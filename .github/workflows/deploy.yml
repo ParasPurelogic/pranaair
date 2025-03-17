@@ -1,0 +1,54 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Deploy to Dev
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: reactdev-aqi-in
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # - name: "Create env file"
+      #   run: |
+      #     touch .env
+
+      #     echo JWT_SECRET=${{ secrets.JWT_SECRET }} >> .env
+      #     echo NEXT_PUBLIC_DOMAIN=https://admin.aqi.in >> .env
+      #     echo MAIL_HOST=${{ secrets.MAIL_HOST }} >> .env
+      #     echo MAIL_PORT=${{ secrets.MAIL_PORT }} >> .env
+      #     echo MAIL_SECURE=${{ secrets.MAIL_SECURE }} >> .env
+      #     echo MAIL_USER=${{ secrets.MAIL_USER }} >> .env
+      #     echo MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }} >> .env
+
+      #     cat .env
+
+      - name: Build app
+        run: npm run build
+
+      - name: Restart or Start PM2 process
+        run: |
+          pm2 reload prana-air-dev
+          # pm2 start npm --name prana-air-dev -- run start -- -p 2900
