@@ -1,95 +1,46 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main>
+      <section className="hero-section">
+        <div className="container">
+          <h1>Breathe Clean, Live Healthy</h1>
+          <p>Advanced air quality monitoring solutions for a healthier environment</p>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="py-5">
+        <div className="container">
+          <div className="row g-4">
+            <div className="col-md-4">
+              <div className="product-card">
+                <h3>Air Quality Monitors</h3>
+                <p>Monitor PM2.5, CO2, and other pollutants with our advanced devices</p>
+                <a href="/products/air-quality-monitors" className="btn btn-outline-success">
+                  Explore Monitors
+                </a>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="product-card">
+                <h3>Air Quality Sensors</h3>
+                <p>Professional-grade sensors for accurate air quality measurements</p>
+                <a href="/products/air-quality-sensors" className="btn btn-outline-success">
+                  View Sensors
+                </a>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="product-card">
+                <h3>Air Purifiers</h3>
+                <p>Clean the air in your space with our efficient purification systems</p>
+                <a href="/products/air-purifier" className="btn btn-outline-success">
+                  Discover Purifiers
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
