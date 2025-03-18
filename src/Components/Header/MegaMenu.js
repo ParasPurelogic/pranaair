@@ -3,256 +3,13 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import menuData from "@/data/menuData" // Import the centralized menu data
 
 const MegaMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null)
   const [activeCategory, setActiveCategory] = useState(null)
   const [activeSubCategory, setActiveSubCategory] = useState(null)
-
-  // Menu data structure
-  const menuData = {
-    solutions: {
-      name: "Solutions",
-      icon: "🏢",
-      subcategories: {
-        "for-applications": {
-          name: "For Applications",
-          items: [
-            {
-              id: "smart-city",
-              name: "Smart City Project",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/smart-city-project.jpg",
-            },
-            {
-              id: "construction-sites",
-              name: "Construction Sites",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/construction-sites.jpg",
-            },
-            {
-              id: "institutes-schools",
-              name: "Institutes | Schools",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/institutes-schools.jpg",
-            },
-            {
-              id: "air-quality-drone",
-              name: "Air Quality Drone",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/air-quality-drone.jpg",
-            },
-            {
-              id: "hotel-businesses",
-              name: "Hotel Businesses",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/hotel-businesses.jpg",
-            },
-            {
-              id: "restaurants",
-              name: "Restaurants",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/restaurants.jpg",
-            },
-          ],
-        },
-        "for-industries": {
-          name: "For Industries",
-          items: [
-            {
-              id: "rmc-plants",
-              name: "RMC Plants",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/rmc-plants.jpg",
-            },
-            {
-              id: "fitness-center",
-              name: "Fitness Center | GYM",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/fitness-center.jpg",
-            },
-            {
-              id: "car-parking",
-              name: "Car Parking Lot",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/car-parking.jpg",
-            },
-            { id: "office", name: "Office", image: "https://www.pranaair.com/wp-content/uploads/2024/08/office.jpg" },
-            {
-              id: "retail-stores",
-              name: "Retail Stores",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/retail-stores.jpg",
-            },
-            {
-              id: "airports",
-              name: "Airports",
-              image: "https://www.pranaair.com/wp-content/uploads/2024/08/airports.jpg",
-            },
-          ],
-        },
-      },
-    },
-    products: {
-      name: "Products",
-      icon: "📦",
-      subcategories: {
-        "air-quality-monitors": {
-          name: "Air Quality Monitors",
-          icon: "📊",
-          subcategories: {
-            handheld: {
-              name: "Handheld",
-              products: [
-                {
-                  id: "pocket-pm25",
-                  name: "Pocket PM2.5",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Pocket-PM2.5.jpg",
-                },
-                {
-                  id: "pocket-co2",
-                  name: "Pocket CO2",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Pocket-PM2.5.jpg",
-                },
-                {
-                  id: "oxyco",
-                  name: "OxyCO",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Pocket-PM2.5.jpg",
-                },
-              ],
-            },
-            indoor: {
-              name: "Indoor",
-              products: [
-                {
-                  id: "indoor-pm25",
-                  name: "Indoor PM2.5 Monitor",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Pocket-PM2.5.jpg",
-                },
-                {
-                  id: "indoor-co2",
-                  name: "Indoor CO2 Monitor",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Pocket-PM2.5.jpg",
-                },
-                {
-                  id: "indoor-multi",
-                  name: "Indoor Multi-Parameter Monitor",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Pocket-PM2.5.jpg",
-                },
-              ],
-            },
-            outdoor: {
-              name: "Outdoor",
-              products: [
-                {
-                  id: "outdoor-pm25",
-                  name: "Outdoor PM2.5 Monitor",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/09/prana-sense-monitor-1.webp",
-                },
-                {
-                  id: "outdoor-multi",
-                  name: "Outdoor Multi-Parameter Station",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/09/prana-sense-monitor-1.webp",
-                },
-              ],
-            },
-          },
-        },
-        "air-quality-sensors": {
-          name: "Air Quality Sensors",
-          icon: "🔍",
-          subcategories: {
-            "pm-sensor": {
-              name: "PM Sensors",
-              products: [
-                {
-                  id: "outdoor-pm",
-                  name: "Outdoor PM",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Outdoor-PM-Sensors.jpg",
-                },
-                {
-                  id: "indoor-pm",
-                  name: "Indoor PM",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/Indoor-PM-Sensors.jpg",
-                },
-              ],
-            },
-            "gas-sensor": {
-              name: "Gas Sensors",
-              products: [
-                {
-                  id: "co2-sensor",
-                  name: "CO2 Sensor",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/CO2-gas-sensor.jpg",
-                },
-                {
-                  id: "co-sensor",
-                  name: "CO Sensor",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/CO-gas-sensor.jpg",
-                },
-                {
-                  id: "tvoc-sensor",
-                  name: "TVOC Sensor",
-                  image: "https://www.pranaair.com/wp-content/uploads/2024/08/TVOC-gas-sensor.jpg",
-                },
-              ],
-            },
-          },
-        },
-        "air-purifier": {
-          name: "Air Purifier",
-          icon: "💨",
-          products: [
-            { id: "nano-co", name: "Nano CO", image: "/placeholder.svg?height=200&width=200" },
-            { id: "hepa-purifier", name: "HEPA Air Purifier", image: "/placeholder.svg?height=200&width=200" },
-          ],
-        },
-      },
-    },
-    "know-what": {
-      name: "Know What",
-      icon: "❓",
-      items: [
-        { id: "air-pollution", name: "What is Air Pollution?", icon: "🏭" },
-        { id: "co", name: "What is CO?", icon: "🔄" },
-        { id: "methane", name: "What is Methane?", icon: "💨" },
-        { id: "humidity", name: "What is Humidity?", icon: "💧" },
-        { id: "no2", name: "What is NO2?", icon: "🌫️" },
-        { id: "ammonia", name: "What is Ammonia(NH3)?", icon: "🧪" },
-        { id: "so2", name: "What is SO2?", icon: "🌋" },
-        { id: "pm25", name: "What is PM2.5 | PM10?", icon: "🔬" },
-        { id: "pollen", name: "What is Pollen?", icon: "🌼" },
-        { id: "temperature", name: "What is Temperature?", icon: "🌡️" },
-        { id: "h2s", name: "What is H2S?", icon: "☁️" },
-        { id: "ozone", name: "What is Ozone?", icon: "🌐" },
-        { id: "co2", name: "What is CO2?", icon: "🏭" },
-        { id: "vocs", name: "What is VOCs?", icon: "💨" },
-        { id: "mold", name: "What is Mold?", icon: "🍄" },
-        { id: "radon", name: "What is Radon?", icon: "☢️" },
-        { id: "noise", name: "What is Noise?", icon: "🔊" },
-      ],
-    },
-    "case-studies": {
-      name: "Case Studies",
-      icon: "📝",
-      items: [
-        {
-          id: "tata-steel",
-          name: "Prana Air aids TATA Steel in Air Quality Monitoring",
-          image: "https://www.pranaair.com/wp-content/uploads/2024/08/tata-steel-case-study.jpg",
-        },
-        {
-          id: "interglobe",
-          name: "Prana Air Aided in Air Quality Monitoring Solutions for INTERGLOBE",
-          image: "https://www.pranaair.com/wp-content/uploads/2024/08/interglobe-case-study.jpg",
-        },
-        {
-          id: "mahindra",
-          name: "Prana Air helped Mahindra Lifespaces to monitor air pollution",
-          image: "https://www.pranaair.com/wp-content/uploads/2024/08/mahindra-case-study.jpg",
-        },
-        {
-          id: "cii",
-          name: "Prana Air helped CII to monitor air pollution",
-          image: "https://www.pranaair.com/wp-content/uploads/2024/08/cii-case-study.jpg",
-        },
-      ],
-    },
-    about: {
-      name: "About",
-      icon: "ℹ️",
-    },
-  }
+  const [activeSubSubCategory, setActiveSubSubCategory] = useState(null)
 
   // Set default category and subcategory when menu opens
   useEffect(() => {
@@ -291,6 +48,18 @@ const MegaMenu = () => {
     }
   }, [activeCategory])
 
+  // Update sub-subcategory when subcategory changes
+  useEffect(() => {
+    if (activeCategory === "products" && activeSubCategory) {
+      const subcategory = menuData.products.subcategories[activeSubCategory]
+      if (subcategory && subcategory.subcategories) {
+        setActiveSubSubCategory(Object.keys(subcategory.subcategories)[0])
+      } else {
+        setActiveSubSubCategory(null)
+      }
+    }
+  }, [activeSubCategory])
+
   // Render solutions menu content
   const renderSolutionsContent = () => {
     if (activeCategory === "solutions" && menuData.solutions.subcategories) {
@@ -300,7 +69,7 @@ const MegaMenu = () => {
           <div className="row g-4 p-4">
             {subcategory.items.map((item) => (
               <div key={item.id} className="col-lg-4 col-md-6 mb-4">
-                <Link href={`/solutions/${activeSubCategory}/${item.id}`} className="text-decoration-none">
+                <Link href={item.link} className="text-decoration-none">
                   <div className="position-relative rounded overflow-hidden" style={{ height: "180px" }}>
                     <Image
                       src={item.image || "/placeholder.svg?height=300&width=400"}
@@ -334,7 +103,7 @@ const MegaMenu = () => {
           <div className="row">
             {menuData["know-what"].items.map((item) => (
               <div key={item.id} className="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <Link href={`/know-what/${item.id}`} className="text-decoration-none text-dark">
+                <Link href={item.link} className="text-decoration-none text-dark">
                   <div className="d-flex align-items-center p-2 rounded hover-bg">
                     <span className="me-2" style={{ fontSize: "1.5rem" }}>
                       {item.icon}
@@ -359,7 +128,7 @@ const MegaMenu = () => {
           <div className="row g-4">
             {menuData["case-studies"].items.map((item) => (
               <div key={item.id} className="col-md-6 col-lg-3 mb-4">
-                <Link href={`/case-studies/${item.id}`} className="text-decoration-none">
+                <Link href={item.link} className="text-decoration-none">
                   <div className="position-relative rounded overflow-hidden" style={{ height: "180px" }}>
                     <Image
                       src={item.image || "/placeholder.svg?height=300&width=400"}
@@ -418,10 +187,7 @@ const MegaMenu = () => {
                   subcategory.subcategories[activeSubSubCategory].products &&
                   subcategory.subcategories[activeSubSubCategory].products.map((product) => (
                     <div key={`${activeSubSubCategory}-${product.id}`} className="col-lg-3">
-                      <Link
-                        href={`/products/${activeSubCategory}/${activeSubSubCategory}/${product.id}`}
-                        className="product-card text-decoration-none"
-                      >
+                      <Link href={product.link} className="product-card text-decoration-none">
                         <div className="product-image mb-3">
                           <Image
                             src={product.image || "/placeholder.svg?height=200&width=200"}
@@ -446,10 +212,7 @@ const MegaMenu = () => {
               <div className="row g-4">
                 {subcategory.products.map((product) => (
                   <div key={product.id} className="col-lg-3">
-                    <Link
-                      href={`/products/${activeSubCategory}/${product.id}`}
-                      className="product-card text-decoration-none"
-                    >
+                    <Link href={product.link} className="product-card text-decoration-none">
                       <div className="product-image mb-3">
                         <Image
                           src={product.image || "/placeholder.svg?height=200&width=200"}
@@ -471,21 +234,6 @@ const MegaMenu = () => {
     }
     return null
   }
-
-  // State for sub-subcategory (for products with nested categories)
-  const [activeSubSubCategory, setActiveSubSubCategory] = useState(null)
-
-  // Update sub-subcategory when subcategory changes
-  useEffect(() => {
-    if (activeCategory === "products" && activeSubCategory) {
-      const subcategory = menuData.products.subcategories[activeSubCategory]
-      if (subcategory && subcategory.subcategories) {
-        setActiveSubSubCategory(Object.keys(subcategory.subcategories)[0])
-      } else {
-        setActiveSubSubCategory(null)
-      }
-    }
-  }, [activeSubCategory])
 
   return (
     <nav className="navbar navbar-expand-lg bg-white">
@@ -654,7 +402,7 @@ const MegaMenu = () => {
 
             {/* About Menu Item */}
             <li className="nav-item">
-              <Link href="/about" className="nav-link">
+              <Link href={menuData.about.link} className="nav-link">
                 About
               </Link>
             </li>
