@@ -1053,39 +1053,177 @@ export default function CommonMonitorPage() {
                 </div>
             </section>
 
-            {/* Accuracy Section */}
-            <section className="highly-accurate-monitor">
-                <div className="container-fluid">
-                    <div className="row">
+            {/* Air Quality Sensors Section */}
+            <section className="air-quality-sensor">
+                <div className="container">
+                    <div className="row air-quality-sensor-bg">
                         <div className="col-md-6">
-                            <div className="highly-accurate-heading">
-                                <h2>Highly Accurate Prana Air Monitor</h2>
-                                <p>PM2.5 correlation with a high-end instrument</p>
+                            <div className="air-quality-sensor-content">
+                                <h2>Air Quality Sensors</h2>
+                                <h3>High Quality & Responsive</h3>
+                                <a className="know-more-btn" href="#">
+                                    Know More
+                                </a>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="graph-img">
+                        <div className="col-md-6">
+                            <div className="sensor-img">
                                 <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/highly-accurate-graph-monitor.jpg"
-                                    alt="comparison of prana air monitor data with highly expensive equipment"
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/air-quality-sensor.png"
+                                    alt="prana air air quality sensors"
                                 />
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div className="row accurate-box">
+            {/* Air Quality Manage */}
+            <section className="vc_section air-quality-manage">
+                <div className="container">
+                    <div className="row align-items-center borderr">
                         <div className="col-md-6">
-                            <div className="despite-para">
-                                <h3>Most Accurate & Low-Cost</h3>
-                                <h4>Prana Airs Monitors, Reliable Alternative to Costly Devices</h4>
-                            </div>
+                            <h2 className="manage-heading">
+                                <strong>Our Air Quality Monitoring System in the Management!</strong>
+                            </h2>
+                        </div>
+                        <div className="col-md-6 text-md-end">
+                            <a href="#contact" className="btn btn-primary gtq-btn">
+                                Get A Quote
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="row align-items-center managment-data mt-4">
+                        <div className="col-md-6 text-center">
+                            <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/02/air-quality-management-system.png"
+                                alt="air quality management system"
+                                width={500}
+                                height={300}
+                                className="img-fluid managment-img"
+                            />
                         </div>
                         <div className="col-md-6">
-                            <div className="graph-btn">
-                                <a href="#">Discover Now</a>
+                            <p className="mannage-para data-para">
+                                <strong> Air Quality Management System</strong> is a comprehensive plan to reduce air
+                                pollution by tracking root cause of air pollution in different
+                                settings. Prana Air’s air quality monitors play a crucial role in
+                                each step. These are needed for emission inventories, helping to
+                                identify and understand air quality problems. The real-time data
+                                from our monitors support effective decision-making for emission
+                                control and contribute to the overall assessment of air quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Type of Air Quality Monitor */}
+            <section className="types-air-quality">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <div className="type-of-air-quality-heading">
+                                <h2>Types of Air Quality Monitoring</h2>
+                            </div>
+                        </div>
+                        <div className="col-sm-6"></div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="types-of-tab">
+                                <ul className="nav nav-tabs" role="tablist">
+                                    <li className="nav-item type-tab-title">
+                                        <button
+                                            className={`nav-link ${activeTab === "ambient" ? "active" : ""}`}
+                                            onClick={() => setActiveTab("ambient")}
+                                        >
+                                            <span className="ult-span-text">Ambient Monitoring</span>
+                                        </button>
+                                    </li>
+                                    <li className="nav-item type-tab-title">
+                                        <button
+                                            className={`nav-link ${activeTab === "indoor" ? "active" : ""}`}
+                                            onClick={() => setActiveTab("indoor")}
+                                        >
+                                            <span className="ult-span-text">Indoor Monitoring</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                                <div className="tab-content">
+                                    {activeTab === "ambient" && (
+                                        <div className="tab-pane fade show active">
+                                            <div className="ult_tabitemname">
+                                                <div className="fadeInUp animated">
+                                                    <div>
+                                                        <Image
+                                                            className="types-img"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/Prana-sense.webp"
+                                                            alt="ambient air quality monitoring"
+                                                            width={600}
+                                                            height={400}
+                                                        />
+                                                        <div className="types-air-quality-contect">
+                                                            <h3>Ambient Air Quality Monitoring</h3>
+                                                            <p>
+                                                                Outdoor air is also known as ambient air typically monitored using (Continuous Ambient Air
+                                                                Quality Monitoring Station) CAAQMs. Prana Airs outdoor air quality monitors offer the
+                                                                same functionality as CAAQMs with a compact and efficient design.
+                                                            </p>
+                                                            <h3>Pollutants we monitor</h3>
+                                                            <p>
+                                                                Prana Airs outdoor monitors track AQI, PM2.5, PM10, CO, NO2, SO2, O3, Noise and other
+                                                                pollutants.
+                                                                <br />
+                                                                <a className="gaq-btn" href="#contact">
+                                                                    Get A Quote
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {activeTab === "indoor" && (
+                                        <div className="tab-pane fade show active">
+                                            <div className="ult_tabitemname">
+                                                <div className="fadeInUp animated">
+                                                    <div>
+                                                        <Image
+                                                            className="types-img"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/Indoor-monitor.webp"
+                                                            alt="indoor air quality monitoring"
+                                                            width={600}
+                                                            height={400}
+                                                        />
+                                                        <div className="types-air-quality-contect">
+                                                            <h3>Indoor Air Quality Monitoring</h3>
+                                                            <p>
+                                                                Prana Ais indoor air quality monitors are perfect for any setting—offices, homes,
+                                                                schools, and more. Their compact design and user-friendly features make them the perfect
+                                                                choice for indoor air monitoring.
+                                                            </p>
+                                                            <h3>Pollutants we monitor</h3>
+                                                            <p>
+                                                                Prana Airs indoor air quality monitors measure PM2.5, CO2, CO, VOCs, temperature,
+                                                                humidity more.
+                                                                <br />
+                                                                <a className="gaq-btn" href="#contact">
+                                                                    Get A Quote
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1331,31 +1469,6 @@ export default function CommonMonitorPage() {
                 </div>
             </section>
 
-            {/* Air Quality Sensors Section */}
-            <section className="air-quality-sensor">
-                <div className="container">
-                    <div className="row air-quality-sensor-bg">
-                        <div className="col-md-6">
-                            <div className="air-quality-sensor-content">
-                                <h2>Air Quality Sensors</h2>
-                                <h3>High Quality & Responsive</h3>
-                                <a className="know-more-btn" href="#">
-                                    Know More
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="sensor-img">
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/air-quality-sensor.png"
-                                    alt="prana air air quality sensors"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Trusted By Section */}
             <section className="trust-section">
                 <div className="container">
@@ -1513,94 +1626,117 @@ export default function CommonMonitorPage() {
 
                     <div className="row">
                         <div className="col-md-12">
-                            <div id="testimonialCarousel" className="carousel slide" data-bs-ride="carousel">
-                                <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <div className="row">
-                                            <div className="col-md-6 mx-auto">
-                                                <div className="testimonial-card">
-                                                    <div className="quote-icon">
-                                                        <i className="fa fa-quote-left"></i>
-                                                    </div>
-                                                    <p className="testimonial-text">
-                                                        Using it for last two weeks. Presently excellent performance. Showing PM 2.5 and PM 10, temperature and Humidity along with AQI. Hope it will last.
-                                                    </p>
-                                                    <div className="testimonial-author">
-                                                        <h5>Thomas Mattackal</h5>
-                                                        <div className="rating">
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div className="app-slider-inner">
+                                <Carousel responsive={responsive} infinite autoPlay autoPlaySpeed={6000}>
+                                    <div className="review-img">
+                                        <div className="review-box">
+                                            <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
+                                            <p className="hide-txt">Its a great product that can indicate the level of PM2.5 in a closed or outdoor environment. Its
+                                                not 100% accurate and given its size and price I think it would be an unrealistic expectation to have that level of
+                                                accuracy. It tells you the order of magnitude of PM2.5 pollution in a place and it also indicates the measurement
+                                                extremely fast. I have tested and triangulated the device output with other readings (from air purifiers) and I
+                                                dont think the margin of error is beyond 10%. However, this has been at levels of PM2.5 below 100. I am not sure if
+                                                the margin of error expands or reduces with the PM2.5 increases to levels beyond 150. If you wish to know, on an
+                                                indicative basis, of the range of pollution in a place at a point of time, then this would be a highly recommended
+                                                device.</p>
+
+                                            <ul>
+                                                <li>
+                                                    <h3>Sameer W.</h3>
+                                                </li>
+                                                <li><img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
 
-                                    <div className="carousel-item">
-                                        <div className="row">
-                                            <div className="col-md-6 mx-auto">
-                                                <div className="testimonial-card">
-                                                    <div className="quote-icon">
-                                                        <i className="fa fa-quote-left"></i>
-                                                    </div>
-                                                    <p className="testimonial-text">
-                                                        Very useful if you are aware of the need to know air quality where you sleep, work, or exercise. The battery life is very low, so better to not keep it on for long or keep a charger handy.
-                                                    </p>
-                                                    <div className="testimonial-author">
-                                                        <h5>Amit</h5>
-                                                        <div className="rating">
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+
+                                        <div className="review-img">
+                                        <div className="review-box">
+                                            <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
+                                            <p className="hide-txt">Its a great product that can indicate the level of PM2.5 in a closed or outdoor environment. Its
+                                                not 100% accurate and given its size and price I think it would be an unrealistic expectation to have that level of
+                                                accuracy. It tells you the order of magnitude of PM2.5 pollution in a place and it also indicates the measurement
+                                                extremely fast. I have tested and triangulated the device output with other readings (from air purifiers) and I
+                                                dont think the margin of error is beyond 10%. However, this has been at levels of PM2.5 below 100. I am not sure if
+                                                the margin of error expands or reduces with the PM2.5 increases to levels beyond 150. If you wish to know, on an
+                                                indicative basis, of the range of pollution in a place at a point of time, then this would be a highly recommended
+                                                device.</p>
+
+                                            <ul>
+                                                <li>
+                                                    <h3>Sameer W.</h3>
+                                                </li>
+                                                <li><img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                </li>
+                                            </ul>
                                         </div>
+
                                     </div>
 
-                                    <div className="carousel-item">
-                                        <div className="row">
-                                            <div className="col-md-6 mx-auto">
-                                                <div className="testimonial-card">
-                                                    <div className="quote-icon">
-                                                        <i className="fa fa-quote-left"></i>
-                                                    </div>
-                                                    <p className="testimonial-text">
-                                                        Compact size, accurate reading, battery life is good. I was unable to pair with Android app but not that important for me.
-                                                    </p>
-                                                    <div className="testimonial-author">
-                                                        <h5>SA</h5>
-                                                        <div className="rating">
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                            <span className="star">★</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+
+                                        <div className="review-img">
+                                        <div className="review-box">
+                                            <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
+                                            <p className="hide-txt">Its a great product that can indicate the level of PM2.5 in a closed or outdoor environment. Its
+                                                not 100% accurate and given its size and price I think it would be an unrealistic expectation to have that level of
+                                                accuracy. It tells you the order of magnitude of PM2.5 pollution in a place and it also indicates the measurement
+                                                extremely fast. I have tested and triangulated the device output with other readings (from air purifiers) and I
+                                                dont think the margin of error is beyond 10%. However, this has been at levels of PM2.5 below 100. I am not sure if
+                                                the margin of error expands or reduces with the PM2.5 increases to levels beyond 150. If you wish to know, on an
+                                                indicative basis, of the range of pollution in a place at a point of time, then this would be a highly recommended
+                                                device.</p>
+
+                                            <ul>
+                                                <li>
+                                                    <h3>Sameer W.</h3>
+                                                </li>
+                                                <li><img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        </div>
+
+
+
+                                        <div className="review-img">
+                                        <div className="review-box">
+                                            <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
+                                            <p className="hide-txt">Its a great product that can indicate the level of PM2.5 in a closed or outdoor environment. Its
+                                                not 100% accurate and given its size and price I think it would be an unrealistic expectation to have that level of
+                                                accuracy. It tells you the order of magnitude of PM2.5 pollution in a place and it also indicates the measurement
+                                                extremely fast. I have tested and triangulated the device output with other readings (from air purifiers) and I
+                                                dont think the margin of error is beyond 10%. However, this has been at levels of PM2.5 below 100. I am not sure if
+                                                the margin of error expands or reduces with the PM2.5 increases to levels beyond 150. If you wish to know, on an
+                                                indicative basis, of the range of pollution in a place at a point of time, then this would be a highly recommended
+                                                device.</p>
+
+                                            <ul>
+                                                <li>
+                                                    <h3>Sameer W.</h3>
+                                                </li>
+                                                <li><img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                    <img src="https://www.pranaair.com/wp-content/uploads/2025/02/star.png" alt="" />
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div className="carousel-controls">
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
+                                </Carousel>
                             </div>
                         </div>
                     </div>
@@ -1830,159 +1966,7 @@ export default function CommonMonitorPage() {
                 </div>
             </section>
 
-            {/* Air Quality Manage */}
-            <section className="vc_section air-quality-manage">
-                <div className="container">
-                    <div className="row align-items-center borderr">
-                        <div className="col-md-6">
-                            <h2 className="manage-heading">
-                                <strong>Our Air Quality Monitoring System in the Management!</strong>
-                            </h2>
-                        </div>
-                        <div className="col-md-6 text-md-end">
-                            <a href="#contact" className="btn btn-primary gtq-btn">
-                                Get A Quote
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="row align-items-center managment-data mt-4">
-                        <div className="col-md-6 text-center">
-                            <Image
-                                src="https://www.pranaair.com/wp-content/uploads/2024/02/air-quality-management-system.png"
-                                alt="air quality management system"
-                                width={500}
-                                height={300}
-                                className="img-fluid managment-img"
-                            />
-                        </div>
-                        <div className="col-md-6">
-                            <p className="mannage-para data-para">
-                                <strong> Air Quality Management System</strong> is a comprehensive plan to reduce air
-                                pollution by tracking root cause of air pollution in different
-                                settings. Prana Air’s air quality monitors play a crucial role in
-                                each step. These are needed for emission inventories, helping to
-                                identify and understand air quality problems. The real-time data
-                                from our monitors support effective decision-making for emission
-                                control and contribute to the overall assessment of air quality.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Type of Air Quality Monitor */}
-            <section className="types-air-quality">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <div className="type-of-air-quality-heading">
-                                <h2>Types of Air Quality Monitoring</h2>
-                            </div>
-                        </div>
-                        <div className="col-sm-6"></div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="types-of-tab">
-                                <ul className="nav nav-tabs" role="tablist">
-                                    <li className="nav-item type-tab-title">
-                                        <button
-                                            className={`nav-link ${activeTab === "ambient" ? "active" : ""}`}
-                                            onClick={() => setActiveTab("ambient")}
-                                        >
-                                            <span className="ult-span-text">Ambient Monitoring</span>
-                                        </button>
-                                    </li>
-                                    <li className="nav-item type-tab-title">
-                                        <button
-                                            className={`nav-link ${activeTab === "indoor" ? "active" : ""}`}
-                                            onClick={() => setActiveTab("indoor")}
-                                        >
-                                            <span className="ult-span-text">Indoor Monitoring</span>
-                                        </button>
-                                    </li>
-                                </ul>
-
-                                <div className="tab-content">
-                                    {activeTab === "ambient" && (
-                                        <div className="tab-pane fade show active">
-                                            <div className="ult_tabitemname">
-                                                <div className="fadeInUp animated">
-                                                    <div>
-                                                        <Image
-                                                            className="types-img"
-                                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/Prana-sense.webp"
-                                                            alt="ambient air quality monitoring"
-                                                            width={600}
-                                                            height={400}
-                                                        />
-                                                        <div className="types-air-quality-contect">
-                                                            <h3>Ambient Air Quality Monitoring</h3>
-                                                            <p>
-                                                                Outdoor air is also known as ambient air typically monitored using (Continuous Ambient Air
-                                                                Quality Monitoring Station) CAAQMs. Prana Airs outdoor air quality monitors offer the
-                                                                same functionality as CAAQMs with a compact and efficient design.
-                                                            </p>
-                                                            <h3>Pollutants we monitor</h3>
-                                                            <p>
-                                                                Prana Airs outdoor monitors track AQI, PM2.5, PM10, CO, NO2, SO2, O3, Noise and other
-                                                                pollutants.
-                                                                <br />
-                                                                <a className="gaq-btn" href="#contact">
-                                                                    Get A Quote
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {activeTab === "indoor" && (
-                                        <div className="tab-pane fade show active">
-                                            <div className="ult_tabitemname">
-                                                <div className="fadeInUp animated">
-                                                    <div>
-                                                        <Image
-                                                            className="types-img"
-                                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/Indoor-monitor.webp"
-                                                            alt="indoor air quality monitoring"
-                                                            width={600}
-                                                            height={400}
-                                                        />
-                                                        <div className="types-air-quality-contect">
-                                                            <h3>Indoor Air Quality Monitoring</h3>
-                                                            <p>
-                                                                Prana Ais indoor air quality monitors are perfect for any setting—offices, homes,
-                                                                schools, and more. Their compact design and user-friendly features make them the perfect
-                                                                choice for indoor air monitoring.
-                                                            </p>
-                                                            <h3>Pollutants we monitor</h3>
-                                                            <p>
-                                                                Prana Airs indoor air quality monitors measure PM2.5, CO2, CO, VOCs, temperature,
-                                                                humidity more.
-                                                                <br />
-                                                                <a className="gaq-btn" href="#contact">
-                                                                    Get A Quote
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Type of Air Quality Monitor */}
+            {/* Air Quality Standard */}
             <section className="air-quality-standard-sec">
                 <div className="container">
                     <div className="row">
@@ -2251,6 +2235,45 @@ export default function CommonMonitorPage() {
                                 <p>
                                     <img src="https://www.pranaair.com/wp-content/uploads/2024/03/aqi-dashboard-for-prana-air-monitors.webp" alt="aqi dashboard for prana air monitors" />
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Accuracy Section */}
+            <section className="highly-accurate-monitor">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="highly-accurate-heading">
+                                <h2>Highly Accurate Prana Air Monitor</h2>
+                                <p>PM2.5 correlation with a high-end instrument</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="graph-img">
+                                <img
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/highly-accurate-graph-monitor.jpg"
+                                    alt="comparison of prana air monitor data with highly expensive equipment"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row accurate-box">
+                        <div className="col-md-6">
+                            <div className="despite-para">
+                                <h3>Most Accurate & Low-Cost</h3>
+                                <h4>Prana Airs Monitors, Reliable Alternative to Costly Devices</h4>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="graph-btn">
+                                <a href="#">Discover Now</a>
                             </div>
                         </div>
                     </div>

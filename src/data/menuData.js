@@ -103,7 +103,7 @@ const menuData = {
                   id: "pocket-pm25",
                   name: "Pocket PM2.5",
                   image: "https://www.pranaair.com/wp-content/uploads/2024/08/Pocket-PM2.5.jpg",
-                  link: "/products/air-quality-monitors/handheld/common-monitor", 
+                  link: "/air-quality-monitor", 
                 },
                 {
                   id: "pocket-co2",
