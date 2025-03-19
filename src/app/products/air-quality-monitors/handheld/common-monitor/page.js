@@ -76,6 +76,13 @@ export default function CommonMonitorPage() {
     // AQI Apps State
     const [activeAQITab, setActiveAQITab] = useState("mobile")
 
+    const [activeTab, setActiveTab] = useState("ambient")
+
+    const [activeStandardTab, setActiveStandardTab] = useState("indoor")
+
+
+
+
     return (
         <main>
             {/* Hero Section */}
@@ -1895,6 +1902,383 @@ export default function CommonMonitorPage() {
                 </div>
             </section>
 
+            {/* Air Quality Manage */}
+            <section className="vc_section air-quality-manage">
+                <div className="container">
+                    <div className="row align-items-center borderr">
+                        <div className="col-md-6">
+                            <h2 className="manage-heading">
+                                <strong>Our Air Quality Monitoring System in the Management!</strong>
+                            </h2>
+                        </div>
+                        <div className="col-md-6 text-md-end">
+                            <a href="#contact" className="btn btn-primary gtq-btn">
+                                Get A Quote
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="row align-items-center managment-data mt-4">
+                        <div className="col-md-6 text-center">
+                            <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/02/air-quality-management-system.png"
+                                alt="air quality management system"
+                                width={500}
+                                height={300}
+                                className="img-fluid managment-img"
+                            />
+                        </div>
+                        <div className="col-md-6">
+                            <p className="mannage-para data-para">
+                                <strong> Air Quality Management System</strong> is a comprehensive plan to reduce air
+                                pollution by tracking root cause of air pollution in different
+                                settings. Prana Air’s air quality monitors play a crucial role in
+                                each step. These are needed for emission inventories, helping to
+                                identify and understand air quality problems. The real-time data
+                                from our monitors support effective decision-making for emission
+                                control and contribute to the overall assessment of air quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Type of Air Quality Monitor */}
+            <section className="types-air-quality">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <div className="type-of-air-quality-heading">
+                                <h2>Types of Air Quality Monitoring</h2>
+                            </div>
+                        </div>
+                        <div className="col-sm-6"></div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="types-of-tab">
+                                <ul className="nav nav-tabs" role="tablist">
+                                    <li className="nav-item type-tab-title">
+                                        <button
+                                            className={`nav-link ${activeTab === "ambient" ? "active" : ""}`}
+                                            onClick={() => setActiveTab("ambient")}
+                                        >
+                                            <span className="ult-span-text">Ambient Monitoring</span>
+                                        </button>
+                                    </li>
+                                    <li className="nav-item type-tab-title">
+                                        <button
+                                            className={`nav-link ${activeTab === "indoor" ? "active" : ""}`}
+                                            onClick={() => setActiveTab("indoor")}
+                                        >
+                                            <span className="ult-span-text">Indoor Monitoring</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                                <div className="tab-content">
+                                    {activeTab === "ambient" && (
+                                        <div className="tab-pane fade show active">
+                                            <div className="ult_tabitemname">
+                                                <div className="fadeInUp animated">
+                                                    <div>
+                                                        <Image
+                                                            className="types-img"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/Prana-sense.webp"
+                                                            alt="ambient air quality monitoring"
+                                                            width={600}
+                                                            height={400}
+                                                        />
+                                                        <div className="types-air-quality-contect">
+                                                            <h3>Ambient Air Quality Monitoring</h3>
+                                                            <p>
+                                                                Outdoor air is also known as ambient air typically monitored using (Continuous Ambient Air
+                                                                Quality Monitoring Station) CAAQMs. Prana Airs outdoor air quality monitors offer the
+                                                                same functionality as CAAQMs with a compact and efficient design.
+                                                            </p>
+                                                            <h3>Pollutants we monitor</h3>
+                                                            <p>
+                                                                Prana Airs outdoor monitors track AQI, PM2.5, PM10, CO, NO2, SO2, O3, Noise and other
+                                                                pollutants.
+                                                                <br />
+                                                                <a className="gaq-btn" href="#contact">
+                                                                    Get A Quote
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {activeTab === "indoor" && (
+                                        <div className="tab-pane fade show active">
+                                            <div className="ult_tabitemname">
+                                                <div className="fadeInUp animated">
+                                                    <div>
+                                                        <Image
+                                                            className="types-img"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/Indoor-monitor.webp"
+                                                            alt="indoor air quality monitoring"
+                                                            width={600}
+                                                            height={400}
+                                                        />
+                                                        <div className="types-air-quality-contect">
+                                                            <h3>Indoor Air Quality Monitoring</h3>
+                                                            <p>
+                                                                Prana Ais indoor air quality monitors are perfect for any setting—offices, homes,
+                                                                schools, and more. Their compact design and user-friendly features make them the perfect
+                                                                choice for indoor air monitoring.
+                                                            </p>
+                                                            <h3>Pollutants we monitor</h3>
+                                                            <p>
+                                                                Prana Airs indoor air quality monitors measure PM2.5, CO2, CO, VOCs, temperature,
+                                                                humidity more.
+                                                                <br />
+                                                                <a className="gaq-btn" href="#contact">
+                                                                    Get A Quote
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Type of Air Quality Monitor */}
+            <section className="air-quality-standard-sec">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <div className="air-quality-standard-title">
+                                <h2>Our air quality monitoring devices comply with All Major Standards</h2>
+                            </div>
+                        </div>
+                        <div className="col-sm-6"></div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="air-quality-standard-para">
+                                <p>
+                                    Our air quality monitors meet all air quality standards. These standards are just recommended to make
+                                    them applicable to global solutions. With it, it also supports many air quality management policy
+                                    alternatives. Check different pollutant parameters in outdoor or indoor air.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="page-tabs out">
+                                <ul className="nav nav-tabs" role="tablist">
+                                    <li className="nav-item home-tab-title">
+                                        <button
+                                            className={`nav-link ${activeStandardTab === "indoor" ? "active" : ""}`}
+                                            onClick={() => setActiveStandardTab("indoor")}
+                                        >
+                                            <span className="ult-span-text">Indoor</span>
+                                        </button>
+                                    </li>
+                                    <li className="nav-item home-tab-title">
+                                        <button
+                                            className={`nav-link ${activeStandardTab === "outdoor" ? "active" : ""}`}
+                                            onClick={() => setActiveStandardTab("outdoor")}
+                                        >
+                                            <span className="ult-span-text">Outdoor</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                                <div className="tab-content">
+                                    {activeStandardTab === "indoor" && (
+                                        <div className="tab-pane fade show active">
+                                            <div className="ult_tabitemname">
+                                                <div className="air-standard-parameter">
+                                                    <ul>
+                                                        <li>
+                                                            <strong>Parameters:</strong>
+                                                        </li>
+                                                        <li>PM 2.5</li>
+                                                        <li>O3</li>
+                                                        <li>TVOC</li>
+                                                        <li>HCHO</li>
+                                                        <li>CO</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>WELL:</strong>
+                                                        </li>
+                                                        <li>35 µg/m3</li>
+                                                        <li>&lt;9 ppm</li>
+                                                        <li>&lt;500 µg/m3</li>
+                                                        <li>&lt;27 ppb</li>
+                                                        <li>&lt;51 ppb</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>LEED:</strong>
+                                                        </li>
+                                                        <li>15 µg/m3</li>
+                                                        <li>10 ppm</li>
+                                                        <li>500 µg/m3</li>
+                                                        <li>27 ppb</li>
+                                                        <li>.075 ppm</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>ASHRAE:</strong>
+                                                        </li>
+                                                        <li>35 µg/m3</li>
+                                                        <li>11 ppm</li>
+                                                        <li>–</li>
+                                                        <li>33 µg/m3</li>
+                                                        <li>.075 ppm</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>WHO-Europe:</strong>
+                                                        </li>
+                                                        <li>–</li>
+                                                        <li>10 ppm (8h)</li>
+                                                        <li>–</li>
+                                                        <li>0.1 mg/m3</li>
+                                                        <li>0.064 ppm (8h)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {activeStandardTab === "outdoor" && (
+                                        <div className="tab-pane fade show active">
+                                            <div className="ult_tabitemname">
+                                                <div className="air-standard-parameter">
+                                                    <ul>
+                                                        <li>
+                                                            <strong>Parameters:</strong>
+                                                        </li>
+                                                        <li>PM 2.5</li>
+                                                        <li>PM 10</li>
+                                                        <li>O3</li>
+                                                        <li>NO2</li>
+                                                        <li>SO2</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>Time</strong>
+                                                        </li>
+                                                        <li>
+                                                            Annual Mean
+                                                            <br /> 24-hr Mean.
+                                                        </li>
+                                                        <li>
+                                                            Annual Mean
+                                                            <br /> 24-hr Mean.
+                                                        </li>
+                                                        <li>8-hr Mean.</li>
+                                                        <li>
+                                                            Annual Mean
+                                                            <br /> 1-hr Mean.
+                                                        </li>
+                                                        <li>24-hr Mean.</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>WHO</strong>
+                                                        </li>
+                                                        <li>
+                                                            5 µg/m3
+                                                            <br /> 15 µg/m3
+                                                        </li>
+                                                        <li>
+                                                            5 µg/m3
+                                                            <br /> 45 µg/m3
+                                                        </li>
+                                                        <li>100 µg/m3</li>
+                                                        <li>
+                                                            10 µg/m3
+                                                            <br /> 200 µg/m3
+                                                        </li>
+                                                        <li>40 µg/m3</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>India (CPCB)</strong>
+                                                        </li>
+                                                        <li>
+                                                            40 µg/m3
+                                                            <br /> 60 µg/m3
+                                                        </li>
+                                                        <li>
+                                                            60 µg/m3
+                                                            <br /> 100 µg/m3
+                                                        </li>
+                                                        <li>100 µg/m3</li>
+                                                        <li>
+                                                            40 µg/m3
+                                                            <br /> 80 µg/m3 (24-hr)
+                                                        </li>
+                                                        <li>80 µg/m3</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>US (EPA)</strong>
+                                                        </li>
+                                                        <li>
+                                                            15 µg/m3
+                                                            <br /> 35 µg/m3
+                                                        </li>
+                                                        <li>
+                                                            –<br /> 150 µg/m3
+                                                        </li>
+                                                        <li>0.070 ppm</li>
+                                                        <li>
+                                                            53 ppb
+                                                            <br /> 100 ppb
+                                                        </li>
+                                                        <li>75 ppb (1-hr)</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>European (EEA)</strong>
+                                                        </li>
+                                                        <li>
+                                                            Limit value, 25 µg/m3
+                                                            <br /> –
+                                                        </li>
+                                                        <li>
+                                                            Limit value, 40 µg/m3
+                                                            <br /> Limit value, 50 µg/m3 (1-hr)
+                                                        </li>
+                                                        <li>Target value, 120µg/m3</li>
+                                                        <li>
+                                                            40 µg/m3
+                                                            <br /> Limit value, 200 µg/m3
+                                                        </li>
+                                                        <li>–</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* CSS Styles */}
             <style jsx global>{`
      @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap);
@@ -2016,14 +2400,15 @@ span.prana-txt {
 }
 
 .page-tabs ul {
-    justify-content: center !important;
-    top: -65px;
+   background: #e4e7ec;
+    gap: 0px;
+    top: -85px;
+    left: 900px;
     border-radius: 50px !important;
-    background: #E4E7EC;
+    justify-content: space-between;
     width: 25% !important;
-    gap: 30px;
     padding: 5px 0 !important;
-    left: 440px
+    position: relative;
 }
 
 li.ult_tab_li.home-tab-title.current {
@@ -2685,16 +3070,16 @@ ul.air-poll-box-last-row {
 }
 
 .key-parameter ul {
-    z-index: 2;
+z-index: 2;
     background: #2f3031;
     gap: 55px;
-    top: 0;
-    left: 740px;
-    border-radius: 50px !important;
-    justify-content: center !important;
-    width: 43% !important;
-    padding: 0 !important;
     position: relative;
+    top: 0;
+    left: 700px;
+    border-radius: 50px !important;
+    justify-content: space-between;
+    width: 45% !important;
+    padding: 0 !important;
 }
 
 .key-parameter ul li button {
@@ -2707,13 +3092,13 @@ ul.air-poll-box-last-row {
     z-index: 2;
     background: #d3dae1;
     gap: 55px;
+    position: relative;
     top: -60px;
     left: 740px;
     border-radius: 50px !important;
-    justify-content: center !important;
-    width: 35% !important;
+    justify-content: space-between;
+    width: 40% !important;
     padding: 0 !important;
-    position: relative;
 }
 
 .product-tabs ul li button {
@@ -2744,25 +3129,18 @@ img.para-bg {
     z-index: 2;
     background: #2f3031;
     gap: 55px;
-    top: -80px;
-    left: 740px;
-    border-radius: 50px !important;
-    justify-content: center !important;
-    width: 40% !important;
-    padding: 0 !important;
     position: relative;
+    top: -80px;
+    left: 700px;
+    border-radius: 50px !important;
+    justify-content: space-between;
+    width: 44%!important;
+    padding: 0 !important;
 }
 
 .dash-tabs ul li button {
     padding: 15px 25px !important;
     border-radius: 30px !important;
-}
-
-.dash-content ul {
-    left: 0;
-    top: 30px;
-    background: transparent;
-    width: 100% !important;
 }
 
 .key-para {
@@ -2877,6 +3255,7 @@ img.para-bg {
     padding: 13px 60px;
     border-radius: 50px;
     float: right;
+        border: none;
     transition: .3s linear
 }
 
@@ -2925,19 +3304,28 @@ img.para-bg {
 }
 
 .data-para {
-    margin-left: -140px;
-    padding-top: 50px;
-    padding-right: 50px
+    margin-left: -40px;
+    padding-top: 0px;
+    padding-right: 50px;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #263D4F;
 }
 
 .air-standard-parameter ul {
-    background: #fff0;
+        background: #fff0;
+    margin: 0;
+    list-style: none;
     width: 100% !important;
     padding: 0 !important;
-    list-style: none;
-    margin: 0
+    left: 0;
+    top: 20px;
 }
-
+.page-tabs ul li button {
+    border-radius: 30px !important;
+    padding: 15px 40px !important;
+}
 .air-quality-standard-sec {
     padding-top: 50px
 }
@@ -2961,10 +3349,6 @@ img.para-bg {
     margin-bottom: -60px !important
 }
 
-.out ul {
-    width: 20% !important;
-    top: -140px
-}
 
 .air-standard-parameter {
     display: flex
@@ -3163,13 +3547,16 @@ img.para-bg {
 }
 
 .dash-content ul {
+    gap: 30px;
     background: #fff0;
-    list-style: none;
     margin: 0;
-    padding: 0 0 30px !important;
+    list-style: none;
     display: flex;
+    top: 30px;
     width: 100% !important;
-    gap: 20px
+    padding: 0 0 30px !important;
+    left: 0;
+    justify-content: center;
 }
 
 .tv-web-btn {
@@ -3557,17 +3944,23 @@ img.para-bg {
 }
 
 .types-of-tab ul {
-    background: #E4E7EC;
+      background: #e4e7ec;
     border-radius: 50px;
-    padding: 7px !important;
-    width: 26% !important;
-    left: 400px;
-    top: -50px;
-    margin-top: -60px !important
+    justify-content: space-between;
+    position: relative;
+    top: -80px;
+    left: 850px;
+    width: 34% !important;
+    margin-top: 0 !important;
+    padding: 7px !important
 }
 
 .types-of-tab ul li a {
     border-radius: 50px
+}
+    .types-of-tab ul li button {
+    border-radius: 30px !important;
+    padding: 15px 25px !important;
 }
 
 .type-of-air-quality-heading h2 {
@@ -3583,13 +3976,14 @@ img.para-bg {
 }
 
 .types-air-quality-contect {
+  -webkit-backdrop-filter: blur(5.5px);
     background: #f4f8feba;
-    backdrop-filter: blur(40.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    border-left: 1px solid rgb(255 255 255 / 32%);
-    border-right: 1px solid rgb(255 255 255 / 35%);
+    border-left: 1px solid #ffffff52;
+    border-right: 1px solid #ffffff59;
     margin-top: -130px;
-    padding: 50px 50px 70px
+    padding: 50px 50px 70px;
+    position: relative;
+    backdrop-filter: blur(10.5px);
 }
 
 .types-air-quality-contect h3 {
