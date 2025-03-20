@@ -244,7 +244,7 @@ ul.rate_list li {
 
 /* Remote Data Section */
 .remote-data-section {
-    background: url("	https://www.pranaair.com/wp-content/uploads/2023/08/remote-data-bg-scaled.jpg");
+    background: url("https://www.pranaair.com/wp-content/uploads/2023/08/remote-data-bg-scaled.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -420,7 +420,7 @@ li.image-box h5 {
 }
 
 .app-key-feature-mobile-bg {
-    background: url("	https://www.pranaair.com/wp-content/uploads/2023/08/mobile-app-data.png");
+    background: url("https://www.pranaair.com/wp-content/uploads/2023/08/mobile-app-data.png");
     background-repeat: no-repeat;
     background-size: 215px;
     background-position: center;
@@ -1136,7 +1136,6 @@ img.dashborad-img {
 }
 
 .contact_content_box:after {
-    background: url("/placeholder.svg?height=160&width=160");
     width: 160px;
     height: 160px;
     content: "";
