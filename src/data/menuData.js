@@ -282,7 +282,7 @@ const menuData = {
     },
     about: {
       name: "About",
-      icon: "ℹ️",
+      icon: <img src="/icons/about.png" alt="About" width={20} height={20} />,
       link: "/about", 
     },
   }

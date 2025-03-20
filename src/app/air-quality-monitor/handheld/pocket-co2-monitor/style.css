@@ -1,0 +1,1853 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+p {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+    font-family: "Nunito Sans", sans-serif;
+    text-decoration: none !important;
+}
+
+/* Banner Section */
+.pocket_banner_box {
+    background: url("https://www.pranaair.com/wp-content/uploads/2023/08/prana-air-pocket-co2-monitor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.banner-content h1 {
+    font-size: 45px;
+    color: #31343d;
+    font-weight: 600;
+    padding-right: 150px;
+    line-height: 55px;
+}
+
+.banner-txt {
+    color: #77b160;
+    font-weight: 800;
+}
+
+.banner-content p {
+    color: #51526a;
+    font-size: 18px;
+    padding-right: 43%;
+}
+
+.banner-content ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 20px;
+    padding-left: 0;
+}
+
+.banner-content ul li {
+    color: #31343d;
+    font-size: 17px;
+    position: relative;
+    height: 40px;
+}
+
+.banner-btn {
+    font-size: 16px;
+    background: #77b160;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px 0;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.banner-btn:hover {
+    color: #fff;
+    background: #5a9947;
+}
+
+.banner-content {
+    margin-top: 150px;
+}
+
+/* Qualitative Features Section */
+.qualitytative_features_section {
+    padding: 100px 0 0;
+}
+
+.title_heading.circle_heading {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    width: 50%;
+}
+
+.features_detail_box ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features_detail_box li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fetures_name {
+    font-size: 15px;
+    display: block;
+    color: #000;
+    padding-top: 10px;
+}
+
+.border_left_line {
+    border-left: 1px solid #d9dfd8;
+}
+
+/* Multiple User Interfaces Section */
+.multi-data-content h2 {
+    text-align: left;
+    margin: 0 0 20px;
+}
+
+.multi-data-content p {
+    color: #51526a;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tablinks {
+    border: 0;
+    border-radius: 5px;
+    background: #f5f5f5;
+    margin-bottom: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.tablinks ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px 0px;
+    width: 230px;
+}
+
+.tablinks ul li img {
+    width: 35px;
+    margin-top: -10px;
+    filter: invert(1);
+}
+
+.tablinks ul li h3 {
+    color: #31343d;
+    font-size: 18px;
+    margin: 0 0 -6px;
+}
+
+.tablinks ul li {
+    text-align: left;
+}
+
+.tablinks ul li p {
+    color: #51526a;
+    font-size: 14px;
+}
+
+.tablinks.active {
+    background: #77b160;
+    box-shadow: 0px 5px 4px #e2e0e0;
+}
+
+.tablinks.active ul li img {
+    filter: invert(0);
+}
+
+.tablinks.active ul li h3 {
+    color: #fefafa;
+}
+
+.tablinks.active ul li p {
+    color: #fff;
+}
+
+.tabcontent {
+    display: none;
+    animation: 1s fadeEffect;
+    text-align: center;
+    padding-top: 130px;
+}
+
+.tabcontent img {
+    height: auto;
+}
+
+ul.rate_list li img {
+    width: 20px;
+    margin-right: 7px;
+    height: auto;
+}
+
+ul.rate_list li {
+    font-size: 17px;
+    color: #000;
+    padding: 0 12px;
+    border-right: 1px solid #000;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+.banner-btn img {
+    height: auto;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Remote Data Section */
+.remote-data-section {
+    background: url("	https://www.pranaair.com/wp-content/uploads/2023/08/remote-data-bg-scaled.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 70px;
+    height: 475px;
+    overflow: visible;
+}
+
+.remote-data-para {
+    padding-top: 50px;
+}
+
+.remote-data-para p {
+    color: #51526a;
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.remote-data-iamges ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 207px;
+    padding-left: 0;
+}
+
+.screen-monitor {
+    width: 190px;
+    height: auto;
+}
+
+.wife {
+    width: 100px;
+    position: relative;
+    left: -40px;
+    height: auto;
+}
+
+.aqi-cloud {
+    width: 135px;
+    position: relative;
+    left: -80px;
+    height: auto;
+}
+
+.mob-app {
+    width: 220px;
+    position: relative;
+    left: -50px;
+    top: -100px;
+    height: auto;
+}
+
+.image-box {
+    position: relative;
+}
+
+.image-box:before {
+    position: absolute;
+    content: "";
+    border: 2px dashed #0dacef;
+    width: 140px;
+    right: -110px;
+    top: 50px;
+}
+
+.image-box-first {
+    position: relative;
+}
+
+.image-box-first:before {
+    position: absolute;
+    content: "";
+    border: 2px dashed #0dacef;
+    width: 140px;
+    right: -170px;
+    top: 90px;
+}
+
+.image-box-first h5 {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+li.image-box h5 {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    top: 130px;
+}
+
+.remote-data-iamges ul li:last-child h5 {
+    position: relative;
+    top: -60px;
+}
+
+/* App Key Features */
+.app-key-features {
+    margin-top: 100px;
+    padding-top: 70px;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 100px;
+}
+
+.app-key-features::before {
+    position: absolute;
+    content: "";
+    height: 700px;
+    background: radial-gradient(#cfd2e4, #e9eef4);
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+.aqi-dashboard-para p {
+    text-align: center;
+    color: rgb(43 43 43);
+    font-size: 20px;
+    padding: 0px 320px;
+    font-weight: 700;
+}
+
+.application-tabs {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.app-tab {
+    padding: 15px 20px;
+    background-color: #fafafa;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: block;
+    color: #31343d;
+    width: 40%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.app-tab:hover {
+    background-color: #77b160;
+    color: #fff;
+}
+
+.app-tab.active {
+    background-color: #77b160;
+    color: #fff;
+    box-shadow: 0px 5px 5px #24341e2e;
+}
+
+.app-tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    animation: fadeEffect 1s;
+}
+
+.app-tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.app-key-feature-mobile-bg {
+    background: url("	https://www.pranaair.com/wp-content/uploads/2023/08/mobile-app-data.png");
+    background-repeat: no-repeat;
+    background-size: 215px;
+    background-position: center;
+    padding: 0px 0;
+}
+
+.app-key-feature-mobile-bg ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    top: 30px;
+    position: relative;
+    padding-left: 0;
+}
+
+.app-key-feature-mobile-bg img {
+    width: 220px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px #80808042;
+    cursor: pointer;
+    height: auto;
+}
+
+.app-key-feature-mobile-bg ul li {
+    width: 100%;
+}
+
+.br-clr.active {
+    border: 3px solid #77b160;
+    border-radius: 30px;
+}
+
+.app-tab-content p {
+    font-size: 14px;
+    color: #fdfafa;
+    margin: 15px 0 15px;
+    background: #0101016e;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eeee;
+}
+
+/* Data Connectivity Section */
+.data_connectivity_section {
+    margin-top: 100px;
+}
+
+.how-it-work-sec {
+    position: relative;
+}
+
+.workbody_cntr {
+    display: flex;
+    align-items: center;
+}
+
+.work-body {
+    cursor: pointer;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    width: 55%;
+
+}
+
+.work-body.active_aqi_tab {
+    background: #f2f8f0;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.work-img {
+    border: 2px dashed #68b555;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    z-index: 990;
+}
+
+.work-detail {
+    padding-left: 35px;
+}
+
+.work-detail h4 {
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.work-detail p {
+    margin-bottom: 0px;
+    width: 60%;
+}
+
+.step {
+    position: absolute;
+    right: 172px;
+    top: 0;
+}
+
+.hiddenStepInfo {
+    display: none;
+}
+
+.activeStepInfo {
+    display: block !important;
+}
+
+.download_ap_box h5 {
+    font-size: 18pt;
+    margin-bottom: 15px;
+}
+
+.download_ap_box p {
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.app_store_btn {
+    float: left;
+    margin-right: 10px;
+}
+
+/* Product Slider */
+.pocket_flex_slider {
+    padding: 180px 0 40px;
+}
+
+.new-tabcontent {
+    display: none;
+    padding: 0 20px;
+    animation: fadeEffect 1s;
+    text-align: center;
+}
+
+.new-tabcontent img {
+    width: 80%;
+    height: auto;
+}
+
+.new-tab {
+    text-align: center;
+    background: none;
+    border: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.new-tab button {
+    padding: 0px;
+    background: #eee;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 0;
+}
+
+.new-tab button.active {
+    background-color: #69b555;
+}
+
+.new-tablinks img {
+    width: 80px;
+}
+
+/* Features Section */
+.introduce_features {
+    margin: 50px 0 0;
+    background: transparent;
+    padding: 0;
+}
+
+.introduce_features ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.introduce_features li {
+    width: 33.33%;
+    float: left;
+    padding: 15px 0;
+    color: #000;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.highlight_feature {
+    color: #66b355;
+    border-bottom: 1px solid #66b355;
+    display: table;
+}
+
+.introduce_button {
+    display: flex;
+}
+
+.pocket_buy_btn {
+    background: #66b355;
+    box-shadow: none;
+    width: 30%;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.pocket_buy_btn:hover {
+    color: #fff;
+    background: #5a9947;
+}
+
+.black_download_brochure {
+    background: #000;
+    gap: 10px;
+}
+
+/* Technical Specifications */
+.tech-spec-section {
+    padding-top: 160px;
+    padding-bottom: 60px;
+}
+
+.tech-spec-heading p {
+    color: #31343d;
+    font-size: 28px;
+    margin: 0;
+    position: relative;
+    z-index: 99;
+}
+
+.tech-spec {
+    margin-top: 15px;
+}
+
+.tech-spec-colm ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.tech-spec-colm ul li {
+    display: flex;
+    gap: 0px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.tech-spec-colm ul li h6 {
+    font-size: 17px;
+    color: #677580;
+    width: 50%;
+}
+
+.tech-spec-colm ul li h5 {
+    color: #31343d;
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+}
+
+.tech-spec-row-bg {
+    background: #f4f3f5;
+    padding: 20px 0;
+}
+
+/* NDIR Technology Section */
+.ndir-techo-section {
+    margin-top: 100px;
+    background: url("https://www.pranaair.com/wp-content/uploads/2023/10/ndir-sensor-bg-scaled.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.ndir-sensor-taxt {
+    padding-top: 100px;
+}
+
+.ndir-sensor-taxt h2 {
+    color: #3f4045;
+    font-size: 46px;
+    font-weight: 800;
+}
+
+.ndir {
+    color: #77b160;
+}
+
+.ndir-sensor-taxt h3 {
+    color: #31343d;
+    font-size: 28px;
+    font-weight: 800;
+    padding-top: 10px;
+}
+
+.ndir-sensor-taxt p {
+    color: #51526a;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.ndir-sensor-taxt a {
+    font-size: 17px;
+    background: #77b160;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* CO2 Health Index */
+.quality_range_section {
+    background-color: #fff2dd;
+    padding: 50px 0;
+}
+
+.introducing_box {
+    padding-top: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center p {
+    font-size: 16px;
+    color: #383838;
+    line-height: 1.6;
+}
+
+.range_section {
+    margin-top: 50px;
+}
+
+.range_cntr {
+    padding: 275px 70px 10px;
+}
+
+.range_cntr ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+.range_cntr li {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.range_text {
+    font-weight: 600;
+    position: relative;
+    z-index: 9;
+}
+
+.range_color {
+    width: 100%;
+    height: 13px;
+    margin: 8px 0;
+    position: relative;
+    z-index: 9;
+}
+
+.good_range .range_text {
+    color: #0c9914;
+}
+
+.good_range .range_color {
+    background: #0c9914;
+}
+
+.moderate_range .range_text {
+    color: #d2c900;
+}
+
+.moderate_range .range_color {
+    background: #d2c900;
+}
+
+.poor_range .range_text {
+    color: #e64a19;
+}
+
+.poor_range .range_color {
+    background: #e64a19;
+}
+
+.unhealthy_range .range_text {
+    color: #ed4d9f;
+}
+
+.unhealthy_range .range_color {
+    background: #ed4d9f;
+}
+
+.serve_range .range_text {
+    color: #93519e;
+}
+
+.serve_range .range_color {
+    background: #93519e;
+}
+
+.hazaedous_range .range_text {
+    color: #be1426;
+}
+
+.hazaedous_range .range_color {
+    background: #be1426;
+}
+
+small.range_no {
+    position: relative;
+    z-index: 9;
+    font-size: 14px;
+    font-weight: 600;
+    color: #383838;
+}
+
+.hover_range_box {
+    position: absolute;
+    top: -140px;
+    left: 46%;
+    transform: translate(-47%, 0);
+}
+
+.hover_range_box img {
+    width: 55px;
+    height: auto;
+}
+
+.tooltip_aqi {
+    position: absolute;
+    top: -87px;
+    left: -204px;
+    text-align: left;
+    background-image: linear-gradient(-70deg, #efeff0, #fff);
+    padding: 11px 15px;
+    border-radius: 10px;
+    width: 246px;
+    visibility: hidden;
+}
+
+.active_range .tooltip_aqi {
+    visibility: visible;
+}
+
+.range_cntr li.good_range .hover_range_box {
+    visibility: visible !important;
+}
+
+/* Places with High CO2 */
+.pocket_monitor_cntr {
+    position: relative;
+    margin-bottom: -20px;
+    margin-top: 40px;
+}
+
+.pocket_monitor_cntr img {
+    width: 100%;
+    height: auto;
+}
+
+.pocket_overlay_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.pocket_monitor_cntr:hover .pocket_overlay_box {
+    opacity: 1;
+}
+
+.pocket_overlay_box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.pocket_overlay_box p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Trusted By Section */
+.trusted-by-section {
+    padding: 50px 0;
+}
+
+.client-logos {
+    text-align: center;
+    box-shadow: 0px 4px 5px #8080803b;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.dashboard-data {
+    padding-top: 100px;
+}
+
+.dashboard-data ul {
+    list-style: none;
+    margin: 0;
+}
+
+.dashboard-data ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    gap: 10px;
+}
+
+.dashboard-data ul li img {
+    width: 50px;
+    height: auto;
+}
+
+.dashboard-data ul li h5 {
+    color: #31343D;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+img.dashborad-img {
+    width: 800px;
+    margin-top: -100px;
+    position: relative;
+    left: 200px;
+    top: 70px;
+    height: auto;
+}
+
+.tv-img {
+    width: 66% !important;
+    top: 200px !important;
+    left: 300px !important;
+    height: auto;
+}
+
+.product-tabs ul {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.mob-row {
+    margin-top: 20px;
+}
+
+.ndir-sensor-img img {
+    height: auto;
+}
+
+/* Smallest & Portable Section */
+.smallest_portable_monitore-section {
+    background: url("https://www.pranaair.com/wp-content/uploads/2023/08/smallest-portable-bg-scaled.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 270px;
+    border-radius: 20px;
+    margin: 100px 0;
+    padding-top: 20px;
+}
+
+.smallest-portable-heading {
+    padding-left: 80px;
+}
+
+.smallest-portable-heading h2 {
+    font-size: 41px;
+    font-weight: bold;
+}
+
+.smallest-portable-heading h3 {
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+.buy-btns {
+    margin-top: 50px;
+}
+
+.buy-btns ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    padding-left: 0;
+}
+
+.buy-btns ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 8px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px #8080804a;
+    display: inline-block;
+}
+
+.buy-btns ul li:first-child a {
+    background: #68b555;
+}
+
+.buy-btns ul li:last-child a {
+    background: #e98c0e;
+}
+
+/* Contact Section */
+.contact-page-section {
+    text-align: center;
+    position: relative;
+    padding-top: 170px;
+    overflow: visible;
+}
+
+.contact-page-section:before {
+    position: absolute;
+    content: "";
+    background: #77b16026;
+    width: 100%;
+    height: 500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 100px;
+    z-index: -1;
+}
+
+.contact-page-heading h2 {
+    color: #31343d;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.contact-page-heading p {
+    color: #677580;
+    font-size: 18px;
+}
+
+.airquality_inner_form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 0 auto;
+    position: relative;
+    width: 1030px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 15px #80808045;
+}
+
+.airquality_inner_form .contact_content_box {
+    background: #77b160;
+    width: 35%;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    padding: 30px 15px 75px;
+}
+
+.contact_information_box h4 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.contact_information_box p {
+    color: #fff;
+    font-weight: 300;
+}
+
+.contact_info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact_info li {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contact_info li i {
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.contact_content_box:after {
+    background: url("/placeholder.svg?height=160&width=160");
+    width: 160px;
+    height: 160px;
+    content: "";
+    position: absolute;
+    bottom: -92px;
+    left: -25px;
+    z-index: 0;
+    background-size: 66%;
+}
+
+.form-area-box {
+    width: 65%;
+    padding: 6px 0 0 60px;
+}
+
+.airquality_contact_box input.form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #60606073;
+    padding-left: 4px;
+    background: transparent;
+}
+
+.airquality_contact_box textarea.form-control {
+    max-height: 78px;
+    border: none;
+    border-bottom: 1px solid #60606073;
+    padding-left: 4px;
+    background: transparent;
+}
+
+.airquality_contact_box button.btn-primary {
+    background: #77b160;
+    border: none;
+    width: auto;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+.clean-air-img img {
+    width: 100%;
+    height: auto;
+}
+
+h2.title_heading {
+    padding-top: 120px;
+    width: 60%;
+}
+
+h2.trusted_heading {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.client-logos img {
+    height: auto;
+    width: 40%;
+}
+
+.places_heading {
+    padding-top: 60px;
+}
+
+.app-nav-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.app-tabs {
+    padding-top: 40px;
+}
+
+.app-nav-tabs li .active {
+    background-color: #66b355;
+    color: #fff;
+    box-shadow: 0 3px 0 1px #dbebd6;
+    border-radius: 10px !important;
+    border-top: 1px solid #dbebd6;
+}
+
+.app-nav-tabs li button {
+    padding: 10px 20px !important;
+}
+
+.tab-pane {
+    height: 0;
+}
+
+.tab-pane.fade.show.active {
+    height: auto;
+}
+
+span.range_btn_Image img {
+    height: auto;
+}
+
+img.dashborad-Image {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+section.data-connectivity-section {
+    margin-top: 150px;
+}
+
+.connectivity-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px 0;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.step-icon img {
+    height: auto;
+    width: 40px;
+}
+
+.step-icon {
+    height: auto;
+}
+
+.connectivity-step.active-step {
+    background: #f2f8f0;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.download-app-section {
+    padding-top: 30px;
+}
+
+a.app-store-link img {
+    height: auto;
+    width: 110px;
+}
+
+.app-store-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.app-image-container img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h4.step-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+    .pocket_banner_box {
+        background-size: 600px;
+        height: auto;
+        background-position: top right;
+    }
+
+    .banner-content h1 {
+        font-size: 35px;
+        padding-right: 0;
+        line-height: 40px;
+        padding-top: 110px;
+    }
+
+    .banner-content {
+        text-align: center;
+        margin-top: 160px;
+    }
+
+    .banner-content p {
+        padding-right: 0;
+    }
+
+    .banner-content ul {
+        gap: 2px;
+        justify-content: space-evenly;
+    }
+
+    .banner-btn {
+        margin: 20px auto;
+        width: 50%;
+    }
+
+    .features_detail_box li {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .title_heading.circle_heading {
+        font-size: 24px;
+        margin-bottom: 10px;
+        padding-top: 0px;
+        width: 100%;
+    }
+
+    .qualitytative_features_section {
+        padding: 50px 0 0;
+    }
+
+    .fetures_name {
+        font-size: 15px;
+        padding-top: 0px;
+        line-height: 20px;
+    }
+
+    h2.title_heading {
+        padding-top: 60px;
+        width: 90%;
+        margin: 0 0 10px;
+    }
+
+    .tab {
+        display: flex;
+        gap: 10px;
+    }
+
+    .tablinks {
+        margin-right: 0;
+        padding: 0px 10px;
+    }
+
+    .tablinks ul {
+        display: block;
+        padding: 10px 0;
+        width: auto;
+    }
+
+    .tablinks ul li {
+        text-align: center;
+    }
+
+    .tablinks ul li img {
+        width: 25px;
+        margin-top: 0;
+        height: auto;
+    }
+
+    .tabcontent {
+        padding-top: 30px;
+    }
+
+    li.image-box h5 {
+        top: 20px;
+    }
+
+    .image-box-first h5 {
+        top: 20px;
+    }
+
+    .remote-data-iamges ul li:last-child h5 {
+        position: relative;
+        top: 20px;
+    }
+
+    ul.application-tabs li {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .image-box:before {
+        width: 60px;
+        right: 154px;
+        top: 140px;
+        transform: rotate(90deg);
+    }
+
+    .tooltip_aqi {
+        left: -194px;
+    }
+
+    .tablinks ul li h3 {
+        font-size: 13px;
+        margin: 0 0 0;
+        text-align: center;
+        line-height: 19px;
+    }
+
+    .tablinks ul li p {
+        font-size: 13px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .tabcontent img {
+        width: 100%;
+    }
+
+    .remote-data-section {
+        height: auto;
+        padding: 40px 0;
+        margin-top: 0px;
+    }
+
+    .remote-data-iamges ul {
+        display: block;
+        text-align: center;
+    }
+
+    .remote-data-iamges ul li {
+        margin-bottom: 100px;
+    }
+
+    .screen-monitor {
+        width: 140px;
+    }
+
+    .wife {
+        width: 80px;
+        left: 0;
+    }
+
+    .aqi-cloud {
+        width: 105px;
+        left: 0;
+    }
+
+    .mob-app {
+        width: 180px;
+        left: 0;
+        top: 0;
+    }
+
+    .app-key-features {
+        margin-top: 50px;
+        height: auto;
+        padding-top: 10px;
+        background: radial-gradient(#cfd2e4, #e9eef4);
+    }
+
+    .aqi-dashboard-para p {
+        padding: 0 0px;
+    }
+
+    .app-tab {
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        width: 95%;
+        text-align: center;
+        margin: 0 0px 10px;
+    }
+
+    .app-key-feature-mobile-bg ul {
+        gap: 10px;
+    }
+
+    .dashboard-data {
+        padding-top: 10px;
+    }
+
+    .pocket_flex_slider {
+        padding: 100px 0 40px;
+    }
+
+    .introduce_button {
+        gap: 10px;
+    }
+
+    .ndir-sensor-Image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .ndir-sensor-taxt {
+        padding-top: 0px;
+    }
+
+    h2.title_heading {
+        padding-top: 40px;
+        width: 100%;
+    }
+
+    .hover_range_box img {
+        width: 50px;
+        height: auto;
+    }
+
+    h2.trusted_heading {
+        padding-top: 20px;
+    }
+
+    .app-key-feature-mobile-bg {
+        background-size: 160px;
+        padding: 0px 0 70px;
+    }
+
+    .app-key-feature-mobile-bg img {
+        width: 155px;
+        border-radius: 0px;
+    }
+
+    .introduce_features li {
+        width: 49%;
+        padding: 10px 0;
+    }
+
+    .pocket_buy_btn {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .tech-spec-section {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .tech-spec-heading h2 {
+        font-size: 22px;
+    }
+
+    .tech-spec-colm ul li {
+        gap: 40px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .smallest_portable_monitore-section {
+        height: auto;
+        border-radius: 20px;
+        padding: 30px 0;
+        margin: 0px 0;
+    }
+
+    img.pocket-co-monitor-side-view {
+        height: auto;
+    }
+
+    .smallest-portable-heading {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .smallest-portable-heading h2 {
+        font-size: 25px;
+    }
+
+    .smallest-portable-heading h3 {
+        font-size: 24px;
+        padding-top: 0;
+    }
+
+    .buy-btns ul {
+        gap: 0px;
+        justify-content: space-evenly;
+    }
+
+    .buy-btns {
+        margin-top: 20px;
+    }
+
+    .buy-btns ul li a {
+        font-size: 14px;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+    .range_cntr {
+        padding: 206px 0 10px;
+        position: relative;
+        left: -11px;
+    }
+
+    .range_text {
+        font-size: 12px;
+    }
+
+    small.range_no {
+        font-size: 9px;
+    }
+
+    .airquality_inner_form {
+        width: 100%;
+    }
+
+    .airquality_inner_form .contact_content_box {
+        width: 100%;
+        padding: 30px 15px 25px;
+    }
+
+    .form-area-box {
+        width: 100%;
+        padding: 20px 0 0 0px;
+    }
+
+    .image-box-first:before {
+        width: 60px;
+        right: 154px;
+        top: 192px;
+        transform: rotate(90deg);
+    }
+
+    .app-nav-tabs {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .app-tabs {
+        padding-top: 40px;
+    }
+
+    .app-nav-tabs li .active {
+        background-color: #66b355;
+        color: #fff;
+        box-shadow: 0 3px 0 1px #dbebd6;
+        border-radius: 10px !important;
+        border-top: 1px solid #dbebd6;
+    }
+
+    .app-nav-tabs li button {
+        padding: 10px 20px !important;
+    }
+
+    .tab-pane {
+        height: 0;
+    }
+
+    .tab-pane.fade.show.active {
+        height: auto;
+    }
+
+    span.range_btn_Image img {
+        height: auto;
+    }
+
+
+    .pocket_portable_box img {
+        width: 100%;
+        height: auto;
+    }
+
+    ul.rate_list li {
+        font-size: 14px;
+        padding: 0 10px;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    ul.application-tabs li {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .pocket_slider_content {
+        padding-top: 40px;
+    }
+
+    .ndir-sensor-Image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .clean-air-Image img {
+        height: auto;
+        width: 100%;
+    }
+
+    img.pocket-co-monitor-side-view {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .pocket_banner_box {
+        background-size: 950px;
+        height: auto;
+        background-position: top left;
+    }
+
+    .banner-content h1 {
+        font-size: 33px;
+        padding-right: 50px;
+        line-height: 45px;
+    }
+
+    .banner-content {
+        margin-top: 50px;
+    }
+
+    .banner-content p {
+        font-size: 17px;
+        padding-right: 50px;
+    }
+
+    .tabcontent img {
+        width: 300px;
+        margin-top: 200px;
+        margin-right: 50px;
+    }
+
+    .remote-data-iamges ul {
+        display: flex;
+        text-align: center;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .image-box-first:before {
+        width: 60px;
+        right: -70px;
+        top: 50px;
+    }
+
+    .aqi-dashboard-para p {
+        font-size: 17px;
+        padding: 0;
+    }
+
+    .remote-data-iamges ul li:last-child h5 {
+        position: relative;
+        top: 30px;
+        font-size: 18px;
+    }
+
+    .image-box:before {
+        width: 60px;
+        right: -46px;
+        top: 30px;
+    }
+
+    .remote-data-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .wife {
+        left: 0;
+        width: 50px;
+    }
+
+    .aqi-cloud {
+        width: 75px;
+        left: 0;
+    }
+
+    .mob-app {
+        left: 0;
+        width: 110px;
+        top: 10px;
+    }
+
+    .app-tab {
+        width: 70%
+    }
+
+    .ndir-sensor-taxt {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .app-key-feature-mobile-bg img {
+        width: 160px;
+        border-radius: 10px;
+    }
+
+    .app-key-feature-mobile-bg {
+        background-size: 165px;
+    }
+
+    .pocket_portable_box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .clean-air-Image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .ndir-sensor-Image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pocket_buy_btn {
+        width: 50%;
+    }
+
+    .airquality_inner_form {
+        width: 100%;
+    }
+
+    .airquality_inner_form .contact_content_box {
+        width: 40%;
+    }
+
+    .form-area-box {
+        width: 60%;
+        padding: 10px 0 0 30px;
+    }
+
+    .banner-btn {
+        width: 50%;
+    }
+
+    .screen-monitor {
+        width: 100px;
+    }
+}
