@@ -1,0 +1,885 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap"); 
+
+.air-drone-page {
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2025/03/hero-background.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.hero-drone-image {
+  position: relative;
+  z-index: 2;
+  margin-top: -60px;
+  margin-bottom: -40px;
+}
+
+.hero-drone-image img {
+  max-width: 500px;
+  height: auto;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-request-quote {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-request-quote:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-request-quote svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-drone-image img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-drone-image {
+    margin-top: -40px;
+    margin-bottom: -30px;
+  }
+
+  .hero-drone-image img {
+    max-width: 350px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 80px 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-drone-image {
+    margin-top: -30px;
+    margin-bottom: -20px;
+  }
+
+  .hero-drone-image img {
+    max-width: 280px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn-request-quote {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Features Section */
+.features-section {
+  background-color: #000;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.features-intro {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Drone Category Section */
+.drone-category-section {
+  background-color: #000;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-tab {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.category-tab.active {
+  opacity: 1;
+  color: #4fc3f7;
+  font-weight: 600;
+}
+
+.category-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4fc3f7;
+}
+
+.sticky-tabs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sticky-tabs .category-tab {
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .sticky-tabs {
+    padding: 10px 0;
+  }
+
+  .sticky-tabs .category-tab {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+}
+
+.drone-details {
+  padding: 20px 0;
+  position: relative;
+}
+
+.drone-info {
+  padding-right: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.drone-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.drone-description {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.drone-description p {
+  margin-bottom: 15px;
+}
+
+.drone-description strong {
+  font-weight: 700;
+  color: #4fc3f7;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #8bc34a;
+  font-size: 0.9rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.drone-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-request {
+  background-color: #4fc3f7;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-request:hover {
+  background-color: #3da8d9;
+}
+
+.btn-brochure {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-brochure:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #4fc3f7;
+}
+
+.drone-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.drone-image {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  flex: 1;
+}
+
+.drone-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Slider Card Styles */
+.slider-card {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.slider-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-arrow {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.slider-arrow:hover {
+  opacity: 1;
+}
+
+.slider-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.slider-thumbnail {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-thumbnail.active {
+  border-color: #4fc3f7;
+  background-color: rgba(79, 195, 247, 0.2);
+}
+
+.slider-thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.navigation-dots {
+  display: none;
+}
+
+/* Large drone title overlay */
+.drone-title-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  line-height: 1;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Specification cards - COMPLETELY REVISED */
+.specs-container {
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.specs-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.spec-card {
+  background-color: rgba(18, 18, 18, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* First row cards */
+.spec-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-card-text .spec-title {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: lowercase;
+}
+
+/* Cards with blue numbers */
+.spec-card-value {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-card-value .spec-value {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #4fc3f7;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.spec-card-value .spec-unit {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #4fc3f7;
+  display: inline;
+}
+
+.spec-card-value .spec-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: lowercase;
+  margin-top: 5px;
+}
+
+/* Cards with descriptions */
+.spec-card-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-card-description .spec-title {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.spec-card-description .spec-description {
+  font-size: 1rem;
+  color: #4fc3f7;
+  font-weight: 500;
+}
+
+.spec-card-description .spec-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 5px;
+}
+
+/* Quad Drone Specific Styles - UPDATED to match design */
+.quad-specs {
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+/* We're reusing the specs-row and spec-card classes from the VTOL section 
+   to maintain consistency and reduce duplicate code */
+
+/* Responsive adjustments for Quad specs */
+@media (max-width: 992px) {
+  .quad-specs .specs-row:nth-child(1) .spec-card {
+    flex: 1 1 calc(33.333% - 10px);
+    min-width: 150px;
+  }
+
+  .quad-specs .specs-row:nth-child(2) .spec-card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quad-specs .specs-row:nth-child(1) .spec-card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+  }
+
+  .quad-specs .specs-row:nth-child(2) .spec-card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .quad-specs {
+    margin-top: 20px;
+  }
+
+  .quad-specs .specs-row {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .drone-title-overlay {
+    font-size: 6rem;
+  }
+
+  .specs-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-drone-image img {
+    max-width: 350px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .drone-info {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .drone-title {
+    font-size: 2.5rem;
+  }
+
+  .drone-title-overlay {
+    font-size: 5rem;
+    top: -20px;
+  }
+
+  .slider-card {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .slider-thumbnails {
+    flex-direction: row;
+  }
+
+  .slider-nav {
+    flex-direction: row;
+  }
+
+  .specs-row {
+    flex-wrap: wrap;
+  }
+
+  .specs-row .spec-card {
+    flex: 1 1 calc(33.333% - 10px);
+    min-width: 150px;
+  }
+
+  .specs-row:nth-child(2) .spec-card {
+    flex: 1 1 calc(20% - 12px);
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-drone-image img {
+    max-width: 300px;
+  }
+
+  .hero-section {
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: unset;
+  }
+
+  .feature-item {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .drone-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .drone-title-overlay {
+    font-size: 4rem;
+    top: -10px;
+    right: 0;
+  }
+
+  .drone-description {
+    text-align: left;
+  }
+
+  .drone-buttons {
+    justify-content: flex-start;
+  }
+
+  .navigation-dots {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .category-tabs {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* Specification cards - Mobile layout */
+  .specs-row {
+    flex-wrap: wrap;
+  }
+
+  .specs-row .spec-card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+  }
+
+  .specs-row:nth-child(2) .spec-card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+  }
+
+  .spec-card-value .spec-value {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .features-grid {
+    gap: 25px 15px;
+  }
+
+  .hero-drone-image img {
+    max-width: 250px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-text {
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .category-tab {
+    font-size: 1rem;
+  }
+
+  .drone-title {
+    font-size: 1.8rem;
+  }
+
+  .drone-title-overlay {
+    font-size: 3rem;
+  }
+
+  .btn-request,
+  .btn-brochure {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .slider-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .specs-container {
+    margin-top: 20px;
+  }
+
+  .specs-row {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .spec-card {
+    padding: 15px;
+  }
+
+  .spec-card-value .spec-value {
+    font-size: 2.5rem;
+  }
+
+  .spec-card-value .spec-unit {
+    font-size: 1rem;
+  }
+
+  .spec-card-value .spec-title,
+  .spec-card-text .spec-title,
+  .spec-card-description .spec-title {
+    font-size: 0.9rem;
+  }
+
+  .spec-card-description .spec-description {
+    font-size: 0.9rem;
+  }
+}
+
