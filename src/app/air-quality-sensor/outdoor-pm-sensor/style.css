@@ -1,0 +1,3291 @@
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@200..800&display=swap');
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Manrope' !important;
+}
+
+p {
+  font-family: 'Manrope' !important;
+}
+
+a {
+  font-family: 'Manrope' !important;
+  text-decoration: none;
+}
+
+.hero-section {
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/pm-sensor.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+}
+
+.hero-heading {
+  text-align: center;
+  padding-top: 180px;
+}
+
+.hero-heading h1 {
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero-heading p {
+  color: #ffffffed;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 34%;
+  line-height: 40px;
+}
+
+.range {
+  background: #d9fdc8fa;
+  border: 1px solid #7AB261;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #436831;
+  font-weight: 500;
+}
+
+.hero-heading a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 40px auto;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  background: #00000075;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 18px;
+  width: 20%;
+  transition: all .2s linear;
+}
+
+.hero-heading a img {
+  border-radius: 100%;
+  width: 10%;
+  transition: .2s linear;
+}
+
+.hero-heading a:hover {
+  background: #28482d;
+}
+
+.hero-heading a:hover img {
+  transform: translateX(10px);
+}
+
+.tab-container {
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.tab-button {
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #0000001C;
+  background-color: #F6F7F5;
+  border-radius: 20px;
+}
+
+.tab-button.active {
+  background-color: #d5f1c880;
+  border: 2px solid #7AB261;
+}
+
+.tab-button img {
+  width: 100%;
+}
+
+.tab-content img {
+  width: 100%;
+}
+
+.feature-heading h2 {
+  color: #263D4F;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 62px;
+  padding-bottom: 0px;
+}
+
+.amazing {
+  background: #7AB2612E;
+  border-radius: 20px;
+  border: 1px solid #7AB261;
+  padding: 0 15px;
+}
+
+.feature-heaidng {
+  padding-top: 10px;
+  background: #ffffff;
+  border-radius: 60px 60px 0 0;
+  margin-top: -50px;
+}
+
+.amazing-feature ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.amazing-feature ul li img {
+  width: 80px;
+}
+
+.amazing-feature ul li h3 {
+  color: #263D4F;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-top: 15px;
+}
+
+.amazing-feature {
+  margin: 0;
+}
+
+.amazing-feature ul li {
+  display: inline-block;
+  width: 21%;
+  padding-bottom: 30px;
+  border-right: 1px solid #0000001f;
+  padding-top: 50px;
+  height: 180px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.feature-sec {
+  border-top: 1px solid #00000029;
+  border-bottom: 1px solid #00000052;
+  margin-top: 20px;
+}
+
+.pm-tech-sec {
+  background: #FBFFF9;
+  padding-top: 100px;
+}
+
+.tech-img img {
+  width: 100%;
+}
+
+.feature-heading {
+  padding-top: 100px;
+}
+
+.feature-heading p {
+  color: #263D4F;
+  font-size: 32px;
+}
+
+.range-sec {
+  background: #e7ede4;
+  border-top: 1px solid #00000021;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.range-para p {
+  color: #263D4F;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  padding-right: 100px;
+}
+
+.green {
+  color: #659B4E;
+  font-weight: 600;
+}
+
+.range-heading h3 {
+  background: #7ab2614f;
+  border: 1px solid #7AB2612E;
+  color: #263D4F;
+  font-weight: 400;
+  padding: 10px 80px;
+  margin-top: 30px;
+}
+
+.seamless-img img {
+  width: 100%;
+}
+
+.seamless-sec {
+  padding-top: 150px;
+}
+
+.seamless-txt h2 {
+  color: #263D4F;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.seamless-para {
+  background: #FBFFF9;
+  margin: 0;
+  border: 1px solid #00000024;
+  padding: 60px 50px 60px 50px;
+  width: 430px;
+  margin-top: 80px;
+}
+
+.seamless-para p {
+  color: #263d4fe0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  width: 70%;
+}
+
+.sensor-img img {
+  width: 100%;
+}
+
+.amazing-feature ul li:nth-child(6) {
+  position: relative;
+  top: 20px;
+}
+
+.amazing-feature ul li:nth-child(7) {
+  position: relative;
+  top: 20px;
+}
+
+.amazing-feature ul li:nth-child(8) {
+  position: relative;
+  top: 0px;
+}
+
+.indoor-outdoor-sensor-tab-sec {
+  padding-top: 140px;
+}
+
+.tab-title h2 {
+  color: #263D4F;
+  font-size: 40px;
+  font-weight: 500;
+  width: 50%;
+  margin: 0 auto;
+  line-height: 52px;
+}
+
+.tab-title p {
+  color: #263D4F;
+  font-size: 18px;
+  padding-top: 10px;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.tab-content-box h2 {
+  color: #263d4f;
+  width: 70%;
+  text-align: left;
+  font-size: 24px;
+  line-height: 32px;
+  margin-left: 0;
+  line-height: 44px;
+}
+
+.tab-content-box h2 strong {
+  background: #7ab26170;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 1px solid #7ab2615c;
+}
+
+.tab-content-box p {
+  color: #263D4F;
+  text-align: left;
+  line-height: 30px;
+  padding-top: 50px;
+  width: 80%;
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.sensor-img p {
+  width: 100%;
+}
+
+.tab-box a {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #27272742 !important;
+  border-radius: 0 !important;
+}
+
+.tab-box ul {
+  display: flex !important;
+  gap: 35px;
+}
+
+.tab-box ul .vc_active {
+  background: #7AB261;
+}
+
+.tab-box ul .vc_active a {
+  color: #fff !important;
+}
+
+.tab-box ul li a .far {
+  transform: rotate(72deg) !important;
+}
+
+.tab-content-box {
+  background: #e7ede4;
+  border-radius: 15px;
+  padding-top: 20px;
+  height: 480px;
+  padding-left: 45px;
+  margin-top: 0px;
+}
+
+.sensnor-slider {
+  margin: 40px 0;
+}
+
+.tab-content-box a {
+  color: #263D4F;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #263D4F !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px !important;
+  justify-content: center;
+  width: 45%;
+  padding: 15px;
+  margin-top: -20px;
+  background: #FFFFFF75;
+  transition: .2s linear;
+}
+
+.tab-content-box a img {
+  border-radius: 100%;
+  width: 25px;
+}
+
+.tab-content-box a:hover {
+  box-shadow: 0px 5px 0px #263D4F;
+}
+
+.tab-heading {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button.tab-title.active {
+  background: #7AB261;
+  color: #fff;
+}
+
+.tab-title {
+  padding: 15px;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid;
+  color: #000;
+}
+
+.size-compare-img img {
+  width: 80%;
+}
+
+.size-compare-sec {
+  background: url(https://www.pranaair.com/wp-content/uploads/2024/12/size-comparison-bg.webp) rgb(0 0 0 / 80%);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  height: auto;
+  background-blend-mode: multiply;
+  border-bottom: 1px solid #fff;
+}
+
+.size-compare-img h2 {
+  color: #F7F7FC;
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 80px;
+}
+
+.size-compare-box-txt {
+  background: #000000;
+  padding: 80px 70px 0;
+  margin: 60px 0 0;
+  width: 580px;
+  border: 1px solid #ffffff4f;
+  border-radius: 0;
+  border-bottom: 0;
+}
+
+.size-compare-box-txt p {
+  color: #f7f7fce6;
+  font-size: 16px;
+  width: 80%;
+  padding-bottom: 30px;
+}
+
+.size-compare-box-txt ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-compare-box-txt ul li img {
+  width: 50px;
+}
+
+.size-compare-box-txt ul li h3 {
+  color: #F7F7FC;
+  font-size: 16px;
+  margin: 0;
+}
+
+.size-compare-box-txt ul li p {
+  color: #f7f7fced;
+  font-size: 16px;
+}
+
+.size-compare-box-txt ul li:last-child {
+  width: 50%;
+}
+
+.size-compare-box-txt ul li p {
+  padding-bottom: 20px;
+}
+
+.experince-sec {
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/outdoor-each-particular-matter.webp);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 900px;
+}
+
+.experince-heading h2 {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  color: #F7F7FC;
+  line-height: 50px;
+  font-weight: 400;
+}
+
+.experince-heading p {
+  text-align: center;
+}
+
+.experince-heading {
+  padding-top: 100px;
+}
+
+.experince-heading p {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.experince-heading ul {
+  list-style: none;
+  padding: 0;
+  margin: 100px 0 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.experince-heading ul li {
+  color: #F7F7FC;
+  font-size: 14px;
+  text-align: center;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.experince-heading ul li:nth-child(2) {
+  animation-duration: 2s;
+}
+
+.experince-heading ul li:nth-child(3) {
+  animation-duration: 4s;
+}
+
+.experince-heading ul li:nth-child(4) {
+  animation-duration: 2s;
+}
+
+.experince-heading ul li:nth-child(5) {
+  animation-duration: 5s;
+}
+
+.experince-heading ul li:nth-child(6) {
+  animation-duration: 3s;
+  margin-top: 150px;
+}
+
+.experince-heading ul li:nth-child(1) img {
+  width: 70px;
+  margin-top: 100px;
+}
+
+.experince-heading ul li:nth-child(2) img {
+  width: 90px;
+  margin-top: 200px;
+}
+
+.experince-heading ul li:nth-child(3) img {
+  width: 50px;
+  margin-top: 50px;
+}
+
+.experince-heading ul li:nth-child(4) img {
+  width: 70px;
+  margin-top: 200px;
+}
+
+.experince-heading ul li:nth-child(5) img {
+  width: 60px;
+  margin-top: 250px;
+}
+
+.experince-heading ul li:nth-child(6) img {
+  width: 75px;
+  margin-top: 0px;
+}
+
+.pm-indoor-heading h3 {
+  color: #fff;
+  font-weight: 400;
+}
+
+.pm-indoor-heading {
+  margin-top: 150px;
+  margin-left: -120px;
+}
+
+.particulate-matter-heading {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -230px;
+}
+
+.particulate-matter-heading h2 {
+  padding-top: 50px;
+  color: #fff;
+}
+
+.particulate-matter-heading p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 auto;
+  width: 60%;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+.pm-indoor-bg {
+  background: #b2b2b200;
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border-top: 1px solid #fff3;
+  border-bottom: 1px solid #ffffff2b;
+  margin-top: 0;
+  padding: 0;
+}
+
+.black-bg {
+  background: #000;
+  overflow: visible !important;
+}
+
+.pm-indoor-bg ul {
+  margin: 0;
+  padding: 0px;
+}
+
+.pm-indoor-bg ul li:last-child {
+  border-right: none;
+}
+
+.pm-indoor-bg ul li {
+  display: inline-block;
+  width: 23%;
+  border-right: 1px solid #ffffff3d;
+  padding: 20px 0;
+  margin-right: 20px;
+}
+
+.pm-indoor-bg ul li:last-child p {
+  padding-right: 50px;
+}
+
+.pm-indoor-bg ul li:nth-child(2) p {
+  padding-right: 60px;
+}
+
+.pm-indoor-bg ul li h4 {
+  background: #7ab2612e;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  color: #fff;
+  border: 1px solid #7ab261cc;
+  width: 80%;
+  font-size: 20px;
+}
+
+.pm-indoor-bg ul li p {
+  font-size: 16px;
+  padding-right: 50px;
+  color: #f7f7fcf5;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.pm-indoor-bg .wpb_content_element {
+  margin: 0;
+}
+
+.experince-heading p {
+  color: #f7f7fce8;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.source-sec {
+  background: #070504;
+  padding: 30px 100px;
+}
+
+.pm-indoor-bg ul li:last-child {
+  border-right: none;
+}
+
+.source-box h2 {
+  color: #F7F7FC;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.source-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.source-box ul li {
+  color: #F7F7FC;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.source-box ul li img {
+  width: 100%;
+}
+
+.source-box {
+  padding: 0 100px;
+}
+
+.data-compare-chart-img img {
+  width: 100%;
+}
+
+.data-compare-chart-heading h2 {
+  color: #263D4F;
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 50px;
+  line-height: 34px;
+  padding-top: 70px;
+}
+
+.border-line {
+  border: 1px solid #00000012;
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: auto 0px;
+}
+
+.marquee-inner {
+  display: flex;
+  animation: marquee 10s linear infinite;
+  gap: 10px;
+}
+
+.marquee-inner img {
+  width: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-img-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.marquee-img-box ul li {
+  width: 150px;
+  text-align: center;
+}
+
+.clinet-heading h3 {
+  color: #263D4F;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.border-bg {
+  background: #F6F7F5;
+}
+
+.marquee-img-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comapre-chart-para p {
+  color: #263D4F;
+  font-size: 16px;
+  padding: 30px 50px;
+}
+
+.border-left {
+  position: relative;
+}
+
+.border-left:before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #0000001c;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+}
+
+.comapre-chart-para {
+  position: relative;
+  margin: 0;
+}
+
+
+.app-sensor-sec {
+  padding-top: 150px;
+}
+
+.br-btm {
+  border-bottom: 1px solid #07070740;
+  margin-bottom: 50px;
+}
+
+.app-sensor-title img {
+  width: 100%;
+}
+
+.app-sensor-title h4 {
+  color: #263D4F;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.app-sensor-title p {
+  margin: 0;
+}
+
+.app-secnsor-slider {
+  padding-left: 230px;
+}
+
+.construction-site-sec {
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/constructions-site.webp);
+  background-size: cover;
+  background-position: center;
+  height: 1070px;
+  margin-top: 150px;
+}
+
+.construction-heading h2 {
+  color: #263D4F;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52px;
+}
+
+.construction-site-sec .construction-btn a {
+  width: 40%;
+  float: right;
+  text-decoration: none;
+}
+
+.construction-btn a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #263D4F;
+  font-size: 16px;
+  border: 1px solid #263D4F;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 50px;
+  width: 100%;
+  transition: .2s linear;
+}
+
+.construction-btn ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 50px;
+}
+
+.construction-btn ul li {
+  width: 30%;
+}
+
+.construction-btn a img {
+  width: 20px;
+}
+
+
+.construction-btn a:hover {
+  background: #67b455;
+  color: #fff;
+  border: none;
+}
+
+.construction-heading p {
+  color: #263D4F;
+  font-size: 18px;
+  line-height: 32px;
+  width: 80%;
+}
+
+.construction-bg {
+
+  /* From https: //css.glass */
+  background: rgb(0 0 0 / 18%);
+  backdrop-filter: blur(10.9px);
+  -webkit-backdrop-filter: blur(10.9px);
+  width: 90%;
+}
+
+.construct-site {
+  margin: 0 !important;
+  list-style: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #ffffff40;
+  padding: 30px 30px 30px 0px;
+  position: relative;
+}
+
+.dpcc {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  list-style: none !important;
+  justify-content: space-around;
+  padding: 40px 30px 40px 80px;
+}
+
+.construct-site li h3 {
+  color: #F1F9EF;
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.construct-site li {
+  color: #FFFFFF;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.construct-site:before {
+  position: absolute;
+  content: "";
+  background: #ffffff40;
+  height: 100%;
+  width: 1px;
+}
+
+.dpcc li img {
+  width: 70px;
+  height: auto;
+}
+
+.dpcc li:last-child {
+  width: 70%;
+}
+
+.dpcc li {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.dpcc li h4 {
+  color: #F1F9EF;
+  font-size: 27px;
+  line-height: 32px;
+}
+
+.case-studies-sec {
+  padding-top: 50px;
+}
+
+.laser-br {
+  margin-top: 20px;
+  border: 1px solid #0b0b0b1c;
+  padding: 40px;
+  position: relative;
+  background: #F9FAF8;
+}
+
+.laser-heading h3 {
+  color: #263D4F;
+  font-size: 24px;
+  background: #7AB2612E;
+  border: 1px solid #7ab261d1;
+  padding: 10px;
+  width: 75%;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.laser-heading h4 {
+  color: #263D4F;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+.laser-para p {
+  color: #263D4F;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  padding-left: 80px;
+}
+
+.laser-author p {
+  text-align: right;
+  width: 60%;
+  font-style: italic;
+  color: #263D4F;
+  float: right;
+}
+
+.laser-br:before {
+  position: absolute;
+  content: "";
+  background: #0b0b0b1c;
+  height: 100%;
+  width: 1px;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+
+.note-para img {
+  width: 100%;
+}
+
+.note-para p {
+  color: #263D4F;
+  font-size: 16px;
+}
+
+.study-link img {
+  width: 100%;
+}
+
+.study-link p {
+  color: #263D4F;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.pm-note-para {
+  padding-left: 40px;
+  padding-right: 80px;
+  line-height: 28px;
+}
+
+.study-para {
+  background: #7ab26114;
+  border: 1px solid #7ab2614f;
+  border-radius: 15px;
+  padding: 15px;
+  width: 70%;
+  float: right;
+}
+
+.calibration-bg {
+  background: #f9faf8;
+  border-right: 1px solid #0b0b0b1c;
+  border-left: 1px solid #0b0b0b1c;
+}
+
+.green-bg {
+  margin-top: 0;
+  background: #F7FDF4;
+}
+
+.laser-pm-case ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
+.laser-pm-case ul li img {
+  width: 100%;
+}
+
+.case-bg {
+  background: #f7fdf4;
+  border-bottom: 1px solid #0b0b0b1c;
+  border-right: 1px solid #0b0b0b1c;
+  border-left: 1px solid #0b0b0b1c;
+}
+
+.health-impact-sec {
+  padding-top: 130px;
+}
+
+.mob-flex {
+  display: flex;
+  gap: 15px;
+}
+
+.healt-impact-heading h2 {
+  color: #263D4F;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52px;
+}
+
+.healt-impact-img img {
+  width: 100%;
+}
+
+.healt-impact-img p {
+  margin: 0;
+}
+
+.healt-impact-img h4 {
+  color: #263D4F;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tech-spec-sec {
+  padding-top: 140px;
+}
+
+.tech-spec-heading h2 {
+  color: #263D4F;
+  font-size: 40px;
+  font-weight: 500;
+  width: 70%;
+  line-height: 50px;
+}
+
+.tech-spec-tabel ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+}
+
+.tech-spec-tabel ul li {
+  width: 45%;
+}
+
+.tech-spec-tabel ul li h3 {
+  color: #263d4fc9;
+  font-size: 16px;
+}
+
+.tech-spec-tabel ul li h4 {
+  color: #263D4F;
+  font-size: 18px;
+}
+
+.outdoor-bg-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.outdoor-bg-box ul li img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.outdoor-bg-box .wpb_wrapper {
+  display: flex;
+}
+
+.tech-bg {
+  background: #F7FDF4;
+}
+
+.outdoor-bg-box {
+  background: #f7fdf4;
+  border: 1px solid #0000002b;
+  padding: 60px 50px;
+  display: flex;
+}
+
+.outdoor-bg-box ul li h3 {
+  color: #263D4F;
+  font-size: 24px;
+  text-align: center;
+  line-height: 31px;
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+
+.tech-spec-heading {
+  padding-bottom: 40px;
+}
+
+.airqulality_contact_section.inner_container {
+  margin-top: 100px;
+  padding-top: 50px;
+  background: #f0f8f0;
+  height: auto;
+  overflow: visible !important;
+  padding-bottom: 50px;
+}
+
+.airquality_inner_form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 950px;
+  margin: 0 auto 30px;
+  box-shadow: 2px 2px 11px 0 #ccc
+}
+
+.airqulality_contact_section .contact_content_box {
+  background: #7AB261;
+  padding: 40px 20px 75px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden
+}
+
+.airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+  width: 60%;
+  padding: 6px 0 0 40px
+}
+
+.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: #7AB261;
+  border: none;
+  width: auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px
+}
+
+.title_heading {
+  text-align: center;
+  color: #263D4F;
+  font-size: 32px;
+  margin-bottom: 0;
+  font-weight: 800
+}
+
+.introducing_box p {
+  color: #677580;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 30px
+}
+
+.text-center {
+  text-align: center;
+  padding-bottom: 40px
+}
+
+.introducing_box {
+  padding: 15px 0
+}
+
+.contact_information_box h4 {
+  font-size: 25px;
+  color: #fff
+}
+
+.contact_information_box p {
+  color: #fff;
+  font-weight: 400;
+  padding-top: 10px
+}
+
+ul.contact_info {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+.contact_info li {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300
+}
+
+.contact_info li i {
+  font-size: 21px;
+  margin-right: 10px
+}
+
+.contact_content_box:after {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+  width: 160px;
+  height: 160px;
+  content: "";
+  position: absolute;
+  bottom: -92px;
+  left: -25px;
+  z-index: 0;
+  background-size: 66%
+}
+
+.airquality_contact_box input.wpcf7-form-control {
+  width: 100%;
+  margin-bottom: 15px !important;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px
+}
+
+.airquality_contact_box label {
+  width: 100%
+}
+
+.airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
+  max-height: 78px;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px
+}
+
+.also-like {
+  padding-top: 100px;
+  padding-bottom: 100px
+}
+
+.also-like-heading h2 {
+  color: #263D4F;
+  font-size: 32px;
+  font-weight: 600
+}
+
+.may-also ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center
+}
+
+.may-also ul li a img {
+  width: 95%;
+  transition: .3s linear
+}
+
+.may-also ul li {
+  text-align: center;
+  overflow: hidden
+}
+
+.may-also ul li a img:hover {
+  transform: scale(1.02)
+}
+
+.may-also ul li h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #263D4F;
+  font-size: 22px;
+}
+
+.may-also ul li h5 img {
+  border: 1px solid #263d4f;
+  width: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.may-also ul li a {
+  text-decoration: none
+}
+
+.aqi-box-bg {
+  display: flex;
+  align-items: end;
+  gap: 30px;
+  position: relative;
+  padding-top: 50px;
+}
+
+.pm-sensor {
+  width: 60% !important;
+}
+
+.aqi-box-bg:before {
+  position: absolute;
+  content: "";
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/chart-bg.webp);
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  bottom: -50px;
+}
+
+.indoor-sensor ul {
+  list-style: none;
+  margin: 0 0 60px;
+  text-align: center;
+}
+
+.indoor-sensor ul li img {
+  width: 100%;
+}
+
+.wifi-aqi ul {
+  list-style: none;
+  margin: 0;
+}
+
+.wifi-aqi {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  position: relative;
+  top: -50px;
+}
+
+.monitor ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.monitor ul li img {
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+}
+
+.aqi-box-bg ul li h3 {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.wifi-aqi ul li img {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.indoor-sensor {
+  position: relative;
+}
+
+.indoor-sensor:before {
+  position: absolute;
+  content: "";
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/arrow-line.png);
+  background-size: 100%;
+  width: 45px;
+  height: 7px;
+  transform: rotate(90deg);
+  left: 0px;
+  right: 0;
+  margin: 0 auto;
+  top: 160px;
+}
+
+.wifi-aqi:before {
+  position: absolute;
+  content: "";
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/arrow-line.png);
+  background-size: 100%;
+  width: 50px;
+  height: 7px;
+  left: -40px;
+  margin: 0 auto;
+  top: 30px;
+}
+
+.wifi-aqi:after {
+  position: absolute;
+  content: "";
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/arrow-line.png);
+  background-size: 100%;
+  width: 50px;
+  height: 7px;
+  right: 140px;
+  margin: 0 auto;
+  top: 30px;
+}
+
+.monitor {
+  position: relative;
+  top: -70px;
+}
+
+.monitor:before {
+  position: absolute;
+  content: "";
+  background: url(https://www.pranaair.com/wp-content/uploads/2025/01/arrow-line.png);
+  background-size: 100%;
+  width: 50px;
+  height: 7px;
+  left: -20px;
+  margin: 0 auto;
+  top: 40px;
+}
+
+.may-also a img {
+  width: 100%;
+}
+
+.may-also h5 {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.may-also h5 img {
+  width: 20px;
+}
+
+.may-also p {
+  margin: 0;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .may-also h5 {
+    font-size: 16px;
+  }
+
+  .may-also h5 img {
+    width: 15px;
+  }
+
+  .hero-heading h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .hero-heading {
+    padding-top: 100px;
+  }
+
+  .hero-section {
+    height: 500px;
+  }
+
+  .range {
+    padding: 5px 10px;
+  }
+
+  .hero-heading p {
+    font-size: 16px;
+    width: 100%;
+    line-height: 32px;
+  }
+
+  .hero-heading a {
+    font-size: 14px;
+    width: 70%;
+  }
+
+  .tab-container {
+    padding-top: 50px;
+  }
+
+  .feature-heaidng {
+    padding-top: 50px;
+    border-radius: 30px 30px 0 0;
+    margin-top: -30px;
+  }
+
+  .feature-heading h2 {
+    font-size: 22px;
+    line-height: 40px;
+  }
+
+  .amazing {
+    border-radius: 10px;
+    padding: 5px 15px;
+  }
+
+  .feature-sec .vc_row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .feature-sec {
+    border-top: none;
+    margin-top: 20px;
+    padding-bottom: 100px;
+  }
+
+  .tab-content img {
+    width: 100%;
+    display: block;
+    margin: 0px auto;
+  }
+
+  .tab-button {
+    border-radius: 10px;
+  }
+
+  .tabs {
+    gap: 5px;
+    width: 90%;
+    margin: 20px auto 0;
+  }
+
+  .amazing-feature ul li {
+    width: 43%;
+    padding-bottom: 10px;
+    border-right: none;
+    padding-top: 0;
+    height: auto;
+    border-bottom: 1px solid #00000026;
+  }
+
+  .amazing-feature ul li:nth-child(6) {
+    top: 0px;
+  }
+
+  .amazing-feature ul li:nth-child(8) {
+    top: 20px;
+  }
+
+  .amazing-feature ul li img {
+    width: 60px;
+  }
+
+  .amazing-feature ul li h3 {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 0;
+    margin-top: 0px;
+  }
+
+  .pm-tech-sec {
+    padding-top: 40px;
+  }
+
+  .feature-heading p {
+    font-size: 18px;
+  }
+
+  .tech-img img {
+    width: 100%;
+  }
+
+  .range-para p {
+    font-size: 16px;
+    line-height: 28px;
+    padding-right: 0px;
+  }
+
+  .range-heading h3 {
+    padding: 10px 20px;
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .seamless-sec {
+    padding-top: 60px;
+  }
+
+  .seamless-txt h2 {
+    font-size: 24px;
+    width: 90%;
+    line-height: 30px;
+  }
+
+  .aqi-box-bg {
+    gap: 40px;
+    padding-top: 10px;
+    flex-direction: column;
+  }
+
+  .aqi-box-bg:before {
+    height: 400px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  .indoor-sensor {
+    display: flex;
+  }
+
+  .indoor-sensor:before {
+    transform: rotate(0deg);
+    left: -100px;
+    right: 0;
+    margin: 0 auto;
+    top: 40px;
+  }
+
+  .indoor-sensor ul li img {
+    width: 55%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .pm-sensor {
+    width: 50% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .aqi-box-bg ul li h3 {
+    font-size: 12px;
+    line-height: 17px;
+    padding-top: 5px;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .wifi-aqi:before {
+    left: 200px;
+    top: -40px;
+    right: 0;
+    transform: rotate(90deg);
+  }
+
+  .wifi-aqi:after {
+    right: 150px;
+    transform: rotate(180deg);
+  }
+
+  .wifi-aqi {
+    gap: 20px;
+    flex-direction: row-reverse;
+    top: -30px;
+  }
+
+  .wifi-aqi ul li img {
+    width: 40%;
+    padding-bottom: 10px;
+  }
+
+  .monitor:before {
+    left: 0;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+  }
+
+  .monitor ul li img {
+    width: 50%;
+    margin: 50px auto 10px;
+  }
+
+  .monitor ul li h3 {
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 10px;
+  }
+
+  .seamless-para {
+    padding: 30px 20px;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .seamless-para p {
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+  }
+
+  .indoor-outdoor-sensor-tab-sec {
+    padding-top: 60px;
+  }
+
+  .tab-title h2 {
+    font-size: 24px;
+    width: 100%;
+    line-height: 32px;
+    text-align: left;
+  }
+
+  .tab-title p {
+    font-size: 16px;
+    padding-top: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .tab-box ul {
+    gap: 5px;
+  }
+
+  .tab-box a {
+    font-size: 14px;
+    padding: 12px 7px !important;
+  }
+
+  .feature-sec .vc_row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .monitor ul li h3 {
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 10px;
+  }
+
+  .tab-box .vc_tta-tabs-container {
+    display: block !important;
+  }
+
+  .vc_tta-panel-heading {
+    display: none;
+  }
+
+  .tab-title {
+    padding-top: 10px;
+  }
+
+  .tab-content-box {
+    border-radius: 10px;
+    padding-top: 20px;
+    height: auto;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+  }
+
+  .tab-content-box h2 {
+    width: 100%;
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 0;
+  }
+
+  .tab-content-box p {
+    line-height: 26px;
+    padding-top: 20px;
+    width: 100%;
+    font-size: 14px;
+    margin-left: 0;
+    padding-bottom: 10px;
+  }
+
+  .tab-content-box a {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .size-compare-img h2 {
+    font-size: 26px;
+    padding-bottom: 20px;
+  }
+
+  .size-compare-sec {
+    padding-top: 30px;
+    height: auto;
+  }
+
+  .size-compare-img img {
+    width: 100%;
+  }
+
+  .size-compare-box-txt {
+    padding: 20px;
+    margin: 10px 0 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    border-bottom: 0;
+  }
+
+  .size-compare-box-txt p {
+    font-size: 14px;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .size-compare-box-txt ul li img {
+    width: 40px;
+  }
+
+  .size-compare-box-txt ul li h3 {
+    font-size: 14px;
+  }
+
+  .size-compare-box-txt ul li p {
+    padding-bottom: 0px;
+  }
+
+  .size-compare-box-txt ul li p {
+    font-size: 14px;
+  }
+
+  .experince-heading {
+    padding-top: 50px;
+  }
+
+  .experince-heading h2 {
+    width: 100%;
+    padding-bottom: 10px;
+    line-height: 36px;
+    font-size: 24px;
+  }
+
+  .experince-heading p {
+    width: 100%;
+  }
+
+  .experince-heading p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .experince-sec {
+    height: 300px;
+  }
+
+  .experince-heading ul li:nth-child(6) {
+    margin-top: 0px;
+  }
+
+  .experince-heading ul {
+    margin: 0px;
+    gap: 10px;
+  }
+
+  .experince-heading ul li {
+    font-size: 12px;
+  }
+
+  .pm-indoor-heading h3 {
+    font-size: 18px;
+  }
+
+  .pm-indoor-bg {
+    background: rgb(11 11 11 / 65%);
+    padding: 0 0px;
+    margin-top: 0px;
+  }
+
+  .pm-indoor-bg ul li h4 {
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .pm-indoor-bg ul li:nth-child(4) {
+    position: relative;
+    top: 40px;
+  }
+
+  .pm-indoor-bg ul li p {
+    font-size: 13px;
+    padding-right: 0;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .pm-indoor-bg ul li:nth-child(2) p {
+    padding-right: 2px;
+  }
+
+  .pm-indoor-bg ul li:last-child p {
+    padding-right: 30px;
+  }
+
+  .pm-indoor-bg ul {
+    padding: 0 0 40px;
+    text-align: center;
+  }
+
+  .pm-indoor-heading {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  .source-sec {
+    background: #070504;
+    padding: 30px 0px;
+  }
+
+  .source-box h2 {
+    font-size: 18px;
+  }
+
+  .source-box ul {
+    display: block;
+  }
+
+  .source-box ul li {
+    font-size: 15px;
+    display: inline-block;
+    width: 49%;
+    padding-bottom: 10px;
+  }
+
+  .data-compare-chart-heading h2 {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 26px;
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .comapre-chart-para p {
+    font-size: 14px;
+    padding: 20px 10px 30px;
+  }
+
+  .clinet-heading h3 {
+    font-size: 18px;
+    padding-top: 30px;
+    width: 80%;
+    line-height: 28px;
+  }
+
+  .border-left:before {
+    width: 100%;
+    height: 1px;
+    top: 140px;
+  }
+
+  .marquee-img-box ul li {
+    width: 60px;
+  }
+
+  .marquee-inner {
+    gap: 0px;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .app-sensor-sec {
+    padding-top: 60px;
+  }
+
+  .app-secnsor-slider {
+    padding-left: 10px;
+  }
+
+  .app-sensor-title h4 {
+    font-size: 14px;
+  }
+
+  .construction-heading p {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .construction-heading h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .construct-site {
+    padding: 20px 0;
+  }
+
+  .construct-site li {
+    font-size: 14px;
+  }
+
+  .construct-site li h3 {
+    font-size: 32px;
+  }
+
+  .dpcc {
+    padding: 20px;
+  }
+
+  .dpcc li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .dpcc li img {
+    width: 50px;
+  }
+
+  .dpcc li h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .laser-br {
+    margin-top: 0px;
+    padding: 30px 0;
+  }
+
+  .laser-br:before {
+    display: none;
+  }
+
+  .laser-heading h3 {
+    font-size: 18px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .laser-heading h4 {
+    font-size: 18px;
+    line-height: 26px;
+    border-bottom: 1px solid #0000004d;
+    padding-bottom: 10px;
+  }
+
+  .laser-para p {
+    font-size: 14px;
+    line-height: 26px;
+    padding-left: 0px;
+  }
+
+  .laser-author p {
+    width: 70%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .note-para p {
+    font-size: 14px;
+  }
+
+  .pm-note-para {
+    padding-left: 20px;
+    padding-right: 30px;
+    line-height: 24px;
+  }
+
+  .study-link p {
+    font-size: 14px;
+  }
+
+  .study-para {
+    width: 90%;
+    float: none;
+    font-size: 14px;
+  }
+
+  .laser-pm-case ul {
+    flex-direction: column;
+    padding: 0 0 70px;
+  }
+
+  .laser-pm-case ul li {
+    margin-bottom: -50px;
+  }
+
+  .health-impact-sec {
+    padding-top: 50px;
+  }
+
+  .healt-impact-heading h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .healt-impact-img h4 {
+    font-size: 16px;
+  }
+
+  .healt-impact-img {
+    width: 200px;
+  }
+
+  .mob-flex {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .pm-indoor-bg ul li {
+    width: 44%;
+    padding: 20px 0 0;
+    margin-right: 10px;
+  }
+
+  .pm-indoor-bg ul li:nth-child(2) {
+    border-right: 0;
+  }
+
+  .experince-heading ul li:nth-child(1) img {
+    width: 40px;
+  }
+
+  .experince-heading ul li:nth-child(2) img {
+    width: 30px;
+    margin-top: 20px;
+  }
+
+  .experince-heading ul li:nth-child(3) img {
+    width: 40px;
+    margin-top: -10px;
+  }
+
+  .source-box {
+    padding: 0;
+  }
+
+  .experince-heading ul li:nth-child(4) img {
+    width: 30px;
+    margin-top: 100px;
+  }
+
+  .experince-heading ul li:nth-child(6) img {
+    width: 45px;
+    margin-top: 80px;
+  }
+
+  .experince-heading ul li:nth-child(5) img {
+    width: 40px;
+    margin-top: 10px;
+  }
+
+  .construction-btn a {
+    font-size: 14px;
+    width: 100%;
+    float: none;
+    background: #ffffffbd;
+    padding: 10px;
+  }
+
+  .construction-site-sec .construction-btn a {
+    width: 50%;
+    float: none;
+  }
+
+  .construction-btn ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .construction-btn ul li {
+    width: 50%;
+  }
+
+  .construction-heading {
+    margin: 0 0 15px;
+  }
+
+  .construction-site-sec {
+    height: auto;
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .tech-spec-sec {
+    padding-top: 50px;
+  }
+
+  .tech-spec-heading h2 {
+    font-size: 24px;
+    width: 70%;
+    line-height: 30px;
+  }
+
+  .tech-spec-heading {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  .tech-spec-tabel ul {
+    gap: 50px;
+  }
+
+  .tech-spec-tabel ul li h3 {
+    font-size: 12px;
+  }
+
+  .tech-spec-tabel ul li h4 {
+    font-size: 14px;
+  }
+
+  .outdoor-bg-box {
+    padding: 20px;
+  }
+
+  .outdoor-bg-box ul li h3 {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 30px;
+  }
+
+  .airqulality_contact_section.inner_container {
+    margin-top: 30px;
+    padding-top: 20px;
+    height: auto;
+  }
+
+  .title_heading {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .introducing_box p {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+  }
+
+  .introducing_box p {
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+  }
+
+  .airqulality_contact_section .contact_content_box {
+    padding: 20px 10px 25px;
+    width: 100%;
+  }
+
+  .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+    width: 100%;
+    padding: 30px 0 0 10px;
+  }
+
+  .also-like {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .also-like-heading h2 {
+    font-size: 24px;
+  }
+
+  .may-also ul {
+    display: block;
+  }
+
+  .may-also ul li {
+    overflow: visible;
+    display: inline-block;
+    width: 32%;
+  }
+
+  .may-also ul li a img {
+    width: 100%;
+  }
+
+  .may-also ul li h5 {
+    font-size: 11px;
+  }
+
+  .may-also ul li h5 img {
+    width: 10px;
+    padding: 3px;
+    border-radius: 3px;
+  }
+
+  .also-like-heading {
+    margin: 0;
+  }
+
+  .may-also ul li p {
+    display: none;
+  }
+
+  .feature-heading {
+    padding-top: 0px;
+  }
+
+  .particulate-matter-heading h2 {
+    padding-top: 30px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
+  }
+
+  .particulate-matter-heading p {
+    font-size: 14px;
+    margin: 0 auto;
+    width: 100%;
+    line-height: 24px;
+    color: #000;
+    font-weight: 400;
+  }
+
+  .particulate-matter-heading {
+    margin-bottom: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .hero-section {
+    height: 600px;
+  }
+
+  .hero-heading {
+    padding-top: 80px;
+  }
+
+  .hero-heading p {
+    width: 60%;
+  }
+
+  .feature-heading h2 {
+    font-size: 18px;
+    line-height: 44px;
+    padding-bottom: 5px;
+  }
+
+  .amazing {
+    border-radius: 10px;
+    padding: 6px 15px;
+  }
+
+  .feature-sec {
+    margin-top: 20px;
+  }
+
+  .amazing-feature {
+    padding: 20px 0 60px;
+  }
+
+  .amazing-feature ul li {
+    width: 27%;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    height: auto;
+  }
+
+  .amazing-feature ul li img {
+    width: 70px;
+  }
+
+  .amazing-feature ul li h3 {
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 0px;
+  }
+
+  .tab-button {
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .tabs {
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  .pm-tech-sec {
+    background: #FBFFF9;
+    padding-top: 50px;
+  }
+
+  .feature-heading p {
+    font-size: 24px;
+  }
+
+  .tech-img img {
+    width: 80%;
+  }
+
+  .range-para p {
+    font-size: 16px;
+    line-height: 25px;
+    padding-right: 40px;
+  }
+
+  .range-heading h3 {
+    padding: 10px 30px;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .seamless-sec {
+    padding-top: 80px;
+  }
+
+  .seamless-txt h2 {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .aqi-box-bg {
+    gap: 30px;
+    padding-top: 40px;
+  }
+
+  .wifi-aqi {
+    gap: 10px;
+    top: 0px;
+  }
+
+  .wifi-aqi:before {
+    top: 20px;
+  }
+
+  .wifi-aqi:after {
+    right: 100px;
+    top: 20px;
+  }
+
+  .source-box ul li {
+    font-size: 16px;
+  }
+
+  .monitor:before {
+    left: -20px;
+    top: 25px;
+  }
+
+  .tab-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tab-row .wpb_column {
+    width: 100%;
+  }
+
+  .indoor-sensor:before {
+    top: 135px;
+  }
+
+  .wifi-aqi ul li img {
+    width: 50%;
+  }
+
+  .monitor ul li img {
+    width: 50%;
+  }
+
+  .monitor {
+    top: -30px;
+  }
+
+  .seamless-para {
+    padding: 30px 20px 40px 20px;
+    width: 90%;
+    margin-top: 0px;
+  }
+
+  .indoor-sensor ul li img {
+    width: 100%;
+  }
+
+  .pm-sensor {
+    width: 100% !important;
+  }
+
+  .indoor-outdoor-sensor-tab-sec {
+    padding-top: 60px;
+  }
+
+  .tab-title h2 {
+    font-size: 30px;
+    width: 60%;
+    line-height: 42px;
+  }
+
+  .tab-title p {
+    width: 70%;
+  }
+
+  .tab-content-box {
+    padding-top: 20px;
+    height: auto;
+    padding-left: 25px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .tab-content-box h2 {
+    width: 100%;
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 0;
+  }
+
+  .tab-content-box p {
+    line-height: 25px;
+    padding-top: 20px;
+    width: 90%;
+    font-size: 14px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .tab-content-box a {
+    width: 80%;
+    margin-top: 0px;
+  }
+
+  .size-compare-img h2 {
+    font-size: 30px;
+    padding-bottom: 50px;
+  }
+
+  .size-compare-box-txt {
+    padding: 20px 20px 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    border-bottom: 0;
+  }
+
+  .size-compare-box-txt p {
+    font-size: 14px;
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .size-compare-box-txt ul li img {
+    width: 40px;
+  }
+
+  .size-compare-box-txt ul li h3 {
+    font-size: 14px;
+  }
+
+  .size-compare-box-txt ul li p {
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .experince-heading h2 {
+    width: 90%;
+    padding-bottom: 10px;
+  }
+
+  .experince-heading p {
+    width: 60%;
+    font-size: 16px;
+  }
+
+  .pm-indoor-bg ul li {
+    width: 48%;
+    padding: 30px 0 0;
+    margin-right: 10px;
+  }
+
+  .pm-indoor-bg ul li h4 {
+    border-radius: 12px;
+    width: 60%;
+    font-size: 16px;
+  }
+
+  .experince-heading {
+    padding-top: 40px;
+  }
+
+  .pm-indoor-bg ul li p {
+    font-size: 14px;
+    padding-right: 20px;
+    line-height: 23px;
+  }
+
+  .source-box {
+    padding: 0;
+  }
+
+  .source-sec {
+    padding: 30px 10px;
+  }
+
+  .pm-indoor-bg ul {
+    padding: 0px 0 20px;
+  }
+
+  .comapre-chart-para p {
+    padding: 30px;
+  }
+
+  .clinet-heading h3 {
+    width: 50%;
+  }
+
+  .app-sensor-sec {
+    padding-top: 60px;
+  }
+
+  .app-secnsor-slider {
+    padding-left: 20px;
+  }
+
+  .construction-heading h2 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .construction-btn a {
+    width: 100%;
+  }
+
+  .construction-site-sec .construction-btn a {
+    width: 70%;
+    float: right;
+  }
+
+  .construction-bg {
+    width: 110%;
+  }
+
+  .construction-btn ul li {
+    width: 60%;
+  }
+
+  .construction-btn ul {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .construction-heading p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 100%;
+  }
+
+  .construction-site-sec {
+    height: auto;
+    margin-top: 100px;
+  }
+
+  .construct-site {
+    padding: 30px 30px 30px 10px;
+  }
+
+  .dpcc {
+    padding: 40px 30px 40px 10px;
+  }
+
+  .dpcc li:last-child {
+    width: 90%;
+  }
+
+  .laser-br {
+    padding: 20px;
+  }
+
+  .laser-heading h3 {
+    font-size: 18px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .laser-heading h4 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .laser-para p {
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 20px;
+  }
+
+  .laser-author p {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  .pm-note-para {
+    line-height: 24px;
+  }
+
+  .note-para p {
+    font-size: 14px;
+  }
+
+  .study-link p {
+    font-size: 13px;
+  }
+
+  .study-para {
+    width: 90%;
+    float: none;
+  }
+
+  .laser-heading h4 {
+    font-size: 20px;
+  }
+
+  .health-impact-sec {
+    padding-top: 50px;
+  }
+
+  .healt-impact-heading h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .healt-impact-img h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .tech-spec-sec {
+    padding-top: 60px;
+  }
+
+  .tech-spec-heading h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .tech-spec-tabel ul {
+    gap: 50px;
+  }
+
+  .outdoor-bg-box {
+    padding: 40px 10px;
+  }
+
+  .outdoor-bg-box ul li h3 {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 30px;
+  }
+
+  .airqulality_contact_section.inner_container {
+    margin-top: 50px;
+    padding-top: 30px;
+    height: auto;
+  }
+
+  .may-also ul li h5 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .may-also ul li h5 img {
+    padding: 7px;
+    border-radius: 7px;
+  }
+
+  .also-like-heading {
+    margin-bottom: 0;
+  }
+
+  .sensor-img p {
+    width: 100% !important;
+  }
+
+  .marquee-img-box ul li {
+    width: 90px;
+  }
+
+  .feature-heading {
+    padding-top: 0px;
+  }
+
+  .feature-heaidng {
+    padding-top: 60px;
+  }
+
+  .experince-heading ul {
+    margin: 20px 0 0;
+  }
+
+  .experince-sec {
+    height: 470px;
+  }
+
+  .experince-heading ul li:nth-child(3) img {
+    margin-top: 150px;
+  }
+
+  .experince-heading ul li:nth-child(2) img {
+    width: 60px;
+  }
+
+  .experince-heading ul li:nth-child(1) img {
+    width: 50px;
+  }
+
+  .experince-heading ul li:nth-child(4) img {
+    width: 50px;
+  }
+
+  .experince-heading ul li:nth-child(6) img {
+    width: 55px;
+  }
+
+  .pm-indoor-bg {
+    margin-top: 0px;
+    padding: 0 10px;
+  }
+
+  .pm-indoor-heading {
+    margin-top: -20px;
+    margin-left: 20px;
+  }
+
+  .particulate-matter-heading p {
+    font-size: 16px;
+    width: 90%;
+    line-height: 28px;
+  }
+
+  .pm-indoor-bg ul li:nth-child(2) p {
+    padding-right: 50px;
+  }
+
+  .hero-heading a {
+    width: 40%;
+  }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .hero-section {
+    height: 600px;
+  }
+
+  .feature-heaidng {
+    padding-top: 50px;
+  }
+
+  .feature-heading h2 {
+    font-size: 30px;
+    line-height: 52px;
+  }
+
+  .amazing-feature ul li img {
+    width: 70px;
+  }
+
+  .amazing-feature ul li {
+    width: 20%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    height: auto;
+  }
+
+  .amazing-feature ul li:nth-child(6) {
+    position: relative;
+    top: 10px;
+  }
+
+  .amazing-feature ul li h3 {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 5px;
+  }
+
+  .pm-tech-sec {
+    padding-top: 50px;
+  }
+
+  .seamless-sec {
+    padding-top: 80px;
+  }
+
+  .seamless-txt h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .aqi-box-bg {
+    gap: 20px;
+  }
+
+  .wifi-aqi {
+    gap: 0px;
+  }
+
+  .indoor-sensor:before {
+    top: 130px;
+  }
+
+  .indoor-sensor ul li img {
+    width: 70%;
+  }
+
+  .pm-sensor {
+    width: 50% !important;
+  }
+
+  .monitor ul li img {
+    width: 50%;
+  }
+
+  .wifi-aqi ul li img {
+    width: 50%;
+    padding-bottom: 0px;
+  }
+
+  .wifi-aqi:before {
+    left: -50px;
+    top: 30px;
+  }
+
+  .wifi-aqi:after {
+    right: 100px;
+    top: 30px;
+  }
+
+  .monitor:before {
+    left: -30px;
+    top: 70px;
+  }
+
+  .seamless-para {
+    padding: 40px 20px 40px 20px;
+    width: 330px;
+  }
+
+  .indoor-outdoor-sensor-tab-sec {
+    padding-top: 50px;
+  }
+
+  .tab-title p {
+    width: 60%;
+  }
+
+  .tab-content-box {
+    padding-top: 20px;
+    height: auto;
+    padding-left: 25px;
+  }
+
+  .tab-content-box h2 {
+    color: #263D4F;
+    width: 90%;
+    text-align: left;
+    font-size: 22px;
+    line-height: 32px;
+    margin-left: 0;
+    line-height: 44px;
+  }
+
+  .tab-content-box p {
+    line-height: 24px;
+    padding-top: 20px;
+    width: 90%;
+    font-size: 14px;
+    margin-left: 0;
+    padding-bottom: 25px;
+  }
+
+  .size-compare-box-txt {
+    padding: 40px 20px 0;
+    margin: -30px 0 0;
+    width: 390px;
+    height: auto;
+  }
+
+  .size-compare-sec {
+    height: 500px;
+  }
+
+  .experince-heading p {
+    width: 50%;
+  }
+
+  .pm-indoor-bg ul li {
+    width: 23%;
+    padding: 20px 0;
+    margin-right: 10px;
+  }
+
+  .pm-indoor-bg ul li p {
+    padding-right: 10px;
+  }
+
+  .app-sensor-sec {
+    padding-top: 100px;
+  }
+
+  .construction-heading h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .construction-btn a {
+    width: 80%;
+  }
+
+  .construction-site-sec .construction-btn a {
+    width: 50%;
+    float: right;
+  }
+
+  .construction-btn ul li {
+    width: 60%;
+  }
+
+  .construction-btn ul {
+    margin: 0;
+    gap: 10px;
+  }
+
+  .construct-site {
+    padding: 30px 30px 30px 10px;
+  }
+
+  .dpcc {
+    padding: 40px 30px 40px 30px;
+  }
+
+  .construction-site-sec {
+    height: 650px;
+    margin-top: 100px;
+  }
+
+  .laser-heading h3 {
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .laser-heading h4 {
+    font-size: 20px;
+  }
+
+  .laser-para p {
+    padding-left: 20px;
+  }
+
+  .laser-author p {
+    width: 70%;
+  }
+
+  .study-para {
+    width: 90%;
+    float: none;
+  }
+
+  .healt-impact-heading h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .health-impact-sec {
+    padding-top: 80px;
+  }
+
+  .healt-impact-img h4 {
+    font-size: 14px;
+  }
+
+  .outdoor-bg-box {
+    padding: 40px 10px;
+  }
+
+  .may-also ul li h5 {
+    font-size: 16px;
+  }
+
+  .may-also ul li h5 img {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .sensor-img p {
+    width: 100% !important;
+  }
+
+  .range-heading h3 {
+    padding: 10px 30px;
+  }
+
+  .experince-heading {
+    padding-top: 60px;
+  }
+
+  .experince-sec {
+    height: auto;
+  }
+
+  .experince-heading ul {
+    padding: 0;
+    margin: 0;
+    gap: 0px;
+  }
+
+  .pm-indoor-bg {
+    margin-top: 0px;
+    padding: 0;
+  }
+
+  .pm-indoor-heading {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .pm-indoor-bg ul li h4 {
+    width: 60%;
+    font-size: 16px;
+  }
+
+  .pm-indoor-bg ul li:last-child {
+    position: relative;
+    top: 20px;
+  }
+
+  .experince-heading ul li:nth-child(3) img {
+    margin-top: 150px;
+  }
+
+  .particulate-matter-heading p {
+    width: 70%;
+  }
+
+  .pm-indoor-bg ul li:nth-child(2) p {
+    padding-right: 30px;
+  }
+}

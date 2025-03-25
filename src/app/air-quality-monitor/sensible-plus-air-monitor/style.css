@@ -1,0 +1,897 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nunito Sans' !important;
+}
+
+p {
+  font-family: 'Nunito Sans' !important;
+}
+
+a {
+  font-family: 'Nunito Sans' !important;
+}
+
+.btnbuynow {
+  background: #49a034 !important;
+  color: #fff !important;
+  padding: 12px 40px !important;
+  border-radius: 30px !important;
+  text-decoration: none !important;
+  font-weight: 800 !important;
+  font-size: 18px;
+}
+
+.banner-btns {
+  padding-top: 30px;
+}
+
+span.heading-bg {
+  background: #a7ee5c26;
+  border-radius: 50px;
+}
+
+.btnbuynow img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.ui-tabs-nav li:last-child {
+  display: none !important;
+}
+
+.slide-img img {
+  width: 100%;
+}
+
+.vc_custom_1726658797482 {
+  height: 600px;
+}
+
+.sensibleplusbanner h2 {
+  font-size: 70px;
+  font-weight: 600;
+  text-align: left;
+  line-height: 80px;
+  color: #7AB261;
+  padding-right: 200px;
+}
+
+span.heading-bg {
+  background: #a7ee5c26;
+  border-radius: 50px;
+}
+
+.bannet_title_box.sensible_banner p {
+  text-align: left;
+  color: #263d4fe8;
+  font-weight: normal;
+  margin: 0;
+  line-height: 34px;
+  font-size: 24px;
+}
+
+.monitor_box .specification_heading {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 0 0 8px;
+  letter-spacing: 0;
+}
+
+.monitor_box h3.aqi_heading {
+  font-size: 18px;
+  color: #888888;
+  font-weight: normal;
+  line-height: normal;
+}
+
+#content .tab_aqi_section .wpb_content_element .wpb_tabs_nav {
+  margin: 0 0 26px;
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0px 1px 4px 2px #ccc;
+  border-radius: 5px;
+  padding: 6px 6px !important;
+}
+
+.tab_aqi_section .tab-style-one .wpb_tabs_nav>li.ui-state-active {
+  background: #39A033 !important;
+  border-radius: 3px;
+  border: none !important;
+}
+
+.tab_aqi_section .tab-style-one.wpb_tabs .wpb_tabs_nav li {
+  margin: 0;
+  float: none;
+  display: inline-block;
+  background: none;
+  font-size: 14px;
+  border-right: 2px solid #ccc;
+}
+
+#page .tab-style-one .wpb_tabs_nav li.ui-state-active a {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.tab_aqi_section .tab-style-one.wpb_tabs .wpb_tabs_nav a {
+  padding: 1px 23px;
+  line-height: normal;
+  color: #39A033;
+  text-align: center;
+}
+
+.tab_aqi_section {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.aqi_box {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aqi_box ul {
+  display: inherit;
+  list-style: none;
+  margin: 0;
+  justify-content: inherit;
+}
+
+.aqi_box li {
+  margin-bottom: 25px;
+  padding: 0 23px;
+  float: left;
+}
+
+.aqi_box li h3 {
+  border: 2px dashed #ffffff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.aqi_box ul li img {
+  height: 30px;
+}
+
+.aqi_box ul li p {
+  font-size: 16px;
+  color: #383838;
+  line-height: 1.6;
+}
+
+.moniator_sec.monitor_sec_new {
+  margin-top: 0;
+}
+
+.moniator_sec {
+  padding: 0 30px 60px;
+  margin-top: -200px;
+}
+
+.sensor_feature_list {
+  padding-left: 15px;
+}
+
+.sensor_feature_list ul {
+  margin: 0;
+  list-style: none;
+}
+
+.sensor_feature_list.sensible_feature_list li {
+  color: #000;
+  line-height: 26px;
+  display: inherit;
+  text-align: center;
+}
+
+.sensor_feature_list.sensible_feature_list li small {
+  display: block;
+}
+
+.pranaair_img_box img {
+  max-width: 320px;
+}
+
+.specification_box.monitor_box.text-center {
+  padding-top: 34px;
+  text-align: center;
+}
+
+.specification_box.monitor_box.text-center {
+  padding-top: 34px;
+  text-align: center;
+}
+
+.comparison_graph_img img {
+  width: 100%;
+}
+
+.progress_bar_cntr .vc_tta.vc_tta-spacing-1 .vc_tta-tabs-list {
+  padding: 0;
+  margin: 25px 0 25px 0 !important;
+  text-align: center;
+}
+
+.progress_bar_cntr li.vc_tta-tab {
+  margin: 0 !important;
+  border: 1px solid #ccc;
+}
+
+.progress_bar_cntr .vc_tta-tab.vc_active>a {
+  border: none !important;
+  background: #68b555 !important;
+  color: #fff !important;
+  padding: 5px 35px !important;
+}
+
+.progress_bar_cntr .vc_tta-tab>a {
+  border: none !important;
+  background-color: #fff !important;
+  color: #39A033 !important;
+  padding: 5px 12px !important;
+  border-radius: 0 !important;
+  width: auto;
+  margin: 0;
+  box-shadow: inherit;
+  font-size: 14px;
+  border-right: none !important;
+  font-weight: 600;
+}
+
+.dt-style.vc_progress_bar.outline-bg .vc_single_bar {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(133, 134, 140, .15);
+  box-shadow: inherit;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 30px !important;
+  width: 100%;
+  margin: 11px auto;
+}
+
+.progress_bar_cntr span.vc_bar {
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+}
+
+.progress_bar_cntr .vc_progress_bar {
+  padding: 0 115px;
+}
+
+.step-dots {
+  padding: 40px 29px 0;
+}
+
+.specification_heading {
+  position: relative;
+  color: #3a3939;
+  font-size: 36px;
+  letter-spacing: 0.6px;
+  line-height: normal;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  font-weight: 400;
+}
+
+.step-dots button {
+  background: none;
+  border: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.step-dots h5 {
+  font-size: 14px;
+  margin: 0 0 4px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border-radius: 50%;
+  color: #39A033;
+  line-height: 30px;
+  float: left;
+  margin-right: 15px;
+  border: 1px solid #39A033;
+}
+
+.step-dots p {
+  font-size: 15px;
+  padding: 3px 30px 2px;
+  text-align: left;
+  width: 100%;
+  color: #000;
+  margin: 0;
+}
+
+.qualitymonitor_heading_box h2 {
+  font-size: 32px;
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.qualitymonitor_heading_box.italic_para.tv_app_box p {
+  padding: 8px 100px;
+}
+
+a.tv_app_btn img {
+  width: 224px;
+  padding-top: 19px;
+}
+
+.qualitymonitor_heading_box {
+  padding: 64px 0 30px;
+  text-align: center;
+}
+
+
+.download_app_section {
+  background: url(https://www.pranaair.com/wp-content/uploads/2021/07/aqi-air-quality-app.png?id=22991) no-repeat;
+  height: 955px;
+  background-size: 100%;
+}
+
+.downloadapp_deail_box {
+  padding: 0 50px 0px 0px;
+  float: right;
+  width: 30%;
+  margin-top: 200px;
+}
+
+.downloadapp_deail_box h3 {
+  color: #fff;
+  text-align: right;
+  font-size: 22px;
+  line-height: normal;
+}
+
+.downloadapp_deail_box p {
+  color: #fff;
+  text-align: right;
+  padding: 8px 0;
+  float: right;
+}
+
+a.download_app_btn {
+  float: right;
+  margin-right: 15px;
+}
+
+ul.feature_quality_cntr {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.quality_feature_section {
+  padding: 10px 41px 60px;
+  margin-top: 20px;
+}
+
+.feature_quality_cntr li {
+  float: left;
+  width: 31.33%;
+  display: inline-block;
+  justify-content: center;
+}
+
+.feature_quality_cntr .feature_sensor_box {
+  min-height: 165px;
+}
+
+.feature_sensor_box small {
+  font-size: 0;
+  height: 40px;
+  display: block;
+}
+
+.features_detail_box {
+  padding: 0 40px;
+}
+
+.feature_quality_cntr .features_detail_box h3 {
+  font-size: 20px;
+  line-height: normal;
+}
+
+.features_detail_box p {
+  font-size: 14px;
+  color: #777777;
+}
+
+.sensible_cntr_point {
+  padding: 0 50px;
+}
+
+.sensible_point_box {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.sensible_point_box code {
+  color: #fff;
+  font-size: 16px;
+  padding-top: 9px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.accordian_section .vc_tta.vc_general .vc_tta-panel-title>a {
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000 !important;
+}
+
+.contact_img_box img {
+  width: 100%;
+}
+
+.contact_senitizer_section input.wpcf7-form-control.wpcf7-submit {
+  background: none;
+  border: 1px solid #000 !important;
+  color: #000;
+  font-size: 12px;
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+.contact_form_box {
+  clear: both;
+  padding: 25px 20px 35px;
+}
+
+.contact_senitizer_section {
+  box-shadow: 3px 0px 10px 0px #ccc;
+  background: #fff;
+  width: 100% !important;
+  margin: 30px auto 110px;
+  left: 0 !important;
+}
+
+.contact_senitizer_section textarea.wpcf7-form-control.wpcf7-textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  resize: none;
+  height: 100px;
+}
+
+.product_compare_box {
+  width: 25%;
+  float: left;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.product_compare_box img {
+  width: 100%;
+  opacity: 0.7;
+  transition: transform .5s;
+}
+
+.product_compare_box h3 {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+}
+
+h2.specification_heading.green_heading {
+  text-align: center;
+}
+
+.banner_section {
+  background: url(https://www.pranaair.com/wp-content/uploads/2024/11/sensible-plus-in-room.webp);
+  background-size: cover;
+  background-position: center;
+  height: 750px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.banner_section:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(93deg, #ffffff, #ffffffd6, transparent);
+  width: 70%;
+  height: 750px;
+  left: 0;
+  top: 0;
+}
+
+.sensibleplusbanner {
+  padding-top: 200px;
+  position: relative;
+}
+
+.vc_do_custom_heading {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .banner_section {
+    background-position: -720px center;
+    height: 600px !important;
+  }
+
+  .banner_section:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(180deg, #ffffff, #ffffff, transparent);
+    width: 100%;
+    height: 350px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .banner_section {
+    padding: 10px 5px 0px !important;
+  }
+
+  .sensibleplusbanner h2 {
+    font-size: 32px;
+    text-align: center;
+    line-height: 46px;
+    padding: 0 90px;
+    margin: 0;
+  }
+
+  span.heading-bg {
+    padding: 0 10px;
+  }
+
+  .bannet_title_box.sensible_banner p {
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px !important;
+    padding-bottom: 10px;
+  }
+
+  .qualitymonitor_heading_box h2 {
+    font-size: 26px;
+    padding-bottom: 0px;
+    line-height: 34px;
+  }
+
+  .banner-btns {
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  form.cart button {
+    margin: 0 !important;
+  }
+
+  .btnbuynow {
+    padding: 14px 45px !important;
+    margin-top: 20px !important;
+    display: block;
+    text-align: center;
+  }
+
+  .sensibleplusbanner {
+    margin-top: 0;
+    padding-top: 0px;
+  }
+
+  .pd-top {
+    padding-top: 315px;
+  }
+
+  .monitor_box .specification_heading {
+    font-size: 18px;
+  }
+
+  #content .tab_aqi_section .wpb_content_element .wpb_tabs_nav {
+    width: 25%;
+    margin: 0 auto;
+  }
+
+  .aqi_box li {
+    margin-bottom: 5px;
+    padding: 0 0px;
+    float: none;
+    display: inline-block;
+    width: auto;
+  }
+
+  .aqi_box ul {
+    display: block;
+  }
+
+  .sensor_feature_list.sensible_feature_list li {
+    color: #000;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-align: left;
+    gap: 10px;
+  }
+
+  .sensor_feature_list.sensible_feature_list {
+    padding-left: 0;
+  }
+
+  .moniator_sec {
+    padding: 0 30px 8px 30px;
+    margin-top: 0;
+  }
+
+  .specification_box.monitor_box.text-center {
+    padding-top: 0;
+  }
+
+  .progress_bar_cntr .vc_progress_bar {
+    padding: 0 8px 6px;
+  }
+
+  .specification_heading {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  .download_app_section {
+    height: 400px;
+    background-size: cover;
+    background-position: center left;
+  }
+
+  .qualitymonitor_heading_box {
+    padding-top: 30px;
+  }
+
+  .download_app_section .downloadapp_deail_box {
+    top: 50px;
+  }
+
+  .downloadapp_deail_box h3 {
+    font-size: 16px;
+    color: #ffffff00;
+  }
+
+  .downloadapp_deail_box p {
+    color: #ffffff00;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .qualitymonitor_heading_box.italic_para.tv_app_box p {
+    padding: 1px 0px;
+  }
+
+  .qualitymonitor_heading_box {
+    padding-top: 10px;
+  }
+
+  .qualitymonitor_heading_box {
+    padding: 24px 0 0px;
+    text-align: center;
+  }
+
+  ul.feature_quality_cntr.feature_width_auto li {
+    float: left;
+  }
+
+  ul.feature_quality_cntr {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .feature_quality_cntr li {
+    min-height: auto;
+  }
+
+  .feature_quality_cntr .features_detail_box h3 {
+    font-size: 11px;
+  }
+
+  .feature_quality_cntr .features_detail_box p {
+    font-size: 12px;
+  }
+
+  .quality_feature_section {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .features_detail_box {
+    padding: 0 10px 30px;
+  }
+
+  .feature_quality_cntr li {
+    float: left;
+    width: 50%;
+    margin: 0 !important;
+  }
+
+  .sensible_cntr_point {
+    padding: 0;
+  }
+
+  .product_direction_bg:before {
+    display: none;
+  }
+
+  .sensible_point_box img {
+    width: 100%;
+    filter: inherit;
+  }
+
+  .sensible_point_box {
+    width: 50%;
+  }
+
+  .sensible_point_box code {
+    color: #010101;
+    font-size: 20px;
+    padding: 7px 0 18px;
+    font-weight: 500;
+  }
+
+  .product_compare_box {
+    width: 50%;
+  }
+
+  .product_compare_box h3 {
+    font-size: 16px;
+    bottom: 7px;
+  }
+
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .sensibleplusbanner h2 {
+    font-size: 38px !important;
+    line-height: 50px;
+    padding-right: 100px;
+  }
+
+  .bannet_title_box.sensible_banner p {
+    line-height: 24px;
+    font-size: 18px;
+  }
+
+  .sensibleplusbanner {
+    padding-top: 100px;
+  }
+
+  .banner-btns {
+    padding-top: 20px;
+  }
+
+  .btnbuynow {
+    padding: 12px 46px !important;
+  }
+
+  .qualitymonitor_heading_box h2 {
+    font-size: 26px;
+  }
+
+  .vc_row.vc_row-o-full-height {
+    min-height: 50vh;
+  }
+
+  .aqi_box li {
+    margin-bottom: 5px;
+    padding: 0 15px;
+  }
+
+  .pranaair_img_box img {
+    max-width: 36%;
+  }
+
+  .tab_aqi_section {
+    padding-top: 0;
+  }
+
+  .progress_bar_cntr .vc_progress_bar {
+    padding: 0 45px;
+  }
+
+  .specification_heading {
+    font-size: 30px;
+  }
+
+  .step-dots p {
+    font-size: 12px;
+    padding: 0;
+    line-height: 20px;
+  }
+
+  .downloadapp_deail_box h3 {
+    font-size: 20px;
+  }
+
+  .downloadapp_deail_box {
+    right: 0;
+    width: 55%;
+    top: 105px;
+    padding: 0 20px;
+  }
+
+  .downloadapp_deail_box p {
+    padding: 8px 0;
+    float: right;
+    width: 65%;
+    display: flex;
+  }
+
+  .download_app_section {
+    height: 550px;
+  }
+
+  .qualitymonitor_heading_box.italic_para.tv_app_box p {
+    padding: 0;
+  }
+
+  .features_detail_box {
+    padding: 0 10px;
+  }
+
+  .feature_quality_cntr li {
+    width: 49%;
+  }
+
+  .sensible_point_box img {
+    width: 100%;
+  }
+
+  .sensible_point_box {
+    width: 25%;
+  }
+
+  .sensible_new_faq {
+    padding-top: 100px;
+  }
+
+  .banner_section:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(91deg, #ffffff, #ffffffd9, transparent);
+    width: 60%;
+    height: 450px;
+    top: 0;
+    left: 0;
+  }
+
+  .banner_section {
+    height: 450px;
+  }
+
+}
