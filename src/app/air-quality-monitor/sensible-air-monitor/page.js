@@ -248,11 +248,11 @@ export default function SensibleAirMonitor() {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+            <div className="col-lg-12">
               <div className="video-container">
                 <iframe 
                   width="100%" 
-                  height="315" 
+                  height="600" 
                   src="https://www.youtube.com/embed/2EIYZoY9MPw" 
                   title="Comparison Video" 
                   frameBorder="0" 
