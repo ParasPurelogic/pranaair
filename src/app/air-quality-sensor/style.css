@@ -1,0 +1,622 @@
+.monitor_feature_box {
+    min-height: 184px;
+}
+
+
+.quality_real_box h1 {
+    font-size: 40px;
+
+}
+
+.realtime_feature_section .wpb_column.vc_column_container.vc_col-sm-6 {
+    z-index: 9;
+}
+
+.discover_btn:hover {
+    color: #fff;
+    background: #31B78F;
+}
+
+.data_accuracy_section {
+    position: relative;
+    margin: 35px 200px;
+}
+
+img.img-responsive.center-block {
+    width: 100%;
+}
+
+.data_accuracy_section:after {
+    position: absolute;
+    content: "";
+    width: 1264px;
+    height: 100%;
+    background: url(https://www.pranaair.com/wp-content/uploads/2023/03/banner-background.png);
+    left: 50%;
+    top: 0;
+    background-size: cover;
+    z-index: 0;
+    transform: translate(-50%, 10px);
+}
+
+.quality_real_box {
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+
+}
+
+.dataauracy_img_box img {
+    float: right;
+    width: 100%;
+}
+
+.dataauracy_img_box {
+    position: relative;
+    z-index: 1;
+    width: 320px;
+    float: right;
+
+}
+
+
+
+.quality_real_box h1 {
+    font-size: 28px;
+    letter-spacing: 0.2em;
+    font-weight: 200;
+}
+
+.airquality_content_box p {
+    color: #727380;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.quality_real_box h2 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.discover_btn {
+    border: 1.5px solid #31B78F;
+    padding: 8px 25px;
+    font-size: 18px;
+    color: #23272A;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 14px;
+    transition: 0.3s;
+}
+
+.discover_btn.accuracy_btn {
+    position: absolute;
+    top: 17px;
+    left: -130px;
+    background: #FAFAFA;
+    color: #2F8B85;
+
+}
+
+.discover_btn.accuracy_btn:hover {
+    color: #2F8B85;
+    background: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .quality_real_box h1 {
+        font-size: 18px;
+    }
+
+    .quality_real_box h2 {
+        font-size: 24px;
+        margin: 5px 0 22px !important;
+        line-height: 34px;
+    }
+
+    .data_accuracy_section {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 25px 20px;
+    }
+    .discover_btn.accuracy_btn {
+        top: 0;
+        left: -42px;
+    }
+    .dataauracy_img_box img {
+        float: none;
+    }
+    .discover_btn {
+        padding: 8px 18px;
+        font-size: 15px;
+        margin-top: 7px;
+    }
+
+    .quality_real_box {
+        padding-top: 5px;
+    }
+
+    .dataauracy_img_box {
+        width: 300px;
+    }
+
+    .quality_real_box h2 br {
+        display: none;
+    }
+
+}
+
+.ourclient_section {
+    background: #F9F9F9;
+    padding: 50px 0;
+}
+
+.our_client_box ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.our_client_box ul li {
+    padding: 0 46px 53px;
+    width: 15%;
+}
+
+@media only screen and (max-width: 767px) {
+    .our_client_box ul li {
+        padding: 0 10px 13px 0 !important;
+        width: 30% !important;
+    }
+
+    .our_client_box ul li img {
+        width: 100% !important;
+    }
+
+    button.slick-prev.default.slick-arrow {
+        left: 72.7%;
+    }
+
+    button.slick-next.default.slick-arrow {
+        right: 16px;
+    }
+
+}
+
+
+
+.monitor_btn_box {
+    display: flex;
+    align-items: center;
+}
+
+a.monitor_know_btn {
+    padding: 6px 14px !important;
+}
+
+.ui-tabs-panel {
+    position: relative;
+    left: 50px;
+}
+
+.monitor_banner_box {
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 150px;
+    height: 700px;
+}
+
+.monitor_banner_box span {
+    color: #fff;
+}
+
+.monitor_banner_box h2 {
+    color: #fff;
+}
+
+.monitor_banner_box p {
+    font-size: 20px;
+    color: #fff;
+    padding: 0 280px;
+}
+
+.qualitymonitor_heading_box {
+    padding: 64px 0 30px;
+}
+
+.qualitymonitor_heading_box p {
+    font-size: 15px;
+    color: #777;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.tab_aqi_section {
+    text-align: center;
+    padding-top: 35px;
+}
+
+#content .tab_aqi_section .wpb_content_element .wpb_tabs_nav {
+    margin: 0 0 26px;
+    display: inline-block;
+    background: #fff;
+    box-shadow: 0px 0px 10px 2px #cccccca1;
+    border-radius: 50px;
+    padding: 10px 10px 5px !important;
+}
+
+span.rating_box {
+    display: none;
+}
+
+.tab_aqi_section .tab-style-one .wpb_tabs_nav>li.ui-state-active {
+    background: #39A033 !important;
+    border-radius: 50px;
+    border: none !important;
+}
+
+.tab_aqi_section .tab-style-one.wpb_tabs .wpb_tabs_nav a {
+    padding: 10px 30px;
+    line-height: normal;
+    color: #39A033;
+    text-align: center;
+}
+
+.text-big {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.pocket_monitor_box {
+    float: left;
+    width: 43%;
+    background: #fff;
+    box-shadow: 2px 0 6px 4px #cccccc63;
+    display: flex;
+    margin: 0 1.5% 30px;
+    position: relative;
+    border-radius: 15px;
+    height: 250px;
+}
+
+.pocket_monitor_img {
+    background: #F7F7F7;
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+}
+
+.monitor_detail_box {
+    text-align: left;
+    padding: 12px 0 20px;
+    width: 100%;
+}
+
+.monitor_detail_box h3 {
+    font-size: 20px;
+    padding-left: 20px;
+    margin: 0 0 10px;
+}
+
+.monitor_detail_box p {
+    display: none;
+}
+
+.rate_compare_box {
+    display: flex;
+    font-size: 16px;
+    color: #333;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+span.woocs_price_code {
+    color: #7ab261 !important;
+    display: flex;
+}
+
+ul.product_feature_list {
+    list-style: none;
+    margin: 10px 0 0;
+    background: #F2FFF1;
+    overflow: hidden;
+    padding: 5px 20px;
+}
+
+ul.product_feature_list li {
+    float: left;
+    width: 50%;
+    font-size: 12px;
+    color: #333;
+    line-height: normal;
+    font-weight: 600;
+    padding: 7px 0;
+    margin: 0;
+}
+
+.monitor_btn_box {
+    display: flex;
+    align-items: center;
+    clear: both;
+    padding: 15px 0 0 15px;
+}
+
+a.monitor_know_btn {
+    display: inline-block;
+    background: rgb(57, 160, 51);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(57, 160, 51);
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 50px;
+    margin-right: 5px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px !important;
+}
+
+.banner-btn {
+    background: #39A033 !important;
+    color: #fff !important;
+    border: 1px solid #39A033 !important;
+    text-decoration: none;
+    padding: 5px 35px !important;
+    font-size: 14px !important;
+    border-radius: 50px !important;
+    margin-right: 5px;
+    width: 100%;
+    font-weight: 400 !important;
+    text-align: center;
+    height: 43px !important;
+}
+
+.qualitymonitor_heading_box {
+    padding: 64px 0 30px;
+}
+
+.qualitymonitor_heading_box h2 {
+    font-size: 32px;
+    position: relative;
+    padding-bottom: 7px;
+    margin-bottom: 29px;
+}
+
+.qualitymonitor_heading_box h2:before {
+    width: 119px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    background: #39A033;
+}
+
+.qualitymonitor_heading_box.italic_para p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.monitor_feature_box {
+    position: relative;
+    box-shadow: -2px -1px 9px 0 #ccc;
+    padding: 80px 20px 20px;
+    margin: 0 15px 40px !important;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+.monitor_feature_box:before {
+    width: 100%;
+    height: 145px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    content: "";
+}
+
+.monitor_feature_box p {
+    font-size: 14px;
+}
+
+.monitor_feature_box h4 {
+    color: #000;
+    font-size: 16px;
+}
+
+.monitor_feature_box img {
+    float: right;
+    width: 59px;
+}
+
+.green_border {
+    border-bottom: 4px solid #39A033;
+}
+
+.purple_border {
+    border-bottom: 4px solid #975AA0;
+}
+
+.red_border {
+    border-bottom: 4px solid #E75834;
+}
+
+.pink_border {
+    border-bottom: 4px solid #EA519F;
+}
+
+.yellow_border {
+    border-bottom: 4px solid #D4CA2F;
+}
+
+.blue_border {
+    border-bottom: 4px solid #289BD1;
+}
+
+.comparison_graph_img img {
+    width: 100%;
+}
+
+.contact_form_box {
+    clear: both;
+    padding: 25px 20px 35px;
+}
+
+.contact_senitizer_section {
+    box-shadow: 3px 0 10px 0 #ccc;
+    background: #fff;
+    width: 100% !important;
+    margin: 30px auto 110px;
+    left: 0 !important;
+}
+
+.sensible_conact_section {
+    margin: 110px 180px 130px !important;
+}
+
+.contact_form_box h3 {
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.contact_form_box p {
+    font-size: 16px;
+    color: #888;
+}
+
+.contact_img_box {
+    height: 470px !important;
+}
+
+.contact_img_box img {
+    width: 80%;
+}
+
+.contact_senitizer_section input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 12px !important;
+}
+
+.contact_senitizer_section textarea.wpcf7-form-control.wpcf7-textarea {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    resize: none;
+    height: 100px;
+}
+
+.our_client_box ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.our_client_box ul li {
+    padding: 0 46px 53px;
+    width: 17%;
+    float: none;
+    display: inline-block;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .pocket_monitor_box {
+        width: 100% !important;
+        height: auto;
+        margin: 0 0 20px;
+    }
+
+    .ui-tabs-panel {
+        left: 0;
+    }
+
+    .monitor_detail_box h3 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    ul.product_feature_list li {
+        float: none;
+        width: 100%;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 5px 0;
+    }
+
+    .woocom-list-content .woocs_price_code span {
+        font-size: 16px !important;
+        padding: 0 2px;
+    }
+
+    .monitor_banner_box p {
+        padding: 0 30px;
+    }
+
+    #content .tab_aqi_section .wpb_content_element .wpb_tabs_nav {
+        margin: 0 30px 26px;
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .single_add_to_cart_button.button {
+        font-size: 12px;
+    }
+
+    .contact_img_box {
+        height: 240px !important;
+    }
+
+    .our_client_box ul {
+        margin: 0 !important;
+    }
+
+    .monitor_banner_box {
+        height: 500px;
+    }
+
+    .data_accuracy_section:after {
+        display: none;
+    }
+    .sensible_conact_section {
+        margin: 60px 0px 100px !important;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+    .pocket_monitor_box {
+        width: 100% !important;
+        margin: 0 0px 40px;
+    }
+
+    a.monitor_know_btn {
+        padding: 6px 10px !important;
+    }
+
+    .ui-tabs-panel {
+        left: 0;
+    }
+
+    .monitor_banner_box p {
+        padding: 0 180px;
+        line-height: 40px;
+    }
+
+    .our_client_box ul {
+        margin: 0 !important;
+    }
+
+    .our_client_box ul li img {
+        width: 100%;
+    }
+
+    .our_client_box ul li {
+        width: 20%;
+        padding: 0;
+    }
+}
