@@ -1,0 +1,2419 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&display=swap");
+
+/* Base Styles */
+.smart-city-page {
+  font-family: "Nunito Sans", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
+a {
+  font-family: "Nunito Sans", sans-serif !important;
+  text-decoration: none !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-md-3 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.col-md-6 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.col-md-9 {
+  width: 75%;
+  padding: 0 15px;
+}
+
+.col-lg-5 {
+  width: 41.66%;
+  padding: 0 15px;
+}
+
+.col-lg-7 {
+  width: 58.33%;
+  padding: 0 15px;
+}
+
+/* Banner Section */
+.home-banner-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide-img {
+  width: 100%;
+  height: auto;
+  margin-top: -50px;
+}
+
+.banner-content {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  z-index: 2;
+}
+
+.banner-content:before {
+  position: absolute;
+  content: "";
+  background: #24c250;
+  width: 3px;
+  height: 140px;
+  left: -20px;
+  top: -5px;
+}
+
+.banner-content h1,
+.banner-content h2 {
+  color: #fff;
+  width: 50%;
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.smart-city-txt {
+  color: #24c250;
+  font-weight: 800;
+}
+
+.banner-content p {
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.banner-btn {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px 40px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 800;
+  border-right: 8px solid #24c250;
+  transition: .3s linear;
+  display: inline-block;
+}
+
+.banner-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.slider-buttons {
+  display: flex;
+  margin-top: -100px;
+  position: relative;
+  gap: 200px;
+  padding-left: 150px;
+  z-index: 3;
+}
+
+.slider-buttons:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, white, transparent);
+  width: 80%;
+  height: 1px;
+  top: -10px;
+  right: 0;
+  left: 156px;
+  z-index: 0;
+}
+
+.slider-button {
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: left;
+}
+
+.slider-button p {
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.slider-button:hover {
+  color: #24c250;
+}
+
+.slider-button.active {
+  position: relative;
+  color: #24c250;
+}
+
+.slider-button.active::before {
+  position: absolute;
+  content: "";
+  background: #24c250;
+  width: 150px;
+  height: 2px;
+  top: -10px;
+  left: 0;
+}
+
+.mouse-scroll-icon {
+  position: absolute;
+  right: 230px;
+  bottom: 60px;
+  z-index: 3;
+}
+
+.mouse-scroll-icon img {
+  width: 20px;
+}
+
+/* Factor Affecting Section */
+.factor-affecting {
+  padding-top: 50px;
+}
+
+.factor-heading h2 {
+  color: #e0e4ec;
+  font-weight: 300;
+  font-size: 28px;
+  padding-right: 200px;
+  line-height: 40px;
+  padding-left: 20px;
+  padding-bottom: 75px;
+}
+
+.smart-city-factor {
+  font-weight: 700;
+}
+
+.factor-para p {
+  color: #97a7b6;
+  font-size: 18px;
+}
+
+.factor-affect-tab {
+  margin-top: 30px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+}
+
+.tab-heading {
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 18px;
+  color: #667580;
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+.tab-heading:hover {
+  color: #24c250;
+}
+
+.tab-heading.current {
+  color: #24c250;
+}
+
+.tab-heading.current:before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  top: 37px;
+  background: #1eb946;
+  left: 10px;
+}
+
+.factor-tab-image img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.factor-tab-para {
+  font-size: 18px;
+  line-height: 30px;
+  padding-right: 110px;
+  padding-top: 100px;
+  padding-left: 60px;
+  color: #97a7b6;
+}
+
+.green-clr {
+  color: #24c250;
+}
+
+/* Health Impact Section */
+.health-impact {
+  padding-top: 120px;
+}
+
+.health-impact-heading h2 {
+  font-size: 46px;
+  color: #e0e4ec;
+}
+
+.healt-impaact {
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.office-pollutatnt-bg {
+  margin-top: 60px;
+}
+
+.office-pollutant-icons {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/08/problems-air-pollution-in-outdoor-environment.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 535px;
+  position: relative;
+}
+
+.office-pollutant-icons img {
+  width: 100px;
+  position: absolute;
+}
+
+.so2 {
+  left: 40%;
+  top: 30px;
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pm2\.5 {
+  left: 60%;
+  top: 60px;
+  width: 70px !important;
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.co2 {
+  left: 80%;
+  top: 50px;
+  width: 80px !important;
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.tvocs {
+  left: 20%;
+  top: 100px;
+  width: 70px !important;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.no2 {
+  left: 30%;
+  top: 40px;
+  width: 85px !important;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.co {
+  left: 70%;
+  top: 140px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+/* Health Impact Slider - Updated to match the design */
+.health-impact-slider {
+  background: #1e1e22;
+  margin-top: 60px;
+  padding: 70px 0;
+}
+
+/* Updated Health Impact Card Styling */
+.health-impact-card {
+  background: #1e1e22;
+  padding: 30px 20px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.health-impact-icon {
+  margin-bottom: 20px;
+}
+
+.health-impact-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.health-impact-card h3 {
+  color: #e0e4ec;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.health-impact-card p {
+  color: #97a7b6;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* City Frame Section - Updated to match the design */
+.city-frame {
+  padding-top: 180px;
+  padding-bottom: 100px;
+}
+
+.city-frame-heading {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.city-frame-heading img {
+  position: absolute;
+  width: 155px;
+  left: -180px;
+  top: -20px;
+}
+
+.city-frame-heading h2 {
+  color: #e0e4ec;
+  font-size: 42px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+/* Updated Frame Tabs Styling to match the design */
+.frame-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.frame-tab {
+  position: relative;
+  background: #232326;
+  border: none;
+  color: #fff;
+  width: 32%;
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.frame-tab.active {
+  background: rgba(36, 194, 80, 0.16);
+}
+
+.frame-tab-number {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.13);
+  font-weight: 800;
+  margin-right: 20px;
+}
+
+.frame-tab-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-tab-title {
+  font-size: 24px;
+  color: #fff;
+}
+
+.frame-tab.active .frame-tab-title {
+  color: #24c250;
+}
+
+.frame-tab-subtitle {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.frame-tab-arrows {
+  position: absolute;
+  right: 20px;
+  color: #24c250;
+  font-size: 24px;
+}
+
+.frame-tab-arrows.reverse {
+  transform: rotate(180deg);
+}
+
+.frame-content {
+  position: relative;
+  margin-top: 20px;
+}
+
+.frame-content-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-image {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.frame-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.frame-description {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 40%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.frame-description h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.frame-description .highlight {
+  color: #24c250;
+  font-weight: 700;
+}
+
+.frame-description p {
+  color: #97a7b6;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Air Quality Solutions Section */
+.air-quality-solution {
+  padding-top: 250px;
+}
+
+.air-quality-heading h2 {
+  color: #e0e4ec;
+  font-size: 28px;
+  padding-right: 260px;
+  line-height: 40px;
+}
+
+.air-qaulity-para p {
+  color: #97a7b6;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.accordian-tabs {
+  margin-top: 50px;
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+}
+
+.accordian-tab-heading {
+  background: #232326;
+  border: none;
+  height: 80px;
+  padding: 15px 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordian-tab-heading h4 {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.accordian-tab-heading.active h4 {
+  color: #24c250;
+}
+
+.one-num:before,
+.two-num:before,
+.three-num:before {
+  position: absolute;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.22);
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  font-weight: 800;
+  font-family: "Nunito Sans";
+}
+
+.one-num:before {
+  content: "01";
+}
+
+.two-num:before {
+  content: "02";
+}
+
+.three-num:before {
+  content: "03";
+}
+
+.accord-icons {
+  position: relative;
+  top: -75px;
+  height: 0;
+  left: 370px;
+}
+
+.heading-icon {
+  width: 40px;
+}
+
+.drone-icon {
+  width: 50px;
+  position: relative;
+  top: 10px;
+  left: -110px;
+}
+
+.purifier-icon {
+  position: relative;
+  left: -80px;
+}
+
+.main-box {
+  position: relative;
+  z-index: 0;
+  background: rgba(36, 194, 80, 0.16);
+  overflow: hidden;
+  padding: 30px;
+}
+
+.ambient-monitor {
+  width: 300px;
+  position: relative;
+  left: 50px;
+}
+
+.ambient-air-monitor-box h3 {
+  color: #c4c9d4;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.ambient-air-monitor-box h4 {
+  color: #c4c9d4;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.ambient-air-monitor-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 -10px 10px;
+  display: flex;
+  gap: 0px;
+}
+
+.ambient-air-monitor-box ul li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ambient-air-monitor-box ul li img {
+  width: 60px;
+}
+
+.ambient-air-monitor-box ul li h5 {
+  color: #c4c9d4;
+  font-size: 16px;
+  font-weight: 600 !important;
+  margin-left: 10px;
+}
+
+.perameter-bg {
+  background: rgba(36, 194, 80, 0.16);
+  justify-content: center;
+  padding: 35px 0;
+  position: relative;
+  margin-top: 30px;
+}
+
+.perameter-heading {
+  color: #c4c9d4;
+  font-size: 24px;
+  margin-left: 100px;
+  line-height: 50px;
+  padding-right: 210px;
+}
+
+.pera-line {
+  position: relative;
+}
+
+.pera-line:before {
+  position: absolute;
+  content: "";
+  background: rgba(255, 255, 255, 0.23);
+  width: 120px;
+  height: 1px;
+  top: 50px;
+}
+
+.wheat {
+  margin-left: 20px;
+}
+
+.parameter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.parameter ul li {
+  display: flex;
+  align-items: center;
+}
+
+.parameter ul li img {
+  width: 25px;
+}
+
+.parameter ul li h6 {
+  color: #c4c9d4;
+  font-size: 14px;
+  position: relative;
+  left: 10px;
+  margin: 0;
+}
+
+.dronne-ul ul {
+  gap: 50px;
+}
+
+.know-more {
+  float: right;
+  padding: 20px 0;
+  margin-right: 30px;
+}
+
+.know-more a {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  color: #24c250;
+}
+
+.know-more a:hover {
+  color: #24c250;
+}
+
+.know-more a img {
+  width: 35px;
+}
+
+.ambient-monitor-city-img {
+  margin-top: 50px;
+}
+
+.ambient-monitorin-city {
+  font-size: 28px;
+  color: #e0e4ec;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ambient-monitor-bold {
+  font-weight: 700;
+}
+
+.ambient-monitor-city-img img {
+  width: 100%;
+}
+
+.data-insight-box {
+  padding-top: 135px;
+  padding-bottom: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.data-insight-heading {
+  width: 80%;
+}
+
+.data-insight {
+  color: #e0e4ec;
+  font-size: 28px;
+  padding-right: 50px;
+  margin: 0;
+}
+
+.data-clr {
+  color: #24c250;
+  font-weight: 800;
+}
+
+.data-insight-para p {
+  font-size: 16px;
+  color: #97a7b6;
+  line-height: 30px;
+}
+
+.data-insight-img-box {
+  margin-top: 30px;
+}
+
+.image-row1 {
+  margin-bottom: 30px;
+}
+
+.image-row1 ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.image-row1 ul li {
+  position: relative;
+}
+
+.image-row1 ul li img {
+  width: 575px;
+  transition: .3s linear;
+  display: block;
+}
+
+.last-row ul {
+  display: block !important;
+}
+
+.last-row ul li img {
+  width: 99%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.77), transparent);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 84%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: left;
+  width: 100%;
+}
+
+.text h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text p {
+  padding-right: 100px;
+}
+
+.last-text {
+  top: 55%;
+}
+
+/* Technical Specifications Section */
+.technical-spec {
+  padding-top: 200px;
+}
+
+.tech-heading {
+  color: #e0e4ec;
+  font-size: 46px;
+  padding-bottom: 60px;
+}
+
+.spec-bold {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.tech-spec {
+  padding-top: 50px;
+}
+
+.tech-spec-colm ul {
+  list-style: none;
+  margin: 0;
+}
+
+.tech-spec-colm ul li {
+  display: flex;
+  gap: 120px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+.tech-spec-colm ul li h6 {
+  color: #97a7b6;
+  font-size: 17px;
+  width: 35%;
+  margin: 0;
+}
+
+.tech-spec-colm ul li h5 {
+  color: #e0e4ec;
+  font-size: 16px;
+  font-weight: 600 !important;
+  margin: 0;
+}
+
+.tech-spec-row-bg {
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.tech-spec-row-bg:before {
+  position: absolute;
+  content: "";
+  background: #1e1e22;
+  width: 605px;
+  height: 60px;
+  z-index: -1;
+  top: 8px;
+  left: 0;
+}
+
+.logo-tech-spec {
+  position: relative;
+  margin: 0 !important;
+  list-style: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.logo-tech-spec li img {
+  width: 25px;
+}
+
+.download-brochure {
+  margin: 30px 0 !important;
+  list-style: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.download-brochure li h5 {
+  color: #e0e4ec;
+  font-size: 20px;
+  font-weight: 300 !important;
+}
+
+.download-brochure li a {
+  font-size: 14px;
+  display: flex;
+  background: #24c250;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 6px;
+  gap: 10px;
+  align-items: center;
+}
+
+.download-brochure li a img {
+  width: 20px;
+}
+
+/* Our Clients Section */
+.our-client {
+  padding-top: 200px;
+}
+
+.our-clinet-heading {
+  font-size: 28px;
+  color: #e0e4ec;
+  width: 20%;
+  line-height: 40px;
+  padding-bottom: 120px;
+}
+
+.client-bold {
+  font-size: 28px;
+  font-weight: 600 !important;
+}
+
+.our-client-para p {
+  color: #97a7b6;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.mob-row {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.our-clients-logo {
+  width: 200px;
+  filter: grayscale(1);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.our-clients-logo:hover {
+  filter: grayscale(0);
+}
+
+/* Contact Form Section */
+.contact-form {
+  padding-top: 200px;
+}
+
+.get-in-heading {
+  padding-bottom: 70px;
+  color: #e0e4ec;
+  font-size: 36px;
+  padding-left: 90px;
+}
+
+.touch-bold {
+  font-weight: 700;
+}
+
+.get-in-touch-para p {
+  color: #97a7b6;
+  padding-top: 20px;
+  margin-left: 200px;
+}
+
+.airquality_inner_form {
+  background: #1e1e22;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 1150px;
+  margin: 0 auto 30px;
+}
+
+.contact_content_box {
+  background: #24c250;
+  width: 40%;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 15px 75px;
+}
+
+.contact_content_box:after {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+  width: 160px;
+  height: 160px;
+  content: "";
+  position: absolute;
+  bottom: -92px;
+  left: -25px;
+  z-index: 0;
+  background-size: 66%;
+}
+
+.contact_information_box h4 {
+  font-size: 25px;
+  color: #fff;
+}
+
+.contact_information_box p {
+  color: #fff;
+  font-weight: 300;
+}
+
+.contact_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact_info li {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.contact_info li i {
+  font-size: 21px;
+  margin-right: 10px;
+}
+
+.contact_info i.fa.fa-phone {
+  transform: rotate(131deg);
+}
+
+.form-area-box {
+  width: 60%;
+  padding: 6px 0 0 100px;
+}
+
+.airquality_contact_box label {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  color: #97a7b6;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.airquality_contact_box input.form-control {
+  width: 100%;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid rgba(96, 96, 96, 0.45);
+  padding-left: 4px;
+  background: transparent;
+  color: #fff;
+  height: 40px;
+}
+
+.airquality_contact_box textarea.form-control {
+  max-height: 78px;
+  border: none;
+  border-bottom: 1px solid rgba(96, 96, 96, 0.45);
+  padding-left: 4px;
+  background: transparent;
+  width: 100%;
+  color: #fff;
+}
+
+.airquality_contact_box button.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: #24c250;
+  border: none;
+  width: auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+/* FAQ Section */
+.faq {
+  padding-top: 200px;
+}
+
+.faq-heading {
+  color: #e0e4ec;
+  font-size: 28px;
+  width: 80%;
+  line-height: 35px;
+  padding-bottom: 70px;
+}
+
+.question-bold {
+  font-weight: 600 !important;
+}
+
+.my-tab {
+  margin-top: 30px;
+}
+
+.my-tab-section {
+  margin-bottom: 15px;
+}
+
+.accordion-header {
+  background: #232326;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.accordion-header h4 {
+  color: #97a7b6;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.faq-tab-para p {
+  color: #e0e4ec;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+/* Industrial Applications Section */
+.indusrtial-application {
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+
+.indusrial-heading {
+  color: #e0e4ec;
+  font-size: 46px;
+  font-weight: 400 !important;
+  padding-bottom: 80px;
+}
+
+.appli-bold {
+  font-weight: 700;
+}
+
+.owl-slider {
+  margin-top: 50px;
+}
+
+.app_img_bx img {
+  border-radius: 25px;
+  width: 100%;
+  transition: .3s linear;
+}
+
+.app_img_bx:hover img {
+  transform: scale(1.1);
+}
+
+.app_service_box {
+  margin-bottom: 30px;
+}
+
+.app_service_box h4 {
+  font-size: 20px;
+  color: #e0e4ec;
+  padding-top: 25px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .banner-content {
+    top: 80px;
+    left: 40px;
+  }
+
+  .banner-content h1,
+  .banner-content h2 {
+    width: 90%;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .banner-content:before {
+    width: 3px;
+    height: 100px;
+    left: -10px;
+    top: 5px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .banner-btn {
+    padding: 12px 25px;
+  }
+
+  .slider-buttons {
+    gap: 0;
+    padding-left: 0;
+    margin-top: -80px;
+  }
+
+  .slider-button {
+    font-size: 13px;
+    padding-right: 20px;
+  }
+
+  .slider-button p {
+    display: none;
+  }
+
+  .slider-button.active::before {
+    width: 100px;
+  }
+
+  .factor-heading h2 {
+    font-size: 24px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 10px;
+  }
+
+  .tab-buttons {
+    gap: 3px;
+  }
+
+  .factor-tab-para {
+    font-size: 17px;
+    padding-right: 0;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+  .health-impact {
+    padding-top: 0;
+  }
+
+  .health-impact-heading h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .healt-impaact {
+    font-size: 26px;
+  }
+
+  .office-pollutant-icons {
+    background-size: 400px;
+    height: auto;
+    margin-top: -20px;
+  }
+
+  .office-pollutant-icons img {
+    width: 40px;
+  }
+
+  /* Updated mobile styles for health impact slider */
+  .health-impact-slider {
+    margin-top: 0;
+    padding: 30px 0;
+  }
+
+  .health-impact-card {
+    padding: 15px;
+  }
+
+  .health-impact-icon img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .health-impact-card h3 {
+    font-size: 18px;
+  }
+
+  .health-impact-card p {
+    font-size: 14px;
+  }
+
+  /* Updated mobile styles for city frame section */
+  .city-frame {
+    padding-top: 80px;
+  }
+
+  .frame-tabs {
+    flex-direction: column;
+  }
+
+  .frame-tab {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .frame-description {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .air-quality-solution {
+    padding-top: 50px;
+  }
+
+  .air-quality-heading h2 {
+    padding-right: 40px;
+    line-height: 34px;
+  }
+
+  .ambient-monitor {
+    width: 160px;
+    margin-top: 0;
+    margin-left: 0;
+    left: 90px;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .ambient-air-monitor-box h3,
+  .ambient-air-monitor-box h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .ambient-air-monitor-box h4 {
+    margin-bottom: 40px;
+    padding-right: 0;
+    line-height: 25px;
+  }
+
+  .ambient-air-monitor-box ul {
+    justify-content: space-around;
+  }
+
+  .ambient-air-monitor-box ul li {
+    display: block;
+    margin-left: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .ambient-air-monitor-box ul li img {
+    width: 50px;
+  }
+
+  .ambient-air-monitor-box ul li h5 {
+    font-size: 14px;
+  }
+
+  .perameter-bg {
+    padding: 21px 25px;
+    display: block;
+    width: 110%;
+    margin-top: 30px;
+  }
+
+  .perameter-heading {
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    padding-right: 0;
+  }
+
+  .parameter ul {
+    margin: 0 0 15px;
+    gap: 20px;
+  }
+
+  .know-more a {
+    font-size: 18px;
+  }
+
+  .know-more {
+    margin-right: 100px;
+  }
+
+  .know-more a img {
+    width: 30px;
+  }
+
+  .ambient-monitorin-city {
+    font-size: 22px;
+    padding-right: 90px;
+    line-height: 30px;
+  }
+
+  .data-insight-box {
+    padding-top: 45px;
+    padding-bottom: 40px;
+    display: block;
+  }
+
+  .data-insight {
+    font-size: 21px;
+    line-height: 35px;
+    padding-right: 0;
+  }
+
+  .data-insight-para p {
+    font-size: 15px;
+    line-height: 27px;
+  }
+
+  .image-row1 ul {
+    display: block;
+  }
+
+  .image-row1 ul li img {
+    width: 335px;
+    margin-bottom: 20px;
+  }
+
+  .technical-spec {
+    padding-top: 50px;
+  }
+
+  .tech-heading {
+    font-size: 28px;
+    padding-bottom: 0;
+  }
+
+  .spec-bold {
+    font-size: 24px;
+  }
+
+  .tech-spec-colm ul li {
+    gap: 0;
+    padding-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .tech-spec-row-bg {
+    width: 100%;
+    padding: 0 0 10px;
+  }
+
+  .tech-spec-colm ul li h5 {
+    font-size: 14px;
+  }
+
+  .tech-spec-colm ul li h6 {
+    font-size: 14px;
+    width: 45%;
+  }
+
+  .tech-spec {
+    padding-top: 0;
+  }
+
+  .logo-tech-spec li img {
+    width: 20px;
+  }
+
+  .download-brochure {
+    display: block;
+  }
+
+  .download-brochure li h5 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .download-brochure li a {
+    justify-content: center;
+  }
+
+  .our-client {
+    padding-top: 40px;
+  }
+
+  .our-clinet-heading {
+    padding-bottom: 30px;
+    width: 70%;
+  }
+
+  .get-in-heading {
+    padding-bottom: 10px;
+    font-size: 26px;
+    padding-left: 0;
+  }
+
+  .get-in-touch-para p {
+    padding-bottom: 40px;
+    margin-left: 0;
+  }
+
+  .contact_content_box {
+    width: 100%;
+    padding: 15px 10px 35px;
+  }
+
+  .form-area-box {
+    width: 100%;
+    padding: 35px 0 0 0;
+  }
+
+  .airquality_inner_form {
+    padding: 15px;
+  }
+
+  .contact-form {
+    padding-top: 50px;
+  }
+
+  .faq {
+    padding-top: 50px;
+  }
+
+  .faq-heading {
+    font-size: 24px;
+    width: 100%;
+    padding-right: 50px;
+    padding-bottom: 10px;
+  }
+
+  .indusrtial-application {
+    padding-top: 50px;
+  }
+
+  .indusrial-heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
+
+  .appli-bold {
+    font-size: 22px;
+  }
+
+  .app_service_box {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .banner-content {
+    top: 60px;
+    left: 20px;
+  }
+
+  .banner-content h1,
+  .banner-content h2 {
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .banner-content p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .banner-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .slider-buttons {
+    margin-top: -60px;
+  }
+
+  .slider-button {
+    font-size: 12px;
+  }
+
+  .frame-tab-number {
+    font-size: 24px;
+  }
+
+  .frame-tab-title {
+    font-size: 18px;
+  }
+
+  .frame-tab-subtitle {
+    font-size: 12px;
+  }
+
+  .frame-description h3 {
+    font-size: 18px;
+  }
+
+  .frame-description p {
+    font-size: 14px;
+  }
+
+  .col-md-3,
+  .col-md-6,
+  .col-md-9,
+  .col-lg-5,
+  .col-lg-7 {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .mob-row {
+    flex-wrap: wrap;
+  }
+
+  .mob-row .col-md-3 {
+    width: 50%;
+    text-align: center;
+  }
+
+  .our-clients-logo {
+    width: 120px;
+    margin: 0 auto 20px;
+  }
+}
+
+/* Responsive improvements for all sections */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .banner-content {
+    top: 200px;
+    left: 100px;
+  }
+
+  .banner-content h1,
+  .banner-content h2 {
+    width: 70%;
+    font-size: 48px;
+  }
+
+  .slider-buttons {
+    gap: 100px;
+    padding-left: 100px;
+  }
+
+  .frame-description {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .banner-content {
+    top: 150px;
+    left: 50px;
+  }
+
+  .banner-content h1,
+  .banner-content h2 {
+    width: 80%;
+    font-size: 36px;
+  }
+
+  .slider-buttons {
+    gap: 50px;
+    padding-left: 50px;
+  }
+
+  .frame-tabs {
+    flex-wrap: wrap;
+  }
+
+  .frame-tab {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+
+  .frame-description {
+    position: relative;
+    width: 100%;
+    top: 0;
+    margin-top: 20px;
+    background: transparent;
+  }
+
+  .city-frame-heading img {
+    width: 100px;
+    left: -120px;
+  }
+
+  .city-frame-heading h2 {
+    font-size: 32px;
+  }
+
+  .factor-tab-para {
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+
+  .ambient-monitor {
+    width: 200px;
+    left: 20px;
+  }
+
+  .perameter-heading {
+    margin-left: 50px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .banner-content {
+    top: 80px;
+    left: 40px;
+  }
+
+  .banner-content h1,
+  .banner-content h2 {
+    width: 90%;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .banner-content:before {
+    width: 3px;
+    height: 100px;
+    left: -10px;
+    top: 5px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .banner-btn {
+    padding: 12px 25px;
+  }
+
+  .slider-buttons {
+    gap: 0;
+    padding-left: 0;
+    margin-top: -80px;
+  }
+
+  .slider-button {
+    font-size: 13px;
+    padding-right: 20px;
+  }
+
+  .slider-button p {
+    display: none;
+  }
+
+  .slider-button.active::before {
+    width: 100px;
+  }
+
+  .factor-heading h2 {
+    font-size: 24px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 10px;
+  }
+
+  .tab-buttons {
+    gap: 3px;
+  }
+
+  .factor-tab-para {
+    font-size: 17px;
+    padding-right: 0;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+  .health-impact {
+    padding-top: 0;
+  }
+
+  .health-impact-heading h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .healt-impaact {
+    font-size: 26px;
+  }
+
+  .office-pollutant-icons {
+    background-size: 400px;
+    height: auto;
+    margin-top: -20px;
+  }
+
+  .office-pollutant-icons img {
+    width: 40px;
+  }
+
+  /* City Frame Section Mobile Improvements */
+  .city-frame {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .city-frame-heading {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .city-frame-heading img {
+    display: none;
+  }
+
+  .city-frame-heading h2 {
+    font-size: 28px;
+    padding-bottom: 10px;
+  }
+
+  .frame-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .frame-tab {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .frame-tab-number {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  .frame-tab-title {
+    font-size: 20px;
+  }
+
+  .frame-tab-subtitle {
+    font-size: 14px;
+  }
+
+  .frame-description {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+  }
+
+  .frame-description h3 {
+    font-size: 20px;
+  }
+
+  .frame-description p {
+    font-size: 16px;
+  }
+
+  .air-quality-solution {
+    padding-top: 50px;
+  }
+
+  .air-quality-heading h2 {
+    padding-right: 40px;
+    line-height: 34px;
+  }
+
+  .ambient-monitor {
+    width: 160px;
+    margin-top: 0;
+    margin-left: 0;
+    left: 90px;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .ambient-air-monitor-box h3,
+  .ambient-air-monitor-box h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .ambient-air-monitor-box h4 {
+    margin-bottom: 40px;
+    padding-right: 0;
+    line-height: 25px;
+  }
+
+  .ambient-air-monitor-box ul {
+    justify-content: space-around;
+  }
+
+  .ambient-air-monitor-box ul li {
+    display: block;
+    margin-left: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .ambient-air-monitor-box ul li img {
+    width: 50px;
+  }
+
+  .ambient-air-monitor-box ul li h5 {
+    font-size: 14px;
+  }
+
+  .perameter-bg {
+    padding: 21px 25px;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .perameter-heading {
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    padding-right: 0;
+  }
+
+  .parameter ul {
+    margin: 0 0 15px;
+    gap: 20px;
+  }
+
+  .know-more a {
+    font-size: 18px;
+  }
+
+  .know-more {
+    margin-right: 0;
+    float: none;
+    text-align: center;
+  }
+
+  .know-more a img {
+    width: 30px;
+  }
+
+  .ambient-monitorin-city {
+    font-size: 22px;
+    padding-right: 0;
+    line-height: 30px;
+  }
+
+  .data-insight-box {
+    padding-top: 45px;
+    padding-bottom: 40px;
+    display: block;
+  }
+
+  .data-insight {
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  .data-insight-para p {
+    font-size: 15px;
+    line-height: 27px;
+  }
+
+  .image-row1 ul {
+    display: block;
+  }
+
+  .image-row1 ul li img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .technical-spec {
+    padding-top: 50px;
+  }
+
+  .tech-heading {
+    font-size: 28px;
+    padding-bottom: 0;
+  }
+
+  .spec-bold {
+    font-size: 24px;
+  }
+
+  .tech-spec-colm ul li {
+    gap: 0;
+    padding-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .tech-spec-row-bg {
+    width: 100%;
+    padding: 0 0 10px;
+  }
+
+  .tech-spec-colm ul li h5 {
+    font-size: 14px;
+  }
+
+  .tech-spec-colm ul li h6 {
+    font-size: 14px;
+    width: 45%;
+  }
+
+  .tech-spec {
+    padding-top: 0;
+  }
+
+  .logo-tech-spec li img {
+    width: 20px;
+  }
+
+  .download-brochure {
+    display: block;
+  }
+
+  .download-brochure li h5 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .download-brochure li a {
+    justify-content: center;
+  }
+
+  .our-client {
+    padding-top: 40px;
+  }
+
+  .our-clinet-heading {
+    padding-bottom: 30px;
+    width: 70%;
+  }
+
+  .get-in-heading {
+    padding-bottom: 10px;
+    font-size: 26px;
+    padding-left: 0;
+  }
+
+  .get-in-touch-para p {
+    padding-bottom: 40px;
+    margin-left: 0;
+  }
+
+  .contact_content_box {
+    width: 100%;
+    padding: 15px 10px 35px;
+  }
+
+  .form-area-box {
+    width: 100%;
+    padding: 35px 0 0 0;
+  }
+
+  .airquality_inner_form {
+    padding: 15px;
+  }
+
+  .contact-form {
+    padding-top: 50px;
+  }
+
+  .faq {
+    padding-top: 50px;
+  }
+
+  .faq-heading {
+    font-size: 24px;
+    width: 100%;
+    padding-right: 50px;
+    padding-bottom: 10px;
+  }
+
+  .indusrtial-application {
+    padding-top: 50px;
+  }
+
+  .indusrial-heading {
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
+
+  .appli-bold {
+    font-size: 22px;
+  }
+
+  .app_service_box {
+    margin-top: 40px;
+  }
+}
+
+/* React Multi Carousel Styling */
+.carousel-container {
+  padding: 20px 0;
+}
+
+.react-multi-carousel-list {
+  position: relative;
+}
+
+.react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+}
+
+.react-multiple-carousel__arrow {
+  position: absolute;
+  outline: none;
+  transition: all 0.5s;
+  border-radius: 35px;
+  z-index: 1000;
+  border: none;
+  background: rgba(36, 194, 80, 0.8);
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background: rgba(36, 194, 80, 1);
+}
+
+.react-multiple-carousel__arrow::before {
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  font-family: revicons;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: 10px;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: 10px;
+}
+
+.react-multi-carousel-dot-list {
+  position: absolute;
+  bottom: -25px;
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.react-multi-carousel-dot button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 1;
+  padding: 5px 5px 5px 5px;
+  box-shadow: none;
+  transition: background 0.5s;
+  border: none;
+  margin-right: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.react-multi-carousel-dot--active button {
+  background: #24c250;
+}
+
+/* Health Impact Slider Specific Styling */
+.health-impact-slider .carousel-container {
+  padding: 20px 0 40px;
+}
+
+.health-impact-slider .health-impact-box {
+  padding: 0 15px;
+}
+
+.health-impact-slider .health-impact-box ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.health-impact-slider .health-impact-box ul li:first-child {
+  margin-bottom: 20px;
+}
+
+.health-impact-slider .health-impact-box ul li h3 {
+  padding-right: 0;
+  margin-bottom: 10px;
+}
+
+/* Industrial Applications Carousel Styling */
+.indusrtial-application .carousel-container {
+  padding: 20px 0 40px;
+}
+
+.indusrtial-application .item {
+  padding: 0 15px;
+}
+
+/* Banner Carousel Styling */
+.home-banner-section .carousel-container {
+  padding: 0;
+}
+
+.home-banner-section .react-multi-carousel-dot-list {
+  bottom: 20px;
+}
+
+.home-banner-section .react-multiple-carousel__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .health-impact-slider .health-impact-box ul {
+    height: auto;
+  }
+
+  .health-impact-slider .health-impact-box ul li img {
+    width: 100px;
+  }
+
+  .health-impact-slider .health-impact-box ul li h3 {
+    font-size: 18px;
+  }
+
+  .health-impact-slider .health-impact-box ul li p {
+    font-size: 14px;
+  }
+
+  .react-multiple-carousel__arrow {
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .react-multiple-carousel__arrow::before {
+    font-size: 16px;
+  }
+}
+
+/* Update the arrow GIF positioning */
+.ar-gif,
+.sec,
+.last {
+  width: 60px;
+  position: absolute;
+  z-index: 1;
+}
+
+.ar-gif {
+  transform: rotate(136deg);
+  top: -110px;
+  left: 230px;
+}
+
+.sec {
+  transform: rotate(136deg);
+  top: -110px;
+  left: 570px;
+}
+
+.last {
+  transform: rotate(317deg);
+  top: -110px;
+  left: 950px;
+}
+

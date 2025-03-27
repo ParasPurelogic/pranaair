@@ -4,7 +4,6 @@ import Footer from "@/Components/Footer"
 import Header from "@/Components/Header"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 export const metadata = {
   title: "Prana Air - Air Quality Monitoring Solutions",
   description:

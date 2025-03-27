@@ -1,0 +1,1955 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.buy-now-btn-sec,
+.tab-inner-aqi .good-sec-top h5,
+body h2.sec-heading b,
+body h2.sec-heading.sec-heading-sec {
+  font-family: "Poppins", sans-serif !important;
+}
+
+p,
+.inner-real-time-aqi .countrey-sec {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif !important;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Banner Section */
+.school_banner_box {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 0 160px;
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/05/air-quality-monitoring-solutions-for-rmc-plant.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner_quality_box {
+  width: 45%;
+}
+
+.banner_quality_img_box {
+  width: 55%;
+}
+
+.pocket_title_box.school_aqi_box {
+  padding: 110px 0 0 15%;
+}
+
+.pocket_title_box.school_aqi_box h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.pocket_title_box span {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.school_aqi_box span.bold_text {
+  font-weight: bold;
+  display: block;
+  color: #78ae60;
+}
+
+.pocket_buy_btn {
+  background-color: #78ae60;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.pocket_buy_btn:hover {
+  background-color: #669e4c;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Section Styles */
+section {
+  width: 100%;
+  display: block;
+  clear: both;
+  padding: 0 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* MPCB Guidelines Section - Updated to match design */
+.top_space_heading {
+  background-color: var(--background-cream);
+  padding: 60px 0;
+}
+
+.introducing_box.sub_title_box {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sub_title_box .title_heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.sub_title_box .title_heading span {
+  color: var(--primary-green);
+  font-weight: 500;
+}
+
+.sub_title_box p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.introduce_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.bg-btn.bg-green.view_btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bg-btn.bg-green.view_btn:hover {
+  opacity: 0.9;
+}
+
+.bold_text {
+  font-weight: bold;
+  color: #78ae60;
+}
+
+/* Pollutant Section */
+.inner_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pollution_cntr {
+  padding-bottom: 20px;
+}
+
+.feature_box {
+  width: 25%;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.feature_box img {
+  width: auto;
+  max-width: 100%;
+}
+
+.feature_wrap_box {
+  padding-top: 25px;
+}
+
+.feature_box h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature_box p {
+  font-size: 15px;
+  color: #000;
+  padding: 0 35px;
+  font-weight: 300;
+}
+
+/* Impact Section */
+.school_img_box {
+  min-height: 830px !important;
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/05/air-pollutants-in-rmc-plant.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+}
+
+.school_box_cntr {
+  width: 950px;
+  float: none;
+  padding: 120px 0;
+  margin: 0 auto;
+}
+
+.school_box_cntr ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+.school_box_cntr li {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  float: left;
+  min-height: 225px;
+  left: 30px;
+}
+
+span.school_icon_box {
+  position: absolute;
+  top: -28px;
+  left: -28px;
+}
+
+.school_box_cntr li img {
+  width: 60px;
+}
+
+.schhol_text_box {
+  background: rgba(79, 108, 65, 0.5);
+  padding: 10px;
+  display: inline-block;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  min-width: 180px;
+  text-align: center;
+  color: #fff;
+}
+
+.schhol_text_box h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.schhol_text_box p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+li.first_school_box {
+  left: 186px;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+li.second_school_box {
+  top: 78px;
+  left: 325px;
+  transform: translatey(0px);
+  animation: float 7s ease-in-out infinite;
+}
+
+li.third_school_box {
+  left: 30px;
+  transform: translatey(0px);
+  animation: float 8s ease-in-out infinite;
+}
+
+li.third_school_box span.school_icon_box {
+  top: -45px;
+  left: -45px;
+}
+
+li.third_school_box span.school_icon_box img {
+  width: 96px;
+}
+
+li.fourth_school_box {
+  top: 65px;
+  left: 327px;
+  transform: translatey(0px);
+  animation: float 5s ease-in-out infinite;
+}
+
+li.fourth_school_box span.school_icon_box {
+  top: -53px;
+  left: -55px;
+}
+
+li.fourth_school_box span.school_icon_box img {
+  width: 108px;
+}
+
+li.fivth_school_box {
+  left: 30px;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+li.fivth_school_box span.school_icon_box {
+  left: -43px;
+  top: -46px;
+}
+
+li.fivth_school_box span.school_icon_box img {
+  width: 93px;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+/* Guidelines expanded section */
+.table_specifiction_collapse {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.table_specifiction_collapse h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.table_specifiction_collapse p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.mpcb-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.mpcb-logo-container p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.guidelines-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 30px;
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.guideline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.guideline-item .bullet {
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.guideline-item span {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.guideline-item sup {
+  font-size: 10px;
+}
+
+.rmc-gazette {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.rmc-gazette a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.air_heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 40px 0;
+  position: relative;
+}
+
+.air_heading:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: var(--primary-green);
+}
+
+/* Monitoring Section */
+.quality_solution_section {
+  padding: 60px 0;
+}
+
+.quality_solution_section .title_heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.quality_solution_section .bold_text {
+  color: var(--primary-green);
+}
+
+.ambient_monitor_section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.pills_tab {
+  margin-bottom: 20px;
+}
+
+.nav.nav-pills {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nav.nav-pills li {
+  width: 33.33%;
+  margin-left: 6px;
+  text-align: center;
+}
+
+.nav.nav-pills li a {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 9px;
+  padding: 30px 30px;
+  font-size: 16px;
+  color: #31343d;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.nav.nav-pills li.active a {
+  border-radius: 5px;
+  background: #78ae60;
+  color: #fff;
+}
+
+.nav.nav-pills li.active a:before {
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-top: 13px solid #78ae60;
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.tab_img {
+  display: block;
+  width: 242px;
+  height: 183px;
+  margin: 0 auto 10px;
+}
+
+.tab_img img {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.tab-content {
+  background: #ffff;
+  border: 1px solid #78ae60;
+  border-radius: 9px;
+  padding: 20px 30px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.in.active {
+  display: block;
+}
+
+.ambient_monitor_box p {
+  font-size: 15px;
+  color: #667580;
+  font-weight: normal;
+  padding-top: 25px;
+}
+
+/* Monitoring Solutions Section */
+.monitoring-tabs {
+  display: flex;
+  margin: 40px 0 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.monitoring-tab {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.monitoring-tab.active {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.monitoring-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.monitoring-text {
+  flex: 1;
+}
+
+.monitoring-text h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--primary-green);
+}
+
+.monitoring-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.monitoring-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monitoring-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.parameter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.parameter-tag {
+  padding: 6px 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+ul.paramete_list {
+  display: flex;
+  list-style: none;
+  clear: both;
+  margin: 0;
+  padding-top: 32px;
+  flex-wrap: wrap;
+}
+
+.paramete_list li {
+  background: #ffff;
+  border: 1px solid #bfbfbf;
+  border-radius: 6px;
+  padding: 5px 18px;
+  color: #667580;
+  font-size: 13px;
+  margin-right: 20px;
+  width: auto;
+  float: none;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+/* Freemium Services Section */
+/* Data Freemium Services Section */
+.data-freemium-section {
+  padding: 60px 0;
+}
+
+.data-freemium-section .title_heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.data-freemium-section .bold_text {
+  color: var(--primary-green);
+}
+
+.data-freemium-section p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.app_service_box {
+  width: 33.33%;
+  padding: 15px;
+  text-align: center;
+}
+
+.app_service_box img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+
+.app_service_box:hover img {
+  transform: scale(1.1);
+}
+
+.app_img_bx {
+  overflow: hidden;
+}
+
+.app_service_box h4 {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  padding-top: 18px;
+  font-weight: normal;
+}
+
+/* RMC Plant Section */
+/* Construction Banner */
+.construction-banner {
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/05/air-quality-solutions-for-rmc-plant.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  margin: 60px 0;
+  color: white;
+}
+
+.construction-banner-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.construction-banner-text {
+  max-width: 60%;
+}
+
+.construction-banner-text h2 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.construction-banner-text h2 b {
+  color: #f79530;
+  font-weight: 700;
+}
+
+.construction-banner-button a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.construction-banner-button a:hover {
+  background-color: #669e4c;
+}
+
+.rmc-plant {
+  padding: 150px 0 0;
+}
+
+.rmc-plant-sec {
+  height: 255px;
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/05/air-quality-solutions-for-rmc-plant.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.rmc-plant-sec ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 82px 0;
+  justify-content: space-around;
+}
+
+.rmc-plant-sec ul li h5 {
+  font-size: 26px;
+  color: #fff;
+  font-family: "Roboto";
+  line-height: 1.3;
+  padding-right: 110px;
+}
+
+.rmc-plant-sec ul li h5 b {
+  font-weight: 900;
+  color: #f79530;
+}
+
+.rmc-plant-sec ul li:first-child {
+  width: 58%;
+}
+
+.rmc-plant-sec ul li:last-child a {
+  background: #78ae60;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: .3s linear;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.rmc-plant-sec ul li:last-child a img {
+  width: 20px;
+}
+
+.rmc-plant-sec ul li:last-child a:hover {
+  border: 1px solid #fff;
+}
+
+/* Clientele Section */
+/* Clientele Section */
+.clientele-section {
+  padding: 60px 0;
+}
+
+.clientele-section .title_heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.clientele-section .bold_text {
+  color: var(--primary-green);
+}
+
+.clientele-section p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.client-logo {
+  width: 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: scale(1.05);
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 80px;
+}
+
+.client_logo_section {
+  padding-bottom: 20px;
+}
+
+.client-logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.client-logo-container > div {
+  box-shadow: 2px -2px 8px -1px #ccc;
+  padding: 15px 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  height: 120px;
+  transition: transform 0.4s;
+  width: 22%;
+}
+
+.client-logo-container > div:hover {
+  transform: scale(1.1);
+}
+
+/* FAQ Section */
+.faq_ask_section {
+  padding: 60px 0;
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  padding: 1rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #000;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: #78ae60;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer.active {
+  max-height: 500px;
+  padding-bottom: 1rem;
+}
+
+.faq-answer p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #606060;
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.contact-section .title_heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.contact-section .bold_text {
+  color: var(--primary-green);
+}
+
+.contact-section p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+}
+
+.contact-info {
+  width: 35%;
+  background-color: var(--primary-green);
+  color: white;
+  padding: 40px 30px;
+  position: relative;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-detail i {
+  font-size: 20px;
+}
+
+.contact-detail-text {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact-form {
+  width: 65%;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.submit-button {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #669e4c;
+}
+
+.airqulality_contact_section {
+  padding: 0 220px;
+  margin-top: 45px;
+  position: relative;
+}
+
+.airqulality_contact_section:before {
+  background: rgba(120, 174, 96, 0.1);
+  width: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 420px;
+  z-index: 0;
+}
+
+.airquality_inner_form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 950px;
+  margin: 0 auto 30px;
+  box-shadow: 2px 2px 11px 0px #ccc;
+  z-index: 1;
+  position: relative;
+}
+
+.contact_content_box {
+  background: #78ae60;
+  padding: 30px 15px 75px;
+  width: 40%;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact_content_box:after {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+  width: 160px;
+  height: 160px;
+  content: "";
+  position: absolute;
+  bottom: -92px;
+  left: -25px;
+  z-index: 0;
+  background-size: 66%;
+}
+
+.contact-form-wrapper {
+  width: 60%;
+  padding: 6px 0 0 40px;
+}
+
+.contact_information_box h4 {
+  font-size: 25px;
+  color: #fff;
+}
+
+.contact_information_box p {
+  color: #fff;
+  font-weight: 300;
+}
+
+ul.contact_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact_info li {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.contact_info li i {
+  font-size: 21px;
+  margin-right: 10px;
+}
+
+.contact_info {
+  padding-top: 20px !important;
+}
+
+.airquality_contact_box input.wpcf7-form-control {
+  width: 100%;
+  margin-bottom: 15px !important;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px;
+  height: 30px;
+}
+
+.airquality_contact_box label {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  color: #606060;
+}
+
+.airquality_contact_box textarea {
+  max-height: 78px;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px;
+  width: 100%;
+}
+
+.airquality_contact_box input[type="submit"] {
+  background: #78ae60;
+  border: none;
+  width: auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+label.message_text {
+  color: #78ae60;
+  font-weight: 500;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+/* Industrial Applications Section */
+/* Industrial Applications Section */
+.industrial-applications {
+  padding: 60px 0;
+  border-top: 1px solid #eee;
+}
+
+.industrial-applications .title_heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.industrial-applications .bold_text {
+  color: var(--primary-green);
+}
+
+.industrial-applications p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.applications-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.carousel-item {
+  padding: 15px;
+}
+
+.application-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: white;
+  margin: 0 10px;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+}
+
+.application-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.application-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.application-card:hover .application-card-image img {
+  transform: scale(1.05);
+}
+
+.application-card h3 {
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+/* Make sure the carousel is visible */
+.react-multi-carousel-list {
+  display: flex !important;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.react-multi-carousel-track {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+}
+
+.seperate_industrial_box {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  margin-top: 33px;
+}
+
+.industries_application_section {
+  padding: 0 0 60px;
+}
+
+.owl-slider {
+  padding: 0 25px;
+}
+
+.carousel-container {
+  padding: 20px 0;
+}
+
+/* Responsive Styles */
+/* Responsive styles */
+@media (max-width: 992px) {
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .monitoring-content {
+    flex-direction: column;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .construction-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .construction-banner-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .client-logos {
+    gap: 15px;
+  }
+
+  .client-logo {
+    width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .school_banner_box {
+    padding: 0;
+    flex-direction: column-reverse;
+    height: 730px;
+    padding-top: 20px;
+    background-position: 97% -75px !important;
+    background-repeat: no-repeat !important;
+    background-size: 689px !important;
+  }
+
+  .banner_quality_box {
+    width: 100%;
+    position: relative;
+    top: 1px;
+  }
+
+  .banner_quality_img_box {
+    width: 100%;
+  }
+
+  .pocket_title_box.school_aqi_box {
+    padding: 10px 30px 44px;
+  }
+
+  .pocket_title_box.school_aqi_box h1 {
+    font-size: 27px;
+    line-height: normal;
+  }
+
+  .sub_title_box .title_heading {
+    font-size: 30px;
+  }
+
+  .feature_box {
+    width: 100%;
+    padding: 13px 15px;
+  }
+
+  .feature_box p {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .school_img_box {
+    min-height: 495px !important;
+  }
+
+  .school_box_cntr {
+    width: 100%;
+    float: none;
+    padding: 65px 0 0;
+  }
+
+  .schhol_text_box {
+    display: none;
+    min-width: 240px;
+    padding: 12px 15px;
+  }
+
+  li.first_school_box .schhol_text_box {
+    display: block;
+  }
+
+  .nav.nav-pills {
+    margin: 0 -30px 20px -36px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .nav.nav-pills li {
+    width: auto;
+    flex: 0 0 38%;
+    margin-bottom: 22px;
+  }
+
+  .nav.nav-pills li a {
+    padding: 2px 15px 13px;
+    font-size: 14px;
+  }
+
+  .tab_img {
+    width: 242px;
+    height: 183px;
+  }
+
+  .monitoring-content {
+    flex-direction: column;
+  }
+
+  .app_service_box {
+    width: 100%;
+    padding-bottom: 35px;
+  }
+
+  .rmc-plant-sec {
+    height: 255px;
+    background-position: center;
+  }
+
+  .rmc-plant-sec ul {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 58px 0;
+    text-align: center;
+  }
+
+  .rmc-plant-sec ul li h5 {
+    font-size: 16px;
+    line-height: 28px;
+    padding-right: 0;
+  }
+
+  .rmc-plant-sec ul li:first-child {
+    width: 100%;
+  }
+
+  .rmc-plant-sec ul li:last-child a {
+    padding: 10px 0px;
+    display: block;
+    width: 50%;
+    margin: 15px auto;
+    font-size: 14px;
+  }
+
+  .client-logo-container > div {
+    width: 45%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    height: 103px;
+  }
+
+  .airqulality_contact_section {
+    padding: 0 15px !important;
+  }
+
+  .contact_content_box {
+    width: 100%;
+    padding: 13px 15px 10px;
+  }
+
+  .contact-form-wrapper {
+    width: 100%;
+    padding: 30px 15px 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq_section.faq_ask_section {
+    padding: 0 15px !important;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pocket_title_box.school_aqi_box {
+    padding: 110px 0 0 15%;
+  }
+
+  .feature_box {
+    width: 50%;
+  }
+
+  .app_service_box {
+    width: 50%;
+  }
+
+  .client-logo-container > div {
+    width: 45%;
+  }
+
+  .airqulality_contact_section {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .school_box_cntr {
+    width: 90%;
+  }
+
+  .airqulality_contact_section {
+    padding: 0 100px;
+  }
+}
+
+/* Font Awesome Icons for Contact Section */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-phone:before {
+  content: "\f095";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-map-marker:before {
+  content: "\f041";
+}
+
+.contact_info li .fa-phone {
+  transform: rotate(131deg);
+}
+
+/* Add styles for the Solutions Tabs section */
+.solution-tabs-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.solution-tab {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.solution-tab.active {
+  background-color: var(--primary-green);
+  color: white;
+  position: relative;
+}
+
+.solution-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid var(--primary-green);
+}
+
+.solution-tab-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.solution-tab h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.solution-content {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.solution-content-inner p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.solution-content-inner h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.features-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.features-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+.features-list.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.parameter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.parameter-tag {
+  padding: 8px 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.brochure-btn,
+.quote-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.brochure-btn {
+  border: 1px solid var(--primary-green);
+  color: var(--primary-green);
+  background-color: white;
+}
+
+.quote-btn {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+}
+
+.brochure-btn:hover,
+.quote-btn:hover {
+  opacity: 0.9;
+}
+
+.hide-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hide-button button {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hide-button button span {
+  font-size: 12px;
+}
+
+/* Fix Industrial Applications carousel */
+.industrial-applications {
+  padding: 60px 0;
+  border-top: 1px solid #eee;
+}
+
+.industrial-applications .title_heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.industrial-applications .bold_text {
+  color: var(--primary-green);
+}
+
+.industrial-applications p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.owl-slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.carousel-container {
+  padding: 20px 0;
+}
+
+.item {
+  padding: 0 15px;
+}
+
+.app_service_box {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.app_service_box:hover {
+  transform: translateY(-5px);
+}
+
+.app_img_bx {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.app_img_bx img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+  display: block;
+}
+
+.app_service_box:hover .app_img_bx img {
+  transform: scale(1.05);
+}
+
+.app_service_box h4 {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+  margin: 15px 0 0;
+}
+
+.app_service_box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+/* Make sure the carousel is visible */
+.react-multi-carousel-list {
+  display: flex !important;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.react-multi-carousel-track {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+}
+
+/* Responsive styles for the industrial applications section */
+@media (max-width: 768px) {
+  .app_service_box {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .app_img_bx img {
+    height: 180px;
+  }
+}
+
+/* Responsive styles for the solutions tabs */
+@media (max-width: 768px) {
+  .solution-tabs-container {
+    flex-direction: column;
+  }
+
+  .features-list.two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
