@@ -652,6 +652,7 @@ h6 {
   display: inline-block;
   width: 25%;
 }
+
 .parameter-main {
   background: rgb(255 255 255 / 0%);
   border-radius: 35px;
@@ -665,14 +666,16 @@ h6 {
   padding: 40px;
   margin-top: 50px;
 }
+
 .parameter-main ul li img {
   width: 50px;
   height: auto;
 }
 
 .parameter-txt {
-  color: #B9B9B9;
-  font-weight: 500;
+  color: #b9b9b9;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .parameter-box {
@@ -681,8 +684,616 @@ h6 {
   gap: 5px;
 }
 
+.app-controller {
+  background: url(/img/app-controller.webp);
+  background-size: cover;
+  background-position: right;
+  height: 980px;
+}
 
+.heading-app h2 {
+  color: #F0F2F7;
+  font-size: 40px;
+  width: 43%;
+}
 
+.heading-app h2 span {
+  color: #58B0F9;
+}
+
+.map-box ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  background: #00000038;
+  border-radius: 25px;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-left: 1px solid #ffffff59;
+  border-bottom: 0;
+  border-right: 1px solid #ffffff17;
+  border-top: 1px solid #ffffff38;
+  padding: 30px;
+}
+
+.map-box {
+  gap: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.map-box ul li img {
+  width: 50px;
+  height: auto;
+}
+
+.map-box ul li h3 {
+  color: #fff;
+  font-size: 20px;
+}
+
+.map-box ul li p {
+  color: #F0F2F7;
+  font-size: 16px;
+  font-weight: 300;
+  width: 70%;
+}
+
+.heading-app {
+  padding-bottom: 170px;
+}
+
+.map-img {
+  display: flex;
+  gap: 20px;
+}
+
+.map-img ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.map-img ul li img {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.map-img ul li h3 {
+  color: #FFFFFF;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.map-img ul li p {
+  color: #f0f2f7ba;
+  font-size: 16px;
+}
+
+.map-img ul li {
+  width: 100%;
+}
+
+.thermal-camera .container {
+  background: url(/img/thermal-camera-bg.webp);
+  background-size: cover;
+  height: 400px;
+  padding-top: 60px;
+}
+
+.thermal-camera {
+  margin-top: 130px;
+}
+
+.camera-img img {
+  width: 40%;
+  height: auto;
+}
+
+.camera-img {
+  text-align: center;
+}
+
+.night-vision-txt h2 {
+  color: #F0F2F7;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 24px;
+}
+
+.night-vision-txt p {
+  color: #f0f2f7bf;
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 10px;
+  width: 80%;
+}
+
+.night-vision-txt ul {
+  padding: 0;
+  list-style: none;
+  margin: 30px 0 0;
+  display: flex;
+  gap: 10px;
+}
+
+.night-vision-txt ul li {
+  background: #47474726;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-left: 1px solid #ffffff59;
+  border-bottom: 0;
+  border-right: 1px solid #ffffff17;
+  border-top: 1px solid #ffffff38;
+  padding: 16px 20px;
+  color: #fff;
+}
+
+.night-vision-txt ul li span {
+  color: #58B0F9;
+}
+
+.night-vision-txt {
+  padding-left: 130px;
+}
+
+.h-c-battery img {
+  height: auto;
+  width: 100%;
+}
+
+.high-capacity-txt h2 {
+  color: #58B0F9;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.high-capacity-txt h3 {
+  color: #F0F2F7;
+  font-size: 24px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.high-capacity-txt p {
+  color: #f0f2f7c9;
+  font-size: 18px;
+  padding-bottom: 10px;
+  width: 60%;
+}
+
+.high-capacity-txt ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.high-capacity-txt ul li {
+  background-image: linear-gradient(180deg, #000000a1, #00000000);
+  border-radius: 14px;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-left: 1px solid #ffffff59;
+  border-bottom: 0;
+  border-right: 1px solid #ffffff17;
+  border-top: 1px solid #ffffff38;
+  padding: 12px 20px;
+  color: #fff;
+  width: 25%;
+  text-align: center;
+}
+
+.high-capacity .container {
+  background: #47474726;
+  border-radius: 80px;
+  background-image: linear-gradient(180deg, #00000078, #00000000);
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-left: 1px solid #ffffff59;
+  border-bottom: 0;
+  border-right: 1px solid #ffffff17;
+  border-top: 1px solid #ffffff38;
+  padding: 16px 20px;
+  color: #fff;
+}
+
+.high-capacity-txt {
+  padding-top: 60px;
+}
+
+.lightweight-sec {
+  margin-top: 60px;
+}
+
+.lightweight-sec .container {
+  padding: 40px 60px;
+}
+
+.light-weight-drone-img img {
+  height: auto;
+  width: 80%;
+}
+
+.light-weight-drone-img {
+  text-align: center;
+}
+
+.light-weight-drone-txt h2 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.light-weight-drone-txt h2 span {
+  color: #58B0F9;
+}
+
+.light-weight-drone-txt p {
+  color: #f0f2f7bd;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.light-weight-drone-txt {
+  padding-top: 60px;
+  padding-left: 80px;
+}
+
+.lightweight-sec {
+  margin-top: 60px;
+}
+
+.lightweight-sec .container {
+  padding: 40px 60px;
+}
+
+.light-weight-drone-img img {
+  height: auto;
+  width: 80%;
+}
+
+.light-weight-drone-img {
+  text-align: center;
+}
+
+.light-weight-drone-txt h2 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.light-weight-drone-txt h2 span {
+  color: #58B0F9;
+}
+
+.light-weight-drone-txt p {
+  color: #f0f2f7bd;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.light-weight-drone-txt {
+  padding-top: 60px;
+  padding-left: 80px;
+}
+
+.long-enduru-drone-img img {
+  width: 100%;
+  height: auto;
+}
+
+.long-enduru-drone-txt h2 {
+  font-size: 40px;
+  font-weight: 200;
+  width: 90%;
+}
+
+.long-enduru-drone-txt {
+  margin-left: -100px;
+  padding-top: 40px;
+}
+
+.long-enduru-drone-txt h2 span {
+  color: #58B0F9;
+}
+
+.long-enduru-drone-txt p {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 32px;
+  width: 80%;
+}
+
+.high-capacity.long-endurance-drone-sec {
+  margin-top: 70px;
+}
+
+.advance-air-tech {
+  padding-top: 150px;
+}
+
+.advance-monitor-tech {
+  text-align: center;
+}
+
+.advance-monitor-tech h2 {
+  color: #F0F2F7;
+  font-size: 40px;
+  margin: 0;
+}
+
+.advance-monitor-tech p {
+  color: #f0f2f77a;
+  font-size: 30px;
+}
+
+.video-slider-img img {
+  width: 95%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.video-slider-img {
+  text-align: center;
+}
+
+.labelling-drone {
+  padding-top: 220px;
+  background: url(/img/labelling-bg.webp);
+  background-size: cover;
+  padding-bottom: 300px;
+}
+
+.labell-txt h2 {
+  color: #F0F2F7;
+  font-size: 52px;
+  font-weight: 300;
+}
+
+.labell-txt h2 span {
+  color: #58B0F9;
+}
+
+.labell-txt p {
+  color: #f0f2f7bd;
+  font-size: 18px;
+  width: 70%;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.labell-txt ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.labell-txt ul li a {
+  background: #1972BC;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.labell-txt ul li a img {
+  height: auto;
+  width: 15px;
+}
+
+.labell-txt ul li a:hover {
+  background: #0d5fa3;
+}
+
+.labell-img img {
+  width: 100%;
+  height: auto;
+}
+
+.labell-txt {
+  padding-top: 50px;
+}
+
+.gallery-slider-card .slider-thumbnails {
+  flex-direction: row;
+}
+
+.gallery-slider-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery-slider-card .slider-arrow {
+  transform: rotate(-90deg);
+}
+
+.gallery-slider-card .slider-thumbnail {
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  padding: 0;
+}
+
+.drone-sensor-image img {
+  border-radius: 15px;
+}
+
+.gallery-slider-card .slider-thumbnail.active {
+  border: 2px solid #58B0F9;
+}
+
+.gallery-title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.gallery-tab {
+  justify-content: flex-end;
+}
+
+.gallery-tab.sticky-tabs {
+  justify-content: center;
+}
+
+.drone-sensor-image img {
+  border-radius: 15px;
+}
+
+.trailord {
+  padding-top: 100px;
+}
+
+.trailord-txt h2 {
+  color: #F0F2F7;
+  width: 30%;
+}
+
+.trailord-txt h2 span {
+  color: #58B0F9;
+}
+
+.icon-rang ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-rang ul li img {
+  height: auto;
+  width: 50px;
+}
+
+.icon-rang ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f0f2f7a8;
+  font-size: 16px;
+  border-bottom: 1px solid #ffffff17;
+  width: 90%;
+  padding: 8px 0;
+}
+
+.prana-vtol-main {
+  display: flex;
+  background: #47474726;
+  border-radius: 80px;
+  background-image: linear-gradient(#00000078, #0000);
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-left: 1px solid #ffffff59;
+  border-bottom: 0;
+  border-right: 1px solid #ffffff17;
+  border-top: 1px solid #ffffff38;
+  padding: 60px 100px;
+  margin-top: 0px;
+  gap: 220px;
+}
+
+.prana-vtol-quad-img {
+  width: 100%;
+  padding-left: 100px;
+}
+
+.img-box {
+  display: flex;
+}
+
+.compare {
+  width: 100%;
+}
+
+.prana-vtol-quad-img img {
+  height: auto;
+  width: 220px;
+}
+
+.compare h3 {
+  color: #fff;
+  font-size: 24px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}
+
+.compare p {
+  color: #f0f2f7bf;
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 1px solid #ffffff1a;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.compare a {
+  color: #58b0f9;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 30px;
+}
+
+.compare a img {
+  width: 15px;
+  height: auto;
+}
+
+.icon-rang {
+  padding-top: 250px;
+}
+
+.tech-spec-list {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.tech-spec-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.car-in-outdoor-tab ul li {
+  background: none !important;
+}
+
+.tech-spec-list ul li h5 {
+  color: #fff;
+  font-size: 16px;
+}
+
+.tech-spec-list ul li {
+  width: 30%;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.texh-spec-box:before {
+  position: absolute;
+  content: "";
+  background: #f0f8f0;
+  height: 70px;
+  width: 100%;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  top: 85px;
+}
 
 
 /* Responsive adjustments for Quad specs */
