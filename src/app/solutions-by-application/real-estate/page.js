@@ -93,7 +93,7 @@ export default function RealEstate() {
           </h2>
           <p>
             We spend more than 90% of our lives indoors and the air pollutants present indoors are 10x times more
-            harmful than the ambient environment. Therefore, indoor air quality affects most occupants' health. Various
+            harmful than the ambient environment. Therefore, indoor air quality affects most occupants health. Various
             air pollutants in real estate such as residential areas and malls can exist.
           </p>
         </div>
@@ -333,7 +333,7 @@ export default function RealEstate() {
             </div>
             <h3>Pregnant Ladies</h3>
             <p>
-              When they are exposed to poor air quality, both mother's and child's health are affected. Poor air can
+              When they are exposed to poor air quality, both mothers and childs health are affected. Poor air can
               affect prenatal development.
             </p>
           </div>
@@ -447,7 +447,7 @@ export default function RealEstate() {
             Air quality <span className="highlight-text">Solutions</span>
           </h2>
           <p>
-            Prana Air's air quality monitoring and air purifying solutions give you the power to know what your
+            Prana Airs air quality monitoring and air purifying solutions give you the power to know what your
             residents and visitors breathe and what you could do to clean the air to make real estate properties
             pollution-free zones and view and analyze your IAQ.
           </p>
@@ -740,7 +740,7 @@ export default function RealEstate() {
           <p>
             About Air Quality Solution for Real Estates
             <br />
-            Have questions? We're here to help.
+            Have questions? Were here to help.
           </p>
         </div>
 
@@ -780,7 +780,7 @@ export default function RealEstate() {
             <div className="faq-item-body" style={{ display: activeAccordion === 2 ? "block" : "none" }}>
               <p>
                 To know the nature of pollutants and how much they are present in a space so that necessary actions can
-                be taken to improve air quality and protect occupants' health.
+                be taken to improve air quality and protect occupants health.
               </p>
             </div>
           </div>
@@ -794,7 +794,7 @@ export default function RealEstate() {
             </div>
             <div className="faq-item-body" style={{ display: activeAccordion === 3 ? "block" : "none" }}>
               <p>
-                Prana Air Monitors are WiFi enabled so you don't need to set up a wire framework to extract and display
+                Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display
                 the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time
                 data on your screens or mobile app.
               </p>
