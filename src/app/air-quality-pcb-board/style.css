@@ -1,0 +1,1057 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nunito Sans' !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: 'Nunito Sans' !important;
+}
+
+a {
+  font-family: 'Nunito Sans' !important;
+  text-decoration: none !important;
+}
+
+.vc_section[data-vc-full-width] {
+  overflow: visible !important;
+}
+
+.deskshow {
+  display: block;
+}
+
+.mobshow {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.banner-btn-arrow {
+  width: 60px;
+  position: relative;
+  top: -3px;
+}
+
+.button_slide {
+  color: #FFF !important;
+  border: 2px solid rgb(255 255 255) !important;
+  padding: 20px 20px !important;
+  display: inline-block !important;
+  font-family: 'Nunito Sans' !important;
+  font-size: 18px !important;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #526B2E;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  background-color: transparent !important;
+  margin-top: 30px;
+  position: relative !important;
+  height: auto !important;
+}
+
+.slide_right:hover {
+  box-shadow: inset 400px 0 0 0 #526B2E !important;
+}
+
+.button_slide:before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 3px;
+  height: 60px;
+  right: 0;
+  top: 0;
+}
+
+.banner-btn-arrow {
+  width: 60px;
+  position: relative;
+  top: -3px;
+  left: 7px;
+}
+
+.button_slide:before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 3px;
+  height: 67px;
+  right: 0;
+  top: 0;
+}
+
+.banner {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/06/pcb-board-banner-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+.banner-txt {
+  padding-top: 100px;
+}
+
+.banner-txt h1 {
+  color: #9FE469;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.banner-txt h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 50px;
+  margin: 0;
+}
+
+.banner-txt h3 {
+  color: #fff;
+  font-size: 44px;
+  line-height: 50px;
+  font-weight: 800;
+}
+
+.banner-txt h4 {
+  color: #fff;
+}
+
+.banner-txt p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.indoor-outdoor {
+  margin: 0 !important;
+  list-style: none !important;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0;
+}
+
+.indoor-outdoor li {
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+}
+
+.indoor-outdoor li:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #ffffff0d, white, #ffffff0a);
+  width: 1px;
+  height: 25px;
+  right: -20px;
+  top: -3px;
+}
+
+.banner-para {
+  padding-top: 30px;
+  font-size: 18px !important;
+  padding-right: 150px;
+}
+
+.circuit-borad-section {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/pcb-banner-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 35px 40px 20px;
+}
+
+.circuit-board h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #31343D;
+  font-weight: 700;
+}
+
+.circuit-board h2 img {
+  width: 42px;
+  position: relative;
+  top: 20px;
+  left: -5px;
+}
+
+.circuit-board h3 {
+  color: #31343D;
+  font-size: 26px;
+  font-weight: 800;
+  margin-left: 45px;
+}
+
+.circuit-board {
+  padding-bottom: 30px;
+  padding-top: 110px;
+}
+
+.pcb-customize-txt img {
+  width: 55px;
+}
+
+.para-txt {
+  padding: 55px 0;
+}
+
+.box-1 {
+  width: 100%;
+}
+
+.pcb-board-txt p {
+  color: #677580;
+  font-size: 16px;
+  line-height: 27px;
+  padding-right: 180px;
+}
+
+.pcb-customize-txt h3 {
+  font-size: 18px;
+  padding-right: 120px;
+  line-height: 25px;
+  padding-bottom: 50px;
+  padding-top: 10px;
+}
+
+.banner-txt h4 {
+  color: #fff;
+}
+
+.tab-inner-title a {
+  font-size: 14px;
+}
+
+.tab-inner-title button {
+  background: none;
+  border: none;
+  font-weight: 500;
+  color: #737373;
+}
+
+li.tab-inner-title.active button {
+  color: #000;
+  border-bottom: 4px solid #8BC34A;
+}
+
+.pcb-customize-txt {
+  display: flex;
+  gap: 40px;
+}
+
+.shdw-line {
+  position: relative;
+}
+
+.shdw-line:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #7d7c7c00, #7d7c7c59, #7d7c7c00);
+  height: 130px;
+  width: 1px;
+  right: 360px;
+}
+
+.shdw-line:after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #7d7c7c00, #7d7c7c59, #7d7c7c00);
+  height: 130px;
+  width: 1px;
+  right: 70px;
+  top: 0;
+}
+
+.last-shdw-line:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #7d7c7c00, #7d7c7c59, #7d7c7c00);
+  height: 130px;
+  width: 1px;
+  right: 360px;
+}
+
+.last-shdw-line {
+  position: relative;
+}
+
+.tab-imgs-section {
+  padding-top: 100px;
+}
+
+.tab-main-heading h2 {
+  font-size: 26px;
+  color: #31343D;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.tab-main-heading {
+  padding-bottom: 50px;
+}
+
+.tab-inner-title a {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.tab-inner-title a:hover {
+  color: black !important;
+}
+
+.tab-inner-title a {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #677580 !important;
+}
+
+
+.tab-inner-title {
+  background: transparent !important;
+  padding-bottom: 50px !important;
+}
+
+.tab-img-para {
+  padding: 30px 0;
+}
+
+.ult_tabitemname {
+  padding: 0 !important;
+}
+
+.tab-inner-title.current a {
+  color: #31343D !important;
+}
+
+.tab-inner-title.current {
+  position: relative
+}
+
+.tab-inner-title.current:before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 3px;
+  top: 28px;
+  background: #7AB261;
+}
+
+.tab-img-para h2 img {
+  width: 32px;
+}
+
+.tab-img-para h2 {
+  color: #31343D;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.tab-img-para p {
+  font-size: 16px;
+  color: #677580;
+  line-height: 30px;
+  padding-bottom: 0px;
+  padding-left: 40px;
+  padding-right: 60px;
+}
+
+.air-qualty-sensore {
+  padding-top: 150px;
+}
+
+.air-quality-sensore h2 {
+  font-size: 24px;
+  color: #31343D;
+  font-weight: 700;
+}
+
+.air-quality-sensore h3 {
+  font-size: 26px;
+  color: #31343D;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.air-quality-sensore-para p {
+  color: #677580;
+  font-size: 16px;
+  padding-right: 290px;
+  padding-bottom: 70px;
+}
+
+.air-quality-sensore {
+  position: relative;
+}
+
+.air-quality-sensore:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #7d7c7c00, #7d7c7c69, #7d7c7c00);
+  height: 60px;
+  width: 1px;
+  right: 60px;
+}
+
+.pcb-sensore-img {
+  padding-bottom: 20px;
+}
+
+.my-tab-section h4 a i {
+  left: 96% !important;
+}
+
+.my-tab-section .vc_tta-panel-heading {
+  border-color: #f0f0f000 !important;
+  background-color: #f8f8f800 !important;
+}
+
+.tab-section {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.frequently-asked-questions h4 {
+  font-size: 24px;
+  color: #31343D;
+  font-weight: 800;
+  padding-right: 80px;
+  line-height: 36px;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.frequently-asked-questions h4:before {
+  position: absolute;
+  content: "";
+  background: #eee;
+  width: 70%;
+  height: 1px;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+.my-tab-section h4 {
+  font-size: 18px !important;
+}
+
+.my-tab-section h4 a {
+  color: #31343D !important;
+  padding-left: 0px !important;
+}
+
+.vc_tta-panel-body p {
+  margin-bottom: 15px !important;
+  color: #677580;
+  line-height: 28px;
+  font-size: 16px;
+  position: relative;
+}
+
+.vc_tta-panel-body p:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(90deg, transparent, #9696966e, #96969600);
+  width: 100%;
+  height: 1px;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.my-tab-section .vc_tta-panel-body {
+  padding: 14px 0px !important;
+}
+
+.woocom-list-content {
+  text-align: center;
+}
+
+.faq-section {
+  padding-top: 170px;
+}
+
+.introducing_box.sub_title_box {
+  padding: 45px 0 10px;
+  text-align: center;
+}
+
+.sub_title_box .title_heading {
+  text-align: center;
+  color: #000;
+  font-size: 36px;
+  margin: 0 0 15px;
+  font-weight: normal;
+}
+
+span.bold_text {
+  font-weight: bold;
+  color: #7ab261;
+}
+
+.airquality_inner_form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 950px;
+  margin: 0 auto 0px !important;
+  box-shadow: 2px 2px 11px 0px #ccc;
+}
+
+.contact_content_box {
+  padding: 30px 15px 45px !important;
+  background: #7AB261;
+  width: 40%;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-colum {
+  width: 60%;
+  padding: 6px 0 0 40px;
+}
+
+.contact_information_box h4 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.contact_information_box p {
+  color: #fff;
+  font-weight: 300;
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+.contact_info li {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+ul.contact_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.contact_info i.fa.fa-phone {
+  transform: rotate(131deg);
+}
+
+.contact_info li i {
+  font-size: 21px;
+  margin-right: 10px;
+}
+
+.airquality_contact_box label {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  color: #606060;
+}
+
+.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: #7AB261;
+  border: none;
+  width: auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  float: right;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+  border: 0;
+  border-bottom: 1px solid #c7c3c3ee;
+  margin-bottom: 20px !important;
+}
+
+textarea.wpcf7-form-control.wpcf7-textarea {
+  border: 0;
+  border-bottom: 1px solid #c7c3c3ee;
+  max-height: 120px;
+}
+
+.contat-form-section:before {
+  background: #EFFFE8;
+  width: 100%;
+  height: 300px;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.product-image img {
+  width: 60%;
+}
+
+.contat-form-section {
+  padding-bottom: 100px;
+  margin-top: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+.ult-video {
+  margin: 0 !important;
+}
+
+.product-slider-cont img {
+  width: 160px;
+}
+
+.product-sldier-heading {
+  padding-bottom: 60px;
+}
+
+.product-section-slider {
+  padding-top: 100px;
+}
+
+.product-slider-cont a {
+  font-size: 18px;
+  color: #333333;
+  font-weight: 700;
+  line-height: 30px;
+  padding-left: 30px;
+  display: block;
+  margin-top: -30px;
+}
+
+.product .woocom-project .price {
+  display: none;
+}
+
+.star-rating {
+  display: none !important;
+}
+
+.woo-buttons {
+  display: none;
+}
+
+.type-product .woocom-project {
+  border: none;
+}
+
+.wpb_tabs.tab-style-one .wpb_tabs_nav>li.ui-state-active {
+  background-color: #7ab261 !important;
+}
+
+.product .onsale {
+  background-color: #7ab261 !important;
+}
+
+.arrows-bg-on.owl-carousel .owl-nav a {
+  background-color: #7ab261;
+}
+
+figcaption.woocom-list-content a.btn.btn-success {
+  border: 1.5px solid #7ab261 !important;
+  color: #7ab261 !important;
+}
+
+figcaption.woocom-list-content a.btn.btn-primary {
+  background: #7ab261 !important;
+}
+
+.woo-buttons-on-img {
+  padding: 0px;
+}
+
+.product .woo-buttons-on-img {
+  margin: 0 0 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .banner-txt {
+    margin-top: 0px;
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 30px !important;
+  }
+
+  .banner-txt h1 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .banner-txt h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .banner-txt h3 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .banner-txt p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .indoor-outdoor li {
+    font-size: 16px;
+  }
+
+  .indoor-outdoor {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .banner-para {
+    padding-top: 20px;
+    font-size: 14px !important;
+    padding-right: 0;
+  }
+
+  .button_slide {
+    padding: 14px 15px !important;
+    margin-top: 10px;
+    font-size: 15px !important;
+  }
+
+  .banner-btn-arrow {
+    width: 50px;
+  }
+
+  .last-shdw-line:before {
+    right: 220px;
+  }
+
+  .banner {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .button_slide:before {
+    height: 50px;
+  }
+
+  .circuit-board h2 img {
+    width: 32px;
+    top: 10px;
+  }
+
+  .circuit-board h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .circuit-board h3 {
+    font-size: 22px;
+    margin-left: 35px;
+  }
+
+  .pcb-board-txt p {
+    padding-right: 0;
+  }
+
+  .para-txt {
+    padding: 25px 0;
+  }
+
+  .pcb-customize-txt .wpb_wrapper {
+    display: flex;
+  }
+
+  .pcb-customize-txt img {
+    width: 45px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pcb-customize-txt h3 {
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  .shdw-line:before {
+    display: none;
+  }
+
+  .shdw-line:after {
+    display: none;
+  }
+
+  .tab-imgs-section {
+    padding-top: 60px;
+  }
+
+  .tab-main-heading h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .tab-main-heading {
+    padding-bottom: 20px;
+  }
+
+  span.ult_tab_main.Both .aio-icon.none {
+    margin: 0 !important;
+  }
+
+  .tab-inner-title a {
+    font-size: 16px !important;
+  }
+
+  .tab-inner-title.current:before {
+    top: 38px;
+  }
+
+  .tab-inner-title {
+    padding-bottom: 30px !important;
+  }
+
+  .tab-img-para h2 {
+    font-size: 20px;
+  }
+
+  .tab-img-para p {
+    font-size: 16px;
+    line-height: 28px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .air-qualty-sensore {
+    padding-top: 50px;
+  }
+
+  .air-quality-sensore h2 {
+    font-size: 18px;
+  }
+
+  .air-quality-sensore h3 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .air-quality-sensore-para p {
+    font-size: 16px;
+    padding-right: 0;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  .air-quality-sensore:before {
+    display: none;
+  }
+
+  .pcb-sensore-img {
+    padding-bottom: 10px;
+  }
+
+  .faq-section {
+    padding-top: 90px;
+  }
+
+  .frequently-asked-questions h4 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .frequently-asked-questions h4:before {
+    bottom: 60px;
+  }
+
+  .my-tab-section h4 a {
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 0 !important;
+  }
+
+  .contat-form-section {
+    margin-top: 100px;
+  }
+
+  .contact_content_box {
+    padding: 30px 15px 15px !important;
+    width: 100%;
+  }
+
+  .contact_information_box h4 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .contact_information_box p {
+    padding-bottom: 24px;
+    font-size: 15px;
+  }
+
+  .contact_info li {
+    padding-bottom: 25px;
+    font-size: 15px;
+  }
+
+  .contact-colum {
+    width: 100%;
+    padding: 50px 0 0 0px;
+  }
+
+  airquality_contact_box label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #677580;
+  }
+
+  .airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    width: 100%;
+  }
+
+  .product-section-slider {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .circuit-borad-section {
+    padding: 35px 10px 20px;
+  }
+
+  .pcb-customize-txt {
+    gap: 40px;
+  }
+
+  .box-1 {
+    width: 100%;
+  }
+
+  figcaption.woocom-list-content a.btn.btn-primary {
+    margin-left: 10px !important;
+  }
+
+  .circuit-board {
+    padding-top: 50px;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+
+
+  .banner-para {
+    padding-right: 0;
+  }
+
+  .pcb-board-txt p {
+    padding-right: 30px;
+  }
+
+  .pcb-customize-txt h3 {
+    padding-right: 20px;
+  }
+
+  .shdw-line:before {
+    right: 10px;
+  }
+
+  .shdw-line:after {
+    right: 10px;
+  }
+
+  .air-quality-sensore-para p {
+    padding-bottom: 70px;
+    padding-right: 50px;
+  }
+
+  .air-quality-sensore:before {
+    right: 0;
+  }
+
+  .faq-section {
+    padding-top: 120px;
+  }
+
+  .frequently-asked-questions h4 {
+    font-size: 20px;
+    padding-right: 0;
+    line-height: 30px;
+  }
+
+  .contat-form-section {
+    padding-bottom: 100px;
+  }
+
+  .product-section-slider {
+    padding-top: 50px;
+  }
+
+  .air-quality-sensore h2 {
+    font-size: 20px;
+  }
+
+  .air-quality-sensore h3 {
+    font-size: 22px;
+  }
+
+  .box-1 {
+    width: 40%;
+  }
+
+  .pcb-customize-txt {
+    gap: 30px;
+  }
+}

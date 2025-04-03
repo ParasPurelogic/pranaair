@@ -1,0 +1,2278 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Base Styles */
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0 0 15px;
+}
+
+p {
+  margin: 0 0 20px;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #78ae60;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #5c8a49;
+}
+
+/* Container */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.highlight-text {
+  color: #78ae60;
+  font-weight: 700;
+}
+
+.section-header p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Hero Banner */
+.hero-banner {
+  display: flex;
+  background-color: #fff;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 50%;
+  padding: 80px 40px 80px 10%;
+  color: #333;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  max-width: 90%;
+  color: #333;
+}
+
+.hero-image {
+  width: 170%;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-tabs {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.category-tab {
+  padding: 8px 16px;
+  background-color: rgba(120, 174, 96, 0.1);
+  color: #333;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-tab.active {
+  background-color: #78ae60;
+  color: white;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #78ae60;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.cta-button:hover {
+  background-color: #5c8a49;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Pollutants Grid */
+.pollutants-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.pollutant-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pollutant-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pollutant-icon {
+  margin-bottom: 20px;
+}
+
+.pollutant-icon img {
+  height: 60px;
+  width: auto;
+}
+
+.pollutant-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pollutant-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Subsection Title */
+.subsection-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 30px;
+  color: #333;
+}
+
+/* Risk Grid */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.risk-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.risk-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.risk-image {
+  margin-bottom: 20px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.risk-image img {
+  max-height: 100%;
+  width: auto;
+}
+
+.risk-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.risk-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Solutions Tabs */
+.solutions-tabs {
+  margin-top: 40px;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #78ae60;
+}
+
+.tab-button.active {
+  color: #78ae60;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #78ae60;
+}
+
+.tab-content-item {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-content-item:first-child {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Product Slider */
+.product-slider {
+  position: relative;
+  margin: 40px 0;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.product-slide {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.product-slide.active {
+  display: flex;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.product-info p {
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: #78ae60;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-image {
+  flex: 1;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.slider-nav:hover {
+  background-color: #78ae60;
+  color: white;
+}
+
+.slider-nav.prev {
+  left: -20px;
+}
+
+.slider-nav.next {
+  right: -20px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+  background-color: #78ae60;
+  transform: scale(1.2);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-image {
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-item:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-item h3 {
+  padding: 20px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Comparison Container */
+.comparison-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+}
+
+.comparison-column {
+  flex: 1;
+  padding: 30px;
+}
+
+.comparison-column h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.clean h3 {
+  color: #78ae60;
+}
+
+.unclean h3 {
+  color: #e86868;
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.comparison-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+.clean .comparison-list li::before {
+  background-color: #78ae60;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.unclean .comparison-list li::before {
+  background-color: #e86868;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.comparison-divider {
+  width: 1px;
+  background-color: #ddd;
+}
+
+/* FAQ Container */
+.faq-container {
+  margin-top: 40px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item-header:hover {
+  background-color: #eee;
+}
+
+.faq-item.active .faq-item-header {
+  background-color: #f0f0f0;
+}
+
+.faq-item-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.faq-icon {
+  font-size: 20px;
+  font-weight: 700;
+  color: #78ae60;
+}
+
+.faq-item-body {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-item-body {
+  padding: 15px 20px;
+  max-height: 500px;
+}
+
+.faq-item-body p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  width: 35%;
+  background-color: #78ae60;
+  color: white;
+  padding: 40px;
+  position: relative;
+}
+
+.contact-info::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-details {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.contact-form {
+  width: 65%;
+  padding: 40px;
+}
+
+.modern-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #78ae60;
+  outline: none;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  align-self: flex-start;
+  background-color: #78ae60;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #5c8a49;
+  transform: translateY(-2px);
+}
+
+/* Applications Slider */
+.applications-slider {
+  margin-top: 40px;
+}
+
+.application-item {
+  padding: 15px;
+}
+
+.application-image {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.application-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.application-image:hover img {
+  transform: scale(1.05);
+}
+
+.application-item h4 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+/* Add styles for the pollutants overlay section to match reference design */
+.pollutants-overlay-section {
+  position: relative;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  margin: 60px 0;
+  background-image: url(https://www.pranaair.com/wp-content/uploads/2022/12/air-quality-problems-for-real-estates.jpg);
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pollutant-marker {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.marker-circle {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(120, 174, 96, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.marker-circle img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.marker-box {
+  background-color: rgba(120, 174, 96, 0.9);
+  padding: 15px;
+  border-radius: 5px;
+  margin-left: 15px;
+  max-width: 250px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.marker-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.marker-box h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.marker-box p {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .section-container {
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-banner {
+    flex-direction: column;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-content {
+    padding: 60px 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .pollutants-grid,
+  .risk-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-slide {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .pollutant-marker {
+    position: relative;
+    margin: 15px;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .overlay-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    overflow-y: auto;
+  }
+
+  .pollutants-overlay-section {
+    height: auto;
+    min-height: 600px;
+  }
+
+  .product-slide {
+    flex-direction: column;
+  }
+
+  .product-info {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .product-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .tabs-header {
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    flex: 1 0 auto;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .comparison-container {
+    flex-direction: column;
+  }
+
+  .comparison-divider {
+    height: 1px;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .marker-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .marker-circle img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .marker-box {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .marker-box h3 {
+    font-size: 16px;
+  }
+
+  .marker-box p {
+    font-size: 12px;
+  }
+
+  .slider-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .slider-nav.prev {
+    left: 10px;
+  }
+
+  .slider-nav.next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .pollutants-grid,
+  .risk-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .faq-item-header h4 {
+    font-size: 15px;
+  }
+}
+
+/* Animation */
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+/* Responsive styles for the new sections */
+@media (max-width: 992px) {
+  .product-slide {
+    flex-direction: column;
+  }
+
+  .product-info {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .slider-nav.prev {
+    left: -10px;
+  }
+
+  .slider-nav.next {
+    right: -10px;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+body h3,
+body h2,
+.buy-now-btn-sec,
+.tab-inner-aqi .good-sec-top h5,
+body h2.sec-heading b,
+body h2.sec-heading.sec-heading-sec {
+  font-family: "Poppins", sans-serif !important;
+}
+body p,
+.inner-real-time-aqi .countrey-sec {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif !important;
+}
+.school_banner_box {
+  padding: 0 0 160px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.contact_info i.fa.fa-phone {
+  transform: rotate(131deg);
+}
+.school_img_box {
+  min-height: 830px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.schhol_text_box {
+  background: rgba(79, 108, 65, 0.5);
+  padding: 10px;
+  display: inline-block;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  min-width: 180px;
+  text-align: center;
+  color: #fff;
+}
+.third_school_box span.school_icon_box img {
+  width: 96px;
+}
+
+li.third_school_box span.school_icon_box {
+  top: -45px;
+  left: -45px;
+}
+
+li.fourth_school_box span.school_icon_box img {
+  width: 108px;
+}
+li.fourth_school_box span.school_icon_box {
+  top: -53px;
+  left: -55px;
+}
+
+li.fivth_school_box span.school_icon_box img {
+  width: 93px;
+}
+li.fivth_school_box span.school_icon_box {
+  left: -43px;
+  top: -46px;
+}
+
+.schhol_text_box h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+.schhol_text_box p {
+  color: #fff;
+  font-size: 14px;
+}
+.school_box_cntr {
+  width: 950px;
+  float: none;
+  padding: 120px 0;
+}
+.school_box_cntr ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.school_box_cntr li {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  float: left;
+  min-height: 225px;
+}
+.school_box_cntr li img {
+  width: 60px;
+}
+span.school_icon_box {
+  position: absolute;
+  top: -28px;
+  left: -28px;
+}
+li.first_school_box {
+  left: 186px;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+li.second_school_box {
+  top: 78px;
+  left: 325px;
+  transform: translatey(0px);
+  animation: float 7s ease-in-out infinite;
+}
+li.third_school_box {
+  left: -30px;
+  transform: translatey(0px);
+  animation: float 8s ease-in-out infinite;
+}
+
+li.fourth_school_box {
+  top: 65px;
+  left: 327px;
+  transform: translatey(0px);
+  animation: float 5s ease-in-out infinite;
+}
+li.six_school_box {
+  left: 268px;
+  top: 70px;
+}
+
+.pocket_title_box.school_aqi_box h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.app_img_bx {
+  overflow: hidden;
+}
+.owl-slider .owl-nav button span {
+  font-size: 95px;
+  color: #78ae60;
+  font-family: "Open Sans";
+  font-weight: 500;
+}
+.vs_text {
+  display: none;
+}
+.seperate_industrial_box {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  margin-top: 33px;
+}
+.air_graph_box .wpb_wrapper {
+  float: right;
+}
+.air_graph_box .wpb_text_column.wpb_content_element .wpb_wrapper {
+  float: none;
+}
+.banner_quality_img_box figure.wpb_wrapper.vc_figure {
+  width: 100%;
+}
+.banner_quality_img_box .vc_single_image-wrapper.vc_box_border_grey {
+  width: 100%;
+}
+.banner_quality_img_box img.vc_single_image-img.attachment-full {
+  width: 100%;
+}
+.pocket_title_box.school_aqi_box {
+  padding: 110px 0 0 15%;
+}
+.banner_quality_box.wpb_column.vc_column_container.vc_col-sm-6 {
+  width: 45%;
+}
+.banner_quality_img_box.wpb_column.vc_column_container.vc_col-sm-6 {
+  width: 55%;
+}
+ul.rate_list li {
+  font-weight: 500;
+}
+.pocket_buy_btn {
+  font-weight: 500;
+  font-size: 16px;
+}
+.pocket_title_box .rate_list {
+  margin-top: 15px;
+}
+.school_aqi_box span.bold_text {
+  font-weight: bold;
+  display: block;
+  color: #78ae60;
+}
+.app_service_box p {
+  margin: 0 !important;
+  overflow: hidden;
+}
+.app_service_box img {
+  transition: transform 0.4s;
+}
+.app_service_box {
+  overflow: hidden;
+}
+.owl-slider .owl-nav {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.owl-slider button.owl-prev {
+  position: absolute;
+  left: -45px;
+}
+.owl-slider button.owl-next {
+  position: absolute;
+  right: -49px;
+}
+.app_service_box img:hover {
+  transform: scale(1.1);
+}
+.tab-style-one.wpb_tabs .wpb_tabs_nav a:hover {
+  color: #fff;
+}
+.pollution_cntr .feature_box {
+  width: auto;
+  padding: 40px 15px;
+}
+.feature_box img {
+  width: auto;
+}
+.quality_solution_section .introducing_box.sub_title_box {
+  padding-bottom: 25px;
+}
+.top_space_heading .introducing_box.sub_title_box {
+  padding-top: 75px;
+}
+.industries_application_section .app_service_box h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+.industries_application_section .app_service_box p {
+  font-size: 17px;
+  font-weight: 300;
+}
+.tab-style-one.wpb_tabs .wpb_tabs_nav a:hover {
+  color: #fff !important;
+}
+.faq_ask_section .introducing_box.sub_title_box {
+  padding: 20px 0 30px;
+}
+.sub_title_box .title_heading {
+  text-align: center;
+  color: #000;
+  font-size: 36px;
+  margin: 0 0 15px;
+  font-weight: normal;
+}
+span.bold_text {
+  font-weight: bold;
+  color: #78ae60;
+}
+.pollution_cntr .feature_box p {
+  font-size: 15px;
+  color: #000;
+  padding: 0 35px;
+  font-weight: 300;
+}
+.school_img_box figure.wpb_wrapper.vc_figure {
+  width: 100%;
+}
+.school_img_box .vc_single_image-wrapper.vc_box_border_grey {
+  width: 100%;
+}
+.school_img_box img.vc_single_image-img.attachment-full {
+  width: 100%;
+}
+.feature_box h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.school_img_box {
+  margin-top: 60px;
+}
+.faq_section .vc_tta-panel-body {
+  padding-left: 0 !important;
+}
+.pollution_cntr .vc_column-inner {
+  padding: 0 !important;
+}
+.vc_col-has-fill > .vc_column-inner,
+.vc_row-has-fill + .vc_row-full-width + .vc_row > .vc_column_container > .vc_column-inner,
+.vc_row-has-fill + .vc_row > .vc_column_container > .vc_column-inner,
+.vc_row-has-fill > .vc_column_container > .vc_column-inner {
+  padding: 0;
+}
+.introducing_box.sub_title_box {
+  padding: 45px 0;
+}
+.app_service_box img {
+  width: 100%;
+}
+.industrial_applications_box img {
+  width: 100%;
+}
+.air_quality_box ul {
+  list-style: none;
+  padding: 0 0 0 30px;
+  margin: 0;
+}
+.air_quality_box li {
+  color: #000;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.client_logo_section figure.wpb_wrapper.vc_figure {
+  box-shadow: 2px -2px 8px -1px #ccc;
+  padding: 15px 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  height: 120px;
+  transition: transform 0.4s;
+}
+.client_logo_section figure.wpb_wrapper.vc_figure:hover {
+  transform: scale(1.1);
+}
+.slider_img_box {
+  width: 55%;
+  float: left;
+}
+.slider_details_box {
+  width: 45%;
+  float: left;
+  padding: 0 30px;
+}
+.air_quality_tab_sec .wpb_content_element .wpb_tabs_nav {
+  display: flex;
+  justify-content: center;
+}
+.air_quality_tab_sec .wpb_tabs .wpb_tabs_nav li {
+  position: relative;
+  background: #78ae60 !important;
+  margin: 12px 0 0 0 !important;
+  box-shadow: 2px 2px 8px -1px #ccc;
+}
+.air_quality_tab_sec .wpb_tabs.tab-style-one .wpb_tabs_nav > li.ui-state-active {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+#page .tab-style-one .wpb_tabs_nav li.ui-state-active a {
+  color: #000;
+  -webkit-text-fill-color: #000;
+}
+.tab-style-one.wpb_tabs .wpb_tabs_nav a {
+  padding: 10px 35px;
+  text-align: center;
+  color: #fff;
+  border-right: 1px solid #fff;
+}
+.slider_details_box h3 {
+  color: #000;
+  font-size: 35px;
+  font-weight: normal;
+}
+.slider_details_box span {
+  padding: 5px 0 20px;
+  font-size: 14px;
+  font-style: italic;
+  display: block;
+}
+ul.airquality_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.airquality_list li {
+  margin-bottom: 7px;
+}
+.slider_cntr {
+  max-width: 850px;
+  margin: 22px auto;
+}
+ul.airquality_list li {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png) no-repeat;
+  padding-left: 34px;
+  background-size: 20px;
+  background-position: 0 1px;
+}
+ul.airquality_list.red_list li {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/red-arrow.png) no-repeat;
+  background-size: 20px;
+  background-position: 0 1px;
+}
+.air_quality_box h3 {
+  color: #000;
+  font-size: 25px;
+  margin: 0 0 25px;
+  font-weight: 500;
+}
+.air_graph_box {
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+}
+.air_quality_box ul.airquality_list {
+  margin: 0 0 35px !important;
+}
+a.left.carousel-control,
+a.right.carousel-control {
+  background: none;
+}
+.slider_img_box img {
+  border-radius: 7px;
+}
+a.knowmore_btn {
+  background: #78ae60;
+  padding: 8px 13px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+}
+a.rent_btn {
+  font-size: 15px;
+  color: #78ae60;
+  margin: 30px 0 0 15px;
+  display: inline-block;
+}
+.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading {
+  border: none;
+  background: none;
+}
+.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title > a {
+  color: #000;
+  font-size: 20px;
+}
+.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title > a {
+  color: #000;
+}
+.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading {
+  border: none;
+  background: none;
+}
+.faq_section .vc_tta.vc_general .vc_tta-panel.vc_active {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+.faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left .vc_tta-controls-icon {
+  left: auto;
+  right: 15px;
+}
+.faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title > a {
+  padding-left: 0;
+}
+.airqulality_contact_section .contact_content_box {
+  background: #78ae60;
+  padding: 30px 15px 75px;
+  width: 40%;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+.contact_content_box:after {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+  width: 160px;
+  height: 160px;
+  content: "";
+  position: absolute;
+  bottom: -92px;
+  left: -25px;
+  z-index: 0;
+  background-size: 66%;
+}
+.airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+  width: 60%;
+  padding: 6px 0 0 40px;
+}
+.airquality_contact_box label br {
+  display: none;
+}
+.airquality_contact_box input.wpcf7-form-control {
+  width: 100%;
+  margin-bottom: 15px !important;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px;
+}
+.airquality_contact_box label {
+  width: 100%;
+}
+.contact_information_box h4 {
+  font-size: 25px;
+  color: #fff;
+}
+.contact_information_box p {
+  color: #fff;
+  font-weight: 300;
+}
+.airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
+  max-height: 78px;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px;
+}
+ul.contact_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: #78ae60;
+  border: none;
+  width: auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.contact_info li {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.contact_info li i {
+  font-size: 21px;
+  margin-right: 10px;
+}
+.contact_info {
+  padding-top: 20px !important;
+}
+.airquality_inner_form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 950px;
+  margin: 0 auto 30px;
+  box-shadow: 2px 2px 11px 0px #ccc;
+}
+.app_service_box h4 {
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+  padding-top: 18px;
+  font-weight: normal;
+}
+.app_service_box p {
+  text-align: center;
+}
+.industries_application_section {
+  padding: 0 0 60px;
+}
+.air_qualiity_right {
+  padding-left: 12px;
+}
+a.left.carousel-control,
+a.right.carousel-control {
+  background: none;
+  color: #78ae60;
+  opacity: 1;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  font-size: 49px;
+  top: 50%;
+}
+.airqulality_contact_section {
+  padding: 0 220px !important;
+  margin-top: 45px;
+}
+.airquality_contact_box label {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  color: #606060;
+}
+.faq_section .vc_tta-panel-body p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #606060;
+}
+label.message_text {
+  color: #78ae60;
+  font-weight: 500;
+}
+.airqulality_contact_section:before {
+  background: rgba(120, 174, 96, 0.1);
+  width: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 420px;
+  z-index: 0;
+}
+.faq_section.faq_ask_section {
+  padding: 0 220px !important;
+}
+.feature_wrap_box {
+  padding-top: 25px;
+}
+.airgraph_cntr {
+  padding: 0 220px !important;
+}
+
+/* Animation for floating elements */
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+/* Responsive styles */
+@media screen and (min-width: 1700px) and (max-width: 2000px) {
+  .pocket_title_box.school_aqi_box {
+    padding: 110px 0 0 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .school_banner_box {
+    padding: 0;
+  }
+  .pocket_title_box.school_aqi_box h1 {
+    font-size: 27px;
+    line-height: normal;
+  }
+  .pocket_title_box.school_aqi_box p {
+    font-size: 15px;
+  }
+  .pocket_title_box.school_aqi_box ul.rate_list li {
+    font-size: 16px;
+  }
+  ul.rate_list li {
+    font-size: 14px;
+  }
+  .pocket_title_box .rate_list {
+    padding-top: 15px;
+  }
+  .pocket_title_box .rate_list .pocket_buy_btn {
+    margin-top: 17px;
+  }
+  .sub_title_box .title_heading {
+    font-size: 30px;
+  }
+  .pollution_cntr .feature_box p {
+    padding: 0 12px;
+  }
+  .pollution_cntr .feature_box p {
+    padding: 0;
+  }
+  .pollution_cntr .feature_box {
+    padding: 13px 15px;
+  }
+  .slider_img_box {
+    width: 100%;
+    float: none;
+  }
+  .slider_details_box {
+    width: 100%;
+    float: none;
+    padding: 0 5px;
+  }
+  .slider_details_box h3 {
+    font-size: 18px;
+  }
+  .air_graph_box {
+    padding: 30px 0;
+  }
+  .airqulality_contact_section .contact_content_box {
+    background: #78ae60;
+    padding: 13px 15px 10px;
+    width: 100%;
+  }
+  .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+    width: 100%;
+    padding: 30px 15px 0;
+  }
+  .airquality_inner_form {
+    padding: 20px 20px 0;
+  }
+  .faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title > a {
+    font-size: 14px;
+    padding-left: 15px;
+    line-height: normal;
+  }
+  .faq_section .vc_tta-panel-body p {
+    font-size: 14px;
+  }
+  .app_service_box {
+    padding-bottom: 35px;
+    display: block;
+  }
+  .airquality_contact_box label {
+    font-size: 14px;
+  }
+  .airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
+    max-height: 65px;
+  }
+  .airquality_contact_box input.wpcf7-form-control {
+    height: 30px;
+  }
+  .app_service_box h4 {
+    font-size: 22px;
+  }
+  ul.airquality_list.red_list li {
+    font-size: 16px;
+  }
+  .air_quality_box h3 {
+    font-size: 22px;
+  }
+  .tab-style-one.wpb_tabs .wpb_tabs_nav a {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .air_graph_box {
+    border-right: none;
+  }
+  .air_qualiity_right {
+    padding: 10px 0;
+  }
+  .pollution_cntr .feature_box p {
+    padding: 0;
+    font-size: 14px;
+  }
+  .airqulality_contact_section {
+    padding: 0 15px !important;
+  }
+  .faq_section.faq_ask_section {
+    padding: 0 15px !important;
+  }
+  .faq_ask_section .introducing_box.sub_title_box {
+    padding: 15px 0 30px;
+  }
+  a.left.carousel-control,
+  a.right.carousel-control {
+    display: none;
+  }
+  .introducing_box.sub_title_box {
+    padding: 35px 0 20px;
+  }
+  .airgraph_cntr {
+    padding: 0 15px !important;
+  }
+  .contact_information_box h4 {
+    font-size: 22px;
+  }
+  .contact_information_box p {
+    font-size: 14px;
+  }
+  body p,
+  .inner-real-time-aqi .countrey-sec {
+    font-size: 16px;
+  }
+  .tab-style-one.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+    padding: 0;
+  }
+  .feature_box img {
+    width: 60px;
+  }
+  .feature_wrap_box {
+    padding: 0 0 0 18px;
+  }
+  .pollution_cntr {
+    padding: 0 10px;
+  }
+  .school_img_box {
+    margin-top: 36px;
+  }
+  #myCarousel .carousel-indicators .active {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    background-color: #78ae60;
+  }
+  #myCarousel .carousel-indicators li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #78ae60;
+    border-radius: 10px;
+  }
+  #myCarousel .carousel-indicators {
+    bottom: -24px;
+    left: 43%;
+    transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  ul.airquality_list li {
+    font-size: 16px;
+  }
+  .top_space_heading .introducing_box.sub_title_box {
+    padding: 35px 0 40px;
+  }
+  .contact_info li {
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+  .contact_information_box ul.contact_info {
+    padding: 10px 0 0 !important;
+  }
+  .client_logo_section .wpb_column.vc_column_container.vc_col-sm-3 {
+    width: 50%;
+    float: left;
+  }
+  .client_logo_section figure.wpb_wrapper.vc_figure {
+    padding: 10px 15px;
+    margin: 10px 0;
+    height: 103px;
+  }
+  .banner_quality_box.wpb_column.vc_column_container.vc_col-sm-6 {
+    width: 100%;
+    position: relative;
+    top: 1px;
+  }
+  .banner_quality_img_box.wpb_column.vc_column_container.vc_col-sm-6 {
+    width: 100%;
+  }
+  .vc_row.wpb_row.vc_row-fluid.school_banner_box.vc_custom_1659419765553.vc_row-has-fill {
+    flex-direction: column-reverse;
+    display: flex;
+    height: 605px;
+    background-position: 97% -75px !important;
+    background-repeat: no-repeat !important;
+    background-size: 689px !important;
+  }
+  .pocket_title_box.school_aqi_box {
+    padding: 10px 30px 30px;
+  }
+  span.vs_text {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: 22px;
+  }
+  .owl-slider {
+    padding: 0 25px;
+  }
+  .owl-slider .owl-nav button span {
+    font-size: 82px;
+  }
+  .owl-slider button.owl-prev {
+    position: absolute;
+    left: -30px;
+  }
+  .owl-slider button.owl-next {
+    position: absolute;
+    right: -30px;
+  }
+  .school_banner_box {
+    padding: 0;
+  }
+  .school_img_box {
+    min-height: 495px !important;
+  }
+  li.second_school_box {
+    top: 155px;
+    left: 62px;
+  }
+
+  li.second_school_box span.school_icon_box {
+    left: 28px;
+    top: -38px;
+  }
+
+  li.third_school_box {
+    left: 75px;
+    top: 70px;
+  }
+
+  li.fourth_school_box span.school_icon_box {
+    top: 40px;
+    left: -17px;
+  }
+  li.first_school_box {
+    left: 44px;
+  }
+  .schhol_text_box {
+    display: none;
+    min-width: 240px;
+    padding: 12px 15px;
+  }
+  .schhol_text_box h3 {
+    font-size: 18px;
+  }
+  .schhol_text_box p {
+    color: #fff;
+    font-size: 12px;
+  }
+  .school_box_cntr {
+    width: 100%;
+    float: none;
+    padding: 65px 0 0;
+  }
+  li.fourth_school_box {
+    top: 124px;
+    left: 65px;
+  }
+  li.first_school_box .schhol_text_box {
+    display: block;
+  }
+  li.fourth_school_box .schhol_text_box {
+    position: relative;
+    left: -208px;
+    z-index: -1;
+  }
+  li.second_school_box .schhol_text_box {
+    position: relative;
+    left: -195px;
+    z-index: -1;
+    min-width: inherit !important;
+    width: 258px;
+    top: -12px;
+  }
+
+  li.fivth_school_box {
+    left: 68px;
+    top: 43px;
+  }
+
+  li.six_school_box {
+    left: -126px;
+    top: 105px;
+  }
+  li.six_school_box span.school_icon_box {
+    left: 243px;
+  }
+  .six_school_box .schhol_text_box {
+    min-width: 283px;
+  }
+
+  .vc_row.wpb_row.vc_row-fluid.school_img_box.vc_custom_1660844203328.vc_row-has-fill.vc_row-o-full-height.vc_row-o-columns-middle.vc_row-flex {
+    background-size: cover !important;
+  }
+  .vc_row.wpb_row.vc_row-fluid.school_banner_box.vc_row-has-fill {
+    flex-direction: column-reverse;
+    display: flex;
+    height: 665px;
+    padding-top: 20px;
+    background-position: 97% -75px !important;
+    background-repeat: no-repeat !important;
+    background-size: 689px !important;
+  }
+
+  li.fivth_school_box .schhol_text_box {
+    min-width: 234px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider_details_box {
+    width: 100%;
+    float: none;
+    padding: 0 5px;
+    padding-bottom: 15px;
+  }
+}
+
+/* Additional styles for the tabs */
+.wpb_tabs_nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.wpb_tabs_nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.wpb_tabs_nav li a {
+  display: block;
+  padding: 10px 35px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #78ae60;
+  border-right: 1px solid #fff;
+}
+
+.wpb_tabs_nav li.ui-state-active a {
+  color: #000;
+  background-color: #fff;
+}
+
+.wpb_tab {
+  padding: 20px 0;
+}
+
+/* Carousel styles */
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  transition: 0.6s ease-in-out left;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+.carousel-inner > .active {
+  left: 0;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.carousel-control.right {
+  right: 0;
+  left: auto;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #78ae60;
+  border-radius: 10px;
+}
+
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #78ae60;
+}
+
+/* Client logo section */
+.client-logo {
+  width: 25%;
+  float: left;
+  padding: 15px;
+}
+
+.client-logo img {
+  width: 100%;
+  box-shadow: 2px -2px 8px -1px #ccc;
+  padding: 15px;
+  transition: transform 0.4s;
+}
+
+.client-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Pollution grid */
+.pollution_cntr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pollution_cntr .feature_box {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .pollution_cntr .feature_box {
+    width: 50%;
+  }
+
+  .client-logo {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .pollutant-marker {
+    position: relative;
+    margin: 15px;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .overlay-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    overflow-y: auto;
+  }
+
+  .pollutants-overlay-section {
+    height: auto;
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marker-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .marker-circle img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .marker-box {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .marker-box h3 {
+    font-size: 16px;
+  }
+
+  .marker-box p {
+    font-size: 12px;
+  }
+}
+

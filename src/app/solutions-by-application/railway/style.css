@@ -1,0 +1,1653 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif !important;
+}
+
+p {
+  font-family: "Poppins", sans-serif !important;
+}
+
+a {
+  font-family: "Poppins", sans-serif !important;
+  text-decoration: none;
+}
+
+.school_banner_box {
+  padding: 0 0 160px;
+  background: url(https://www.pranaair.com/wp-content/uploads/2024/08/air-quality-solutions-for-railways-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  margin-top: 0;
+}
+
+.pocket_title_box.school_aqi_box h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.school_aqi_box span.bold_text {
+  font-weight: 700;
+  display: block;
+  color: #78ae60;
+}
+
+.pocket_title_box.school_aqi_box p {
+  font-size: 18px;
+  color: #000;
+  padding-right: 180px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.pocket_title_box.school_aqi_box {
+  position: relative;
+  padding-top: 100px;
+}
+
+.pocket_title_box.school_aqi_box:before {
+  position: absolute;
+  content: "";
+  background: #67758047;
+  width: 70%;
+  height: 1px;
+  left: 0;
+  bottom: 140px;
+  margin: 0 auto;
+}
+
+.feature_wrap_box h2 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.banner-btn {
+  background: #78ae60;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+  width: 37%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.banner-btn:hover {
+  color: #fff;
+}
+
+.introducing_box.sub_title_box {
+  padding: 90px 0 60px;
+}
+
+.sub_title_box .title_heading {
+  text-align: center;
+  color: #000;
+  font-size: 36px;
+  margin: 0 0 15px;
+  font-weight: 400;
+}
+
+.sub_title_box p {
+  color: #677580;
+  padding: 0 90px;
+}
+
+.factors-affect-box {
+  width: 90%;
+  height: 250px;
+}
+
+.feature_box p {
+  font-size: 14px;
+  color: #677580;
+}
+
+.railway-staion-plateform {
+  background: url(https://www.pranaair.com/wp-content/uploads/2024/08/railway-station-plateform-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 130px;
+  padding-top: 70px;
+  height: 700px;
+}
+
+.congested-stations img {
+  width: 80px;
+  height: 80px;
+}
+
+.congested-stations {
+  background: #ffdfdf;
+  box-shadow: none;
+  border: 2px solid red;
+  padding-top: 50px;
+  height: 270px;
+}
+
+.congested-stations:hover {
+  transform: scale(1.02);
+}
+
+.congested-stations h2 {
+  font-size: 20px;
+}
+
+.quote {
+  text-align: center;
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/quote-box-design.png);
+  background-size: 850px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 0 160px;
+  margin-top: 100px;
+}
+
+.quote-heading h2 {
+  font-size: 30px;
+  color: #78ae60;
+}
+
+.quote-heading p {
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.area-para img {
+  width: 100%;
+  transition: .2s linear;
+}
+
+.area-para:hover img {
+  transform: scale(1.09);
+}
+
+.area-para {
+  overflow: hidden;
+}
+
+.area-para h3 {
+  color: #31343d;
+  font-weight: 600;
+}
+
+.area-para {
+  text-align: center;
+}
+
+.area-para p {
+  color: #677580;
+  font-size: 16px;
+}
+
+.mg-l {
+  padding: 0 50px;
+}
+
+.passengers-box img {
+  width: 20%;
+}
+
+.loco-pilot {
+  width: 25% !important;
+}
+
+.passengers-box {
+  text-align: center;
+  box-shadow: 0 0 20px #e6e6e6;
+  padding: 30px 20px;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.passengers-box h3 {
+  color: #000;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.air-quality-tab-img img {
+  width: 100%;
+}
+
+.air-quality-heading h3 {
+  color: #000;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.air-quality-heading p {
+  font-size: 15px;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+ul.airquality_list li {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png) no-repeat;
+  padding-left: 34px;
+  background-size: 20px;
+  background-position: 0 1px;
+  margin-top: 15px;
+}
+
+.btns-bottom {
+  display: flex;
+  align-items: baseline;
+  gap: 25px;
+  padding-left: 30px;
+}
+
+a.knowmore_btn {
+  background: #78ae60;
+  padding: 8px 13px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.air-quality-heading {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+ul.airquality_list {
+  list-style: none;
+  padding: 0 0 0 30px;
+  margin: 0 0 20px;
+}
+
+a.rent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #78ae60;
+}
+
+a.rent img {
+  width: 30px;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a {
+  border-color: #dcdcdc !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a {
+  border-color: #78ae60 !important;
+  background-color: #78ae60 !important;
+  color: #fff !important;
+  box-shadow: 0 0 20px #d0d0d0e6 !important;
+}
+
+.air-tab .vc_tta-tabs-container {
+  margin-bottom: 40px !important;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a:hover {
+  box-shadow: 0 0 20px #d0d0d0e6 !important;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a:hover {
+  border-color: #78ae60 !important;
+  background-color: #78ae60 !important;
+  color: #fff !important;
+}
+
+ul.airquality_list.red_list li {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/red-arrow.png) no-repeat;
+  background-size: 20px;
+  background-position: 0 1px;
+}
+
+.air_quality_box h3 {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+.air_quality_box {
+  padding-left: 150px;
+}
+
+.slider-img img {
+  width: 100%;
+}
+
+.slider {
+  margin-top: 150px;
+  position: relative !important;
+}
+
+.slidder-txt img {
+  width: 60px;
+}
+
+.slidder-txt h3 {
+  font-size: 22px;
+  color: #31343d;
+  font-weight: 600;
+}
+
+.slidder-txt p {
+  color: #677580;
+  font-size: 16px;
+  line-height: 30px;
+  width: 73%;
+}
+
+.slidder-txt {
+  padding-top: 150px;
+  padding-left: 200px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  background: #f1f7ef;
+  width: 70%;
+  height: 400px;
+  left: 0;
+  top: 80px;
+}
+
+.line {
+  position: relative;
+}
+
+.line:before {
+  position: absolute;
+  content: "";
+  background: #0000003b;
+  width: 1px;
+  height: 200px;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.client-logo {
+  text-align: center;
+  background: #fff;
+  height: 150px;
+  margin-bottom: 30px !important;
+  padding-top: 30px;
+  box-shadow: 0 0 15px #0000001f;
+}
+
+.airqulality_contact_section:before {
+  background: rgb(120 174 96 / 0.1);
+  width: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 420px;
+  z-index: 0;
+}
+
+.airqulality_contact_section {
+  position: relative !important;
+  margin-top: 100px;
+}
+
+.airqulality_contact_section .contact_content_box {
+  background: #78ae60;
+  padding: 30px 15px 75px;
+  width: 40%;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact_information_box h4 {
+  font-size: 25px;
+  color: #fff;
+}
+
+.contact_information_box p {
+  color: #fff;
+  font-weight: 300;
+}
+
+ul.contact_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact_info li {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  gap: 10px;
+}
+
+.contact_info li img {
+  filter: brightness(81.5);
+  width: 20px;
+}
+
+.airquality_inner_form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 980px;
+  margin: 0 auto 30px;
+  box-shadow: 2px 2px 11px 0 #ccc;
+}
+
+.airquality_contact_box input.wpcf7-form-control {
+  width: 100%;
+  margin-bottom: 15px !important;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px;
+}
+
+label.message_text {
+  color: #78ae60;
+  font-weight: 500;
+}
+
+.airquality_contact_box label {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  color: #606060;
+}
+
+.airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+  width: 60%;
+  padding: 6px 0 0 40px;
+}
+
+.airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
+  max-height: 78px;
+  border: none;
+  border-bottom: 1px solid #60606073;
+  padding-left: 4px;
+}
+
+.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: #78ae60;
+  border: none;
+  width: auto;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.contact_content_box:after {
+  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+  width: 160px;
+  height: 160px;
+  content: "";
+  position: absolute;
+  bottom: -92px;
+  left: -25px;
+  z-index: 0;
+  background-size: 66%;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title > a {
+  color: #000;
+}
+
+.vc_tta-panel-body p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #606060;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading {
+  border: none;
+  background: none;
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title > a {
+  color: #000;
+}
+
+.faq-tab-heading {
+  margin-bottom: 20px;
+}
+
+.owl-slider .owl-nav button span {
+  font-size: 76px;
+  color: #78ae60;
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+.owl-slider button.owl-prev {
+  position: absolute;
+  left: -45px;
+}
+
+.owl-slider button.owl-next {
+  position: absolute;
+  right: -49px;
+}
+
+.owl-slider .owl-nav {
+  position: absolute;
+  top: 18%;
+  width: 100%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.industries_application_section .app_service_box h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.app_service_box h4 {
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+  padding-top: 18px;
+  font-weight: 400;
+}
+
+.pd-bt {
+  padding-bottom: 100px;
+}
+
+.quote-heading {
+  padding: 0 300px;
+}
+
+.app_img_bx:hover img {
+  transform: scale(1.09);
+}
+
+.app_img_bx img {
+  transition: .2s linear;
+}
+
+.app_img_bx {
+  overflow: hidden;
+}
+
+/* Responsive Styles */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .school_banner_box {
+    padding: 0 0 0;
+    height: 400px;
+    overflow: visible !important;
+    margin-bottom: 300px;
+  }
+  .pocket_title_box.school_aqi_box {
+    padding-top: 400px;
+    text-align: center;
+  }
+  .pocket_title_box.school_aqi_box p {
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-right: 0;
+  }
+  .pocket_title_box.school_aqi_box h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+  .hero-section {
+    overflow: visible !important;
+  }
+  .banner-btn {
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .pocket_title_box.school_aqi_box:before {
+    width: 100%;
+    bottom: 70px;
+    margin: 0 auto;
+  }
+  .sub_title_box p {
+    padding: 0 0;
+  }
+  .factors-affect-box {
+    width: 100%;
+    height: auto;
+  }
+  .feature_box p {
+    margin: 0;
+  }
+  .quote-heading {
+    padding: 0;
+  }
+  .feature_box img {
+    width: 100px !important;
+  }
+  .congested-stations img {
+    width: 60px !important;
+    height: 60px;
+  }
+  .congested-stations {
+    padding: 10px 10px 15px;
+    height: auto;
+  }
+  .quote-heading h2 {
+    font-size: 20px;
+  }
+  .quote-heading p {
+    font-size: 14px;
+    padding-top: 0;
+  }
+  .mg-l {
+    padding: 0 10px;
+  }
+  .quote {
+    padding: 10px 0 30px;
+    margin-top: 50px;
+    background: none;
+    border: 1px solid #68b554;
+    border-radius: 10px;
+  }
+  .introducing_box.sub_title_box {
+    padding: 0 0 30px;
+  }
+  .area-para {
+    padding-bottom: 30px;
+  }
+  .area-para h3 {
+    font-size: 20px !important;
+  }
+  .area-para p {
+    font-size: 14px;
+  }
+  .passengers-box {
+    margin-bottom: 20px !important;
+  }
+  .vc_tta.vc_tta-spacing-1 .vc_tta-tab {
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  .vc_tta-panel-heading {
+    display: none;
+  }
+  .air-quality-heading {
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .air-quality-heading h3 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .vc_tta-panel-body p {
+    font-size: 14px;
+  }
+  ul.airquality_list {
+    padding: 0 0 0 0;
+  }
+  .btns-bottom {
+    gap: 15px;
+    padding-left: 0;
+  }
+  .sub_title_box .title_heading {
+    font-size: 24px;
+    margin: 50px 0 10px;
+  }
+  .air_quality_box {
+    padding-left: 0;
+    padding-bottom: 50px;
+  }
+  .air_quality_box h3 {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .line:before {
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 215px;
+  }
+  .slider {
+    margin-top: 50px;
+  }
+  .slidder-txt {
+    padding-top: 0;
+    padding-left: 0;
+  }
+  .slidder-txt p {
+    font-size: 14px;
+    line-height: 26px;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .slidder-txt h3 {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+  .slider:before {
+    width: 100%;
+    height: 400px;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .airqulality_contact_section .contact_content_box {
+    padding: 20px 15px 45px;
+    width: 100%;
+  }
+  .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+    width: 100%;
+    padding: 50px 0 0;
+  }
+  .airquality_contact_box label {
+    font-size: 14px;
+  }
+  .introducing_box.sub_title_box {
+    padding: 0 0 10px;
+  }
+  .faq-tab-heading .vc_tta-panel-heading {
+    display: block;
+  }
+  span.vc_tta-title-text {
+    font-size: 14px;
+  }
+  .faq-tab-heading {
+    margin-bottom: 10px;
+  }
+  .client-logo {
+    height: 50px;
+    margin-bottom: 10px !important;
+    padding: 10px 10px;
+  }
+  .client-logo img {
+    width: 100%;
+  }
+  .client_logo_section {
+    display: flex;
+  }
+  .owl-slider button.owl-prev {
+    left: -25px;
+  }
+  .owl-slider button.owl-next {
+    right: -25px;
+  }
+  .feature_wrap_box h2 {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .school_banner_box {
+    padding: 0 0 0;
+    margin-top: 0;
+    height: 350px;
+  }
+  .pocket_title_box.school_aqi_box {
+    padding-top: 0;
+  }
+  .pocket_title_box.school_aqi_box p {
+    font-size: 14px;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .pocket_title_box.school_aqi_box h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .feature_box img {
+    width: 60px;
+    height: 50px;
+  }
+  .feature_box h2 {
+    font-size: 12px;
+  }
+  .congested-stations {
+    padding-top: 10px;
+    height: 290px;
+  }
+  .quote {
+    background-size: 720px;
+    padding: 0 0 190px;
+    margin-top: 100px;
+  }
+  .area-para p {
+    font-size: 14px;
+  }
+  .area-para h3 {
+    font-size: 18px;
+  }
+  .passengers-box img {
+    width: 30%;
+  }
+  .loco-pilot {
+    width: 40% !important;
+  }
+  .passengers-box h3 {
+    font-size: 18px;
+  }
+  .passengers-box {
+    height: 350px;
+  }
+  .air-quality-heading {
+    padding-left: 10px;
+    padding-top: 0;
+  }
+  ul.airquality_list {
+    padding: 0 0 0 10px;
+    margin: 0 0 20px;
+  }
+  .btns-bottom {
+    gap: 10px;
+    padding-left: 30px;
+  }
+  a.knowmore_btn {
+    padding: 8px 21px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .air_quality_box {
+    padding-left: 20px;
+  }
+  .air_quality_box h3 {
+    padding-left: 10px;
+  }
+  .slidder-txt {
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+  .slidder-txt p {
+    width: 95%;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .slider:before {
+    top: 0;
+  }
+  .client-logo img {
+    width: 70%;
+  }
+  .client-logo {
+    height: 120px;
+  }
+  .quote-heading {
+    padding: 0 80px 50px;
+  }
+  .introducing_box.sub_title_box {
+    padding: 0 0 40px;
+  }
+  .owl-slider button.owl-prev {
+    left: -20px;
+  }
+  .owl-slider button.owl-next {
+    right: -20px;
+  }
+}
+
+/* Bootstrap Tab Styling */
+.nav-tabs {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.nav-tabs > li {
+  margin-bottom: -1px;
+  margin-right: 5px;
+}
+
+.nav-tabs > li > a {
+  border: 1px solid #dcdcdc;
+  border-radius: 4px 4px 0 0;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 15px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  border-color: #78ae60;
+  background-color: #78ae60;
+  color: #fff;
+  box-shadow: 0 0 20px #d0d0d0e6;
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Accordion Styling */
+.panel-group .panel {
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.panel-default {
+  border-color: #ddd;
+}
+
+.panel-default > .panel-heading {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+}
+
+.panel-title > a {
+  display: block;
+  text-decoration: none;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.in {
+  display: block;
+}
+
+/* Carousel Styling */
+.carousel-container {
+  position: relative;
+}
+
+.carousel-item-padding-40-px {
+  padding: 0 40px;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Modern Tabs Styling */
+.modern-tabs {
+  margin-top: 30px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.tab-buttons button {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button.active {
+  background-color: #78ae60;
+  color: #fff;
+  border-color: #78ae60;
+  box-shadow: 0 0 20px #d0d0d0e6;
+}
+
+.tab-buttons button:hover:not(.active) {
+  background-color: #f5f5f5;
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.tab-pane {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modern Contact Form Styling */
+.modern-contact-section {
+  padding: 80px 0;
+  background-color: #f9fcf7;
+  margin-top: 50px;
+}
+
+.modern-contact-form {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.contact-info-sidebar {
+  background: #78ae60;
+  color: #fff;
+  padding: 40px 30px;
+  width: 35%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-info-sidebar h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.contact-info-sidebar p {
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.contact-info-item .icon {
+  margin-right: 15px;
+}
+
+.contact-info-item .icon img {
+  width: 20px;
+  filter: brightness(10);
+}
+
+.contact-info-item .info span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.contact-info-item .info p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.contact-bg-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  bottom: -75px;
+  left: -75px;
+}
+
+.contact-form-container {
+  padding: 40px;
+  width: 65%;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row.two-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-field.full-width {
+  width: 100%;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #78ae60;
+}
+
+.send-message-btn {
+  background: #78ae60;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-message-btn:hover {
+  background: #669e4e;
+}
+
+@media (max-width: 768px) {
+  .modern-contact-form {
+    flex-direction: column;
+  }
+
+  .contact-info-sidebar,
+  .contact-form-container {
+    width: 100%;
+  }
+
+  .form-row.two-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info-sidebar {
+    padding: 30px 20px;
+  }
+
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+}
+
+/* Modern Industrial Applications Styling */
+.industrial-applications {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.title_heading .industrial-text {
+  color: #000;
+  font-weight: 500;
+}
+
+.title_heading .applications-text {
+  color: #78ae60;
+  font-weight: 500;
+}
+
+.modern-carousel-container {
+  position: relative;
+  margin-top: 50px;
+  padding: 0 40px;
+}
+
+.modern-carousel {
+  position: relative;
+}
+
+.modern-item {
+  padding: 0 15px;
+}
+
+.modern-service-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modern-img-box {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modern-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.modern-img-box:hover img {
+  transform: scale(1.05);
+}
+
+.modern-title {
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.modern-title:hover {
+  color: #78ae60;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: #78ae60;
+}
+
+.custom-arrow:hover span {
+  color: #fff;
+}
+
+.custom-arrow span {
+  color: #78ae60;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+/* Modern Contact Section Styling */
+.modern-contact-section {
+  padding: 80px 0;
+  background-color: #f9fcf7;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.contact-header .bold-text {
+  font-weight: 700;
+  color: #000;
+}
+
+.contact-header p {
+  color: #677580;
+  font-size: 16px;
+}
+
+.contact-card {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-sidebar {
+  background: #78ae60;
+  color: #fff;
+  padding: 40px 30px;
+  width: 35%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-sidebar h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.contact-sidebar p {
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  margin-right: 15px;
+}
+
+.contact-icon img {
+  width: 20px;
+  filter: brightness(10);
+}
+
+.contact-details span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.contact-details p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.contact-bg-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  bottom: -75px;
+  left: -75px;
+}
+
+.contact-form {
+  padding: 40px;
+  width: 65%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #78ae60;
+}
+
+.send-message-btn {
+  background: #78ae60;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-message-btn:hover {
+  background: #669e4e;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-sidebar,
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .contact-sidebar {
+    padding: 30px 20px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .modern-img-box {
+    height: 180px;
+  }
+}
+
+/* Modern Air Quality Solutions Styling */
+.modern-tabs {
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-btn {
+  background: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.tab-btn.active {
+  background-color: #78ae60;
+  color: #fff;
+}
+
+.tab-btn:hover:not(.active) {
+  background-color: #f5f5f5;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.solution-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.solution-image {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.solution-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.solution-details {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.solution-details h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 500;
+}
+
+.solution-details p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.solution-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.solution-features li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 16px;
+}
+
+.solution-features li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: url("https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png") no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.solution-btn {
+  display: inline-block;
+  background-color: #78ae60;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.solution-btn:hover {
+  background-color: #669e4e;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .solution-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tab-btn {
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  .solution-details h3 {
+    font-size: 22px;
+  }
+}
+

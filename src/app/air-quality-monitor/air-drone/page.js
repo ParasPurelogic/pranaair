@@ -2,7 +2,9 @@
 import { useEffect, useState, useRef } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
-
+import Image from "next/image";
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 // Arrow icons for slider
 const ChevronUpIcon = () => (
   <svg
@@ -66,17 +68,18 @@ export default function AirDronePage() {
 
   // VTOL drone slider images
   const vtolSliderImages = [
-    "https://www.pranaair.com/wp-content/uploads/2025/03/vtol-top-view.webp",
-    "https://www.pranaair.com/wp-content/uploads/2025/03/vtol-sensor-view.webp",
-    "https://www.pranaair.com/wp-content/uploads/2025/03/vtol-schematic.webp",
-    "https://www.pranaair.com/wp-content/uploads/2025/03/vtol-flight-path.webp",
+    "/img/prana-VTOL-air-quality-drone.png",
+    "/img/front-of-the-prana-vtol-drone.png",
+    "/img/prana-vtol-drone-from-left.png",
+    "/img/vtol-drone-fron-the-front.png",
   ]
-
+  
   // Quad drone slider images
   const quadSliderImages = [
-    "https://www.pranaair.com/wp-content/uploads/2025/03/quad-top-view.webp",
-    "https://www.pranaair.com/wp-content/uploads/2025/03/quad-sensor-view.webp",
-    "https://www.pranaair.com/wp-content/uploads/2025/03/quad-schematic.webp",
+    "/img/prana-quad-air-quality-drone.webp",
+    "/img/prana-air-quad-drone-angle-from-top.webp",
+    "/img/prana-air-quad-drone-view-from-side.webp",
+    "/img/prana-air-quad-drone-from-front.webp",
   ]
 
   // Initialize Bootstrap JS components after component mounts
@@ -110,6 +113,26 @@ export default function AirDronePage() {
     setActiveSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1))
   }
 
+  // Carousel responsive settings
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  }
+
   return (
     <div className="air-drone-page">
       <main className="air-drone-page">
@@ -135,6 +158,8 @@ export default function AirDronePage() {
             <div className="hero-buttons">
               <button className="btn-request-quote">
                 Request a quote
+              </button>
+              <button>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#333" />
                 </svg>
@@ -145,7 +170,7 @@ export default function AirDronePage() {
 
         {/* Features Section */}
         <section className="features-section">
-          <div className="container">
+          <div className="container-fluid">
             <p className="features-intro">Industry leaders trust Prana Air to grow their revenue</p>
 
             <div className="features-grid">
@@ -243,7 +268,7 @@ export default function AirDronePage() {
                         <div className="drone-buttons">
                           <button className="btn-request">Request a quote</button>
                           <button className="btn-brochure">
-                            <span className="circle"></span>
+                            <Image src="/img/btn-icon.png" alt="Logo" width={23} height={23} />
                             Brochure
                           </button>
                         </div>
@@ -254,7 +279,7 @@ export default function AirDronePage() {
                       <div className="drone-image-container">
                         <div className="drone-image">
                           <img
-                            src="https://www.pranaair.com/wp-content/uploads/2025/03/prana-VTOL-air-quality-drone.webp"
+                            src={vtolSliderImages[activeSlide] || "https://www.pranaair.com/wp-content/uploads/2025/03/prana-VTOL-air-quality-drone.webp"}
                             alt="Prana VTOL Air Quality Drone"
                             className="img-fluid"
                           />
@@ -388,7 +413,7 @@ export default function AirDronePage() {
                       <div className="drone-image-container">
                         <div className="drone-image">
                           <img
-                            src="https://www.pranaair.com/wp-content/uploads/2025/03/prana-quad-air-quality-drone.webp"
+                            src={quadSliderImages[activeSlide] || "https://www.pranaair.com/wp-content/uploads/2025/03/prana-quad-air-quality-drone.webp"}
                             alt="Prana QUAD Drone"
                             className="img-fluid"
                           />
@@ -477,8 +502,168 @@ export default function AirDronePage() {
             </div>
           </div>
         </section>
+
+        {/* Advance air quality monitor tech */}
+        <section className="air-quality-monitor-tech">
+          <div className="container">
+            <div className="row">
+              <div className="monitor-tech">
+                <h2>Advanced Air Quality Monitoring Technology</h2>
+                <p>Both drones leverage AI-powered sensor suites to detect and map pollutants, enabling</p>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="slider-monitor-tech">
+                  <Carousel
+                    responsive={responsive}
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={3000}
+                    className="app-slider"
+                  >
+                    <div>
+                      <div className="app-slide-img-box">
+                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
+                        <h3>
+                          Pollution Source Identification
+                        </h3>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="app-slide-img-box">
+                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
+                        <h3>
+                          Pollution Source Identification
+                        </h3>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="app-slide-img-box">
+                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
+                        <h3>
+                          Pollution Source Identification
+                        </h3>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="app-slide-img-box">
+                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
+                        <h3>
+                          Pollution Source Identification
+                        </h3>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="app-slide-img-box">
+                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
+                        <h3>
+                          Pollution Source Identification
+                        </h3>
+                      </div>
+                    </div>
+                  </Carousel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* parameters measured */}
+        <section className="parameter-sec">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-5">
+                <div className="parameter-img">
+                <Image src="/img/prana-VTOL-parameters-measured.webp" alt="Logo" width={200} height={100} />
+                <h3>Parameters</h3>
+                <span>Measured</span>
+                </div>
+              </div>
+              <div className="col-lg-7">
+                <div className="parameter-main">
+                  <ul>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                    <li>
+                      <span className="parameter-box">
+                    <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                    <span className="parameter-txt">PM1</span>
+                    </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   )
 }
-

@@ -1,0 +1,1267 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Base Styles */
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif !important;
+  margin-top: 0;
+}
+
+p {
+  font-family: "Poppins", sans-serif !important;
+  margin-bottom: 1rem;
+}
+
+a {
+  font-family: "Poppins", sans-serif !important;
+  text-decoration: none;
+  color: #78ae60;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #5a8a48;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logistics-page {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.highlight {
+  color: #78ae60;
+  font-weight: 600;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #677580;
+  font-size: 18px;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2024/08/Air-quality-solutions-for-Logistics-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero-content {
+  max-width: 600px;
+  margin-left: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  background-color: #78ae60;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  box-shadow: 0 4px 0 0 #fdd28d;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #5a8a48;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Factors Section */
+.factors-section {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.factor-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.factor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.factor-icon {
+  margin-bottom: 20px;
+}
+
+.factor-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.factor-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.factor-card p {
+  color: #677580;
+  font-size: 16px;
+}
+
+/* Transportation Section */
+.transportation-section {
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2024/08/Sources-of-Air-Pollution-in-Logistics-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: white;
+}
+
+.split-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.split-half {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.split-half h3 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.round-icon {
+  background-color: #333;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 3px solid #e74c3c;
+  position: relative;
+}
+
+.round-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.round-icon span {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Quote Section */
+.quote-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.quote-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+  position: relative;
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/07/quote-box-design.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.quote-container h2 {
+  color: #78ae60;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.quote-container p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Areas of Concern Section */
+.concern-section {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.concern-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.concern-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.concern-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.concern-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.concern-card:hover img {
+  transform: scale(1.1);
+}
+
+.concern-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 20px 10px;
+  margin: 0;
+}
+
+.concern-card p {
+  padding: 0 20px 20px;
+  margin: 0;
+  color: #677580;
+}
+
+/* Who is at Risk Section */
+.risk-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.risk-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.risk-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.risk-icon {
+  margin-bottom: 20px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.risk-icon img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.risk-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.risk-card p {
+  color: #677580;
+  font-size: 16px;
+}
+
+/* Solutions Section */
+.solutions-section {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.tabs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  padding: 12px 25px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: #78ae60;
+  color: white;
+}
+
+.tab-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.solution-card {
+  display: flex;
+  padding: 30px;
+}
+
+.solution-image {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.solution-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.solution-content {
+  flex: 1;
+}
+
+.solution-content h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.solution-content p {
+  color: #677580;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.secondary-button {
+  display: inline-block;
+  background-color: #78ae60;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #5a8a48;
+  color: white;
+}
+
+/* Effects Section */
+.effects-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.effects-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.effects-column {
+  flex: 1;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.effects-column h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.effects-list {
+  list-style: none;
+  padding: 0;
+}
+
+.effects-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.effects-list.negative li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2022/08/red-arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.effects-list.positive li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* AQI App Slider Section */
+.aqi-app-section {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-carousel-container {
+  position: relative;
+}
+
+.app-carousel-item {
+  padding: 0;
+}
+
+.app-slide {
+  width: 100%;
+}
+
+.app-slide-content {
+  display: flex;
+  min-height: 500px;
+  width: 100%;
+}
+
+.app-slide-text {
+  flex: 1;
+  padding: 80px 60px;
+  background-color: #f8fbf6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-slide-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.app-slide-text h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.app-slide-text p {
+  color: #677580;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 90%;
+}
+
+.app-slide-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* App Carousel Dots */
+.app-dot-list {
+  display: flex !important;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 10;
+}
+
+.app-dot-list li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.app-dot-list button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.app-dot-list .react-multi-carousel-dot--active button {
+  background: #78ae60;
+  width: 12px;
+  height: 12px;
+}
+
+/* Clientele Section */
+.clientele-section {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.client-logo {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* Modern Contact Section */
+.contact-section {
+  background-color: #f8fbf6;
+  padding: 80px 20px;
+}
+
+.modern-contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-sidebar {
+  width: 35%;
+  background-color: #78ae60;
+  color: white;
+  padding: 40px 30px;
+  position: relative;
+}
+
+.contact-sidebar h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.contact-sidebar p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.contact-icon {
+  margin-right: 15px;
+}
+
+.contact-icon img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-form-container {
+  width: 65%;
+  padding: 40px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row.two-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.form-field {
+  flex: 1;
+}
+
+.form-field.full-width {
+  width: 100%;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #78ae60;
+  box-shadow: 0 0 0 2px rgba(120, 174, 96, 0.2);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.send-message-btn {
+  background-color: #78ae60;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-message-btn:hover {
+  background-color: #5a8a48;
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  background-color: #f9f9f9;
+  padding: 20px 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-question {
+  background-color: #78ae60;
+  color: white;
+}
+
+.faq-question h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.faq-icon {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer.show {
+  max-height: 500px;
+  padding: 20px 30px;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #677580;
+}
+
+/* Applications Section */
+.applications-section {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.modern-applications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.applications-carousel {
+  position: relative;
+  padding: 0 20px;
+}
+
+.application-item-wrapper {
+  padding: 0 10px;
+}
+
+.application-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.application-image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.application-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.application-image:hover img {
+  transform: scale(1.05);
+}
+
+.application-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  margin-top: 15px;
+  transition: color 0.3s ease;
+}
+
+.application-title:hover {
+  color: #78ae60;
+}
+
+/* React Multi Carousel Custom Styles */
+.react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+}
+
+.react-multiple-carousel__arrow {
+  position: absolute;
+  outline: none;
+  transition: all 0.5s;
+  border-radius: 35px;
+  z-index: 1000;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.react-multiple-carousel__arrow:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.react-multiple-carousel__arrow::before {
+  font-size: 20px;
+  color: #78ae60;
+  display: block;
+  font-family: revicons;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: 10px;
+}
+
+.react-multiple-carousel__arrow--left::before {
+  content: "‹";
+}
+
+.react-multiple-carousel__arrow--right {
+  right: 10px;
+}
+
+.react-multiple-carousel__arrow--right::before {
+  content: "›";
+}
+
+@media (max-width: 768px) {
+  .react-multiple-carousel__arrow {
+    min-width: 35px;
+    min-height: 35px;
+  }
+}
+
+/* Custom Arrows */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-arrow {
+  left: -40px;
+}
+
+.right-arrow {
+  right: -40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .factors-grid,
+  .concern-grid,
+  .risk-grid,
+  .client-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .left-arrow {
+    left: -20px;
+  }
+
+  .right-arrow {
+    right: -20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .section-description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    margin-left: 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .split-container {
+    flex-direction: column;
+  }
+
+  .split-half {
+    margin-bottom: 50px;
+  }
+
+  .solution-card {
+    flex-direction: column;
+  }
+
+  .solution-image {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .effects-container {
+    flex-direction: column;
+  }
+
+  .slider-content {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-sidebar {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+
+  .app-slide-content {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .app-slide-text {
+    padding: 40px 30px;
+  }
+
+  .app-slide-text p {
+    max-width: 100%;
+  }
+
+  .app-slide-image {
+    height: 300px;
+  }
+
+  .app-dot-list {
+    bottom: 10px;
+  }
+
+  .custom-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .factors-grid,
+  .concern-grid,
+  .risk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .round-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-btn {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .form-row.two-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .factors-grid,
+  .concern-grid,
+  .risk-grid,
+  .client-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .quote-container {
+    padding: 30px 20px;
+  }
+
+  .quote-container h2 {
+    font-size: 24px;
+  }
+
+  .quote-container p {
+    font-size: 16px;
+  }
+
+  .faq-question h3 {
+    font-size: 16px;
+  }
+
+  .solution-content h3 {
+    font-size: 22px;
+  }
+
+  .contact-sidebar,
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+
+  .app-slide-text {
+    padding: 30px 20px;
+  }
+
+  .app-slide-text h3 {
+    font-size: 24px;
+  }
+
+  .app-slide-image {
+    height: 250px;
+  }
+}
+

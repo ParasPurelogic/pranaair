@@ -1,0 +1,2834 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
+
+html {
+    scroll-behavior: smooth
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Manrope' !important
+}
+
+p {
+    font-family: 'Manrope' !important
+}
+
+a {
+    font-family: 'Manrope' !important
+}
+
+a.apple-btn {
+    color: #1f80d1
+}
+
+#main-hero-video {
+    margin-top: 0px
+}
+
+.hero-section {
+    height: 640px;
+    position: relative;
+}
+
+.hero-heading {
+    padding-left: 50px;
+    position: absolute;
+    bottom: 250px;
+    z-index: 1;
+    left: 100px
+}
+
+.hero-section:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(90deg, #0000007a, #fdfdfd00);
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1
+}
+
+.hero-heading h1 {
+    color: #FFF;
+    font-size: 44px;
+    font-weight: 800
+}
+
+.hero-heading p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 0px;
+    width: 60%;
+}
+
+.hero-heading a {
+    color: #fff;
+    background: #1F80D1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    gap: 20px;
+    margin-top: 30px;
+    transition: .2s linear
+}
+
+.hero-heading a:hover {
+    background: #16578e
+}
+
+.hero-heading a img {
+    width: 35px;
+    transition: .3s linear
+}
+
+.hero-heading a:hover img {
+    transform: rotate(45deg)
+}
+
+.ambi-monitor-img {
+    position: absolute;
+    top: 200px;
+    text-align: center
+}
+
+.ambi-monitor-img img {
+    width: 60%
+}
+
+.salinet-feture-sec {
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.salinet-feture-heading h2 {
+    color: #263D4F;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 55px
+}
+
+.sailent-feture-para p {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+    width: 70%;
+    padding-top: 5px
+}
+
+.salinet-feture-img img {
+    width: 75%;
+    margin-top: 70px
+}
+
+.sailent-feture-point ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start
+}
+
+.sailent-feture-point ul li h3 {
+    color: #263D4F;
+    font-size: 24px;
+    font-weight: 700;
+    width: 80%
+}
+
+.sailent-feture-point ul li p {
+    color: #263D4F;
+    font-size: 16px;
+    width: 90%
+}
+
+.sailent-feture-point {
+    padding-top: 80px
+}
+
+.sailent-feture-point ul li img {
+    width: 30px;
+    margin-left: -90px;
+    transition: .2s linear
+}
+
+.sailent-feture-point ul:hover li img {
+    background: #1f80d1;
+    border-radius: 100%
+}
+
+.sailent-feture-point ul li img:hover {
+    background: #1f80d1;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%
+}
+
+.br-line {
+    border-bottom: 1px solid #00000026;
+    padding-bottom: 20px
+}
+
+.parameters-sec {
+    margin-top: 150px;
+    background: #0B1B26;
+    padding-top: 70px;
+    border-radius: 40px;
+    padding-bottom: 100px
+}
+
+.dark-br-line {
+    border-bottom: 1px solid #ffffff26;
+    padding-bottom: 20px;
+    margin-bottom: 80px
+}
+
+.parameter-heading h2 {
+    color: #ECF0F3;
+    width: 60%
+}
+
+.parameter-para p {
+    color: #ECF0F3
+}
+
+ul.patrameter-gif {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background: #253B4A;
+    border-radius: 15px;
+    height: 120px;
+    margin-bottom: 20px !important;
+    justify-content: space-evenly;
+    transition: .2s linear
+}
+
+ul.patrameter-gif li img {
+    width: 80px
+}
+
+ul.patrameter-gif li h3 {
+    color: #ECF0F3;
+    font-size: 22px;
+    font-weight: 600;
+    width: 90%
+}
+
+ul.patrameter-gif:hover {
+    border: 1px solid #ffffff2e
+}
+
+ul.connectivity-box {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 60px 15px 50px;
+    gap: 50px;
+    background: #F2F4F9;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 40px
+}
+
+ul.connectivity-box li img {
+    width: 100%
+}
+
+ul.connectivity-box li h3 {
+    color: #59565B;
+    font-size: 19px;
+    text-align: center;
+    font-weight: 500
+}
+
+li.vc_tta-tab .vc_tta-title-text {
+    font-size: 24px;
+    color: #263D4F
+}
+
+li.vc_tta-tab.vc_active .vc_tta-title-text {
+    color: #1F80D1
+}
+
+i.vc_tta-icon.fas.fa-arrow-right {
+    display: inline-block;
+    transform: rotate(-35deg);
+    color: #263D4F
+}
+
+ul.vc_tta-tabs-list {
+    padding-top: 50px !important
+}
+
+li.vc_tta-tab a {
+    background: transparent !important;
+    border: none !important
+}
+
+li.vc_tta-tab.vc_active a i.vc_tta-icon.fas.fa-arrow-right {
+    color: #1e80d1
+}
+
+.img-box {
+    height: 200px
+}
+
+ul.connectivity-box li:nth-last-child(3) img {
+    width: 65%;
+    margin-top: 50px;
+    margin-left: -10px
+}
+
+ul.connectivity-box li:nth-last-child(2) img {
+    width: 92%;
+    margin-top: 30px
+}
+
+ul.connectivity-box li:nth-last-child(1) img {
+    width: 90%
+}
+
+ul.connectivity-box li:nth-last-child(4) img {
+    width: 100%
+}
+
+ul.connectivity-box li {
+    position: relative
+}
+
+ul.connectivity-box li:nth-last-child(4):before {
+    position: absolute;
+    content: "";
+    background: url(https://www.pranaair.com/wp-content/uploads/2024/06/connectivity-arrow.png);
+    background-size: 100%;
+    width: 40%;
+    height: 18px;
+    top: 80px;
+    left: 180px
+}
+
+ul.connectivity-box li:nth-last-child(4) h3 {
+    padding: 20px 60px
+}
+
+ul.connectivity-box li:nth-last-child(3):before {
+    position: absolute;
+    content: "";
+    background: url(https://www.pranaair.com/wp-content/uploads/2024/06/connectivity-arrow.png);
+    background-size: 100%;
+    width: 60%;
+    height: 12px;
+    top: 80px;
+    left: 95px
+}
+
+ul.connectivity-box li:nth-last-child(2):before {
+    position: absolute;
+    content: "";
+    background: url(https://www.pranaair.com/wp-content/uploads/2024/06/connectivity-arrow.png);
+    background-size: 100%;
+    width: 55%;
+    height: 13px;
+    top: 80px;
+    left: 130px
+}
+
+.connectivety-sec {
+    padding-top: 150px
+}
+
+.connectivety-tab-title {
+    display: flex;
+}
+
+
+ul.connect-tab {
+    list-style: none;
+    padding: 50px 0 0;
+    width: 30%;
+}
+
+ul.connect-tab li button {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0 !important;
+}
+
+button.nav-link.active {
+    color: #1e81d1;
+}
+
+.hero-heading a:hover {
+    background: #16578e
+}
+
+.wifi-heading {
+    padding-top: 50px
+}
+
+.wifi-heading h3 {
+    color: #1F80D1;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+
+.wifi-heading h3 img {
+    width: 30px
+}
+
+.wifi-heading h4 {
+    font-size: 24px;
+    color: #263D4F;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding-top: 50px
+}
+
+.wifi-heading h4 img {
+    width: 30px
+}
+
+.durability-slider-img img {
+    width: 60%
+}
+
+img.weather-img {
+    width: 60% !important
+}
+
+.durability-slider-img {
+    text-align: center
+}
+
+.durability-sec {
+    padding-top: 150px;
+    position: relative;
+}
+
+.durability-sec:before {
+    position: absolute;
+    content: "";
+    background: url(https://www.pranaair.com/wp-content/uploads/2024/06/Durability-bg.png);
+    background-size: 100%;
+    width: 50%;
+    height: 172px;
+    left: 0;
+    top: 110px
+}
+
+.durability-heading {
+    padding-top: 200px
+}
+
+.durability-heading h2 {
+    color: #263D4F;
+    font-size: 44px;
+    text-transform: capitalize;
+    line-height: 50px;
+    font-weight: 800
+}
+
+.durability-heading p {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-right: 50px
+}
+
+.durability-slider {
+    background: #f2f4f9;
+    border-radius: 40px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.durability-slider .owl-nav {
+    position: relative;
+    top: 30px
+}
+
+.durability-slider .owl-nav .owl-next {
+    left: 57% !important
+}
+
+.convert-into-air-quality-sec {
+    background: #0b1b26;
+    margin-top: 150px;
+    padding-top: 100px;
+    border-radius: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.convert-into-air-quality-heading {
+    position: relative;
+}
+
+.convert-into-air-quality-heading h2 {
+    color: #ECF0F3;
+    font-size: 44px;
+    text-transform: capitalize;
+    width: 70%;
+    line-height: 55px
+}
+
+.weather-staition-variant h3 {
+    color: #ECF0F3;
+    font-size: 24px;
+    font-weight: 700
+}
+
+.weather-staition-variant {
+    padding-top: 50px;
+    position: relative;
+}
+
+.weahter-st {
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 10px
+}
+
+.weather-staition-variant ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.weather-staition-variant ul li {
+    color: #ecf0f3;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    width: 23%;
+    background: #253b4a;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin: 10px 5px 0;
+    text-align: center;
+}
+
+.covert-weather-station-img img {
+    width: 90%;
+    position: relative;
+    left: 100px;
+    top: 60px
+}
+
+.covert-weather-station-img {
+    text-align: right;
+    margin: 0
+}
+
+.row-flex {
+    align-items: flex-end;
+    display: flex
+}
+
+.convert-into-air-quality-sec:before {
+    position: absolute;
+    content: "";
+    background-image: url(https://www.pranaair.com/wp-content/uploads/2024/06/rain2.gif);
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat
+}
+
+.hyper-local-networks-img img {
+    width: 100%;
+    border-radius: 10px
+}
+
+.hyper-local-networks-sec {
+    margin-top: 150px
+}
+
+.hyper-local-networks-img {
+    position: relative;
+    overflow: hidden
+}
+
+.hyper-local-networks-img:before {
+    position: absolute;
+    content: "";
+    background: #1f80d1a1;
+    width: 50%;
+    height: 100%;
+    border-radius: 14px 0 0 14px
+}
+
+.various-applications-slider-img {
+    margin: 0 10px;
+}
+
+.hyper-local-networks-para {
+    position: relative;
+    top: -400px;
+    padding: 0 100px;
+}
+
+.hyper-local-networks-para h2 {
+    color: #FFF;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 50px
+}
+
+.hyper-local-networks-para p {
+    color: #fff;
+    font-size: 18px;
+    padding-top: 10px
+}
+
+.various-applications-slider-img img {
+    width: 100%
+}
+
+.various-applications-slider {
+    margin-left: 230px;
+    padding-top: 100px;
+}
+
+.various-applications-slider-img h3 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700
+}
+
+.various-applications-slider-img p {
+    color: #263D4F;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.various-applications-sec {
+    margin-top: 150px
+}
+
+.various-applications-heaidng h2 {
+    color: #263D4F;
+    font-size: 44px;
+    font-weight: 800;
+    width: 70%;
+    line-height: 50px
+}
+
+.various-applications-para p {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+    width: 70%
+}
+
+.various-applications-slider .owl-nav {
+    bottom: 650px;
+    position: relative;
+    z-index: 2;
+    left: 420px
+}
+
+.visbel {
+    overflow: visible !important
+}
+
+.various-applications-slider .owl-nav a.owl-prev {
+    left: 47% !important
+}
+
+.part-label-section {
+    background: #F2F4F9;
+    border-radius: 40px;
+    padding: 50px 0 0
+}
+
+.part-line {
+    margin-bottom: 60px;
+    padding-top: 150px
+}
+
+.parts-label-img img {
+    width: 60%
+}
+
+.parts-label-img {
+    text-align: center
+}
+
+.part-label-point img {
+    width: 120px
+}
+
+img.rain-arrow {
+    width: 7px
+}
+
+.part-label-point h4 {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 600
+}
+
+.part-label-point {
+    text-align: center
+}
+
+ul.pole {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end
+}
+
+ul.pole li img {
+    width: 130px;
+    transform: rotate(180deg)
+}
+
+ul.temp {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px
+}
+
+ul.temp li img {
+    width: 140px
+}
+
+.wind-box {
+    position: relative;
+    top: 80px;
+    left: 150px
+}
+
+.wind-box h4 {
+    margin-left: -110px
+}
+
+.rang-box {
+    position: relative;
+    top: 110px
+}
+
+.anemometer-box {
+    position: relative;
+    left: -160px;
+    top: 100px
+}
+
+.anemometer-box h4 {
+    margin-right: -100px
+}
+
+.pole-box {
+    position: relative;
+    margin-top: -80px;
+    left: 200px
+}
+
+.temp-box {
+    position: relative;
+    margin-top: -300px;
+    left: -260px
+}
+
+.apm-box {
+    position: relative;
+    margin-top: 80px;
+    left: -270px
+}
+
+.app-heading h2 {
+    text-align: center;
+    width: 100%
+}
+
+.mob-app-img img {
+    width: 100%;
+    margin-bottom: 0px !important
+}
+
+.mob-app-img {
+    margin: 0 0 -30px
+}
+
+.web-dash-img {
+    margin: 0
+}
+
+.app-bg {
+    background: url(https://www.pranaair.com/wp-content/uploads/2024/06/aqi-mob-app-bg-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 610px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mob-app-txt h3 {
+    color: #263D4F;
+    font-size: 24px;
+    font-weight: 700;
+    width: 90%;
+    text-transform: capitalize
+}
+
+.mob-app-txt {
+    margin-top: 50px
+}
+
+.mob-app-txt p {
+    color: #263D4F;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 190px;
+    margin-bottom: 30px
+}
+
+.mob-app-txt a {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+    border-radius: 7px;
+    margin: 10px 0;
+}
+
+.mob-app-txt a img {
+    width: 15px;
+    margin-right: 7px
+}
+
+a.anndro img {
+    width: 20px
+}
+
+a.anndro {
+    border: 1px solid #1F80D1;
+    color: #1F80D1
+}
+
+a.ios {
+    background: #1F80D1;
+    color: #fff
+}
+
+.video-section {
+    padding-top: 150px
+}
+
+.web-dash-img img {
+    width: 100%
+}
+
+.web-dash-device-img img {
+    width: 80%
+}
+
+.web-dashboard-sec {
+    background: #F2F4F9;
+    margin-top: 150px
+}
+
+.web-dash-row {
+    padding-top: 30px
+}
+
+.web-dash-txt h3 {
+    color: #2B2B2B;
+    font-size: 40px;
+    font-weight: 700
+}
+
+.web-dash-txt h4 {
+    color: #2B2B2B;
+    font-size: 28px;
+    line-height: 40px
+}
+
+.web-dash-txt p {
+    color: #263D4F;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 400px
+}
+
+.web-dash-txt a {
+    background: #1F80D1;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 20px
+}
+
+.web-dash-txt a img {
+    width: 30px;
+    transition: .2s linear
+}
+
+.web-dash-txt a:hover img {
+    transform: rotate(45deg)
+}
+
+.web-dash-device-img {
+    width: 55%
+}
+
+.web-dash-row ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex
+}
+
+.web-dash-row ul li:last-child {
+    position: relative;
+    left: -170px
+}
+
+.web-dash-row ul li {
+    text-align: left;
+    margin-bottom: -20px !important
+}
+
+.web-dash-txt {
+    position: relative;
+    left: 0;
+    top: 20px
+}
+
+.prana-air-ambient-sec {
+    background: #F2F4F9;
+    margin-top: 150px;
+    border-radius: 40px
+}
+
+.prana-air-ambient-img img {
+    width: 100%;
+    border-radius: 10px
+}
+
+.prana-air-ambient-img {
+    padding: 40px
+}
+
+.pranaair-ambient-txt p {
+    padding-right: 300px;
+    padding-top: 10px
+}
+
+.pranaair-ambient-txt {
+    padding-top: 80px
+}
+
+.tv-app-sec {
+    background: #0B1B26;
+    border-radius: 50px 50px 0 0;
+    overflow: hidden;
+    margin-top: 150px
+}
+
+.tv-app-heading h2 {
+    color: #fff;
+    font-size: 44px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+    line-height: 50px;
+    text-transform: capitalize
+}
+
+.tv-app-heading h2 img {
+    width: 100px
+}
+
+.tv-app-para p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-right: 100px
+}
+
+.multi-themes ul {
+    list-style: none;
+    padding: 70px 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center
+}
+
+.multi-themes ul li img {
+    width: 60px
+}
+
+.multi-themes ul li h3 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0
+}
+
+.multi-themes ul li p {
+    color: #fff;
+    font-size: 14px;
+    width: 70%
+}
+
+.tv-app-theme-img {
+    margin: 0
+}
+
+.tv-app-theme-img img {
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    margin-bottom: -10px !important
+}
+
+.tv-br-line {
+    padding-top: 60px;
+    border-bottom: 1px solid #ffffff36;
+    padding-bottom: 50px
+}
+
+.theme-line {
+    position: relative
+}
+
+.theme-line:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(45deg, #ffffff00, #ffffff4f, #ffffff00);
+    width: 1px;
+    height: 100px;
+    left: -550px;
+    right: 0;
+    top: 60px;
+    margin: auto
+}
+
+.theme-line:after {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(45deg, #ffffff00, #ffffff4f, #ffffff00);
+    width: 1px;
+    height: 100px;
+    left: 300px;
+    right: 0;
+    top: 60px;
+    margin: auto
+}
+
+.compare-weather-station-sec h2 {
+    color: #263D4F;
+    font-size: 44px;
+    line-height: 60px;
+    text-transform: capitalize;
+    padding-bottom: 80px;
+    width: 69%
+}
+
+.compare-weather-station-sec {
+    padding-top: 150px
+}
+
+.weather-staiton-heading h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #263D4F;
+    padding-bottom: 50px
+}
+
+.weather-staiton-heading {
+    text-align: center
+}
+
+.weather-staiton-heading img {
+    width: 50%;
+    margin-bottom: -5px !important
+}
+
+.our-weather-station-bx ul {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.our-weather-station-bx ul li h4 {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 600
+}
+
+.our-weather-station-bx ul li p {
+    color: #263D4F;
+    font-size: 16px;
+    font-weight: 500;
+    width: 90%
+}
+
+.our-weather-station-bx ul li:before {
+    position: absolute;
+    background: #263D4F;
+    width: 7px;
+    height: 7px;
+    content: "";
+    border-radius: 100%;
+    left: -20px;
+    top: 5px
+}
+
+.our-weather-station-bx ul li {
+    position: relative;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #00000038;
+    padding-bottom: 30px
+}
+
+.our-weather-station-bx {
+    padding: 50px 70px
+}
+
+.dark-color {
+    background: #EAEEF6;
+    border-radius: 40px
+}
+
+.our-weather-station-bx ul li:last-child {
+    border-bottom: 0
+}
+
+.whats-inside-box-sec {
+    background: #0B1B26;
+    border-radius: 50px;
+    margin-top: 150px
+}
+
+.inside-box ul {
+    list-style: none;
+    padding: 50px 0 100px;
+    margin: 0
+}
+
+.inside-box ul li h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 10px;
+    line-height: 25px
+}
+
+.inside-box ul li img {
+    width: 130px
+}
+
+.inside-box ul li {
+    display: inline-block;
+    width: 14%;
+    border-bottom: 1px solid #ffffff42;
+    padding-bottom: 40px;
+    margin: 0 10px 50px;
+    text-align: center
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading {
+    border-color: #fff0;
+    background-color: #fff0
+}
+
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading {
+    border-color: transparent !important;
+    background-color: transparent !important
+}
+
+.vc_tta-panel-body {
+    padding: 10px 0 !important
+}
+
+span.vc_tta-title-text {
+    color: #263D4F;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 600
+}
+
+.faq-para p {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.vc_tta.vc_general .vc_tta-panel-title>a {
+    padding: 0 !important
+}
+
+.faq-title {
+    border-bottom: 1px solid #00000021;
+    padding-bottom: 30px;
+    margin-bottom: 30px
+}
+
+.faq-section {
+    padding-top: 150px
+}
+
+.faq-heading h2 {
+    color: #263D4F;
+    font-size: 44px;
+    font-weight: 800;
+    padding-bottom: 50px
+}
+
+airqulality_contact_section .contact_content_box {
+    background: #7AB261;
+    padding: 40px 20px 75px;
+    width: 35%;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden
+}
+
+.contact_content_box {
+    padding: 40px 0 0 80px
+}
+
+.airqulality_contact_section .contact_content_box {
+    background: #1F80D1;
+    padding: 40px 20px 75px;
+    width: 25%;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden
+}
+
+.airquality_inner_form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 950px;
+    margin: 0 auto 30px !important;
+    box-shadow: 2px 2px 25px 0 #cccccc78;
+    position: relative
+}
+
+.airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+    width: 60%;
+    padding: 6px 0 0 40px
+}
+
+.airquality_contact_box label {
+    width: 100%
+}
+
+.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    background: #1F80D1;
+    border: none;
+    width: auto;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px
+}
+
+.airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
+    max-height: 78px;
+    border: none;
+    border-bottom: 1px solid #60606073;
+    padding-left: 4px
+}
+
+textarea.wpcf7-form-control.wpcf7-textarea {
+    max-height: 150px
+}
+
+.airquality_contact_box input.wpcf7-form-control {
+    width: 100%;
+    margin-bottom: 15px !important;
+    border: none;
+    border-bottom: 1px solid #60606073;
+    padding-left: 4px
+}
+
+.contact_information_box h4 {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600
+}
+
+.contact_information_box p {
+    color: #fff;
+    font-weight: 400;
+    padding-top: 10px
+}
+
+ul.contact_info {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.contact_info li {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 300
+}
+
+.contact_info li i {
+    font-size: 21px;
+    margin-right: 10px
+}
+
+.contact_content_box:after {
+    background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+    width: 160px;
+    height: 160px;
+    content: "";
+    position: absolute;
+    bottom: -92px;
+    left: -25px;
+    z-index: 0;
+    background-size: 66%
+}
+
+.airqulality_contact_section.inner_container {
+    margin-top: 150px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.airqulality_contact_section.inner_container:before {
+    position: absolute;
+    content: "";
+    background: #F2F4F9;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1
+}
+
+.introducing_box.sub_title_box.text-center {
+    text-align: center
+}
+
+.title_heading {
+    text-align: center;
+    color: #263D4F;
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 0
+}
+
+.introducing_box p {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0 50px
+}
+
+.also-like-img img {
+    width: 100%;
+    transition: .2s linear
+}
+
+.also-like-link:hover img {
+    transform: scale(1.02)
+}
+
+.also-like-heading h2 {
+    color: #263D4F;
+    font-size: 44px;
+    text-transform: capitalize;
+    font-weight: 800;
+    width: 70%;
+    line-height: 50px
+}
+
+.also-like-sec {
+    padding-top: 150px
+}
+
+.also-like-img ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    display: flex
+}
+
+.also-like-img ul li {
+    color: #263D4F;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.also-like-img ul li img {
+    width: 30px
+}
+
+.line-also {
+    border-bottom: 1px solid #00000030;
+    padding-bottom: 50px;
+    margin-bottom: 50px
+}
+
+.environmental-monitoring-sec {
+    background: url(https://www.pranaair.com/wp-content/uploads/2024/10/environmental-monitoring-bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.environmental-monitoring-sec:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(90deg, #000000ba, transparent);
+    width: 50%;
+    height: 585px;
+    left: 0;
+    top: 0
+}
+
+.environmental-monitoring-img {
+    margin: 0;
+    padding-top: 120px;
+    text-align: right
+}
+
+.environmental-monitoring-img img {
+    width: 90%;
+    margin-bottom: -20px !important
+}
+
+.environmental-monitoring-txt h2 {
+    color: #fff;
+    font-size: 46px;
+    line-height: 50px;
+    margin: 0
+}
+
+.environmental-monitoring-txt h3 {
+    color: #fff;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 400;
+    margin: 0
+}
+
+.environmental-monitoring-txt p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 10px;
+    padding-right: 100px
+}
+
+.environmental-monitoring-txt {
+    padding-top: 250px;
+    position: relative;
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .hero-section:before {
+        background-image: linear-gradient(180deg, #0000007a, #fdfdfd00);
+        width: 100%;
+        height: 30%
+    }
+
+    #main-hero-video {
+        margin-top: 0;
+        min-width: 0px;
+        height: 220px;
+    }
+
+    .hero-section {
+        height: auto
+    }
+
+    .hero-mob-row {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: -204px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .hero-heading {
+        padding-left: 0;
+        position: relative;
+        text-align: center;
+        bottom: 0;
+        left: 0
+    }
+
+    .connectivety-tab-title {
+        flex-direction: column;
+    }
+
+    .hero-heading h1 {
+        font-size: 30px;
+        color: #273540;
+        padding-top: 20px;
+    }
+
+    ul.connect-tab {
+        padding: 20px 0 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .hero-heading p {
+        font-size: 14px;
+        padding-right: 0;
+        width: 80%;
+        margin: auto;
+        color: #5d5d5d;
+        line-height: 20px
+    }
+
+    .hero-heading a {
+        font-size: 14px;
+        padding: 10px;
+        width: 60%;
+        gap: 10px;
+        margin: 20px auto
+    }
+
+    .hero-heading a img {
+        width: 25px
+    }
+
+    .ambi-monitor-img img {
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 0px !important
+    }
+
+    .ambi-monitor-img {
+        position: relative;
+        top: 0;
+        text-align: center
+    }
+
+    .salinet-feture-sec {
+        padding-top: 50px
+    }
+
+    .salinet-feture-heading h2 {
+        font-size: 30px;
+        width: 100%;
+        line-height: 35px
+    }
+
+    .sailent-feture-para p {
+        font-size: 14px;
+        width: 100%
+    }
+
+    .salinet-feture-img img {
+        width: 100%;
+        margin-top: 30px
+    }
+
+    .sailent-feture-point {
+        padding-top: 20px
+    }
+
+    .sailent-feture-point ul li h3 {
+        font-size: 18px;
+        margin: 0;
+        width: 80%;
+        line-height: 24px
+    }
+
+    .sailent-feture-point ul li img {
+        width: 25px;
+        margin-left: 0
+    }
+
+    .sailent-feture-point ul li p {
+        font-size: 14px;
+        width: 90%
+    }
+
+    .parameters-sec {
+        margin-top: 70px;
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+
+    .parameter-heading h2 {
+        width: 80%
+    }
+
+    .parameter-heading {
+        margin: 0
+    }
+
+    .dark-br-line {
+        padding-bottom: 0;
+        margin-bottom: 20px
+    }
+
+    .wpb_content_element {
+        margin-bottom: 0px !important
+    }
+
+    .mob-flex {
+        display: flex;
+        align-items: center
+    }
+
+    ul.patrameter-gif li img {
+        width: 60px
+    }
+
+    ul.patrameter-gif li h3 {
+        font-size: 14px;
+        width: 90%
+    }
+
+    .mob-flex .vc_column-inner {
+        padding: 0 5px !important
+    }
+
+    ul.patrameter-gif {
+        border-radius: 15px;
+        height: 70px;
+        margin-bottom: 10px !important;
+        justify-content: space-around;
+        transition: .2s linear
+    }
+
+    ul.patrameter-gif li:last-child {
+        width: 100%
+    }
+
+    .connectivety-sec {
+        padding-top: 50px
+    }
+
+    .wifi-heading h3 {
+        font-size: 18px;
+        gap: 10px
+    }
+
+    .wifi-heading h3 img {
+        width: 22px
+    }
+
+    .wifi-heading {
+        padding-top: 30px
+    }
+
+    .wifi-heading h4 {
+        font-size: 18px;
+        padding-top: 0
+    }
+
+    .wifi-heading .wpb_wrapper {
+        display: flex;
+        align-items: baseline;
+        gap: 50px
+    }
+
+    .wifi-heading h4 img {
+        width: 22px
+    }
+
+    ul.connectivity-box li:nth-last-child(4) img {
+        width: 50%
+    }
+
+    ul.connectivity-box li h3 {
+        font-size: 16px
+    }
+
+    .img-box {
+        height: auto;
+        text-align: center
+    }
+
+    ul.connectivity-box li:nth-last-child(4):before {
+        width: 20%;
+        height: 12px;
+        top: 210px;
+        left: 137px;
+        transform: rotate(90deg);
+    }
+
+    ul.connectivity-box li:nth-last-child(3) img {
+        width: 20%;
+        margin-top: 0
+    }
+
+    ul.connectivity-box li:nth-last-child(3):before {
+        width: 20%;
+        height: 12px;
+        top: 110px;
+        left: 127px;
+        transform: rotate(90deg)
+    }
+
+    li.gsm:before {
+        top: 170px !important
+    }
+
+    ul.connectivity-box li {
+        margin-bottom: 60px
+    }
+
+    ul.connectivity-box li:nth-last-child(2):before {
+        width: 20%;
+        height: 12px;
+        top: 145px;
+        left: 130px;
+        transform: rotate(90deg)
+    }
+
+    ul.connectivity-box li:nth-last-child(1) img {
+        width: 40%
+    }
+
+    ul.connectivity-box {
+        padding: 30px 10px;
+        gap: 20px;
+        margin-top: 0;
+        flex-direction: column
+    }
+
+    ul.connectivity-box li:nth-last-child(2) img {
+        width: 25%;
+        margin-top: 0
+    }
+
+    .weahter-st {
+        font-size: 16px;
+        padding-left: 5px
+    }
+
+    .weather-staition-variant h3 {
+        font-size: 18px
+    }
+
+    .weather-staition-variant ul li {
+        font-size: 12px;
+        width: 31%;
+        border-radius: 10px;
+        padding: 15px 10px;
+        margin: 5px 3px 0;
+    }
+
+    .covert-weather-station-img img {
+        width: 80%;
+        left: 0;
+        top: 0;
+        margin-top: 50px
+    }
+
+    .covert-weather-station-img {
+        text-align: center
+    }
+
+    .hyper-local-networks-sec {
+        margin-top: 80px
+    }
+
+    .hyper-local-networks-img:before {
+        display: none
+    }
+
+    .hyper-local-networks-para h2 {
+        font-size: 30px;
+        line-height: 30px
+    }
+
+    .hyper-local-networks-para p {
+        font-size: 14px;
+        padding-top: 4px
+    }
+
+    .hyper-local-networks-para {
+        position: relative;
+        top: 0;
+        padding: 10px;
+        background: #1F80D1;
+        left: 0;
+        margin: -6px 0;
+        width: 100%
+    }
+
+    .mob-app-txt a {
+        width: 100%;
+    }
+
+    .video-section {
+        padding-top: 50px;
+    }
+
+    .various-applications-sec {
+        margin-top: 60px;
+        overflow: visible !important
+    }
+
+    .various-applications-heaidng h2 {
+        font-size: 30px;
+        width: 100%;
+        line-height: 40px
+    }
+
+    .various-applications-para p {
+        font-size: 14px;
+        width: 100%
+    }
+
+    .various-applications-slider {
+        margin-left: 0;
+        padding-top: 50px
+    }
+
+    .various-applications-slider-img {
+        margin: 0 15px
+    }
+
+    .various-applications-slider .owl-nav {
+        bottom: 0;
+        left: 140px
+    }
+
+    .tv-app-sec {
+        border-radius: 30px 30px 0 0
+    }
+
+    .part-label-section {
+        border-radius: 30px
+    }
+
+    .temp-box {
+        position: relative;
+        margin-top: -180px;
+        left: 80px
+    }
+
+    .apm-box {
+        margin-top: 40px;
+        left: 20px
+    }
+
+    .various-applications-slider .owl-nav a.owl-prev {
+        left: 37% !important
+    }
+
+    .part-line {
+        margin-bottom: 40px;
+        padding-top: 70px
+    }
+
+    .part-label-point h4 {
+        font-size: 14px
+    }
+
+    .pole-box {
+        margin-top: -40px;
+        left: -200px
+    }
+
+    ul.pole li img {
+        width: 100px
+    }
+
+    .parts-label-img {
+        text-align: center
+    }
+
+    .parts-label-img img {
+        width: 100%;
+        position: relative;
+        z-index: 1
+    }
+
+    .anemometer-box {
+        position: relative;
+        left: -20px;
+        top: 40px
+    }
+
+    .anemometer-box h4 {
+        margin-right: 0;
+        text-align: right
+    }
+
+    .part-label-point img {
+        width: 80px
+    }
+
+    .rang-box {
+        position: relative;
+        top: 150px;
+        margin-top: -140px
+    }
+
+    img.rain-arrow {
+        width: 5px
+    }
+
+    ul.temp li img {
+        width: 50px;
+        position: relative;
+        z-index: 0;
+        left: 15px
+    }
+
+    ul.temp li h4 {
+        width: 60%
+    }
+
+    .wind-box {
+        position: relative;
+        top: 35px;
+        left: 10px;
+        margin-bottom: -100px !important
+    }
+
+    .wind-box h4 {
+        margin-left: 0;
+        text-align: left
+    }
+
+    .durability-slider .owl-nav .owl-next {
+        left: 65% !important
+    }
+
+    .convert-into-air-quality-heading h2 {
+        font-size: 30px;
+        width: 100%;
+        line-height: 40px
+    }
+
+    .row-flex {
+        flex-direction: column
+    }
+
+    .convert-into-air-quality-sec {
+        margin-top: 100px;
+        padding-top: 50px;
+        padding-bottom: 0;
+        border-radius: 30px
+    }
+
+    .anemometer-box p {
+        text-align: right
+    }
+
+    .wind-box p {
+        text-align: left
+    }
+
+    .durability-heading h2 {
+        font-size: 30px;
+        line-height: 40px
+    }
+
+    .durability-sec:before {
+        width: 90%;
+        height: 70px;
+        left: 0;
+        top: 110px
+    }
+
+    .durability-sec {
+        padding-top: 0
+    }
+
+    .durability-heading p {
+        font-size: 14px;
+        padding-top: 0;
+        padding-bottom: 30px
+    }
+
+    .durability-slider-img img {
+        width: 80%
+    }
+
+    img.weather-img {
+        width: 80% !important
+    }
+
+    .app-bg {
+        height: auto;
+        border-radius: 20px;
+        flex-direction: column-reverse
+    }
+
+    .mob-app-txt h3 {
+        font-size: 18px
+    }
+
+    .mob-app-txt p {
+        font-size: 14px;
+        padding-right: 0;
+        margin-bottom: 20px
+    }
+
+    .web-dash-txt h3 {
+        font-size: 30px
+    }
+
+    .web-dash-txt {
+        left: 0;
+        top: 40px;
+        text-align: center
+    }
+
+    .web-dash-txt p {
+        font-size: 14px;
+        padding-right: 0;
+        padding-top: 5px;
+        width: 70%;
+        margin: auto
+    }
+
+    .web-dash-txt a {
+        padding: 6px;
+        width: 100%
+    }
+
+    .web-dash-row {
+        padding-top: 60px;
+        padding-bottom: 20px
+    }
+
+    .web-dash-device-img {
+        width: 100%
+    }
+
+    .web-dash-row ul li:last-child {
+        left: 0
+    }
+
+    .mob-dash-row {
+        display: flex;
+        flex-direction: column-reverse
+    }
+
+    .inner-mob-row .wpb_wrapper {
+        display: flex;
+        flex-direction: column-reverse
+    }
+
+    .prana-air-ambient-sec {
+        margin-top: 100px;
+        border-radius: 30px
+    }
+
+    .prana-air-ambient-sec .vc_row {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 10px
+    }
+
+    .pranaair-ambient-txt {
+        padding-top: 0;
+        text-align: left !important;
+        padding-bottom: 60px;
+        top: 20px !important
+    }
+
+    .pranaair-ambient-txt p {
+        width: 80%;
+        margin: initial
+    }
+
+    .prana-air-ambient-img {
+        padding: 20px 0
+    }
+
+    .tv-app-heading h2 {
+        font-size: 30px;
+        gap: 20px;
+        width: 60%;
+        line-height: 34px
+    }
+
+    .tv-app-heading h2 img {
+        width: 70px
+    }
+
+    .tv-app-para p {
+        font-size: 14px;
+        padding-top: 10px;
+        padding-right: 10px
+    }
+
+    .tv-br-line {
+        padding-top: 50px;
+        padding-bottom: 20px
+    }
+
+    .theme-line:after {
+        display: none
+    }
+
+    .multi-themes ul {
+        padding: 10px 0;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: flex-start
+    }
+
+    .multi-themes ul li img {
+        width: 30px
+    }
+
+    .multi-themes ul li h3 {
+        font-size: 16px
+    }
+
+    .multi-themes ul li p {
+        font-size: 14px;
+        width: 90%
+    }
+
+    .tv-app-theme-img img {
+        border-radius: 20px 20px 0 0;
+        margin-bottom: -10px !important;
+        margin-top: 40px
+    }
+
+    .compare-weather-station-sec {
+        padding-top: 100px
+    }
+
+    .compare-weather-station-sec h2 {
+        font-size: 30px;
+        line-height: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        text-align: left
+    }
+
+    .weather-staiton-row {
+        display: flex;
+        overflow-x: scroll
+    }
+
+    .weather-staiton-heading img {
+        width: 60%
+    }
+
+    .weather-staiton-heading h3 {
+        font-size: 18px;
+        padding-bottom: 20px
+    }
+
+    .our-weather-station-bx ul li h4 {
+        font-size: 16px
+    }
+
+    .our-weather-station-bx ul li p {
+        font-size: 14px;
+        width: 100%
+    }
+
+    .our-weather-station-bx {
+        padding: 40px 30px;
+        width: 200px;
+        border-radius: 30px
+    }
+
+    .our-weather-station-bx ul li:before {
+        left: -15px
+    }
+
+    .hyper-local-networks-img img {
+        border-radius: 0
+    }
+
+    .web-dashboard-sec {
+        border-radius: 30px
+    }
+
+    .whats-inside-box-sec {
+        margin-top: 100px;
+        border-radius: 30px
+    }
+
+    .inside-box ul li {
+        width: 18%;
+        padding-bottom: 40px;
+        margin: 0 10px 0
+    }
+
+    .inside-box ul li h4 {
+        font-size: 13px;
+        padding-top: 10px;
+        line-height: 20px
+    }
+
+    .inside-box ul li img {
+        width: 50px
+    }
+
+    .faq-section {
+        padding-top: 100px
+    }
+
+    .faq-heading h2 {
+        font-size: 30px;
+        padding-bottom: 30px
+    }
+
+    span.vc_tta-title-text {
+        font-size: 15px
+    }
+
+    .faq-para p {
+        font-size: 14px
+    }
+
+    .faq-title {
+        padding-bottom: 15px;
+        margin-bottom: 20px
+    }
+
+    .airqulality_contact_section.inner_container {
+        margin-top: 100px;
+        padding-top: 30px
+    }
+
+    .title_heading {
+        font-size: 30px
+    }
+
+    .introducing_box p {
+        font-size: 14px;
+        padding: 0 0 30px
+    }
+
+    .airqulality_contact_section .contact_content_box {
+        padding: 30px 10px 50px;
+        width: 100%;
+        border-radius: 25px
+    }
+
+    .contact_information_box h4 {
+        font-size: 20px
+    }
+
+    .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+        width: 100%;
+        padding: 20px 0 0 0
+    }
+
+    .also-like-sec {
+        padding-top: 100px
+    }
+
+    .also-like-heading h2 {
+        font-size: 30px;
+        width: 50%;
+        line-height: 36px
+    }
+
+    .line-also {
+        padding-bottom: 10px;
+        margin-bottom: 10px
+    }
+
+    .weather-staiton-row {
+        display: flex;
+        overflow-x: scroll
+    }
+
+    .also-like-img {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .also-like-img .vc_col-sm-3 {
+        min-width: 220px
+    }
+
+    .mob-row-like .col-md-3 {
+        width: 300px;
+    }
+
+    .mob-row-like {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .also-like-img ul li {
+        font-size: 14px
+    }
+
+    .also-like-img ul li img {
+        width: 25px
+    }
+
+    .vc_tta-tabs.vc_tta-tabs-position-left {
+        flex-direction: column
+    }
+
+    .connectivety-tab-title .vc_tta-panel-heading {
+        display: none
+    }
+
+    ul.vc_tta-tabs-list {
+        display: flex !important
+    }
+
+    li.vc_tta-tab .vc_tta-title-text {
+        font-size: 18px
+    }
+
+    .convert-into-air-quality-sec:before {
+        background-position: top;
+        background-size: 450%
+    }
+
+    .environmental-monitoring-sec:before {
+        width: 100%;
+        height: 300px;
+        background-image: linear-gradient(180deg, #000000ba, transparent)
+    }
+
+    .environmental-monitoring-txt {
+        padding-top: 50px;
+        text-align: center
+    }
+
+    .environmental-monitoring-txt h2 {
+        font-size: 32px;
+        line-height: 40px
+    }
+
+    .environmental-monitoring-txt h3 {
+        font-size: 24px;
+        line-height: 32px
+    }
+
+    .environmental-monitoring-txt p {
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 10px;
+        padding-right: 0
+    }
+
+    .environmental-monitoring-img img {
+        margin-bottom: -10px !important
+    }
+
+    .environmental-monitoring-img {
+        padding-top: 50px;
+        text-align: center
+    }
+}
+
+@media only screen and (min-width:767px) and (max-width:1023px) {
+    #main-hero-video {
+        margin-top: 0
+    }
+
+    .hero-section {
+        height: 100%
+    }
+
+    .hero-section:before {
+        height: 90%
+    }
+
+    .hero-heading h1 {
+        font-size: 40px;
+        line-height: 30px
+    }
+
+    .hero-heading p {
+        font-size: 16px;
+        padding-right: 0;
+        line-height: 24px
+    }
+
+    .hero-heading {
+        bottom: 60px;
+        left: 0
+    }
+
+    .hero-heading a {
+        padding: 8px;
+        width: 60%;
+        gap: 10px
+    }
+
+    .ambi-monitor-img {
+        top: -300px
+    }
+
+    .ambi-monitor-img img {
+        width: 66%
+    }
+
+    .parts-label-img img {
+        width: 70%
+    }
+
+    .salinet-feture-sec {
+        padding-top: 100px
+    }
+
+    .salinet-feture-heading h2 {
+        font-size: 40px
+    }
+
+    .sailent-feture-para p {
+        font-size: 16px;
+        width: 90%;
+        padding-top: 10px
+    }
+
+    .sailent-feture-point {
+        padding-top: 50px
+    }
+
+    .sailent-feture-point ul li h3 {
+        font-size: 20px;
+        width: 70%
+    }
+
+    .salinet-feture-img img {
+        width: 90%
+    }
+
+    .parameters-sec {
+        margin-top: 100px;
+        padding-top: 50px;
+        padding-bottom: 60px
+    }
+
+    .parameter-heading h2 {
+        width: 90%;
+        line-height: 50px
+    }
+
+    .dark-br-line {
+        margin-bottom: 40px
+    }
+
+    ul.patrameter-gif li img {
+        width: 70px
+    }
+
+    ul.patrameter-gif li h3 {
+        font-size: 16px
+    }
+
+    ul.patrameter-gif {
+        height: 100px
+    }
+
+    .wifi-heading h3 {
+        font-size: 20px
+    }
+
+    .wifi-heading h4 {
+        font-size: 20px;
+        line-height: 30px;
+        padding-top: 30px
+    }
+
+    ul.connectivity-box {
+        padding: 30px 10px 30px;
+        gap: 0
+    }
+
+    ul.connectivity-box li:nth-last-child(4) h3 {
+        padding: 0 40px
+    }
+
+    ul.connectivity-box li:nth-last-child(4) img {
+        width: 65%
+    }
+
+    ul.connectivity-box li:nth-last-child(3) img {
+        width: 40%;
+        margin-top: 20px
+    }
+
+    ul.connectivity-box li:nth-last-child(4):before {
+        width: 42%;
+        height: 11px;
+        top: 40px;
+        left: 70px
+    }
+
+    ul.connectivity-box li:nth-last-child(3):before {
+        width: 60%;
+        height: 10px;
+        top: 40px;
+        left: 30px
+    }
+
+    ul.connectivity-box li:nth-last-child(2) img {
+        width: 80%;
+        margin-top: 10px
+    }
+
+    ul.connectivity-box li:nth-last-child(1) img {
+        width: 60%;
+        margin-top: 10px;
+        margin-left: 40px
+    }
+
+    ul.connectivity-box li:nth-last-child(2):before {
+        width: 70%;
+        height: 9px;
+        top: 40px;
+        left: 65px
+    }
+
+    ul.connectivity-box li h3 {
+        font-size: 14px;
+        line-height: 22px
+    }
+
+    .img-box {
+        height: 80px;
+        padding-bottom: 10px
+    }
+
+    .durability-heading {
+        padding-top: 100px
+    }
+
+    .durability-heading h2 {
+        font-size: 30px;
+        line-height: 35px
+    }
+
+    .durability-heading p {
+        font-size: 16px;
+        padding-top: 0;
+        padding-right: 20px
+    }
+
+    .durability-slider {
+        padding-bottom: 100px;
+        padding-top: 40px
+    }
+
+    .durability-slider .owl-nav .owl-next {
+        left: 60% !important
+    }
+
+    .convert-into-air-quality-heading h2 {
+        font-size: 30px;
+        width: 70%;
+        line-height: 42px
+    }
+
+    .convert-into-air-quality-sec {
+        margin-top: 100px;
+        padding-top: 60px
+    }
+
+    .covert-weather-station-img img {
+        width: 100%;
+        left: 0;
+        top: 60px
+    }
+
+    .weather-staition-variant ul li {
+        width: 27%
+    }
+
+    .hyper-local-networks-para {
+        top: -230px;
+        padding: 0 20px
+    }
+
+    .hyper-local-networks-para h2 {
+        font-size: 30px;
+        line-height: 20px
+    }
+
+    .hyper-local-networks-para p {
+        font-size: 16px
+    }
+
+    .wind-box {
+        top: 50px;
+        left: 100px
+    }
+
+    .anemometer-box {
+        left: -110px;
+        top: 50px
+    }
+
+    .temp-box {
+        margin-top: -170px;
+        left: -95px
+    }
+
+    .apm-box {
+        margin-top: 20px;
+        left: -120px
+    }
+
+    .pole-box {
+        left: 120px
+    }
+
+    .part-line {
+        margin-bottom: 40px;
+        padding-top: 100px
+    }
+
+    .mob-app-txt p {
+        font-size: 14px;
+        padding-right: 10px;
+        margin-bottom: 20px
+    }
+
+    .mob-app-txt {
+        margin-top: 0
+    }
+
+    .app-bg {
+        display: flex;
+        height: auto
+    }
+
+    .web-dash-txt p {
+        padding-right: 0
+    }
+
+    .web-dash-row ul li:last-child {
+        left: -40px
+    }
+
+    .web-dash-row ul li {
+        margin-bottom: 0px !important
+    }
+
+    .web-dash-device-img {
+        width: 70%
+    }
+
+    .web-dash-txt h3 {
+        font-size: 30px
+    }
+
+    .web-dash-txt h4 {
+        font-size: 22px
+    }
+
+    .mob-dash-row {
+        display: flex;
+        align-items: flex-end
+    }
+
+    .web-dashboard-sec {
+        margin-top: 100px
+    }
+
+    .pranaair-ambient-txt p {
+        padding-right: 30px;
+        padding-top: 10px
+    }
+
+    .prana-air-ambient-img {
+        padding: 40px 0 0
+    }
+
+    .pranaair-ambient-txt {
+        padding-top: 40px;
+        padding-bottom: 50px
+    }
+
+    .tv-app-heading h2 {
+        font-size: 30px;
+        gap: 30px;
+        width: 60%;
+        line-height: 40px
+    }
+
+    .tv-app-heading h2 img {
+        width: 80px
+    }
+
+    .tv-app-para p {
+        font-size: 16px;
+        padding-top: 0;
+        padding-right: 30px
+    }
+
+    .multi-themes ul {
+        padding: 30px 0;
+        gap: 10px
+    }
+
+    .multi-themes ul li h3 {
+        font-size: 18px
+    }
+
+    .theme-line:after {
+        display: none
+    }
+
+    .compare-weather-station-sec h2 {
+        font-size: 30px;
+        line-height: 50px;
+        padding-bottom: 30px;
+        width: 90%;
+        text-align: left
+    }
+
+    .weather-staiton-heading h3 {
+        font-size: 20px;
+        padding-bottom: 20px
+    }
+
+    .our-weather-station-bx {
+        padding: 50px 40px
+    }
+
+    .inside-box ul {
+        padding: 20px 0 50px
+    }
+
+    .inside-box ul li img {
+        width: 90px
+    }
+
+    .inside-box ul li h4 {
+        font-size: 16px;
+        padding-top: 10px;
+        line-height: 15px
+    }
+
+    .inside-box ul li {
+        width: 13%;
+        padding-bottom: 40px;
+        margin: 0 10px 0
+    }
+
+    .faq-section {
+        padding-top: 100px
+    }
+
+    .faq-heading h2 {
+        font-size: 30px;
+        padding-bottom: 30px
+    }
+
+    .also-like-heading h2 {
+        font-size: 30px;
+        width: 60%;
+        line-height: 40px
+    }
+
+    .line-also {
+        padding-bottom: 20px;
+        margin-bottom: 20px
+    }
+
+    .also-like-img ul li {
+        font-size: 16px;
+        font-weight: 600
+    }
+
+    .web-dash-txt {
+        position: relative;
+        left: 30px;
+        top: 0
+    }
+
+    .web-dash-row {
+        padding-top: 0
+    }
+
+    .environmental-monitoring-txt {
+        padding-top: 80px
+    }
+
+    .environmental-monitoring-txt h2 {
+        font-size: 32px;
+        line-height: 40px
+    }
+
+    .environmental-monitoring-txt h3 {
+        font-size: 26px;
+        line-height: 38px
+    }
+
+    .environmental-monitoring-txt p {
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 10px;
+        padding-right: 90px
+    }
+
+    .environmental-monitoring-img {
+        padding-top: 100px
+    }
+}
