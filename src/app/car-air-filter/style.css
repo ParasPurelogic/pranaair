@@ -1,0 +1,2132 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito Sans" !important;
+}
+
+p {
+  font-family: "Nunito Sans" !important;
+}
+
+a {
+  font-family: "Nunito Sans" !important;
+}
+
+.hero-section {
+  background: url(https://www.pranaair.com/wp-content/uploads/2024/06/Anti-Pollution-Car-Cabin-Filter-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  position: relative;
+}
+.hero-section:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(90deg, black, black, transparent);
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+.hero-heding {
+  padding-top: 300px;
+  position:relative;
+}
+
+
+.hero-heding h1 {
+  color: #f3f5fb;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.hero-heding h2 {
+  color: #f3f5fb;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+.hero-heding p {
+  color: #f5f5f5;
+  font-size: 18px;
+  font-weight: 500;
+  width: 60%;
+  text-transform: capitalize;
+}
+
+.car-filter-price span.woocs_price_code {
+  justify-content: flex-end;
+  color: #000 !important;
+  flex-direction: row-reverse;
+  padding: 20px 0;
+}
+
+.car-filter-price span.woocommerce-Price-amount.amount {
+  color: #f5f5f5;
+  font-size: 26px;
+}
+
+.hero-heding a {
+  color: #ffffff;
+  font-size: 18px;
+  background: #00abf4;
+  text-decoration: none;
+  padding: 14px;
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+  transition: .3s linear;
+}
+
+.hero-heding a:hover {
+  border: 2px solid #00abf4;
+  background: transparent;
+  color: #fff;
+}
+
+.using-car-air-filter-img img {
+  width: 100%;
+}
+
+.using-bg {
+  background: #1b2022;
+  height: 585px;
+}
+
+.pd .vc_column-inner {
+  padding: 0;
+}
+
+.using-car-filter-sec {
+  padding-top: 120px;
+}
+
+.using-car-filter-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+
+.using-para p {
+  color: #f5f5f5;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px 40px 0px;
+  opacity: 85%;
+}
+
+.using-para {
+  padding: 50px;
+}
+
+.car-air-pollution-sec {
+  padding-top: 130px;
+}
+
+.car-air-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+  padding-bottom: 30px;
+}
+
+.car-air-pollution-icon {
+  width: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.high-nitro-di-img {
+  width: 100%;
+}
+
+ul.problem-of-car-solution li:nth-child(4) {
+  position: relative;
+  top: -30px;
+}
+
+ul.problem-of-car-solution {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.problem-of-car-solution li {
+  display: inline-block;
+  width: 32%;
+  margin: 0 5px;
+}
+
+.car-air-pollution-card h3 {
+  color: #263d4f;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cair-air-pollution-para {
+  color: #263d4fcc;
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 50px;
+}
+
+.car-air-pollution-card {
+  position: relative;
+  margin-top: 30px;
+}
+
+.car-air-pollution-card:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(180deg, black, transparent);
+  width: 100%;
+  height: 30%;
+}
+
+.use-the-right-filter-sec {
+  padding-top: 130px;
+}
+
+.right-filtger-box h3 {
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #ffffff6b;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.right-filtger-box p {
+  color: #f4f8fec7;
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.right-filtger-box:hover {
+  background: #00abf4;
+}
+
+.indor-box {
+  background: #293134;
+  height: 350px;
+  padding: 40px 30px 0;
+  transition: .3s linear;
+  width: 100%;
+}
+
+.indor-box img {
+  width: 40%;
+}
+
+.right-filter-box-main {
+  display: flex;
+  gap: 15px;
+}
+
+ul.car-filter {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul.car-filter li {
+  width: 30%;
+  display: inline-block;
+  margin: 10px;
+}
+
+.indor-box h3 {
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #ffffff2e;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.indor-box p {
+  color: #f4f8fecf;
+  font-size: 16px;
+  padding-right: 40px;
+}
+
+.indor-box:hover {
+  background: #00abf4;
+}
+
+.use-right-filter-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-weight: 800;
+  width: 65%;
+  line-height: 50px;
+  padding-bottom: 30px;
+}
+
+.filtration-tec-sec {
+  margin-top: 120px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.filtration-tec-sec:before {
+  background: #1b2022;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.filtration-tec-heading h2 {
+  color: #f5f5f5;
+  font-size: 40px;
+  font-weight: 800;
+  padding-top: 70px;
+  line-height: 46px;
+}
+
+.filtration-tec-heading p {
+  color: #f5f5f5;
+  font-size: 20px;
+}
+
+.filtration-tec-img img {
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.filrtion-tech-point ul {
+  list-style: none;
+  padding: 0 0 25px;
+  margin: 0;
+  display: flex;
+  font-style: italic;
+  gap: 20px;
+  position: relative;
+}
+
+.filrtion-tech-point ul li img {
+  width: 50px;
+}
+
+.filrtion-tech-point {
+  padding-top: 100px;
+  margin-left: -100px;
+}
+
+.filrtion-tech-point ul li h3 {
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.filrtion-tech-point ul li p {
+  color: #f5f5f5bd;
+  font-size: 16px;
+  font-style: normal;
+  width: 80%;
+}
+
+.filrtion-tech-point ul:before {
+  position: absolute;
+  content: "";
+  background: #f5f5f55c;
+  width: 10%;
+  height: 1px;
+  left: -120px;
+  top: 20px;
+}
+
+.filrtion-tech-point ul:after {
+  position: absolute;
+  content: "";
+  background: #f5f5f5;
+  width: 20px;
+  height: 20px;
+  left: -140px;
+  top: 10px;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.ultimate-protection-img img {
+  width: 100%;
+}
+
+.ultimate-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  text-transform: capitalize;
+  line-height: 40px;
+}
+
+.ultimate-heading p {
+  color: #263d4f;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ultimate-heading a {
+  color: #ffffff;
+  background: #00abf4;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  width: 20%;
+  margin-top: 20px;
+}
+
+.ultimate-sec {
+  padding-top: 150px;
+}
+
+.ultimate-heading {
+  padding-top: 60px;
+}
+
+.guards-heading-box {
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.guard-img img {
+  width: 19%;
+}
+
+.guard-img {
+  text-align: center;
+  margin-top: -50px;
+}
+
+.gurad-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.gurad-heading p {
+  color: #263d4fbd;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gurad-for-you-sec {
+  background: url(https://www.pranaair.com/wp-content/uploads/2024/06/guards-in-your-cars-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+.pollutants-box ul li img {
+  width: 25%;
+  position: relative;
+}
+
+.pollutants-box ul {
+  list-style: none;
+  margin: 0;
+}
+
+.pollutants-box ul li {
+  display: inline-block;
+  width: 49%;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.pollen {
+  width: 70% !important;
+  top: 100px;
+  left: 170px;
+  animation: float 3s ease-in-out infinite;
+}
+
+img.dust {
+  left: 300px;
+  top: 100px;
+  animation: float 7s ease-in-out infinite;
+}
+
+img.odor {
+  left: 200px;
+  top: 200px;
+  animation: float 7s ease-in-out infinite;
+}
+
+img.smog {
+  left: 300px;
+  animation: float 4s ease-in-out infinite;
+}
+
+img.mites {
+  left: 250px;
+  top: 200px;
+  animation: float 6s ease-in-out infinite;
+}
+
+img.soot {
+  left: 120px;
+  top: 250px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.breathe-healthier-sec {
+  background: url(https://www.pranaair.com/wp-content/uploads/2024/06/Breathe-healthier-and-Drive-easier-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin-top: 200px;
+}
+
+.breathe-healthier-heaidng {
+  background: #00abf4ed;
+  margin-top: 70px;
+  margin-left: 30px;
+  padding: 70px 30px 80px 80px;
+}
+
+.breathe-healthier-heaidng h2 {
+  color: #f5f5f5;
+  font-size: 40px;
+  text-transform: capitalize;
+  width: 80%;
+  line-height: 45px;
+}
+
+.breathe-healthier-heaidng p {
+  color: #f5f5f5db;
+  font-size: 16px;
+  width: 80%;
+}
+
+.enjoy-fresh-air-img img {
+  width: 100%;
+}
+
+.enjoy-fresh-air-sec {
+  padding-top: 180px;
+}
+
+.enjoy-fresh-air-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.enjoy-fresh-air-heading h3 {
+  font-size: 40px;
+  background: #00abf4;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.enjoy-fresh-air-heading p {
+  color: #263d4f;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.approx {
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: -20px;
+  display: block;
+}
+
+.enjoy-fresh-air-img {
+  margin-top: -100px;
+  position: relative;
+  z-index: 0;
+}
+
+.enjoy-fresh-air-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.how-to-install-img h2 {
+  color: #263d4f;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+}
+
+.how-to-install-img img {
+  width: 100%;
+}
+
+.how-to-install-filter-img img {
+  width: 100%;
+}
+
+.how-to-install-filter-img {
+  margin-top: 120px;
+}
+
+.how-to-install-sec {
+  padding-top: 60px;
+  margin-top: 150px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.how-to-install-sec:before {
+  position: absolute;
+  content: "";
+  background: #f5f5f5;
+  width: 80%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  margin: 0 auto;
+}
+
+.install-all-steps-img img {
+  width: 80%;
+}
+
+.installation-steps h3 {
+  color: #263d4f;
+  font-size: 24px;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+.installation-steps {
+  padding-top: 100px;
+}
+
+.installation-steps strong {
+  color: #263d4f;
+  font-size: 18px;
+}
+
+.installation-steps p {
+  color: #263d4f;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.install-all-steps-img {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.reason-to-choose-sec {
+  background: #1b2022;
+  margin-top: 150px;
+  padding-top: 80px;
+  padding-bottom: 110px;
+}
+
+.red-bg {
+  background: #ffdce0;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+.green-bg {
+  background: #f2ffea;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+.reason-to-choose-filter-box h3 {
+  color: #f5f5f5;
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.reason-to-choose-heading h2 {
+  color: #f5f5f5;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+  width: 80%;
+  padding-bottom: 50px;
+}
+
+.reason-to-choose-filter-box img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.red-box .vc_column-inner {
+  background: #412c2e;
+  padding: 40px;
+}
+
+.green-box .vc_column-inner {
+  background: #25301e;
+  margin: 0 10px;
+  padding: 40px;
+}
+
+.reason-to-choose-filter-box p {
+  color: #f5f5f5b0;
+  font-size: 14px;
+}
+
+p.para-filter {
+  width: 60%;
+  margin-top: -30px;
+}
+
+.diff-table-para h3 {
+  font-size: 18px;
+  color: #263d4f;
+  font-weight: 700;
+  margin: 0;
+}
+
+.diff-table-heading h2 {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 800;
+  color: #263d4f;
+  display: block;
+}
+
+.diff-table-para p {
+  color: #263d4fdb;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.diff-table-para {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 5px !important;
+  padding-top: 20px;
+}
+
+.diff-table-para:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #00000012, #00000040, transparent);
+  width: 100%;
+  height: 1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+
+.prana-air-cabin-filter-sec {
+  padding-top: 170px;
+}
+
+.car-cabin-filter-heading {
+  text-align: center;
+}
+
+.car-cabin-filter-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.car-cabin-filter-heading p {
+  color: #263d4f;
+  font-size: 18px;
+  font-weight: 500;
+  width: 40%;
+  margin: auto;
+}
+
+.car-cabin-filter-heading ul {
+  list-style: none;
+  padding: 30px 0 30px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+
+.car-cabin-filter-heading ul li {
+  color: #263d4f;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.car-cabin-filter-heading ul li:before {
+  position: absolute;
+  content: "";
+  background: #088cec;
+  width: 30px;
+  height: 30px;
+  left: -40px;
+  top: -5px;
+}
+
+.car-cabin-filter-heading ul li:last-child:before {
+  background: #616161;
+}
+
+.graph-img img {
+  width: 100%;
+}
+
+.filter-graph-para p {
+  color: #263d4f;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.available-for-sec {
+  padding-top: 50px;
+  margin-top: 150px;
+}
+
+.available-for-sec:before {
+  position: absolute;
+  content: "";
+  background: #f5f5f5;
+  width: 95%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+ul.brand-logo {
+  list-style: none;
+  padding: 70px 0 0;
+  margin: 0;
+}
+
+ul.brand-logo li {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+ul.brand-logo li img {
+  width: 200px;
+  transition: .1s linear;
+  filter: grayscale(1);
+}
+
+ul.brand-logo li img:hover {
+  filter: grayscale(0);
+}
+
+.available-for-heading h2 {
+  color: #263d4f;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.available-for-heading p {
+  color: #263d4f;
+  font-size: 18px;
+  font-weight: 500;
+  width: 60%;
+}
+
+.available-for-heading {
+  padding-top: 150px;
+}
+
+.select-car-brand-sec {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.select-car-brand-sec:before {
+  position: absolute;
+  content: "";
+  background: #1b2022;
+  width: 90%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+}
+
+.select-brand-heading h2 {
+  color: #f5f5f5;
+  font-size: 24px;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+
+.all-brands-list ul {
+  list-style: none;
+  padding: 0 0 10px;
+  margin: 0 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  border-bottom: 1px solid #d9d9d945;
+  width: 90%;
+}
+
+.all-brands-list ul li h3 {
+  color: #00abf4;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.all-brands-list ul li:last-child {
+  width: 120%;
+}
+
+.all-brands-list ul li:first-child {
+  width: 30%;
+}
+
+.all-brands-list ul li {
+  color: #f5f5f599;
+  font-size: 16px;
+}
+
+.brand-btn {
+  margin-top: 150px;
+  position: relative;
+  left: 50px;
+}
+
+.brand-btn:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #ffffff00, #ffffff36, #ffffff00);
+  width: 1px;
+  height: 550px;
+  left: -50px;
+  top: -150px;
+}
+
+a.buy-btn {
+  background: #00abf4;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+  font-weight: 500;
+  margin: auto;
+  transition: .2s linear;
+}
+
+a.amazon-btn {
+  border: 1px solid #00abf4;
+  color: #00abf4;
+  font-size: 18px;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+  font-weight: 500;
+  margin: auto;
+  transition: .2s linear;
+}
+
+a.amazon-btn:hover {
+  color: #fff;
+  background: #00abf4;
+  border: none;
+}
+
+a.buy-btn:hover {
+  background: transparent;
+  border: 1px solid #00abf4;
+  color: #00abf4;
+}
+
+.faq-heading h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  padding-bottom: 50px;
+  color: #263d4f;
+}
+
+.faq-title .vc_tta-panel-heading {
+  background: transparent !important;
+  border: none !important;
+}
+
+.faq-para p {
+  font-size: 18px;
+  color: #263d4fb0;
+}
+
+span.vc_tta-title-text {
+  font-size: 18px;
+  color: #263d4f;
+}
+
+.faq-title {
+  padding-bottom: 20px;
+}
+
+.vc_tta.vc_general .vc_tta-panel-title > a {
+  padding: 10px 0 0 !important;
+}
+
+.vc_tta-panel-body {
+  padding: 15px 20px 0 !important;
+}
+
+.faq h1 {
+  text-align: center;
+  color: #333;
+}
+
+.faq {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq h2 {
+  font-size: 1.2em;
+  color: #263d4f;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.faq-content {
+  font-size: 1em;
+  color: #555;
+  display: none;
+  padding: 10px 0;
+}
+
+.faq h2::after {
+  content: "\002B";
+  /* Unicode character for "+" sign */
+  float: right;
+}
+
+.faq.active h2::after {
+  content: "\2212";
+  /* Unicode character for "-" sign */
+}
+
+/* Responsive Styles */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .hero-heding {
+    padding-top: 350px;
+    text-align: center;
+  }
+
+  .hero-heding h1 {
+    font-size: 28px;
+    margin: 0;
+    line-height: 40px;
+  }
+
+  .hero-heding h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .hero-heding p {
+    font-size: 14px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+
+  .car-filter-price span.woocs_price_code {
+    padding: 0px 0 10px;
+    justify-content: center;
+    margin-left: 30px;
+  }
+
+  .pd .vc_column-inner {
+    padding: 0 !important;
+  }
+
+  .car-filter-price span.woocommerce-Price-amount.amount {
+    font-size: 18px;
+    margin-left: -30px;
+  }
+
+  .hero-section:before {
+    background-image: linear-gradient(0deg, black, black, transparent);
+    top: 300px;
+    width: 100%;
+    height: 50%;
+  }
+
+  .hero-section {
+    background-position: -400px center;
+    height: 600px;
+  }
+
+  .hero-heding a {
+    font-size: 14px;
+    padding: 10px;
+    margin: auto;
+  }
+
+  .using-car-filter-heading h2 {
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 20px;
+  }
+
+  .using-car-filter-sec {
+    padding-top: 50px;
+  }
+
+  .using-para {
+    padding: 20px 0 0;
+  }
+
+  .using-para p {
+    font-size: 16px;
+    padding: 0px 20px 0px;
+  }
+
+  .using-bg {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .car-air-pollution-sec {
+    padding-top: 50px;
+  }
+
+  .car-air-heading h2 {
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 10px;
+  }
+
+  .car-air-heading {
+    margin: 0;
+  }
+
+  .car-air-pollution-icon {
+    width: 40px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .mob-scroll {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .car-air-pollution-card h3 {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  .cair-air-pollution-para {
+    font-size: 13px;
+    padding-right: 30px;
+    line-height: 20px;
+  }
+
+  .car-air-pollution-card {
+    width: 200px;
+    margin-top: 0px;
+    margin-bottom: 40px !important;
+  }
+
+  ul.problem-of-car-solution li:nth-child(2) {
+    position: relative;
+    top: 20px;
+  }
+
+  .use-the-right-filter-sec {
+    padding-top: 50px;
+  }
+
+  .use-right-filter-heading h2 {
+    font-size: 24px;
+    width: 100%;
+    line-height: 32px;
+    padding-bottom: 0px;
+  }
+
+  .use-right-filter-heading {
+    margin: 0;
+  }
+
+  .indor-box {
+    height: 230px;
+    padding: 10px 10px 20px;
+    margin-bottom: 10px;
+  }
+
+  .right-filter-box-main {
+    gap: 10px;
+  }
+
+  .indor-box img {
+    width: 40%;
+  }
+
+  .indor-box h3 {
+    font-size: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    padding-top: 0px;
+    line-height: 20px;
+  }
+
+  .indor-box p {
+    font-size: 14px;
+    padding-right: 0px;
+    margin: 0;
+  }
+
+  .filtration-tec-sec {
+    margin-top: 50px;
+    position: relative;
+  }
+
+  .filtration-tec-heading h2 {
+    font-size: 25px;
+    padding-top: 40px;
+    margin: 0 0 5px;
+  }
+
+  .filtration-tec-heading p {
+    font-size: 16px;
+  }
+
+  .filrtion-tech-point ul:before {
+    display: none;
+  }
+
+  .filrtion-tech-point ul:after {
+    display: none;
+  }
+
+  .filrtion-tech-point ul li img {
+    width: 40px;
+  }
+
+  .filtration-tec-sec:before {
+    width: 100%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  .filtration-tec-sec {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .filtration-tec-heading h2 {
+    font-size: 25px;
+    padding-top: 40px;
+    margin: 0 0 5px;
+  }
+
+  .filtration-tec-heading p {
+    color: #f5f5f5;
+    font-size: 16px;
+  }
+
+  .filtration-tec-img img {
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .filrtion-tech-point {
+    padding-top: 150px;
+    margin-left: 20px;
+    position: relative;
+    z-index: 1;
+    padding-right: 20px;
+  }
+
+  .filrtion-tech-point ul {
+    padding: 0 0 15px;
+    gap: 10px;
+    position: relative;
+  }
+
+  .filrtion-tech-point ul li img {
+    width: 40px;
+  }
+
+  .filrtion-tech-point ul li h3 {
+    font-size: 14px;
+    line-height: 20px;
+    color: #263d4f;
+  }
+
+  .filrtion-tech-point ul li p {
+    font-size: 14px;
+    width: 90%;
+    color: #263d4fcc;
+    padding-top: 5px;
+  }
+
+  .pollutants-box ul li img {
+    width: 30%;
+  }
+
+  img.smog {
+    left: 100px;
+    top: 150px;
+  }
+
+  .filtration-tec-sec:after {
+    background: #f5f5f5;
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    margin: auto;
+    z-index: 0;
+  }
+
+  .ultimate-sec {
+    padding-top: 50px;
+  }
+
+  .ultimate-heading h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .ultimate-heading {
+    padding-top: 20px;
+  }
+
+  .ultimate-heading p {
+    font-size: 14px;
+  }
+
+  .mob-row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .ultimate-heading a {
+    padding: 15px;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .guards-heading-box {
+    padding-top: 50px;
+  }
+
+  .gurad-heading h2 {
+    font-size: 24px;
+  }
+
+  .gurad-heading p {
+    font-size: 14px;
+  }
+
+  .guard-img img {
+    width: 15%;
+    float: right;
+    margin-top: -70px;
+  }
+
+  .gurad-for-you-sec {
+    background-position: -350px center;
+    height: 500px;
+  }
+
+  .pollen {
+    width: 60% !important;
+    top: 30px;
+    left: 140px;
+  }
+
+  img.dust {
+    left: 280px;
+    top: -80px;
+  }
+
+  img.odor {
+    left: 200px;
+    top: 0px;
+  }
+
+  img.mites {
+    left: 50px;
+    top: 150px;
+  }
+
+  img.soot {
+    left: 120px;
+    top: -40px;
+  }
+
+  .breathe-healthier-sec {
+    height: 500px;
+    margin-top: 100px;
+    background-position: center;
+  }
+
+  .breathe-healthier-heaidng h2 {
+    font-size: 24px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .breathe-healthier-heaidng {
+    margin-top: 40px;
+    margin-left: 0px;
+    padding: 30px;
+  }
+
+  .breathe-healthier-heaidng p {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .enjoy-fresh-air-sec {
+    padding-top: 60px;
+  }
+
+  .enjoy-fresh-air-heading h2 {
+    font-size: 24px;
+  }
+
+  .enjoy-fresh-air-heading h3 {
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .enjoy-fresh-air-heading p {
+    font-size: 14px;
+  }
+
+  .enjoy-fresh-air-img {
+    margin-top: 0px;
+  }
+
+  .how-to-install-sec {
+    padding-top: 40px;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  .how-to-install-img h2 {
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+
+  .how-to-install-sec:before {
+    width: 100%;
+  }
+
+  .how-to-install-filter-img {
+    margin-top: 20px;
+  }
+
+  .installation-steps {
+    padding-top: 50px;
+  }
+
+  .installation-steps h3 {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+
+  .installation-steps strong {
+    font-size: 16px;
+  }
+
+  .installation-steps p {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  .reason-to-choose-heading h2 {
+    font-size: 24px;
+    line-height: 30px;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .reason-to-choose-sec {
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .red-box .vc_column-inner {
+    padding: 10px 10px 30px;
+  }
+
+  .reason-to-choose-filter-box h3 {
+    font-size: 16px;
+  }
+
+  p.para-filter {
+    width: 70%;
+    margin-top: -20px;
+  }
+
+  .green-box .vc_column-inner {
+    margin: 30px 0 0;
+    padding: 10px 10px 30px;
+  }
+
+  .diff-table-para h3 {
+    font-size: 14px;
+  }
+
+  .diff-table-para p {
+    font-size: 14px;
+  }
+
+  .diff-table-para {
+    padding-bottom: 10px;
+    margin-bottom: 5px !important;
+    padding-top: 10px;
+  }
+
+  .prana-air-cabin-filter-sec {
+    padding-top: 60px;
+  }
+
+  .car-cabin-filter-heading h2 {
+    font-size: 24px;
+  }
+
+  .car-cabin-filter-heading p {
+    font-size: 14px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .car-cabin-filter-heading ul {
+    padding: 20px 0 20px;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .car-cabin-filter-heading ul li {
+    font-size: 12px;
+  }
+
+  .car-cabin-filter-heading ul li:before {
+    width: 15px;
+    height: 15px;
+    left: -20px;
+    top: 2px;
+  }
+
+  .filter-graph-para p {
+    font-size: 16px;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .available-for-sec {
+    padding-top: 30px;
+    margin-top: 50px;
+  }
+
+  .available-for-heading {
+    padding-top: 50px;
+  }
+
+  .available-for-heading h2 {
+    font-size: 24px;
+  }
+
+  .available-for-heading p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  ul.brand-logo {
+    padding: 30px 0 0;
+  }
+
+  ul.brand-logo li img {
+    width: 140px;
+  }
+
+  ul.brand-logo li {
+    margin-bottom: 20px;
+  }
+
+  .available-for-sec:before {
+    width: 100%;
+  }
+
+  .select-car-brand-sec {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .select-brand-heading h2 {
+    font-size: 18px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .all-brands-list ul {
+    padding: 0 20px 10px;
+    margin: 0 0 10px;
+    align-items: flex-start;
+    gap: 0px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .all-brands-list ul li:first-child {
+    width: 100%;
+  }
+
+  .all-brands-list ul li {
+    font-size: 14px;
+  }
+
+  .all-brands-list ul li h3 {
+    font-size: 16px;
+  }
+
+  .all-brands-list ul li:last-child {
+    width: 90%;
+  }
+
+  .brand-btn {
+    margin-top: 20px;
+    left: 0px;
+  }
+
+  a.buy-btn {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  a.amazon-btn {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .tab-btn-row {
+    display: flex;
+  }
+
+  .diff-table-heading h2 {
+    font-size: 16px;
+    line-height: 24px;
+    height: 50px;
+  }
+
+  .red-bg {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  .green-bg {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  .faq-heading h2 {
+    font-size: 30px;
+    line-height: 34px;
+    padding-bottom: 20px;
+  }
+
+  span.vc_tta-title-text {
+    font-size: 14px;
+  }
+
+  .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-body {
+    margin: 0;
+    padding: 10px 0 !important;
+  }
+
+  .faq-para p {
+    font-size: 14px;
+  }
+
+  .vc_tta.vc_general .vc_tta-panel-title > a {
+    padding: 0px !important;
+  }
+
+  .high-nitro-di-img {
+    width: 75%;
+  }
+
+  .car-air-pollution-card:before {
+    width: 75%;
+  }
+
+  ul.problem-of-car-solution li {
+    width: 45%;
+  }
+
+  ul.problem-of-car-solution li:nth-child(4) {
+    top: 0;
+  }
+
+  ul.car-filter li {
+    width: 47%;
+    margin: 5px 3px;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .hero-heding h1 {
+    font-size: 40px;
+  }
+
+  .hero-heding h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .hero-heding p {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .hero-section {
+    height: 600px;
+  }
+
+  .hero-heding {
+    padding-top: 200px;
+  }
+
+  .using-car-filter-sec {
+    padding-top: 60px;
+  }
+
+  .using-car-filter-heading h2 {
+    font-size: 28px;
+    line-height: 42px;
+    padding-bottom: 20px;
+  }
+
+  .using-para {
+    padding: 0px;
+  }
+
+  .using-para p {
+    font-size: 14px;
+    padding: 10px 20px 10px;
+    margin: 0;
+  }
+
+  .using-bg {
+    height: auto;
+  }
+
+  .car-air-pollution-sec {
+    padding-top: 60px;
+  }
+
+  .car-air-heading h2 {
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+
+  .car-air-pollution-icon {
+    width: 50px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .cair-air-pollution-para {
+    font-size: 14px;
+    padding-right: 0px;
+  }
+
+  .car-air-pollution-card h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .use-the-right-filter-sec {
+    padding-top: 60px;
+  }
+
+  .use-right-filter-heading h2 {
+    font-size: 30px;
+    width: 80%;
+    padding-bottom: 20px;
+  }
+
+  .indor-box h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    padding-top: 0px;
+  }
+
+  .indor-box p {
+    font-size: 14px;
+    padding-right: 0px;
+  }
+
+  .indor-box {
+    height: 300px;
+    padding: 15px;
+  }
+
+  .filtration-tec-sec {
+    margin-top: 50px;
+    position: relative;
+  }
+
+  .filtration-tec-heading h2 {
+    font-size: 30px;
+    padding-top: 40px;
+  }
+
+  .filtration-tec-heading p {
+    font-size: 18px;
+  }
+
+  .filrtion-tech-point ul li h3 {
+    font-size: 16px;
+  }
+
+  .filrtion-tech-point ul li p {
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .filtration-tec-img img {
+    width: 170%;
+  }
+
+  .filrtion-tech-point {
+    padding-top: 100px;
+    margin-left: -30px;
+  }
+
+  .filrtion-tech-point ul:before {
+    width: 5%;
+    left: -20px;
+    top: 20px;
+  }
+
+  .filrtion-tech-point ul:after {
+    left: -30px;
+  }
+
+  .ultimate-sec {
+    padding-top: 50px;
+  }
+
+  .ultimate-heading h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .ultimate-heading {
+    padding-top: 10px;
+  }
+
+  .ultimate-heading a {
+    padding: 10px;
+    width: 50%;
+  }
+
+  .gurad-heading h2 {
+    font-size: 30px;
+  }
+
+  .guard-img {
+    margin-top: 0px;
+  }
+
+  .guard-img img {
+    width: 20%;
+  }
+
+  .gurad-heading h2 {
+    font-size: 30px;
+  }
+
+  .gurad-heading p {
+    font-size: 16px;
+  }
+
+  .gurad-for-you-sec {
+    height: 300px;
+  }
+
+  .pollen {
+    width: 60% !important;
+    top: 40px;
+    left: 90px;
+  }
+
+  img.smog {
+    left: 100px;
+  }
+
+  img.dust {
+    left: 100px;
+    top: 50px;
+  }
+
+  img.mites {
+    left: 50px;
+    top: 20px;
+  }
+
+  img.odor {
+    left: 200px;
+    top: 40px;
+  }
+
+  img.soot {
+    top: 50px;
+  }
+
+  .breathe-healthier-sec {
+    height: 400px;
+    margin-top: 100px;
+  }
+
+  .breathe-healthier-heaidng {
+    margin-top: 50px;
+    margin-left: 10px;
+    padding: 10px;
+  }
+
+  .breathe-healthier-heaidng h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .enjoy-fresh-air-sec {
+    padding-top: 80px;
+  }
+
+  .enjoy-fresh-air-heading h2 {
+    font-size: 30px;
+  }
+
+  .enjoy-fresh-air-heading h3 {
+    font-size: 30px;
+  }
+
+  .enjoy-fresh-air-heading p {
+    font-size: 16px;
+  }
+
+  .how-to-install-sec {
+    margin-top: 100px;
+  }
+
+  .how-to-install-img h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .how-to-install-sec:before {
+    width: 100%;
+  }
+
+  .how-to-install-filter-img {
+    margin-top: 100px;
+  }
+
+  .reason-to-choose-sec {
+    margin-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  .reason-to-choose-heading h2 {
+    font-size: 30px;
+    line-height: 40px;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .red-box .vc_column-inner {
+    padding: 20px;
+  }
+
+  .green-box .vc_column-inner {
+    padding: 20px;
+  }
+
+  .diff-table-heading h2 {
+    font-size: 20px;
+  }
+
+  p.para-filter {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .faq-heading h2 {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+
+  .prana-air-cabin-filter-sec {
+    padding-top: 100px;
+  }
+
+  .car-cabin-filter-heading h2 {
+    font-size: 30px;
+  }
+
+  .car-cabin-filter-heading p {
+    font-size: 16px;
+    width: 50%;
+  }
+
+  .filter-graph-para p {
+    font-size: 16px;
+    width: 80%;
+  }
+
+  .available-for-sec {
+    padding-top: 20px;
+    margin-top: 60px;
+  }
+
+  .available-for-heading {
+    padding-top: 100px;
+  }
+
+  .available-for-heading h2 {
+    font-size: 30px;
+  }
+
+  .available-for-sec:before {
+    width: 100%;
+  }
+
+  .available-for-heading p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  ul.brand-logo li img {
+    width: 170px;
+  }
+
+  .all-brands-list ul li:last-child {
+    width: 100%;
+  }
+
+  .select-car-brand-sec:before {
+    width: 100%;
+  }
+
+  .all-brands-list ul {
+    gap: 30px;
+  }
+
+  .brand-btn {
+    margin-top: 110px;
+    left: 10px;
+  }
+
+  a.buy-btn {
+    font-size: 18px;
+    padding: 15px;
+    width: 70%;
+  }
+
+  a.amazon-btn {
+    font-size: 18px;
+    padding: 15px;
+    width: 70%;
+  }
+
+  ul.problem-of-car-solution li {
+    width: 48%;
+  }
+
+  ul.problem-of-car-solution li:nth-child(4) {
+    position: relative;
+    top: 0px;
+  }
+
+  ul.problem-of-car-solution li:nth-child(2) {
+    position: relative;
+    top: 20px;
+  }
+}
+

@@ -1,0 +1,1901 @@
+
+  /* Hero Section - Completely redesigned to match reference UI */
+  .hero-section {
+    background-color: #fff;
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .hero-left {
+    width: 50%;
+    position: relative;
+  }
+  
+  .hero-right {
+    width: 50%;
+    padding-left: 40px;
+  }
+  
+  .product-area {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-image-container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .product-bg {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(240, 249, 235, 1) 0%, rgba(255, 255, 255, 1) 70%);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .product-image {
+    position: relative;
+    z-index: 3;
+    max-width: 600px;
+    height: auto;
+  }
+  
+  .ion-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .ion {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .ion.positive img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .ion.negative img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .virus-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .virus {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .virus img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .gradient-bar-top {
+    height: 4px;
+    width: 100px;
+    background: var(--gradient-bar);
+    margin-bottom: 15px;
+    border-radius: 2px;
+  }
+  
+  .product-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+  
+  .product-code {
+    font-size: 18px;
+    color: var(--text-light);
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  
+  .product-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 30px;
+  }
+  
+  .price-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .price-label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--text-dark);
+  }
+  
+  .price-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .buy-now-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #559e45;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+    }
+  
+    .hero-left,
+    .hero-right {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .hero-right {
+      margin-top: 30px;
+      text-align: center;
+    }
+  
+    .gradient-bar-top {
+      margin: 0 auto 15px;
+    }
+  
+    .product-area {
+      height: 400px;
+    }
+  
+    .product-bg {
+      width: 350px;
+      height: 350px;
+    }
+  
+    .product-image {
+      max-width: 200px;
+    }
+  
+    .product-title {
+      font-size: 36px;
+    }
+  }
+  
+  /* Original styles from version 41 */
+  .banner_section {
+    background: linear-gradient(90deg, #fff 50%, #f0f9eb 50%);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .banner-image-container {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-image-container img.main-product {
+    max-width: 80%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .banner-text-container {
+    width: 50%;
+    padding: 0 20px;
+  }
+  
+  .gradient-bar {
+    height: 4px;
+    width: 80px;
+    background: var(--gradient-bar);
+    margin-bottom: 15px;
+    border-radius: 2px;
+  }
+  
+  .banner-text-container h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 10px;
+  }
+  
+  .banner-text-container h2 {
+    font-size: 18px;
+    color: var(--text-light);
+    margin: 0 0 15px;
+    font-weight: 600;
+  }
+  
+  .banner-text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+  
+  .price-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .price-label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  .price-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .buy-now-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .buy-now-button:hover {
+    background-color: #559e45;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .floating-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  
+  .particle.positive {
+    background-color: #e74c3c;
+  }
+  
+  .particle.negative {
+    background-color: #3498db;
+  }
+  
+  .particle.virus {
+    background-color: #9b59b6;
+  }
+  
+  /* Certified Space Technology Section */
+  .certified-space-section {
+    background-color: #1a1a1a;
+    background-image: url(https://www.pranaair.com/wp-content/uploads/2021/02/certified_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .certified-space-section h2 {
+    font-size: 48px;
+    color: white;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Product Description Section */
+  .product-description-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title .gradient-bar {
+    margin: 0 auto 15px;
+  }
+  
+  .product-description-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Features Section */
+  .features-section {
+    padding: 60px 20px;
+    background-color: var(--bg-light);
+  }
+  
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    width: calc(20% - 30px);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  /* Product Features Diagram */
+  .product-features-diagram {
+    padding: 40px 20px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .product-center-image {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .product-center-image img {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .features-diagram-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .feature-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .feature-item-header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .feature-item-header h3 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin: 0;
+  }
+  
+  .feature-item p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  /* Range of Action Section */
+  .range-of-action-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    background-image: url(https://www.pranaair.com/wp-content/uploads/2021/03/sanitizer-comparison-with-purifie.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .range-of-action-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .range-title {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .range-comparison {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .range-item {
+    width: 45%;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .range-item img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .range-item h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .range-item .range-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .range-item p {
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Observations Section */
+  .observations-section {
+    padding: 60px 20px;
+  }
+  
+  .observations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Observation Rows Styling */
+  .observation-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .observation-row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .observation-row.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  .observation-image {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .observation-image {
+      width: 48%;
+      margin-bottom: 0;
+    }
+  }
+  
+  .observation-content {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  @media (min-width: 768px) {
+    .observation-content {
+      width: 48%;
+    }
+  }
+  
+  .graph-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .observation-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .observation-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .observation-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .observation-content p {
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .observation-graph {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .observation-graph img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .observation-content {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .observation-content h3 {
+    font-size: 28px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  
+  .observation-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-light);
+  }
+  
+  .observation-list {
+    background-color: #e8fff9;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .observation-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .observation-list li {
+    font-size: 16px;
+    color: var(--text-dark);
+    padding: 8px 0 8px 30px;
+    position: relative;
+  }
+  
+  .observation-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://www.pranaair.com/wp-content/uploads/2021/03/check-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  /* Testing Results Section */
+  .testing-results-section {
+    padding: 60px 20px;
+    background-color: var(--bg-light);
+  }
+  
+  .testing-results-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testing-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .testing-intro p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-light);
+  }
+  
+  /* Elimination Grid */
+  .elimination-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .elimination-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+  }
+  
+  .elimination-item h3 {
+    font-size: 22px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+  }
+  
+  .elimination-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+  
+  .elimination-item .highlight {
+    font-weight: 700;
+  }
+  
+  .elimination-graph {
+    margin-top: 20px;
+  }
+  
+  .elimination-graph img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Product Specifications Section */
+  .product-specifications-section {
+    padding: 60px 20px;
+  }
+  
+  .specifications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .product-images {
+    width: 40%;
+    padding: 20px;
+  }
+  
+  .main-product-image {
+    margin-bottom: 20px;
+  }
+  
+  .main-product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-thumbnails {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .product-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .product-thumbnail.active {
+    border-color: var(--primary-color);
+  }
+  
+  .product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .specifications-table {
+    width: 60%;
+    padding: 20px;
+  }
+  
+  .specifications-table h2 {
+    font-size: 32px;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .spec-table tr {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .spec-table tr:last-child {
+    border-bottom: none;
+  }
+  
+  .spec-table td {
+    padding: 15px 10px;
+    font-size: 16px;
+    color: var(--text-dark);
+  }
+  
+  .spec-table td:first-child {
+    font-weight: 600;
+    width: 40%;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  
+  .action-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .action-button:hover {
+    background-color: #559e45;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .action-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .action-button.secondary:hover {
+    background-color: rgba(103, 180, 85, 0.1);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .feature-card {
+      width: calc(33.33% - 30px);
+    }
+  
+    .features-diagram-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .elimination-grid {
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .banner-content-wrapper {
+      flex-direction: column-reverse;
+    }
+  
+    .banner-image-container,
+    .banner-text-container {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .banner-text-container h1 {
+      font-size: 36px;
+    }
+  
+    .feature-card {
+      width: calc(50% - 30px);
+    }
+  
+    .features-diagram-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .observation-row {
+      flex-direction: column;
+    }
+  
+    .observation-graph,
+    .observation-content {
+      width: 100%;
+    }
+  
+    .elimination-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .specifications-container {
+      flex-direction: column;
+    }
+  
+    .product-images,
+    .specifications-table {
+      width: 100%;
+    }
+  
+    .range-comparison {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .range-item {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .range-title {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner-text-container h1 {
+      font-size: 28px;
+    }
+  
+    .certified-space-section h2 {
+      font-size: 32px;
+    }
+  
+    .section-title {
+      font-size: 24px;
+    }
+  
+    .feature-card {
+      width: 100%;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .product-center-image img {
+      max-width: 200px;
+    }
+  
+    .feature-item {
+      padding: 15px;
+    }
+  
+    .feature-item-header img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .feature-item-header h3 {
+      font-size: 16px;
+    }
+  
+    .elimination-item {
+      padding: 20px;
+    }
+  
+    .elimination-item h3 {
+      font-size: 18px;
+    }
+  }
+  
+  /* Modern Observation Rows Styling */
+  .modern-observation-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  @media (min-width: 768px) {
+    .modern-observation-row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .modern-observation-row.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  .modern-observation-image {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .modern-observation-image {
+      width: 48%;
+      margin-bottom: 0;
+    }
+  }
+  
+  .modern-observation-content {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  @media (min-width: 768px) {
+    .modern-observation-content {
+      width: 48%;
+    }
+  }
+  
+  .modern-observation-list {
+    background-color: #e8fff9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .modern-observation-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .modern-observation-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+    padding: 8px 0 8px 30px;
+    position: relative;
+  }
+  
+  .modern-observation-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://www.pranaair.com/wp-content/uploads/2021/03/check-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .modern-observation-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .modern-observation-content p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  /* Modern Product Specifications Section */
+  .modern-product-specifications {
+    padding: 60px 0;
+    background-color: #fff;
+  }
+  
+  .download-brochure-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .download-brochure-button {
+    background-color: #67b455;
+    color: white;
+    border: 2px solid #67b455;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .download-brochure-button:hover {
+    background-color: #559e45;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-spec-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .product-images-container {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .main-product-image {
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .main-product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .product-thumbnails {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .thumbnail-btn {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: none;
+  }
+  
+  .thumbnail-btn:hover,
+  .thumbnail-btn.active {
+    border-color: #67b455;
+  }
+  
+  .thumbnail-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-specs-table {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .product-specs-table h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .product-specs-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .product-specs-table table tr {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .product-specs-table table tr:last-child {
+    border-bottom: none;
+  }
+  
+  .product-specs-table table td {
+    padding: 15px 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .product-specs-table table td:first-child {
+    font-weight: 600;
+    width: 40%;
+    background-color: #f9f9f9;
+  }
+  
+  .get-quote-button {
+    background-color: #67b455;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+  
+  .get-quote-button:hover {
+    background-color: #559e45;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Modern Cleaning Section */
+  .modern-cleaning-section {
+    padding: 60px 0;
+    background-color: #fff;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .section-header .gradient-bar {
+    margin: 0 auto 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .cleaning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .cleaning-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cleaning-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cleaning-image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cleaning-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 180px;
+    border-radius: 8px;
+  }
+  
+  .cleaning-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .cleaning-card h4 {
+    font-size: 16px;
+    color: #67b455;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .cleaning-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .card-number {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 40px;
+    color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  /* Modern Kills Section */
+  .modern-kills-section {
+    padding: 60px 0;
+    background-color: #fff;
+  }
+  
+  .kills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .kills-card {
+    text-align: center;
+    max-width: 200px;
+  }
+  
+  .kills-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .kills-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .kills-card h3 {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Modern Contact Section */
+  .modern-contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .contact-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .contact-header p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .contact-form-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .contact-info-sidebar {
+    background-color: #67b455;
+    color: white;
+    padding: 40px 30px;
+    width: 300px;
+  }
+  
+  .contact-info-sidebar h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info-sidebar p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .contact-info-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .contact-icon {
+    margin-right: 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .contact-info-text h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-info-text p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+  }
+  
+  .form-row.two-columns {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-field {
+    flex: 1;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-field textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .send-message-btn {
+    background-color: #67b455;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .send-message-btn:hover {
+    background-color: #559e45;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Original styles from version 41 */
+  .certified_space_box {
+    padding: 40px 0;
+  }
+  
+  .certified_space_box h2 {
+    font-size: 63px;
+    color: #fff;
+    text-align: center;
+    padding-top: 43px;
+    margin: 0;
+  }
+  
+  .certified_bg_img {
+    background-image: url(https://www.pranaair.com/wp-content/uploads/2021/02/certified_bg.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .specification_box.monitor_box.text-center {
+    padding-top: 34px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .monitor_box .specification_heading {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    padding: 0 0 8px;
+    letter-spacing: 0;
+  }
+  
+  .specification_box p {
+    font-size: 14px;
+    margin: 0;
+    color: #383838;
+    line-height: 1.6;
+  }
+  
+  .featured_heading small {
+    display: block;
+    text-align: center;
+  }
+  
+  small {
+    font-size: 16px;
+  }
+  
+  .monitor_box h3.aqi_heading {
+    font-size: 18px;
+    color: #888;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0;
+  }
+  
+  a.buy_sanitizer_btn {
+    background: #67b455;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+    width: 25%;
+    font-weight: 600;
+  }
+  
+  .featured_ctnr {
+    display: flex;
+    margin-bottom: 50px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .feature_box {
+    width: 18%;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 8px -1px #ccc;
+    margin: 0 15px 20px;
+    padding: 25px 15px;
+    background: #fff;
+    transition: transform .4s;
+  }
+  
+  .feature_box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature_box p {
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .feature_box img {
+    width: 110px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .feature_box h2 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    line-height: normal;
+    color: #333;
+  }
+  
+  .feature_wrap_box {
+    padding: 0 10px;
+  }
+  
+  .howit_work_cntr {
+    background: #fff;
+    box-shadow: 2px 2px 8px -1px #ccc;
+    width: 80%;
+    padding: 20px;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 30px !important;
+    border-radius: 13px;
+    margin: 0 auto;
+  }
+  
+  .howitworks_img_box {
+    width: 22%;
+    float: left;
+    padding: 10px;
+  }
+  
+  .howitworks_box {
+    width: 75%;
+    padding-left: 20px;
+    float: left;
+  }
+  
+  .howitworks_img_box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .howitworks_box h3 {
+    font-size: 22px;
+    color: #333;
+    margin: -2px 0 6px;
+    line-height: normal;
+  }
+  
+  .howitworks_box p {
+    color: #999;
+    font-size: 13px;
+  }
+  
+  .howit_work_cntr.clearfix.float_right {
+    text-align: right;
+    float: right;
+  }
+  
+  .featured_section {
+    padding: 40px 70px;
+  }
+  
+  .tablesenitizer_box {
+    padding-bottom: 50px;
+    overflow-x: auto;
+  }
+  
+  .tablesenitizer_box table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .tablesenitizer_box tr:nth-child(odd) {
+    background: #f8fdff;
+  }
+  
+  .tablesenitizer_box th {
+    font-size: 12px;
+    width: 87px;
+    line-height: 19px;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+    background: #d6e8f0;
+  }
+  
+  .tablesenitizer_box tr:nth-child(even) {
+    background-color: #efefef !important;
+  }
+  
+  .tablesenitizer_box td,
+  .tablesenitizer_box th {
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    line-height: 19px;
+    padding: 8px;
+    border: 1px solid #000;
+    font-weight: 600;
+  }
+  
+  .td_first {
+    text-align: left !important;
+  }
+  
+  .air-puruifer_section {
+    background: url(https://www.pranaair.com/wp-content/uploads/2021/03/sanitizer-comparison-with-purifie.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+  }
+  
+  .elimination_graph_box {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .elimination_graph_box h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .elimination_graph img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .tab-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .tab-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .vc_tta-panel-heading {
+    background: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .vc_tta-panel-title {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .vc_tta-panel-title a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .vc_tta-panel-title a:after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+  
+  .vc_tta-panel-body {
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 20px;
+    display: none;
+  }
+  
+  .vc_active .vc_tta-panel-title a:after {
+    content: "-";
+  }
+  
+  .vc_active .vc_tta-panel-body {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+    }
+  
+    .hero-left,
+    .hero-right {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .hero-right {
+      margin-top: 30px;
+      text-align: center;
+    }
+  
+    .gradient-bar-top {
+      margin: 0 auto 15px;
+    }
+  
+    .product-area {
+      height: 400px;
+    }
+  
+    .product-bg {
+      width: 350px;
+      height: 350px;
+    }
+  
+    .product-image {
+      max-width: 200px;
+    }
+  
+    .product-title {
+      font-size: 36px;
+    }
+  
+    .feature_box {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+  
+    .howit_work_cntr {
+      width: 100%;
+    }
+  
+    .howitworks_img_box,
+    .howitworks_box {
+      width: 100%;
+      float: none;
+      padding: 0 0 15px;
+    }
+  
+    .featured_section {
+      padding: 20px;
+    }
+  
+    .cleaning-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-form-container {
+      flex-direction: column;
+    }
+  
+    .contact-info-sidebar {
+      width: 100%;
+    }
+  }
+  
+  

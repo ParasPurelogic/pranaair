@@ -170,8 +170,6 @@ export default function AirDronePage() {
     },
   }
 
-
-
   return (
     <div className="air-drone-page">
       <main className="air-drone-page">
@@ -573,25 +571,17 @@ export default function AirDronePage() {
                     </div>
                     <div>
                       <div className="app-slide-img-box">
-                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
+                        <Image src="/img/health-risk-mitigation.webp" alt="Logo" width={200} height={100} />
                         <h3>
-                          Pollution Source Identification
+                          Environmental Compliance
                         </h3>
                       </div>
                     </div>
                     <div>
                       <div className="app-slide-img-box">
-                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
+                        <Image src="/img/environmental-complince.webp" alt="Logo" width={200} height={100} />
                         <h3>
-                          Pollution Source Identification
-                        </h3>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="app-slide-img-box">
-                        <Image src="/img/pollution-source-identification.webp" alt="Logo" width={200} height={100} />
-                        <h3>
-                          Pollution Source Identification
+                          Health Risk Mitigation
                         </h3>
                       </div>
                     </div>
@@ -626,68 +616,68 @@ export default function AirDronePage() {
                   <ul>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/CH4.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">CH4</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/CO.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">CO</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/H2S.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">H2S</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/Humidity.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">Humidity</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/NH3.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">NH3</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/NO2.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">NO2</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/O3.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">O3</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/PM2.5.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">PM2.5</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/PM10.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">PM10</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/SO2.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">SO2</span>
                       </span>
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
+                        <Image src="/img/TEMPERATURE.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">TEMPERATURE</span>
                       </span>
                     </li>
                     <li>
@@ -728,38 +718,38 @@ export default function AirDronePage() {
                   </ul>
                   <ul>
                     <li>
-                      <Image src="/img/real-time-maps.png" alt="real-time-maps" width={100} height={100} />
+                      <Image src="/img/Historical-Data.png" alt="real-time-maps" width={100} height={100} />
                     </li>
                     <li>
-                      <h3>Real-Time Maps</h3>
-                      <p>Visual representation of current air quality data</p>
+                      <h3>Historical Data</h3>
+                      <p>Analysis of past measurements for trend identification</p>
                     </li>
                   </ul>
                 </div>
                 <div className="map-box">
                   <ul>
                     <li>
-                      <Image src="/img/real-time-maps.png" alt="real-time-maps" width={100} height={100} />
+                      <Image src="/img/graph-generation.png" alt="real-time-maps" width={100} height={100} />
                     </li>
                     <li>
-                      <h3>Real-Time Maps</h3>
-                      <p>Visual representation of current air quality data</p>
+                      <h3>Graph Generation</h3>
+                      <p>Visual graphs for easy interpretation</p>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Image src="/img/real-time-maps.png" alt="real-time-maps" width={100} height={100} />
+                      <Image src="/img/Data-Plotting.png" alt="real-time-maps" width={100} height={100} />
                     </li>
                     <li>
-                      <h3>Real-Time Maps</h3>
-                      <p>Visual representation of current air quality data</p>
+                      <h3>Data Plotting</h3>
+                      <p>Detailed plots for in-depth analysis</p>
                     </li>
                   </ul>
                 </div>
                 <div className="map-img">
                   <ul>
                     <li>
-                      <Image src="/img/custom-data.webp" alt="heat-maps" width={100} height={100} />
+                      <Image src="/img/heat-maps.webp" alt="heat-maps" width={100} height={100} />
                       <h3>Heat Maps</h3>
                       <p>Colour-coded maps highlighting pollution hotspots</p>
                     </li>
@@ -767,8 +757,8 @@ export default function AirDronePage() {
                   <ul>
                     <li>
                       <Image src="/img/custom-data.webp" alt="heat-maps" width={100} height={100} />
-                      <h3>Heat Maps</h3>
-                      <p>Colour-coded maps highlighting pollution hotspots</p>
+                      <h3>Custom Data</h3>
+                      <p>Tailored reports based on user needs</p>
                     </li>
                   </ul>
                 </div>
@@ -840,7 +830,6 @@ export default function AirDronePage() {
                 <div className="light-weight-drone-img">
                   <Image src="/img/lightweight-drone.webp" alt="real-time-maps" width={100} height={100} />
                 </div>
-
               </div>
             </div>
           </div>
@@ -854,7 +843,6 @@ export default function AirDronePage() {
                 <div className="long-enduru-drone-img">
                   <Image src="/img/long-endurance-drone.webp" alt="real-time-maps" width={100} height={100} />
                 </div>
-
               </div>
               <div className="col-lg-6">
                 <div className="long-enduru-drone-txt">
@@ -884,27 +872,59 @@ export default function AirDronePage() {
                     responsive={videoSlider}
                     infinite={true}
                     autoPlay={true}
-                    autoPlaySpeed={3000}
+                    autoPlaySpeed={4000}
                     className="video-slider"
                   >
                     <div>
                       <div className="video-slider-img">
-                        <Image src="/img/video-thumbnail.webp" alt="Logo" width={200} height={100} />
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src="https://customer-12c4mdft3x8eqlll.cloudflarestream.com/484294820fe7b20ff36ed750ff19324a/iframe?muted=true&autoplay=true&loop=true" // Replace with your actual video URL
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
+                        ></iframe>
                       </div>
                     </div>
                     <div>
                       <div className="video-slider-img">
-                        <Image src="/img/video-thumbnail.webp" alt="Logo" width={200} height={100} />
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src="https://customer-12c4mdft3x8eqlll.cloudflarestream.com/484294820fe7b20ff36ed750ff19324a/iframe?muted=true&autoplay=true&loop=true" // Replace with your actual video URL
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
+                        ></iframe>
                       </div>
                     </div>
                     <div>
                       <div className="video-slider-img">
-                        <Image src="/img/video-thumbnail.webp" alt="Logo" width={200} height={100} />
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src="https://customer-12c4mdft3x8eqlll.cloudflarestream.com/484294820fe7b20ff36ed750ff19324a/iframe?muted=true&autoplay=true&loop=true" // Replace with your actual video URL
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
+                        ></iframe>
                       </div>
                     </div>
                     <div>
                       <div className="video-slider-img">
-                        <Image src="/img/video-thumbnail.webp" alt="Logo" width={200} height={100} />
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src="https://customer-12c4mdft3x8eqlll.cloudflarestream.com/484294820fe7b20ff36ed750ff19324a/iframe?muted=true&autoplay=true&loop=true" // Replace with your actual video URL
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
+                        ></iframe>
                       </div>
                     </div>
                   </Carousel>
@@ -1077,20 +1097,20 @@ export default function AirDronePage() {
                   </ul>
                   <ul>
                     <li>
-                      <Image src="/img/flight-range.png" alt="Logo" width={200} height={100} />
-                      Flight Range
+                      <Image src="/img/Use-Case.png" alt="Logo" width={200} height={100} />
+                      Use Case
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Image src="/img/flight-range.png" alt="Logo" width={200} height={100} />
-                      Flight Range
+                      <Image src="/img/Camera.png" alt="Logo" width={200} height={100} />
+                      Camera
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Image src="/img/flight-range.png" alt="Logo" width={200} height={100} />
-                      Flight Range
+                      <Image src="/img/Portability.png" alt="Logo" width={200} height={100} />
+                      Portability
                     </li>
                   </ul>
                 </div>
@@ -1108,18 +1128,18 @@ export default function AirDronePage() {
                   <div className="compare">
                     <h3>Prana VTOL</h3>
                     <p>90km (long-endurance)</p>
-                    <p>90km (long-endurance)</p>
-                    <p>90km (long-endurance)</p>
-                    <p>90km (long-endurance)</p>
+                    <p>Industrial sites, environmental research</p>
+                    <p>Thermal + 4K night vision</p>
+                    <p>Compact design, 1.8kg max weight</p>
                     <a href="#">Request a quote  <Image src="/img/blue-icon.png" alt="Logo" width={200} height={100} /></a>
                   </div>
 
                   <div className="compare">
                     <h3>Prana QUAD</h3>
-                    <p>90km (long-endurance)</p>
-                    <p>90km (long-endurance)</p>
-                    <p>90km (long-endurance)</p>
-                    <p>90km (long-endurance)</p>
+                    <p>1km (localized precision)</p>
+                    <p>Urban areas, rapid deployments</p>
+                    <p>High-resolution with GNSS</p>
+                    <p>Ultra-lightweight (720g), 5-inch props</p>
                     <a href="#">Request a quote  <Image src="/img/blue-icon.png" alt="Logo" width={200} height={100} /></a>
                   </div>
                 </div>
@@ -1141,8 +1161,8 @@ export default function AirDronePage() {
           </div>
           <div className="container">
             <div className="row">
-              <div className="col-12">
-                <ul className="nav nav-tabs">
+              <div className="col-lg-6">
+                <ul className="nav nav-tabs tech-tab">
                   <li className="nav-item">
                     <button
                       className={`nav-link ${activePartTab === "Parts & Label" ? "active" : ""}`}
@@ -1162,148 +1182,514 @@ export default function AirDronePage() {
                     </button>
                   </li>
                 </ul>
-                <div className="tab-content">
-                  <div className={`tab-pane ${activePartTab === "Parts & Label" ? "show active" : ""}`}>
-                    <div class="row texh-spec-box">
-                      <div class="col-md-6">
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Parameters:</h5>
-                            </li>
-                            <li>Breathalyzer</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Connectivity:</h5>
-                            </li>
-                            <li>Wi-Fi</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Color:</h5>
-                            </li>
-                            <li>Ivory</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Size:</h5>
-                            </li>
-                            <li>11 x 3.4 x 7.5 (in cm)</li>
-                          </ul>
-                        </div>
+              </div>
+              <div className="col-lg-6">
+                <a className="brochure-btn" href="#"><Image src="/img/btn-icon.png" alt="Logo" width={200} height={100} /> Brochure</a>
+              </div>
+              <div className="tab-content">
+                <div className={`tab-pane ${activePartTab === "Parts & Label" ? "show active" : ""}`}>
+                  <div class="row texh-spec-box">
+                    <div class="col-md-6">
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>Breathalyzer</li>
+                        </ul>
                       </div>
-                      <div class="col-md-6">
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Storage:</h5>
-                            </li>
-                            <li>Micro SD Card Storage +<br />AQI Cloud Storage</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Weight:</h5>
-                            </li>
-                            <li>175g</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Screen:</h5>
-                            </li>
-                            <li>Color LED Display</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Power Supply:</h5>
-                            </li>
-                            <li>Type C USB Cable</li>
-                          </ul>
-                        </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>Breathalyzer</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>Breathalyzer</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>Breathalyzer</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
-                  <div className={`tab-pane ${activePartTab === "Disassambley" ? "show active" : ""}`}>
-                    <div class="row texh-spec-box">
-                      <div class="col-md-6">
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Parameters:</h5>
-                            </li>
-                            <li>Breathalyzer</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Connectivity:</h5>
-                            </li>
-                            <li>Wi-Fi</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Color:</h5>
-                            </li>
-                            <li>Ivory</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Size:</h5>
-                            </li>
-                            <li>11 x 3.4 x 7.5 (in cm)</li>
-                          </ul>
-                        </div>
+                </div>
+                <div className={`tab-pane ${activePartTab === "Disassambley" ? "show active" : ""}`}>
+                  <div class="row texh-spec-box">
+                    <div class="col-md-6">
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>test</li>
+                        </ul>
                       </div>
-                      <div class="col-md-6">
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Storage:</h5>
-                            </li>
-                            <li>Micro SD Card Storage +<br />AQI Cloud Storage</li>
-                          </ul>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>Breathalyzer</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>Breathalyzer</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Parameters:</h5>
+                          </li>
+                          <li>Breathalyzer</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Materials :</h5>
+                          </li>
+                          <li>PC+ABS</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list">
+                        <ul>
+                          <li>
+                            <h5>Working current : </h5>
+                          </li>
+                          <li>≤20mA</li>
+                        </ul>
+                      </div>
+                      <div class="tech-spec-list bg">
+                        <ul>
+                          <li>
+                            <h5>Device dimension : </h5>
+                          </li>
+                          <li>66mm X 40mm X 16mm </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* airqulality contact Section */}
+        <section className="airqulality_contact_section inner_container">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="introducing_box sub_title_box text-center">
+                  <h2 className="title_heading">
+                    Get in <span className="bold_text">Touch</span>
+                  </h2>
+                  <p>
+                    Please help us know what requirements you have.
+                    <br />
+                    Our team will contact you very soon.
+                  </p>
+                </div>
+
+                <div className="row airquality_inner_form">
+                  <div className="contact_content_box col-md-4">
+                    <div className="contact_information_box">
+                      <h4>Contact Info</h4>
+                      <p>Looking for Any Indoor Air Quality Monitor?</p>
+                      <ul className="contact_info">
+                        <li>
+                          <i className="fa fa-phone" aria-hidden="true"></i>
+                          Phone Number:
+                          <br />
+                          (+91) 73918-73918
+                        </li>
+                        <li>
+                          <i className="fa fa-envelope" aria-hidden="true"></i>
+                          Email Address:
+                          <br />
+                          info@purelogic.in
+                        </li>
+                        <li>
+                          <i className="fa fa-map-marker" aria-hidden="true"></i>
+                          Office Location:
+                          <br />
+                          706, 7th Floor, Sec 10,
+                          <br />
+                          Rohini, Delhi 85, India
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="col-md-8">
+                    <div className="airquality_contact_box">
+                      <form action="#" method="post" className="contact-form">
+                        <div className="row">
+                          <div className="col-12">
+                            <p>
+                              <label>
+                                Your Full Name
+                                <br />
+                                <input type="text" name="your-name" className="form-control" required />
+                              </label>
+                            </p>
+                          </div>
+
+                          <div className="col-md-6">
+                            <p>
+                              <label>
+                                Your Phone No
+                                <br />
+                                <input type="tel" name="phone" className="form-control" required />
+                              </label>
+                            </p>
+                          </div>
+
+                          <div className="col-md-6">
+                            <p>
+                              <label>
+                                Your Email
+                                <br />
+                                <input type="email" name="your-email" className="form-control" required />
+                              </label>
+                            </p>
+                          </div>
+
+                          <div className="col-12">
+                            <p>
+                              <label>
+                                Your Organisation
+                                <br />
+                                <input type="text" name="company-name" className="form-control" required />
+                              </label>
+                            </p>
+                          </div>
+
+                          <div className="col-12">
+                            <p>
+                              <label className="message_text">
+                                Message
+                                <br />
+                                <textarea
+                                  name="your-message"
+                                  className="form-control"
+                                  rows="5"
+                                  placeholder="Write message here"
+                                ></textarea>
+                              </label>
+                            </p>
+                          </div>
+
+                          <div className="col-12">
+                            <p>
+                              <input type="submit" value="Send Message" className="wpcf7-submit" />
+                            </p>
+                          </div>
                         </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Weight:</h5>
-                            </li>
-                            <li>175g</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Screen:</h5>
-                            </li>
-                            <li>Color LED Display</li>
-                          </ul>
-                        </div>
-                        <div class="tech-spec-list">
-                          <ul>
-                            <li>
-                              <h5>Power Supply:</h5>
-                            </li>
-                            <li>Type C USB Cable</li>
-                          </ul>
-                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs Section */}
+        <section className="faq-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="faq-heading">
+                  <h2>Frequently asked questions</h2>
+                </div>
+                <div className="accordion" id="faqAccordion">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq1"
+                        aria-expanded="true"
+                      >
+                        1. What does Prana Air Cair+ air quality monitor measure?
+                      </button>
+                    </h2>
+                    <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                      <div className="accordion-body faq-tab-para">
+                        Prana Air Cair+ is an air quality monitor designed to measure indoor air pollutants - AQI, PM2.5,
+                        PM10, CO2, TVOC, HCHO, Temperature, and Humidity. It provides accurate data on various pollutants,
+                        helping you understand and improve your indoor air quality.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq2"
+                        aria-expanded="false"
+                      >
+                        2. How does the device connect to the internet?
+                      </button>
+                    </h2>
+                    <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div className="accordion-body faq-tab-para">
+                        Cair+ monitor features WiFi connectivity, allowing it to seamlessly connect to your home network.
+                        This enables you to access real-time air quality data on various devices, including your mobile,
+                        tablet, TV app, and through a web dashboard.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq3"
+                        aria-expanded="false"
+                      >
+                        3. What platforms are supported for accessing data?
+                      </button>
+                    </h2>
+                    <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div className="accordion-body faq-tab-para">
+                        Prana Air Cair+ device supports multiple platforms for data access. You can monitor air quality
+                        data on your mobile devices (iOS and Android), tablets, and even your television. Additionally, a
+                        web dashboard is available for easy access via a computer.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq4"
+                        aria-expanded="false"
+                      >
+                        4. Is Cair+ monitor portable?
+                      </button>
+                    </h2>
+                    <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div className="accordion-body faq-tab-para">
+                        Yes, Prana Air Cair+ monitor is designed to be portable. Its compact size allows you to move it
+                        around your living spaces effortlessly, ensuring that you can monitor air quality in different
+                        rooms or areas of your home.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq5"
+                        aria-expanded="false"
+                      >
+                        5. How accurate is the air quality data provided by Cair+?
+                      </button>
+                    </h2>
+                    <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div className="accordion-body faq-tab-para">
+                        Cair+ monitor is known for its high accuracy in measuring air quality. Its advanced sensors
+                        provide precise readings of various pollutants, giving you reliable information to make informed
+                        decisions about improving your indoor air quality.
                       </div>
                     </div>
                   </div>
