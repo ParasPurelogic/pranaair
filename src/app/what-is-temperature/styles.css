@@ -1,0 +1,619 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,900;1,700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito Sans" !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-family: "Nunito Sans" !important;
+}
+a {
+  font-family: "Nunito Sans" !important;
+  text-decoration: none !important;
+}
+.vc_section[data-vc-full-width] {
+  overflow: visible !important;
+}
+.deskshow {
+  display: block;
+}
+.mobshow {
+  display: none;
+}
+
+/* Bootstrap Grid System */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .col-md-1 {
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+  }
+  .col-md-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .col-md-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-md-7 {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+  .col-md-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  .col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-md-10 {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+  .col-md-11 {
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+  }
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.home-banner {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/banner-background-scaled.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 550px;
+}
+
+.tem-meter img {
+  width: 80px;
+  margin-top: 50px;
+}
+
+.banner-text h1 {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.tem-heading {
+  color: #ff001f;
+}
+
+.banner-text p {
+  font-size: 22px;
+}
+
+.banner-text {
+  padding-top: 180px;
+  position: relative;
+  left: 40px;
+  z-index: 1;
+}
+
+.left-cloud img {
+  position: relative;
+  top: 60px;
+}
+
+.right-cloud img {
+  max-width: 355px;
+  position: relative;
+  left: -190px;
+  top: 180px;
+  z-index: 0;
+}
+
+.bottom-cloud img {
+  width: 240px;
+}
+
+.temp-classification-text h2 {
+  font-size: 44px;
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.temp-classification-text {
+  text-align: center;
+}
+
+.temp-classification-text p {
+  font-size: 21px;
+}
+
+.tem-classification {
+  padding-top: 90px;
+}
+
+.hot-img img {
+  width: 280px;
+}
+
+.cold-temp-img img {
+  width: 200px;
+}
+
+.temp-measure-unit {
+  margin-top: 75px;
+  background: #fafbff;
+}
+
+.temp-measure-unit-heading h2 {
+  font-size: 33px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.temp-unit-caps img {
+  width: 250px;
+}
+
+.temp-unit-text h3 {
+  font-size: 33px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.temp-affect-air-quality {
+  padding-top: 140px;
+}
+
+.temp-affect-air-quality-text {
+  text-align: center;
+}
+
+.temp-affect-air-quality-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.temp-affect-air-quality-text p {
+  font-size: 23px;
+  padding: 0 120px;
+}
+
+.temp-affect-heading-box h3 {
+  font-size: 43px;
+  text-align: center;
+  display: block;
+  background: #d9e5ff;
+  margin: 70px auto;
+  width: 35%;
+  border-radius: 15px;
+  padding: 15px 5px;
+}
+
+.temp-affect-hot-cold-text {
+  padding-top: 80px;
+}
+
+.temp-affect-hot-cold-text h3 {
+  font-size: 33px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.temp-affect-hot-cold-text p {
+  font-size: 22px;
+  padding-right: 120px;
+}
+
+.outdoor-right-side p {
+  padding-right: 0 !important;
+  text-align: right;
+  padding-left: 110px;
+}
+
+.temp-scale {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/temperature-scale-bg-scaled.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+}
+
+.temp-scale-img img {
+  width: 85px;
+  position: relative;
+  top: 10px;
+}
+
+.temp-scale-para p {
+  font-size: 33px;
+  padding: 90px 0 0;
+  position: relative;
+  left: 30px;
+}
+
+.temp-inversion {
+  margin-top: 130px;
+  text-align: center;
+  background: #fafbff;
+  padding-top: 70px;
+}
+
+.temp-inversion-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 70px;
+}
+
+.temp-inversion-text p {
+  font-size: 21px;
+  padding: 0 100px 10px;
+}
+
+.temp-inversion-img img{
+  margin-top: 40px;
+  width:100%;
+
+}
+.meterological-fectors {
+  padding-top: 150px;
+}
+
+.meterological-fector-heading h2 {
+  font-size: 48px;
+  font-weight: 800;
+  padding: 0 230px 40px;
+  line-height: 60px;
+}
+
+.meterological-fector-heading {
+  text-align: center;
+}
+
+.meterological-fector-heading p {
+  font-size: 22px;
+  padding: 0 80px 90px;
+}
+
+.meterological-fector-img img {
+  width: 242px;
+}
+
+.meterological-fector-text {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.meterological-fector-text h3 {
+  font-size: 33px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.meterological-fector-text p {
+  font-size: 22px;
+  padding: 0 90px 50px;
+}
+
+.human-health-affect-heading h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 120px 190px 100px;
+  line-height: 60px;
+}
+
+.affect-human-health {
+  padding-bottom: 100px;
+}
+.temp-affect-hot-cold-img img {
+    width: 100%;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .home-banner {
+    height: auto;
+  }
+
+  .left-cloud img {
+    top: 20px;
+    width: 220px;
+  }
+  .tem-meter img {
+    width: 70px;
+    margin-right: 250px;
+  }
+  .right-cloud img {
+    max-width: 245px;
+    left: 0;
+    top: -550px;
+  }
+  .bottom-cloud img {
+    width: 240px;
+    top: -40px;
+    position: relative;
+  }
+  .banner-text {
+    padding-top: 40px;
+    left: 0;
+  }
+  .banner-text h1 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .banner-text p {
+    font-size: 20px;
+  }
+  .hot-img img {
+    width: 180px;
+  }
+  .tem-classification {
+    padding-top: 60px;
+  }
+  .hot-img {
+    text-align: center !important;
+  }
+  .temp-classification-text h2 {
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
+  .temp-classification-text p {
+    font-size: 20px;
+  }
+  .cold-temp-img img {
+    width: 150px;
+  }
+  .cold-temp-img {
+    text-align: center !important;
+  }
+  .temp-measure-unit-heading h2 {
+    font-size: 30px;
+  }
+  .temp-unit-caps img {
+    width: 160px;
+    margin-top: 60px;
+  }
+  .temp-unit-text h3 {
+    font-size: 30px;
+  }
+  .temp-affect-air-quality-text h2 {
+    font-size: 28px;
+  }
+  .temp-affect-air-quality {
+    padding-top: 80px;
+  }
+  .temp-affect-air-quality-text p {
+    font-size: 22px;
+    padding: 0 0px;
+  }
+  .temp-affect-heading-box h3 {
+    font-size: 33px;
+    width: 90%;
+  }
+  .temp-affect-hot-cold-text {
+    padding-top: 50px;
+  }
+  .temp-affect-hot-cold-text p {
+    font-size: 20px;
+    text-align: center;
+    padding-right: 0;
+  }
+  .outdoor-right-side p {
+    padding-right: 0 !important;
+    text-align: center;
+    padding-left: 0;
+  }
+  .temp-scale-img {
+    text-align: center !important;
+  }
+  .temp-scale-img img {
+    width: 70px;
+    top: 10px;
+  }
+  .temp-scale-para p {
+    font-size: 21px;
+    padding: 40px 0 40px;
+    left: 0;
+  }
+  .temp-inversion {
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+
+  .temp-inversion-text h2 {
+    font-size: 31px;
+    padding-bottom: 30px;
+  }
+  .temp-inversion-text p {
+    font-size: 21px;
+    padding: 0 0px 10px;
+  }
+  .meterological-fector-heading h2 {
+    font-size: 24px;
+    padding: 0 0px 30px;
+    line-height: 35px;
+  }
+  .meterological-fector-heading p {
+    font-size: 20px;
+    padding: 0 0 90px;
+  }
+  .meterological-fectors {
+    padding-top: 90px;
+  }
+  .meterological-fector-img img {
+    width: 215px;
+  }
+  .meterological-fector-text h3 {
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
+  .meterological-fector-text p {
+    font-size: 20px;
+    padding: 0 0px 50px;
+  }
+  .human-health-affect-heading h2 {
+    font-size: 30px;
+    padding: 50px 0px 60px;
+    line-height: 37px;
+  }
+  /* Add this at the end of the mobile media query */
+  .mob-revers {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  /* Adjust these properties for better mobile display */
+  .meterological-fector-img {
+    text-align: center;
+  }
+
+  .temp-affect-hot-cold-img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+.temp-affect-hot-cold-img img{
+    width:100%;
+  }
+  .temp-unit-caps {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .right-cloud img {
+    max-width: 300px;
+    position: relative;
+    left: -270px;
+    top: 80px;
+    z-index: 0;
+  }
+  .temp-classification-text h2 {
+    font-size: 44px;
+    padding-bottom: 10px;
+    line-height: 45px;
+  }
+  .temp-unit-caps img {
+    width: 180px;
+  }
+  .temp-unit-text h3 {
+    font-size: 26px;
+  }
+  .temp-affect-air-quality-text h2 {
+    font-size: 40px;
+    padding-bottom: 40px;
+    line-height: 45px;
+  }
+  .temp-affect-air-quality {
+    padding-top: 100px;
+  }
+  .temp-affect-heading-box h3 {
+    width: 55%;
+  }
+  .temp-affect-hot-cold-text p {
+    font-size: 20px;
+    padding-right: 0;
+  }
+  .outdoor-right-side p {
+    padding-right: 0 !important;
+    padding-left: 0;
+  }
+  .temp-scale-para p {
+    font-size: 20px;
+    padding: 90px 0 20px;
+    left: 0;
+  }
+  .meterological-fectors {
+    padding-top: 100px;
+  }
+  .meterological-fector-heading h2 {
+    font-size: 40px;
+    padding: 0 0px 20px;
+    line-height: 55px;
+  }
+  .meterological-fector-text h3 {
+    font-size: 28px;
+    padding-bottom: 15px;
+  }
+  .meterological-fector-text p {
+    font-size: 20px;
+    padding: 0 0px 30px;
+  }
+  .human-health-affect-heading h2 {
+    font-size: 42px;
+    padding: 70px 0px 80px;
+    line-height: 55px;
+  }
+}
+

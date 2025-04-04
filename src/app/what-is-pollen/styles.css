@@ -1,0 +1,174 @@
+.whitetext {
+  color: #ffffff;
+}
+
+.full-width-section {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-1-5 {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-2,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.col-md-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.col-md-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-box {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.separator {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.heading_top_white {
+  color: #000;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .alignleft {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body p {
+    text-align: center !important;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .vc_custom_1671444811961 .vc_empty_space {
+    height: auto !important;
+  }
+
+  .vc_custom_1671446814711 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+
+  .col-md-1-5,
+  .col-md-2,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+

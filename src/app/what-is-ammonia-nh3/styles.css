@@ -1,0 +1,290 @@
+.whitetext {
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.air_heading {
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  padding: 40px 0;
+  position: relative;
+}
+
+.air_heading:before {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/02/border_bottom_line-2.png) no-repeat;
+  content: "";
+  width: 420px;
+  height: 2px;
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* Sources Grid */
+.sources-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.sources-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.source-item {
+  width: 33.33%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+/* Environment Section */
+.environment-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.environment-text {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.environment-image {
+  width: 50%;
+  padding: 0 15px;
+}
+
+/* Health Effects Section */
+.health_effects_section {
+  margin: 40px 0;
+}
+
+.level_range_cntr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.health_color {
+  width: 65%;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 12px;
+  padding: 9px 5px;
+  text-align: center;
+}
+
+.Good_color {
+  background: #50af62;
+}
+.Satisfactory_color {
+  background: #91ce6a;
+}
+.Moderately_color {
+  background: #d3ca2f;
+}
+.poor_color {
+  background: #ec632b;
+}
+.verypoor_color {
+  background: #e93223;
+}
+.Severe_color {
+  background: #c6291d;
+}
+
+.level_range_cntr span {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: normal;
+  color: #000;
+  font-family: "proxima-nova-bold", sans-serif;
+}
+
+.lavel_box {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+}
+
+.level_range_cntr .health_color span {
+  color: #fff;
+}
+
+.health_heading {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24pt;
+  line-height: 48px;
+  margin-bottom: 50px;
+  font-family: "proxima-nova-bold", sans-serif;
+}
+
+.health_effect_box .lavel_box span {
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.health_effect_box span.mg_text {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "proxima-nova-regular", sans-serif;
+}
+
+.health_effect_box .health_color {
+  box-shadow: inherit;
+}
+
+.health_effect_box .health_color span {
+  color: #000;
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.lavel_box p {
+  font-weight: 500;
+  font-family: "proxima-nova-bold", sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+.bottom_text {
+  float: right;
+  color: #000;
+  padding-top: 15px;
+}
+
+h2.health_heading.mobile_level_heading {
+  display: none;
+}
+
+.mobile_mg_text {
+  font-family: "proxima-nova-regular", sans-serif;
+  display: none;
+}
+
+/* Hazards Grid */
+.hazards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hazard-item {
+  width: 48%;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+/* Regulations Grid */
+.regulations-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.regulation-item {
+  width: 33.33%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .alignleft,
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body p {
+    text-align: center !important;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+
+  h2.health_heading.mobile_level_heading {
+    display: block;
+    font-size: 19pt;
+    margin: 0 0 20px;
+  }
+
+  h2.health_heading {
+    display: none;
+  }
+
+  .lavel_box {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .health_color {
+    width: 98%;
+    padding: 11px 5px;
+  }
+
+  .level_range_cntr {
+    display: inherit;
+    margin-bottom: 15px;
+  }
+
+  .level_range_cntr span {
+    font-size: 15px;
+  }
+
+  .level_range_cntr .health_color span {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .level_range_cntr.health_effect_box {
+    display: none;
+  }
+
+  span.mobile_mg_text {
+    font-size: 11px;
+    margin-left: 6px;
+    display: inline;
+    font-family: "proxima-nova-regular", sans-serif;
+  }
+
+  .source-item,
+  .environment-text,
+  .environment-image,
+  .hazard-item,
+  .regulation-item {
+    width: 100%;
+  }
+
+  .air_heading:before {
+    width: 316px;
+    background-size: 100%;
+  }
+}
+

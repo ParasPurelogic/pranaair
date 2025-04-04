@@ -1,0 +1,303 @@
+.whitetext {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .alignleft {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  body p {
+    text-align: center !important;
+  }
+  h4 {
+    text-align: center;
+  }
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-1,
+.col-md-1-5,
+.col-md-3,
+.col-md-6,
+.col-md-9,
+.col-md-11 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.col-md-1-5 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.col-md-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-md-11 {
+  flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+
+@media (max-width: 767px) {
+  .col-md-1,
+  .col-md-1-5,
+  .col-md-3,
+  .col-md-6,
+  .col-md-9,
+  .col-md-11 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .prevention_section {
+    margin-bottom: 20px;
+  }
+}
+
+.air_heading {
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  padding: 40px 0;
+  position: relative;
+}
+
+.air_heading:before {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/02/border_bottom_line-2.png) no-repeat;
+  content: "";
+  width: 420px;
+  height: 2px;
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.douknow_text {
+  color: #60cadf;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* H2S Levels Table Styles */
+.h2levels_table {
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.thead_top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #60cadf;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.thead_top li {
+  font-weight: bold;
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  padding: 7px 0;
+  line-height: normal;
+}
+
+.thead_top li:first-child {
+  width: 10.4%;
+  border-right: 2px solid #fff;
+}
+
+.thead_top li:last-child {
+  width: 89.6%;
+}
+
+.thead_row {
+  background: #fff3dd;
+}
+
+.h2levels_table td {
+  border-right: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 21px;
+  font-weight: normal;
+}
+
+.h2levels_table table {
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead.thead_row th {
+  border: 2px solid #fff;
+  font-size: 16px;
+  color: #000;
+  padding: 18px 21px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.thead_top.Severe_color ul {
+  background: #d70000;
+}
+
+.thead_top.Severe_color li {
+  padding: 20px 22px;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.thead_top.Severe_color li:first-child {
+  width: 7%;
+  border-left: 2px solid #fff;
+}
+
+.thead_top.Severe_color li:last-child {
+  border-right: 2px solid #fff;
+  width: 92%;
+}
+
+/* Color Classes */
+.Good_color {
+  background: #00b358;
+}
+
+.Satisfactory_color {
+  background: #7dd25b;
+}
+
+.Moderately_color {
+  background: #d3ca2f;
+}
+
+.poor_color {
+  background: #ff5800;
+}
+
+.verypoor_color {
+  background: #fe0000;
+}
+
+.Severe_color {
+  background: #d70000;
+}
+
+@media only screen and (max-width: 767px) {
+  .h2levels_table table {
+    margin: 0;
+    width: 805px !important;
+  }
+
+  .h2levels_table {
+    overflow-x: scroll;
+  }
+
+  .h2levels_table td {
+    font-size: 14.5px;
+    padding: 10px 15px;
+  }
+
+  .thead_top li:first-child {
+    width: 10%;
+  }
+
+  .thead_top {
+    width: 805px;
+  }
+
+  .thead_top li {
+    font-size: 17px;
+  }
+
+  thead.thead_row th {
+    font-size: 18px;
+  }
+
+  .thead_top.Severe_color li:first-child {
+    width: 6.5%;
+  }
+
+  .thead_top.Severe_color li {
+    padding: 22px 15px;
+    font-size: 14.5px;
+  }
+
+  .douknow_text {
+    text-align: center;
+  }
+
+  .air_heading:before {
+    width: 316px;
+    background-size: 100%;
+  }
+}
+
+.prevention_section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+

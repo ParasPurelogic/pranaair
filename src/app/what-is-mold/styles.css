@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,900;1,700&display=swap");
+
+/* Base styles */
+.mold-page {
+  font-family: "Nunito Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.highlight {
+  color: #bcc334;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wall-mold-image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styles */
+section {
+  padding: 60px 0;
+}
+
+.banner-section {
+  background-color: #4b5214;
+  padding: 60px 0;
+  color: white;
+}
+
+.health-effects-section {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+
+.mold-walls-section {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+
+.detection-section {
+  background-color: #f7f7f8;
+  padding: 60px 0;
+  margin-bottom: 0;
+}
+
+.section-content {
+  margin-bottom: 40px;
+}
+
+/* Banner content */
+.banner-content {
+  text-align: center;
+}
+
+.mold-icon {
+  width: 135px;
+  height: 135px;
+  margin-bottom: 20px;
+}
+
+.banner-content h1 {
+  font-size: 36pt;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 14pt;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.whitetext {
+  color: #ffffff;
+}
+
+/* Air heading */
+.air_heading {
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  padding: 30px 0;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.air_heading:before {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/02/border_bottom_line-2.png) no-repeat;
+  content: "";
+  width: 420px;
+  height: 2px;
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* Symptoms grid */
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.symptom-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.arrow-icon {
+  width: 47px;
+  height: 22px;
+  margin-bottom: 15px;
+}
+
+.symptom-item p {
+  font-size: 14pt;
+}
+
+/* Health conditions grid */
+.health-conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.health-condition {
+  text-align: center;
+  padding: 20px;
+}
+
+.condition-image {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.health-condition h4 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.health-condition p {
+  font-size: 14pt;
+}
+
+/* Table styles */
+.table-responsive {
+  overflow-x: auto;
+  margin-bottom: 40px;
+}
+
+.humidity-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 15px;
+  background-color: #f2f2f2;
+}
+
+.humidity-table th,
+.humidity-table td {
+  padding: 20px;
+  border: 3px solid #fff;
+  font-size: 16px;
+}
+
+.humidity-table th {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff3dd;
+}
+
+.humidity-table tr:nth-child(1) {
+  background-color: #78ccbf;
+}
+
+.humidity-table tr:nth-child(2) {
+  background-color: #37afae;
+}
+
+.humidity-table tr:nth-child(3) {
+  background-color: #3a9eae;
+}
+
+.humidity-table tr:nth-child(4) {
+  background-color: #1295a9;
+}
+
+.humidity-table td {
+  color: #ffffff;
+}
+
+/* Factors grid */
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.factor-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.factor-item h4 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.factor-item p {
+  font-size: 14pt;
+}
+
+/* Effects list */
+.effects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.effect-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.effect-item:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.effect-content {
+  flex: 1;
+}
+
+.effect-content h3 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.effect-content p {
+  font-size: 14pt;
+}
+
+.effect-icon {
+  flex: 0 0 130px;
+  text-align: center;
+}
+
+.effect-icon img {
+  width: 130px;
+  height: 130px;
+}
+
+/* Fungi section */
+.fungi-heading {
+  font-size: 24pt;
+  color: #bcc334;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.fungi-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.fungi-type {
+  text-align: center;
+}
+
+.fungi-type img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Prevention grid */
+.prevention-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.prevention-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.prevention-item img {
+  width: 300px;
+  height: 251px;
+  margin-bottom: 20px;
+}
+
+.prevention-item h4 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.prevention-item p {
+  font-size: 14pt;
+}
+
+/* Detection grid */
+.detection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.detection-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.detection-item img {
+  width: 260px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.detection-item h4 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.detection-item p {
+  font-size: 14pt;
+}
+
+/* Animation */
+.fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .air_heading:before {
+    width: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .symptoms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .factors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fungi-types-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .prevention-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detection-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .air_heading:before {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .symptoms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-conditions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .factors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fungi-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prevention-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .effect-item {
+    flex-direction: column-reverse;
+  }
+
+  .effect-icon {
+    margin-bottom: 20px;
+  }
+
+  .effect-content {
+    text-align: center;
+  }
+
+  .air_heading:before {
+    width: 250px;
+  }
+
+  .humidity-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .humidity-table thead,
+  .humidity-table tbody,
+  .humidity-table th,
+  .humidity-table td,
+  .humidity-table tr {
+    display: block;
+  }
+
+  .humidity-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .humidity-table tr {
+    margin-bottom: 15px;
+  }
+
+  .humidity-table td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  .humidity-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .humidity-table td:nth-of-type(1):before {
+    content: "Humidity Level";
+  }
+  .humidity-table td:nth-of-type(2):before {
+    content: "Mold Level";
+  }
+  .humidity-table td:nth-of-type(3):before {
+    content: "Description";
+  }
+  .humidity-table td:nth-of-type(4):before {
+    content: "Health Effects";
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-content h1 {
+    font-size: 28pt;
+  }
+
+  .banner-content p {
+    font-size: 12pt;
+  }
+
+  .air_heading {
+    font-size: 24px;
+  }
+
+  .air_heading:before {
+    width: 200px;
+  }
+
+  .prevention-item img,
+  .detection-item img {
+    width: 200px;
+    height: auto;
+  }
+
+  .condition-image {
+    width: 200px;
+    height: auto;
+  }
+}
+

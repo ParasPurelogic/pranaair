@@ -1,0 +1,724 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins" !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-family: "Poppins" !important;
+}
+a {
+  font-family: "Poppins" !important;
+  text-decoration: none !important;
+}
+.vc_section[data-vc-full-width] {
+  overflow: visible !important;
+}
+.deskshow {
+  display: block;
+}
+.mobshow {
+  display: none;
+}
+
+/* _____________________banner-section__________________ */
+
+.banner-section {
+  background: #556fb7;
+  height: 580px;
+}
+
+.banner-txt {
+  padding-top: 155px;
+}
+
+.banner-txt h1 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.banner-txt h1 img {
+  width: 110px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.banner-txt p {
+  font-size: 24px;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.banner-img img {
+  max-width: 635px;
+  position: relative;
+  top: 70px;
+}
+
+/* _____________________climate-chang-section__________________ */
+
+.climate-chang-section {
+  padding-top: 130px;
+}
+.change {
+  color: #556fb7;
+}
+
+.climate-headings {
+  padding-bottom: 45px;
+  position: relative;
+  font-size: 40px;
+  font-weight: 800;
+  color: #2a2a2c;
+}
+
+.climate-headings:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(356deg, #d9d9d900, #c8c5c5, #d9d9d900);
+  width: 400px;
+  height: 2px;
+  bottom: 20px;
+}
+
+.climate-change-heading p {
+  color: #56636d;
+  font-size: 19px;
+  padding-right: 70px;
+  line-height: 34px;
+  padding-bottom: 10px;
+}
+.climate-change-cars-img img {
+  padding-top: 60px;
+}
+
+/* _____________________mithane-in-envoirment-section__________________ */
+
+.mithane-in-envoirment-section {
+  background: #f7f8fd;
+  margin-top: 110px;
+  padding-top: 120px;
+  height: 814px;
+}
+
+.climate-change-cars-img img {
+  width: 1000px;
+}
+
+/* _____________________source-of-methane-section__________________ */
+
+.source-of-methane-section {
+  padding-top: 170px;
+}
+
+.source-of-methane-img img {
+  width: 210px;
+  padding-bottom: 20px;
+  padding-top: 50px;
+}
+
+.source-inner-txt-para h3 {
+  font-size: 26px;
+  color: #556fb7;
+  font-weight: 600;
+}
+
+.source-inner-txt-para p {
+  color: #56636d;
+  font-size: 19px;
+  padding-right: 70px;
+}
+
+.earth-section {
+  margin-top: 200px;
+  background: #556fb7;
+  height: 170px;
+}
+
+.earth-img img {
+  width: 260px;
+  position: relative;
+  top: -60px;
+  left: 80px;
+}
+
+.earth-para p {
+  color: #fff;
+  font-size: 19px;
+  padding-top: 40px;
+}
+
+/* _____________________methane-poisoning-section__________________ */
+
+.methane-poisoning-section {
+  margin-top: 160px;
+  background: #f7f8fd;
+  padding-top: 120px;
+}
+
+.methane-poisioning-heading h2 {
+  padding-right: 520px;
+  line-height: 65px;
+}
+.methane-poisoning-inner-txt h3 {
+  color: #2a2a2c;
+}
+
+.medical-txt-box {
+  padding-top: 170px;
+}
+
+.medical-icon img {
+  width: 150px;
+  margin-top: -90px;
+}
+
+.medical-para p {
+  font-size: 19px;
+  color: #56636d;
+  line-height: 35px;
+}
+/* _____________________methane-poisoning-section__________________ */
+
+/* _____________________health-hazard-section__________________ */
+
+.health-hazard-section {
+  padding-top: 145px;
+  background-color: #fff;
+}
+
+.health-hazards-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.health-hazards-blue {
+  color: #556fb7;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+
+.health-hazards-header p {
+  color: #56636d;
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  max-width: 90%;
+}
+
+.hazard-cards {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.hazard-card {
+  background-color: #f7f8fd;
+  border-radius: 8px;
+  padding: 30px 25px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.hazard-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+}
+
+.hazard-icon {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hazard-icon img {
+  width: 80px;
+  height: auto;
+}
+
+.hazard-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2a2a2c;
+  margin-bottom: 15px;
+}
+
+.hazard-card p {
+  color: #56636d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.quote-section {
+  margin-top: 60px;
+}
+
+/* Update responsive styles for the health hazard section */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .health-hazard-section {
+    padding-top: 80px;
+  }
+
+  .health-hazards-header h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .health-hazards-header p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hazard-card {
+    margin-bottom: 20px;
+  }
+
+  .hazard-icon img {
+    width: 60px;
+  }
+
+  .hazard-card h3 {
+    font-size: 20px;
+  }
+
+  .hazard-card p {
+    font-size: 15px;
+  }
+}
+
+/* Update tablet responsive styles */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hazard-card {
+    margin-bottom: 20px;
+  }
+
+  .health-hazards-header h2 {
+    font-size: 32px;
+  }
+}
+
+/* Remove these styles as they're being replaced */
+.health-hazars-heading h2,
+.health-hazars-heading p,
+.health-hazard-images img,
+.health-hazard-inner-txt h3,
+.health-hazard-inner-txt p,
+.health-hazars-box-bg:before,
+.health-hazard-inner-txt {
+  /* These styles will be overridden by the new ones */
+}
+/* _____________________health-hazard-section__________________ */
+
+/* _____________________methane-work-place-section__________________ */
+
+.methane-work-place-section {
+  background: #f7f8fd;
+  margin-top: 115px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.methane-work-place-heading h2 {
+  line-height: 70px;
+}
+
+.wrk-place-exposure-limits-logo img {
+  width: 260px;
+}
+.single-logo-img {
+  margin-left: -40px;
+}
+.work-place-exposure-limits-para p {
+  color: #56636d;
+  font-size: 22px;
+  line-height: 44px;
+  padding-right: 120px;
+}
+
+.methane-work-place-heading {
+  padding-bottom: 80px;
+}
+
+/* _____________________methane-work-place-section__________________ */
+
+/* _____________________reduce-methane-poisoning-section__________________ */
+
+.reduce-methane-poisoning-section {
+  padding-top: 100px;
+}
+
+.methane-reduce-heading h2 {
+  padding-right: 400px;
+  line-height: 70px;
+}
+
+.reduce-methane-ways-imgs img {
+  width: 360px;
+}
+
+.reduce-methane-ways-txts h3 {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 600;
+  padding-top: 40px;
+}
+
+.reduce-methane-ways-txts p {
+  color: #56636d;
+  font-size: 19px;
+  padding-right: 190px;
+  line-height: 35px;
+  padding-bottom: 120px;
+}
+
+.methane-reduce-heading {
+  padding-bottom: 100px;
+}
+
+.note-box {
+  background: #556fb7;
+  max-width: 350px;
+  height: 400px;
+  margin-top: 60px;
+  border-radius: 40px;
+  padding: 40px 0px 0px 0px;
+}
+
+.note-box h3 {
+  font-size: 25px;
+  color: #fff;
+  line-height: 35px;
+  padding-left: 40px;
+}
+
+.note-box p {
+  font-size: 19px;
+  line-height: 35px;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 70px;
+}
+
+/* _____________________reduce-methane-poisoning-section__________________ */
+
+/* _____________________mobile-responsive-css__________________ */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .banner-section {
+    height: auto;
+  }
+  .banner-txt {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .banner-txt h1 {
+    font-size: 32px;
+  }
+  .banner-txt h1 img {
+    width: 80px;
+    top: 0;
+  }
+  .banner-txt p {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .banner-img img {
+    max-width: 100%;
+    top: 0;
+  }
+  .climate-chang-section {
+    padding-top: 60px;
+  }
+  .climate-headings {
+    padding-bottom: 45px;
+    font-size: 32px;
+  }
+  .climate-headings:before {
+    width: 100%;
+  }
+  .climate-change-heading p {
+    font-size: 18px;
+    padding-right: 0px;
+  }
+  .climate-change-cars-img img {
+    width: 100%;
+  }
+
+  .climate-change-cars-img img {
+    padding-top: 40px;
+  }
+  .mithane-in-envoirment-section {
+    margin-top: 60px;
+    padding-top: 60px;
+    height: auto;
+  }
+  .methane-work-place-heading h2 {
+    padding-bottom: 25px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .source-of-methane-section {
+    padding-top: 60px;
+  }
+  .source-of-methane-img img {
+    width: 50%;
+    padding-top: 20px;
+  }
+  .source-inner-txt-para h3 {
+    font-size: 24px;
+  }
+  .source-inner-txt-para p {
+    font-size: 18px;
+    padding-right: 0px;
+  }
+  .earth-section {
+    margin-top: 100px;
+    height: 350px;
+  }
+  .earth-para p {
+    font-size: 18px;
+  }
+  .earth-img img {
+    width: 60%;
+    top: 20px;
+    left: 60px;
+  }
+  .methane-poisoning-section {
+    padding-top: 60px;
+  }
+  .methane-poisioning-heading h2 {
+    padding-right: 0;
+    line-height: 45px;
+  }
+  .medical-txt-box {
+    padding-top: 130px;
+  }
+  .medical-icon img {
+    width: 100px;
+    margin-top: -100px;
+  }
+  .medical-para p {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  .health-hazard-section {
+    padding-top: 80px;
+  }
+  .health-hazards-header h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .health-hazards-header p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hazard-card {
+    margin-bottom: 20px;
+  }
+
+  .hazard-icon img {
+    width: 60px;
+  }
+
+  .hazard-card h3 {
+    font-size: 20px;
+  }
+
+  .hazard-card p {
+    font-size: 15px;
+  }
+  .health-hazars-box-bg {
+    margin-bottom: 0px;
+  }
+  .quote-section {
+    padding-top: 100px;
+  }
+  .quote-para p {
+    font-size: 20px;
+    padding: 0 0px;
+  }
+  .methane-work-place-section {
+    margin-top: 75px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .methane-work-place-heading {
+    padding-bottom: 60px;
+  }
+  .wrk-place-exposure-limits-logo img {
+    width: 70%;
+  }
+  .work-place-exposure-limits-para p {
+    font-size: 18px;
+    line-height: 32px;
+    padding-right: 0px;
+    padding-bottom: 50px;
+  }
+  .reduce-methane-poisoning-section {
+    padding-top: 60px;
+  }
+  .methane-reduce-heading h2 {
+    padding-right: 0;
+    line-height: 50px;
+    font-size: 24px;
+  }
+  .methane-reduce-heading {
+    padding-bottom: 50px;
+  }
+  .reduce-methane-ways-imgs img {
+    width: 70%;
+  }
+  .reduce-methane-ways-txts p {
+    font-size: 18px;
+    padding-right: 90px;
+    padding-bottom: 90px;
+  }
+  .note-box {
+    height: 360px;
+    margin-top: 0;
+    margin-bottom: 50px !important;
+  }
+}
+
+/* _____________________mobile-responsive-css__________________ */
+
+/* _____________________tab-responsive-css__________________ */
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .banner-txt h1 {
+    font-size: 30px;
+  }
+  .banner-txt h1 img {
+    width: 100px;
+  }
+  .banner-section {
+    height: auto;
+    padding: 50px;
+  }
+  .banner-txt p {
+    font-size: 20px;
+  }
+  .banner-img img {
+    max-width: 100%;
+    top: 50px;
+  }
+  .banner-txt {
+    padding-top: 0;
+  }
+
+  .climate-chang-section {
+    padding-top: 100px;
+  }
+  .climate-change-cars-img img {
+    width: 100%;
+  }
+  .mithane-in-envoirment-section {
+    height: auto;
+  }
+  .source-of-methane-img img {
+    width: 80%;
+  }
+  .source-inner-txt-para h3 {
+    font-size: 24px;
+  }
+  .source-inner-txt-para p {
+    font-size: 18px;
+    padding-right: 30px;
+  }
+  .earth-img img {
+    width: 80%;
+    top: -60px;
+    left: 0;
+  }
+  .earth-para p {
+    font-size: 18px;
+    padding-top: 30px;
+  }
+  .methane-poisoning-section {
+    margin-top: 60px;
+    padding-top: 70px;
+  }
+  .methane-poisioning-heading h2 {
+    padding-right: 0;
+    line-height: 60px;
+  }
+  .medical-txt-box {
+    padding-top: 70px;
+  }
+  .medical-icon img {
+    width: 130px;
+  }
+  .medical-para p {
+    font-size: 18px;
+    line-height: 34px;
+    padding-bottom: 50px;
+  }
+  .health-hazard-section {
+    padding-top: 90px;
+  }
+  .health-hazards-header h2 {
+    font-size: 32px;
+  }
+  .health-hazars-box-bg:before {
+    display: none;
+  }
+  .health-hazard-images img {
+    width: 130px;
+  }
+  .health-hazard-inner-txt p {
+    font-size: 17px;
+    line-height: 30px;
+    padding-right: 0px;
+  }
+  .quote-section {
+    padding-top: 50px;
+  }
+  .wrk-place-exposure-limits-logo img {
+    width: 70%;
+  }
+  .work-place-exposure-limits-para p {
+    font-size: 18px;
+    line-height: 34px;
+    padding-right: 10px;
+  }
+  .methane-work-place-section {
+    padding-bottom: 50px;
+  }
+  .methane-reduce-heading h2 {
+    padding-right: 0;
+    line-height: 40px;
+  }
+  .reduce-methane-ways-imgs img {
+    width: 60%;
+  }
+  .reduce-methane-ways-txts p {
+    font-size: 19px;
+    line-height: 30px;
+    padding-right: 50px;
+  }
+
+  .note-box {
+    margin-top: 10px;
+  }
+}
+
+/* _____________________tab-responsive-css__________________ */
+

@@ -1,0 +1,431 @@
+/* General Styles */
+.whitetext {
+  color: #ffffff;
+}
+
+.full-width-section {
+  width: 100%;
+}
+
+.bg-light-green {
+  background-color: #c2d5a8;
+}
+
+.bg-white {
+  background-color: #fefdfd;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-8,
+.col-md-12,
+.col-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.col-md-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.col-md-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.col-md-12,
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.offset-md-2 {
+  margin-left: 16.666667%;
+}
+
+/* Spacing */
+.py-35 {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.py-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.empty-space {
+  height: 20px;
+}
+
+.empty-space-40 {
+  height: 40px;
+}
+
+.empty-space-50 {
+  height: 50px;
+}
+
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Animations */
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Images */
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #c2d5a8;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: 8px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -10px;
+  background-color: #c2d5a8;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Health Effects Section */
+.health_effects_section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.health_heading {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24pt;
+  line-height: 48px;
+  margin-bottom: 50px;
+  font-family: "proxima-nova-bold", sans-serif;
+}
+
+.level_range_cntr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.health_color {
+  width: 65%;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 12px;
+  padding: 9px 5px;
+  text-align: center;
+}
+
+.Good_color {
+  background: #50af62;
+}
+.Satisfactory_color {
+  background: #91ce6a;
+}
+.Moderately_color {
+  background: #d3ca2f;
+}
+.poor_color {
+  background: #ec632b;
+}
+.verypoor_color {
+  background: #e93223;
+}
+.Severe_color {
+  background: #c6291d;
+}
+
+.level_range_cntr span {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: normal;
+  color: #000;
+  font-family: "proxima-nova-bold", sans-serif;
+}
+
+.lavel_box {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+}
+
+.level_range_cntr .health_color span {
+  color: #fff;
+}
+
+.health_effect_box .lavel_box span {
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.health_effect_box span.mg_text {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "proxima-nova-regular", sans-serif;
+}
+
+.health_effect_box .health_color {
+  box-shadow: inherit;
+}
+
+.health_effect_box .health_color span {
+  color: #000;
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.lavel_box p {
+  font-weight: 500;
+  font-family: "proxima-nova-bold", sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+.bottom_text {
+  float: right;
+  color: #000;
+  padding-top: 15px;
+  display: block;
+}
+
+h2.health_heading.mobile_level_heading {
+  display: none;
+}
+
+.mobile_mg_text {
+  font-family: "proxima-nova-regular", sans-serif;
+  display: none;
+}
+
+/* Product Carousel */
+.product-carousel-container {
+  margin: 40px 0;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .alignleft,
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body p,
+  h4 {
+    text-align: center !important;
+  }
+
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .offset-md-2 {
+    margin-left: 0;
+  }
+
+  h2.health_heading.mobile_level_heading {
+    display: block;
+    font-size: 19pt;
+    margin: 0 0 20px;
+  }
+
+  h2.health_heading {
+    display: none;
+  }
+
+  .lavel_box {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .health_color {
+    width: 98%;
+    padding: 11px 5px;
+  }
+
+  .level_range_cntr {
+    display: inherit;
+    margin-bottom: 15px;
+  }
+
+  .level_range_cntr span {
+    font-size: 15px;
+  }
+
+  .level_range_cntr .health_color span {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .level_range_cntr.health_effect_box {
+    display: none;
+  }
+
+  span.mobile_mg_text {
+    font-size: 11px;
+    margin-left: 6px;
+    display: inline;
+    font-family: "proxima-nova-regular", sans-serif;
+  }
+}
+

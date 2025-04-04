@@ -1,0 +1,159 @@
+.whitetext {
+  color: #ffffff;
+}
+
+.full-width-section {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+  padding: 0 15px;
+}
+
+.col-md-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 15px;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding: 0 15px;
+}
+
+.col-md-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignnone {
+  margin: 5px 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* Product Carousel Styling */
+.product-card {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h4 {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .alignleft {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body p {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-6,
+  .col-md-8,
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+

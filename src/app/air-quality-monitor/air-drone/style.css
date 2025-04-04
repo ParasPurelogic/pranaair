@@ -39,15 +39,16 @@ h6 {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 54px;
   font-weight: 800;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  position: relative;
-  z-index: 1;
   margin-bottom: 0;
   line-height: 1.1;
+  background: -webkit-linear-gradient(#fff, #ffffff, #ffffff70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-drone-image {
@@ -58,19 +59,18 @@ h6 {
 }
 
 .hero-drone-image img {
-  max-width: 500px;
   height: auto;
+  width: 65%;
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 200;
   color: #fff;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  position: relative;
+  margin-bottom: 30px;
   z-index: 2;
   line-height: 1.5;
+  padding-top: 20px;
 }
 
 .hero-buttons {
@@ -81,6 +81,11 @@ h6 {
   z-index: 2;
 }
 
+.hero-buttons button img {
+  width: 15px;
+  height: auto;
+}
+
 .hero-buttons button {
   background-color: #fff;
   color: #333;
@@ -88,7 +93,7 @@ h6 {
   padding: 12px 20px;
   border-radius: 10px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -150,10 +155,18 @@ h6 {
   position: relative;
 }
 
+.last {
+  position: relative;
+}
+
+.last:before {
+  display: none;
+}
+
 .feature-item:before {
   position: absolute;
   content: "";
-  background: #ffffff6e;
+  background: #ffffff26;
   width: 1px;
   height: 60px;
   right: -60px;
@@ -195,38 +208,41 @@ h6 {
 .category-tabs {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   margin-bottom: 50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .category-tab {
   background: none;
   border: none;
-  color: #fff;
+  color: #F0F2F7;
   font-size: 1.1rem;
-  font-weight: 500;
-  padding: 10px 0;
+  font-weight: 400;
+  padding: 7px 20px;
   cursor: pointer;
   position: relative;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  opacity: .7;
+  transition: opacity .3s;
 }
 
 .category-tab.active {
   opacity: 1;
-  color: #1972BC;
+  color: #58B0F9;
   font-weight: 600;
 }
 
 .category-tab.active::after {
+  background-color: #58B0F9;
+}
+
+.category-tab:after {
   content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: #1972BC;
+  height: 1px;
+  background-color: #F0F2F7;
 }
 
 .sticky-tabs {
@@ -278,11 +294,13 @@ h6 {
 .drone-description p {
   margin-bottom: 15px;
   line-height: 32px;
+  font-size: 18px;
+  color: #f0f2f76e;
+  font-weight: 300;
 }
 
 .drone-description strong {
-  font-weight: 700;
-  color: #4fc3f7;
+  color: #F0F2F7;
 }
 
 .read-more-btn {
@@ -309,30 +327,30 @@ h6 {
   color: #fff;
   border: none;
   padding: 12px 24px;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all .3s;
 }
 
 .btn-request:hover {
-  background-color: #3da8d9;
+  background-color: #1972BC;
 }
 
 .btn-brochure {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 24px;
-  border-radius: 4px;
+  background-color: #0000;
+  color: #58B0F9;
+  border: 1px solid #58B0F9;
+  padding: 12px 30px;
+  border-radius: 10px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
+  gap: 5px;
+  transition: all .3s;
 }
 
 .btn-brochure:hover {
@@ -357,6 +375,21 @@ h6 {
   text-align: left;
   z-index: 2;
   flex: 1;
+}
+
+.drone-image:before {
+  position: absolute;
+  content: "";
+  background-image: radial-gradient(#ffffff6e, #0000);
+  width: 80%;
+  height: 300px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 100%;
+  filter: blur(41px);
+  bottom: 0;
+  z-index: -1;
 }
 
 .drone-image img {
@@ -447,16 +480,14 @@ h6 {
   color: #ffffff24;
   line-height: 1;
   z-index: 1;
-  pointer-events: none;
+  background: -webkit-linear-gradient(#f0f0f09c, #f0f0f000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Specification cards - COMPLETELY REVISED */
 .specs-container {
   margin-top: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
 }
 
 .specs-row {
@@ -467,14 +498,16 @@ h6 {
 }
 
 .spec-card {
-  background-color: rgba(18, 18, 18, 0.9);
-  border-radius: 15px;
-  padding: 20px;
   flex: 1;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-left: 0;
+  border-top: 1px solid #ffffff1c;
+  background-color: #0f0f0fd6;
+  color: white;
+  padding: 20px 20px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
 }
 
 /* First row cards */
@@ -484,9 +517,10 @@ h6 {
 }
 
 .spec-card-text .spec-title {
-  font-size: 1rem;
+  font-size: 20px;
   color: #fff;
   text-transform: lowercase;
+  font-weight: 300;
 }
 
 /* Cards with blue numbers */
@@ -496,24 +530,24 @@ h6 {
 }
 
 .spec-card-value .spec-value {
-  font-size: 4rem;
-  font-weight: 500;
-  color: #1972bc;
+  font-size: 36px;
+  font-weight: 400;
+  color: #58B0F9;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .spec-card-value .spec-unit {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: #1972bc;
+  font-weight: 200;
+  color: #58B0F9;
   display: inline;
 }
 
 .spec-card-value .spec-title {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+  color: #ffffffd1;
   text-transform: lowercase;
   margin-top: 5px;
 }
@@ -525,16 +559,16 @@ h6 {
 }
 
 .spec-card-description .spec-title {
-  font-size: 1.1rem;
+  font-size: 20px;
   color: #fff;
   margin-bottom: 5px;
-  font-weight: 600;
+  font-weight: 200;
 }
 
 .spec-card-description .spec-description {
-  font-size: 1rem;
-  color: #1972bc;
-  font-weight: 500;
+  font-size: 15px;
+  color: #58B0F9;
+  font-weight: 400;
 }
 
 .spec-card-description .spec-note {
@@ -546,10 +580,6 @@ h6 {
 /* Quad Drone Specific Styles - UPDATED to match design */
 .quad-specs {
   margin-top: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
 }
 
 .air-quality-monitor-tech {
@@ -1559,6 +1589,21 @@ input.wpcf7-submit {
   margin-left: 30px;
 }
 
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
@@ -1635,6 +1680,10 @@ input.wpcf7-submit {
     top: -20px;
   }
 
+  .drone-image-container {
+    flex-direction: column;
+  }
+
   .slider-card {
     position: relative;
     right: auto;
@@ -1709,7 +1758,7 @@ input.wpcf7-submit {
 
   .drone-title-overlay {
     font-size: 4rem;
-    top: -40px;
+    top: -10px;
     right: 0;
     left: 0px;
   }
@@ -2056,7 +2105,17 @@ input.wpcf7-submit {
   }
 
   .night-vision-txt {
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .camera-img img {
+    width: 60%;
+  }
+
+  .video-slider-img iframe {
+    width: 100%;
+    height: 100%;
   }
 
   .thermal-camera .container {
@@ -2290,6 +2349,10 @@ input.wpcf7-submit {
     width: 80%;
     font-size: 14px;
   }
+
+  .drone-image:before {
+    height: 200px;
+  }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
@@ -2435,6 +2498,11 @@ input.wpcf7-submit {
 
   .faq-section {
     margin-top: 0px;
+  }
+
+  .drone-image:before {
+    height: 250px;
+    bottom: 100px;
   }
 }
 

@@ -1,0 +1,420 @@
+/* General Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.full-width-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 800px;
+}
+
+/* What is Air Pollution Section */
+.what-is-section {
+  background-color: #fefdfd;
+  padding: 50px 0;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Air Contaminants Section */
+.contaminants-section {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.contaminant-item {
+  margin-bottom: 30px;
+}
+
+/* Types of Air Pollution Section */
+.types-section {
+  padding: 50px 0 40px;
+}
+
+.pollution-type {
+  margin-bottom: 40px;
+}
+
+/* AQI Section */
+.aqi-section {
+  padding: 50px 0;
+}
+
+.aqi-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aqi-text {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.aqi-image {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+/* Pollution Sources Section */
+.sources-section {
+  background-color: #e2f3ff;
+  padding: 50px 0 80px;
+}
+
+.pollution-sources {
+  margin-bottom: 40px;
+}
+
+.source-button {
+  background-color: #0687e3;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.sources-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.source-item {
+  flex: 0 0 calc(33.333% - 20px);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.source-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Health Impacts Section */
+.health-impacts-section {
+  padding: 50px 0 35px;
+}
+
+.health-impacts-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.health-impact-boxes {
+  flex: 0 0 25%;
+}
+
+.health-impact-image {
+  flex: 0 0 50%;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.impact-box {
+  background-color: #ffe8aa;
+  padding: 15px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Solutions Section */
+.solutions-section {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+}
+
+.solutions-container {
+  margin-top: 40px;
+}
+
+.solutions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.solution-item {
+  flex: 0 0 calc(25% - 20px);
+  text-align: center;
+}
+
+.solution-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Air Quality Solutions Section */
+.air-quality-solutions {
+  padding: 50px 0 70px;
+}
+
+.solutions-products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.product-item {
+  flex: 0 0 calc(33.333% - 30px);
+  text-align: center;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Monitor Products Section */
+.monitor-products-section {
+  padding: 50px 0;
+}
+
+.products-carousel {
+  margin: 40px 0;
+}
+
+.carousel-item {
+  padding: 15px;
+  text-align: center;
+}
+
+.caaqms-banner {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.caaqms-banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom Classes from Original CSS */
+.whitetext {
+  color: #ffffff;
+}
+
+.air_heading {
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  padding: 40px 0;
+  position: relative;
+}
+
+.air_heading:before {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/02/border_bottom_line-2.png) no-repeat;
+  content: "";
+  width: 420px;
+  height: 2px;
+  position: absolute;
+  bottom: 19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: calc(15% - 15px);
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  width: 70%;
+  height: auto;
+}
+
+.card2-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card2 {
+  width: 15%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card2 img {
+  width: 70%;
+  height: auto;
+}
+
+.saveyourfuture_box {
+  border: 2px solid #0687e3;
+  padding: 8px 0 20px;
+  max-width: 920px;
+  margin: 30px auto;
+  position: relative;
+  left: 54px;
+}
+
+.future_img {
+  position: absolute;
+  top: -31px;
+  left: -165px;
+}
+
+.future_img img {
+  width: 269px;
+}
+
+.saveyourfuture_box h3 {
+  color: #0687e3;
+  font-size: 24px;
+  padding-left: 115px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .alignleft,
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body p,
+  h4 {
+    text-align: center !important;
+  }
+
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+
+  .aqi-content {
+    flex-direction: column;
+  }
+
+  .aqi-text {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .health-impact-boxes {
+    flex: 0 0 100%;
+  }
+
+  .health-impact-image {
+    flex: 0 0 100%;
+    padding-top: 30px;
+    margin: 30px 0;
+  }
+
+  .source-item,
+  .solution-item {
+    flex: 0 0 100%;
+  }
+
+  .solutions-products {
+    flex-direction: column;
+  }
+
+  .product-item {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+
+  .saveyourfuture_box {
+    border: 2px solid #0687e3;
+    padding: 20px;
+    max-width: 100%;
+    margin: 30px auto;
+    position: relative;
+    left: 0;
+    text-align: center;
+  }
+
+  .future_img {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .saveyourfuture_box h3 {
+    font-size: 17px;
+    padding-left: 0;
+  }
+
+  .air_heading:before {
+    width: 316px;
+    background-size: 100%;
+  }
+
+  .card {
+    width: calc(50% - 20px);
+  }
+
+  .card2 {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .source-item,
+  .solution-item {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .health-impact-boxes {
+    flex: 0 0 30%;
+  }
+
+  .health-impact-image {
+    flex: 0 0 40%;
+  }
+}
+

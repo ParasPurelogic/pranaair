@@ -1,0 +1,360 @@
+/* Base Styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.whitetext {
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Banner Section */
+.banner-section {
+  background-color: #61b7c8;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-icon {
+  margin-bottom: 20px;
+}
+
+.heading_top_white {
+  font-size: 50pt;
+  line-height: 1.1;
+  display: block;
+}
+
+.environment-importance {
+  margin-top: 50px;
+}
+
+.plant-icon-container {
+  margin: 30px 0;
+}
+
+/* Indoor CO2 Levels Section */
+.indoor-co2-levels {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.co2-levels-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.co2-levels-list {
+  text-align: left;
+  flex: 1;
+}
+
+.co2-levels-list p {
+  font-size: 14pt;
+  margin-bottom: 10px;
+}
+
+.co2-levels-image {
+  flex: 1;
+}
+
+/* CO2 Sources Section */
+.co2-sources {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.sources-image {
+  margin-top: 30px;
+}
+
+/* Health Effects Section */
+.health-effects {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #fefdfd;
+}
+
+.health-effects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.health-effect-item {
+  text-align: center;
+}
+
+.health-effect-image {
+  margin-bottom: 15px;
+}
+
+/* Tips Section */
+.tips-section {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #69abb9;
+}
+
+.tips-container {
+  margin-top: 40px;
+}
+
+.tip-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.tip-image {
+  flex: 1;
+}
+
+.tip-content {
+  flex: 3;
+  padding: 0 30px;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Updated Tips Section Styles */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tip-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card-image {
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.tip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tip-card:hover .tip-img {
+  transform: scale(1.05);
+}
+
+.tip-card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip-card-content h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tip-card-content p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Measure CO2 Section */
+.measure-co2 {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #61b7c8;
+}
+
+.co2-monitor-image {
+  margin-top: 30px;
+}
+
+/* Product Carousel Section */
+.product-carousel {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.product-slider {
+  margin-top: 40px;
+}
+
+.product-item {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Blog Carousel Section */
+.blog-carousel {
+  padding: 60px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.blog-slider {
+  margin-top: 40px;
+}
+
+.blog-item {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .alignleft {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body p {
+    text-align: center !important;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+
+  .co2-levels-container {
+    flex-direction: column;
+  }
+
+  .health-effects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-item {
+    flex-direction: column;
+  }
+
+  .row-reverse {
+    flex-direction: column;
+  }
+
+  .tip-content {
+    padding: 20px 0;
+  }
+
+  .text-right {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .health-effects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tip-item {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .row-reverse {
+    flex-direction: column;
+  }
+
+  .tip-content {
+    padding: 20px 0;
+  }
+
+  .text-right {
+    text-align: center;
+  }
+}
+
+/* Responsive adjustments for the tips grid */
+@media screen and (max-width: 992px) {
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tip-card-image {
+    height: 180px;
+  }
+}
+

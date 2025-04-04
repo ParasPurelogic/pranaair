@@ -1,0 +1,225 @@
+.whitetext {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .alignleft {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  body p {
+    text-align: center !important;
+  }
+  h4 {
+    text-align: center;
+  }
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  body p {
+    text-align: center;
+  }
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .vc_custom_1671444811961 .vc_empty_space {
+    height: auto !important;
+  }
+
+  .vc_custom_1671446814711 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+}
+
+.level_range_cntr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.health_color {
+  width: 65%;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 12px;
+  padding: 9px 5px;
+  text-align: center;
+}
+.Good_color {
+  background: #50af62;
+}
+.Satisfactory_color {
+  background: #91ce6a;
+}
+.Moderately_color {
+  background: #d3ca2f;
+}
+.poor_color {
+  background: #ec632b;
+}
+.verypoor_color {
+  background: #e93223;
+}
+.Severe_color {
+  background: #c6291d;
+}
+
+.level_range_cntr span {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: normal;
+  color: #000;
+  font-family: "proxima-nova-bold", sans-serif;
+}
+
+.lavel_box {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+}
+.level_range_cntr .health_color span {
+  color: #fff;
+}
+.health_heading {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24pt;
+  line-height: 48px;
+  margin-bottom: 50px;
+  font-family: "proxima-nova-bold", sans-serif;
+}
+.health_effect_box .lavel_box span {
+  font-weight: 700;
+  font-size: 18pt;
+}
+.health_effect_box span.mg_text {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "proxima-nova-regular", sans-serif;
+}
+
+.health_effect_box .health_color {
+  box-shadow: inherit;
+}
+.health_effect_box .health_color span {
+  color: #000;
+  font-weight: 700;
+  font-size: 18pt;
+}
+.lavel_box p {
+  font-weight: 500;
+  font-family: "proxima-nova-bold", sans-serif;
+  color: #000;
+  margin: 0;
+}
+.bottom_text {
+  float: right;
+  color: #000;
+  padding-top: 15px;
+}
+h2.health_heading.mobile_level_heading {
+  display: none;
+}
+
+.mobile_mg_text {
+  font-family: "proxima-nova-regular", sans-serif;
+  display: none;
+}
+
+.health_effects_section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.full-width-section {
+  width: 100%;
+  padding: 0;
+}
+
+.empty-space {
+  height: 20px;
+}
+
+.product-carousel {
+  margin: 40px 0;
+}
+
+.product-item {
+  padding: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  h2.health_heading.mobile_level_heading {
+    display: block;
+    font-size: 19pt;
+    margin: 0 0 20px;
+  }
+
+  h2.health_heading {
+    display: none;
+  }
+
+  .lavel_box {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .health_color {
+    width: 98%;
+    padding: 11px 5px;
+  }
+  .level_range_cntr {
+    display: inherit;
+    margin-bottom: 15px;
+  }
+  .level_range_cntr span {
+    font-size: 15px;
+  }
+  .level_range_cntr .health_color span {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .level_range_cntr.health_effect_box {
+    display: none;
+  }
+
+  span.mobile_mg_text {
+    font-size: 11px;
+    margin-left: 6px;
+    display: inline;
+    font-family: "proxima-nova-regular", sans-serif;
+  }
+
+  .row-inner {
+    flex-direction: column;
+  }
+
+  .column-inner {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
+

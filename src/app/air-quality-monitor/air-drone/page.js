@@ -185,7 +185,7 @@ export default function AirDronePage() {
               className="hero-drone-image"
               style={{ transform: "scale(1.2)", marginTop: "-40px", position: "relative", zIndex: 2 }}
             >
-              <img src="https://www.pranaair.com/wp-content/uploads/2025/03/Prana-VTOL.webp" alt="Prana VTOL Drone" />
+              <Image src="/img/Prana-air-VTOL.webp" alt="Logo" width={200} height={200} />
             </div>
             <p className="hero-subtitle">
               Transforming Environmental Insights Real-time Air
@@ -197,9 +197,7 @@ export default function AirDronePage() {
                 Request a quote
               </button>
               <button>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#333" />
-                </svg>
+              <Image src="/img/hero-btn-icon.png" alt="Logo" width={20} height={20} />
               </button>
             </div>
           </div>
@@ -220,7 +218,6 @@ export default function AirDronePage() {
                 </div>
                 <div className="feature-text">Real-Time Data</div>
               </div>
-
               <div className="feature-item">
                 <div className="feature-icon">
                   <img
@@ -230,7 +227,6 @@ export default function AirDronePage() {
                 </div>
                 <div className="feature-text">Lightweight Design</div>
               </div>
-
               <div className="feature-item">
                 <div className="feature-icon">
                   <img
@@ -240,7 +236,6 @@ export default function AirDronePage() {
                 </div>
                 <div className="feature-text">Modular Sensors</div>
               </div>
-
               <div className="feature-item">
                 <div className="feature-icon">
                   <img
@@ -250,8 +245,7 @@ export default function AirDronePage() {
                 </div>
                 <div className="feature-text">High Accuracy</div>
               </div>
-
-              <div className="feature-item">
+              <div className="feature-item last">
                 <div className="feature-icon">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2025/03/robut-connectivity.png"
@@ -267,7 +261,7 @@ export default function AirDronePage() {
         {/* Drone Category Section */}
         <section className="drone-category-section" ref={sectionRef}>
           <div className="container">
-            <h2 className="section-title">Drone Category</h2>
+            <h2 className="section-title">Drone <span className="heading-grey">Category</span> </h2>
 
             <div className="category-tabs" ref={tabsRef}>
               <button
@@ -284,7 +278,7 @@ export default function AirDronePage() {
               </button>
             </div>
 
-            <div className="drone-details">
+            <div className="drone-details ">
               {activeTab === "vtol" ? (
                 <>
                   <div className="drone-title-overlay">Prana VTOL</div>
@@ -410,8 +404,7 @@ export default function AirDronePage() {
                       </div>
                       <div className="spec-card spec-card-description">
                         <div className="spec-title">Remote Control Range</div>
-                        <div className="spec-description">15 km</div>
-                        <div className="spec-note">in open conditions</div>
+                        <div className="spec-description">15 km in open conditions</div>
                       </div>
                       <div className="spec-card spec-card-description">
                         <div className="spec-title">Wind Resistance</div>
@@ -1005,7 +998,7 @@ export default function AirDronePage() {
                             {photpGallaery.map((image, index) => (
                               <div
                                 key={index}
-                                className={`slider-thumbnail ${activeSlide === index ? "active" : ""}`}
+                                className={`slider-thumbnail ${activeSlide === index ? "active fade-in" : ""}`}
                                 onClick={() => handleSlideClick(index)}
                               >
                                 <img src={image || "/placeholder.svg"} alt={`VTOL view ${index + 1}`} />
@@ -1023,7 +1016,7 @@ export default function AirDronePage() {
                           {vtolSliderImages.map((_, index) => (
                             <div
                               key={index}
-                              className={`nav-dot ${activeSlide === index ? "active" : ""}`}
+                              className={`nav-dot ${activeSlide === index ? "active fade-in" : ""}`}
                               onClick={() => handleSlideClick(index)}
                             ></div>
                           ))}
@@ -1187,7 +1180,7 @@ export default function AirDronePage() {
                 <a className="brochure-btn" href="#"><Image src="/img/btn-icon.png" alt="Logo" width={200} height={100} /> Brochure</a>
               </div>
               <div className="tab-content">
-                <div className={`tab-pane ${activePartTab === "Parts & Label" ? "show active" : ""}`}>
+                <div className={`tab-pane ${activePartTab === "Parts & Label" ? "show active fade-in" : ""}`}>
                   <div class="row texh-spec-box">
                     <div class="col-md-6">
                       <div class="tech-spec-list">
@@ -1323,7 +1316,7 @@ export default function AirDronePage() {
                     </div>
                   </div>
                 </div>
-                <div className={`tab-pane ${activePartTab === "Disassambley" ? "show active" : ""}`}>
+                <div className={`tab-pane ${activePartTab === "Disassambley" ? "show active fade-in" : ""}`}>
                   <div class="row texh-spec-box">
                     <div class="col-md-6">
                       <div class="tech-spec-list">

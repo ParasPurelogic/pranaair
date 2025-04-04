@@ -1,0 +1,394 @@
+/* General Styles */
+.whitetext {
+  color: #ffffff;
+}
+
+/* Banner Section */
+.banner-section {
+  background-color: #9ec9b9;
+  padding: 40px 0 60px;
+}
+
+.banner-content {
+  padding: 15px 0;
+}
+
+.heading_top_white {
+  font-size: 50pt;
+  line-height: 1.1;
+  display: block;
+}
+
+/* Particulates Section */
+.particulates-section {
+  padding: 40px 0;
+}
+
+.particulates-section h2 {
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.particulates-section p {
+  font-size: 14pt;
+  margin-bottom: 30px;
+}
+
+/* Types of PM Section */
+.types-pm-section {
+  padding: 50px 0 60px;
+}
+
+.types-pm-section h2 {
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.types-pm-section p {
+  font-size: 15pt;
+  margin-bottom: 20px;
+}
+
+.pm-types {
+  padding-top: 20px;
+}
+
+.pm-type-card {
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.pm-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pm-type-card h4 {
+  font-size: 14pt;
+  margin-top: 15px;
+}
+
+.pm-type-card p {
+  font-size: 14pt;
+}
+
+/* PM Sources Section */
+.pm-sources-section {
+  padding-bottom: 70px;
+}
+
+.pm-sources-section h2 {
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.pm-sources-section p {
+  font-size: 16pt;
+  margin-bottom: 20px;
+}
+
+/* PM Guidelines Section */
+.pm-guidelines-section {
+  padding-bottom: 70px;
+}
+
+.pm-guidelines-section h2 {
+  font-size: 24pt;
+  margin-bottom: 30px;
+}
+
+/* PM Unhealthy Section */
+.pm-unhealthy-section {
+  padding-bottom: 60px;
+}
+
+.pm-unhealthy-section h2 {
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.pm-unhealthy-section p {
+  font-size: 16pt;
+  margin-bottom: 50px;
+}
+
+/* AQI Tabs */
+.aqi-tabs {
+  margin-bottom: 50px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.tab-buttons button.active {
+  background: #9ec9b9;
+  color: white;
+}
+
+.aqi-levels {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.aqi-level {
+  width: 16%;
+  text-align: center;
+  padding: 10px;
+}
+
+.inner-good-sec {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.inner-good-sec h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.aqi-level h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.good-sec-top {
+  background-color: #009966;
+  color: white;
+}
+
+.good-sec-top1 {
+  background-color: #ffde33;
+  color: black;
+}
+
+.good-sec-top2 {
+  background-color: #ff9933;
+  color: black;
+}
+
+.good-sec-top3 {
+  background-color: #cc0033;
+  color: white;
+}
+
+.good-sec-top4 {
+  background-color: #660099;
+  color: white;
+}
+
+.good-sec-top5 {
+  background-color: #7e0023;
+  color: white;
+}
+
+/* PM Care Section */
+.pm-care-section {
+  background-color: #d6f8eb;
+  padding-bottom: 60px;
+}
+
+.pm-care-section h2,
+.pm-care-section h3 {
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.pm-care-section p {
+  font-size: 16pt;
+  margin-bottom: 30px;
+}
+
+.pm-effects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.col-md-1-5 {
+  width: 20%;
+  padding: 15px;
+  text-align: center;
+}
+
+.col-md-1-5 img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.col-md-1-5 img:hover {
+  transform: scale(1.05);
+}
+
+.col-md-1-5 p {
+  font-size: 14pt;
+}
+
+/* PM Reduce Section */
+.pm-reduce-section {
+  padding-bottom: 60px;
+}
+
+.pm-reduce-section h3 {
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.pm-reduce-section h4 {
+  font-size: 18pt;
+  margin: 30px 0 20px;
+}
+
+.pm-reduce-section p {
+  font-size: 15pt;
+  margin-bottom: 20px;
+}
+
+/* PM Monitor Section */
+.pm-monitor-section {
+  background-color: #c1e7df;
+  padding-bottom: 60px;
+}
+
+.pm-monitor-section h3 {
+  font-size: 24pt;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+
+.pm-monitor-section p {
+  font-size: 15pt;
+  margin-bottom: 30px;
+}
+
+/* PM Products Section */
+.pm-products-section {
+  padding: 40px 0 60px;
+}
+
+.pm-products-section h3 {
+  font-size: 24pt;
+  margin-bottom: 40px;
+}
+
+.product-carousel {
+  padding: 20px 0;
+}
+
+.product-item {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+.product-item h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .alignleft {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body p {
+    text-align: center !important;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  .alignright {
+    display: block;
+    float: none;
+    max-width: 36% !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .row_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .vc_custom_1671444811961 .vc_empty_space {
+    height: auto !important;
+  }
+
+  .vc_custom_1671446814711 {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  span.heading_top_white {
+    font-size: 33pt !important;
+    padding: 22px 0;
+    display: block;
+  }
+
+  .col-md-1-5 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .aqi-level {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+
+  .pm-type-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .col-md-1-5 {
+    width: 33.33%;
+    margin-bottom: 20px;
+  }
+
+  .aqi-level {
+    width: 33.33%;
+    margin-bottom: 15px;
+  }
+}
+
