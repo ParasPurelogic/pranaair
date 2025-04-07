@@ -205,6 +205,10 @@ h6 {
   text-align: center;
 }
 
+.heading-grey {
+  color: #f0f2f79c;
+}
+
 .category-tabs {
   display: flex;
   justify-content: center;
@@ -217,7 +221,7 @@ h6 {
   border: none;
   color: #F0F2F7;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 300;
   padding: 7px 20px;
   cursor: pointer;
   position: relative;
@@ -439,6 +443,8 @@ h6 {
   flex-direction: column;
   gap: 10px;
   margin: 10px 0;
+  position: relative;
+  z-index: 0;
 }
 
 .slider-thumbnail {
@@ -464,6 +470,20 @@ h6 {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+.gallery-thumbnail .slider-thumbnail {
+  display: block;
+}
+
+.gallery-thumbnail .slider-thumbnail {
+  height: auto;
+}
+
+.gallery-thumbnail .slider-thumbnail img {
+  height: auto;
+  max-width: max-content;
+  width: 130%;
 }
 
 .navigation-dots {
@@ -519,7 +539,7 @@ h6 {
 .spec-card-text .spec-title {
   font-size: 20px;
   color: #fff;
-  text-transform: lowercase;
+  text-transform: capitalize;
   font-weight: 300;
 }
 
@@ -612,6 +632,10 @@ h6 {
   font-weight: 400;
 }
 
+.monitor-tech p span {
+  color: #f0f2f787;
+}
+
 .app-slide-img-box img {
   width: 95%;
   height: auto;
@@ -684,15 +708,15 @@ h6 {
 }
 
 .parameter-main {
-  background: rgb(255 255 255 / 0%);
+  background-image: linear-gradient(180deg, #00000045, transparent);
   border-radius: 35px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border-left: 1px solid #ffffff59;
+  border-left: 1px solid #ffffff17;
   border-bottom: 0;
   border-right: 1px solid #ffffff17;
-  border-top: 1px solid rgb(255 255 255 / 22%);
+  border-top: 1px solid #ffffff38;
   padding: 40px;
   margin-top: 50px;
 }
@@ -736,18 +760,29 @@ h6 {
   list-style: none;
   margin: 0;
   display: flex;
-  gap: 20px;
-  background: #00000038;
+  gap: 30px;
+  background-image: linear-gradient(164deg, #00000038, transparent);
   border-radius: 25px;
   box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border-left: 1px solid #ffffff59;
+  border-left: 1px solid #ffffff17;
   border-bottom: 0;
   border-right: 1px solid #ffffff17;
   border-top: 1px solid #ffffff38;
-  padding: 30px;
+  padding: 20px;
   width: 100%;
+  position: relative;
+}
+
+.map-box ul:before {
+  position: absolute;
+  content: "";
+  background: #ffffff12;
+  width: 1px;
+  height: 70px;
+  left: 85px;
+  top: 20px;
 }
 
 .map-box {
@@ -767,10 +802,10 @@ h6 {
 }
 
 .map-box ul li p {
-  color: #F0F2F7;
+  color: #f0f2f7b8;
   font-size: 16px;
   font-weight: 300;
-  width: 70%;
+  width: 90%;
 }
 
 .heading-app {
@@ -791,13 +826,13 @@ h6 {
 .map-img ul li img {
   height: auto;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .map-img ul li h3 {
   color: #FFFFFF;
   font-size: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .map-img ul li p {
@@ -812,8 +847,8 @@ h6 {
 .thermal-camera .container {
   background: url(/img/thermal-camera-bg.webp);
   background-size: cover;
-  height: 400px;
-  padding-top: 60px;
+  height: 500px;
+  padding-top: 100px;
 }
 
 .thermal-camera {
@@ -821,7 +856,7 @@ h6 {
 }
 
 .camera-img img {
-  width: 40%;
+  width: 50%;
   height: auto;
 }
 
@@ -844,25 +879,29 @@ h6 {
   width: 80%;
 }
 
+.night-vision-txt p strong {
+  color: #fff;
+}
+
 .night-vision-txt ul {
   padding: 0;
   list-style: none;
-  margin: 30px 0 0;
+  margin: 30px 30px 0;
   display: flex;
   gap: 10px;
 }
 
 .night-vision-txt ul li {
-  background: #47474726;
+  background-image: linear-gradient(-180deg, #0000003b, transparent);
   border-radius: 15px;
   box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border-left: 1px solid #ffffff59;
+  border-left: 1px solid #ffffff14;
   border-bottom: 0;
-  border-right: 1px solid #ffffff17;
+  border-right: 1px solid #ffffff14;
   border-top: 1px solid #ffffff38;
-  padding: 16px 20px;
+  padding: 22px 60px;
   color: #fff;
 }
 
@@ -877,6 +916,7 @@ h6 {
 .h-c-battery img {
   height: auto;
   width: 100%;
+  border-radius: 100px;
 }
 
 .high-capacity-txt h2 {
@@ -893,10 +933,14 @@ h6 {
 }
 
 .high-capacity-txt p {
-  color: #f0f2f7c9;
+  color: #f0f2f778;
   font-size: 18px;
   padding-bottom: 10px;
   width: 60%;
+}
+
+.high-capacity-txt p span {
+  color: #F0F2F7;
 }
 
 .high-capacity-txt ul {
@@ -925,14 +969,14 @@ h6 {
 
 .high-capacity .container {
   background: #47474726;
-  border-radius: 80px;
-  background-image: linear-gradient(180deg, #00000078, #00000000);
+  border-radius: 80px 80px 0 0;
+  background-image: linear-gradient(360deg, #0c0c0c, transparent);
   box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border-left: 1px solid #ffffff59;
+  border-left: 1px solid #ffffff0f;
   border-bottom: 0;
-  border-right: 1px solid #ffffff17;
+  border-right: 1px solid #ffffff0f;
   border-top: 1px solid #ffffff38;
   padding: 16px 20px;
   color: #fff;
@@ -969,9 +1013,13 @@ h6 {
 }
 
 .light-weight-drone-txt p {
-  color: #f0f2f7bd;
-  font-size: 16px;
+  color: #f0f2f7b3;
+  font-size: 18px;
   line-height: 30px;
+}
+
+.light-weight-drone-txt p span {
+  color: #F0F2F7;
 }
 
 .light-weight-drone-txt {
@@ -1005,12 +1053,6 @@ h6 {
   color: #58B0F9;
 }
 
-.light-weight-drone-txt p {
-  color: #f0f2f7bd;
-  font-size: 16px;
-  line-height: 30px;
-}
-
 .light-weight-drone-txt {
   padding-top: 60px;
   padding-left: 80px;
@@ -1042,6 +1084,11 @@ h6 {
   font-weight: 200;
   line-height: 32px;
   width: 80%;
+  color: #f0f2f79e;
+}
+
+.long-enduru-drone-txt p span {
+  color: #F0F2F7;
 }
 
 .high-capacity.long-endurance-drone-sec {
@@ -1050,6 +1097,28 @@ h6 {
 
 .advance-air-tech {
   padding-top: 150px;
+  position: relative;
+}
+
+.advance-air-tech:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(90deg, black, transparent);
+  width: 15%;
+  height: 90%;
+  left: 0;
+  z-index: 1;
+  bottom: 0;
+}
+
+.advance-air-tech:after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(-90deg, #000000fc, #000000b0, transparent);
+  width: 15%;
+  height: 90%;
+  bottom: 0;
+  right: 0;
 }
 
 .advance-monitor-tech {
@@ -1096,23 +1165,42 @@ h6 {
 
 .labelling-drone {
   padding-top: 220px;
-  background: url(/img/labelling-bg.webp);
-  background-size: cover;
   padding-bottom: 300px;
+  position: relative;
+}
+
+.labelling-drone:before {
+  position: absolute;
+  content: "";
+  background: url(/img/labelling-bg.webp);
+  background-size: 70%;
+  height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: -50px;
+  z-index: 0;
+  top: 340px;
+  filter: opacity(0.8);
 }
 
 .labell-txt h2 {
   color: #F0F2F7;
   font-size: 52px;
   font-weight: 300;
+  padding-bottom: 20px;
 }
 
 .labell-txt h2 span {
   color: #58B0F9;
 }
 
+.labell-txt p span {
+  color: #f0f2f7;
+}
+
 .labell-txt p {
-  color: #f0f2f7bd;
+  color: #f0f2f785;
   font-size: 18px;
   width: 70%;
   font-weight: 300;
@@ -1143,8 +1231,22 @@ h6 {
   background: #0d5fa3;
 }
 
+.quad-drone img {
+  width: 85%;
+}
+
+.quad-drone {
+  padding-top: 100px;
+  text-align: left !important;
+}
+
+.labell-img {
+  text-align: right;
+  position: relative;
+}
+
 .labell-img img {
-  width: 100%;
+  width: 95%;
   height: auto;
 }
 
@@ -1160,10 +1262,34 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+
+.gallery-slider-card:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(90deg, #000000, #00000080, transparent);
+  width: 14%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.gallery-slider-card:after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(-90deg, #000000, transparent);
+  width: 14%;
+  height: 100%;
+  right: 0;
+  top: 0;
 }
 
 .gallery-slider-card .slider-arrow {
   transform: rotate(-90deg);
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-slider-card .slider-thumbnail {
@@ -1181,8 +1307,12 @@ h6 {
   border: 2px solid #58B0F9;
 }
 
+.gallery-title span {
+  color: #f0f2f76b;
+}
+
 .gallery-title {
-  color: #fff;
+  color: #F0F2F7;
   font-size: 40px;
   font-weight: 300;
 }
@@ -1201,6 +1331,22 @@ h6 {
 
 .trailord {
   padding-top: 100px;
+  position: relative;
+}
+
+.trailord:before {
+  position: absolute;
+  content: "";
+  background-image: radial-gradient(#ffffff52, #0000);
+  width: 60%;
+  height: 300px;
+  left: 170px;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 100%;
+  filter: blur(41px);
+  top: 200px;
+  z-index: 0;
 }
 
 .trailord-txt h2 {
@@ -1237,18 +1383,18 @@ h6 {
 .prana-vtol-main {
   display: flex;
   background: #47474726;
-  border-radius: 80px;
-  background-image: linear-gradient(#00000078, #0000);
+  padding: 60px 100px;
+  margin-top: 0;
+  gap: 220px;
+  border-radius: 80px 80px 0 0;
+  background-image: linear-gradient(360deg, #0c0c0c, #0000);
   box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border-left: 1px solid #ffffff59;
+  border-left: 1px solid #ffffff0f;
   border-bottom: 0;
-  border-right: 1px solid #ffffff17;
+  border-right: 1px solid #ffffff0f;
   border-top: 1px solid #ffffff38;
-  padding: 60px 100px;
-  margin-top: 0px;
-  gap: 220px;
 }
 
 .prana-vtol-quad-img {
@@ -1258,6 +1404,7 @@ h6 {
 
 .img-box {
   display: flex;
+  position: relative;
 }
 
 .compare {
@@ -1274,6 +1421,9 @@ h6 {
   font-size: 24px;
   padding-bottom: 25px;
   padding-left: 30px;
+  background: -webkit-linear-gradient(#f0f0f09c, #f0f0f000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .compare p {
@@ -1306,11 +1456,36 @@ h6 {
 .parts-label-heading {
   text-align: center;
   padding-top: 130px;
+  padding-bottom: 50px;
+}
+
+.tech-tab button.nav-link.active {
+  color: #58B0F9;
+  border-bottom: 1px solid #58B0F9;
+}
+
+
+.tech-tab button.nav-link {
+  padding: 0 20px 10px !important;
+  color: #f0f2f778;
+  font-size: 20px;
+  background: transparent !important;
+  border: none;
+  border-bottom: 1px solid #ffffff54;
+}
+
+.tech-tab {
+  gap: 30px;
+  border: none;
 }
 
 .parts-label-heading h2 {
-  color: #fff;
+  color: #F0F2F7;
   font-size: 40px;
+}
+
+.parts-label-heading h2 span {
+  color: #f0f2f747;
 }
 
 .tech-spec-list {
@@ -1343,7 +1518,7 @@ h6 {
 }
 
 .bg {
-  background: #1972bc47;
+  background: #1972bc24;
 }
 
 .tech-spec-list ul {
@@ -1358,14 +1533,25 @@ h6 {
 }
 
 .tech-spec-list ul li h5 {
-  color: #fff;
+  color: #ffffff96;
   font-size: 16px;
+  font-weight: 300;
 }
 
 .tech-spec-list ul li {
   width: 40%;
-  color: #fff;
+  color: #ffffff91;
   font-size: 17px;
+}
+
+.roch-icon img {
+  height: auto;
+  width: 80px;
+}
+
+.roch-icon {
+  text-align: right;
+  padding-top: 20px;
 }
 
 .tab-content {
@@ -1407,7 +1593,7 @@ h6 {
 }
 
 .airquality_inner_form {
-  max-width: 950px;
+  max-width: 1060px;
   margin: 0 auto 30px;
   background: #47474726;
   border-radius: 30px;
@@ -1415,7 +1601,7 @@ h6 {
   box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border-left: 1px solid #ffffff59;
+  border-left: 1px solid #ffffff17;
   border-bottom: 0;
   border-right: 1px solid #ffffff17;
   border-top: 1px solid #ffffff38;
@@ -1510,31 +1696,62 @@ ul.contact_info {
 .airqulality_contact_section.inner_container {
   margin-top: 100px;
   padding-top: 50px;
-  position: relative !important;
+  position: relative;
 }
 
 .airqulality_contact_section.inner_container:before {
   position: absolute;
   content: "";
-  background: #f0f8f0;
+  background-image: linear-gradient(180deg, #1972bc29, transparent);
   width: 100%;
-  height: 400px;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: -1;
+  z-index: 0;
 }
 
+
 .faq-section {
-  margin-top: 200px;
-  padding-top: 70px;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 .faq-heading h2 {
-  color: #F0F2F7;
+  color: #f0f2f7;
   font-size: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+  width: 30%;
+  font-weight: 300;
+}
+
+.accordion-button {
+  background: #1972bc2e;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.collapse.show {
+  background: #1972bc;
+  border-radius: 0 0 5px 5px;
+}
+
+.accordion-button:after {
+  filter: brightness(65.5);
+}
+
+.faq-tab-para {
+  color: #ffffffb5;
+  padding-top: 0;
+  width: 80%;
+}
+
+.accordion-item {
+  background: transparent;
+  border: none;
+  margin-bottom: 10px;
 }
 
 .faq-tab-title {
@@ -1555,13 +1772,14 @@ ul.contact_info {
 }
 
 .introducing_box.sub_title_box p {
-  color: #F0F2F7;
+  color: #f0f2f7a1;
   font-size: 18px;
 }
 
 
 .introducing_box.sub_title_box {
   padding-bottom: 30px;
+  position: relative;
 }
 
 .airquality_contact_box input {
@@ -1605,6 +1823,13 @@ input.wpcf7-submit {
   }
 }
 
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #1972BC;
+  box-shadow: none;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
 
 
 /* Responsive adjustments for Quad specs */
@@ -1761,6 +1986,7 @@ input.wpcf7-submit {
     top: -10px;
     right: 0;
     left: 0px;
+    text-align: center;
   }
 
   .drone-description {
@@ -1787,7 +2013,7 @@ input.wpcf7-submit {
   }
 
   .category-tabs {
-    justify-content: center;
+    justify-content: start;
     gap: 30px;
   }
 
@@ -1911,7 +2137,7 @@ input.wpcf7-submit {
 
 @media (max-width: 992px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 30px;
   }
 
   .hero-drone-image img {
@@ -1930,12 +2156,24 @@ input.wpcf7-submit {
   }
 
   .hero-drone-image {
-    margin-top: -40px;
+    margin-top: -30px !important;
     margin-bottom: -30px;
   }
 
   .hero-drone-image img {
-    max-width: 350px;
+    max-width: 450px;
+  }
+
+  .drone-image {
+    text-align: center;
+  }
+
+  .drone-image img {
+    max-width: 75%;
+  }
+
+  .align-items-center {
+    flex-direction: column-reverse;
   }
 
   .hero-subtitle {
@@ -1949,7 +2187,7 @@ input.wpcf7-submit {
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 30px;
   }
 
   .hero-drone-image {
@@ -2084,7 +2322,25 @@ input.wpcf7-submit {
     border-radius: 20px;
     border-bottom: 0;
     padding: 15px;
+    gap: 15px;
     flex-direction: column;
+  }
+
+  .map-img ul li p {
+    font-size: 14px;
+  }
+
+  .map-img ul li h3 {
+    font-size: 16px;
+    padding-top: 15px;
+  }
+
+  .map-img ul li img {
+    border-radius: 13px;
+  }
+
+  .map-box {
+    margin-bottom: 0px;
   }
 
   .map-box ul li img {
@@ -2118,10 +2374,39 @@ input.wpcf7-submit {
     height: 100%;
   }
 
+  .advance-air-tech:after {
+    height: 60%;
+  }
+
   .thermal-camera .container {
     background-size: cover;
     height: auto;
-    padding-top: 20px;
+    background-position: center;
+    padding-top: 70px;
+  }
+
+  .advance-air-tech:before {
+    height: 60%;
+  }
+
+  .quad-drone {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .labelling-drone:before {
+    background-size: 100%;
+    height: 500px;
+    width: 100%;
+    top: 340px;
+  }
+
+  .gallery-title {
+    font-size: 30px;
+  }
+
+  .night-vision-txt ul {
+    margin: 20px 10px 0;
   }
 
   .night-vision-txt h2 {
@@ -2141,7 +2426,7 @@ input.wpcf7-submit {
   }
 
   .night-vision-txt ul li {
-    padding: 20px 15px;
+    padding: 15px 10px;
   }
 
   .high-capacity .container {
@@ -2353,6 +2638,21 @@ input.wpcf7-submit {
   .drone-image:before {
     height: 200px;
   }
+
+  .trailord:before {
+    width: 100%;
+    height: 140px;
+    left: 0;
+  }
+
+  .introducing_box.sub_title_box p {
+    font-size: 16px;
+  }
+
+  .faq-heading h2 {
+    font-size: 30px;
+    width: 90%;
+  }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
@@ -2504,6 +2804,17 @@ input.wpcf7-submit {
     height: 250px;
     bottom: 100px;
   }
+
+  .category-tabs {
+    justify-content: center;
+  }
+
+  .quad-drone {
+    text-align: left !important;
+  }
+  .gallery-slider-card .slider-thumbnail {
+    height: 50px;
+}
 }
 
 @media only screen and (min-width: 1023px) and (max-width: 1366px) {}

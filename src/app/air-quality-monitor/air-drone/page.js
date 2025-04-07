@@ -197,7 +197,7 @@ export default function AirDronePage() {
                 Request a quote
               </button>
               <button>
-              <Image src="/img/hero-btn-icon.png" alt="Logo" width={20} height={20} />
+                <Image src="/img/hero-btn-icon.png" alt="Logo" width={20} height={20} />
               </button>
             </div>
           </div>
@@ -539,7 +539,7 @@ export default function AirDronePage() {
             <div className="row">
               <div className="monitor-tech">
                 <h2>Advanced Air Quality Monitoring Technology</h2>
-                <p>Both drones leverage AI-powered sensor suites to detect and map pollutants, enabling</p>
+                <p><span>Both drones leverage</span> AI-powered sensor <span>suites to</span> detect and map pollutants, enabling</p>
               </div>
             </div>
           </div>
@@ -628,7 +628,7 @@ export default function AirDronePage() {
                     <li>
                       <span className="parameter-box">
                         <Image src="/img/Humidity.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">Humidity</span>
+                        <span className="parameter-txt">Humid</span>
                       </span>
                     </li>
                     <li>
@@ -670,7 +670,7 @@ export default function AirDronePage() {
                     <li>
                       <span className="parameter-box">
                         <Image src="/img/TEMPERATURE.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">TEMPERATURE</span>
+                        <span className="parameter-txt">TEMP</span>
                       </span>
                     </li>
                     <li>
@@ -798,7 +798,7 @@ export default function AirDronePage() {
                 <div className="high-capacity-txt">
                   <h2>5000 mAh </h2>
                   <h3>High capacity Battery</h3>
-                  <p>Up to 90km range with 90minute flight time ( 4SP and 3S Li-ion )</p>
+                  <p>Up to <span>90km</span> range with <span>90minute</span> flight time ( <span>4SP and 3S Li-ion</span> )</p>
                   <ul>
                     <li>4SP</li>
                     <li>3S Li-ion</li>
@@ -816,7 +816,7 @@ export default function AirDronePage() {
               <div className="col-lg-6">
                 <div className="light-weight-drone-txt">
                   <h2><span>Lightweight Drone</span> for Quick & Easy Air Monitoring </h2>
-                  <p>Smallest, fastest Air Quality Drone as Weighing just 720g— perfect for quick pollution checks in cities. it is easy to deploy and manoeuvre, making it perfect for localized pollution tracking.</p>
+                  <p>Smallest, fastest Air Quality Drone as Weighing just <span> 720g—</span> perfect for quick pollution checks in cities. it is easy to <span>deploy and manoeuvre,</span> making it perfect for localized <span>pollution tracking.</span></p>
                 </div>
               </div>
               <div className="col-lg-6">
@@ -840,7 +840,7 @@ export default function AirDronePage() {
               <div className="col-lg-6">
                 <div className="long-enduru-drone-txt">
                   <h2><span>Long-Endurance Drone</span> for Large-Scale Pollution Mapping </h2>
-                  <p>Designed for big missions, the Prana Air Drone can fly up to 90 km and stay airborne for long time. As whether monitoring industrial regions or large areas, it ensures maximum coverage with precise air quality insights!</p>
+                  <p>Designed for <span>big missions,</span> the Prana Air Drone can fly up to <span>90 km</span> and stay <span>airborne for long time.</span> As whether monitoring <span>industrial regions or large areas,</span> it ensures maximum coverage with precise air quality insights!</p>
                 </div>
               </div>
             </div>
@@ -931,17 +931,26 @@ export default function AirDronePage() {
         <section className="labelling-drone">
           <div className="container">
             <div className="row">
-              <div className="col-lg-5">
+              <div className="col-lg-6">
                 <div className="labell-txt">
                   <h2><span>Labelling</span> of Drone</h2>
-                  <p>High-resolution camera with GNSS integration for precise geo-tagging.</p>
                   <ul>
                     <li><a href="#">Request a quote</a></li>
                     <li><a href="#"><Image src="/img/icon.png" alt="Logo" width={200} height={100} /></a></li>
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-7">
+              <div className="col-lg-6">
+                <div className="labell-txt">
+                  <p>High-resolution camera with <span>GNSS integration</span> for precise <span>geo-tagging.</span></p>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="labell-img quad-drone">
+                  <Image src="/img/prana-quad-drone.webp" alt="Logo" width={200} height={100} />
+                </div>
+              </div>
+              <div className="col-lg-6">
                 <div className="labell-img">
                   <Image src="/img/labelling-of-drone.webp" alt="Logo" width={200} height={100} />
                 </div>
@@ -955,7 +964,7 @@ export default function AirDronePage() {
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
-                <h2 className="gallery-title">Product Gallery</h2>
+                <h2 className="gallery-title">Product <span>Gallery</span></h2>
               </div>
               <div className="col-lg-6">
                 <div className="category-tabs gallery-tab" ref={tabsRef}>
@@ -994,7 +1003,7 @@ export default function AirDronePage() {
                             <ChevronUpIcon />
                           </button>
 
-                          <div className="slider-thumbnails">
+                          <div className="slider-thumbnails gallery-thumbnail">
                             {photpGallaery.map((image, index) => (
                               <div
                                 key={index}
@@ -1147,7 +1156,7 @@ export default function AirDronePage() {
             <div className="row">
               <div className="col-md-12">
                 <div className="parts-label-heading">
-                  <h2>Technical Specifications</h2>
+                  <h2><span>Technical</span> Specifications</h2>
                 </div>
               </div>
             </div>
@@ -1449,11 +1458,19 @@ export default function AirDronePage() {
                           <li>66mm X 40mm X 16mm </li>
                         </ul>
                       </div>
-                    </div>
+                    </div>                  
                   </div>
                 </div>
               </div>
             </div>
+            <div className="row">
+                      <div className="col-md-6"></div>
+                      <div className="col-md-6">
+                        <div className="roch-icon">
+                          <Image src="/img/rohs.png" alt="rohs" width={50} height={50} />
+                        </div>
+                      </div>
+                    </div>
           </div>
         </section>
 
