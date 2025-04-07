@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import "./home.css"
 
 export default function PranaAirHomepage() {
   // State for slider
@@ -37,7 +38,7 @@ export default function PranaAirHomepage() {
                 Simplify Your <span className="text-highlight">Air Quality Monitoring</span>
               </h1>
               <p>Keep tabs on your indoor and outdoor air quality index using cutting-edge technology devices.</p>
-              <Link href="/explore" className="hero-button">
+              <Link href="/air-quality-monitor" className="hero-button">
                 Explore More
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/hero-button-icon.png"
@@ -56,7 +57,7 @@ export default function PranaAirHomepage() {
                   <div className="all-device">
                     <ul>
                       <li>
-                        <Link href="/products/sensible-plus">
+                        <Link href="/air-quality-monitor/ambient-air-monitor/prana-sense">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/10/prana-air-sensible-plus-monitor.webp"
                             alt="prana air sensible plus indoor air quality monitor"
@@ -80,7 +81,7 @@ export default function PranaAirHomepage() {
                     </ul>
                     <ul className="second-row">
                       <li className="mt">
-                        <Link href="/products/pocket-pm25">
+                        <Link href="/air-quality-monitor/handheld/pocket-monitor/">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/10/Pocket-PM2.5-Monitor-WiFi.webp"
                             alt="prana air pocket pm2.5 monitor"
@@ -91,7 +92,7 @@ export default function PranaAirHomepage() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/products/cair-plus">
+                        <Link href="/air-quality-monitor/cair-monitor/">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/10/Cair-plus-Indoor-Air-Quality-Monitor.webp"
                             alt="prana air cair+ indoor air quality monitor"
@@ -108,7 +109,7 @@ export default function PranaAirHomepage() {
                   <div className="all-device">
                     <ul>
                       <li>
-                        <Link href="/products/prana-sense">
+                        <Link href="/air-quality-monitor/ambient-air-monitor/prana-sense/">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/10/Highly-accurate-prana-senes-monitor.webp"
                             alt="prana air prana sense ambient air quality monitor"
@@ -119,7 +120,7 @@ export default function PranaAirHomepage() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/products/co2-monitor">
+                        <Link href="/air-quality-monitor/pocket-co2-monitor/">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/10/Worlds-Smallest-CO2-Monitor.webp"
                             alt="prana air co2 air quality monitor"
@@ -132,7 +133,7 @@ export default function PranaAirHomepage() {
                     </ul>
                     <ul className="second-row">
                       <li className="mt">
-                        <Link href="/products/sensible">
+                        <Link href="/air-quality-monitor/sensible-air-monitor/">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/10/sensible-monitor.webp"
                             alt="prana air sensible indoor air quality monitor"
@@ -176,7 +177,7 @@ export default function PranaAirHomepage() {
             </div>
             <div className="parameter-box">
               <div className="firstn">
-                <a href="https://www.pranaair.com/what-is-particulate-matter-pm/" className="parameter-btn param-1">
+                <Link href="/what-is-particulate-matter-pm/" className="parameter-btn param-1">
                   <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-pm10.png" alt="pm10 pollutant" width={55} height={55} />
                   PM10
                   <Image
@@ -186,9 +187,9 @@ export default function PranaAirHomepage() {
                     width={15}
                     height={15}
                   />
-                </a>
+                </Link>
 
-                <a href="https://www.pranaair.com/what-is-nitrogen-dioxide-no2/" className="parameter-btn param-2">
+                <Link href="/what-is-nitrogen-dioxide-no2/" className="parameter-btn param-2">
                   <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-no2.png" alt="no2 pollutant" width={55} height={55} />
                   NO2
                   <Image
@@ -198,9 +199,9 @@ export default function PranaAirHomepage() {
                     width={15}
                     height={15}
                   />
-                </a>
+                </Link>
 
-                <a href="https://www.pranaair.com/what-is-ozone-o3/" className="parameter-btn param-3">
+                <Link href="/what-is-ozone-o3/" className="parameter-btn param-3">
                   <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-o3.png" alt="ozone pollutant" width={55} height={55} />
                   O3
                   <Image
@@ -210,10 +211,10 @@ export default function PranaAirHomepage() {
                     width={15}
                     height={15}
                   />
-                </a>
+                </Link>
               </div>
               <div className="firstn">
-                <a href="https://www.pranaair.com/what-is-carbon-monoxide-co/" className="parameter-btn param-4">
+                <Link href="/what-is-carbon-monoxide-co/" className="parameter-btn param-4">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/co-parameter.png"
                     alt="co pollutant"
@@ -228,9 +229,9 @@ export default function PranaAirHomepage() {
                     width={15}
                     height={15}
                   />
-                </a>
+                </Link>
 
-                <a href="https://www.pranaair.com/what-is-particulate-matter-pm/" className="parameter-btn param-5">
+                <Link href="/what-is-particulate-matter-pm/" className="parameter-btn param-5">
                   <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-pm2.5.png" alt="pm2.5 pollutant" width={55} height={55} />
                   PM2.5
                   <Image
@@ -240,9 +241,9 @@ export default function PranaAirHomepage() {
                     width={15}
                     height={15}
                   />
-                </a>
+                </Link>
 
-                <a href="https://www.pranaair.com/what-is-hydrogen-sulfide-h2s/" className="parameter-btn param-6">
+                <Link href="/what-is-hydrogen-sulfide-h2s/" className="parameter-btn param-6">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-h2s.png"
                     alt="h2s pollutant"
@@ -257,10 +258,10 @@ export default function PranaAirHomepage() {
                     width={15}
                     height={15}
                   />
-                </a>
+                </Link>
               </div>
               <div className="firstn last-para">
-                <a href="https://www.pranaair.com/what-is-sulfur-dioxide-so2/" className="parameter-btn param-7">
+                <Link href="/what-is-sulfur-dioxide-so2/" className="parameter-btn param-7">
                   <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-so2.png" alt="so2 pollutant" width={55} height={55} />
                   SO2
                   <Image
@@ -270,7 +271,7 @@ export default function PranaAirHomepage() {
                     width={15}
                     height={15}
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -341,7 +342,7 @@ export default function PranaAirHomepage() {
                 <div className="aq-monitor-box">
                   <div className="discover-air-quality-page-img">
                     <Link
-                      href="https://www.pranaair.com/air-quality-monitor/handheld/pocket-monitor/"
+                      href="/air-quality-monitor/handheld/pocket-monitor/"
                       className="page-link"
                     >
                       <Image
@@ -366,7 +367,7 @@ export default function PranaAirHomepage() {
                     </Link>
                   </div>
                   <div className="discover-air-quality-page-img">
-                    <Link href="https://www.pranaair.com/air-quality-monitor/air-drone/" className="page-link">
+                    <Link href="/air-quality-monitor/air-drone/" className="page-link">
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-Air-Quality-Drone.jpg"
                         alt="prana air air quality drone"
@@ -391,7 +392,7 @@ export default function PranaAirHomepage() {
                 </div>
                 <div className="aq-monitor-last">
                   <div className="discover-air-quality-page-img cair-monitor">
-                    <Link href="https://www.pranaair.com/air-quality-monitor/cair-monitor/" className="page-link">
+                    <Link href="/air-quality-monitor/cair-monitor/" className="page-link">
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-indoor-Cair-Monitor.jpg"
                         alt="prana air cair indoor air quality monitor"
@@ -415,7 +416,7 @@ export default function PranaAirHomepage() {
                   </div>
                   <div className="discover-air-quality-page-img cair-monitor ambient-lite">
                     <Link
-                      href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
+                      href="/air-quality-monitor/ambient-air-monitor/"
                       className="page-link"
                     >
                       <Image
@@ -440,7 +441,7 @@ export default function PranaAirHomepage() {
                     </Link>
                   </div>
                   <div className="see-more-box">
-                    <Link href="https://www.pranaair.com/air-quality-monitor/" className="see-more">
+                    <Link href="/air-quality-monitor/" className="see-more">
                       Know More
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
@@ -461,7 +462,7 @@ export default function PranaAirHomepage() {
                     <li>
                       <div className="discover-air-sensor-page-img">
                         <Link
-                          href="https://www.pranaair.com/air-quality-sensor/outdoor-pm-sensor/"
+                          href="/air-quality-sensor/outdoor-pm-sensor/"
                           className="sensor-page-link"
                         >
                           <div className="img-box">
@@ -491,7 +492,7 @@ export default function PranaAirHomepage() {
                     <li>
                       <div className="discover-air-sensor-page-img">
                         <Link
-                          href="https://www.pranaair.com/air-quality-sensor/carbon-dioxide-co2-sensor/"
+                          href="/air-quality-sensor/carbon-dioxide-co2-sensor/"
                           className="sensor-page-link"
                         >
                           <div className="img-box">
@@ -521,7 +522,7 @@ export default function PranaAirHomepage() {
                     <li>
                       <div className="discover-air-sensor-page-img">
                         <Link
-                          href="https://www.pranaair.com/air-quality-sensor/carbon-monoxide-co-sensor/"
+                          href="/air-quality-sensor/carbon-monoxide-co-sensor/"
                           className="sensor-page-link"
                         >
                           <div className="img-box">
@@ -551,7 +552,7 @@ export default function PranaAirHomepage() {
                     <li>
                       <div className="discover-air-sensor-page-img">
                         <Link
-                          href="https://www.pranaair.com/air-quality-sensor/sulfur-dioxide-so2-sensor/"
+                          href="/air-quality-sensor/sulfur-dioxide-so2-sensor/"
                           className="sensor-page-link"
                         >
                           <div className="img-box">
@@ -583,7 +584,7 @@ export default function PranaAirHomepage() {
                     <li>
                       <div className="discover-air-sensor-page-img">
                         <Link
-                          href="https://www.pranaair.com/air-quality-sensor/ammonia-nh3-sensor/"
+                          href="/air-quality-sensor/ammonia-nh3-sensor/"
                           className="sensor-page-link"
                         >
                           <div className="img-box">
@@ -613,7 +614,7 @@ export default function PranaAirHomepage() {
                     <li>
                       <div className="discover-air-sensor-page-img">
                         <Link
-                          href="https://www.pranaair.com/air-quality-sensor/ozone-o3-sensor/"
+                          href="/air-quality-sensor/ozone-o3-sensor/"
                           className="sensor-page-link"
                         >
                           <div className="img-box">
@@ -643,7 +644,7 @@ export default function PranaAirHomepage() {
                     <li>
                       <div className="discover-air-sensor-page-img">
                         <Link
-                          href="https://www.pranaair.com/air-quality-sensor/nitrogen-dioxide-no2-sensor/"
+                          href="/air-quality-sensor/nitrogen-dioxide-no2-sensor/"
                           className="sensor-page-link"
                         >
                           <div className="img-box">
@@ -672,7 +673,7 @@ export default function PranaAirHomepage() {
                     </li>
                     <li>
                       <div className="knwo-more-box">
-                        <Link href="https://www.pranaair.com/air-quality-sensor/" className="see-more">
+                        <Link href="/air-quality-sensor/" className="see-more">
                           Know More
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
@@ -692,7 +693,7 @@ export default function PranaAirHomepage() {
               <div className={`custom-content ${activeTab === 2 ? "active" : ""}`}>
                 <div className="aq-monitor-pcb-box">
                   <div className="discover-air-quality-pcb-page-img">
-                    <Link href="https://www.pranaair.com/air-quality-pcb-board/" className="pcb-page-link">
+                    <Link href="/air-quality-pcb-board/" className="pcb-page-link">
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/09/pranaair-pcb-board.webp"
                         alt="air quality pcb boards of prana air"
@@ -722,7 +723,7 @@ export default function PranaAirHomepage() {
                 <div className="aq-monitor-pcb-box">
                   <div className="discover-air-quality-pcb-page-img weather-st-img">
                     <Link
-                      href="https://www.pranaair.com/air-quality-monitor/weather-station/"
+                      href="/air-quality-monitor/weather-station/"
                       className="pcb-page-link"
                     >
                       <Image
@@ -753,7 +754,7 @@ export default function PranaAirHomepage() {
               <div className={`custom-content ${activeTab === 4 ? "active" : ""}`}>
                 <div className="aq-monitor-box">
                   <div className="discover-air-quality-page-img">
-                    <Link href="https://www.pranaair.com/wearable-air-purifier/" className="page-link">
+                    <Link href="/wearable-air-purifier/" className="page-link">
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Hanging-Purifier.jpg"
                         alt="prana air wearable personal air purifier"
@@ -776,7 +777,7 @@ export default function PranaAirHomepage() {
                     </Link>
                   </div>
                   <div className="discover-air-quality-page-img">
-                    <Link href="https://www.pranaair.com/fresh-air-machine/" className="page-link">
+                    <Link href="/fresh-air-machine/" className="page-link">
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Fresh-air-Machine.jpg"
                         alt="prana air fresh air machine as air quality solution"
@@ -801,7 +802,7 @@ export default function PranaAirHomepage() {
                 </div>
                 <div className="aq-monitor-last">
                   <div className="discover-air-quality-page-img cair-monitor ambient-lite">
-                    <Link href="https://www.pranaair.com/outdoor-air-purifier/" className="page-link">
+                    <Link href="/outdoor-air-purifier/" className="page-link">
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-outdoor-air-Purifier.jpg"
                         alt="prana air outdoor air purifier"
@@ -824,7 +825,7 @@ export default function PranaAirHomepage() {
                     </Link>
                   </div>
                   <div className="discover-air-quality-page-img cair-monitor ambient-lite">
-                    <Link href="https://www.pranaair.com/car-air-filter/" className="page-link">
+                    <Link href="/car-air-filter/" className="page-link">
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Car-cabin-filters.jpg"
                         alt="prana air anti pollution car air filter"
@@ -968,7 +969,7 @@ export default function PranaAirHomepage() {
                         always know the air quality around you, wherever you are.
                       </p>
                       <div className="connect-btn-box">
-                        <a href="https://apps.apple.com/tt/app/aqi/id1439684571" className="iso-btn">
+                        <Link href="https://apps.apple.com/tt/app/aqi/id1439684571" className="iso-btn">
                           <ul className="seamless-connect-btn">
                             <li>
                               <Image
@@ -984,8 +985,8 @@ export default function PranaAirHomepage() {
                               <span className="btan-txt">App Store</span>
                             </li>
                           </ul>
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.aqi.data" className="play-store-btn">
+                        </Link>
+                        <Link href="https://play.google.com/store/apps/details?id=com.aqi.data" className="play-store-btn">
                           <ul className="seamless-connect-btn">
                             <li>
                               <Image
@@ -1001,7 +1002,7 @@ export default function PranaAirHomepage() {
                               <span className="btan-txt">Google Play</span>
                             </li>
                           </ul>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <div className="connectivety-tab-bg">
@@ -1029,7 +1030,7 @@ export default function PranaAirHomepage() {
                         Enjoy seamless integration across multiple devices for a complete picture of your air
                         environment.
                       </p>
-                      <a href="https://www.aqi.in/userlogin" className="dashboard-button">
+                      <Link href="https://www.aqi.in/userlogin" className="dashboard-button">
                         <ul className="seamless-connect-btn dash-btn">
                           <li>
                             <Image
@@ -1045,7 +1046,7 @@ export default function PranaAirHomepage() {
                             <span className="btan-txt">Dashboard</span>
                           </li>
                         </ul>
-                      </a>
+                      </Link>
                     </div>
                     <div className="connectivety-tab-bg">
                       <Image
@@ -1823,1950 +1824,7 @@ export default function PranaAirHomepage() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Custom CSS */}
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-        /* Base Styles */
- h1,
- h2,
- h3,
- h4,
- h5,
- h6,
- p,
- a {
-     font-family: 'Nunito Sans', sans-serif;
- }
-
- a {
-     text-decoration: none;
- }
-
- /* Hero Section */
- .hero-section {
-     background-image: url(https://www.pranaair.com/wp-content/uploads/2024/08/breathe-freely-embrace-the-power-of-clean-air-scaled.webp);
-     background-size: cover;
-     height: 950px;
-     position: relative;
- }
-
- .hero-content-wrapper {
-     display: flex;
-     flex-direction: row;
-     padding-top: 100px;
- }
-
- .hero-text-content {
-     width: 40%;
-     padding-top: 50px;
- }
-
- .hero-text-content h1 {
-     color: #fff;
-     font-size: 54px;
-     font-weight: 400;
-     line-height: 1.2;
- }
-
- .text-highlight {
-     color: #8FE758;
- }
-
- .hero-text-content p {
-     color: #fff;
-     font-size: 18px;
-     width: 80%;
-     line-height: 30px;
-     padding-top: 10px;
- }
-
- .hero-button {
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     color: #fff;
-     font-size: 16px;
-     font-weight: 400;
-     border: 2px solid #fff;
-     border-radius: 50px;
-     justify-content: center;
-     padding: 15px 10px;
-     width: 60%;
-     margin-top: 20px;
-     transition: .2s linear;
-     text-decoration: none;
- }
-
- .hero-button-icon {
-     background: #fff;
-     border-radius: 100%;
-     transition: .2s linear;
-     width: 10%;
-     height: auto;
- }
-
- .hero-button:hover {
-     background: rgba(77, 138, 49, 0.63);
- }
-
- .hero-image-grid {
-     width: 60%;
-     position: relative;
- }
-
- .slider-container {
-     position: relative;
-     height: 500px;
- }
-
- .slider-item {
-     position: absolute;
-     top: 50px;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     opacity: 0;
-     transition: opacity 1s ease-in-out;
- }
-
- .slider-item.active {
-     opacity: 1;
-     z-index: 9;
- }
-
- .all-device ul {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-     display: flex;
-     gap: 10px;
- }
-
- .all-device ul.second-row {
-     margin-top: 10px;
- }
-
- .all-device ul li.mt {
-     margin-top: -30px;
- }
-
- .device-image {
-     border-radius: 10px;
-     width: 100%;
-     height: auto;
- }
-
- /* Parameters Section */
- .explore-functionality-sec {
-     height: 850px;
-     margin-top: 50px;
-     position: relative;
-     overflow: visible;
-     background: url(https://www.pranaair.com/wp-content/uploads/2024/08/parameters-bg-scaled.jpg);
- }
-
- .parameters-content {
-     display: flex;
-     flex-direction: row;
- }
-
- .function-txt {
-     width: 50%;
-     margin-top: 50px;
- }
-
- .function-txt h2 {
-     color: #263D4F;
-     font-size: 54px;
-     line-height: 62px;
-     text-transform: capitalize;
- }
-
- .function-txt p {
-     color: #263D4F;
-     font-size: 18px;
-     font-weight: 600;
- }
-
- .parameter-box {
-     width: 60%;
-     margin-top: 150px;
- }
-
- .firstn {
-     display: flex;
-     gap: 30px;
- }
-
- .parameter-btn {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 20px;
-     background: rgba(77, 86, 75, 0.41);
-     border-radius: 50px;
-     padding: 10px 0;
-     transition: .2s linear;
-     color: #fff;
-     text-decoration: none;
-     width: 100%;
- }
-
- .parameter-btn:hover {
-     background: #6b715c;
- }
-
- .parameter-arrow {
-     width: 15px;
- }
-
- .param-1 {
-     animation-name: floating;
-     animation-duration: 4s;
-     animation-iteration-count: infinite;
-     animation-timing-function: ease-in-out;
- }
-
- .param-2 {
-     position: relative;
-     top: -40px;
-     animation-name: floating;
-     animation-duration: 3s;
-     animation-iteration-count: infinite;
-     animation-timing-function: ease-in-out;
- }
-
- .param-3 {
-     position: relative;
-     left: 50px;
-     animation-name: floating;
-     animation-duration: 2s;
-     animation-iteration-count: infinite;
-     animation-timing-function: ease-in-out;
- }
-
- .param-4 {
-     position: relative;
-     top: 50px;
-     animation-name: floating;
-     animation-duration: 3s;
-     animation-iteration-count: infinite;
-     animation-timing-function: ease-in-out;
- }
-
- .param-5 {
-     position: relative;
-     left: 40px;
-     animation-name: floating;
-     animation-duration: 3s;
-     animation-iteration-count: infinite;
-     animation-timing-function: ease-in-out;
- }
-
- .param-6 {
-     position: relative;
-     top: 100px;
-     animation-name: floating;
-     animation-duration: 2s;
-     animation-iteration-count: infinite;
-     animation-timing-function: ease-in-out;
- }
-
- .param-7 {
-     position: relative;
-     top: 100px;
-     left: 200px;
-     width: 32%;
-     animation-name: floating;
-     animation-duration: 2s;
-     animation-iteration-count: infinite;
-     animation-timing-function: ease-in-out;
- }
-
- .last-para a {
-     width: 32%;
- }
-
- @keyframes floating {
-     0% {
-         transform: translate(0, 0);
-     }
-
-     65% {
-         transform: translate(0, 15px);
-     }
-
-     100% {
-         transform: translate(0, 0);
-     }
- }
-
- /* Discover Air Quality Section */
- .discover-air-quality {
-     padding-top: 80px;
- }
-
- .discover-header {
-     display: flex;
-     flex-direction: row;
-     margin-bottom: 50px;
- }
-
- .discover-air-quality-heading {
-     width: 50%;
- }
-
- .discover-air-quality-heading h2 {
-     color: #263D4F;
-     font-size: 54px;
-     line-height: 62px;
- }
-
- .discover-air-quality-para {
-     width: 50%;
- }
-
- .discover-air-quality-para p {
-     color: #263D4F;
-     font-weight: 600;
-     font-size: 18px;
-     padding-left: 200px;
-     padding-top: 10px;
- }
-
- .row-line {
-     border-bottom: 1px solid rgba(0, 0, 0, 0.17);
-     padding-bottom: 30px;
-     margin-bottom: 50px;
- }
-
- .discover-content {
-     display: flex;
-     flex-direction: row;
- }
-
- .tabs-container {
-     width: 25%;
- }
-
- .custom-tabs {
-     display: flex;
-     flex-direction: column;
-     width: 100%;
- }
-
- .custom-tab {
-     cursor: pointer;
-     padding: 15px;
-     text-align: center;
-     border-bottom: 1px solid #c3c3c3;
-     transition: all 0.3s ease;
-     margin-bottom: 10px;
- }
-
- .custom-tab:hover {
-     background-color: #67b455;
-     color: white;
- }
-
- .custom-tab.active {
-     background-color: #67b455;
-     color: white;
- }
-
- .product-catgeory h3 {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     margin: 0;
-     font-size: 18px;
-     font-weight: normal;
- }
-
- .tab-arrow {
-     display: inline-block;
-     transform: rotate(-45deg);
- }
-
- .custom-tab.active .tab-arrow {
-     transform: rotate(0);
- }
-
- .custom-content-container {
-     width: 75%;
-     padding-left: 40px;
- }
-
- .custom-content {
-     display: none;
- }
-
- .custom-content.active {
-     display: block;
- }
-
- .aq-monitor-box {
-     display: flex;
-     gap: 15px;
- }
-
- .discover-air-quality-page-img {
-     position: relative;
-     overflow: hidden;
-     height: auto;
-     width: 50%;
- }
-
- .monitor-image,
- .purifier-image {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 8px;
- }
-
- .discover-air-quality-page-img ul {
-     list-style: none;
-     padding: 0;
-     display: flex;
-     align-items: center;
-     margin-top: 0;
-     gap: 20px;
-     position: absolute;
-     bottom: 0px;
-     left: 15px;
-     color: white;
- }
-
- .discover-air-quality-page-img ul li {
-     font-size: 16px;
-     font-weight: 500;
- }
-
- .arrow-icon {
-     filter: brightness(8.5);
-     transition: .2s linear;
- }
-
- .discover-air-quality-page-img:hover .arrow-icon {
-     transform: rotate(45deg);
- }
-
- .aq-monitor-last {
-     display: flex;
-     gap: 15px;
-     margin-top: 15px;
- }
-
- .cair-monitor {
-     width: 100%;
- }
-
- .see-more-box {
-     width: 50%;
- }
-
- .see-more .arrow-icon {
-     filter: brightness(0.5);
- }
-
- .see-more {
-     display: flex;
-     align-items: center;
-     color: #263D4F;
-     font-size: 14px;
-     font-weight: 700;
-     justify-content: space-around;
-     border: 1px solid #263D4F;
-     border-radius: 50px;
-     padding: 10px;
-     margin-top: 90px;
-     text-decoration: none;
- }
-
- .see-more:hover {
-     background: #7ab261;
-     border: 1px solid #fff;
-     color: #fff;
- }
-
- .see-more:hover .arrow-icon {
-     transform: rotate(45deg);
-     filter: brightness(9.5);
- }
-
- /* Sensors Tab */
- .sensor-row {
-     margin-bottom: 20px;
- }
-
- .all-sensor {
-     margin: 0 0 40px;
-     display: flex;
-     gap: 10px;
-     list-style: none;
-     padding: 0;
- }
-
- .discover-air-sensor-page-img {
-     margin-bottom: 5px;
-     text-align: center;
- }
-
- .img-box {
-     height: 150px;
-     padding-top: 0;
- }
-
- .sensor-image {
-     width: 100%;
-     height: 100%;
-     object-fit: contain;
-     border-radius: 8px;
- }
-
- .co2-sensor-img {
-     width: 100%;
- }
-
- .discover-air-sensor-page-img ul {
-     list-style: none;
-     padding: 0 5px;
-     margin: -30px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 8px;
-     position: relative;
-     z-index: 1;
- }
-
- .discover-air-sensor-page-img ul li {
-     color: #fff;
-     font-size: 14px;
-     font-weight: 500;
- }
-
- /* PCB Tab */
- .aq-monitor-pcb-box {
-     margin-bottom: 20px;
- }
-
- .discover-air-quality-pcb-page-img {
-     text-align: center;
-     position: relative;
-     margin-bottom: 15px;
- }
-
- .pcb-image,
- .weather-image {
-     width: 100%;
-     border-radius: 8px;
- }
-
- .discover-air-quality-pcb-page-img ul {
-     list-style: none;
-     padding: 0 20px;
-     margin: -50px 0 0;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 8px;
-     position: relative;
-     z-index: 1;
- }
-
- .discover-air-quality-pcb-page-img ul li {
-     color: #fff;
-     font-size: 14px;
-     font-weight: 500;
- }
-
- /* Shopping Section */
- .shopping-section {
-     margin-top: 50px;
- }
-
- .shopping-content {
-     display: flex;
-     flex-direction: row;
- }
-
- .experince-heading {
-     width: 30%;
- }
-
- .experince-heading h3 {
-     color: #263D4F;
-     font-size: 24px;
-     line-height: 32px;
-     padding-top: 50px;
- }
-
- .experience-function {
-     width: 70%;
-     display: flex;
-     gap: 60px;
- }
-
- .experince-shoping {
-     list-style: none;
-     padding: 0;
-     margin: 50px 0 0;
-     display: flex;
-     gap: 100px;
- }
-
- .experince-shoping li {
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     position: relative;
-     color: #263D4F;
-     font-size: 18px;
-     line-height: 20px;
- }
-
- .experince-shoping li:before {
-     position: absolute;
-     content: "";
-     background: rgba(38, 61, 79, 0.15);
-     width: 1px;
-     height: 40px;
-     right: -30px;
- }
-
- /* Seamless Connectivity Section */
- .seamless-connective {
-     padding-top: 100px;
-     background: url(https://www.pranaair.com/wp-content/uploads/2024/07/seamless-connection-background-scaled.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     margin-top: 100px;
-     padding-bottom: 60px;
- }
-
- .connectivity-header {
-     display: flex;
-     flex-direction: row;
-     margin-bottom: 50px;
- }
-
- .seamless-connect-heading {
-     width: 50%;
- }
-
- .seamless-connect-heading h2 {
-     font-size: 54px;
-     color: #263D4F;
-     line-height: 60px;
- }
-
- .seamless-txt {
-     width: 50%;
- }
-
- .seamless-txt p {
-     color: #263D4F;
-     font-size: 18px;
-     font-weight: 600;
-     padding-left: 200px;
-     padding-top: 10px;
- }
-
- .seamless-tab {
-     margin-top: 60px;
- }
-
- .tabs-header {
-     display: flex;
-     border-bottom: 1px solid #ddd;
-     margin-bottom: 30px;
- }
-
- .tab-button {
-     padding: 10px 20px;
-     margin-right: 20px;
-     background: none;
-     border: none;
-     cursor: pointer;
-     color: #263D4F;
-     font-size: 16px;
-     display: flex;
-     align-items: center;
-     gap: 10px;
- }
-
- .tab-button.active {
-     background-color: #7AB261;
-     color: white;
- }
-
- .tab-bg {
-     background: white;
-     border: 1px solid #DFDFDF;
-     border-radius: 10px;
-     overflow: hidden;
- }
-
- .panel-content {
-     display: flex;
-     flex-direction: row;
- }
-
- .connectivety-tab-text {
-         width: 50%;
-    padding: 70px 0 40px 80px;
- }
-
- .mob-heading {
-     padding: 0 0 20px;
-     margin: 0;
-     list-style: none;
-     display: flex;
-     align-items: center;
-     gap: 12px;
- }
-
- .connectivety-tab-text h3 {
-     color: #7AB261;
-     font-size: 20px;
-     margin: 0;
- }
-
- .connectivety-tab-text h4 {
-     color: #263D4F;
-     font-size: 26px;
-     font-weight: 600;
-     width: 70%;
-     line-height: 30px;
-     margin: 0;
- }
-
- .connectivety-tab-text p {
-     color: #263D4F;
-     font-size: 16px;
-     font-weight: 600;
-     width: 70%;
-     padding-bottom: 20px;
- }
-
- .connect-btn-box {
-     display: flex;
-     gap: 20px;
-     padding-top: 20px;
- }
-
- .connect-btn-box a {
-     width: 35%;
-     transition: .2s linear;
-     border-radius: 50px;
-     text-decoration: none;
- }
-
- .connect-btn-box a:hover {
-     box-shadow: 0 20px 20px rgba(190, 190, 190, 0.3);
- }
-
- .seamless-connect-btn {
-     list-style: none;
-     padding: 10px;
-     margin: 0;
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     justify-content: center;
-     border-radius: 50px;
-     height: 65px;
- }
-
- .iso-btn ul {
-     background: #7AB261;
- }
-
- .iso-btn ul li span {
-     color: #FFF;
- }
-
- .play-store-btn ul {
-     background: #E4E4EE;
- }
-
- .play-store-btn ul li span {
-     color: #31343D;
- }
-
- .btn-txt-small {
-     font-size: 10px;
- }
-
- .btan-txt {
-     font-size: 14px;
-     font-weight: 700;
-     display: block;
-     margin-top: -5px;
- }
-
- .dash-btn {
-     width: 30%;
-     height: 40px;
-     margin-top: 20px;
- }
-
- .connectivety-tab-bg {
-     width: 50%;
-     background: #F7F7FC;
-     position: relative;
-     left: -80px;
-     padding-top: 50px;
-     text-align: center;
- }
-
- .app-image {
-     display: inline-block;
-         height: auto;
- }
-
- .web-dash {
-     width: 70%;
-     padding-bottom: 70px;
-     height: auto;
- }
-
- .dash-btn li img {
-     height: auto;
-     width: 100%;
- }
-
- .tv-screen {
-     width: 70%;
-    padding-bottom: 70px;
-    height: auto;
- }
-
- /* Air Quality Drone Section */
- .air-quality-drone-secv {
-     background: url(https://www.pranaair.com/wp-content/uploads/2024/08/aqi-quality-drone-bcakground-scaled.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     height: 700px;
-     margin-top: 100px;
-     position: relative;
-     overflow: visible;
- }
-
- .drone-content {
-     display: flex;
-     flex-direction: row;
-     padding-top: 80px;
- }
-
- .air-quality-drone-txt {
-     width: 60%;
-     padding-top: 30px;
-     margin-top: -150px;
- }
-
- .air-quality-drone-txt h2 {
-     color: #263D4F;
-     font-size: 54px;
-     font-weight: 500;
- }
-
- .air-quality-drone-txt p {
-     color: #263D4F;
-     font-size: 18px;
-     padding-top: 10px;
-     width: 70%;
- }
-
- .air-quality-drone-txt a {
-     background: #67b455;
-     display: flex;
-     color: #fff;
-     text-decoration: none;
-     font-size: 14px;
-     font-weight: 500;
-     align-items: center;
-     gap: 10px;
-     justify-content: center;
-     padding: 15px;
-     border-radius: 50px;
-     width: 25%;
-     margin-top: 20px;
- }
-
- .air-quality-drone-txt a:hover {
-     background: #263d4f;
- }
-
- .drone-img {
-     width: 42%;
- }
-
- .drone-image {
-     width: 100%;
-     animation: float 2s ease-in-out infinite;
- }
-
- .controller {
-     margin-top: -300px;
- }
-
- .controller-image {
-     width: 100%;
-     height: auto;
- }
-
- /* Our Clientele Section */
- .our-clientele-sec {
-     padding-top: 150px;
- }
-
- .clientele-header {
-     display: flex;
-     flex-direction: row;
-     margin-bottom: 40px;
- }
-
- .our-client-heading {
-     width: 50%;
- }
-
- .our-client-heading h2 {
-     color: #263D4F;
-     font-size: 54px;
-     width: 40%;
-     line-height: 60px;
- }
-
- .our-client-para {
-     width: 50%;
- }
-
- .our-client-para p {
-     color: #263D4F;
-     font-size: 18px;
-     font-weight: 500;
-     padding-left: 200px;
-     padding-top: 10px;
- }
-
- .clint-br {
-     border-bottom: 1px solid rgba(38, 61, 79, 0.21);
-     padding-bottom: 30px;
-     margin-bottom: 40px;
- }
-
- .all-cliente-logo ul {
-     list-style: none;
-     padding: 0;
-     margin: 0;
-     display: flex;
-     flex-wrap: wrap;
- }
-
- .all-cliente-logo ul li {
-     display: inline-block;
-     width: 14%;
-     margin-bottom: 30px;
-     text-align: center;
- }
-
- /* Trusted Clients Section */
- .trusted-clients-sec {
-     background: #091205;
-     margin-top: 160px;
-     padding: 70px 0;
- }
-
- .trusted-clients-content {
-     display: flex;
-     flex-direction: row;
- }
-
- .trusted-clients-text {
-     width: 50%;
- }
-
- .counter-txt {
-     flex-direction: row;
-     display: flex;
- }
-
- .stats-number {
-     color: #7AB261;
-     font-weight: 800;
-     font-size: 84px;
-     font-family: 'Nunito Sans';
- }
-
- .counter_suffix {
-     color: #7AB261;
-     font-weight: 800;
-     font-size: 84px;
-     font-family: 'Nunito Sans';
- }
-
- .truted-client-heading {
-     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-     width: 60%;
-     padding-bottom: 10px;
- }
-
- .truted-client-heading h3 {
-     color: #FEFEFE;
-     font-size: 32px;
-     font-weight: 600;
-     line-height: 56px;
-     margin: 0;
- }
-
- .monitor-insalled-txt h3 {
-     color: #F7F7FC;
-     font-size: 30px;
-     font-weight: 500;
-     line-height: 46px;
-     width: 90%;
-     padding-top: 0;
-     margin-top: 20px;
- }
-
- .monitor-insalled-txt p {
-     color: #F7F7FC;
-     font-size: 18px;
-     font-weight: 400;
-     width: 70%;
-     opacity: 80%;
- }
-
- .trusted-clients-img {
-     width: 50%;
- }
-
- .clients-map {
-     width: 100%;
-     height: auto;
- }
-
- /* Case Studies Section */
- .case-studies-sec {
-     padding-top: 150px;
- }
-
- .case-studies-heading h2 {
-     color: #263D4F;
-     font-size: 54px;
-     line-height: 62px;
-     text-align: center;
-     padding-bottom: 50px;
- }
-
- .case-studies-slider {
-     overflow-x: auto;
-     padding: 20px 0;
- }
-
- .case-studies-slider-container {
-     display: flex;
-     gap: 20px;
-     padding: 0 20px;
- }
-
- .case-study-item {
-     position: relative;
-     width: 300px;
-     flex-shrink: 0;
- }
-
- .case-study-image {
-     width: 100%;
-     height: auto;
- }
-
- .case-study-item h3 {
-     color: white;
-     font-size: 16px;
-     position: absolute;
-     bottom: 20px;
-     left: 0;
-     padding: 0 20px;
-     z-index: 10;
-     line-height: 22px;
- }
-
- .case-study-item::before {
-     position: absolute;
-     content: "";
-     background-image: linear-gradient(0deg, #091205, transparent);
-     width: 100%;
-     height: 130px;
-     bottom: 0;
-     z-index: 1;
-     border-radius: 0 0 8px 8px;
- }
-
- /* Breathing Fresh Air Section */
- .breathing-fresh-air {
-     background: url(https://www.pranaair.com/wp-content/uploads/2024/07/young-beautiful-business-woman-is-resting-sofa-after-successful-working-day-rest-break-scaled.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     height: 570px;
-     margin-top: 100px;
-     position: relative;
- }
-
- .breathing-fresh-air-content {
-     display: flex;
-     justify-content: flex-end;
-     height: 100%;
-     align-items: center;
- }
-
- .breathing-fresh-air-txt {
-    background: #7ab261e8;
-    width: 50%;
-    margin-right: -195px;
-    padding: 50px 30px;
-    margin-top: 200px;
- }
-
- .breathing-fresh-air-txt h2 {
-     color: #FFF;
-     font-size: 40px;
-     line-height: 50px;
-     margin-bottom: 20px;
- }
-
- .fresh-air-button {
-     background: #fff;
-     display: flex;
-     color: #7AB261;
-     align-items: center;
-     gap: 10px;
-     justify-content: center;
-     border-radius: 50px;
-     width: 40%;
-     height: 50px;
-     transition: .2s linear;
-     text-decoration: none;
- }
-
- .fresh-air-button:hover {
-     box-shadow: 0 10px 10px rgba(39, 55, 33, 0.34);
- }
-
- .fresh-air-button:hover .button-icon {
-     transform: rotate(45deg);
- }
-
- /* Most Accurate Section */
- .most-accurate-row {
-     background: #091205;
-     height: 300px;
-     border-radius: 0 0 35px 35px;
-     position: relative;
-     overflow: hidden;
-     margin-top: -50px;
- }
-
- .most-accurate-row::before {
-     position: absolute;
-     content: "";
-     background: url(https://www.pranaair.com/wp-content/uploads/2024/08/Most-Accurate-Low-Cost-graph.png);
-     background-size: 100%;
-     width: 100%;
-     height: 220px;
-     bottom: 0;
-     left: 0;
-     background-repeat: no-repeat;
-     z-index: 0;
-     opacity: 100%;
- }
-
- .most-accurate-content {
-     display: flex;
-     flex-direction: row;
-     position: relative;
-     z-index: 1;
- }
-
- .most-accurate-text {
-     width: 50%;
-     padding-top: 100px;
-     position: relative;
-     left: 100px;
- }
-
- .most-accurate-text h3 {
-     color: #7AB261;
-     font-size: 20px;
-     margin: 0;
- }
-
- .most-accurate-text h4 {
-     color: #FFF;
-     font-size: 24px;
-     line-height: 30px;
-     margin-top: 10px;
- }
-
- .accurate-btn {
-     width: 50%;
-     padding-top: 140px;
-     position: relative;
-     left: 200px;
- }
-
- .accuracy-button {
-     background: #fff;
-     display: flex;
-     color: #7AB261;
-     font-size: 14px;
-     align-items: center;
-     gap: 10px;
-     width: 33%;
-     justify-content: space-around;
-     border-radius: 50px;
-     height: 50px;
-     transition: .2s linear;
-     text-decoration: none;
- }
-
- .accuracy-button:hover {
-     background: #7AB261;
-     color: #fff;
- }
-
- .accuracy-button:hover img {
-     filter: brightness(10.5);
- }
-
- /* Air Quality Solutions Section */
- .air-quality-solution-sec {
-     background: #091205;
-     margin-top: 150px;
-     padding: 100px 0;
- }
-
- .solutions-content {
-     color: white;
- }
-
- .solution-page-tab {
-     display: flex;
-     margin-bottom: 0px;
- }
-
- .solution-text {
-     width: 50%;
- }
-
- .solution-text h3 {
-     color: #F7F7FC;
-     font-size: 54px;
-     line-height: 60px;
-     padding-bottom: 10px;
- }
-
- .solutions-button {
-     color: #F7F7FC;
-     font-size: 14px;
-     display: flex;
-     align-items: center;
-     gap: 30px;
-     border: 1px solid #fff;
-     width: 50%;
-     height: 40px;
-     border-radius: 40px;
-     justify-content: center;
-     text-decoration: none;
-     transition: .2s linear;
- }
-
- .solutions-button:hover {
-     background: #7ab261;
-     border: none;
- }
-
- .solution-pages-link.smart-city {
-     width: 50%;
-     position: relative;
-     overflow: hidden;
- }
-
- .solution-image {
-     width: 100%;
-     height: auto;
-     transition: .4s linear;
- }
-
- .solution-pages-link.smart-city:hover .solution-image {
-     transform: scale(1.05);
- }
-
- .solution-pages-link.smart-city::before {
-     position: absolute;
-     content: "";
-     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.64), transparent);
-     width: 100%;
-     height: 110px;
-     bottom: 0;
-     z-index: 1;
- }
-
- .solution-pages-link.smart-city h4 {
-     color: #F7F7FD;
-     font-size: 20px;
-     display: flex;
-     align-items: baseline;
-     gap: 10px;
-     position: relative;
-     z-index: 2;
-     bottom: 60px;
-     left: 15px;
-     line-height: 22px;
- }
-
- .all-solu-tab {
-     display: flex;
-     gap: 15px;
-     margin-bottom: 20px;
- }
-
- .solution-tab-links {
-     width: 50%;
-     position: relative;
-     overflow: hidden;
- }
-
- .solution-tab-links::before {
-     position: absolute;
-     content: "";
-     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.84), transparent);
-     width: 100%;
-     height: 110px;
-     bottom: 0;
-     z-index: 1;
- }
-
- .solution-tab-links:hover .solution-image {
-     transform: scale(1.05);
- }
-
- .solution-tab-links h4 {
-     color: #F7F7FD;
-     font-size: 20px;
-     display: flex;
-     align-items: baseline;
-     gap: 10px;
-     position: relative;
-     z-index: 2;
-     bottom: 60px;
-     left: 15px;
-     line-height: 22px;
- }
-
- /* Blog Section */
- .blog-sec {
-     background: #303D2A;
-     padding: 100px 0;
- }
-
- .blog-content {
-     display: flex;
-     flex-direction: row;
- }
-
- .articles-list {
-     width: 66.66%;
-     display: flex;
-     gap: 30px;
- }
-
- .project-odd {
-     width: 50%;
-     display: flex;
-     flex-direction: column;
- }
-
- .blog-image {
-     width: 100%;
-     height: auto;
-     border-radius: 8px;
- }
-
- .entry-meta {
-     margin-top: 20px;
- }
-
- .category-link {
-     border: 1px solid rgba(255, 255, 255, 0.44);
-     border-radius: 50px;
-     padding: 3px 15px;
-     color: #fff;
-     text-decoration: none;
-     font-size: 14px;
- }
-
- .entry-title {
-     color: white;
-     font-size: 20px;
-     font-weight: 300;
-     margin-top: 10px;
- }
-
- .entry-title a {
-     color: white;
-     text-decoration: none;
- }
-
- .blog-title {
-         width: 30%;
-    position: relative;
-    top: 0px;
-    left: 100px;
- }
-
- .blog-title h2 {
-     color: #fff;
-     font-size: 54px;
-     line-height: 60px;
- }
-
- .blogs-button {
-     color: #F7F7FC;
-     font-size: 14px;
-     display: flex;
-     align-items: center;
-     gap: 20px;
-     border: 1px solid #fff;
-     justify-content: center;
-     border-radius: 50px;
-     width: 45%;
-     height: 40px;
-     transition: .2s linear;
-     text-decoration: none;
-     margin-top: 20px;
- }
-
- .blogs-button:hover {
-     background: #7ab261;
-     border: none;
- }
-
- .blogs-button:hover .button-icon {
-     transform: rotate(45deg);
- }
-
- /* Discover Section */
- .discover-sec {
-     background: #091205;
-     padding: 60px 0 100px;
- }
-
- .discover-title ul {
-     align-items: center;
-     list-style: none;
-     padding: 0;
-     margin: 0;
-     display: flex;
-     gap: 50px;
- }
-
- .discover-title ul li h2 {
-     color: #F7F7FD;
-     font-size: 54px;
-     line-height: 60px;
- }
-
- .discover-row {
-     border-top: 1px solid rgba(140, 140, 140, 0.26);
-     margin-top: 40px;
-     padding-top: 60px;
- }
-
- .testimonials-container {
-     display: flex;
-     gap: 30px;
- }
-
- .clinet-txt {
-     position: relative;
-     padding-left: 40px;
-     width: 33.33%;
- }
-
- .clinet-txt::before {
-     position: absolute;
-     content: "";
-     background-image: linear-gradient(45deg, #7AB261, transparent);
-     left: 0;
-     width: 1px;
-     height: 280px;
- }
-
- .clinet-txt h3 {
-     color: #F7F7FD;
-     font-size: 18px;
-     margin: 10px 0 5px;
- }
-
- .clinet-txt h4 {
-     color: rgba(247, 247, 253, 0.6);
-     font-size: 16px;
-     margin: 0 0 10px;
- }
-
- .clinet-txt p {
-     color: rgba(247, 247, 253, 0.9);
-     font-size: 14px;
-     font-weight: 300;
-     line-height: 22px;
-     width: 90%;
- }
-
- /* Awards Section */
- .award-sec {
-     margin-top: 150px;
-     position: relative;
-     overflow: visible;
- }
-
- .award-sec::before {
-     position: absolute;
-     content: "";
-     background: rgba(122, 178, 97, 0.1);
-     width: 50%;
-     height: 350px;
-     left: 0;
-     top: 0;
-     z-index: 0;
- }
-
- .award-sec::after {
-     position: absolute;
-     content: "";
-     background: #F3F7FA;
-     width: 50%;
-     height: 380px;
-     right: 0;
-     top: 50px;
-     z-index: 0;
- }
-
- .awards-content {
-     position: relative;
-     z-index: 1;
-     display: flex;
- }
-
- .award-box {
-     display: flex;
-     margin-bottom: 50px;
- }
-
- .award-img {
-     width: 50%;
- }
-     .mg-tops .award-img {
-    width: 30%;
-}
-
- .award-img img {
-        width: 60%;
-    margin-top: -50px;
-    height: auto;
- }
-
- .award-txt {
-    width: 80%;
-    padding: 50px 10px;
- }
-
- .award-txt h2 {
-     color: #263D4F;
-     font-size: 24px;
-     font-weight: 500;
-     line-height: 32px;
- }
-
- .award-txt p {
-     color: rgba(38, 61, 79, 0.89);
-     font-size: 18px;
- }
-
- .mg-tops {
-     padding-top: 50px;
- }
-
- /* Query Section */
- .query-sec {
-     padding: 100px 0 200px;
- }
-
- .query-content {
-     display: flex;
-     flex-direction: row;
- }
-
- .query-heading {
-     width: 50%;
- }
-
- .query-heading h2 {
-     font-size: 40px;
-     line-height: 50px;
- }
-
- .lets-talk-link {
-     width: 50%;
- }
-
- .lets-talk-link a {
-     color: #263D4F;
-     font-size: 32px;
-     font-weight: 700;
-     display: flex;
-     align-items: center;
-     gap: 15px;
-     transition: .2s linear;
-     border-bottom: 1px solid #263D4F;
-     width: 60%;
-     margin-left: 100px;
-     padding: 15px;
-     text-decoration: none;
- }
-
- .lets-talk-link a:hover {
-     background: #7AB261;
-     color: #fff;
- }
-
- .lets-talk-link a:hover img {
-     transform: rotate(45deg);
-     filter: brightness(10.5);
- }
-
- /* Responsive Styles */
- @media (max-width: 768px) {
-     .hero-content-wrapper {
-         flex-direction: column;
-         padding-top: 50px;
-     }
-
-     .hero-text-content {
-         width: 100%;
-         text-align: center;
-         padding-top: 20px;
-     }
-
-     .hero-text-content h1 {
-         font-size: 36px;
-     }
-
-     .hero-text-content p {
-         width: 100%;
-         font-size: 16px;
-     }
-
-     .hero-button {
-         margin: 20px auto;
-         width: 80%;
-     }
-
-     .hero-image-grid {
-         width: 100%;
-     }
-
-     .slider-container {
-         height: 400px;
-     }
-
-     .parameters-content {
-         flex-direction: column;
-     }
-
-     .function-txt {
-         width: 100%;
-         margin-top: -100px;
-     }
-
-     .function-txt h2 {
-         font-size: 32px;
-         line-height: 40px;
-     }
-
-     .parameter-box {
-         width: 100%;
-         margin-top: 30px;
-     }
-
-     .firstn {
-         flex-wrap: wrap;
-         gap: 10px;
-     }
-
-     .parameter-btn {
-         width: 48%;
-         font-size: 12px;
-         gap: 10px;
-     }
-
-     .last-para a {
-         width: 48%;
-     }
-
-     .discover-header {
-         flex-direction: column;
-     }
-
-     .discover-air-quality-heading,
-     .discover-air-quality-para {
-         width: 100%;
-     }
-
-     .discover-air-quality-para p {
-         padding-left: 0;
-     }
-
-     .discover-content {
-         flex-direction: column;
-     }
-
-     .tabs-container,
-     .custom-content-container {
-         width: 100%;
-         padding-left: 0;
-     }
-
-     .custom-tabs {
-         flex-direction: row;
-         overflow-x: auto;
-     }
-
-     .aq-monitor-box,
-     .aq-monitor-last {
-         flex-direction: column;
-     }
-
-     .discover-air-quality-page-img {
-         width: 100%;
-         margin-bottom: 15px;
-     }
-
-     .see-more-box {
-         width: 100%;
-     }
-
-     .see-more {
-         margin-top: 20px;
-     }
-
-     .all-sensor {
-         flex-direction: column;
-     }
-
-     .shopping-content {
-         flex-direction: column;
-     }
-
-     .experince-heading,
-     .experience-function {
-         width: 100%;
-     }
-
-     .experience-function {
-         flex-direction: column;
-         gap: 20px;
-     }
-
-     .connectivity-header {
-         flex-direction: column;
-     }
-
-     .seamless-connect-heading,
-     .seamless-txt {
-         width: 100%;
-     }
-
-     .seamless-txt p {
-         padding-left: 0;
-     }
-
-     .panel-content {
-         flex-direction: column;
-     }
-
-     .connectivety-tab-text,
-     .connectivety-tab-bg {
-         width: 100%;
-         padding: 20px;
-         left: 0;
-     }
-
-     .drone-content {
-         flex-direction: column;
-     }
-
-     .air-quality-drone-txt,
-     .drone-img {
-         width: 100%;
-         text-align: center;
-     }
-
-     .air-quality-drone-txt a {
-         width: 80%;
-         margin: 20px auto;
-     }
-
-     .clientele-header {
-         flex-direction: column;
-     }
-
-     .our-client-heading,
-     .our-client-para {
-         width: 100%;
-     }
-
-     .our-client-para p {
-         padding-left: 0;
-     }
-
-     .all-cliente-logo ul li {
-         width: 33%;
-     }
-
-     .trusted-clients-content {
-         flex-direction: column;
-     }
-
-     .trusted-clients-text,
-     .trusted-clients-img {
-         width: 100%;
-     }
-
-     .case-studies-slider-container {
-         padding: 0 10px;
-     }
-
-     .breathing-fresh-air-content {
-         justify-content: center;
-     }
-
-     .breathing-fresh-air-txt {
-         width: 90%;
-         margin: 0;
-     }
-
-     .most-accurate-content {
-         flex-direction: column;
-     }
-
-     .most-accurate-text,
-     .accurate-btn {
-         width: 100%;
-         left: 0;
-         padding-top: 40px;
-         text-align: center;
-     }
-
-     .accuracy-button {
-         width: 80%;
-         margin: 0 auto;
-     }
-
-     .solution-page-tab {
-         flex-direction: column;
-     }
-
-     .solution-text,
-     .solution-pages-link.smart-city {
-         width: 100%;
-     }
-
-     .solutions-button {
-         width: 100%;
-     }
-
-     .all-solu-tab {
-         flex-direction: column;
-     }
-
-     .solution-tab-links {
-         width: 100%;
-         margin-bottom: 20px;
-     }
-
-     .blog-content {
-         flex-direction: column-reverse;
-     }
-
-     .articles-list,
-     .blog-title {
-         width: 100%;
-     }
-
-     .blog-title {
-         left: 0;
-         top: 0;
-         margin-bottom: 30px;
-     }
-
-     .blogs-button {
-         width: 100%;
-     }
-
-     .project-odd {
-         width: 100%;
-         margin-bottom: 30px;
-     }
-
-     .discover-title ul {
-         flex-direction: column;
-         align-items: flex-start;
-         gap: 20px;
-     }
-
-     .testimonials-container {
-         flex-direction: column;
-     }
-
-     .clinet-txt {
-         width: 100%;
-         margin-bottom: 40px;
-     }
-
-     .award-box {
-         flex-direction: column;
-     }
-
-     .award-img,
-     .award-txt {
-         width: 100%;
-     }
-
-     .query-content {
-         flex-direction: column;
-     }
-
-     .query-heading,
-     .lets-talk-link {
-         width: 100%;
-     }
-
-     .lets-talk-link a {
-         width: 100%;
-         margin-left: 0;
-         margin-top: 20px;
-     }
- }
-      `}</style>
+      </section>    
     </main>
   )
 }

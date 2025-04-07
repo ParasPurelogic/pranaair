@@ -84,7 +84,7 @@ const MobileMenu = () => {
             <div className="row g-3">
               {menuData.solutions.subcategories[activeSubCategory].items.map((item) => (
                 <div key={item.id} className="col-6">
-                  <Link href={item.link} className="text-decoration-none text-dark">
+                  <a href={item.link} className="text-decoration-none text-dark">
                     <div className="product-card text-center">
                       <div className="product-image mb-2">
                         <Image
@@ -97,7 +97,7 @@ const MobileMenu = () => {
                       </div>
                       <h6 className="product-name small mb-0">{item.name}</h6>
                     </div>
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
@@ -123,12 +123,12 @@ const MobileMenu = () => {
             <div className="row g-2">
               {menuData["know-what"].items.map((item) => (
                 <div key={item.id} className="col-12 border-bottom">
-                  <Link href={item.link} className="text-decoration-none text-dark d-flex align-items-center p-2">
+                  <a href={item.link} className="text-decoration-none text-dark d-flex align-items-center p-2">
                     <span className="me-3" style={{ fontSize: "1.5rem" }}>
                       {item.icon}
                     </span>
                     <span>{item.name}</span>
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
@@ -154,7 +154,7 @@ const MobileMenu = () => {
             <div className="row g-3">
               {menuData["case-studies"].items.map((item) => (
                 <div key={item.id} className="col-12 mb-3">
-                  <Link href={item.link} className="text-decoration-none text-dark">
+                  <a href={item.link} className="text-decoration-none text-dark">
                     <div className="position-relative rounded overflow-hidden" style={{ height: "140px" }}>
                       <Image
                         src={item.image || "/placeholder.svg?height=140&width=300"}
@@ -170,7 +170,7 @@ const MobileMenu = () => {
                         <h6 className="mb-0 small">{item.name}</h6>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </div>
               ))}
             </div>
@@ -201,13 +201,13 @@ const MobileMenu = () => {
         }}
       >
         <div className="mobile-menu-header d-flex justify-content-between align-items-center p-3 border-bottom">
-          <Link href="/" className="navbar-brand">
+          <a href="#" className="navbar-brand">
             <img
               src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-logo.webp"
               alt="Prana Air"
               width={60}
             />
-          </Link>
+          </a>
           <button className="btn-close" onClick={toggleMenu} aria-label="Close menu"></button>
         </div>
 

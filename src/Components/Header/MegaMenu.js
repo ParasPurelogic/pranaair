@@ -69,7 +69,7 @@ const MegaMenu = () => {
           <div className="row g-4 p-4">
             {subcategory.items.map((item) => (
               <div key={item.id} className="col-lg-4 col-md-6 mb-4">
-                <Link href={item.link} className="text-decoration-none">
+                <a href={item.link} className="text-decoration-none">
                   <div className="position-relative rounded overflow-hidden" style={{ height: "180px" }}>
                     <Image
                       src={item.image || "/placeholder.svg?height=300&width=400"}
@@ -85,7 +85,7 @@ const MegaMenu = () => {
                       <h6 className="mb-0">{item.name}</h6>
                     </div>
                   </div>
-                </Link>
+                </a>
               </div>
             ))}
           </div>

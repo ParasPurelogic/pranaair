@@ -615,6 +615,41 @@ export default function AirDronePage() {
               <div className="col-lg-7">
                 <div className="parameter-main">
                   <ul>
+
+                    <li>
+                      <span className="parameter-box">
+                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">PM1</span>
+                      </span>
+                    </li>
+
+                    <li>
+                      <span className="parameter-box">
+                        <Image src="/img/PM2.5.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">PM2.5</span>
+                      </span>
+                    </li>
+
+                    <li>
+                      <span className="parameter-box">
+                        <Image src="/img/PM10.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">PM10</span>
+                      </span>
+                    </li>
+
+                    <li>
+                      <span className="parameter-box">
+                        <Image src="/img/TEMPERATURE.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">TEMP</span>
+                      </span>
+                    </li>
+
+                    <li>
+                      <span className="parameter-box">
+                        <Image src="/img/Humidity.png" alt="Logo" width={200} height={100} />
+                        <span className="parameter-txt">Humid</span>
+                      </span>
+                    </li>
                     <li>
                       <span className="parameter-box">
                         <Image src="/img/CH4.png" alt="Logo" width={200} height={100} />
@@ -631,12 +666,6 @@ export default function AirDronePage() {
                       <span className="parameter-box">
                         <Image src="/img/H2S.png" alt="Logo" width={200} height={100} />
                         <span className="parameter-txt">H2S</span>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="parameter-box">
-                        <Image src="/img/Humidity.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">Humid</span>
                       </span>
                     </li>
                     <li>
@@ -659,32 +688,8 @@ export default function AirDronePage() {
                     </li>
                     <li>
                       <span className="parameter-box">
-                        <Image src="/img/PM2.5.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM2.5</span>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="parameter-box">
-                        <Image src="/img/PM10.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM10</span>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="parameter-box">
                         <Image src="/img/SO2.png" alt="Logo" width={200} height={100} />
                         <span className="parameter-txt">SO2</span>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="parameter-box">
-                        <Image src="/img/TEMPERATURE.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">TEMP</span>
-                      </span>
-                    </li>
-                    <li>
-                      <span className="parameter-box">
-                        <Image src="/img/pm1.png" alt="Logo" width={200} height={100} />
-                        <span className="parameter-txt">PM1</span>
                       </span>
                     </li>
                   </ul>
@@ -1466,19 +1471,19 @@ export default function AirDronePage() {
                           <li>66mm X 40mm X 16mm </li>
                         </ul>
                       </div>
-                    </div>                  
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-                      <div className="col-md-6"></div>
-                      <div className="col-md-6">
-                        <div className="roch-icon">
-                          <Image src="/img/rohs.png" alt="rohs" width={50} height={50} />
-                        </div>
-                      </div>
-                    </div>
+              <div className="col-md-6"></div>
+              <div className="col-md-6">
+                <div className="roch-icon">
+                  <Image src="/img/rohs.png" alt="rohs" width={50} height={50} />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
