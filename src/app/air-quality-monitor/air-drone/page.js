@@ -37,7 +37,16 @@ const ChevronDownIcon = () => (
     <path d="m6 9 6 6 6-6"></path>
   </svg>
 )
-
+function throttle(fn, wait) {
+  let lastTime = 0;
+  return function (...args) {
+    const now = new Date().getTime();
+    if (now - lastTime >= wait) {
+      fn.apply(this, args);
+      lastTime = now;
+    }
+  };
+}
 export default function AirDronePage() {
   const [activeTab, setActiveTab] = useState("vtol")
   const [activeSlide, setActiveSlide] = useState(0)
@@ -53,7 +62,6 @@ export default function AirDronePage() {
         const sectionBottom = sectionRect.bottom
         const tabsHeight = tabsRef.current.offsetHeight
 
-        // Make tabs sticky when section is in view and user has scrolled past the initial position
         if (sectionTop <= 0 && sectionBottom > tabsHeight) {
           tabsRef.current.classList.add("sticky-tabs")
         } else {
@@ -61,9 +69,9 @@ export default function AirDronePage() {
         }
       }
     }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    const throttledScroll = throttle(handleScroll, 100);
+    window.addEventListener("scroll", throttledScroll)
+    return () => window.removeEventListener("scroll", throttledScroll)
   }, [])
 
   // VTOL drone slider images
@@ -259,8 +267,8 @@ export default function AirDronePage() {
         </section>
 
         {/* Drone Category Section */}
-        <section className="drone-category-section" ref={sectionRef}>
-          <div className="container">
+        <section className="drone-category-section">
+          <div className="container" ref={sectionRef}>
             <h2 className="section-title">Drone <span className="heading-grey">Category</span> </h2>
 
             <div className="category-tabs" ref={tabsRef}>
