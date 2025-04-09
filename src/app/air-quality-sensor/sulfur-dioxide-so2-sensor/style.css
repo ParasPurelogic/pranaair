@@ -53,135 +53,6 @@ a {
     font-weight: 600;
 }
 
-.product-discription span img {
-    width: 20%;
-    height: auto;
-    float: right;
-    position: relative;
-    left: -130px;
-    top: 3px;
-}
-
-.sensor-tab-btn img {
-    height: auto;
-}
-
-.sensor-disc-tab button {
-    padding: 4px 20px !important;
-    border-radius: 0 !important;
-    border: 1px solid #D4DAD2 !important;
-}
-
-.sensor-disc-tab {
-    border: 0;
-    padding-top: 20px;
-}
-
-.sensor-img {
-    text-align: center;
-}
-
-.product-discription {
-    padding-left: 100px;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-
-.sensor-tab-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.sensor-tab-btn span {
-    color: #263D4F;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.sensor-disc-tab .nav-item .active {
-    background: #7AB2612E;
-}
-
-.product-rate span {
-    color: #7AB261;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.product-rate {
-    padding-top: 40px;
-}
-
-.product-rate p {
-    color: #263D4F;
-    font-size: 18px;
-    line-height: 30px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-.product-rate ul {
-    list-style: none;
-    padding: 0 0 40px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.product-rate ul li {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.product-rate ul li button {
-    border: 1px solid #7AB261;
-    padding: 5px 15px;
-}
-
-button.dicrement {
-    background: transparent;
-    color: #7AB261;
-}
-
-button.increment {
-    background: #7AB261;
-    color: #fff;
-}
-
-.buy-now-btn li button {
-    width: 100%;
-    height: 54px;
-    color: #7AB261;
-    background: transparent;
-}
-
-.buy-now-btn li {
-    width: 100%;
-}
-
-.fw-bold {
-    font-weight: 300;
-    font-size: 17px !important;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    display: block;
-    color: #fff !important;
-    padding: 0px 9px 3px;
-}
-
-.add-cart {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #7AB260 !important;
-    color: #fff !important;
-    font-size: 16px;
-    font-weight: 400;
-}
-
 .product-sec {
     position: relative;
 }
@@ -203,42 +74,6 @@ button.increment {
 
 .product-img {
     padding-top: 150px;
-}
-
-.sensor-img img {
-    width: 250px;
-    height: auto;
-}
-
-.sensor-img-thumb img {
-    width: 60px;
-    height: auto;
-}
-
-.sensor-product-tab {
-    justify-content: center;
-    border: none;
-    padding-top: 30px;
-    gap: 15px;
-}
-
-.sensor-product-tab .nav-item .active {
-    background: #7AB2611A;
-    border: 2px solid #7AB261;
-    border-radius: 20px;
-}
-
-.sensor-product-tab .nav-item button {
-    padding: 15px 10px !important;
-    background: #F6F7F5;
-    border: 1px solid #0000001C;
-    border-radius: 20px;
-}
-
-.product-discription h1 {
-    color: #263D4F;
-    font-size: 32px;
-    font-weight: 600;
 }
 
 .product-discription span img {
@@ -368,29 +203,6 @@ button.increment {
     color: #fff !important;
     font-size: 16px;
     font-weight: 400;
-}
-
-.product-sec {
-    position: relative;
-}
-
-.product-sec:before {
-    position: absolute;
-    content: "";
-    background: #F7FDF4;
-    width: 50%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-.main.py-4 {
-    padding: 0 !important;
-}
-
-.product-img {
-    padding-top: 150px;
 }
 
 .intro {
@@ -533,9 +345,6 @@ button.increment {
     padding: 40px 40px 25px;
 }
 
-.why-choose-icon {
-    padding-top: 60px;
-}
 
 .why-choose-icon ul li h3 {
     color: #f7f7fced;
@@ -550,54 +359,10 @@ button.increment {
     line-height: 26px;
 }
 
-.why-choose-heading {
-    text-align: center;
-}
-
-.why-choose-heading h2 {
-    color: #F7F7FC;
-    font-size: 40px;
-    margin: 0 auto;
-    width: 40%;
-    line-height: 62px;
-}
-
-.why-choose-heading h2 span {
-    background: #7AB2612E;
-    border: 1px solid #7ab26173;
-    border-radius: 15px;
-    padding: 0 10px;
-}
-
-.why-choose-icon ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.why-choose-icon ul li {
-    display: inline-block;
-    width: 33%;
-    border: 1px solid #ffffff14;
-    padding: 40px 40px 25px;
-}
-
 .why-choose-icon {
     padding-top: 60px;
 }
 
-.why-choose-icon ul li h3 {
-    color: #f7f7fced;
-    font-size: 20px;
-    font-weight: 200;
-}
-
-.why-choose-icon ul li p {
-    color: #f7f7fcb5;
-    font-size: 14px;
-    padding-top: 5px;
-    line-height: 26px;
-}
 
 .calibration-video {
     margin-top: 150px;
@@ -765,30 +530,6 @@ button.increment {
     line-height: 30px;
 }
 
-.light-mode {
-    padding-top: 140px;
-}
-
-.light-mode-txt h2 {
-    color: #263D4F;
-    font-size: 40px;
-}
-
-.light-mode-img img {
-    width: 100%;
-    height: auto;
-}
-
-.light-mode-img {
-    padding-top: 50px;
-}
-
-.light-mode-img p {
-    color: #263D4F;
-    font-size: 18px;
-    line-height: 30px;
-}
-
 .sensor-chip {
     padding-top: 170px;
 }
@@ -859,4 +600,943 @@ button.increment {
     top: 0;
     height: 100%;
     left: -300px;
+}
+
+.app-slider-sec {
+    padding-top: 200px;
+}
+
+.slider-title h2 {
+    color: #263D4F;
+    font-size: 40px;
+    font-weight: 300;
+    width: 50%;
+}
+
+.slider-title {
+    padding-bottom: 60px;
+}
+
+.app-slide-img-box img {
+    height: auto;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.app-slider {
+    margin-left: 200px;
+}
+
+.app-slide-img-box h3 {
+    color: #263D4F;
+    font-size: 18px;
+    padding-top: 10px;
+    width: 50%;
+    line-height: 28px;
+}
+
+.react-multiple-carousel__arrow--left {
+    margin-top: 0px;
+    z-index: 99999;
+}
+
+.tech-spec-sec {
+    padding-top: 150px;
+    position: relative;
+}
+
+.tech-heading h2 {
+    color: #263D4F;
+    font-size: 40px;
+    width: 70%;
+}
+
+.tech-heading {
+    padding-bottom: 50px;
+}
+
+.tech-tab .variant-tab-btn span {
+    color: #263d4fbf;
+}
+
+.tech-tab .variant-tab-btn img {
+    filter: invert(1);
+}
+
+.tech-tab .nav-link {
+    border-bottom: 1px solid #16161633;
+}
+
+.tech-tab .nav-link.active span {
+    color: #f7f7fc !important;
+}
+
+.tech-tab .nav-link.active img {
+    filter: none;
+}
+
+.tech-tab {
+    padding-top: 30px;
+}
+
+.tech-spec-txt ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.tech-spec-txt ul li {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tech-spec-txt ul li h4 {
+    color: #263d4fc7;
+    font-size: 16px;
+    width: 90%;
+    line-height: 26px;
+}
+
+.tech-spec-txt ul li h5 {
+    color: #263D4F;
+    font-size: 16px;
+    padding-left: 20px;
+    line-height: 26px;
+}
+
+.tech-spec-txt {
+    margin: 0;
+    padding-top: 20px;
+}
+
+.tech-spec-img img {
+    width: 60%;
+    height: auto;
+}
+
+.tech-spec-img {
+    text-align: center;
+}
+
+.tech-spec-img ul {
+    list-style: none;
+    padding: 15px 0 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-spec-img ul li a {
+    display: flex;
+    gap: 5px;
+    color: #7AB261;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tech-spec-img ul li {
+    width: 30%;
+}
+
+.tech-spec-img ul li a img {
+    width: 25px;
+    height: auto;
+}
+
+.tech-spec-sec:before {
+    position: absolute;
+    content: "";
+    background: #1311111a;
+    width: 100%;
+    height: 1px;
+    top: 270px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.tech-spec-sec:after {
+    position: absolute;
+    content: "";
+    background: #1311111a;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0px;
+}
+
+.sensor-gallery-sec {
+    padding-top: 160px;
+}
+
+.sensor-gallery-heading h2 {
+    text-align: center;
+    color: #263D4F;
+}
+
+.sensor-gallery-heading h2 span {
+    background: #7AB2612E;
+    border-radius: 10px;
+    padding: 4px 10px;
+}
+
+.sensor-gallery-heading p {
+    color: #263D4F;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 50%;
+    line-height: 26px;
+}
+
+.sensor-img-box img {
+    width: 100%;
+    height: auto;
+}
+
+.sensor-img-box {
+    margin-top: 50px;
+}
+
+.introducing_box.sub_title_box {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.airquality_contact_box input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #00000033;
+    border-radius: 0;
+}
+
+.airquality_contact_box textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #00000033;
+    border-radius: 0;
+}
+
+input.wpcf7-submit {
+    background: #7AB261;
+    color: #fff;
+    padding: 15px 60px;
+    border-radius: 0px;
+}
+
+
+.airqulality_contact_section .contact_content_box {
+    background: #7AB261;
+    padding: 40px 20px 75px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact_content_box:after {
+    background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+    width: 200px;
+    height: 200px;
+    content: "";
+    position: absolute;
+    bottom: -110px;
+    left: -25px;
+    z-index: 0;
+    background-size: 66%;
+}
+
+.contact_info li {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contact_info li i {
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.contact_information_box p {
+    color: #fff;
+    font-weight: 400;
+}
+
+.contact_information_box h4 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.contact_info {
+    padding: 0;
+}
+
+.airqulality_contact_section.inner_container {
+    padding-top: 80px;
+    position: relative;
+    margin-top: 150px;
+}
+
+.airqulality_contact_section.inner_container:before {
+    position: absolute;
+    background: #F7FDF4;
+    width: 100%;
+    height: 400px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    content: "";
+    z-index: -1;
+}
+
+.introducing_box.sub_title_box h2 {
+    color: #263D4F;
+    font-size: 40px;
+}
+
+
+.introducing_box.sub_title_box {
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.airquality_contact_box input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #00000033;
+    border-radius: 0;
+}
+
+.airquality_contact_box textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #00000033;
+    border-radius: 0;
+}
+
+input.wpcf7-submit {
+    background: #7AB261;
+    color: #fff;
+    padding: 15px 60px;
+    border-radius: 0px;
+}
+
+.airquality_contact_box {
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+.airquality_inner_form {
+    max-width: 1060px;
+    margin: 0 auto 30px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 0;
+    box-shadow: 0px 0px 50px #c3c3c38f;
+}
+
+.airquality_contact_box label {
+    width: 100%;
+    color: #12121266;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.contact_info li i {
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.introducing_box.sub_title_box p {
+    color: #263D4F;
+    font-size: 16px;
+}
+
+.you-may-also {
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.you-may-also-heading {
+    text-align: center;
+}
+
+.you-may-also-heading h2 {
+    color: #263D4F;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+.you-may-also-heading ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.you-may-also-heading ul li img {
+    width: 100%;
+    height: auto;
+}
+
+.you-may-also-heading ul li {
+    margin: 0 5px;
+}
+
+.you-may-also-heading ul li span {
+    color: #263D4F;
+    font-size: 17px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid #00000024;
+}
+
+.you-may-also-heading ul li span img {
+    width: 25px;
+    filter: brightness(0.5);
+}
+
+@media only screen and (width >=320px) and (width <=767px) {
+    .you-may-also-heading ul {
+        overflow-x: auto;
+    }
+
+    .app-slider {
+        margin-left: 0px;
+    }
+
+    .product-img {
+        padding-top: 50px;
+    }
+
+    .sensor-img img {
+        width: 180px;
+    }
+
+    .sensor-product-tab {
+        padding-top: 10px;
+    }
+
+    .sensor-img-thumb img {
+        width: 45px;
+    }
+
+    .sensor-product-tab .nav-item .active {
+        border-radius: 15px;
+    }
+
+    .product-discription {
+        padding-left: 20px;
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+
+    .product-sec:before {
+        background: #eff6eb;
+        width: 100%;
+        height: 70%;
+        right: 0;
+        top: 320px;
+    }
+
+    .product-discription h1 {
+        font-size: 24px;
+    }
+
+    .sensor-disc-tab {
+        padding-top: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .sensor-tab-btn span {
+        font-size: 16px;
+    }
+
+    .sensor-disc-tab button {
+        padding: 4px 10px !important;
+    }
+
+    .product-discription span img {
+        width: 24%;
+        left: -70px;
+        top: -10px;
+    }
+
+    .product-rate {
+        padding-top: 30px;
+    }
+
+    .product-rate span {
+        font-size: 22px;
+    }
+
+    .product-rate p {
+        font-size: 14px;
+        line-height: 26px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .buy-now-btn {
+        flex-direction: column;
+        gap: 15px !important;
+    }
+
+    .intro {
+        padding-top: 80px;
+    }
+
+    .intro-heading h2 {
+        font-size: 30px;
+        width: 70%;
+        line-height: 48px;
+    }
+
+    .variant-tab {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding-top: 20px;
+    }
+
+    .variant-tab-btn {
+        gap: 40px;
+    }
+
+    .sensor-txt {
+        padding-bottom: 100px;
+        flex-direction: column-reverse;
+    }
+
+    .sensor-imgs {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sensor-imgs h3 {
+        font-size: 36px;
+    }
+
+    .sensor-imgs img {
+        width: 50%;
+        margin-top: -20px;
+        margin-right: 50px;
+    }
+
+    .content {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .content ul {
+        padding: 10px 0 0;
+        gap: 10px;
+    }
+
+    .content ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .sensor-txt {
+        padding-bottom: 60px;
+    }
+
+    .why-choose-heading h2 {
+        font-size: 30px;
+        width: 90%;
+        line-height: 52px;
+    }
+
+    .why-choose-icon {
+        padding-top: 40px;
+    }
+
+    .why-choose-icon ul li {
+        width: 50%;
+        padding: 20px 15px 15px;
+    }
+
+    .why-choose-icon ul li h3 {
+        font-size: 18px;
+    }
+
+    .calibration-video {
+        margin-top: 100px;
+    }
+
+    .video-txt {
+        margin-top: 0px;
+    }
+
+    .video-txt h2 {
+        font-size: 30px;
+    }
+
+    .video-txt p {
+        font-size: 14px;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    .what-tech {
+        padding-top: 100px;
+    }
+
+    .what-tech-heading h2 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .what-tech-heading {
+        padding-bottom: 40px;
+    }
+
+    .tech-txt {
+        padding-top: 0px;
+        padding-left: 30px;
+        margin-top: 0px;
+    }
+
+    .tech-txt h3 {
+        font-size: 30px;
+        width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .tech-txt:before {
+        background-image: linear-gradient(180deg, #000, #0000);
+        width: 100%;
+        height: 50%;
+    }
+
+    .what-is-sulfur {
+        margin-top: 100px;
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .sulfur-heading h2 {
+        width: 80%;
+    }
+
+    .sulfur-txt {
+        padding: 20px 20px;
+        width: 95%;
+        border-radius: 30px;
+    }
+
+    .light-mode {
+        padding-top: 80px;
+    }
+
+    .light-mode-txt h2 {
+        font-size: 30px;
+    }
+
+    .light-mode-img p {
+        font-size: 16px;
+    }
+
+    .sensor-chip {
+        padding-top: 80px;
+    }
+
+    .sensor-chip-txt {
+        height: auto;
+        padding: 30px;
+    }
+
+    .sensor-chip-txt:before {
+        background-image: linear-gradient(0deg, #131010, #0000);
+        width: 100%;
+        top: -218px;
+        height: 70%;
+        left: 0;
+    }
+
+    .sensor-chip-txt ul {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .sensor-chip-txt ul:before {
+        display: none;
+    }
+
+    .sensor-chip-txt ul li h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .sensor-chip-txt ul li p {
+        padding-top: 15px;
+    }
+
+    .app-slider-sec {
+        padding-top: 60px;
+    }
+
+    .slider-title h2 {
+        font-size: 30px;
+        width: 70%;
+    }
+
+    .slider-title {
+        padding-bottom: 20px;
+    }
+
+    .app-slide-img-box img {
+        width: 100%;
+    }
+
+    .tech-spec-sec {
+        padding-top: 100px;
+    }
+
+    .tech-heading h2 {
+        font-size: 30px;
+    }
+
+    .tech-heading {
+        padding-bottom: 10px;
+    }
+
+    .tab-pane .row {
+        flex-direction: column-reverse;
+    }
+
+    .tech-spec-img img {
+        width: 50%;
+        height: auto;
+    }
+
+    .tech-spec-img {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .tech-spec-img ul li a img {
+        width: 30px;
+    }
+
+    .tech-spec-img ul li a {
+        align-items: center;
+    }
+
+    .tech-spec-img ul li {
+        width: 40%;
+    }
+
+    .tech-spec-txt ul li h4 {
+        font-size: 14px;
+    }
+
+    .tech-spec-txt ul li h4 {
+        font-size: 15px;
+    }
+
+    .tech-spec-txt ul li {
+        margin-bottom: 10px;
+    }
+
+    .sensor-gallery-sec {
+        padding-top: 100px;
+    }
+
+    .sensor-gallery-heading p {
+        width: 100%;
+    }
+
+    .sensor-img-box {
+        margin-top: 20px;
+    }
+
+    .airqulality_contact_section.inner_container {
+        padding-top: 40px;
+        margin-top: 80px;
+    }
+
+    .introducing_box.sub_title_box h2 {
+        font-size: 30px;
+    }
+
+    .airquality_contact_box {
+        margin-left: 0px;
+        padding-top: 30px;
+    }
+
+    .you-may-also {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .you-may-also-heading h2 {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (width >=767px) and (width <=1023px) {
+    .product-img {
+        padding-top: 70px;
+    }
+
+    .product-sec:before {
+        width: 100%;
+        height: 60%;
+        right: 0;
+        top: 440px;
+    }
+
+    .product-discription {
+        padding-left: 10px;
+        padding-top: 80px;
+    }
+
+    .product-discription span img {
+        width: 18%;
+        left: -310px;
+        top: -5px;
+    }
+
+    .intro {
+        padding-top: 80px;
+    }
+
+    .content ul li {
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 16px;
+    }
+
+    .sensor-imgs h3 {
+        font-size: 46px;
+    }
+
+    .sensor-imgs img {
+        width: 60%;
+        margin-top: -20px;
+    }
+
+    .sensor-txt {
+        padding-bottom: 100px;
+    }
+
+    .why-choose-heading h2 {
+        width: 80%;
+    }
+
+    .why-choose-icon ul li {
+        padding: 20px 15px 20px;
+    }
+
+    .calibration-video {
+        margin-top: 100px;
+    }
+
+    .video-txt {
+        margin-top: 0px;
+    }
+
+    .video-txt p {
+        width: 90%;
+    }
+
+    .what-tech {
+        padding-top: 100px;
+    }
+
+    .what-tech-heading h2 {
+        width: 80%;
+    }
+
+    .tech-txt {
+        margin-top: 0px;
+    }
+
+    .what-is-sulfur {
+        margin-top: 130px;
+        padding-bottom: 50px;
+        padding-top: 90px;
+    }
+
+    .light-mode {
+        padding-top: 100px;
+    }
+
+    .sensor-chip {
+        padding-top: 80px;
+    }
+
+    .sensor-chip-txt:before {
+        background-image: linear-gradient(0deg, #131010, #0000);
+        width: 100%;
+        top: -230px;
+        height: 100%;
+        left: 0px;
+    }
+
+    .sensor-chip-txt {
+        height: 240px;
+        padding: 40px;
+    }
+
+    .app-slider-sec {
+        padding-top: 100px;
+    }
+
+    .app-slider {
+        margin-left: 20px;
+    }
+
+    .app-slide-img-box h3 {
+        font-size: 16px;
+        width: 100%;
+        line-height: 22px;
+    }
+
+    .tech-heading {
+        padding-bottom: 10px;
+    }
+
+    .tech-spec-sec:before {
+        top: 210px;
+    }
+
+    .tech-spec-sec:after {
+        bottom: -20px;
+    }
+
+    .sensor-gallery-heading p {
+        width: 80%;
+    }
+
+    .sensor-img-box {
+        margin-top: 30px;
+    }
+
+    .airqulality_contact_section.inner_container {
+        padding-top: 60px;
+        margin-top: 80px;
+    }
+
+    .you-may-also {
+        padding-top: 60px;
+    }
 }

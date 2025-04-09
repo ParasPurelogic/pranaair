@@ -12,11 +12,13 @@ export default function AirDronePage() {
     const [trackTab, trackActiveSpecTab] = useState("MobileApp")
     const [discTab, discActiveSpecTab] = useState("SensorDisc")
     const [introTab, introActiveSpecTab] = useState("IntroSensor")
+    const [techTab, techActiveSpecTab] = useState("TechSpec")
     const [quantity, setQuantity] = useState(1);
 
     const increment = () => setQuantity((prev) => prev + 1);
     const decrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
+    // Carousel responsive settings
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -24,18 +26,35 @@ export default function AirDronePage() {
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 53,
+            items: 4,
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 4,
+            items: 3,
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 1,
         },
     }
-
+    const gallery = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 1,
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1,
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+        },
+    }
     return (
         <div className="air-drone-page">
             <main className="air-drone-page">
@@ -411,7 +430,7 @@ export default function AirDronePage() {
                     </div>
                 </section>
                 {/* app slider */}
-                <section className="app-slider">
+                <section className="app-slider-sec">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
@@ -423,9 +442,403 @@ export default function AirDronePage() {
                         </div>
                     </div>
                     <div className="container-fluid">
-                        <div className="col-lg-12">
-                            <div className="slider-app">
-                                
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <Carousel
+                                    responsive={responsive}
+                                    infinite={true}
+                                    autoPlay={true}
+                                    autoPlaySpeed={3000}
+                                    className="app-slider"
+                                >
+                                    <div>
+                                        <div className="app-slide-img-box">
+                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
+                                            <h3>
+                                                Air Quality Monitoring Equipment
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="app-slide-img-box">
+                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
+                                            <h3>
+                                                Air Quality Monitoring Equipment
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="app-slide-img-box">
+                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
+                                            <h3>
+                                                Air Quality Monitoring Equipment
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="app-slide-img-box">
+                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
+                                            <h3>
+                                                Air Quality Monitoring Equipment
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="app-slide-img-box">
+                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
+                                            <h3>
+                                                Air Quality Monitoring Equipment
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </Carousel>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* technical Specifications */}
+                <section className="tech-spec-sec">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="tech-heading">
+                                    <h2>Technical Specifications</h2>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="variant-box">
+                                    <ul className="nav nav-tabs variant-tab tech-tab" role="tablist">
+                                        <li className="nav-item">
+                                            <button className={`nav-link ${techTab === "TechSpec" ? "active" : ""}`} onClick={() => techActiveSpecTab("TechSpec")}
+                                                href="#">
+                                                <div className="variant-tab-btn">
+                                                    <span>Variant A</span>
+                                                    <Image src="/img/variant-icon.png" alt="so2-sensor" width={50} height={50} />
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li className="nav-item">
+                                            <button className={`nav-link ${techTab === "TVApp" ? "active" : ""}`} onClick={() => techActiveSpecTab("TVApp")}
+                                                href="#">
+                                                <div className="variant-tab-btn">
+                                                    <span>Variant B</span>
+                                                    <Image src="/img/variant-icon.png" alt="so2-sensor" width={50} height={50} />
+                                                </div>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="tab-content">
+                            <div className={`tab-pane ${techTab === "TechSpec" ? "show active" : ""}`}>
+                                <div className="row">
+                                    <div className="col-lg-4">
+                                        <div className="tech-spec-txt">
+                                            <ul>
+                                                <li>
+                                                    <h4>Product Name: </h4>
+                                                </li>
+                                                <li>
+                                                    <h5>SO2 Sensor </h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Resolution: </h4>
+                                                </li>
+                                                <li>
+                                                    <h5>0.01 ppm</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Response Time:</h4>
+                                                </li>
+                                                <li>
+                                                    <h5> 15 seconds</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Operating Temperature Range:</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>-20℃～50℃</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Operating Humidity Range – non-condensing</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>15%RH – 90%RH (no condensation)</h5>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-4">
+                                        <div className="tech-spec-txt">
+                                            <ul>
+                                                <li>
+                                                    <h4>Measurement Range: </h4>
+                                                </li>
+                                                <li>
+                                                    <h5>0 to 50 ppm </h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Repeatability: </h4>
+                                                </li>
+                                                <li>
+                                                    <h5> +/- 3 % of reading</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Sensitivity @ 200 mV bias:</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>25 +/- 10 nA/ppm</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Operating Voltage</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>3.7V～5.5V</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>Operating Humidity Range – non-condensing</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>15%RH – 90%RH (no condensation)</h5>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-4">
+                                        <div className="tech-spec-img">
+                                            <Image src="/img/prana-air-sulfur-ioxide-so2-sensor-with-board.webp" alt="so2-sensor" width={50} height={50} />
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Buy now <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><Image src="/img/data-document-sheet-icon.png" alt="so2-sensor" width={50} height={50} /> Data Sheet </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={`tab-pane ${techTab === "TVApp" ? "show active" : ""}`}>
+                                <div className="sensor-txt">
+                                    <h1>redd</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* sensor gallery */}
+                <section className="sensor-gallery-sec">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="sensor-gallery-heading">
+                                    <h2>Sensors <span>Gallery</span></h2>
+                                    <p>The SO2 sensor comes with a long life of almost 10 years. With this kind of longevity, there is no need to worry about calibration and breakdown.</p>
+                                </div>
+                                <div className="sensor-gallery-img">
+                                    <Carousel
+                                        responsive={gallery}
+                                        infinite={true}
+                                        autoPlay={true}
+                                        autoPlaySpeed={3000}
+                                        className="sensor-slider"
+                                    >
+                                        <div>
+                                            <div className="sensor-img-box">
+                                                <Image src="/img/sensors-gallery-img.webp" alt="so2-sensor" width={50} height={50} />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="sensor-img-box">
+                                                <Image src="/img/sensors-gallery-img.webp" alt="so2-sensor" width={50} height={50} />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="sensor-img-box">
+                                                <Image src="/img/sensors-gallery-img.webp" alt="so2-sensor" width={50} height={50} />
+                                            </div>
+                                        </div>
+                                    </Carousel>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* airqulality contact Section */}
+                <section className="airqulality_contact_section inner_container">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="introducing_box sub_title_box text-center">
+                                    <h2 className="title_heading">
+                                        Get in <span className="bold_text">Touch</span>
+                                    </h2>
+                                    <p>
+                                        Please help us know what requirements you have.
+                                        <br />
+                                        Our team will contact you very soon.
+                                    </p>
+                                </div>
+
+                                <div className="row airquality_inner_form">
+                                    <div className="contact_content_box col-md-4">
+                                        <div className="contact_information_box">
+                                            <h4>Contact Info</h4>
+                                            <p>Looking for Any Indoor Air Quality Monitor?</p>
+                                            <ul className="contact_info">
+                                                <li>
+                                                    <i className="fa fa-phone" aria-hidden="true"></i>
+                                                    Phone Number:
+                                                    <br />
+                                                    (+91) 73918-73918
+                                                </li>
+                                                <li>
+                                                    <i className="fa fa-envelope" aria-hidden="true"></i>
+                                                    Email Address:
+                                                    <br />
+                                                    info@purelogic.in
+                                                </li>
+                                                <li>
+                                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
+                                                    Office Location:
+                                                    <br />
+                                                    706, 7th Floor, Sec 10,
+                                                    <br />
+                                                    Rohini, Delhi 85, India
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-8">
+                                        <div className="airquality_contact_box">
+                                            <form action="#" method="post" className="contact-form">
+                                                <div className="row">
+                                                    <div className="col-12">
+                                                        <p>
+                                                            <label>
+                                                                Your Full Name
+                                                                <br />
+                                                                <input type="text" name="your-name" className="form-control" required />
+                                                            </label>
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="col-md-6">
+                                                        <p>
+                                                            <label>
+                                                                Your Phone No
+                                                                <br />
+                                                                <input type="tel" name="phone" className="form-control" required />
+                                                            </label>
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="col-md-6">
+                                                        <p>
+                                                            <label>
+                                                                Your Email
+                                                                <br />
+                                                                <input type="email" name="your-email" className="form-control" required />
+                                                            </label>
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="col-12">
+                                                        <p>
+                                                            <label>
+                                                                Your Organisation
+                                                                <br />
+                                                                <input type="text" name="company-name" className="form-control" required />
+                                                            </label>
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="col-12">
+                                                        <p>
+                                                            <label className="message_text">
+                                                                Message
+                                                                <br />
+                                                                <textarea
+                                                                    name="your-message"
+                                                                    className="form-control"
+                                                                    rows="5"
+                                                                    placeholder="Write message here"
+                                                                ></textarea>
+                                                            </label>
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="col-12">
+                                                        <p>
+                                                            <input type="submit" value="Send Message" className="wpcf7-submit" />
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* You may also like */}
+                <section className="you-may-also">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="you-may-also-heading">
+                                    <h2>You may also like</h2>
+                                    <ul>
+                                        <li>
+                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
+                                            <span>Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></span>
+                                        </li>
+                                        <li>
+                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
+                                            <span>Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></span>
+                                        </li>
+                                        <li>
+                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
+                                            <span>Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></span>
+                                        </li>
+                                        <li>
+                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
+                                            <span>Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></span>
+                                        </li>
+                                        <li>
+                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
+                                            <span>Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></span>
+                                        </li>
+                                        <li>
+                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
+                                            <span>Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></span>
+                                        </li>
+                                        <li>
+                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
+                                            <span>Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} /></span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
