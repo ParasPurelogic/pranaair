@@ -6,6 +6,7 @@ import Link from "next/link"
 import Image from "next/image";
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import SensorNavBar from "@/Components/Sensorbar/SensorNavBar"
 
 
 export default function AirDronePage() {
@@ -58,6 +59,8 @@ export default function AirDronePage() {
     return (
         <div className="air-drone-page">
             <main className="air-drone-page">
+                {/* Hero Section */}
+                <SensorNavBar />
                 {/* Hero Section */}
                 <section className="product-sec">
                     <div className="container">

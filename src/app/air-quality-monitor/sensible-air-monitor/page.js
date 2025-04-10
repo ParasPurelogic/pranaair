@@ -5,6 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function SensibleAirMonitor() {
   // Responsive settings for carousel
@@ -410,37 +411,20 @@ export default function SensibleAirMonitor() {
       </div>
 
       {/* Contact Section */}
-      <div className="contact_senitizer_section sensible_conact_section contact_monitor_sec" id="request_a_quote">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="contact_img_box">
-                <img src="https://www.pranaair.com/wp-content/uploads/2021/05/contact-us-image.jpeg" alt="contact us image" className="img-fluid" />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <h3><span style={{ fontSize: "18pt" }}><strong>Get In Touch With Us</strong></span></h3>
-              <p>Contact us for more details about Sensible Air Monitor.</p>
-              <p>Request a quote</p>
-              <form className="contact-form">
-                <div className="form-group">
-                  <input type="text" className="form-control" placeholder="Your Name" />
-                </div>
-                <div className="form-group">
-                  <input type="email" className="form-control" placeholder="Your Email" />
-                </div>
-                <div className="form-group">
-                  <input type="tel" className="form-control" placeholder="Your Phone" />
-                </div>
-                <div className="form-group">
-                  <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" className="btn bg-btn bg-green">Submit</button>
-              </form>
-            </div>
+      <div className="container">
+  <div className="row">
+      <div className="col-md-12">
+          <div className="contact-heading">
+              <h2>Get in Touch</h2>
+              <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+              </p>
           </div>
-        </div>
       </div>
+  </div>
+</div>
+<ContactForm pageName="Sensible Air Monitor Page" />
 
       {/* Related Products Section */}
       <div className="product_compare_section">

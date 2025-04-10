@@ -1,0 +1,29 @@
+.active-sensor-link {
+    position: relative;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.active-sensor-link:before {
+    position: absolute;
+    content: "";
+    background: #7AB261;
+    width: 80px;
+    height: 2px;
+    bottom: 0;
+    left: -25px;
+    right: 0;
+}
+
+.sensor-bar a {
+    margin: 0 70px;
+    text-decoration: none;
+    color: #31343D;
+    font-size: 14px;
+}
+
+.sensor-bar {
+    background: #f3f5f2;
+    text-align: center;
+    padding: 15px;
+}

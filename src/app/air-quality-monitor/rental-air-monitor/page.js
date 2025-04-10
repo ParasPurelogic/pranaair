@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function RentalAirMonitorPage() {
   const [selectedOption, setSelectedOption] = useState("Monitor - 10 units for 24 Months")
@@ -560,129 +561,20 @@ export default function RentalAirMonitorPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="airqulality_contact_section" id="get_in_touch">
-        <div className="container">
-          <div className="introducing_box sub_title_box text-center">
-            <h2 className="title_heading">
-              Get in <span className="bold_text">Touch</span>
-            </h2>
-            <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-          </div>
-
-          <div className="airquality_inner_form">
-            <div className="row">
-              <div className="col-md-3">
-                <div className="contact_information_box">
-                  <h4>Contact Info</h4>
-                  <p>Looking for any rental service of air quality monitoring devices?</p>
-                  <ul className="contact_info">
-                    <li>
-                      <i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918
-                    </li>
-                    <li>
-                      <i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in
-                    </li>
-                    <li>
-                      <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10,
-                      Rohini, Delhi 85, India
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-md-9">
-                <div className="airquality_contact_box">
-                  <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                      <label htmlFor="fullname">Full Name*</label>
-                      <input
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        value={formData.fullname}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="yourphone">Phone Number*</label>
-                      <input
-                        type="tel"
-                        id="yourphone"
-                        name="yourphone"
-                        value={formData.yourphone}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="youremail">Email Address*</label>
-                      <input
-                        type="email"
-                        id="youremail"
-                        name="youremail"
-                        value={formData.youremail}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="yourorganisation">Organisation Name*</label>
-                      <input
-                        type="text"
-                        id="yourorganisation"
-                        name="yourorganisation"
-                        value={formData.yourorganisation}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="rental-option">Select Rental Option*</label>
-                      <select
-                        id="rental-option"
-                        name="rental-option"
-                        value={selectedOption}
-                        onChange={(e) => setSelectedOption(e.target.value)}
-                        required
-                      >
-                        <option value="Monitor - 10 units for 24 Months">Monitor - 10 units for 24 Months</option>
-                        <option value="Monitor - 10 units for 36 Months">Monitor - 10 units for 36 Months</option>
-                        <option value="Monitor - 10 units for 48 Months">Monitor - 10 units for 48 Months</option>
-                      </select>
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="yourmessage" className="message_text">
-                        Your Message*
-                      </label>
-                      <textarea
-                        id="yourmessage"
-                        name="yourmessage"
-                        value={formData.yourmessage}
-                        onChange={handleInputChange}
-                        required
-                      ></textarea>
-                    </div>
-
-                    <div className="form-group">
-                      <input type="checkbox" id="terms" name="terms" required />
-                      <label htmlFor="terms">I accept the terms and conditions</label>
-                    </div>
-
-                    <button type="submit" className="wpcf7-submit">
-                      Submit
-                    </button>
-                  </form>
-                </div>
-              </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="contact-heading">
+              <h2>Get in Touch</h2>
+              <p>
+                Please help us know what requirements you have. Our team will
+                contact you very soon.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      <ContactForm pageName="Rental Monitor Page" />
 
       {/* FAQ Section */}
       <section className="faq_section faq_ask_section">

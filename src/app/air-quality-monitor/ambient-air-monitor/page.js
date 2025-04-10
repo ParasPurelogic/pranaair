@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-multi-carousel"
 import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function AmbientAirMonitor() {
     // State for tabs
@@ -2688,64 +2689,20 @@ export default function AmbientAirMonitor() {
             </section>
 
             {/* Contact Form Section */}
-            <section className="airqulality_contact_section" id="contact_form">
-                <div className="container">
-                    <div className="introducing_box sub_title_box text-center">
-                        <h2 className="title_heading">
-                            Get in <span className="bold_text">Touch With Us</span>
-                        </h2>
-                        <p>Please let us know your requirements so we can get back to you soon.</p>
-                    </div>
-                    <div className="row airquality_inner_form">
-                        <div className="col-md-3 contact_content_box">
-                            <div className="contact_information_box">
-                                <h4>Contact Info</h4>
-                                <p>Looking for Ambient Air Quality Monitors?</p>
-                                <ul className="contact_info">
-                                    <li>
-                                        <i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918
-                                    </li>
-                                    <li>
-                                        <i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in
-                                    </li>
-                                    <li>
-                                        <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10,
-                                        Rohini, Delhi 85, India
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-md-9">
-                            <div className="airquality_contact_box">
-                                <form>
-                                    <div className="row">
-                                        <div className="col-md-6 mb-3">
-                                            <input type="text" className="form-control" placeholder="Your Name" required />
-                                        </div>
-                                        <div className="col-md-6 mb-3">
-                                            <input type="email" className="form-control" placeholder="Your Email" required />
-                                        </div>
-                                        <div className="col-md-6 mb-3">
-                                            <input type="tel" className="form-control" placeholder="Your Phone" required />
-                                        </div>
-                                        <div className="col-md-6 mb-3">
-                                            <input type="text" className="form-control" placeholder="Your Company" />
-                                        </div>
-                                        <div className="col-12 mb-3">
-                                            <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
-                                        </div>
-                                        <div className="col-12">
-                                            <button type="submit" className="btn btn-primary">
-                                                Submit
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="contact-heading">
+                            <h2>Get in Touch</h2>
+                            <p>
+                                Please help us know what requirements you have. Our team will
+                                contact you very soon.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <ContactForm pageName="Ambient Monitor Page" />
 
             {/* FAQs Section */}
             <section className="faq-section">

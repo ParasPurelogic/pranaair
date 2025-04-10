@@ -1776,123 +1776,13 @@ a.learn-more img {
   text-align: center
 }
 
-.airqulality_contact_section {
-  padding: 40px 220px !important;
-  margin-top: 200px
+.contact-info {
+  background: #1f80d1 !important;
 }
 
-.airqulality_contact_section .contact_content_box {
-  background: #1972BC;
-  padding: 40px 20px 75px;
-  border-radius: 25px;
-  position: relative;
-  overflow: hidden
-}
-
-.contact_content_box:after {
-  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
-  width: 160px;
-  height: 160px;
-  content: "";
-  position: absolute;
-  bottom: -92px;
-  left: -25px;
-  z-index: 0;
-  background-size: 66%
-}
-
-.airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
-  width: 60%;
-  padding: 6px 0 0 40px
-}
-
-.airquality_contact_box label br {
-  display: none
-}
-
-.airquality_contact_box input.wpcf7-form-control {
-  width: 100%;
-  margin-bottom: 15px !important;
-  border: none;
-  border-bottom: 1px solid #60606073;
-  padding-left: 4px
-}
-
-.airquality_contact_box label {
-  width: 100%
-}
-
-.contact_information_box h4 {
-  font-size: 25px;
-  color: #fff
-}
-
-.contact_information_box p {
-  color: #fff;
-  font-weight: 400;
-  padding-top: 10px
-}
-
-.airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
-  max-height: 78px;
-  border: none;
-  border-bottom: 1px solid #60606073;
-  padding-left: 4px
-}
-
-ul.contact_info {
-  list-style: none;
-  padding: 0;
-  margin: 0
-}
-
-.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
-  background: #1972BC;
-  border: none;
-  width: auto;
-  margin-top: 30px;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 5px
-}
-
-.contact_info li {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  padding-bottom: 25px;
-  font-size: 16px;
-  font-weight: 300
-}
-
-.contact_info li i {
-  font-size: 21px;
-  margin-right: 10px
-}
-
-.contact_info {
-  padding-top: 20px !important
-}
-
-.airquality_inner_form {
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 950px;
-  margin: 0 auto 30px;
-  box-shadow: 2px 2px 11px 0 #ccc
-}
-
-.title_heading {
-  text-align: center;
-  color: #31343D;
-  font-size: 32px
-}
-
-.introducing_box p {
-  color: #677580;
-  font-size: 18px;
-  padding-top: 10px
+.submit-btn {
+  background: #1f80d1 !important;
+  border-radius: 10px !important;
 }
 
 .introducing_box {

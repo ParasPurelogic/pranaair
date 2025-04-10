@@ -5,6 +5,7 @@ import "./style.css"
 import Image from "next/image";
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
 // Arrow icons for slider
 const ChevronUpIcon = () => (
   <svg
@@ -1488,124 +1489,7 @@ export default function AirDronePage() {
         </section>
 
         {/* airqulality contact Section */}
-        <section className="airqulality_contact_section inner_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="introducing_box sub_title_box text-center">
-                  <h2 className="title_heading">
-                    Get in <span className="bold_text">Touch</span>
-                  </h2>
-                  <p>
-                    Please help us know what requirements you have.
-                    <br />
-                    Our team will contact you very soon.
-                  </p>
-                </div>
-
-                <div className="row airquality_inner_form">
-                  <div className="contact_content_box col-md-4">
-                    <div className="contact_information_box">
-                      <h4>Contact Info</h4>
-                      <p>Looking for Any Indoor Air Quality Monitor?</p>
-                      <ul className="contact_info">
-                        <li>
-                          <i className="fa fa-phone" aria-hidden="true"></i>
-                          Phone Number:
-                          <br />
-                          (+91) 73918-73918
-                        </li>
-                        <li>
-                          <i className="fa fa-envelope" aria-hidden="true"></i>
-                          Email Address:
-                          <br />
-                          info@purelogic.in
-                        </li>
-                        <li>
-                          <i className="fa fa-map-marker" aria-hidden="true"></i>
-                          Office Location:
-                          <br />
-                          706, 7th Floor, Sec 10,
-                          <br />
-                          Rohini, Delhi 85, India
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="col-md-8">
-                    <div className="airquality_contact_box">
-                      <form action="#" method="post" className="contact-form">
-                        <div className="row">
-                          <div className="col-12">
-                            <p>
-                              <label>
-                                Your Full Name
-                                <br />
-                                <input type="text" name="your-name" className="form-control" required />
-                              </label>
-                            </p>
-                          </div>
-
-                          <div className="col-md-6">
-                            <p>
-                              <label>
-                                Your Phone No
-                                <br />
-                                <input type="tel" name="phone" className="form-control" required />
-                              </label>
-                            </p>
-                          </div>
-
-                          <div className="col-md-6">
-                            <p>
-                              <label>
-                                Your Email
-                                <br />
-                                <input type="email" name="your-email" className="form-control" required />
-                              </label>
-                            </p>
-                          </div>
-
-                          <div className="col-12">
-                            <p>
-                              <label>
-                                Your Organisation
-                                <br />
-                                <input type="text" name="company-name" className="form-control" required />
-                              </label>
-                            </p>
-                          </div>
-
-                          <div className="col-12">
-                            <p>
-                              <label className="message_text">
-                                Message
-                                <br />
-                                <textarea
-                                  name="your-message"
-                                  className="form-control"
-                                  rows="5"
-                                  placeholder="Write message here"
-                                ></textarea>
-                              </label>
-                            </p>
-                          </div>
-
-                          <div className="col-12">
-                            <p>
-                              <input type="submit" value="Send Message" className="wpcf7-submit" />
-                            </p>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ContactForm pageName="Air Drone Page" />
 
         {/* FAQs Section */}
         <section className="faq-section">

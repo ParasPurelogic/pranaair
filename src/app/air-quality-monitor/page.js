@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 1200 }, items: 4 },
@@ -1655,7 +1656,7 @@ export default function CommonMonitorPage() {
                                     </div>
 
 
-                                        <div className="review-img">
+                                    <div className="review-img">
                                         <div className="review-box">
                                             <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
                                             <p className="hide-txt">Its a great product that can indicate the level of PM2.5 in a closed or outdoor environment. Its
@@ -1683,7 +1684,7 @@ export default function CommonMonitorPage() {
                                     </div>
 
 
-                                        <div className="review-img">
+                                    <div className="review-img">
                                         <div className="review-box">
                                             <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
                                             <p className="hide-txt">Its a great product that can indicate the level of PM2.5 in a closed or outdoor environment. Its
@@ -1707,11 +1708,11 @@ export default function CommonMonitorPage() {
                                                 </li>
                                             </ul>
                                         </div>
-                                        </div>
+                                    </div>
 
 
 
-                                        <div className="review-img">
+                                    <div className="review-img">
                                         <div className="review-box">
                                             <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
                                             <p className="hide-txt">Its a great product that can indicate the level of PM2.5 in a closed or outdoor environment. Its
@@ -1814,77 +1815,20 @@ export default function CommonMonitorPage() {
             </div>
 
             {/* Contact Form Section */}
-            <section className="airqulality_contact_section inner_container" id="contact">
-                <div className="container">
-                    <div className="introducing_box sub_title_box text-center">
-                        <h2 className="title_heading">
-                            Get in <span className="bold_text">Touch</span>
-                        </h2>
-                        <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-                    </div>
-
-                    <div className="row airquality_inner_form">
-                        <div className="col-md-3 contact_content_box">
-                            <div className="contact_information_box">
-                                <h4>Contact Info</h4>
-                                <p>Looking for Any Indoor Air Quality Monitor?</p>
-                                <ul className="contact_info">
-                                    <li>
-                                        <i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918
-                                    </li>
-                                    <li>
-                                        <i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in
-                                    </li>
-                                    <li>
-                                        <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10,
-                                        Rohini, Delhi 85, India
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="col-md-9">
-                            <div className="airquality_contact_box">
-                                <form>
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <input type="text" className="form-control" placeholder="Your Name" required />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <input type="email" className="form-control" placeholder="Your Email" required />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <input type="tel" className="form-control" placeholder="Phone Number" required />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <input type="text" className="form-control" placeholder="Subject" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="form-group mb-3">
-                                        <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
-                                    </div>
-
-                                    <button type="submit" className="btn btn-primary">
-                                        Submit
-                                    </button>
-                                </form>
-                            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="contact-heading">
+                            <h2>Get in Touch</h2>
+                            <p>
+                                Please help us know what requirements you have. Our team will
+                                contact you very soon.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <ContactForm pageName="Air Quality Monitor Common Page" />
 
             {/* Related Products Section */}
             <section className="also-like">

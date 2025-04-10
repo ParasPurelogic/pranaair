@@ -1,7 +1,12 @@
-export default function page() {
+// pages/about.js
+import ContactForm from "@/Components/Contacform/ContactForm";
+
+
+export default function About() {
   return (
-    <div className="container">
-      Contact Page
+    <div>
+      <h1>About Us</h1>
+      <ContactForm pageName="About Page" />
     </div>
-  )
+  );
 }

@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Carousel from "react-multi-carousel"
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function PranaSense() {
     const [activeTab, setActiveTab] = useState('mobile-app');
@@ -887,6 +888,22 @@ export default function PranaSense() {
                 </div>
             </section>
 
+            {/* Contact Form Section */}
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="contact-heading">
+                            <h2>Get in Touch</h2>
+                            <p>
+                                Please help us know what requirements you have. Our team will
+                                contact you very soon.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ContactForm pageName="Prana Sense Page" />
+
             {/* FAQ Section */}
             <section className="tab-section">
                 <div className="container">
@@ -949,74 +966,6 @@ export default function PranaSense() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Contact Form Section */}
-            <section className="contat-form-section" id="get-in-touch">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="introducing_box sub_title_box text-center">
-                                <h2 className="title_heading">Get in <span className="bold_text">Touch</span></h2>
-                                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row airquality_inner_form">
-                        <div className="col-md-3 contact_content_box">
-                            <div className="contact_information_box">
-                                <h4>Contact Info</h4>
-                                <p>Looking for Ambient Air Quality Monitor?</p>
-                                <ul className="contact_info">
-                                    <li><img src="https://www.pranaair.com/wp-content/uploads/2024/09/footer-call-icon.png" alt="call icon" /> Phone Number: (+91) 73918-73918</li>
-                                    <li><img src="https://www.pranaair.com/wp-content/uploads/2024/09/footer-mail-icon.png" alt="mail icon" /> Email Address: info@purelogic.in</li>
-                                    <li><img src="https://www.pranaair.com/wp-content/uploads/2024/09/footer-locate-icon.png" alt="location icon" /> Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-md-9 contact-colum">
-                            <div className="airquality_contact_box">
-                                <form>
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <label>Your Name</label>
-                                                <input type="text" className="form-control" required />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <label>Your Email</label>
-                                                <input type="email" className="form-control" required />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <label>Phone Number</label>
-                                                <input type="tel" className="form-control" required />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group mb-3">
-                                                <label>Subject</label>
-                                                <input type="text" className="form-control" />
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <div className="form-group mb-3">
-                                                <label>Your Message</label>
-                                                <textarea className="form-control" rows="4"></textarea>
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <button type="submit" className="btn btn-primary">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>

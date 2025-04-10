@@ -1704,113 +1704,6 @@ span.yellow {
   position: relative
 }
 
-.contat-form-section {
-  padding-bottom: 100px;
-  padding-top: 60px;
-  background: #ebf3f9
-}
-
-.sub_title_box .title_heading {
-  text-align: center;
-  color: #000;
-  font-size: 36px;
-  margin: 0 0 15px;
-  font-weight: 400
-}
-
-.introducing_box.sub_title_box.text-center {
-  text-align: center
-}
-
-span.bold_text {
-  font-weight: 700;
-  color: #1972bc
-}
-
-.airquality_inner_form {
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 950px;
-  margin: 30px auto 0px !important;
-  box-shadow: 2px 2px 11px 0 #ccc
-}
-
-.contact_content_box {
-  padding: 30px 15px 75px !important;
-  background: #1972bc;
-  width: 40%;
-  border-radius: 25px;
-  position: relative;
-  overflow: hidden
-}
-
-.contact_information_box h4 {
-  font-size: 28px;
-  color: #fff
-}
-
-.contact_information_box p {
-  color: #fff;
-  font-weight: 300;
-  padding-bottom: 30px;
-  font-size: 18px
-}
-
-ul.contact_info {
-  list-style: none;
-  padding: 0;
-  margin: 0
-}
-
-.contact_info li {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  padding-bottom: 45px;
-  font-size: 18px;
-  font-weight: 300;
-  gap: 10px
-}
-
-.contact_info li img {
-  width: 24px
-}
-
-.contact-colum {
-  width: 60%;
-  padding: 6px 0 0 40px
-}
-
-.airquality_contact_box label {
-  width: 100%;
-  font-size: 16px;
-  font-weight: 300;
-  color: #606060
-}
-
-input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
-  border: 0;
-  border-bottom: 1px solid #c7c3c3ee;
-  margin-bottom: 30px !important
-}
-
-textarea.wpcf7-form-control.wpcf7-textarea {
-  border: 0;
-  border-bottom: 1px solid #c7c3c3ee;
-  max-height: 150px
-}
-
-.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
-  background: #1972bc;
-  border: none;
-  width: auto;
-  margin-top: 30px;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 5px
-}
-
 .video-file img {
   width: 100%;
   margin: 0 auto
@@ -1868,6 +1761,15 @@ textarea.wpcf7-form-control.wpcf7-textarea {
   right: 0;
   margin: 0 auto;
   top: 115%
+}
+
+.contact-info {
+  background: #1972bc !important;
+}
+
+.submit-btn {
+  background: #1972bc !important;
+  border-radius: 10px !important;
 }
 
 .ult-video {
@@ -3424,10 +3326,11 @@ textarea.wpcf7-form-control.wpcf7-textarea {
     margin-left: -20px;
     margin-top: 5px
   }
+
   .power-img img {
     max-width: 530px;
     margin-left: -180px;
-}
+  }
 }
 
 @media only screen and (min-device-width :768px) and (max-device-width :1024px) and (orientation :landscape) {

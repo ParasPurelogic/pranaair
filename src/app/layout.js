@@ -1,7 +1,7 @@
 import "@/app/globals.css" // Custom CSS
 import "bootstrap/dist/css/bootstrap.min.css" // Bootstrap CSS
-import Footer from "@/Components/Footer"
-import Header from "@/Components/Header"
+import MainHeader from "@/Components/MainHeader"
+import MainFooter from "@/Components/MainFooter"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export const metadata = {
@@ -15,13 +15,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {/* Header */}
-        <Header />
+       <MainHeader/>
 
         {/* Page Content */}
         <main className="main py-4">{children}</main>
 
         {/* Footer */}
-        <Footer />
+        <MainFooter />
       </body>
     </html>
   )

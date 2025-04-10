@@ -1,0 +1,112 @@
+
+.box-form {
+    width: 1000px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 0 auto 30px;
+    box-shadow: 2px 2px 11px 0 #ccc;
+}
+
+.contact-heading {
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 150px;
+}
+
+.contact-heading h2 {
+    text-align: center;
+    color: #31343d;
+    font-size: 32px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.contact-heading p {
+    color: #677580;
+    font-size: 18px;
+    padding-top: 10px;
+    margin: 0 auto !important;
+    width: 40%;
+}
+
+.contact-info {
+    background: #7ab261;
+    padding: 40px 20px 75px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info:before {
+    background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+    width: 200px;
+    height: 200px;
+    content: "";
+    position: absolute;
+    bottom: -125px;
+    left: -25px;
+    z-index: 0;
+    background-size: 66%;
+}
+
+.contact-info h4 {
+    color: #fff;
+    font-size: 32px;
+    margin: 0;
+}
+
+.contact-info p {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+p.mb-2 {
+    margin-bottom: 25px !important;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.contact-info ul li i {
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    padding-top: 15px;
+}
+
+form.form-box {
+    padding: 5px 25px;
+}
+
+.submit-btn {
+    background: #7ab261;
+    color: #fff;
+    border: none;
+    padding: 15px 50px;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: .2s linear;
+}
+
+.submit-btn:hover {
+    background: #518339;
+}
+
+.form-control::placeholder {
+    font-size: 14px;
+    color: #bababa;
+}
+
+.form-control {
+    padding: 12px 15px;
+}
+
+textarea.form-control {
+    height: 180px;
+}
