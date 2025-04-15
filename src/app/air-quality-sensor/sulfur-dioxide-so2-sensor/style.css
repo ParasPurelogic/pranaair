@@ -83,6 +83,7 @@ a {
     position: relative;
     left: -130px;
     top: 3px;
+    z-index: 1;
 }
 
 .sensor-tab-btn img {

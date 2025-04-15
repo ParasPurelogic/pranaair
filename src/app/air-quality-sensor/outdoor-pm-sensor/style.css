@@ -324,13 +324,14 @@ a {
 }
 
 .tab-content-box p {
-  color: #263D4F;
+  color: #263d4f;
   text-align: left;
   line-height: 30px;
-  padding-top: 50px;
+  padding-top: 30px;
   width: 80%;
   font-size: 16px;
   margin-left: 0;
+  padding-bottom: 20px;
 }
 
 .sensor-img p {
@@ -459,8 +460,9 @@ button.tab-title.active {
 .size-compare-box-txt p {
   color: #f7f7fce6;
   font-size: 16px;
-  width: 80%;
+  width: 100%;
   padding-bottom: 30px;
+  line-height: 28px;
 }
 
 .size-compare-box-txt ul {
@@ -536,13 +538,17 @@ button.tab-title.active {
 }
 
 .experince-heading ul li {
-  color: #F7F7FC;
+  color: #f7f7fc;
   font-size: 14px;
   text-align: center;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @keyframes floating {
@@ -630,8 +636,8 @@ button.tab-title.active {
 }
 
 .pm-indoor-heading {
-  margin-top: 150px;
-  margin-left: -120px;
+  margin-top: 200px;
+  margin-left: 0;
 }
 
 .particulate-matter-heading {
@@ -884,9 +890,14 @@ button.tab-title.active {
   width: 100%;
 }
 
+.app-sensor-title {
+  margin: 0 10px 50px;
+}
+
 .app-sensor-title h4 {
   color: #263D4F;
   font-size: 20px;
+  padding-top: 15px;
   font-weight: 400;
 }
 
@@ -1267,6 +1278,7 @@ button.tab-title.active {
   overflow: visible !important;
   padding-bottom: 50px;
 }
+
 .contact-heading {
   padding-top: 50px !important;
 }
@@ -1452,7 +1464,7 @@ button.tab-title.active {
   height: 7px;
   left: -20px;
   margin: 0 auto;
-  top: 40px;
+  top: 70px;
 }
 
 .may-also a img {

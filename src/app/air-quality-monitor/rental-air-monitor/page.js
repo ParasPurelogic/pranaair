@@ -696,95 +696,35 @@ export default function RentalAirMonitorPage() {
           </div>
 
           <div className="row client_logo_section">
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-
-          <div className="row client_logo_section">
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/RENAULT-NISSAN.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-          </div>
-
-          <div className="row client_logo_section">
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/INTERGLOBE.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/GMDA-1.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/download.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/HAVELLS.png"
-                alt="Client Logo"
-                className="img-fluid"
-              />
+            <div className="logo-box">
+              <ul>
+                <li>
+                  <img src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png" alt="Client Logo"
+                    className="img-fluid" />
+                </li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/RENAULT-NISSAN.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/INTERGLOBE.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/GMDA-1.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/download.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+                <li><img src="https://www.pranaair.com/wp-content/uploads/2022/08/HAVELLS.png" alt="Client Logo"
+                  className="img-fluid" /></li>
+              </ul>
             </div>
           </div>
         </div>

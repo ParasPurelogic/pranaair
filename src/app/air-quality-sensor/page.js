@@ -10,16 +10,19 @@ export default function AirQualitySensors() {
   return (
     <div>
       {/* Banner Section */}
-      <div className="row monitor_banner_section" style={{ backgroundImage: "url('https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-quality-sensor-board.jpeg')" }}>
-        <div className="col-md-12">
-          <div className="monitor_banner_box">
-            <h2><span style={{ fontSize: '24pt' }}>Prana Air</span></h2>
-            <h2><span style={{ fontSize: '36pt' }}>Air Quality Sensors</span></h2>
-            <span style={{ fontSize: '24pt' }}>Know the quality of the air you breathe.</span>
+      <section className="monitor_banner_section" style={{ backgroundImage: "url('https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-quality-sensor-board.jpeg')" }}>
+        <div className='container'>
+        <div className="row" >
+          <div className="col-md-12">
+            <div className="monitor_banner_box">
+              <h2><span style={{ fontSize: '24pt' }}>Prana Air</span></h2>
+              <h2><span style={{ fontSize: '36pt' }}>Air Quality Sensors</span></h2>
+              <span style={{ fontSize: '24pt' }}>Know the quality of the air you breathe.</span>
+            </div>
           </div>
         </div>
-      </div>
-
+        </div>
+      </section>
       {/* Introduction Section */}
       <div className="container">
         <div className="row">
@@ -45,18 +48,19 @@ export default function AirQualitySensors() {
       <div className="container tab_aqi_section">
         <div className="row">
           <div className="col-md-12">
-            <ul className="nav nav-tabs">
-              <li className={activeTab === 'all' ? 'active' : ''}>
-                <a href="#" onClick={() => setActiveTab('all')}>All</a>
-              </li>
-              <li className={activeTab === 'pm' ? 'active' : ''}>
-                <a href="#" onClick={() => setActiveTab('pm')}>PM</a>
-              </li>
-              <li className={activeTab === 'gases' ? 'active' : ''}>
-                <a href="#" onClick={() => setActiveTab('gases')}>Gases</a>
-              </li>
-            </ul>
-
+            <div className="all-sensor-tab">
+              <ul className="nav nav-tabs">
+                <li className={activeTab === 'all' ? 'active' : ''}>
+                  <a href="#" onClick={() => setActiveTab('all')}>All</a>
+                </li>
+                <li className={activeTab === 'pm' ? 'active' : ''}>
+                  <a href="#" onClick={() => setActiveTab('pm')}>PM</a>
+                </li>
+                <li className={activeTab === 'gases' ? 'active' : ''}>
+                  <a href="#" onClick={() => setActiveTab('gases')}>Gases</a>
+                </li>
+              </ul>
+            </div>
             <div className="tab-content">
               {activeTab === 'all' && (
                 <div className="tab-pane active">
@@ -439,26 +443,30 @@ export default function AirQualitySensors() {
       <ContactForm pageName="Air Quality Sensor Page" />
 
       {/* Trusted By Section */}
-      <div className="row ourclient_section">
-        <div className="col-md-12">
-          <h2 style={{ textAlign: 'center' }}><span style={{ fontSize: '24pt' }}>Trusted By</span></h2>
-          <p style={{ textAlign: 'center' }}><span style={{ fontSize: '18pt' }}>Some of the industrys top organisations</span></p>
-        </div>
-        <div className="col-md-12">
-          <div className="our_client_box">
-            <ul>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/csir-logo.png" alt="Prana Air client csir" width="220" height="auto" /></li>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-varanasi-logo.png" alt="Prana Air client iit varanasi" width="220" height="auto" /></li>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-varanasi-logo.png" alt="Prana Air client iit roorkee" width="220" height="auto" /></li>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-hyderabad-logo.png" alt="Prana Air client iit hyderabad" width="220" height="auto" /></li>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-dhanbad-logo.png" alt="Prana Air client iit dhanbad" width="220" height="auto" /></li>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-bombay-logo.png" alt="Prana Air client iit bombay" width="220" height="auto" /></li>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/dae-logo.png" alt="Prana Air client dae" width="220" height="auto" /></li>
-              <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/ola-logo.png" alt="Prana Air client ola" width="220" height="auto" /></li>
-            </ul>
+      <section className='trust-sec'>
+        <div className='container'>
+          <div className="row ourclient_section">
+            <div className="col-md-12">
+              <h2 style={{ textAlign: 'center' }}><span style={{ fontSize: '24pt' }}>Trusted By</span></h2>
+              <p style={{ textAlign: 'center' }}><span style={{ fontSize: '18pt' }}>Some of the industrys top organisations</span></p>
+            </div>
+            <div className="col-md-12">
+              <div className="our_client_box">
+                <ul>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/csir-logo.png" alt="Prana Air client csir" width="220" height="auto" /></li>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-varanasi-logo.png" alt="Prana Air client iit varanasi" width="220" height="auto" /></li>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-varanasi-logo.png" alt="Prana Air client iit roorkee" width="220" height="auto" /></li>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-hyderabad-logo.png" alt="Prana Air client iit hyderabad" width="220" height="auto" /></li>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-dhanbad-logo.png" alt="Prana Air client iit dhanbad" width="220" height="auto" /></li>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/iit-bombay-logo.png" alt="Prana Air client iit bombay" width="220" height="auto" /></li>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/dae-logo.png" alt="Prana Air client dae" width="220" height="auto" /></li>
+                  <li><img src="https://www.pranaair.com/wp-content/uploads/2023/03/ola-logo.png" alt="Prana Air client ola" width="220" height="auto" /></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

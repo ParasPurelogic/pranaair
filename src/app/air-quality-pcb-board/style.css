@@ -331,7 +331,11 @@ li.tab-inner-title.active button {
 
 .tab-inner-title {
   background: transparent !important;
-  padding-bottom: 50px !important;
+  padding-bottom: 0px !important;
+}
+
+.tab-navigation ul {
+  gap: 15px;
 }
 
 .tab-img-para {
@@ -405,6 +409,37 @@ li.tab-inner-title.active button {
 
 .air-quality-sensore {
   position: relative;
+  padding-bottom: 60px;
+}
+
+.faq-heading {
+  padding-bottom: 40px;
+}
+
+.accordion-button:not(.collapsed) {
+  background: transparent;
+  color: #212529;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.prouct-slider-tab .nav-tabs {
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.prouct-slider-tab .nav-tabs li.active button {
+  background: #7ab261;
+  color: #fff;
+}
+
+.prouct-slider-tab .nav-tabs li button {
+  border: none;
+  padding: 12px 30px;
 }
 
 .air-quality-sensore:before {
@@ -949,11 +984,11 @@ figcaption.woocom-list-content a.btn.btn-primary {
   }
 
   .air-quality-sensore h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .air-quality-sensore h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .box-1 {

@@ -1493,6 +1493,10 @@ a.btn:hover .fa-arrow-right {
     margin-bottom: 0px !important;
   }
 
+  .grey-green img {
+    margin-top: 0px;
+  }
+
   .your-data-txt h2 {
     font-size: 24px;
     line-height: 32px;
@@ -1528,8 +1532,24 @@ a.btn:hover .fa-arrow-right {
   }
 
   .mob-dash-heading h2 {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 28px;
+    width: 100%;
+  }
+
+  .tab-sec .nav-link {
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+
+  .tab-sec ul {
+    justify-content: left;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .tab-sec .nav-link.active {
+    border-radius: 20px 20px 0;
   }
 
   .tab-sec .vc_tta-panels-container {
@@ -1591,6 +1611,7 @@ a.btn:hover .fa-arrow-right {
 
   .tab-content {
     padding: 20px 30px 0;
+    border-radius: 30px;
   }
 
   .dash-mob-img img {
@@ -1663,6 +1684,7 @@ a.btn:hover .fa-arrow-right {
     margin-bottom: 20px;
     padding-right: 0;
     width: 100%;
+    font-size: 14px;
     justify-content: space-between;
   }
 
@@ -1765,11 +1787,7 @@ a.btn:hover .fa-arrow-right {
   }
 
   .hospital:before {
-    height: 270px;
-  }
-
-  .hospital-heading {
-    top: 130px;
+    height: 262px;
   }
 
   .oxyco-monitor img {
@@ -1782,8 +1800,12 @@ a.btn:hover .fa-arrow-right {
 
   .hero-txt h1 {
     font-size: 30px;
-    width: 60%;
+    width: 90%;
     padding: 10px;
+  }
+
+  .banner-btn {
+    width: 60%;
   }
 
   .hero-txt h2 {
@@ -1801,7 +1823,7 @@ a.btn:hover .fa-arrow-right {
   }
 
   .key-feature-txt h3 {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .key-feature-txt p {
@@ -1810,13 +1832,17 @@ a.btn:hover .fa-arrow-right {
     width: 90%;
   }
 
+  .feature ul li:nth-child(2) {
+    top: -10px;
+  }
+
   .feature ul li {
     width: 30%;
     margin: 0 10px;
   }
 
   .feature-txt {
-    margin-top: -60px;
+    margin-top: -80px;
     height: 80px;
     padding: 10px 10px;
   }
@@ -1870,7 +1896,7 @@ a.btn:hover .fa-arrow-right {
   }
 
   .feature ul li:nth-child(5) {
-    top: -40px;
+    top: 10px;
   }
 
   .feature ul li:nth-child(3) {
@@ -1883,14 +1909,10 @@ a.btn:hover .fa-arrow-right {
     line-height: 20px;
   }
 
-  .variant-sec {
-    margin-top: 0px;
-  }
-
   .variant-txt {
     padding-top: 20px;
-    padding-left: 30px;
-    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-bottom: 5px;
     margin: 0;
   }
 
@@ -1901,11 +1923,13 @@ a.btn:hover .fa-arrow-right {
   .variant-txt p {
     font-size: 20px;
     line-height: 16px;
+    padding-top: 10px;
+    margin: 0;
   }
 
   .tab {
     width: 100%;
-    margin: auto 20px;
+    margin: auto 0px;
     gap: 0px;
   }
 
@@ -1919,7 +1943,7 @@ a.btn:hover .fa-arrow-right {
   }
 
   .oxy-co-box ul li {
-    width: 90%;
+    width: 100%;
     gap: 10px;
     padding: 7px 10px;
     margin-bottom: 0px;
@@ -1939,20 +1963,18 @@ a.btn:hover .fa-arrow-right {
   }
 
   .content-para {
-    top: 200px;
-    left: -450px;
+    top: 150px;
+    left: -350px;
+    width: 100%;
   }
 
   .variant-sec {
     height: 394px;
+    margin-top: 100px;
   }
 
   .parameter {
     margin-top: -150px;
-  }
-
-  .hospital:before {
-    height: 355px;
   }
 
   .track-head {
@@ -1968,13 +1990,14 @@ a.btn:hover .fa-arrow-right {
   }
 
   .hospital-heading {
-    top: 200px;
+    top: 150px;
     width: 60%;
     left: 50px;
   }
 
   .tab-content {
-    padding: 40px 60px 50px;
+    padding: 40px 60px 0px;
+    border-radius: 20px;
   }
 
   .visualise-data-sec {
@@ -2090,7 +2113,7 @@ a.btn:hover .fa-arrow-right {
   }
 
   .transfer {
-    margin-top: -150px;
+    margin-top: -90px;
     height: 100px;
     padding: 20px 20px 20px;
   }
@@ -2099,8 +2122,13 @@ a.btn:hover .fa-arrow-right {
     padding-top: 50px;
   }
 
+  .tab-sec ul {
+    width: 100%;
+  }
+
   .mob-dash-heading h2 {
     font-size: 30px;
+    width: 100%;
     line-height: 40px;
   }
 
@@ -2170,7 +2198,7 @@ a.btn:hover .fa-arrow-right {
 
   .product-specifi h4 {
     font-size: 16px;
-    width: 35%;
+    width: 50%;
   }
 
   .product-specifi {

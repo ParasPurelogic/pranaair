@@ -126,7 +126,17 @@ export default function SquairMonitor() {
       });
     }
   }, []);
-
+  // Initialize Bootstrap JS components after component mounts
+  useEffect(() => {
+    // Dynamically import Bootstrap JS only on the client side
+    import("bootstrap/dist/js/bootstrap.bundle.min.js")
+      .then(() => {
+        console.log("Bootstrap JS initialized")
+      })
+      .catch((err) => {
+        console.error("Failed to load Bootstrap JS:", err)
+      })
+  }, [])
   return (
     <div>
       {/* Banner Section */}
@@ -902,102 +912,137 @@ export default function SquairMonitor() {
         <ContactForm pageName="Squair Air Monitor Page" />
       </div>
       {/* FAQ Section */}
-      <div className="container-fluid squairMonitorFaq" style={{ backgroundImage: "url(/wp-content/uploads/2021/04/faqBg-square.jpg)" }}>
-        <div className="row">
-          <div className="col-md-12">
-            <h3 style={{ textAlign: 'center', color: '#fff' }}>Frequently Asked Questions</h3>
-            <div className="panel-group" id="faqAccordion">
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq1">
-                      1. What air quality parameters are measured by SQUAIR Monitor?
-                    </a>
-                  </h4>
-                </div>
-                <div id="faq1" className="panel-collapse collapse in">
-                  <div className="panel-body">
-                    <p style={{ textAlign: 'justify' }}>SQUAIR is an indoor air quality monitor that effectively measures a wide range of primary and secondary air pollutants.</p>
-                    <p><strong>Parameters:</strong></p>
-                    <p><strong>SQUAIR+ (Lite):</strong> PM 2.5, PM 10, CO2, TVOC, HCHO, Noise, Light, Temperature, Humidity</p>
-                    <p><strong>SQUAIR+ (Pro):</strong> PM 2.5, PM 10, CO, O3, CO2, SO2, NO2, TVOC, Noise, Light, Temperature, Humidity</p>
+      <section className="faq-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="faq-heading">
+                <h2>Frequently asked questions</h2>
+              </div>
+              <div className="accordion" id="faqAccordion">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                      aria-expanded="true"
+                    >
+                      1. What air quality parameters are measured by SQUAIR Monitor ?
+                    </button>
+                  </h2>
+                  <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      SQUAIR is an indoor air quality monitor that effectively measures a wide range of primary and secondary air pollutants.
+
+                      Parameters:
+                      SQUAIR+ (Lite): PM 2.5, PM 10, CO2, TVOC, HCHO, Noise, Light, Temperature, Humidity
+                      SQUAIR+ (Pro): PM 2.5, PM 10, CO, O3, CO2, SO2, NO2, TVOC, Noise, Light, Temperature, Humidity
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq2">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                      aria-expanded="false"
+                    >
                       2. Is SQUAIR monitor competent as per the international standards?
-                    </a>
-                  </h4>
-                </div>
-                <div id="faq2" className="panel-collapse collapse">
-                  <div className="panel-body">
-                    <p style={{ textAlign: 'justify' }}>Yes. It has been curated with cutting-edge technology, keeping national and international requirements in mind. SQUAIR is compliant with the standards set by WELL, LEED, ISHRAE, and WHO.</p>
+                    </button>
+                  </h2>
+                  <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      Yes. It has been curated with cutting-edge technology,
+                      keeping national and international requirements in mind. SQUAIR is compliant with the
+                      standards set by WELL, LEED, ISHRAE, and WHO.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq3">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                      aria-expanded="false"
+                    >
                       3. How can I connect my monitor to get the data?
-                    </a>
-                  </h4>
-                </div>
-                <div id="faq3" className="panel-collapse collapse">
-                  <div className="panel-body">
-                    <p style={{ textAlign: 'justify' }}>Yes. You can connect your SQUAIR monitor through Wi-Fi, GSM SIM, and RS-485 connectivity. Go through the above video on this page about the whole process of connectivity process.</p>
+                    </button>
+                  </h2>
+                  <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      Yes. You can connect your SQUAIR monitor through Wi-Fi,
+                      GSM SIM, and RS-485 connectivity. Go through the above video on this page about the
+                      whole process of connectivity process.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq4">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4"
+                      aria-expanded="false"
+                    >
                       4. Do I get any on-board storage with SQUAIR?
-                    </a>
-                  </h4>
-                </div>
-                <div id="faq4" className="panel-collapse collapse">
-                  <div className="panel-body">
-                    <p>Yes. SQUAIR monitor comes with on-board micro-SD card storage.</p>
+                    </button>
+                  </h2>
+                  <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      Yes. SQUAIR monitor comes with on-board micro-SD card storage.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq5">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq5"
+                      aria-expanded="false"
+                    >
                       5. Can I connect my SQUAIR monitor with my Building Management System (BMS)?
-                    </a>
-                  </h4>
-                </div>
-                <div id="faq5" className="panel-collapse collapse">
-                  <div className="panel-body">
-                    <p style={{ textAlign: 'justify' }}>Yes, absolutely. the monitor is extremely versatile and flexible in terms of connectivity. It comes with RS-485 connectivity which renders it compatible with your BMS.</p>
+                    </button>
+                  </h2>
+                  <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      Yes, absolutely. the monitor is extremely versatile and
+                      flexible in terms of connectivity. It comes with RS-485 connectivity which renders it
+                      compatible with your BMS.
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="panel panel-default">
-                <div className="panel-heading">
-                  <h4 className="panel-title">
-                    <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq6">
-                      6. How much does SQUAIR monitor weigh?
-                    </a>
-                  </h4>
-                </div>
-                <div id="faq6" className="panel-collapse collapse">
-                  <div className="panel-body">
-                    <p>SQUAIR monitor weighs 475 gm (16.75 oz).</p>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq5"
+                      aria-expanded="false"
+                    >
+                       6. How much does SQUAIR monitor weigh?
+                    </button>
+                  </h2>
+                  <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                    SQUAIR monitor weighs 475 gm (16.75 oz).
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Related Products */}
       <div className="container product_compare_section">

@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap);
 
+main.main.py-4 {
+    padding: 0 !important;
+}
+
 html {
     scroll-behavior: smooth
 }
@@ -845,6 +849,7 @@ a.anndro {
 
 a.ios {
     background: #1F80D1;
+    margin-top: 20px;
     color: #fff
 }
 
@@ -1349,6 +1354,17 @@ span.vc_tta-title-text {
     border-radius: 10px !important;
 }
 
+.accordion-button:not(.collapsed) {
+    color: #263d4f;
+    font-size: 22px;
+    font-weight: 500;
+    background: transparent;
+}
+
+.accordion-item {
+    border: none;
+}
+
 @media only screen and (min-width:320px) and (max-width:767px) {
     .hero-section:before {
         background-image: linear-gradient(180deg, #0000007a, #fdfdfd00);
@@ -1563,7 +1579,8 @@ span.vc_tta-title-text {
     }
 
     ul.connectivity-box li h3 {
-        font-size: 16px
+        font-size: 16px;
+        padding-top: 15px;
     }
 
     .img-box {
@@ -2582,7 +2599,10 @@ span.vc_tta-title-text {
 
     .multi-themes ul {
         padding: 30px 0;
-        gap: 10px
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .multi-themes ul li h3 {
@@ -2688,5 +2708,9 @@ span.vc_tta-title-text {
 
     .environmental-monitoring-img {
         padding-top: 100px
+    }
+
+    .web-dash-txt a {
+        width: 60%;
     }
 }

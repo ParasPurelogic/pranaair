@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -47,7 +47,17 @@ export default function WeatherStation() {
       items: 1
     }
   };
-
+  // Initialize Bootstrap JS components after component mounts
+  useEffect(() => {
+    // Dynamically import Bootstrap JS only on the client side
+    import("bootstrap/dist/js/bootstrap.bundle.min.js")
+      .then(() => {
+        console.log("Bootstrap JS initialized")
+      })
+      .catch((err) => {
+        console.error("Failed to load Bootstrap JS:", err)
+      })
+  }, [])
   return (
     <div>
       {/* Hero Section */}
@@ -793,84 +803,78 @@ export default function WeatherStation() {
           <div className="row">
             <div className="col-12">
               <div className="faq-heading">
-                <h2>FAQ</h2>
+                <h2>Frequently asked questions</h2>
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <div className="faq-tab">
-                <div className="accordion" id="faqAccordion">
-                  <div className="card faq-title">
-                    <div className="card-header" id="headingOne">
-                      <h2 className="mb-0">
-                        <button
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 1 ? '' : 'collapsed'}`}
-                          type="button"
-                          onClick={() => setActiveFaqTab(activeFaqTab === 1 ? 0 : 1)}
-                        >
-                          What kind of data can I collect from the weather station?
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseOne" className={`collapse ${activeFaqTab === 1 ? 'show' : ''}`}>
-                      <div className="card-body faq-para">
-                        <p>Weather station measures various meteorological parameters including temperature, humidity, wind speed and direction, rainfall and many more.</p>
-                      </div>
+              <div className="accordion" id="faqAccordion">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                      aria-expanded="true"
+                    >
+                      What kind of data can I collect from the weather station?
+                    </button>
+                  </h2>
+                  <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      Weather station measures various meteorological parameters including temperature, humidity, wind speed and direction, rainfall and many more.
                     </div>
                   </div>
-                  <div className="card faq-title">
-                    <div className="card-header" id="headingTwo">
-                      <h2 className="mb-0">
-                        <button
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 2 ? '' : 'collapsed'}`}
-                          type="button"
-                          onClick={() => setActiveFaqTab(activeFaqTab === 2 ? 0 : 2)}
-                        >
-                          Can I access the weather stations real-time data remotely?
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseTwo" className={`collapse ${activeFaqTab === 2 ? 'show' : ''}`}>
-                      <div className="card-body faq-para">
-                        <p>Yes, accessing the weather stations real-time data is possible with remote monitoring capabilities.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card faq-title">
-                    <div className="card-header" id="headingThree">
-                      <h2 className="mb-0">
-                        <button
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 3 ? '' : 'collapsed'}`}
-                          type="button"
-                          onClick={() => setActiveFaqTab(activeFaqTab === 3 ? 0 : 3)}
-                        >
-                          Is the weather station durable against harsh weather?
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseThree" className={`collapse ${activeFaqTab === 3 ? 'show' : ''}`}>
-                      <div className="card-body faq-para">
-                        <p>Yes, the weather station is designed to resist various environmental conditions.</p>
-                      </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                      aria-expanded="false"
+                    >
+                      Can I access the weather stations real-time data remotely?
+                    </button>
+                  </h2>
+                  <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      Yes, accessing the weather station’s real-time data is possible with remote monitoring capabilities.
                     </div>
                   </div>
-                  <div className="card faq-title">
-                    <div className="card-header" id="headingFour">
-                      <h2 className="mb-0">
-                        <button
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 4 ? '' : 'collapsed'}`}
-                          type="button"
-                          onClick={() => setActiveFaqTab(activeFaqTab === 4 ? 0 : 4)}
-                        >
-                          Do I have to install air quality monitors for air monitoring with the weather station?
-                        </button>
-                      </h2>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                      aria-expanded="false"
+                    >
+                      Is the weather station durable against harsh weather?
+                    </button>
+                  </h2>
+                  <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                      Yes, the weather station is designed to resist various environmental conditions.
                     </div>
-                    <div id="collapseFour" className={`collapse ${activeFaqTab === 4 ? 'show' : ''}`}>
-                      <div className="card-body faq-para">
-                        <p>With Prana Air weather station, you can turn the device into air quality monitoring system with the advanced variant.</p>
-                      </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4"
+                      aria-expanded="false"
+                    >
+                      Do I have to install air quality monitors for air monitoring with the weather station?
+                    </button>
+                  </h2>
+                  <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">
+                    With Prana Air weather station, you can turn the device into air quality monitoring system with the advanced variant.
                     </div>
                   </div>
                 </div>

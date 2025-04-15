@@ -538,8 +538,8 @@ export default function PMSensorPage() {
               <div className="size-compare-box-txt">
                 <p>
                   Particulate Matter or PM is a mixture of tiny particles or liquid droplets. And these also emits in
-                  the air from different sources. As a result, these particles can{" "}
-                  <span style={{ backgroundColor: "#e1bee7" }}>enter </span>the human lungs and cause many harm to
+                  the air from different sources. As a result, these particles can
+                  enter the human lungs and cause many harm to
                   health.
                 </p>
                 <ul>
