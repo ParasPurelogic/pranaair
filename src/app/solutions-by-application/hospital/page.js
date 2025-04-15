@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function HospitalPage() {
   const [activeTab, setActiveTab] = useState(0)
@@ -372,7 +373,7 @@ export default function HospitalPage() {
     return () => {
       const schoolBoxItems = document.querySelectorAll(".school_box_cntr li")
       schoolBoxItems.forEach((item) => {
-        item.removeEventListener("click", () => {})
+        item.removeEventListener("click", () => { })
       })
     }
   }, [])
@@ -921,81 +922,21 @@ export default function HospitalPage() {
       </section>
 
       {/* Contact Section - Updated with modern contact form */}
-      <section id="get_in_touch" className="contact-section">
+      <section id="get_in_touch" className="contact-section-box">
         <div className="container">
-          <div className="section-header text-center">
-            <h2>
-              Get in <span className="text-primary">Touch</span>
-            </h2>
-            <p>Please let us know your requirements so we can get back to you soon.</p>
-          </div>
-
-          <div className="contact-container">
-            <div className="row">
-              <div className="col-lg-4">
-                <div className="contact-info">
-                  <h3>Contact Info</h3>
-                  <p>Looking for air quality solutions for Hospital?</p>
-                  <ul className="contact-details">
-                    <li>
-                      <span className="icon">📞</span>
-                      Phone Number: (+91) 73918-73918
-                    </li>
-                    <li>
-                      <span className="icon">✉️</span>
-                      Email Address: info@purelogic.in
-                    </li>
-                    <li>
-                      <span className="icon">📍</span>
-                      Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-lg-8">
-                <div className="contact-form">
-                  <form>
-                    <div className="row">
-                      <div className="col-12 mb-3">
-                        <label>Your Full Name</label>
-                        <input type="text" className="form-control" placeholder="Enter your name" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6 mb-3">
-                        <label>Your Phone No</label>
-                        <input type="tel" className="form-control" placeholder="Enter your phone number" />
-                      </div>
-                      <div className="col-md-6 mb-3">
-                        <label>Your Email</label>
-                        <input type="email" className="form-control" placeholder="Enter your email" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-12 mb-3">
-                        <label>Your Organisation</label>
-                        <input type="text" className="form-control" placeholder="Enter your organisation" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-12 mb-3">
-                        <label className="message-label">Message</label>
-                        <textarea className="form-control" rows="4" placeholder="Write message here"></textarea>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-12">
-                        <button type="submit" className="submit-button">
-                          Send Message
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Hospital Page" />
       </section>
 
       {/* FAQ Section */}

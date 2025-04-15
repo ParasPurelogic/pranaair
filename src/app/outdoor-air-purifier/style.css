@@ -75,7 +75,7 @@ body p,
   left: 0;
   top: 0;
   height: 420px;
-  z-index: 0;
+  z-index: -1;
 }
 
 .introducing_box.sub_title_box {

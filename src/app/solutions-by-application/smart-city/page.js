@@ -4,6 +4,8 @@ import { useEffect, useState, useRef } from "react"
 import "./style.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function SmartCityPage() {
   const [activeSlide, setActiveSlide] = useState(0)
@@ -1755,58 +1757,8 @@ export default function SmartCityPage() {
               </div>
             </div>
           </div>
-
-          <div className="airquality_inner_form">
-            <div className="row">
-              <div className="col-md-3 contact_content_box">
-                <div className="contact_information_box">
-                  <h4>Contact Info</h4>
-                  <p>Looking for air quality solutions for a Smart City?</p>
-                  <ul className="contact_info">
-                    <li>
-                      <i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918
-                    </li>
-                    <li>
-                      <i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in
-                    </li>
-                    <li>
-                      <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10,
-                      Rohini, Delhi 85, India
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-md-9 form-area-box">
-                <div className="airquality_contact_box">
-                  <form>
-                    <div className="form-group">
-                      <label htmlFor="fullname">Full Name</label>
-                      <input type="text" className="form-control" id="fullname" name="fullname" />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="email">Email</label>
-                      <input type="email" className="form-control" id="email" name="email" />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="phone">Phone</label>
-                      <input type="tel" className="form-control" id="phone" name="phone" />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="organization">Organization</label>
-                      <input type="text" className="form-control" id="organization" name="organization" />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="message">Message</label>
-                      <textarea className="form-control" id="message" name="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" className="wpcf7-form-control has-spinner wpcf7-submit">
-                      Submit
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ContactForm pageName="Cair Monitor Page" />
+          
         </div>
       </section>
 

@@ -2,6 +2,8 @@
 import "./style.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function ParkingLotPage() {
   return (
@@ -685,188 +687,21 @@ export default function ParkingLotPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="contact-section" id="get_in_touch" style={{ backgroundColor: "#f5f8f5", padding: "60px 0" }}>
+      <section className="contact-section-box" id="get_in_touch" style={{ backgroundColor: "#f5f8f5", padding: "60px 0" }}>
         <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="title_heading" style={{ fontSize: "36px", marginBottom: "10px" }}>
-              Get in <span style={{ color: "#78ae60" }}>Touch</span>
-            </h2>
-            <p style={{ fontSize: "16px", color: "#555" }}>
-              Please let us know your requirements
-              <br />
-              so we can get back to you soon.
-            </p>
-          </div>
-
-          <div
-            className="contact-container"
-            style={{
-              maxWidth: "1000px",
-              margin: "0 auto",
-              backgroundColor: "#fff",
-              borderRadius: "10px",
-              boxShadow: "0 5px 15px rgba(0,0,0,0.08)",
-              overflow: "hidden",
-              display: "flex",
-              flexWrap: "wrap",
-            }}
-          >
-            {/* Left Side - Contact Info */}
-            <div
-              style={{
-                backgroundColor: "#78ae60",
-                padding: "40px 30px",
-                color: "#fff",
-                width: "100%",
-                maxWidth: "350px",
-              }}
-            >
-              <h3 style={{ fontSize: "24px", marginBottom: "20px" }}>Contact Info</h3>
-              <p style={{ marginBottom: "25px" }}>Looking for air quality solutions for car parking lot?</p>
-
-              <div style={{ marginBottom: "20px", display: "flex", alignItems: "flex-start" }}>
-                <div style={{ marginRight: "15px", marginTop: "5px" }}>
-                  <i className="fa fa-phone" aria-hidden="true" style={{ transform: "rotate(90deg)" }}></i>
-                </div>
-                <div>
-                  <div style={{ fontWeight: "500", marginBottom: "5px" }}>Phone Number:</div>
-                  <div>(+91) 73918-73918</div>
-                </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
-
-              <div style={{ marginBottom: "20px", display: "flex", alignItems: "flex-start" }}>
-                <div style={{ marginRight: "15px", marginTop: "5px" }}>
-                  <i className="fa fa-envelope" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <div style={{ fontWeight: "500", marginBottom: "5px" }}>Email Address:</div>
-                  <div>info@purelogic.in</div>
-                </div>
-              </div>
-
-              <div style={{ display: "flex", alignItems: "flex-start" }}>
-                <div style={{ marginRight: "15px", marginTop: "5px" }}>
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                </div>
-                <div>
-                  <div style={{ fontWeight: "500", marginBottom: "5px" }}>Office Location:</div>
-                  <div>706, 7th Floor, Sec 10, Rohini, Delhi 85, India</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Form */}
-            <div
-              style={{
-                padding: "40px 30px",
-                flex: "1",
-              }}
-            >
-              <form id="contact-form" className="contact-form">
-                <div style={{ marginBottom: "25px" }}>
-                  <label style={{ display: "block", marginBottom: "8px", color: "#555" }}>Your Full Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    style={{
-                      width: "100%",
-                      padding: "10px",
-                      border: "1px solid #ddd",
-                      borderRadius: "4px",
-                      fontSize: "16px",
-                    }}
-                    required
-                  />
-                </div>
-
-                <div style={{ display: "flex", gap: "20px", marginBottom: "25px" }}>
-                  <div style={{ flex: "1" }}>
-                    <label style={{ display: "block", marginBottom: "8px", color: "#555" }}>Your Phone No</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      style={{
-                        width: "100%",
-                        padding: "10px",
-                        border: "1px solid #ddd",
-                        borderRadius: "4px",
-                        fontSize: "16px",
-                      }}
-                      required
-                    />
-                  </div>
-                  <div style={{ flex: "1" }}>
-                    <label style={{ display: "block", marginBottom: "8px", color: "#555" }}>Your Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      style={{
-                        width: "100%",
-                        padding: "10px",
-                        border: "1px solid #ddd",
-                        borderRadius: "4px",
-                        fontSize: "16px",
-                      }}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div style={{ marginBottom: "25px" }}>
-                  <label style={{ display: "block", marginBottom: "8px", color: "#555" }}>Your Organisation</label>
-                  <input
-                    type="text"
-                    name="company"
-                    style={{
-                      width: "100%",
-                      padding: "10px",
-                      border: "1px solid #ddd",
-                      borderRadius: "4px",
-                      fontSize: "16px",
-                    }}
-                  />
-                </div>
-
-                <div style={{ marginBottom: "25px" }}>
-                  <label style={{ display: "block", marginBottom: "8px", color: "#78ae60", fontWeight: "500" }}>
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    placeholder="Write message here"
-                    style={{
-                      width: "100%",
-                      padding: "10px",
-                      border: "1px solid #ddd",
-                      borderRadius: "4px",
-                      minHeight: "120px",
-                      fontSize: "16px",
-                      resize: "vertical",
-                    }}
-                    rows="4"
-                  ></textarea>
-                </div>
-
-                <div>
-                  <button
-                    type="submit"
-                    style={{
-                      backgroundColor: "#78ae60",
-                      color: "#fff",
-                      border: "none",
-                      padding: "12px 25px",
-                      borderRadius: "4px",
-                      fontSize: "16px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Parking Lot Page" />
       </section>
 
       {/* Industrial Applications Section */}

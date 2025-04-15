@@ -390,9 +390,11 @@ a {
   from {
     transform: translate(0, 0px);
   }
+
   65% {
     transform: translate(0, 15px);
   }
+
   to {
     transform: translate(0, -0px);
   }
@@ -1080,6 +1082,26 @@ a {
 /* Contact Form Section */
 .contact-form {
   padding-top: 200px;
+}
+
+.box-form {
+  background: #1e1e22 !important;
+  box-shadow: none !important;
+}
+
+.contact-info {
+  background: #24c250 !important;
+}
+
+.submit-btn {
+  background: #24c250 !important;
+}
+
+.form-control {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #ffffff2e !important;
+  border-radius: 0 !important;
 }
 
 .get-in-heading {
@@ -2416,4 +2438,3 @@ a {
   top: -110px;
   left: 950px;
 }
-

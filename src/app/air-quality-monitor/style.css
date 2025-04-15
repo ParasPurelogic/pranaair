@@ -39,6 +39,7 @@ span.prana-txt {
     font-size: 50px;
     line-height: 60px;
     width: 100%;
+    font-weight: 700;
     text-transform: capitalize
 }
 
@@ -808,7 +809,7 @@ ul.air-poll-box-last-row {
 .product-tabs ul {
     z-index: 2;
     background: #d3dae1;
-    gap: 55px;
+    gap: 0px;
     position: relative;
     top: -60px;
     left: 740px;
@@ -818,16 +819,29 @@ ul.air-poll-box-last-row {
     padding: 0 !important;
 }
 
+.nav-link.active {
+    color: #7ab261 !important;
+}
+
+.key-parameter .nav-link {
+    color: #fff;
+}
+
 .product-tabs ul li button {
-    padding: 15px 27px !important;
+    padding: 15px 50px !important;
     border-radius: 30px !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.key-parameter-sec .container {
+    overflow: visible;
 }
 
 img.para-bg {
     width: 40%;
     position: absolute;
     bottom: -50px;
-    right: -40px;
     z-index: 0;
 }
 
@@ -858,6 +872,7 @@ img.para-bg {
 .dash-tabs ul li button {
     padding: 15px 25px !important;
     border-radius: 30px !important;
+    color: #fff;
 }
 
 .key-para {
@@ -1525,6 +1540,10 @@ img.para-bg {
     padding-top: 150px
 }
 
+.trust-title {
+    text-align: center;
+}
+
 .trust-title h2 {
     color: #263D4F;
     font-size: 32px;
@@ -1533,6 +1552,10 @@ img.para-bg {
 
 .trust-title p {
     color: #263D4F
+}
+
+.testimonial-section {
+    padding-top: 100px;
 }
 
 .all-company-sec {
@@ -1692,7 +1715,8 @@ img.para-bg {
 }
 
 .types-img {
-    width: 100%
+    width: 100%;
+    height: auto;
 }
 
 .types-air-quality-contect {
@@ -1808,18 +1832,28 @@ img.para-bg {
 }
 
 .app-slider-inner {
-    margin-left: 230px;
+    margin-left: 0;
     padding-bottom: 100px
+}
+
+.review-box img {
+    width: 40px;
+    padding-bottom: 10px;
+}
+
+.app-slider-monitor {
+    margin-left: 170px;
 }
 
 .app-heading h2 {
     color: #263D4F;
     font-size: 32px;
-    font-weight: 700
+    font-weight: 700;
+    padding-bottom: 40px;
 }
 
 .app-slider-row {
-    padding-top: 150px
+    padding-top: 100px
 }
 
 .app-content h3 {
@@ -1979,7 +2013,8 @@ ul.contact_info {
 .also-like-heading h2 {
     color: #263D4F;
     font-size: 32px;
-    font-weight: 800
+    font-weight: 800;
+    padding-bottom: 40px;
 }
 
 .may-also ul {
@@ -2444,8 +2479,8 @@ ul.application-tabs {
 
 .video-main {
     position: relative;
-    top: 238px;
-    left: 82px;
+    top: 243px;
+    left: 77px;
     z-index: 0;
 }
 
@@ -2769,6 +2804,11 @@ ul.application-tabs {
 
     .video-container {
         height: 120px;
+        margin-top: 30px;
+    }
+
+    .product-tabs ul li button {
+        padding: 15px 25px !important;
     }
 
     .ambient-banner a {
@@ -2862,10 +2902,6 @@ ul.application-tabs {
         width: 100%;
         margin-bottom: 20px;
         height: auto
-    }
-
-    .air-pollution-box ul li img {
-        width: 100%;
     }
 
     .arrow-link img {
@@ -3028,9 +3064,9 @@ ul.application-tabs {
     }
 
     .hassle {
-        height: 240px;
-        padding: 10px 15px;
-        margin-left: 5px
+        height: 252px;
+        padding: 10px 10px;
+        margin-left: 5px;
     }
 
     .hassle ul {
@@ -3068,8 +3104,12 @@ ul.application-tabs {
     }
 
     .last-box {
-        width: 190%;
+        width: 200%;
         margin-right: 0
+    }
+
+    .impact-img {
+        padding-top: 100px;
     }
 
     .versatile ul li {
@@ -3185,9 +3225,14 @@ ul.application-tabs {
         right: 60px !important
     }
 
+    .app-slider-monitor {
+        margin-left: 0;
+    }
+
     .key-parameter-sec {
         padding-top: 20px;
-        margin-top: 20px
+        margin-top: 20px;
+        padding-bottom: 40px;
     }
 
     .key-title h2 {
@@ -3990,7 +4035,12 @@ ul.application-tabs {
         background-size: 100%;
         width: 100%;
         height: 100px;
-        top: 90px;
+        top: 70px;
+        z-index: 0;
+    }
+
+    .graph-btn {
+        position: relative;
     }
 
     .customre-exp-heading h2 {
@@ -4076,7 +4126,7 @@ ul.application-tabs {
     .ambient-banner h1 {
         font-size: 28px;
         line-height: 40px;
-        width: 80%
+        width: 100%
     }
 
     .ambient-banner p {
@@ -4113,7 +4163,7 @@ ul.application-tabs {
     .product-tabs ul {
         left: 280px;
         width: 60% !important;
-        top: -70px;
+        top: -100px;
     }
 
     .in-outdoor {
@@ -4131,11 +4181,12 @@ ul.application-tabs {
 
     .all-monitore-tite h2 {
         font-size: 28px;
+        width: 80%;
         line-height: 36px
     }
 
     .page-tabs ul {
-        top: -80px;
+        top: -110px;
         gap: 50px;
         left: 320px;
         width: 55% !important;
@@ -4164,6 +4215,7 @@ ul.application-tabs {
         box-shadow: 0 0 20px #dbe0e770;
         padding: 15px 10px;
         width: 100%;
+        height: 400px;
         margin-bottom: 20px
     }
 
@@ -4183,9 +4235,17 @@ ul.application-tabs {
         line-height: 20px
     }
 
+    .app-slider-monitor {
+        margin-left: 0;
+    }
+
+    .air-pollution-box ul li img {
+        width: 100%;
+    }
+
     .air-pollution-box {
         height: auto;
-        padding: 30px;
+        padding: 10px;
     }
 
     .versatile {
@@ -4571,6 +4631,7 @@ ul.application-tabs {
     .site-coverd ul {
         padding: 30px 10px;
         margin: 30px 0 0;
+        width: 100%;
         gap: 30px
     }
 
@@ -4794,6 +4855,10 @@ ul.application-tabs {
 
     .impact-txt a {
         width: 60%;
+    }
+
+    img.para-bg {
+        right: 0;
     }
 }
 

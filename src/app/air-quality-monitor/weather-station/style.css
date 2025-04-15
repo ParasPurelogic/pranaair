@@ -1225,151 +1225,6 @@ span.vc_tta-title-text {
     padding-bottom: 50px
 }
 
-airqulality_contact_section .contact_content_box {
-    background: #7AB261;
-    padding: 40px 20px 75px;
-    width: 35%;
-    border-radius: 25px;
-    position: relative;
-    overflow: hidden
-}
-
-.contact_content_box {
-    padding: 40px 0 0 80px
-}
-
-.airqulality_contact_section .contact_content_box {
-    background: #1F80D1;
-    padding: 40px 20px 75px;
-    width: 25%;
-    border-radius: 25px;
-    position: relative;
-    overflow: hidden
-}
-
-.airquality_inner_form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 950px;
-    margin: 0 auto 30px !important;
-    box-shadow: 2px 2px 25px 0 #cccccc78;
-    position: relative
-}
-
-.airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
-    width: 60%;
-    padding: 6px 0 0 40px
-}
-
-.airquality_contact_box label {
-    width: 100%
-}
-
-.airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
-    background: #1F80D1;
-    border: none;
-    width: auto;
-    margin-top: 30px;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px
-}
-
-.airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
-    max-height: 78px;
-    border: none;
-    border-bottom: 1px solid #60606073;
-    padding-left: 4px
-}
-
-textarea.wpcf7-form-control.wpcf7-textarea {
-    max-height: 150px
-}
-
-.airquality_contact_box input.wpcf7-form-control {
-    width: 100%;
-    margin-bottom: 15px !important;
-    border: none;
-    border-bottom: 1px solid #60606073;
-    padding-left: 4px
-}
-
-.contact_information_box h4 {
-    font-size: 25px;
-    color: #fff;
-    font-weight: 600
-}
-
-.contact_information_box p {
-    color: #fff;
-    font-weight: 400;
-    padding-top: 10px
-}
-
-ul.contact_info {
-    list-style: none;
-    padding: 0;
-    margin: 0
-}
-
-.contact_info li {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    padding-bottom: 25px;
-    font-size: 16px;
-    font-weight: 300
-}
-
-.contact_info li i {
-    font-size: 21px;
-    margin-right: 10px
-}
-
-.contact_content_box:after {
-    background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
-    width: 160px;
-    height: 160px;
-    content: "";
-    position: absolute;
-    bottom: -92px;
-    left: -25px;
-    z-index: 0;
-    background-size: 66%
-}
-
-.airqulality_contact_section.inner_container {
-    margin-top: 150px;
-    padding-top: 50px;
-    position: relative;
-}
-
-.airqulality_contact_section.inner_container:before {
-    position: absolute;
-    content: "";
-    background: #F2F4F9;
-    width: 100%;
-    height: 60%;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: -1
-}
-
-.introducing_box.sub_title_box.text-center {
-    text-align: center
-}
-
-.title_heading {
-    text-align: center;
-    color: #263D4F;
-    font-size: 44px;
-    font-weight: 800;
-    margin-bottom: 0
-}
-
 .introducing_box p {
     color: #263D4F;
     font-size: 18px;
@@ -1483,6 +1338,15 @@ ul.contact_info {
 .environmental-monitoring-txt {
     padding-top: 250px;
     position: relative;
+}
+
+.contact-info {
+    background: #1f80d1 !important;
+}
+
+.submit-btn {
+    background: #1f80d1 !important;
+    border-radius: 10px !important;
 }
 
 @media only screen and (min-width:320px) and (max-width:767px) {
@@ -2261,12 +2125,6 @@ ul.contact_info {
     .introducing_box p {
         font-size: 14px;
         padding: 0 0 30px
-    }
-
-    .airqulality_contact_section .contact_content_box {
-        padding: 30px 10px 50px;
-        width: 100%;
-        border-radius: 25px
     }
 
     .contact_information_box h4 {

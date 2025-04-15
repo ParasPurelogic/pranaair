@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function FreshAirMachine() {
   const [activeTab, setActiveTab] = useState("pm25")
@@ -1310,75 +1312,20 @@ export default function FreshAirMachine() {
       </div>
 
       {/* Contact Form Section */}
-      <div className="container" id="fresh_air_machine_contact">
-        <div className="introducing_box sub_title_box text-center">
-          <h2 className="title_heading">
-            Get in <span className="bold_text">Touch </span>
-          </h2>
-          <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-        </div>
-        <div className="row airquality_inner_form">
-          <div className="col-md-3 contact_content_box">
-            <div className="contact_information_box">
-              <h4>Contact Info</h4>
-              <p>Looking for Fresh Air Machine?</p>
-              <ul className="contact_info">
-                <li>
-                  <i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918
-                </li>
-                <li>
-                  <i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in
-                </li>
-                <li>
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10,
-                  Rohini, Delhi 85, India
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-md-9 contact-colum">
-            <div className="airquality_contact_box">
-              <form>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Your Name*</label>
-                      <input type="text" className="form-control" required />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Your Email*</label>
-                      <input type="email" className="form-control" required />
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Phone Number*</label>
-                      <input type="tel" className="form-control" required />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <label>Subject</label>
-                      <input type="text" className="form-control" />
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label>Your Message</label>
-                  <textarea className="form-control" rows="4"></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-              </form>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="contact-heading">
+              <h2>Get in Touch</h2>
+              <p>
+                Please help us know what requirements you have. Our team will
+                contact you very soon.
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <ContactForm pageName="Fresh Air Machine Page" />
 
       {/* FAQ Section */}
       <div className="container">

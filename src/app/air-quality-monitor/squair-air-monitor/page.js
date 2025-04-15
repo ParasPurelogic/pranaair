@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function SquairMonitor() {
   const [activeTab, setActiveTab] = useState('squair-lite');
@@ -168,13 +169,13 @@ export default function SquairMonitor() {
         <div className="row">
           <div className="col-md-12">
             <div className="video-container">
-              <iframe 
-                width="100%" 
-                height="500" 
-                src="https://www.youtube.com/embed/vKTDgUu1K_E" 
-                title="SQUAIR Air Quality Monitor" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              <iframe
+                width="100%"
+                height="500"
+                src="https://www.youtube.com/embed/vKTDgUu1K_E"
+                title="SQUAIR Air Quality Monitor"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
@@ -241,13 +242,13 @@ export default function SquairMonitor() {
           <div className="row">
             <div className="col-md-12">
               <div className="video-container">
-                <iframe 
-                  width="100%" 
-                  height="500" 
-                  src="https://www.youtube.com/embed/QS2pE69EZdI" 
-                  title="SQUAIR Air Quality Monitor Tutorial" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe
+                  width="100%"
+                  height="500"
+                  src="https://www.youtube.com/embed/QS2pE69EZdI"
+                  title="SQUAIR Air Quality Monitor Tutorial"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
@@ -802,12 +803,12 @@ export default function SquairMonitor() {
             <h4 style={{ textAlign: 'center' }}><strong><span style={{ fontSize: '16pt' }}>See the Invisible Air Pollutants</span></strong></h4>
             <div className="pollutionParticlesHoverEffect">
               <img src="https://www.pranaair.com/wp-content/uploads/2021/05/indoor-air-pollutants.jpeg" alt="invisible indoor air pollutants" width="100%" />
-              <input 
-                type="button" 
-                name="type" 
-                id="pollutedeffectBtn" 
-                value={showPollutants ? 'Hide the invisible' : 'See the invisible'} 
-                onClick={togglePollutants} 
+              <input
+                type="button"
+                name="type"
+                id="pollutedeffectBtn"
+                value={showPollutants ? 'Hide the invisible' : 'See the invisible'}
+                onClick={togglePollutants}
               />
               <div id="pollutedOnHover" style={{ opacity: showPollutants ? 1 : 0 }}>
                 <img src="https://www.pranaair.com/wp-content/uploads/2021/05/squair-polution-paticle-name.png" alt="indoor air pollutants" width="100%" className="motion-css" />
@@ -831,7 +832,7 @@ export default function SquairMonitor() {
             <p className="appICONS" style={{ textAlign: 'right' }}>
               <a href="https://play.google.com/store/apps/details?id=com.aqi.data&hl=en">
                 <img className="brdr" src="https://www.pranaair.com/wp-content/uploads/2021/05/squair-monitor-connects-to-AQI-mobile-app.png" alt="google playstore icon " />
-              </a> 
+              </a>
               <a href="https://apps.apple.com/in/app/air-quality-index-aqi-india/id1439684571">
                 <img className="brdr" src="https://www.pranaair.com/wp-content/uploads/2021/04/squair-apple-store.png" alt="app store icon" />
               </a>
@@ -884,37 +885,22 @@ export default function SquairMonitor() {
       </div>
 
       {/* Contact Form */}
-      <div className="container contact_senitizer_section sensible_conact_section contact_monitor_sec" id="request_a_quote">
-        <div className="row">
-          <div className="col-md-6">
-            <div className="contact_img_box">
-              <img className="alignleft" src="https://www.pranaair.com/wp-content/uploads/2021/05/contact-us-image.jpeg" alt="contact us image" width="600" height="538" />
+      <div id="request_a_quote">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <h4><span style={{ fontSize: '16pt' }}><strong>Request A Quote</strong></span></h4>
-            <p>Contact us for more details about the air pollution monitoring devices.</p>
-            <p>Drop a message</p>
-            <form>
-              <div className="form-group">
-                <input type="text" className="form-control" placeholder="Your Name" />
-              </div>
-              <div className="form-group">
-                <input type="email" className="form-control" placeholder="Your Email" />
-              </div>
-              <div className="form-group">
-                <input type="tel" className="form-control" placeholder="Your Phone" />
-              </div>
-              <div className="form-group">
-                <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
-          </div>
         </div>
+        <ContactForm pageName="Squair Air Monitor Page" />
       </div>
-
-
       {/* FAQ Section */}
       <div className="container-fluid squairMonitorFaq" style={{ backgroundImage: "url(/wp-content/uploads/2021/04/faqBg-square.jpg)" }}>
         <div className="row">

@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function AirQualitySolutions() {
     const [activeTab, setActiveTab] = useState('air-quality-monitors');
@@ -461,7 +463,7 @@ export default function AirQualitySolutions() {
                                     </h2>
                                     <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                         Your health could be harmed by increased CO2 exposure. Health effects like nausea, vertigo, exhaustion, difficulty breathing, and perspiration can be evident in public spaces like hotel lobbies and reception areas. Transmission of chronic illnesses like the flu and the common cold is fairly common.                                        </div>
+                                            Your health could be harmed by increased CO2 exposure. Health effects like nausea, vertigo, exhaustion, difficulty breathing, and perspiration can be evident in public spaces like hotel lobbies and reception areas. Transmission of chronic illnesses like the flu and the common cold is fairly common.                                        </div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -478,7 +480,7 @@ export default function AirQualitySolutions() {
                                     </h2>
                                     <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Many pollutants can be present inside hotel rooms and lobbies. CO2 is one of the main pollutants followed by microbial pollution, CO, TVOC, and noise.
+                                            Many pollutants can be present inside hotel rooms and lobbies. CO2 is one of the main pollutants followed by microbial pollution, CO, TVOC, and noise.
                                         </div>
                                     </div>
                                 </div>
@@ -496,7 +498,7 @@ export default function AirQualitySolutions() {
                                     </h2>
                                     <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        To know the nature of pollutants and by how much are they present in hotels so that necessary actions can be taken.
+                                            To know the nature of pollutants and by how much are they present in hotels so that necessary actions can be taken.
                                         </div>
                                     </div>
                                 </div>
@@ -514,7 +516,7 @@ export default function AirQualitySolutions() {
                                     </h2>
                                     <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
+                                            Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
                                         </div>
                                     </div>
                                 </div>
@@ -532,7 +534,7 @@ export default function AirQualitySolutions() {
                                     </h2>
                                     <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Yes, you can monitor the temperature, noise, and humidity in an area.
+                                            Yes, you can monitor the temperature, noise, and humidity in an area.
                                         </div>
                                     </div>
                                 </div>
@@ -550,7 +552,7 @@ export default function AirQualitySolutions() {
                                     </h2>
                                     <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more.
+                                            Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more.
                                         </div>
                                     </div>
                                 </div>
@@ -604,52 +606,21 @@ export default function AirQualitySolutions() {
             </div>
 
             {/* Contact Section */}
-            <div className="container airqulality_contact_section inner_container" id="get_in_touch">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">Get in <span className="bold_text">Touch </span></h2>
-                            <p>Please help us know what requirements you have.
-                                Our team will contact you very soon.</p>
+            <div className="airqulality_contact_section inner_container" id="get_in_touch">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="contact-heading">
+                                <h2>Get in Touch</h2>
+                                <p>
+                                    Please help us know what requirements you have. Our team will
+                                    contact you very soon.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="row airquality_inner_form">
-                    <div className="col-md-3 contact_content_box">
-                        <div className="contact_information_box">
-                            <h4>Prana Air Contact Info</h4>
-                            <p>Looking for the air quality solutions of school, or any institutes?</p>
-                            <ul className="contact_info">
-                                <li><i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918</li>
-                                <li><i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in</li>
-                                <li><i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-md-9">
-                        <div className="airquality_contact_box">
-                            <form>
-                                <div className="form-group">
-                                    <label>Your Name</label>
-                                    <input type="text" className="form-control" placeholder="Enter your name" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Your Email</label>
-                                    <input type="email" className="form-control" placeholder="Enter your email" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Your Phone</label>
-                                    <input type="tel" className="form-control" placeholder="Enter your phone number" />
-                                </div>
-                                <div className="form-group">
-                                    <label className="message_text">Your Message</label>
-                                    <textarea className="form-control" rows="3" placeholder="Enter your message"></textarea>
-                                </div>
-                                <button type="submit" className="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <ContactForm pageName="Hotel Businesses Page" />
             </div>
 
             {/* Industrial Applications */}

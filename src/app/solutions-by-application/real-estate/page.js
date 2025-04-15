@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function RealEstate() {
   const [activeTab, setActiveTab] = useState("air-quality-monitors")
@@ -831,70 +833,21 @@ export default function RealEstate() {
       </div>
 
       {/* Contact Section */}
-      <div className="contact-section" id="get_in_touch">
-        <div className="section-header">
-          <h2>
-            Get in <span className="highlight-text">Touch</span>
-          </h2>
-          <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-        </div>
-
-        <div className="contact-container">
-          <div className="contact-info">
-            <h3>Contact Info</h3>
-            <p>Looking for the air quality solutions for real estate properties?</p>
-
-            <div className="contact-details">
-              <div className="contact-item">
-                <span className="contact-icon">📞</span>
-                <span>Phone Number: (+91) 73918-73918</span>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">✉️</span>
-                <span>Email Address: info@purelogic.in</span>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">📍</span>
-                <span>Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India</span>
+      <div className="contact-section-box" id="get_in_touch">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
-
-          <div className="contact-form">
-            <form className="modern-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Your Name (required)</label>
-                  <input type="text" name="your-name" required />
-                </div>
-                <div className="form-group">
-                  <label>Your Email (required)</label>
-                  <input type="email" name="your-email" required />
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Phone Number (required)</label>
-                  <input type="tel" name="your-phone" required />
-                </div>
-                <div className="form-group">
-                  <label>Your Organisation</label>
-                  <input type="text" name="your-organisation" />
-                </div>
-              </div>
-
-              <div className="form-group full-width">
-                <label>Message</label>
-                <textarea name="your-message" placeholder="Write message here"></textarea>
-              </div>
-
-              <button type="submit" className="submit-button">
-                Send Message
-              </button>
-            </form>
-          </div>
         </div>
+        <ContactForm pageName="Real Estate Page" />
       </div>
 
       {/* Industrial Applications Section */}

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
 body {
   font-family: "Poppins", sans-serif !important;
 }
@@ -150,6 +151,10 @@ a {
   font-size: 20px;
 }
 
+.contact-heading {
+  padding-top: 0px !important;
+}
+
 .quote {
   text-align: center;
   background: url(https://www.pranaair.com/wp-content/uploads/2023/07/quote-box-design.png);
@@ -285,13 +290,13 @@ a.rent img {
   width: 30px;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a {
   border-color: #dcdcdc !important;
   background-color: #fff !important;
   color: #000 !important;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a {
   border-color: #78ae60 !important;
   background-color: #78ae60 !important;
   color: #fff !important;
@@ -302,11 +307,11 @@ a.rent img {
   margin-bottom: 40px !important;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a:hover {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a:hover {
   box-shadow: 0 0 20px #d0d0d0e6 !important;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a:hover {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a:hover {
   border-color: #78ae60 !important;
   background-color: #78ae60 !important;
   color: #fff !important;
@@ -513,7 +518,7 @@ label.message_text {
   background-size: 66%;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title>a {
   color: #000;
 }
 
@@ -528,7 +533,7 @@ label.message_text {
   background: none;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title>a {
   color: #000;
 }
 
@@ -602,67 +607,84 @@ label.message_text {
     overflow: visible !important;
     margin-bottom: 300px;
   }
+
   .pocket_title_box.school_aqi_box {
     padding-top: 400px;
     text-align: center;
   }
+
   .pocket_title_box.school_aqi_box p {
     font-size: 14px;
     padding-bottom: 10px;
     padding-right: 0;
   }
+
   .pocket_title_box.school_aqi_box h1 {
     font-size: 30px;
     line-height: 38px;
     margin-bottom: 10px;
   }
+
   .hero-section {
     overflow: visible !important;
   }
+
   .banner-btn {
     font-size: 16px;
     width: 80%;
     margin: 0 auto;
   }
+
   .pocket_title_box.school_aqi_box:before {
     width: 100%;
     bottom: 70px;
     margin: 0 auto;
   }
+
   .sub_title_box p {
     padding: 0 0;
   }
+
   .factors-affect-box {
     width: 100%;
     height: auto;
   }
+
   .feature_box p {
     margin: 0;
   }
+
   .quote-heading {
     padding: 0;
   }
+
   .feature_box img {
     width: 100px !important;
   }
+
   .congested-stations img {
     width: 60px !important;
     height: 60px;
   }
+
   .congested-stations {
     padding: 10px 10px 15px;
     height: auto;
   }
+
   .quote-heading h2 {
     font-size: 20px;
   }
+
   .quote-heading p {
     font-size: 14px;
     padding-top: 0;
   }
+
   .mg-l {
     padding: 0 10px;
   }
+
   .quote {
     padding: 10px 0 30px;
     margin-top: 50px;
@@ -670,83 +692,104 @@ label.message_text {
     border: 1px solid #68b554;
     border-radius: 10px;
   }
+
   .introducing_box.sub_title_box {
     padding: 0 0 30px;
   }
+
   .area-para {
     padding-bottom: 30px;
   }
+
   .area-para h3 {
     font-size: 20px !important;
   }
+
   .area-para p {
     font-size: 14px;
   }
+
   .passengers-box {
     margin-bottom: 20px !important;
   }
+
   .vc_tta.vc_tta-spacing-1 .vc_tta-tab {
     margin-top: 0;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 0;
   }
+
   .vc_tta-panel-heading {
     display: none;
   }
+
   .air-quality-heading {
     padding-left: 0;
     padding-top: 0;
   }
+
   .air-quality-heading h3 {
     font-size: 25px;
     line-height: 28px;
   }
+
   .vc_tta-panel-body p {
     font-size: 14px;
   }
+
   ul.airquality_list {
     padding: 0 0 0 0;
   }
+
   .btns-bottom {
     gap: 15px;
     padding-left: 0;
   }
+
   .sub_title_box .title_heading {
     font-size: 24px;
     margin: 50px 0 10px;
   }
+
   .air_quality_box {
     padding-left: 0;
     padding-bottom: 50px;
   }
+
   .air_quality_box h3 {
     padding-left: 0;
     padding-bottom: 0;
   }
+
   .line:before {
     width: 100%;
     height: 1px;
     left: 0;
     top: 215px;
   }
+
   .slider {
     margin-top: 50px;
   }
+
   .slidder-txt {
     padding-top: 0;
     padding-left: 0;
   }
+
   .slidder-txt p {
     font-size: 14px;
     line-height: 26px;
     width: 100%;
     padding-bottom: 20px;
   }
+
   .slidder-txt h3 {
     font-size: 20px;
     margin-top: -10px;
   }
+
   .slider:before {
     width: 100%;
     height: 400px;
@@ -755,46 +798,59 @@ label.message_text {
     right: 0;
     margin: 0 auto;
   }
+
   .airqulality_contact_section .contact_content_box {
     padding: 20px 15px 45px;
     width: 100%;
   }
+
   .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
     width: 100%;
     padding: 50px 0 0;
   }
+
   .airquality_contact_box label {
     font-size: 14px;
   }
+
   .introducing_box.sub_title_box {
     padding: 0 0 10px;
   }
+
   .faq-tab-heading .vc_tta-panel-heading {
     display: block;
   }
+
   span.vc_tta-title-text {
     font-size: 14px;
   }
+
   .faq-tab-heading {
     margin-bottom: 10px;
   }
+
   .client-logo {
     height: 50px;
     margin-bottom: 10px !important;
     padding: 10px 10px;
   }
+
   .client-logo img {
     width: 100%;
   }
+
   .client_logo_section {
     display: flex;
   }
+
   .owl-slider button.owl-prev {
     left: -25px;
   }
+
   .owl-slider button.owl-next {
     right: -25px;
   }
+
   .feature_wrap_box h2 {
     font-size: 14px;
     line-height: 22px;
@@ -808,102 +864,130 @@ label.message_text {
     margin-top: 0;
     height: 350px;
   }
+
   .pocket_title_box.school_aqi_box {
     padding-top: 0;
   }
+
   .pocket_title_box.school_aqi_box p {
     font-size: 14px;
     padding-right: 0;
     padding-bottom: 0;
   }
+
   .pocket_title_box.school_aqi_box h1 {
     font-size: 30px;
     margin-bottom: 20px;
   }
+
   .feature_box img {
     width: 60px;
     height: 50px;
   }
+
   .feature_box h2 {
     font-size: 12px;
   }
+
   .congested-stations {
     padding-top: 10px;
     height: 290px;
   }
+
   .quote {
     background-size: 720px;
     padding: 0 0 190px;
     margin-top: 100px;
   }
+
   .area-para p {
     font-size: 14px;
   }
+
   .area-para h3 {
     font-size: 18px;
   }
+
   .passengers-box img {
     width: 30%;
   }
+
   .loco-pilot {
     width: 40% !important;
   }
+
   .passengers-box h3 {
     font-size: 18px;
   }
+
   .passengers-box {
     height: 350px;
   }
+
   .air-quality-heading {
     padding-left: 10px;
     padding-top: 0;
   }
+
   ul.airquality_list {
     padding: 0 0 0 10px;
     margin: 0 0 20px;
   }
+
   .btns-bottom {
     gap: 10px;
     padding-left: 30px;
   }
+
   a.knowmore_btn {
     padding: 8px 21px;
     border-radius: 5px;
     font-size: 12px;
   }
+
   .air_quality_box {
     padding-left: 20px;
   }
+
   .air_quality_box h3 {
     padding-left: 10px;
   }
+
   .slidder-txt {
     padding-top: 50px;
     padding-left: 20px;
   }
+
   .slidder-txt p {
     width: 95%;
     font-size: 14px;
     line-height: 25px;
   }
+
   .slider:before {
     top: 0;
   }
+
   .client-logo img {
     width: 70%;
   }
+
   .client-logo {
     height: 120px;
   }
+
   .quote-heading {
     padding: 0 80px 50px;
   }
+
   .introducing_box.sub_title_box {
     padding: 0 0 40px;
   }
+
   .owl-slider button.owl-prev {
     left: -20px;
   }
+
   .owl-slider button.owl-next {
     right: -20px;
   }
@@ -917,12 +1001,12 @@ label.message_text {
   margin-bottom: 30px;
 }
 
-.nav-tabs > li {
+.nav-tabs>li {
   margin-bottom: -1px;
   margin-right: 5px;
 }
 
-.nav-tabs > li > a {
+.nav-tabs>li>a {
   border: 1px solid #dcdcdc;
   border-radius: 4px 4px 0 0;
   background-color: #fff;
@@ -930,9 +1014,9 @@ label.message_text {
   padding: 10px 15px;
 }
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover {
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
   border-color: #78ae60;
   background-color: #78ae60;
   color: #fff;
@@ -961,7 +1045,7 @@ label.message_text {
   border-color: #ddd;
 }
 
-.panel-default > .panel-heading {
+.panel-default>.panel-heading {
   color: #333;
   background-color: #f5f5f5;
   border-color: #ddd;
@@ -976,7 +1060,7 @@ label.message_text {
   color: inherit;
 }
 
-.panel-title > a {
+.panel-title>a {
   display: block;
   text-decoration: none;
 }
@@ -1054,6 +1138,7 @@ label.message_text {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -1650,4 +1735,3 @@ label.message_text {
     font-size: 22px;
   }
 }
-

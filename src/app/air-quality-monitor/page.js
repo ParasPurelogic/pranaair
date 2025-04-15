@@ -14,6 +14,12 @@ const responsive = {
     tablet: { breakpoint: { max: 992, min: 768 }, items: 2 },
     mobile: { breakpoint: { max: 768, min: 0 }, items: 1 },
 };
+const customer = {
+    superLargeDesktop: { breakpoint: { max: 4000, min: 1200 }, items: 3 },
+    desktop: { breakpoint: { max: 1200, min: 992 }, items: 3 },
+    tablet: { breakpoint: { max: 992, min: 768 }, items: 2 },
+    mobile: { breakpoint: { max: 768, min: 0 }, items: 1 },
+};
 
 export default function CommonMonitorPage() {
     useEffect(() => {
@@ -1474,7 +1480,7 @@ export default function CommonMonitorPage() {
             <section className="trust-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                             <div className="trust-title">
                                 <h2>Trusted By</h2>
                                 <p>Some of the Industrys Top Organisations</p>
@@ -1616,10 +1622,10 @@ export default function CommonMonitorPage() {
             </section>
 
             {/* Testimonial Slider Section */}
-            <section className="testimonial-section py-5">
+            <section className="testimonial-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12 text-center mb-4">
+                        <div className="col-md-12 text-center mb-2">
                             <h2 className="section-title">We care about customer experience too</h2>
                             <p className="section-subtitle">Some of the  Top Organisations</p>
                         </div>
@@ -1628,7 +1634,7 @@ export default function CommonMonitorPage() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="app-slider-inner">
-                                <Carousel responsive={responsive} infinite autoPlay autoPlaySpeed={6000}>
+                                <Carousel responsive={customer} infinite autoPlay autoPlaySpeed={6000}>
                                     <div className="review-img">
                                         <div className="review-box">
                                             <img src="https://www.pranaair.com/wp-content/uploads/2025/02/quote-icon.png" alt="" />
@@ -1756,7 +1762,7 @@ export default function CommonMonitorPage() {
                     </div>
                 </div>
                 <div className="container-fluid">
-                    <div className="app-slider-inner">
+                    <div className="app-slider-monitor">
                         <Carousel responsive={responsive} infinite autoPlay autoPlaySpeed={6000}>
                             {/* Slide 1 */}
                             <div className="app-air-slider">

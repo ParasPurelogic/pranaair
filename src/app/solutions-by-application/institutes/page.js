@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function AirQualitySolutions() {
     const [activeTab, setActiveTab] = useState('air-quality-monitors');
@@ -45,12 +46,12 @@ export default function AirQualitySolutions() {
         }
     };
     useEffect(() => {
-              import("bootstrap/dist/js/bootstrap.bundle.min.js")
-                .then(() => {
-                  console.log("Bootstrap JS loaded");
-                })
-                .catch((err) => console.error("Error loading Bootstrap JS:", err));
-            }, []);
+        import("bootstrap/dist/js/bootstrap.bundle.min.js")
+            .then(() => {
+                console.log("Bootstrap JS loaded");
+            })
+            .catch((err) => console.error("Error loading Bootstrap JS:", err));
+    }, []);
 
     return (
         <div>
@@ -458,123 +459,123 @@ export default function AirQualitySolutions() {
 
             {/* FAQ Section */}
             <section className="faq-section">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="accordion" id="faqAccordion">
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button
-                                        className="accordion-button"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#faq1"
-                                        aria-expanded="true"
-                                    >
-                                        1. What are the major pollutants that are present in educational institutes?
-                                    </button>
-                                </h2>
-                                <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                    <div className="accordion-body faq-tab-para">
-                                    Many pollutants can be present inside a typical classroom. CO2 is the main pollutant followed by PM2.5 - dust, TVOCs, Ozone, etc.
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="accordion" id="faqAccordion">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
+                                        <button
+                                            className="accordion-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#faq1"
+                                            aria-expanded="true"
+                                        >
+                                            1. What are the major pollutants that are present in educational institutes?
+                                        </button>
+                                    </h2>
+                                    <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                        <div className="accordion-body faq-tab-para">
+                                            Many pollutants can be present inside a typical classroom. CO2 is the main pollutant followed by PM2.5 - dust, TVOCs, Ozone, etc.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#faq2"
-                                        aria-expanded="false"
-                                    >
-                                         2. Are any other parameters included in the monitors other than the air pollutants?
-                                    </button>
-                                </h2>
-                                <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div className="accordion-body faq-tab-para">
-                                    Yes, you can monitor the temperature, noise, and humidity in an area.
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#faq2"
+                                            aria-expanded="false"
+                                        >
+                                            2. Are any other parameters included in the monitors other than the air pollutants?
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div className="accordion-body faq-tab-para">
+                                            Yes, you can monitor the temperature, noise, and humidity in an area.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#faq3"
-                                        aria-expanded="false"
-                                    >
-                                        3. What are the health impacts of the pollutants present inside the classrooms and college premises?
-                                    </button>
-                                </h2>
-                                <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div className="accordion-body faq-tab-para">
-                                    Decreased IQ, alertness, attention, brain functioning, concentration, and increase in illness absence rates.
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#faq3"
+                                            aria-expanded="false"
+                                        >
+                                            3. What are the health impacts of the pollutants present inside the classrooms and college premises?
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div className="accordion-body faq-tab-para">
+                                            Decreased IQ, alertness, attention, brain functioning, concentration, and increase in illness absence rates.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#faq4"
-                                        aria-expanded="false"
-                                    >
-                                       4. How can I check the AQI in my classroom using your device?
-                                    </button>
-                                </h2>
-                                <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div className="accordion-body faq-tab-para">
-                                    Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#faq4"
+                                            aria-expanded="false"
+                                        >
+                                            4. How can I check the AQI in my classroom using your device?
+                                        </button>
+                                    </h2>
+                                    <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div className="accordion-body faq-tab-para">
+                                            Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#faq5"
-                                        aria-expanded="false"
-                                    >
-                                       5. Why is it necessary to have air quality monitoring solutions?
-                                    </button>
-                                </h2>
-                                <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div className="accordion-body faq-tab-para">
-                                    To know the nature of pollutants and by how much are they present in a classroom so that necessary actions can be taken.
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#faq5"
+                                            aria-expanded="false"
+                                        >
+                                            5. Why is it necessary to have air quality monitoring solutions?
+                                        </button>
+                                    </h2>
+                                    <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div className="accordion-body faq-tab-para">
+                                            To know the nature of pollutants and by how much are they present in a classroom so that necessary actions can be taken.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="accordion-item">
-                                <h2 className="accordion-header">
-                                    <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#faq6"
-                                        aria-expanded="false"
-                                    >
-                                       6. Are there any additional benefits that come with the solutions?
-                                    </button>
-                                </h2>
-                                <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div className="accordion-body faq-tab-para">
-                                    Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more.
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#faq6"
+                                            aria-expanded="false"
+                                        >
+                                            6. Are there any additional benefits that come with the solutions?
+                                        </button>
+                                    </h2>
+                                    <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div className="accordion-body faq-tab-para">
+                                            Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
             {/* Clientele Section */}
             <div className="container top_space_heading">
@@ -620,52 +621,21 @@ export default function AirQualitySolutions() {
             </div>
 
             {/* Contact Section */}
-            <div className="container airqulality_contact_section inner_container" id="get_in_touch">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">Get in <span className="bold_text">Touch </span></h2>
-                            <p>Please help us know what requirements you have.
-                                Our team will contact you very soon.</p>
+            <div className="airqulality_contact_section inner_container" id="get_in_touch">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="contact-heading">
+                                <h2>Get in Touch</h2>
+                                <p>
+                                    Please help us know what requirements you have. Our team will
+                                    contact you very soon.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="row airquality_inner_form">
-                    <div className="col-md-3 contact_content_box">
-                        <div className="contact_information_box">
-                            <h4>Prana Air Contact Info</h4>
-                            <p>Looking for the air quality solutions of school, or any institutes?</p>
-                            <ul className="contact_info">
-                                <li><i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918</li>
-                                <li><i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in</li>
-                                <li><i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-md-9">
-                        <div className="airquality_contact_box">
-                            <form>
-                                <div className="form-group">
-                                    <label>Your Name</label>
-                                    <input type="text" className="form-control" placeholder="Enter your name" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Your Email</label>
-                                    <input type="email" className="form-control" placeholder="Enter your email" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Your Phone</label>
-                                    <input type="tel" className="form-control" placeholder="Enter your phone number" />
-                                </div>
-                                <div className="form-group">
-                                    <label className="message_text">Your Message</label>
-                                    <textarea className="form-control" rows="3" placeholder="Enter your message"></textarea>
-                                </div>
-                                <button type="submit" className="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <ContactForm pageName="Institutes Page" />
             </div>
 
             {/* Industrial Applications */}

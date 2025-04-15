@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Link from "next/link"
 import Carousel from "react-multi-carousel"
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function PMSensorPage() {
   // State for tabs in the product image section
@@ -1404,86 +1405,17 @@ export default function PMSensorPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="introducing_box sub_title_box text-center">
-                <h2 className="title_heading">
-                  Get in <span className="bold_text">Touch</span>
-                </h2>
-                <p>Please help us know what requirements you have. So, our team will contact you very soon.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row airquality_inner_form">
-            <div className="col-md-3 contact_content_box">
-              <div className="contact_information_box">
-                <h4>Contact Info</h4>
-                <p>Looking for Any Particulate Matter (PM) Sensor?</p>
-                <ul className="contact_info">
-                  <li>
-                    <i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918
-                  </li>
-                  <li>
-                    <i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in
-                  </li>
-                  <li>
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10,
-                    Rohini, Delhi 85, India
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-md-9">
-              <div className="airquality_contact_box">
-                <form>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="name">Your Name</label>
-                        <input type="text" className="form-control" id="name" placeholder="Enter your name" />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="email">Your Email</label>
-                        <input type="email" className="form-control" id="email" placeholder="Enter your email" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="phone">Phone Number</label>
-                        <input type="tel" className="form-control" id="phone" placeholder="Enter your phone number" />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="company">Company Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="company"
-                          placeholder="Enter your company name"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="message">Your Message</label>
-                    <textarea
-                      className="form-control"
-                      id="message"
-                      rows="4"
-                      placeholder="Enter your message"
-                    ></textarea>
-                  </div>
-                  <button type="submit" className="btn btn-primary">
-                    Submit
-                  </button>
-                </form>
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Outdoor Pm Sensor Page" />
       </section>
 
       {/* You May Also Like Section */}

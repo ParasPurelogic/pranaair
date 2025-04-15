@@ -4,6 +4,7 @@ import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function AnimalCarePage() {
   // State for tabs in the air quality solutions section
@@ -823,110 +824,21 @@ export default function AnimalCarePage() {
       </div>
 
       {/* SECTION 11: Get in Touch */}
-      <div className="contact-section" id="get_in_touch">
+      <div className="contact-section-box" id="get_in_touch">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="introducing_box sub_title_box text-center">
-                <h2 className="title_heading">
-                  Get in{" "}
-                  <span className="bold_text">
-                    <strong>Touch</strong>
-                  </span>
-                </h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-12">
-              <div className="contact-container">
-                <div className="contact-info">
-                  <h3>Contact Info</h3>
-                  <p>Looking for air quality solutions for Animal Care Centers?</p>
-                  <ul className="contact-details">
-                    <li>
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-call-icon.png"
-                        alt="phone icon"
-                      />
-                      <div>
-                        <strong>Phone Number:</strong>
-                        <br />
-                        (+91) 73918-73918
-                      </div>
-                    </li>
-                    <li>
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-mail-icon.png"
-                        alt="mail icon"
-                      />
-                      <div>
-                        <strong>Email Address:</strong>
-                        <br />
-                        info@purelogic.in
-                      </div>
-                    </li>
-                    <li>
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-loaction-icon.png"
-                        alt="office location"
-                      />
-                      <div>
-                        <strong>Office Location:</strong>
-                        <br />
-                        706, 7th Floor, Sec 10,
-                        <br />
-                        Rohini, Delhi 85, India
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="contact-form">
-                  <form>
-                    <div className="form-group">
-                      <label htmlFor="fullName">Your Full Name</label>
-                      <input type="text" id="fullName" className="form-control" />
-                    </div>
-
-                    <div className="form-row">
-                      <div className="form-group" style={{ flex: 1 }}>
-                        <label htmlFor="phone">Your Phone No</label>
-                        <input type="tel" id="phone" className="form-control" />
-                      </div>
-
-                      <div className="form-group" style={{ flex: 1 }}>
-                        <label htmlFor="email">Your Email</label>
-                        <input type="email" id="email" className="form-control" />
-                      </div>
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="organization">Your Organisation</label>
-                      <input type="text" id="organization" className="form-control" />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="message">Message</label>
-                      <textarea
-                        id="message"
-                        className="form-control"
-                        rows="4"
-                        placeholder="Write message here"
-                      ></textarea>
-                    </div>
-
-                    <button type="submit" className="submit-btn">
-                      Send Message
-                    </button>
-                  </form>
-                </div>
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Animal Care Center Page" />
       </div>
 
       {/* SECTION 12: FAQ */}

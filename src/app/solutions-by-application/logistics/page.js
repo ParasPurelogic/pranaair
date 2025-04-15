@@ -4,6 +4,8 @@ import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function LogisticsPage() {
   const [activeTab, setActiveTab] = useState("air-quality-monitors")
@@ -630,90 +632,21 @@ export default function LogisticsPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="contact-section" id="get_in_touch">
-        <div className="section-header">
-          <h2>
-            Get in <span className="highlight">Touch</span>
-          </h2>
-          <p className="section-description">
-            Please help us know what requirements you have. Our team will contact you very soon.
-          </p>
-        </div>
-
-        <div className="modern-contact-container">
-          <div className="contact-card">
-            <div className="contact-sidebar">
-              <h3>Contact Info</h3>
-              <p>Looking for air quality solutions for Logistics Business?</p>
-
-              <div className="contact-info-item">
-                <div className="contact-icon">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-call-icon.png" alt="Phone" />
-                </div>
-                <div className="contact-text">
-                  <span className="contact-label">Phone Number:</span>
-                  <span>(+91) 73918-73918</span>
-                </div>
-              </div>
-
-              <div className="contact-info-item">
-                <div className="contact-icon">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-mail-icon.png" alt="Email" />
-                </div>
-                <div className="contact-text">
-                  <span className="contact-label">Email Address:</span>
-                  <span>info@purelogic.in</span>
-                </div>
-              </div>
-
-              <div className="contact-info-item">
-                <div className="contact-icon">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-loaction-icon.png"
-                    alt="Location"
-                  />
-                </div>
-                <div className="contact-text">
-                  <span className="contact-label">Office Location:</span>
-                  <span>706, 7th Floor, Sec 10, Rohini, Delhi 110085, India</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-form-container">
-              <div className="form-row">
-                <div className="form-field full-width">
-                  <input type="text" placeholder="Your Full Name" />
-                </div>
-              </div>
-
-              <div className="form-row two-columns">
-                <div className="form-field">
-                  <input type="tel" placeholder="Your Phone No" />
-                </div>
-                <div className="form-field">
-                  <input type="email" placeholder="Your Email" />
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-field full-width">
-                  <input type="text" placeholder="Your Organisation" />
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-field full-width">
-                  <textarea placeholder="Message" rows="4"></textarea>
-                </div>
-              </div>
-
-              <div className="form-row">
-                <button className="send-message-btn">Send Message</button>
+      <section className="contact-section-box" id="get_in_touch">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Logistic Page" />
       </section>
 
       {/* FAQ Section */}

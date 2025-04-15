@@ -1181,6 +1181,7 @@ export default function CairMonitor() {
           </div>
           <div className="row">
             <div className="col-12">
+              <div className="plateform-tab">
               <ul className="nav nav-tabs" role="tablist">
                 <li className="nav-item">
                   <button className={`nav-link ${trackTab === "MobileApp" ? "active" : ""}`} onClick={() => trackActiveSpecTab("MobileApp")}
@@ -1204,6 +1205,7 @@ export default function CairMonitor() {
                   </button>
                 </li>
               </ul>
+              </div>
               <div className="tab-content">
                 <div className={`tab-pane ${trackTab === "MobileApp" ? "show active" : ""}`}>
                   <div className="row">
@@ -1612,6 +1614,7 @@ export default function CairMonitor() {
       <div className="container-fluid">
         <div className="row parts-label-tabsection">
           <div className="col-12">
+            <div className="label-part-tab">
             <ul className="nav nav-tabs">
               <li className="nav-item">
                 <a
@@ -1632,6 +1635,7 @@ export default function CairMonitor() {
                 </a>
               </li>
             </ul>
+            </div>
             <div className="tab-content">
               <div className={`tab-pane ${activePartTab === "Parts & Label" ? "show active" : ""}`}>
                 <div className="row part-labe-bg">

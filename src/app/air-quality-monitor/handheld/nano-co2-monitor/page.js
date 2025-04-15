@@ -170,7 +170,7 @@ export default function NanoCO2MonitorPage() {
         <div className="container">
           <div className="row align-items-stretch">
             {/* Product Gallery */}
-            <div className="col-lg-6 col-md-12">
+            <div className="col-lg-4">
               <div className="product-gallery">
                 <div className="main-image">
                   <img
@@ -193,8 +193,7 @@ export default function NanoCO2MonitorPage() {
               </div>
             </div>
 
-            {/* Product Information */}
-            <div className="col-lg-6 col-md-12">
+            <div className="col-lg-4">
               <div className="product-info">
                 <h1 className="product-title">Nano CO2 Monitor</h1>
                 <p className="product-subtitle">Your portable health consultant</p>
@@ -212,26 +211,29 @@ export default function NanoCO2MonitorPage() {
                     around you.
                   </p>
                 </div>
+              </div>
+            </div>
 
-                <div className="product-options">
-                  <div className="option-group">
-                    <label>Model</label>
-                    <div className="select-wrapper">
-                      <select className="form-select">
-                        <option>Nano CO2</option>
-                        <option>Nano CO</option>
-                        <option>Nano TVOC/HCHO</option>
-                      </select>
-                    </div>
+            {/* Product Information */}
+            <div className="col-lg-4">
+              <div className="product-options">
+                <div className="option-group">
+                  <label>Model</label>
+                  <div className="select-wrapper">
+                    <select className="form-select">
+                      <option>Nano CO2</option>
+                      <option>Nano CO</option>
+                      <option>Nano TVOC/HCHO</option>
+                    </select>
                   </div>
-
-                  <div className="option-group">
-                    <label>Quantity</label>
-                    <input type="number" className="form-control" min="1" defaultValue="1" />
-                  </div>
-
-                  <button className="buy-now-btn">Buy Now</button>
                 </div>
+
+                <div className="option-group">
+                  <label>Quantity</label>
+                  <input type="number" className="form-control" min="1" defaultValue="1" />
+                </div>
+
+                <button className="buy-now-btn">Buy Now</button>
               </div>
             </div>
           </div>
@@ -1176,19 +1178,7 @@ export default function NanoCO2MonitorPage() {
         </div>
       </section>
 
-      {/* Mobile Buy Now Sticky Button */}
-      <div id="buy-now-button" className="buy-now-sticky">
-        <ul>
-          <li>
-            <h4>Nano CO2 Monitor</h4>
-            <br />
-            <span>₹ 2,490</span>
-          </li>
-          <li>
-            <button className="single_add_to_cart_button button alt sticky-btn">Buy Now</button>
-          </li>
-        </ul>
-      </div>
+      
     </main>
   )
 }

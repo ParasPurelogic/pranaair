@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function ConstructionAirQuality() {
     const [activeTab, setActiveTab] = useState("home")
@@ -1299,89 +1301,19 @@ export default function ConstructionAirQuality() {
             {/* Contact Section */}
             <div className="container-fluid airqulality_contact_section inner_container">
                 <div className="container">
-                    <div className="row" id="get_in_touch">
+                    <div className="row">
                         <div className="col-md-12">
-                            <div className="introducing_box sub_title_box text-center">
-                                <h2 className="title_heading">
-                                    Get in <span className="bold_text">Touch </span>
-                                </h2>
+                            <div className="contact-heading">
+                                <h2>Get in Touch</h2>
                                 <p>
-                                    Please help us know what requirements you have.
-                                    <br />
-                                    Our team will contact you very soon.
+                                    Please help us know what requirements you have. Our team will
+                                    contact you very soon.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className="row airquality_inner_form">
-                        <div className="col-md-3 contact_content_box">
-                            <div className="contact_information_box">
-                                <h4>Contact Info</h4>
-                                <p>Looking for air quality solutions for construction sites?</p>
-                                <ul className="contact_info">
-                                    <li>
-                                        <i className="fa fa-phone" aria-hidden="true"></i>Phone Number:
-                                        <br />
-                                        (+91) 73918-73918
-                                    </li>
-                                    <li>
-                                        <i className="fa fa-envelope" aria-hidden="true"></i>Email Address:
-                                        <br />
-                                        info@purelogic.in
-                                    </li>
-                                    <li>
-                                        <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location:
-                                        <br />
-                                        706, 7th Floor, Sec 10,
-                                        <br />
-                                        Rohini, Delhi 85, India
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-md-9">
-                            <div className="airquality_contact_box">
-                                <form>
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="form-group">
-                                                <label>Your Name</label>
-                                                <input type="text" className="form-control" placeholder="Enter your name" />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group">
-                                                <label>Your Email</label>
-                                                <input type="email" className="form-control" placeholder="Enter your email" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="form-group">
-                                                <label>Phone Number</label>
-                                                <input type="tel" className="form-control" placeholder="Enter your phone number" />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="form-group">
-                                                <label>Company Name</label>
-                                                <input type="text" className="form-control" placeholder="Enter your company name" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="message_text">Your Message</label>
-                                        <textarea className="form-control" rows="3" placeholder="Enter your message"></textarea>
-                                    </div>
-                                    <button type="submit" className="btn btn-primary">
-                                        Submit
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <ContactForm pageName="Constructions Page" />
             </div>
 
             {/* Industrial Applications */}

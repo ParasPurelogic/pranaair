@@ -5,7 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-
+import ContactForm from "@/Components/Contacform/ContactForm";
 export default function WeatherStation() {
   const [activeTab, setActiveTab] = useState(1);
   const [activeFaqTab, setActiveFaqTab] = useState(1);
@@ -261,8 +261,8 @@ export default function WeatherStation() {
                 <div className="connectivety-tab-title">
                   <ul className="connect-tab">
                     <li className="connect-tab-item">
-                      <button 
-                        className={`nav-link ${activeTab === 1 ? 'active' : ''}`} 
+                      <button
+                        className={`nav-link ${activeTab === 1 ? 'active' : ''}`}
                         onClick={() => setActiveTab(1)}
                         href="#wifi"
                       >
@@ -270,8 +270,8 @@ export default function WeatherStation() {
                       </button>
                     </li>
                     <li className="connect-tab-item">
-                      <button 
-                        className={`nav-link ${activeTab === 2 ? 'active' : ''}`} 
+                      <button
+                        className={`nav-link ${activeTab === 2 ? 'active' : ''}`}
                         onClick={() => setActiveTab(2)}
                         href="#gsm"
                       >
@@ -340,7 +340,7 @@ export default function WeatherStation() {
             </div>
             <div className="col-md-8">
               <div className="durability-slider">
-                <Carousel 
+                <Carousel
                   responsive={responsive}
                   infinite={true}
                   autoPlay={true}
@@ -464,7 +464,7 @@ export default function WeatherStation() {
         <div className="container-fluid visbel">
           <div className="row">
             <div className="col-12">
-              <Carousel 
+              <Carousel
                 responsive={applicationsResponsive}
                 infinite={true}
                 autoPlay={true}
@@ -804,9 +804,9 @@ export default function WeatherStation() {
                   <div className="card faq-title">
                     <div className="card-header" id="headingOne">
                       <h2 className="mb-0">
-                        <button 
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 1 ? '' : 'collapsed'}`} 
-                          type="button" 
+                        <button
+                          className={`btn btn-link btn-block text-left ${activeFaqTab === 1 ? '' : 'collapsed'}`}
+                          type="button"
                           onClick={() => setActiveFaqTab(activeFaqTab === 1 ? 0 : 1)}
                         >
                           What kind of data can I collect from the weather station?
@@ -822,9 +822,9 @@ export default function WeatherStation() {
                   <div className="card faq-title">
                     <div className="card-header" id="headingTwo">
                       <h2 className="mb-0">
-                        <button 
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 2 ? '' : 'collapsed'}`} 
-                          type="button" 
+                        <button
+                          className={`btn btn-link btn-block text-left ${activeFaqTab === 2 ? '' : 'collapsed'}`}
+                          type="button"
                           onClick={() => setActiveFaqTab(activeFaqTab === 2 ? 0 : 2)}
                         >
                           Can I access the weather stations real-time data remotely?
@@ -840,9 +840,9 @@ export default function WeatherStation() {
                   <div className="card faq-title">
                     <div className="card-header" id="headingThree">
                       <h2 className="mb-0">
-                        <button 
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 3 ? '' : 'collapsed'}`} 
-                          type="button" 
+                        <button
+                          className={`btn btn-link btn-block text-left ${activeFaqTab === 3 ? '' : 'collapsed'}`}
+                          type="button"
                           onClick={() => setActiveFaqTab(activeFaqTab === 3 ? 0 : 3)}
                         >
                           Is the weather station durable against harsh weather?
@@ -858,9 +858,9 @@ export default function WeatherStation() {
                   <div className="card faq-title">
                     <div className="card-header" id="headingFour">
                       <h2 className="mb-0">
-                        <button 
-                          className={`btn btn-link btn-block text-left ${activeFaqTab === 4 ? '' : 'collapsed'}`} 
-                          type="button" 
+                        <button
+                          className={`btn btn-link btn-block text-left ${activeFaqTab === 4 ? '' : 'collapsed'}`}
+                          type="button"
                           onClick={() => setActiveFaqTab(activeFaqTab === 4 ? 0 : 4)}
                         >
                           Do I have to install air quality monitors for air monitoring with the weather station?
@@ -884,46 +884,18 @@ export default function WeatherStation() {
       <section className="airqulality_contact_section inner_container" id="contact">
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <div className="introducing_box sub_title_box text-center">
-                <h2 className="title_heading">Get in <span className="bold_text">Touch</span></h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row airquality_inner_form">
-            <div className="col-md-3 contact_content_box">
-              <div className="contact_information_box">
-                <h4>Contact Info</h4>
-                <p>Looking for Automatic Weather Station?</p>
-                <ul className="contact_info">
-                  <li><i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918</li>
-                  <li><i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in</li>
-                  <li><i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-md-9">
-              <div className="airquality_contact_box">
-                <form>
-                  <div className="form-group">
-                    <input type="text" className="form-control" placeholder="Your Name" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="email" className="form-control" placeholder="Your Email" required />
-                  </div>
-                  <div className="form-group">
-                    <input type="tel" className="form-control" placeholder="Your Phone" required />
-                  </div>
-                  <div className="form-group">
-                    <textarea className="form-control" rows="3" placeholder="Your Message"></textarea>
-                  </div>
-                  <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Weather Station Monitor Page" />
       </section>
 
       {/* You May Also Like Section */}

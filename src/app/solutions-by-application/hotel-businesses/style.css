@@ -709,6 +709,14 @@ label.message_text {
     font-weight: 500;
 }
 
+.contact-heading {
+    padding-top: 90px !important;
+}
+
+.airqulality_contact_section {
+    margin-top: 100px;
+}
+
 .airqulality_contact_section:before {
     background: rgba(120, 174, 96, 0.1);
     width: 100%;
@@ -717,7 +725,7 @@ label.message_text {
     left: 0;
     top: 0;
     height: 420px;
-    z-index: 0;
+    z-index: -1;
 }
 
 .faq_section.faq_ask_section {

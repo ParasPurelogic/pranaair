@@ -209,7 +209,7 @@ a {
   border-radius: 30px;
   border: 2px solid #e8e8e8;
   padding: 40px 40px 0;
-  height: 200px;
+  height: 230px;
 }
 
 .could-sotrage h3 {
@@ -451,7 +451,7 @@ a {
   padding: 40px 60px 0;
   text-align: center;
   background: #000;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .tab-button i {
@@ -726,11 +726,32 @@ span.why-bg {
   text-align: center;
 }
 
+.tab-sec ul {
+  justify-content: center;
+  margin: 40px auto;
+  width: 52%;
+}
+
+.tab-sec .nav-link {
+  padding: 15px 50px;
+  font-size: 16px;
+}
+
+.tab-sec .nav-link.active {
+  background: #7ab261;
+  color: #fff;
+  border: none;
+  border-radius: 50px 50px 0 50px;
+}
+
 .mob-dash-heading h2 {
   color: #263d4f;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 50px;
+  text-transform: capitalize;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .vc_tta.vc_tta-spacing-1 .vc_tta-tabs-list:before {
@@ -760,10 +781,6 @@ span.why-bg {
 
 .tv img {
   margin-top: 20px;
-}
-
-.app img {
-  margin-top: -50px !important;
 }
 
 .tab-sec .vc_tta-panels-container {
@@ -807,7 +824,7 @@ a.btn .fa-arrow-right {
   border-radius: 100%;
   width: 90px;
   height: 90px;
-  margin: 0 auto;
+  margin: 15px auto;
   font-size: 22px !important;
   transform: rotate(330deg) !important;
   display: block !important;
@@ -828,12 +845,8 @@ a.btn:hover .fa-arrow-right {
   width: 100%;
 }
 
-.owl-prev {
-  transform: rotate(45deg);
-}
-
-.owl-next {
-  transform: rotate(-45deg);
+.app-img {
+  margin: 0 10px;
 }
 
 .app-txt h2 {
@@ -924,7 +937,8 @@ a.btn:hover .fa-arrow-right {
   padding-right: 60px;
   position: relative;
   z-index: 1;
-  justify-content: space-around;
+  justify-content: space-between;
+  text-align: left;
 }
 
 .product-specifi h4 {
@@ -1073,6 +1087,27 @@ a.btn:hover .fa-arrow-right {
   background: transparent !important;
   border: 0 !important;
   border-bottom: 1px solid #a1a1a133 !important;
+}
+
+.app-img {
+  margin: 0 10px;
+}
+
+.faq-heading {
+  padding-bottom: 40px;
+}
+
+.accordion-button:not(.collapsed) {
+  background: transparent;
+  border: none;
+  color: #202020;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: transparent;
 }
 
 /* Responsive styles for mobile devices */

@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function SensiblePlusAirMonitor() {
   // State for tabs
@@ -30,12 +31,12 @@ export default function SensiblePlusAirMonitor() {
     }
   };
   useEffect(() => {
-            import("bootstrap/dist/js/bootstrap.bundle.min.js")
-              .then(() => {
-                console.log("Bootstrap JS loaded");
-              })
-              .catch((err) => console.error("Error loading Bootstrap JS:", err));
-          }, []);
+    import("bootstrap/dist/js/bootstrap.bundle.min.js")
+      .then(() => {
+        console.log("Bootstrap JS loaded");
+      })
+      .catch((err) => console.error("Error loading Bootstrap JS:", err));
+  }, []);
 
   return (
     <div>
@@ -78,20 +79,20 @@ export default function SensiblePlusAirMonitor() {
             <div className="col-12">
               <div className="tabs-container">
                 <div className="tabs-header">
-                  <button 
-                    className={activeBasicAdvancedTab === 'Basic' ? 'active' : ''} 
+                  <button
+                    className={activeBasicAdvancedTab === 'Basic' ? 'active' : ''}
                     onClick={() => setActiveBasicAdvancedTab('Basic')}
                   >
                     Basic
                   </button>
-                  <button 
-                    className={activeBasicAdvancedTab === 'Advanced' ? 'active' : ''} 
+                  <button
+                    className={activeBasicAdvancedTab === 'Advanced' ? 'active' : ''}
                     onClick={() => setActiveBasicAdvancedTab('Advanced')}
                   >
                     Advanced
                   </button>
                 </div>
-                
+
                 <div className="tabs-content">
                   {activeBasicAdvancedTab === 'Basic' && (
                     <section className="aqi_icon_section">
@@ -362,9 +363,9 @@ export default function SensiblePlusAirMonitor() {
           <div className="col-md-6">
             <p style={{ textAlign: 'center' }}>
               <span style={{ fontSize: '14pt' }}><strong><span style={{ fontSize: '18pt' }}>Scan this QR Code to</span>
-              <br />
-                <img className="size-full wp-image-24466 aligncenter" src="https://www.pranaair.com/wp-content/uploads/2022/09/sensible-plus-monitor-manual.png" alt="prana air sensible+ air quality monitor manual" width="200" height="200" /></strong></span>
                 <br />
+                <img className="size-full wp-image-24466 aligncenter" src="https://www.pranaair.com/wp-content/uploads/2022/09/sensible-plus-monitor-manual.png" alt="prana air sensible+ air quality monitor manual" width="200" height="200" /></strong></span>
+              <br />
               <span style={{ fontSize: '14pt' }}> <strong>Download Products Manual</strong></span>
             </p>
           </div>
@@ -399,7 +400,7 @@ export default function SensiblePlusAirMonitor() {
               <div className="downloadapp_deail_box hidemobile">
                 <h3>To get the updates about Air Quality near you, Download AQI App</h3>
                 <p>To track the quality of air you inhale, download the AQI app on your iOS/Android device(s) and forget all your worries.
-                Download the app via Google Play Store (for Android), or Apple App Store (for iOS).</p>
+                  Download the app via Google Play Store (for Android), or Apple App Store (for iOS).</p>
                 <a className="download_app_btn" href="https://apps.apple.com/in/app/air-quality-index-aqi-india/id1439684571">
                   <img src="https://www.pranaair.com/wp-content/uploads/2021/02/app-store.png" alt="App Store" />
                 </a>
@@ -444,7 +445,7 @@ export default function SensiblePlusAirMonitor() {
           </div>
           <div className="row">
             <div className="col-12">
-              <Carousel 
+              <Carousel
                 responsive={responsive}
                 infinite={true}
                 autoPlay={true}
@@ -795,39 +796,20 @@ export default function SensiblePlusAirMonitor() {
       </div>
 
       {/* Contact Section */}
-      <div className="contact_senitizer_section sensible_conact_section" id="form">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="contact_img_box">
-                <img src="https://www.pranaair.com/wp-content/uploads/2021/05/contact-us-image.jpeg" alt="contact us image" className="img-fluid" />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="contact_form_box">
-                <h3 style={{ textAlign: 'justify' }}>Get In Touch With Us</h3>
-                <p>Contact us for more details about Sensible+ Monitor</p>
-                <strong>Drop a message</strong>
-                <form className="contact-form">
-                  <div className="mb-3">
-                    <input type="text" className="form-control" placeholder="Your Name" required />
-                  </div>
-                  <div className="mb-3">
-                    <input type="email" className="form-control" placeholder="Your Email" required />
-                  </div>
-                  <div className="mb-3">
-                    <input type="tel" className="form-control" placeholder="Your Phone" required />
-                  </div>
-                  <div className="mb-3">
-                    <textarea className="form-control" rows="4" placeholder="Your Message" required></textarea>
-                  </div>
-                  <button type="submit" className="btn btn-outline-dark">Submit</button>
-                </form>
-              </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="contact-heading">
+              <h2>Get in Touch</h2>
+              <p>
+                Please help us know what requirements you have. Our team will
+                contact you very soon.
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <ContactForm pageName="Sensible Plus Air Monitor Page" />
 
       {/* Product Compare Section */}
       <div className="product_compare_section">

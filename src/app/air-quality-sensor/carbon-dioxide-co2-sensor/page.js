@@ -6,6 +6,7 @@ import "react-multi-carousel/lib/styles.css"
 import "./style.css"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 // Register the ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -151,16 +152,16 @@ export default function CO2SensorPage() {
 
       {/* Feature Heading Section */}
       <div className="container-fluid">
-      <div className="row feature-heaidng">
-        <div className="col-md-8">
-          <div className="feature-heading">
-            <h2>
-              Advanced Carbon Dioxide (CO₂) sensor with <span className="amazing">NDIR Technology</span>
-            </h2>
+        <div className="row feature-heaidng">
+          <div className="col-md-8">
+            <div className="feature-heading">
+              <h2>
+                Advanced Carbon Dioxide (CO₂) sensor with <span className="amazing">NDIR Technology</span>
+              </h2>
+            </div>
           </div>
+          <div className="col-md-4"></div>
         </div>
-        <div className="col-md-4"></div>
-      </div>
       </div>
 
       {/* Feature Section */}
@@ -1120,77 +1121,17 @@ export default function CO2SensorPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="introducing_box sub_title_box text-center">
-                <h2 className="title_heading">
-                  Get in <span className="bold_text">Touch</span>
-                </h2>
-                <p>Please help us know what requirements you have. So, our team will contact you very soon.</p>
-              </div>
-              <div className="row airquality_inner_form">
-                <div className="col-md-3 contact_content_box">
-                  <div className="contact_information_box">
-                    <h4>Contact Info</h4>
-                    <p>Looking for Any Particulate Matter (PM) Sensor?</p>
-                    <ul className="contact_info">
-                      <li>
-                        <i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918
-                      </li>
-                      <li>
-                        <i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in
-                      </li>
-                      <li>
-                        <i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10,
-                        Rohini, Delhi 85, India
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-9">
-                  <div className="airquality_contact_box">
-                    <form>
-                      <div className="row">
-                        <div className="col-md-6">
-                          <label>
-                            <input type="text" placeholder="Your Name" required />
-                          </label>
-                        </div>
-                        <div className="col-md-6">
-                          <label>
-                            <input type="email" placeholder="Your Email" required />
-                          </label>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-6">
-                          <label>
-                            <input type="tel" placeholder="Phone Number" required />
-                          </label>
-                        </div>
-                        <div className="col-md-6">
-                          <label>
-                            <input type="text" placeholder="Subject" />
-                          </label>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-12">
-                          <label>
-                            <textarea placeholder="Your Message" rows="4"></textarea>
-                          </label>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-12">
-                          <input type="submit" value="Submit" />
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Carbon Dioxide Co2 Sensor Page" />
       </section>
 
       {/* You May Also Like Section */}

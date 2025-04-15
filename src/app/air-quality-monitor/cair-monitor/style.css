@@ -257,6 +257,25 @@ a {
   padding-top: 40px;
 }
 
+.car-in-outdoor-tab ul {
+  gap: 100px;
+}
+
+.car-in-outdoor-tab ul .nav-link.active {
+  color: #7ab261;
+  border: none;
+  border-bottom: 2px solid #7ab261;
+}
+
+.tab-content {
+  padding-top: 30px;
+}
+
+.car-in-outdoor-tab ul .nav-link {
+  font-size: 18px;
+  color: #00000070;
+}
+
 .car-in-outdoor-tab ul li a {
   background: transparent !important;
 }
@@ -403,7 +422,7 @@ a {
 }
 
 .partical-count {
-  width: 160px !important;
+  width: 190px !important;
 }
 
 .parameter-icons ul li {
@@ -536,15 +555,21 @@ a {
   width: 100%;
 }
 
+.app-slide-img-box {
+  margin: 0 5px;
+}
+
 .app-slider {
   padding-top: 0px;
 }
 
 .app-slide-img-box h3 {
-  font-weight: 500 !important;
   color: #263d4f;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-right: 30px;
 }
 
 .air-pollition-section {
@@ -829,6 +854,41 @@ a {
   width: 68px;
 }
 
+.car-in-outdoor-tab ul {
+  gap: 100px;
+}
+
+.car-in-outdoor-tab ul .nav-link.active {
+  color: #7ab261;
+  border: none;
+  border-bottom: 2px solid #7ab261;
+}
+
+.tab-content {
+  padding-top: 30px;
+}
+
+.car-in-outdoor-tab ul .nav-link {
+  font-size: 18px;
+  color: #00000070;
+}
+
+.plateform-tab ul {
+  border-bottom: 1px solid #0000001a;
+  gap: 50px;
+  width: 50%;
+}
+
+.plateform-tab ul .nav-link.active {
+  background: transparent;
+  border-bottom: 2px solid #7ab261;
+  color: #7ab261;
+}
+
+.plateform-tab ul .nav-link {
+  font-size: 18px;
+}
+
 .tv-app-section:before {
   position: absolute;
   content: "";
@@ -1030,6 +1090,30 @@ a {
   font-weight: 800;
   padding-top: 15px;
 }
+
+.label-part-tab ul .nav-link {
+  font-size: 18px;
+  color: #00000070;
+}
+
+.label-part-tab ul {
+  border-bottom: 1px solid #0000001a;
+  gap: 50px;
+  width: 50%;
+  margin-left: 190px;
+}
+
+.label-part-tab .nav-link.active {
+  background: transparent;
+  border-bottom: 2px solid #7ab261 !important;
+  color: #7ab261;
+  border: none;
+}
+
+.label-part-tab .nav-link {
+  font-size: 18px;
+}
+
 
 .health-index-score-box ul li h5 {
   font-size: 11px;
@@ -2307,7 +2391,7 @@ ul.contact_info {
 .contact-section {
   position: relative;
   padding-top: 60px;
-  margin-top: 180px;
+  margin-top: 0px;
 }
 
 .contact-section:before {
@@ -2321,6 +2405,21 @@ ul.contact_info {
   top: 0;
   right: 0;
   margin: 0 auto;
+}
+
+.accordion-button:not(.collapsed) {
+  background: transparent;
+  color: #263d4f;
+  font-weight: 700;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+button.accordion-button.collapsed {
+  background: transparent;
 }
 
 @media only screen and (min-width:320px) and (max-width:767px) {
@@ -2456,9 +2555,10 @@ ul.contact_info {
   }
 
   .parameter-icons ul li {
-    padding: 5px;
-    width: 72px;
-    height: 30px;
+    padding: 10px;
+    width: 85px;
+    height: 45px;
+    border-radius: 8px;
   }
 
   .parameter-icons ul li h5 {
@@ -2504,6 +2604,7 @@ ul.contact_info {
 
   .slider-banner {
     height: auto;
+    padding-bottom: 100px;
     margin-left: -15px
   }
 
@@ -2520,6 +2621,7 @@ ul.contact_info {
 
   .content-tab-box {
     margin: 0;
+    padding-left: 20px;
   }
 
   .vc_row.wpb_row.vc_row-fluid.slider-banner {
@@ -2597,6 +2699,7 @@ ul.contact_info {
 
   .parameter-para p {
     font-size: 14px;
+    padding-left: 20px;
     padding-right: 10px
   }
 
@@ -2608,7 +2711,8 @@ ul.contact_info {
   }
 
   .parameters-icons-box {
-    padding-top: 0
+    padding-top: 0;
+    padding-left: 10px;
   }
 
   .carousel-shortcode.carousel-shortcode-id-1.reposition-arrows .owl-nav .owl-prev {
@@ -2830,7 +2934,7 @@ ul.contact_info {
   }
 
   .mob-app-btn {
-    gap: 0;
+    gap: 10px;
     padding-top: 0;
     flex-direction: column-reverse
   }
@@ -2882,7 +2986,7 @@ ul.contact_info {
   }
 
   .types-visuals-section:after {
-    height: 270px
+    height: 200px
   }
 
   .ntabcontent {
@@ -3059,7 +3163,8 @@ ul.contact_info {
   }
 
   .tech-spec-line {
-    padding-top: 40px
+    padding-top: 40px;
+    gap: 30px;
   }
 
   .tech-spec-btn {
@@ -3270,8 +3375,20 @@ ul.contact_info {
     display: none
   }
 
+  .tab-content {
+    padding-top: 10px;
+  }
+
   .tab-aqi-ranges ul {
     padding: 0 0
+  }
+
+  .car-in-outdoor-tab ul .nav-link {
+    font-size: 14px;
+  }
+
+  .car-in-outdoor-tab ul {
+    gap: 10px;
   }
 
   .monitor-turn-into-clock {
@@ -3313,9 +3430,10 @@ ul.contact_info {
   }
 
   .monitor-clock-text {
-    top: 90px;
+    top: 60px;
     left: 0;
-    text-align: left
+    text-align: left;
+    padding-left: 10px;
   }
 
   .monitor-clock-text h2 {
@@ -3380,7 +3498,8 @@ ul.contact_info {
   }
 
   .aqi-mobile-app:before {
-    bottom: 160px
+    bottom: 0;
+    top: 40px;
   }
 
   .ventilation-pose-health-risk {
@@ -3422,7 +3541,7 @@ ul.contact_info {
   }
 
   .poor-health-box {
-    margin: -40px 0 40px !important;
+    margin: 30px 0 40px !important;
     padding: 5px 15px;
     width: 85%;
     float: left;
@@ -3673,7 +3792,7 @@ ul.contact_info {
 
   .manual-btn {
     width: 85%;
-    margin-top: 10px
+    margin: 0 auto;
   }
 
   .long-battery-section {
@@ -3797,10 +3916,22 @@ ul.contact_info {
     padding-top: 10px
   }
 
+  .label-part-tab ul {
+    gap: 20px;
+    width: 90%;
+    margin-left: 0px;
+  }
+
   .aqi-tv-app-title {
     padding-top: 0;
     position: relative;
-    padding-left: 30px
+    padding-left: 10px
+  }
+
+  .plateform-tab ul {
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
   }
 
   .tech-spec-list ul li:last-child {
@@ -3844,6 +3975,7 @@ ul.contact_info {
   .ntabcontent h5 {
     font-size: 12px;
     top: 10px;
+    padding-top: 20px;
     line-height: 22px;
   }
 
@@ -3868,6 +4000,12 @@ ul.contact_info {
 @media only screen and (min-width:767px) and (max-width:1023px) {
   .monitor-turn-into-clock {
     height: 440px;
+    margin-top: 100px;
+  }
+
+  .new-ntabb {
+    margin-top: 20px;
+    display: flex;
   }
 
   .slider-banner {
@@ -4033,7 +4171,7 @@ ul.contact_info {
     padding: 5px;
     border-radius: 10px;
     width: auto;
-    height: 30px
+    height: 50px
   }
 
   .app-section {
@@ -4392,13 +4530,13 @@ ul.contact_info {
   }
 
   .types-visuals-section:before {
-    height: 600px
+    height: 500px
   }
 
   .show-img img {
     width: 50%;
     position: relative;
-    top: 28px
+    top: -30px
   }
 
   .types-visuals-section:after {
@@ -4432,8 +4570,8 @@ ul.contact_info {
   }
 
   .historic-data-text p {
-    font-size: 20px;
-    padding-right: 30px
+    font-size: 17px;
+    padding-right: 0px;
   }
 
   .access-real-time-historic-data {
@@ -4515,7 +4653,7 @@ ul.contact_info {
   .disassamble-glow-img img {
     margin-top: -278px;
     margin-left: 70px;
-    top: -30px
+    top: 50px
   }
 
   .long-battery-text {
@@ -4647,7 +4785,7 @@ ul.contact_info {
   .manual-btn {
     gap: 10px;
     padding: 10px 20px;
-    width: 70%;
+    width: 100%;
     margin-top: 30px;
     font-size: 13px
   }
@@ -4659,6 +4797,39 @@ ul.contact_info {
 
   .banner-section:before {
     height: 450px;
+  }
+
+  .car-in-outdoor-tab ul {
+    gap: 40px;
+  }
+
+  .graph-heading {
+    padding-top: 100px;
+  }
+
+  .plateform-tab ul {
+    gap: 30px;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .parts-label-tabs {
+    padding-top: 100px;
+  }
+
+  .label-part-tab ul {
+    gap: 50px;
+    width: 70%;
+    margin-left: 30px;
+  }
+
+  .contact-heading {
+    padding-top: 100px;
+  }
+
+  .contact-heading p {
+    width: 60%;
   }
 }
 
@@ -4779,7 +4950,14 @@ ul.contact_info {
   }
 
   .position-eight {
-    left: 30px
+    left: 0px;
+    top: 110px;
+  }
+
+  .disassamble-text p {
+    font-size: 16px;
+    width: 90%;
+    padding-top: 0px;
   }
 
   .tech-spec-inner-one ul {
@@ -4803,7 +4981,8 @@ ul.contact_info {
   }
 
   .track-aqi-heading h2 {
-    font-size: 32px
+    font-size: 32px;
+    padding-right: 30px;
   }
 
   .aqi-logo img {
@@ -4811,13 +4990,14 @@ ul.contact_info {
   }
 
   .parameter-icons ul li {
-    width: 70px;
-    height: 40px
+    width: 90px;
+    height: 60px;
   }
 
   .monitor-clock-text {
     top: 60px;
-    left: 80px
+    left: auto;
+    padding-left: 50px;
   }
 
   .monitor-clock-text p {
@@ -4901,7 +5081,15 @@ ul.contact_info {
 
   .disassamble-glow-img img {
     margin-left: 100px;
-    top: -57px
+    top: 5px
+  }
+
+  .part-label-box ul {
+    width: 100%;
+  }
+
+  .label-part-tab ul {
+    margin-left: 30px;
   }
 
   .wifi-connect-heading {
@@ -4930,11 +5118,47 @@ ul.contact_info {
   }
 
   .types-visuals-section:before {
-    height: 660px
+    height: 550px
+  }
+
+  .aqi-tv-app-title h2 {
+    width: 85%;
+  }
+
+  .graph-chart {
+    height: 480px;
+  }
+
+  .aqi-tv-app-title p {
+    font-size: 22px;
+    padding-right: 40px;
+    padding-top: 10px;
+  }
+
+  .aqi-tv-app-title {
+    padding-top: 100px;
+    padding-left: 60px;
   }
 
   .wifi-connect-heading p {
-    padding-right: 100px
+    padding-right: 0px;
+    font-size: 18px;
+  }
+
+  .aqi-mobile-app:before {
+    bottom: -40px;
+  }
+
+  .aqi-ranges-section {
+    margin-top: 100px;
+  }
+
+  .aqi-mobile-text {
+    padding-top: 50px;
+  }
+
+  .quote-section {
+    padding-top: 100px;
   }
 
   .tav-app-screen {
@@ -4948,7 +5172,8 @@ ul.contact_info {
   }
 
   .content-tab-box img {
-    padding-top: 0;
-    margin-left: -60px
+    padding-top: 50px;
+    width: 100%;
+    margin-left: -70px;
   }
 }

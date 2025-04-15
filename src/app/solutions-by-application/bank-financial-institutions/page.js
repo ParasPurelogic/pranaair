@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function BankFinancialInstitutions() {
   const [activeTab, setActiveTab] = useState("air-quality-monitors")
@@ -756,69 +758,20 @@ export default function BankFinancialInstitutions() {
 
       {/* Contact Section */}
       <div className="modern-contact-section mobile-friendly" id="get_in_touch">
-        <div className="contact-header text-center">
-          <h2 className="title_heading">
-            Get in <span className="bold_text">Touch</span>
-          </h2>
-          <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-        </div>
-
-        <div className="modern-contact-container">
-          <div className="contact-info-panel">
-            <h3>Contact Info</h3>
-            <p>Looking for the air quality solutions for banks/financial institutions?</p>
-
-            <div className="contact-details">
-              <div className="contact-item">
-                <span className="contact-icon">📞</span>
-                <span>Phone Number: (+91) 73918-73918</span>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">✉️</span>
-                <span>Email Address: info@purelogic.in</span>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">📍</span>
-                <span>Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India</span>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
             </div>
           </div>
-
-          <div className="contact-form-panel">
-            <form className="modern-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Your Name (required)</label>
-                  <input type="text" name="your-name" required />
-                </div>
-                <div className="form-group">
-                  <label>Your Email (required)</label>
-                  <input type="email" name="your-email" required />
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Phone Number (required)</label>
-                  <input type="tel" name="your-phone" required />
-                </div>
-                <div className="form-group">
-                  <label>Your Organisation</label>
-                  <input type="text" name="your-organisation" />
-                </div>
-              </div>
-
-              <div className="form-group full-width">
-                <label>Message</label>
-                <textarea name="your-message" placeholder="Write message here"></textarea>
-              </div>
-
-              <button type="submit" className="submit-btn">
-                Send Message
-              </button>
-            </form>
-          </div>
         </div>
+        <ContactForm pageName="Bank Financial institution Page" />
       </div>
 
       {/* Industrial Applications Section */}

@@ -5,6 +5,7 @@ import Image from "next/image"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function OfficeSolutions() {
   const [activeTab, setActiveTab] = useState("monitors")
@@ -881,93 +882,21 @@ export default function OfficeSolutions() {
       </section>
 
       {/* Contact Section */}
-      <section id="get_in_touch" className="contact-section">
+      <section id="get_in_touch" className="contact-section-box">
         <div className="container">
-          <div className="section-header text-center">
-            <h2 className="section-title">
-              Get in <span className="highlight">Touch</span>
-            </h2>
-            <p>Please let us know your requirements so we can get back to you soon.</p>
-          </div>
-
-          <div className="contact-form-container">
-            <div className="contact-info-box">
-              <h3>Contact Info</h3>
-              <p>Looking for air quality solutions for Office?</p>
-
-              <div className="contact-info-item">
-                <div className="contact-icon">
-                  <i className="fa fa-phone" aria-hidden="true"></i>
-                </div>
-                <div className="contact-text">
-                  <div className="contact-label">Phone Number:</div>
-                  <div>(+91) 73918-73918</div>
-                </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
-
-              <div className="contact-info-item">
-                <div className="contact-icon">
-                  <i className="fa fa-envelope" aria-hidden="true"></i>
-                </div>
-                <div className="contact-text">
-                  <div className="contact-label">Email Address:</div>
-                  <div>info@purelogic.in</div>
-                </div>
-              </div>
-
-              <div className="contact-info-item">
-                <div className="contact-icon">
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                </div>
-                <div className="contact-text">
-                  <div className="contact-label">Office Location:</div>
-                  <div>706, 7th Floor, Sec 10, Rohini, Delhi 85, India</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-form-box">
-              <form className="contact-form">
-                <div className="form-group full-width">
-                  <label>Your Full Name</label>
-                  <input type="text" name="your-name" className="form-control" required />
-                </div>
-
-                <div className="form-row">
-                  <div className="form-group half-width">
-                    <label>Your Phone No</label>
-                    <input type="tel" name="your-phone" className="form-control" required />
-                  </div>
-                  <div className="form-group half-width">
-                    <label>Your Email</label>
-                    <input type="email" name="your-email" className="form-control" required />
-                  </div>
-                </div>
-
-                <div className="form-group full-width">
-                  <label>Your Organisation</label>
-                  <input type="text" name="your-organisation" className="form-control" />
-                </div>
-
-                <div className="form-group full-width">
-                  <label className="message-label">Message</label>
-                  <textarea
-                    name="your-message"
-                    className="form-control"
-                    placeholder="Write message here"
-                    rows="4"
-                  ></textarea>
-                </div>
-
-                <div className="form-group submit-group">
-                  <button type="submit" className="submit-button">
-                    Send Message
-                  </button>
-                </div>
-              </form>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Office Page" />
       </section>
 
       {/* FAQ Section */}

@@ -100,11 +100,7 @@ export default function PocketMonitorPage() {
                   alt="WiFi"
                   className="wifi-icon"
                 />
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="Prana Air"
-                  className="title-icon"
-                />
+               
               </h2>
               <h3 className="section-subtitle">Air Quality Monitor</h3>
             </div>

@@ -1332,6 +1332,27 @@ ul.vc_tta-tabs-list {
   line-height: 32px
 }
 
+.app-card {
+  margin: 0 10px 50px;
+}
+
+.tab-section .nav-link.active {
+  color: #1460a7;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #1460a7;
+}
+
+.tab-section .nav-link {
+  padding: 0 30px 10px;
+  font-size: 18px;
+}
+
+.tab-section ul {
+  width: 42%;
+  margin: 0 auto;
+}
+
 .tab-txt p {
   color: #263d4fab;
   font-size: 18px;
@@ -1371,7 +1392,12 @@ ul.seamless-connect-btn {
   gap: 10px;
   justify-content: center;
   border-radius: 13px;
+  width: 100% !important;
   height: 65px !important
+}
+
+.air-quality-monitor-manufacturing {
+  margin: 0 10px 40px;
 }
 
 ul.seamless-connect-btn li {
@@ -1605,7 +1631,7 @@ span.yellow {
   align-items: center;
   justify-content: center;
   font-size: 17px;
-  width: 14%;
+  width: 19%;
   margin: 0 auto;
   margin-right: 1px;
   padding: 10px 20px;
@@ -1776,6 +1802,10 @@ span.yellow {
   margin: 0
 }
 
+.app-card {
+  margin: 0 10px 50px;
+}
+
 .pranasens-yt .ultv-video__outer-wrap {
   border-radius: 25px
 }
@@ -1784,6 +1814,16 @@ span.yellow {
   width: 100%;
   margin-top: 50px;
   border-radius: 10px
+}
+
+.accordion-button:not(.collapsed) {
+  background: transparent;
+  color: #263d4f;
+  font-size: 20px;
+}
+
+.accordion {
+  --bs-accordion-border-color: transparent;
 }
 
 @media only screen and (min-width:320px) and (max-width:767px) {
@@ -2676,7 +2716,7 @@ span.yellow {
   }
 
   .tab-txt {
-    padding-top: 10px
+    padding-top: 30px
   }
 
   .smart-feature-box:before {
@@ -2697,7 +2737,7 @@ span.yellow {
 
   .why-choose-prana ul li h3 {
     font-size: 15px;
-    height: 120px;
+    height: 150px;
     margin-bottom: 10px !important;
     padding: 20px 15px 10px;
     margin: 0 10px;
@@ -2705,8 +2745,18 @@ span.yellow {
     line-height: 16px
   }
 
+  .tab-section .nav-link {
+    padding: 20px 10px 10px;
+    font-size: 14px;
+  }
+
   .why-choose-prana {
     padding-top: 20px
+  }
+
+  .tab-section ul {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .why-choose-prana ul li:nth-child(7) h3 {
@@ -2715,7 +2765,7 @@ span.yellow {
   }
 
   .why-choose-prana ul li:last-child h3 {
-    width: 70%
+    width: 90%
   }
 
   .why-choose-prana ul li:nth-child(7) h3 img {
@@ -3135,8 +3185,12 @@ span.yellow {
 
   .app-heading p {
     font-size: 16px;
-    padding-right: 100px;
+    padding-right: 0px;
     line-height: 26px
+  }
+
+  .tab-section ul {
+    width: 90%;
   }
 
   .app-slider {
@@ -3259,8 +3313,8 @@ span.yellow {
     line-height: 36px
   }
 
-  .why-choose-prana ul li {
-    width: 32%
+  .solar-innovation-sec {
+    height: 500px;
   }
 
   .why-choose-prana ul li h3 {
@@ -3272,8 +3326,8 @@ span.yellow {
     margin-bottom: 10px !important
   }
 
-  .why-choose-prana ul li h3 img {
-    width: 60%
+  .pollutant-gas-monitor ul {
+    padding: 0;
   }
 
   .why-choose-prana ul li:last-child h3 {

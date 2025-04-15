@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function AirQualitySolutions() {
     const [activeTab, setActiveTab] = useState('air-quality-monitors');
@@ -655,52 +657,21 @@ export default function AirQualitySolutions() {
             </div>
 
             {/* Contact Section */}
-            <div className="container airqulality_contact_section inner_container" id="get_in_touch">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">Get in <span className="bold_text">Touch </span></h2>
-                            <p>Please help us know what requirements you have.
-                                Our team will contact you very soon.</p>
+            <div className=" airqulality_contact_section inner_container" id="get_in_touch">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="contact-heading">
+                                <h2>Get in Touch</h2>
+                                <p>
+                                    Please help us know what requirements you have. Our team will
+                                    contact you very soon.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="row airquality_inner_form">
-                    <div className="col-md-3 contact_content_box">
-                        <div className="contact_information_box">
-                            <h4>Prana Air Contact Info</h4>
-                            <p>Looking for the air quality solutions of school, or any institutes?</p>
-                            <ul className="contact_info">
-                                <li><i className="fa fa-phone" aria-hidden="true"></i>Phone Number: (+91) 73918-73918</li>
-                                <li><i className="fa fa-envelope" aria-hidden="true"></i>Email Address: info@purelogic.in</li>
-                                <li><i className="fa fa-map-marker" aria-hidden="true"></i>Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-md-9">
-                        <div className="airquality_contact_box">
-                            <form>
-                                <div className="form-group">
-                                    <label>Your Name</label>
-                                    <input type="text" className="form-control" placeholder="Enter your name" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Your Email</label>
-                                    <input type="email" className="form-control" placeholder="Enter your email" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Your Phone</label>
-                                    <input type="tel" className="form-control" placeholder="Enter your phone number" />
-                                </div>
-                                <div className="form-group">
-                                    <label className="message_text">Your Message</label>
-                                    <textarea className="form-control" rows="3" placeholder="Enter your message"></textarea>
-                                </div>
-                                <button type="submit" className="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <ContactForm pageName="Fitness Center Gym Page" />
             </div>
 
             {/* Industrial Applications */}

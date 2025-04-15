@@ -5,6 +5,8 @@ import Image from "next/image"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 // Update the Solutions Tabs section to match the reference design
 // Replace the existing MpcbGuidelinesSection component with this updated version

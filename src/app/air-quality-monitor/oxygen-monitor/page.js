@@ -766,7 +766,7 @@ export default function OxygenMonitor() {
                     </div>
                     <div className="row">
                         <div className="col-md-12">
-                            <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={3000} className="app-slide">
+                            <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={3000} className="app-slide">
                                 <div className="app-img">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/10/Residential-Use.webp"

@@ -890,102 +890,14 @@ img.power {
 }
 
 /* Contact form styles */
-.contact-section {
+.contact-section-box {
   background-color: #f5f8f5;
   padding: 60px 0;
+  margin-top: 100px;
 }
-
-.contact-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  display: flex;
+.contact-heading {
+  padding-top: 30px !important;
 }
-
-.contact-info {
-  background-color: #78ae60;
-  color: white;
-  padding: 40px 30px;
-  width: 35%;
-  position: relative;
-}
-
-.contact-info h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.contact-info p {
-  margin-bottom: 30px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contact-details {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-details li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.contact-details li img {
-  margin-right: 15px;
-  width: 20px;
-  filter: brightness(100);
-}
-
-.contact-form {
-  padding: 40px;
-  width: 65%;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.form-control {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.form-control:focus {
-  border-color: #78ae60;
-  outline: none;
-}
-
-.submit-btn {
-  background-color: #78ae60;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.submit-btn:hover {
-  background-color: #669e50;
-}
-
 /* Fix for the slider section */
 .carousel-item {
   flex: 0 0 100%;

@@ -1,9 +1,10 @@
 "use client"
-import { useState, useEffect  } from "react"
+import { useState, useEffect } from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function PranaAirPCB() {
     // State for tabs
@@ -71,7 +72,7 @@ export default function PranaAirPCB() {
                                 <h1>Prana Air</h1>
                                 <h2>Air Quality</h2>
                                 <h3>PCB Board</h3>
-                                <h4>For indoor &amp; outdoor</h4>                               
+                                <h4>For indoor &amp; outdoor</h4>
                                 <ul className="indoor-outdoor">
                                     <li>SO2</li>
                                     <li>NO2</li>
@@ -406,7 +407,7 @@ export default function PranaAirPCB() {
                                     </h2>
                                     <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Prana Air offers a range of PCBs tailored for air quality monitoring, ensuring efficient and accurate data collection.
+                                            Prana Air offers a range of PCBs tailored for air quality monitoring, ensuring efficient and accurate data collection.
                                         </div>
                                     </div>
                                 </div>
@@ -424,7 +425,7 @@ export default function PranaAirPCB() {
                                     </h2>
                                     <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Absolutely! Prana Air PCBs are designed to be easily customized, allowing for seamless integration with various air quality monitoring systems.
+                                            Absolutely! Prana Air PCBs are designed to be easily customized, allowing for seamless integration with various air quality monitoring systems.
                                         </div>
                                     </div>
                                 </div>
@@ -442,7 +443,7 @@ export default function PranaAirPCB() {
                                     </h2>
                                     <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Yes, Prana Air PCBs are versatile and compatible with a wide range of Prana Air- air quality sensors, enabling comprehensive monitoring of pollutants.
+                                            Yes, Prana Air PCBs are versatile and compatible with a wide range of Prana Air- air quality sensors, enabling comprehensive monitoring of pollutants.
                                         </div>
                                     </div>
                                 </div>
@@ -460,7 +461,7 @@ export default function PranaAirPCB() {
                                     </h2>
                                     <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Prana Air PCBs are built to withstand long-term operation, providing reliable and consistent performance for continuous air quality monitoring.
+                                            Prana Air PCBs are built to withstand long-term operation, providing reliable and consistent performance for continuous air quality monitoring.
                                         </div>
                                     </div>
                                 </div>
@@ -478,7 +479,7 @@ export default function PranaAirPCB() {
                                     </h2>
                                     <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Certainly! Prana Air offers comprehensive technical support to ensure smooth implementation and operation of their PCBs for air quality monitoring.
+                                            Certainly! Prana Air offers comprehensive technical support to ensure smooth implementation and operation of their PCBs for air quality monitoring.
                                         </div>
                                     </div>
                                 </div>
@@ -496,7 +497,7 @@ export default function PranaAirPCB() {
                                     </h2>
                                     <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        Yes, Prana Air PCBs adhere to industry standards and regulations, ensuring reliable performance and compliance with air quality monitoring requirements.
+                                            Yes, Prana Air PCBs adhere to industry standards and regulations, ensuring reliable performance and compliance with air quality monitoring requirements.
                                         </div>
                                     </div>
                                 </div>
@@ -514,7 +515,7 @@ export default function PranaAirPCB() {
                                     </h2>
                                     <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                        PCBs can be connected using various communication modes, such as UART, WiFi, RS-485, and GSM, offering flexibility and compatibility with diverse systems and devices.                                        </div>
+                                            PCBs can be connected using various communication modes, such as UART, WiFi, RS-485, and GSM, offering flexibility and compatibility with diverse systems and devices.                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -527,72 +528,18 @@ export default function PranaAirPCB() {
             <section className="contat-form-section" id="get-in-touch">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
-                            <div className="introducing_box sub_title_box text-center">
-                                <h2 className="title_heading">
-                                    Get in <span className="bold_text">Touch </span>
-                                </h2>
-                                <p>Please help us know what requirements you have.</p>
-                                <p>Our team will contact you very soon.</p>
-                            </div>
-
-                            <div className="row airquality_inner_form">
-                                <div className="col-md-3 contact_content_box">
-                                    <div className="contact_information_box">
-                                        <h4>Contact Info</h4>
-                                        <p>Looking for air quality PCB?</p>
-                                        <ul className="contact_info">
-                                            <li>
-                                                Phone Number: (+91) 73918-73918
-                                            </li>
-                                            <li>
-                                                Email Address: info@purelogic.in
-                                            </li>
-                                            <li>
-                                                Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi
-                                                85, India
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="col-md-9 contact-colum">
-                                    <div className="airquality_contact_box">
-                                        <form className="contact-form">
-                                            <div className="row">
-                                                <div className="col-md-6 mb-3">
-                                                    <input type="text" className="form-control" placeholder="Your Name" required />
-                                                </div>
-                                                <div className="col-md-6 mb-3">
-                                                    <input type="email" className="form-control" placeholder="Your Email" required />
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="col-md-6 mb-3">
-                                                    <input type="tel" className="form-control" placeholder="Your Phone" required />
-                                                </div>
-                                                <div className="col-md-6 mb-3">
-                                                    <input type="text" className="form-control" placeholder="Subject" />
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="col-12 mb-3">
-                                                    <textarea className="form-control" rows="5" placeholder="Your Message" required></textarea>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="col-12">
-                                                    <button type="submit" className="btn btn-primary">
-                                                        Submit
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                        <div className="col-md-12">
+                            <div className="contact-heading">
+                                <h2>Get in Touch</h2>
+                                <p>
+                                    Please help us know what requirements you have. Our team will
+                                    contact you very soon.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <ContactForm pageName="Air Quality Pcb Board Page" />
             </section>
 
             {/* Product Slider Section */}

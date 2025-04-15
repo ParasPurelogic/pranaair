@@ -3,6 +3,7 @@ import "./style.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import { useState } from "react"
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function AirportSolutions() {
   const [activeTab, setActiveTab] = useState(0)
@@ -1215,79 +1216,19 @@ export default function AirportSolutions() {
       {/* Contact Section */}
       <section className="contact-section-wrapper" id="get_in_touch">
         <div className="container">
-          <div className="contact-section-header">
-            <h2>
-              Get in <span className="bold_text">Touch</span>
-            </h2>
-            <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-          </div>
-
-          <div className="contact-form-card">
-            <div className="contact-info-sidebar">
-              <h3>Contact Info</h3>
-              <p>Looking for the air quality solutions for an airport?</p>
-
-              <div className="contact-info-item">
-                <i className="fa fa-phone" aria-hidden="true"></i>
-                <div className="info-content">
-                  <span className="info-label">Phone Number:</span>
-                  (+91) 73918-73918
-                </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
-
-              <div className="contact-info-item">
-                <i className="fa fa-envelope" aria-hidden="true"></i>
-                <div className="info-content">
-                  <span className="info-label">Email Address:</span>
-                  info@purelogic.in
-                </div>
-              </div>
-
-              <div className="contact-info-item">
-                <i className="fa fa-map-marker" aria-hidden="true"></i>
-                <div className="info-content">
-                  <span className="info-label">Office Location:</span>
-                  706, 7th Floor, Sec 10, Rohini, Delhi 85, India
-                </div>
-              </div>
-            </div>
-
-            <div className="contact-form-content">
-              <form>
-                <div className="form-group">
-                  <label>Your Full Name</label>
-                  <input type="text" name="name" required />
-                </div>
-
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Your Phone No</label>
-                    <input type="tel" name="phone" required />
-                  </div>
-
-                  <div className="form-group">
-                    <label>Your Email</label>
-                    <input type="email" name="email" required />
-                  </div>
-                </div>
-
-                <div className="form-group">
-                  <label>Your Organisation</label>
-                  <input type="text" name="company" />
-                </div>
-
-                <div className="form-group">
-                  <label>Message</label>
-                  <textarea name="message" placeholder="Write message here"></textarea>
-                </div>
-
-                <button type="submit" className="submit-button">
-                  Send Message
-                </button>
-              </form>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Airports Page" />
       </section>
 
       {/* Industrial Applications Section */}

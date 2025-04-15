@@ -1251,53 +1251,55 @@ export default function AmbientAirMonitor() {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <ul className="nav nav-tabs" id="techTab" role="tablist">
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className={`nav-link ${activeTechTab === "Ambient PM" ? "active" : ""}`}
-                                        onClick={() => setActiveTechTab("Ambient PM")}
-                                        id="ambient-pm-tech-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#ambient-pm-tech"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="ambient-pm-tech"
-                                        aria-selected={activeTechTab === "Ambient PM"}
-                                    >
-                                        Ambient PM
-                                    </button>
-                                </li>
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className={`nav-link ${activeTechTab === "Ambient Pro" ? "active" : ""}`}
-                                        onClick={() => setActiveTechTab("Ambient Pro")}
-                                        id="ambient-pro-tech-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#ambient-pro-tech"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="ambient-pro-tech"
-                                        aria-selected={activeTechTab === "Ambient Pro"}
-                                    >
-                                        Ambient Pro
-                                    </button>
-                                </li>
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className={`nav-link ${activeTechTab === "Prana Sense" ? "active" : ""}`}
-                                        onClick={() => setActiveTechTab("Prana Sense")}
-                                        id="prana-sense-tech-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#prana-sense-tech"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="prana-sense-tech"
-                                        aria-selected={activeTechTab === "Prana Sense"}
-                                    >
-                                        Prana Sense
-                                    </button>
-                                </li>
-                            </ul>
+                            <div className="tech-tab-spec">
+                                <ul className="nav nav-tabs" id="techTab" role="tablist">
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className={`nav-link ${activeTechTab === "Ambient PM" ? "active" : ""}`}
+                                            onClick={() => setActiveTechTab("Ambient PM")}
+                                            id="ambient-pm-tech-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#ambient-pm-tech"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="ambient-pm-tech"
+                                            aria-selected={activeTechTab === "Ambient PM"}
+                                        >
+                                            Ambient PM
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className={`nav-link ${activeTechTab === "Ambient Pro" ? "active" : ""}`}
+                                            onClick={() => setActiveTechTab("Ambient Pro")}
+                                            id="ambient-pro-tech-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#ambient-pro-tech"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="ambient-pro-tech"
+                                            aria-selected={activeTechTab === "Ambient Pro"}
+                                        >
+                                            Ambient Pro
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className={`nav-link ${activeTechTab === "Prana Sense" ? "active" : ""}`}
+                                            onClick={() => setActiveTechTab("Prana Sense")}
+                                            id="prana-sense-tech-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#prana-sense-tech"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="prana-sense-tech"
+                                            aria-selected={activeTechTab === "Prana Sense"}
+                                        >
+                                            Prana Sense
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                             <div className="tab-content" id="techTabContent">
                                 <div
                                     className={`tab-pane fade ${activeTechTab === "Ambient PM" ? "show active" : ""}`}
@@ -1665,53 +1667,56 @@ export default function AmbientAirMonitor() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <ul className="nav nav-tabs" id="dataTab" role="tablist">
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className={`nav-link ${activeDataTab === "Web-Dashboard" ? "active" : ""}`}
-                                        onClick={() => setActiveDataTab("Web-Dashboard")}
-                                        id="web-dashboard-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#web-dashboard"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="web-dashboard"
-                                        aria-selected={activeDataTab === "Web-Dashboard"}
-                                    >
-                                        Web-Dashboard
-                                    </button>
-                                </li>
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className={`nav-link ${activeDataTab === "Mobile App" ? "active" : ""}`}
-                                        onClick={() => setActiveDataTab("Mobile App")}
-                                        id="mobile-app-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#mobile-app"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="mobile-app"
-                                        aria-selected={activeDataTab === "Mobile App"}
-                                    >
-                                        Mobile App
-                                    </button>
-                                </li>
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className={`nav-link ${activeDataTab === "TV App" ? "active" : ""}`}
-                                        onClick={() => setActiveDataTab("TV App")}
-                                        id="tv-app-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#tv-app"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="tv-app"
-                                        aria-selected={activeDataTab === "TV App"}
-                                    >
-                                        TV App
-                                    </button>
-                                </li>
-                            </ul>
+                            <div className="data-tab">
+                                <ul className="nav nav-tabs" id="dataTab" role="tablist">
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className={`nav-link ${activeDataTab === "Web-Dashboard" ? "active" : ""}`}
+                                            onClick={() => setActiveDataTab("Web-Dashboard")}
+                                            id="web-dashboard-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#web-dashboard"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="web-dashboard"
+                                            aria-selected={activeDataTab === "Web-Dashboard"}
+                                        >
+                                            Web-Dashboard
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className={`nav-link ${activeDataTab === "Mobile App" ? "active" : ""}`}
+                                            onClick={() => setActiveDataTab("Mobile App")}
+                                            id="mobile-app-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#mobile-app"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="mobile-app"
+                                            aria-selected={activeDataTab === "Mobile App"}
+                                        >
+                                            Mobile App
+                                        </button>
+                                    </li>
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className={`nav-link ${activeDataTab === "TV App" ? "active" : ""}`}
+                                            onClick={() => setActiveDataTab("TV App")}
+                                            id="tv-app-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#tv-app"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="tv-app"
+                                            aria-selected={activeDataTab === "TV App"}
+                                        >
+                                            TV App
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
                             <div className="tab-content" id="dataTabContent">
                                 <div
                                     className={`tab-pane fade ${activeDataTab === "Web-Dashboard" ? "show active" : ""}`}
@@ -2462,226 +2467,147 @@ export default function AmbientAirMonitor() {
                         </div>
                     </div>
 
-                    {/* Row 1 */}
-                    <div className="row mob-client-logo">
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/tata-company.png"
-                                        alt="tata company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/igcar-org.png"
-                                        alt="igcar org company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/microsoft-company.png"
-                                        alt="microsoft company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/emaar-company.png"
-                                        alt="emaar company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="client-logo-img-box">
+                                <ul>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/igcar-org.png"
+                                            alt="igcar org company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/microsoft-company.png"
+                                            alt="microsoft company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/emaar-company.png"
+                                            alt="emaar company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/siemens-company.png"
+                                            alt="siemens company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/mahindra-company.png"
+                                            alt="mahindra company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/renault-company.png"
+                                            alt="renualt company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/bcg-group.png"
+                                            alt="bcg company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/taj-hotel.png"
+                                            alt="taj hotel logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/foodworks.png"
+                                            alt="foodworks logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/asianpaints.png"
+                                            alt="asianpaints logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/iit-institutes.png"
+                                            alt="iit institute logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/neeri-company.png"
+                                            alt="neeri logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/03/ola-cab.png"
+                                            alt="ola cab"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/l-and-t-company.png"
+                                            alt="l & t company logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/08/jw-marriott.png"
+                                            alt="jw marriott logo"
+                                            width={150}
+                                            height={80}
+                                            className="img-fluid"
+                                        />
+                                    </li>
 
-                    {/* Row 2 */}
-                    <div className="row mob-client-logo">
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/siemens-company.png"
-                                        alt="siemens company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/mahindra-company.png"
-                                        alt="mahindra company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/renault-company.png"
-                                        alt="renualt company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/bcg-group.png"
-                                        alt="bcg company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Row 3 */}
-                    <div className="row mob-client-logo">
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/taj-hotel.png"
-                                        alt="taj hotel logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/foodworks.png"
-                                        alt="foodworks logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/asianpaints.png"
-                                        alt="asianpaints logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/iit-institutes.png"
-                                        alt="iit institute logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Row 4 */}
-                    <div className="row mob-client-logo">
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/neeri-company.png"
-                                        alt="neeri logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/03/ola-cab.png"
-                                        alt="ola cab"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/l-and-t-company.png"
-                                        alt="l & t company logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-sm-3">
-                            <div className="client-logo fadeInUp animated">
-                                <p>
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/08/jw-marriott.png"
-                                        alt="jw marriott logo"
-                                        width={150}
-                                        height={80}
-                                        className="img-fluid"
-                                    />
-                                </p>
+                                </ul>
                             </div>
                         </div>
                     </div>

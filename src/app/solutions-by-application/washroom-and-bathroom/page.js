@@ -5,6 +5,8 @@ import Image from "next/image"
 import "./style.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function WashroomPage() {
   const [activeTab, setActiveTab] = useState("monitors")
@@ -860,72 +862,21 @@ export default function WashroomPage() {
       </section>
 
       {/* Contact Section - Updated to match reference design */}
-      <section id="get_in_touch" className="contact-section">
+      <section id="get_in_touch" className="contact-section-box">
         <div className="container">
-          <h2 className="section-title">
-            Get in <span className="highlight">Touch</span>
-          </h2>
-          <p className="section-description">
-            Please help us know what requirements you have. Our team will contact you very soon.
-          </p>
-
-          <div className="contact-container">
-            <div className="contact-info">
-              <h3>Contact Info</h3>
-              <p>Looking for air quality solutions for washrooms/ bathroom?</p>
-              <ul className="contact-details">
-                <li>
-                  <span className="contact-icon">📞</span>
-                  Phone Number: (+91) 73918-73918
-                </li>
-                <li>
-                  <span className="contact-icon">✉️</span>
-                  Email Address: info@purelogic.in
-                </li>
-                <li>
-                  <span className="contact-icon">📍</span>
-                  Office Location: 706, 7th Floor, Sec 10, Rohini, Delhi 85, India
-                </li>
-              </ul>
-            </div>
-
-            <div className="contact-form">
-              <form>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Your Full Name</label>
-                    <input type="text" className="form-control" placeholder="Your Name" />
-                  </div>
-                </div>
-                <div className="form-row two-columns">
-                  <div className="form-group">
-                    <label>Your Phone No</label>
-                    <input type="tel" className="form-control" placeholder="Your Phone" />
-                  </div>
-                  <div className="form-group">
-                    <label>Your Email</label>
-                    <input type="email" className="form-control" placeholder="Your Email" />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Your Organisation</label>
-                    <input type="text" className="form-control" placeholder="Your Organisation" />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label className="message-label">Message</label>
-                    <textarea className="form-control" rows="4" placeholder="Write message here"></textarea>
-                  </div>
-                </div>
-                <button type="submit" className="submit-button">
-                  Send Message
-                </button>
-              </form>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Cair Monitor Page" />
       </section>
 
       {/* Industrial Applications Section - Updated to fix missing carousel slides */}

@@ -4,6 +4,8 @@ import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm";
+
 
 export default function RailwayPage() {
   // State to track active tab
@@ -1107,82 +1109,19 @@ export default function RailwayPage() {
       {/* Get in Touch Section */}
       <section className="modern-contact-section" id="get_in_touch">
         <div className="container">
-          <div className="contact-header text-center">
-            <h2>
-              Get in <span className="bold-text">Touch</span>
-            </h2>
-            <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
-          </div>
-
-          <div className="contact-card">
-            <div className="contact-sidebar">
-              <h3>Contact Info</h3>
-              <p>Looking for air quality solutions for Railways?</p>
-
-              <div className="contact-item">
-                <div className="contact-icon">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-call-icon.png" alt="phone icon" />
-                </div>
-                <div className="contact-details">
-                  <span>Phone Number:</span>
-                  <p>(+91) 73918-73918</p>
-                </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="contact-heading">
+                <h2>Get in Touch</h2>
+                <p>
+                  Please help us know what requirements you have. Our team will
+                  contact you very soon.
+                </p>
               </div>
-
-              <div className="contact-item">
-                <div className="contact-icon">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-mail-icon.png" alt="mail icon" />
-                </div>
-                <div className="contact-details">
-                  <span>Email Address:</span>
-                  <p>info@purelogic.in</p>
-                </div>
-              </div>
-
-              <div className="contact-item">
-                <div className="contact-icon">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/menu-loaction-icon.png"
-                    alt="location icon"
-                  />
-                </div>
-                <div className="contact-details">
-                  <span>Office Location:</span>
-                  <p>706, 7th Floor, Sector 10, Rohini, Delhi 110085, India</p>
-                </div>
-              </div>
-
-              <div className="contact-bg-circle"></div>
-            </div>
-
-            <div className="contact-form">
-              <div className="form-group full-width">
-                <input type="text" placeholder="Your Full Name" />
-              </div>
-
-              <div className="form-row">
-                <div className="form-group half-width">
-                  <input type="tel" placeholder="Your Phone No" />
-                </div>
-                <div className="form-group half-width">
-                  <input type="email" placeholder="Your Email" />
-                </div>
-              </div>
-
-              <div className="form-group full-width">
-                <input type="text" placeholder="Your Organisation" />
-              </div>
-
-              <div className="form-group full-width">
-                <textarea placeholder="Write message here" rows="4"></textarea>
-              </div>
-
-              <button type="submit" className="send-message-btn">
-                Send Message
-              </button>
             </div>
           </div>
         </div>
+        <ContactForm pageName="Cair Monitor Page" />
       </section>
 
       {/* FAQ Section */}

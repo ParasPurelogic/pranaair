@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import './style.css';
+import ContactForm from "@/Components/Contacform/ContactForm";
 
 export default function AirQualitySensors() {
   const [activeTab, setActiveTab] = useState('all');
@@ -422,37 +423,20 @@ export default function AirQualitySensors() {
       </div>
 
       {/* Contact Section */}
-      <div className="container contact_senitizer_section sensible_conact_section contact_monitor_sec">
+      <div className="container">
         <div className="row">
-          <div className="col-md-6">
-            <div className="contact_img_box">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/03/contact-form.jpeg" alt="contact form" />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="contact_form_box">
-              <h3 style={{ textAlign: 'justify' }}>Get In Touch With Us</h3>
-              <p>Contact us for more details about the air pollution sensors.</p>
-              <p><strong>Drop a message</strong></p>
-              <form>
-                <div className="form-group">
-                  <input type="text" className="form-control" placeholder="Your Name" />
-                </div>
-                <div className="form-group">
-                  <input type="email" className="form-control" placeholder="Your Email" />
-                </div>
-                <div className="form-group">
-                  <input type="tel" className="form-control" placeholder="Your Phone" />
-                </div>
-                <div className="form-group">
-                  <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-              </form>
+          <div className="col-md-12">
+            <div className="contact-heading">
+              <h2>Get in Touch</h2>
+              <p>
+                Please help us know what requirements you have. Our team will
+                contact you very soon.
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <ContactForm pageName="Air Quality Sensor Page" />
 
       {/* Trusted By Section */}
       <div className="row ourclient_section">

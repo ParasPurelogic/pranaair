@@ -91,7 +91,9 @@ p {
   display: block;
   color: #78ae60;
 }
-
+.contact-heading {
+  padding-top: 50px !important;
+}
 .pocket_title_box .rate_list {
   margin-top: 15px;
   list-style: none;
