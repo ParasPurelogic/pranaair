@@ -30,20 +30,6 @@ export default function BreathalyzerPage() {
     setQuantity(Number.parseInt(e.target.value))
   }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const buyNowButton = document.getElementById("buy-now-button")
-      if (window.pageYOffset > 1200) {
-        buyNowButton.style.display = "block"
-      } else {
-        buyNowButton.style.display = "none"
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
   const updateProductFeatures = () => {
     return (
       <div className="product-features">
@@ -652,39 +638,42 @@ export default function BreathalyzerPage() {
                         <p>Ensure accurate data logging by setting the correct time and date on your breathalyzer.</p>
                       </div>
 
-                      <div className="mob-row-parametere">
-                        <div className="tab-logo-box">
-                          <h3>01</h3>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
-                            alt="Press button"
-                            width={150}
-                            height={100}
-                          />
-                          <p>Press the button for a second till the Prana Air Logo and Wait will appear.</p>
+                      <div className="row mob-row-parametere">
+                        <div className="col-md-4">
+                          <div className="tab-logo-box">
+                            <h3>01</h3>
+                            <Image
+                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
+                              alt="Prana Air Logo"
+                              width={150}
+                              height={100}
+                            />
+                            <p>Press the button for a second till the Prana Air Logo and “Wait” will appear.</p>
+                          </div>
                         </div>
-                        <div className="tab-logo-box">
-                          <h3>02</h3>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2025/02/turn-on-long-press-the-button.png"
-                            alt="Long press"
-                            width={150}
-                            height={100}
-                          />
-                          <p>Once the device is turn on long-press the button to enter settings.</p>
+                        <div className="col-md-4">
+                          <div className="tab-logo-box">
+                            <h3>02</h3>
+                            <Image
+                              src="https://www.pranaair.com/wp-content/uploads/2025/02/turn-on-long-press-the-button.png"
+                              alt="Blow for 5-6 seconds"
+                              width={150}
+                              height={100}
+                            />
+                            <p>Once the device is turn on long-press the button to enter settings.</p>
+                          </div>
                         </div>
-                        <div className="tab-logo-box">
-                          <h3>03</h3>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
-                            alt="Adjust time"
-                            width={150}
-                            height={100}
-                          />
-                          <p>
-                            Use short/long presses to adjust time and date and Long-press again to return to the main
-                            screen.
-                          </p>
+                        <div className="col-md-4">
+                          <div className="tab-logo-box">
+                            <h3>03</h3>
+                            <Image
+                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
+                              alt="Alcohol level display"
+                              width={150}
+                              height={100}
+                            />
+                            <p>Use short/long presses to adjust time and date and Long-press again to return to the main screen.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -704,35 +693,44 @@ export default function BreathalyzerPage() {
                         <p>Effortlessly export your data for future analysis.</p>
                       </div>
 
-                      <div className="mob-row-parametere">
-                        <div className="tab-logo-box">
-                          <h3>01</h3>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
-                            alt="Press button"
-                            width={150}
-                            height={100}
-                          />
-                          <p>Press and hold the button until the Prana Air logo appears on the screen.</p>
+                      <div className="row mob-row-parametere">
+                        <div className="col-md-4">
+                          <div className="tab-logo-box">
+                            <h3>01</h3>
+                            <Image
+                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
+                              alt="Prana Air Logo"
+                              width={150}
+                              height={100}
+                            />
+                            <p>Press and hold the button until the Prana Air logo appears on the screen.</p>
+                          </div>
                         </div>
-                        <div className="tab-logo-box">
-                          <h3>02</h3>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
-                            alt="View records"
-                            width={150}
-                            height={100}
-                          />
-                          <p>Short-press to view past records with date, time, and alcohol level.</p>
+                        <div className="col-md-4">
+                          <div className="tab-logo-box">
+                            <h3>02</h3>
+                            <Image
+                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
+                              alt="Blow for 5-6 seconds"
+                              width={150}
+                              height={100}
+                            />
+                            <p>Short-press to view past records with date, time, and alcohol level.</p>
+                          </div>
                         </div>
-                        <div className="tab-logo-box data-box">
-                          <p>Connect via Type-C cable, enable USB mode, and access records in an Excel file.</p>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Connect-via-Type-C-cable.webp"
-                            alt="Type-C connection"
-                            width={337}
-                            height={200}
-                          />
+                        <div className="col-md-4">
+                          <div className="tab-logo-box data-box">
+                            <h3>03</h3>
+                            <p>Connect via Type-C cable, enable USB mode, and access records in an Excel file.
+                            </p>
+                            <Image
+                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Connect-via-Type-C-cable.webp"
+                              alt="Alcohol level display"
+                              width={150}
+                              height={100}
+                            />
+                            
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -845,7 +843,7 @@ export default function BreathalyzerPage() {
             </div>
             <div className="col-md-2">
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2023/06/alcohol-icon.png"
+                src="https://www.pranaair.com/wp-content/uploads/2023/06/bottle-icon-100x100.png"
                 alt="alcohol icon"
                 width={45}
                 height={45}
@@ -1360,7 +1358,7 @@ export default function BreathalyzerPage() {
                 <div className="col-md-8"></div>
                 <div className="col-md-4">
                   <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2023/06/rosh-iocn.png"
+                    src="https://www.pranaair.com/wp-content/uploads/2023/06/rosh-icon.png"
                     alt="ROHS Certified"
                     width={80}
                     height={80}

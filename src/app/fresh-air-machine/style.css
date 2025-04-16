@@ -8,22 +8,28 @@ h5,
 h6 {
   font-family: "Nunito Sans" !important;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 p {
   font-family: "Nunito Sans" !important;
 }
+
 a {
   font-family: "Nunito Sans" !important;
   text-decoration: none !important;
 }
+
 .vc_section[data-vc-full-width] {
   overflow: visible !important;
 }
+
 .deskshow {
   display: block;
 }
+
 .mobshow {
   display: none;
 }
@@ -90,8 +96,8 @@ a {
 
 .banner-text {
   text-align: right;
-  padding-right: 120px;
-  padding-top: 200px;
+  padding-right: 0px;
+  padding-top: 150px;
 }
 
 .technology-image img {
@@ -106,7 +112,7 @@ a {
 }
 
 .banner-text h2 {
-  font-size: 65px;
+  font-size: 58px;
   color: #4a9fd8;
   line-height: 75px;
   position: relative;
@@ -150,13 +156,16 @@ a {
   background: transparent;
   color: #4a9fd8;
 }
+
 .featured_ctnr {
   display: flex;
   align-items: center;
 }
+
 .introducing_box.sub_title_box.text-center {
   text-align: center;
 }
+
 .feature_wrap_box h2 {
   margin: 0;
 }
@@ -164,30 +173,32 @@ a {
 .feature_wrap_box p {
   padding: 0 20px;
 }
+
 .banner-text p {
   color: #677580;
 }
+
 .clean-air-para h1 {
   line-height: 42px;
 }
-.wpb_tabs.tab-style-one .wpb_tabs_nav > li.ui-state-active {
+
+.wpb_tabs.tab-style-one .wpb_tabs_nav>li.ui-state-active {
   background-color: #209ad6;
 }
+
 .tab-style-one.wpb_tabs .wpb_tabs_nav li {
   box-shadow: 0px 5px 5px #80808036;
 }
+
 .indoor-pollutant-heading {
   padding-bottom: 70px;
+  padding-top: 100px;
 }
 
 .tab-para-txt {
   padding-top: 50px;
 }
 
-.pollutant-indoor-bg img {
-  width: 550px;
-  margin-top: -100px;
-}
 .germs-iocn img {
   width: 80px;
   position: relative;
@@ -195,6 +206,7 @@ a {
   left: 160px;
   animation: float 6s ease-in-out infinite;
 }
+
 .germs-iocn {
   height: 0;
 }
@@ -214,6 +226,7 @@ a {
   left: 330px;
   animation: float 6s ease-in-out infinite;
 }
+
 .pm10-iocn {
   height: 0;
 }
@@ -233,6 +246,7 @@ a {
   left: 80px;
   animation: float 6s ease-in-out infinite;
 }
+
 .dust-icon {
   height: 0;
 }
@@ -244,6 +258,7 @@ a {
   left: 500px;
   animation: float 5s ease-in-out infinite;
 }
+
 .co2-icon {
   height: 0;
 }
@@ -255,12 +270,15 @@ a {
   left: 360px;
   animation: float 6s ease-in-out infinite;
 }
+
 .hcho-icon {
   height: 0;
 }
+
 .tvocs-iocn {
   height: 0;
 }
+
 .matching-working-image img {
   margin-left: -200px;
 }
@@ -271,6 +289,7 @@ a {
   font-size: 19px;
   color: #000;
 }
+
 .control-air-breath {
   background: url(https://www.pranaair.com/wp-content/uploads/2023/07/control-mahcine-remote-bg-scaled.jpg);
   background-repeat: no-repeat;
@@ -280,14 +299,12 @@ a {
   margin-top: 80px;
 }
 
-.wpb_tabs.tab-style-one .wpb_tabs_nav > li.ui-state-active {
+.wpb_tabs.tab-style-one .wpb_tabs_nav>li.ui-state-active {
   background-color: #209ad6;
 }
+
 .tab-style-one.wpb_tabs .wpb_tabs_nav li {
   box-shadow: 0px 5px 5px #80808036;
-}
-.indoor-pollutant-heading {
-  padding-bottom: 70px;
 }
 
 .tab-para-txt {
@@ -305,8 +322,20 @@ a {
 }
 
 .pollutant-indoor-bg img {
-  width: 550px;
-  margin-top: -100px;
+  width: 500px;
+  margin-top: 0px;
+}
+
+.prana-air-clean-machine-heading {
+  padding-top: 100px;
+}
+
+.machine-working-heading {
+  padding-top: 100px;
+}
+
+.firsh-air-two-mode-heading.tech-heading {
+  padding-top: 100px;
 }
 
 .co2-icon img {
@@ -316,6 +345,7 @@ a {
   left: 500px;
   animation: float 5s ease-in-out infinite;
 }
+
 .co2-icon {
   height: 0;
 }
@@ -327,20 +357,19 @@ a {
   left: 360px;
   animation: float 6s ease-in-out infinite;
 }
+
 .hcho-icon {
   height: 0;
 }
+
 .tvocs-iocn {
   height: 0;
 }
+
 .matching-working-image img {
   margin-left: -200px;
 }
 
-.control-air-breath-img img {
-  width: 680px;
-  margin-left: 100px;
-}
 
 .control-breath-heading {
   padding-top: 100px;
@@ -364,6 +393,7 @@ a {
   font-size: 19px;
   padding-top: 15px;
 }
+
 .firsh-air-two-mode-heading h2 {
   font-size: 32px;
   color: #1c1c1c;
@@ -400,15 +430,22 @@ a {
   font-size: 19px;
   padding-right: 10px;
 }
+
 .outdoor-txt-mode {
   margin-left: 70px;
   margin-top: -25px;
 }
+
+img.havc-img {
+  width: 100%;
+}
+
 .tech-spec ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  position: relative;
   align-items: baseline;
 }
 
@@ -432,9 +469,10 @@ a {
 .tech-spec ul li:last-child {
   width: 140%;
 }
+
 .control-air-breath-img img {
-  width: 680px;
-  margin-left: 100px;
+  width: 550px;
+  margin-left: 0px;
 }
 
 .control-breath-heading {
@@ -502,6 +540,7 @@ a {
 .tech-spec ul li:last-child {
   width: 140%;
 }
+
 .shdw-line:before {
   position: absolute;
   content: "";
@@ -510,20 +549,24 @@ a {
   height: 100%;
   right: 0;
 }
+
 .shdw-line {
   position: relative;
 }
+
 .broucher-btn {
   float: right;
   position: relative;
   top: -50px;
 }
+
 .broucher-btn a img {
   width: 20px;
   position: relative;
   top: 3px;
   left: -5px;
 }
+
 .broucher-btn a {
   background: #209ad6;
   color: #ffff;
@@ -559,6 +602,7 @@ a {
   left: -20px;
   z-index: -1;
 }
+
 .broucher-btn a img {
   width: 20px;
   position: relative;
@@ -579,6 +623,7 @@ a {
   right: 20px;
   top: 0;
 }
+
 .box-shdw-line:after {
   position: absolute;
   content: "";
@@ -588,6 +633,7 @@ a {
   left: -10px;
   top: 0;
 }
+
 .room-air-purifier-spec ul {
   list-style: none;
   margin: 0;
@@ -661,9 +707,11 @@ a {
 .room-air-purifier {
   margin-top: -60px;
 }
+
 .prana-air-fresh-machine {
   margin-top: -75px;
 }
+
 .prana-air-fresh-machine h3 {
   position: relative;
   top: 20px;
@@ -672,10 +720,12 @@ a {
 .my-tab-section h4 a i {
   left: 96% !important;
 }
+
 .my-tab-section .vc_tta-panel-heading {
   border-color: #f0f0f000 !important;
   background-color: #f8f8f800 !important;
 }
+
 .tab-section {
   padding-top: 150px;
   padding-bottom: 100px;
@@ -698,6 +748,7 @@ a {
   color: #31343d !important;
   padding-left: 0px !important;
 }
+
 .vc_tta-panel-body p {
   margin-bottom: 15px !important;
   color: #677580;
@@ -705,6 +756,7 @@ a {
   font-size: 16px;
   position: relative;
 }
+
 .vc_tta-panel-body p:before {
   position: absolute;
   content: "";
@@ -716,25 +768,31 @@ a {
   right: 0;
   margin: 0 auto;
 }
+
 .my-tab-section .vc_tta-panel-body {
   padding: 14px 0px !important;
 }
+
 .frequently-asked-questions p {
   color: #677580;
   font-size: 18px;
   line-height: 30px;
   padding-bottom: 60px;
 }
+
 span.faq {
   color: #31343d;
   font-weight: 600;
 }
+
 .tech-heading h2 {
   padding-bottom: 0;
 }
+
 .tech-para {
   padding-bottom: 30px;
 }
+
 .clean-air-machine-imgs img {
   width: 290px;
 }
@@ -758,6 +816,7 @@ span.faq {
   left: 70px;
   top: 50px;
 }
+
 .lets-find-heading h2 {
   font-size: 30px;
   font-weight: 800;
@@ -778,11 +837,13 @@ span.faq {
   padding-bottom: 30px;
   padding-top: 75px;
 }
+
 .indoor-pollutant-heading h2 {
   font-size: 30px;
   font-weight: 800;
   line-height: 35px;
 }
+
 .faq-heading {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -800,9 +861,11 @@ span.faq {
 .multi-imgs-bottom {
   padding-bottom: 50px !important;
 }
+
 .hot-cold-air-img img {
   margin: 0 !important;
 }
+
 .diff-vs-fresh-air-heading h2 {
   font-size: 27px;
   color: #1c1c1c;
@@ -843,8 +906,10 @@ span.faq {
   display: none;
   padding: 0;
 }
+
 .tabcontent {
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  animation: fadeEffect 1s;
+  /* Fading effect takes 1 second */
   text-align: center;
 }
 
@@ -853,10 +918,12 @@ span.faq {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 .tablinks img {
   width: 100px;
 }
@@ -864,6 +931,7 @@ span.faq {
 .tabcontent img {
   width: 80%;
 }
+
 .matching-workig-img img {
   width: 100%;
 }
@@ -873,6 +941,7 @@ span.faq {
   padding-top: 30px;
   margin-right: -100px;
 }
+
 .video-heading h2 {
   font-size: 30px;
   font-weight: 700;
@@ -1064,9 +1133,11 @@ span.faq {
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -1248,8 +1319,16 @@ span.faq {
   }
 
   .banner-text a {
-    width: 35%;
+    width: 65%;
     margin-top: 10px;
+  }
+
+  .matching-workig-img {
+    margin-right: 0;
+  }
+
+  .tech-spec ul li:last-child {
+    width: 90%;
   }
 
   .control-air-breath-img img {
@@ -1289,6 +1368,39 @@ span.faq {
 
   .prana-air-fresh-machine {
     margin-left: 0;
+  }
+
+  .co2-icon img {
+    top: -340px;
+    left: 100px;
+  }
+
+  .pm10-iocn img {
+    left: 230px;
+  }
+
+  .pollutant-indoor-bg img {
+    width: 100%;
+  }
+
+  .tvocs-iocn img {
+    left: 270px;
+  }
+
+  .hcho-icon img {
+    left: 160px;
+  }
+
+  .recicular-img img {
+    width: 100%;
+  }
+
+  .list-bg:before {
+    display: none;
+  }
+
+  .box-form {
+    width: 100%;
   }
 }
 
@@ -1484,6 +1596,7 @@ span.faq {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -1576,3 +1689,53 @@ span.faq {
   }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .pollutant-indoor-bg img {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .germs-iocn img {
+    left: 60px;
+  }
+
+  .tvocs-iocn img {
+    left: 200px;
+  }
+
+  .pm10-iocn img {
+    top: -200px;
+    left: 200px;
+  }
+
+  .hcho-icon img {
+    left: 200px;
+  }
+
+  .co2-icon img {
+    top: -290px;
+    left: 0px;
+  }
+
+  .recicular-img img {
+    width: 100%;
+  }
+
+  .firsh-air-two-mode-heading h2 {
+    padding-bottom: 30px;
+  }
+
+  .home-banner:before {
+    height: 800px;
+    bottom: -100px;
+    z-index: -1;
+  }
+
+  .indoor-pollutant-heading {
+    padding-bottom: 0px;
+  }
+
+  .tech-spec ul li:last-child {
+    width: 100%;
+  }
+}

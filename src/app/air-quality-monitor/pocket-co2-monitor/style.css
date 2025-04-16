@@ -986,6 +986,19 @@ img.dashborad-img {
 .product-tabs ul {
     justify-content: center;
     margin-bottom: 30px;
+    gap: 30px;
+    border: none;
+}
+
+.product-tabs ul .nav-link.active {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-weight: 800;
+}
+
+.product-tabs ul .nav-link {
+    font-size: 22px;
 }
 
 .mob-row {
@@ -1187,6 +1200,7 @@ img.dashborad-img {
 h2.title_heading {
     padding-top: 120px;
     width: 60%;
+    margin: 20px auto;
 }
 
 h2.trusted_heading {
@@ -1296,6 +1310,55 @@ a.app-store-link img {
 h4.step-title {
     font-size: 18px;
     font-weight: 700;
+}
+
+.product-tabs ul .nav-link.active {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-weight: 800;
+}
+
+.product-tabs ul .nav-link {
+    font-size: 22px;
+}
+
+.logo-box ul li {
+    display: inline-block;
+    width: 33%;
+}
+
+.logo-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.logo-box ul li img {
+    width: 30%;
+    height: auto;
+}
+
+.tab_left_Image {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab_left_Image img {
+    width: 100%;
+    height: auto;
+}
+
+span.range_btn_Image img {
+    width: 30%;
+    margin-bottom: -50px;
+    position: relative;
+}
+
+span.tab_monitor_device img {
+    width: 30%;
+    float: right;
+    margin-top: -150px;
 }
 
 /* Responsive Styles */

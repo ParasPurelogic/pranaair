@@ -358,7 +358,7 @@ export default function JuniorPollutionMask() {
       </section>
 
       {/* Product Details Section */}
-      <section className="bg-black detail-row">
+      <section className="detail-row">
         <div className="container">
           <h2 className="head-proxima">Product Details: Children Pollution Mask</h2>
 
@@ -573,7 +573,7 @@ export default function JuniorPollutionMask() {
                 Stylish and comfortable to wear.
               </p>
               <div style={{ height: "55px" }}></div>
-              <p style={{ textAlign: "left" }}>
+              <div className="amazone-btn">
                 <a className="bg-btn bg-green" href="#">
                   Buy Now
                 </a>
@@ -581,7 +581,7 @@ export default function JuniorPollutionMask() {
                   <img src="https://www.pranaair.com/wp-content/uploads/2021/02/quality-amazon.png" alt="amazon logo" />
                   amazon
                 </a>
-              </p>
+                </div>
             </div>
           </div>
         </div>

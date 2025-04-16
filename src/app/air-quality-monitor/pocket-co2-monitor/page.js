@@ -1473,49 +1473,23 @@ export default function CO2MonitorPage() {
                             </h2>
                         </div>
                     </div>
-                    <div className="row mob-row">
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="microsoft logo" />
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="ola logo" />
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="marriott logo" />
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="tata logo" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mob-row">
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="havells logo" />
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="csir logo" />
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="gmda logo" />
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <div className="client-logos">
-                                <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="cii" />
-                            </div>
-                        </div>
+                    <div className="row">
+                        <div className="logo-box">
+                            <ul>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/ola.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/marriott.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/tata.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/havellss.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/csir.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/gmda.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/cii.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/morgan.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/interglobe.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/mahindra.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                                <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/renault-nissan.jpg" width={65} height={65} alt="microsoft logo" /></li>
+                            </ul>
+                        </div>                      
                     </div>
                 </div>
             </section>

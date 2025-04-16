@@ -1163,7 +1163,7 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <img
+            <img className="havc-img"
               src="https://www.pranaair.com/wp-content/uploads/2022/06/hvac-machine-1024x572.jpg"
               alt="difference between hvac system and prana air fresh air machine"
             />
