@@ -1,296 +1,99 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,900;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,900;1,700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito Sans" !important;
+  font-family: 'Nunito Sans' !important;
 }
+
 p {
-  font-family: "Nunito Sans" !important;
+  font-family: 'Nunito Sans' !important;
 }
+
 a {
-  font-family: "Nunito Sans" !important;
+  font-family: 'Nunito Sans' !important;
 }
+
 .vc_section[data-vc-full-width] {
   overflow: visible !important;
 }
+
 .deskshow {
   display: block;
 }
+
 .mobshow {
   display: none;
 }
 
-/* Layout container to ensure proper stacking */
-.layout-container {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Main header styles */
-.main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-}
-
-/* Secondary navigation styles */
 .inner-header-sticky {
-  position: fixed;
-  top: 60px; /* Positioned exactly below main header */
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 999;
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid #f0f0f0;
-  height: 60px; /* Fixed height */
-  display: flex;
-  align-items: center;
+  background: #F1F1F8;
+  z-index: 3;
 }
 
 .new-nav-bar {
-  list-style: none !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 20px 0;
+  list-style: none !important;
   margin: 0 !important;
-  padding: 0;
-  max-width: 1200px;
-  margin: 0 auto !important;
-  height: 100%;
+  flex-direction: row;
 }
 
-.new-nav-bar .nav-item {
-  margin: 0 30px;
+.new-nav-bar .nav-item.active {
   position: relative;
 }
 
 .new-nav-bar .nav-item.active:before {
   position: absolute;
-  background-image: linear-gradient(89.99deg, #7ab261 0.01%, #2ab752 100%);
-  width: 100%;
+  background-image: linear-gradient(89.99deg, #fef85e 0.01%, #2AB752 100%);
+  width: 110px;
   height: 3px;
   content: "";
-  bottom: -18px;
-  left: 0;
-  border-radius: 0;
+  bottom: -20px;
+  left: -20px;
+  border-radius: 50px;
 }
 
 .new-nav-bar li a {
   text-decoration: none;
-  color: #31343d;
-  font-family: "Nunito Sans";
+  color: #31343D;
+  font-family: 'Nunito Sans';
   font-size: 16px;
   font-weight: 600;
-  padding: 20px 0;
-  display: block;
 }
 
 .sticky {
-  position: fixed !important;
-  top: 0;
+  top: 70px;
   width: 100%;
   z-index: 9999;
-  background: #f1f1f8;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Add this new navigation bar style */
-.product-nav-bar {
-  background-color: #f5f5f7;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-  position: relative; /* Change from fixed to relative */
-  z-index: 90;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Add a sticky class that will be applied on scroll */
-.product-nav-bar.sticky {
-  position: fixed;
-  top: 0;
+  transition: all .6s ease-in-out;
+  animation: 1s forwards smothScroll;
+  background: #e4f1f4;
   left: 0;
-  width: 100%;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  right: 0;
+  margin: 0 auto;
+  position: fixed !important;
 }
 
-.product-nav-bar ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-.product-nav-bar ul li {
-  margin: 0 30px;
-  position: relative;
-}
+/* _____________________________________BANNER-SECTION____________________________________________ */
 
-.product-nav-bar ul li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px 0;
-  display: block;
-  transition: color 0.3s ease;
-}
 
-.product-nav-bar ul li a:hover {
-  color: #7ab261;
-}
-
-.product-nav-bar ul li.active a {
-  color: #7ab261;
-}
-
-.product-nav-bar ul li.active::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #7ab261;
-}
-
-/* Banner section positioned exactly below the headers */
 .banner-section {
-  margin-top: 0; /* Remove the margin */
-  padding-top: 0;
-  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/06/out-door-banner-backgroud.jpg");
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/06/out-door-banner-backgroud.jpg);
   background-size: cover;
-  background-position: center;
-  height: calc(100vh - 60px); /* Adjust height to account for header */
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-/* Mobile navigation styles */
-@media only screen and (max-width: 767px) {
-  .inner-header-sticky {
-    height: auto;
-    overflow-x: auto;
-  }
-
-  .new-nav-bar {
-    flex-direction: row;
-    height: auto;
-    padding: 10px 0;
-    justify-content: flex-start;
-    width: max-content;
-  }
-
-  .new-nav-bar .nav-item {
-    margin: 0 15px;
-  }
-
-  .new-nav-bar .nav-item.active {
-    background-color: transparent;
-  }
-
-  .new-nav-bar .nav-item.active a {
-    color: #7ab261;
-    font-weight: 700;
-  }
-
-  .new-nav-bar .nav-item.active:before {
-    width: 65px;
-    bottom: -10px;
-    left: 0;
-  }
-
-  .new-nav-bar li a {
-    padding: 10px 0;
-    font-size: 14px;
-  }
-
-  .banner-section {
-    margin-top: 0 !important; /* Remove the margin for mobile as well */
-    height: auto;
-    min-height: 500px;
-  }
-
-  .product-nav-bar {
-    overflow-x: auto;
-    justify-content: flex-start;
-  }
-
-  .product-nav-bar ul {
-    width: max-content;
-    padding: 0 15px;
-  }
-
-  .product-nav-bar ul li {
-    margin: 0 15px;
-  }
-}
-
-.banner-content h4 {
-  font-size: 24px;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.banner-content h2 {
-  font-size: 60px;
-  color: #fff;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 5px;
-}
-
-.banner-content .subtitle {
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-.buy-now-btn {
-  display: inline-flex;
-  align-items: center;
-  color: #fff;
-  border: 2px solid #fff;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.buy-now-btn:hover {
-  background: #5ec2e9;
-  border-color: #5ec2e9;
-  color: #fff;
-}
-
-.buy-now-btn svg {
-  margin-left: 10px;
-  transition: all 0.3s ease;
-}
-
-.buy-now-btn:hover svg {
-  transform: translateX(5px);
+  background-repeat: no-repeat;
+  height: 735px;
+  overflow: hidden;
 }
 
 .banner-girl-img img {
@@ -299,46 +102,123 @@ a {
   top: -114px;
   z-index: 0;
 }
+
 .banner-txt {
-  padding-top: 0;
+  padding-top: 150px;
+  font-size: 32px;
+  color: #fff;
 }
 
 .banner-txt h4 {
   color: #fff;
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
 .banner-txt h2 {
   font-size: 58px;
   color: #fff;
   line-height: 64px;
+  margin: 0;
   font-weight: 800;
-  margin-bottom: 0;
 }
 
-.purifier-heading {
+.banner-txt h3 {
   font-size: 74px;
-  margin-top: 0;
+  color: #fff;
+  line-height: 74px;
 }
 
-.banner-txt .subtitle {
+.banner-txt p {
   color: #fff;
-  font-size: 24px;
-  margin: 20px 0;
+  font-size: 27px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.banner-txt-anim ul {
+  white-space: nowrap;
+  color: #fff;
+  margin: 0px;
+  padding: 0;
+}
+
+.banner-txt-anim ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 75px;
+  font-family: 'Nunito Sans';
+  font-weight: 800;
+}
+
+.banner-txt-anim ul li:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.banner-txt-anim ul li:nth-of-type(2) {
+  animation-delay: .2s;
+}
+
+.banner-txt-anim ul li:nth-of-type(3) {
+  animation-delay: .4s;
+}
+
+.banner-txt-anim ul li:nth-of-type(4) {
+  animation-delay: .6s;
+}
+
+.banner-txt-anim ul li:nth-of-type(5) {
+  animation-delay: .8s;
+}
+
+.banner-txt-anim ul li:nth-of-type(6) {
+  animation-delay: 1s;
+}
+
+.banner-txt-anim ul li:nth-of-type(7) {
+  animation-delay: 1.2s;
+}
+
+.banner-txt-anim ul li:nth-of-type(8) {
+  animation-delay: 1.4s;
+}
+
+.banner-txt-anim ul li:nth-of-type(9) {
+  animation-delay: 1.6s;
+}
+
+.banner-txt-anim ul li:nth-of-type(9) {
+  animation-delay: 1.8s;
+}
+
+@keyframes animate {
+  0% {
+    filter: blur(0px);
+  }
+
+  50% {
+    filter: blur(0px);
+  }
+
+  100% {
+    filter: blur(40px);
+  }
+}
+
+.wpb_content_element {
+  margin: 0 !important;
 }
 
 .button_slide {
-  color: #fff !important;
+  color: #FFF !important;
   border: 2px solid rgb(255 255 255) !important;
-  padding: 15px 30px !important;
+  padding: 20px 35px !important;
   display: inline-block !important;
-  font-family: "Nunito Sans" !important;
+  font-family: 'Nunito Sans' !important;
   font-size: 18px !important;
   letter-spacing: 1px;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 #5ec2e9;
+  box-shadow: inset 0 0 0 0 #5EC2E9;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
@@ -346,26 +226,35 @@ a {
   margin-top: 30px;
   position: relative !important;
   height: auto !important;
-  border-radius: 0 !important;
 }
+
 .slide_right:hover {
-  box-shadow: inset 400px 0 0 0 #5ec2e9 !important;
+  box-shadow: inset 400px 0 0 0 #5EC2E9 !important;
 }
+
 .button_slide:before {
   position: absolute;
   content: "";
   background: #fff;
   width: 3px;
-  height: 60px;
+  height: 67px;
   right: 0;
   top: 0;
 }
+
 .banner-btn-arrow {
   width: 60px;
   position: relative;
   top: -3px;
 }
+
 /* _____________________________________BANNER-SECTION____________________________________________ */
+
+
+
+
+
+
 
 /* _____________________________________ELIMINATION-SECTION____________________________________________ */
 
@@ -374,16 +263,19 @@ a {
   -moz-animation: spin 12s linear infinite;
   animation: spin 12s linear infinite;
 }
+
 @-moz-keyframes spin {
   100% {
     -moz-transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -391,362 +283,179 @@ a {
   }
 }
 
-/* Update the elimination section styles to match the reference */
-.elimination-section {
-  padding: 60px 0 0;
-  background: #fff;
-}
-
-.elimination-heading h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.elimination-heading p {
-  font-size: 18px;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
 .elimination-bg-section {
-  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/06/elimation-bg.jpg");
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/06/elimation-bg-scaled.jpg);
   background-size: cover;
   background-position: center;
-  padding: 80px 0;
-  position: relative;
+  height: 460px;
+  margin-top: 50px;
 }
 
-.elimination-item {
-  margin-bottom: 30px;
-  transition: all 0.3s ease;
-}
-
-.elimination-item:hover {
-  transform: translateY(-5px);
-}
-
-.elimination-icon img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-.elimination-text h4 {
-  font-size: 18px;
-  color: #333;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.elimination-center img {
-  max-width: 300px;
-  transition: all 0.5s ease;
-}
-
-.elimination-center img:hover {
-  transform: translateY(-10px);
-}
 .elimination-heading {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 60px 0 30px;
+  padding-top: 150px;
+}
+
+.rotet {
+  position: relative;
+  width: 40px;
+  top: -5px;
+  left: -5px;
 }
 
 .elimination-heading h3 {
   font-size: 36px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 35px;
 }
 
 .elimination-heading p {
   font-size: 18px;
-  line-height: 1.6;
-  color: #616f73;
-  margin: 0 auto;
-}
-
-.elimination-bg-section {
-  background: #f5f7f9;
-  background-size: cover;
-  background-position: center;
-  padding: 60px 0;
-  height: auto;
-  position: relative;
-}
-
-.elimination-device-img {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.elimination-device-img img {
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.elimination-specs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding-top: 0;
+  padding: 0 220px 20px;
+  line-height: 31px;
 }
 
 .elimination-specs ul {
   list-style: none;
-  margin: 0 0 40px;
+  margin: 0;
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 100px;
 }
 
 .elimination-specs ul li img {
-  width: 50px;
+  width: 75px;
+}
+
+.elimination-specs ul li {
+  position: relative;
+}
+
+.elimination-specs ul li:last-child:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, transparent, white, transparent);
+  width: 1px;
+  height: 50px;
+  left: -20px;
+}
+
+.elimination-specs {
+  padding-top: 90px;
 }
 
 .elimination-specs ul li h5 {
-  font-size: 18px;
-  color: #31343d;
-  font-weight: 500 !important;
-  line-height: 1.5;
-  margin-top: 0;
+  font-size: 19px;
+  color: #FFFFFF;
+  font-weight: 400 !important;
+  line-height: 28px;
 }
+
+
+
 
 /* _____________________________________ELIMINATION-SECTION____________________________________________ */
 
+
+
 /* _____________________________________Impressive Features-SECTION____________________________________________ */
 
-/* Update the impressive features section styles to match the reference */
 .impressive-feature-section {
-  background: linear-gradient(to right, #93adbc, #a7c1d0, #d4e3ea);
-  padding: 80px 0;
-  position: relative;
-  overflow: hidden;
+  background-image: linear-gradient(46deg, #93adbc, #93adbce3, #d4e3ea);
+  margin-top: 220px;
   height: auto;
-}
-
-.impressive-feature-section h2 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.impressive-feature-section p {
-  font-size: 20px;
-  color: #fff;
-  opacity: 0.9;
-}
-
-.feature-icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  transition: all 0.3s ease;
-}
-
-.row:hover .feature-icon {
-  transform: scale(1.1);
-}
-
-.device-showcase {
-  position: relative;
-  margin-top: 30px;
-}
-
-.device-platform {
-  background: #fff;
-  width: 250px;
-  height: 40px;
-  border-radius: 10px 10px 0 0;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.device-angle {
-  background: #d4e3ea;
-  width: 300px;
-  height: 200px;
-  transform: skewY(-20deg);
-  position: absolute;
-  top: 20px;
-  left: -25px;
-  z-index: 0;
+  overflow: hidden;
 }
 
 .impressive-feature h3 {
   color: #fff;
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 49px;
   font-weight: 800;
-  margin-bottom: 10px;
 }
 
 .impressive-feature h5 {
-  font-size: 22px;
-  color: #ffffff;
-  font-weight: 500 !important;
-  line-height: 1.4;
-  margin-bottom: 40px;
+  font-size: 26px;
+  color: #FFFFFF;
+  font-weight: 600 !important;
+  line-height: 34px;
 }
 
 .impressive-feature {
   padding-top: 60px;
 }
 
-.impressive-feature-icons {
-  margin-top: 30px;
-  margin-left: 0;
-  width: 100%;
+.impressive-feature-icons ul li img {
+  width: 85px;
+}
+
+.impressive-feature-icon-box {
+  display: flex;
+  align-items: center;
+  gap: 70px;
 }
 
 .impressive-feature-icons ul {
   list-style: none;
   display: flex;
-  align-items: flex-start;
-  margin: 0 0 30px;
-  gap: 15px;
+  align-items: center;
+  margin: 0 0 40px;
+  gap: 10px;
   padding: 0;
+}
+
+.impressive-feature-icons ul li {
+  color: #fff;
 }
 
 .impressive-feature-icons ul li h4 {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
-  margin-bottom: 5px;
+}
+
+.impressive-feature-icons {
+  margin-top: 50px;
+  margin-left: -26px;
+  width: 100%;
 }
 
 .impressive-feature-icons ul li p {
   font-size: 16px;
   color: #fff;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.frature-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  line-height: 27px;
 }
 
 .frature-img img {
-  max-width: 100%;
+  width: 500px;
   position: relative;
-  left: 0;
-  top: 0;
+  left: 170px;
+  top: 23px;
 }
+
 .left-feature-icon-box {
   position: relative;
   left: 70px;
 }
 
-/* Impressive Features Section Styling */
-.feature-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
-}
 
-.feature-icon {
-  margin-right: 20px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.feature-icon img {
-  max-width: 100%;
-  height: auto;
-}
-
-.feature-content h4 {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.feature-content p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 16px;
-  margin-bottom: 0;
-}
-
-.feature-device-img {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.feature-device-img img {
-  max-width: 100%;
-  height: auto;
-}
 
 /* _____________________________________Impressive Features-SECTION____________________________________________ */
 
+
+
+
+
 /* ____________________________________wearable-section____________________________________________ */
 
-/* Update the wearable section styles to match the reference */
+
+
 .wearable-section {
-  background: #e4f1f4;
-  padding: 80px 0;
-  margin-top: 0;
-}
-
-.wearable-box {
-  margin-top: 0;
-  padding-left: 0;
-}
-
-.wearable-box h3 {
-  font-size: 36px;
-  font-weight: 800;
-  color: #31343d;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.wearable-box h4 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 20px;
-  color: #31343d;
-}
-
-.wearable-box p {
-  color: #616f73;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.wearable-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wearable-img img {
-  max-width: 100%;
-  min-width: auto;
+  background: #E4F1F4;
+  margin-top: 100px;
 }
 
 .wearable-img img {
@@ -761,7 +470,7 @@ a {
 .wearable-box h3 {
   font-size: 36px;
   font-weight: 800;
-  color: #31343d;
+  color: #31343D;
   line-height: 35px;
 }
 
@@ -772,7 +481,7 @@ a {
 }
 
 .wearable-box p {
-  color: #616f73;
+  color: #616F73;
   font-size: 16px;
   padding-right: 200px;
   line-height: 28px;
@@ -785,79 +494,29 @@ img.wearable-arrow-icon {
   top: 20px;
 }
 
+
 /* ____________________________________wearable-section____________________________________________ */
+
+
 
 /* ____________________________________benefit-section____________________________________________ */
 
-/* Benefits section fixes */
-.benefit-section {
-  padding-top: 80px;
-  padding-bottom: 20px;
-  text-align: left;
-}
 
-.benefit-section h3 {
-  font-size: 36px;
-  color: #31343d;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
 
-.benefit-section h5 {
-  font-size: 22px;
-  color: #616f73;
-  font-weight: 500 !important;
-  line-height: 1.4;
-  margin-bottom: 0;
-}
 
-.benefit-bg-section {
-  background-color: #f5f7f9;
-  padding: 60px 0;
-}
-
-.benefit-icon-box {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.benefit-icons {
-  margin-bottom: 20px;
-}
-
-.benefit-icon-box img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-}
-
-.benefit-icon-box h3 {
-  font-size: 18px;
-  color: #31343d;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.benefit-icon-box p {
-  color: #616f73;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-}
 
 .benefit-icon-box img {
   width: 100px;
 }
 
 .benefit-bg-section {
-  background-color: #e4f1f4;
+  background-color: #E4F1F4;
   padding: 70px 0;
 }
 
 .benefit-section h3 {
   font-size: 36px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 800;
   line-height: 49px;
 }
@@ -869,128 +528,44 @@ img.wearable-arrow-icon {
 
 .benefit-section h5 {
   font-size: 22px;
-  color: #616f73;
+  color: #616F73;
   font-weight: 600 !important;
 }
 
 .benefit-icon-box h3 {
   font-size: 18px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 800;
 }
 
 .benefit-icon-box p {
-  color: #31343d;
+  color: #31343D;
   font-size: 16px;
 }
 
 .left-side {
   position: relative;
 }
+
 .benfit-txt {
   text-align: center;
 }
+
 .benefit-icons {
   text-align: center;
 }
+
 .last-banefit-box p {
   padding-right: 100px;
 }
 
 /* ____________________________________benefit-section____________________________________________ */
 
+
+
+
+
 /* ____________________________________how-to-work-section____________________________________________ */
-
-/* Update the how it works section styles to match the reference */
-.how-work-section {
-  background: #1e2124;
-  background-size: cover;
-  background-position: center;
-  padding: 80px 0;
-  position: relative;
-  overflow: hidden;
-  margin-top: 80px;
-  height: auto;
-}
-
-.how-to-work-text h2 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.how-to-work-text h3 {
-  font-size: 24px;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.how-to-work-text p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #fff;
-  opacity: 0.9;
-}
-
-.floating {
-  animation: floating 6s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.how-to-work-text {
-  padding-top: 0;
-}
-
-.how-to-work-text h3 {
-  color: #fff;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.how-to-work-text h5 {
-  font-size: 22px;
-  color: #fff;
-  font-weight: 500 !important;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
-.how-to-work-text p {
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.6;
-}
-
-.how-work-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.how-work-img img {
-  max-width: 100%;
-  position: relative;
-  top: 0;
-}
 
 .how-work-section {
   background: url(https://www.pranaair.com/wp-content/uploads/2023/06/how-to-work-section-bg.jpeg);
@@ -1001,6 +576,13 @@ img.wearable-arrow-icon {
   height: 380px;
 }
 
+.how-to-work-text h3 {
+  color: #ffff;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 46px;
+}
+
 .how-to-work-text h3 img {
   width: 50px;
   position: relative;
@@ -1008,13 +590,22 @@ img.wearable-arrow-icon {
   top: -10px;
 }
 
+.floating {
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
 @keyframes floating {
   from {
     transform: translate(0, 0px);
   }
+
   65% {
     transform: translate(0, 15px);
   }
+
   to {
     transform: translate(0, -0px);
   }
@@ -1044,42 +635,17 @@ img.wearable-arrow-icon {
   top: -100px;
 }
 
+
+
+
 /* ____________________________________how-to-work-section____________________________________________ */
+
+
 
 /* ____________________________________steps-video-section____________________________________________ */
 
-/* Video section fixes */
-.step-video-section {
-  padding: 80px 0;
-}
 
-.video-heading h4 {
-  font-size: 24px;
-  color: #31343d;
-  font-weight: 700;
-  line-height: 1.4;
-  padding-left: 0;
-  margin-bottom: 0;
-}
 
-.video-paara p {
-  font-size: 16px;
-  color: #616f73;
-  line-height: 1.6;
-  padding-right: 0;
-}
-
-.video-thumbnail-img {
-  position: relative;
-  margin-top: 30px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.video-thumbnail-img img {
-  width: 100%;
-  display: block;
-}
 
 .step-video-section {
   padding-top: 80px;
@@ -1087,12 +653,13 @@ img.wearable-arrow-icon {
 
 .video-heading h4 {
   font-size: 26px;
-  color: #2e2d37;
+  color: #2E2D37;
   font-weight: 800;
   line-height: 40px;
   padding-left: 20px;
   padding-bottom: 30px;
 }
+
 .video-paara p {
   font-size: 16px;
   color: #677580;
@@ -1100,8 +667,9 @@ img.wearable-arrow-icon {
   padding-right: 120px;
   padding-bottom: 30px;
 }
+
 .prana {
-  color: #7ab261;
+  color: #7AB261;
 }
 
 .video-play-button {
@@ -1155,9 +723,10 @@ img.wearable-arrow-icon {
 .video-play-button img {
   position: relative;
   z-index: 3;
-  max-width: 100%;
-  width: auto;
+  width: 60px;
   height: auto;
+  left: -15px;
+  top: -5px;
 }
 
 .video-play-button span {
@@ -1176,11 +745,14 @@ img.wearable-arrow-icon {
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
 }
+
+
 
 .video-overlay {
   position: fixed;
@@ -1189,7 +761,7 @@ img.wearable-arrow-icon {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.50);
   opacity: 0;
   transition: all ease 500ms;
 }
@@ -1233,109 +805,22 @@ img.wearable-arrow-icon {
   box-shadow: 0 0 15px rgb(0 0 0 / 25%);
   background: #fff;
 }
+
 /* ____________________________________steps-video-section____________________________________________ */
+
+
+
+
 
 /* ____________________________________Effortless-section____________________________________________ */
 
-/* Update the effortless operation section styles to match the reference */
-.effortless-section {
-  padding: 100px 0;
-  background: #ffffff;
-}
-
-.operation-step {
-  transition: all 0.3s ease;
-}
-
-.operation-step:hover {
-  transform: translateY(-10px);
-}
-
-.step-number {
-  font-size: 72px;
-  color: #f0f0f0;
-  font-weight: 300;
-  line-height: 1;
-}
-
-.operation-step p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.6;
-}
-.effortless-section {
-  padding: 80px 0;
-  background: #ffffff;
-}
-
-.effortless-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.effortless-heading h3 {
-  color: #31343d;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.effortless-heading p {
-  color: #616f73;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.effortless-box {
-  text-align: center;
-}
-
-.effortless-box ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.effortless-box ul li img {
-  width: 120px;
-  margin-bottom: 20px;
-}
-
-.effortless-box ul li h3 {
-  color: #ccc;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-
-.effortless-box ul li p {
-  color: #31343d;
-  font-size: 16px;
-  line-height: 1.6;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.long-press-top,
-.green-top,
-.red-indicator-top {
-  position: relative;
-  top: 0;
-}
 
 .effortless-section {
   padding-top: 150px;
 }
 
 .effortless-heading h3 {
-  color: #31343d;
+  color: #31343D;
   font-size: 36px;
   font-weight: 800;
   line-height: 50px;
@@ -1343,7 +828,7 @@ img.wearable-arrow-icon {
 }
 
 .effortless-heading p {
-  color: #616f73;
+  color: #616F73;
   font-size: 22px;
   font-weight: 600;
   line-height: 37px;
@@ -1370,117 +855,45 @@ img.wearable-arrow-icon {
 }
 
 .effortless-box ul li p {
-  color: #31343d;
+  color: #31343D;
   font-size: 18px;
   padding-right: 10px;
 }
+
 .long-press-top {
   position: relative;
   top: -30px;
 }
+
 .green-top {
   position: relative;
   top: -30px;
 }
+
 .red-indicator-top {
   position: relative;
   top: -30px;
 }
+
 /* ____________________________________Effortless-section____________________________________________ */
 
+
+
+
 /* ____________________________________Lonization Technology-section____________________________________________ */
-
-/* Update the ionization technology section styles to match the reference */
-.lonization-tech-section {
-  padding: 80px 0;
-}
-
-.lonization-colm-bg {
-  background: #e4f1f4;
-  height: auto;
-  padding: 60px;
-  display: flex;
-  align-items: center;
-}
-
-.lonization-text {
-  padding: 0;
-}
-
-.lonization-text h4 {
-  font-size: 24px;
-  color: #31343d;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 10px;
-}
-
-.lonization-text h3 {
-  font-size: 30px;
-  line-height: 1.3;
-  color: #31343d;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.lonization-text p {
-  color: #616f73;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.lonization-tech-img-bg {
-  background: #1e2124;
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dual-icon-txt {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: auto;
-  text-align: right;
-  z-index: 2;
-}
-
-.dual-icon-txt h4 {
-  color: #5ec2e9;
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 5px;
-}
-
-.dual-icon-txt h5 {
-  color: #616f73;
-  font-size: 18px;
-  font-weight: 500 !important;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.lonization-tech-img img {
-  max-width: 100%;
-  margin: 0;
-}
 
 .lonization-tech-section {
   padding-top: 200px;
 }
 
 .lonization-colm-bg {
-  background: #e4f1f4;
+  background: #E4F1F4;
   height: 340px;
 }
 
 .lonization-text h4 {
   font-size: 30px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 800;
   line-height: 32px;
 }
@@ -1504,7 +917,7 @@ img.wearable-arrow-icon {
 }
 
 .lonization-text p {
-  color: #616f73;
+  color: #616F73;
   font-size: 18px;
   line-height: 30px;
   padding-right: 50px;
@@ -1527,7 +940,7 @@ img.wearable-arrow-icon {
 }
 
 .dual-icon-txt h4 {
-  color: #5ec2e9;
+  color: #5EC2E9;
   font-size: 37px;
   font-weight: 800;
   line-height: 50px;
@@ -1535,14 +948,14 @@ img.wearable-arrow-icon {
 }
 
 .dual-icon-txt h5 {
-  color: #616f73;
+  color: #616F73;
   font-size: 20px;
   font-weight: 600 !important;
   line-height: 28px;
 }
 
 span.dual-icon {
-  color: #31343d;
+  color: #31343D;
   font-weight: 800;
 }
 
@@ -1553,63 +966,17 @@ span.dual-icon {
   width: 30%;
 }
 
+
+
+
+
+
 /* ____________________________________Lonization Technology-section____________________________________________ */
 
+
+
+
 /* ____________________________________Stay Protected-section____________________________________________ */
-/* Stay Protected section fixes */
-.stay-protected-section {
-  padding: 80px 0;
-}
-
-.stay-protect-txt {
-  padding-top: 0;
-}
-
-.stay-protect-txt img {
-  width: 60px;
-  margin-bottom: 20px;
-}
-
-.stay-protect-txt h3 {
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.stay-protect-txt h4 {
-  font-size: 28px;
-  line-height: 1.3;
-  font-weight: 600 !important;
-  margin-bottom: 20px;
-}
-
-.stay-protect-txt p {
-  font-size: 16px;
-  color: #616f73;
-  line-height: 1.6;
-  padding-right: 0;
-  margin-bottom: 0;
-}
-
-.stay-protect-ing-bg {
-  background: #e4f1f4;
-  height: auto;
-  position: relative;
-  top: 0;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.stay-protect-img img {
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
 .stay-protected-section {
   padding-top: 220px;
 }
@@ -1635,13 +1002,13 @@ span.dual-icon {
 
 .stay-protect-txt p {
   font-size: 18px;
-  color: #616f73;
+  color: #616F73;
   line-height: 28px;
   padding-right: 200px;
 }
 
 .stay-protect-ing-bg {
-  background: #e4f1f4;
+  background: #E4F1F4;
   height: 310px;
   position: relative;
   top: 80px;
@@ -1654,137 +1021,13 @@ span.dual-icon {
   left: -80px;
 }
 
-/* ____________________________________Stay Protected-section____________________________________________ */
-
-/* ____________________________________Air's Air Purifier-section____________________________________________ */
-
-/* Update the air purifier comparison section styles to match the reference */
-.air-purifier-other-purifier-section {
-  padding: 80px 0;
-  position: relative;
-  background: #ffffff;
-}
-
-.purifier-heading h3 {
-  color: #7ab261;
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1.3;
-  margin-bottom: 5px;
-}
-
-.purifier-heading h5 {
-  font-size: 20px;
-  color: #31343d;
-  font-weight: 500 !important;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.other-purifier-heading h5 {
-  color: #31343d;
-  font-size: 28px;
-  line-height: 1.3;
-  margin-bottom: 5px;
-}
-
-.other-purifier-heading h6 {
-  font-size: 20px;
-  color: #31343d;
-  font-weight: 500 !important;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.paran-purifier-col-bg {
-  margin-top: 30px;
-  background: #e4f1f4;
-  height: auto;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-}
-
-.other-purifier-col-bg {
-  margin-top: 30px;
-  background: #f7f7f9;
-  position: relative;
-  left: 0;
-  height: auto;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-}
-
-.parna-purifieri-txt {
-  padding-top: 0;
-  padding-left: 0;
-  width: 100%;
-}
-
-.parna-purifieri-txt h4 {
-  color: #31343d;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.parna-purifieri-txt h5 {
-  font-size: 18px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.other-purifieri-txt {
-  padding-top: 0;
-  padding-left: 0;
-}
-
-.other-purifieri-txt h4 {
-  font-size: 24px;
-  text-transform: capitalize;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 5px;
-}
-
-.other-purifieri-txt h5 {
-  font-size: 18px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.prana-purifier-img,
-.other-purifier-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.prana-purifier-img img,
-.other-purifier-img img {
-  max-width: 100%;
-  position: relative;
-  top: 0;
-}
-
-.air-purifier-other-purifier-section:before {
-  position: absolute;
-  content: "VS";
-  color: #31343d;
-  font-size: 24px;
-  font-weight: 800;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  font-family: "Nunito Sans" !important;
-}
+/* ____________________________________Air’s Air Purifier-section____________________________________________ */
 
 .other-purifier-img img {
   margin-top: 15px;
   width: 95%;
 }
+
 .prana-purifier-img img {
   width: 95%;
   position: relative;
@@ -1799,19 +1042,20 @@ span.dual-icon {
 .parna-purifieri-txt {
   top: 0;
   left: 0;
-  width: 40%;
+  width: 70%;
   padding-top: 100px;
   padding-left: 90px;
 }
 
 .paran-purifier-col-bg {
   margin-top: 20px;
-  background: #e4f1f4;
+  background: #E4F1F4;
   height: 322px;
+  overflow: hidden;
 }
 
 .purifier-heading h3 {
-  color: #7ab261;
+  color: #7AB261;
   font-size: 32px;
   font-weight: 800;
   line-height: 43px;
@@ -1820,31 +1064,33 @@ span.dual-icon {
 
 .purifier-heading h5 {
   font-size: 22px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 600 !important;
   line-height: 30px;
 }
 
 .parna-purifieri-txt h4 {
-  color: #31343d;
+  color: #31343D;
 }
 
 .other-purifier-heading h5 {
-  color: #31343d;
+  color: #31343D;
   text-transform: capitalize;
   font-size: 32px;
   line-height: 43px;
   margin: 0;
 }
+
 .other-purifier-heading h6 {
   font-size: 22px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 600 !important;
   line-height: 30px;
 }
+
 .other-purifier-col-bg {
   margin-top: 20px;
-  background: #f7f7f9;
+  background: #F7F7F9;
   position: relative;
   left: 10px;
   height: 322px;
@@ -1857,14 +1103,14 @@ span.dual-icon {
 
 .other-purifieri-txt h4 {
   font-size: 20px;
-  color: #31343d;
+  color: #31343D;
   text-transform: capitalize;
   font-weight: 800;
   line-height: 27px;
 }
 
 .other-purifieri-txt h5 {
-  color: #616f73;
+  color: #616F73;
   font-size: 20px;
   font-weight: 600 !important;
   line-height: 27px;
@@ -1873,97 +1119,39 @@ span.dual-icon {
 .air-purifier-other-purifier-section:before {
   position: absolute;
   content: "vs";
-  color: #31343d;
+  color: #31343D;
   font-size: 40px;
   font-weight: 800;
   right: 40%;
   bottom: 25%;
   z-index: 1;
-  font-family: "Nunito Sans" !important;
+  font-family: 'Nunito Sans' !important;
 }
 
-/* ____________________________________Air's Air Purifier-section____________________________________________ */
+
+
+
+
+/* ____________________________________Air’s Air Purifier-section____________________________________________ */
+
+
+
 
 /* ____________________________________video-2-section____________________________________________ */
-
-/* Video Section 2 fixes */
-.step-video2-section {
-  padding: 80px 0;
-}
 
 .step-video2-section {
   padding-top: 150px;
 }
 
+
+
+
 /* ____________________________________video-2-section____________________________________________ */
 
+
+
+
 /* ____________________________________Age Group-section____________________________________________ */
-
-/* Update the age group section styles to match the reference */
-.every-age-group-section {
-  padding: 80px 0;
-  background: #ffffff;
-}
-
-.age-group-heading {
-  text-align: left;
-  margin-bottom: 50px;
-}
-
-.age-group-heading h3 {
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 10px;
-  color: #31343d;
-}
-
-.age-group-heading h4 {
-  font-size: 22px;
-  line-height: 1.4;
-  font-weight: 500 !important;
-  margin: 0;
-  color: #616f73;
-}
-
-.age-group-imgs {
-  position: relative;
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.age-group-imgs:before {
-  display: none;
-}
-
-.age-group-imgs img {
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.age-group-imgs img:hover {
-  transform: scale(1.05);
-}
-
-.age-group-txt-para {
-  padding-top: 0;
-}
-
-.age-group-txt-para h4 {
-  font-size: 20px;
-  color: #31343d;
-  font-weight: 700 !important;
-  line-height: 1.3;
-  margin-bottom: 10px;
-}
-
-.age-group-txt-para p {
-  color: #616f73;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-}
 
 .age-group-heading h3 {
   font-size: 38px;
@@ -1989,7 +1177,7 @@ span.dual-icon {
 .age-group-imgs:before {
   position: absolute;
   content: "";
-  background: #e4f1f4;
+  background: #E4F1F4;
   width: 360px;
   height: 355px;
   z-index: 0;
@@ -2003,13 +1191,15 @@ span.dual-icon {
   transition: .3s linear;
 }
 
+
 .age-group-imgs img:hover {
   box-shadow: 0px 0px 30px #eeee;
   transform: scale(1.05);
 }
+
 .age-group-txt-para h4 {
   font-size: 20px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 600 !important;
   line-height: 27px;
 }
@@ -2019,216 +1209,316 @@ span.dual-icon {
 }
 
 .age-group-txt-para p {
-  color: #31343d;
+  color: #31343D;
   font-size: 18px;
   line-height: 27px;
 }
 
+
+
+
+
+
 /* ____________________________________Age Group-section____________________________________________ */
 
-/* Add the Attractive Section styles */
-/* Add this after the Age Group section styles and before the Technical specifications section styles */
+
+
+
+
 
 /* ____________________________________attractive-section____________________________________________ */
 
-.attractive-section {
-  padding: 80px 0;
-  background: #ffffff;
-  margin-top: 0;
+
+.attractive-heading h3 {
+  position: relative;
+  left: -45px;
 }
 
-.attractive-section .section-heading {
-  margin-bottom: 40px;
-}
-
-.attractive-section .section-heading h2 {
-  font-size: 36px;
-  font-weight: 800;
-  color: #31343d;
-  margin-bottom: 5px;
-}
-
-.attractive-section .section-heading p {
+.attractive-heading h5 {
+  color: #31343D;
   font-size: 20px;
-  color: #616f73;
-  font-weight: 500;
 }
 
-.attractive-section .feature-panel {
-  transition: all 0.3s ease;
-  margin-bottom: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+.attractive-section {
+  padding-top: 110px;
 }
 
-.attractive-section .feature-panel:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.attractive-dark-colm {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/06/product-feature-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 275px;
 }
 
-.attractive-section .feature-labels p {
+.product-feature-heading ul {
+  list-style: none;
+  margin: 0;
+}
+
+.product-feature-heading ul li h4 {
+  color: #fff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-.attractive-section h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 5px;
+ul.left-heading li:first-child img {
+  width: 120px;
+  position: relative;
+  top: -23px;
+  left: 115px;
+  z-index: 1;
+  transform: rotate(180deg);
 }
 
-.attractive-section p {
-  font-size: 18px;
-  color: #616f73;
+ul.left-heading {
+  position: relative;
+  top: 100px;
+  left: 50px;
 }
 
-@media only screen and (max-width: 767px) {
-  .attractive-section .feature-panel {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .attractive-section .feature-labels {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .attractive-section .feature-labels.text-right {
-    text-align: center;
-  }
-
-  .attractive-section .feature-labels .mb-5 {
-    margin-bottom: 15px;
-  }
-
-  .attractive-section .feature-labels div[style] {
-    margin: 0 auto;
-  }
+ul.left-heading li {
+  padding-bottom: 70px;
 }
+
+ul.left-heading li:last-child img {
+  width: 170px;
+  position: relative;
+  top: -75px;
+  left: 35px;
+  z-index: 1;
+}
+
+ul.left-heading li:last-child {
+  padding: 0;
+  position: relative;
+  top: -30px;
+  left: 30px;
+}
+
+ul.right-heading {
+  position: relative;
+  top: 95px;
+}
+
+.right-heading li h4:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
+  width: 65px;
+  height: 1px;
+  top: 0px;
+  left: 39px;
+}
+
+.right-heading li h4:after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
+  width: 65px;
+  height: 1px;
+  top: 45px;
+  left: 0px;
+}
+
+.left-heading li h4:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
+  width: 65px;
+  height: 1px;
+  top: -8px;
+  left: -21px;
+}
+
+.left-heading li h4:after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
+  width: 65px;
+  height: 1px;
+  top: 25px;
+  left: 20px;
+}
+
+.right-heading ul li:first-child h4 img {
+  position: relative;
+  left: 9px;
+}
+
+ul.right-heading li:first-child img {
+  position: relative;
+  left: -139px;
+  width: 116px;
+  top: 15px;
+}
+
+ul.right-heading li:first-child h4 {
+  position: relative;
+  left: 30px;
+  top: -15px;
+  font-weight: 400;
+}
+
+ul.right-heading li:last-child img {
+  width: 150px;
+  position: relative;
+  top: 0px;
+  left: -117px;
+}
+
+ul.right-heading li:last-child h4 {
+  position: relative;
+  top: 22px;
+  font-weight: 400;
+}
+
+.attractive-light-colm {
+  background: #E4F1F4;
+  position: relative;
+  left: 10px;
+  height: 275px;
+}
+
+.type-c-charger-img img {
+  width: 210px;
+  position: relative;
+  top: -30px;
+  left: 40px;
+}
+
+.type-c-heading h3 {
+  font-size: 32px;
+  color: #31343D;
+  font-weight: 800;
+  line-height: 43px;
+  margin: 0;
+}
+
+.type-c-heading h5 {
+  font-size: 20px;
+  color: #616F73;
+  font-weight: 600 !important;
+}
+
+.type-c-heading {
+  padding-top: 100px;
+  margin-left: 30px;
+}
+
+.attractive-hanging-colm {
+  background: #e5f1f4;
+  margin-top: 10px;
+  height: 275px;
+}
+
+.hanging-device-img {
+  width: 177px;
+  margin-left: 50px;
+}
+
+.two-modes-colm {
+  background: url(https://www.pranaair.com/wp-content/uploads/2023/06/product-modes-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  height: 275px;
+}
+
+.two-modes-img img {
+  position: relative;
+  top: -20px;
+}
+
+.two-mode-heading h3 {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 38px;
+}
+
+.two-mode-heading {
+  padding-top: 65px;
+}
+
+.two-mode-heading ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  padding: 0;
+  gap: 20px;
+  position: relative;
+}
+
+.two-mode-heading ul li {
+  color: #fff;
+}
+
+.two-mode-heading ul:before {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(45deg, #0000000d, #635E5E, #635e5e08);
+  width: 1px;
+  height: 22px;
+  left: 77px;
+}
+
+ul.right-heading li:first-child {
+  position: relative;
+  top: -20px;
+}
+
+ul.right-heading li:first-child img {
+  position: relative;
+  top: 33px;
+}
+
+ul.right-heading li:last-child {
+  position: relative;
+  top: -15px;
+}
+
+ul.right-heading li:last-child img {
+  width: 109px;
+  position: relative;
+  top: 10px;
+}
+
+/* ____________________________________attractive-section____________________________________________ */
+
+
 
 /* ____________________________________Technical specifications-section____________________________________________ */
 
-.technical-spec-section {
-  padding: 80px 0;
-  background: #f9f9f9;
-}
-
-.spec-heading h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.spec-heading h3 {
-  font-size: 20px;
-  color: #666;
-  font-weight: 500;
-}
-
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  background: #7ab261;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.download-btn:hover {
-  background: #5ec2e9;
-  color: #fff;
-}
-
-.spec-item {
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.spec-item:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.spec-label {
-  color: #666;
-  font-size: 16px;
-}
-
-.spec-value {
-  color: #333;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* FAQ Section Styling */
-.faq-section {
-  padding: 80px 0;
-  background: #ffffff;
-}
-
-.faq-item {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
-}
-
-.faq-question {
-  padding: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question.active {
-  background: #f9f9f9;
-  border-radius: 8px 8px 0 0;
-}
-
-.faq-question h4 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-
-.faq-answer {
-  padding: 0 15px 15px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.toggle-icon {
-  color: #7ab261;
-  transition: all 0.3s ease;
-}
 
 .brochore-btn {
   text-align: right;
 }
+
 .brochore-btn a {
   gap: 5px;
   background: #7ab261;
-  color: #ffff;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   text-decoration: none;
   font-size: 14px;
-  width: 20%;
+  width: 24%;
   margin: 40px auto;
   margin-right: 0;
-  padding: 10px 23px;
+  padding: 15px 23px;
   border-radius: 6px;
-  transition: 0.2s linear;
+  transition: all .2s linear;
 }
+
 .brochore-btn a:hover {
   background: #5cc1e8;
 }
+
 .brochore-btn img {
   width: 20px;
 }
@@ -2246,7 +1536,7 @@ span.dual-icon {
 }
 
 .technical-spec-heading h5 {
-  color: #31343d;
+  color: #31343D;
   font-size: 24px;
   line-height: 34px;
 }
@@ -2255,18 +1545,21 @@ span.dual-icon {
   padding-top: 60px;
   position: relative;
 }
+
 .product-specifi p {
   font-size: 18px;
   color: #677580;
   width: 55%;
 }
+
 .product-specifi h4 {
   font-size: 18px;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 800;
   padding-top: 6px;
   width: 60%;
 }
+
 .product-specifi {
   display: flex;
   margin-bottom: 50px;
@@ -2275,40 +1568,108 @@ span.dual-icon {
 .shdw-line {
   position: relative;
 }
+
 .mid-box:before {
   content: "";
-  background: #e4f1f4;
+  background: #E4F1F4;
   position: absolute;
   width: 100%;
   height: 65px;
   left: 0;
   right: 0;
   margin: 0;
+  z-index: -1;
   top: 130px;
   border-radius: 10px;
 }
+
 .shdw-line:before {
   position: absolute;
   content: "";
-  background-image: linear-gradient(
-    270deg,
-    rgba(190, 190, 190, 0.68) 0.72%,
-    #635e5e 45.95%,
-    rgba(190, 190, 190, 0.68) 98.74%
-  );
+  background-image: linear-gradient(270deg, rgba(190, 190, 190, 0.68) 0.72%, #635E5E 45.95%, rgba(190, 190, 190, 0.68) 98.74%);
   width: 1px;
   height: 240px;
   top: 0;
   right: 10px;
   opacity: 0.17;
 }
+
 .mrg-btm {
   margin-top: -30px;
 }
 
 /* ____________________________________Technical specifications-section____________________________________________ */
 
+
+
 /* ____________________________________customize-section____________________________________________ */
+img.banner-girl-img {
+  width: 100%;
+}
+
+
+img.elimination-device-img {
+  width: 100%;
+}
+
+img.frature-img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.benefits-colum {
+  justify-content: center;
+  gap: 50px;
+}
+
+img.wearable-img {
+  width: 100%;
+  min-width: 806px;
+}
+
+img.how-work-img {
+  width: 100%;
+  position: relative;
+  top: -100px;
+}
+
+img.video-thumnail-img {
+  width: 100%;
+}
+
+img.lonization-tech-img {
+  width: 355px;
+  margin-top: -230px;
+  margin-right: 100px;
+  float: right;
+}
+
+img.stay-protect-img {
+  width: 645px;
+  position: relative;
+  top: -160px;
+  left: -80px;
+}
+
+img.prana-purifier-img {
+  width: 100%;
+}
+
+img.other-purifier-img {
+  width: 100%;
+}
+
+img.product-feature-img {
+  width: 100%;
+}
+
+img.type-c-charger-img {
+  width: 65%;
+}
+
+img.two-modes-img {
+  width: 85%;
+}
 
 .customize-section {
   background: #e5f1f4;
@@ -2319,30 +1680,36 @@ span.dual-icon {
 
 .customize-slider-img {
   background: #fff;
-  padding: 15px 15px 0px;
-  margin-bottom: -20px !important;
-  box-shadow: 0px 0px 15px #8fbac636;
+  padding: 15px 15px 0;
+  box-shadow: 0 0 15px #8fbac636;
+  margin-bottom: 50px !important;
+  margin: 0 10px;
 }
 
 .customize-slider-img img {
-  width: 253px;
+  width: 100%;
 }
+
 .new-slider .owl-nav {
   position: relative;
   top: -100px;
   left: -310px;
 }
+
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a.owl-prev {
   top: calc(100% + 0px) !important;
   left: 0px !important;
 }
+
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a.owl-next {
   top: calc(100% + 0px) !important;
   left: 70px !important;
 }
+
 .arrows-bg-on.carousel-shortcode.carousel-shortcode-id-1 .owl-nav a {
-  background: #5cc0e8;
+  background: #5CC0E8;
 }
+
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a {
   width: 55px !important;
   height: 40px !important;
@@ -2350,6 +1717,7 @@ span.dual-icon {
   border-style: solid !important;
   border-radius: 0 !important;
 }
+
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a.owl-prev i {
   padding: 0px 0px 0px 0px;
 }
@@ -2357,17 +1725,20 @@ span.dual-icon {
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav i {
   font-size: 14px;
 }
+
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a i:hover {
   color: #5cc1e8 !important;
 }
+
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a:not(:hover) i,
 .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a:not(:hover) i:before {
   color: #ffffff;
   -webkit-text-fill-color: #ffffff;
   background: none;
 }
+
 .arrows-hover-bg-on.owl-carousel .owl-nav a:hover {
-  background-color: #616f732e !important;
+  background-color: #616F732E !important;
 }
 
 .customize-slider-heading h2 {
@@ -2376,8 +1747,9 @@ span.dual-icon {
   line-height: 49px;
 }
 
+
 .customize-slider-heading h4 {
-  color: #616f73;
+  color: #616F73;
   font-size: 22px;
   line-height: 37px;
   font-weight: 600 !important;
@@ -2386,6 +1758,7 @@ span.dual-icon {
 .customize-slider-heading {
   padding-top: 120px;
 }
+
 .customize-slider-img h3 {
   font-size: 54px;
   font-weight: 800;
@@ -2401,7 +1774,7 @@ span.dual-icon {
 .customize-slider-img h4 {
   font-size: 17px;
   font-weight: 800;
-  color: #31343d;
+  color: #31343D;
 }
 
 .customize-slider-img p {
@@ -2410,17 +1783,25 @@ span.dual-icon {
   padding-bottom: 30px;
 }
 
+
+
+
+
 /* ____________________________________customize-section____________________________________________ */
+
+
 
 /* ____________________________________tab-section____________________________________________ */
 
 .my-tab-section h4 a i {
   left: 96% !important;
 }
+
 .my-tab-section .vc_tta-panel-heading {
   border-color: #f0f0f000 !important;
   background-color: #f8f8f800 !important;
 }
+
 .tab-section {
   padding-top: 150px;
   padding-bottom: 100px;
@@ -2428,13 +1809,14 @@ span.dual-icon {
 
 .frequently-asked-questions h4 {
   font-size: 24px;
-  color: #31343d;
+  color: #31343D;
   font-weight: 800;
   padding-right: 80px;
   line-height: 36px;
   padding-bottom: 70px;
   position: relative;
 }
+
 .frequently-asked-questions h4:before {
   position: absolute;
   content: "";
@@ -2445,14 +1827,16 @@ span.dual-icon {
   left: 0;
   right: 0;
 }
+
 .my-tab-section h4 {
   font-size: 18px !important;
 }
 
 .my-tab-section h4 a {
-  color: #31343d !important;
+  color: #31343D !important;
   padding-left: 0px !important;
 }
+
 .vc_tta-panel-body p {
   margin-bottom: 15px !important;
   color: #677580;
@@ -2460,6 +1844,7 @@ span.dual-icon {
   font-size: 16px;
   position: relative;
 }
+
 .vc_tta-panel-body p:before {
   position: absolute;
   content: "";
@@ -2471,544 +1856,464 @@ span.dual-icon {
   right: 0;
   margin: 0 auto;
 }
+
 .my-tab-section .vc_tta-panel-body {
   padding: 14px 0px !important;
 }
 
-/* ____________________________________tab-section____________________________________________ */
+img.use-videop {
+  width: 100%;
+}
 
 /* ____________________________________mob-css____________________________________________ */
 
-/* Mobile responsiveness fixes */
-@media only screen and (max-width: 991px) {
-  .banner-section {
-    height: auto;
-    padding: 80px 0;
-  }
-
-  .banner-txt {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .banner-girl-img img {
-    max-width: 100% !important;
-    position: relative;
-    top: 0;
-  }
-
-  .elimination-specs {
-    margin-bottom: 40px;
-  }
-
-  .impressive-feature-section {
-    padding: 60px 0;
-  }
-
-  .frature-img {
-    margin-top: 40px;
-  }
-
-  .wearable-box {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .wearable-box p {
-    padding-right: 0;
-  }
-
-  .how-to-work-text {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .how-to-work-text p {
-    padding-right: 0;
-  }
-
-  .lonization-colm-bg {
-    padding: 40px 20px;
-    margin-bottom: 40px;
-  }
-
-  .stay-protect-txt {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .stay-protect-txt p {
-    padding-right: 0;
-  }
-
-  .air-purifier-other-purifier-section:before {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .inner-header-sticky {
-    overflow-x: auto;
-  }
-
-  .new-nav-bar {
-    justify-content: flex-start;
-    padding: 15px 10px;
-    width: max-content;
-  }
-
-  .new-nav-bar .nav-item {
-    margin: 0 15px;
-  }
-
-  .banner-txt h2 {
-    font-size: 36px;
-    line-height: 1.2;
-  }
-
-  .banner-txt-anim ul li {
-    font-size: 48px;
-  }
-
-  .elimination-heading h3 {
-    font-size: 28px;
-  }
-
-  .elimination-heading p {
-    font-size: 16px;
-  }
-
-  .impressive-feature h3 {
-    font-size: 28px;
-  }
-
-  .impressive-feature h5 {
-    font-size: 18px;
-  }
-
-  .wearable-box h3 {
-    font-size: 28px;
-  }
-
-  .wearable-box h4 {
-    font-size: 22px;
-  }
-
-  .benefit-section h3 {
-    font-size: 28px;
-  }
-
-  .benefit-section h5 {
-    font-size: 18px;
-  }
-
-  .how-to-work-text h3 {
-    font-size: 28px;
-    justify-content: center;
-  }
-
-  .how-to-work-text h5 {
-    font-size: 18px;
-  }
-
-  .video-heading h4 {
-    font-size: 20px;
-  }
-
-  .effortless-heading h3 {
-    font-size: 28px;
-  }
-
-  .effortless-heading p {
-    font-size: 18px;
-  }
-
-  .lonization-text h3 {
-    font-size: 24px;
-  }
-
-  .stay-protect-txt h3 {
-    font-size: 28px;
-  }
-
-  .stay-protect-txt h4 {
-    font-size: 22px;
-  }
-
-  .purifier-heading h3,
-  .other-purifier-heading h5 {
-    font-size: 24px;
-  }
-
-  .age-group-heading h3 {
-    font-size: 28px;
-  }
-
-  .mob-scroll {
-    overflow-x: visible;
-    flex-wrap: wrap;
-  }
-}
-
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+
   .mobshow {
     display: block !important;
   }
+
   .deskshow {
     display: none;
   }
+
   .banner-txt {
     margin-top: 0;
     padding-top: 50px;
     padding-left: 0px;
     text-align: left;
   }
+
   .banner-txt h4 {
     font-size: 18px;
   }
+
   .banner-txt h2 {
     font-size: 40px;
     line-height: 54px;
   }
+
   .banner-txt-anim ul li {
     font-size: 52px;
   }
+
   .banner-txt-anim ul {
     margin: 25px 0 30px;
   }
+
   .banner-txt p {
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 0;
   }
+
   .button_slide {
     padding: 10px 15px !important;
     margin-top: 10px;
   }
+
   .button_slide:before {
     height: 40px;
   }
+
   .banner-section {
     height: 735px;
-    background: linear-gradient(rgb(43 52 58 / 40%), rgb(95 112 73 / 0%)),
-      url(https://www.pranaair.com/wp-content/uploads/2023/06/out-door-banner-backgroud.jpg) center center;
+    background: linear-gradient(rgb(43 52 58 / 40%), rgb(95 112 73 / 0%)), url(https://www.pranaair.com/wp-content/uploads/2023/06/out-door-banner-backgroud.jpg) center center;
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   .banner-girl-img img {
     max-width: 320px !important;
     top: 25px;
     z-index: 0;
     left: 20px;
   }
+
   .elimination-heading h3 {
     font-size: 22px;
   }
+
   .elimination-heading {
     padding-top: 50px;
   }
+
   .rotet {
     width: 30px;
   }
+
   .elimination-heading p {
     padding: 0 0 20px;
-    color: #616f73;
+    color: #616F73;
   }
+
   .elimination-specs ul {
     display: block;
     margin-bottom: 0;
     width: 100%;
   }
+
   .elimination-specs {
     padding-top: 30px;
     display: flex;
     padding-left: 15px;
     gap: 25px;
   }
+
   .elimination-specs ul li img {
     width: 55px;
     position: relative;
     left: -10px;
   }
+
   .elimination-specs ul li h5 {
     font-size: 16px;
     line-height: 21px;
     padding-right: 27px;
     padding-top: 10px;
   }
+
   .elimination-specs ul li:last-child:before {
     width: 50px;
     height: 1px;
     left: 0;
     top: 4px;
   }
+
   .elimination-device-img img {
     margin-top: 0px;
     width: 270px;
   }
+
   .elimination-bg-section {
     background-position: right;
     height: auto;
     padding-bottom: 30px;
   }
+
   .impressive-feature h3 {
     font-size: 26px;
   }
+
   .impressive-feature-section {
     background-image: linear-gradient(183deg, #93adbc, #93adbce3, #d4e3ea);
     margin-top: 75px;
     height: auto;
   }
+
   .impressive-feature {
     padding-top: 30px;
   }
+
   .impressive-feature h5 {
     font-size: 18px;
     line-height: 15px;
   }
+
   .impressive-feature-icons {
     margin-top: 30px;
     margin-left: 0;
   }
+
   .impressive-feature-icon-box {
     gap: 20px;
   }
+
   .impressive-feature-icons ul li img {
     width: 55px;
   }
+
   .impressive-feature-icons ul li h4 {
     font-size: 16px;
     padding-top: 10px;
   }
+
   .impressive-feature-icons ul li p {
     font-size: 13px;
     line-height: 20px;
   }
+
   .frature-img img {
     max-width: 290px;
     position: relative;
     left: -30px;
     top: 0;
   }
+
   .impressive-feature-icons ul {
     list-style: none;
     display: block;
     margin: 0;
   }
+
   .wearable-img img {
     min-width: 100%;
     position: relative;
     left: 0;
   }
+
   .mob-revers {
     display: flex;
     flex-flow: wrap-reverse;
   }
+
   img.wearable-arrow-icon {
     width: 100px;
     left: -50px;
     top: 0px;
   }
+
   .wearable-box {
     margin-top: 0px;
     padding-left: 20px;
   }
+
   .wearable-box h3 {
     font-size: 28px;
   }
+
   .wearable-box h4 {
     font-size: 20px;
     line-height: 10px;
   }
+
   .wearable-box p {
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 30px;
   }
+
   .wearable-section {
     margin-top: 60px;
   }
+
   .benefit-section {
     padding-top: 60px;
   }
+
   .benefit-section h3 {
     font-size: 28px;
   }
+
   .benefit-section h5 {
     font-weight: 600 !important;
   }
+
   .benefit-icon-box img {
     width: 75px;
   }
+
   .benefit-icon-box {
     display: flex;
     align-items: center;
     margin-bottom: 40px !important;
   }
+
   .benefit-icon-box h3 {
     margin: 0;
   }
+
   .benefit-icon-box p {
     font-size: 15px;
   }
+
   .left-side {
     left: 0;
   }
+
   .benefit-bg-section {
     padding: 50px 0;
   }
+
   .how-work-section {
     margin-top: 100px;
     height: auto;
     padding-bottom: 50px;
   }
+
   .how-to-work-text {
     padding-top: 0;
   }
+
   .how-work-img img {
     top: -90px;
     max-width: 400px;
     left: -40px;
     margin-bottom: -100px;
   }
+
   .how-to-work-text h3 {
     font-size: 28px;
     line-height: 38px;
   }
+
   .how-to-work-text h5 {
     font-size: 20px;
     padding-right: 30px;
   }
+
   .how-to-work-text p {
     font-size: 16px;
     line-height: 30px;
     padding-right: 20px;
   }
+
   .step-video-section {
     padding-top: 70px;
   }
+
   .video-heading h4 {
     font-size: 20px;
     line-height: 33px;
     padding-left: 0;
     padding-bottom: 10px;
   }
+
   .video-paara p {
     font-size: 16px;
     padding-right: 10px;
   }
+
   .ult-video {
     margin: 0;
   }
+
   .effortless-section {
     padding-top: 100px;
   }
+
   .effortless-heading h3 {
     font-size: 28px;
     line-height: 40px;
   }
+
   .effortless-heading p {
     font-size: 18px;
   }
+
   .effortless-box ul li img {
     width: 100px;
   }
+
   .effortless-box ul li h3 {
     font-size: 30px;
     line-height: 30px;
   }
+
   .effortless-box ul li p {
     font-size: 16px;
   }
+
   .long-press-top {
     top: -10px;
   }
+
   .lonization-tech-img img {
     max-width: 255px;
     margin-top: -140px;
     margin-right: 30px;
   }
+
   .dual-icon-txt h4 {
     font-size: 20px;
     line-height: 30px;
   }
+
   .dual-icon-txt h5 {
     font-size: 13px;
     line-height: 18px;
   }
+
   .dual-icon-txt {
     top: -80px;
     left: 240px;
   }
+
   .lonization-text {
     padding-left: 10px;
   }
+
   .lonization-text h4 {
     font-size: 22px;
     line-height: 44px;
   }
+
   .lonization-text h3 {
     font-size: 26px;
     margin-top: -20px;
   }
+
   .lonization-text p {
     font-size: 18px;
     padding-right: 0;
   }
+
   .stay-protected-section {
     padding-top: 170px;
   }
+
   .stay-protect-img img {
     width: 300px;
     top: -100px;
     left: -16px;
   }
+
   .stay-protect-ing-bg {
     height: 150px;
     top: 0;
   }
+
   .stay-protect-txt img {
     width: 60px;
     margin-left: -20px;
   }
+
   .stay-protect-txt {
     padding-top: 30px;
   }
+
   .stay-protect-txt h3 {
     font-size: 30px;
     line-height: 46px;
   }
+
   .stay-protect-txt h4 {
     font-size: 20px;
     line-height: 15px;
     padding-bottom: 10px;
   }
+
   .stay-protect-txt p {
     font-size: 16px;
     line-height: 26px;
     padding-right: 30px;
   }
+
   .air-purifier-other-purifier-section {
     padding-top: 80px;
   }
+
   .purifier-heading h3 {
     font-size: 26px;
     line-height: 35px;
   }
+
   .purifier-heading h5 {
     font-size: 18px;
     line-height: 24px;
   }
+
   .parna-purifieri-txt h4 {
     font-size: 34px !important;
     line-height: 40px !important;
+
   }
+
   .parna-purifieri-txt h5 {
     font-size: 20px;
     line-height: 30px;
   }
+
   .parna-purifieri-txt {
     top: -80px;
     left: 0;
@@ -3017,52 +2322,65 @@ span.dual-icon {
     padding-left: 8px;
     margin-bottom: -80px !important;
   }
+
   .paran-purifier-col-bg {
     margin-top: 20px;
     height: auto;
   }
+
   .prana-purifier-img img {
     max-width: 75%;
     top: 0;
   }
+
   .other-purifier-col-bg {
     margin-top: 150px;
     left: 0;
     height: auto;
   }
+
   .other-purifier-heading h5 {
     font-size: 26px;
   }
+
   .other-purifier-heading h6 {
     font-size: 18px;
     line-height: 24px;
   }
+
   .other-purifier-heading {
     position: relative;
     top: 440px;
     z-index: 1;
     height: 0;
   }
+
   .air-purifier-other-purifier-section:before {
     right: 46%;
     bottom: 47%;
   }
+
   .other-purifier-img img {
     margin-top: 0;
   }
+
   .other-purifieri-txt {
     padding-top: 60px;
     padding-left: 10px;
   }
+
   .other-purifieri-txt h5 {
     padding-right: 150px;
   }
+
   .other-purifier-img img {
     max-width: 220px;
   }
+
   .step-video2-section {
     padding-top: 80px;
   }
+
   .slick-slide {
     margin: 0 !important;
   }
@@ -3070,15 +2388,18 @@ span.dual-icon {
   .every-age-group-section {
     padding-top: 70px;
   }
+
   .age-group-heading h3 {
     font-size: 28px;
     line-height: 47px;
   }
+
   .age-group-heading h4 {
     font-size: 18px;
     line-height: 5px;
     padding-bottom: 70px;
   }
+
   .age-group-imgs {
     padding-top: 10px;
   }
@@ -3089,23 +2410,28 @@ span.dual-icon {
     top: -20px;
     left: 35px;
   }
+
   .mob-scroll {
     display: flex;
     align-items: center;
     white-space: nowrap;
     overflow-x: auto;
   }
+
   .attractive-section {
     padding-top: 50px;
   }
+
   .attractive-heading h3 {
     left: -35px;
   }
+
   .attractive-heading h3 img {
     position: relative;
     top: -30px;
     left: 30px;
   }
+
   .technical-spec-heading h3 img {
     position: relative;
     top: -30px;
@@ -3117,18 +2443,22 @@ span.dual-icon {
     margin-left: -35px;
     line-height: 35px;
   }
+
   .technical-spec-heading h5 {
     font-size: 22px;
   }
+
   .brochore-btn a {
     justify-content: center;
     width: 100%;
     padding: 12px 0px;
     margin: 10px 0 !important;
   }
+
   .carousel-shortcode.carousel-shortcode-id-74836803beaa5207b9971d1d965b0b87 .owl-dot {
     margin: 0 5px;
   }
+
   .brochore-btn {
     position: relative;
     top: 0;
@@ -3137,69 +2467,88 @@ span.dual-icon {
     text-align: center;
     margin-bottom: 70px !important;
   }
+
   .mid-box {
     padding-top: 0;
   }
+
   .product-specifi h4 {
     font-size: 14px;
   }
+
   .product-specifi p {
     font-size: 15px;
   }
+
   .mid-box:before {
     height: 55px;
     top: 90px;
     left: -5px;
     width: 103%;
     border-radius: 0;
+
   }
+
   .shdw-line:before {
     display: none;
   }
+
   .customize-slider-heading {
     padding-top: 20px;
   }
+
   .customize-slider-heading h2 {
     font-size: 26px;
     margin: 0;
   }
+
   .customize-slider-heading h4 {
     font-size: 18px;
     line-height: 27px;
   }
+
   .customize-slider-img img {
     width: 100%;
   }
+
   .customize-slider-img {
     margin-top: 60px;
     padding-bottom: 20px;
   }
+
   .new-slider .owl-nav {
     top: 35px;
     left: 0;
   }
+
   .carousel-shortcode.carousel-shortcode-id-1 .owl-nav a {
     width: 45px !important;
     height: 30px !important;
   }
+
   .tab-section {
     padding-top: 70px;
   }
+
   .frequently-asked-questions h4 {
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 55px;
   }
+
   .my-tab-section h4 {
     font-size: 16px !important;
     line-height: 25px !important;
   }
+
   vc_tta-panel-body p {
     padding-right: 40px;
   }
+
   .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left .vc_tta-controls-icon {
     top: 35%;
   }
+
   .product-feature-img img {
     width: 140px;
     position: relative;
@@ -3210,23 +2559,33 @@ span.dual-icon {
     height: 360px;
     padding-top: 40px;
   }
+
   ul.left-heading li:last-child {
     padding: 0;
     position: relative;
     top: 160px;
-    left: 13px;
+    left: 0;
     z-index: 1;
   }
+
+  img.product-feature-img {
+    width: 40%;
+  }
+
   .product-feature-heading ul li h4 {
     font-size: 14px;
+    text-align: right;
+    left: 0 !important;
   }
+
   ul.left-heading li:first-child {
-    left: 20px;
+    left: 0px;
     position: relative;
     top: 55px;
     z-index: 1;
     padding-bottom: 0;
   }
+
   ul.left-heading {
     position: relative;
     top: 0;
@@ -3234,159 +2593,122 @@ span.dual-icon {
   }
 
   ul.left-heading li:first-child:before {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 110px;
-    height: 1px;
-    left: 30px;
-    top: 61px;
+    display: none;
   }
+
   ul.left-heading li:first-child:after {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 1px;
-    height: 27px;
-    left: 30px;
-    top: 35px;
+    display: none;
   }
+
   ul.left-heading li:last-child:before {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 90px;
-    height: 1px;
-    top: -50px;
-    left: 54px;
+    display: none;
   }
+
   ul.left-heading li:last-child:after {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 1px;
-    height: 33px;
-    top: -50px;
-    left: 54px;
+    display: none;
   }
 
   ul.right-heading {
     position: relative;
     top: -50px;
-    left: 170px;
+    left: 0px;
   }
 
-  ul.right-heading li:first-child:after {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 1px;
-    height: 50px;
-    left: -28px;
-    top: 15px;
-  }
 
-  ul.right-heading li:first-child:before {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 55px;
-    height: 1px;
-    left: -28px;
-    top: 15px;
-  }
+
+
   ul.right-heading li:first-child {
     position: relative;
     top: -160px;
-    left: 10px;
-  }
-  ul.right-heading li:last-child:after {
-    width: 1px;
-    position: absolute;
-    content: "";
-    background: #fff;
-    height: 50px;
-    top: -55px;
-    left: 70px;
+    left: 0px;
   }
 
-  ul.right-heading li:last-child:before {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 90px;
-    height: 1px;
-    top: -55px;
-    left: -20px;
-  }
+
+
   ul.right-heading li:last-child {
     position: relative;
     top: -30px;
     left: 0px;
   }
+
   .attractive-light-colm {
     left: 0;
     height: 360px;
     margin-top: 10px;
   }
+
   .mobile-revres-coulm {
     display: flex;
     flex-direction: column-reverse;
   }
+
   .type-c-heading {
     padding-top: 40px;
     margin-left: 60px;
+    left: 0;
   }
+
   .type-c-heading h3 {
     font-size: 26px;
   }
+
   .type-c-heading h5 {
     font-size: 18px;
   }
+
   .type-c-charger-img img {
     width: 200px;
     top: -10px;
     left: 50px;
     margin-bottom: -40px;
   }
+
   .two-modes-colm {
     left: 0;
     height: 400px;
   }
+
   .two-modes-img img {
     width: 300px;
     margin-bottom: -50px;
   }
+
   .two-mode-heading {
     padding-top: 0;
     padding-bottom: 50px;
     padding-left: 40px;
   }
+
   .two-mode-heading h3 {
     font-size: 26px;
   }
+
   .attractive-hanging-colm {
     margin-top: 20px;
     height: 360px;
     padding-bottom: 50px;
   }
+
   .mobile-flex-dric {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
   }
+
   .type-c-heading {
     padding-top: 20px;
     margin-left: 0;
     position: relative;
-    left: 50px;
   }
+
   .hanging-heading {
     padding-top: 110px;
   }
+
   .hanging-device-img img {
     max-width: 170px;
   }
+
   .mobile-layout {
     display: flex;
     flex-direction: column;
@@ -3395,14 +2717,17 @@ span.dual-icon {
   .mobile-position-change {
     order: 1;
   }
+
   .video-play-button:before {
     width: 60px;
     height: 60px;
   }
+
   .video-play-button:after {
     width: 60px;
     height: 60px;
   }
+
   .video-play-button span {
     border-left: 25px solid #000000;
     border-top: 15px solid transparent;
@@ -3410,14 +2735,18 @@ span.dual-icon {
     top: 7px;
     left: 3px;
   }
+
   .box-line {
     margin-bottom: 50px;
   }
+
   .mob-product-spec-box1 {
     margin-bottom: 50px;
     position: relative;
     z-index: 0;
+
   }
+
   .mob-product-spec-box1:after {
     position: absolute;
     content: "";
@@ -3427,9 +2756,44 @@ span.dual-icon {
     left: 0;
     top: -30px;
   }
+
+  .mob-product-spec-box1:before {
+    content: "";
+    background: #E4F1F4;
+    position: absolute;
+    width: 103%;
+    height: 55px;
+    top: 67px;
+    z-index: -1;
+    left: -6px;
+  }
+
+  .mrg-btm {
+    margin: 25px 0;
+  }
+
+  .mob-mrg-btm {
+    margin: 25px 0;
+  }
+
+  .mob-product-spec-box2 {
+    position: relative;
+    z-index: 0;
+  }
+
+  .mob-product-spec-box2:after {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(45deg, #0000000d, #635e5e3b, #635e5e08);
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: -30px;
+  }
+
   .mob-product-spec-box2:before {
     content: "";
-    background: #e4f1f4;
+    background: #E4F1F4;
     position: absolute;
     width: 103%;
     height: 55px;
@@ -3437,26 +2801,33 @@ span.dual-icon {
     z-index: -1;
     left: -5px;
   }
+
   .customize-slider-img p {
     padding-bottom: 10px;
   }
+
   .customize-section {
     padding-bottom: 80px;
   }
+
   .video-overlay-close {
     top: 180px;
     right: 17px;
   }
+
   .video-overlay video {
     width: 90% !important;
   }
+
   .benfit-txt {
     text-align: left;
   }
+
   .product-specifi {
     margin-bottom: 40px;
     align-items: baseline;
   }
+
   .new-nav-bar .nav-item.active:before {
     width: 65px;
     bottom: -20px;
@@ -3464,65 +2835,369 @@ span.dual-icon {
   }
 
   .right-heading li:first-child h4:before {
-    position: absolute;
-    content: "";
-    background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
-    width: 65px;
-    height: 1px;
-    top: 15px;
-    left: 25px;
+    display: none;
   }
+
   .right-heading li:first-child h4:after {
-    position: absolute;
-    content: "";
-    background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
-    width: 65px;
-    height: 1px;
-    top: 45px;
-    left: 0px;
+    display: none;
   }
+
+  .left-heading li h4:before {
+    display: none;
+  }
+
   .right-heading li:last-child h4::after {
-    position: absolute;
-    content: "";
-    background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
-    width: 65px;
-    height: 1px;
-    top: 0px;
-    left: 39px;
+    display: none;
   }
+
+  .left-heading li h4:after {
+    display: none;
+  }
+
   .right-heading li:last-child h4:before {
-    position: absolute;
-    content: "";
-    background-image: linear-gradient(45deg, #ffffff00, white, #ffffff00);
-    width: 65px;
-    height: 1px;
-    top: 23px;
-    left: 10px;
+    display: none;
   }
 
   .new-nav-bar li a {
     font-size: 13px;
   }
+
   .lonization-tech-section {
     padding-top: 80px;
   }
+
+  img.wearable-img {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  img.stay-protect-img {
+    width: 100%;
+    top: -120px;
+    left: 0;
+  }
 }
 
-/* Elimination Section Background */
-.elimination-bg-section {
-  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/06/elimation-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 60px 0;
-}
+/* ____________________________________tab-css____________________________________________ */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+
+
+  .banner-girl-img img {
+    max-width: 455px !important;
+    top: 42px;
+    left: -50px;
+  }
+
   .banner-section {
-    margin-top: 160px !important; /* Increased for mobile as well */
+    height: auto;
+    padding-bottom: 40px;
   }
 
-  .inner-header-sticky {
+  .banner-txt h2 {
+    font-size: 48px;
+  }
+
+  .banner-txt-anim ul li {
+    font-size: 65px;
+  }
+
+  .banner-txt-anim ul {
+    margin: 30px 0 30px;
+  }
+
+  .elimation-heading {
+    padding-top: 50px;
+  }
+
+  .elimination-heading h3 {
+    font-size: 30px;
+  }
+
+  .elimination-heading p {
+    padding: 0 120px 20px;
+  }
+
+  .elimination-bg-section {
+    height: 520px;
+  }
+
+  .elimination-specs {
+    padding-top: 60px;
+  }
+
+  .frature-img img {
+    max-width: 100%;
+    left: 10px;
+    top: 565px;
+  }
+
+  .impressive-feature-section {
     height: auto;
+    padding-bottom: 30px;
+  }
+
+  .impressive-feature-icons ul li img {
+    width: 75px;
+  }
+
+  .impressive-feature-icons ul li h4 {
+    font-size: 16px;
+  }
+
+  .impressive-feature-icons {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  img.wearable-arrow-icon {
+    width: 120px;
+    left: -30px;
+    top: 0;
+  }
+
+  .wearable-box p {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .wearable-img img {
+    min-width: 100%;
+    margin-top: 60px;
+  }
+
+  .how-to-work-text p {
+    padding-right: 50px;
+    padding-top: 10px;
+  }
+
+  .how-to-work-text {
+    padding-top: 30px;
+  }
+
+  .how-work-img img {
+    top: 40px;
+    max-width: 120%;
+  }
+
+  .effortless-box ul {
+    display: block;
+    text-align: center;
+  }
+
+  .lonization-text {
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+
+  .stay-protect-img img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .stay-protected-section {
+    padding-top: 70px;
+  }
+
+  .stay-protect-txt p {
+    padding-right: 20px;
+  }
+
+  .parna-purifieri-txt {
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+
+  .age-group-imgs:before {
+    width: 195px;
+    height: 245px;
+  }
+
+  .product-specifi p {
+    font-size: 14px;
+  }
+
+  .product-specifi h4 {
+    font-size: 15px;
+  }
+
+  .customize-slider-img img {
+    width: 100%;
+  }
+
+  .new-slider .owl-nav {
+    left: -190px;
+  }
+
+  .attractive-section {
+    padding-top: 0;
+  }
+
+  .rotet {
+    top: -35px;
+    left: 35px;
+  }
+
+  .every-age-group-section {
+    padding-top: 50px;
+  }
+
+  .step-video2-section {
+    padding-top: 50px;
+  }
+
+  .elimination-specs ul li:last-child:before {
+    left: -15px;
+    top: 50px;
+  }
+
+  .impressive-feature-icon-box {
+    gap: 20px;
+  }
+
+  .brochore-btn a {
+    width: 50%;
+  }
+
+  .dual-icon-txt {
+    top: -200px;
+    left: 0px;
+    width: 100%;
+  }
+
+  .technical-spec-heading h5 {
+    font-size: 20px;
+    line-height: 15px;
+  }
+
+  .other-purifier-col-bg {
+    left: 0;
+  }
+
+  .parna-purifieri-txt h4 {
+    font-size: 30px;
+  }
+
+  .prana-purifier-img img {
+    width: 100%;
+    top: 127px;
+  }
+
+  .other-purifieri-txt {
+    padding-left: 40px;
+  }
+
+  .other-purifier-img img {
+    margin-top: 105px;
+    width: 100%;
+  }
+
+  .attractive-light-colm {
+    left: 0;
+  }
+
+  .two-modes-colm {
+    left: 0;
+  }
+
+  ul.left-heading {
+    top: 70px;
+    left: 10px;
+  }
+
+  ul.left-heading li:first-child img {
+    width: 90px;
+    top: -23px;
+    left: 65px;
+  }
+
+  ul.left-heading li:last-child img {
+    width: 100px;
+    top: -75px;
+    left: 35px;
+  }
+
+  ul.right-heading {
+    top: 58px;
+    left: -10px;
+  }
+
+
+  .product-feature-heading ul li h4 {
+    font-size: 15px;
+  }
+
+  ul.right-heading li:first-child img {
+    position: relative;
+    top: 33px;
+    width: 100px;
+    left: -100px;
+  }
+
+  ul.right-heading li:last-child h4 {
+    position: relative;
+    top: -8px;
+    left: 20px;
+  }
+
+  .product-specifi {
+    align-items: baseline;
+  }
+
+  .mid-box:before {
+    top: 125px;
+  }
+
+  .customize-slider-heading h2 {
+    font-size: 30px;
+  }
+
+  img.wearable-img {
+    min-width: 100%;
+  }
+
+  .benefits-colum {
+    gap: 20px;
+  }
+
+  img.how-work-img {
+    top: 0px;
+  }
+
+  .video-paara p {
+    padding-right: 0px;
+  }
+
+  img.lonization-tech-img {
+    width: 70%;
+    margin-top: -200px;
+    margin-right: 50px;
+  }
+
+  .dual-icon-txt {
+    top: -100px;
+    left: 200px;
+    width: 70%;
+  }
+
+  img.stay-protect-img {
+    width: 100%;
+    top: 40px;
+    left: 0px;
+  }
+
+  img.type-c-charger-img {
+    width: 100%;
+  }
+
+  .two-mode-heading h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  img.two-modes-img {
+    width: 100%;
   }
 }
-

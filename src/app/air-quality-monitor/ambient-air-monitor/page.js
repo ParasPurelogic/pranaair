@@ -458,7 +458,7 @@ export default function AmbientAirMonitor() {
                                 <div className="get-brochur">
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <a href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
                                                 <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png" alt="brochure" width={22} height={22} />
                                                 Brochure
                                             </a>
@@ -810,7 +810,7 @@ export default function AmbientAirMonitor() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="#">Construction Site</Link>
+                                                    <Link href="/solutions-by-application/constructions/">Construction Site</Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -836,7 +836,7 @@ export default function AmbientAirMonitor() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="#">Parking Lots</Link>
+                                                    <Link href="/solutions-by-application/parking-lot/">Parking Lots</Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -867,7 +867,7 @@ export default function AmbientAirMonitor() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="#">Smart City Project</Link>
+                                                    <Link href="/solutions-by-application/smart-city/">Smart City Project</Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -893,7 +893,7 @@ export default function AmbientAirMonitor() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="#">Real Estates</Link>
+                                                    <Link href="/solutions-by-application/real-estate/">Real Estates</Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -924,7 +924,7 @@ export default function AmbientAirMonitor() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="#">RMC Plant</Link>
+                                                    <Link href="/solutions-by-application/ready-mix-concrete-plant/">RMC Plant</Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -951,7 +951,7 @@ export default function AmbientAirMonitor() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="#">Airports</Link>
+                                                    <Link href="/solutions-by-application/airports/">Airports</Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -959,7 +959,7 @@ export default function AmbientAirMonitor() {
                                 </div>
                             </div>
                             <div className="explore-btn">
-                                <Link href="#">Explore More</Link>
+                                <Link href="/solutions-by-application/">Explore More</Link>
                             </div>
                         </div>
                     </div>
@@ -977,7 +977,7 @@ export default function AmbientAirMonitor() {
                                     Get accurate weather forecasts to predict weather conditions for different activities with stand-out
                                     features.
                                 </p>
-                                <Link href="#">Know More</Link>
+                                <Link href="/air-quality-monitor/weather-station/">Know More</Link>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -1307,10 +1307,10 @@ export default function AmbientAirMonitor() {
                                     role="tabpanel"
                                     aria-labelledby="ambient-pm-tech-tab"
                                 >
-                                    <Link className="tech-spec-btn" href="#" target="_blank">
+                                    <a className="tech-spec-btn" href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf" target="_blank">
                                         <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png" alt="brochure-icon" width={20} height={20} />
                                         Brochure
-                                    </Link>
+                                    </a>
                                     <div className="tech-spec-parameter">
                                         <ul className="basic-pm">
                                             <li>
@@ -2402,7 +2402,7 @@ export default function AmbientAirMonitor() {
                         </div>
                         <div className="col-sm-6">
                             <div>
-                                <Link href="https://www.pranaair.com/solutions-by-application/constructions/">
+                                <Link href="/solutions-by-application/constructions/">
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/contruction-image.jpg"
                                         alt="prana air ambient air quality monitors for construction sites"
@@ -2412,7 +2412,7 @@ export default function AmbientAirMonitor() {
                                     />
                                 </Link>
                                 <p>
-                                    <Link href="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-ambient.png" className="learn-more">
+                                    <Link href="/solutions-by-application/constructions/" className="learn-more">
                                         Know More
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-ambient.png"
@@ -2439,7 +2439,7 @@ export default function AmbientAirMonitor() {
                                     Prana Airs sensors are the most accurate and reliable sensors on the market, providing real-time
                                     monitoring of a wide range of air pollutants.
                                     <br />
-                                    <Link href="https://www.pranaair.com/air-quality-sensor/" className="know-how-link">
+                                    <Link href="/air-quality-sensor/" className="know-how-link">
                                         Know How
                                     </Link>
                                 </p>

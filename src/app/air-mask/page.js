@@ -491,6 +491,7 @@ export default function AirMaskPage() {
 
       {/* Perfect Outdoor Companions Section */}
       <div className="col-push-sec">
+        <div className="container-fluid">
         <div className="row">
           <div
             className="col-md-6 bg-img-sec"
@@ -581,10 +582,12 @@ export default function AirMaskPage() {
             </div>
           </div>
         </div>
+        </div>
       </div>
 
       {/* Micro Ventilator Section */}
       <div className="padd-more">
+      <div className="container-fluid">
         <div className="row">
           <div
             className="col-md-6 bg-img-sec"
@@ -623,10 +626,12 @@ export default function AirMaskPage() {
             </p>
           </div>
         </div>
+        </div>
       </div>
 
       {/* Stylish Section */}
       <div className="col-push-sec padd-more">
+        <div className="container-fluid">
         <div className="row">
           <div
             className="col-md-6 bg-img-sec"
@@ -665,6 +670,7 @@ export default function AirMaskPage() {
               </span>
             </p>
           </div>
+        </div>
         </div>
       </div>
 

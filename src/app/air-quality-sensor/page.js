@@ -51,13 +51,13 @@ export default function AirQualitySensors() {
             <div className="all-sensor-tab">
               <ul className="nav nav-tabs">
                 <li className={activeTab === 'all' ? 'active' : ''}>
-                  <a href="#" onClick={() => setActiveTab('all')}>All</a>
+                  <button onClick={() => setActiveTab('all')}>All</button>
                 </li>
                 <li className={activeTab === 'pm' ? 'active' : ''}>
-                  <a href="#" onClick={() => setActiveTab('pm')}>PM</a>
+                  <button onClick={() => setActiveTab('pm')}>PM</button>
                 </li>
                 <li className={activeTab === 'gases' ? 'active' : ''}>
-                  <a href="#" onClick={() => setActiveTab('gases')}>Gases</a>
+                  <button onClick={() => setActiveTab('gases')}>Gases</button>
                 </li>
               </ul>
             </div>

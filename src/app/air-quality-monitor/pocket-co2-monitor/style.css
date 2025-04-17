@@ -660,6 +660,12 @@ li.image-box h5 {
     z-index: 99;
 }
 
+.tech-spec-heading h2 {
+    margin: 0;
+}
+.ndir-sensor-Image img {
+    height: auto;
+}
 .tech-spec {
     margin-top: 15px;
 }
@@ -881,8 +887,35 @@ small.range_no {
     visibility: visible;
 }
 
+.application_no {
+    color: #ebebeb;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: normal;
+}
+
 .range_cntr li.good_range .hover_range_box {
     visibility: visible !important;
+}
+
+.application_no {
+    color: #ebebeb;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.clean-air-Image img {
+    height: auto;
+    width: 100%;
+}
+
+.pocket_cntr_bg h2 {
+    margin: 0 0 10px;
+}
+
+.smallest_portable_section {
+    margin-top: 140px;
 }
 
 /* Places with High CO2 */
@@ -1774,6 +1807,12 @@ span.tab_monitor_device img {
     img.pocket-co-monitor-side-view {
         height: auto;
     }
+    .content-placement-middle .col-md-6 {
+        padding: 0 0 20px 15px !important;
+    }
+    .logo-box ul li img {
+        width: 80%;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1911,5 +1950,11 @@ span.tab_monitor_device img {
 
     .screen-monitor {
         width: 100px;
+    }
+    h2.title_heading {
+        width: 100%;
+    }
+    .title_heading.circle_heading {
+        width: 100%;
     }
 }

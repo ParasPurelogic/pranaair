@@ -2295,11 +2295,15 @@ span.vc_tta-title-text {
     }
 
     .ambi-monitor-img {
-        top: -300px
+        top: 200px
     }
 
     .ambi-monitor-img img {
         width: 66%
+    }
+
+    .mob-app-txt a {
+        width: 90%;
     }
 
     .parts-label-img img {

@@ -947,6 +947,11 @@ a {
   flex-wrap: wrap;
 }
 
+.all-cliente-logo ul li img {
+  width: 100%;
+  height: auto;
+}
+
 .all-cliente-logo ul li {
   display: inline-block;
   width: 14%;
@@ -2096,8 +2101,55 @@ a {
     line-height: 50px;
     padding-bottom: 10px;
   }
+
   .discover-title ul li h2 {
     font-size: 34px;
     line-height: 40px;
+  }
+
+  .award-box {
+    width: 100%;
+  }
+
+  .awards-content {
+    flex-direction: column;
+  }
+
+  .award-img img {
+    width: 30%;
+  }
+
+  .award-sec:after {
+    display: none;
+  }
+
+  .award-sec:before {
+    display: none;
+  }
+
+  .query-sec {
+    padding: 30px 0 30px;
+  }
+
+  .query-heading h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .mg-tops .award-img img {
+    width: 100%;
+  }
+
+  .experince-shoping li:before {
+    right: 0;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .controller {
+    margin-top: -150px;
+}
+.most-accurate-row {
+  margin-top: 0px;
+  z-index: 1;
 }
 }

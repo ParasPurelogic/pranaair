@@ -281,201 +281,156 @@ export default function PranaAirHomepage() {
       {/* Discover Air Quality Section */}
       <section className="discover-air-quality">
         <div className="container">
-          <div className="row-line">
-            <div className="discover-header">
-              <div className="discover-air-quality-heading">
-                <h2>Discover the Ultimate Air Quality Solutions</h2>
-              </div>
-              <div className="discover-air-quality-para">
-                <p>
-                  Prana Air offers a range of advanced air quality monitors, sensors, purifiers designed for every
-                  environment, ensuring you can breathe clean air wherever you are.
-                </p>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="discover-header">
+                <div className="discover-air-quality-heading">
+                  <h2>Discover the Ultimate Air Quality Solutions</h2>
+                </div>
+                <div className="discover-air-quality-para">
+                  <p>
+                    Prana Air offers a range of advanced air quality monitors, sensors, purifiers designed for every
+                    environment, ensuring you can breathe clean air wherever you are.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="discover-content">
+                <div className="tabs-container">
+                  <div className="custom-tabs">
+                    <div className={`custom-tab ${activeTab === 0 ? "active" : ""}`} onClick={() => activateCustomTab(0)}>
+                      <div className="product-catgeory">
+                        <h3>
+                          Air Quality Monitors <i className="tab-arrow"></i>
+                        </h3>
+                      </div>
+                    </div>
+                    <div className={`custom-tab ${activeTab === 1 ? "active" : ""}`} onClick={() => activateCustomTab(1)}>
+                      <div className="product-catgeory">
+                        <h3>
+                          Air Quality Sensors <i className="tab-arrow"></i>
+                        </h3>
+                      </div>
+                    </div>
+                    <div className={`custom-tab ${activeTab === 2 ? "active" : ""}`} onClick={() => activateCustomTab(2)}>
+                      <div className="product-catgeory">
+                        <h3>
+                          Air Quality PCBs <i className="tab-arrow"></i>
+                        </h3>
+                      </div>
+                    </div>
+                    <div className={`custom-tab ${activeTab === 3 ? "active" : ""}`} onClick={() => activateCustomTab(3)}>
+                      <div className="product-catgeory">
+                        <h3>
+                          Weather Station <i className="tab-arrow"></i>
+                        </h3>
+                      </div>
+                    </div>
+                    <div className={`custom-tab ${activeTab === 4 ? "active" : ""}`} onClick={() => activateCustomTab(4)}>
+                      <div className="product-catgeory">
+                        <h3>
+                          Air Purifiers <i className="tab-arrow"></i>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-          <div className="discover-content">
-            <div className="tabs-container">
-              <div className="custom-tabs">
-                <div className={`custom-tab ${activeTab === 0 ? "active" : ""}`} onClick={() => activateCustomTab(0)}>
-                  <div className="product-catgeory">
-                    <h3>
-                      Air Quality Monitors <i className="tab-arrow"></i>
-                    </h3>
-                  </div>
-                </div>
-                <div className={`custom-tab ${activeTab === 1 ? "active" : ""}`} onClick={() => activateCustomTab(1)}>
-                  <div className="product-catgeory">
-                    <h3>
-                      Air Quality Sensors <i className="tab-arrow"></i>
-                    </h3>
-                  </div>
-                </div>
-                <div className={`custom-tab ${activeTab === 2 ? "active" : ""}`} onClick={() => activateCustomTab(2)}>
-                  <div className="product-catgeory">
-                    <h3>
-                      Air Quality PCBs <i className="tab-arrow"></i>
-                    </h3>
-                  </div>
-                </div>
-                <div className={`custom-tab ${activeTab === 3 ? "active" : ""}`} onClick={() => activateCustomTab(3)}>
-                  <div className="product-catgeory">
-                    <h3>
-                      Weather Station <i className="tab-arrow"></i>
-                    </h3>
-                  </div>
-                </div>
-                <div className={`custom-tab ${activeTab === 4 ? "active" : ""}`} onClick={() => activateCustomTab(4)}>
-                  <div className="product-catgeory">
-                    <h3>
-                      Air Purifiers <i className="tab-arrow"></i>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="custom-content-container">
-              {/* Air Quality Monitors Tab Content */}
-              <div className={`custom-content ${activeTab === 0 ? "active" : ""}`}>
-                <div className="aq-monitor-box">
-                  <div className="discover-air-quality-page-img">
-                    <Link
-                      href="/air-quality-monitor/handheld/pocket-monitor/"
-                      className="page-link"
-                    >
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-pocket-pm2.5-monitor-portable-PM2.5-Monitor.jpg"
-                        alt="prana air pocket pm2.5 monitor portable"
-                        width={400}
-                        height={200}
-                        className="monitor-image"
-                      />
-                      <ul>
-                        <li>Pocket PM2.5 Monitor</li>
-                        <li>
+                <div className="custom-content-container">
+                  {/* Air Quality Monitors Tab Content */}
+                  <div className={`custom-content ${activeTab === 0 ? "active" : ""}`}>
+                    <div className="aq-monitor-box">
+                      <div className="discover-air-quality-page-img">
+                        <Link
+                          href="/air-quality-monitor/handheld/pocket-monitor/"
+                          className="page-link"
+                        >
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-pocket-pm2.5-monitor-portable-PM2.5-Monitor.jpg"
+                            alt="prana air pocket pm2.5 monitor portable"
+                            width={400}
+                            height={200}
+                            className="monitor-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
-                  </div>
-                  <div className="discover-air-quality-page-img">
-                    <Link href="/air-quality-monitor/air-drone/" className="page-link">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-Air-Quality-Drone.jpg"
-                        alt="prana air air quality drone"
-                        width={400}
-                        height={200}
-                        className="monitor-image"
-                      />
-                      <ul>
-                        <li>Air Quality Drone</li>
-                        <li>
+                          <ul>
+                            <li>Pocket PM2.5 Monitor</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                      <div className="discover-air-quality-page-img">
+                        <Link href="/air-quality-monitor/air-drone/" className="page-link">
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-Air-Quality-Drone.jpg"
+                            alt="prana air air quality drone"
+                            width={400}
+                            height={200}
+                            className="monitor-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
-                  </div>
-                </div>
-                <div className="aq-monitor-last">
-                  <div className="discover-air-quality-page-img cair-monitor">
-                    <Link href="/air-quality-monitor/cair-monitor/" className="page-link">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-indoor-Cair-Monitor.jpg"
-                        alt="prana air cair indoor air quality monitor"
-                        width={400}
-                        height={200}
-                        className="monitor-image"
-                      />
-                      <ul>
-                        <li>Cair + Monitor</li>
-                        <li>
+                          <ul>
+                            <li>Air Quality Drone</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="aq-monitor-last">
+                      <div className="discover-air-quality-page-img cair-monitor">
+                        <Link href="/air-quality-monitor/cair-monitor/" className="page-link">
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-indoor-Cair-Monitor.jpg"
+                            alt="prana air cair indoor air quality monitor"
+                            width={400}
+                            height={200}
+                            className="monitor-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
-                  </div>
-                  <div className="discover-air-quality-page-img cair-monitor ambient-lite">
-                    <Link
-                      href="/air-quality-monitor/ambient-air-monitor/"
-                      className="page-link"
-                    >
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Ambient-Lite-monitor.jpg"
-                        alt="prana air ambient air quality monitor"
-                        width={400}
-                        height={200}
-                        className="monitor-image"
-                      />
-                      <ul>
-                        <li>Ambient Lite Monitor</li>
-                        <li>
+                          <ul>
+                            <li>Cair + Monitor</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                      <div className="discover-air-quality-page-img cair-monitor ambient-lite">
+                        <Link
+                          href="/air-quality-monitor/ambient-air-monitor/"
+                          className="page-link"
+                        >
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Ambient-Lite-monitor.jpg"
+                            alt="prana air ambient air quality monitor"
+                            width={400}
+                            height={200}
+                            className="monitor-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
-                  </div>
-                  <div className="see-more-box">
-                    <Link href="/air-quality-monitor/" className="see-more">
-                      Know More
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                        alt="arrow icon"
-                        width={15}
-                        height={15}
-                        className="arrow-icon"
-                      />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Air Quality Sensors Tab Content */}
-              <div className={`custom-content ${activeTab === 1 ? "active" : ""}`}>
-                <div className="sensor-row">
-                  <ul className="all-sensor">
-                    <li>
-                      <div className="discover-air-sensor-page-img">
-                        <Link
-                          href="/air-quality-sensor/outdoor-pm-sensor/"
-                          className="sensor-page-link"
-                        >
-                          <div className="img-box">
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-pm-sensor.jpg"
-                              alt="prana air outdoor pm2.5 sensor"
-                              width={250}
-                              height={150}
-                              className="sensor-image"
-                            />
-                          </div>
                           <ul>
-                            <li>PM Sensor</li>
+                            <li>Ambient Lite Monitor</li>
                             <li>
                               <Image
                                 src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
@@ -488,192 +443,8 @@ export default function PranaAirHomepage() {
                           </ul>
                         </Link>
                       </div>
-                    </li>
-                    <li>
-                      <div className="discover-air-sensor-page-img">
-                        <Link
-                          href="/air-quality-sensor/carbon-dioxide-co2-sensor/"
-                          className="sensor-page-link"
-                        >
-                          <div className="img-box">
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-co2-sensor.jpg"
-                              alt="prana air ndir co2 sensor"
-                              width={250}
-                              height={150}
-                              className="sensor-image co2-sensor-img"
-                            />
-                          </div>
-                          <ul>
-                            <li>CO2 Sensor</li>
-                            <li>
-                              <Image
-                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                                alt="arrow icon"
-                                width={15}
-                                height={15}
-                                className="arrow-icon"
-                              />
-                            </li>
-                          </ul>
-                        </Link>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="discover-air-sensor-page-img">
-                        <Link
-                          href="/air-quality-sensor/carbon-monoxide-co-sensor/"
-                          className="sensor-page-link"
-                        >
-                          <div className="img-box">
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-co-sensor.jpg"
-                              alt="prana air co sensor"
-                              width={250}
-                              height={150}
-                              className="sensor-image"
-                            />
-                          </div>
-                          <ul>
-                            <li>CO Sensor</li>
-                            <li>
-                              <Image
-                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                                alt="arrow icon"
-                                width={15}
-                                height={15}
-                                className="arrow-icon"
-                              />
-                            </li>
-                          </ul>
-                        </Link>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="discover-air-sensor-page-img">
-                        <Link
-                          href="/air-quality-sensor/sulfur-dioxide-so2-sensor/"
-                          className="sensor-page-link"
-                        >
-                          <div className="img-box">
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-so2-sensor.jpg"
-                              alt="prana air so2 sensor"
-                              width={250}
-                              height={150}
-                              className="sensor-image"
-                            />
-                          </div>
-                          <ul>
-                            <li>SO2 Sensor</li>
-                            <li>
-                              <Image
-                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                                alt="arrow icon"
-                                width={15}
-                                height={15}
-                                className="arrow-icon"
-                              />
-                            </li>
-                          </ul>
-                        </Link>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul className="all-sensor">
-                    <li>
-                      <div className="discover-air-sensor-page-img">
-                        <Link
-                          href="/air-quality-sensor/ammonia-nh3-sensor/"
-                          className="sensor-page-link"
-                        >
-                          <div className="img-box">
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-ammonia-sensor.jpg"
-                              alt="prana air nh3 ammonia sensor"
-                              width={250}
-                              height={150}
-                              className="sensor-image"
-                            />
-                          </div>
-                          <ul>
-                            <li>NH3 Sensor</li>
-                            <li>
-                              <Image
-                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                                alt="arrow icon"
-                                width={15}
-                                height={15}
-                                className="arrow-icon"
-                              />
-                            </li>
-                          </ul>
-                        </Link>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="discover-air-sensor-page-img">
-                        <Link
-                          href="/air-quality-sensor/ozone-o3-sensor/"
-                          className="sensor-page-link"
-                        >
-                          <div className="img-box">
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-ozone-sensor.jpg"
-                              alt="prana air o3 ozone sensor"
-                              width={250}
-                              height={150}
-                              className="sensor-image"
-                            />
-                          </div>
-                          <ul>
-                            <li>Ozone Sensor</li>
-                            <li>
-                              <Image
-                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                                alt="arrow icon"
-                                width={15}
-                                height={15}
-                                className="arrow-icon"
-                              />
-                            </li>
-                          </ul>
-                        </Link>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="discover-air-sensor-page-img">
-                        <Link
-                          href="/air-quality-sensor/nitrogen-dioxide-no2-sensor/"
-                          className="sensor-page-link"
-                        >
-                          <div className="img-box">
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-no2-sensor.jpg"
-                              alt="prana air no2 sensor"
-                              width={250}
-                              height={150}
-                              className="sensor-image"
-                            />
-                          </div>
-                          <ul>
-                            <li>NO2 Sensor</li>
-                            <li>
-                              <Image
-                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                                alt="arrow icon"
-                                width={15}
-                                height={15}
-                                className="arrow-icon"
-                              />
-                            </li>
-                          </ul>
-                        </Link>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="knwo-more-box">
-                        <Link href="/air-quality-sensor/" className="see-more">
+                      <div className="see-more-box">
+                        <Link href="/air-quality-monitor/" className="see-more">
                           Know More
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
@@ -684,173 +455,408 @@ export default function PranaAirHomepage() {
                           />
                         </Link>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                    </div>
+                  </div>
 
-              {/* Air Quality PCBs Tab Content */}
-              <div className={`custom-content ${activeTab === 2 ? "active" : ""}`}>
-                <div className="aq-monitor-pcb-box">
-                  <div className="discover-air-quality-pcb-page-img">
-                    <Link href="/air-quality-pcb-board/" className="pcb-page-link">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/09/pranaair-pcb-board.webp"
-                        alt="air quality pcb boards of prana air"
-                        width={500}
-                        height={300}
-                        className="pcb-image"
-                      />
-                      <ul>
-                        <li>Air Quality PCBs</li>
+                  {/* Air Quality Sensors Tab Content */}
+                  <div className={`custom-content ${activeTab === 1 ? "active" : ""}`}>
+                    <div className="sensor-row">
+                      <ul className="all-sensor">
                         <li>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
-                          />
+                          <div className="discover-air-sensor-page-img">
+                            <Link
+                              href="/air-quality-sensor/outdoor-pm-sensor/"
+                              className="sensor-page-link"
+                            >
+                              <div className="img-box">
+                                <Image
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-pm-sensor.jpg"
+                                  alt="prana air outdoor pm2.5 sensor"
+                                  width={250}
+                                  height={150}
+                                  className="sensor-image"
+                                />
+                              </div>
+                              <ul>
+                                <li>PM Sensor</li>
+                                <li>
+                                  <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                    alt="arrow icon"
+                                    width={15}
+                                    height={15}
+                                    className="arrow-icon"
+                                  />
+                                </li>
+                              </ul>
+                            </Link>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="discover-air-sensor-page-img">
+                            <Link
+                              href="/air-quality-sensor/carbon-dioxide-co2-sensor/"
+                              className="sensor-page-link"
+                            >
+                              <div className="img-box">
+                                <Image
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-co2-sensor.jpg"
+                                  alt="prana air ndir co2 sensor"
+                                  width={250}
+                                  height={150}
+                                  className="sensor-image co2-sensor-img"
+                                />
+                              </div>
+                              <ul>
+                                <li>CO2 Sensor</li>
+                                <li>
+                                  <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                    alt="arrow icon"
+                                    width={15}
+                                    height={15}
+                                    className="arrow-icon"
+                                  />
+                                </li>
+                              </ul>
+                            </Link>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="discover-air-sensor-page-img">
+                            <Link
+                              href="/air-quality-sensor/carbon-monoxide-co-sensor/"
+                              className="sensor-page-link"
+                            >
+                              <div className="img-box">
+                                <Image
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-co-sensor.jpg"
+                                  alt="prana air co sensor"
+                                  width={250}
+                                  height={150}
+                                  className="sensor-image"
+                                />
+                              </div>
+                              <ul>
+                                <li>CO Sensor</li>
+                                <li>
+                                  <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                    alt="arrow icon"
+                                    width={15}
+                                    height={15}
+                                    className="arrow-icon"
+                                  />
+                                </li>
+                              </ul>
+                            </Link>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="discover-air-sensor-page-img">
+                            <Link
+                              href="/air-quality-sensor/sulfur-dioxide-so2-sensor/"
+                              className="sensor-page-link"
+                            >
+                              <div className="img-box">
+                                <Image
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-so2-sensor.jpg"
+                                  alt="prana air so2 sensor"
+                                  width={250}
+                                  height={150}
+                                  className="sensor-image"
+                                />
+                              </div>
+                              <ul>
+                                <li>SO2 Sensor</li>
+                                <li>
+                                  <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                    alt="arrow icon"
+                                    width={15}
+                                    height={15}
+                                    className="arrow-icon"
+                                  />
+                                </li>
+                              </ul>
+                            </Link>
+                          </div>
                         </li>
                       </ul>
-                    </Link>
+                      <ul className="all-sensor">
+                        <li>
+                          <div className="discover-air-sensor-page-img">
+                            <Link
+                              href="/air-quality-sensor/ammonia-nh3-sensor/"
+                              className="sensor-page-link"
+                            >
+                              <div className="img-box">
+                                <Image
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-ammonia-sensor.jpg"
+                                  alt="prana air nh3 ammonia sensor"
+                                  width={250}
+                                  height={150}
+                                  className="sensor-image"
+                                />
+                              </div>
+                              <ul>
+                                <li>NH3 Sensor</li>
+                                <li>
+                                  <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                    alt="arrow icon"
+                                    width={15}
+                                    height={15}
+                                    className="arrow-icon"
+                                  />
+                                </li>
+                              </ul>
+                            </Link>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="discover-air-sensor-page-img">
+                            <Link
+                              href="/air-quality-sensor/ozone-o3-sensor/"
+                              className="sensor-page-link"
+                            >
+                              <div className="img-box">
+                                <Image
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-ozone-sensor.jpg"
+                                  alt="prana air o3 ozone sensor"
+                                  width={250}
+                                  height={150}
+                                  className="sensor-image"
+                                />
+                              </div>
+                              <ul>
+                                <li>Ozone Sensor</li>
+                                <li>
+                                  <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                    alt="arrow icon"
+                                    width={15}
+                                    height={15}
+                                    className="arrow-icon"
+                                  />
+                                </li>
+                              </ul>
+                            </Link>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="discover-air-sensor-page-img">
+                            <Link
+                              href="/air-quality-sensor/nitrogen-dioxide-no2-sensor/"
+                              className="sensor-page-link"
+                            >
+                              <div className="img-box">
+                                <Image
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-no2-sensor.jpg"
+                                  alt="prana air no2 sensor"
+                                  width={250}
+                                  height={150}
+                                  className="sensor-image"
+                                />
+                              </div>
+                              <ul>
+                                <li>NO2 Sensor</li>
+                                <li>
+                                  <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                    alt="arrow icon"
+                                    width={15}
+                                    height={15}
+                                    className="arrow-icon"
+                                  />
+                                </li>
+                              </ul>
+                            </Link>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="knwo-more-box">
+                            <Link href="/air-quality-sensor/" className="see-more">
+                              Know More
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </Link>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Weather Station Tab Content */}
-              <div className={`custom-content ${activeTab === 3 ? "active" : ""}`}>
-                <div className="aq-monitor-pcb-box">
-                  <div className="discover-air-quality-pcb-page-img weather-st-img">
-                    <Link
-                      href="/air-quality-monitor/weather-station/"
-                      className="pcb-page-link"
-                    >
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Weather-station.jpg"
-                        alt="Weather station of prana air"
-                        width={500}
-                        height={300}
-                        className="weather-image"
-                      />
-                      <ul>
-                        <li>Weather Station</li>
-                        <li>
+                  {/* Air Quality PCBs Tab Content */}
+                  <div className={`custom-content ${activeTab === 2 ? "active" : ""}`}>
+                    <div className="aq-monitor-pcb-box">
+                      <div className="discover-air-quality-pcb-page-img">
+                        <Link href="/air-quality-pcb-board/" className="pcb-page-link">
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/09/pranaair-pcb-board.webp"
+                            alt="air quality pcb boards of prana air"
+                            width={500}
+                            height={300}
+                            className="pcb-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
+                          <ul>
+                            <li>Air Quality PCBs</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Air Purifiers Tab Content */}
-              <div className={`custom-content ${activeTab === 4 ? "active" : ""}`}>
-                <div className="aq-monitor-box">
-                  <div className="discover-air-quality-page-img">
-                    <Link href="/wearable-air-purifier/" className="page-link">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Hanging-Purifier.jpg"
-                        alt="prana air wearable personal air purifier"
-                        width={400}
-                        height={200}
-                        className="purifier-image"
-                      />
-                      <ul>
-                        <li>Wearable Air Purifier</li>
-                        <li>
+                  {/* Weather Station Tab Content */}
+                  <div className={`custom-content ${activeTab === 3 ? "active" : ""}`}>
+                    <div className="aq-monitor-pcb-box">
+                      <div className="discover-air-quality-pcb-page-img weather-st-img">
+                        <Link
+                          href="/air-quality-monitor/weather-station/"
+                          className="pcb-page-link"
+                        >
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Weather-station.jpg"
+                            alt="Weather station of prana air"
+                            width={500}
+                            height={300}
+                            className="weather-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
+                          <ul>
+                            <li>Weather Station</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                  <div className="discover-air-quality-page-img">
-                    <Link href="/fresh-air-machine/" className="page-link">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Fresh-air-Machine.jpg"
-                        alt="prana air fresh air machine as air quality solution"
-                        width={400}
-                        height={200}
-                        className="purifier-image"
-                      />
-                      <ul>
-                        <li>Fresh air machine</li>
-                        <li>
+
+                  {/* Air Purifiers Tab Content */}
+                  <div className={`custom-content ${activeTab === 4 ? "active" : ""}`}>
+                    <div className="aq-monitor-box">
+                      <div className="discover-air-quality-page-img">
+                        <Link href="/wearable-air-purifier/" className="page-link">
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Hanging-Purifier.jpg"
+                            alt="prana air wearable personal air purifier"
+                            width={400}
+                            height={200}
+                            className="purifier-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
-                  </div>
-                </div>
-                <div className="aq-monitor-last">
-                  <div className="discover-air-quality-page-img cair-monitor ambient-lite">
-                    <Link href="/outdoor-air-purifier/" className="page-link">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-outdoor-air-Purifier.jpg"
-                        alt="prana air outdoor air purifier"
-                        width={400}
-                        height={200}
-                        className="purifier-image"
-                      />
-                      <ul>
-                        <li>Outdoor air Purifier</li>
-                        <li>
+                          <ul>
+                            <li>Wearable Air Purifier</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                      <div className="discover-air-quality-page-img">
+                        <Link href="/fresh-air-machine/" className="page-link">
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Fresh-air-Machine.jpg"
+                            alt="prana air fresh air machine as air quality solution"
+                            width={400}
+                            height={200}
+                            className="purifier-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
-                  </div>
-                  <div className="discover-air-quality-page-img cair-monitor ambient-lite">
-                    <Link href="/car-air-filter/" className="page-link">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Car-cabin-filters.jpg"
-                        alt="prana air anti pollution car air filter"
-                        width={400}
-                        height={200}
-                        className="purifier-image"
-                      />
-                      <ul>
-                        <li>Car Cabin Filter</li>
-                        <li>
+                          <ul>
+                            <li>Fresh air machine</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="aq-monitor-last">
+                      <div className="discover-air-quality-page-img cair-monitor ambient-lite">
+                        <Link href="/outdoor-air-purifier/" className="page-link">
                           <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
-                            alt="arrow icon"
-                            width={15}
-                            height={15}
-                            className="arrow-icon"
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-outdoor-air-Purifier.jpg"
+                            alt="prana air outdoor air purifier"
+                            width={400}
+                            height={200}
+                            className="purifier-image"
                           />
-                        </li>
-                      </ul>
-                    </Link>
+                          <ul>
+                            <li>Outdoor air Purifier</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                      <div className="discover-air-quality-page-img cair-monitor ambient-lite">
+                        <Link href="/car-air-filter/" className="page-link">
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Car-cabin-filters.jpg"
+                            alt="prana air anti pollution car air filter"
+                            width={400}
+                            height={200}
+                            className="purifier-image"
+                          />
+                          <ul>
+                            <li>Car Cabin Filter</li>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
+                                alt="arrow icon"
+                                width={15}
+                                height={15}
+                                className="arrow-icon"
+                              />
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
 
         {/* Experience Shopping Section */}
@@ -1824,7 +1830,7 @@ export default function PranaAirHomepage() {
             </div>
           </div>
         </div>
-      </section>    
+      </section>
     </main>
   )
 }

@@ -294,7 +294,7 @@ export default function PranaSense() {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="weather-data-para">
-                                <p><strong>Get a complete Environmental overview:</strong> Optional weather station for real-time data weather monitoring capabilities. <a href="#"><strong>Weather Station</strong></a></p>
+                                <p><strong>Get a complete Environmental overview:</strong> Optional weather station for real-time data weather monitoring capabilities. <a href="/air-quality-monitor/weather-station/"><strong>Weather Station</strong></a></p>
                             </div>
                             <div className="card-box">
                                 <ul>

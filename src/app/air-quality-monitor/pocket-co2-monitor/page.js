@@ -196,12 +196,12 @@ export default function CO2MonitorPage() {
     }, [])
     const [activeProductTab, setActiveProductTab] = useState("handheld")
     const [appTab, setAppProductTab] = useState("Home")
-     // Add this state for the active step in Section 7 after the other state declarations
-  const [activeStep, setActiveStep] = useState(1)
+    // Add this state for the active step in Section 7 after the other state declarations
+    const [activeStep, setActiveStep] = useState(1)
 
-  const changeStep = (step) => {
-    setActiveStep(step)
-  }
+    const changeStep = (step) => {
+        setActiveStep(step)
+    }
 
     return (
         <div className="co2-monitor-page">
@@ -676,176 +676,176 @@ export default function CO2MonitorPage() {
 
             {/* Data Connectivity Section */}
             <section className="data-connectivity-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 col-md-12">
-              <div className="connectivity-content">
-                <h2 className="connectivity-title">
-                  Pocket PM2.5 Monitor
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                    width={20} height={20}
-                    alt="Prana Air"
-                    className="title-icon"
-                  />
-                </h2>
-                <h3 className="connectivity-subtitle">Data connectivity to Mobile App</h3>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 col-md-12">
+                            <div className="connectivity-content">
+                                <h2 className="connectivity-title">
+                                    Pocket PM2.5 Monitor
+                                    <Image
+                                        src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                                        width={20} height={20}
+                                        alt="Prana Air"
+                                        className="title-icon"
+                                    />
+                                </h2>
+                                <h3 className="connectivity-subtitle">Data connectivity to Mobile App</h3>
 
-                <div className="connectivity-steps">
-                  <div
-                    className={`connectivity-step ${activeStep === 1 ? "active-step" : ""}`}
-                    onClick={() => changeStep(1)}
-                  >
-                    <div className="step-icon">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2023/08/install.png.png"
-                        alt="Install AQI App"
-                        width={20} height={20}
-                      />
-                    </div>
-                    <div className="step-content">
-                      <h4 className="step-title">1. INSTALL AQI APP & SIGN UP</h4>
-                      <p className="step-description">
-                        Install the AQI app on your smartphones from the app store. Sign up & log in through your
-                        account.
-                      </p>
-                    </div>
-                  </div>
+                                <div className="connectivity-steps">
+                                    <div
+                                        className={`connectivity-step ${activeStep === 1 ? "active-step" : ""}`}
+                                        onClick={() => changeStep(1)}
+                                    >
+                                        <div className="step-icon">
+                                            <Image
+                                                src="https://www.pranaair.com/wp-content/uploads/2023/08/install.png.png"
+                                                alt="Install AQI App"
+                                                width={20} height={20}
+                                            />
+                                        </div>
+                                        <div className="step-content">
+                                            <h4 className="step-title">1. INSTALL AQI APP & SIGN UP</h4>
+                                            <p className="step-description">
+                                                Install the AQI app on your smartphones from the app store. Sign up & log in through your
+                                                account.
+                                            </p>
+                                        </div>
+                                    </div>
 
-                  <div
-                    className={`connectivity-step ${activeStep === 2 ? "active-step" : ""}`}
-                    onClick={() => changeStep(2)}
-                  >
-                    <div className="step-icon">
-                      <Image src="https://www.pranaair.com/wp-content/uploads/2023/09/connect.png"
-                      width={20} height={20}
-                       alt="Connect Device" />
-                    </div>
-                    <div className="step-content">
-                      <h4 className="step-title">2. CONNECT THE DEVICE WITH THE APP</h4>
-                      <p className="step-description">
-                        Go to My Device & select Pocket PM2.5 Monitor. Long press the power button on top of the
-                        device until a QR code appears on the screen.
-                      </p>
-                    </div>
-                  </div>
+                                    <div
+                                        className={`connectivity-step ${activeStep === 2 ? "active-step" : ""}`}
+                                        onClick={() => changeStep(2)}
+                                    >
+                                        <div className="step-icon">
+                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/09/connect.png"
+                                                width={20} height={20}
+                                                alt="Connect Device" />
+                                        </div>
+                                        <div className="step-content">
+                                            <h4 className="step-title">2. CONNECT THE DEVICE WITH THE APP</h4>
+                                            <p className="step-description">
+                                                Go to My Device & select Pocket PM2.5 Monitor. Long press the power button on top of the
+                                                device until a QR code appears on the screen.
+                                            </p>
+                                        </div>
+                                    </div>
 
-                  <div
-                    className={`connectivity-step ${activeStep === 3 ? "active-step" : ""}`}
-                    onClick={() => changeStep(3)}
-                  >
-                    <div className="step-icon">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2023/09/scan-qr-code.png"
-                        width={20} height={20}
-                        alt="Scan QR Code"
-                      />
-                    </div>
-                    <div className="step-content">
-                      <h4 className="step-title">3. SCAN THE QR & CONFIGURE WIFI</h4>
-                      <p className="step-description">
-                        Scan the QR code or Enter the device ID displayed on your device screen. Fill in your Wi-Fi
-                        details. Your device should successfully be connected now.
-                      </p>
-                    </div>
-                  </div>
+                                    <div
+                                        className={`connectivity-step ${activeStep === 3 ? "active-step" : ""}`}
+                                        onClick={() => changeStep(3)}
+                                    >
+                                        <div className="step-icon">
+                                            <Image
+                                                src="https://www.pranaair.com/wp-content/uploads/2023/09/scan-qr-code.png"
+                                                width={20} height={20}
+                                                alt="Scan QR Code"
+                                            />
+                                        </div>
+                                        <div className="step-content">
+                                            <h4 className="step-title">3. SCAN THE QR & CONFIGURE WIFI</h4>
+                                            <p className="step-description">
+                                                Scan the QR code or Enter the device ID displayed on your device screen. Fill in your Wi-Fi
+                                                details. Your device should successfully be connected now.
+                                            </p>
+                                        </div>
+                                    </div>
 
-                  <div
-                    className={`connectivity-step ${activeStep === 4 ? "active-step" : ""}`}
-                    onClick={() => changeStep(4)}
-                  >
-                    <div className="step-icon">
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2023/09/data.png"
-                        alt="Get Insightful Data"
-                        width={20} height={20}
-                      />
+                                    <div
+                                        className={`connectivity-step ${activeStep === 4 ? "active-step" : ""}`}
+                                        onClick={() => changeStep(4)}
+                                    >
+                                        <div className="step-icon">
+                                            <Image
+                                                src="https://www.pranaair.com/wp-content/uploads/2023/09/data.png"
+                                                alt="Get Insightful Data"
+                                                width={20} height={20}
+                                            />
+                                        </div>
+                                        <div className="step-content">
+                                            <h4 className="step-title">4. NOW GET THE INSIGHTFUL DATA-</h4>
+                                            <p className="step-description">
+                                                Analyse the PM2.5 level in real-time & historical data stored in the AQI cloud through the app
+                                                on your smartphone.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="download-app-section">
+                                    <h3 className="download-title">
+                                        Download the <span className="highlight-text">AQI App</span>
+                                    </h3>
+                                    <p className="download-description">
+                                        Integrate your monitors data to our mobile application to access the data remotely and analyze the
+                                        historical trend.
+                                    </p>
+                                    <div className="app-store-buttons">
+                                        <a
+                                            href="https://play.google.com/store/apps/details?id=com.aqi.data"
+                                            className="app-store-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Image
+                                                src="https://www.pranaair.com/wp-content/uploads/2021/03/google-play-store.png"
+                                                alt="Google Play Store"
+                                                width={20} height={20}
+                                            />
+                                        </a>
+                                        <a
+                                            href="https://apps.apple.com/tt/app/airqualityindex-aqi/id1439684571"
+                                            className="app-store-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Image
+                                                src="https://www.pranaair.com/wp-content/uploads/2021/02/appstore.png"
+                                                alt="Apple App Store"
+                                                width={20} height={20}
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 col-md-12">
+                            <div className="app-preview">
+                                <div className="app-image-container">
+                                    {activeStep === 1 && (
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2022/06/1.png"
+                                            alt="Install AQI App Preview"
+                                            width={600} height={400}
+                                        />
+                                    )}
+                                    {activeStep === 2 && (
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/09/connect-device-with-our-app.png"
+                                            alt="Connect Device Preview"
+                                            width={600} height={400}
+                                        />
+                                    )}
+                                    {activeStep === 3 && (
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/09/scan-qr-and-configure-with-wifi.png"
+                                            alt="Scan QR Code Preview"
+                                            width={600} height={400}
+                                        />
+                                    )}
+                                    {activeStep === 4 && (
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/09/insightful-data.png"
+                                            alt="Insightful Data Preview"
+                                            width={600} height={400}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="step-content">
-                      <h4 className="step-title">4. NOW GET THE INSIGHTFUL DATA-</h4>
-                      <p className="step-description">
-                        Analyse the PM2.5 level in real-time & historical data stored in the AQI cloud through the app
-                        on your smartphone.
-                      </p>
-                    </div>
-                  </div>
                 </div>
-
-                <div className="download-app-section">
-                  <h3 className="download-title">
-                    Download the <span className="highlight-text">AQI App</span>
-                  </h3>
-                  <p className="download-description">
-                    Integrate your monitors data to our mobile application to access the data remotely and analyze the
-                    historical trend.
-                  </p>
-                  <div className="app-store-buttons">
-                    <a
-                      href="https://play.google.com/store/apps/details?id=com.aqi.data"
-                      className="app-store-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2021/03/google-play-store.png"
-                        alt="Google Play Store"
-                        width={20} height={20}
-                      />
-                    </a>
-                    <a
-                      href="https://apps.apple.com/tt/app/airqualityindex-aqi/id1439684571"
-                      className="app-store-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2021/02/appstore.png"
-                        alt="Apple App Store"
-                        width={20} height={20}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-12">
-              <div className="app-preview">
-                <div className="app-image-container">
-                  {activeStep === 1 && (
-                    <Image
-                      src="https://www.pranaair.com/wp-content/uploads/2022/06/1.png"
-                      alt="Install AQI App Preview"
-                      width={600} height={400}
-                    />
-                  )}
-                  {activeStep === 2 && (
-                    <Image
-                      src="https://www.pranaair.com/wp-content/uploads/2023/09/connect-device-with-our-app.png"
-                      alt="Connect Device Preview"
-                      width={600} height={400}
-                    />
-                  )}
-                  {activeStep === 3 && (
-                    <Image
-                      src="https://www.pranaair.com/wp-content/uploads/2023/09/scan-qr-and-configure-with-wifi.png"
-                      alt="Scan QR Code Preview"
-                      width={600} height={400}
-                    />
-                  )}
-                  {activeStep === 4 && (
-                    <Image
-                      src="https://www.pranaair.com/wp-content/uploads/2023/09/insightful-data.png"
-                      alt="Insightful Data Preview"
-                      width={600} height={400}
-                    />
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
             {/* Product Slider */}
             <section className="pocket_flex_slider">
@@ -1143,174 +1143,427 @@ export default function CO2MonitorPage() {
                         </div>
                     </div>
                     <div className="row">
-                    <div className="app-tabs">
-    <ul className="app-nav-tabs" role="tablist">
-        <li className="nav-item" role="presentation">
-            <button className={`nav-link ${appTab==="Home" ? "active" : "" }`} onClick={()=>
-                setAppProductTab("Home")}
-                >
-                Home
-            </button>
-        </li>
-        <li className="nav-item" role="presentation">
-            <button className={`nav-link ${appTab==="School" ? "active" : "" }`} onClick={()=>
-                setAppProductTab("School")}
-                >
-                School
-            </button>
-        </li>
-        <li className="nav-item" role="presentation">
-            <button className={`nav-link ${appTab==="Office" ? "active" : "" }`} onClick={()=>
-                setAppProductTab("Office")}
-                >
-                Office
-            </button>
-        </li>
-    </ul>
+                        <div className="app-tabs">
+                            <ul className="app-nav-tabs" role="tablist">
+                                <li className="nav-item" role="presentation">
+                                    <button className={`nav-link ${appTab === "Home" ? "active" : ""}`} onClick={() =>
+                                        setAppProductTab("Home")}
+                                    >
+                                        Home
+                                    </button>
+                                </li>
+                                <li className="nav-item" role="presentation">
+                                    <button className={`nav-link ${appTab === "School" ? "active" : ""}`} onClick={() =>
+                                        setAppProductTab("School")}
+                                    >
+                                        School
+                                    </button>
+                                </li>
+                                <li className="nav-item" role="presentation">
+                                    <button className={`nav-link ${appTab === "Office" ? "active" : ""}`} onClick={() =>
+                                        setAppProductTab("Office")}
+                                    >
+                                        Office
+                                    </button>
+                                </li>
+                            </ul>
 
-    <div className="app-tabs">
-        <div className={`tab-pane fade ${appTab==="Home" ? "show active" : "" }`}>
-            <div className="row">
-                <div className="col-md-6">
-                    <div className="tab_left_Image"><span className="range_btn_Image">
-                            <Image decoding="async"
-                                src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png" width={30}
-                                height={30} alt="moderate co2 level" />
-                        </span>
-                        <Image decoding="async"
-                            src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-home.jpg" width={300}
-                            height={300} alt="moderate co2 level at home" />
-                        <span className="tab_monitor_device">
-                            <Image decoding="async"
-                                src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png" width={300}
-                                height={300}
-                                alt="moderate co2 level on monitor" />
-                        </span>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="application_text_box">
-                        <p><span className="application_no">01</span></p>
-                        <h3 style={{ textAlign: "left" , color: "#e8c92e" }}>
-                            Moderate CO<sub>2</sub> At Home – Morning
-                        </h3>
-                        <p style={{ textAlign: "justify" , fontSize: "13pt" }}>
-                            Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the
-                            early morning.
-                        </p>
-                        <p style={{ fontSize: "13pt" , paddingBottom: "10px" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> CO₂ Range: Between 400-1000 ppm
-                        </p>
-                        <p style={{ fontSize: "13pt" , paddingBottom: "10px" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> Time Frame: Till 10 am
-                        </p>
-                        <p style={{ fontSize: "13pt" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Headaches, vomiting, &
-                            drowsiness.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <div className="app-tabs">
+                                <div className={`tab-pane fade ${appTab === "Home" ? "show active" : ""}`}>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png" width={30}
+                                                    height={30} alt="moderate co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-home.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p><span className="application_no">01</span></p>
+                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>
+                                                    Moderate CO<sub>2</sub> At Home – Morning
+                                                </h3>
+                                                <p style={{ textAlign: "justify", fontSize: "13pt" }}>
+                                                    Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the
+                                                    early morning.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> CO₂ Range: Between 400-1000 ppm
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Time Frame: Till 10 am
+                                                </p>
+                                                <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Headaches, vomiting, &
+                                                    drowsiness.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p style={{ textAlign: "right", }}><span className="application_no">02</span></p>
+                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>
+                                                    Good CO<sub>2</sub> At Home – Morning
+                                                </h3>
+                                                <p style={{ textAlign: "right", fontSize: "13pt" }}>
+                                                    When there is proper ventilation and the number of people inside a house is minimal, CO2 levels remain under the good category.
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    Levels 250 ppm : CO2 Range <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    10 am – 5 pm : Time Frame <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    Safe to breathe : Health Impacts   <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png" width={30}
+                                                    height={30} alt="good air co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-home.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/co2-monitor-in-home-device.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
 
-        <div className={`tab-pane fade ${appTab==="School" ? "show active" : "" }`}>
-            <div className="row">
-                <div className="col-md-6">
-                    <div className="tab_left_Image"><span className="range_btn_Image">
-                            <Image decoding="async"
-                                src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png" width={30}
-                                height={30} alt="moderate co2 level" />
-                        </span>
-                        <Image decoding="async"
-                            src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-home.jpg" width={300}
-                            height={300} alt="moderate co2 level at home" />
-                        <span className="tab_monitor_device">
-                            <Image decoding="async"
-                                src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png" width={300}
-                                height={300}
-                                alt="moderate co2 level on monitor" />
-                        </span>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="application_text_box">
-                        <p><span className="application_no">02</span></p>
-                        <h3 style={{ textAlign: "left" , color: "#e8c92e" }}>
-                            Moderate CO<sub>2</sub> At Home – Morning
-                        </h3>
-                        <p style={{ textAlign: "justify" , fontSize: "13pt" }}>
-                            Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the
-                            early morning.
-                        </p>
-                        <p style={{ fontSize: "13pt" , paddingBottom: "10px" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> CO₂ Range: Between 400-1000 ppm
-                        </p>
-                        <p style={{ fontSize: "13pt" , paddingBottom: "10px" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> Time Frame: Till 10 am
-                        </p>
-                        <p style={{ fontSize: "13pt" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Headaches, vomiting, &
-                            drowsiness.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png" width={30}
+                                                    height={30} alt="moderate co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-home.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/remote-data-co2-monitor.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p><span className="application_no">03</span></p>
+                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>
+                                                    Moderate CO<sub>2</sub> At Home – Morning
+                                                </h3>
+                                                <p style={{ textAlign: "justify", fontSize: "13pt" }}>
+                                                    Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the
+                                                    early morning.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> CO₂ Range: Between 400-1000 ppm
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Time Frame: Till 10 am
+                                                </p>
+                                                <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Headaches, vomiting, &
+                                                    drowsiness.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-        <div className={`tab-pane fade ${appTab==="Office" ? "show active" : "" }`}>
-            <div className="row">
-                <div className="col-md-6">
-                    <div className="tab_left_Image"><span className="range_btn_Image">
-                            <Image decoding="async"
-                                src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png" width={30}
-                                height={30} alt="moderate co2 level" />
-                        </span>
-                        <Image decoding="async"
-                            src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-home.jpg" width={300}
-                            height={300} alt="moderate co2 level at home" />
-                        <span className="tab_monitor_device">
-                            <Image decoding="async"
-                                src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png" width={300}
-                                height={300}
-                                alt="moderate co2 level on monitor" />
-                        </span>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="application_text_box">
-                        <p><span className="application_no">03</span></p>
-                        <h3 style={{ textAlign: "left" , color: "#e8c92e" }}>
-                            Moderate CO<sub>2</sub> At Home – Morning
-                        </h3>
-                        <p style={{ textAlign: "justify" , fontSize: "13pt" }}>
-                            Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the
-                            early morning.
-                        </p>
-                        <p style={{ fontSize: "13pt" , paddingBottom: "10px" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> CO₂ Range: Between 400-1000 ppm
-                        </p>
-                        <p style={{ fontSize: "13pt" , paddingBottom: "10px" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> Time Frame: Till 10 am
-                        </p>
-                        <p style={{ fontSize: "13pt" , color: "#1c1b1b" }}>
-                            <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Headaches, vomiting, &
-                            drowsiness.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                                <div className={`tab-pane fade ${appTab === "School" ? "show active" : ""}`}>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png" width={30}
+                                                    height={30} alt="moderate co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-classroom.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p><span className="application_no">01</span></p>
+                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>
+                                                    Moderate CO2 in School – Morning
+                                                </h3>
+                                                <p style={{ textAlign: "justify", fontSize: "13pt" }}>
+                                                    Usually, the CO2 level in the early morning is moderate when the number of students and staff is not much. The range increases when the number of students and staff increases.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> CO2 Range: Between 400-1000 ppm
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Time Frame: From 8 am – 12 pm
+                                                </p>
+                                                <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Health Impacts: lifelong respiratory infections, unattentiveness, etc.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p style={{ textAlign: "right", }}><span className="application_no">02</span></p>
+                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>
+                                                    Good CO2 in School – Evening
+                                                </h3>
+                                                <p style={{ textAlign: "right", fontSize: "13pt" }}>
+                                                    As the school day ends, there is a progressive decline in the number of students on the school grounds. When the ventilation rate is good, CO2 levels start to decline and the air quality begins to improve.
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    CO2 Range: ≤ 1000 ppm<Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    Time Frame: Between 12-2 PM  <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    Health Impacts: Cognitive, IQ skills, mental abilities of the child   <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png" width={30}
+                                                    height={30} alt="good air co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-classroom.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/co2-monitor-in-home-device.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png" width={30}
+                                                    height={30} alt="moderate co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-classroom-1.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/remote-data-co2-monitor.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p><span className="application_no">03</span></p>
+                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>
+                                                    Bad CO2 in School – Day (Afternoon)
+                                                </h3>
+                                                <p style={{ textAlign: "justify", fontSize: "13pt" }}>
+                                                    An increase in the CO2 levels even by 100 ppm corresponds to a 0.2% increase in absence rates.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> CO2 Range: 2000 ppm.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Time Frame: Between 12-2 PM
+                                                </p>
+                                                <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Cognitive, IQ skills, mental abilities of the child
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={`tab-pane fade ${appTab === "Office" ? "show active" : ""}`}>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png" width={30}
+                                                    height={30} alt="moderate co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-office.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p><span className="application_no">01</span></p>
+                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>
+                                                    Moderate CO2 in Office – Morning
+                                                </h3>
+                                                <p style={{ textAlign: "justify", fontSize: "13pt" }}>
+                                                    Early in the morning, when working hour begins, CO2 levels are typical to moderate as the employees are not fully present.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> CO2 Range: 1000 ppm
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-office.jpg"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Time Frame: From 9 am – 11 pm
+                                                </p>
+                                                <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Employees feel fresh and active when there are good to moderate CO2 levels.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p style={{ textAlign: "right", }}><span className="application_no">02</span></p>
+                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>
+                                                    Bad CO2 in Office – Day (Afternoon)
+                                                </h3>
+                                                <p style={{ textAlign: "right", fontSize: "13pt" }}>
+                                                    As all the employees are present, then CO2 levels rise as a result of respiration and accumulate over time, they are in an unhealthy range.
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                CO2 Range: It can exceed up to 3000 ppm<Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                Time Frame: between 12 pm – 4 pm  <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                                <p style={{ textAlign: "right", fontSize: "13pt", color: "#1c1b1b" }}>
+                                                Health Impacts: Dizziness, loss of coordination, unattentiveness   <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png" width={30}
+                                                    height={30} alt="good air co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-classroom-1.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/co2-monitor-in-home-device.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="tab_left_Image"><span className="range_btn_Image">
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png" width={30}
+                                                    height={30} alt="moderate co2 level" />
+                                            </span>
+                                                <Image decoding="async"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-classroom-1.jpg" width={300}
+                                                    height={300} alt="moderate co2 level at home" />
+                                                <span className="tab_monitor_device">
+                                                    <Image decoding="async"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/remote-data-co2-monitor.png" width={300}
+                                                        height={300}
+                                                        alt="moderate co2 level on monitor" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="application_text_box">
+                                                <p><span className="application_no">03</span></p>
+                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>
+                                                    Bad CO2 in School – Day (Afternoon)
+                                                </h3>
+                                                <p style={{ textAlign: "justify", fontSize: "13pt" }}>
+                                                    An increase in the CO2 levels even by 100 ppm corresponds to a 0.2% increase in absence rates.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> CO2 Range: 2000 ppm.
+                                                </p>
+                                                <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Time Frame: Between 12-2 PM
+                                                </p>
+                                                <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
+                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
+                                                        alt="moderate co2 icon" width="20" height="20" /> Health Impacts: Cognitive, IQ skills, mental abilities of the child
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1489,7 +1742,7 @@ export default function CO2MonitorPage() {
                                 <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/mahindra.jpg" width={65} height={65} alt="microsoft logo" /></li>
                                 <li><Image src="https://www.pranaair.com/wp-content/uploads/2022/07/renault-nissan.jpg" width={65} height={65} alt="microsoft logo" /></li>
                             </ul>
-                        </div>                      
+                        </div>
                     </div>
                 </div>
             </section>
