@@ -33,10 +33,9 @@ body p,
 }
 
 .banner_content_wrapper {
-  max-width: 550px;
-  padding: 60px;
-  position: relative;
-  z-index: 2;
+    padding: 0px;
+    position: relative;
+    z-index: 2;
 }
 
 .banner_content_wrapper h1 {
@@ -322,8 +321,9 @@ ul.rate_list li {
 }
 
 .pollution_cntr .feature_box {
-  width: auto;
-  padding: 40px 15px;
+    width: auto;
+    padding: 20px 0px;
+    text-align: center;
 }
 
 .feature_box img {
@@ -1046,6 +1046,7 @@ label.message_text {
 
   .feature_box img {
     width: 60px;
+    height: auto;
   }
 
   .feature_wrap_box {
@@ -1169,9 +1170,11 @@ label.message_text {
 
   li.second_school_box {
     top: 155px;
-    left: 62px;
+    left: 0;
   }
-
+  .tab-button {
+    padding: 10px;
+}
   li.second_school_box span.school_icon_box {
     left: 28px;
     top: -38px;
@@ -1184,7 +1187,7 @@ label.message_text {
 
   li.fourth_school_box span.school_icon_box {
     top: 40px;
-    left: -17px;
+    left: 0;
   }
 
   li.first_school_box {
@@ -1438,4 +1441,27 @@ label.message_text {
   .banner_content_wrapper h1 .bold_text {
     font-size: 36px;
   }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+    .airgraph_cntr {
+        padding: 0 50px !important;
+    }
+    .faq_section.faq_ask_section {
+        padding: 0 30px !important;
+    }
+    li.second_school_box {
+        left: 0;
+    }
+    .school_box_cntr {
+        width: 100%;
+    }
+    li.fourth_school_box {
+        top: 125px;
+        left: 0;
+    }
+    li.six_school_box {
+        left: 0;
+        top: 70px;
+    }
 }

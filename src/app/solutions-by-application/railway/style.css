@@ -141,6 +141,7 @@ a {
   border: 2px solid red;
   padding-top: 50px;
   height: 270px;
+  text-align: center;
 }
 
 .congested-stations:hover {
@@ -191,6 +192,8 @@ a {
 .area-para h3 {
   color: #31343d;
   font-weight: 600;
+  font-size: 20px;
+  padding-top: 15px;
 }
 
 .area-para {
@@ -360,8 +363,8 @@ ul.airquality_list.red_list li {
 }
 
 .slidder-txt {
-  padding-top: 150px;
-  padding-left: 200px;
+  padding-top: 100px;
+  padding-left: 100px;
 }
 
 .slider:before {
@@ -876,8 +879,13 @@ label.message_text {
   }
 
   .pocket_title_box.school_aqi_box h1 {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 20px;
+    line-height: 36px;
+  }
+
+  .mg-l {
+    padding: 0 0px 50px;
   }
 
   .feature_box img {
@@ -954,8 +962,12 @@ label.message_text {
   }
 
   .slidder-txt {
-    padding-top: 50px;
-    padding-left: 20px;
+    padding-top: 30px;
+    padding-left: 0px;
+  }
+
+  .carousel-item-padding-40-px {
+    padding: 0 !important;
   }
 
   .slidder-txt p {
@@ -964,8 +976,13 @@ label.message_text {
     line-height: 25px;
   }
 
+  .contact-heading p {
+    width: 70% !important;
+  }
+
   .slider:before {
     top: 0;
+    height: 300px;
   }
 
   .client-logo img {

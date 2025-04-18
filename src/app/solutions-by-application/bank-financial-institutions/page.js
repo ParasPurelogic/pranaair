@@ -104,13 +104,13 @@ export default function BankFinancialInstitutions() {
       >
         <div className="vc_column banner_quality_box" style={{ width: "50%" }}>
           <div className="pocket_title_box school_aqi_box">
-            <h1>
+            <h1>  
               Air quality solutions for <span className="bold_text">Bank / Financial Institutions</span>
             </h1>
-            <span style={{ fontSize: "14pt" }}>
+            <p style={{ fontSize: "14pt" }}>
               A complete solution for air monitoring, air purification, and data monitoring for banks and other
               financial institutions.
-            </span>
+            </p>
 
             <a className="pocket_buy_btn" href="#get_in_touch">
               Get a Quote
@@ -743,16 +743,16 @@ export default function BankFinancialInstitutions() {
 
       <div className="modern-clients-grid inner_container mobile-optimized">
         <div className="client-logo">
-          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-1.png" alt="client logo" />
+          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png" alt="client logo" />
         </div>
         <div className="client-logo">
-          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-2.png" alt="client logo" />
+          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png" alt="client logo" />
         </div>
         <div className="client-logo">
-          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-3.png" alt="client logo" />
+          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png" alt="client logo" />
         </div>
         <div className="client-logo">
-          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-4.png" alt="client logo" />
+          <img src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png" alt="client logo" />
         </div>
       </div>
 

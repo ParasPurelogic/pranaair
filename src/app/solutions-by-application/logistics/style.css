@@ -1229,6 +1229,7 @@ section {
 
   .quote-container {
     padding: 30px 20px;
+    background-position: bottom;
   }
 
   .quote-container h2 {

@@ -339,8 +339,11 @@ p {
     text-align: left;
     width: auto;
     flex-grow: 1;
+    left: 0 !important;
   }
-
+  .react-multi-carousel-list {
+    padding: 0 !important;
+}
   .pollutant-connector {
     display: none;
   }
@@ -1210,10 +1213,6 @@ textarea.form-control {
   overflow: hidden;
 }
 
-/* 3. Add clip-path to ensure slides don't overflow */
-.react-multi-carousel-list {
-  overflow: visible !important;
-}
 
 /* 4. Add specific styling for each slide type to ensure proper containment */
 .source-card,
@@ -1341,3 +1340,8 @@ textarea.form-control {
   }
 }
 
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .box-form {
+    width: 100% !important;
+  }
+}

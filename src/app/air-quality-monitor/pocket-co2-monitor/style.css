@@ -98,7 +98,7 @@ a {
     text-align: left;
     margin-bottom: 10px;
     padding-top: 0px;
-    width: 50%;
+    width: 100%;
 }
 
 .features_detail_box ul {
@@ -1232,7 +1232,7 @@ img.dashborad-img {
 
 h2.title_heading {
     padding-top: 120px;
-    width: 60%;
+    width: 100%;
     margin: 20px auto;
 }
 

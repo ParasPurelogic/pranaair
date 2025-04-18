@@ -57,12 +57,12 @@ export default function AirQualitySolutions() {
     return (
         <div>
             {/* Banner Section */}
-            <div className="row school_banner_box" style={{ backgroundImage: "url('https://www.pranaair.com/wp-content/uploads/2022/12/air-quality-solutions-for-fitness-center.jpg')" }}>
+            <div className="row school_banner_box" style={{ backgroundImage: "url('https://www.pranaair.com/wp-content/uploads/2022/09/air-quality-solutions-for-cinema-halls-by-prana-air.jpg')" }}>
                 <div className="col-md-6 banner_quality_box">
                     <div className="pocket_title_box school_aqi_box">
-                        <h1>Air quality solutions for <span className="bold_text">Fitness Center & Gym</span></h1>
-                        <p>A complete solution for air monitoring, air purification, and data
-                            monitoring for your fitness centers and gyms.</p>
+                        <h1>Air quality solutions for <span className="bold_text">Cinema Halls & Theatre</span></h1>
+                        <p>A complete solution including air quality monitoring,
+                            air purification & data accessibility</p>
                         <a className="pocket_buy_btn" href="#get_in_touch">Get a Quote</a>
                     </div>
                 </div>
@@ -75,7 +75,9 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">Major Air <span className="bold_text">Pollutants</span></h2>
-                            <p>Fitness centers and gym areas are enclosed, high-density spaces where fresh air is extremely necessary. Occupancy, panting athletes, and ventilation rates are two factors that affect the air quality indoors. Due to this, the transmission of airborne diseases and pathogens is very easy. Therefore, it is necessary to monitor the air quality and take proper measures to avoid bad air quality scenarios.</p>
+                            <p>When the cinema halls and theatres are packed, there is no movement in the pollution particles, and as a result, they build up within the enclosed spaces. As a result, movie-goers will feel uneasy and unwell. This will reduce the number of their visits. In short, cinema halls will lose money.
+
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,7 @@ export default function AirQualitySolutions() {
                             <img src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png" alt="pm2.5 in school and institutes" />
                             <div className="feature_wrap_box">
                                 <h2>PM2.5</h2>
-                                <p>Microscopic breathable dust and liquid particles that enter deep into our lungs.</p>
+                                <p>Fine dust particles & water droplets suspended in the air (diameter of 2.5 microns)</p>
                             </div>
                         </div>
                     </div>
@@ -98,7 +100,7 @@ export default function AirQualitySolutions() {
                             <img src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png" alt="co2 gas in schools and institutes" />
                             <div className="feature_wrap_box">
                                 <h2>CO2</h2>
-                                <p>The breathing rate of athletes is high in gyms which directly influences the CO2 levels.</p>
+                                <p>CO2 levels exceed the desired CO2 limits at times when there is no movement in the air</p>
                             </div>
                         </div>
                     </div>
@@ -107,34 +109,16 @@ export default function AirQualitySolutions() {
                             <img src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png" alt="tvoc in schools and institutes" />
                             <div className="feature_wrap_box">
                                 <h2>TVOC</h2>
-                                <p>Gym equipment and cleaning agents are some of the potential sources.</p>
+                                <p>The fabric used in seating, furniture or wooden products, paints, carpets</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="feature_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/12/microbe-icon.png" alt="ozone in school & institutes" />
+                            <img src="https://www.pranaair.com/wp-content/uploads/2022/09/hcho-icon-plain.png" alt="ozone in school & institutes" />
                             <div className="feature_wrap_box">
-                                <h2>Microbial Pollutants</h2>
-                                <p>Flu, cough, cold, etc. are caused when exposed to microbial pollutants.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/12/odor-icon.png" alt="ozone in school & institutes" />
-                            <div className="feature_wrap_box">
-                                <h2>Odor</h2>
-                                <p>When sweat and bacteria are exposed to gym fabric, produces a bad odor.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon.png" alt="ozone in school & institutes" />
-                            <div className="feature_wrap_box">
-                                <h2>Noise</h2>
-                                <p>Loud noise due to huge no. of people gathering</p>
+                                <h2>HCHO</h2>
+                                <p>Aerosol sprays, perfumes, and room fresheners are some of the potential sources</p>
                             </div>
                         </div>
                     </div>
@@ -142,7 +126,7 @@ export default function AirQualitySolutions() {
             </div>
 
             {/* School Image Box */}
-            <div className="row school_img_box" style={{ backgroundImage: "url('https://www.pranaair.com/wp-content/uploads/2022/12/air-pollution-problem-in-fitness-center-gym.jpg')" }}>
+            <div className="row school_img_box" style={{ backgroundImage: "url('https://www.pranaair.com/wp-content/uploads/2022/09/air-pollution-problems-in-cinema-hall.jpg')" }}>
                 <div className="col-md-12">
                     <div className="school_box_cntr">
                         <ul>
@@ -152,8 +136,8 @@ export default function AirQualitySolutions() {
                                 </span>
                                 <div className="schhol_text_box">
                                     <h3>PM2.5</h3>
-                                    <p>They have the ability to enter the
-                                        bloodstream & can cause various diseases.</p>
+                                    <p>Carpet and clothing fibers,
+                                        degradation of buildings</p>
                                 </div>
                             </li>
                             <li className="second_school_box">
@@ -162,8 +146,8 @@ export default function AirQualitySolutions() {
                                 </span>
                                 <div className="schhol_text_box">
                                     <h3>CO2</h3>
-                                    <p>Excess CO2 can cause perspiration,
-                                        fatigue, suffocation, convulsions</p>
+                                    <p>Respiration
+                                        or breathing</p>
                                 </div>
                             </li>
                             <li className="third_school_box">
@@ -171,19 +155,9 @@ export default function AirQualitySolutions() {
                                     <img src="https://www.pranaair.com/wp-content/uploads/2022/08/ozone-o3-icon.png" alt="ozone o3 in school & institutes" />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>Noise</h3>
-                                    <p>Excessive noise can result in headaches
-                                        & high blood pressure.</p>
-                                </div>
-                            </li>
-                            <li className="fourth_school_box">
-                                <span className="school_icon_box">
-                                    <img src="https://www.pranaair.com/wp-content/uploads/2022/12/bacteria-icon.png" alt="tvoc in school & institutes" />
-                                </span>
-                                <div className="schhol_text_box">
-                                    <h3>Microbe</h3>
-                                    <p>Flu, cough, cold, etc. are
-                                        caused when exposed to microbial pollutants.</p>
+                                    <h3>TVOCs</h3>
+                                    <p>Paints, carpets,
+                                        disinfectants</p>
                                 </div>
                             </li>
                         </ul>
@@ -209,38 +183,38 @@ export default function AirQualitySolutions() {
                 <div className="row">
                     <div className="col-md-3">
                         <div className="risk_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/12/gym-personal-trainer.png" alt="Personal Trainer in fitness center" />
+                            <img src="https://www.pranaair.com/wp-content/uploads/2022/09/respiratory-illness-in-cinema-hall.png" alt="Personal Trainer in fitness center" />
                             <div className="feature_wrap_box">
-                                <h2>Personal Trainer</h2>
-                                <p>Unattentiveness, a high chance of acquiring respiratory illnesses, and loss of coordination.</p>
+                                <h2>Respiratory Illness </h2>
+                                <p>Movie-goers and staff with respiratory or other illnesses already have a weaker respiratory and immune system.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="risk_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/12/service-technicians.png" alt="Service Technician in fitness center" />
+                            <img src="https://www.pranaair.com/wp-content/uploads/2022/09/children-in-cinemal-hall.png" alt="Service Technician in fitness center" />
                             <div className="feature_wrap_box">
-                                <h2>Service Technician</h2>
-                                <p>Loss of coordination, unattentiveness, etc. are very common if exposed to bad air quality.</p>
+                                <h2>Children</h2>
+                                <p>Children have developing organs. When exposed, the growing tissue and cell growth are hampered.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="risk_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/12/front-desk-staff.png" alt="Front desk staff in fitness center & gym" />
+                            <img src="https://www.pranaair.com/wp-content/uploads/2022/09/cinema-hall-staff.png" alt="Front desk staff in fitness center & gym" />
                             <div className="feature_wrap_box">
-                                <h2>Front desk staff
+                                <h2>Staff
                                 </h2>
-                                <p>Bad air quality will affect every individual present in the same scenario, including the desk staff.</p>
+                                <p>Lower productivity, absenteeism, and lower concentration are some of the side effects of exposure.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="risk_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/12/gym-members.png" alt="a customer of a restaurant" />
+                            <img src="https://www.pranaair.com/wp-content/uploads/2022/09/movie-goers.png" alt="a customer of a restaurant" />
                             <div className="feature_wrap_box">
-                                <h2>Members</h2>
-                                <p>Nausea, uneasiness, headaches, and breathlessness are some of the side effects of exposure.</p>
+                                <h2>Movie-Goers</h2>
+                                <p>Healthy adults will experience side effects like headaches, dizziness, stuffiness, and nausea.</p>
                             </div>
                         </div>
                     </div>
@@ -263,29 +237,32 @@ export default function AirQualitySolutions() {
             <div className="container air_quality_tab_sec">
                 <div className="row">
                     <div className="col-md-12">
-                        <ul className="nav nav-tabs">
-                            <li className="nav-item">
-                                <button className={`nav-link ${activeTab === "air-quality-monitors" ? "active" : ""}`} onClick={() => setActiveTab("air-quality-monitors")}
-                                    href="#"
-                                >
-                                    Air Quality Monitors
-                                </button>
-                            </li>
-                            <li className="nav-item">
-                                <button className={`nav-link ${activeTab === "fresh-air-machine" ? "active" : ""}`} onClick={() => setActiveTab("fresh-air-machine")}
-                                    href="#"
-                                >
-                                    Fresh Air Machine
-                                </button>
-                            </li>
-                            <li className="nav-item">
-                                <button className={`nav-link ${activeTab === "api-data" ? "active" : ""}`} onClick={() => setActiveTab("api-data")}
-                                    href="#"
-                                >
-                                    API Data
-                                </button>
-                            </li>
-                        </ul>
+                        <div className='solution-tab'>
+                            <ul className="nav nav-tabs">
+                                <li className="nav-item">
+                                    <button className={`nav-link ${activeTab === "air-quality-monitors" ? "active" : ""}`} onClick={() => setActiveTab("air-quality-monitors")}
+                                        href="#"
+                                    >
+                                        Air Quality Monitors
+                                    </button>
+                                </li>
+                                <li className="nav-item">
+                                    <button className={`nav-link ${activeTab === "fresh-air-machine" ? "active" : ""}`} onClick={() => setActiveTab("fresh-air-machine")}
+                                        href="#"
+                                    >
+                                        Fresh Air Machine
+                                    </button>
+                                </li>
+                                <li className="nav-item">
+                                    <button className={`nav-link ${activeTab === "api-data" ? "active" : ""}`} onClick={() => setActiveTab("api-data")}
+                                        href="#"
+                                    >
+                                        API Data
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
 
                         <div className="tab-content">
                             {activeTab === 'air-quality-monitors' && (

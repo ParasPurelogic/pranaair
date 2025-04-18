@@ -1548,6 +1548,7 @@ ul.paramete_list {
     /* --------------new-css-------- */
     .new-monitor-bg img {
         width: 55% !important;
+        height: auto;
     }
 
     .new-monitor-bg:before {
@@ -1968,4 +1969,17 @@ a.new-brochure {
 
 img.img-responsive {
     width: 100%;
+}
+.faq-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #0c0c0c;
+}
+
+.accordion-item {
+    border: none;
 }

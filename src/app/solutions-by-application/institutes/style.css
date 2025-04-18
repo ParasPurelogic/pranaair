@@ -311,6 +311,7 @@ span.bold_text {
 
 .school_img_box {
     margin-top: 60px;
+    width: 100%;
 }
 
 .faq_section .vc_tta-panel-body {
@@ -1129,7 +1130,7 @@ label.message_text {
     }
 
     li.first_school_box {
-        left: 290px;
+        left: 60px;
     }
 
     li.second_school_box {
@@ -1137,8 +1138,14 @@ label.message_text {
     }
 
     li.third_school_box {
-        left: 270px;
+        left: 60px;
         top: 60px;
+    }
+
+    .client_logo_section img {
+        width: 30%;
+        display: block;
+        margin: 0 auto 30px;
     }
 
     .airgraph_cntr {
@@ -1147,5 +1154,64 @@ label.message_text {
 
     .airqulality_contact_section {
         padding: 0 0px !important;
+    }
+}
+
+.solution-tab ul {
+    justify-content: center;
+}
+
+.solution-tab ul .nav-link.active {
+    background: #7ab261;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.solution-tab ul .nav-link {
+    margin: 0px 30px;
+}
+
+.faq-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #0c0c0c;
+}
+
+.accordion-item {
+    border: none;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+    .hero-content {
+        padding-top: 50px;
+    }
+
+    .client_logo_section img {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .airqulality_contact_section {
+        padding: 0 !important;
+    }
+
+    .contact-heading p {
+        width: 80%;
+    }
+
+    .airgraph_cntr {
+        padding: 0 20px !important;
+    }
+
+    li.first_school_box {
+        left: 300px;
+    }
+
+    li.third_school_box {
+        left: 300px;
     }
 }

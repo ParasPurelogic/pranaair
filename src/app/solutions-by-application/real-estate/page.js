@@ -72,8 +72,7 @@ export default function RealEstate() {
           </h1>
           <p>A complete solution for air quality monitoring, air purification, and other solutions for real-estates.</p>
           <div className="category-tabs">
-            <span className="category-tab active">Residential</span>
-            <span className="category-tab">Commercial</span>
+            <span>Residential</span>  <span>Commercial</span>
           </div>
           <a className="cta-button" href="#get_in_touch">
             Get a Quote
@@ -271,7 +270,7 @@ export default function RealEstate() {
             </div>
           </div>
 
-          <div className="pollutant-marker" style={{ bottom: "30%", left: "15%" }}>
+          <div className="pollutant-marker" style={{ bottom: "10%", left: "15%" }}>
             <div className="marker-circle">
               <img src="https://www.pranaair.com/wp-content/uploads/2022/12/odor.png" alt="odor problem" />
             </div>

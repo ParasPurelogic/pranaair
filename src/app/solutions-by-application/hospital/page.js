@@ -233,18 +233,18 @@ export default function HospitalPage() {
 
   // Client logos
   const clientLogos = [
-    { name: "Morgan Stanley", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/morgan-stanley-logo.png" },
-    { name: "Ola", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/ola-logo.png" },
-    { name: "Microsoft", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/microsoft-logo.png" },
-    { name: "IIT", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/iit-logo.png" },
-    { name: "Renault Nissan", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/renault-nissan-logo.png" },
-    { name: "Tata", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/tata-logo.png" },
-    { name: "CSIR", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/csir-logo.png" },
-    { name: "Mahindra", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/mahindra-logo.png" },
-    { name: "Interglobe", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/interglobe-logo.png" },
-    { name: "GMDA", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/gmda-logo.png" },
-    { name: "Leighton", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/leighton-logo.png" },
-    { name: "Havells", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/havells-logo.png" },
+    { name: "Morgan Stanley", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png" },
+    { name: "Ola", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png" },
+    { name: "Microsoft", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png" },
+    { name: "IIT", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png" },
+    { name: "Renault Nissan", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/RENAULT-NISSAN.png" },
+    { name: "Tata", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png" },
+    { name: "CSIR", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png" },
+    { name: "Mahindra", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png" },
+    { name: "Interglobe", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/INTERGLOBE.png" },
+    { name: "GMDA", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/GMDA-1.png" },
+    { name: "Leighton", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/download.png" },
+    { name: "Havells", logo: "https://www.pranaair.com/wp-content/uploads/2022/08/HAVELLS.png" },
   ]
 
   // Industrial applications data

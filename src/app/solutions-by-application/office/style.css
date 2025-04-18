@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  font-family: "Poppins", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body h3,
@@ -14,2144 +14,2188 @@ body h2,
 .tab-inner-aqi .good-sec-top h5,
 body h2.sec-heading b,
 body h2.sec-heading.sec-heading-sec {
-  font-family: "Poppins", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
 }
 
 body p,
 .inner-real-time-aqi .countrey-sec {
-  font-size: 18px;
-  font-family: "Poppins", sans-serif !important;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif !important;
 }
 
 .school_banner_box {
-  padding: 0 0 160px;
-  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/air-quality-solutions-for-offices-scaled.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  margin-top: -30px;
+    padding: 0 0 160px;
+    background: url(https://www.pranaair.com/wp-content/uploads/2023/07/air-quality-solutions-for-offices-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    margin-top: -30px;
 }
 
 .pocket_title_box.school_aqi_box p {
-  font-size: 18px;
-  color: #677580;
-  padding-right: 0px;
+    font-size: 18px;
+    color: #677580;
+    padding-right: 0px;
 }
 
 .banner-high-co2 {
-  color: #31343d !important;
-  font-size: 16px !important;
-  padding-top: 50px;
+    color: #31343d !important;
+    font-size: 16px !important;
+    padding-top: 50px;
 }
 
 .pocket_title_box.school_aqi_box:before {
-  position: absolute;
-  content: "";
-  background: #67758047;
-  width: 340px;
-  height: 1px;
-  left: -40px;
-  bottom: 120px;
-  right: 0;
-  margin: 0 auto;
+    position: absolute;
+    content: "";
+    background: #67758047;
+    width: 340px;
+    height: 1px;
+    left: -40px;
+    bottom: 120px;
+    right: 0;
+    margin: 0 auto;
 }
 
 .pollution_cntr {
-  margin-bottom: 45px;
+    margin-bottom: 45px;
 }
 
 .school_img_box {
-  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/air-pollutants-in-office-scaled.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 830px !important;
+    background: url(https://www.pranaair.com/wp-content/uploads/2023/07/air-pollutants-in-office-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 830px !important;
 }
 
 .contact_info i.fa.fa-phone {
-  transform: rotate(131deg);
+    transform: rotate(131deg);
 }
 
 .contact-heading {
-  padding-top: 50px !important;
+    padding-top: 50px !important;
 }
 
 .vc_row.wpb_row.vc_row-fluid.school_img_box.vc_custom_1660844203328.vc_row-has-fill.vc_row-o-full-height.vc_row-o-columns-middle.vc_row-flex {
-  background-size: 100% !important;
+    background-size: 100% !important;
 }
 
 .schhol_text_box {
-  background: rgba(79, 108, 65, 0.5);
-  padding: 10px 10px;
-  display: inline-block;
-  border: 3px solid #fff;
-  border-radius: 20px;
-  width: 270px;
-  text-align: center;
-  color: #fff;
+    background: rgba(79, 108, 65, 0.5);
+    padding: 10px 10px;
+    display: inline-block;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    width: 270px;
+    text-align: center;
+    color: #fff;
 }
 
 .third_school_box span.school_icon_box img {
-  width: 96px;
+    width: 96px;
 }
 
 li.third_school_box span.school_icon_box {
-  top: -45px;
-  left: -45px;
+    top: -45px;
+    left: -45px;
 }
 
 li.fourth_school_box span.school_icon_box img {
-  width: 108px;
+    width: 108px;
 }
 
 li.fourth_school_box span.school_icon_box {
-  top: -53px;
-  left: -55px;
+    top: -53px;
+    left: -55px;
 }
 
 li.fivth_school_box span.school_icon_box img {
-  width: 93px;
+    width: 93px;
 }
 
 li.fivth_school_box span.school_icon_box {
-  left: -43px;
-  top: -46px;
+    left: -43px;
+    top: -46px;
 }
 
 .schhol_text_box h3 {
-  margin: 0 0 4px;
-  font-size: 18px;
+    margin: 0 0 4px;
+    font-size: 18px;
 }
 
 .schhol_text_box p {
-  color: #fff;
-  font-size: 14px;
+    color: #fff;
+    font-size: 14px;
 }
 
 .school_box_cntr {
-  width: 950px;
-  float: none;
-  padding: 120px 0;
+    width: 950px;
+    float: none;
+    padding: 120px 0;
 }
 
 .school_box_cntr ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .school_box_cntr li {
-  display: inline-block;
-  position: relative;
-  width: 50%;
-  float: left;
-  min-height: 225px;
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    float: left;
+    min-height: 225px;
 }
 
 .school_box_cntr li img {
-  width: 60px;
+    width: 60px;
 }
 
 span.school_icon_box {
-  position: absolute;
-  top: -28px;
-  left: -28px;
+    position: absolute;
+    top: -28px;
+    left: -28px;
 }
 
 li.first_school_box {
-  left: 186px;
-  transform: translatey(0px);
-  animation: float 6s ease-in-out infinite;
+    left: 186px;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
 }
 
 li.second_school_box {
-  top: -50px;
-  left: 325px;
-  transform: translatey(0px);
-  animation: float 7s ease-in-out infinite;
+    top: -50px;
+    left: 325px;
+    transform: translatey(0px);
+    animation: float 7s ease-in-out infinite;
 }
 
 li.third_school_box {
-  left: 270px;
-  transform: translatey(0px);
-  animation: float 8s ease-in-out infinite;
-  top: 60px;
+    left: 270px;
+    transform: translatey(0px);
+    animation: float 8s ease-in-out infinite;
+    top: 60px;
 }
 
 li.fivth_school_box {
-  left: 250px;
-  top: 70px;
+    left: 250px;
+    top: 70px;
 }
 
 li.fourth_school_box {
-  top: 65px;
-  left: 327px;
-  transform: translatey(0px);
-  animation: float 5s ease-in-out infinite;
+    top: 65px;
+    left: 327px;
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
 }
 
 li.six_school_box {
-  left: 438px;
-  top: -60px;
+    left: 438px;
+    top: -60px;
 }
 
 li.sixth_school_box {
-  left: 280px;
+    left: 280px;
 }
 
 .pocket_title_box.school_aqi_box h1 {
-  font-size: 40px;
-  line-height: 48px;
-  font-family: "Poppins", sans-serif !important;
-  font-weight: 300;
-  margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .app_img_bx {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .owl-slider .owl-nav button span {
-  font-size: 95px;
-  color: #78ae60;
-  font-family: "Open Sans";
-  font-weight: 500;
+    font-size: 95px;
+    color: #78ae60;
+    font-family: "Open Sans";
+    font-weight: 500;
 }
 
 .vs_text {
-  display: none;
+    display: none;
 }
 
 .seperate_industrial_box {
-  border-top: 1px solid rgba(0, 0, 0, 0.4);
-  margin-top: 33px;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    margin-top: 33px;
 }
 
 .air_graph_box .wpb_wrapper {
-  float: right;
+    float: right;
 }
 
 .air_graph_box .wpb_text_column.wpb_content_element .wpb_wrapper {
-  float: none;
+    float: none;
 }
 
 .banner_quality_img_box figure.wpb_wrapper.vc_figure {
-  width: 100%;
+    width: 100%;
 }
 
 .banner_quality_img_box .vc_single_image-wrapper.vc_box_border_grey {
-  width: 100%;
+    width: 100%;
 }
 
 .banner_quality_img_box img.vc_single_image-img.attachment-full {
-  width: 100%;
+    width: 100%;
 }
 
 .pocket_title_box.school_aqi_box {
-  padding: 130px 0 0 15%;
-  position: relative;
+    padding: 130px 0 0 15%;
+    position: relative;
 }
 
 .banner_quality_box.wpb_column.vc_column_container.vc_col-sm-6 {
-  width: 45%;
+    width: 45%;
 }
 
 .banner_quality_img_box.wpb_column.vc_column_container.vc_col-sm-6 {
-  width: 55%;
+    width: 55%;
 }
 
 ul.rate_list li {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .pocket_buy_btn {
-  font-weight: 500;
-  font-size: 16px;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .pocket_title_box .rate_list {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .school_aqi_box span.bold_text {
-  font-weight: bold;
-  display: block;
-  color: #78ae60;
+    font-weight: bold;
+    display: block;
+    color: #78ae60;
 }
 
 .app_service_box p {
-  margin: 0 !important;
-  overflow: hidden;
+    margin: 0 !important;
+    overflow: hidden;
 }
 
 .app_service_box img {
-  transition: transform 0.4s;
+    transition: transform 0.4s;
 }
 
 .app_service_box {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .owl-slider .owl-nav {
-  position: absolute;
-  top: 18%;
-  width: 100%;
-  left: 0;
-  transform: translate(0, -50%);
+    position: absolute;
+    top: 18%;
+    width: 100%;
+    left: 0;
+    transform: translate(0, -50%);
 }
 
 .owl-slider button.owl-prev {
-  position: absolute;
-  left: -45px;
+    position: absolute;
+    left: -45px;
 }
 
 .owl-slider button.owl-next {
-  position: absolute;
-  right: -49px;
+    position: absolute;
+    right: -49px;
 }
 
 .app_service_box img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .tab-style-one.wpb_tabs .wpb_tabs_nav a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .pollution_cntr {
-  text-align: center;
-  background: #f4fcf0;
-  padding: 20px 50px;
+    text-align: center;
+    background: #f4fcf0;
+    padding: 20px 50px;
 }
 
 .pollution_cntr .feature_box {
-  width: auto;
-  padding: 10px 15px;
-  height: 256px;
+    width: auto;
+    padding: 10px 15px;
+    height: 256px;
 }
 
 .feature_box img {
-  width: auto;
+    width: auto;
 }
 
 .quality_solution_section .introducing_box.sub_title_box {
-  padding-bottom: 25px;
+    padding-bottom: 25px;
 }
 
 .top_space_heading .introducing_box.sub_title_box {
-  padding-top: 50px;
+    padding-top: 50px;
 }
 
 .industries_application_section .app_service_box h4 {
-  font-size: 22px;
-  font-weight: 500;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .industries_application_section .app_service_box p {
-  font-size: 17px;
-  font-weight: 300;
+    font-size: 17px;
+    font-weight: 300;
 }
 
 .tab-style-one.wpb_tabs .wpb_tabs_nav a:hover {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 .faq_ask_section .introducing_box.sub_title_box {
-  padding: 20px 0 30px;
+    padding: 20px 0 30px;
 }
 
 .sub_title_box .title_heading {
-  text-align: center;
-  color: #000;
-  font-size: 36px;
-  margin: 0 0 15px;
-  font-weight: normal;
+    text-align: center;
+    color: #000;
+    font-size: 36px;
+    margin: 0 0 15px;
+    font-weight: normal;
 }
 
 span.bold_text {
-  font-weight: bold;
-  color: #78ae60;
+    font-weight: bold;
+    color: #78ae60;
 }
 
 .pollution_cntr .feature_box p {
-  font-size: 15px;
-  color: #677580;
-  padding: 0px 15px;
-  font-weight: 300;
+    font-size: 15px;
+    color: #677580;
+    padding: 0px 15px;
+    font-weight: 300;
 }
 
 .school_img_box figure.wpb_wrapper.vc_figure {
-  width: 100%;
+    width: 100%;
 }
 
 .school_img_box .vc_single_image-wrapper.vc_box_border_grey {
-  width: 100%;
+    width: 100%;
 }
 
 .school_img_box img.vc_single_image-img.attachment-full {
-  width: 100%;
+    width: 100%;
 }
 
 .feature_box h2 {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .school_img_box {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 
 .faq_section .vc_tta-panel-body {
-  padding-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 .pollution_cntr .vc_column-inner {
-  padding: 0 !important;
+    padding: 0 !important;
 }
 
 .vc_col-has-fill>.vc_column-inner,
 .vc_row-has-fill+.vc_row-full-width+.vc_row>.vc_column_container>.vc_column-inner,
 .vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner,
 .vc_row-has-fill>.vc_column_container>.vc_column-inner {
-  padding: 0;
+    padding: 0;
 }
 
 .introducing_box.sub_title_box {
-  padding: 90px 0 60px;
+    padding: 90px 0 60px;
 }
 
 .app_service_box img {
-  width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .industrial_applications_box img {
-  width: 100%;
+    width: 100%;
 }
 
 .air_quality_box ul {
-  list-style: none;
-  padding: 0 0 0 30px;
-  margin: 0;
+    list-style: none;
+    padding: 0 0 0 30px;
+    margin: 0;
 }
 
 .air_quality_box li {
-  color: #000;
-  padding-bottom: 10px;
-  font-size: 18px;
+    color: #000;
+    padding-bottom: 10px;
+    font-size: 18px;
 }
 
 .client_logo_section figure.wpb_wrapper.vc_figure {
-  box-shadow: 2px -2px 8px -1px #ccc;
-  padding: 15px 15px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0;
-  height: 120px;
-  transition: transform 0.4s;
+    box-shadow: 2px -2px 8px -1px #ccc;
+    padding: 15px 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    height: 120px;
+    transition: transform 0.4s;
 }
 
 .client_logo_section figure.wpb_wrapper.vc_figure:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .slider_img_box {
-  width: 55%;
-  float: left;
+    width: 55%;
+    float: left;
 }
 
 .slider_details_box {
-  width: 45%;
-  float: left;
-  padding: 0 30px;
+    width: 45%;
+    float: left;
+    padding: 0 30px;
 }
 
 .air_quality_tab_sec .wpb_content_element .wpb_tabs_nav {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .air_quality_tab_sec .wpb_tabs .wpb_tabs_nav li {
-  position: relative;
-  background: #78ae60 !important;
-  margin: 12px 0 0 0 !important;
-  box-shadow: 2px 2px 8px -1px #ccc;
+    position: relative;
+    background: #78ae60 !important;
+    margin: 12px 0 0 0 !important;
+    box-shadow: 2px 2px 8px -1px #ccc;
 }
 
 .air_quality_tab_sec .wpb_tabs.tab-style-one .wpb_tabs_nav>li.ui-state-active {
-  color: #000 !important;
-  background-color: #fff !important;
+    color: #000 !important;
+    background-color: #fff !important;
 }
 
 #page .tab-style-one .wpb_tabs_nav li.ui-state-active a {
-  color: #000;
-  -webkit-text-fill-color: #000;
+    color: #000;
+    -webkit-text-fill-color: #000;
 }
 
 .tab-style-one.wpb_tabs .wpb_tabs_nav a {
-  padding: 10px 35px;
-  text-align: center;
-  color: #fff;
-  border-right: 1px solid #fff;
+    padding: 10px 35px;
+    text-align: center;
+    color: #fff;
+    border-right: 1px solid #fff;
 }
 
 .slider_details_box h3 {
-  color: #000;
-  font-size: 34px;
-  font-weight: normal;
-  line-height: 38px;
+    color: #000;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 38px;
 }
 
 .slider_details_box p {
-  font-size: 15px;
-  font-style: italic;
-  padding-bottom: 10px;
+    font-size: 15px;
+    font-style: italic;
+    padding-bottom: 10px;
 }
 
 ul.airquality_list {
-  margin: 0 0 20px;
-  padding: 0;
-  list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
 }
 
 ul.airquality_list li {
-  margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 
 .slider_cntr {
-  max-width: 850px;
-  margin: 22px auto;
+    max-width: 850px;
+    margin: 22px auto;
 }
 
 ul.airquality_list li {
-  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png) no-repeat;
-  padding-left: 34px;
-  background-size: 20px;
-  background-position: 0 1px;
+    background: url(https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png) no-repeat;
+    padding-left: 34px;
+    background-size: 20px;
+    background-position: 0 1px;
 }
 
 ul.airquality_list.red_list li {
-  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/red-arrow.png) no-repeat;
-  background-size: 20px;
-  background-position: 0 1px;
+    background: url(https://www.pranaair.com/wp-content/uploads/2022/08/red-arrow.png) no-repeat;
+    background-size: 20px;
+    background-position: 0 1px;
 }
 
 .air_quality_box h3 {
-  color: #000;
-  font-size: 25px;
-  margin: 0 0 25px;
-  font-weight: 500;
+    color: #000;
+    font-size: 25px;
+    margin: 0 0 25px;
+    font-weight: 500;
 }
 
 .air_graph_box {
-  border-right: 2px solid rgba(0, 0, 0, 0.4);
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
 }
 
 .air_quality_box ul.airquality_list {
-  margin: 0 0 35px !important;
+    margin: 0 0 35px !important;
 }
 
 a.left.carousel-control,
 a.right.carousel-control {
-  background: none;
+    background: none;
 }
 
 .slider_img_box img {
-  border-radius: 7px;
+    border-radius: 7px;
 }
 
 a.knowmore_btn {
-  background: #78ae60;
-  padding: 8px 13px;
-  display: inline-block;
-  color: #fff;
-  border-radius: 5px;
+    background: #78ae60;
+    padding: 8px 13px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 5px;
 }
 
 a.rent_btn {
-  font-size: 15px;
-  color: #78ae60;
-  margin: 30px 0 0 15px;
-  display: inline-block;
+    font-size: 15px;
+    color: #78ae60;
+    margin: 30px 0 0 15px;
+    display: inline-block;
 }
 
 .faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading {
-  border: none;
-  background: none;
+    border: none;
+    background: none;
 }
 
 .faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title>a {
-  color: #000;
-  font-size: 20px;
+    color: #000;
+    font-size: 20px;
 }
 
 .faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title>a {
-  color: #000;
+    color: #000;
 }
 
 .faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-heading {
-  border: none;
-  background: none;
+    border: none;
+    background: none;
 }
 
 .faq_section .vc_tta.vc_general .vc_tta-panel.vc_active {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
 }
 
 .faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left .vc_tta-controls-icon {
-  left: auto;
-  right: 15px;
+    left: auto;
+    right: 15px;
 }
 
 .faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title>a {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .airqulality_contact_section .contact_content_box {
-  background: #78ae60;
-  padding: 30px 15px 75px;
-  width: 40%;
-  border-radius: 25px;
-  position: relative;
-  overflow: hidden;
+    background: #78ae60;
+    padding: 30px 15px 75px;
+    width: 40%;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
 }
 
 .contact_content_box:after {
-  background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
-  width: 160px;
-  height: 160px;
-  content: "";
-  position: absolute;
-  bottom: -92px;
-  left: -25px;
-  z-index: 0;
-  background-size: 66%;
+    background: url(https://www.pranaair.com/wp-content/uploads/2022/08/circle_bg.png) no-repeat;
+    width: 160px;
+    height: 160px;
+    content: "";
+    position: absolute;
+    bottom: -92px;
+    left: -25px;
+    z-index: 0;
+    background-size: 66%;
 }
 
 .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
-  width: 60%;
-  padding: 6px 0 0 40px;
+    width: 60%;
+    padding: 6px 0 0 40px;
 }
 
 .airquality_contact_box label br {
-  display: none;
+    display: none;
 }
 
 .airquality_contact_box input.wpcf7-form-control {
-  width: 100%;
-  margin-bottom: 15px !important;
-  border: none;
-  border-bottom: 1px solid #60606073;
-  padding-left: 4px;
+    width: 100%;
+    margin-bottom: 15px !important;
+    border: none;
+    border-bottom: 1px solid #60606073;
+    padding-left: 4px;
 }
 
 .airquality_contact_box label {
-  width: 100%;
+    width: 100%;
 }
 
 .contact_information_box h4 {
-  font-size: 25px;
-  color: #fff;
+    font-size: 25px;
+    color: #fff;
 }
 
 .contact_information_box p {
-  color: #fff;
-  font-weight: 300;
+    color: #fff;
+    font-weight: 300;
 }
 
 .airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
-  max-height: 78px;
-  border: none;
-  border-bottom: 1px solid #60606073;
-  padding-left: 4px;
+    max-height: 78px;
+    border: none;
+    border-bottom: 1px solid #60606073;
+    padding-left: 4px;
 }
 
 ul.contact_info {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .airquality_contact_box input.wpcf7-form-control.has-spinner.wpcf7-submit {
-  background: #78ae60;
-  border: none;
-  width: auto;
-  margin-top: 30px;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 5px;
+    background: #78ae60;
+    border: none;
+    width: auto;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 .contact_info li {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  padding-bottom: 25px;
-  font-size: 16px;
-  font-weight: 300;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 .contact_info li i {
-  font-size: 21px;
-  margin-right: 10px;
+    font-size: 21px;
+    margin-right: 10px;
 }
 
 .contact_info {
-  padding-top: 20px !important;
+    padding-top: 20px !important;
 }
 
 .airquality_inner_form {
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 950px;
-  margin: 0 auto 30px;
-  box-shadow: 2px 2px 11px 0px #ccc;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 950px;
+    margin: 0 auto 30px;
+    box-shadow: 2px 2px 11px 0px #ccc;
 }
 
 .app_service_box h4 {
-  font-size: 25px;
-  color: #000;
-  text-align: center;
-  padding-top: 18px;
-  font-weight: normal;
+    font-size: 25px;
+    color: #000;
+    text-align: center;
+    padding-top: 18px;
+    font-weight: normal;
 }
 
 .app_service_box p {
-  text-align: center;
+    text-align: center;
 }
 
 .industries_application_section {
-  padding: 0 0 60px;
+    padding: 0 0 60px;
 }
 
 .air_qualiity_right {
-  padding-left: 12px;
+    padding-left: 12px;
 }
 
 a.left.carousel-control,
 a.right.carousel-control {
-  background: none;
-  color: #78ae60;
-  opacity: 1;
-  box-shadow: inherit;
-  text-shadow: inherit;
-  font-size: 49px;
-  top: 50%;
+    background: none;
+    color: #78ae60;
+    opacity: 1;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    font-size: 49px;
+    top: 50%;
 }
 
 .airqulality_contact_section {
-  padding: 0 220px !important;
-  margin-top: 45px;
+    padding: 0 220px !important;
+    margin-top: 45px;
 }
 
 .airquality_contact_box label {
-  width: 100%;
-  font-size: 16px;
-  font-weight: 300;
-  color: #606060;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    color: #606060;
 }
 
 .faq_section .vc_tta-panel-body p {
-  font-size: 20px;
-  font-weight: 300;
-  color: #606060;
+    font-size: 20px;
+    font-weight: 300;
+    color: #606060;
 }
 
 label.message_text {
-  color: #78ae60;
-  font-weight: 500;
+    color: #78ae60;
+    font-weight: 500;
 }
 
 .airqulality_contact_section:before {
-  background: rgba(120, 174, 96, 0.1);
-  width: 100%;
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  height: 420px;
-  z-index: 0;
+    background: rgba(120, 174, 96, 0.1);
+    width: 100%;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 420px;
+    z-index: 0;
 }
 
 .faq_section.faq_ask_section {
-  padding: 0 220px !important;
+    padding: 0 220px !important;
 }
 
 .airgraph_cntr {
-  padding: 0 220px !important;
+    padding: 0 220px !important;
 }
 
 .feature_wrap_box h3 {
-  font-size: 20px;
-  color: #31343d;
+    font-size: 20px;
+    color: #31343d;
 }
 
 .feature_wrap_box p {
-  color: #677580;
-  font-size: 16px;
+    color: #677580;
+    font-size: 16px;
 }
 
 .my-para p {
-  padding: 0 70px;
+    padding: 0 70px;
 }
 
 .heading-box {
-  background: #78ae60;
-  color: #fff;
-  display: block;
-  width: 30%;
-  margin: 50px auto 0;
-  font-size: 20px;
-  padding: 10px 0;
-  border-radius: 10px;
+    background: #78ae60;
+    color: #fff;
+    display: block;
+    width: 30%;
+    margin: 50px auto 0;
+    font-size: 20px;
+    padding: 10px 0;
+    border-radius: 10px;
 }
 
 .long-term-heading {
-  text-align: center;
-  margin-bottom: 30px !important;
+    text-align: center;
+    margin-bottom: 30px !important;
 }
 
 .factors-affect-box {
-  width: 90%;
+    width: 90%;
 }
 
 .quote {
-  text-align: center;
-  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/quote-box-design.png);
-  background-size: 850px;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 0 0 160px;
+    text-align: center;
+    background: url(https://www.pranaair.com/wp-content/uploads/2023/07/quote-box-design.png);
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 0 160px;
 }
 
 .quote-heading p {
-  font-size: 18px;
-  padding-top: 10px;
+    font-size: 18px;
+    padding-top: 10px;
 }
 
 .quote-heading h2 {
-  font-size: 30px;
-  color: #78ae60;
+    font-size: 30px;
+    color: #78ae60;
 }
 
 .source-air-pollution-slider-txt img {
-  width: 325px;
+    width: 325px;
 }
 
 .source-air-pollution-slider-txt h3 {
-  font-size: 20px;
-  color: #31343d;
+    font-size: 20px;
+    color: #31343d;
 }
 
 .source-air-pollution-slider-txt {
-  text-align: center;
+    text-align: center;
 }
 
 .source-air-pollution-slider-txt p {
-  font-size: 16px;
-  color: #677580;
+    font-size: 16px;
+    color: #677580;
 }
 
 .source-of-air-pollution-heading {
-  text-align: center;
-  padding-bottom: 60px;
+    text-align: center;
+    padding-bottom: 60px;
 }
 
 .source-of-air-pollution-heading h2 {
-  font-size: 32px;
-  color: #31343d;
+    font-size: 32px;
+    color: #31343d;
 }
 
 .source-of-air-pollution-heading p {
-  color: #677580;
-  font-size: 18px;
-  padding: 0 90px;
+    color: #677580;
+    font-size: 18px;
+    padding: 0 90px;
 }
 
 .sub_title_box p {
-  color: #677580;
-  padding: 0 90px;
+    color: #677580;
+    padding: 0 90px;
 }
 
 .banner-btn {
-  background: #78ae60;
-  color: #ffff;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 16px;
-  display: block;
-  width: 37%;
-  text-align: center;
-  margin-top: 30px;
+    background: #78ae60;
+    color: #ffff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: block;
+    width: 37%;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .banner-btn:hover {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
 .btns-bottom {
-  display: flex;
-  align-items: baseline;
+    display: flex;
+    align-items: baseline;
 }
 
 .btns-bottom a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .app_service_box h3 {
-  text-align: center;
-  font-size: 22px;
+    text-align: center;
+    font-size: 22px;
 }
 
 .health-impact .feature_wrap_box p {
-  padding: 0 30px;
+    padding: 0 30px;
 }
 
 .aligncenter {
-  margin: 0;
+    margin: 0;
 }
 
 .tab-slider-my .slick-prev {
-  left: 120px;
+    left: 120px;
 }
 
 .tab-slider-my .slick-next {
-  right: 100px;
+    right: 100px;
 }
 
 .tab-slider-my button {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 button.slick-next.default.slick-arrow {
-  background: #78ae60;
-  color: #fff !important;
-  padding: 15px;
-  right: 70px;
+    background: #78ae60;
+    color: #fff !important;
+    padding: 15px;
+    right: 70px;
 }
 
 button.slick-prev.default.slick-arrow {
-  background: #78ae60;
-  padding: 15px;
-  color: #fff !important;
-  left: 70px;
+    background: #78ae60;
+    padding: 15px;
+    color: #fff !important;
+    left: 70px;
 }
 
 .ult_tabmenu {
-  justify-content: center !important;
+    justify-content: center !important;
 }
 
 button.slick-next.default.slick-arrow i {
-  font-size: 30px;
-  position: relative;
-  top: -15px;
-  left: -14px;
+    font-size: 30px;
+    position: relative;
+    top: -15px;
+    left: -14px;
 }
 
 button.slick-prev.default.slick-arrow i {
-  font-size: 30px;
-  position: relative;
-  top: -15px;
-  left: -14px;
+    font-size: 30px;
+    position: relative;
+    top: -15px;
+    left: -14px;
 }
 
 @media screen and (min-width: 1700px) and (max-width: 2000px) {
-  .pocket_title_box.school_aqi_box {
-    padding: 110px 0 0 25%;
-  }
+    .pocket_title_box.school_aqi_box {
+        padding: 110px 0 0 25%;
+    }
 }
 
 @media screen and (max-width: 767px) {
-  .school_banner_box {
-    padding: 0;
-  }
-
-  .pocket_title_box.school_aqi_box h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    line-height: normal;
-  }
-
-  .pocket_title_box.school_aqi_box p {
-    font-size: 15px;
-  }
-
-  .pocket_title_box.school_aqi_box ul.rate_list li {
-    font-size: 16px;
-  }
-
-  ul.rate_list li {
-    font-size: 14px;
-  }
-
-  .pocket_title_box .rate_list {
-    padding-top: 15px;
-  }
-
-  .pocket_title_box .rate_list .pocket_buy_btn {
-    margin-top: 17px;
-  }
-
-  .sub_title_box .title_heading {
-    font-size: 30px;
-  }
-
-  .pollution_cntr .feature_box p {
-    padding: 0 12px;
-  }
-
-  .pollution_cntr .feature_box p {
-    padding: 0;
-  }
-
-  .pollution_cntr .feature_box {
-    padding: 13px 15px;
-  }
-
-  .slider_img_box {
-    width: 100%;
-    float: none;
-  }
-
-  .slider_details_box {
-    width: 100%;
-    float: none;
-    padding: 0 5px;
-  }
-
-  .slider_details_box h3 {
-    font-size: 18px;
-  }
-
-  .air_graph_box {
-    padding: 30px 0;
-  }
-
-  .airqulality_contact_section .contact_content_box {
-    background: #78ae60;
-    padding: 13px 15px 10px;
-    width: 100%;
-  }
-
-  .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
-    width: 100%;
-    padding: 30px 15px 0;
-  }
-
-  .airquality_inner_form {
-    padding: 20px 20px 0;
-  }
-
-  .faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title>a {
-    font-size: 14px;
-    padding-left: 15px;
-    line-height: normal;
-  }
-
-  .faq_section .vc_tta-panel-body p {
-    font-size: 14px;
-  }
-
-  .app_service_box {
-    padding-bottom: 35px;
-    display: block;
-  }
-
-  .airquality_contact_box label {
-    font-size: 14px;
-  }
-
-  .airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
-    max-height: 65px;
-  }
-
-  .airquality_contact_box input.wpcf7-form-control {
-    height: 30px;
-  }
-
-  .app_service_box h4 {
-    font-size: 22px;
-  }
-
-  ul.airquality_list.red_list li {
-    font-size: 16px;
-  }
-
-  .air_quality_box h3 {
-    font-size: 22px;
-  }
-
-  .tab-style-one.wpb_tabs .wpb_tabs_nav a {
-    padding: 10px 12px;
-    font-size: 12px;
-  }
-
-  .air_graph_box {
-    border-right: none;
-  }
-
-  .air_qualiity_right {
-    padding: 10px 0;
-  }
-
-  .pollution_cntr .feature_box p {
-    padding: 0;
-    font-size: 14px;
-  }
-
-  .airqulality_contact_section {
-    padding: 0 15px !important;
-  }
-
-  .faq_section.faq_ask_section {
-    padding: 0 15px !important;
-  }
-
-  .faq_ask_section .introducing_box.sub_title_box {
-    padding: 15px 0 30px;
-  }
-
-  a.left.carousel-control,
-  a.right.carousel-control {
-    display: none;
-  }
-
-  .introducing_box.sub_title_box {
-    padding: 5px 0 20px;
-  }
-
-  .airgraph_cntr {
-    padding: 0 15px !important;
-  }
-
-  .contact_information_box h4 {
-    font-size: 22px;
-  }
-
-  .contact_information_box p {
-    font-size: 14px;
-  }
-
-  body p,
-  .inner-real-time-aqi .countrey-sec {
-    font-size: 16px;
-  }
-
-  .tab-style-one.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab {
-    padding: 0;
-  }
-
-  .feature_box img {
-    width: auto;
-  }
-
-  .feature_wrap_box {
-    padding: 0;
-    margin-bottom: 30px !important;
-  }
-
-  .pollution_cntr {
-    padding: 0 10px;
-  }
-
-  .school_img_box {
-    margin-top: 36px;
-  }
-
-  #myCarousel .carousel-indicators .active {
-    width: 16px;
-    height: 16px;
-    margin: 0;
-    background-color: #78ae60;
-  }
-
-  #myCarousel .carousel-indicators li {
-    width: 14px;
-    height: 14px;
-    border: 1px solid #78ae60;
-    border-radius: 10px;
-  }
-
-  #myCarousel .carousel-indicators {
-    bottom: -24px;
-    left: 43%;
-    transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-
-  ul.airquality_list li {
-    font-size: 16px;
-  }
-
-  .top_space_heading .introducing_box.sub_title_box {
-    padding: 35px 0 40px;
-  }
-
-  .contact_info li {
-    padding-bottom: 15px;
-    font-size: 14px;
-  }
-
-  .contact_information_box ul.contact_info {
-    padding: 10px 0 0 !important;
-  }
-
-  .client_logo_section .wpb_column.vc_column_container.vc_col-sm-3 {
-    width: 50%;
-    float: left;
-  }
-
-  .client_logo_section figure.wpb_wrapper.vc_figure {
-    padding: 10px 15px;
-    margin: 10px 0;
-    height: 103px;
-  }
-
-  .banner_quality_box.wpb_column.vc_column_container.vc_col-sm-6 {
-    width: 100%;
-    position: relative;
-    top: 1px;
-  }
-
-  .banner_quality_img_box.wpb_column.vc_column_container.vc_col-sm-6 {
-    width: 100%;
-  }
-
-  .vc_row.wpb_row.vc_row-fluid.school_banner_box.vc_custom_1659419765553.vc_row-has-fill {
-    flex-direction: column-reverse;
-    display: flex;
-    height: 605px;
-    background-position: 97% -75px !important;
-    background-repeat: no-repeat !important;
-    background-size: 689px !important;
-  }
-
-  .pocket_title_box.school_aqi_box {
-    padding: 220px 30px 80px;
-  }
-
-  span.vs_text {
-    display: block;
-    font-size: 30px;
-    text-align: center;
-    font-weight: regular;
-    position: relative;
-    top: 10px;
-    bottom: 10px;
-  }
-
-  .owl-slider {
-    padding: 0 25px;
-  }
-
-  .owl-slider .owl-nav button span {
-    font-size: 82px;
-  }
-
-  .owl-slider button.owl-prev {
-    position: absolute;
-    left: -30px;
-  }
-
-  .owl-slider button.owl-next {
-    position: absolute;
-    right: -30px;
-  }
-
-  .school_banner_box {
-    padding: 0;
-  }
-
-  .school_img_box {
-    min-height: 495px !important;
-  }
-
-  li.second_school_box {
-    top: 155px;
-    left: 62px;
-  }
-
-  li.second_school_box span.school_icon_box {
-    left: 28px;
-    top: -38px;
-  }
-
-  li.third_school_box {
-    left: 75px;
-    top: 120px;
-  }
-
-  li.fourth_school_box span.school_icon_box {
-    top: 40px;
-    left: -17px;
-  }
-
-  li.first_school_box {
-    left: 44px;
-  }
-
-  .schhol_text_box {
-    display: none;
-    min-width: 190px;
-    padding: 5px;
-  }
-
-  .schhol_text_box h3 {
-    font-size: 18px;
-  }
-
-  .schhol_text_box p {
-    color: #fff;
-    font-size: 12px;
-  }
-
-  .school_box_cntr {
-    width: 100%;
-    float: none;
-    padding: 65px 0 0;
-  }
-
-  li.fourth_school_box {
-    top: 124px;
-    left: 65px;
-  }
-
-  li.first_school_box .schhol_text_box {
-    display: block;
-  }
-
-  li.fourth_school_box .schhol_text_box {
-    position: relative;
-    left: -208px;
-    z-index: -1;
-  }
-
-  li.second_school_box .schhol_text_box {
-    position: relative;
-    left: -195px;
-    z-index: -1;
-    min-width: inherit !important;
-    width: 258px;
-    top: -12px;
-  }
-
-  li.fivth_school_box {
-    left: 68px;
-    top: 23px;
-  }
-
-  li.six_school_box {
-    left: -126px;
-    top: 165px;
-  }
-
-  li.six_school_box span.school_icon_box {
-    left: 243px;
-  }
-
-  .six_school_box .schhol_text_box {
-    min-width: 283px;
-  }
-
-  .vc_row.wpb_row.vc_row-fluid.school_img_box.vc_custom_1660844203328.vc_row-has-fill.vc_row-o-full-height.vc_row-o-columns-middle.vc_row-flex {
-    background-size: cover !important;
-  }
-
-  .vc_row.wpb_row.vc_row-fluid.school_banner_box.vc_row-has-fill {
-    flex-direction: column-reverse;
-    display: flex;
-    height: 730px;
-    padding-top: 20px;
-    background-position: 97% -75px !important;
-    background-repeat: no-repeat !important;
-    background-size: 689px !important;
-  }
-
-  li.fivth_school_box .schhol_text_box {
-    min-width: 234px;
-  }
+    .school_banner_box {
+        padding: 0;
+    }
+
+    .pocket_title_box.school_aqi_box h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        line-height: normal;
+    }
+
+    .pocket_title_box.school_aqi_box p {
+        font-size: 15px;
+    }
+
+    .pocket_title_box.school_aqi_box ul.rate_list li {
+        font-size: 16px;
+    }
+
+    ul.rate_list li {
+        font-size: 14px;
+    }
+
+    .pocket_title_box .rate_list {
+        padding-top: 15px;
+    }
+
+    .pocket_title_box .rate_list .pocket_buy_btn {
+        margin-top: 17px;
+    }
+
+    .sub_title_box .title_heading {
+        font-size: 30px;
+    }
+
+    .pollution_cntr .feature_box p {
+        padding: 0 12px;
+    }
+
+    .pollution_cntr .feature_box p {
+        padding: 0;
+    }
+
+    .pollution_cntr .feature_box {
+        padding: 13px 15px;
+    }
+
+    .slider_img_box {
+        width: 100%;
+        float: none;
+    }
+
+    .slider_details_box {
+        width: 100%;
+        float: none;
+        padding: 0 5px;
+    }
+
+    .slider_details_box h3 {
+        font-size: 18px;
+    }
+
+    .air_graph_box {
+        padding: 30px 0;
+    }
+
+    .airqulality_contact_section .contact_content_box {
+        background: #78ae60;
+        padding: 13px 15px 10px;
+        width: 100%;
+    }
+
+    .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
+        width: 100%;
+        padding: 30px 15px 0;
+    }
+
+    .airquality_inner_form {
+        padding: 20px 20px 0;
+    }
+
+    .faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title>a {
+        font-size: 14px;
+        padding-left: 15px;
+        line-height: normal;
+    }
+
+    .faq_section .vc_tta-panel-body p {
+        font-size: 14px;
+    }
+
+    .app_service_box {
+        padding-bottom: 35px;
+        display: block;
+    }
+
+    .airquality_contact_box label {
+        font-size: 14px;
+    }
+
+    .airquality_contact_box textarea.wpcf7-form-control.wpcf7-textarea {
+        max-height: 65px;
+    }
+
+    .airquality_contact_box input.wpcf7-form-control {
+        height: 30px;
+    }
+
+    .app_service_box h4 {
+        font-size: 22px;
+    }
+
+    ul.airquality_list.red_list li {
+        font-size: 16px;
+    }
+
+    .air_quality_box h3 {
+        font-size: 22px;
+    }
+
+    .tab-style-one.wpb_tabs .wpb_tabs_nav a {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .air_graph_box {
+        border-right: none;
+    }
+
+    .air_qualiity_right {
+        padding: 10px 0;
+    }
+
+    .pollution_cntr .feature_box p {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .airqulality_contact_section {
+        padding: 0 15px !important;
+    }
+
+    .faq_section.faq_ask_section {
+        padding: 0 15px !important;
+    }
+
+    .faq_ask_section .introducing_box.sub_title_box {
+        padding: 15px 0 30px;
+    }
+
+    a.left.carousel-control,
+    a.right.carousel-control {
+        display: none;
+    }
+
+    .introducing_box.sub_title_box {
+        padding: 5px 0 20px;
+    }
+
+    .airgraph_cntr {
+        padding: 0 15px !important;
+    }
+
+    .contact_information_box h4 {
+        font-size: 22px;
+    }
+
+    .contact_information_box p {
+        font-size: 14px;
+    }
+
+    body p,
+    .inner-real-time-aqi .countrey-sec {
+        font-size: 16px;
+    }
+
+    .tab-style-one.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+        padding: 0;
+    }
+
+    .feature_box img {
+        width: auto;
+    }
+
+    .feature_wrap_box {
+        padding: 0;
+        margin-bottom: 30px !important;
+    }
+
+    .pollution_cntr {
+        padding: 0 10px;
+    }
+
+    .school_img_box {
+        margin-top: 36px;
+    }
+
+    #myCarousel .carousel-indicators .active {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        background-color: #78ae60;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #78ae60;
+        border-radius: 10px;
+    }
+
+    #myCarousel .carousel-indicators {
+        bottom: -24px;
+        left: 43%;
+        transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+
+    ul.airquality_list li {
+        font-size: 16px;
+    }
+
+    .top_space_heading .introducing_box.sub_title_box {
+        padding: 35px 0 40px;
+    }
+
+    .contact_info li {
+        padding-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .contact_information_box ul.contact_info {
+        padding: 10px 0 0 !important;
+    }
+
+    .client_logo_section .wpb_column.vc_column_container.vc_col-sm-3 {
+        width: 50%;
+        float: left;
+    }
+
+    .client_logo_section figure.wpb_wrapper.vc_figure {
+        padding: 10px 15px;
+        margin: 10px 0;
+        height: 103px;
+    }
+
+    .banner_quality_box.wpb_column.vc_column_container.vc_col-sm-6 {
+        width: 100%;
+        position: relative;
+        top: 1px;
+    }
+
+    .banner_quality_img_box.wpb_column.vc_column_container.vc_col-sm-6 {
+        width: 100%;
+    }
+
+    .vc_row.wpb_row.vc_row-fluid.school_banner_box.vc_custom_1659419765553.vc_row-has-fill {
+        flex-direction: column-reverse;
+        display: flex;
+        height: 605px;
+        background-position: 97% -75px !important;
+        background-repeat: no-repeat !important;
+        background-size: 689px !important;
+    }
+
+    .pocket_title_box.school_aqi_box {
+        padding: 220px 30px 80px;
+    }
+
+    span.vs_text {
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        font-weight: regular;
+        position: relative;
+        top: 10px;
+        bottom: 10px;
+    }
+
+    .owl-slider {
+        padding: 0 25px;
+    }
+
+    .owl-slider .owl-nav button span {
+        font-size: 82px;
+    }
+
+    .owl-slider button.owl-prev {
+        position: absolute;
+        left: -30px;
+    }
+
+    .owl-slider button.owl-next {
+        position: absolute;
+        right: -30px;
+    }
+
+    .school_banner_box {
+        padding: 0;
+    }
+
+    .school_img_box {
+        min-height: 495px !important;
+    }
+
+    li.second_school_box {
+        top: 155px;
+        left: 0px;
+    }
+
+    li.second_school_box span.school_icon_box {
+        left: 28px;
+        top: -38px;
+    }
+
+    li.third_school_box {
+        left: 75px;
+        top: 120px;
+    }
+
+    li.fourth_school_box span.school_icon_box {
+        top: 40px;
+        left: -17px;
+    }
+
+    li.first_school_box {
+        left: 44px;
+    }
+
+    .schhol_text_box {
+        display: none;
+        min-width: 190px;
+        padding: 5px;
+    }
+
+    .schhol_text_box h3 {
+        font-size: 18px;
+    }
+
+    .schhol_text_box p {
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .school_box_cntr {
+        width: 100%;
+        float: none;
+        padding: 65px 0 0;
+    }
+
+    li.fourth_school_box {
+        top: 124px;
+        left: 65px;
+    }
+
+    li.first_school_box .schhol_text_box {
+        display: block;
+    }
+
+    li.fourth_school_box .schhol_text_box {
+        position: relative;
+        left: -208px;
+        z-index: -1;
+    }
+
+    li.second_school_box .schhol_text_box {
+        position: relative;
+        left: -195px;
+        z-index: -1;
+        min-width: inherit !important;
+        width: 258px;
+        top: -12px;
+    }
+
+    li.fivth_school_box {
+        left: 68px;
+        top: 23px;
+    }
+
+    li.six_school_box {
+        left: -126px;
+        top: 165px;
+    }
+
+    li.six_school_box span.school_icon_box {
+        left: 243px;
+    }
+
+    .six_school_box .schhol_text_box {
+        min-width: 283px;
+    }
+
+    .vc_row.wpb_row.vc_row-fluid.school_img_box.vc_custom_1660844203328.vc_row-has-fill.vc_row-o-full-height.vc_row-o-columns-middle.vc_row-flex {
+        background-size: cover !important;
+    }
+
+    .vc_row.wpb_row.vc_row-fluid.school_banner_box.vc_row-has-fill {
+        flex-direction: column-reverse;
+        display: flex;
+        height: 730px;
+        padding-top: 20px;
+        background-position: 97% -75px !important;
+        background-repeat: no-repeat !important;
+        background-size: 689px !important;
+    }
+
+    li.fivth_school_box .schhol_text_box {
+        min-width: 234px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-  .slider_details_box {
-    width: 100%;
-    float: none;
-    padding: 0 5px;
-    padding-bottom: 15px;
-  }
+    .slider_details_box {
+        width: 100%;
+        float: none;
+        padding: 0 5px;
+        padding-bottom: 15px;
+    }
 }
 
 .bg-image {
-  background-image: url("https://www.pranaair.com/wp-content/uploads/2023/04/bg-image.png");
-  background-size: 100% 100%;
-  height: 35vh;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    background-image: url("https://www.pranaair.com/wp-content/uploads/2023/04/bg-image.png");
+    background-size: 100% 100%;
+    height: 35vh;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 767px) {
-  .bg-image {
-    background-size: cover;
-    background-position: center;
-    height: 47vh;
-    width: 100%;
-  }
+    .bg-image {
+        background-size: cover;
+        background-position: center;
+        height: 47vh;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  .school_banner_box {
-    padding: 0 0 0;
-    background-size: 570px;
-    background-position: top right;
-    margin-top: 0;
-  }
+    .school_banner_box {
+        padding: 0 0 0;
+        background-size: 570px;
+        background-position: top right;
+        margin-top: 0;
+    }
 
-  .pocket_title_box.school_aqi_box p {
-    font-size: 18px;
-    padding-right: 0;
-  }
+    .pocket_title_box.school_aqi_box p {
+        font-size: 18px;
+        padding-right: 0;
+    }
 
-  .banner-high-co2 {
-    padding-top: 20px;
-  }
+    .banner-high-co2 {
+        padding-top: 20px;
+    }
 
-  .pocket_title_box.school_aqi_box:before {
-    width: 300px;
-    left: -10px;
-    bottom: 190px;
-    right: 0;
-  }
+    .pocket_title_box.school_aqi_box:before {
+        width: 300px;
+        left: -10px;
+        bottom: 190px;
+        right: 0;
+    }
 
-  .banner-btn {
-    font-size: 15px;
-    width: 58%;
-  }
+    .banner-btn {
+        font-size: 15px;
+        width: 58%;
+    }
 
-  .sub_title_box p {
-    padding: 0 0px;
-  }
+    .sub_title_box p {
+        padding: 0 0px;
+    }
 
-  .feature_wrap_box p {
-    font-size: 14px;
-  }
+    .feature_wrap_box p {
+        font-size: 14px;
+    }
 
-  .schhol_text_box {
-    width: 200px;
-  }
+    .schhol_text_box {
+        width: 200px;
+    }
 
-  .third_school_box span.school_icon_box img {
-    width: 66px;
-  }
+    .third_school_box span.school_icon_box img {
+        width: 66px;
+    }
 
-  li.fivth_school_box span.school_icon_box img {
-    width: 80px;
-  }
+    li.fivth_school_box span.school_icon_box img {
+        width: 80px;
+    }
 
-  .heading-box {
-    width: 90%;
-  }
+    .heading-box {
+        width: 90%;
+    }
 
-  .feature_wrap_box h3 {
-    line-height: 26px;
-  }
+    .feature_wrap_box h3 {
+        line-height: 26px;
+    }
 
-  .quote {
-    background-size: contain;
-    padding: 0 0 50px;
-  }
+    .quote {
+        background-size: contain;
+        padding: 0 0 50px;
+    }
 
-  .quote-heading h2 {
-    font-size: 26px;
-  }
+    .quote-heading h2 {
+        font-size: 26px;
+    }
 
-  .quote-heading p {
-    font-size: 11px;
-    padding-top: 10px;
-    padding-bottom: 40px;
-  }
+    .quote-heading p {
+        font-size: 11px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
 
-  .source-of-air-pollution-heading p {
-    font-size: 16px;
-    padding: 0;
-  }
+    .source-of-air-pollution-heading p {
+        font-size: 16px;
+        padding: 0;
+    }
 
-  button.slick-next.default.slick-arrow {
-    right: 0;
-  }
+    button.slick-next.default.slick-arrow {
+        right: 0;
+    }
 
-  button.slick-prev.default.slick-arrow {
-    left: 0px;
-  }
+    button.slick-prev.default.slick-arrow {
+        left: 0px;
+    }
 
-  span.ult-span-text {
-    font-size: 12px !important;
-    margin: 0px;
-    padding-left: 10px;
-  }
+    span.ult-span-text {
+        font-size: 12px !important;
+        margin: 0px;
+        padding-left: 10px;
+    }
+
+    li.sixth_school_box {
+        left: 0;
+    }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
-  .school_banner_box {
-    padding: 0 0 50px;
-    background-size: 900px;
-    background-position: top right;
-    margin-top: 0px;
-  }
+    .school_banner_box {
+        padding: 0 0 50px;
+        background-size: 900px;
+        background-position: top right;
+        margin-top: 0px;
+    }
 
-  .pocket_title_box.school_aqi_box {
-    padding: 10px 0 0 15%;
-  }
+    .pocket_title_box.school_aqi_box {
+        padding: 10px 0 0 15%;
+    }
 
-  .pocket_title_box.school_aqi_box h1 {
-    font-size: 26px;
-    line-height: 40px;
-    margin-bottom: 10px;
-  }
+    .pocket_title_box.school_aqi_box h1 {
+        font-size: 26px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
 
-  .pocket_title_box.school_aqi_box p {
-    font-size: 16px;
-    padding-right: 30px;
-  }
+    .pocket_title_box.school_aqi_box p {
+        font-size: 16px;
+        padding-right: 30px;
+    }
 
-  .banner-high-co2 {
-    padding-top: 10px;
-  }
+    .banner-high-co2 {
+        padding-top: 10px;
+    }
 
-  .pocket_title_box.school_aqi_box:before {
-    width: 200px;
-    left: -50px;
-    bottom: 130px;
-    right: 0;
-  }
+    .pocket_title_box.school_aqi_box:before {
+        width: 200px;
+        left: -50px;
+        bottom: 130px;
+        right: 0;
+    }
 
-  .banner-btn {
-    font-size: 16px;
-    width: 66%;
-    margin-top: 10px;
-  }
+    .banner-btn {
+        font-size: 16px;
+        width: 66%;
+        margin-top: 10px;
+    }
 
-  .introducing_box.sub_title_box {
-    padding: 40px 0 60px;
-  }
+    .introducing_box.sub_title_box {
+        padding: 40px 0 60px;
+    }
 
-  .sub_title_box p {
-    padding: 0 20px 10px;
-  }
+    .sub_title_box p {
+        padding: 0 20px 10px;
+    }
 
-  li.first_school_box {
-    left: 35px;
-    top: -50px;
-  }
+    li.first_school_box {
+        left: 35px;
+        top: -50px;
+    }
 
-  li.second_school_box {
-    left: -55px;
-  }
+    li.second_school_box {
+        left: 0;
+    }
 
-  li.third_school_box {
-    left: 50px;
-  }
+    .school_box_cntr ul li img {
+        height: auto;
+    }
 
-  li.sixth_school_box {
-    left: -10px;
-    top: -160px;
-  }
+    .health-impact .feature_wrap_box p {
+        padding: 0;
+    }
+    .contact-heading p {
+        width: 80%;
+    }
+    .client-logo-box img {
+        width: 100%;
+    }
 
-  li.fivth_school_box {
-    left: 270px;
-    top: 70px;
-  }
+    li.third_school_box {
+        left: 50px;
+    }
 
-  .heading-box {
-    width: 50%;
-    padding: 10px 0;
-  }
+    li.sixth_school_box {
+        left: -10px;
+        top: -160px;
+    }
 
-  .quote {
-    background-size: contain;
-  }
+    li.fivth_school_box {
+        left: 270px;
+        top: 70px;
+    }
 
-  .airgraph_cntr {
-    padding: 0 40px !important;
-  }
+    .heading-box {
+        width: 50%;
+        padding: 10px 0;
+    }
 
-  .airqulality_contact_section {
-    padding: 0 20px !important;
-  }
+    .quote {
+        background-size: contain;
+    }
 
-  .faq_section.faq_ask_section {
-    padding: 0 40px !important;
-  }
+    .airgraph_cntr {
+        padding: 0 40px !important;
+    }
+
+    .airqulality_contact_section {
+        padding: 0 20px !important;
+    }
+
+    .faq_section.faq_ask_section {
+        padding: 0 40px !important;
+    }
+
+    li.six_school_box {
+        left: -150px;
+        top: -80px;
+    }
+
+    .source-air-pollution-slider-txt img {
+        width: 100%;
+        height: auto;
+    }
+
+    .school_box_cntr {
+        width: 100%;
+    }
 }
 
 /* Quote section styles */
 .quote-section {
-  padding: 60px 0;
-  text-align: center;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .quote-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  background: url(https://www.pranaair.com/wp-content/uploads/2023/07/quote-box-design.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 60px 0;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: url(https://www.pranaair.com/wp-content/uploads/2023/07/quote-box-design.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 0;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .quote-content {
-  max-width: 700px;
-  margin: 0 auto;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .quote-content h2 {
-  color: #78ae60;
-  font-size: 30px;
-  margin-bottom: 20px;
+    color: #78ae60;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .quote-content p {
-  font-size: 18px;
-  line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Solutions section styles */
 .quality-solutions-section {
-  padding: 60px 0;
-  background-color: #fff;
+    padding: 60px 0;
+    background-color: #fff;
 }
 
 .section-header {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .section-title {
-  font-size: 36px;
-  margin-bottom: 15px;
-  font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .section-title .highlight {
-  color: #78ae60;
-  font-weight: 700;
+    color: #78ae60;
+    font-weight: 700;
 }
 
 .solutions-tabs-container {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .tabs-header {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .tab-button {
-  padding: 12px 30px;
-  background-color: #f5f5f5;
-  border: none;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    padding: 12px 30px;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .tab-button.active {
-  background-color: #78ae60;
-  color: white;
+    background-color: #78ae60;
+    color: white;
 }
 
 .tabs-content {
-  position: relative;
+    position: relative;
 }
 
 .product-slide {
-  padding: 20px;
+    padding: 20px;
 }
 
 .product-content {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 }
 
 .product-info {
-  flex: 1;
-  padding: 30px;
+    flex: 1;
+    padding: 30px;
 }
 
 .product-info h3 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #333;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .product-info p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-  line-height: 1.6;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .feature-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 25px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
 }
 
 .feature-list li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 10px;
-  font-size: 16px;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .feature-list li:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  width: 20px;
-  height: 20px;
-  background: url("https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png") no-repeat;
-  background-size: contain;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: url("https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png") no-repeat;
+    background-size: contain;
 }
 
 .product-image {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .know-more-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #78ae60;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #78ae60;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .know-more-btn:hover {
-  background-color: #669e4e;
+    background-color: #669e4e;
 }
 
 .rent-btn {
-  display: inline-block;
-  margin-left: 15px;
-  color: #78ae60;
-  text-decoration: none;
-  font-weight: 500;
+    display: inline-block;
+    margin-left: 15px;
+    color: #78ae60;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .button-group {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: #78ae60;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #78ae60;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .left-arrow {
-  left: -20px;
+    left: -20px;
 }
 
 .right-arrow {
-  right: -20px;
+    right: -20px;
 }
 
 .fresh-air-content {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 /* Comparison section styles */
 .comparison-section {
-  padding: 60px 0;
-  background-color: #f9f9f9;
+    padding: 60px 0;
+    background-color: #f9f9f9;
 }
 
 .comparison-container {
-  max-width: 1000px;
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .comparison-columns {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
 }
 
 .comparison-column {
-  flex: 1;
-  padding: 30px;
-  text-align: center;
+    flex: 1;
+    padding: 30px;
+    text-align: center;
 }
 
 .comparison-divider {
-  width: 1px;
-  background-color: #ddd;
-  margin: 0 20px;
+    width: 1px;
+    background-color: #ddd;
+    margin: 0 20px;
 }
 
 .comparison-column h3 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .without-solution h3 {
-  color: #e86868;
+    color: #e86868;
 }
 
 .with-solution h3 {
-  color: #78ae60;
+    color: #78ae60;
 }
 
 .comparison-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 25px;
-  text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    text-align: left;
 }
 
 .comparison-list li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 10px;
-  font-size: 16px;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .negative-list li:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  width: 20px;
-  height: 20px;
-  background: url("https://www.pranaair.com/wp-content/uploads/2022/08/red-arrow.png") no-repeat;
-  background-size: contain;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: url("https://www.pranaair.com/wp-content/uploads/2022/08/red-arrow.png") no-repeat;
+    background-size: contain;
 }
 
 .positive-list li:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  width: 20px;
-  height: 20px;
-  background: url("https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png") no-repeat;
-  background-size: contain;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: url("https://www.pranaair.com/wp-content/uploads/2022/08/arrow.png") no-repeat;
+    background-size: contain;
 }
 
 .comparison-image {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .comparison-studies {
-  text-align: center;
-  margin-top: 30px;
-  padding: 0 20px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 20px;
 }
 
 .comparison-studies p {
-  margin-bottom: 15px;
-  font-size: 16px;
-  line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Clientele section styles */
 .clientele-section {
-  padding: 60px 0;
-  background-color: #fff;
+    padding: 60px 0;
+    background-color: #fff;
 }
 
 .client-grid {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .client-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .client-logo-box {
-  flex: 1;
-  margin: 0 15px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+    flex: 1;
+    margin: 0 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
 .client-logo-box:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* Contact section styles */
 .contact-section {
-  padding: 60px 0;
-  background-color: #f5f8f5;
+    padding: 60px 0;
+    background-color: #f5f8f5;
 }
 
 .contact-form-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .contact-info-box {
-  width: 35%;
-  background-color: #78ae60;
-  padding: 40px 30px;
-  color: #fff;
+    width: 35%;
+    background-color: #78ae60;
+    padding: 40px 30px;
+    color: #fff;
 }
 
 .contact-info-box h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .contact-info-box p {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .contact-info-item {
-  display: flex;
-  margin-bottom: 20px;
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .contact-icon {
-  margin-right: 15px;
-  font-size: 18px;
+    margin-right: 15px;
+    font-size: 18px;
 }
 
 .contact-label {
-  font-weight: 500;
-  margin-bottom: 5px;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .contact-form-box {
-  width: 65%;
-  padding: 40px;
+    width: 65%;
+    padding: 40px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .form-row {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .full-width {
-  width: 100%;
+    width: 100%;
 }
 
 .half-width {
-  width: 50%;
+    width: 50%;
 }
 
 .form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 textarea.form-control {
-  min-height: 120px;
-  resize: vertical;
+    min-height: 120px;
+    resize: vertical;
 }
 
 .message-label {
-  color: #78ae60;
-  font-weight: 500;
+    color: #78ae60;
+    font-weight: 500;
 }
 
 .submit-button {
-  background-color: #78ae60;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background-color: #78ae60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #669e4e;
+    background-color: #669e4e;
 }
 
 /* FAQ section styles */
 .faq-section {
-  padding: 60px 0;
-  background-color: #fff;
+    padding: 60px 0;
+    background-color: #fff;
 }
 
 .faq-container {
-  max-width: 1000px;
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .faq-item {
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
 }
 
 .faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
 }
 
 .faq-question h3 {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
 }
 
 .faq-toggle {
-  font-size: 24px;
-  color: #78ae60;
+    font-size: 24px;
+    color: #78ae60;
 }
 
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 }
 
 .faq-answer.show {
-  max-height: 500px;
-  padding-bottom: 15px;
+    max-height: 500px;
+    padding-bottom: 15px;
 }
 
 .faq-answer p {
-  margin: 0;
-  color: #666;
-  line-height: 1.6;
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Industrial applications section styles */
 .industrial-applications-section {
-  padding: 60px 0;
-  background-color: #f9f9f9;
+    padding: 60px 0;
+    background-color: #f9f9f9;
 }
 
 .applications-carousel {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .application-item {
-  padding: 15px;
-  text-align: center;
+    padding: 15px;
+    text-align: center;
 }
 
 .application-image {
-  margin-bottom: 15px;
-  border-radius: 8px;
-  overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.application-image img {
+    width: 100%;
+    height: auto;
+}
+
+.client-logo-box img {
+    height: auto;
+    width: 40%;
 }
 
 .application-item h3 {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
-  .contact-form-container {
-    flex-direction: column;
-  }
+    .contact-form-container {
+        flex-direction: column;
+    }
 
-  .contact-info-box,
-  .contact-form-box {
-    width: 100%;
-  }
+    .contact-info-box,
+    .contact-form-box {
+        width: 100%;
+    }
 
-  .comparison-columns {
-    flex-direction: column;
-  }
+    .comparison-columns {
+        flex-direction: column;
+    }
 
-  .comparison-divider {
-    width: 100%;
-    height: 1px;
-    margin: 20px 0;
-  }
+    .comparison-divider {
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+    }
 
-  .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
 
-  .half-width {
-    width: 100%;
-  }
+    .half-width {
+        width: 100%;
+    }
 
-  .client-row {
-    flex-wrap: wrap;
-  }
+    .client-row {
+        flex-wrap: wrap;
+    }
 
-  .client-logo-box {
-    width: 45%;
-    margin-bottom: 20px;
-  }
+    .client-logo-box {
+        width: 45%;
+        margin-bottom: 20px;
+    }
 
-  .product-content {
-    flex-direction: column;
-  }
+    .product-content {
+        flex-direction: column;
+    }
 
-  .fresh-air-content {
-    flex-direction: column;
-  }
+    .fresh-air-content {
+        flex-direction: column;
+    }
 }

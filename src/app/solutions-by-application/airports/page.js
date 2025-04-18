@@ -1100,7 +1100,7 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-1.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />
@@ -1109,7 +1109,7 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-2.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />
@@ -1118,7 +1118,7 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-3.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />
@@ -1127,45 +1127,7 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-4.jpg"
-                  alt="Client Logo"
-                  className="img-responsive"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-3 col-sm-6">
-              <div className="client-logo-box">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-5.jpg"
-                  alt="Client Logo"
-                  className="img-responsive"
-                />
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="client-logo-box">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-6.jpg"
-                  alt="Client Logo"
-                  className="img-responsive"
-                />
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="client-logo-box">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-7.jpg"
-                  alt="Client Logo"
-                  className="img-responsive"
-                />
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className="client-logo-box">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-8.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />
@@ -1176,7 +1138,7 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-9.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/RENAULT-NISSAN.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />
@@ -1185,7 +1147,7 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-10.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />
@@ -1194,7 +1156,7 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-11.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />
@@ -1203,7 +1165,45 @@ export default function AirportSolutions() {
             <div className="col-md-3 col-sm-6">
               <div className="client-logo-box">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-12.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png"
+                  alt="Client Logo"
+                  className="img-responsive"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-3 col-sm-6">
+              <div className="client-logo-box">
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/INTERGLOBE.png"
+                  alt="Client Logo"
+                  className="img-responsive"
+                />
+              </div>
+            </div>
+            <div className="col-md-3 col-sm-6">
+              <div className="client-logo-box">
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/GMDA-1.png"
+                  alt="Client Logo"
+                  className="img-responsive"
+                />
+              </div>
+            </div>
+            <div className="col-md-3 col-sm-6">
+              <div className="client-logo-box">
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/download.png"
+                  alt="Client Logo"
+                  className="img-responsive"
+                />
+              </div>
+            </div>
+            <div className="col-md-3 col-sm-6">
+              <div className="client-logo-box">
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/HAVELLS.png"
                   alt="Client Logo"
                   className="img-responsive"
                 />

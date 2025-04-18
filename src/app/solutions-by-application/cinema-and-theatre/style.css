@@ -64,9 +64,13 @@ body p,
 }
 
 .school_box_cntr {
-    width: 950px;
-    float: right;
-    padding: 120px 0;
+    width: 100%;
+    padding: 300px 0 0;
+}
+
+.school_box_cntr ul {
+    display: flex;
+    justify-content: space-around;
 }
 
 .school_box_cntr ul {
@@ -75,13 +79,6 @@ body p,
     padding: 0;
 }
 
-.school_box_cntr li {
-    display: inline-block;
-    position: relative;
-    width: 50%;
-    float: left;
-    min-height: 225px;
-}
 
 .school_box_cntr li img {
     width: 60px;
@@ -311,6 +308,8 @@ span.bold_text {
 
 .school_img_box {
     margin-top: 60px;
+    background-size: cover;
+    width: 100%;
 }
 
 .faq_section .vc_tta-panel-body {
@@ -714,6 +713,20 @@ a.right.carousel-control {
     top: 0;
     height: 420px;
     z-index: -1;
+}
+
+.solution-tab ul {
+    justify-content: center;
+}
+
+.solution-tab ul .nav-link.active {
+    background: #7ab261;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.solution-tab ul .nav-link {
+    margin: 0px 30px;
 }
 
 .faq_section.faq_ask_section {
@@ -1156,4 +1169,30 @@ a.right.carousel-control {
     .airqulality_contact_section {
         padding: 0 0px !important;
     }
+
+    span.school_icon_box {
+        position: absolute;
+        top: 90px;
+        left: 0;
+    }
+
+    .client_logo_section img {
+        width: 40%;
+        margin: 0 auto 30px;
+        display: block;
+    }
+}
+
+.faq-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #0c0c0c;
+}
+
+.accordion-item {
+    border: none;
 }

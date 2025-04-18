@@ -827,7 +827,7 @@ export default function WashroomPage() {
           <div className="client-grid">
             <div className="client-logo">
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-1.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
                 alt="Client Logo"
                 width={200}
                 height={100}
@@ -835,7 +835,7 @@ export default function WashroomPage() {
             </div>
             <div className="client-logo">
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-2.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
                 alt="Client Logo"
                 width={200}
                 height={100}
@@ -843,7 +843,7 @@ export default function WashroomPage() {
             </div>
             <div className="client-logo">
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-3.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
                 alt="Client Logo"
                 width={200}
                 height={100}
@@ -851,7 +851,7 @@ export default function WashroomPage() {
             </div>
             <div className="client-logo">
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-4.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
                 alt="Client Logo"
                 width={200}
                 height={100}

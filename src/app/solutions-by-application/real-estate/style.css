@@ -81,7 +81,7 @@ a:hover {
 }
 
 .hero-content {
-  width: 50%;
+  width: 100%;
   padding: 80px 40px 80px 10%;
   color: #333;
   position: relative;
@@ -1895,7 +1895,9 @@ label.message_text {
     width: 258px;
     top: -12px;
   }
-
+  .contact-heading p {
+    width: 80%;
+}
   li.fivth_school_box {
     left: 68px;
     top: 43px;
@@ -2091,7 +2093,9 @@ label.message_text {
   .pollution_cntr .feature_box {
     width: 50%;
   }
-
+  .contact-heading p {
+    width: 80%;
+}
   .client-logo {
     width: 50%;
   }

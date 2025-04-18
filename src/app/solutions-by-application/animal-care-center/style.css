@@ -1180,181 +1180,237 @@ img.power {
     margin-bottom: 5px;
   }
 
-  @media only screen and (max-width: 767px) {
-  .pollutants-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .bottom-pollutants {
-    grid-column: 1;
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-container {
-    flex-direction: column;
-  }
-  
-  .contact-info, .contact-form {
-    width: 100%;
-  }
-  
-  .form-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .app_img_bx {
-    height: 150px;
-  }
 }
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .pollutants-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media only screen and (max-width: 767px) {
+    .pollutants-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .bottom-pollutants {
+      grid-column: 1;
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+      flex-direction: column;
+    }
+    
+    .contact-info, .contact-form {
+      width: 100%;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .app_img_bx {
+      height: 150px;
+    }
   }
   
-  .bottom-pollutants {
-    grid-column: 1 / span 2;
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .pollutants-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .bottom-pollutants {
+      grid-column: 1 / span 2;
+    }
   }
-}
-
-@media only screen and (min-width: 767px) and (max-width: 1023px) {
-  .school_banner_box {
-    padding: 0 0 0;
-    margin-top: 0;
-    height: 350px;
+  
+  @media only screen and (min-width: 767px) and (max-width: 1023px) {
+    .school_banner_box {
+      padding: 0 0 0;
+      margin-top: 0;
+      height: 350px;
+    }
+    .pocket_title_box.school_aqi_box {
+      padding-top: 0;
+    }
+    .pocket_title_box.school_aqi_box p {
+      font-size: 14px;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+    .pocket_title_box.school_aqi_box h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .feature_box img {
+      width: 60px;
+      height: 50px;
+    }
+    .feature_box h2 {
+      font-size: 12px;
+    }
+    .quote {
+      background-size: 720px;
+      padding: 0 0 190px;
+      margin-top: 100px;
+    }
+    .area-para p {
+      font-size: 14px;
+    }
+    .area-para h3 {
+      font-size: 18px;
+    }
+    .passengers-box img {
+      width: 60%;
+    }
+    .loco-pilot {
+      width: 70% !important;
+    }
+    .guidelines-logo a {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .passengers-box h3 {
+      font-size: 18px;
+    }
+    .passengers-box {
+      height: 480px;
+      margin-bottom: 50px !important;
+    }
+    .air-quality-heading h3 {
+      font-size: 28px;
+    }
+    .air-quality-heading {
+      padding-left: 10px;
+      padding-top: 0;
+    }
+    ul.airquality_list {
+      padding: 0 0 0 10px;
+      margin: 0 0 20px;
+    }
+    .btns-bottom {
+      gap: 10px;
+      padding-left: 30px;
+    }
+    a.knowmore_btn {
+      padding: 8px 21px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    .air_quality_box {
+      padding-left: 20px;
+    }
+    .air_quality_box h3 {
+      padding-left: 10px;
+    }
+    .slidder-txt {
+      padding-top: 50px;
+      padding-left: 20px;
+    }
+    .slidder-txt p {
+      width: 95%;
+      font-size: 14px;
+      line-height: 25px;
+    }
+    .slider:before {
+      top: 0;
+      height: 340px;
+    }
+    .client-logo img {
+      width: 70%;
+    }
+    .client-logo {
+      height: 120px;
+    }
+    .quote-heading {
+      padding: 0 80px 50px;
+    }
+    .introducing_box.sub_title_box {
+      padding: 0 0 40px;
+    }
+    .railway-staion-plateform {
+      height: 600px;
+    }
+    .factors-affect-box {
+      height: 220px;
+    }
+    .stationary {
+      left: 80px;
+    }
+    .owl-slider button.owl-prev {
+      left: -20px;
+    }
+    .owl-slider button.owl-next {
+      right: -20px;
+    }
+    .banner-btn {
+      width: 45%;
+    }
+    .mg-pd {
+      left: 20px;
+    }
+    .source-heading p {
+      padding: 0;
+    }
+    .source-wrap_box h2 {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+    .sub_title_box .title_heading {
+      font-size: 30px;
+      margin: 50px 0 15px;
+    }
+    .pocket_title_box.school_aqi_box h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .pocket_title_box.school_aqi_box p {
+        padding-right: 0px;
+        padding-top: 10px;
+    }
+    .banner-btn {
+        width: 60%;
+    }
+    .introducing_box.sub_title_box {
+        padding: 90px 0 10px;
+    }
+    .source-wrap_box h2 {
+        padding: 10px;
+    }
+    .mg-l {
+        padding: 0;
+    }
+    .area-para h3 {
+        padding-top: 20px;
+    }
+    .risk-img {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .air-quality-heading {
+        padding-top: 0px;
+    }
+    .air-quality-heading h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .air_quality_box {
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+    .slidder-txt {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+    .slider:before {
+        display: none;
+    }
+    .slidder-txt p {
+        width: 100%;
+    }
+    .client-logo {
+        height: 110px;
+    }
+    .client-logo img {
+        width: 60%;
+    }
+    .contact-heading p {    
+        width: 60%;
+    }
   }
-  .pocket_title_box.school_aqi_box {
-    padding-top: 0;
-  }
-  .pocket_title_box.school_aqi_box p {
-    font-size: 14px;
-    padding-right: 0;
-    padding-bottom: 0;
-  }
-  .pocket_title_box.school_aqi_box h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  .feature_box img {
-    width: 60px;
-    height: 50px;
-  }
-  .feature_box h2 {
-    font-size: 12px;
-  }
-  .quote {
-    background-size: 720px;
-    padding: 0 0 190px;
-    margin-top: 100px;
-  }
-  .area-para p {
-    font-size: 14px;
-  }
-  .area-para h3 {
-    font-size: 18px;
-  }
-  .passengers-box img {
-    width: 60%;
-  }
-  .loco-pilot {
-    width: 70% !important;
-  }
-  .guidelines-logo a {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  .passengers-box h3 {
-    font-size: 18px;
-  }
-  .passengers-box {
-    height: 480px;
-    margin-bottom: 50px !important;
-  }
-  .air-quality-heading h3 {
-    font-size: 28px;
-  }
-  .air-quality-heading {
-    padding-left: 10px;
-    padding-top: 0;
-  }
-  ul.airquality_list {
-    padding: 0 0 0 10px;
-    margin: 0 0 20px;
-  }
-  .btns-bottom {
-    gap: 10px;
-    padding-left: 30px;
-  }
-  a.knowmore_btn {
-    padding: 8px 21px;
-    border-radius: 5px;
-    font-size: 12px;
-  }
-  .air_quality_box {
-    padding-left: 20px;
-  }
-  .air_quality_box h3 {
-    padding-left: 10px;
-  }
-  .slidder-txt {
-    padding-top: 50px;
-    padding-left: 20px;
-  }
-  .slidder-txt p {
-    width: 95%;
-    font-size: 14px;
-    line-height: 25px;
-  }
-  .slider:before {
-    top: 0;
-    height: 340px;
-  }
-  .client-logo img {
-    width: 70%;
-  }
-  .client-logo {
-    height: 120px;
-  }
-  .quote-heading {
-    padding: 0 80px 50px;
-  }
-  .introducing_box.sub_title_box {
-    padding: 0 0 40px;
-  }
-  .railway-staion-plateform {
-    height: 600px;
-  }
-  .factors-affect-box {
-    height: 220px;
-  }
-  .stationary {
-    left: 80px;
-  }
-  .owl-slider button.owl-prev {
-    left: -20px;
-  }
-  .owl-slider button.owl-next {
-    right: -20px;
-  }
-  .banner-btn {
-    width: 45%;
-  }
-  .mg-pd {
-    left: 20px;
-  }
-  .source-heading p {
-    padding: 0;
-  }
-  .source-wrap_box h2 {
-    font-size: 15px;
-    padding: 0 10px;
-  }
-  .sub_title_box .title_heading {
-    font-size: 30px;
-    margin: 50px 0 15px;
-  }
-}
-
-}

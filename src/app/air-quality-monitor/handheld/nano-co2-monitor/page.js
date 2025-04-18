@@ -1,6 +1,8 @@
 "use client"
 import { useEffect, useState, useRef } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 import "./style.css"
 
 export default function NanoCO2MonitorPage() {
@@ -118,7 +120,24 @@ export default function NanoCO2MonitorPage() {
   const toggleFaq = (faqId) => {
     setActiveFaq(activeFaq === faqId ? null : faqId)
   }
-
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  }
   return (
     <main className="nano-co2-monitor-page">
       {/* Sticky Navigation Bar */}
@@ -575,36 +594,63 @@ export default function NanoCO2MonitorPage() {
 
       {/* SECTION 7: Small, Sleek, Reliable */}
       <section className="slider_section">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-5 col-md-12">
-              <div className="slider-image">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/06/portable-nano-co2-monitor-of-prana-air.jpg"
-                  alt="portable nano co2 monitor of prana air"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-            <div className="col-lg-7 col-md-12">
-              <div className="slider-content">
-                <h2>Small · Sleek · Reliable</h2>
-                <p>
-                  Our mini air quality monitor is a perfect companion for a healthier lifestyle. Stay informed about the
-                  air you breathe without the hassle of large and complicated equipment.
-                </p>
-                <div className="slider-navigation">
-                  <button className="nav-button prev" aria-label="Previous slide">
-                    <span>←</span>
-                  </button>
-                  <button className="nav-button next" aria-label="Next slide">
-                    <span>→</span>
-                  </button>
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          className="home-slider"
+          arrows={true}
+        >
+          <div>
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-5 col-md-12">
+                  <div className="slider-image">
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/portable-nano-co2-monitor-of-prana-air.jpg"
+                      alt="portable nano co2 monitor of prana air"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-7 col-md-12">
+                  <div className="slider-content">
+                    <h2>Small · Sleek · Reliable</h2>
+                    <p>
+                      Our mini air quality monitor is a perfect companion for a healthier lifestyle. Stay informed about the
+                      air you breathe without the hassle of large and complicated equipment.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          <div>
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-5 col-md-12">
+                  <div className="slider-image">
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/easy-to-use-anywhere-prana-air-co2-monitor.jpg"
+                      alt="portable nano co2 monitor of prana air"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-7 col-md-12">
+                  <div className="slider-content">
+                    <h2>Intelligent · Compact · Accurate</h2>
+                    <p>
+                      Real-time monitoring of indoor CO2 levels allows you to make data-driven decisions to improve the air quality of your indoor environments!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Carousel>
+
       </section>
 
       {/* SECTION 8: Banner Image */}
@@ -782,7 +828,7 @@ export default function NanoCO2MonitorPage() {
             </div>
             <div className="col-lg-7 col-md-12">
               <div className="product-key-functions">
-                <div className="key-function-item d-flex align-items-center mb-4">
+                <div className="key-function-item d-flex mb-4">
                   <div className="key-function-image me-3">
                     <img
                       className="d-none d-md-block"
@@ -802,7 +848,7 @@ export default function NanoCO2MonitorPage() {
                   </div>
                 </div>
 
-                <div className="key-function-item d-flex align-items-center mb-4">
+                <div className="key-function-item d-flex mb-4 calibration">
                   <div className="key-function-image me-3">
                     <img
                       className="d-none d-md-block"
@@ -822,7 +868,7 @@ export default function NanoCO2MonitorPage() {
                   </div>
                 </div>
 
-                <div className="key-function-item d-flex align-items-center">
+                <div className="key-function-item d-flex brightness">
                   <div className="key-function-image me-3">
                     <img
                       className="d-none d-md-block"
@@ -1178,7 +1224,7 @@ export default function NanoCO2MonitorPage() {
         </div>
       </section>
 
-      
+
     </main>
   )
 }

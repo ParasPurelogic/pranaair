@@ -263,6 +263,7 @@ export default function AirQualitySolutions() {
             <div className="container air_quality_tab_sec">
                 <div className="row">
                     <div className="col-md-12">
+                        <div className='solution-tab'>
                         <ul className="nav nav-tabs">
                             <li className="nav-item">
                                 <button className={`nav-link ${activeTab === "air-quality-monitors" ? "active" : ""}`} onClick={() => setActiveTab("air-quality-monitors")}
@@ -286,6 +287,7 @@ export default function AirQualitySolutions() {
                                 </button>
                             </li>
                         </ul>
+                        </div>
 
                         <div className="tab-content">
                             {activeTab === 'air-quality-monitors' && (

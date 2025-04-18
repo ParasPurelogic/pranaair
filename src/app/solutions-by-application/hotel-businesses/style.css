@@ -32,6 +32,7 @@ body p,
 
 .school_img_box {
     min-height: 830px !important;
+    width: 100%;
 }
 
 .vc_row.wpb_row.vc_row-fluid.school_img_box.vc_custom_1660844203328.vc_row-has-fill.vc_row-o-full-height.vc_row-o-columns-middle.vc_row-flex {
@@ -1161,15 +1162,21 @@ section.img-box-sec {
     }
 
     li.first_school_box {
-        left: 290px;
+        left: 0px;
     }
 
     li.second_school_box {
         left: 0;
     }
 
+    .client_logo_section img {
+        width: 30%;
+        margin: 0 auto 30px;
+        display: block;
+    }
+
     li.third_school_box {
-        left: 270px;
+        left: 0px;
         top: 60px;
     }
 
@@ -1179,5 +1186,57 @@ section.img-box-sec {
 
     .airqulality_contact_section {
         padding: 0 0px !important;
+    }
+    .custom {
+        flex-wrap: wrap;
+    }
+}
+
+.solution-tab ul {
+    justify-content: center;
+}
+
+.solution-tab ul .nav-link.active {
+    background: #7ab261;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.solution-tab ul .nav-link {
+    margin: 0px 30px;
+}
+
+.faq-section {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #0c0c0c;
+}
+
+.accordion-item {
+    border: none;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+    .airqulality_contact_section {
+        padding: 0 !important;
+    }
+    .contact-heading p {
+        width: 70%;
+    }
+    .client_logo_section img {
+        width: 70%;
+    }
+    .airgraph_cntr {
+        padding: 0 20px !important;
+    }
+    .slider_details_box h3 {
+        font-size: 25px;
+    }
+    .custom {
+        flex-wrap: wrap;
     }
 }

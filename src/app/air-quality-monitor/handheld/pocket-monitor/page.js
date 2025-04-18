@@ -1326,7 +1326,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/morgan.jpg"
                   alt="Morgan Stanley"
                   className="client-logo"
                 />
@@ -1335,7 +1335,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2021/12/ola.jpg"
                   alt="OLA"
                   className="client-logo"
                 />
@@ -1344,7 +1344,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/renault-nissan.jpg"
                   alt="Renault Nissan"
                   className="client-logo"
                 />
@@ -1353,7 +1353,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/cii.jpg"
                   alt="CII"
                   className="client-logo"
                 />
@@ -1362,7 +1362,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/interglobe.jpg"
                   alt="Interglobe"
                   className="client-logo"
                 />
@@ -1371,7 +1371,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/marriott.jpg"
                   alt="Marriott"
                   className="client-logo"
                 />
@@ -1380,7 +1380,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/csir.jpg"
                   alt="CSIR"
                   className="client-logo"
                 />
@@ -1389,7 +1389,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/tata.jpg"
                   alt="TATA"
                   className="client-logo"
                 />
@@ -1398,7 +1398,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/mahindra.jpg"
                   alt="Mahindra"
                   className="client-logo"
                 />
@@ -1407,7 +1407,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/gmda.jpg"
                   alt="GMDA"
                   className="client-logo"
                 />
@@ -1416,7 +1416,7 @@ export default function PocketMonitorPage() {
             <div className="col-lg-3 col-md-4 col-6">
               <div className="client-logo-card">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/07/havellss.jpg"
                   alt="Havells"
                   className="client-logo"
                 />

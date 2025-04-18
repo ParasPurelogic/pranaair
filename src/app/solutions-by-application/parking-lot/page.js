@@ -649,7 +649,7 @@ export default function ParkingLotPage() {
             <div className="col-md-3">
               <div className="client-logo">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/ultratech-cement-logo.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
                   alt="UltraTech Cement"
                   className="img-responsive"
                 />
@@ -658,7 +658,7 @@ export default function ParkingLotPage() {
             <div className="col-md-3">
               <div className="client-logo">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/speco-technologies-logo.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
                   alt="Speco Technologies"
                   className="img-responsive"
                 />
@@ -667,7 +667,7 @@ export default function ParkingLotPage() {
             <div className="col-md-3">
               <div className="client-logo">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/starcrete-logo.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
                   alt="StarCrete"
                   className="img-responsive"
                 />
@@ -676,7 +676,7 @@ export default function ParkingLotPage() {
             <div className="col-md-3">
               <div className="client-logo">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/indiscrete-logo.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
                   alt="Indiscrete"
                   className="img-responsive"
                 />

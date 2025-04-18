@@ -719,11 +719,12 @@ label.message_text {
   .feature_box {
     padding: 13px 15px;
   }
-
-  .school_img_box {
-    min-height: 495px !important;
-  }
-
+  .img-responsive {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
   .airqulality_contact_section {
     padding: 0 15px !important;
   }
@@ -769,3 +770,8 @@ label.message_text {
   }
 }
 
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .box-form {
+    width: 100% !important;
+  }
+}

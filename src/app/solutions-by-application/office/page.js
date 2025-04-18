@@ -803,7 +803,7 @@ export default function OfficeSolutions() {
             <div className="client-row">
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-1.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
                   alt="Morgan Stanley"
                   width={200}
                   height={100}
@@ -812,7 +812,7 @@ export default function OfficeSolutions() {
               </div>
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/ola-company.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
                   alt="Ola"
                   width={200}
                   height={100}
@@ -821,7 +821,7 @@ export default function OfficeSolutions() {
               </div>
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-3.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
                   alt="Microsoft"
                   width={200}
                   height={100}
@@ -830,7 +830,7 @@ export default function OfficeSolutions() {
               </div>
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/iit-institutes.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
                   alt="IIT"
                   width={200}
                   height={100}
@@ -842,7 +842,7 @@ export default function OfficeSolutions() {
             <div className="client-row">
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/renault-company.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/RENAULT-NISSAN.png"
                   alt="Renault Nissan"
                   width={200}
                   height={100}
@@ -851,7 +851,7 @@ export default function OfficeSolutions() {
               </div>
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/tata-company.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png"
                   alt="Tata"
                   width={200}
                   height={100}
@@ -860,7 +860,7 @@ export default function OfficeSolutions() {
               </div>
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2022/08/client-logo-4.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png"
                   alt="CSIR"
                   width={200}
                   height={100}
@@ -869,7 +869,7 @@ export default function OfficeSolutions() {
               </div>
               <div className="client-logo-box">
                 <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/mahindra-company.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png"
                   alt="Mahindra"
                   width={200}
                   height={100}
