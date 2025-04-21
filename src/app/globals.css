@@ -639,6 +639,10 @@ a {
   grid-column: span 3;
 }
 
+.footer-logo img {
+  height: auto;
+}
+
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -695,7 +699,7 @@ a {
 .contact-item {
   display: flex;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
 }
 
 .contact-icon {

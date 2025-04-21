@@ -142,7 +142,7 @@ function MainFooter() {
               <h5 className="footer-heading" style={{ marginBottom: "24px" }}>
                 {t("footer.contactDetails")}
               </h5>
-              <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              <div style={{ display: "flex", flexDirection: "column" }}>
                 <div className="contact-item">
                   <div className="contact-icon">
                     <svg
