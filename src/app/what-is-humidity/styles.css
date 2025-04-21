@@ -68,6 +68,8 @@
 .center-image {
   margin: 0 auto;
   display: block;
+  width: 40%;
+  height: auto;
 }
 
 .empty-space {
@@ -195,3 +197,9 @@ hr {
   }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .center-image {
+      width: 50%;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {}  

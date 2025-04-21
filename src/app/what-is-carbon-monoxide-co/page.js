@@ -664,7 +664,7 @@ export default function CarbonMonoxidePage() {
           <div className="row align-items-center">
             <div className="col-md-3">
               <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/ventilation-to-reduce-co-gas.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/Ventilation-180x180.png"
                 alt="Ventilation"
                 className="img-fluid fade-in-up"
               />
@@ -685,7 +685,7 @@ export default function CarbonMonoxidePage() {
           <div className="row align-items-center">
             <div className="col-md-3">
               <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/public-transport-to-reduce-co-gas.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/Public-transport-181x142.png"
                 alt="Public Transport"
                 className="img-fluid fade-in-up"
               />
@@ -705,7 +705,7 @@ export default function CarbonMonoxidePage() {
           <div className="row align-items-center">
             <div className="col-md-3">
               <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/alternate-fuels-to-reduce-co-gas.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/alternate-fuel-181x142.png"
                 alt="Alternate Fuels"
                 className="img-fluid fade-in-up"
               />
@@ -726,7 +726,7 @@ export default function CarbonMonoxidePage() {
           <div className="row align-items-center">
             <div className="col-md-3">
               <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/non-fuel-alternatives-to-reduce-co-gas.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/non-fule-alternative-181x142.png"
                 alt="Non-fuel Alternatives"
                 className="img-fluid fade-in-up"
               />
@@ -746,7 +746,7 @@ export default function CarbonMonoxidePage() {
           <div className="row align-items-center">
             <div className="col-md-3">
               <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/recycling-to-reduce-co-gas.png"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/Recycle-180x180.png"
                 alt="Recycling"
                 className="img-fluid fade-in-up"
               />

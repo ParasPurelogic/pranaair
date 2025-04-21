@@ -14,7 +14,7 @@
 }
 
 .heading_top_white {
-  font-size: 50pt;
+  font-size: 44pt;
   line-height: 1.1;
   display: block;
 }
@@ -200,6 +200,7 @@
 /* PM Care Section */
 .pm-care-section {
   background-color: #d6f8eb;
+  padding-top: 100px;
   padding-bottom: 60px;
 }
 
@@ -380,6 +381,13 @@
   }
 }
 
+.aligncenter {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .col-md-1-5 {
     width: 33.33%;
@@ -392,3 +400,35 @@
   }
 }
 
+.sick {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  img.aligncenter {
+    width: 60%;
+    height: auto;
+  }
+
+  .topsection {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sick {
+    width: 100%;
+}
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  img.aligncenter {
+    width: 40%;
+    height: auto;
+  }
+
+  .sick {
+    width: 60%;
+  }
+}

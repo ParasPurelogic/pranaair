@@ -16,7 +16,9 @@ h5,
 h6 {
     font-family: "Nunito Sans", sans-serif !important
 }
-
+.graph-btn {
+    position: relative;
+}
 .hero-section {
     background: url(https://www.pranaair.com/wp-content/uploads/2024/09/know-the-quality-of-air-you-breathe-scaled.webp);
     background-repeat: no-repeat;

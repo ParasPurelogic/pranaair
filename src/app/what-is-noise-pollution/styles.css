@@ -403,3 +403,20 @@ tr:nth-child(even) {
   text-align: center;
 }
 
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  img.aligncenter {
+      width: 60%;
+      height: auto;
+  }
+  .topsection {
+      padding-left: 0;
+      padding-right: 0;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  img.aligncenter {
+      width: 40%;
+      height: auto;
+  }
+}

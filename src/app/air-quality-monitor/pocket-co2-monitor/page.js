@@ -215,7 +215,7 @@ export default function CO2MonitorPage() {
                                 <p>Track the real-time air quality levels on the go with our smallest, portable, and handiest pocket air monitor.</p>
                                 <ul className="rate_list">
                                     <li>
-                                        <div className="woocom-list-content">[woocs_price id=52265]</div>
+                                        <div className="woocom-list-content">₹ 5,990.00</div>
                                     </li>
                                     <li>
                                         <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/Pocket-Sized-icon.png" width={20} height={20} alt="pocket-sized icon" /> Pocket-Sized
@@ -897,10 +897,10 @@ export default function CO2MonitorPage() {
                                 </ul>
                             </div>
                             <div className="introduce_button">
-                                <Link href="#" className="pocket_buy_btn black_download_brochure">
+                                <Link href="https://www.pranaair.com/wp-content/uploads/2023/10/Prana-Air-Pocket-CO2-Air-Quality-Monitor-Brochure.pdf" className="pocket_buy_btn black_download_brochure">
                                     <Image src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" width={20} height={20} alt="download icon" /> Brochure
                                 </Link>
-                                <Link href="#" className="pocket_buy_btn black_download_brochure">
+                                <Link href="https://www.pranaair.com/wp-content/uploads/2024/10/Prana-air-Pocket-CO2-air-quality-monitor-manual.pdf" className="pocket_buy_btn black_download_brochure">
                                     <Image src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" width={20} height={20} alt="download icon" /> Manual
                                 </Link>
                             </div>
@@ -1014,7 +1014,7 @@ export default function CO2MonitorPage() {
                                 <h2><span className="ndir">NDIR</span> Technology</h2>
                                 <h3>for more Accurate Detection</h3>
                                 <p>With Prana Airs CO2 sensor is based on the non-dispersive infrared (NDIR) principle, which is the most widely used and trusted technology for CO2 sensing.</p>
-                                <Link href="/?page_id=22552">Find Out</Link>
+                                <Link href="https://www.pranaair.com/air-quality-sensor/carbon-dioxide-co2-sensor/">Find Out</Link>
                             </div>
                         </div>
                     </div>
@@ -1039,7 +1039,7 @@ export default function CO2MonitorPage() {
                                     system is good or bad.
                                 </span>
                                 <p>
-                                    <span style={{ fontSize: '13pt' }}><Link href="/?page_id=63720">Know More</Link></span>
+                                    <span style={{ fontSize: '13pt' }}><Link href="/what-is-carbon-dioxide-co2/">Know More</Link></span>
                                 </p>
                             </div>
                         </div>
@@ -1703,7 +1703,7 @@ export default function CO2MonitorPage() {
                                     <span style={{ fontSize: '24pt' }}>Fresh Air Machine</span>
                                 </h2>
                                 <span style={{ fontSize: '14pt' }}>Prana Air provides the solution to indoor air pollution with an air purifying machine to purify the air pollutants.</span>
-                                <Link href="/?page_id=24681" className="learn_more">&gt;&gt;Learn More</Link>
+                                <Link href="/fresh-air-machine/" className="learn_more">&gt;&gt;Learn More</Link>
                             </div>
                         </div>
                         <div className="col-md-6 clean-air-Image">

@@ -212,7 +212,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/pocket-co2-monitor/">
+                                                <a href="/air-quality-monitor/pocket-co2-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-Co2.png"
                                                         alt="prana air pocket co2 monitor"
@@ -220,7 +220,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/pocket-co2-monitor/">
+                                                <a href="/air-quality-monitor/pocket-co2-monitor/">
                                                     Pocket CO2 Monitor
                                                 </a>
                                                 <ul>
@@ -261,7 +261,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/handheld/pocket-monitor/">
+                                                <a href="/air-quality-monitor/handheld/pocket-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.png"
                                                         alt="prana air pocket pm2.5 monitor"
@@ -269,7 +269,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/handheld/pocket-monitor/">
+                                                <a href="/air-quality-monitor/handheld/pocket-monitor/">
                                                     Pocket PM2.5 Monitor
                                                 </a>
                                                 <ul>
@@ -310,7 +310,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/oxygen-monitor/">
+                                                <a href="/air-quality-monitor/oxygen-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-oxygen-co-monitor.png"
                                                         alt="prana air pocket pm2.5 monitor"
@@ -318,7 +318,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/oxygen-monitor/">OxyCO Monitor</a>
+                                                <a href="/air-quality-monitor/oxygen-monitor/">OxyCO Monitor</a>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">₹5,999</span>
@@ -357,7 +357,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/pocket-co2-monitor/">
+                                                <a href="/air-quality-monitor/pocket-co2-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-Co2.png"
                                                         alt="prana air pocket co2 monitor"
@@ -365,7 +365,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/pocket-co2-monitor/">
+                                                <a href="/air-quality-monitor/pocket-co2-monitor/">
                                                     Pocket CO2 Monitor
                                                 </a>
                                                 <ul>
@@ -406,7 +406,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/handheld/pocket-monitor/">
+                                                <a href="/air-quality-monitor/handheld/pocket-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.png"
                                                         alt="prana air pocket pm2.5 monitor"
@@ -414,7 +414,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/handheld/pocket-monitor/">
+                                                <a href="/air-quality-monitor/handheld/pocket-monitor/">
                                                     Pocket PM2.5 Monitor
                                                 </a>
                                                 <ul>
@@ -455,7 +455,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/oxygen-monitor/">
+                                                <a href="/air-quality-monitor/oxygen-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-oxygen-co-monitor.png"
                                                         alt="prana air pocket pm2.5 monitor"
@@ -463,7 +463,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/oxygen-monitor/">OxyCO Monitor</a>
+                                                <a href="/air-quality-monitor/oxygen-monitor/">OxyCO Monitor</a>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">₹5,999</span>
@@ -506,7 +506,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Indoor</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/sensible-air-monitor/">
+                                                <a href="/air-quality-monitor/sensible-air-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/sensible-air-quality-monitor.png"
                                                         alt="prana air sensible air quality monitor"
@@ -514,7 +514,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/sensible-air-monitor/">
+                                                <a href="/air-quality-monitor/sensible-air-monitor/">
                                                     Sensible Monitor
                                                 </a>
                                                 <ul>
@@ -559,7 +559,7 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Outdoor</span>
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/ambient-air-monitor/">
+                                                <a href="/air-quality-monitor/ambient-air-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2024/07/Ambient-PM-product.png"
                                                         alt="prana air Ambient PM air quality monitor"
@@ -567,7 +567,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="https://www.pranaair.com/in/air-quality-monitor/ambient-air-monitor/">Ambient PM</a>
+                                                <a href="/air-quality-monitor/ambient-air-monitor/">Ambient PM</a>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">Request A Quote</span>
@@ -850,7 +850,7 @@ export default function CommonMonitorPage() {
                         <p>
                             The dramatic rise in population has increased energy consumption and resource use. It leads to higher pollutant levels and greater health risks, particularly respiratory illnesses. Therefore, air quality monitoring is crucial. Prana Air’s air quality monitors help in checking pollutants in your environment to make informed decisions for healthier, cleaner air.
                         </p>
-                        <a href="#" className="btn btn-primary">
+                        <a href="/solutions-by-application/" className="btn btn-primary">
                             Learn More
                         </a>
                     </div>
@@ -929,7 +929,7 @@ export default function CommonMonitorPage() {
                                                 environmental changes as well. PM10 causes allergies that can influence sensitive groups.
                                             </p>
 
-                                            <a className="key-btn" href="#">
+                                            <a className="key-btn" href="/what-is-particulate-matter-pm/">
                                                 Explore More
                                             </a>
 
@@ -967,7 +967,7 @@ export default function CommonMonitorPage() {
                                                 extreme health issues. Such as cardiac arrest, and impaired cognitive function.
                                             </p>
 
-                                            <a className="key-btn" href="#">
+                                            <a className="key-btn" href="/what-is-carbon-dioxide-co2/">
                                                 Explore More
                                             </a>
 
@@ -1008,7 +1008,7 @@ export default function CommonMonitorPage() {
                                                 or nervous system. Some chemicals can also cause cancer in animals.
                                             </p>
 
-                                            <a className="key-btn" href="#">
+                                            <a className="key-btn" href="/what-is-voc/">
                                                 Explore More
                                             </a>
 
@@ -1766,7 +1766,7 @@ export default function CommonMonitorPage() {
                         <Carousel responsive={responsive} infinite autoPlay autoPlaySpeed={6000}>
                             {/* Slide 1 */}
                             <div className="app-air-slider">
-                                <a href="https://www.pranaair.com/in/solutions-by-application/smart-city/">
+                                <a href="/solutions-by-application/smart-city/">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/smart-city.jpg"
                                         alt="Smart City"
@@ -1779,7 +1779,7 @@ export default function CommonMonitorPage() {
 
                             {/* Slide 2 */}
                             <div className="app-air-slider">
-                                <a href="https://www.pranaair.com/in/solutions-by-application/schools/">
+                                <a href="/solutions-by-application/schools/">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/air-quality-solutions-for-real-estates.jpg"
                                         alt="Air Quality for Schools"
@@ -1792,7 +1792,7 @@ export default function CommonMonitorPage() {
 
                             {/* Slide 3 */}
                             <div className="app-air-slider">
-                                <a href="https://www.pranaair.com/in/solutions-by-application/hospitals/">
+                                <a href="/solutions-by-application/hospitals/">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/smart-city.jpg"
                                         alt="Air Quality for Hospitals"
@@ -1805,7 +1805,7 @@ export default function CommonMonitorPage() {
 
                             {/* Slide 4 */}
                             <div className="app-air-slider">
-                                <a href="https://www.pranaair.com/in/solutions-by-application/offices/">
+                                <a href="/solutions-by-application/offices/">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/air-quality-solutions-for-construction-sites.webp"
                                         alt="Air Quality for Offices"
@@ -1852,7 +1852,7 @@ export default function CommonMonitorPage() {
                             <div className="may-also">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="/air-quality-monitor/handheld/pocket-monitor/">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.jpg"
                                                 alt="prana air Pocket PM2.5 monitor portable"
@@ -1864,7 +1864,7 @@ export default function CommonMonitorPage() {
                                         </h5>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="/air-quality-monitor/cair-monitor/">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/03/Cair.jpg"
                                                 alt="prana air Cair indoor air quality monitor"
@@ -1875,7 +1875,7 @@ export default function CommonMonitorPage() {
                                         </h5>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="/air-quality-monitor/sensible-air-monitor/">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/03/pranaair-sensible-air-monitor.webp"
                                                 alt="prana air sensible indoor air quality monitor"
@@ -1887,7 +1887,7 @@ export default function CommonMonitorPage() {
                                         </h5>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="/air-quality-monitor/ambient-air-monitor/">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/03/Ambient-pro.jpg"
                                                 alt="prana air Ambient pro monitor"
@@ -1899,7 +1899,7 @@ export default function CommonMonitorPage() {
                                         </h5>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="/air-quality-monitor/squair-air-monitor/">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/03/SQUAIR.jpg"
                                                 alt="prana air SQUAIR monitor"
@@ -2223,7 +2223,7 @@ export default function CommonMonitorPage() {
                         </div>
                         <div className="col-md-6">
                             <div className="graph-btn">
-                                <a href="#">Discover Now</a>
+                                <a href="/air-quality-data-accuracy/">Discover Now</a>
                             </div>
                         </div>
                     </div>

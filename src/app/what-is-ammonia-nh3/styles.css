@@ -288,3 +288,16 @@ h2.health_heading.mobile_level_heading {
   }
 }
 
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  img.aligncenter {
+      width: 100%;
+      height: auto;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  img.aligncenter {
+      width: 100%;
+      height: auto;
+  }
+}  

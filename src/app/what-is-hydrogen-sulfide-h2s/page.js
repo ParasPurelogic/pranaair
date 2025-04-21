@@ -480,7 +480,7 @@ export default function HydrogenSulfidePage() {
           <div className="row prevention_section">
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2023/03/monitor-your-storage-space.png"
+                src="https://www.pranaair.com/wp-content/uploads/2023/03/storage-space-200x200.png"
                 alt="Monitor your storage space"
                 width={200}
                 height={200}
@@ -504,7 +504,7 @@ export default function HydrogenSulfidePage() {
           <div className="row prevention_section">
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2023/03/keep-an-eye-on-the-temperature.png"
+                src="https://www.pranaair.com/wp-content/uploads/2023/03/maintain-temperature-200x200.png"
                 alt="Keep an eye on the temperature"
                 width={200}
                 height={200}
@@ -528,7 +528,7 @@ export default function HydrogenSulfidePage() {
           <div className="row prevention_section">
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2023/03/no-smoking-near-storage-area.png"
+                src="https://www.pranaair.com/wp-content/uploads/2023/03/no-smoking-area-200x200.png"
                 alt="No smoking near storage area"
                 width={200}
                 height={200}
@@ -552,7 +552,7 @@ export default function HydrogenSulfidePage() {
           <div className="row prevention_section">
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2023/03/ventilation-is-the-key.png"
+                src="https://www.pranaair.com/wp-content/uploads/2023/03/proper-ventilation-200x200.png"
                 alt="Ventilation is the key"
                 width={200}
                 height={200}
@@ -576,7 +576,7 @@ export default function HydrogenSulfidePage() {
           <div className="row prevention_section">
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2023/03/use-precautionary-measure.png"
+                src="https://www.pranaair.com/wp-content/uploads/2023/03/precautionary-measure-200x200.png"
                 alt="Use precautionary measure"
                 width={200}
                 height={200}
@@ -600,7 +600,7 @@ export default function HydrogenSulfidePage() {
           <div className="row prevention_section">
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2023/03/ready-to-use-fire-safety.png"
+                src="https://www.pranaair.com/wp-content/uploads/2023/03/fire-extinguisher-200x200.png"
                 alt="Ready to use fire safety"
                 width={200}
                 height={200}

@@ -290,7 +290,7 @@ export default function AmbientAirMonitor() {
                                 <div className="get-brochur">
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <a href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
                                                     alt="download brochure"
@@ -631,7 +631,7 @@ export default function AmbientAirMonitor() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#contact_form">Get a Quote</a>
+                                            <a href="/air-quality-monitor/ambient-air-monitor/prana-sense/">Get a Quote</a>
                                         </li>
                                     </ul>
                                 </div>

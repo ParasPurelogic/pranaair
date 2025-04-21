@@ -308,8 +308,19 @@
   padding-left: 115px;
 }
 
+.aqi-image img {
+  width: 100%;
+  height: auto;
+}
+
+.health-impact-image img {
+  width: 100%;
+  height: auto;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
+
   .alignleft,
   .alignright {
     display: block;
@@ -404,6 +415,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+
   .source-item,
   .solution-item {
     flex: 0 0 calc(50% - 20px);
@@ -418,3 +430,50 @@
   }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .whitetext {
+    text-align: center;
+  }
+
+  .aqi-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .health-impact-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .whitetext {
+    text-align: left;
+  }
+
+  .aqi-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .health-impact-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .saveyourfuture_box {
+    max-width: 100%;
+    margin: 30px auto;
+    position: relative;
+    left: 0;
+  }
+
+  .future_img {
+    top: 10px;
+    left: -20px;
+  }
+
+  .future_img img {
+    width: 16%;
+  }
+}

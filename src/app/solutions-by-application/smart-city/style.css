@@ -274,7 +274,7 @@ a {
     height: 3px;
     top: 37px;
     background: #1eb946;
-    left: 10px;
+    left: 0px;
 }
 
 .factor-tab-image img {
@@ -540,9 +540,8 @@ a {
 }
 
 .frame-image {
-    width: 100%;
+    width: 80%;
     margin-bottom: 30px;
-    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -550,23 +549,20 @@ a {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 5px;
 }
 
 .frame-description {
     position: absolute;
     top: 20px;
-    right: 0;
-    width: 40%;
+    right: -120px;
+    width: 30%;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
 }
 
 .frame-description h3 {
-    font-size: 24px;
+    font-size: 18px;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .frame-description .highlight {
@@ -614,7 +610,7 @@ a {
     position: relative;
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-direction: row-reverse;
     justify-content: flex-end;
     gap: 30px;
@@ -1468,10 +1464,6 @@ a {
         left: 90px;
     }
 
-    .row {
-        display: block;
-    }
-
     .ambient-air-monitor-box h3,
     .ambient-air-monitor-box h4 {
         font-size: 18px;
@@ -2034,9 +2026,6 @@ a {
         left: 90px;
     }
 
-    .row {
-        display: block;
-    }
 
     .ambient-air-monitor-box h3,
     .ambient-air-monitor-box h4 {
@@ -2450,5 +2439,132 @@ a {
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
     .slide-img {
         margin-top: 0px;
+        height: 600px;
     }
-} 
+    .slider-buttons {
+        margin-top: -150px;
+        margin-bottom: 40px;
+    }
+    .slider-buttons:before {
+        right: 0;
+        left: 10px;
+    }
+    .mouse-scroll-icon {
+        right: 100px;
+    }
+    .office-pollutant-icons {
+        background-size: cover;
+        height: 250px;
+        margin-top: -20px;
+    }
+    .health-impact-slider {
+        padding: 0px 0;
+    }
+    .frame-image {
+        width: 100%;
+    }
+    .frame-description {
+        right: 0;
+    }
+    .box-form {
+        width: 100%;
+    }
+    .our-clients-logo {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .slide-img {
+        height: 400px;
+        margin-top: 0;
+    }
+
+    .mouse-scroll-icon {
+        right: 30px;
+    }
+
+    .slider-buttons:before {
+        right: 0;
+        left: 0;
+    }
+
+    .office-pollutant-icons {
+        height: 260px;
+    }
+
+    .co2 {
+        left: 0%;
+        top: 30px;
+        width: 50px !important;
+    }
+
+    .no2 {
+        left: 30%;
+        width: 45px !important;
+    }
+
+    .health-impact-icon img {
+        width: 200px;
+        height: auto;
+    }
+
+    .health-impact-card h3 {
+        font-size: 22px;
+    }
+
+    .health-impact-slider .carousel-container {
+        padding: 20px 0 0px;
+    }
+
+    .frame-image {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .frame-description {
+        right: 0;
+    }
+
+    .one-num:before,
+    .two-num:before,
+    .three-num:before {
+        font-size: 30px;
+        top: 15px;
+        left: 10px;
+    }
+
+    .accordian-tab-heading {
+        padding: 15px 70px;
+        gap: 30px;
+    }
+    .accordian-tab-heading h4 {
+        font-size: 16px;
+    }
+    .parameter ul li {
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .parameter ul {
+        display: block;
+        margin: 0;
+    }
+    .parameter ul li h6 {
+        left: 0;
+        margin: 5px 0 0;
+    }
+    .text h3 {
+        font-size: 18px;
+    }
+    .text {
+        top: 75%;
+    }
+    .text p {
+        font-size: 14px;
+    }
+    .row {
+        display: block;
+    }
+}

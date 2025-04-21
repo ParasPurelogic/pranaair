@@ -37,7 +37,7 @@ export default function ParticularMatterPage() {
             <div className="col-md-8 offset-md-2">
               <div className="banner-content">
                 <img 
-                  className="wp-image-60375 aligncenter" 
+                  className="wp-image-60375 sick" 
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/what-is-particulate-matter-pm.png" 
                   alt="what is particulate matter pm" 
                   width="224" 
@@ -382,11 +382,11 @@ export default function ParticularMatterPage() {
                 <span>Without a doubt, YES! Even in small amounts, particulate can make you feel uneasy or sick.</span>
               </p>
               <img 
-                className="aligncenter" 
+                className="sick" 
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/sick-due-to-pm-air-pollution-600x1024.png" 
                 alt="sick due to pm air pollution" 
-                width="335" 
-                height="571" 
+                width="200" 
+                height="200" 
               />
               
               <h3 className="text-center">
@@ -434,7 +434,7 @@ export default function ParticularMatterPage() {
               </p>
               <p className="text-center">
                 <img 
-                  className="aligncenter" 
+                  className="sick" 
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/N95-air-pollution-mask.jpg" 
                   alt="N95 air pollution mask" 
                   width="504" 
@@ -459,7 +459,7 @@ export default function ParticularMatterPage() {
               </p>
               
               <img 
-                className="aligncenter" 
+                className="sick" 
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/pm2.5-air-quality-monitor-1024x546.png" 
                 alt="pm2.5 air quality monitor" 
                 width="779" 

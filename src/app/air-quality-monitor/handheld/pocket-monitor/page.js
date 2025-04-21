@@ -1089,7 +1089,7 @@ export default function PocketMonitorPage() {
                 </div>
 
                 <div className="features-buttons">
-                  <a href="#" className="feature-btn brochure-btn">
+                  <a href="https://www.pranaair.com/wp-content/uploads/2023/10/Prana-Air-Pocket-PM2.5-Air-Quality-Monitor-Brochure.pdf" className="feature-btn brochure-btn">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png"
                       alt="Brochure"
@@ -1097,7 +1097,7 @@ export default function PocketMonitorPage() {
                     />
                     <span>Brochure</span>
                   </a>
-                  <a href="#" className="feature-btn manual-btn">
+                  <a href="https://www.pranaair.com/wp-content/uploads/2024/10/Prana-air-Pocket-PM-air-quality-monitor-manual.pdf" className="feature-btn manual-btn">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png"
                       alt="Manual"
@@ -1205,10 +1205,10 @@ export default function PocketMonitorPage() {
                     />
                   </h2>
                   <div className="banner-buttons">
-                    <a href="#" className="banner-btn buy-now">
+                    <a href="https://www.pranaair.com/checkout/?add-to-cart=7312" className="banner-btn buy-now">
                       Buy Now
                     </a>
-                    <a href="#" className="banner-btn amazon">
+                    <a href="https://www.amazon.in/dp/B07YPLTX7F?ref=myi_title_dp" className="banner-btn amazon">
                       Amazon
                     </a>
                   </div>

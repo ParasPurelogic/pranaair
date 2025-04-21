@@ -9,6 +9,8 @@
 
 .bg-light-green {
   background-color: #c2d5a8;
+  padding: 100px 0;
+  margin-bottom: 100px;
 }
 
 .bg-white {
@@ -429,3 +431,19 @@ h2.health_heading.mobile_level_heading {
   }
 }
 
+.heading_top_white {
+  font-size: 52px !important;
+}  
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  img.aligncenter {
+      width: 100%;
+      height: auto;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  img.aligncenter {
+      width: 100%;
+      height: auto;
+  }
+}
