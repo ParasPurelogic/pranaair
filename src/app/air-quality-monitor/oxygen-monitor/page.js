@@ -56,18 +56,11 @@ export default function OxygenMonitor() {
                                     encType="multipart/form-data"
                                     method="post"
                                 >
-                                    <button
-                                        className="single_add_to_cart_button button alt banner-btn"
-                                        name="add-to-cart"
-                                        type="submit"
-                                        value="124689"
-                                    >
-                                        Buy Now{" "}
-                                        <img
-                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                            alt="buy now icon"
-                                        />
-                                    </button>
+                                    <form class="cart" action="https://www.pranaair.com/product/oxyco-monitor/" enctype="multipart/form-data" method="post">
+                                        <button class="single_add_to_cart_button button alt banner-btn" name="add-to-cart" type="submit" value="124689">Buy
+                                            Now <img decoding="async" src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                                alt="buy now icon" /></button>
+                                    </form>
                                 </form>
                             </div>
                         </div>

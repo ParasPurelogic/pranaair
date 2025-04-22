@@ -49,9 +49,11 @@ export default function SensiblePlusAirMonitor() {
                 <h2><span className="heading-bg">Sensible+</span> Air Monitor</h2>
                 <p>Keep track of indoor air quality along-with ambient indoor & outdoor pollutants</p>
                 <div className="banner-btns">
-                  <button className="single_add_to_cart_button button alt btnbuynow" type="submit">
-                    Buy Now <img src="https://www.pranaair.com/wp-content/uploads/2024/11/butnow-btn.png" alt="" />
-                  </button>
+                  <form class="cart" action="https://www.pranaair.com/product/sensible-plus-air-monitor/" enctype="multipart/form-data"
+                    method="post"><button class="single_add_to_cart_button button alt btnbuynow" name="add-to-cart" type="submit"
+                      value="15945">Buy Now <img decoding="async"
+                        src="https://www.pranaair.com/wp-content/uploads/2024/11/butnow-btn.png" alt="" /></button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -823,19 +825,19 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="product_compare_box">
-                <a href="#"><img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg" alt="prana air cair air quality monitor" /></a>
+                <a href="/air-quality-monitor/cair-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg" alt="prana air cair air quality monitor" /></a>
                 <h3>CAIR+</h3>
               </div>
               <div className="product_compare_box">
-                <a href="#"><img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-monitor-on-table.jpg" alt="prana air sensible air quality monitor" /></a>
-                <h3>CAIR+</h3>
+                <a href="/air-quality-monitor/sensible-air-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-monitor-on-table.jpg" alt="prana air sensible air quality monitor" /></a>
+                <h3>Sensible</h3>
               </div>
               <div className="product_compare_box">
-                <a href="#"><img src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-squair-air-quality-monitor.jpg" alt="prana air squair air quality monitor" /></a>
+                <a href="/air-quality-monitor/squair-air-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-squair-air-quality-monitor.jpg" alt="prana air squair air quality monitor" /></a>
                 <h3>SQUAIR</h3>
               </div>
               <div className="product_compare_box">
-                <a href="#"><img src="https://www.pranaair.com/wp-content/uploads/2022/06/prana-air-caaqms-ambient-air-quality-monitor.jpg" alt="prana air caaqms ambient air quality monitor" /></a>
+                <a href="/air-quality-monitor/ambient-air-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2022/06/prana-air-caaqms-ambient-air-quality-monitor.jpg" alt="prana air caaqms ambient air quality monitor" /></a>
                 <h3>Ambient</h3>
               </div>
             </div>

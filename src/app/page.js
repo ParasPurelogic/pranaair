@@ -12,6 +12,9 @@ export default function PranaAirHomepage() {
   const [activeTab, setActiveTab] = useState(0)
   // State for connectivity tabs
   const [activeConnectivityTab, setActiveConnectivityTab] = useState(1)
+  // State for blog posts
+  const [blogPosts, setBlogPosts] = useState([])
+  const [loading, setLoading] = useState(true)
 
   // Auto-rotate slider
   useEffect(() => {
@@ -25,6 +28,77 @@ export default function PranaAirHomepage() {
   const activateCustomTab = (index) => {
     setActiveTab(index)
   }
+
+ // Fetch blog posts
+ useEffect(() => {
+  const fetchBlogPosts = async () => {
+    try {
+      setLoading(true)
+      // Real WordPress API call
+      const response = await fetch("https://www.pranaair.com/wp-json/wp/v2/posts?_embed&per_page=2")
+      const data = await response.json()
+
+      // Transform WordPress data to match our blog post format
+      const formattedPosts = data.map((post) => {
+        // Get the featured image URL or use a placeholder
+        const featuredMedia = post._embedded?.["wp:featuredmedia"]?.[0]
+        const imageUrl = featuredMedia?.source_url || "/placeholder.svg"
+
+        // Get the first category
+        const category = post._embedded?.["wp:term"]?.[0]?.[0]?.name || "Blog"
+        const categorySlug = post._embedded?.["wp:term"]?.[0]?.[0]?.slug || "blog"
+
+        // Format the date
+        const date = new Date(post.date)
+        const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+
+        return {
+          id: post.id.toString(),
+          title: post.title.rendered,
+          slug: post.slug,
+          category: category,
+          categorySlug: categorySlug,
+          imageUrl: imageUrl,
+          imageAlt: post.title.rendered,
+          date: formattedDate,
+        }
+      })
+
+      setBlogPosts(formattedPosts)
+    } catch (error) {
+      console.error("Error fetching blog posts:", error)
+      // Set fallback data in case the API fails
+      setBlogPosts([
+        {
+          id: "1",
+          title: "Understanding Air Quality in India: Challenges and Solutions",
+          slug: "breathing-air-pollution-is-like-smoking",
+          category: "Air Quality",
+          categorySlug: "air-quality",
+          imageUrl:
+            "https://www.pranaair.com/wp-content/uploads/2025/04/breathing-air-pollution-is-like-smoking-1306x870.webp",
+          imageAlt: "Air Quality in India",
+          date: "11/04/2025",
+        },
+        {
+          id: "2",
+          title: "The Hidden Dangers of PM2.5: How Small Particles Cause Big Health Problems",
+          slug: "prana-air-devices-helped-study",
+          category: "Health",
+          categorySlug: "health",
+          imageUrl:
+            "https://www.pranaair.com/wp-content/uploads/2025/04/prana-air-device-helped-study-of-heart-defects-1306x870.webp",
+          imageAlt: "PM2.5 Effects on Health",
+          date: "09/04/2025",
+        },
+      ])
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  fetchBlogPosts()
+}, [])
 
   return (
     <main>
@@ -1118,7 +1192,7 @@ export default function PranaAirHomepage() {
                 Get real-time insights into air quality with Prana Airs Air Quality Drone, equipped with cutting-edge
                 sensor technology.
               </p>
-              <Link href="/air-quality-drone" className="drone-button">
+              <Link href="/air-quality-monitor/air-drone" className="drone-button">
                 Know More
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/parameters-icon.webp"
@@ -1317,7 +1391,7 @@ export default function PranaAirHomepage() {
         <div className="case-studies-slider">
           <div className="case-studies-slider-container">
             <div className="case-study-item">
-              <Link href="/case-studies/mahindra" className="case-study-link">
+              <Link href="https://www.pranaair.com/blog/mahindra-lifespaces-air-quality-due-to-construction-and-demolition-activities/" className="case-study-link">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/How-Prana-Air-helped-Mahindra-Lifespaces.jpg"
                   alt="case study of How Prana Air helped Mahindra Lifespaces"
@@ -1329,7 +1403,7 @@ export default function PranaAirHomepage() {
               </Link>
             </div>
             <div className="case-study-item">
-              <Link href="/case-studies/interglobe" className="case-study-link">
+              <Link href="https://www.pranaair.com/blog/case-study-air-quality-monitoring-solution-for-interglobe/" className="case-study-link">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/Aided-in-Air-Quality-Monitoring-Solutions-for-INTERGLOBE-1.jpg"
                   alt="case study of Aided in Air Quality Monitoring Solutions for INTERGLOBE"
@@ -1341,7 +1415,7 @@ export default function PranaAirHomepage() {
               </Link>
             </div>
             <div className="case-study-item">
-              <Link href="/case-studies/cii" className="case-study-link">
+              <Link href="https://www.pranaair.com/blog/case-study-air-pollution-due-to-stubble-burning/" className="case-study-link">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/How-Prana-Air-helped-CII-to-monitor-air-pollution.jpg"
                   alt="case study of How Prana Air helped CII to monitor air pollution"
@@ -1353,7 +1427,7 @@ export default function PranaAirHomepage() {
               </Link>
             </div>
             <div className="case-study-item">
-              <Link href="/case-studies/ola-microsoft" className="case-study-link">
+              <Link href="https://www.pranaair.com/blog/prana-air-monitors-street-level-pollution/" className="case-study-link">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/How-Prana-Air-aided-Ola-and-Microsoft.jpg"
                   alt="case study of How Prana Air aided Ola and Microsoft"
@@ -1365,7 +1439,7 @@ export default function PranaAirHomepage() {
               </Link>
             </div>
             <div className="case-study-item">
-              <Link href="/case-studies/tata-steel" className="case-study-link">
+              <Link href="https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/" className="case-study-link">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/Prana-Air-aids-TATA-Steel.jpg"
                   alt="case study of Prana Air aids TATA Steel"
@@ -1386,7 +1460,7 @@ export default function PranaAirHomepage() {
           <div className="breathing-fresh-air-content">
             <div className="breathing-fresh-air-txt">
               <h2>Breathing Fresh Air Is Not An Option, It Is Our Right</h2>
-              <Link href="/about-us" className="fresh-air-button">
+              <Link href="/fresh-air-machine/" className="fresh-air-button">
                 Know More
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/green-arrow.png"
@@ -1414,7 +1488,7 @@ export default function PranaAirHomepage() {
               </h4>
             </div>
             <div className="accurate-btn">
-              <Link href="/accuracy" className="accuracy-button">
+              <Link href="https://www.pranaair.com/air-quality-data-accuracy/" className="accuracy-button">
                 Check Accuracy
                 <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/green-arrow.png" alt="link icon" width={15} height={15} />
               </Link>
@@ -1621,62 +1695,45 @@ export default function PranaAirHomepage() {
         <div className="container">
           <div className="blog-content">
             <div className="articles-list">
-              <div className="project-odd">
-                <div className="post-thumbnail-wrap">
-                  <Link href="/blog/air-quality-in-india">
-                    <Image
-                      src="/placeholder.svg?height=300&width=500"
-                      alt="Air Quality in India"
-                      width={500}
-                      height={300}
-                      className="blog-image"
-                    />
-                  </Link>
-                </div>
-                <div className="post-entry-content">
-                  <div className="entry-meta">
-                    <Link href="/category/air-quality" className="category-link">
-                      Air Quality
-                    </Link>
+              {loading ? (
+                <div className="loading">Loading blog posts...</div>
+              ) : (
+                blogPosts.map((post) => (
+                  <div key={post.id} className="project-odd">
+                    <div className="post-thumbnail-wrap">
+                      <Link href={`https://www.pranaair.com/blog/${post.slug}/`}>
+                        <Image
+                          src={post.imageUrl || "/placeholder.svg"}
+                          alt={post.imageAlt}
+                          width={500}
+                          height={300}
+                          className="blog-image"
+                        />
+                      </Link>
+                    </div>
+                    <div className="post-entry-content">
+                      <div className="entry-meta">
+                        <Link
+                          href={`https://www.pranaair.com/blog/category/${post.categorySlug}/`}
+                          className="category-link"
+                        >
+                          {post.category}
+                        </Link>
+                        <span className="post-date">{post.date}</span>
+                      </div>
+                      <h3 className="entry-title">
+                        <Link href={`https://www.pranaair.com/blog/${post.slug}/`}>{post.title}</Link>
+                      </h3>
+                    </div>
                   </div>
-                  <h3 className="entry-title">
-                    <Link href="/blog/air-quality-in-india">
-                      Understanding Air Quality in India: Challenges and Solutions
-                    </Link>
-                  </h3>
-                </div>
-              </div>
-              <div className="project-odd">
-                <div className="post-thumbnail-wrap">
-                  <Link href="/blog/pm2.5-effects">
-                    <Image
-                      src="/placeholder.svg?height=300&width=500"
-                      alt="PM2.5 Effects on Health"
-                      width={500}
-                      height={300}
-                      className="blog-image"
-                    />
-                  </Link>
-                </div>
-                <div className="post-entry-content">
-                  <div className="entry-meta">
-                    <Link href="/category/health" className="category-link">
-                      Health
-                    </Link>
-                  </div>
-                  <h3 className="entry-title">
-                    <Link href="/blog/pm2.5-effects">
-                      The Hidden Dangers of PM2.5: How Small Particles Cause Big Health Problems
-                    </Link>
-                  </h3>
-                </div>
-              </div>
+                ))
+              )}
             </div>
             <div className="blog-title">
               <h2>
                 Air Quality <span className="text-highlight">Blogs</span>
               </h2>
-              <Link href="/blogs" className="blogs-button">
+              <Link href="https://www.pranaair.com/blog/" className="blogs-button">
                 See More Blogs
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
@@ -1690,6 +1747,7 @@ export default function PranaAirHomepage() {
           </div>
         </div>
       </section>
+
 
       {/* Discover Section */}
       <section className="discover-sec">
@@ -1823,7 +1881,7 @@ export default function PranaAirHomepage() {
               </h2>
             </div>
             <div className="lets-talk-link">
-              <Link href="/contact">
+              <Link href="https://www.pranaair.com/contact/">
                 Let Talk
                 <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png" alt="link icon" width={20} height={20} />
               </Link>

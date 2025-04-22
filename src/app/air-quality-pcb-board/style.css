@@ -27,6 +27,25 @@ a {
   overflow: visible !important;
 }
 
+.product-info h4 {
+  font-size: 20px;
+}
+
+.product-info {
+  padding: 55px 15px 15px;
+  text-align: left;
+}
+
+.product-info a {
+  background: #7ab261;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+}
+.product-info a:hover {
+  background: #4f753d;
+
+}
 .deskshow {
   display: block;
 }

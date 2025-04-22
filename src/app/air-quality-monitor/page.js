@@ -98,9 +98,6 @@ export default function CommonMonitorPage() {
 
     const [activeStandardTab, setActiveStandardTab] = useState("indoor")
 
-
-
-
     return (
         <main>
             {/* Hero Section */}
@@ -246,10 +243,10 @@ export default function CommonMonitorPage() {
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Buy Now{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/product/pocket-co2-monitor/" enctype="multipart/form-data"
+                                                    method="post"> <button class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart" type="submit" value="52265">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -295,10 +292,10 @@ export default function CommonMonitorPage() {
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Buy Now{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/product/pm2-5-pocket-monitor/" enctype="multipart/form-data"
+                                                    method="post"> <button class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart" type="submit" value="7312">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -342,10 +339,10 @@ export default function CommonMonitorPage() {
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Buy Now{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/product/oxyco-monitor/" enctype="multipart/form-data" method="post">
+                                                    <button class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart"
+                                                        type="submit" value="124689">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -357,20 +354,20 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="/air-quality-monitor/pocket-co2-monitor/">
+                                                <a href="/air-quality-monitor/handheld/nano-co-monitor/">
                                                     <img
-                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-Co2.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Nano-Co.png"
                                                         alt="prana air pocket co2 monitor"
                                                     />
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="/air-quality-monitor/pocket-co2-monitor/">
-                                                    Pocket CO2 Monitor
+                                                <a href="/air-quality-monitor/handheld/nano-co-monitor/">
+                                                    Nano CO Monitor
                                                 </a>
                                                 <ul>
                                                     <li>
-                                                        <span className="coast">₹4,999</span>
+                                                        <span className="coast">₹ 8,990.00</span>
                                                     </li>
                                                     <li>
                                                         <img
@@ -382,19 +379,20 @@ export default function CommonMonitorPage() {
                                                 <ul>
                                                     <li>
                                                         <h5>Connectivity :</h5>
-                                                        <h4>WiFi</h4>
+                                                        <h4>NA</h4>
                                                     </li>
                                                     <li>
                                                         <h5>Battery :</h5>
-                                                        <h4>400 mAh</h4>
+                                                        <h4>1000 mAh</h4>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Buy Now{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co-monitor/"
+                                                    enctype="multipart/form-data" method="post"> <button
+                                                        class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart" type="submit"
+                                                        value="76353">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -406,20 +404,20 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="/air-quality-monitor/handheld/pocket-monitor/">
+                                                <a href="/air-quality-monitor/handheld/nano-co2-monitor/">
                                                     <img
-                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Nano-Co2.png"
                                                         alt="prana air pocket pm2.5 monitor"
                                                     />
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="/air-quality-monitor/handheld/pocket-monitor/">
-                                                    Pocket PM2.5 Monitor
+                                                <a href="/air-quality-monitor/handheld/nano-co2-monitor/">
+                                                    Nano CO2 Monitor
                                                 </a>
                                                 <ul>
                                                     <li>
-                                                        <span className="coast">₹3,499</span>
+                                                        <span className="coast">₹ 2,490.00</span>
                                                     </li>
                                                     <li>
                                                         <img
@@ -431,19 +429,20 @@ export default function CommonMonitorPage() {
                                                 <ul>
                                                     <li>
                                                         <h5>Connectivity :</h5>
-                                                        <h4>WiFi</h4>
+                                                        <h4>NA</h4>
                                                     </li>
                                                     <li>
                                                         <h5>Battery :</h5>
-                                                        <h4>450 mAh</h4>
+                                                        <h4>700 mAh</h4>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Buy Now{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co2-monitor/"
+                                                    enctype="multipart/form-data" method="post"> <button
+                                                        class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart" type="submit"
+                                                        value="77731">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -455,18 +454,18 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Handheld</span>
-                                                <a href="/air-quality-monitor/oxygen-monitor/">
+                                                <a href="/air-quality-monitor/handheld/nano-tvoc-monitor/">
                                                     <img
-                                                        src="https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-oxygen-co-monitor.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Nano-TVOC-monitor.png"
                                                         alt="prana air pocket pm2.5 monitor"
                                                     />
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="/air-quality-monitor/oxygen-monitor/">OxyCO Monitor</a>
+                                                <a href="/air-quality-monitor/handheld/nano-tvoc-monitor/">Nano TVOC Monitor</a>
                                                 <ul>
                                                     <li>
-                                                        <span className="coast">₹5,999</span>
+                                                        <span className="coast">₹ 4,990.00</span>
                                                     </li>
                                                     <li>
                                                         <img
@@ -478,19 +477,20 @@ export default function CommonMonitorPage() {
                                                 <ul>
                                                     <li>
                                                         <h5>Connectivity :</h5>
-                                                        <h4>WiFi</h4>
+                                                        <h4>NA</h4>
                                                     </li>
                                                     <li>
                                                         <h5>Battery :</h5>
-                                                        <h4>450 mAh</h4>
+                                                        <h4>1000 mAh</h4>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Buy Now{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-tvoc-monitor/"
+                                                    enctype="multipart/form-data" method="post"> <button
+                                                        class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart" type="submit"
+                                                        value="76924">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -519,7 +519,7 @@ export default function CommonMonitorPage() {
                                                 </a>
                                                 <ul>
                                                     <li>
-                                                        <span className="coast">₹9,999</span>
+                                                        <span className="coast">₹59,999</span>
                                                     </li>
                                                     <li>
                                                         <img
@@ -540,10 +540,156 @@ export default function CommonMonitorPage() {
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Buy Now{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/product/sensible-air-monitor/" enctype="multipart/form-data"
+                                                    method="post"> <button class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart" type="submit" value="12151">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="icon" />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">Indoor</span>
+                                                <a href="/air-quality-monitor/sensible-plus-air-monitor/">
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Sensible-.png"
+                                                        alt="prana air sensible air quality monitor"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href="/air-quality-monitor/sensible-plus-air-monitor/">
+                                                    Sensible+ Monitor
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">₹69,999</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt="card-rating"
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>Connectivity :</h5>
+                                                        <h4>WiFi</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>Battery :</h5>
+                                                        <h4>5000 mAh</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form class="cart" action="https://www.pranaair.com/product/sensible-plus-air-monitor/" enctype="multipart/form-data"
+                                                    method="post"> <button
+                                                        class="single_add_to_cart_button button alt wc-variation-selection-needed monitor_know_btn monitor_card_btn"
+                                                        type="submit">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="icon" />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">Indoor</span>
+                                                <a href="/air-quality-monitor/cair-monitor/">
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Cair.png"
+                                                        alt="prana air sensible air quality monitor"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href="/air-quality-monitor/cair-monitor/">
+                                                    Cair+
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">₹ 16,990.00</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt="card-rating"
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>Connectivity :</h5>
+                                                        <h4>WiFi</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>Battery :</h5>
+                                                        <h4>1500 mAh</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form class="cart" action="https://www.pranaair.com/product/cair-plus-monitor/" enctype="multipart/form-data"
+                                                    method="post"> <button class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart" type="submit" value="93808">Buy Now <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="icon" />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">Indoor</span>
+                                                <a href="/air-quality-monitor/cair-monitor/">
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Squiar-lite.png"
+                                                        alt="prana air sensible air quality monitor"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href="/air-quality-monitor/cair-monitor/">
+                                                    Squair
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">Request A Quote</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt="card-rating"
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>Connectivity :</h5>
+                                                        <h4>WiFi / GSM / RH485 / LORA</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>Battery :</h5>
+                                                        <h4>NA</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/"
+                                                    enctype="multipart/form-data" method="post"> <button
+                                                        class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart"
+                                                        type="submit">know More <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -555,19 +701,21 @@ export default function CommonMonitorPage() {
                                     <div className="col-md-4">
                                         <div className="prdocut-card">
                                             <div className="arrow-link">
-                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="" />
+                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="icon" />
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">Outdoor</span>
                                                 <a href="/air-quality-monitor/ambient-air-monitor/">
                                                     <img
                                                         src="https://www.pranaair.com/wp-content/uploads/2024/07/Ambient-PM-product.png"
-                                                        alt="prana air Ambient PM air quality monitor"
+                                                        alt="prana air sensible air quality monitor"
                                                     />
                                                 </a>
                                             </div>
                                             <div className="card-text">
-                                                <a href="/air-quality-monitor/ambient-air-monitor/">Ambient PM</a>
+                                                <a href="/air-quality-monitor/ambient-air-monitor/">
+                                                    Ambient PM
+                                                </a>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">Request A Quote</span>
@@ -591,10 +739,157 @@ export default function CommonMonitorPage() {
                                                 </ul>
                                             </div>
                                             <div className="card-btn">
-                                                <button className="btn">
-                                                    Know More{" "}
-                                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" />
-                                                </button>
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
+                                                    enctype="multipart/form-data" method="post"> <button
+                                                        class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart"
+                                                        type="submit">Know More<img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="icon" />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">Outdoor</span>
+                                                <a href="/air-quality-monitor/ambient-air-monitor/prana-sense/">
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/12/Prana-sense-monitor.png"
+                                                        alt="prana air sensible air quality monitor"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href="/air-quality-monitor/ambient-air-monitor/prana-sense/">
+                                                    Prana Sense
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">Request A Quote</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt="card-rating"
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>Connectivity :</h5>
+                                                        <h4>LoRa / GSM / WiFi / RS485</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>Battery :</h5>
+                                                        <h4>40,000mAh</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/prana-sense/"
+                                                    enctype="multipart/form-data" method="post"> <button
+                                                        class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart"
+                                                        type="submit">Know More <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="icon" />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">Outdoor</span>
+                                                <a href="/air-quality-monitor/ambient-air-monitor/">
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/07/Ambient-pro-product.png"
+                                                        alt="prana air sensible air quality monitor"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href="/air-quality-monitor/ambient-air-monitor/">
+                                                    Ambient Pro
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">Request A Quote</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt="card-rating"
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>Connectivity :</h5>
+                                                        <h4>WiFi / GSM / RH485</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>Battery :</h5>
+                                                        <h4>NA</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
+                                                    enctype="multipart/form-data" method="post"> <button
+                                                        class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn" name="add-to-cart"
+                                                        type="submit">Know More <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png" alt="icon" />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">Outdoor</span>
+                                                <a href="/air-quality-monitor/air-drone/">
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/Air-quality-drone.png"
+                                                        alt="prana air sensible air quality monitor"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href="/air-quality-monitor/air-drone/">
+                                                    Air Quality Drone
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">Request A Quote</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt="card-rating"
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>Connectivity :</h5>
+                                                        <h4>GPS/Raider</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>Battery :</h5>
+                                                        <h4>YES</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form class="cart" action="https://www.pranaair.com/air-quality-monitor/air-drone/" enctype="multipart/form-data"
+                                                    method="post"> <button class="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart" type="submit">Know More <img decoding="async"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="icon" /></button> </form>
                                             </div>
                                         </div>
                                     </div>
@@ -1068,7 +1363,7 @@ export default function CommonMonitorPage() {
                             <div className="air-quality-sensor-content">
                                 <h2>Air Quality Sensors</h2>
                                 <h3>High Quality & Responsive</h3>
-                                <a className="know-more-btn" href="#">
+                                <a className="know-more-btn" href="/air-quality-sensor/">
                                     Know More
                                 </a>
                             </div>
@@ -1820,102 +2115,6 @@ export default function CommonMonitorPage() {
                 </div>
             </div>
 
-            {/* Contact Form Section */}
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="contact-heading">
-                            <h2>Get in Touch</h2>
-                            <p>
-                                Please help us know what requirements you have. Our team will
-                                contact you very soon.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ContactForm pageName="Air Quality Monitor Common Page" />
-
-            {/* Related Products Section */}
-            <section className="also-like">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="also-like-heading">
-                                <h2>You may also like</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="may-also">
-                                <ul>
-                                    <li>
-                                        <a href="/air-quality-monitor/handheld/pocket-monitor/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.jpg"
-                                                alt="prana air Pocket PM2.5 monitor portable"
-                                            />
-                                        </a>
-                                        <h5>
-                                            Pocket PM{" "}
-                                            <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
-                                        </h5>
-                                    </li>
-                                    <li>
-                                        <a href="/air-quality-monitor/cair-monitor/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/Cair.jpg"
-                                                alt="prana air Cair indoor air quality monitor"
-                                            />
-                                        </a>
-                                        <h5>
-                                            Cair+ <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
-                                        </h5>
-                                    </li>
-                                    <li>
-                                        <a href="/air-quality-monitor/sensible-air-monitor/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/pranaair-sensible-air-monitor.webp"
-                                                alt="prana air sensible indoor air quality monitor"
-                                            />
-                                        </a>
-                                        <h5>
-                                            Sensible{" "}
-                                            <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
-                                        </h5>
-                                    </li>
-                                    <li>
-                                        <a href="/air-quality-monitor/ambient-air-monitor/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/Ambient-pro.jpg"
-                                                alt="prana air Ambient pro monitor"
-                                            />
-                                        </a>
-                                        <h5>
-                                            Ambient pro{" "}
-                                            <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
-                                        </h5>
-                                    </li>
-                                    <li>
-                                        <a href="/air-quality-monitor/squair-air-monitor/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/SQUAIR.jpg"
-                                                alt="prana air SQUAIR monitor"
-                                            />
-                                        </a>
-                                        <h5>
-                                            SQUAIR <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
-                                        </h5>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Air Quality Standard */}
             <section className="air-quality-standard-sec">
                 <div className="container">
@@ -2501,9 +2700,9 @@ export default function CommonMonitorPage() {
                                         <article className="post">
                                             <div className="post-thumbnail-wrap">
                                                 <div className="post-thumbnail">
-                                                    <a href="#" className="post-thumbnail-rollover">
+                                                    <a href="https://www.pranaair.com/blog/case-study-prana-air-solutions-enhanced-air-quality-monitoring-at-igcar/" className="post-thumbnail-rollover">
                                                         <img
-                                                            src="/placeholder.svg?height=300&width=400"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/03/IGCAR-case-study-900x600.jpg"
                                                             alt="Case Study"
                                                             className="img-fluid"
                                                         />
@@ -2512,13 +2711,13 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="post-entry-content">
                                                 <h3 className="entry-title">
-                                                    <a href="#">How Prana Airs Solutions Enhanced Air Quality Monitoring at IGCAR?</a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-prana-air-solutions-enhanced-air-quality-monitoring-at-igcar/">How Prana Airs Solutions Enhanced Air Quality Monitoring at IGCAR?</a>
                                                 </h3>
                                                 <div className="entry-meta">
-                                                    <a className="author vcard" href="#">By <span className="fn">Shakshi</span></a>
-                                                    <a href="#" className="data-link">20/03/2024</a>
+                                                    <a className="author vcard" href="https://www.pranaair.com/blog/case-study-prana-air-solutions-enhanced-air-quality-monitoring-at-igcar/">By <span className="fn">Shakshi</span></a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-prana-air-solutions-enhanced-air-quality-monitoring-at-igcar/" className="data-link">20/03/2024</a>
                                                 </div>
-                                                <a href="#" className="post-details details-type-link">
+                                                <a href="https://www.pranaair.com/blog/case-study-prana-air-solutions-enhanced-air-quality-monitoring-at-igcar/" className="post-details details-type-link">
                                                     Know more<i className="arrow-icon" aria-hidden="true"></i>
                                                 </a>
                                             </div>
@@ -2530,9 +2729,9 @@ export default function CommonMonitorPage() {
                                         <article className="post">
                                             <div className="post-thumbnail-wrap">
                                                 <div className="post-thumbnail">
-                                                    <a href="#" className="post-thumbnail-rollover">
+                                                    <a href="https://www.pranaair.com/blog/case-study-air-quality-monitoring-solution-for-interglobe/" className="post-thumbnail-rollover">
                                                         <img
-                                                            src="/placeholder.svg?height=300&width=400"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2022/07/interglobe-130x86.jpg"
                                                             alt="Case Study"
                                                             className="img-fluid"
                                                         />
@@ -2541,13 +2740,13 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="post-entry-content">
                                                 <h3 className="entry-title">
-                                                    <a href="#">Aided in Air Quality Monitoring Solutions for INTERGLOBE</a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-air-quality-monitoring-solution-for-interglobe/">Aided in Air Quality Monitoring Solutions for INTERGLOBE</a>
                                                 </h3>
                                                 <div className="entry-meta">
-                                                    <a className="author vcard" href="#">By <span className="fn">Manasvi Kumar</span></a>
-                                                    <a href="#" className="data-link">22/06/2023</a>
+                                                    <a className="author vcard" href="https://www.pranaair.com/blog/case-study-air-quality-monitoring-solution-for-interglobe/">By <span className="fn">Manasvi Kumar</span></a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-air-quality-monitoring-solution-for-interglobe/" className="data-link">22/06/2023</a>
                                                 </div>
-                                                <a href="#" className="post-details details-type-link">
+                                                <a href="https://www.pranaair.com/blog/case-study-air-quality-monitoring-solution-for-interglobe/" className="post-details details-type-link">
                                                     Know more<i className="arrow-icon" aria-hidden="true"></i>
                                                 </a>
                                             </div>
@@ -2559,9 +2758,9 @@ export default function CommonMonitorPage() {
                                         <article className="post">
                                             <div className="post-thumbnail-wrap">
                                                 <div className="post-thumbnail">
-                                                    <a href="#" className="post-thumbnail-rollover">
+                                                    <a href="https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/" className="post-thumbnail-rollover">
                                                         <img
-                                                            src="/placeholder.svg?height=300&width=400"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2023/04/Ambient-air-quality-monitor-916x611.jpeg"
                                                             alt="Case Study"
                                                             className="img-fluid"
                                                         />
@@ -2570,13 +2769,13 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="post-entry-content">
                                                 <h3 className="entry-title">
-                                                    <a href="#">Prana Air aids TATA Steel in Hyperlocal Air Quality Monitoring</a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/">Prana Air aids TATA Steel in Hyperlocal Air Quality Monitoring</a>
                                                 </h3>
                                                 <div className="entry-meta">
-                                                    <a className="author vcard" href="#">By <span className="fn">Manasvi Kumar</span></a>
-                                                    <a href="#" className="data-link">27/04/2023</a>
+                                                    <a className="author vcard" href="https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/">By <span className="fn">Manasvi Kumar</span></a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/" className="data-link">27/04/2023</a>
                                                 </div>
-                                                <a href="#" className="post-details details-type-link">
+                                                <a href="https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/" className="post-details details-type-link">
                                                     Know more<i className="arrow-icon" aria-hidden="true"></i>
                                                 </a>
                                             </div>
@@ -2588,9 +2787,9 @@ export default function CommonMonitorPage() {
                                         <article className="post">
                                             <div className="post-thumbnail-wrap">
                                                 <div className="post-thumbnail">
-                                                    <a href="#" className="post-thumbnail-rollover">
+                                                    <a href="https://www.pranaair.com/blog/case-study-pacific-golf-estate/" className="post-thumbnail-rollover">
                                                         <img
-                                                            src="/placeholder.svg?height=300&width=400"
+                                                            src="https://www.pranaair.com/wp-content/uploads/2021/03/How-Prana-Air-assisted-Pacific-Golf-Estate-in-fulfilling-their-promise-of-unpolluted-air-900x600.jpg"
                                                             alt="Case Study"
                                                             className="img-fluid"
                                                         />
@@ -2599,13 +2798,13 @@ export default function CommonMonitorPage() {
                                             </div>
                                             <div className="post-entry-content">
                                                 <h3 className="entry-title">
-                                                    <a href="#">How Prana Air assisted Pacific Golf Estate</a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-pacific-golf-estate/">How Prana Air assisted Pacific Golf Estate</a>
                                                 </h3>
                                                 <div className="entry-meta">
-                                                    <a className="author vcard" href="#">By <span className="fn">Poorna Khanna</span></a>
-                                                    <a href="#" className="data-link">05/03/2021</a>
+                                                    <a className="author vcard" href="https://www.pranaair.com/blog/case-study-pacific-golf-estate/">By <span className="fn">Poorna Khanna</span></a>
+                                                    <a href="https://www.pranaair.com/blog/case-study-pacific-golf-estate/" className="data-link">05/03/2021</a>
                                                 </div>
-                                                <a href="#" className="post-details details-type-link">
+                                                <a href="https://www.pranaair.com/blog/case-study-pacific-golf-estate/" className="post-details details-type-link">
                                                     Know more<i className="arrow-icon" aria-hidden="true"></i>
                                                 </a>
                                             </div>
@@ -2618,7 +2817,101 @@ export default function CommonMonitorPage() {
                 </div>
             </section>
 
-            {/* CSS Styles */}
+            {/* Contact Form Section */}
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="contact-heading">
+                            <h2>Get in Touch</h2>
+                            <p>
+                                Please help us know what requirements you have. Our team will
+                                contact you very soon.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ContactForm pageName="Air Quality Monitor Common Page" />
+
+            {/* Related Products Section */}
+            <section className="also-like">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="also-like-heading">
+                                <h2>You may also like</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="may-also">
+                                <ul>
+                                    <li>
+                                        <a href="/air-quality-monitor/handheld/pocket-monitor/">
+                                            <img
+                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.jpg"
+                                                alt="prana air Pocket PM2.5 monitor portable"
+                                            />
+                                        </a>
+                                        <h5>
+                                            Pocket PM{" "}
+                                            <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
+                                        </h5>
+                                    </li>
+                                    <li>
+                                        <a href="/air-quality-monitor/cair-monitor/">
+                                            <img
+                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/Cair.jpg"
+                                                alt="prana air Cair indoor air quality monitor"
+                                            />
+                                        </a>
+                                        <h5>
+                                            Cair+ <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
+                                        </h5>
+                                    </li>
+                                    <li>
+                                        <a href="/air-quality-monitor/sensible-air-monitor/">
+                                            <img
+                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/pranaair-sensible-air-monitor.webp"
+                                                alt="prana air sensible indoor air quality monitor"
+                                            />
+                                        </a>
+                                        <h5>
+                                            Sensible{" "}
+                                            <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
+                                        </h5>
+                                    </li>
+                                    <li>
+                                        <a href="/air-quality-monitor/ambient-air-monitor/">
+                                            <img
+                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/Ambient-pro.jpg"
+                                                alt="prana air Ambient pro monitor"
+                                            />
+                                        </a>
+                                        <h5>
+                                            Ambient pro{" "}
+                                            <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
+                                        </h5>
+                                    </li>
+                                    <li>
+                                        <a href="/air-quality-monitor/squair-air-monitor/">
+                                            <img
+                                                src="https://www.pranaair.com/wp-content/uploads/2024/03/SQUAIR.jpg"
+                                                alt="prana air SQUAIR monitor"
+                                            />
+                                        </a>
+                                        <h5>
+                                            SQUAIR <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="icon" />
+                                        </h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }

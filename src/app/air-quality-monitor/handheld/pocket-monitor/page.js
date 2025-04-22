@@ -82,9 +82,11 @@ export default function PocketMonitorPage() {
 
           <div className="product-price">₹ 3,990.00</div>
 
-          <a href="/checkout" className="buy-now-btn">
-            Buy Now <span className="arrow">→</span>
-          </a>
+          <form class="cart" action="https://www.pranaair.com/product/pm2-5-pocket-monitor/" enctype="multipart/form-data"
+            method="post"><button class="single_add_to_cart_button button alt banner-btn" name="add-to-cart" type="submit"
+              value="7312">Buy Now <img
+                src="https://www.pranaair.com/wp-content/uploads/2023/09/Vector-3.png" alt="icon" /></button>
+          </form>
         </div>
       </div>
 
@@ -100,7 +102,7 @@ export default function PocketMonitorPage() {
                   alt="WiFi"
                   className="wifi-icon"
                 />
-               
+
               </h2>
               <h3 className="section-subtitle">Air Quality Monitor</h3>
             </div>

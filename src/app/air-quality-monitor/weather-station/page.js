@@ -916,7 +916,7 @@ export default function WeatherStation() {
           <div className="row mob-row-like">
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href="#">
+                <a className="also-like-link" href="/air-quality-monitor/handheld/pocket-monitor">
                   <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.jpg" alt="prana air Pocket PM2.5 monitor" />
                 </a>
                 <ul>
@@ -927,7 +927,7 @@ export default function WeatherStation() {
             </div>
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href="#">
+                <a className="also-like-link" href="/air-quality-monitor/cair-monitor">
                   <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Cair.jpg" alt="prana air Cair+ air quality monitor" />
                 </a>
                 <ul>
@@ -938,7 +938,7 @@ export default function WeatherStation() {
             </div>
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href="#">
+                <a className="also-like-link" href="/air-quality-monitor/sensible-air-monitor">
                   <img src="https://www.pranaair.com/wp-content/uploads/2024/06/prana-air-sensible-air-monitor.webp" alt="prana air sensible indoor air quality monitor" />
                 </a>
                 <ul>
@@ -949,7 +949,7 @@ export default function WeatherStation() {
             </div>
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href="#">
+                <a className="also-like-link" href="/air-quality-monitor/weather-station#">
                   <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Ambient-pro.jpg" alt="prana air Ambient pro air quality monitor" />
                 </a>
                 <ul>

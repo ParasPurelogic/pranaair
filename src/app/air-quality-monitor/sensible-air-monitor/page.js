@@ -52,8 +52,9 @@ export default function SensibleAirMonitor() {
               <div className="home-banner">
                 <h1>Sensible Air Monitor</h1>
                 <p>keep a track of indoor air quality along-with ambient indoor & outdoor PM level.</p>
-                <form className="cart" action="https://www.pranaair.com/product/sensible-air-monitor/" encType="multipart/form-data" method="post">
-                  <button className="single_add_to_cart_button button alt banner-btn" name="add-to-cart" type="submit" value="12151">Buy Now</button>
+                <form class="cart" action="https://www.pranaair.com/product/sensible-air-monitor/" enctype="multipart/form-data"
+                  method="post"><button class="single_add_to_cart_button button alt banner-btn" name="add-to-cart" type="submit"
+                    value="12151">Buy Now</button>
                 </form>
               </div>
             </div>
@@ -76,12 +77,12 @@ export default function SensibleAirMonitor() {
                 <p>Real-Time & Historic Air Quality <br />Hourly, Weekly & Monthly</p>
                 <img src="https://www.pranaair.com/wp-content/uploads/2022/07/real-time-and-historic-data.jpg" alt="real-time aqi icon" />
               </div>
-              
+
               <div className="featured-info">
                 <p>Easily Portable<br /> air quality device</p>
                 <img src="https://www.pranaair.com/wp-content/uploads/2022/07/portable-monitor.jpg" alt="sensible air monitor portable icon" />
               </div>
-              
+
               <div className="featured-info">
                 <p>Detect Gase Air Pollutants <br />CO, CO2, O3, HCHO, TVOCs</p>
                 <img src="https://www.pranaair.com/wp-content/uploads/2022/07/detects-toxic-gases.jpg" alt="toxic gases icon" />
@@ -96,12 +97,12 @@ export default function SensibleAirMonitor() {
                 <img src="https://www.pranaair.com/wp-content/uploads/2022/07/micro-sd-card.jpg" alt="sd card ddata card icon" />
                 <p>Micro SD Card Data Storage<br />Access data anytime</p>
               </div>
-              
+
               <div className="featured-info featured-right-sec">
                 <img src="https://www.pranaair.com/wp-content/uploads/2022/07/led-display.jpg" alt="led display icon" />
                 <p>Health Tips For Air Pollution <br /> To Get Precautions</p>
               </div>
-              
+
               <div className="featured-info featured-right-sec">
                 <img src="https://www.pranaair.com/wp-content/uploads/2022/07/type-c-cable.jpg" alt="sensible usb charging icon" />
                 <p>Type-C USB Power Source<br /> No Inbuilt Battery </p>
@@ -221,7 +222,7 @@ export default function SensibleAirMonitor() {
           </div>
           <div className="row">
             <div className="col-12">
-              <Carousel 
+              <Carousel
                 responsive={responsive}
                 infinite={true}
                 autoPlay={true}
@@ -251,13 +252,13 @@ export default function SensibleAirMonitor() {
           <div className="row">
             <div className="col-lg-12">
               <div className="video-container">
-                <iframe 
-                  width="100%" 
-                  height="600" 
-                  src="https://www.youtube.com/embed/2EIYZoY9MPw" 
-                  title="Comparison Video" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                <iframe
+                  width="100%"
+                  height="600"
+                  src="https://www.youtube.com/embed/2EIYZoY9MPw"
+                  title="Comparison Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
@@ -348,7 +349,7 @@ export default function SensibleAirMonitor() {
           </div>
           <div className="row mobile-slider">
             <div className="col-12">
-              <Carousel 
+              <Carousel
                 responsive={{
                   mobile: { breakpoint: { max: 767, min: 0 }, items: 1 }
                 }}
@@ -412,19 +413,19 @@ export default function SensibleAirMonitor() {
 
       {/* Contact Section */}
       <div className="container">
-  <div className="row">
-      <div className="col-md-12">
-          <div className="contact-heading">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="contact-heading">
               <h2>Get in Touch</h2>
               <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
+                Please help us know what requirements you have. Our team will
+                contact you very soon.
               </p>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
-</div>
-<ContactForm pageName="Sensible Air Monitor Page" />
+      <ContactForm pageName="Sensible Air Monitor Page" />
 
       {/* Related Products Section */}
       <div className="product_compare_section">

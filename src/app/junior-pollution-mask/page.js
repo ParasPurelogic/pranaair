@@ -23,7 +23,7 @@ export default function JuniorPollutionMask() {
             <div className="col-md-6">
               <div className="banner-content">
                 <h1>Did you know that more than 90% of children are breathing toxic air every day?</h1>
-                <a href="#">buy now</a>
+                <a href="https://www.pranaair.com/checkout/?add-to-cart=6257">buy now</a>
               </div>
             </div>
             <div className="col-md-6">
@@ -574,7 +574,7 @@ export default function JuniorPollutionMask() {
               </p>
               <div style={{ height: "55px" }}></div>
               <div className="amazone-btn">
-                <a className="bg-btn bg-green" href="#">
+                <a className="bg-btn bg-green" href="https://www.pranaair.com/checkout/?add-to-cart=6257">
                   Buy Now
                 </a>
                 <a className="bg-btn bg-orange alignnone" href="https://www.amazon.in/dp/B08JQK2Z3N?ref=myi_title_dp">

@@ -19,6 +19,7 @@ a {
   padding: 0 !important;
 }
 
+
 /* Hero Section */
 .hero-section {
   background-image: url(https://www.pranaair.com/wp-content/uploads/2024/08/breathe-freely-embrace-the-power-of-clean-air-scaled.webp);
@@ -1057,6 +1058,7 @@ a {
   display: flex;
   gap: 20px;
   padding: 0 20px;
+  justify-content: center;
 }
 
 .case-study-item {
@@ -1379,12 +1381,23 @@ a {
 
 .blog-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 250px !important;
 }
 
 .entry-meta {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-date {
+  border: 1px solid #ffffff70;
+  border-radius: 50px;
+  padding: 3px 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .category-link {
@@ -2144,12 +2157,14 @@ a {
     right: 0;
   }
 }
+
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
   .controller {
     margin-top: -150px;
-}
-.most-accurate-row {
-  margin-top: 0px;
-  z-index: 1;
-}
+  }
+
+  .most-accurate-row {
+    margin-top: 0px;
+    z-index: 1;
+  }
 }

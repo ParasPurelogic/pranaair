@@ -12,15 +12,15 @@ export default function AirQualitySensors() {
       {/* Banner Section */}
       <section className="monitor_banner_section" style={{ backgroundImage: "url('https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-quality-sensor-board.jpeg')" }}>
         <div className='container'>
-        <div className="row" >
-          <div className="col-md-12">
-            <div className="monitor_banner_box">
-              <h2><span style={{ fontSize: '24pt' }}>Prana Air</span></h2>
-              <h2><span style={{ fontSize: '36pt' }}>Air Quality Sensors</span></h2>
-              <span style={{ fontSize: '24pt' }}>Know the quality of the air you breathe.</span>
+          <div className="row" >
+            <div className="col-md-12">
+              <div className="monitor_banner_box">
+                <h2><span style={{ fontSize: '24pt' }}>Prana Air</span></h2>
+                <h2><span style={{ fontSize: '36pt' }}>Air Quality Sensors</span></h2>
+                <span style={{ fontSize: '24pt' }}>Know the quality of the air you breathe.</span>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
       {/* Introduction Section */}
@@ -82,7 +82,9 @@ export default function AirQualitySensors() {
                         </ul>
                         <div className="monitor_btn_box">
                           <a className="monitor_know_btn" href="#">Know More</a>
-                          <button className="single_add_to_cart_button button alt banner-btn">Buy Now</button>
+                          <form class="cart" action="https://www.pranaair.com/product/carbon-dioxide-sensor/" enctype="multipart/form-data"
+                            method="post"><button class="single_add_to_cart_button button alt banner-btn" name="add-to-cart" type="submit"
+                              value="15437">Buy Now</button></form>
                         </div>
                       </div>
                     </div>
@@ -111,7 +113,7 @@ export default function AirQualitySensors() {
 
                     <div className="pocket_monitor_box">
                       <div className="pocket_monitor_img">
-                        <a href="#">
+                        <a href="https://www.pranaair.com/product/carbon-monoxide-co-sensor/">
                           <img src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-so2-sensor.png" alt="prana air sulfur dioxide so2 sensor" width="100" height="100" />
                         </a>
                       </div>
@@ -148,7 +150,7 @@ export default function AirQualitySensors() {
                         </ul>
                         <div className="monitor_btn_box">
                           <a className="monitor_know_btn" href="#">Know More</a>
-                          <a className="monitor_know_btn monitor_card_btn" href="#">Buy Now</a>
+                          <a className="monitor_know_btn monitor_card_btn" href="https://www.pranaair.com/product/nitrogen-dioxide-no2-sensor/">Buy Now</a>
                         </div>
                       </div>
                     </div>

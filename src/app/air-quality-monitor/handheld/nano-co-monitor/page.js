@@ -269,9 +269,10 @@ export default function NanoCOMonitor() {
                             inputMode="numeric"
                           />
                         </div>
-                        <button type="submit" name="add-to-cart" className="single_add_to_cart_button button alt">
-                          Buy Now
-                        </button>
+                        <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co-monitor/" method="post" enctype="multipart/form-data">
+                         <button type="submit" name="add-to-cart" value="76353" class="single_add_to_cart_button button alt">Buy Now</button>
+
+                        </form>
                       </form>
                     </div>
                   </div>
@@ -822,15 +823,15 @@ export default function NanoCOMonitor() {
 
       {/* Outdoor Banner */}
       <div className="container-fluid">
-      <div className="row out-door-banner">
-        <div className="col-md-12">
-          <img
-            src="https://www.pranaair.com/wp-content/uploads/2023/05/real-time-measuring-of-co-gas-in-kitchen-2048x634.jpeg"
-            alt="Outdoor Monitor Device"
-            className="outdoor-monitor-device-img"
-          />
+        <div className="row out-door-banner">
+          <div className="col-md-12">
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2023/05/real-time-measuring-of-co-gas-in-kitchen-2048x634.jpeg"
+              alt="Outdoor Monitor Device"
+              className="outdoor-monitor-device-img"
+            />
+          </div>
         </div>
-      </div>
       </div>
 
       {/* Real Time CO Detection */}

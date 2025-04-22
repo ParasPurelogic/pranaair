@@ -27,7 +27,7 @@ export default function CarAirFilter() {
                     <span className="woocommerce-Price-amount amount">₹1,990.00</span>
                   </span>
                 </div>
-                <a href="#">Buy Now</a>
+                <a href="https://www.pranaair.com/product/car-cabin-air-filter/">Buy Now</a>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -435,7 +435,7 @@ export default function CarAirFilter() {
                   The multi-layer filter absorb various pollutants in one time and offers more filtering power and a
                   longer service life
                 </p>
-                <a href="#">Buy Now</a>
+                <a href="https://www.pranaair.com/product/car-cabin-air-filter/">Buy Now</a>
               </div>
             </div>
             <div className="col-md-6">
@@ -816,7 +816,7 @@ export default function CarAirFilter() {
             </div>
             <div className="col-md-4">
               <div className="brand-btn">
-                <a className="buy-btn" href="#">
+                <a className="buy-btn" href="https://www.pranaair.com/product/car-cabin-air-filter/">
                   Buy Now
                 </a>
                 <a

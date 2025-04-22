@@ -8,6 +8,10 @@
 
 }
 
+form.cart {
+  width: 100%;
+}
+
 main.main.py-4 {
   padding: 0 !important;
 }

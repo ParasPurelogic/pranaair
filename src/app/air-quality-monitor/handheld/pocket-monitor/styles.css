@@ -105,11 +105,23 @@ body {
   line-height: 1.2;
 }
 
-.product-name {
+.product-title .product-name {
   color: #7ab261;
   font-size: 50px;
-  font-weight: 600;
-  display: block;
+  font-weight: 700;
+}
+
+.cart button {
+  background: #7ab261;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.cart button img {
+  width: 30px;
 }
 
 .product-type {

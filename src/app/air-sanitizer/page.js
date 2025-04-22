@@ -115,7 +115,9 @@ export default function AirSanitizer() {
               <span className="price-label">MRP</span>
               <span className="price-value">₹ 29,990.00</span>
             </div>
-            <button className="buy-now-btn">Buy Now</button>
+            <form class="cart" action="https://www.pranaair.com/product/air-sanitizer/" enctype="multipart/form-data" method="post">
+              <button class="single_add_to_cart_button button alt button button_slide slide_right" name="add-to-cart"
+                type="submit" value="14022">Buy Now</button></form>
           </div>
         </div>
       </section>

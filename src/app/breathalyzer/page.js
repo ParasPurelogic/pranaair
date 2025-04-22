@@ -329,7 +329,7 @@ export default function BreathalyzerPage() {
                 <div className="mrp-sec">
                   <div className="discount-mrp woocom-list-content">
                     <h6>m.r.p.</h6>
-                    <h5>80.22$</h5>
+                    <h5>₹ 6,990.00</h5>
                   </div>
                   <section className="articles-container">
                     <article className="article">
@@ -392,7 +392,11 @@ export default function BreathalyzerPage() {
                     </div>
                     <div className="buy-btns">
                       <br />
-                      <button className="single_add_to_cart_button button alt">Add to Cart</button>
+                      <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/breathalyzer/" method="post"
+                        enctype="multipart/form-data">
+                        <button type="submit" name="add-to-cart" value="77733"
+                          class="single_add_to_cart_button button alt">Add to Cart</button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -729,7 +733,7 @@ export default function BreathalyzerPage() {
                               width={150}
                               height={100}
                             />
-                            
+
                           </div>
                         </div>
                       </div>

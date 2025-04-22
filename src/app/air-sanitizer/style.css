@@ -6,6 +6,14 @@
   position: relative;
 }
 
+button.single_add_to_cart_button {
+  background: #7ab261;
+  border: 0;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 10px;
+}
+
 .hero-container {
   max-width: 1660px;
   margin: 0 auto;

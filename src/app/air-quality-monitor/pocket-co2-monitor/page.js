@@ -224,9 +224,10 @@ export default function CO2MonitorPage() {
                                         <Image src="https://www.pranaair.com/wp-content/uploads/2022/07/WIFI-enable-icon.png" width={20} height={20} alt="wifi icon" /> Wifi Enabled
                                     </li>
                                 </ul>
-                                <button className="single_add_to_cart_button button alt banner-btn" name="add-to-cart" value="52265">
-                                    Buy Now <Image src="https://www.pranaair.com/wp-content/uploads/2023/09/Vector-3.png" width={20} height={20} alt="icon" />
-                                </button>
+                                <form class="cart" action="https://www.pranaair.com/product/pocket-co2-monitor/" enctype="multipart/form-data"
+                                    method="post"><button class="single_add_to_cart_button button alt banner-btn" name="add-to-cart" type="submit"
+                                        value="52265">Buy Now <img decoding="async" src="https://www.pranaair.com/wp-content/uploads/2023/09/Vector-3.png" alt="icon" /></button>
+                                </form>
                             </div>
                         </div>
                         <div className="col-md-6 right_pocket_Image">
@@ -1487,15 +1488,15 @@ export default function CO2MonitorPage() {
                                                     As all the employees are present, then CO2 levels rise as a result of respiration and accumulate over time, they are in an unhealthy range.
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                CO2 Range: It can exceed up to 3000 ppm<Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                    CO2 Range: It can exceed up to 3000 ppm<Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
                                                         alt="moderate co2 icon" width="20" height="20" />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                Time Frame: between 12 pm – 4 pm  <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                    Time Frame: between 12 pm – 4 pm  <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
                                                         alt="moderate co2 icon" width="20" height="20" />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", color: "#1c1b1b" }}>
-                                                Health Impacts: Dizziness, loss of coordination, unattentiveness   <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
+                                                    Health Impacts: Dizziness, loss of coordination, unattentiveness   <Image src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
                                                         alt="moderate co2 icon" width="20" height="20" />
                                                 </p>
                                             </div>

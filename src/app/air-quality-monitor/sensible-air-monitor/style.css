@@ -1177,6 +1177,7 @@
   
   .cus-heading {
     padding-top: 50px;
+    padding-bottom: 0 !important;
   }
   
   div#request_a_quote {

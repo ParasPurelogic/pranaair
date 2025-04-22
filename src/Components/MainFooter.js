@@ -81,9 +81,9 @@ function MainFooter() {
                 { key: "home", path: "/" },
                 { key: "about", path: "/about-us" },
                 { key: "contact", path: "/contact-us" },
-                { key: "blog", path: "/blog" },
-                { key: "faqs", path: "/faqs" },
-                { key: "shop", path: "/shop" },
+                { key: "blog", path: "https://www.pranaair.com/blog/" },
+                { key: "faqs", path: "https://www.pranaair.com/faq/" },
+                { key: "shop", path: "https://www.pranaair.com/shop/" },
               ].map((link) => (
                 <li key={link.key} className="footer-link-item">
                   <Link href={getLocalizedPath(link.path)} className="footer-link">
@@ -99,12 +99,12 @@ function MainFooter() {
             <h5 className="footer-heading">{t("footer.columns.ourProducts")}</h5>
             <ul className="footer-links">
               {[
-                { key: "airQualityMonitors", path: "/air-quality-monitors" },
-                { key: "airQualitySensors", path: "/air-quality-sensors" },
-                { key: "airQualityDrone", path: "/air-quality-drone" },
-                { key: "airQualityPCBs", path: "/air-quality-pcbs" },
-                { key: "weatherStation", path: "/weather-station" },
-                { key: "freshAirMachine", path: "/fresh-air-machine" },
+                { key: "airQualityMonitors", path: "/air-quality-monitor/" },
+                { key: "airQualitySensors", path: "/air-quality-sensor" },
+                { key: "airQualityDrone", path: "/air-quality-monitor/air-drone/" },
+                { key: "airQualityPCBs", path: "/air-quality-pcb-board/" },
+                { key: "weatherStation", path: "/air-quality-monitor/weather-station/" },
+                { key: "freshAirMachine", path: "/fresh-air-machine/" },
               ].map((product) => (
                 <li key={product.key} className="footer-link-item">
                   <Link href={getLocalizedPath(product.path)} className="footer-link">
@@ -114,18 +114,18 @@ function MainFooter() {
               ))}
             </ul>
           </div>
-
+ 
           {/* Other Links */}
           <div className="footer-links-section">
             <h5 className="footer-heading">{t("footer.columns.otherLinks")}</h5>
             <ul className="footer-links">
               {[
-                { key: "airQualitySolutions", path: "/air-quality-solutions" },
-                { key: "productManuals", path: "/product-manuals" },
-                { key: "dataAccuracy", path: "/data-accuracy" },
-                { key: "caseStudy", path: "/case-study" },
-                { key: "refundPolicy", path: "/refund-policy" },
-                { key: "privacyPolicy", path: "/privacy-policy" },
+                { key: "airQualitySolutions", path: "https://www.pranaair.com/solutions-by-application/" },
+                { key: "productManuals", path: "https://www.pranaair.com/documents/" },
+                { key: "dataAccuracy", path: "https://www.pranaair.com/air-quality-data-accuracy/" },
+                { key: "caseStudy", path: "https://www.pranaair.com/blog/category/case-study/" },
+                { key: "refundPolicy", path: "https://www.pranaair.com/return-refund-policy/" },
+                { key: "privacyPolicy", path: "https://www.pranaair.com/privacy/" },
               ].map((link) => (
                 <li key={link.key} className="footer-link-item">
                   <Link href={getLocalizedPath(link.path)} className="footer-link">
@@ -142,7 +142,7 @@ function MainFooter() {
               <h5 className="footer-heading" style={{ marginBottom: "24px" }}>
                 {t("footer.contactDetails")}
               </h5>
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex", flexDirection: "column"}}>
                 <div className="contact-item">
                   <div className="contact-icon">
                     <svg
@@ -265,10 +265,10 @@ function MainFooter() {
               <span className="social-label">{t("footer.findUsOn")}:</span>
               <div className="social-icons">
                 {[
-                  { icon: "facebook", href: "#" },
-                  { icon: "youtube", href: "#" },
-                  { icon: "linkedin", href: "#" },
-                  { icon: "instagram", href: "#" },
+                  { icon: "facebook", href: "https://www.facebook.com/airprana" },
+                  { icon: "youtube", href: "https://www.youtube.com/c/PranaAir" },
+                  { icon: "linkedin", href: "https://www.linkedin.com/company/pranaair/" },
+                  { icon: "instagram", href: "https://www.instagram.com/prana.air/" },
                 ].map((social, index) => (
                   <Link key={index} href={social.href} style={{ color: "#9ca3af", transition: "color 0.2s" }}>
                     <svg

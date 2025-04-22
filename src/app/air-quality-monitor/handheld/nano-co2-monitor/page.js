@@ -252,7 +252,11 @@ export default function NanoCO2MonitorPage() {
                   <input type="number" className="form-control" min="1" defaultValue="1" />
                 </div>
 
-                <button className="buy-now-btn">Buy Now</button>
+                <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co2-monitor/"
+                  method="post" enctype="multipart/form-data">
+                  <button type="submit" name="add-to-cart" value="77731"
+                    class="single_add_to_cart_button button alt">Buy Now</button>
+                </form>
               </div>
             </div>
           </div>

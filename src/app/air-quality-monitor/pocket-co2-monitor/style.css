@@ -230,6 +230,8 @@ ul.rate_list li {
 
 .banner-btn img {
     height: auto;
+    width: 25px;
+    transform: rotate(0deg);
 }
 
 @keyframes fadeEffect {

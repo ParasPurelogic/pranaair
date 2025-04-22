@@ -280,7 +280,12 @@ export default function NanoTVOCMonitorPage() {
                     </div>
                     <div className="buy-btns">
                       <br />
-                      <button className="buy-now-btn">Buy Now</button>
+                      <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-tvoc-monitor/"
+                        method="post" enctype="multipart/form-data">
+                        <button type="submit" name="add-to-cart" value="76924"
+                          class="single_add_to_cart_button button alt">Buy Now</button>
+
+                      </form>
                     </div>
                   </div>
                 </div>
