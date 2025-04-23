@@ -46,7 +46,7 @@ const categories = [
             image: "https://www.pranaair.com/wp-content/uploads/2024/08/Nano-TVOC.jpg",
             url: "/air-quality-monitor/handheld/nano-tvoc-monitor",
           },
-          
+
           {
             name: "Oxygen Monitor",
             slug: "oxygen-monitor",
@@ -217,13 +217,14 @@ const categories = [
     slug: "air-quality-pcb",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Quality-PCBs-icon.webp",
     subcategories: [],
-
+    customContent: true,
   },
   {
     name: "Weather Station",
     slug: "weather-station",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-weather-station-icon.png",
     subcategories: [],
+    customContent: true,
   },
   {
     name: "Air Purifier",
@@ -370,12 +371,143 @@ const categories = [
   },
 ]
 
+// Pagination component
+function PaginationControl({ currentPage, totalPages, onPageChange }) {
+  return (
+    <div className="flex items-center justify-center space-x-2 my-4">
+      <button
+        onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+        className=" flex items-center justify-center w-8 h-8 rounded-md border border-gray-300 bg-white text-gray-700 disabled:opacity-50"
+        aria-label="Previous page"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <button
+          key={page}
+          onClick={() => onPageChange(page)}
+          className={`w-8 h-8 rounded-md flex items-center justify-center ${currentPage === page ? "bg-green-600 text-white" : "border border-gray-300 bg-white text-gray-700"
+            }`}
+          aria-label={`Page ${page}`}
+          aria-current={currentPage === page ? "page" : undefined}
+        >
+          {page}
+        </button>
+      ))}
+
+      <button
+        onClick={() => currentPage < totalPages && onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        className="flex items-center justify-center w-8 h-8 rounded-md border border-gray-300 bg-white text-gray-700 disabled:opacity-50"
+        aria-label="Next page"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  )
+}
+
+// PCB Mega Menu Content
+function PCBMegaMenuContent({ onClose }) {
+  return (
+    <div className="empty-products-content">
+      <Link href="/air-quality-pcb-board/">
+        <Image
+          src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-air-quality-PCBs-borads-2048x596.jpg"
+          alt="Air Quality PCBs"
+          width={800}
+          height={233}
+          className="w-full h-auto rounded-lg"
+        />
+        <h3 className="text-xl font-semibold mt-4 mb-2">Air Quality PCBs</h3>
+      </Link>
+    </div>
+  )
+}
+
+// Weather Station Mega Menu Content
+function WeatherStationMegaMenuContent({ products, onClose, currentPage, setCurrentPage }) {
+  const itemsPerPage = 7
+  const totalPages = Math.ceil(products.length / itemsPerPage)
+  const displayedProducts = products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+
+  return (
+    <div className="products-container">
+      <div className="empty-products-content">
+        <Link href="/air-quality-monitor/weather-station/">
+          <Image
+            src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-Weather-station-Measure-weather-data-with-air-quality-2048x594.jpg"
+            alt="Air Quality PCBs"
+            width={800}
+            height={233}
+            className="w-full h-auto rounded-lg"
+          />
+          <h3 className="text-xl font-semibold mt-4 mb-2">Weather Station</h3>
+        </Link>
+      </div>
+
+      {totalPages > 1 && (
+        <PaginationControl currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+      )}
+    </div>
+  )
+}
+
 export function MegaMenu({ onClose }) {
   const [activeCategory, setActiveCategory] = useState(categories[0]?.slug || "")
   const [activeSubcategory, setActiveSubcategory] = useState(categories[0]?.subcategories?.[0]?.slug || "")
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 7
 
   const selectedCategory = categories.find((cat) => cat.slug === activeCategory)
   const selectedSubcategory = selectedCategory?.subcategories?.find((sub) => sub.slug === activeSubcategory)
+
+  // Reset page when category or subcategory changes
+  const handleCategoryChange = (categorySlug) => {
+    if (activeCategory !== categorySlug) {
+      setCurrentPage(1)
+      setActiveCategory(categorySlug)
+      const category = categories.find((cat) => cat.slug === categorySlug)
+      if (category?.subcategories?.length > 0) {
+        setActiveSubcategory(category.subcategories[0].slug)
+      } else {
+        setActiveSubcategory("")
+      }
+    }
+  }
+
+  const handleSubcategoryChange = (subcategorySlug) => {
+    if (activeSubcategory !== subcategorySlug) {
+      setCurrentPage(1)
+      setActiveSubcategory(subcategorySlug)
+    }
+  }
 
   return (
     <div className="mega-menu-wrapper">
@@ -386,14 +518,7 @@ export function MegaMenu({ onClose }) {
             <button
               key={category.slug}
               className={`category-button ${activeCategory === category.slug ? "active" : ""}`}
-              onMouseEnter={() => {
-                setActiveCategory(category.slug)
-                if (category.subcategories?.length > 0) {
-                  setActiveSubcategory(category.subcategories[0].slug)
-                } else {
-                  setActiveSubcategory("")
-                }
-              }}
+              onMouseEnter={() => handleCategoryChange(category.slug)}
             >
               <span className="category-icon-wrapper">
                 <Image
@@ -432,7 +557,7 @@ export function MegaMenu({ onClose }) {
               <button
                 key={subcategory.slug}
                 className={`subcategory-button ${activeSubcategory === subcategory.slug ? "active" : ""}`}
-                onMouseEnter={() => setActiveSubcategory(subcategory.slug)}
+                onMouseEnter={() => handleSubcategoryChange(subcategory.slug)}
               >
                 {subcategory.icon && (
                   <Image
@@ -465,67 +590,91 @@ export function MegaMenu({ onClose }) {
 
         {/* Products Grid */}
         <div className="products-grid-container">
-          {selectedSubcategory?.products && selectedSubcategory.products.length > 0 ? (
-            <>             
-              <div className="products-grid">
-                {selectedSubcategory.products.map((product) => (
-                  <Link key={product.slug} href={product.url} className="product-card" onClick={onClose}>
-                    <div className="product-image-container">
-                      <Image
-                        src={product.image || "/placeholder.svg?height=200&width=200"}
-                        alt={product.name}
-                        fill
-                        className="product-image"
-                      />
-                    </div>
-                    <div className="product-info">
-                      <h3 className="product-name">{product.name}</h3>
-                    </div>
-                  </Link>
-                ))}
-                <div className="products-header">
-                <Link
-                  href="air-quality-monitor/"
-                  className="view-all-products"
-                  onClick={onClose}
-                >
-                  View All {selectedSubcategory.name}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </Link>
-              </div>
-              </div>
-            </>
-          ) : (
+          {/* PCB Custom Content */}
+          {selectedCategory?.slug === "air-quality-pcb" ? (
             <div className="empty-products">
-              <div className="empty-products-content">
-                <Link href="#">
-              <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-air-quality-PCBs-borads-2048x596.jpg"
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="category-icon"
-                />
-                <h5>Air Quality PCBs</h5>
-                </Link>
-              </div>
+              <PCBMegaMenuContent onClose={onClose} />
             </div>
-          )}
+          ) : /* Weather Station Custom Content */
+            selectedCategory?.slug === "weather-station" ? (
+              <WeatherStationMegaMenuContent
+                products={selectedCategory.products || []}
+                onClose={onClose}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+              />
+            ) : /* Regular Products Grid */
+              selectedSubcategory?.products && selectedSubcategory.products.length > 0 ? (
+                <>
+                  <div className="products-grid">
+                    {selectedSubcategory.products
+                      .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+                      .map((product) => (
+                        <Link key={product.slug} href={product.url} className="product-card" onClick={onClose}>
+                          <div className="product-image-container">
+                            <Image
+                              src={product.image || "/placeholder.svg?height=200&width=200"}
+                              alt={product.name}
+                              fill
+                              className="product-image"
+                            />
+                          </div>
+                          <div className="product-info">
+                            <h3 className="product-name">{product.name}</h3>
+                          </div>
+                        </Link>
+                      ))}
+                  </div>
+
+                  {selectedSubcategory.products.length > itemsPerPage && (
+                    <PaginationControl
+                      currentPage={currentPage}
+                      totalPages={Math.ceil(selectedSubcategory.products.length / itemsPerPage)}
+                      onPageChange={setCurrentPage}
+                    />
+                  )}
+
+                  <div className="products-header">
+                    <Link
+                      href={`/${selectedCategory?.slug}/${selectedSubcategory.slug}`}
+                      className="view-all-products"
+                      onClick={onClose}
+                    >
+                      View All {selectedSubcategory.name}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </Link>
+                  </div>
+                </>
+              ) : (
+                <div className="empty-products">
+                  <div className="empty-products-content">
+                    <Link href={`/${selectedCategory?.slug}`}>
+                      <Image
+                        src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-air-quality-PCBs-borads-2048x596.jpg"
+                        alt=""
+                        width={800}
+                        height={233}
+                        className="w-full h-auto rounded-lg"
+                      />
+                      <h5 className="mt-4 text-xl font-semibold">{selectedCategory?.name}</h5>
+                    </Link>
+                  </div>
+                </div>
+              )}
         </div>
       </div>
     </div>
   )
 }
-
