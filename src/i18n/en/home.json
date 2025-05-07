@@ -1,0 +1,36 @@
+{
+    "hero": {
+      "title": "Simplify Your Air Quality Monitoring",
+      "highlight": "Air Quality Monitoring",
+      "description": "Keep tabs on your indoor and outdoor air quality index using cutting-edge technology devices.",
+      "button": "Explore More"
+    },
+    "parameters": {
+      "title": "Stay Ahead: Guard Yourself Against Harmful Pollutants!",
+      "description": "According to the World Health Organization (WHO), air pollution causes around 7 million premature deaths each year due to various diseases. Including heart disease, stroke, chronic obstructive pulmonary disease, lung cancer, and acute respiratory infections."
+    },
+    "discover": {
+      "title": "Discover the Ultimate Air Quality Solutions",
+      "description": "Prana Air offers a range of advanced air quality monitors, sensors, purifiers designed for every environment, ensuring you can breathe clean air wherever you are."
+    },
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "sensors": "Air Quality Sensors",
+      "pcbs": "Air Quality PCBs",
+      "weather": "Weather Station",
+      "purifiers": "Air Purifiers"
+    },
+    "shopping": {
+      "title": "Experience the convenience of shopping",
+      "globalShipping": "Global Shipping",
+      "quickDelivery": "Quick Delivery",
+      "warrantyProducts": "Warranty Products",
+      "returnPolicy": "Return Policy"
+    },
+    "seamlessConnectivity": {
+    "title": "Seamless Connectivity",
+    "description": "Stay connected wherever you go with our smart global SIM solutions.",
+    "imageAlt": "People connected through technology"
+  }
+  }
+  

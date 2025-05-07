@@ -400,8 +400,9 @@ function PaginationControl({ currentPage, totalPages, onPageChange }) {
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`w-8 h-8 rounded-md flex items-center justify-center ${currentPage === page ? "bg-green-600 text-white" : "border border-gray-300 bg-white text-gray-700"
-            }`}
+          className={`w-8 h-8 rounded-md flex items-center justify-center ${
+            currentPage === page ? "bg-green-600 text-white" : "border border-gray-300 bg-white text-gray-700"
+          }`}
           aria-label={`Page ${page}`}
           aria-current={currentPage === page ? "page" : undefined}
         >
@@ -596,83 +597,83 @@ export function MegaMenu({ onClose }) {
               <PCBMegaMenuContent onClose={onClose} />
             </div>
           ) : /* Weather Station Custom Content */
-            selectedCategory?.slug === "weather-station" ? (
-              <WeatherStationMegaMenuContent
-                products={selectedCategory.products || []}
-                onClose={onClose}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-              />
-            ) : /* Regular Products Grid */
-              selectedSubcategory?.products && selectedSubcategory.products.length > 0 ? (
-                <>
-                  <div className="products-grid">
-                    {selectedSubcategory.products
-                      .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
-                      .map((product) => (
-                        <Link key={product.slug} href={product.url} className="product-card" onClick={onClose}>
-                          <div className="product-image-container">
-                            <Image
-                              src={product.image || "/placeholder.svg?height=200&width=200"}
-                              alt={product.name}
-                              fill
-                              className="product-image"
-                            />
-                          </div>
-                          <div className="product-info">
-                            <h3 className="product-name">{product.name}</h3>
-                          </div>
-                        </Link>
-                      ))}
-                  </div>
-
-                  {selectedSubcategory.products.length > itemsPerPage && (
-                    <PaginationControl
-                      currentPage={currentPage}
-                      totalPages={Math.ceil(selectedSubcategory.products.length / itemsPerPage)}
-                      onPageChange={setCurrentPage}
-                    />
-                  )}
-
-                  <div className="products-header">
-                    <Link
-                      href={`/${selectedCategory?.slug}/${selectedSubcategory.slug}`}
-                      className="view-all-products"
-                      onClick={onClose}
-                    >
-                      View All {selectedSubcategory.name}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                      </svg>
+          selectedCategory?.slug === "weather-station" ? (
+            <WeatherStationMegaMenuContent
+              products={selectedCategory.products || []}
+              onClose={onClose}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          ) : /* Regular Products Grid */
+          selectedSubcategory?.products && selectedSubcategory.products.length > 0 ? (
+            <>
+              <div className="products-grid">
+                {selectedSubcategory.products
+                  .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+                  .map((product) => (
+                    <Link key={product.slug} href={product.url} className="product-card" onClick={onClose}>
+                      <div className="product-image-container">
+                        <Image
+                          src={product.image || "/placeholder.svg?height=200&width=200"}
+                          alt={product.name}
+                          fill
+                          className="product-image"
+                        />
+                      </div>
+                      <div className="product-info">
+                        <h3 className="product-name">{product.name}</h3>
+                      </div>
                     </Link>
-                  </div>
-                </>
-              ) : (
-                <div className="empty-products">
-                  <div className="empty-products-content">
-                    <Link href={`/${selectedCategory?.slug}`}>
-                      <Image
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-air-quality-PCBs-borads-2048x596.jpg"
-                        alt=""
-                        width={800}
-                        height={233}
-                        className="w-full h-auto rounded-lg"
-                      />
-                      <h5 className="mt-4 text-xl font-semibold">{selectedCategory?.name}</h5>
-                    </Link>
-                  </div>
-                </div>
+                  ))}
+              </div>
+
+              {selectedSubcategory.products.length > itemsPerPage && (
+                <PaginationControl
+                  currentPage={currentPage}
+                  totalPages={Math.ceil(selectedSubcategory.products.length / itemsPerPage)}
+                  onPageChange={setCurrentPage}
+                />
               )}
+
+              <div className="products-header">
+                <Link
+                  href={`/${selectedCategory?.slug}/${selectedSubcategory.slug}`}
+                  className="view-all-products"
+                  onClick={onClose}
+                >
+                  View All {selectedSubcategory.name}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </Link>
+              </div>
+            </>
+          ) : (
+            <div className="empty-products">
+              <div className="empty-products-content">
+                <Link href={`/${selectedCategory?.slug}`}>
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-air-quality-PCBs-borads-2048x596.jpg"
+                    alt=""
+                    width={800}
+                    height={233}
+                    className="w-full h-auto rounded-lg"
+                  />
+                  <h5 className="mt-4 text-xl font-semibold">{selectedCategory?.name}</h5>
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

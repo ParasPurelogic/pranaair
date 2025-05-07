@@ -3,22 +3,13 @@
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { MegaMenu } from "./MegaMenu"
+import { useTranslation } from "react-i18next"
 
 // Mock cart context
 const useCart = () => {
   return { itemCount: 0 }
-}
-
-// Mock translations
-const useTranslations = () => {
-  return {
-    locale: "en",
-    setLocale: () => {},
-    availableLocales: [{ code: "en", name: "English (UK)" }],
-    getLocalizedPath: (path) => path,
-  }
 }
 
 // Navigation data
@@ -31,17 +22,54 @@ const mainNavItems = [
 ]
 
 function MainHeader() {
+  const { i18n } = useTranslation()
+  const router = useRouter()
+  const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState(null)
   const [activeSubcategory, setActiveSubcategory] = useState(null)
   const [activeMobileMenu, setActiveMobileMenu] = useState(null)
   const { itemCount } = useCart()
-  const pathname = usePathname()
   const megaMenuRef = useRef(null)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
 
   const languageDropdownRef = useRef(null)
-  const { locale, setLocale, availableLocales, getLocalizedPath } = useTranslations()
+
+  // Available languages
+  const availableLanguages = [
+    { code: "", name: "English (UK)" },
+    { code: "hi", name: "हिंदी" },
+  ]
+
+  // Change language function with URL update
+  const changeLanguage = (lng) => {
+    // Update i18next language
+    i18n.changeLanguage(lng)
+
+    // Update URL to include language code
+    const currentLang = i18n.language
+
+    // Get the current path without the language prefix
+    let newPath = pathname
+
+    // Remove current language prefix if it exists
+    availableLanguages.forEach((lang) => {
+      if (pathname.startsWith(`/${lang.code}/`)) {
+        newPath = pathname.substring(lang.code.length + 1)
+      } else if (pathname === `/${lang.code}`) {
+        newPath = "/"
+      }
+    })
+
+    // Add new language prefix
+    if (newPath === "/") {
+      router.push(`/${lng}`)
+    } else {
+      router.push(`/${lng}${newPath}`)
+    }
+
+    setIsLanguageDropdownOpen(false)
+  }
 
   // Close mega menu when clicking outside
   useEffect(() => {
@@ -112,7 +140,7 @@ function MainHeader() {
       <header className="header-container">
         <div className="header-inner">
           {/* Logo */}
-          <Link href="/" className="logo-container">
+          <Link href={`/${i18n.language}`} className="logo-container">
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-logo.webp"
               alt="Prana Air"
@@ -129,7 +157,7 @@ function MainHeader() {
                 <li key={item.label} className="nav-item">
                   {item.hasDropdown ? (
                     <>
-                      <Link href={item.href} className="nav-link">
+                      <Link href={`/${i18n.language}${item.href}`} className="nav-link">
                         {item.label}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +180,7 @@ function MainHeader() {
                       )}
                     </>
                   ) : (
-                    <Link href={item.href} className="nav-link">
+                    <Link href={`/${i18n.language}${item.href}`} className="nav-link">
                       {item.label}
                     </Link>
                   )}
@@ -163,7 +191,7 @@ function MainHeader() {
 
           {/* Right Menu */}
           <div className="right-menu">
-            <Link href="/contact" className="get-in-touch">
+            <Link href={`/${i18n.language}/contact`} className="get-in-touch">
               Get in touch
             </Link>
 
@@ -189,7 +217,7 @@ function MainHeader() {
                   <line x1="2" y1="12" x2="22" y2="12"></line>
                   <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                 </svg>
-                <span>English (UK)</span>
+                <span>{i18n.language === "hi" ? "हिंदी" : "English (UK)"}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -223,31 +251,34 @@ function MainHeader() {
                   }}
                 >
                   <div style={{ padding: "4px 0" }}>
-                    <Link
-                      href={pathname}
-                      className="d-block w-100 text-start px-4 py-2"
-                      style={{
-                        fontSize: "14px",
-                        backgroundColor: "#f3f4f6",
-                        color: "#7ab261",
-                      }}
-                      onClick={() => {
-                        setLocale("en")
-                        setIsLanguageDropdownOpen(false)
-                      }}
-                    >
-                      English (UK)
-                    </Link>
+                    {availableLanguages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        className="d-block w-100 text-start px-4 py-2"
+                        style={{
+                          fontSize: "14px",
+                          backgroundColor: i18n.language === lang.code ? "#f3f4f6" : "transparent",
+                          color: i18n.language === lang.code ? "#7ab261" : "#374151",
+                          border: "none",
+                          width: "100%",
+                          textAlign: "left",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => changeLanguage(lang.code)}
+                      >
+                        {lang.name}
+                      </button>
+                    ))}
                   </div>
                 </div>
               )}
             </div>
 
-            <Link href="/login" className="login-link">
+            <Link href={`/${i18n.language}/login`} className="login-link">
               Login
             </Link>
 
-            <Link href="/cart" className="cart-link">
+            <Link href={`/${i18n.language}/cart`} className="cart-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -304,7 +335,7 @@ function MainHeader() {
       {isMobileMenuOpen && (
         <div className="mobile-menu">
           <div className="mobile-menu-header">
-            <Link href="/" className="logo-container">
+            <Link href={`/${i18n.language}`} className="logo-container">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-logo.webp"
                 alt="Prana Air"
@@ -441,7 +472,7 @@ function MainHeader() {
                         {handheldProducts.map((product) => (
                           <Link
                             key={product.slug}
-                            href={product.url}
+                            href={`/${i18n.language}${product.url}`}
                             className="mobile-product-card"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
@@ -461,7 +492,7 @@ function MainHeader() {
 
                       {/* View All Link */}
                       <Link
-                        href="/air-quality-monitor/handheld"
+                        href={`/${i18n.language}/air-quality-monitor/handheld`}
                         className="view-all-link"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -568,10 +599,37 @@ function MainHeader() {
             </div>
           </div>
 
+          {/* Language Switcher in Mobile Menu */}
+          <div className="mobile-nav-item" style={{ padding: "16px", borderBottom: "1px solid #e5e7eb" }}>
+            <div style={{ fontSize: "16px", color: "#374151", marginBottom: "10px" }}>Select Language</div>
+            <div style={{ display: "flex", gap: "10px" }}>
+              {availableLanguages.map((lang) => (
+                <button
+                  key={lang.code}
+                  style={{
+                    padding: "8px 16px",
+                    borderRadius: "4px",
+                    border: "1px solid #e5e7eb",
+                    backgroundColor: i18n.language === lang.code ? "#7ab261" : "white",
+                    color: i18n.language === lang.code ? "white" : "#374151",
+                    fontSize: "14px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    changeLanguage(lang.code)
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  {lang.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Mobile Actions */}
           <div style={{ padding: "16px", marginTop: "16px" }}>
             <Link
-              href="/contact"
+              href={`/${i18n.language}/contact`}
               style={{
                 display: "block",
                 width: "100%",
@@ -593,4 +651,3 @@ function MainHeader() {
 }
 
 export default MainHeader
-
