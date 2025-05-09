@@ -1,36 +1,137 @@
 {
-    "hero": {
-      "title": "Simplify Your Air Quality Monitoring",
-      "highlight": "Air Quality Monitoring",
-      "description": "Keep tabs on your indoor and outdoor air quality index using cutting-edge technology devices.",
-      "button": "Explore More"
-    },
-    "parameters": {
-      "title": "Stay Ahead: Guard Yourself Against Harmful Pollutants!",
-      "description": "According to the World Health Organization (WHO), air pollution causes around 7 million premature deaths each year due to various diseases. Including heart disease, stroke, chronic obstructive pulmonary disease, lung cancer, and acute respiratory infections."
-    },
-    "discover": {
-      "title": "Discover the Ultimate Air Quality Solutions",
-      "description": "Prana Air offers a range of advanced air quality monitors, sensors, purifiers designed for every environment, ensuring you can breathe clean air wherever you are."
-    },
-    "tabs": {
-      "monitors": "Air Quality Monitors",
-      "sensors": "Air Quality Sensors",
-      "pcbs": "Air Quality PCBs",
-      "weather": "Weather Station",
-      "purifiers": "Air Purifiers"
-    },
-    "shopping": {
-      "title": "Experience the convenience of shopping",
-      "globalShipping": "Global Shipping",
-      "quickDelivery": "Quick Delivery",
-      "warrantyProducts": "Warranty Products",
-      "returnPolicy": "Return Policy"
-    },
-    "seamlessConnectivity": {
+  "hero": {
+    "title": "Simplify Your",
+    "highlight": "Air Quality Monitoring",
+    "description": "Keep tabs on your indoor and outdoor air quality index using cutting-edge technology devices.",
+    "button": "Explore More"
+  },
+  "parameters": {
+    "title": "Stay Ahead: Guard Yourself Against Harmful Pollutants!",
+    "description": "According to the World Health Organization (WHO), air pollution causes around 7 million premature deaths each year due to various diseases. Including heart disease, stroke, chronic obstructive pulmonary disease, lung cancer, and acute respiratory infections."
+  },
+  "discovers": {
+    "title": "Discover the Ultimate Air Quality Solutions",
+    "description": "Prana Air offers a range of advanced air quality monitors, sensors, purifiers designed for every environment, ensuring you can breathe clean air wherever you are.",
+    "button": "Know More"
+  },
+  "tabs": {
+    "monitors": "Air Quality Monitors",
+    "sensors": "Air Quality Sensors",
+    "pcbs": "Air Quality PCBs",
+    "weather": "Weather Station",
+    "purifiers": "Air Purifiers"
+  },
+  "shopping": {
+    "title": "Experience the convenience of shopping",
+    "globalShipping": "Global Shipping",
+    "quickDelivery": "Quick Delivery",
+    "warrantyProducts": "Warranty Products",
+    "returnPolicy": "Return Policy"
+  },
+  "seamlessConnectivity": {
     "title": "Seamless Connectivity",
     "description": "Stay connected wherever you go with our smart global SIM solutions.",
     "imageAlt": "People connected through technology"
+  },
+  "connectivity": {
+    "mobileApp": "AQI Mobile App",
+    "webDashboard": "Web-Dashboard",
+    "tvApp": "AQI TV App",
+    "mobileAppTitle": "Mobile App",
+    "mobileAppSubtitle": "Seamless Connectivity",
+    "mobileAppDescription": "Stay informed with real-time updates and personalized alerts on your mobile app, ensuring you always know the air quality around you, wherever you are.",
+    "downloadOn": "Download on the",
+    "appStore": "App Store",
+    "getItOn": "Get it on",
+    "googlePlay": "Google Play",
+    "webDashboardTitle": "Web dashboard connectivity",
+    "webDashboardSubtitle": "Real-Time Insights",
+    "webDashboardDescription": "Discover real-time insights into the air quality with our intuitive web dashboard connectivity. Enjoy seamless integration across multiple devices for a complete picture of your air environment.",
+    "view": "View",
+    "dashboard": "Dashboard",
+    "tvConnectivityTitle": "TV connectivity",
+    "tvConnectivitySubtitle": "View Air quality data",
+    "tvConnectivityDescription": "Easily view your air quality data on your TV screen with our seamless connectivity feature. Stay informed about your environment with clear, easy-to-read visuals directly on your TV."
+  },
+  "drone": {
+    "title": "See the Air You Breathe",
+    "description": "Get real-time insights into air quality with Prana Airs Air Quality Drone, equipped with cutting-edge sensor technology.",
+    "button": "Know More"
+  },
+  "clientele": {
+    "title": "Our Clientele",
+    "description": "Join industry leaders who rely on our advanced solutions to ensure cleaner, safer environments."
+  },
+  "trustedClients": {
+    "counter": "4000",
+    "suffix": "+",
+    "title": "Air Quality Monitors Installed",
+    "sectorTitle": "Across Top Sectors:",
+    "sectors": "Construction, Hospitality, Education, Tech, Research Study, and many more",
+    "description": "Installed in numerous strategic sites, ensuring comprehensive coverage and accurate data collection."
+  },
+  "caseStudies": {
+    "title": "Some of Our Case Studies",
+    "case1": "How Prana Air helped Mahindra Lifespaces",
+    "case2": "Aided in Air Quality Monitoring Solutions for INTERGLOBE",
+    "case3": "How Prana Air helped CII to monitor air pollution",
+    "case4": "How Prana Air aided Ola and Microsoft",
+    "case5": "Prana Air aids TATA Steel"
+  },
+  "freshAir": {
+    "title": "Breathing Fresh Air Is Not An Option, It Is Our Right",
+    "button": "Know More"
+  },
+  "accurate": {
+    "title": "Most Accurate & Low-Cost",
+    "subtitle": "Prana Air Monitors, Reliable Alternative To Costly Devices",
+    "button": "Check Accuracy"
+  },
+  "solutions": {
+    "title": "Air Quality",
+    "highlight": "Solutions",
+    "button": "Explore More",
+    "smartCity": "Smart City\nProjects",
+    "institutes": "Institutes/\nSchools",
+    "construction": "Construction\nSites",
+    "hotel": "Hotel\nBusinesses",
+    "airports": "Airports",
+    "hospital": "Hospital/\nHealthcare",
+    "realEstate": "Real\nEstates"
+  },
+  "discover": {
+    "title": "Discover why people love Prana Air",
+    "testimonial1": {
+      "name": "Dr. Siddhartha Agarwal",
+      "position": "Assistant Professor, IIT (ISM) Dhanbad, India.",
+      "text": "Prana Air outdoor air quality monitors have been a valuable tool in our environmental project. The devices provide reliable data that has helped us to track air quality trends over time. The organization is sincere and dedicated towards its customers. Their customer service is also excellent. I would recommend them to everyone who is working in the field of Environment or Air quality."
+    },
+    "testimonial2": {
+      "name": "Dr. Surender Yadav",
+      "position": "General Manager, J.M. Envirolab Pvt. Ltd.",
+      "text": "We have procured multiple Prana Air Air quality monitors for our work. The monitors have been valuable tool in our field of work. The devices provide accurate and reliable data that has helped us immensely in our application. The devices are capable of performing in harsh situations as well. Their customer service is also very responsive in case of any rare occurrence of malfunction."
+    },
+    "testimonial3": {
+      "name": "Anil Sobti",
+      "position": "General Manager-commercial, Unity Group",
+      "text": "We have been using the Prana Air Air Quality monitors, installed by Purelogic Labs India Pvt. Ltd. at our different construction sites and have found their product accurate and reliable. The devices installed have helped us to comply with the air quality standards and ensure the safety of our workers. The after-sales service is very prompt and excellent."
+    }
+  },
+  "awards": {
+    "wearable": {
+      "title": "Best Wearable Brand Award",
+      "subtitle": "Winner in 2019 by IHW council",
+      "description": "Prana Air is proud to receive the Wearable Brand Award at the 4th Edition Good Air Summit and Awards. This recognition highlights our commitment to innovative solutions for clean air."
+    },
+    "monitoring": {
+      "title": "Best Monitoring Devices Brand Award",
+      "subtitle": "in 2019 by IHW Council",
+      "description": "We are pleased to announce that we received the prestigious Monitoring Devices Brand Award at the highly regarded 4th Edition Good Air Summit and Awards. Our regular development of new ideas to aid in reducing air pollution demonstrates our commitment to bettering air quality everywhere."
+    }
+  },
+  "query": {
+    "title": "Have a Query?",
+    "subtitle": "Get in touch with us",
+    "button": "Let Talk"
   }
-  }
-  
+}

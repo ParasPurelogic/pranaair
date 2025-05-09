@@ -1,188 +1,16 @@
-"use client"
-import { useEffect, useState, useRef } from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+
+import ProductNavbar from "@/Components/Pages/NanoCo2monitor/product-navbar"
 import "./style.css"
+import ProductGalleryTabs from "@/Components/Pages/NanoCo2monitor/product-gallery-tabs"
+import CO2MonitorSlider from "@/Components/Pages/NanoCo2monitor/co2-monitor-slider"
+import ProductComparison from "@/Components/Pages/NanoCo2monitor/product-comparison"
+import FaqAccordionCO2 from "@/Components/Pages/NanoCo2monitor/faq-accordion-co2"
 
 export default function NanoCO2MonitorPage() {
-  // State for active tab
-  const [activeTab, setActiveTab] = useState("Overview")
-  const [activeImage, setActiveImage] = useState(0)
-  const navbarRef = useRef(null)
-  const tabsContainerRef = useRef(null)
-  const [activeFaq, setActiveFaq] = useState(null)
-
-  // Add these additional mobile responsiveness improvements at the top of the file, after the useState declarations
-
-  // Add this function to handle smooth scrolling for mobile navigation
-  const scrollToTabSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      // Add offset for the sticky header
-      const yOffset = -70
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-      window.scrollTo({
-        top: y,
-        behavior: "smooth",
-      })
-    }
-    setActiveTab(sectionId)
-  }
-
-  // Images for the product gallery
-  const productImages = [
-    "https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-co2-monitor.png",
-    "https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-co2-monitor.png",
-    "https://www.pranaair.com/wp-content/uploads/2023/06/pranaa-air-nano-co2-device.png",
-    "https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-co2-monitor-backview.png",
-  ]
-
-  // Initialize Bootstrap JS components after component mounts
-  useEffect(() => {
-    // Dynamically import Bootstrap JS only on the client side
-    import("bootstrap/dist/js/bootstrap.bundle.min.js")
-      .then(() => {
-        console.log("Bootstrap JS initialized")
-      })
-      .catch((err) => {
-        console.error("Failed to load Bootstrap JS:", err)
-      })
-
-    // Add scroll event listener for sticky navbar
-    const handleScroll = () => {
-      const navbar = navbarRef.current
-      if (navbar) {
-        if (window.scrollY > 0) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky")
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-
-    // Add scroll event for buy now button on mobile
-    const handleBuyNowButtonScroll = () => {
-      const buyNowButton = document.getElementById("buy-now-button")
-      if (buyNowButton) {
-        if (window.pageYOffset > 1200) {
-          buyNowButton.style.display = "block"
-        } else {
-          buyNowButton.style.display = "none"
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleBuyNowButtonScroll)
-
-    // Clean up event listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("scroll", handleBuyNowButtonScroll)
-    }
-  }, [])
-
-  // Function to scroll to section when tab is clicked
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-    }
-    setActiveTab(sectionId)
-  }
-
-  // Handle horizontal scrolling for tabs on mobile
-  useEffect(() => {
-    const tabsContainer = tabsContainerRef.current
-    if (tabsContainer) {
-      const handleWheel = (e) => {
-        if (window.innerWidth < 768) {
-          e.preventDefault()
-          tabsContainer.scrollLeft += e.deltaY
-        }
-      }
-
-      tabsContainer.addEventListener("wheel", handleWheel, { passive: false })
-
-      return () => {
-        tabsContainer.removeEventListener("wheel", handleWheel)
-      }
-    }
-  }, [])
-
-  const handleThumbnailClick = (index) => {
-    setActiveImage(index)
-  }
-
-  const toggleFaq = (faqId) => {
-    setActiveFaq(activeFaq === faqId ? null : faqId)
-  }
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
   return (
     <main className="nano-co2-monitor-page">
       {/* Sticky Navigation Bar */}
-      <div className="product-navbar" ref={navbarRef}>
-        <div className="container">
-          <div className="nav-tabs" ref={tabsContainerRef}>
-            <button
-              className={`nav-tab ${activeTab === "Overview" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Overview")}
-            >
-              Overview
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Features" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Features")}
-            >
-              Features
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Functions" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Functions")}
-            >
-              Functions
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Tech-Specs" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Tech-Specs")}
-            >
-              Tech-Specs
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Compare" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Compare")}
-            >
-              Compare
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "FAQs" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("FAQs")}
-            >
-              FAQs
-            </button>
-          </div>
-        </div>
-      </div>
+      <ProductNavbar />
 
       {/* SECTION 1: Product Overview */}
       <section className="product-overview" id="Overview">
@@ -190,26 +18,7 @@ export default function NanoCO2MonitorPage() {
           <div className="row align-items-stretch">
             {/* Product Gallery */}
             <div className="col-lg-4">
-              <div className="product-gallery">
-                <div className="main-image">
-                  <img
-                    src={productImages[activeImage] || "/placeholder.svg"}
-                    alt="Nano CO2 Monitor"
-                    className="img-fluid"
-                  />
-                </div>
-                <div className="thumbnails">
-                  {productImages.map((image, index) => (
-                    <div
-                      key={index}
-                      className={`thumbnail ${activeImage === index ? "active" : ""}`}
-                      onClick={() => handleThumbnailClick(index)}
-                    >
-                      <img src={image || "/placeholder.svg"} alt={`Nano CO2 Monitor view ${index + 1}`} />
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <ProductGalleryTabs />
             </div>
 
             <div className="col-lg-4">
@@ -252,10 +61,20 @@ export default function NanoCO2MonitorPage() {
                   <input type="number" className="form-control" min="1" defaultValue="1" />
                 </div>
 
-                <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co2-monitor/"
-                  method="post" enctype="multipart/form-data">
-                  <button type="submit" name="add-to-cart" value="77731"
-                    class="single_add_to_cart_button button alt">Buy Now</button>
+                <form
+                  className="cart new-cart"
+                  action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co2-monitor/"
+                  method="post"
+                  encType="multipart/form-data"
+                >
+                  <button
+                    type="submit"
+                    name="add-to-cart"
+                    value="77731"
+                    className="single_add_to_cart_button button alt"
+                  >
+                    Buy Now
+                  </button>
                 </form>
               </div>
             </div>
@@ -516,7 +335,7 @@ export default function NanoCO2MonitorPage() {
                 <p>
                   The respiratory environment is critical. CO2 impacts the comfort levels of a person. When Its level
                   exceeds the limits, it can do both short-term and long-term damage to ones health. Excess CO2 levels
-                  can result in stuffiness, dizziness, loss of attention, etc.
+                  can result in stuffiness, dizziness, loss of attention, and other health issues.
                 </p>
               </div>
             </div>
@@ -598,63 +417,7 @@ export default function NanoCO2MonitorPage() {
 
       {/* SECTION 7: Small, Sleek, Reliable */}
       <section className="slider_section">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          className="home-slider"
-          arrows={true}
-        >
-          <div>
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-lg-5 col-md-12">
-                  <div className="slider-image">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/06/portable-nano-co2-monitor-of-prana-air.jpg"
-                      alt="portable nano co2 monitor of prana air"
-                      className="img-fluid"
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-7 col-md-12">
-                  <div className="slider-content">
-                    <h2>Small · Sleek · Reliable</h2>
-                    <p>
-                      Our mini air quality monitor is a perfect companion for a healthier lifestyle. Stay informed about the
-                      air you breathe without the hassle of large and complicated equipment.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-lg-5 col-md-12">
-                  <div className="slider-image">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/06/easy-to-use-anywhere-prana-air-co2-monitor.jpg"
-                      alt="portable nano co2 monitor of prana air"
-                      className="img-fluid"
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-7 col-md-12">
-                  <div className="slider-content">
-                    <h2>Intelligent · Compact · Accurate</h2>
-                    <p>
-                      Real-time monitoring of indoor CO2 levels allows you to make data-driven decisions to improve the air quality of your indoor environments!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Carousel>
-
+        <CO2MonitorSlider />
       </section>
 
       {/* SECTION 8: Banner Image */}
@@ -1062,75 +825,7 @@ export default function NanoCO2MonitorPage() {
 
       {/* SECTION 18: Product Comparison */}
       <section className="comparison-section" id="Compare">
-        <div className="container">
-          <h2 className="comparison-title">
-            Comparison of Nano CO<sub>2</sub> vs High-End Monitor
-          </h2>
-
-          <div className="comparison-products">
-            <div className="comparison-product">
-              <div className="comparison-product-image">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-co2-monitor-portable.png"
-                  alt="Nano CO2 Monitor"
-                />
-              </div>
-              <div className="comparison-product-name">Nano CO2 Monitor</div>
-            </div>
-            <div className="comparison-product">
-              <div className="comparison-product-image">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/06/tsi-co2-monitor.png"
-                  alt="High-End Monitor"
-                />
-              </div>
-              <div className="comparison-product-name">High-End Monitor</div>
-            </div>
-          </div>
-
-          <div className="comparison-table">
-            <div className="comparison-row">
-              <div className="comparison-label">Description :</div>
-              <div className="comparison-value">Nano CO2 Monitor</div>
-              <div className="comparison-value">High-End Monitor</div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-label">Size :</div>
-              <div className="comparison-value">Small</div>
-              <div className="comparison-value">Bulky</div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-label">Price :</div>
-              <div className="comparison-value">Low-cost</div>
-              <div className="comparison-value">Expensive</div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-label">Weight :</div>
-              <div className="comparison-value">Lightweight</div>
-              <div className="comparison-value">Comparatively Heavy</div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-label">Range :</div>
-              <div className="comparison-value">Upto 5000 ppm</div>
-              <div className="comparison-value">Upto 5000 ppm</div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-label">Accuracy :</div>
-              <div className="comparison-value">±5%</div>
-              <div className="comparison-value">±3%</div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-label">Technology :</div>
-              <div className="comparison-value">NDIR Sensor</div>
-              <div className="comparison-value">NDIR Sensor</div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-label">Portability :</div>
-              <div className="comparison-value">High Portability</div>
-              <div className="comparison-value">Comparatively less portable</div>
-            </div>
-          </div>
-        </div>
+        <ProductComparison />
       </section>
 
       {/* SECTION 19: FAQs */}
@@ -1138,98 +833,9 @@ export default function NanoCO2MonitorPage() {
         <div className="container">
           <h2 className="faqs-title">Frequently Asked</h2>
           <h3 className="faqs-subtitle">Questions About Nano CO2 Monitor</h3>
-
-          <div className="faq-accordion">
-            <div className="faq-item">
-              <div className={`faq-question ${activeFaq === "faq1" ? "active" : ""}`} onClick={() => toggleFaq("faq1")}>
-                <span className="question-text">1. What is a nano portable CO2 monitor?</span>
-                <span className="toggle-icon">{activeFaq === "faq1" ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === "faq1" ? "show" : ""}`}>
-                <p>
-                  A nano CO2 monitor is a device used to measure the concentration of carbon dioxide in the air in
-                  real-time. It is small and portable, making it convenient to carry and use in various indoor spaces.
-                </p>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <div className={`faq-question ${activeFaq === "faq2" ? "active" : ""}`} onClick={() => toggleFaq("faq2")}>
-                <span className="question-text">2. How does Prana Air Nano CO2 monitor work?</span>
-                <span className="toggle-icon">{activeFaq === "faq2" ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === "faq2" ? "show" : ""}`}>
-                <p>
-                  This monitor operates by utilizing an NDIR sensor to detect the amount of carbon dioxide in the air.
-                  The sensor is capable of measuring the infrared radiation that is absorbed by CO2 molecules present in
-                  the air, and this data is then processed to determine the concentration of CO2 in the environment.
-                </p>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <div className={`faq-question ${activeFaq === "faq3" ? "active" : ""}`} onClick={() => toggleFaq("faq3")}>
-                <span className="question-text">3. Why is it important to monitor CO2 levels?</span>
-                <span className="toggle-icon">{activeFaq === "faq3" ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === "faq3" ? "show" : ""}`}>
-                <p>
-                  Maintaining optimal indoor air quality is crucial, and monitoring CO2 levels is an effective way to
-                  achieve this. Elevated CO2 levels signify inadequate ventilation, and can cause various health issues
-                  such as headaches, drowsiness, discomfort, and other related problems. By keeping track of CO2 levels,
-                  it is possible to identify when ventilation needs to be improved to ensure good indoor air quality.
-                </p>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <div className={`faq-question ${activeFaq === "faq4" ? "active" : ""}`} onClick={() => toggleFaq("faq4")}>
-                <span className="question-text">4. Where can this carbon dioxide monitor be used?</span>
-                <span className="toggle-icon">{activeFaq === "faq4" ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === "faq4" ? "show" : ""}`}>
-                <p>
-                  It is a versatile device suitable for use in diverse indoor environments such as homes, offices,
-                  schools, hospitals, and other public buildings. it proves to be especially valuable in areas where
-                  people tend to spend extended periods and where ventilation may be insufficient. These devices enable
-                  the monitoring of CO2 levels, ensuring optimal indoor air quality in various settings.
-                </p>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <div className={`faq-question ${activeFaq === "faq5" ? "active" : ""}`} onClick={() => toggleFaq("faq5")}>
-                <span className="question-text">5. How accurate is the data of this monitor?</span>
-                <span className="toggle-icon">{activeFaq === "faq5" ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === "faq5" ? "show" : ""}`}>
-                <p>
-                  When it comes to measuring CO2 levels, our Nano CO2 monitor has an exceptional quality, and regular
-                  calibration further enhances their accuracy. High-quality NDIR sensor is incorporated into the device
-                  to deliver precise measurements of CO2 levels, ensuring reliable results.
-                </p>
-              </div>
-            </div>
-
-            <div className="faq-item">
-              <div className={`faq-question ${activeFaq === "faq6" ? "active" : ""}`} onClick={() => toggleFaq("faq6")}>
-                <span className="question-text">6. How do I use this CO2 monitor?</span>
-                <span className="toggle-icon">{activeFaq === "faq6" ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === "faq6" ? "show" : ""}`}>
-                <p>
-                  To use the CO2 monitor, simply turn it on and let it run for a few minutes to allow it to calibrate
-                  and take readings. The device will display the current CO2 concentration in parts per million (ppm).
-                  You can then use this information to adjust ventilation and improve indoor air quality.
-                </p>
-              </div>
-            </div>
-          </div>
+          <FaqAccordionCO2 />
         </div>
       </section>
-
-
     </main>
   )
 }
-

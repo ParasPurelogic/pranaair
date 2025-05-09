@@ -1,89 +1,17 @@
 "use client"
-
-import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import "react-multi-carousel/lib/styles.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-import Carousel from "react-multi-carousel"
+import ContactForm from "@/Components/Contacform/ContactForm"
 import "./style.css"
-import ContactForm from "@/Components/Contacform/ContactForm";
+import AmbientMonitorVariantsTab from "@/Components/Pages/AmbientAirmonitor/AmbientMonitorvariantstab"
+import CaseStudiesSlider from "@/Components/Pages/AmbientAirmonitor/CaseSlider"
+import DataAccessibilityTab from "@/Components/Pages/AmbientAirmonitor/DataAccessibitly"
+import FaqAccordion from "@/Components/Pages/AmbientAirmonitor/FaqAccordion"
+import AMPartsLabelTab from "@/Components/Pages/AmbientAirmonitor/AmPartLabel"
+import TechSpecTab from "@/Components/Pages/AmbientAirmonitor/TechSpec"
 
 export default function AmbientAirMonitor() {
-    // State for tabs
-    const [activeTab, setActiveTab] = useState("London")
-    const [activeTechTab, setActiveTechTab] = useState("Ambient PM")
-    const [activePartTab, setActivePartTab] = useState("Ambient PM")
-    const [activeDataTab, setActiveDataTab] = useState("Web-Dashboard")
 
-    // State for show/hide content
-    const [showContent, setShowContent] = useState({
-        London: false,
-        solar: false,
-        Tokyo: false,
-    })
-
-    // Toggle show/hide content
-    const toggleContent = (tabId) => {
-        setShowContent({
-            ...showContent,
-            [tabId]: !showContent[tabId],
-        })
-    }
-
-    // Responsive settings for carousel
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 3,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-        },
-    }
-
-    const caseStudies = [
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-tata.webp",
-            title: "Aided TATA STEEL Plant In Hyperlocal Air Monitoring",
-            link: "https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/",
-            alt: "prana air ambient air quality monitors at tata steel",
-        },
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-ola-and-microsoft.webp",
-            title: "Aided Ola & Microsoft studied street-level pollution",
-            link: "https://www.pranaair.com/blog/prana-air-monitors-street-level-pollution/",
-            alt: "prana air ambient air quality monitors for ola and microsoft",
-        },
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-mahindra-lifespaces.webp",
-            title: "Mahindra Lifespaces to monitor air pollution due to construction activities.",
-            link: "https://www.pranaair.com/blog/mahindra-lifespaces-air-quality-due-to-construction-and-demolition-activities/",
-            alt: "prana air ambient air quality monitors for mahindra lifespaces",
-        },
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-CII.webp",
-            title: "CII to monitor air pollution due to stubble burning",
-            link: "https://www.pranaair.com/blog/case-study-air-pollution-due-to-stubble-burning/",
-            alt: "prana air ambient air quality monitors for CII",
-        },
-    ]
-    useEffect(() => {
-        import("bootstrap/dist/js/bootstrap.bundle.min.js")
-            .then(() => {
-                console.log("Bootstrap JS loaded");
-            })
-            .catch((err) => console.error("Error loading Bootstrap JS:", err));
-    }, []);
     return (
         <div>
             {/* Hero Section */}
@@ -132,562 +60,7 @@ export default function AmbientAirMonitor() {
                         </div>
                     </div>
 
-                    <div className="row tab-sections">
-                        <div className="col-12">
-                            <div className="tab" id="tabContainer">
-                                <button
-                                    className={`tablinks ${activeTab === "London" ? "active" : ""}`}
-                                    onClick={() => setActiveTab("London")}
-                                    id="defaultOpen"
-                                >
-                                    <ul className="tab-inner">
-                                        <li>
-                                            <Image
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/10/Ambient-PM-monitor.webp"
-                                                alt="prana air ambient pm air quality monitor"
-                                                width={100}
-                                                height={100}
-                                            />
-                                        </li>
-                                        <li>
-                                            <h3>Ambient PM</h3>
-                                        </li>
-                                        <li>
-                                            <Image
-                                                src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-ambient.png"
-                                                alt="arrow"
-                                                width={20}
-                                                height={20}
-                                                className="arrow"
-                                            />
-                                        </li>
-                                    </ul>
-                                </button>
-                                <button
-                                    className={`tablinks line ${activeTab === "solar" ? "active" : ""}`}
-                                    onClick={() => setActiveTab("solar")}
-                                >
-                                    <ul className="tab-inner">
-                                        <li>
-                                            <Image
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/10/ambient-variants-prana-sense-monitor.webp"
-                                                alt="prana air ambient pro air quality monitor"
-                                                width={100}
-                                                height={100}
-                                            />
-                                        </li>
-                                        <li>
-                                            <h3>Prana Sense</h3>
-                                        </li>
-                                        <li>
-                                            <Image
-                                                src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-ambient.png"
-                                                alt="arrow"
-                                                width={20}
-                                                height={20}
-                                                className="arrow"
-                                            />
-                                        </li>
-                                    </ul>
-                                </button>
-                                <button
-                                    className={`tablinks ${activeTab === "Tokyo" ? "active" : ""}`}
-                                    onClick={() => setActiveTab("Tokyo")}
-                                >
-                                    <ul className="tab-inner">
-                                        <li>
-                                            <Image
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/10/Prana-Airs-ambient-pro-monitor.webp"
-                                                alt="prana air ambient pro air quality monitor"
-                                                width={100}
-                                                height={100}
-                                            />
-                                        </li>
-                                        <li>
-                                            <h3>Ambient Pro</h3>
-                                        </li>
-                                        <li>
-                                            <Image
-                                                src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-ambient.png"
-                                                alt="arrow"
-                                                width={20}
-                                                height={20}
-                                                className="arrow"
-                                            />
-                                        </li>
-                                    </ul>
-                                </button>
-                            </div>
-
-                            {/* Tab Content */}
-                            <div id="London" className="tabcontent" style={{ display: activeTab === "London" ? "block" : "none" }}>
-                                <div className="color-box">
-                                    <div className="ambient-pm-content">
-                                        <h3>Ambient PM</h3>
-                                        <p>
-                                            It is the basic ambient monitor that measures AQI, PM2.5, PM10, temperature, and humidity
-                                            providing a comprehensive overview of the air quality around you.
-                                        </p>
-                                        <h4>Features</h4>
-                                    </div>
-
-                                    <div className="drone-icon-list">
-                                        <ul>
-                                            <li>
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/low-cost-icon.png" alt="low cost icon" width={50} height={50} />
-                                                <p>Low-cost real-time air quality monitoring</p>
-                                            </li>
-                                            <li>
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/compact-device.png" alt="compact device" width={50} height={50} />
-                                                <p>Compact and lightweight design</p>
-                                            </li>
-                                        </ul>
-
-                                        <ul>
-                                            <li>
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/weatherproof-icon.png"
-                                                    alt="weatherproof icon"
-                                                    width={50}
-                                                    height={50}
-                                                />
-                                                <p>Fully Waterproof Housing</p>
-                                            </li>
-                                            <li>
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/portable-icon.png" alt="portable icon" width={50} height={50} />
-                                                <p>Portable and easy to carry anywhere</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="aqi-data">
-                                        <ul>
-                                            <li>
-                                                <h5>AQI</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM1</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM2.5</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM10</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Temp.</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Humid.</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Noise</h5>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="get-brochur">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
-                                                    alt="download brochure"
-                                                    width={22}
-                                                    height={22}
-                                                />
-                                                Brochure
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#contact_form">Get a Quote</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="show-container">
-                                    <button className="showbutton" onClick={() => toggleContent("London")}>
-                                        View Details
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/cllapse-icon.png" alt="" width={18} height={18} />
-                                    </button>
-                                    <div className={`contentmy ${showContent.London ? "showing" : "hiddenn"}`}>
-                                        <h3>Ambient PM</h3>
-                                        <p>
-                                            Prana Air Ambient PM Basic Monitor is a comprehensive solution for measuring air quality. It
-                                            accurately measures PM2.5, PM10, temperature, and humidity, providing you with valuable insights
-                                            into the air you breathe. With an optional weather station, you can also gain data on wind speed,
-                                            wind direction, rainfall, and barometric pressure. The compact and portable design of the Prana
-                                            Air Ambient PM Basic Monitor makes it easy to use anywhere. The clear and easy-to-read screen
-                                            displays real-time data, and built-in data logging allows you to track trends over time. Cloud
-                                            connectivity provides remote access to data, so you can stay informed about air quality even when
-                                            youe not on site.
-                                        </p>
-                                        <Image
-                                            src="https://www.pranaair.com/wp-content/uploads/2024/10/Prana-Air-Ambient-PM-Basic-Monitors.webp"
-                                            alt="prana air ambient air quality monitor for constructions site"
-                                            width={800}
-                                            height={400}
-                                        />
-                                    </div>
-                                    <button
-                                        className="close-btn hidebutton"
-                                        style={{ display: showContent.London ? "block" : "none" }}
-                                        onClick={() => toggleContent("London")}
-                                    >
-                                        Close
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/cllapse-icon.png" alt="close icon" width={18} height={18} />
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div id="solar" className="tabcontent" style={{ display: activeTab === "solar" ? "block" : "none" }}>
-                                <div className="color-box">
-                                    <div className="ambient-pm-content">
-                                        <h3>Prana Sense</h3>
-                                        <p>
-                                            Revolutionizing Air Quality Monitoring with cutting-edge technology for better accuracy and
-                                            reliability with seamless connectivity and comprehensive data access.
-                                        </p>
-                                        <h4>Features</h4>
-                                    </div>
-
-                                    <div className="drone-icon-list">
-                                        <ul>
-                                            <li>
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/low-cost-icon.png" alt="low cost icon" width={50} height={50} />
-                                                <p>Low-cost real-time air quality monitoring</p>
-                                            </li>
-                                            <li>
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/weatherproof-icon.png"
-                                                    alt="weatherproof icon"
-                                                    width={50}
-                                                    height={50}
-                                                />
-                                                <p>Fully Waterproof Housing</p>
-                                            </li>
-                                        </ul>
-
-                                        <ul>
-                                            <li>
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2024/10/solar-powered.png" alt="solar powered" width={50} height={50} />
-                                                <p>Solar Powered</p>
-                                            </li>
-                                            <li>
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/battery-backup.png"
-                                                    alt="battery-backup icon"
-                                                    width={50}
-                                                    height={50}
-                                                />
-                                                <p>96h Battery Backup</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="aqi-data">
-                                        <ul>
-                                            <li>
-                                                <h5>AQI</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM1</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM2.5</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM10</h5>
-                                            </li>
-                                            <li>
-                                                <h5>CO</h5>
-                                            </li>
-                                            <li>
-                                                <h5>CO2</h5>
-                                            </li>
-                                            <li>
-                                                <h5>SO2</h5>
-                                            </li>
-                                            <li>
-                                                <h5>NO</h5>
-                                            </li>
-                                            <li>
-                                                <h5>NO2</h5>
-                                            </li>
-                                            <li>
-                                                <h5>O3</h5>
-                                            </li>
-                                            <li>
-                                                <h5>CH4</h5>
-                                            </li>
-                                            <li>
-                                                <h5>TVOC</h5>
-                                            </li>
-                                            <li>
-                                                <h5>H2S</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Temp.</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Humid.</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Noise</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Wind Direction</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Wind Speed</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Rainfall</h5>
-                                            </li>
-                                            <li>
-                                                <h5>UV Index</h5>
-                                            </li>
-                                            <li>
-                                                <h5>LUX</h5>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="get-brochur">
-                                    <ul>
-                                        <li>
-                                            <a href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png" alt="brochure" width={22} height={22} />
-                                                Brochure
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#contact_form">Get a Quote</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="show-container">
-                                    <button className="showbutton" onClick={() => toggleContent("solar")}>
-                                        View Details
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/cllapse-icon.png" alt="" width={18} height={18} />
-                                    </button>
-                                    <div className={`contentmy ${showContent.solar ? "showing" : "hiddenn"}`}>
-                                        <h3>Prana Sense</h3>
-                                        <p>
-                                            Prana Sense offers the ultimate solution for continuous, real-time outdoor air quality monitoring.
-                                            Monitor several parameters and pollutants with the advanced technology of the device. Connect the
-                                            device with a solar panel for continuous power supply with a 40,000 mAh battery that can last long
-                                            for 96 hours. The compact and portable design of the monitor makes it easy to install anywhere.
-                                            Also provide real-time readings of temperature, humidity and noise for perfect environmental
-                                            monitoring. Seamlessly connect to the AQI app or cloud storage to access your data from anywhere,
-                                            anytime.
-                                        </p>
-                                        <Image
-                                            src="https://www.pranaair.com/wp-content/uploads/2024/10/Prana-Sense-device.webp"
-                                            alt="prana air ambient pro air quality monitor in used"
-                                            width={800}
-                                            height={400}
-                                        />
-                                    </div>
-                                    <button
-                                        className="close-btn hidebutton"
-                                        style={{ display: showContent.solar ? "block" : "none" }}
-                                        onClick={() => toggleContent("solar")}
-                                    >
-                                        Close
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/cllapse-icon.png" alt="close icon" width={18} height={18} />
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div id="Tokyo" className="tabcontent" style={{ display: activeTab === "Tokyo" ? "block" : "none" }}>
-                                <div className="color-box">
-                                    <div className="ambient-pm-content">
-                                        <h3>Ambient Pro</h3>
-                                        <p>
-                                            It is the most advanced monitor in Prana Airs Ambient family. It measures all of the same
-                                            pollutants as the Ambient Lite monitor, plus temperature and humidity.
-                                        </p>
-                                        <h4>Features</h4>
-                                    </div>
-
-                                    <div className="drone-icon-list">
-                                        <ul>
-                                            <li>
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/low-cost-icon.png" alt="low cost icon" width={50} height={50} />
-                                                <p>Low-cost air quality monitors</p>
-                                            </li>
-                                            <li>
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/online-data-access.png"
-                                                    alt="online data access"
-                                                    width={50}
-                                                    height={50}
-                                                />
-                                                <p>Data on website, mobile & table apps, TV</p>
-                                            </li>
-                                        </ul>
-
-                                        <ul>
-                                            <li>
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/weatherproof-icon.png"
-                                                    alt="weatherproof icon"
-                                                    width={50}
-                                                    height={50}
-                                                />
-                                                <p>Fully Waterproof Housing</p>
-                                            </li>
-                                            <li>
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/multiple-sensors.png"
-                                                    alt="multiple sensors icon"
-                                                    width={50}
-                                                    height={50}
-                                                />
-                                                <p>Multiple air sensors (PM & Gases)</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="aqi-data">
-                                        <ul>
-                                            <li>
-                                                <h5>AQI</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM1</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM2.5</h5>
-                                            </li>
-                                            <li>
-                                                <h5>PM10</h5>
-                                            </li>
-                                            <li>
-                                                <h5>CO</h5>
-                                            </li>
-                                            <li>
-                                                <h5>CO2</h5>
-                                            </li>
-                                            <li>
-                                                <h5>SO2</h5>
-                                            </li>
-                                            <li>
-                                                <h5>NO</h5>
-                                            </li>
-                                            <li>
-                                                <h5>NO2</h5>
-                                            </li>
-                                            <li>
-                                                <h5>O3</h5>
-                                            </li>
-                                            <li>
-                                                <h5>CH4</h5>
-                                            </li>
-                                            <li>
-                                                <h5>TVOC</h5>
-                                            </li>
-                                            <li>
-                                                <h5>H2S</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Temp.</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Humid.</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Noise</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Wind Direction</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Wind Speed</h5>
-                                            </li>
-                                            <li>
-                                                <h5>Rainfall</h5>
-                                            </li>
-                                            <li>
-                                                <h5>LUX</h5>
-                                            </li>
-                                            <li>
-                                                <h5>UV Index</h5>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="get-brochur">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png" alt="brochure" width={22} height={22} />
-                                                Brochure
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/air-quality-monitor/ambient-air-monitor/prana-sense/">Get a Quote</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="ambent-weather-staion">
-                                    <div className="staions-image">
-                                        <Image
-                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/prana-air-ambient-pro-monitor-variants.webp"
-                                            alt="prana air ambient pro monitor variants"
-                                            width={250}
-                                            height={250}
-                                        />
-                                    </div>
-                                    <div className="staion-tetx">
-                                        <h4>Ambient Pro Monitor</h4>
-                                        <p>
-                                            It is the most advanced ambient air quality monitor of Prana Air that comes with inbuilt weather
-                                            station.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="show-container">
-                                    <button className="showbutton" onClick={() => toggleContent("Tokyo")}>
-                                        View Details
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/cllapse-icon.png" alt="" width={18} height={18} />
-                                    </button>
-                                    <div className={`contentmy ${showContent.Tokyo ? "showing" : "hiddenn"}`}>
-                                        <h3>Ambient Pro Inbuilt Weather Station</h3>
-                                        <p>
-                                            The primary aspect for determining environmental stability is the Continuous Ambient Air Quality
-                                            Monitoring System (CAAQMS). There are many factors that control the quality of air and many
-                                            sources contributing to it such as natural, industrial and anthropogenic. Meteorological factors
-                                            also alter and impact air quality. Outdoor air pollution does not just jeopardize the living. It
-                                            is also detrimental to the ecology and the atmospheric chemistry of the earth. Chronic Obstructive
-                                            Pulmonary Disease (COPD) and asthma are examples of bad air quality for human health.
-                                        </p>
-                                        <Image
-                                            src="https://www.pranaair.com/wp-content/uploads/2024/10/Ambient-Pro-Monitor.webp"
-                                            alt="prana air ambient pro air quality monitor in used"
-                                            width={800}
-                                            height={400}
-                                        />
-                                    </div>
-                                    <button
-                                        className="close-btn hidebutton"
-                                        style={{ display: showContent.Tokyo ? "block" : "none" }}
-                                        onClick={() => toggleContent("Tokyo")}
-                                    >
-                                        Close
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/cllapse-icon.png" alt="close icon" width={18} height={18} />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <AmbientMonitorVariantsTab />
                 </div>
             </section>
 
@@ -730,11 +103,21 @@ export default function AmbientAirMonitor() {
                             <div className="moniotr-main-icons-box">
                                 <ul>
                                     <li className="line-shdw">
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/pranaair-accurate-sensors.png" alt="accurate sensors" width={80} height={80} />
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/pranaair-accurate-sensors.png"
+                                            alt="accurate sensors"
+                                            width={80}
+                                            height={80}
+                                        />
                                         <h3>Highly accurate and reliable sensors</h3>
                                     </li>
                                     <li className="line-shdw">
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/pranaair-cloud-data-access.png" alt="cloud data access" width={80} height={80} />
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/pranaair-cloud-data-access.png"
+                                            alt="cloud data access"
+                                            width={80}
+                                            height={80}
+                                        />
                                         <h3>Data accessibility on website, mobile & TV apps</h3>
                                     </li>
                                 </ul>
@@ -1006,234 +389,7 @@ export default function AmbientAirMonitor() {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <div className="part-label-tab">
-                                <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activePartTab === "Ambient PM" ? "active" : ""}`}
-                                            onClick={() => setActivePartTab("Ambient PM")}
-                                            id="ambient-pm-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#ambient-pm"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="ambient-pm"
-                                            aria-selected={activePartTab === "Ambient PM"}
-                                        >
-                                            Ambient PM
-                                        </button>
-                                    </li>
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activePartTab === "Ambient Pro" ? "active" : ""}`}
-                                            onClick={() => setActivePartTab("Ambient Pro")}
-                                            id="ambient-pro-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#ambient-pro"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="ambient-pro"
-                                            aria-selected={activePartTab === "Ambient Pro"}
-                                        >
-                                            Ambient Pro
-                                        </button>
-                                    </li>
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activePartTab === "Prana Sense" ? "active" : ""}`}
-                                            onClick={() => setActivePartTab("Prana Sense")}
-                                            id="prana-sense-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#prana-sense"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="prana-sense"
-                                            aria-selected={activePartTab === "Prana Sense"}
-                                        >
-                                            Prana Sense
-                                        </button>
-                                    </li>
-                                </ul>
-                                <div className="tab-content" id="myTabContent">
-                                    <div
-                                        className={`tab-pane fade ${activePartTab === "Ambient PM" ? "show active" : ""}`}
-                                        id="ambient-pm"
-                                        role="tabpanel"
-                                        aria-labelledby="ambient-pm-tab"
-                                    >
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <Image
-                                                    className="ambeint-pm"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/prana-air-Ambient-PM.webp"
-                                                    alt="ambient-pm-monitor-pranaair"
-                                                    width={400}
-                                                    height={400}
-                                                />
-                                            </div>
-                                            <div className="col-md-6 list-line">
-                                                <div className="ambient-lite-label-list">
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num1.png" alt="" width={20} height={20} />
-                                                            <h4>Mode Button</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num2.png" alt="" width={20} height={20} />
-                                                            <h4>Power Button</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num3.png" alt="" width={20} height={20} />
-                                                            <h4>PM Sensor Inlet (2)</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num4.png" alt="" width={20} height={20} />
-                                                            <h4>Air Inlet - Temperature & Humidity</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num5.png" alt="" width={20} height={20} />
-                                                            <h4>Micro SD Card Slot</h4>
-                                                        </li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num6.png" alt="" width={20} height={20} />
-                                                            <h4>Weather Station Slot</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num7.png" alt="" width={20} height={20} />
-                                                            <h4>12V DC</h4>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className={`tab-pane fade ${activePartTab === "Ambient Pro" ? "show active" : ""}`}
-                                        id="ambient-pro"
-                                        role="tabpanel"
-                                        aria-labelledby="ambient-pro-tab"
-                                    >
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <Image
-                                                    className="ambeint-pro"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/Parts-Label-Ambient-pro.webp"
-                                                    alt="ambient-pro-monitor-pranaair.png"
-                                                    width={400}
-                                                    height={400}
-                                                />
-                                            </div>
-                                            <div className="col-md-6 list-line">
-                                                <div className="ambient-pro-label-list">
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num1.png" alt="" width={20} height={20} />
-                                                        </li>
-                                                        <li>
-                                                            <h4>Gases Inlet</h4>
-                                                            SO2, NO2, CO, O3, TVOCS, H2S and NH3.
-                                                        </li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num2.png" alt="" width={20} height={20} />
-                                                        </li>
-                                                        <li>
-                                                            <h4>7 inch LED Data Display</h4>
-                                                        </li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num3.png" alt="" width={20} height={20} />
-                                                        </li>
-                                                        <li>
-                                                            <h4>Air Inlet</h4>
-                                                            Noise & PM (1, 2.5, 10), Temperature, Humidity and Pressure.
-                                                        </li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num4.png" alt="" width={20} height={20} />
-                                                        </li>
-                                                        <li>
-                                                            <h4>Weather</h4>
-                                                            LUX, Wind Speed, Wind Direction, UV and Rainfall.
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className={`tab-pane fade ${activePartTab === "Prana Sense" ? "show active" : ""}`}
-                                        id="prana-sense"
-                                        role="tabpanel"
-                                        aria-labelledby="prana-sense-tab"
-                                    >
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <Image
-                                                    className="ambeint-lite"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/prana-sense-monitor-pranaair.webp"
-                                                    alt="ambient-lite-monitor-pranaair"
-                                                    width={400}
-                                                    height={400}
-                                                />
-                                            </div>
-                                            <div className="col-md-6 list-line">
-                                                <div className="ambient-lite-label-list">
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num1.png" alt="" width={20} height={20} />
-                                                            <h4>PM Sensor Inlet (2)</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num2.png" alt="" width={20} height={20} />
-                                                            <h4>GPS Antenna</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num3.png" alt="" width={20} height={20} />
-                                                            <h4>Air Inlet - T/H</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num4.png" alt="" width={20} height={20} />
-                                                            <h4>Mode Button</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num5.png" alt="" width={20} height={20} />
-                                                            <h4>Micro SD Card Slot</h4>
-                                                        </li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num6.png" alt="" width={20} height={20} />
-                                                            <h4>Power Button</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/num7.png" alt="" width={20} height={20} />
-                                                            <h4>12V DC</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2024/10/num8.png" alt="" width={20} height={20} />
-                                                            <h4>Weather Station Slot</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2024/10/num9.png" alt="" width={20} height={20} />
-                                                            <h4>RS485/ Relay</h4>
-                                                        </li>
-                                                        <li>
-                                                            <Image src="https://www.pranaair.com/wp-content/uploads/2024/10/num10.png" alt="" width={20} height={20} />
-                                                            <h4>Air Out</h4>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <AMPartsLabelTab />
                         </div>
                     </div>
                 </div>
@@ -1251,306 +407,7 @@ export default function AmbientAirMonitor() {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <div className="tech-tab-spec">
-                                <ul className="nav nav-tabs" id="techTab" role="tablist">
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activeTechTab === "Ambient PM" ? "active" : ""}`}
-                                            onClick={() => setActiveTechTab("Ambient PM")}
-                                            id="ambient-pm-tech-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#ambient-pm-tech"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="ambient-pm-tech"
-                                            aria-selected={activeTechTab === "Ambient PM"}
-                                        >
-                                            Ambient PM
-                                        </button>
-                                    </li>
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activeTechTab === "Ambient Pro" ? "active" : ""}`}
-                                            onClick={() => setActiveTechTab("Ambient Pro")}
-                                            id="ambient-pro-tech-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#ambient-pro-tech"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="ambient-pro-tech"
-                                            aria-selected={activeTechTab === "Ambient Pro"}
-                                        >
-                                            Ambient Pro
-                                        </button>
-                                    </li>
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activeTechTab === "Prana Sense" ? "active" : ""}`}
-                                            onClick={() => setActiveTechTab("Prana Sense")}
-                                            id="prana-sense-tech-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#prana-sense-tech"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="prana-sense-tech"
-                                            aria-selected={activeTechTab === "Prana Sense"}
-                                        >
-                                            Prana Sense
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="tab-content" id="techTabContent">
-                                <div
-                                    className={`tab-pane fade ${activeTechTab === "Ambient PM" ? "show active" : ""}`}
-                                    id="ambient-pm-tech"
-                                    role="tabpanel"
-                                    aria-labelledby="ambient-pm-tech-tab"
-                                >
-                                    <a className="tech-spec-btn" href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf" target="_blank">
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png" alt="brochure-icon" width={20} height={20} />
-                                        Brochure
-                                    </a>
-                                    <div className="tech-spec-parameter">
-                                        <ul className="basic-pm">
-                                            <li>
-                                                <h4>Basic Parameters:</h4>
-                                            </li>
-                                            <li>AQI, PM1, PM2.5, PM10, Temperature and Humidity</li>
-                                        </ul>
-                                        <ul className="tech-color-box">
-                                            <li>
-                                                <h4>Basic PM + Weather Station:</h4>
-                                            </li>
-                                            <li>
-                                                Basic parameters + LUX, Solar Irradiance, Wind Speed, Wind Direction, Rainfall, Gust & UV Index
-                                            </li>
-                                        </ul>
-                                        <div className="tech-spec-inner-parameter">
-                                            <div className="tech-spec-inner-one ambient-lite-pm">
-                                                <ul>
-                                                    <li>
-                                                        <h4>Connectivity</h4>
-                                                    </li>
-                                                    <li>Wifi or GSM</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Weight:</h4>
-                                                    </li>
-                                                    <li>600g (Approx)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Data Interval:</h4>
-                                                    </li>
-                                                    <li>30s to 1hour</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>USB Type:</h4>
-                                                    </li>
-                                                    <li>Micro USB</li>
-                                                </ul>
-                                            </div>
-                                            <div className="tech-spec-inner-two">
-                                                <ul>
-                                                    <li>
-                                                        <h4>Mobile app:</h4>
-                                                    </li>
-                                                    <li>AQI App (available on ios and android)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Dimensions:</h4>
-                                                    </li>
-                                                    <li>16.5 x 5 x 11.5 (cm)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Storage:</h4>
-                                                    </li>
-                                                    <li>AQI Cloud Storage</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Housing</h4>
-                                                    </li>
-                                                    <li>Weatherproof</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    className={`tab-pane fade ${activeTechTab === "Ambient Pro" ? "show active" : ""}`}
-                                    id="ambient-pro-tech"
-                                    role="tabpanel"
-                                    aria-labelledby="ambient-pro-tech-tab"
-                                >
-                                    <div className="tech-spec-parameter">
-                                        <ul>
-                                            <li>
-                                                <h4>Parameters:</h4>
-                                            </li>
-                                            <li>
-                                                Ambient Lite + O3, CH4, Noise, NH3, LUX, Wind Speed, Wind Direction, Rainfall and UV Index
-                                            </li>
-                                        </ul>
-                                        <div className="tech-spec-inner-parameter">
-                                            <div className="tech-spec-inner-one-pm">
-                                                <ul>
-                                                    <li>
-                                                        <h4>Connectivity</h4>
-                                                    </li>
-                                                    <li>Wifi or GSM(4G) and RS-485 (MODBUS)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Weight:</h4>
-                                                    </li>
-                                                    <li>1.4kg. (Approx)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Battery:</h4>
-                                                    </li>
-                                                    <li>—</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>USB Type:</h4>
-                                                    </li>
-                                                    <li>—</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Data Interval:</h4>
-                                                    </li>
-                                                    <li>30 sec to 1 Hour</li>
-                                                </ul>
-                                            </div>
-                                            <div className="tech-spec-inner-two mg-top">
-                                                <ul>
-                                                    <li>
-                                                        <h4>Mobile app:</h4>
-                                                    </li>
-                                                    <li>AQI Mobile App</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Dimensions:</h4>
-                                                    </li>
-                                                    <li>18 X 38 (cm)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Storage:</h4>
-                                                    </li>
-                                                    <li>AQI Cloud Storage</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Housing</h4>
-                                                    </li>
-                                                    <li>Weatherproof</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    className={`tab-pane fade ${activeTechTab === "Prana Sense" ? "show active" : ""}`}
-                                    id="prana-sense-tech"
-                                    role="tabpanel"
-                                    aria-labelledby="prana-sense-tech-tab"
-                                >
-                                    <Link className="tech-spec-btn" href="#">
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png" alt="brochure-icon" width={20} height={20} />
-                                        Brochure
-                                    </Link>
-                                    <div className="tech-spec-parameter">
-                                        <ul>
-                                            <li>
-                                                <h4>Parameters:</h4>
-                                            </li>
-                                            <li>PM10, PM2.5 & PM1, temp., Humid, CO2, NO2, CO, SO2, O3,NH3, TVOC MOS, Noise,CH4</li>
-                                        </ul>
-                                        <div className="tech-spec-inner-parameter">
-                                            <div className="tech-spec-inner-one-pm">
-                                                <ul>
-                                                    <li>
-                                                        <h4>Connectivity</h4>
-                                                    </li>
-                                                    <li>Wi-Fi, GSM, LoRa,and RS-485</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Weight:</h4>
-                                                    </li>
-                                                    <li>1 kg. (Approx)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Power:</h4>
-                                                    </li>
-                                                    <li>Inbuilt Solar Panel</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Data Interval:</h4>
-                                                    </li>
-                                                    <li>30 sec to 1 Hour</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Display Size:</h4>
-                                                    </li>
-                                                    <li>Monochrome 3.5 inch</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Battery:</h4>
-                                                    </li>
-                                                    <li>40,000 mAh in-built Backup (96 Hours)</li>
-                                                </ul>
-                                            </div>
-                                            <div className="tech-spec-inner-two mg-top">
-                                                <ul>
-                                                    <li>
-                                                        <h4>Mobile app:</h4>
-                                                    </li>
-                                                    <li>AQI Mobile App</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Dimensions:</h4>
-                                                    </li>
-                                                    <li>230 X 150 X 85mm</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Housing</h4>
-                                                    </li>
-                                                    <li>Weatherproof</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Power Supply:</h4>
-                                                    </li>
-                                                    <li>Direct Power Supply or Solar (30watt)</li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <h4>Storage:</h4>
-                                                    </li>
-                                                    <li>Micro SD Card Storage + Cloud Storage (with AQI Dashboard)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <TechSpecTab />
                         </div>
                     </div>
                 </div>
@@ -1575,7 +432,12 @@ export default function AmbientAirMonitor() {
                         <div className="col-md-3">
                             <div className="generic-connect-device-box devices">
                                 <div className="line-arrow">
-                                    <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png" alt="arrow line" width={120} height={80} />
+                                    <Image
+                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png"
+                                        alt="arrow line"
+                                        width={120}
+                                        height={80}
+                                    />
                                 </div>
                                 <Image
                                     className="devices-img"
@@ -1590,11 +452,21 @@ export default function AmbientAirMonitor() {
                         <div className="col-md-3">
                             <div className="generic-connect-device-box tyc">
                                 <div className="type-arrow">
-                                    <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png" alt="arrow line" width={120} height={80} />
+                                    <Image
+                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png"
+                                        alt="arrow line"
+                                        width={120}
+                                        height={80}
+                                    />
                                 </div>
                                 <ul>
                                     <li>
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/wifi.webp" alt="wifi connectivity" width={35} height={35} />
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/wifi.webp"
+                                            alt="wifi connectivity"
+                                            width={35}
+                                            height={35}
+                                        />
                                         <h5>Wifi</h5>
                                     </li>
                                     <li>
@@ -1607,7 +479,12 @@ export default function AmbientAirMonitor() {
                                         <h5>GSM</h5>
                                     </li>
                                     <li>
-                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/rs-485.png" alt="rs-485 connectivity" width={35} height={35} />
+                                        <Image
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/rs-485.png"
+                                            alt="rs-485 connectivity"
+                                            width={35}
+                                            height={35}
+                                        />
                                         <h5>RS 485</h5>
                                     </li>
                                 </ul>
@@ -1617,7 +494,12 @@ export default function AmbientAirMonitor() {
                         <div className="col-md-3">
                             <div className="generic-connect-device-box sd-card-cloud">
                                 <div className="type-arrow">
-                                    <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png" alt="arrow icon" width={120} height={80} />
+                                    <Image
+                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png"
+                                        alt="arrow icon"
+                                        width={120}
+                                        height={80}
+                                    />
                                 </div>
                                 <Image
                                     className="sd-card"
@@ -1667,391 +549,7 @@ export default function AmbientAirMonitor() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <div className="data-tab">
-                                <ul className="nav nav-tabs" id="dataTab" role="tablist">
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activeDataTab === "Web-Dashboard" ? "active" : ""}`}
-                                            onClick={() => setActiveDataTab("Web-Dashboard")}
-                                            id="web-dashboard-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#web-dashboard"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="web-dashboard"
-                                            aria-selected={activeDataTab === "Web-Dashboard"}
-                                        >
-                                            Web-Dashboard
-                                        </button>
-                                    </li>
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activeDataTab === "Mobile App" ? "active" : ""}`}
-                                            onClick={() => setActiveDataTab("Mobile App")}
-                                            id="mobile-app-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#mobile-app"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="mobile-app"
-                                            aria-selected={activeDataTab === "Mobile App"}
-                                        >
-                                            Mobile App
-                                        </button>
-                                    </li>
-                                    <li className="nav-item" role="presentation">
-                                        <button
-                                            className={`nav-link ${activeDataTab === "TV App" ? "active" : ""}`}
-                                            onClick={() => setActiveDataTab("TV App")}
-                                            id="tv-app-tab"
-                                            data-bs-toggle="tab"
-                                            data-bs-target="#tv-app"
-                                            type="button"
-                                            role="tab"
-                                            aria-controls="tv-app"
-                                            aria-selected={activeDataTab === "TV App"}
-                                        >
-                                            TV App
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="tab-content" id="dataTabContent">
-                                <div
-                                    className={`tab-pane fade ${activeDataTab === "Web-Dashboard" ? "show active" : ""}`}
-                                    id="web-dashboard"
-                                    role="tabpanel"
-                                    aria-labelledby="web-dashboard-tab"
-                                >
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="aqi-tv-app-box">
-                                                <ul className="aqi-tv-img">
-                                                    <li>
-                                                        <Image
-                                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/AQI-Dashboard-icon.png"
-                                                            alt="aqi data web-dasbhoard"
-                                                            width={85}
-                                                            height={85}
-                                                        />
-                                                    </li>
-                                                    <li>
-                                                        <h4>AQI Web-Dashboard</h4>
-                                                        <p>Analyze the real-time and historic data of your ambient monitor data on website.</p>
-                                                    </li>
-                                                </ul>
-                                                <div className="data-icon">
-                                                    <div className="data-icon-box1">
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/World-air-pollution.png"
-                                                                    alt="world pollution"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Analysis: Worlds most polluted cities and countries.</h6>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/weather.png"
-                                                                    alt="weather data"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Weather forecast of your current selected location</h6>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="data-icon-box1">
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/health-recommendation.png"
-                                                                    alt="health recommendation"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Health advice based on real-time air quality index</h6>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Compare.png"
-                                                                    alt="compare the air quality data"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Compare different air quality parameters of two or more location</h6>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div className="aqi-tv-btn-box">
-                                                    <ul>
-                                                        <li>
-                                                            <a className="apple-btn" href="https://www.aqi.in/userlogin">
-                                                                View Dashboard
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="indoor-index-image">
-                                                <Image
-                                                    className="aqidash-img"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-dashboard-co2.png"
-                                                    alt="aqi data web-dashboard"
-                                                    width={600}
-                                                    height={400}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    className={`tab-pane fade ${activeDataTab === "Mobile App" ? "show active" : ""}`}
-                                    id="mobile-app"
-                                    role="tabpanel"
-                                    aria-labelledby="mobile-app-tab"
-                                >
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="aqi-tv-app-box">
-                                                <ul className="aqi-tv-img">
-                                                    <li>
-                                                        <Image
-                                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-dashboard-co2.png"
-                                                            alt="aqi mobile app"
-                                                            width={85}
-                                                            height={85}
-                                                        />
-                                                    </li>
-                                                    <li>
-                                                        <h4>AQI Mobile App</h4>
-                                                        <p>Access your ambient air monitor data on the app.</p>
-                                                    </li>
-                                                </ul>
-                                                <div className="data-icon">
-                                                    <div className="data-icon-box1">
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/real-time-co2-level.png"
-                                                                    alt="real-time data"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Real-time air quality API for accurate global data</h6>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/historic-data.png"
-                                                                    alt="air quality historic data"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Insightful Air quality monitoring dashboard</h6>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="data-icon-box1">
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/World-air-pollution.png"
-                                                                    alt="world air pollution data"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>World air pollution map and weather map</h6>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Compare.png"
-                                                                    alt="compare air quality data"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Compare different air quality parameters of two or more location</h6>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div className="aqi-tv-btn-box">
-                                                    <ul>
-                                                        <li>
-                                                            <a className="apple-btn" href="https://apps.apple.com/tt/app/aqi/id1439684571">
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/apple-icon.png"
-                                                                    alt="aqi ios app"
-                                                                    width={15}
-                                                                    height={15}
-                                                                />
-                                                                Download for <span className="iso">iOS</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a
-                                                                className="apple-btn andro-btn"
-                                                                href="https://play.google.com/store/apps/details?id=com.aqi.data"
-                                                            >
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/android-icon.png"
-                                                                    alt="aqi android app"
-                                                                    width={15}
-                                                                    height={15}
-                                                                />
-                                                                Download for <span className="andro">android</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="indoor-index-image">
-                                                <Image
-                                                    className="mobile-app"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/ambient-pm-only-pm.png"
-                                                    alt="aqi mobile app"
-                                                    width={300}
-                                                    height={400}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    className={`tab-pane fade ${activeDataTab === "TV App" ? "show active" : ""}`}
-                                    id="tv-app"
-                                    role="tabpanel"
-                                    aria-labelledby="tv-app-tab"
-                                >
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="aqi-tv-app-box">
-                                                <ul className="aqi-tv-img">
-                                                    <li>
-                                                        <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/AQI-Dashboard-icon.png" alt="aqi tv app" width={85} height={85} />
-                                                    </li>
-                                                    <li>
-                                                        <h4>AQI TV App</h4>
-                                                        <p>Display your ambient monitor data on big TV screen.</p>
-                                                    </li>
-                                                </ul>
-                                                <div className="data-icon">
-                                                    <div className="data-icon-box1">
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Compare.png"
-                                                                    alt="compare air quality data"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Outdoor vs Indoor Air Quality data</h6>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/24-hours.png"
-                                                                    alt="historic data on tv"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>24*7 remote access to the monitored data</h6>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="data-icon-box1">
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/AQI.png"
-                                                                    alt="aqi data on tv"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>AQI TV app controlled by AQI mobile app.</h6>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <Image
-                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Choose.png"
-                                                                    alt="choose aqi tv app theme"
-                                                                    width={41}
-                                                                    height={41}
-                                                                />
-                                                            </li>
-                                                            <li>
-                                                                <h6>Choose from multiple ranges of themes.</h6>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div className="aqi-tv-btn-box">
-                                                    <ul>
-                                                        <li>
-                                                            <a
-                                                                className="apple-btn"
-                                                                href="https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew"
-                                                            >
-                                                                Download for <span className="iso">TV</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="indoor-index-image">
-                                                <Image
-                                                    className="tv-app"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-tv-app-dashboard.png"
-                                                    alt="aqi tv app"
-                                                    width={600}
-                                                    height={400}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <DataAccessibilityTab />
                         </div>
                     </div>
                 </div>
@@ -2066,12 +564,12 @@ export default function AmbientAirMonitor() {
                                 <p>
                                     <Image src="/images/quote-icon-ambient.png" alt="quote-icon-ambient" width={50} height={50} />
                                     <br />
-                                    <strong>Ambient</strong> Air Quality Monitoring is one of the primary aspects that govern environmental
-                                    stability. Air quality is dynamic. Several factors control the air quality of a place. There are
-                                    numerous natural, industrial, and anthropogenic sources that emit air toxins. Meteorological factors
-                                    also alter and impact air quality. Outdoor air pollution does not just jeopardize the living. It is also
-                                    detrimental to the ecology and the atmospheric chemistry of the earth. Thus, outdoor air monitoring is
-                                    essential.
+                                    <strong>Ambient</strong> Air Quality Monitoring is one of the primary aspects that govern
+                                    environmental stability. Air quality is dynamic. Several factors control the air quality of a place.
+                                    There are numerous natural, industrial, and anthropogenic sources that emit air toxins. Meteorological
+                                    factors also alter and impact air quality. Outdoor air pollution does not just jeopardize the living.
+                                    It is also detrimental to the ecology and the atmospheric chemistry of the earth. Thus, outdoor air
+                                    monitoring is essential.
                                 </p>
                             </div>
                         </div>
@@ -2099,16 +597,17 @@ export default function AmbientAirMonitor() {
                                 <p className="text-center">
                                     The primary aspect for determining environmental stability is the Continuous Ambient Air Quality
                                     Monitoring System (CAAQMS). There are many factors that control the quality of air and many sources
-                                    contributing to it such as natural, industrial and anthropogenic. Meteorological factors also alter and
-                                    impact air quality. Outdoor air pollution does not just jeopardize the living. It is also detrimental to
-                                    the ecology and the atmospheric chemistry of the earth. Chronic Obstructive Pulmonary Disease (COPD) and
-                                    asthma are examples of bad air quality for human health. Thus, outdoor air monitoring is essential.
-                                    Conventionally, the Continuous Ambient Air Quality Management System (CAAQMS) used for ambient air
-                                    monitoring is a very extensive and expensive set-up as it involves regular filter changes, and importing
-                                    regulations. Prana Air provides ambient air quality monitors that are easy to use, portable, and highly
-                                    accurate and cost-effective. The monitors come with detecting sensors for particulate matter, nitrogen
-                                    dioxide, sulfur dioxide, hydrogen sulfide, carbon monoxide, and ozone based on different sensing
-                                    techniques.
+                                    contributing to it such as natural, industrial and anthropogenic. Meteorological factors also alter
+                                    and impact air quality. Outdoor air pollution does not just jeopardize the living. It is also
+                                    detrimental to the ecology and the atmospheric chemistry of the earth. Chronic Obstructive Pulmonary
+                                    Disease (COPD) and asthma are examples of bad air quality for human health. Thus, outdoor air
+                                    monitoring is essential. Conventionally, the Continuous Ambient Air Quality Management System (CAAQMS)
+                                    used for ambient air monitoring is a very extensive and expensive set-up as it involves regular filter
+                                    changes, and importing regulations. Prana Air provides ambient air quality monitors that are easy to
+                                    regulations. Prana Air provides ambient air quality monitors that are easy to use, portable, and
+                                    highly accurate and cost-effective. The monitors come with detecting sensors for particulate matter,
+                                    nitrogen dioxide, sulfur dioxide, hydrogen sulfide, carbon monoxide, and ozone based on different
+                                    sensing techniques.
                                 </p>
                                 <p>&nbsp;</p>
                                 <p className="text-center">
@@ -2193,10 +692,11 @@ export default function AmbientAirMonitor() {
                                             <li>
                                                 <span className="parana"> Prana Air</span> Ambient Air monitor is CAAQMS (Continuous Ambient Air
                                                 Quality Monitoring System) installed with sensors to detect the concentration of pollutants like
-                                                PM10, PM2.5, SO2. NO2, O3, H2S, NH3, CO, etc. Prana Air monitor is smart, economical, easy to use,
-                                                portable, compact lightweight, and consumes very less time for analysis and has Wi-Fi, GSM, and
-                                                RS-485 type connectivity. The data is shown on a digital screen and provides 24×7 access to
-                                                analytic results. The real-time data is given in less than 30 seconds with accuracy and precision.
+                                                PM10, PM2.5, SO2. NO2, O3, H2S, NH3, CO, etc. Prana Air monitor is smart, economical, easy to
+                                                use, portable, compact lightweight, and consumes very less time for analysis and has Wi-Fi, GSM,
+                                                and RS-485 type connectivity. The data is shown on a digital screen and provides 24×7 access to
+                                                analytic results. The real-time data is given in less than 30 seconds with accuracy and
+                                                precision.
                                             </li>
                                         </ul>
                                     </div>
@@ -2217,8 +717,8 @@ export default function AmbientAirMonitor() {
                                                 System) is very big in size comparable to a small room. The system has different analyzers for
                                                 different parameters such as BAM for Particulate Matter, pulsed UV fluorescence for SO2,
                                                 chemiluminescence for NO2 and NH3, NDIR (Non-Dispersive Infrared Technology) for CO2, and UV
-                                                photometric/ chemiluminescence for O3 and gives real-time data within 20-25 minutes. The system is
-                                                bulky &amp; huge and hence its portability is restricted. It requires manpower and high
+                                                photometric/ chemiluminescence for O3 and gives real-time data within 20-25 minutes. The system
+                                                is bulky &amp; huge and hence its portability is restricted. It requires manpower and high
                                                 maintenance cost.
                                             </li>
                                         </ul>
@@ -2234,8 +734,7 @@ export default function AmbientAirMonitor() {
             <section className="bam-banner">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-6">
-                        </div>
+                        <div className="col-sm-6"></div>
                         <div className="col-sm-6">
                             <div className="chip-sensor-heading bam-content fadeInUp animated">
                                 <h2>Beta Attenuation Mass (BAM) Monitor</h2>
@@ -2327,47 +826,7 @@ export default function AmbientAirMonitor() {
                     </div>
                     <div className="row">
                         <div className="col-sm-12">
-                            <Carousel
-                                responsive={responsive}
-                                infinite={true}
-                                autoPlay={true}
-                                autoPlaySpeed={3000}
-                                keyBoardControl={true}
-                                customTransition="transform 600ms ease-in-out"
-                                transitionDuration={600}
-                                containerClass="carousel-container"
-                                removeArrowOnDeviceType={["tablet", "mobile"]}
-                                dotListClass="custom-dot-list-style"
-                                itemClass="carousel-item-padding"
-                            >
-                                {caseStudies.map((study, index) => (
-                                    <div key={index} className="case-study-item">
-                                        <div className="slider-img">
-                                            <Link href={study.link}>
-                                                <Image
-                                                    src={study.image || "/placeholder.svg"}
-                                                    alt={study.alt}
-                                                    width={400}
-                                                    height={250}
-                                                    className="img-fluid"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="slider-txrt">
-                                            <ul>
-                                                <li>
-                                                    <h5>
-                                                        <Link href={study.link}>{study.title}</Link>
-                                                    </h5>
-                                                </li>
-                                                <li>
-                                                    <Image src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-ambient.png" alt="arrow" width={20} height={20} />
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                ))}
-                            </Carousel>
+                            <CaseStudiesSlider />
                         </div>
                     </div>
                 </div>
@@ -2381,7 +840,8 @@ export default function AmbientAirMonitor() {
                             <div className="construction-heading fadeInUp animated">
                                 <h2>150+</h2>
                                 <p>
-                                    Constructions<br />
+                                    Constructions
+                                    <br />
                                     Sites Covered
                                 </p>
                                 <ul className="guid-line">
@@ -2394,7 +854,8 @@ export default function AmbientAirMonitor() {
                                         />
                                     </li>
                                     <li>
-                                        Acc. to<br />
+                                        Acc. to
+                                        <br />
                                         <h5>DPCC Guidelines</h5>
                                     </li>
                                 </ul>
@@ -2462,9 +923,7 @@ export default function AmbientAirMonitor() {
                                 <h2>Our Clientele</h2>
                             </div>
                         </div>
-                        <div className="col-sm-6">
-                            {/* This column was empty in the original code */}
-                        </div>
+                        <div className="col-sm-6">{/* This column was empty in the original code */}</div>
                     </div>
 
                     <div className="row">
@@ -2606,7 +1065,6 @@ export default function AmbientAirMonitor() {
                                             className="img-fluid"
                                         />
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
@@ -2620,10 +1078,7 @@ export default function AmbientAirMonitor() {
                     <div className="col-md-12">
                         <div className="contact-heading">
                             <h2>Get in Touch</h2>
-                            <p>
-                                Please help us know what requirements you have. Our team will
-                                contact you very soon.
-                            </p>
+                            <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
                         </div>
                     </div>
                 </div>
@@ -2638,80 +1093,7 @@ export default function AmbientAirMonitor() {
                             <div className="faq-heading">
                                 <h2>Frequently Asked Questions</h2>
                             </div>
-                            <div className="accordion" id="faqAccordion">
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq1"
-                                            aria-expanded="true"
-                                        >
-                                            1. What parameters OxyCo does monitor?
-                                        </button>
-                                    </h2>
-                                    <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            OxyCo is designed to monitor real-time Oxygen, carbon monoxide, temperature and humidity in your air.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq2"
-                                            aria-expanded="false"
-                                        >
-                                            2. What is the battery capacity of the OxyCo?
-                                        </button>
-                                    </h2>
-                                    <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            The compact monitor is packed with a 1000mAh battery that works for a long time.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq3"
-                                            aria-expanded="false"
-                                        >
-                                            3. How can I access OxyCo data?
-                                        </button>
-                                    </h2>
-                                    <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            You can seamlessly access the OxyCo data by downloading it in different formats or transferring it to your email.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq4"
-                                            aria-expanded="false"
-                                        >
-                                            4. Why do Oxygen Calibration?
-                                        </button>
-                                    </h2>
-                                    <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            The OxyCo monitor performs Oxygen Calibration to maintain optimal accuracy in the device readings.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <FaqAccordion />
                         </div>
                     </div>
                 </div>
@@ -2719,4 +1101,3 @@ export default function AmbientAirMonitor() {
         </div>
     )
 }
-

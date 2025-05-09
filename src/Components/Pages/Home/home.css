@@ -388,6 +388,17 @@ a {
 .aq-monitor-box {
   display: flex;
   gap: 15px;
+  margin-bottom: 15px;
+}
+
+ul#connectivityTabs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+ul#connectivityTabs li {
+  width: 17%;
 }
 
 .discover-air-quality-page-img {
@@ -661,9 +672,24 @@ a {
 
 .tabs-header {
   display: flex;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0;
   flex-direction: column;
-  gap: 20px;
+}
+
+.tabs-header li button {
+  border-bottom: 1px solid #d0d0d0 !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  width: 90%;
+  display: block;
+  padding: 15px 25px;
+}
+
+.tabs-header li .nav-link.active {
+  background: #7ab261;
+  border-radius: 0;
+  color: #fff;
 }
 
 .tab-button {
@@ -897,8 +923,10 @@ a {
 }
 
 .controller-image {
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin: 40px auto;
+  display: block;
 }
 
 /* Our Clientele Section */

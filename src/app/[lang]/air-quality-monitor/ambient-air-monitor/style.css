@@ -3,9 +3,11 @@
 html {
   scroll-behavior: smooth
 }
+
 main.main.py-4 {
   padding: 0 !important;
 }
+
 h1,
 h2,
 h3,
@@ -151,16 +153,17 @@ span.hd-txt {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 45px;
-  justify-content: center
+  gap: 25px;
+  justify-content: center;
+  padding: 0;
 }
 
 .get-brochur {
   float: right;
   position: relative;
-  left: 430px;
-  top: -70px;
-  height: 0
+  left: 380px;
+  top: -80px;
+  height: 0;
 }
 
 .get-brochur ul li img {
@@ -217,6 +220,10 @@ span.hd-txt {
   color: #ffffffc7;
   font-size: 18px;
   padding-bottom: 60px
+}
+
+.tab-inner div img {
+  height: auto;
 }
 
 ul.tab-inner {
@@ -2102,8 +2109,43 @@ span.vc_tta-title-text {
 }
 
 button img {
-  width: 18px;
+  width: 80px;
   height: auto;
+}
+
+.variant-tab li {
+  width: 100%;
+}
+
+.variant-tab li button {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+.tab-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.variant-tab li .nav-link.active {
+  background: #1f80d1;
+  border: 0;
+  border-radius: 15px;
+}
+
+.tab-inner div h3 {
+  font-size: 20px;
+}
+
+.variant-tab li .nav-link h3 {
+  color: #fff;
+}
+
+.variant-tab {
+  border-bottom: 1px solid #ffffff40;
+  gap: 25px;
 }
 
 button.showbutton img {
@@ -2228,6 +2270,7 @@ button.accordion-button {
   }
 
   .tab-sections {
+    flex-direction: column-reverse;
     padding-top: 30px
   }
 
@@ -2268,6 +2311,7 @@ button.accordion-button {
 
   .arrow {
     left: 5px;
+    width: 10px !important;
     top: -10px
   }
 
@@ -2404,7 +2448,11 @@ button.accordion-button {
   }
 
   button img {
-    width: 14px
+    width: 45px
+  }
+
+  .tab-inner div h3 {
+    font-size: 14px;
   }
 
   .get-brochur ul li:last-child a {
@@ -3850,6 +3898,29 @@ button.accordion-button {
   span.hd-txt {
     font-size: 40px
   }
+
+  .variant-tab {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .variant-tab li {
+    width: auto;
+  }
+
+  .variant-tab li button {
+    display: block;
+    height: 70px;
+    width: 180px;
+  }
+
+  .tab-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 
 @media only screen and (min-width:481px) and (max-width:768px) {
@@ -4739,6 +4810,32 @@ button.accordion-button {
 
 .show-container button {
   cursor: pointer
+}
+
+.contentmy h3 {
+  color: #ffffffe0;
+}
+
+.contentmy p {
+  color: #ffffffe0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+
+.contentmy img {
+  width: 100%;
+  height: auto;
+}
+
+button.showbutton img {
+  width: 16px;
+  margin: 0 10px;
+}
+
+button.hidebutton img {
+  width: 16px;
+  margin: 0 10px;
 }
 
 .our-product {

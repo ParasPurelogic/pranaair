@@ -1,30 +1,12 @@
-"use client"
 
-import { useState, useEffect } from "react"
-import "react-multi-carousel/lib/styles.css"
 import Image from "next/image"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Link from "next/link"
-import Carousel from "react-multi-carousel"
-import './style.css';
-import ContactForm from "@/Components/Contacform/ContactForm";
+import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm"
+import ProductCarousel from "@/Components/Pages/OutPmSensor/product-carousel"
 
 export default function PMSensorPage() {
-  // State for tabs in the product image section
-  const [activeTab, setActiveTab] = useState("tab1")
-
-  // State for indoor/outdoor sensor tabs
-  const [activeSensorTab, setActiveSensorTab] = useState("outdoor")
-
-  // Function to handle tab changes
-  const handleTabChange = (tabId) => {
-    setActiveTab(tabId)
-  }
-
-  // Function to handle sensor tab changes
-  const handleSensorTabChange = (tabId) => {
-    setActiveSensorTab(tabId)
-  }
 
   // Responsive settings for the applications carousel
   const responsive = {
@@ -200,26 +182,27 @@ export default function PMSensorPage() {
             </div>
             <div className="col-md-5">
               <div className="tab-container">
+                {/* Tab Content */}
                 <div className="tab-content">
-                  <div id="tab1" style={{ display: activeTab === "tab1" ? "block" : "none" }}>
+                  <div className="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Front-View.webp"
                       alt="Prana Air PM Sensor"
                     />
                   </div>
-                  <div id="tab2" style={{ display: activeTab === "tab2" ? "block" : "none" }}>
+                  <div className="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Particulate-matter-Sensor-Side-View.webp"
                       alt="Prana Air PM2.5 Sensor"
                     />
                   </div>
-                  <div id="tab3" style={{ display: activeTab === "tab3" ? "block" : "none" }}>
+                  <div className="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Front-View.webp"
                       alt="Prana Air PM Sensor of metallic body"
                     />
                   </div>
-                  <div id="tab4" style={{ display: activeTab === "tab4" ? "block" : "none" }}>
+                  <div className="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Side-View.webp"
                       alt="Prana Air PM2.5 Sensor of side view"
@@ -227,44 +210,77 @@ export default function PMSensorPage() {
                   </div>
                 </div>
 
-                <div className="tabs">
-                  <button
-                    className={`tab-button ${activeTab === "tab1" ? "active" : ""}`}
-                    onClick={() => handleTabChange("tab1")}
-                  >
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Front-View.webp"
-                      alt="Prana Air PM Sensor"
-                    />
-                  </button>
-                  <button
-                    className={`tab-button ${activeTab === "tab2" ? "active" : ""}`}
-                    onClick={() => handleTabChange("tab2")}
-                  >
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2025/01/Particulate-matter-Sensor-Side-View.webp"
-                      alt="Prana Air PM2.5 Sensor"
-                    />
-                  </button>
-                  <button
-                    className={`tab-button ${activeTab === "tab3" ? "active" : ""}`}
-                    onClick={() => handleTabChange("tab3")}
-                  >
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Front-View.webp"
-                      alt="Prana Air PM Sensor of metallic body"
-                    />
-                  </button>
-                  <button
-                    className={`tab-button ${activeTab === "tab4" ? "active" : ""}`}
-                    onClick={() => handleTabChange("tab4")}
-                  >
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Side-View.webp"
-                      alt="Prana Air PM2.5 Sensor of side view"
-                    />
-                  </button>
-                </div>
+                {/* Tab Buttons */}
+                <ul className="nav nav-tabs tabs" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active tab-button"
+                      id="tab1-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab1"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab1"
+                      aria-selected="true"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Front-View.webp"
+                        alt="Prana Air PM Sensor"
+                      />
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link tab-button"
+                      id="tab2-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab2"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab2"
+                      aria-selected="false"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/Particulate-matter-Sensor-Side-View.webp"
+                        alt="Prana Air PM2.5 Sensor"
+                      />
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link tab-button"
+                      id="tab3-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab3"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab3"
+                      aria-selected="false"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Front-View.webp"
+                        alt="Prana Air PM Sensor of metallic body"
+                      />
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link tab-button"
+                      id="tab4-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab4"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab4"
+                      aria-selected="false"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Side-View.webp"
+                        alt="Prana Air PM2.5 Sensor of side view"
+                      />
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -364,7 +380,10 @@ export default function PMSensorPage() {
                 <div className="wifi-aqi">
                   <ul>
                     <li>
-                      <img src="https://www.pranaair.com/wp-content/uploads/2025/01/wifi-connectivity.webp" alt="wifi connectivity" />
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/wifi-connectivity.webp"
+                        alt="wifi connectivity"
+                      />
                     </li>
                     <li>
                       <h3>WiFi connectivity to the monitor</h3>
@@ -428,23 +447,41 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="tab-box">
-                <div className="tab-nav">
-                  <button
-                    className={`tab-title ${activeSensorTab === "outdoor" ? "active" : ""}`}
-                    onClick={() => handleSensorTabChange("outdoor")}
-                  >
-                    Outdoor PM Sensor <i className="far fa-arrow-alt-circle-right"></i>
-                  </button>
-                  <button
-                    className={`tab-title ${activeSensorTab === "indoor" ? "active" : ""}`}
-                    onClick={() => handleSensorTabChange("indoor")}
-                  >
-                    Indoor PM Sensor <i className="far fa-arrow-alt-circle-right"></i>
-                  </button>
-                </div>
+                {/* Tab Navigation */}
+                <ul className="nav nav-tabs tab-nav" id="sensorTabs" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active tab-title"
+                      id="outdoor-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#outdoor"
+                      type="button"
+                      role="tab"
+                      aria-controls="outdoor"
+                      aria-selected="true"
+                    >
+                      Outdoor PM Sensor <i className="far fa-arrow-alt-circle-right"></i>
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link tab-title"
+                      id="indoor-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#indoor"
+                      type="button"
+                      role="tab"
+                      aria-controls="indoor"
+                      aria-selected="false"
+                    >
+                      Indoor PM Sensor <i className="far fa-arrow-alt-circle-right"></i>
+                    </button>
+                  </li>
+                </ul>
 
-                <div className="tab-content">
-                  {activeSensorTab === "outdoor" && (
+                {/* Tab Content */}
+                <div className="tab-content" id="sensorTabsContent">
+                  <div className="tab-pane fade show active" id="outdoor" role="tabpanel" aria-labelledby="outdoor-tab">
                     <div className="sensnor-slider">
                       <div className="row">
                         <div className="col-md-6">
@@ -477,9 +514,9 @@ export default function PMSensorPage() {
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
 
-                  {activeSensorTab === "indoor" && (
+                  <div className="tab-pane fade" id="indoor" role="tabpanel" aria-labelledby="indoor-tab">
                     <div className="sensnor-slider">
                       <div className="row">
                         <div className="col-md-6">
@@ -513,7 +550,7 @@ export default function PMSensorPage() {
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -538,9 +575,8 @@ export default function PMSensorPage() {
               <div className="size-compare-box-txt">
                 <p>
                   Particulate Matter or PM is a mixture of tiny particles or liquid droplets. And these also emits in
-                  the air from different sources. As a result, these particles can
-                  enter the human lungs and cause many harm to
-                  health.
+                  the air from different sources. As a result, these particles can enter the human lungs and cause many
+                  harm to health.
                 </p>
                 <ul>
                   <li>
@@ -751,8 +787,8 @@ export default function PMSensorPage() {
             <div className="col-md-6">
               <div className="comapre-chart-para">
                 <p>
-                  In a comprehensive comparative study evaluating the data accuracy of Prana Airs PM2.5 sensor against
-                  a high-end Beta Attenuation Monitoring (BAM) system.
+                  In a comprehensive comparative study evaluating the data accuracy of Prana Airs PM2.5 sensor against a
+                  high-end Beta Attenuation Monitoring (BAM) system.
                 </p>
               </div>
             </div>
@@ -886,20 +922,7 @@ export default function PMSensorPage() {
 
           <div className="row visible-box">
             <div className="col-sm-12">
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                keyBoardControl={true}
-                customTransition="transform 400ms ease-in-out"
-                transitionDuration={400}
-                containerClass="carousel-container"
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding"
-                showDots={true}
-                arrows={false}
-              >
+              <ProductCarousel responsive={responsive} className="app-sensor-slider">
                 <div className="app-sensor-title">
                   <p>
                     <Image
@@ -1016,7 +1039,7 @@ export default function PMSensorPage() {
                   </p>
                   <h4>Health care facilities</h4>
                 </div>
-              </Carousel>
+              </ProductCarousel>
             </div>
           </div>
         </div>
@@ -1040,7 +1063,13 @@ export default function PMSensorPage() {
               <div className="construction-btn fadeInUp animated">
                 <p>
                   <Link href="https://www.pranaair.com/solutions-by-application/constructions/" className="btn-link">
-                    Construction Sites <Image src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png" alt="button icon" width={20} height={20} />
+                    Construction Sites{" "}
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
+                      alt="button icon"
+                      width={20}
+                      height={20}
+                    />
                   </Link>
                 </p>
               </div>
@@ -1058,7 +1087,12 @@ export default function PMSensorPage() {
                 </ul>
                 <ul className="dpcc">
                   <li>
-                    <Image src="https://www.pranaair.com/wp-content/uploads/2025/01/DPCC-logo.png" alt="DPCC Logo" width={80} height={80} />
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2025/01/DPCC-logo.png"
+                      alt="DPCC Logo"
+                      width={80}
+                      height={80}
+                    />
                   </li>
                   <li>
                     Sites Covered
@@ -1407,10 +1441,7 @@ export default function PMSensorPage() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -1430,19 +1461,7 @@ export default function PMSensorPage() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <Carousel
-                responsive={alsoLikeResponsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                keyBoardControl={true}
-                customTransition="all .5s"
-                transitionDuration={500}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-              >
+              <ProductCarousel responsive={alsoLikeResponsive} className="allsensor-slide">
                 <div className="may-also">
                   <a href="#">
                     <img
@@ -1539,7 +1558,7 @@ export default function PMSensorPage() {
                     <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
                   </h5>
                 </div>
-              </Carousel>
+              </ProductCarousel>
             </div>
           </div>
         </div>
@@ -1547,4 +1566,3 @@ export default function PMSensorPage() {
     </div>
   )
 }
-

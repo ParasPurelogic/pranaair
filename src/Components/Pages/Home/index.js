@@ -5,6 +5,7 @@ import Image from "next/image";
 import BlogSection from "./BlogSection";
 import HeroImageGrid from "./HeroImageGrid";
 import SectionDiscover from "./SectionDiscover";
+import SeamleassConnectivitySection from "./SeamlessConnectivitySection";
 import { getServerTranslation } from "../../../i18n/server";
 
 export default async function PranaAirHomepage() {
@@ -181,241 +182,20 @@ export default async function PranaAirHomepage() {
       <SectionDiscover />
 
       {/* Seamless Connectivity Section */}
-      <section className="seamless-connective">
-        <div className="container">
-          <div className="connectivity-header">
-            <div className="seamless-connect-heading">
-              <h2>Seamless Connectivity for Air Quality Monitoring</h2>
-            </div>
-            <div className="seamless-txt">
-              <p>
-                Connect Prana Airs air quality monitoring devices effortlessly, designed for seamless integration with AQI platforms.
-              </p>
-            </div>
-          </div>
 
-          <div className="seamless-tab">
-            <ul className="nav nav-tabs tabs-header" id="connectivityTabs" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link active"
-                  id="tab1-seamless-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tab1-seamless"
-                  type="button"
-                  role="tab"
-                  aria-controls="tab1-seamless"
-                  aria-selected="true"
-                >
-                  AQI Mobile App <i className="tab-arrow"></i>
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="tab2-seamless-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tab2-seamless"
-                  type="button"
-                  role="tab"
-                  aria-controls="tab2-seamless"
-                  aria-selected="false"
-                >
-                  Web-Dashboard <i className="tab-arrow"></i>
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="tab3-seamless-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tab3-seamless"
-                  type="button"
-                  role="tab"
-                  aria-controls="tab3-seamless"
-                  aria-selected="false"
-                >
-                  AQI TV App <i className="tab-arrow"></i>
-                </button>
-              </li>
-            </ul>
-
-            <div className="tab-content tab-bg" id="connectivityTabsContent">
-              <div
-                className="tab-pane fade show active"
-                id="tab1-seamless"
-                role="tabpanel"
-                aria-labelledby="tab1-seamless-tab"
-              >
-                {/* AQI Mobile App Tab Content */}
-                <div className="panel-content">
-                  <div className="connectivety-tab-text">
-                    <ul className="mob-heading">
-                      <li>
-                        <Image
-                          src="https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png"
-                          alt="aqi mobile app logo"
-                          width={100}
-                          height={100}
-                        />
-                      </li>
-                      <li>
-                        <h3>Mobile App</h3>
-                        <h4>Seamless Connectivity</h4>
-                      </li>
-                    </ul>
-                    <p>
-                      Stay informed with real-time updates and personalized alerts on your mobile app, ensuring you always know the air quality around you, wherever you are.
-                    </p>
-                    <div className="connect-btn-box">
-                      <Link href="https://apps.apple.com/tt/app/aqi/id1439684571" className="iso-btn">
-                        <ul className="seamless-connect-btn">
-                          <li>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/07/app-store.png"
-                              alt="ios app logo"
-                              width={35}
-                              height={35}
-                            />
-                          </li>
-                          <li>
-                            <span className="btn-txt-small">Download on the</span>
-                            <br />
-                            <span className="btan-txt">App Store</span>
-                          </li>
-                        </ul>
-                      </Link>
-                      <Link href="https://play.google.com/store/apps/details?id=com.aqi.data" className="play-store-btn">
-                        <ul className="seamless-connect-btn">
-                          <li>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2024/07/google-play.png"
-                              alt="android app"
-                              width={35}
-                              height={35}
-                            />
-                          </li>
-                          <li>
-                            <span className="btn-txt-small">Get it on</span>
-                            <br />
-                            <span className="btan-txt">Google Play</span>
-                          </li>
-                        </ul>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="connectivety-tab-bg">
-                    <Image
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/aqi-mobile-air-quality-app.png"
-                      alt="AQI mobile app"
-                      width={300}
-                      height={500}
-                      className="app-image"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="tab-pane fade"
-                id="tab2-seamless"
-                role="tabpanel"
-                aria-labelledby="tab2-seamless-tab"
-              >
-                {/* Web-Dashboard Tab Content */}
-                <div className="panel-content">
-                  <div className="connectivety-tab-text">
-                    <h3>Web dashboard connectivity</h3>
-                    <h4>Real-Time Insights</h4>
-                    <p>
-                      Discover real-time insights into the air quality with our intuitive web dashboard connectivity. Enjoy seamless integration across multiple devices for a complete picture of your air environment.
-                    </p>
-                    <Link href="https://www.aqi.in/userlogin" className="dashboard-button">
-                      <ul className="seamless-connect-btn dash-btn">
-                        <li>
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2024/07/AQI-api-logo.png"
-                            alt="aqi logo"
-                            width={40}
-                            height={40}
-                          />
-                        </li>
-                        <li>
-                          <span className="btn-txt-small">View</span>
-                          <br />
-                          <span className="btan-txt">Dashboard</span>
-                        </li>
-                      </ul>
-                    </Link>
-                  </div>
-                  <div className="connectivety-tab-bg">
-                    <Image
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/aqi-web-dashboard.png"
-                      alt="Web dashboard"
-                      width={500}
-                      height={300}
-                      className="web-dash"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="tab-pane fade"
-                id="tab3-seamless"
-                role="tabpanel"
-                aria-labelledby="tab3-seamless-tab"
-              >
-                {/* AQI TV App Tab Content */}
-                <div className="panel-content">
-                  <div className="connectivety-tab-text">
-                    <ul className="mob-heading">
-                      <li>
-                        <Image
-                          src="https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png"
-                          alt="AQI TV app"
-                          width={100}
-                          height={100}
-                        />
-                      </li>
-                      <li>
-                        <h3>TV connectivity</h3>
-                        <h4>View Air quality data</h4>
-                      </li>
-                    </ul>
-                    <p>
-                      Easily view your air quality data on your TV screen with our seamless connectivity feature. Stay informed about your environment with clear, easy-to-read visuals directly on your TV.
-                    </p>
-                  </div>
-                  <div className="connectivety-tab-bg">
-                    <Image
-                      src="https://www.pranaair.com/wp-content/uploads/2024/07/Tv-connectivity.png"
-                      alt="TV app"
-                      width={500}
-                      height={300}
-                      className="tv-screen"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
+      <SeamleassConnectivitySection />
 
       {/* Air Quality Drone Section */}
       <section className="air-quality-drone-secv">
         <div className="container">
           <div className="drone-content">
             <div className="air-quality-drone-txt">
-              <h2>See the Air You Breathe</h2>
+              <h2>{t("drone.title")}</h2>
               <p>
-                Get real-time insights into air quality with Prana Airs Air Quality Drone, equipped with cutting-edge
-                sensor technology.
+                {t("drone.description")}
               </p>
               <Link href="/air-quality-monitor/air-drone" className="drone-button">
-                Know More
+                {t("drone.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/parameters-icon.webp"
                   alt="link icon"
@@ -453,10 +233,10 @@ export default async function PranaAirHomepage() {
           <div className="clint-br">
             <div className="clientele-header">
               <div className="our-client-heading">
-                <h2>Our Clientele</h2>
+                <h2>{t("clientele.title")}</h2>
               </div>
               <div className="our-client-para">
-                <p>Join industry leaders who rely on our advanced solutions to ensure cleaner, safer environments.</p>
+                <p>{t("clientele.description")}</p>
               </div>
             </div>
           </div>
@@ -642,21 +422,20 @@ export default async function PranaAirHomepage() {
           <div className="trusted-clients-content">
             <div className="trusted-clients-text">
               <div className="counter-txt">
-                <div className="stats-number">4000</div>
-                <div className="counter_suffix">+</div>
+                <div className="stats-number">{t("trustedClients.counter")}</div>
+                <div className="counter_suffix">{t("trustedClients.suffix")}</div>
               </div>
 
               <div className="truted-client-heading">
-                <h3>Air Quality Monitors Installed</h3>
+                <h3>{t("trustedClients.title")}</h3>
               </div>
 
               <div className="monitor-insalled-txt">
                 <h3>
-                  <span className="text-highlight">Across Top Sectors:</span> Construction, Hospitality, Education,
-                  Tech, Research Study, and many more
+                  <span className="text-highlight">{t("trustedClients.sectorTitle")}</span> {t("trustedClients.sectors")}
                 </h3>
                 <p>
-                  Installed in numerous strategic sites, ensuring comprehensive coverage and accurate data collection.
+                  {t("trustedClients.description")}
                 </p>
               </div>
             </div>
@@ -677,7 +456,7 @@ export default async function PranaAirHomepage() {
       <section className="case-studies-sec">
         <div className="container">
           <div className="case-studies-heading">
-            <h2>Some of Our Case Studies</h2>
+            <h2>{t("caseStudies.title")}</h2>
           </div>
         </div>
         <div className="case-studies-slider">
@@ -694,7 +473,7 @@ export default async function PranaAirHomepage() {
                   height={200}
                   className="case-study-image"
                 />
-                <h3>How Prana Air helped Mahindra Lifespaces</h3>
+                <h3>{t("caseStudies.case1")}</h3>
               </Link>
             </div>
             <div className="case-study-item">
@@ -709,7 +488,7 @@ export default async function PranaAirHomepage() {
                   height={200}
                   className="case-study-image"
                 />
-                <h3>Aided in Air Quality Monitoring Solutions for INTERGLOBE</h3>
+                <h3>{t("caseStudies.case2")}</h3>
               </Link>
             </div>
             <div className="case-study-item">
@@ -724,7 +503,7 @@ export default async function PranaAirHomepage() {
                   height={200}
                   className="case-study-image"
                 />
-                <h3>How Prana Air helped CII to monitor air pollution</h3>
+                <h3>{t("caseStudies.case3")}</h3>
               </Link>
             </div>
             <div className="case-study-item">
@@ -739,7 +518,7 @@ export default async function PranaAirHomepage() {
                   height={200}
                   className="case-study-image"
                 />
-                <h3>How Prana Air aided Ola and Microsoft</h3>
+                <h3>{t("caseStudies.case4")}</h3>
               </Link>
             </div>
             <div className="case-study-item">
@@ -754,7 +533,7 @@ export default async function PranaAirHomepage() {
                   height={200}
                   className="case-study-image"
                 />
-                <h3>Prana Air aids TATA Steel</h3>
+                <h3>{t("caseStudies.case5")}</h3>
               </Link>
             </div>
           </div>
@@ -766,9 +545,9 @@ export default async function PranaAirHomepage() {
         <div className="container">
           <div className="breathing-fresh-air-content">
             <div className="breathing-fresh-air-txt">
-              <h2>Breathing Fresh Air Is Not An Option, It Is Our Right</h2>
+              <h2>{t("freshAir.title")}</h2>
               <Link href="/fresh-air-machine/" className="fresh-air-button">
-                Know More
+                {t("freshAir.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/green-arrow.png"
                   alt="link icon"
@@ -787,16 +566,14 @@ export default async function PranaAirHomepage() {
         <div className="container">
           <div className="most-accurate-content">
             <div className="most-accurate-text">
-              <h3>Most Accurate & Low-Cost</h3>
+              <h3>{t("accurate.title")}</h3>
               <h4>
-                Prana Air Monitors, Reliable
-                <br />
-                Alternative To Costly Devices
+                {t("accurate.subtitle")}
               </h4>
             </div>
             <div className="accurate-btn">
               <Link href="https://www.pranaair.com/air-quality-data-accuracy/" className="accuracy-button">
-                Check Accuracy
+                {t("accurate.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/green-arrow.png"
                   alt="link icon"
@@ -817,10 +594,10 @@ export default async function PranaAirHomepage() {
               <div className="solution-page-tab">
                 <div className="solution-text">
                   <h3>
-                    Air Quality <span className="text-highlight">Solutions</span>
+                    {t("solutions.title")} <span className="text-highlight">{t("solutions.highlight")}</span>
                   </h3>
                   <Link href="/solutions-by-application" className="solutions-button">
-                    Explore More
+                    {t("solutions.button")}
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                       alt="link button icon"
@@ -840,9 +617,7 @@ export default async function PranaAirHomepage() {
                       className="solution-image"
                     />
                     <h4>
-                      Smart City
-                      <br />
-                      Projects
+                      {t("solutions.smartCity")}
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                         alt="link icon"
@@ -866,9 +641,7 @@ export default async function PranaAirHomepage() {
                       className="solution-image"
                     />
                     <h4>
-                      Institutes/
-                      <br />
-                      Schools
+                      {t("solutions.institutes")}
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                         alt="link icon"
@@ -888,9 +661,7 @@ export default async function PranaAirHomepage() {
                       className="solution-image"
                     />
                     <h4>
-                      Construction
-                      <br />
-                      Sites
+                      {t("solutions.construction")}
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                         alt="link iconn"
@@ -916,9 +687,7 @@ export default async function PranaAirHomepage() {
                       className="solution-image"
                     />
                     <h4>
-                      Hotel
-                      <br />
-                      Businesses
+                      {t("solutions.hotel")}
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                         alt="link icon"
@@ -938,7 +707,7 @@ export default async function PranaAirHomepage() {
                       className="solution-image"
                     />
                     <h4>
-                      Airports
+                      {t("solutions.airports")}
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                         alt="link icon"
@@ -962,9 +731,7 @@ export default async function PranaAirHomepage() {
                       className="solution-image"
                     />
                     <h4>
-                      Hospital/
-                      <br />
-                      Healthcare
+                      {t("solutions.hospital")}
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                         alt="link icon"
@@ -984,9 +751,7 @@ export default async function PranaAirHomepage() {
                       className="solution-image"
                     />
                     <h4>
-                      Real
-                      <br />
-                      Estates
+                      {t("solutions.realEstate")}
                       <Image
                         src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
                         alt="link icon"
@@ -1020,7 +785,7 @@ export default async function PranaAirHomepage() {
               </li>
               <li>
                 <h2>
-                  Discover why people love <span className="text-highlight">Prana Air</span>
+                  {t("discover.title")} <span className="text-highlight">Prana Air</span>
                 </h2>
               </li>
             </ul>
@@ -1035,13 +800,10 @@ export default async function PranaAirHomepage() {
                   width={60}
                   height={60}
                 />
-                <h3>Dr. Siddhartha Agarwal</h3>
-                <h4>Assistant Professor, IIT (ISM) Dhanbad, India.</h4>
+                <h3>{t("discover.testimonial1.name")}</h3>
+                <h4>{t("discover.testimonial1.position")}</h4>
                 <p>
-                  Prana Air outdoor air quality monitors have been a valuable tool in our environmental project. The
-                  devices provide reliable data that has helped us to track air quality trends over time. The
-                  organization is sincere and dedicated towards its customers. Their customer service is also excellent.
-                  I would recommend them to everyone who is working in the field of Environment or Air quality.
+                  {t("discover.testimonial1.text")}
                 </p>
               </div>
               <div className="clinet-txt">
@@ -1051,13 +813,10 @@ export default async function PranaAirHomepage() {
                   width={60}
                   height={60}
                 />
-                <h3>Dr. Surender Yadav</h3>
-                <h4>General Manager, J.M. Envirolab Pvt. Ltd.</h4>
+                <h3>{t("discover.testimonial2.name")}</h3>
+                <h4>{t("discover.testimonial2.position")}</h4>
                 <p>
-                  We have procured multiple Prana Air Air quality monitors for our work. The monitors have been valuable
-                  tool in our field of work. The devices provide accurate and reliable data that has helped us immensely
-                  in our application. The devices are capable of performing in harsh situations as well. Their customer
-                  service is also very responsive in case of any rare occurrence of malfunction.
+                  {t("discover.testimonial2.text")}
                 </p>
               </div>
               <div className="clinet-txt">
@@ -1067,13 +826,10 @@ export default async function PranaAirHomepage() {
                   width={60}
                   height={60}
                 />
-                <h3>Anil Sobti</h3>
-                <h4>General Manager-commercial, Unity Group</h4>
+                <h3>{t("discover.testimonial3.name")}</h3>
+                <h4>{t("discover.testimonial3.position")}</h4>
                 <p>
-                  We have been using the Prana Air Air Quality monitors, installed by Purelogic Labs India Pvt. Ltd. at
-                  our different construction sites and have found their product accurate and reliable. The devices
-                  installed have helped us to comply with the air quality standards and ensure the safety of our
-                  workers. The after-sales service is very prompt and excellent.
+                  {t("discover.testimonial3.text")}
                 </p>
               </div>
             </div>
@@ -1096,12 +852,11 @@ export default async function PranaAirHomepage() {
               </div>
               <div className="award-txt">
                 <h2>
-                  <span className="text-highlight">Best Wearable Brand Award </span>
-                  Winner in 2019 by IHW council
+                  <span className="text-highlight">{t("awards.wearable.title")} </span>
+                  {t("awards.wearable.subtitle")}
                 </h2>
                 <p>
-                  Prana Air is proud to receive the Wearable Brand Award at the 4th Edition Good Air Summit and Awards.
-                  This recognition highlights our commitment to innovative solutions for clean air.
+                  {t("awards.wearable.description")}
                 </p>
               </div>
             </div>
@@ -1116,13 +871,11 @@ export default async function PranaAirHomepage() {
               </div>
               <div className="award-txt">
                 <h2>
-                  <span className="text-highlight">Best Monitoring Devices Brand Award </span>
-                  in 2019 by IHW Council
+                  <span className="text-highlight">{t("awards.monitoring.title")} </span>
+                  {t("awards.monitoring.subtitle")}
                 </h2>
                 <p>
-                  We are pleased to announce that we received the prestigious Monitoring Devices Brand Award at the
-                  highly regarded 4th Edition Good Air Summit and Awards. Our regular development of new ideas to aid in
-                  reducing air pollution demonstrates our commitment to bettering air quality everywhere.
+                  {t("awards.monitoring.description")}
                 </p>
               </div>
             </div>
@@ -1136,14 +889,14 @@ export default async function PranaAirHomepage() {
           <div className="query-content">
             <div className="query-heading">
               <h2>
-                <span className="text-highlight">Have a Query?</span>
+                <span className="text-highlight">{t("query.title")}</span>
                 <br />
-                Get in touch with us
+                {t("query.subtitle")}
               </h2>
             </div>
             <div className="lets-talk-link">
               <Link href="https://www.pranaair.com/contact/">
-                Let Talk
+                {t("query.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
                   alt="link icon"

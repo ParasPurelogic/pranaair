@@ -1,23 +1,22 @@
-"use client"
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect } from "react";
 
-export default function SeamleassConnectivitySection() {
-  useEffect(() => {
-    import('bootstrap/dist/js/bootstrap.bundle.min.js');
-  }, []);
+import Image from "next/image"
+import Link from "next/link"
+import { getServerTranslation } from "@/i18n/server"
+
+export default async function SeamleassConnectivitySection() {
+  const { t } = await getServerTranslation("home")
+
 
   return (
     <section className="seamless-connective">
       <div className="container">
         <div className="connectivity-header">
           <div className="seamless-connect-heading">
-            <h2>Seamless Connectivity for Air Quality Monitoring</h2>
+            <h2>{t("seamlessConnectivity.title")}</h2>
           </div>
           <div className="seamless-txt">
             <p>
-              Connect Prana Airs air quality monitoring devices effortlessly, designed for seamless integration with AQI platforms.
+              {t("seamlessConnectivity.description")}
             </p>
           </div>
         </div>
@@ -35,7 +34,7 @@ export default function SeamleassConnectivitySection() {
                 aria-controls="tab1-seamless"
                 aria-selected="true"
               >
-                AQI Mobile App <i className="tab-arrow"></i>
+                {t("connectivity.mobileApp")} <i className="tab-arrow"></i>
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -49,7 +48,7 @@ export default function SeamleassConnectivitySection() {
                 aria-controls="tab2-seamless"
                 aria-selected="false"
               >
-                Web-Dashboard <i className="tab-arrow"></i>
+                {t("connectivity.webDashboard")} <i className="tab-arrow"></i>
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -63,7 +62,7 @@ export default function SeamleassConnectivitySection() {
                 aria-controls="tab3-seamless"
                 aria-selected="false"
               >
-                AQI TV App <i className="tab-arrow"></i>
+                {t("connectivity.tvApp")} <i className="tab-arrow"></i>
               </button>
             </li>
           </ul>
@@ -88,12 +87,12 @@ export default function SeamleassConnectivitySection() {
                       />
                     </li>
                     <li>
-                      <h3>Mobile App</h3>
-                      <h4>Seamless Connectivity</h4>
+                      <h3>{t("connectivity.mobileAppTitle")}</h3>
+                      <h4>{t("connectivity.mobileAppSubtitle")}</h4>
                     </li>
                   </ul>
                   <p>
-                    Stay informed with real-time updates and personalized alerts on your mobile app, ensuring you always know the air quality around you, wherever you are.
+                    {t("connectivity.mobileAppDescription")}
                   </p>
                   <div className="connect-btn-box">
                     <Link href="https://apps.apple.com/tt/app/aqi/id1439684571" className="iso-btn">
@@ -107,9 +106,9 @@ export default function SeamleassConnectivitySection() {
                           />
                         </li>
                         <li>
-                          <span className="btn-txt-small">Download on the</span>
+                          <span className="btn-txt-small">  {t("connectivity.downloadO")}</span>
                           <br />
-                          <span className="btan-txt">App Store</span>
+                          <span className="btan-txt">  {t("connectivity.appStore")}</span>
                         </li>
                       </ul>
                     </Link>
@@ -124,9 +123,9 @@ export default function SeamleassConnectivitySection() {
                           />
                         </li>
                         <li>
-                          <span className="btn-txt-small">Get it on</span>
+                          <span className="btn-txt-small">{t("connectivity.getItOn")}</span>
                           <br />
-                          <span className="btan-txt">Google Play</span>
+                          <span className="btan-txt">{t("connectivity.googlePlay")}</span>
                         </li>
                       </ul>
                     </Link>
@@ -153,10 +152,10 @@ export default function SeamleassConnectivitySection() {
               {/* Web-Dashboard Tab Content */}
               <div className="panel-content">
                 <div className="connectivety-tab-text">
-                  <h3>Web dashboard connectivity</h3>
-                  <h4>Real-Time Insights</h4>
+                  <h3>{t("connectivity.webDashboardTitle")}</h3>
+                  <h4>{t("connectivity.webDashboardSubtitle")}</h4>
                   <p>
-                    Discover real-time insights into the air quality with our intuitive web dashboard connectivity. Enjoy seamless integration across multiple devices for a complete picture of your air environment.
+                    {t("connectivity.webDashboardDescription")}
                   </p>
                   <Link href="https://www.aqi.in/userlogin" className="dashboard-button">
                     <ul className="seamless-connect-btn dash-btn">
@@ -169,9 +168,9 @@ export default function SeamleassConnectivitySection() {
                         />
                       </li>
                       <li>
-                        <span className="btn-txt-small">View</span>
+                        <span className="btn-txt-small"> {t("connectivity.view")}</span>
                         <br />
-                        <span className="btan-txt">Dashboard</span>
+                        <span className="btan-txt"> {t("connectivity.dashboard")}</span>
                       </li>
                     </ul>
                   </Link>
@@ -207,12 +206,12 @@ export default function SeamleassConnectivitySection() {
                       />
                     </li>
                     <li>
-                      <h3>TV connectivity</h3>
-                      <h4>View Air quality data</h4>
+                      <h3>{t("connectivity.tvConnectivityTitle")}</h3>
+                      <h4>{t("connectivity.tvConnectivitySubtitle")}</h4>
                     </li>
                   </ul>
                   <p>
-                    Easily view your air quality data on your TV screen with our seamless connectivity feature. Stay informed about your environment with clear, easy-to-read visuals directly on your TV.
+                    {t("connectivity.tvConnectivityDescription")}
                   </p>
                 </div>
                 <div className="connectivety-tab-bg">

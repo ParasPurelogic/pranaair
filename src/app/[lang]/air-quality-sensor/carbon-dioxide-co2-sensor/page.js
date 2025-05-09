@@ -1,130 +1,15 @@
-"use client"
-
-import { useState, useEffect, useRef } from "react"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+import ProductCarousel from "@/Components/Pages/CarbonDioxidesensor/product-carousel"
 import "./style.css"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
-// Register the ScrollTrigger plugin
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger)
-}
+import ContactForm from "@/Components/Contacform/ContactForm"
+import CO2GraphAnimation from "@/Components/Pages/CarbonDioxidesensor/co2-graph-animation"
 
 export default function CO2SensorPage() {
-  // State for tabs in the feature section
-  const [activeTab, setActiveTab] = useState("tab1")
 
-  // State for custom tabs in the index score section
-  const [activeCustomTab, setActiveCustomTab] = useState("custom-tab1")
-
-  // Refs for GSAP animations
-  const page2Ref = useRef(null)
-  const partnerRef = useRef(null)
-  const swipRef = useRef(null)
-
-  // Function to handle tab changes
-  const openTab = (tabId) => {
-    setActiveTab(tabId)
-  }
-
-  // Function to handle custom tab changes
-  const handleCustomTabClick = (tabId) => {
-    setActiveCustomTab(tabId)
-  }
-
-  // Initialize GSAP ScrollTrigger animations
-  useEffect(() => {
-    // Check if window is defined (client-side)
-    if (typeof window !== "undefined") {
-      // Function to initialize ScrollTrigger animations
-      const initScrollTrigger = () => {
-        // Bottom card animation
-        gsap.fromTo(
-          swipRef.current,
-          { y: "100%", opacity: 0 }, // Start off-screen and invisible
-          {
-            y: "-100%", // Move to the top
-            opacity: 1, // Become visible
-            scrollTrigger: {
-              trigger: page2Ref.current,
-              scrub: true,
-              scroller: "body",
-              start: "top 20%",
-              end: "top -80%",
-              pin: true,
-              onUpdate: (self) => {
-                // Gradually hide the top card as the bottom card moves
-                gsap.to(partnerRef.current, {
-                  opacity: 1 - self.progress,
-                  duration: 0.1,
-                  overwrite: true,
-                })
-              },
-            },
-          },
-        )
-      }
-
-      // Media query for desktop
-      const desktopQuery = window.matchMedia("(min-width: 1025px)")
-
-      // Check if the screen width matches the desktop query
-      if (desktopQuery.matches) {
-        console.log("Desktop animation active") // Debugging step
-        initScrollTrigger()
-      } else {
-        console.log("Mobile/tablet detected, ScrollTrigger disabled") // Debugging step
-
-        // Disable ScrollTrigger for smaller screens
-        ScrollTrigger.getAll().forEach((st) => st.kill())
-      }
-
-      // Add event listener for when screen size changes (optional)
-      desktopQuery.addEventListener("change", (e) => {
-        if (e.matches) {
-          // Screen switched to desktop size
-          initScrollTrigger()
-        } else {
-          // Screen switched to mobile/tablet size
-          ScrollTrigger.getAll().forEach((st) => st.kill())
-        }
-      })
-
-      // Ensure ScrollTrigger recalculates everything
-      ScrollTrigger.refresh()
-
-      // Cleanup function
-      return () => {
-        ScrollTrigger.getAll().forEach((st) => st.kill())
-        desktopQuery.removeEventListener("change", (e) => {
-          // Cleanup
-        })
-      }
-    }
-  }, [])
-
-  // Carousel responsive settings
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 2,
-    },
-  }
+  // Text content for the CO2 graph animation
+  const graphTitle = "Create multiple alerts"
+  const graphDescription =
+    "Carbon dioxide is a gas exhaled by human beings as a part of their respiration process. As the population grows and the number of individuals per square foot rises."
+  const graphImageUrl = "https://www.pranaair.com/wp-content/uploads/2025/01/analysis-data.webp"
 
   return (
     <div>
@@ -170,69 +55,104 @@ export default function CO2SensorPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="tab-container">
-                <div className="tab-content" id="tab1" style={{ display: activeTab === "tab1" ? "block" : "none" }}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
-                    alt="Prana Air PM Sensor"
-                  />
-                </div>
-                <div className="tab-content" id="tab2" style={{ display: activeTab === "tab2" ? "block" : "none" }}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
-                    alt="Prana Air PM2.5 Sensor"
-                  />
-                </div>
-                <div className="tab-content" id="tab3" style={{ display: activeTab === "tab3" ? "block" : "none" }}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
-                    alt="Prana Air PM Sensor of metallic body"
-                  />
-                </div>
-                <div className="tab-content" id="tab4" style={{ display: activeTab === "tab4" ? "block" : "none" }}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
-                    alt="Prana Air PM2.5 Sensor of side view"
-                  />
-                </div>
-
-                <div className="tabs">
-                  <button
-                    className={`tab-button ${activeTab === "tab1" ? "active" : ""}`}
-                    onClick={() => openTab("tab1")}
-                  >
+                {/* Tab Content */}
+                <div className="tab-content">
+                  <div className="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
                       alt="Prana Air PM Sensor"
                     />
-                  </button>
-                  <button
-                    className={`tab-button ${activeTab === "tab2" ? "active" : ""}`}
-                    onClick={() => openTab("tab2")}
-                  >
+                  </div>
+                  <div className="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
                       alt="Prana Air PM2.5 Sensor"
                     />
-                  </button>
-                  <button
-                    className={`tab-button ${activeTab === "tab3" ? "active" : ""}`}
-                    onClick={() => openTab("tab3")}
-                  >
+                  </div>
+                  <div className="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
                       alt="Prana Air PM Sensor of metallic body"
                     />
-                  </button>
-                  <button
-                    className={`tab-button ${activeTab === "tab4" ? "active" : ""}`}
-                    onClick={() => openTab("tab4")}
-                  >
+                  </div>
+                  <div className="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
                       alt="Prana Air PM2.5 Sensor of side view"
                     />
-                  </button>
+                  </div>
                 </div>
+                {/* Tab Buttons */}
+                <ul className="nav nav-tabs tabs" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active tab-button"
+                      id="tab1-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab1"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab1"
+                      aria-selected="true"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
+                        alt="Prana Air PM Sensor"
+                      />
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link tab-button"
+                      id="tab2-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab2"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab2"
+                      aria-selected="false"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
+                        alt="Prana Air PM2.5 Sensor"
+                      />
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link tab-button"
+                      id="tab3-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab3"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab3"
+                      aria-selected="false"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
+                        alt="Prana Air PM Sensor of metallic body"
+                      />
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link tab-button"
+                      id="tab4-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tab4"
+                      type="button"
+                      role="tab"
+                      aria-controls="tab4"
+                      aria-selected="false"
+                    >
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2025/01/advanced-carbon-dioxide-sensor.webp"
+                        alt="Prana Air PM2.5 Sensor of side view"
+                      />
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col-md-6">
@@ -509,42 +429,7 @@ export default function CO2SensorPage() {
                 <h3>Analysis of CO2 graph</h3>
               </div>
               {/* GSAP ScrollTrigger Animation Section */}
-              <div className="product-card" id="page2" ref={page2Ref}>
-                <div className="watch-card-inner-box partner" ref={partnerRef}>
-                  <ul>
-                    <li>
-                      <h4>Create multiple alerts</h4>
-                      <p>
-                        Carbon dioxide is a gas exhaled by human beings as a part of their respiration process. As the
-                        population grows and the number of individuals per square foot rises.
-                      </p>
-                    </li>
-                    <li>
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2025/01/analysis-data.webp"
-                        alt="CO2 graph analysis"
-                      />
-                    </li>
-                  </ul>
-                </div>
-                <div className="watch-card-inner-box swip" ref={swipRef}>
-                  <ul>
-                    <li>
-                      <h4>Create multiple alerts</h4>
-                      <p>
-                        Carbon dioxide is a gas exhaled by human beings as a part of their respiration process. As the
-                        population grows and the number of individuals per square foot rises.
-                      </p>
-                    </li>
-                    <li>
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2025/01/analysis-data.webp"
-                        alt="CO2 graph analysis"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <CO2GraphAnimation title={graphTitle} description={graphDescription} imageUrl={graphImageUrl} />
               <div className="row">
                 <div className="col-md-6">
                   <div className="monitor-box-heading">
@@ -606,11 +491,17 @@ export default function CO2SensorPage() {
             <div className="col-md-12">
               <div className="custom-tabs-container">
                 <div className="custom-tabs">
-                  <ul>
-                    <li>
+                  <ul className="nav nav-tabs" id="indexScoreTabs" role="tablist">
+                    <li className="nav-item" role="presentation">
                       <button
-                        className={`custom-tab green ${activeCustomTab === "custom-tab1" ? "active" : ""}`}
-                        onClick={() => handleCustomTabClick("custom-tab1")}
+                        className="custom-tab green active"
+                        id="custom-tab1-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#custom-tab1"
+                        type="button"
+                        role="tab"
+                        aria-controls="custom-tab1"
+                        aria-selected="true"
                       >
                         <h3>
                           Good <img src="https://www.pranaair.com/wp-content/uploads/2025/01/tab-icon.png" alt="" />
@@ -621,10 +512,16 @@ export default function CO2SensorPage() {
                         </ul>
                       </button>
                     </li>
-                    <li>
+                    <li className="nav-item" role="presentation">
                       <button
-                        className={`custom-tab yellow ${activeCustomTab === "custom-tab2" ? "active" : ""}`}
-                        onClick={() => handleCustomTabClick("custom-tab2")}
+                        className="custom-tab yellow"
+                        id="custom-tab2-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#custom-tab2"
+                        type="button"
+                        role="tab"
+                        aria-controls="custom-tab2"
+                        aria-selected="false"
                       >
                         <h3>
                           Moderate <img src="https://www.pranaair.com/wp-content/uploads/2025/01/tab-icon.png" alt="" />
@@ -635,10 +532,16 @@ export default function CO2SensorPage() {
                         </ul>
                       </button>
                     </li>
-                    <li>
+                    <li className="nav-item" role="presentation">
                       <button
-                        className={`custom-tab orange ${activeCustomTab === "custom-tab3" ? "active" : ""}`}
-                        onClick={() => handleCustomTabClick("custom-tab3")}
+                        className="custom-tab orange"
+                        id="custom-tab3-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#custom-tab3"
+                        type="button"
+                        role="tab"
+                        aria-controls="custom-tab3"
+                        aria-selected="false"
                       >
                         <h3>
                           Poor <img src="https://www.pranaair.com/wp-content/uploads/2025/01/tab-icon.png" alt="" />
@@ -649,10 +552,16 @@ export default function CO2SensorPage() {
                         </ul>
                       </button>
                     </li>
-                    <li>
+                    <li className="nav-item" role="presentation">
                       <button
-                        className={`custom-tab pink ${activeCustomTab === "custom-tab4" ? "active" : ""}`}
-                        onClick={() => handleCustomTabClick("custom-tab4")}
+                        className="custom-tab pink"
+                        id="custom-tab4-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#custom-tab4"
+                        type="button"
+                        role="tab"
+                        aria-controls="custom-tab4"
+                        aria-selected="false"
                       >
                         <h3>
                           Unhealthy{" "}
@@ -664,10 +573,16 @@ export default function CO2SensorPage() {
                         </ul>
                       </button>
                     </li>
-                    <li>
+                    <li className="nav-item" role="presentation">
                       <button
-                        className={`custom-tab puple ${activeCustomTab === "custom-tab5" ? "active" : ""}`}
-                        onClick={() => handleCustomTabClick("custom-tab5")}
+                        className="custom-tab puple"
+                        id="custom-tab5-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#custom-tab5"
+                        type="button"
+                        role="tab"
+                        aria-controls="custom-tab5"
+                        aria-selected="false"
                       >
                         <h3>
                           Severe <img src="https://www.pranaair.com/wp-content/uploads/2025/01/tab-icon.png" alt="" />
@@ -678,10 +593,16 @@ export default function CO2SensorPage() {
                         </ul>
                       </button>
                     </li>
-                    <li>
+                    <li className="nav-item" role="presentation">
                       <button
-                        className={`custom-tab red ${activeCustomTab === "custom-tab6" ? "active" : ""}`}
-                        onClick={() => handleCustomTabClick("custom-tab6")}
+                        className="custom-tab red"
+                        id="custom-tab6-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#custom-tab6"
+                        type="button"
+                        role="tab"
+                        aria-controls="custom-tab6"
+                        aria-selected="false"
                       >
                         <h3>
                           Hazardous{" "}
@@ -695,56 +616,43 @@ export default function CO2SensorPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="custom-tab-content">
+                <div className="tab-content" id="indexScoreTabsContent">
                   <div
                     id="custom-tab1"
-                    className={`custom-content ${activeCustomTab === "custom-tab1" ? "active" : ""}`}
+                    className="tab-pane fade show active"
+                    role="tabpanel"
+                    aria-labelledby="custom-tab1-tab"
                   >
                     <p>
                       Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and
                       accurate.
                     </p>
                   </div>
-                  <div
-                    id="custom-tab2"
-                    className={`custom-content ${activeCustomTab === "custom-tab2" ? "active" : ""}`}
-                  >
+                  <div id="custom-tab2" className="tab-pane fade" role="tabpanel" aria-labelledby="custom-tab2-tab">
                     <p>
                       Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and
                       accurate.
                     </p>
                   </div>
-                  <div
-                    id="custom-tab3"
-                    className={`custom-content ${activeCustomTab === "custom-tab3" ? "active" : ""}`}
-                  >
+                  <div id="custom-tab3" className="tab-pane fade" role="tabpanel" aria-labelledby="custom-tab3-tab">
                     <p>
                       Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and
                       accurate.
                     </p>
                   </div>
-                  <div
-                    id="custom-tab4"
-                    className={`custom-content ${activeCustomTab === "custom-tab4" ? "active" : ""}`}
-                  >
+                  <div id="custom-tab4" className="tab-pane fade" role="tabpanel" aria-labelledby="custom-tab4-tab">
                     <p>
                       Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and
                       accurate.
                     </p>
                   </div>
-                  <div
-                    id="custom-tab5"
-                    className={`custom-content ${activeCustomTab === "custom-tab5" ? "active" : ""}`}
-                  >
+                  <div id="custom-tab5" className="tab-pane fade" role="tabpanel" aria-labelledby="custom-tab5-tab">
                     <p>
                       Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and
                       accurate.
                     </p>
                   </div>
-                  <div
-                    id="custom-tab6"
-                    className={`custom-content ${activeCustomTab === "custom-tab6" ? "active" : ""}`}
-                  >
+                  <div id="custom-tab6" className="tab-pane fade" role="tabpanel" aria-labelledby="custom-tab6-tab">
                     <p>
                       Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and
                       accurate.
@@ -804,15 +712,7 @@ export default function CO2SensorPage() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                className="app-slider"
-                showDots={true}
-                arrows={false}
-              >
+              <ProductCarousel className="app-slider" showDots={true} arrows={false}>
                 <div className="slider-box">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2025/01/Air-Filtration-Systems.webp"
@@ -879,7 +779,7 @@ export default function CO2SensorPage() {
                     accurate.
                   </p>
                 </div>
-              </Carousel>
+              </ProductCarousel>
             </div>
           </div>
         </div>
@@ -1123,10 +1023,7 @@ export default function CO2SensorPage() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -1142,15 +1039,7 @@ export default function CO2SensorPage() {
               <div className="also-like-heading">
                 <h2>You may also like</h2>
               </div>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                className="allsensor-slide"
-                showDots={true}
-                arrows={false}
-              >
+              <ProductCarousel className="allsensor-slide" showDots={true} arrows={false} >
                 <div className="may-also">
                   <a href="#">
                     <img
@@ -1247,7 +1136,7 @@ export default function CO2SensorPage() {
                     <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
                   </h5>
                 </div>
-              </Carousel>
+              </ProductCarousel>
             </div>
           </div>
         </div>
@@ -1255,4 +1144,3 @@ export default function CO2SensorPage() {
     </div>
   )
 }
-

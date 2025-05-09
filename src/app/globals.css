@@ -548,6 +548,16 @@ a {
   text-align: left;
 }
 
+.category-button img {
+  width: 30px;
+  height: auto;
+}
+
+.subcategory-button img {
+  width: 40px;
+  height: auto;
+}
+
 .mobile-category-button img {
   width: 24px;
   height: 24px;
@@ -876,6 +886,7 @@ button.w-8.h-8.rounded-md.flex.items-center.justify-center.bg-green-600.text-whi
   border: 0;
   padding: 5px 12px;
 }
+
 .position-absolute {
   left: 0;
   top: 20px;

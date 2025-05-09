@@ -1828,12 +1828,6 @@ body {
   flex-shrink: 0;
 }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 25px;
-}
 
 .faq-answer.show {
   max-height: 500px;
@@ -2736,7 +2730,8 @@ body {
 }
 
 .gallery-thumbnail.active {
-  background-color: #8bc34a;
+  border: 4px solid #7ab261;
+  padding: 5px;
 }
 
 .gallery-thumbnail img {

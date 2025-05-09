@@ -104,6 +104,10 @@ a {
   margin: 0px auto;
 }
 
+.tabs li {
+  width: 23%;
+}
+
 .tab-button {
   padding: 0px;
   cursor: pointer;

@@ -1,178 +1,20 @@
-"use client"
-import { useEffect, useState, useRef } from "react"
+
 import Link from "next/link"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+import TVOCProductNavbar from "@/Components/Pages/NanoTvocmonitor/tvoc-product-navbar"
+import TVOCProductGallery from "@/Components/Pages/NanoTvocmonitor/tvoc-product-gallery"
+import TVOCMonitorSlider from "@/Components/Pages/NanoTvocmonitor/tvoc-monitor-slider"
+import TVOCProductComparison from "@/Components/Pages/NanoTvocmonitor/tvoc-product-comparison"
+import TVOCFaqAccordion from "@/Components/Pages/NanoTvocmonitor/tvoc-faq-accordion"
 
 export default function NanoTVOCMonitorPage() {
-  // State for active tab
-  const [activeTab, setActiveTab] = useState("Overview")
-  const [activeImage, setActiveImage] = useState(0)
-  const navbarRef = useRef(null)
-  const tabsContainerRef = useRef(null)
-  const [activeFaq, setActiveFaq] = useState(null)
 
-  // Images for the product gallery
-  const productImages = [
-    "https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-tvoc-hcho-odor-monitor.png",
-    "https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-tvoc-odor-monitor.png",
-    "https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-tvoc-odor-monitor-sideview.png",
-    "https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-tvoc-monitor-backview.png",
-  ]
-
-  // Initialize Bootstrap JS components after component mounts
-  useEffect(() => {
-    // Dynamically import Bootstrap JS only on the client side
-    import("bootstrap/dist/js/bootstrap.bundle.min.js")
-      .then(() => {
-        console.log("Bootstrap JS initialized")
-      })
-      .catch((err) => {
-        console.error("Failed to load Bootstrap JS:", err)
-      })
-
-    // Add scroll event listener for sticky navbar
-    const handleScroll = () => {
-      const navbar = navbarRef.current
-      if (navbar) {
-        if (window.scrollY > 0) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky")
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-
-    // Add scroll event for buy now button on mobile
-    const handleBuyNowButtonScroll = () => {
-      const buyNowButton = document.getElementById("buy-now-button")
-      if (buyNowButton) {
-        if (window.pageYOffset > 1200) {
-          buyNowButton.style.display = "block"
-        } else {
-          buyNowButton.style.display = "none"
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleBuyNowButtonScroll)
-
-    // Clean up event listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("scroll", handleBuyNowButtonScroll)
-    }
-  }, [])
-
-  // Function to scroll to section when tab is clicked
-  const scrollToTabSection = (sectionId) => {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      // Add offset for the sticky header
-      const yOffset = -70
-      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-      window.scrollTo({
-        top: y,
-        behavior: "smooth",
-      })
-    }
-    setActiveTab(sectionId)
-  }
-
-  // Handle horizontal scrolling for tabs on mobile
-  useEffect(() => {
-    const tabsContainer = tabsContainerRef.current
-    if (tabsContainer) {
-      const handleWheel = (e) => {
-        if (window.innerWidth < 768) {
-          e.preventDefault()
-          tabsContainer.scrollLeft += e.deltaY
-        }
-      }
-
-      tabsContainer.addEventListener("wheel", handleWheel, { passive: false })
-
-      return () => {
-        tabsContainer.removeEventListener("wheel", handleWheel)
-      }
-    }
-  }, [])
-
-  const handleThumbnailClick = (index) => {
-    setActiveImage(index)
-  }
-
-  const toggleFaq = (faqId) => {
-    setActiveFaq(activeFaq === faqId ? null : faqId)
-  }
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
   return (
     <main className="nano-tvoc-monitor-page">
+
       {/* Sticky Navigation Bar */}
-      <div className="product-navbar" ref={navbarRef}>
-        <div className="container">
-          <div className="nav-tabs" ref={tabsContainerRef}>
-            <button
-              className={`nav-tab ${activeTab === "Overview" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Overview")}
-            >
-              Overview
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Features" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Features")}
-            >
-              Features
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Functions" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Functions")}
-            >
-              Functions
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Tech-Specs" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Tech-Specs")}
-            >
-              Tech-Specs
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "Compare" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("Compare")}
-            >
-              Compare
-            </button>
-            <button
-              className={`nav-tab ${activeTab === "FAQs" ? "active" : ""}`}
-              onClick={() => scrollToTabSection("FAQs")}
-            >
-              FAQs
-            </button>
-          </div>
-        </div>
-      </div>
+      <TVOCProductNavbar />
 
       {/* Breadcrumbs */}
       <section className="bredcrums-pages">
@@ -202,26 +44,7 @@ export default function NanoTVOCMonitorPage() {
         <div className="container">
           <div className="row order-colum">
             {/* Product Gallery */}
-            <div className="col-lg-4 col-md-12 ipad">
-              <div className="tabcontent disply" id="Comonitora">
-                <img
-                  src={productImages[activeImage] || "/placeholder.svg"}
-                  alt="prana air nano tvoc hcho odor monitor"
-                  className="img-fluid"
-                />
-              </div>
-              <div className="tab">
-                {productImages.map((image, index) => (
-                  <button
-                    key={index}
-                    className={`tablinks ${activeImage === index ? "active" : ""}`}
-                    onClick={() => handleThumbnailClick(index)}
-                  >
-                    <img src={image || "/placeholder.svg"} alt={`TVOC Monitor view ${index + 1}`} />
-                  </button>
-                ))}
-              </div>
-            </div>
+            <TVOCProductGallery />
 
             {/* Product Information */}
             <div className="col-lg-4 col-md-12 ipad">
@@ -260,7 +83,7 @@ export default function NanoTVOCMonitorPage() {
                 <div className="model-box">
                   <h5>model</h5>
                   <center>
-                    <select className="nav dropbtn" onChange={(e) => (window.location = e.target.value)}>
+                    <select className="nav dropbtn">
                       <option value="https://www.pranaair.com/air-quality-monitor/handheld/nano-tvoc-monitor/">
                         TVOC & HCHO
                       </option>
@@ -280,11 +103,20 @@ export default function NanoTVOCMonitorPage() {
                     </div>
                     <div className="buy-btns">
                       <br />
-                      <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-tvoc-monitor/"
-                        method="post" enctype="multipart/form-data">
-                        <button type="submit" name="add-to-cart" value="76924"
-                          class="single_add_to_cart_button button alt">Buy Now</button>
-
+                      <form
+                        className="cart new-cart"
+                        action="https://www.pranaair.com/air-quality-monitor/handheld/nano-tvoc-monitor/"
+                        method="post"
+                        encType="multipart/form-data"
+                      >
+                        <button
+                          type="submit"
+                          name="add-to-cart"
+                          value="76924"
+                          className="single_add_to_cart_button button alt"
+                        >
+                          Buy Now
+                        </button>
                       </form>
                     </div>
                   </div>
@@ -568,82 +400,7 @@ export default function NanoTVOCMonitorPage() {
 
       {/* SECTION 6: Slider Section */}
       <section className="co-monitore-outdoor-slider">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          className="home-slider"
-          arrows={true}
-        >
-          <div>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="home-slider">
-                    <div>
-                      <div className="row mob-revers">
-                        <div className="col-md-7 ipad">
-                          <div className="ac_slider_content">
-                            <h2>Accurate · Compact · Reliable</h2>
-                            <p>
-                              Experience the convenience of this sleek and compact TVOC monitoring device, which eliminates
-                              the need for bulky and complex equipment. With its reliable data on indoor air quality, you
-                              can stay informed and take control of your environment effortlessly.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="col-md-5 ipad">
-                          <div className="ac_slider_left_box">
-                            <img
-                              src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-odor-tvoc-monitor-with-real-time-data.jpeg"
-                              alt="prana air nano odor tvoc monitor with real-time data"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="home-slider">
-                    <div>
-                      <div className="row mob-revers">
-                        <div className="col-md-7 ipad">
-                          <div className="ac_slider_content">
-                            <h2>Versatile · Convenient · Sleek</h2>
-                            <p>
-                              Experience the ultimate in practicality and versatility with our sleek and convenient TVOC pocket monitor. From tracking indoor air quality to adapting to different air quality environments, it’s the must-have device for effortless monitoring wherever you go.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="col-md-5 ipad">
-                          <div className="ac_slider_left_box">
-                            <img
-                              src="https://www.pranaair.com/wp-content/uploads/2023/05/portable-nano-tvoc-hcho-monitor.jpg"
-                              alt="prana air nano odor tvoc monitor with real-time data"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Carousel>
-
+        <TVOCMonitorSlider />
       </section>
 
       {/* SECTION 7: Real-Time Data */}
@@ -1057,63 +814,7 @@ export default function NanoTVOCMonitorPage() {
               </div>
             </div>
           </div>
-          <div className="row mob-scroll">
-            <div className="col-md-3">
-              <div className="comp-heading mobshow">
-                <h4>TVOC Monitor</h4>
-              </div>
-              <div className="product-discription">
-                <ul>
-                  <li>Description :</li>
-                  <li>Parameter :</li>
-                  <li>Price :</li>
-                  <li>Weight :</li>
-                  <li>Range :</li>
-                  <li>Accuracy :</li>
-                  <li>Technology :</li>
-                  <li>Portability :</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-md-9">
-              <div className="dis-img">
-                <div className="disc-inner-img-one">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-tvoc-hcho-odor-monitor.png"
-                    alt="prana air nano tvoc monitor low cost"
-                  />
-                </div>
-                <div className="disc-inner-img-two">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/06/high-end-tvoc-monitor.png"
-                    alt="tsi high end tvoc monitor"
-                  />
-                </div>
-              </div>
-              <div className="product-feature">
-                <ul className="mini-co-monitor">
-                  <li>Nano TVOC Monitor</li>
-                  <li className="tab-bg">TVOC, HCHO, Temp, Humidity</li>
-                  <li>Low Cost</li>
-                  <li className="tab-bg">75g</li>
-                  <li>0~9.999 mg/m3</li>
-                  <li className="tab-bg">±5%</li>
-                  <li>MOS Sensing</li>
-                  <li className="tab-bg">Small & easy to carry</li>
-                </ul>
-                <ul className="co-multifuntion-monitor">
-                  <li>High-End TVOC Monitor</li>
-                  <li>TVOC</li>
-                  <li>High Cost</li>
-                  <li>Almost 1 Kg</li>
-                  <li>0-20,000 ppb</li>
-                  <li>±3%</li>
-                  <li>PID Sensing</li>
-                  <li>Comparatively less portable</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <TVOCProductComparison />
         </div>
       </section>
 
@@ -1129,78 +830,7 @@ export default function NanoTVOCMonitorPage() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="my-faq">
-                <div className="inner-faq">
-                  <div className={`faq-item ${activeFaq === 1 ? "active" : ""}`} onClick={() => toggleFaq(1)}>
-                    <h4>1. What gases can this nano monitor of Prana Air detect?</h4>
-                    {activeFaq === 1 && (
-                      <div className="faq-para">
-                        <p>This nano monitor is designed to detect TVOC and HCHO gases.</p>
-                      </div>
-                    )}
-                  </div>
-                  <div className={`faq-item ${activeFaq === 2 ? "active" : ""}`} onClick={() => toggleFaq(2)}>
-                    <h4>2. Can this nano monitor detect gases other than TVOC and HCHO?</h4>
-                    {activeFaq === 2 && (
-                      <div className="faq-para">
-                        <p>No, this device is specifically designed to detect TVOC and HCHO gases only.</p>
-                      </div>
-                    )}
-                  </div>
-                  <div className={`faq-item ${activeFaq === 3 ? "active" : ""}`} onClick={() => toggleFaq(3)}>
-                    <h4>3. Can Prana Air nano TVOC/HCHO monitor measure temperature and humidity levels?</h4>
-                    {activeFaq === 3 && (
-                      <div className="faq-para">
-                        <p>
-                          Yes, this device also measures temperature and humidity levels in addition to TVOC and HCHO
-                          gases.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                  <div className={`faq-item ${activeFaq === 4 ? "active" : ""}`} onClick={() => toggleFaq(4)}>
-                    <h4>4. How accurate is this nano TVOC/HCHO monitor?</h4>
-                    {activeFaq === 4 && (
-                      <div className="faq-para">
-                        <p>
-                          The device is equipped with high-precision sensors that provide accurate and reliable data
-                          (±5%).
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                  <div className={`faq-item ${activeFaq === 5 ? "active" : ""}`} onClick={() => toggleFaq(5)}>
-                    <h4>5. Is this nano monitor easy to use?</h4>
-                    {activeFaq === 5 && (
-                      <div className="faq-para">
-                        <p>Yes, the device is designed to be user-friendly and easy to operate.</p>
-                      </div>
-                    )}
-                  </div>
-                  <div className={`faq-item ${activeFaq === 6 ? "active" : ""}`} onClick={() => toggleFaq(6)}>
-                    <h4>6. Is Prana Air nano monitor portable?</h4>
-                    {activeFaq === 6 && (
-                      <div className="faq-para">
-                        <p>Yes, the device is small and compact, making it easy to carry around wherever you go.</p>
-                      </div>
-                    )}
-                  </div>
-                  <div className={`faq-item ${activeFaq === 7 ? "active" : ""}`} onClick={() => toggleFaq(7)}>
-                    <h4>7. Does this monitor have alarm system?</h4>
-                    {activeFaq === 7 && (
-                      <div className="faq-para">
-                        <p>
-                          Yes, it gives an alarm sound when the TVOCs value is yellow color{" "}
-                          <b>
-                            0.100mg/m<sup>3</sup>.{" "}
-                          </b>{" "}
-                          It will start a beep cycle alarm, once every 10 minutes.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
+              <TVOCFaqAccordion />
             </div>
           </div>
         </div>
@@ -1208,4 +838,3 @@ export default function NanoTVOCMonitorPage() {
     </main>
   )
 }
-

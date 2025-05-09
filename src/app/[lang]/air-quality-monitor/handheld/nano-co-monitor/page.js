@@ -1,112 +1,16 @@
-"use client"
 
-import { useState, useEffect } from "react"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+import StickyNav from "@/Components/Pages/NanoComonitor/sticky-nav"
 import "./style.css"
+import ProductImageTabs from "@/Components/Pages/NanoComonitor/product-image-tabs"
+import COMonitorSlider from "@/Components/Pages/NanoComonitor/co-monitor-slider"
+import FaqAccordion from "@/Components/Pages/NanoComonitor/faq-accordion"
 
 export default function NanoCOMonitor() {
-  const [activeTab, setActiveTab] = useState("Comonitora")
-  const [activeNavItem, setActiveNavItem] = useState("overview")
-  const [isSticky, setIsSticky] = useState(false)
-  const [activeFaq, setActiveFaq] = useState(1)
-  const [isContentExpanded, setIsContentExpanded] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 50) {
-        setIsSticky(true)
-      } else {
-        setIsSticky(false)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
-  const handleNavClick = (id) => {
-    setActiveNavItem(id)
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
-  }
-
-  const openCity = (cityName) => {
-    setActiveTab(cityName)
-  }
-
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
 
   return (
     <div>
       {/* Header Section */}
-      <div className={`container-fluid ${isSticky ? "sticky" : ""}`} id="new-header">
-        <ul id="menu">
-          <li>
-            <a
-              href="#overview"
-              className={activeNavItem === "overview" ? "active" : ""}
-              onClick={() => handleNavClick("overview")}
-            >
-              Overview
-            </a>
-          </li>
-          <li>
-            <a
-              href="#features"
-              className={activeNavItem === "features" ? "active" : ""}
-              onClick={() => handleNavClick("features")}
-            >
-              Features
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Keyfunctions"
-              className={activeNavItem === "Keyfunctions" ? "active" : ""}
-              onClick={() => handleNavClick("Keyfunctions")}
-            >
-              Functions
-            </a>
-          </li>
-          <li>
-            <a
-              href="#spec"
-              className={activeNavItem === "spec" ? "active" : ""}
-              onClick={() => handleNavClick("spec")}
-            >
-              Tech-Specs
-            </a>
-          </li>
-          <li>
-            <a
-              href="#compare"
-              className={activeNavItem === "compare" ? "active" : ""}
-              onClick={() => handleNavClick("compare")}
-            >
-              Compare
-            </a>
-          </li>
-        </ul>
-      </div>
+      <StickyNav />
 
       {/* Breadcrumbs Section */}
       <section className="bredcrums-pages">
@@ -142,62 +46,7 @@ export default function NanoCOMonitor() {
         <div className="container">
           <div className="row">
             <div className="col-md-4 ipad">
-              <div>
-                <div id="Comonitora" className={`tabcontent ${activeTab === "Comonitora" ? "disply" : ""}`}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-co-monitor-device.png"
-                    alt="prana air nano co monitor device"
-                  />
-                </div>
-
-                <div id="Comanitorb" className={`tabcontent ${activeTab === "Comanitorb" ? "disply" : ""}`}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/nano-co-monitor-front-view.png"
-                    alt="Prana Air nano co monitor front view"
-                  />
-                </div>
-
-                <div id="Comanitorc" className={`tabcontent ${activeTab === "Comanitorc" ? "disply" : ""}`}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-co-monitor-left-side-view.png"
-                    alt="prana air nano co monitor left side view"
-                  />
-                </div>
-
-                <div id="Comanitord" className={`tabcontent ${activeTab === "Comanitord" ? "disply" : ""}`}>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/nano-co-monitor-back-side-view.png"
-                    alt="Prana Air nano co monitor back side view"
-                  />
-                </div>
-
-                <div className="tab">
-                  <button className="tablinks" onClick={() => openCity("Comonitora")}>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-co-monitor-device.png"
-                      alt="prana air nano co monitor device"
-                    />
-                  </button>
-                  <button className="tablinks" onClick={() => openCity("Comanitorb")}>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/05/nano-co-monitor-front-view.png"
-                      alt="Prana Air nano co monitor front view"
-                    />
-                  </button>
-                  <button className="tablinks" onClick={() => openCity("Comanitorc")}>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-co-monitor-left-side-view.png"
-                      alt="prana air nano co monitor left side view"
-                    />
-                  </button>
-                  <button className="tablinks" onClick={() => openCity("Comanitord")}>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/05/nano-co-monitor-back-side-view.png"
-                      alt="Prana Air nano co monitor back side view"
-                    />
-                  </button>
-                </div>
-              </div>
+              <ProductImageTabs />
             </div>
 
             <div className="col-md-4 ipad">
@@ -218,13 +67,11 @@ export default function NanoCOMonitor() {
                         monoxide (CO) levels. With its advanced and innovative cutting-edge technology, you can keep
                         track of your carbon footprint in real-time.
                       </p>
-                      <p className={`extra-content ${isContentExpanded ? "show" : ""}`} data-is-toggled="false">
+                      <p>
                         It is a low-cost monitor that can give the same data reading like the high-end equipments
                       </p>
 
-                      <button className="read-more btn" onClick={() => setIsContentExpanded(!isContentExpanded)}>
-                        {isContentExpanded ? "Show Less" : "Show More"}
-                      </button>
+
                     </article>
                   </section>
                 </div>
@@ -236,15 +83,9 @@ export default function NanoCOMonitor() {
                 <div className="model-box">
                   <h5>model</h5>
                   <select className="nav dropbtn">
-                    <option value="/air-quality-monitor/handheld/nano-co-monitor/">
-                      Nano CO
-                    </option>
-                    <option value="/air-quality-monitor/handheld/nano-co2-monitor/">
-                      Nano CO2
-                    </option>
-                    <option value="/air-quality-monitor/handheld/nano-tvoc-monitor/">
-                      Nano TVOC/HCHO
-                    </option>
+                    <option value="/air-quality-monitor/handheld/nano-co-monitor/">Nano CO</option>
+                    <option value="/air-quality-monitor/handheld/nano-co2-monitor/">Nano CO2</option>
+                    <option value="/air-quality-monitor/handheld/nano-tvoc-monitor/">Nano TVOC/HCHO</option>
                     <option value="/breathalyzer/">Breathalyzer</option>
                   </select>
 
@@ -269,9 +110,20 @@ export default function NanoCOMonitor() {
                             inputMode="numeric"
                           />
                         </div>
-                        <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co-monitor/" method="post" enctype="multipart/form-data">
-                         <button type="submit" name="add-to-cart" value="76353" class="single_add_to_cart_button button alt">Buy Now</button>
-
+                        <form
+                          className="cart new-cart"
+                          action="https://www.pranaair.com/air-quality-monitor/handheld/nano-co-monitor/"
+                          method="post"
+                          encType="multipart/form-data"
+                        >
+                          <button
+                            type="submit"
+                            name="add-to-cart"
+                            value="76353"
+                            className="single_add_to_cart_button button alt"
+                          >
+                            Buy Now
+                          </button>
                         </form>
                       </form>
                     </div>
@@ -291,8 +143,8 @@ export default function NanoCOMonitor() {
               <div className="women-banner-txt">
                 <h3>Monitoring CO Gas</h3>
                 <h5>has never been this easy!</h5>
-                Prana Air nano CO monitor is convenient to carry over larger distances with a simple yet attractive style
-                and high data accuracy.
+                Prana Air nano CO monitor is convenient to carry over larger distances with a simple yet attractive
+                style and high data accuracy.
               </div>
               <div className="health-icon">
                 <ul>
@@ -336,6 +188,7 @@ export default function NanoCOMonitor() {
 
       {/* Product Quality Section */}
       <section className="product-quality-section" id="features">
+        {/* Content remains the same */}
         <div className="container">
           <div className="row mob-revers">
             <div className="col-md-8 produt-img ipad">
@@ -399,8 +252,8 @@ export default function NanoCOMonitor() {
               <div className="product-quantity-txt">
                 <h5>Nano CO Monitor</h5>
                 <h3>Qualitative features</h3>
-                It has a small, compact body with a minimal and attractive style. People adore our nano health consultant
-                and the way it combines aesthetics and technology.-
+                It has a small, compact body with a minimal and attractive style. People adore our nano health
+                consultant and the way it combines aesthetics and technology.-
               </div>
             </div>
           </div>
@@ -409,6 +262,7 @@ export default function NanoCOMonitor() {
 
       {/* High Definition Banner Section */}
       <section className="high-defination-banner">
+        {/* Content remains the same */}
         <div className="container">
           <div className="row">
             <div className="col-md-7">
@@ -432,15 +286,13 @@ export default function NanoCOMonitor() {
 
       {/* Handy Portable Section */}
       <section className="heandy-portable-section">
+        {/* Content remains the same */}
         <div className="container">
           <div className="row">
             <div className="col-md-6 handy-bg ipad">
               <div className="handy-box">
                 <div className="handy-img">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/handy-device.png"
-                    alt="handy-device"
-                  />
+                  <img src="https://www.pranaair.com/wp-content/uploads/2023/05/handy-device.png" alt="handy-device" />
                 </div>
                 <div className="handy-txt">
                   <h4>Handy</h4>
@@ -470,6 +322,7 @@ export default function NanoCOMonitor() {
 
       {/* Carbon Monoxide Section */}
       <section className="corbon-monoxide-section">
+        {/* Content remains the same */}
         <div className="container">
           <div className="row">
             <div className="col-md-6 ipad">
@@ -485,8 +338,8 @@ export default function NanoCOMonitor() {
                 Carbon monoxide is a colorless, odorless, and non-irritating gas, therefore it cannot be detected with
                 mere human senses. It is also likely to explode when mixed with air (limit: 12.5%∼74.2%). CO is very
                 easy to combine with hemoglobin, which further makes it difficult for the blood to carry oxygen to other
-                body parts. This compromises the tissue respiration rate and even death in severe cases. CO gas has toxic
-                effects on tissues and cells of the whole body, especially on the cerebral cortex.
+                body parts. This compromises the tissue respiration rate and even death in severe cases. CO gas has
+                toxic effects on tissues and cells of the whole body, especially on the cerebral cortex.
               </div>
             </div>
           </div>
@@ -497,13 +350,11 @@ export default function NanoCOMonitor() {
               </h4>
               <div className="health-hazars-data">
                 <div className="inner-data">
-                  0-1 ppm :
-                  <h4>normal level</h4>
+                  0-1 ppm :<h4>normal level</h4>
                   <div className="bar"></div>
                 </div>
                 <div className="inner-data innr-last-data">
-                  51-100 PPM :
-                  <h4>OSHA Exposure Limits</h4>
+                  51-100 PPM :<h4>OSHA Exposure Limits</h4>
                   <div className="pink"></div>
                 </div>
               </div>
@@ -511,13 +362,11 @@ export default function NanoCOMonitor() {
             <div className="col-md-4">
               <div className="health-hazars-data pd-hazard">
                 <div className="inner-data">
-                  2-9 PPM :
-                  <h4>ASHRAE 62-1989 Specific standard living area</h4>
+                  2-9 PPM :<h4>ASHRAE 62-1989 Specific standard living area</h4>
                   <div className="yellow"></div>
                 </div>
                 <div className="inner-data innr-last-data">
-                  101-200 PPM :
-                  <h4>Mild headache, fatigue, nausea, and dizziness</h4>
+                  101-200 PPM :<h4>Mild headache, fatigue, nausea, and dizziness</h4>
                   <div className="purpule"></div>
                 </div>
               </div>
@@ -525,13 +374,11 @@ export default function NanoCOMonitor() {
             <div className="col-md-4">
               <div className="health-hazars-data pd-hazard">
                 <div className="inner-data">
-                  10-50 PPM :
-                  <h4>Avg. 8-hour stay in OSHA confined spaces</h4>
+                  10-50 PPM :<h4>Avg. 8-hour stay in OSHA confined spaces</h4>
                   <div className="orange"></div>
                 </div>
                 <div className="inner-data innr-last-data">
-                  &gt;800 PPM :
-                  <h4>Dizziness, nausea, and convulsion, death within 2-3 hrs.</h4>
+                  &gt;800 PPM :<h4>Dizziness, nausea, and convulsion, death within 2-3 hrs.</h4>
                   <div className="red"></div>
                 </div>
               </div>
@@ -545,54 +392,7 @@ export default function NanoCOMonitor() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                className="home-slider"
-                arrows={false}
-              >
-                <div>
-                  <div className="row">
-                    <div className="col-md-5 ipad">
-                      <div className="ac_slider_left_box">
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-smart-real-time-portable-co-monitor.jpeg"
-                          alt="real-time measuring of vehicle co emissions with prana air co monitor"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-7 ipad">
-                      <div className="ac_slider_content">
-                        <h2>Portable · Easy to Carry</h2>
-                        Prana Airs nano air quality monitor is designed to help you achieve a healthier lifestyle. With
-                        its compact and user-friendly design, you can easily stay informed about the air you breathe
-                        without the need for bulky and complex equipment.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="row">
-                    <div className="col-md-5 ipad">
-                      <div className="ac_slider_left_box">
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/05/pocket-friendly-co-monitor.jpg"
-                          alt="prana air pocket friendly co monitor"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-7 ipad">
-                      <div className="ac_slider_content">
-                        <h2>Pocket-friendly · Lightweight</h2>
-                        Real-time monitoring of CO levels allows you to make data-driven decisions to improve the air
-                        quality of your surrounding environment!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Carousel>
+              <COMonitorSlider />
             </div>
           </div>
         </div>
@@ -600,6 +400,7 @@ export default function NanoCOMonitor() {
 
       {/* Real Time Data Section */}
       <section className="real-time-data-section">
+        {/* Content remains the same */}
         <div className="container">
           <div className="row mob-revers">
             <div className="col-md-6 ipad">
@@ -634,7 +435,6 @@ export default function NanoCOMonitor() {
           </div>
         </div>
       </div>
-
 
       {/* Electrochemical Heading */}
       <div className="container">
@@ -778,7 +578,8 @@ export default function NanoCOMonitor() {
                   <li>Single Press : Turn Alarm </li>
                   <li>
                     on <img src="https://www.pranaair.com/wp-content/uploads/2023/05/volume-on.png" alt="volume-on" />
-                    <span>|</span> off <img src="https://www.pranaair.com/wp-content/uploads/2023/05/volume-off.png" alt="volume-off" />
+                    <span>|</span> off{" "}
+                    <img src="https://www.pranaair.com/wp-content/uploads/2023/05/volume-off.png" alt="volume-off" />
                   </li>
                 </ul>
               </div>
@@ -787,9 +588,18 @@ export default function NanoCOMonitor() {
                 <ul>
                   <li>Single Press : Change Brightness Levels </li>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/05/full-brightness.png" alt="full-brightness" />
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/05/half-brightness.png" alt="half-brightness" />
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/05/low-brightness.png" alt="low-brightness.png" />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/full-brightness.png"
+                      alt="full-brightness"
+                    />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/half-brightness.png"
+                      alt="half-brightness"
+                    />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/low-brightness.png"
+                      alt="low-brightness.png"
+                    />
                   </li>
                 </ul>
               </div>
@@ -918,8 +728,8 @@ export default function NanoCOMonitor() {
             <div className="col-md-9">
               <div className="brochore-btn">
                 <a href="#">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png" alt="brochore-btn" /> Download
-                  Brochure
+                  <img src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png" alt="brochore-btn" />{" "}
+                  Download Brochure
                 </a>
               </div>
             </div>
@@ -927,44 +737,35 @@ export default function NanoCOMonitor() {
           <div className="row mid-box">
             <div className="col-md-4 box-line">
               <div className="product-specifi shdw-line">
-                Product Name :
-                <h4>Nano CO Monitor</h4>
+                Product Name :<h4>Nano CO Monitor</h4>
               </div>
               <div className="product-specifi">
-                Warm-up time :
-                <h4>35 Sec</h4>
+                Warm-up time :<h4>35 Sec</h4>
               </div>
               <div className="product-specifi">
-                Working Temp. :
-                <h4>-20~60°C</h4>
+                Working Temp. :<h4>-20~60°C</h4>
               </div>
             </div>
             <div className="col-md-4 box-line">
               <div className="product-specifi">
-                Detection Range :
-                <h4>0-1000 PPM</h4>
+                Detection Range :<h4>0-1000 PPM</h4>
               </div>
               <div className="product-specifi">
-                Data Refresh Rate :
-                <h4>2 Sec</h4>
+                Data Refresh Rate :<h4>2 Sec</h4>
               </div>
               <div className="product-specifi">
-                Charging Mode :
-                <h4>USB Type-C</h4>
+                Charging Mode :<h4>USB Type-C</h4>
               </div>
             </div>
             <div className="col-md-4 box-line">
               <div className="product-specifi">
-                Working Voltage :
-                <h4>DC5V0 . 5A</h4>
+                Working Voltage :<h4>DC5V0 . 5A</h4>
               </div>
               <div className="product-specifi">
-                Operating Humidity :
-                <h4>0-95% RH</h4>
+                Operating Humidity :<h4>0-95% RH</h4>
               </div>
               <div className="product-specifi">
-                Product Dimensions :
-                <h4>W85 x D51 x H17 (mm)</h4>
+                Product Dimensions :<h4>W85 x D51 x H17 (mm)</h4>
               </div>
             </div>
           </div>
@@ -1055,56 +856,7 @@ export default function NanoCOMonitor() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="my-faq">
-                {[
-                  {
-                    title: "1. What is the ideal range of CO levels in indoor environments?",
-                    content:
-                      "The ideal range of CO levels in indoor environments is below 9 parts per million (ppm). However, it is recommended to maintain levels below 5 ppm for better indoor air quality and to ensure safety.",
-                  },
-                  {
-                    title: "2. How often should I check the CO levels using the portable monitor?",
-                    content:
-                      "If you are exposed to CO gas, you should check it often. Due to the compact size of the monitor, it is easy to carry so you can carry it easily, without any hassle.",
-                  },
-                  {
-                    title: "3. How accurate are the readings on the monitor?",
-                    content: "±(5ppmm + 5%)",
-                  },
-                  {
-                    title: "4. How does the alarm on the monitor work?",
-                    content: "To activate or deactivate the alarm, use the 'S' button on the monitor.",
-                  },
-                  {
-                    title: "5. How many times does the alarm work?",
-                    content:
-                      "50-100 ppm- 3 times per 3 minutes\n101-200 ppm- 5 times per 3 minutes\n> 200 ppm- 10 times per minute",
-                  },
-                  {
-                    title: "6. What is the use time of the monitor?",
-                    content: "About 14 hours after a full charge",
-                  },
-                  {
-                    title: "7. Can the portable CO monitor be used in vehicles, such as cars and trucks?",
-                    content:
-                      "Due to its compact size and accurate data, the mini air quality monitor is highly versatile and suitable for a wide range of indoor and outdoor applications.",
-                  },
-                ].map((faq, index) => (
-                  <div key={index} className="inner-faq">
-                    <div
-                      className={`faq-title ${activeFaq === index + 1 ? "active" : ""}`}
-                      onClick={() => setActiveFaq(index + 1)}
-                    >
-                      <h4>{faq.title}</h4>
-                    </div>
-                    {activeFaq === index + 1 && (
-                      <div className="faq-para">
-                        <p>{faq.content}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <FaqAccordion />
             </div>
           </div>
         </div>
