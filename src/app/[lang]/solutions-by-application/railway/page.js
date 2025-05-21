@@ -1,25 +1,11 @@
 "use client"
 
-import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function RailwayPage() {
-  // State to track active tab
-  const [activeTab, setActiveTab] = useState("air-quality-monitors")
-  const [activeFaq, setActiveFaq] = useState("collapseOne")
-
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId)
-  }
-
-  const toggleFaq = (faqId) => {
-    setActiveFaq(activeFaq === faqId ? "" : faqId)
-  }
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -384,31 +370,57 @@ export default function RailwayPage() {
           </div>
 
           <div className="modern-tabs">
-            <div className="tab-buttons">
-              <button
-                className={`tab-btn ${activeTab === "air-quality-monitors" ? "active" : ""}`}
-                onClick={() => handleTabClick("air-quality-monitors")}
-              >
-                Air quality Monitors
-              </button>
-              <button
-                className={`tab-btn ${activeTab === "outdoor-air-purifier" ? "active" : ""}`}
-                onClick={() => handleTabClick("outdoor-air-purifier")}
-              >
-                Outdoor Air Purifier
-              </button>
-              <button
-                className={`tab-btn ${activeTab === "data-display" ? "active" : ""}`}
-                onClick={() => handleTabClick("data-display")}
-              >
-                Data Display
-              </button>
-            </div>
+            <ul className="nav nav-tabs" id="solutionsTabs" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="air-quality-monitors-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#air-quality-monitors"
+                  type="button"
+                  role="tab"
+                  aria-controls="air-quality-monitors"
+                  aria-selected="true"
+                >
+                  Air quality Monitors
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="outdoor-air-purifier-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#outdoor-air-purifier"
+                  type="button"
+                  role="tab"
+                  aria-controls="outdoor-air-purifier"
+                  aria-selected="false"
+                >
+                  Outdoor Air Purifier
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="data-display-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#data-display"
+                  type="button"
+                  role="tab"
+                  aria-controls="data-display"
+                  aria-selected="false"
+                >
+                  Data Display
+                </button>
+              </li>
+            </ul>
 
-            <div className="tab-content">
+            <div className="tab-content" id="solutionsTabsContent">
               <div
-                className={`tab-pane ${activeTab === "air-quality-monitors" ? "active" : ""}`}
+                className="tab-pane fade show active"
                 id="air-quality-monitors"
+                role="tabpanel"
+                aria-labelledby="air-quality-monitors-tab"
               >
                 <div className="solution-content">
                   <div className="solution-image">
@@ -433,8 +445,10 @@ export default function RailwayPage() {
               </div>
 
               <div
-                className={`tab-pane ${activeTab === "outdoor-air-purifier" ? "active" : ""}`}
+                className="tab-pane fade"
                 id="outdoor-air-purifier"
+                role="tabpanel"
+                aria-labelledby="outdoor-air-purifier-tab"
               >
                 <div className="solution-content">
                   <div className="solution-image">
@@ -453,18 +467,14 @@ export default function RailwayPage() {
                       <li>High-capacity filtration system</li>
                       <li>Reduces pollutant levels for better protection</li>
                     </ul>
-                    <a
-                      className="solution-btn"
-                      href="#"
-                      aria-label="Know More about prana air outdoor air purifier"
-                    >
+                    <a className="solution-btn" href="#" aria-label="Know More about prana air outdoor air purifier">
                       Know More
                     </a>
                   </div>
                 </div>
               </div>
 
-              <div className={`tab-pane ${activeTab === "data-display" ? "active" : ""}`} id="data-display">
+              <div className="tab-pane fade" id="data-display" role="tabpanel" aria-labelledby="data-display-tab">
                 <div className="solution-content">
                   <div className="solution-image">
                     <img
@@ -1113,10 +1123,7 @@ export default function RailwayPage() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -1141,124 +1148,105 @@ export default function RailwayPage() {
             </p>
           </div>
 
-          <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div className="panel panel-default faq-tab-heading">
-              <div
-                className="panel-heading"
-                role="tab"
-                id="headingOne"
-                onClick={() => toggleFaq("collapseOne")}
-                style={{ cursor: "pointer" }}
-              >
-                <h4 className="panel-title">
-                  <a role="button" aria-expanded={activeFaq === "collapseOne"} aria-controls="collapseOne">
-                    1. Why air quality is a concern at railway stations?
-                  </a>
-                </h4>
-              </div>
+          <div className="accordion" id="faqAccordion">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingOne">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  1. Why air quality is a concern at railway stations?
+                </button>
+              </h2>
               <div
                 id="collapseOne"
-                className={`panel-collapse collapse ${activeFaq === "collapseOne" ? "in" : ""}`}
-                role="tabpanel"
+                className="accordion-collapse collapse show"
                 aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
               >
-                <div className="panel-body faq-para">
+                <div className="accordion-body">
                   Trains operate with diesel engines and other activities emit various pollutants like PM2.5, NOx,
                   carbon monoxide (CO), and volatile organic compounds (VOCs).
                 </div>
               </div>
             </div>
 
-            <div className="panel panel-default faq-tab-heading">
-              <div
-                className="panel-heading"
-                role="tab"
-                id="headingTwo"
-                onClick={() => toggleFaq("collapseTwo")}
-                style={{ cursor: "pointer" }}
-              >
-                <h4 className="panel-title">
-                  <a
-                    className={activeFaq !== "collapseTwo" ? "collapsed" : ""}
-                    role="button"
-                    aria-expanded={activeFaq === "collapseTwo"}
-                    aria-controls="collapseTwo"
-                  >
-                    2. What are the health impacts of poor air quality at railway stations?
-                  </a>
-                </h4>
-              </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  2. What are the health impacts of poor air quality at railway stations?
+                </button>
+              </h2>
               <div
                 id="collapseTwo"
-                className={`panel-collapse collapse ${activeFaq === "collapseTwo" ? "in" : ""}`}
-                role="tabpanel"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
               >
-                <div className="panel-body faq-para">
+                <div className="accordion-body">
                   Exposure to poor air quality can cause or worsen respiratory problems including asthma, bronchitis,
                   cardiovascular issues etc.
                 </div>
               </div>
             </div>
 
-            <div className="panel panel-default faq-tab-heading">
-              <div
-                className="panel-heading"
-                role="tab"
-                id="headingThree"
-                onClick={() => toggleFaq("collapseThree")}
-                style={{ cursor: "pointer" }}
-              >
-                <h4 className="panel-title">
-                  <a
-                    className={activeFaq !== "collapseThree" ? "collapsed" : ""}
-                    role="button"
-                    aria-expanded={activeFaq === "collapseThree"}
-                    aria-controls="collapseThree"
-                  >
-                    3. Can air quality issues be managed without advanced solutions at railway stations?
-                  </a>
-                </h4>
-              </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  3. Can air quality issues be managed without advanced solutions at railway stations?
+                </button>
+              </h2>
               <div
                 id="collapseThree"
-                className={`panel-collapse collapse ${activeFaq === "collapseThree" ? "in" : ""}`}
-                role="tabpanel"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
               >
-                <div className="panel-body faq-para">
+                <div className="accordion-body">
                   Managing air quality without advanced solutions is challenging. Air quality monitors and purifiers
                   have a proactive approach to maintaining healthy air quality.
                 </div>
               </div>
             </div>
 
-            <div className="panel panel-default faq-tab-heading">
-              <div
-                className="panel-heading"
-                role="tab"
-                id="headingFour"
-                onClick={() => toggleFaq("collapseFour")}
-                style={{ cursor: "pointer" }}
-              >
-                <h4 className="panel-title">
-                  <a
-                    className={activeFaq !== "collapseFour" ? "collapsed" : ""}
-                    role="button"
-                    aria-expanded={activeFaq === "collapseFour"}
-                    aria-controls="collapseFour"
-                  >
-                    4. How does Prana Air Ambient Air Monitor improve air quality?
-                  </a>
-                </h4>
-              </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFour">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  4. How does Prana Air Ambient Air Monitor improve air quality?
+                </button>
+              </h2>
               <div
                 id="collapseFour"
-                className={`panel-collapse collapse ${activeFaq === "collapseFour" ? "in" : ""}`}
-                role="tabpanel"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion"
               >
-                <div className="panel-body faq-para">
+                <div className="accordion-body">
                   The Prana Air Ambient Air Monitor provides real-time data on pollutant levels, enabling timely
                   responses and informed decision-making for air quality management.
                 </div>
@@ -1268,8 +1256,20 @@ export default function RailwayPage() {
         </div>
       </section>
 
-      {/* External Scripts removed - using internal libraries */}
+      {/* Bootstrap JS */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function() {
+              // Initialize Bootstrap components
+              var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+              var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+              })
+            });
+          `,
+        }}
+      />
     </main>
   )
 }
-

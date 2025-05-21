@@ -1,142 +1,10 @@
-'use client';
+import PollutantsToggle from "@/Components/Pages/SquairAirmonitor/pollutants-toggle"
+import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm"
+import { getServerTranslation } from "@/i18n/server"
 
-import React, { useState, useEffect } from 'react';
-import './style.css';
-import ContactForm from "@/Components/Contacform/ContactForm";
-
-export default function SquairMonitor() {
-  const [activeTab, setActiveTab] = useState('squair-lite');
-  const [showPollutants, setShowPollutants] = useState(false);
-
-  // Function to handle tab switching
-  const handleTabChange = (tabId) => {
-    setActiveTab(tabId);
-  };
-
-  // Function to toggle pollutants visibility
-  const togglePollutants = () => {
-    setShowPollutants(!showPollutants);
-  };
-
-  // Initialize particles.js when component mounts
-  useEffect(() => {
-    // Check if window is defined (client-side)
-    if (typeof window !== 'undefined' && window.particlesJS) {
-      window.particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 355,
-            "density": {
-              "enable": true,
-              "value_area": 789.1476416322727
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            }
-          },
-          "opacity": {
-            "value": 0.48927153781200905,
-            "random": false,
-            "anim": {
-              "enable": true,
-              "speed": 0.2,
-              "opacity_min": 0,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 4,
-            "random": true,
-            "anim": {
-              "enable": true,
-              "speed": 8,
-              "size_min": 0,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": false,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 0.2,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "bubble"
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
-            },
-            "bubble": {
-              "distance": 83.91608391608392,
-              "size": 1,
-              "duration": 3,
-              "opacity": 1,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
-          }
-        },
-        "retina_detect": true
-      });
-    }
-  }, []);
-  // Initialize Bootstrap JS components after component mounts
-  useEffect(() => {
-    // Dynamically import Bootstrap JS only on the client side
-    import("bootstrap/dist/js/bootstrap.bundle.min.js")
-      .then(() => {
-        console.log("Bootstrap JS initialized")
-      })
-      .catch((err) => {
-        console.error("Failed to load Bootstrap JS:", err)
-      })
-  }, [])
+export default async function SquairMonitor() {
+  const { t } = await getServerTranslation("squair-monitor")
   return (
     <div>
       {/* Banner Section */}
@@ -145,19 +13,40 @@ export default function SquairMonitor() {
           <div className="row">
             <div className="col-md-6">
               <div className="squairMonitorbanner-content">
-                <h3>Prana Air</h3>
-                <h1>SQUAIR <span className="heading-sub">Air Quality Monitor</span></h1>
-                <p>Know your harmful air pollutants with a smart indoor air quality monitoring device</p>
+                <h3>{t("squairBanner.title.brand")}</h3>
+                <h1>
+                  {t("squairBanner.title.product")}{" "}
+                  <span className="heading-sub">{t("squairBanner.title.subtitle")}</span>
+                </h1>
+                <p>{t("squairBanner.description")}</p>
                 <div className="banner-btn">
-                  <form className="cart" action="https://www.pranaair.com/product/squair-air-monitor/" encType="multipart/form-data" method="post">
-                    <button className="single_add_to_cart_button button alt bg-btn bg-green" name="add-to-cart" type="submit" value="20807">Buy Now</button>
+                  <form
+                    className="cart"
+                    action="https://www.pranaair.com/product/squair-air-monitor/"
+                    encType="multipart/form-data"
+                    method="post"
+                  >
+                    <button
+                      className="single_add_to_cart_button button alt bg-btn bg-green"
+                      name="add-to-cart"
+                      type="submit"
+                      value="20807"
+                    >
+                      {t("squairBanner.buttons.buyNow")}
+                    </button>
                   </form>
-                  <a className="bg-btn bg-green" href="#request_a_quote">Get A Quote</a>
+                  <a className="bg-btn bg-green" href="#request_a_quote">
+                    {t("squairBanner.buttons.getQuote")}
+                  </a>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/12/prana-air-indoor-squair-air-quality-monitor.png" alt="SQUAIR Air Quality Monitor" className="squair-monitor-img" />
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2021/12/prana-air-indoor-squair-air-quality-monitor.png"
+                alt={t("squairBanner.altTexts.monitorImage")}
+                className="squair-monitor-img"
+              />
             </div>
           </div>
         </div>
@@ -168,9 +57,12 @@ export default function SquairMonitor() {
         <div className="row cntrtxt">
           <div className="col-md-12">
             <div className="squairMonitorContent">
-              <h2 style={{ textAlign: 'center' }}>SQUAIR (IAQ) Air Quality Monitor</h2>
-              <p style={{ textAlign: 'center' }}>SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate matters and gas parameters. It detects PM10, PM2.5, CO, CO<sub>2</sub>, O<sub>3</sub>, NO<sub>2</sub>, SO<sub>2</sub>, TVOC, HCHO, noise, light, temperature & humidity. The monitor comes with two product variants like SQUAIR Lite & SQUAIR Pro which have a few different sensors inside the monitor.</p>
-              <p style={{ textAlign: 'center' }}>The monitor also gives an alert system when the air quality around you is good, poor, or unhealthy. You can easily find out what quality of the air you are breathing in your house or office and control the alert system from the <strong>AQI mobile app</strong>.</p>
+              <h2 style={{ textAlign: "center" }}>{t("squairBanner.productDescription.title")}</h2>
+              <p style={{ textAlign: "center" }}>{t("squairBanner.productDescription.paragraph1")}</p>
+              <p style={{ textAlign: "center" }}>
+                {t("squairBanner.productDescription.paragraph2Part1")}{" "}
+                <strong>{t("squairBanner.productDescription.paragraph2Part2")}</strong>.
+              </p>
             </div>
           </div>
         </div>
@@ -183,7 +75,7 @@ export default function SquairMonitor() {
                 width="100%"
                 height="500"
                 src="https://www.youtube.com/embed/vKTDgUu1K_E"
-                title="SQUAIR Air Quality Monitor"
+                title={t("squairBanner.video.title")}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -195,48 +87,82 @@ export default function SquairMonitor() {
         {/* Features Section */}
         <div className="row squairMonitorContent">
           <div className="col-md-12">
-            <h3 style={{ textAlign: 'center' }}>What Does Prana Air SQUAIR Air Monitor Offer?</h3>
+            <h3 style={{ textAlign: "center" }}>{t("squairBanner.features.heading")}</h3>
           </div>
         </div>
 
         <div className="squair-monitor-feature-pointer">
           <div className="square-customeResponsive">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-realtime-SQUAIR.png" alt="Real-time Air Quality" />
-            <h5 style={{ textAlign: 'center' }}>Real-time Air Quality</h5>
-            <p style={{ textAlign: 'center', color: '#adadad' }}>Get the real-time air pollution data of your monitor with the various air quality parameters anytime.</p>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-realtime-SQUAIR.png"
+              alt={t("squairBanner.features.realTime.alt")}
+            />
+            <h5 style={{ textAlign: "center" }}>{t("squairBanner.features.realTime.title")}</h5>
+            <p style={{ textAlign: "center", color: "#adadad" }}>{t("squairBanner.features.realTime.description")}</p>
           </div>
           <div className="square-customeResponsive">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-reliable-web-SQUAIR.png" alt="Web Dashboard" />
-            <h5 style={{ textAlign: 'center' }}>Reliable Web Dashboard Accessibility</h5>
-            <p style={{ textAlign: 'center', color: '#adadad' }}>Explore our exclusive web dashboard and enjoy the amazing features like download data, scan QR code, link generation, and comparison with graphical representations.</p>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-reliable-web-SQUAIR.png"
+              alt={t("squairBanner.features.webDashboard.alt")}
+            />
+            <h5 style={{ textAlign: "center" }}>{t("squairBanner.features.webDashboard.title")}</h5>
+            <p style={{ textAlign: "center", color: "#adadad" }}>
+              {t("squairBanner.features.webDashboard.description")}
+            </p>
           </div>
           <div className="square-customeResponsive">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-app-enabled-SQUAIR.png" alt="Mobile App" />
-            <h5 style={{ textAlign: 'center' }}>Mobile & Smart TV App Enabled</h5>
-            <p style={{ textAlign: 'center', color: '#adadad' }}>Get access to real-time & historic data with graphical representations, health recommendations, and many other features via AQI mobile & smart TV apps.</p>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-app-enabled-SQUAIR.png"
+              alt={t("squairBanner.features.mobileApp.alt")}
+            />
+            <h5 style={{ textAlign: "center" }}>{t("squairBanner.features.mobileApp.title")}</h5>
+            <p style={{ textAlign: "center", color: "#adadad" }}>{t("squairBanner.features.mobileApp.description")}</p>
           </div>
           <div className="square-customeResponsive">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-versatile-SQUAIR.png" alt="Connectivity" />
-            <h5 style={{ textAlign: 'center' }}>Versatile Connectivity</h5>
-            <p style={{ textAlign: 'center', color: '#adadad' }}>Wide range of connectivity options based on GSM, Wi-Fi, and RS-485 connection. Be assured to manage your indoor environment smartly.</p>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-versatile-SQUAIR.png"
+              alt={t("squairBanner.features.connectivity.alt")}
+            />
+            <h5 style={{ textAlign: "center" }}>{t("squairBanner.features.connectivity.title")}</h5>
+            <p style={{ textAlign: "center", color: "#adadad" }}>
+              {t("squairBanner.features.connectivity.description")}
+            </p>
           </div>
           <div className="square-customeResponsive">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-sd-card-SQUAIR.png" alt="SD Card" />
-            <h5 style={{ textAlign: 'center' }}>Micro SD-Card Data Storage</h5>
-            <p style={{ textAlign: 'center', color: '#adadad' }}>Just insert your micro SD-card into the monitor to facilitate the continuous storage of all the air quality data for future use.</p>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/04/icon-sd-card-SQUAIR.png"
+              alt={t("squairBanner.features.sdCard.alt")}
+            />
+            <h5 style={{ textAlign: "center" }}>{t("squairBanner.features.sdCard.title")}</h5>
+            <p style={{ textAlign: "center", color: "#adadad" }}>{t("squairBanner.features.sdCard.description")}</p>
           </div>
         </div>
 
         <div className="row">
           <div className="col-md-12 square-customeResponsive">
-            <p style={{ textAlign: 'center' }}>
+            <p style={{ textAlign: "center" }}>
               <em>
-                <span style={{ fontSize: '17pt' }}>
+                <span style={{ fontSize: "17pt" }}>
                   <sup>
-                    <span style={{ fontSize: '17pt' }}>
+                    <span style={{ fontSize: "17pt" }}>
                       <sub>
-                        <img className="alignnone size-full" src="https://www.pranaair.com/wp-content/uploads/2022/07/compliance-icon.png" alt="compliance icon" width="30" height="30" />
-                      </sub> Compliance with <span style={{ color: '#4cae51' }}><strong>LEED, WELL,</strong></span> and <span style={{ color: '#4cae51' }}><strong>ASHRAE</strong></span> standards
+                        <img
+                          className="alignnone size-full"
+                          src="https://www.pranaair.com/wp-content/uploads/2022/07/compliance-icon.png"
+                          alt={t("squairBanner.compliance.altText")}
+                          width="30"
+                          height="30"
+                        />
+                      </sub>{" "}
+                      {t("squairBanner.compliance.text.complianceWith")}{" "}
+                      <span style={{ color: "#4cae51" }}>
+                        <strong>{t("squairBanner.compliance.text.leedWell")}</strong>
+                      </span>{" "}
+                      {t("squairBanner.compliance.text.and")}{" "}
+                      <span style={{ color: "#4cae51" }}>
+                        <strong>{t("squairBanner.compliance.text.ashrae")}</strong>
+                      </span>{" "}
+                      {t("squairBanner.compliance.text.standards")}
                     </span>
                   </sup>
                 </span>
@@ -271,33 +197,33 @@ export default function SquairMonitor() {
       <div className="container top_space_air" id="top_space_air">
         <div className="row">
           <div className="col-md-12">
-            <h3 style={{ textAlign: 'center' }}>Air Quality Index Ranges</h3>
+            <h3 style={{ textAlign: "center" }}>{t("squairBanner.aqiRanges.title")}</h3>
             <table className="squair-quality-ranges">
               <tbody>
                 <tr>
                   <td className="brdr grn">
-                    <h5>0-50</h5>
-                    Good
+                    <h5>{t("squairBanner.aqiRanges.ranges.good.range")}</h5>
+                    {t("squairBanner.aqiRanges.ranges.good.label")}
                   </td>
                   <td className="brdr ylw">
-                    <h5>51-100</h5>
-                    Moderate
+                    <h5>{t("squairBanner.aqiRanges.ranges.moderate.range")}</h5>
+                    {t("squairBanner.aqiRanges.ranges.moderate.label")}
                   </td>
                   <td className="brdr orng">
-                    <h5>101-200</h5>
-                    Poor
+                    <h5>{t("squairBanner.aqiRanges.ranges.poor.range")}</h5>
+                    {t("squairBanner.aqiRanges.ranges.poor.label")}
                   </td>
                   <td className="brdr pnk">
-                    <h5>201-300</h5>
-                    Unhealthy
+                    <h5>{t("squairBanner.aqiRanges.ranges.unhealthy.range")}</h5>
+                    {t("squairBanner.aqiRanges.ranges.unhealthy.label")}
                   </td>
                   <td className="brdr jmni">
-                    <h5>301-400</h5>
-                    Severe
+                    <h5>{t("squairBanner.aqiRanges.ranges.severe.range")}</h5>
+                    {t("squairBanner.aqiRanges.ranges.severe.label")}
                   </td>
                   <td className="brdr red">
-                    <h5>401-500<sup>+</sup></h5>
-                    Hazardous
+                    <h5>{t("squairBanner.aqiRanges.ranges.hazardous.range")}</h5>
+                    {t("squairBanner.aqiRanges.ranges.hazardous.label")}
                   </td>
                 </tr>
               </tbody>
@@ -311,416 +237,640 @@ export default function SquairMonitor() {
         <div className="row">
           <div className="col-md-6">
             <div className="squair-variant-heading">
-              <h2>Squair Variants</h2>
+              <h2>{t("squairBanner.variants.title")}</h2>
             </div>
           </div>
           <div className="col-md-6">
             <div className="squair-variant-para">
-              <p>Prana Air indoor air quality monitors use advanced sensors for real-time tracking of indoor air pollutants, delivering a thorough insight into your indoor air quality.</p>
+              <p>{t("squairBanner.variants.description")}</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Tabs for Squair Variants */}
+      {/* Tabs for Squair Variants - Using Bootstrap Tabs */}
       <div className="container-fluid tab-section">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="squair-variant-tab">
-                <ul className="nav nav-tabs">
-                  <li className={activeTab === 'squair-lite' ? 'active squair-variant-title current' : 'squair-variant-title'}>
-                    <a href="#squair-lite" onClick={() => handleTabChange('squair-lite')}>Squair lite</a>
+                {/* Bootstrap Nav Tabs */}
+                <ul className="nav nav-tabs" id="squairVariantTabs" role="tablist">
+                  <li className="nav-item squair-variant-title" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="squair-lite-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#squair-lite-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="squair-lite-tab-pane"
+                      aria-selected="true"
+                    >
+                      {t("squairBanner.variants.tabs.lite.title")}
+                    </button>
                   </li>
-                  <li className={activeTab === 'squair' ? 'active squair-variant-title current' : 'squair-variant-title'}>
-                    <a href="#squair" onClick={() => handleTabChange('squair')}>Squair</a>
+                  <li className="nav-item squair-variant-title" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="squair-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#squair-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="squair-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("squairBanner.variants.tabs.standard.title")}
+                    </button>
                   </li>
-                  <li className={activeTab === 'squair-pro' ? 'active squair-variant-title current' : 'squair-variant-title'}>
-                    <a href="#squair-pro" onClick={() => handleTabChange('squair-pro')}>Squair Pro</a>
+                  <li className="nav-item squair-variant-title" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="squair-pro-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#squair-pro-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="squair-pro-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("squairBanner.variants.tabs.pro.title")}
+                    </button>
                   </li>
                 </ul>
 
-                <div className="tab-content">
-                  {activeTab === 'squair-lite' && (
-                    <div className="tab-pane active" id="squair-lite">
-                      <div className="row">
-                        <div className="col-md-4 squair-bg">
-                          <div className="squair-img">
-                            <div className="mob-boxx">
-                              <img src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-squair-lite.png" alt="pranaair SQUAIR lite" />
-                              <h4>Squair <span className="pro">Lite</span></h4>
-                            </div>
-                            <ul>
-                              <li><a href="#request_a_quote">Get a quote</a></li>
-                              <li><a href="https://www.pranaair.com/wp-content/uploads/2023/04/prana-air-squair-lite-air-monitor-brochure.pdf">
-                                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" alt="icon" /> Brochure</a>
-                              </li>
-                            </ul>
+                {/* Bootstrap Tab Content */}
+                <div className="tab-content" id="squairVariantTabsContent">
+                  {/* Squair Lite Tab */}
+                  <div
+                    className="tab-pane fade show active"
+                    id="squair-lite-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="squair-lite-tab"
+                    tabIndex={0}
+                  >
+                    <div className="row">
+                      <div className="col-md-4 squair-bg">
+                        <div className="squair-img">
+                          <div className="mob-boxx">
+                            <img
+                              src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-squair-lite.png"
+                              alt={t("squairBanner.variants.tabs.lite.image")}
+                            />
+                            <h4>
+                              {t("squairBanner.variants.tabs.standard.title")}{" "}
+                              <span className="pro">{t("squairBanner.variants.tabs.lite.variant")}</span>
+                            </h4>
                           </div>
+                          <ul>
+                            <li>
+                              <a href="#request_a_quote">{t("squairBanner.variants.common.getQuote")}</a>
+                            </li>
+                            <li>
+                              <a href="https://www.pranaair.com/wp-content/uploads/2023/04/prana-air-squair-lite-air-monitor-brochure.pdf">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png"
+                                  alt="icon"
+                                />{" "}
+                                {t("squairBanner.variants.common.brochure")}
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                        <div className="col-md-8 squair-parameter-bg">
-                          <div className="squair-parameters">
-                            <p className="parameter-para">Squair Lite is, an affordable air quality monitor, a compact version of Prana Air Squair with essential features. Ideal for those prioritizing both functionality and cost.</p>
+                      </div>
+                      <div className="col-md-8 squair-parameter-bg">
+                        <div className="squair-parameters">
+                          <p className="parameter-para">{t("squairBanner.variants.tabs.lite.description")}</p>
 
-                            <h4>Parameters :</h4>
-                            <ul className="parameter-list">
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/AQI-parameter.png" alt="AQI parameter" />
-                                  <span className="parameter-data">AQI</span>
+                          <h4>{t("squairBanner.variants.common.parameters")}</h4>
+                          <ul className="parameter-list">
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/AQI-parameter.png"
+                                  alt="AQI parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.aqi")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM1-para.png"
+                                  alt="PM1 para"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm1")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM2.5-parameter.png"
+                                  alt="PM2.5 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm25")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM10-parameter.png"
+                                  alt="PM10 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm10")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO2.png"
+                                  alt="CO2 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.co2")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/TVOC-parameter.png"
+                                  alt="TVOC parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.tvoc")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PARTICLE-COUNT-0.5-parameter.png"
+                                  alt="PARTICLE COUNT (0.5) parameter"
+                                />
+                                <span className="parameter-data">
+                                  {t("squairBanner.variants.parameters.particlesCount")}
                                 </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM1-para.png" alt="PM1 para" />
-                                  <span className="parameter-data">PM1</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/Humidity-parameter.png"
+                                  alt="Humidity parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.humidity")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/TEMPERATURE-parameter.png"
+                                  alt="TEMPERATURE parameter"
+                                />
+                                <span className="parameter-data">
+                                  {t("squairBanner.variants.parameters.temperature")}
                                 </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM2.5-parameter.png" alt="PM2.5 parameter" />
-                                  <span className="parameter-data">PM2.5</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM10-parameter.png" alt="PM10 parameter" />
-                                  <span className="parameter-data">PM10</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO2.png" alt="CO2 parameter" />
-                                  <span className="parameter-data">CO2</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/TVOC-parameter.png" alt="TVOC parameter" />
-                                  <span className="parameter-data">TVOC</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PARTICLE-COUNT-0.5-parameter.png" alt="PARTICLE COUNT (0.5) parameter" />
-                                  <span className="parameter-data">Particles<br />Count</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Humidity-parameter.png" alt="Humidity parameter" />
-                                  <span className="parameter-data">Humi.</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/TEMPERATURE-parameter.png" alt="TEMPERATURE parameter" />
-                                  <span className="parameter-data">Temp.</span>
-                                </span>
-                              </li>
-                            </ul>
-                            <h4>Connectivity :</h4>
-                            <ul className="connect-list">
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/wifi-connect.png" alt="" />
-                                  Wifi
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
+                              </span>
+                            </li>
+                          </ul>
+                          <h4>{t("squairBanner.variants.common.connectivity")}</h4>
+                          <ul className="connect-list">
+                            <li>
+                              <span className="para-flex">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/01/wifi-connect.png" alt="" />
+                                {t("squairBanner.variants.connectivity.wifi")}
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
 
-                  {activeTab === 'squair' && (
-                    <div className="tab-pane active" id="squair">
-                      <div className="row">
-                        <div className="col-md-4 squair-bg">
-                          <div className="squair-img">
-                            <div className="mob-boxx">
-                              <img src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-squair.png" alt="pranaair SQUAIR" />
-                              <h4>Squair</h4>
-                            </div>
-                            <ul>
-                              <li><a href="#request_a_quote">Get a quote</a></li>
-                              <li><a href="https://www.pranaair.com/wp-content/uploads/2023/04/prana-air-squair-air-monitor-brochure.pdf">
-                                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" alt="icon" /> Brochure</a>
-                              </li>
-                            </ul>
+                  {/* Squair Tab */}
+                  <div
+                    className="tab-pane fade"
+                    id="squair-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="squair-tab"
+                    tabIndex={0}
+                  >
+                    <div className="row">
+                      <div className="col-md-4 squair-bg">
+                        <div className="squair-img">
+                          <div className="mob-boxx">
+                            <img
+                              src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-squair.png"
+                              alt={t("squairBanner.variants.tabs.standard.image")}
+                            />
+                            <h4>{t("squairBanner.variants.tabs.standard.title")}</h4>
                           </div>
+                          <ul>
+                            <li>
+                              <a href="#request_a_quote">{t("squairBanner.variants.common.getQuote")}</a>
+                            </li>
+                            <li>
+                              <a href="https://www.pranaair.com/wp-content/uploads/2023/04/prana-air-squair-air-monitor-brochure.pdf">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png"
+                                  alt="icon"
+                                />{" "}
+                                {t("squairBanner.variants.common.brochure")}
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                        <div className="col-md-8 squair-parameter-bg">
-                          <div className="squair-parameters">
-                            <p className="parameter-para">Prana Air Squair offers real-time indoor air quality monitoring, featuring sensors for a detailed understanding of your indoor environment.</p>
+                      </div>
+                      <div className="col-md-8 squair-parameter-bg">
+                        <div className="squair-parameters">
+                          <p className="parameter-para">{t("squairBanner.variants.tabs.standard.description")}</p>
 
-                            <h4>Parameters :</h4>
-                            <ul className="parameter-list">
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/AQI-parameter.png" alt="AQI parameter" />
-                                  <span className="parameter-data">AQI</span>
+                          <h4>{t("squairBanner.variants.common.parameters")}</h4>
+                          <ul className="parameter-list">
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/AQI-parameter.png"
+                                  alt="AQI parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.aqi")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM1-para.png"
+                                  alt="PM1 para"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm1")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM2.5-parameter.png"
+                                  alt="PM2.5 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm25")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM10-parameter.png"
+                                  alt="PM10 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm10")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO2.png"
+                                  alt="CO2 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.co2")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/HCHO-parameter.png"
+                                  alt="HCHO parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.hcho")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/TVOC-parameter.png"
+                                  alt="TVOC parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.tvoc")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PARTICLE-COUNT-0.5-parameter.png"
+                                  alt="PARTICLE COUNT (0.5) parameter"
+                                />
+                                <span className="parameter-data">
+                                  {t("squairBanner.variants.parameters.particlesCount")}
                                 </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM1-para.png" alt="PM1 para" />
-                                  <span className="parameter-data">PM1</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/Humidity-parameter.png"
+                                  alt="Humidity parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.humidity")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/TEMPERATURE-parameter.png"
+                                  alt="TEMPERATURE parameter"
+                                />
+                                <span className="parameter-data">
+                                  {t("squairBanner.variants.parameters.temperature")}
                                 </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM2.5-parameter.png" alt="PM2.5 parameter" />
-                                  <span className="parameter-data">PM2.5</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM10-parameter.png" alt="PM10 parameter" />
-                                  <span className="parameter-data">PM10</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO2.png" alt="CO2 parameter" />
-                                  <span className="parameter-data">CO2</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/HCHO-parameter.png" alt="HCHO parameter" />
-                                  <span className="parameter-data">HCHO</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/TVOC-parameter.png" alt="TVOC parameter" />
-                                  <span className="parameter-data">TVOC</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PARTICLE-COUNT-0.5-parameter.png" alt="PARTICLE COUNT (0.5) parameter" />
-                                  <span className="parameter-data">Particles<br />Count</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Humidity-parameter.png" alt="Humidity parameter" />
-                                  <span className="parameter-data">Humi.</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/TEMPERATURE-parameter.png" alt="TEMPERATURE parameter" />
-                                  <span className="parameter-data">Temp.</span>
-                                </span>
-                              </li>
-                            </ul>
-                            <h4>Connectivity :</h4>
-                            <ul className="connect-list">
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/wifi-connect.png" alt="" />
-                                  Wifi
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/RS485.png" alt="" />
-                                  RS-485
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/GSM.png" alt="GSM" />
-                                  GSM (Optional)
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
+                              </span>
+                            </li>
+                          </ul>
+                          <h4>{t("squairBanner.variants.common.connectivity")}</h4>
+                          <ul className="connect-list">
+                            <li>
+                              <span className="para-flex">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/01/wifi-connect.png" alt="" />
+                                {t("squairBanner.variants.connectivity.wifi")}
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/01/RS485.png" alt="" />
+                                {t("squairBanner.variants.connectivity.rs485")}
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/01/GSM.png" alt="GSM" />
+                                {t("squairBanner.variants.connectivity.gsm")}
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
 
-                  {activeTab === 'squair-pro' && (
-                    <div className="tab-pane active" id="squair-pro">
-                      <div className="row">
-                        <div className="col-md-4 squair-bg">
-                          <div className="squair-img">
-                            <div className="mob-boxx">
-                              <img src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-Squair-pro-monitor.png" alt="pranaair SQUAIR Pro" />
-                              <h4>Squair <span className="pro">Pro</span></h4>
-                            </div>
-                            <ul>
-                              <li><a href="#request_a_quote">Get a quote</a></li>
-                              <li><a href="#">
-                                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" alt="" /> Brochure</a>
-                              </li>
-                            </ul>
+                  {/* Squair Pro Tab */}
+                  <div
+                    className="tab-pane fade"
+                    id="squair-pro-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="squair-pro-tab"
+                    tabIndex={0}
+                  >
+                    <div className="row">
+                      <div className="col-md-4 squair-bg">
+                        <div className="squair-img">
+                          <div className="mob-boxx">
+                            <img
+                              src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-Squair-pro-monitor.png"
+                              alt={t("squairBanner.variants.tabs.pro.image")}
+                            />
+                            <h4>
+                              {t("squairBanner.variants.tabs.standard.title")}{" "}
+                              <span className="pro">{t("squairBanner.variants.tabs.pro.variant")}</span>
+                            </h4>
                           </div>
+                          <ul>
+                            <li>
+                              <a href="#request_a_quote">{t("squairBanner.variants.common.getQuote")}</a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" alt="" />{" "}
+                                {t("squairBanner.variants.common.brochure")}
+                              </a>
+                            </li>
+                          </ul>
                         </div>
-                        <div className="col-md-8 squair-parameter-bg">
-                          <div className="squair-parameters">
-                            <p className="parameter-para">Squair Pro, an advanced variant in Prana Air Squair series, prioritizing precision and high-performance air quality monitoring with enhanced sensors and extra features.</p>
+                      </div>
+                      <div className="col-md-8 squair-parameter-bg">
+                        <div className="squair-parameters">
+                          <p className="parameter-para">{t("squairBanner.variants.tabs.pro.description")}</p>
 
-                            <h4>Parameters :</h4>
-                            <ul className="parameter-list">
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/AQI-parameter.png" alt="AQI parameter" />
-                                  <span className="parameter-data">AQI</span>
+                          <h4>{t("squairBanner.variants.common.parameters")}</h4>
+                          <ul className="parameter-list">
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/AQI-parameter.png"
+                                  alt="AQI parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.aqi")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM1-para.png"
+                                  alt="PM1 para"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm1")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM2.5-parameter.png"
+                                  alt="PM2.5 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm25")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PM10-parameter.png"
+                                  alt="PM10 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pm10")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO2.png"
+                                  alt="CO2 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.co2")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/HCHO-parameter.png"
+                                  alt="HCHO parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.hcho")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/TVOC-parameter.png"
+                                  alt="TVOC parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.tvoc")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/PARTICLE-COUNT-0.5-parameter.png"
+                                  alt="PARTICLE COUNT (0.5) parameter"
+                                />
+                                <span className="parameter-data">
+                                  {t("squairBanner.variants.parameters.particlesCount")}
                                 </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM1-para.png" alt="PM1 para" />
-                                  <span className="parameter-data">PM1</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO.png"
+                                  alt="CO parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.co")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeterNO2.png"
+                                  alt="SO2 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.so2")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-SO2.png"
+                                  alt="NO2"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.no2")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/SO2-2-parameter.png"
+                                  alt="SO2-2 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.h2s")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/NH3-parameter.png"
+                                  alt="NH3 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.nh3")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-O3.png"
+                                  alt="O3 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.o3")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/Lightv-parameter.png"
+                                  alt="Lightv parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.light")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/Noise-parameter.png"
+                                  alt="Noise parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.noise")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/Humidity-parameter.png"
+                                  alt="Humidity parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.humidity")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/TEMPERATURE-parameter.png"
+                                  alt="TEMPERATURE parameter"
+                                />
+                                <span className="parameter-data">
+                                  {t("squairBanner.variants.parameters.temperature")}
                                 </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM2.5-parameter.png" alt="PM2.5 parameter" />
-                                  <span className="parameter-data">PM2.5</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/O2-parameter.png"
+                                  alt="O2 parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.o2")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/Pressure-parameter.png"
+                                  alt="Pressure parameter"
+                                />
+                                <span className="parameter-data">{t("squairBanner.variants.parameters.pressure")}</span>
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/CH4-parameter.png"
+                                  alt="CH4 parameter"
+                                />
+                                <span className="parameter-data">
+                                  {t("squairBanner.variants.parameters.ch4")}{" "}
+                                  <span className="op">{t("squairBanner.variants.common.optional")}</span>
                                 </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PM10-parameter.png" alt="PM10 parameter" />
-                                  <span className="parameter-data">PM10</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO2.png" alt="CO2 parameter" />
-                                  <span className="parameter-data">CO2</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/HCHO-parameter.png" alt="HCHO parameter" />
-                                  <span className="parameter-data">HCHO</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/TVOC-parameter.png" alt="TVOC parameter" />
-                                  <span className="parameter-data">TVOC</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/PARTICLE-COUNT-0.5-parameter.png" alt="PARTICLE COUNT (0.5) parameter" />
-                                  <span className="parameter-data">Particles<br />Count</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-CO.png" alt="CO parameter" />
-                                  <span className="parameter-data">CO</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeterNO2.png" alt="SO2 parameter" />
-                                  <span className="parameter-data">SO2</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-SO2.png" alt="NO2" />
-                                  <span className="parameter-data">NO2</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/SO2-2-parameter.png" alt="SO2-2 parameter" />
-                                  <span className="parameter-data">H2S</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/NH3-parameter.png" alt="NH3 parameter" />
-                                  <span className="parameter-data">NH3</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/parmeter-O3.png" alt="O3 parameter" />
-                                  <span className="parameter-data">O3</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Lightv-parameter.png" alt="Lightv parameter" />
-                                  <span className="parameter-data">Light</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Noise-parameter.png" alt="Noise parameter" />
-                                  <span className="parameter-data">Noise</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Humidity-parameter.png" alt="Humidity parameter" />
-                                  <span className="parameter-data">Humi.</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/TEMPERATURE-parameter.png" alt="TEMPERATURE parameter" />
-                                  <span className="parameter-data">Temp.</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/O2-parameter.png" alt="O2 parameter" />
-                                  <span className="parameter-data">O2</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Pressure-parameter.png" alt="Pressure parameter" />
-                                  <span className="parameter-data">Pressure</span>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/CH4-parameter.png" alt="CH4 parameter" />
-                                  <span className="parameter-data">CH4 <span className="op">(optional)</span></span>
-                                </span>
-                              </li>
-                            </ul>
-                            <h4>Connectivity :</h4>
-                            <ul className="connect-list">
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/wifi-connect.png" alt="wifi-connect" />
-                                  Wifi
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Lora.png" alt="Lora" />
-                                  LORA
-                                </span>
-                              </li>
-                              <li>
-                                <span className="para-flex">
-                                  <img src="https://www.pranaair.com/wp-content/uploads/2024/01/RS485.png" alt="RS485" />
-                                  RS-485
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
+                              </span>
+                            </li>
+                          </ul>
+                          <h4>{t("squairBanner.variants.common.connectivity")}</h4>
+                          <ul className="connect-list">
+                            <li>
+                              <span className="para-flex">
+                                <img
+                                  src="https://www.pranaair.com/wp-content/uploads/2024/01/wifi-connect.png"
+                                  alt="wifi-connect"
+                                />
+                                {t("squairBanner.variants.connectivity.wifi")}
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/01/Lora.png" alt="Lora" />
+                                {t("squairBanner.variants.connectivity.lora")}
+                              </span>
+                            </li>
+                            <li>
+                              <span className="para-flex">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/01/RS485.png" alt="RS485" />
+                                {t("squairBanner.variants.connectivity.rs485")}
+                              </span>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -733,20 +883,32 @@ export default function SquairMonitor() {
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-3">
-            <p style={{ textAlign: 'center' }}>
+            <p style={{ textAlign: "center" }}>
               <strong>
-                <span style={{ fontSize: '18pt' }}>Scan this QR Code to</span>
-                <img className="aligncenter" src="https://www.pranaair.com/wp-content/uploads/2022/04/prana-air-squair-air-monitor-manual-qr-code.png" alt="prana air squair air monitor manual QR code" width="200" height="200" />
-                <span style={{ fontSize: '14pt' }}>Download Manual</span>
+                <span style={{ fontSize: "18pt" }}>{t("squairQrCode.manual.scanText")}</span>
+                <img
+                  className="aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/04/prana-air-squair-air-monitor-manual-qr-code.png"
+                  alt={t("squairQrCode.manual.altText")}
+                  width="200"
+                  height="200"
+                />
+                <span style={{ fontSize: "14pt" }}>{t("squairQrCode.manual.downloadText")}</span>
               </strong>
             </p>
           </div>
           <div className="col-md-3">
-            <p style={{ textAlign: 'center' }}>
+            <p style={{ textAlign: "center" }}>
               <strong>
-                <span style={{ fontSize: '18pt' }}>Scan this QR Code to</span>
-                <img className="aligncenter" src="https://www.pranaair.com/wp-content/uploads/2022/04/prana-air-squair-air-monitor-brochure-qr-code.png" alt="prana air squair air monitor brochure qr code" width="200" height="200" />
-                <span style={{ fontSize: '14pt' }}>Download Brochure</span>
+                <span style={{ fontSize: "18pt" }}>{t("squairQrCode.brochure.scanText")}</span>
+                <img
+                  className="aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/04/prana-air-squair-air-monitor-brochure-qr-code.png"
+                  alt={t("squairQrCode.brochure.altText")}
+                  width="200"
+                  height="200"
+                />
+                <span style={{ fontSize: "14pt" }}>{t("squairQrCode.brochure.downloadText")}</span>
               </strong>
             </p>
           </div>
@@ -758,7 +920,12 @@ export default function SquairMonitor() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/05/use-of-squair-air-quality-monitor.jpeg" alt="use of Prana Air SQUAIR air quality monitor" width="100%" className="displaynone550" />
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/05/use-of-squair-air-quality-monitor.jpeg"
+              alt="use of Prana Air SQUAIR air quality monitor"
+              width="100%"
+              className="displaynone550"
+            />
           </div>
         </div>
       </div>
@@ -767,16 +934,14 @@ export default function SquairMonitor() {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h3 style={{ textAlign: 'center' }}><span style={{ fontSize: '17pt' }}>Indoor Air Quality Monitoring</span></h3>
-            <p style={{ textAlign: 'center', color: '#adadad', padding: '0 5%' }}>
-              <span style={{ fontSize: '13pt' }}>
-                Indoor air pollution is a big matter of concern and an environmental risk to our health. 80-90% of the time, People stay indoors at home and working places. Due to this huge exposure to harmful indoor air quality, there are 3.8 million premature deaths annually caused only by indoor (household) air pollution according to WHO. This impact is not only limited to rural homes, but also to modern housing in urban cities. There are causes and effects of indoor air contamination like cooking, cleaning chemicals, paints, smoking, dust, etc., how a building is ventilated, room temperature, dampness, and condensation.
-              </span>
+            <h3 style={{ textAlign: "center" }}>
+              <span style={{ fontSize: "17pt" }}>{t("indoorAirQualityMonitoring.title")}</span>
+            </h3>
+            <p style={{ textAlign: "center", color: "#adadad", padding: "0 5%" }}>
+              <span style={{ fontSize: "13pt" }}>{t("indoorAirQualityMonitoring.paragraph1")}</span>
             </p>
-            <p style={{ textAlign: 'center', color: '#adadad', padding: '0 5%' }}>
-              <span style={{ fontSize: '13pt' }}>
-                Some of the main pollutants like particulate matter - (PM1, PM2.5, PM10), CO, TVOC, Formaldehyde, CO2, NO2, etc. are to measure and control from sources inside the building and drawn outdoor. Prana Air uses low-cost, highly responsive, compact design, energy-efficient, and RoHS compliant air quality sensors in our air quality monitoring devices to detect these air pollutants.
-              </span>
+            <p style={{ textAlign: "center", color: "#adadad", padding: "0 5%" }}>
+              <span style={{ fontSize: "13pt" }}>{t("indoorAirQualityMonitoring.paragraph2")}</span>
             </p>
           </div>
         </div>
@@ -786,8 +951,13 @@ export default function SquairMonitor() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <h3 style={{ textAlign: 'center' }}>Monitor Connectivity Process</h3>
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/12/squair-air-quality-monitor-connectivity-process.jpg" alt="prana air SQUAIR indoor air quality monitor connectivity process" width="100%" className="displaynone550" />
+            <h3 style={{ textAlign: "center" }}>{t("monitorConnectivityProcess.title")}</h3>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/12/squair-air-quality-monitor-connectivity-process.jpg"
+              alt={t("monitorConnectivityProcess.altText")}
+              width="100%"
+              className="displaynone550"
+            />
           </div>
         </div>
       </div>
@@ -796,12 +966,16 @@ export default function SquairMonitor() {
       <div className="container" id="comparison-chart">
         <div className="row">
           <div className="col-md-12">
-            <h4 style={{ textAlign: 'center' }}>
-              <span style={{ fontSize: '16pt' }}>Prana Air PM2.5 Data Accuracy Level</span>
+            <h4 style={{ textAlign: "center" }}>
+              <span style={{ fontSize: "16pt" }}>{t("comparisonChart.title.line1")}</span>
               <br />
-              <span style={{ fontSize: '16pt' }}>Comparison Chart With BAM</span>
+              <span style={{ fontSize: "16pt" }}>{t("comparisonChart.title.line2")}</span>
             </h4>
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/04/BAM-VS-PRANA-AIR-PM2-squair.png" alt="BAM VS PRANA AIR PM2 accuracy comparison chart" width="100%" />
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/04/BAM-VS-PRANA-AIR-PM2-squair.png"
+              alt={t("comparisonChart.altText")}
+              width="100%"
+            />
           </div>
         </div>
       </div>
@@ -810,22 +984,12 @@ export default function SquairMonitor() {
       <div className="container-fluid squair-polluted-after-before" id="squair-polluted-after-before">
         <div className="row">
           <div className="col-md-12">
-            <h4 style={{ textAlign: 'center' }}><strong><span style={{ fontSize: '16pt' }}>See the Invisible Air Pollutants</span></strong></h4>
-            <div className="pollutionParticlesHoverEffect">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/05/indoor-air-pollutants.jpeg" alt="invisible indoor air pollutants" width="100%" />
-              <input
-                type="button"
-                name="type"
-                id="pollutedeffectBtn"
-                value={showPollutants ? 'Hide the invisible' : 'See the invisible'}
-                onClick={togglePollutants}
-              />
-              <div id="pollutedOnHover" style={{ opacity: showPollutants ? 1 : 0 }}>
-                <img src="https://www.pranaair.com/wp-content/uploads/2021/05/squair-polution-paticle-name.png" alt="indoor air pollutants" width="100%" className="motion-css" />
-                <img src="https://www.pranaair.com/wp-content/uploads/2021/05/invisible-air-pollutants-of-indoor-pollution.jpeg" alt="invisible air pollutants of indoor pollution" width="100%" />
-                <div id="particles-js"></div>
-              </div>
-            </div>
+            <h4 style={{ textAlign: "center" }}>
+              <strong>
+                <span style={{ fontSize: "16pt" }}>{t("invisiblePollutants.title")}</span>
+              </strong>
+            </h4>
+            <PollutantsToggle />
           </div>
         </div>
       </div>
@@ -834,17 +998,29 @@ export default function SquairMonitor() {
       <div className="container-fluid squairMonitorMobilebanner">
         <div className="row">
           <div className="col-md-6">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/05/squair-monitor-connects-to-AQI-mobile-app.png" alt="AQI Mobile App" className="squairMonitorMobile" />
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/05/squair-monitor-connects-to-AQI-mobile-app.png"
+              alt={t("mobileApp.altTexts.mobileApp")}
+              className="squairMonitorMobile"
+            />
           </div>
           <div className="col-md-6 squairMonitorMobilebanner-content">
-            <h3 style={{ textAlign: 'right', color: '#fff' }}>To get the updates about Air Quality near you, Download AQI India app</h3>
-            <p style={{ textAlign: 'right', color: '#adadad' }}>To track the quality of the air you inhale, download the AQI India app on your iOS/Android device(s) and forget all your worries. Download the app via Google Play Store (for Android), or Apple App Store (for iOS).</p>
-            <p className="appICONS" style={{ textAlign: 'right' }}>
+            <h3 style={{ textAlign: "right", color: "#fff" }}>{t("mobileApp.title")}</h3>
+            <p style={{ textAlign: "right", color: "#adadad" }}>{t("mobileApp.description")}</p>
+            <p className="appICONS" style={{ textAlign: "right" }}>
               <a href="https://play.google.com/store/apps/details?id=com.aqi.data&hl=en">
-                <img className="brdr" src="https://www.pranaair.com/wp-content/uploads/2021/05/squair-monitor-connects-to-AQI-mobile-app.png" alt="google playstore icon " />
+                <img
+                  className="brdr"
+                  src="https://www.pranaair.com/wp-content/uploads/2021/05/squair-monitor-connects-to-AQI-mobile-app.png"
+                  alt={t("mobileApp.altTexts.googlePlayStore")}
+                />
               </a>
               <a href="https://apps.apple.com/in/app/air-quality-index-aqi-india/id1439684571">
-                <img className="brdr" src="https://www.pranaair.com/wp-content/uploads/2021/04/squair-apple-store.png" alt="app store icon" />
+                <img
+                  className="brdr"
+                  src="https://www.pranaair.com/wp-content/uploads/2021/04/squair-apple-store.png"
+                  alt={t("mobileApp.altTexts.appStore")}
+                />
               </a>
             </p>
           </div>
@@ -855,20 +1031,26 @@ export default function SquairMonitor() {
       <div className="container webDashboardSquareSection">
         <div className="row">
           <div className="col-md-6 lptopSection">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/05/web-dashboard.jpeg" alt="Web Dashboard" />
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/05/web-dashboard.jpeg"
+              alt={t("webDashboard.altTexts.dashboard")}
+            />
           </div>
           <div className="col-md-6 SquairContentSectionLaptrop">
-            <h3 style={{ textAlign: 'left' }}>Real-time & Historical Data</h3>
-            <p style={{ textAlign: 'left', color: '#adadad' }}>Access the real-time or historic air pollution data with AQI, PM2.5, PM10, Temperature, Humidity & Noise parameters of your city anytime, anywhere.</p>
+            <h3 style={{ textAlign: "left" }}>{t("webDashboard.realTimeData.title")}</h3>
+            <p style={{ textAlign: "left", color: "#adadad" }}>{t("webDashboard.realTimeData.description")}</p>
           </div>
         </div>
         <div className="row">
           <div className="col-md-6 lptopSection">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/05/web-dashboard.jpeg" alt="Web Dashboard" />
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/05/web-dashboard.jpeg"
+              alt={t("webDashboard.altTexts.dashboard")}
+            />
           </div>
           <div className="col-md-6 SquairContentSectionLaptrop">
-            <h3 style={{ textAlign: 'left' }}>Reliable Dashboard</h3>
-            <p style={{ textAlign: 'left', color: '#adadad' }}>Log in to the web dashboard and explore the amazing features. It provides meaningful and more understandable monitor data.</p>
+            <h3 style={{ textAlign: "left" }}>{t("webDashboard.reliableDashboard.title")}</h3>
+            <p style={{ textAlign: "left", color: "#adadad" }}>{t("webDashboard.reliableDashboard.description")}</p>
           </div>
         </div>
       </div>
@@ -878,7 +1060,12 @@ export default function SquairMonitor() {
         <div className="row">
           <div className="col-md-12">
             <a href="https://www.aqi.tv">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/05/AQI-TV-App-for-prana-air-squair-monitor.jpeg" alt="AQI TV App for prana air squair monitor" width="100%" className="dsplyOfff768" />
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2021/05/AQI-TV-App-for-prana-air-squair-monitor.jpeg"
+                alt="AQI TV App for prana air squair monitor"
+                width="100%"
+                className="dsplyOfff768"
+              />
             </a>
           </div>
         </div>
@@ -888,8 +1075,14 @@ export default function SquairMonitor() {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h3 style={{ textAlign: 'center', fontSize: '30px' }}>Scan QR Code & Check the Air Quality Around You</h3>
-            <img className="alignnone size-full" src="https://www.pranaair.com/wp-content/uploads/2021/06/air-quality-dat-by-qr-code-scan.gif" alt="air quality data by qr code scan" width="1280" height="720" />
+            <h3 style={{ textAlign: "center", fontSize: "30px" }}>{t("qrCodeHeading.title")}</h3>
+            <img
+              className="alignnone size-full"
+              src="https://www.pranaair.com/wp-content/uploads/2021/06/air-quality-dat-by-qr-code-scan.gif"
+              alt="air quality data by qr code scan"
+              width="1280"
+              height="720"
+            />
           </div>
         </div>
       </div>
@@ -900,24 +1093,22 @@ export default function SquairMonitor() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <h2>{t("contactHeading.title")}</h2>
+                <p>{t("contactHeading.description")}</p>
               </div>
             </div>
           </div>
         </div>
         <ContactForm pageName="Squair Air Monitor Page" />
       </div>
-      {/* FAQ Section */}
+
+      {/* FAQ Section - Using Bootstrap Accordion */}
       <section className="faq-section">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="faq-heading">
-                <h2>Frequently asked questions</h2>
+                <h2>{t("faqSection.heading")}</h2>
               </div>
               <div className="accordion" id="faqAccordion">
                 <div className="accordion-item">
@@ -929,17 +1120,11 @@ export default function SquairMonitor() {
                       data-bs-target="#faq1"
                       aria-expanded="true"
                     >
-                      1. What air quality parameters are measured by SQUAIR Monitor ?
+                      {t("faqSection.questions.q1")}
                     </button>
                   </h2>
                   <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                    <div className="accordion-body faq-tab-para">
-                      SQUAIR is an indoor air quality monitor that effectively measures a wide range of primary and secondary air pollutants.
-
-                      Parameters:
-                      SQUAIR+ (Lite): PM 2.5, PM 10, CO2, TVOC, HCHO, Noise, Light, Temperature, Humidity
-                      SQUAIR+ (Pro): PM 2.5, PM 10, CO, O3, CO2, SO2, NO2, TVOC, Noise, Light, Temperature, Humidity
-                    </div>
+                    <div className="accordion-body faq-tab-para">{t("faqSection.answers.a1")}</div>
                   </div>
                 </div>
                 <div className="accordion-item">
@@ -951,15 +1136,11 @@ export default function SquairMonitor() {
                       data-bs-target="#faq2"
                       aria-expanded="false"
                     >
-                      2. Is SQUAIR monitor competent as per the international standards?
+                      {t("faqSection.questions.q2")}
                     </button>
                   </h2>
                   <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div className="accordion-body faq-tab-para">
-                      Yes. It has been curated with cutting-edge technology,
-                      keeping national and international requirements in mind. SQUAIR is compliant with the
-                      standards set by WELL, LEED, ISHRAE, and WHO.
-                    </div>
+                    <div className="accordion-body faq-tab-para">{t("faqSection.answers.a2")}</div>
                   </div>
                 </div>
                 <div className="accordion-item">
@@ -971,15 +1152,11 @@ export default function SquairMonitor() {
                       data-bs-target="#faq3"
                       aria-expanded="false"
                     >
-                      3. How can I connect my monitor to get the data?
+                      {t("faqSection.questions.q3")}
                     </button>
                   </h2>
                   <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div className="accordion-body faq-tab-para">
-                      Yes. You can connect your SQUAIR monitor through Wi-Fi,
-                      GSM SIM, and RS-485 connectivity. Go through the above video on this page about the
-                      whole process of connectivity process.
-                    </div>
+                    <div className="accordion-body faq-tab-para">{t("faqSection.answers.a3")}</div>
                   </div>
                 </div>
                 <div className="accordion-item">
@@ -991,13 +1168,11 @@ export default function SquairMonitor() {
                       data-bs-target="#faq4"
                       aria-expanded="false"
                     >
-                      4. Do I get any on-board storage with SQUAIR?
+                      {t("faqSection.questions.q4")}
                     </button>
                   </h2>
                   <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div className="accordion-body faq-tab-para">
-                      Yes. SQUAIR monitor comes with on-board micro-SD card storage.
-                    </div>
+                    <div className="accordion-body faq-tab-para">{t("faqSection.answers.a4")}</div>
                   </div>
                 </div>
                 <div className="accordion-item">
@@ -1009,15 +1184,11 @@ export default function SquairMonitor() {
                       data-bs-target="#faq5"
                       aria-expanded="false"
                     >
-                      5. Can I connect my SQUAIR monitor with my Building Management System (BMS)?
+                      {t("faqSection.questions.q5")}
                     </button>
                   </h2>
                   <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div className="accordion-body faq-tab-para">
-                      Yes, absolutely. the monitor is extremely versatile and
-                      flexible in terms of connectivity. It comes with RS-485 connectivity which renders it
-                      compatible with your BMS.
-                    </div>
+                    <div className="accordion-body faq-tab-para">{t("faqSection.answers.a5")}</div>
                   </div>
                 </div>
                 <div className="accordion-item">
@@ -1026,16 +1197,14 @@ export default function SquairMonitor() {
                       className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#faq5"
+                      data-bs-target="#faq6"
                       aria-expanded="false"
                     >
-                       6. How much does SQUAIR monitor weigh?
+                      {t("faqSection.questions.q6")}
                     </button>
                   </h2>
-                  <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div className="accordion-body faq-tab-para">
-                    SQUAIR monitor weighs 475 gm (16.75 oz).
-                    </div>
+                  <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">{t("faqSection.answers.a6")}</div>
                   </div>
                 </div>
               </div>
@@ -1048,37 +1217,63 @@ export default function SquairMonitor() {
       <div className="container product_compare_section">
         <div className="row">
           <div className="col-md-12">
-            <h3 style={{ textAlign: 'center' }}><span className="nova-light" style={{ fontSize: '20pt' }}><strong className="nova-bold">You May Also Like Other</strong></span></h3>
-            <p style={{ textAlign: 'center' }}><span style={{ fontSize: '18pt' }}>Air Quality Monitors</span><sup><img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" width="32" height="24" /></sup></p>
+            <h3 style={{ textAlign: "center" }}>
+              <span className="nova-light" style={{ fontSize: "20pt" }}>
+                <strong className="nova-bold">{t("relatedProducts.title.part1")}</strong>
+              </span>
+            </h3>
+            <p style={{ textAlign: "center" }}>
+              <span style={{ fontSize: "18pt" }}>{t("relatedProducts.title.part2")}</span>
+              <sup>
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                  alt={t("relatedProducts.altTexts.logo")}
+                  width="32"
+                  height="24"
+                />
+              </sup>
+            </p>
           </div>
         </div>
         <div className="row">
           <div className="product_compare_box">
             <a href="#">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/03/pocket-monitor-in-outdoor.jpeg" alt="prana air pocket air quality monitor" />
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2021/03/pocket-monitor-in-outdoor.jpeg"
+                alt={t("relatedProducts.products.pocket.alt")}
+              />
             </a>
-            <h3>Pocket+</h3>
+            <h3>{t("relatedProducts.products.pocket.name")}</h3>
           </div>
           <div className="product_compare_box">
             <a href="#">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg" alt="prana air cair air quality monitor" />
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg"
+                alt={t("relatedProducts.products.cair.alt")}
+              />
             </a>
-            <h3>CAIR+</h3>
+            <h3>{t("relatedProducts.products.cair.name")}</h3>
           </div>
           <div className="product_compare_box">
             <a href="#">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-monitor-on-table.jpg" alt="prana air sensible air quality monitor" />
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-monitor-on-table.jpg"
+                alt={t("relatedProducts.products.sensible.alt")}
+              />
             </a>
-            <h3>Sensible</h3>
+            <h3>{t("relatedProducts.products.sensible.name")}</h3>
           </div>
           <div className="product_compare_box">
             <a href="#">
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/03/Sensible-air-monitor-on-table.jpg" alt="prana air sensible plus air quality monitor" />
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2021/03/Sensible-air-monitor-on-table.jpg"
+                alt={t("relatedProducts.products.sensiblePlus.alt")}
+              />
             </a>
-            <h3>Sensible+</h3>
+            <h3>{t("relatedProducts.products.sensiblePlus.name")}</h3>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

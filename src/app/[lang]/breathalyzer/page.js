@@ -1,35 +1,19 @@
-"use client"
-
-import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
+import QuantityCounter from "@/Components/Pages/Breathalyzer/quantity-counter"
 
 export default function BreathalyzerPage() {
-  const [activeTab, setActiveTab] = useState("overview")
-  const [activeImage, setActiveImage] = useState("a")
-  const [quantity, setQuantity] = useState(1)
-  const [showMore, setShowMore] = useState(false)
-  const [activeHowToTab, setActiveHowToTab] = useState("alcohol-test")
-
-  // Update the navigation menu to match the design
+  // Scroll to section when clicking on navigation
   const handleTabClick = (tab) => {
-    setActiveTab(tab)
     const element = document.getElementById(tab)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
 
-  const handleImageChange = (image) => {
-    setActiveImage(image)
-  }
-
-  const handleQuantityChange = (e) => {
-    setQuantity(Number.parseInt(e.target.value))
-  }
-
+  // Update the product features section
   const updateProductFeatures = () => {
     return (
       <div className="product-features">
@@ -161,55 +145,8 @@ export default function BreathalyzerPage() {
 
   return (
     <div className="breathalyzer-container">
-      {/* Product Navigation */}
-      <div className="product-navigation">
-        <div id="new-header" className="container-fluid">
-          <ul id="menu">
-            <li>
-              <a
-                href="#overview"
-                className={activeTab === "overview" ? "active" : ""}
-                onClick={() => handleTabClick("overview")}
-              >
-                Overview
-              </a>
-            </li>
-            <li>
-              <a
-                href="#features"
-                className={activeTab === "features" ? "active" : ""}
-                onClick={() => handleTabClick("features")}
-              >
-                Features
-              </a>
-            </li>
-            <li>
-              <a
-                href="#functions"
-                className={activeTab === "functions" ? "active" : ""}
-                onClick={() => handleTabClick("functions")}
-              >
-                Functions
-              </a>
-            </li>
-            <li>
-              <a href="#spec" className={activeTab === "spec" ? "active" : ""} onClick={() => handleTabClick("spec")}>
-                Tech-Specs
-              </a>
-            </li>
-            <li>
-              <a
-                href="#compare"
-                className={activeTab === "compare" ? "active" : ""}
-                onClick={() => handleTabClick("compare")}
-              >
-                Compare
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
+      {/* Product Navigation */}
       {/* Breadcrumb */}
       <div className="static-breadcrums">
         <ul>
@@ -232,90 +169,119 @@ export default function BreathalyzerPage() {
         <div className="container">
           <div className="row order-colum">
             {/* Product Images */}
-            {/* Update the product section to match the design */}
             <div className="col-lg-4 col-md-12 ipad" id="product">
-              <div id="Comonitora" className="tabcontent disply">
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-portable-alcohol-tester.png"
-                  alt="prana air breathalyzer portable alcohol tester"
-                  width={400}
-                  height={450}
-                />
-              </div>
-
-              <div id="Comonitorb" className="tabcontent" style={{ display: activeImage === "b" ? "block" : "none" }}>
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-alcohol-detector.png"
-                  alt="prana air breathalyzer alcohol detector"
-                  width={400}
-                  height={450}
-                />
-              </div>
-
-              <div id="Comonitorc" className="tabcontent" style={{ display: activeImage === "c" ? "block" : "none" }}>
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-portable-breathalyzer-device.png"
-                  alt="prana air portable breathalyzer device"
-                  width={400}
-                  height={450}
-                />
-              </div>
-
-              <div id="Comonitord" className="tabcontent" style={{ display: activeImage === "d" ? "block" : "none" }}>
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-device.png"
-                  alt="prana air breathalyzer device"
-                  width={400}
-                  height={450}
-                />
-              </div>
-
-              <div className="tab">
-                <button
-                  className={`tablinks ${activeImage === "a" ? "active" : ""}`}
-                  onClick={() => handleImageChange("a")}
-                >
+              <div className="tab-content">
+                <div className="tab-pane fade show active" id="Comonitora">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-portable-alcohol-tester.png"
-                    alt="breathly-img-front"
-                    width={80}
-                    height={80}
+                    alt="prana air breathalyzer portable alcohol tester"
+                    width={400}
+                    height={450}
                   />
-                </button>
-                <button
-                  className={`tablinks ${activeImage === "b" ? "active" : ""}`}
-                  onClick={() => handleImageChange("b")}
-                >
+                </div>
+
+                <div className="tab-pane fade" id="Comonitorb">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-alcohol-detector.png"
-                    alt="breathly-img-left"
-                    width={80}
-                    height={80}
+                    alt="prana air breathalyzer alcohol detector"
+                    width={400}
+                    height={450}
                   />
-                </button>
-                <button
-                  className={`tablinks ${activeImage === "c" ? "active" : ""}`}
-                  onClick={() => handleImageChange("c")}
-                >
+                </div>
+
+                <div className="tab-pane fade" id="Comonitorc">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-portable-breathalyzer-device.png"
-                    alt="breathly-img-bottom"
-                    width={80}
-                    height={80}
+                    alt="prana air portable breathalyzer device"
+                    width={400}
+                    height={450}
                   />
-                </button>
-                <button
-                  className={`tablinks ${activeImage === "d" ? "active" : ""}`}
-                  onClick={() => handleImageChange("d")}
-                >
+                </div>
+
+                <div className="tab-pane fade" id="Comonitord">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-device.png"
-                    alt="breathly-img-back-min"
-                    width={80}
-                    height={80}
+                    alt="prana air breathalyzer device"
+                    width={400}
+                    height={450}
                   />
-                </button>
+                </div>
               </div>
+
+              <ul className="nav nav-tabs" role="tablist">
+                <li className="nav-item">
+                  <button
+                    className="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Comonitora"
+                    type="button"
+                    role="tab"
+                    aria-controls="Comonitora"
+                    aria-selected="true"
+                  >
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-portable-alcohol-tester.png"
+                      alt="breathly-img-front"
+                      width={80}
+                      height={80}
+                    />
+                  </button>
+                </li>
+                <li className="nav-item">
+                  <button
+                    className="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Comonitorb"
+                    type="button"
+                    role="tab"
+                    aria-controls="Comonitorb"
+                    aria-selected="false"
+                  >
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-alcohol-detector.png"
+                      alt="breathly-img-left"
+                      width={80}
+                      height={80}
+                    />
+                  </button>
+                </li>
+                <li className="nav-item">
+                  <button
+                    className="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Comonitorc"
+                    type="button"
+                    role="tab"
+                    aria-controls="Comonitorc"
+                    aria-selected="false"
+                  >
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-portable-breathalyzer-device.png"
+                      alt="breathly-img-bottom"
+                      width={80}
+                      height={80}
+                    />
+                  </button>
+                </li>
+                <li className="nav-item">
+                  <button
+                    className="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#Comonitord"
+                    type="button"
+                    role="tab"
+                    aria-controls="Comonitord"
+                    aria-selected="false"
+                  >
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-device.png"
+                      alt="breathly-img-back-min"
+                      width={80}
+                      height={80}
+                    />
+                  </button>
+                </li>
+              </ul>
             </div>
 
             {/* Product Details */}
@@ -338,14 +304,17 @@ export default function BreathalyzerPage() {
                         cutting-edge fuel cell technology, you can rely on precise and trustworthy results. Ensure
                         safety and peace of mind wherever you go with this highly accurate and convenient breathalyzer.
                       </p>
-                      <p
-                        className={`extra-content ${showMore ? "show" : ""}`}
-                        data-is-toggled={showMore ? "true" : "false"}
-                      >
+                      <p className="extra-content collapse" id="showMoreContent">
                         Order yours today and prioritize responsible drinking.
                       </p>
-                      <button className="read-more btn" onClick={() => setShowMore(!showMore)}>
-                        {showMore ? "Show Less" : "Show More"}
+                      <button
+                        className="read-more btn"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#showMoreContent"
+                        aria-expanded="false"
+                        aria-controls="showMoreContent"
+                      >
+                        Show More
                       </button>
                     </article>
                   </section>
@@ -375,27 +344,23 @@ export default function BreathalyzerPage() {
 
                   <div className="model-box">
                     <h5>Quantity</h5>
-                    <div className="quantity buttons_added">
-                      <input
-                        type="number"
-                        step="1"
-                        min="1"
-                        max="9999"
-                        value={quantity}
-                        onChange={handleQuantityChange}
-                        title="Qty"
-                        className="input-text qty text"
-                        size="4"
-                        pattern="[0-9]*"
-                        inputMode="numeric"
-                      />
-                    </div>
+                    <QuantityCounter />
                     <div className="buy-btns">
                       <br />
-                      <form class="cart new-cart" action="https://www.pranaair.com/air-quality-monitor/handheld/breathalyzer/" method="post"
-                        enctype="multipart/form-data">
-                        <button type="submit" name="add-to-cart" value="77733"
-                          class="single_add_to_cart_button button alt">Add to Cart</button>
+                      <form
+                        className="cart new-cart"
+                        action="https://www.pranaair.com/air-quality-monitor/handheld/breathalyzer/"
+                        method="post"
+                        encType="multipart/form-data"
+                      >
+                        <button
+                          type="submit"
+                          name="add-to-cart"
+                          value="77733"
+                          className="single_add_to_cart_button button alt"
+                        >
+                          Add to Cart
+                        </button>
                       </form>
                     </div>
                   </div>
@@ -519,226 +484,253 @@ export default function BreathalyzerPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="tab-box">
-                <div className="tab-navigation">
-                  <ul className="tab-heading">
-                    <li
-                      className={activeHowToTab === "alcohol-test" ? "active" : ""}
-                      onClick={() => setActiveHowToTab("alcohol-test")}
+                <ul className="nav nav-tabs tab-heading" id="howToUseTabs" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="alcohol-test-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#alcohol-test"
+                      type="button"
+                      role="tab"
+                      aria-controls="alcohol-test"
+                      aria-selected="true"
                     >
                       Alcohol Test
-                    </li>
-                    <li
-                      className={activeHowToTab === "date-time" ? "active" : ""}
-                      onClick={() => setActiveHowToTab("date-time")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="date-time-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#date-time"
+                      type="button"
+                      role="tab"
+                      aria-controls="date-time"
+                      aria-selected="false"
                     >
                       Date & Time
-                    </li>
-                    <li
-                      className={activeHowToTab === "history-export" ? "active" : ""}
-                      onClick={() => setActiveHowToTab("history-export")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="history-export-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#history-export"
+                      type="button"
+                      role="tab"
+                      aria-controls="history-export"
+                      aria-selected="false"
                     >
                       History & Data Export
-                    </li>
-                  </ul>
-                </div>
+                    </button>
+                  </li>
+                </ul>
 
-                <div className="tab-content">
-                  {activeHowToTab === "alcohol-test" && (
-                    <div>
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="tab-content-box">
-                            <h3>Test Alcohol</h3>
-                            <p>
-                              Follow these step-by-step instructions to precisely measure the alcohol level in every
-                              breath sample.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="auto-power-off">
-                            <ul>
-                              <li>
-                                <Image
-                                  src="https://www.pranaair.com/wp-content/uploads/2025/02/automatically-powers-off.png"
-                                  alt="Auto power off"
-                                  width={60}
-                                  height={60}
-                                />
-                              </li>
-                              <li>The device automatically powers off after 20 seconds of inactivity.</li>
-                            </ul>
-                          </div>
+                <div className="tab-content" id="howToUseTabsContent">
+                  <div
+                    className="tab-pane fade show active"
+                    id="alcohol-test"
+                    role="tabpanel"
+                    aria-labelledby="alcohol-test-tab"
+                  >
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="tab-content-box">
+                          <h3>Test Alcohol</h3>
+                          <p>
+                            Follow these step-by-step instructions to precisely measure the alcohol level in every
+                            breath sample.
+                          </p>
                         </div>
                       </div>
-
-                      <div className="row mob-row-parametere">
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>01</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/prana-air-logo.jpg"
-                              alt="Prana Air Logo"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Press the button for a second till the Prana Air Logo and Wait will appear.</p>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>02</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/blow-for-5-6-seconds-until-the-bar-fills.jpg"
-                              alt="Blow for 5-6 seconds"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Blow when the test bar shows, blow for 5-6 seconds until the bar fills.</p>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>03</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Alcohol-level-green-yellow-red-displays.jpg"
-                              alt="Alcohol level display"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Alcohol level (green/yellow/red) displays.</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="ranges-display">
-                            <ul className="rang">
-                              <li>0~0.10mg/l</li>
-                              <li>0.10~0.40mg/l</li>
-                              <li>0.40~1.00mg/l</li>
-                            </ul>
-                            <ul className="rang-clr">
-                              <li>Green</li>
-                              <li>Yellow</li>
-                              <li>Red</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="point-para">
-                            <p>0.08%BAC means 0.08g (80mg) of alcohol per 100ml of blood.</p>
-                          </div>
+                      <div className="col-md-6">
+                        <div className="auto-power-off">
+                          <ul>
+                            <li>
+                              <Image
+                                src="https://www.pranaair.com/wp-content/uploads/2025/02/automatically-powers-off.png"
+                                alt="Auto power off"
+                                width={60}
+                                height={60}
+                              />
+                            </li>
+                            <li>The device automatically powers off after 20 seconds of inactivity.</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
-                  )}
 
-                  {activeHowToTab === "date-time" && (
-                    <div>
-                      <div className="tab-content-box">
-                        <h3>Setting the Time and Date on Your Breathalyzer</h3>
-                        <p>Ensure accurate data logging by setting the correct time and date on your breathalyzer.</p>
+                    <div className="row mob-row-parametere">
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>01</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/prana-air-logo.jpg"
+                            alt="Prana Air Logo"
+                            width={150}
+                            height={100}
+                          />
+                          <p>Press the button for a second till the Prana Air Logo and Wait will appear.</p>
+                        </div>
                       </div>
-
-                      <div className="row mob-row-parametere">
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>01</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
-                              alt="Prana Air Logo"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Press the button for a second till the Prana Air Logo and “Wait” will appear.</p>
-                          </div>
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>02</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/blow-for-5-6-seconds-until-the-bar-fills.jpg"
+                            alt="Blow for 5-6 seconds"
+                            width={150}
+                            height={100}
+                          />
+                          <p>Blow when the test bar shows, blow for 5-6 seconds until the bar fills.</p>
                         </div>
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>02</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/turn-on-long-press-the-button.png"
-                              alt="Blow for 5-6 seconds"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Once the device is turn on long-press the button to enter settings.</p>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>03</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
-                              alt="Alcohol level display"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Use short/long presses to adjust time and date and Long-press again to return to the main screen.</p>
-                          </div>
+                      </div>
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>03</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Alcohol-level-green-yellow-red-displays.jpg"
+                            alt="Alcohol level display"
+                            width={150}
+                            height={100}
+                          />
+                          <p>Alcohol level (green/yellow/red) displays.</p>
                         </div>
                       </div>
                     </div>
-                  )}
 
-                  {activeHowToTab === "history-export" && (
-                    <div>
-                      <div className="tab-content-box">
-                        <h3>Viewing Historical Records</h3>
-                        <p>
-                          Easily access past test results along with their date and time to check records anytime and
-                          anywhere.
-                        </p>
-                      </div>
-                      <div className="tab-content-box data-txt">
-                        <h3>Data Export:</h3>
-                        <p>Effortlessly export your data for future analysis.</p>
-                      </div>
-
-                      <div className="row mob-row-parametere">
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>01</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
-                              alt="Prana Air Logo"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Press and hold the button until the Prana Air logo appears on the screen.</p>
-                          </div>
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="ranges-display">
+                          <ul className="rang">
+                            <li>0~0.10mg/l</li>
+                            <li>0.10~0.40mg/l</li>
+                            <li>0.40~1.00mg/l</li>
+                          </ul>
+                          <ul className="rang-clr">
+                            <li>Green</li>
+                            <li>Yellow</li>
+                            <li>Red</li>
+                          </ul>
                         </div>
-                        <div className="col-md-4">
-                          <div className="tab-logo-box">
-                            <h3>02</h3>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
-                              alt="Blow for 5-6 seconds"
-                              width={150}
-                              height={100}
-                            />
-                            <p>Short-press to view past records with date, time, and alcohol level.</p>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="tab-logo-box data-box">
-                            <h3>03</h3>
-                            <p>Connect via Type-C cable, enable USB mode, and access records in an Excel file.
-                            </p>
-                            <Image
-                              src="https://www.pranaair.com/wp-content/uploads/2025/02/Connect-via-Type-C-cable.webp"
-                              alt="Alcohol level display"
-                              width={150}
-                              height={100}
-                            />
-
-                          </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="point-para">
+                          <p>0.08%BAC means 0.08g (80mg) of alcohol per 100ml of blood.</p>
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
+
+                  <div className="tab-pane fade" id="date-time" role="tabpanel" aria-labelledby="date-time-tab">
+                    <div className="tab-content-box">
+                      <h3>Setting the Time and Date on Your Breathalyzer</h3>
+                      <p>Ensure accurate data logging by setting the correct time and date on your breathalyzer.</p>
+                    </div>
+
+                    <div className="row mob-row-parametere">
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>01</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
+                            alt="Prana Air Logo"
+                            width={150}
+                            height={100}
+                          />
+                          <p>Press the button for a second till the Prana Air Logo and "Wait" will appear.</p>
+                        </div>
+                      </div>
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>02</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/turn-on-long-press-the-button.png"
+                            alt="Blow for 5-6 seconds"
+                            width={150}
+                            height={100}
+                          />
+                          <p>Once the device is turn on long-press the button to enter settings.</p>
+                        </div>
+                      </div>
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>03</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
+                            alt="Alcohol level display"
+                            width={150}
+                            height={100}
+                          />
+                          <p>
+                            Use short/long presses to adjust time and date and Long-press again to return to the main
+                            screen.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="tab-pane fade"
+                    id="history-export"
+                    role="tabpanel"
+                    aria-labelledby="history-export-tab"
+                  >
+                    <div className="tab-content-box">
+                      <h3>Viewing Historical Records</h3>
+                      <p>
+                        Easily access past test results along with their date and time to check records anytime and
+                        anywhere.
+                      </p>
+                    </div>
+                    <div className="tab-content-box data-txt">
+                      <h3>Data Export:</h3>
+                      <p>Effortlessly export your data for future analysis.</p>
+                    </div>
+
+                    <div className="row mob-row-parametere">
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>01</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
+                            alt="Prana Air Logo"
+                            width={150}
+                            height={100}
+                          />
+                          <p>Press and hold the button until the Prana Air logo appears on the screen.</p>
+                        </div>
+                      </div>
+                      <div className="col-md-4">
+                        <div className="tab-logo-box">
+                          <h3>02</h3>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
+                            alt="Blow for 5-6 seconds"
+                            width={150}
+                            height={100}
+                          />
+                          <p>Short-press to view past records with date, time, and alcohol level.</p>
+                        </div>
+                      </div>
+                      <div className="col-md-4">
+                        <div className="tab-logo-box data-box">
+                          <h3>03</h3>
+                          <p>Connect via Type-C cable, enable USB mode, and access records in an Excel file.</p>
+                          <Image
+                            src="https://www.pranaair.com/wp-content/uploads/2025/02/Connect-via-Type-C-cable.webp"
+                            alt="Alcohol level display"
+                            width={150}
+                            height={100}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1466,117 +1458,222 @@ export default function BreathalyzerPage() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="faq-accordion">
-                <div className="faq-item">
+              <div className="accordion" id="faqAccordion">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingOne">
+                    <button
+                      className="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <h3>1. How does Prana Air Breathalyzer work?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq1").classList.toggle("active")}
+                    id="collapseOne"
+                    className="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>1. How does Prana Air Breathalyzer work?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq1">
-                    <p>
-                      Prana Air Breathalyzer utilizes advanced electrochemical sensors to accurately measure alcohol
-                      levels in your breath.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        Prana Air Breathalyzer utilizes advanced electrochemical sensors to accurately measure alcohol
+                        levels in your breath.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="faq-item">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingTwo">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <h3>2. How long does it take to get the results?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq2").classList.toggle("active")}
+                    id="collapseTwo"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>2. How long does it take to get the results?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq2">
-                    <p>
-                      You can get the results within 10 seconds of blowing into the device, providing quick and
-                      convenient alcohol level readings.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        You can get the results within 10 seconds of blowing into the device, providing quick and
+                        convenient alcohol level readings.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="faq-item">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingThree">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <h3>3. Does Prana Air Breathalyzer detect other substances besides alcohol?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq3").classList.toggle("active")}
+                    id="collapseThree"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>3. Does Prana Air Breathalyzer detect other substances besides alcohol?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq3">
-                    <p>
-                      No, Prana Air Breathalyzer is specifically designed to measure alcohol levels and does not detect
-                      other substances.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        No, Prana Air Breathalyzer is specifically designed to measure alcohol levels and does not
+                        detect other substances.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="faq-item">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFour">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      <h3>4. Is the device easy to use?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq4").classList.toggle("active")}
+                    id="collapseFour"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>4. Is the device easy to use?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq4">
-                    <p>
-                      Yes, the Prana Air Breathalyzer features a user-friendly design with simple one-button operation,
-                      making it easy for anyone to use.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        Yes, the Prana Air Breathalyzer features a user-friendly design with simple one-button
+                        operation, making it easy for anyone to use.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="faq-item">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFive">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      <h3>5. How portable is the Prana Air Breathalyzer?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq5").classList.toggle("active")}
+                    id="collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>5. How portable is the Prana Air Breathalyzer?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq5">
-                    <p>
-                      The device has a sleek and compact design, making it highly portable and convenient to carry
-                      wherever you go.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        The device has a sleek and compact design, making it highly portable and convenient to carry
+                        wherever you go.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="faq-item">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingSix">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="collapseSix"
+                    >
+                      <h3>6. How accurate is the Prana Air Breathalyzer?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq6").classList.toggle("active")}
+                    id="collapseSix"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>6. How accurate is the Prana Air Breathalyzer?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq6">
-                    <p>
-                      Prana Air Breathalyzer utilizes advanced Gb05 Fuel cell technology, providing highly accurate
-                      alcohol level measurements for reliable results.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        Prana Air Breathalyzer utilizes advanced Gb05 Fuel cell technology, providing highly accurate
+                        alcohol level measurements for reliable results.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="faq-item">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingSeven">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven"
+                      aria-expanded="false"
+                      aria-controls="collapseSeven"
+                    >
+                      <h3>7. Can I export the test data for record-keeping purposes?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq7").classList.toggle("active")}
+                    id="collapseSeven"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSeven"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>7. Can I export the test data for record-keeping purposes?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq7">
-                    <p>
-                      Yes, Prana Air Breathalyzer allows you to export the test record data to a computer, facilitating
-                      easy record-keeping in an excel file format.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        Yes, Prana Air Breathalyzer allows you to export the test record data to a computer,
+                        facilitating easy record-keeping in an excel file format.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="faq-item">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingEight">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseEight"
+                      aria-expanded="false"
+                      aria-controls="collapseEight"
+                    >
+                      <h3>8. Is Prana Air Breathalyzer suitable for professional use?</h3>
+                    </button>
+                  </h2>
                   <div
-                    className="faq-question"
-                    onClick={() => document.getElementById("faq8").classList.toggle("active")}
+                    id="collapseEight"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingEight"
+                    data-bs-parent="#faqAccordion"
                   >
-                    <h3>8. Is Prana Air Breathalyzer suitable for professional use?</h3>
-                  </div>
-                  <div className="faq-answer" id="faq8">
-                    <p>
-                      Yes, the devices high sensitivity, stability, and precise detection make it suitable for
-                      professional applications such as law enforcement, workplace safety, and alcohol testing centers.
-                    </p>
+                    <div className="accordion-body">
+                      <p>
+                        Yes, the devices high sensitivity, stability, and precise detection make it suitable for
+                        professional applications such as law enforcement, workplace safety, and alcohol testing
+                        centers.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1587,4 +1684,3 @@ export default function BreathalyzerPage() {
     </div>
   )
 }
-

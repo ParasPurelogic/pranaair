@@ -1,18 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
-import ContactForm from "@/Components/Contacform/ContactForm";
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function HospitalPage() {
-  const [activeTab, setActiveTab] = useState(0)
-  const [activeFaq, setActiveFaq] = useState(null)
-  const [activeSlide, setActiveSlide] = useState(0)
-  const [activeSourceSlide, setActiveSourceSlide] = useState(0)
-  const [activeAppSlide, setActiveAppSlide] = useState(0)
-
   // Responsive settings for different carousels
   const healthImpactResponsive = {
     superLargeDesktop: {
@@ -76,15 +69,6 @@ export default function HospitalPage() {
       breakpoint: { max: 576, min: 0 },
       items: 1,
     },
-  }
-
-  // Toggle FAQ
-  const toggleFaq = (index) => {
-    if (activeFaq === index) {
-      setActiveFaq(null)
-    } else {
-      setActiveFaq(index)
-    }
   }
 
   // Health impacts data
@@ -343,41 +327,6 @@ export default function HospitalPage() {
     },
   ]
 
-  // Add click handlers for school box items
-  useEffect(() => {
-    const handleSchoolBoxClick = () => {
-      const schoolBoxItems = document.querySelectorAll(".school_box_cntr li")
-
-      schoolBoxItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          const textBox = this.querySelector(".schhol_text_box")
-          if (textBox) {
-            // Hide all other text boxes first
-            document.querySelectorAll(".schhol_text_box").forEach((box) => {
-              if (box !== textBox) {
-                box.style.display = "none"
-              }
-            })
-
-            // Toggle the clicked text box
-            textBox.style.display = textBox.style.display === "none" || textBox.style.display === "" ? "block" : "none"
-          }
-        })
-      })
-    }
-
-    // Call the function after component mounts
-    handleSchoolBoxClick()
-
-    // Cleanup event listeners on unmount
-    return () => {
-      const schoolBoxItems = document.querySelectorAll(".school_box_cntr li")
-      schoolBoxItems.forEach((item) => {
-        item.removeEventListener("click", () => { })
-      })
-    }
-  }, [])
-
   return (
     <main className="hospital-page">
       {/* Banner Section - Updated to match the modern design */}
@@ -589,7 +538,6 @@ export default function HospitalPage() {
               removeArrowOnDeviceType={["tablet", "mobile"]}
               dotListClass="custom-dot-list-style"
               itemClass="carousel-item-padding-40-px"
-              beforeChange={(nextSlide) => setActiveSlide(nextSlide)}
               partialVisible={false}
               centerMode={false}
             >
@@ -607,7 +555,6 @@ export default function HospitalPage() {
         </div>
       </section>
 
-      {/* Quote Section - Updated with modern quote design */}
       {/* Quote Section - Updated to match reference design */}
       <section className="quote-section">
         <div className="container">
@@ -649,7 +596,6 @@ export default function HospitalPage() {
               containerClass="sources-carousel-container"
               dotListClass="sources-carousel-dots"
               itemClass="sources-carousel-item"
-              beforeChange={(nextSlide) => setActiveSourceSlide(nextSlide)}
               partialVisible={false}
               centerMode={false}
             >
@@ -669,7 +615,7 @@ export default function HospitalPage() {
         </div>
       </section>
 
-      {/* Air Quality Solutions Section - Updated with modern tabs and card design */}
+      {/* Air Quality Solutions Section - Updated with Bootstrap tabs */}
       <section className="solutions-section">
         <div className="container">
           <div className="section-header text-center">
@@ -683,17 +629,38 @@ export default function HospitalPage() {
           </div>
 
           <div className="solutions-tabs">
-            <div className="tabs-header">
-              <button className={activeTab === 0 ? "active" : ""} onClick={() => setActiveTab(0)}>
-                Air Quality Monitors
-              </button>
-              <button className={activeTab === 1 ? "active" : ""} onClick={() => setActiveTab(1)}>
-                Fresh Air Solution
-              </button>
-            </div>
-
-            <div className="tabs-content">
-              <div className={`tab-pane ${activeTab === 0 ? "active" : ""}`}>
+            <ul className="nav nav-tabs" id="solutionsTabs" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="monitors-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#monitors"
+                  type="button"
+                  role="tab"
+                  aria-controls="monitors"
+                  aria-selected="true"
+                >
+                  Air Quality Monitors
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="fresh-air-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#fresh-air"
+                  type="button"
+                  role="tab"
+                  aria-controls="fresh-air"
+                  aria-selected="false"
+                >
+                  Fresh Air Solution
+                </button>
+              </li>
+            </ul>
+            <div className="tab-content" id="solutionsTabsContent">
+              <div className="tab-pane fade show active" id="monitors" role="tabpanel" aria-labelledby="monitors-tab">
                 <div className="solution-card monitor-slider-container">
                   <Carousel
                     responsive={{
@@ -753,8 +720,7 @@ export default function HospitalPage() {
                   </Carousel>
                 </div>
               </div>
-
-              <div className={`tab-pane ${activeTab === 1 ? "active" : ""}`}>
+              <div className="tab-pane fade" id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
                 <div className="solution-card">
                   <div className="row">
                     <div className="col-lg-6">
@@ -796,7 +762,7 @@ export default function HospitalPage() {
         </div>
       </section>
 
-      {/* App Solutions Section - NEW */}
+      {/* App Solutions Section - Reused slider component */}
       <section className="app-solutions-section">
         <div className="container">
           <div className="section-header text-center">
@@ -816,7 +782,6 @@ export default function HospitalPage() {
               customTransition="all .5s"
               transitionDuration={500}
               containerClass="app-carousel-container"
-              beforeChange={(nextSlide) => setActiveAppSlide(nextSlide)}
               partialVisible={false}
               centerMode={false}
             >
@@ -897,7 +862,7 @@ export default function HospitalPage() {
         </div>
       </section>
 
-      {/* Clientele Section - NEW */}
+      {/* Clientele Section */}
       <section className="clientele-section">
         <div className="container">
           <div className="section-header text-center">
@@ -921,17 +886,14 @@ export default function HospitalPage() {
         </div>
       </section>
 
-      {/* Contact Section - Updated with modern contact form */}
+      {/* Contact Section */}
       <section id="get_in_touch" className="contact-section-box">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -939,25 +901,40 @@ export default function HospitalPage() {
         <ContactForm pageName="Hospital Page" />
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Using Bootstrap accordion */}
       <section className="faq-section">
         <div className="container">
           <div className="section-header text-center">
             <h2>
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
-            <p>Have questions? Were here to help.</p>
+            <p>Have questions? We're here to help.</p>
           </div>
 
-          <div className="faq-container">
+          <div className="accordion" id="faqAccordion">
             {faqData.map((faq, index) => (
-              <div key={index} className={`faq-item ${activeFaq === index ? "active" : ""}`}>
-                <div className="faq-question" onClick={() => toggleFaq(index)}>
-                  <h3>{faq.question}</h3>
-                  <span className="faq-icon">{activeFaq === index ? "−" : "+"}</span>
-                </div>
-                <div className="faq-answer" style={{ display: activeFaq === index ? "block" : "none" }}>
-                  <p>{faq.answer}</p>
+              <div className="accordion-item" key={index}>
+                <h2 className="accordion-header" id={`heading${index}`}>
+                  <button
+                    className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapse${index}`}
+                    aria-expanded={index === 0 ? "true" : "false"}
+                    aria-controls={`collapse${index}`}
+                  >
+                    {faq.question}
+                  </button>
+                </h2>
+                <div
+                  id={`collapse${index}`}
+                  className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}
+                  aria-labelledby={`heading${index}`}
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    <p>{faq.answer}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -1010,7 +987,16 @@ export default function HospitalPage() {
           </div>
         </div>
       </section>
+
+      {/* Bootstrap Scripts */}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        `,
+        }}
+      />
     </main>
   )
 }
-

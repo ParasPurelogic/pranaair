@@ -1,43 +1,57 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import Carousel from "react-multi-carousel/lib/Carousel"
-import "react-multi-carousel/lib/styles.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 
-export default function OxygenMonitor() {
-    // Tab states
-    const [activeVariantTab, setActiveVariantTab] = useState("London")
-    const [activeScreenTab, setActiveScreenTab] = useState("tab1")
-    const [activeMobileTab, setActiveMobileTab] = useState(0)
+import { getServerTranslation } from "@/i18n/server"
+import OxyGenslider from "@/Components/Pages/OxygenMonitor/carousel"
 
-    useEffect(() => {
-        import("bootstrap/dist/js/bootstrap.bundle.min.js")
-            .then(() => {
-                console.log("Bootstrap JS loaded");
-            })
-            .catch((err) => console.error("Error loading Bootstrap JS:", err));
-    }, []);
+export default async function OxygenMonitor() {
+    const { t } = await getServerTranslation("oxygen-monitor")
+    const appresponsive = [
+        {
+            id: 1,
+            image: "https://www.pranaair.com/wp-content/uploads/2024/10/Residential-Use.webp",
+            title: t("oxygenApplications.items.residential.title"),
+            alt: t("oxygenApplications.items.residential.alt"),
+        },
+        {
+            id: 2,
+            image: "https://www.pranaair.com/wp-content/uploads/2024/10/front-view-kids-cheating-school.webp",
+            title: t("oxygenApplications.items.educational.title"),
+            alt: t("oxygenApplications.items.educational.alt"),
+        },
+        {
+            id: 3,
+            image: "https://www.pranaair.com/wp-content/uploads/2024/10/front-view-family-celebrating-birthday.webp",
+            title: t("oxygenApplications.items.outdoor.title"),
+            alt: t("oxygenApplications.items.outdoor.alt"),
+        },
+        {
+            id: 4,
+            image: "https://www.pranaair.com/wp-content/uploads/2024/12/healthcare-center.webp",
+            title: t("oxygenApplications.items.healthcare.title"),
+            alt: t("oxygenApplications.items.healthcare.alt"),
+        },
+        {
+            id: 5,
+            image:
+                "https://www.pranaair.com/wp-content/uploads/2024/10/industrial-health-measures-corona-virus-pandemic.webp",
+            title: t("oxygenApplications.items.industrial.title"),
+            alt: t("oxygenApplications.items.industrial.alt"),
+        },
+        {
+            id: 6,
+            image: "https://www.pranaair.com/wp-content/uploads/2024/10/so-many-vegetables-this-field.webp",
+            title: t("oxygenApplications.items.agricultural.title"),
+            alt: t("oxygenApplications.items.agricultural.alt"),
+        },
+        {
+            id: 7,
+            image: "https://www.pranaair.com/wp-content/uploads/2024/12/colleagues-in-workplace.webp",
+            title: t("oxygenApplications.items.workplace.title"),
+            alt: t("oxygenApplications.items.workplace.alt"),
+        },
+    ]
 
-    // Responsive settings for carousel
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-        },
-    }
 
     return (
         <div>
@@ -47,20 +61,27 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="hero-txt">
-                                <h1>Oxygen Monitor</h1>
-                                <h2>Live Easy with OxyCO Monitor</h2>
-                                <p>Monitor Real-Time Oxygen and Carbon Monoxide Levels</p>
+                                <h1>{t("oxygenHero.title")}</h1>
+                                <h2>{t("oxygenHero.subtitle")}</h2>
+                                <p>{t("oxygenHero.description")}</p>
                                 <form
                                     className="cart"
                                     action="https://www.pranaair.com/product/oxyco-monitor/"
                                     encType="multipart/form-data"
                                     method="post"
                                 >
-                                    <form class="cart" action="https://www.pranaair.com/product/oxyco-monitor/" enctype="multipart/form-data" method="post">
-                                        <button class="single_add_to_cart_button button alt banner-btn" name="add-to-cart" type="submit" value="124689">Buy
-                                            Now <img decoding="async" src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                                alt="buy now icon" /></button>
-                                    </form>
+                                    <button
+                                        className="single_add_to_cart_button button alt banner-btn"
+                                        name="add-to-cart"
+                                        type="submit"
+                                        value="124689"
+                                    >
+                                        {t("oxygenHero.buyButton")}{" "}
+                                        <img
+                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                            alt={t("oxygenHero.altTexts.buyIcon")}
+                                        />
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -75,14 +96,12 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-7">
                             <div className="key-feature-txt">
-                                <h2>Features</h2>
+                                <h2>{t("oxygenFeatures.title")}</h2>
                                 <h3>
-                                    Key Features Of <span className="green-txt">Oxygen Monitor</span>
+                                    {t("oxygenFeatures.subtitle.part1")}{" "}
+                                    <span className="green-txt">{t("oxygenFeatures.subtitle.highlight")}</span>
                                 </h3>
-                                <p>
-                                    Experience cutting-edge monitoring of Oxygen and Carbon Monoxide with advanced and intelligent
-                                    features of the device.
-                                </p>
+                                <p>{t("oxygenFeatures.description")}</p>
                             </div>
                         </div>
                         <div className="col-md-5"></div>
@@ -94,61 +113,61 @@ export default function OxygenMonitor() {
                                     <li>
                                         <img
                                             src="https://www.pranaair.com/wp-content/uploads/2024/10/compact-and-portable-oxyco-monitor.webp"
-                                            alt="Prana Air oxygen monitor of Compact and Portable design"
+                                            alt={t("oxygenFeatures.items.compact.alt")}
                                         />
                                         <div className="feature-txt">
-                                            <h3>Compact and Portable</h3>
-                                            <p>Fits into any space—home, office, classroom, or outdoors.</p>
+                                            <h3>{t("oxygenFeatures.items.compact.title")}</h3>
+                                            <p>{t("oxygenFeatures.items.compact.description")}</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="connect-txt">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/10/connectivity-options.png"
-                                                alt="Prana Air oxygen monitor of multiple Connectivity Options"
+                                                alt={t("oxygenFeatures.items.connectivity.alt")}
                                             />
-                                            <h3>Connectivity Options</h3>
-                                            <p>Mobile app and dashboard connectivity.</p>
+                                            <h3>{t("oxygenFeatures.items.connectivity.title")}</h3>
+                                            <p>{t("oxygenFeatures.items.connectivity.description")}</p>
                                         </div>
                                     </li>
                                     <li>
                                         <img
                                             src="https://www.pranaair.com/wp-content/uploads/2024/10/prana-air-OxyCO-calibration.webp"
-                                            alt="Prana Air oxygen monitor calibration for higher accuracy"
+                                            alt={t("oxygenFeatures.items.calibration.alt")}
                                         />
                                         <div className="feature-txt">
-                                            <h3>Oxygen Calibration</h3>
-                                            <p>Ensure accuracy with our O2 calibration feature</p>
+                                            <h3>{t("oxygenFeatures.items.calibration.title")}</h3>
+                                            <p>{t("oxygenFeatures.items.calibration.description")}</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="could-sotrage">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/10/data-securely-in-cloud-storage.png"
-                                                alt="data Cloud Storage available in Prana Air oxygen monitor"
+                                                alt={t("oxygenFeatures.items.cloudStorage.alt")}
                                             />
-                                            <h3>Cloud Storage</h3>
-                                            <p>Store your data securely in the cloud</p>
+                                            <h3>{t("oxygenFeatures.items.cloudStorage.title")}</h3>
+                                            <p>{t("oxygenFeatures.items.cloudStorage.description")}</p>
                                         </div>
                                     </li>
                                     <li>
                                         <img
                                             src="https://www.pranaair.com/wp-content/uploads/2024/10/real-time-data-monitoring.webp"
-                                            alt="Real-Time Data Monitoring by Prana Air oxygen monitor"
+                                            alt={t("oxygenFeatures.items.realTime.alt")}
                                         />
                                         <div className="feature-txt">
-                                            <h3>Real-Time Data Monitoring</h3>
-                                            <p>Monitor Oxygen, Carbon Monoxide, humidity, and temperature in real-time.</p>
+                                            <h3>{t("oxygenFeatures.items.realTime.title")}</h3>
+                                            <p>{t("oxygenFeatures.items.realTime.description")}</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="could-sotrage">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/10/built-in-battery.png"
-                                                alt="Built-in Battery in Prana Air oxygen monitor"
+                                                alt={t("oxygenFeatures.items.battery.alt")}
                                             />
-                                            <h3>Built-in Battery</h3>
-                                            <p>The in-built battery keeps your monitor operational.</p>
+                                            <h3>{t("oxygenFeatures.items.battery.title")}</h3>
+                                            <p>{t("oxygenFeatures.items.battery.description")}</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -164,152 +183,170 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="variant-txt">
-                                <h2>Variants</h2>
-                                <p>Variants of OxyCo</p>
+                                <h2>{t("oxygenVariants.title")}</h2>
+                                <p>{t("oxygenVariants.subtitle")}</p>
                             </div>
-                            <div className="tab">
-                                <button
-                                    className={`tablinks ${activeVariantTab === "London" ? "active" : ""}`}
-                                    onClick={() => setActiveVariantTab("London")}
-                                >
-                                    Oxygen + CO <i className="fas fa-arrow-right"></i>
-                                </button>
-                                <button
-                                    className={`tablinks ${activeVariantTab === "Paris" ? "active" : ""}`}
-                                    onClick={() => setActiveVariantTab("Paris")}
-                                >
-                                    Oxygen + CO2 <i className="fas fa-arrow-right"></i>
-                                </button>
-                            </div>
+                            <ul className="tab nav nav-tabs variant-tabs" id="variantTabs" role="tablist">
+                                <li className="nav-item" role="presentation">
+                                    <button
+                                        className="nav-link active"
+                                        id="london-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#london"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="london"
+                                        aria-selected="true"
+                                    >
+                                        {t("oxygenVariants.tabs.oxygenCO.title")} <i className="fas fa-arrow-right"></i>
+                                    </button>
+                                </li>
+                                <li className="nav-item" role="presentation">
+                                    <button
+                                        className="nav-link"
+                                        id="paris-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#paris"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="paris"
+                                        aria-selected="false"
+                                    >
+                                        {t("oxygenVariants.tabs.oxygenCO2.title")} <i className="fas fa-arrow-right"></i>
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
                         <div className="col-md-6">
                             {/* Tab content */}
-                            <div
-                                className={`tabcontent ${activeVariantTab === "London" ? "" : "hide"}`}
-                                style={{ display: activeVariantTab === "London" ? "block" : "none" }}
-                            >
-                                <div className="content-para">
-                                    <p>
-                                        Get real-time oxygen levels and also detect harmful carbon monoxide with precision. The perfect
-                                        device to ensuring safety in enclosed spaces.
-                                    </p>
-                                    <form
-                                        className="cart"
-                                        action="https://www.pranaair.com/product/oxyco-monitor/"
-                                        encType="multipart/form-data"
-                                        method="post"
-                                    >
-                                        <button
-                                            className="single_add_to_cart_button button alt banner-btn"
-                                            name="add-to-cart"
-                                            type="submit"
-                                            value="124689"
+                            <div className="tab-content" id="variantTabsContent">
+                                <div className="tab-pane fade show active" id="london" role="tabpanel" aria-labelledby="london-tab">
+                                    <div className="content-para">
+                                        <p>{t("oxygenVariants.tabs.oxygenCO.description")}</p>
+                                        <form
+                                            className="cart"
+                                            action="https://www.pranaair.com/product/oxyco-monitor/"
+                                            encType="multipart/form-data"
+                                            method="post"
                                         >
-                                            Buy Now{" "}
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                                alt="buy now icon"
-                                            />
-                                        </button>
-                                    </form>
-                                </div>
-                                <div className="oxy-co-box">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/12/oxygen-monitor.webp"
-                                        alt="Prana Air oxygen monitor"
-                                    />
-                                    <div className="parameter">
-                                        <ul>
-                                            <li>
-                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/10/CO-icon.png" alt="co icon" />
-                                                <h5>Carbon Monoxide(CO)</h5>
-                                            </li>
-                                            <li>
+                                            <button
+                                                className="single_add_to_cart_button button alt banner-btn"
+                                                name="add-to-cart"
+                                                type="submit"
+                                                value="124689"
+                                            >
+                                                {t("oxygenVariants.buyButton")}{" "}
                                                 <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/TEMPERATURE.png"
-                                                    alt="temperature icon"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                                    alt={t("oxygenVariants.altTexts.buyIcon")}
                                                 />
-                                                <h5>Temperature</h5>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/10/O2.png" alt="o2 icon" />
-                                                <h5>Oxygen(O2)</h5>
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/Humidity.png"
-                                                    alt="humidity icon"
-                                                />
-                                                <h5>Humidity</h5>
-                                            </li>
-                                        </ul>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div className="oxy-co-box">
+                                        <img
+                                            src="https://www.pranaair.com/wp-content/uploads/2024/12/oxygen-monitor.webp"
+                                            alt={t("oxygenVariants.altTexts.oxygenMonitor")}
+                                        />
+                                        <div className="parameter">
+                                            <ul>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/CO-icon.png"
+                                                        alt={t("oxygenVariants.altTexts.coIcon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.co")}</h5>
+                                                </li>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/TEMPERATURE.png"
+                                                        alt={t("oxygenVariants.altTexts.temperatureIcon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.temperature")}</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/O2.png"
+                                                        alt={t("oxygenVariants.altTexts.o2Icon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.oxygen")}</h5>
+                                                </li>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/Humidity.png"
+                                                        alt={t("oxygenVariants.altTexts.humidityIcon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.humidity")}</h5>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div
-                                className={`tabcontent ${activeVariantTab === "Paris" ? "" : "hide"}`}
-                                style={{ display: activeVariantTab === "Paris" ? "block" : "none" }}
-                            >
-                                <div className="content-para">
-                                    <p>
-                                        Track real-time oxygen and carbon dioxide levels with advanced sensors. The ideal device for labs,
-                                        greenhouses, and controlled environments.
-                                    </p>
-                                    <form
-                                        className="cart"
-                                        action="https://www.pranaair.com/product/oxyco-monitor/"
-                                        encType="multipart/form-data"
-                                        method="post"
-                                    >
-                                        <button
-                                            className="single_add_to_cart_button button alt banner-btn"
-                                            name="add-to-cart"
-                                            type="submit"
-                                            value="1"
+                                <div className="tab-pane fade" id="paris" role="tabpanel" aria-labelledby="paris-tab">
+                                    <div className="content-para">
+                                        <p>{t("oxygenVariants.tabs.oxygenCO2.description")}</p>
+                                        <form
+                                            className="cart"
+                                            action="https://www.pranaair.com/product/oxyco-monitor/"
+                                            encType="multipart/form-data"
+                                            method="post"
                                         >
-                                            Buy Now{" "}
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                                alt="buy now icon"
-                                            />
-                                        </button>
-                                    </form>
-                                </div>
-                                <div className="oxy-co-box oxy-co2-box">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/OxyCO2-monitor.webp"
-                                        alt="prana air oxygen monitor"
-                                    />
-                                    <div className="parameter">
-                                        <ul>
-                                            <li>
-                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/10/CO-icon.png" alt="co icon" />
-                                                <h5>Carbon Monoxide(CO2)</h5>
-                                            </li>
-                                            <li>
+                                            <button
+                                                className="single_add_to_cart_button button alt banner-btn"
+                                                name="add-to-cart"
+                                                type="submit"
+                                                value="1"
+                                            >
+                                                {t("oxygenVariants.buyButton")}{" "}
                                                 <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/TEMPERATURE.png"
-                                                    alt="temperature icon"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                                    alt={t("oxygenVariants.altTexts.buyIcon")}
                                                 />
-                                                <h5>Temperature</h5>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <img src="https://www.pranaair.com/wp-content/uploads/2024/10/O2.png" alt="o2 icon" />
-                                                <h5>Oxygen(O2)</h5>
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/Humidity.png"
-                                                    alt="humidity icon"
-                                                />
-                                                <h5>Humidity</h5>
-                                            </li>
-                                        </ul>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div className="oxy-co-box oxy-co2-box">
+                                        <img
+                                            src="https://www.pranaair.com/wp-content/uploads/2024/10/OxyCO2-monitor.webp"
+                                            alt={t("oxygenVariants.altTexts.oxyCO2Monitor")}
+                                        />
+                                        <div className="parameter">
+                                            <ul>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/CO-icon.png"
+                                                        alt={t("oxygenVariants.altTexts.coIcon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.co2")}</h5>
+                                                </li>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/TEMPERATURE.png"
+                                                        alt={t("oxygenVariants.altTexts.temperatureIcon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.temperature")}</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/O2.png"
+                                                        alt={t("oxygenVariants.altTexts.o2Icon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.oxygen")}</h5>
+                                                </li>
+                                                <li>
+                                                    <img
+                                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/Humidity.png"
+                                                        alt={t("oxygenVariants.altTexts.humidityIcon")}
+                                                    />
+                                                    <h5>{t("oxygenVariants.parameters.humidity")}</h5>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -324,95 +361,109 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="visualise-data-txt">
-                                <h2>Intuitive screen types</h2>
-                                <h3>Visualise your data</h3>
+                                <h2>{t("visualizeData.title")}</h2>
+                                <h3>{t("visualizeData.subtitle")}</h3>
                                 <p>
-                                    The <strong>OxyCO</strong> monitor features four distinct screens to enhance your monitoring
-                                    experience
+                                    {t("visualizeData.description.part1")} <strong>{t("visualizeData.description.highlight")}</strong>{" "}
+                                    {t("visualizeData.description.part2")}
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-md-5">
-                            <div className="tabs">
+                            <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                 <button
-                                    className={`tab-button ${activeScreenTab === "tab1" ? "active" : ""}`}
-                                    onClick={() => setActiveScreenTab("tab1")}
+                                    className="nav-link active"
+                                    id="v-pills-main-tab"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-main"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="v-pills-main"
+                                    aria-selected="true"
                                 >
-                                    Main Screen <i className="fas fa-arrow-right"></i>
+                                    {t("visualizeData.screens.main.title")} <i className="fas fa-arrow-right"></i>
                                 </button>
-                                <div
-                                    id="content2-tab1"
-                                    className={`tab-content tab-content-para ${activeScreenTab !== "tab1" ? "hidden" : ""}`}
-                                >
-                                    Instant overview of all key parameters for quick assessments
-                                </div>
+                                <div className="tab-content-para">{t("visualizeData.screens.main.description")}</div>
 
                                 <button
-                                    className={`tab-button ${activeScreenTab === "tab2" ? "active" : ""}`}
-                                    onClick={() => setActiveScreenTab("tab2")}
+                                    className="nav-link"
+                                    id="v-pills-o2-tab"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-o2"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="v-pills-o2"
+                                    aria-selected="false"
                                 >
-                                    O2 Curve <i className="fas fa-arrow-right"></i>
+                                    {t("visualizeData.screens.o2Curve.title")} <i className="fas fa-arrow-right"></i>
                                 </button>
-                                <div
-                                    id="content2-tab2"
-                                    className={`tab-content tab-content-para ${activeScreenTab !== "tab2" ? "hidden" : ""}`}
-                                >
-                                    Check the historical O2 condition in your environment with the curve.
-                                </div>
+                                <div className="tab-content-para">{t("visualizeData.screens.o2Curve.description")}</div>
 
                                 <button
-                                    className={`tab-button ${activeScreenTab === "tab3" ? "active" : ""}`}
-                                    onClick={() => setActiveScreenTab("tab3")}
+                                    className="nav-link"
+                                    id="v-pills-co-tab"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-co"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="v-pills-co"
+                                    aria-selected="false"
                                 >
-                                    CO Curve <i className="fas fa-arrow-right"></i>
+                                    {t("visualizeData.screens.coCurve.title")} <i className="fas fa-arrow-right"></i>
                                 </button>
-                                <div
-                                    id="content2-tab3"
-                                    className={`tab-content tab-content-para ${activeScreenTab !== "tab3" ? "hidden" : ""}`}
-                                >
-                                    Review the historical CO in your environment.
-                                </div>
+                                <div className="tab-content-para">{t("visualizeData.screens.coCurve.description")}</div>
 
                                 <button
-                                    className={`tab-button ${activeScreenTab === "tab4" ? "active" : ""}`}
-                                    onClick={() => setActiveScreenTab("tab4")}
+                                    className="nav-link"
+                                    id="v-pills-calibration-tab"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-calibration"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="v-pills-calibration"
+                                    aria-selected="false"
                                 >
-                                    Calibration Screen <i className="fas fa-arrow-right"></i>
+                                    {t("visualizeData.screens.calibration.title")} <i className="fas fa-arrow-right"></i>
                                 </button>
-                                <div
-                                    id="content2-tab4"
-                                    className={`tab-content tab-content-para ${activeScreenTab !== "tab4" ? "hidden" : ""}`}
-                                >
-                                    Calibrate your devices O2 sensor for accurate readings.
-                                </div>
+                                <div className="tab-content-para">{t("visualizeData.screens.calibration.description")}</div>
                             </div>
                         </div>
                         <div className="col-md-7">
-                            <div className="monitor-bg">
-                                <div id="content1-tab1" className={`tab-content ${activeScreenTab !== "tab1" ? "hidden" : ""}`}>
+                            <div className="tab-content monitor-bg" id="v-pills-tabContent">
+                                <div
+                                    className="tab-pane fade show active"
+                                    id="v-pills-main"
+                                    role="tabpanel"
+                                    aria-labelledby="v-pills-main-tab"
+                                >
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/12/oxygen-monitor-main-screen.webp"
-                                        alt="Prana Air oxygen monitor main screen"
+                                        alt={t("visualizeData.altTexts.mainScreen")}
                                     />
                                 </div>
-                                <div id="content1-tab2" className={`tab-content ${activeScreenTab !== "tab2" ? "hidden" : ""}`}>
+                                <div className="tab-pane fade" id="v-pills-o2" role="tabpanel" aria-labelledby="v-pills-o2-tab">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/12/oxygen-monitor-o2-graph.webp"
-                                        alt="Prana Air oxygen monitor O2 graph"
+                                        alt={t("visualizeData.altTexts.o2Graph")}
                                     />
                                 </div>
-                                <div id="content1-tab3" className={`tab-content ${activeScreenTab !== "tab3" ? "hidden" : ""}`}>
+                                <div className="tab-pane fade" id="v-pills-co" role="tabpanel" aria-labelledby="v-pills-co-tab">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/12/oxygen-monitor-co-graph.webp"
-                                        alt="Prana Air oxygen monitor CO graph"
+                                        alt={t("visualizeData.altTexts.coGraph")}
                                     />
                                 </div>
-                                <div id="content1-tab4" className={`tab-content ${activeScreenTab !== "tab4" ? "hidden" : ""}`}>
+                                <div
+                                    className="tab-pane fade"
+                                    id="v-pills-calibration"
+                                    role="tabpanel"
+                                    aria-labelledby="v-pills-calibration-tab"
+                                >
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/12/oxygen-monitor-calibration.webp"
-                                        alt="Prana Air oxygen monitor calibration"
+                                        alt={t("visualizeData.altTexts.calibration")}
                                     />
                                 </div>
                             </div>
@@ -427,11 +478,8 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="hospital-heading">
-                                <h2>Hospital-Grade Precision</h2>
-                                <p>
-                                    OxyCO monitor provides real-time and accurate oxygen level tracking that can help in ensuring patient
-                                    safety and optimal care in hospitals or health care centres.
-                                </p>
+                                <h2>{t("oxygenHospital.title")}</h2>
+                                <p>{t("oxygenHospital.description")}</p>
                             </div>
                         </div>
                         <div className="col-md-6"></div>
@@ -441,7 +489,7 @@ export default function OxygenMonitor() {
                             <div className="hospital-img">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2024/12/prana-air-oxygen-monitor-in-hospital.webp"
-                                    alt="Prana Air oxygen monitor in hospital measuring O2 level"
+                                    alt={t("oxygenHospital.altTexts.hospitalImage")}
                                 />
                             </div>
                         </div>
@@ -456,78 +504,29 @@ export default function OxygenMonitor() {
                         <div className="col-md-6">
                             <div className="why-choose-heading">
                                 <h2>
-                                    Why Choose <span className="oxy">OxyCo?</span>
+                                    {t("oxygenWhyChoose.title.part1")} <span className="oxy">{t("oxygenWhyChoose.title.highlight")}</span>
                                 </h2>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="why-choose-para">
-                                <p>OxyCo monitor is your one search go for better living and health environment.</p>
+                                <p>{t("oxygenWhyChoose.subtitle")}</p>
                             </div>
                         </div>
                     </div>
                     <div className="row mob-row">
-                        <div className="col-md-3">
-                            <div className="why-choose-box">
-                                <h3>01</h3>
-                                <h4>
-                                    Better <span className="why-bg">health and safety</span>
-                                </h4>
-                                <p className="why-para">
-                                    Detect CO and Oxygen levels to ensure safe environment for yourself and your loved ones.
-                                </p>
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/oxyco-monitor-Better-health-and-safety.webp"
-                                    alt="Prana Air Oxygen Monitor (OxyCO) for Better health and safety"
-                                />
+                        {t("oxygenWhyChoose.reasons", { returnObjects: true }).map((reason, index) => (
+                            <div className="col-md-3" key={index}>
+                                <div className={`why-choose-box ${reason.colorClass}`}>
+                                    <h3>{reason.number}</h3>
+                                    <h4>
+                                        {reason.title.part1} <span className="why-bg">{reason.title.highlight}</span>
+                                    </h4>
+                                    <p className="why-para">{reason.description}</p>
+                                    <img src={reason.image || "/placeholder.svg"} alt={reason.altText} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="why-choose-box grey-green">
-                                <h3>02</h3>
-                                <h4>
-                                    Improved <span className="why-bg">productivity</span>
-                                </h4>
-                                <p className="why-para">
-                                    Do you know maintained oxygen levels helps in improving focus and productivity in work and study?
-                                </p>
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/Improved-productivity.webp"
-                                    alt="Prana Air Oxygen Monitor (OxyCO) for improving productivity"
-                                />
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="why-choose-box blue">
-                                <h3>03</h3>
-                                <h4>
-                                    Informed <span className="why-bg">decisions</span>
-                                </h4>
-                                <p className="why-para">
-                                    Know the real-time and accurate readings of Oxygen and CO in your environment to make informed
-                                    decision.
-                                </p>
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/informed-decisions.webp"
-                                    alt="Prana Air Oxygen Monitor (OxyCO) helps in your environment to make informed decision"
-                                />
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="why-choose-box purpel">
-                                <h3>04</h3>
-                                <h4>
-                                    Stay <span className="why-bg">informed</span>
-                                </h4>
-                                <p className="why-para">
-                                    Track air pollution round you to check your environmental health and protect yourself.
-                                </p>
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/Stay-informed.webp"
-                                    alt="Prana Air Oxygen Monitor detects O2 along CO gas level"
-                                />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -539,7 +538,7 @@ export default function OxygenMonitor() {
                         <div className="col-md-6">
                             <div className="your-data-txt">
                                 <h2>
-                                    <strong>Data at your fingertips:</strong> Export with ease
+                                    <strong>{t("oxygenDataExport.title.part1")}</strong> {t("oxygenDataExport.title.part2")}
                                 </h2>
                             </div>
                         </div>
@@ -548,14 +547,12 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-8">
                             <div className="your-data-graph-txt">
-                                <h3>Your Data, Your Way</h3>
-                                <p>
-                                    Easily download your OxyCo monitor data in multiple formats, including .csv and .xls, for seamless
-                                    access.
-                                </p>
+                                <h3>{t("oxygenDataExport.subtitle")}</h3>
+                                <p>{t("oxygenDataExport.description")}</p>
                                 <ul>
-                                    <li>.CSV</li>
-                                    <li>.Xls</li>
+                                    {t("oxygenDataExport.formats", { returnObjects: true }).map((format, index) => (
+                                        <li key={index}>{format}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -563,11 +560,11 @@ export default function OxygenMonitor() {
                             <div className="email-transfer-box">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2024/12/oxygen-monitor-export-data.webp"
-                                    alt="Data of Prana Air Oxygen Monitor can be exported in .csv file"
+                                    alt={t("oxygenDataExport.altTexts.exportData")}
                                 />
                                 <div className="feature-txt transfer">
-                                    <h3>Email Transfers</h3>
-                                    <p>Quickly share data via email for online access and collaborative analysis.</p>
+                                    <h3>{t("oxygenDataExport.emailTransfer.title")}</h3>
+                                    <p>{t("oxygenDataExport.emailTransfer.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -582,7 +579,7 @@ export default function OxygenMonitor() {
                         <div className="col-md-12">
                             <div className="mob-dash-heading">
                                 <h2>
-                                    Command your environment anytime, anywhere <strong>Mobile, Web-dashboard, TV app connectivity</strong>
+                                    {t("oxygenMobileDashboard.title.part1")} <strong>{t("oxygenMobileDashboard.title.highlight")}</strong>
                                 </h2>
                             </div>
                         </div>
@@ -590,116 +587,132 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="tab-sec">
-                                <ul className="nav nav-tabs" role="tablist">
-                                    <li className="nav-item">
-                                        <a
-                                            className={`nav-link ${activeMobileTab === 0 ? "active" : ""}`}
-                                            onClick={() => setActiveMobileTab(0)}
+                                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className="nav-link active"
+                                            id="mobile-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#mobile-tab-pane"
+                                            type="button"
                                             role="tab"
+                                            aria-controls="mobile-tab-pane"
+                                            aria-selected="true"
                                         >
-                                            Mobile App
-                                        </a>
+                                            {t("oxygenMobileDashboard.tabs.mobile")}
+                                        </button>
                                     </li>
-                                    <li className="nav-item">
-                                        <a
-                                            className={`nav-link ${activeMobileTab === 1 ? "active" : ""}`}
-                                            onClick={() => setActiveMobileTab(1)}
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className="nav-link"
+                                            id="web-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#web-tab-pane"
+                                            type="button"
                                             role="tab"
+                                            aria-controls="web-tab-pane"
+                                            aria-selected="false"
                                         >
-                                            Web Dashboard
-                                        </a>
+                                            {t("oxygenMobileDashboard.tabs.web")}
+                                        </button>
                                     </li>
-                                    <li className="nav-item">
-                                        <a
-                                            className={`nav-link ${activeMobileTab === 2 ? "active" : ""}`}
-                                            onClick={() => setActiveMobileTab(2)}
+                                    <li className="nav-item" role="presentation">
+                                        <button
+                                            className="nav-link"
+                                            id="tv-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#tv-tab-pane"
+                                            type="button"
                                             role="tab"
+                                            aria-controls="tv-tab-pane"
+                                            aria-selected="false"
                                         >
-                                            Smart TV App
-                                        </a>
+                                            {t("oxygenMobileDashboard.tabs.tv")}
+                                        </button>
                                     </li>
                                 </ul>
 
-                                <div className="tab-content">
-                                    <div className={`tab-pane fade ${activeMobileTab === 0 ? "show active" : ""}`} role="tabpanel">
+                                <div className="tab-content" id="myTabContent">
+                                    <div
+                                        className="tab-pane fade show active"
+                                        id="mobile-tab-pane"
+                                        role="tabpanel"
+                                        aria-labelledby="mobile-tab"
+                                        tabIndex={0}
+                                    >
                                         <div className="row">
                                             <div className="col-md-6">
                                                 <div className="start-work-txt">
                                                     <h2>
-                                                        <span className="green-txt">Diverse connectivity of </span>OxyCo
+                                                        <span className="green-txt">{t("oxygenMobileDashboard.mobile.title.part1")}</span>{" "}
+                                                        {t("oxygenMobileDashboard.mobile.title.part2")}
                                                     </h2>
-                                                    <p>
-                                                        Connect your OxyCo monitor with AQI mobile app to access air quality data on your
-                                                        fingertips.
-                                                    </p>
+                                                    <p>{t("oxygenMobileDashboard.mobile.description")}</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
                                                 <a className="btn" href="https://play.google.com/store/apps/details?id=com.aqi.data">
                                                     <i className="fas fa-arrow-right"></i>
-                                                    Download Mob App
+                                                    {t("oxygenMobileDashboard.mobile.buttonText")}
                                                 </a>
                                             </div>
                                         </div>
                                         <div className="dash-mob-img app">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/12/Mobile-App-OxyCo.webp"
-                                                alt="Mobile App for OxyCo monitor"
+                                                alt={t("oxygenMobileDashboard.mobile.altText")}
                                             />
                                         </div>
                                     </div>
 
-                                    <div className={`tab-pane fade ${activeMobileTab === 1 ? "show active" : ""}`} role="tabpanel">
+                                    <div className="tab-pane fade" id="web-tab-pane" role="tabpanel" aria-labelledby="web-tab" tabIndex={0}>
                                         <div className="row">
                                             <div className="col-md-6">
                                                 <div className="start-work-txt">
                                                     <h2>
-                                                        <span className="green-txt">Diverse connectivity of </span>OxyCo
+                                                        <span className="green-txt">{t("oxygenMobileDashboard.web.title.part1")}</span>{" "}
+                                                        {t("oxygenMobileDashboard.web.title.part2")}
                                                     </h2>
-                                                    <p>
-                                                        Access your OxyCo monitors reading directly to Web-Dashboard to see data anytime anywhere.
-                                                    </p>
+                                                    <p>{t("oxygenMobileDashboard.web.description")}</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
                                                 <a className="btn" href="https://www.aqi.in/userlogin">
                                                     <i className="fas fa-arrow-right"></i>
-                                                    View Dashboard
+                                                    {t("oxygenMobileDashboard.web.buttonText")}
                                                 </a>
                                             </div>
                                         </div>
                                         <div className="dash-mob-img web">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/12/Web-Dashboard-OxyCo-monitor.webp"
-                                                alt="Web Dashboard for OxyCo monitor"
+                                                alt={t("oxygenMobileDashboard.web.altText")}
                                             />
                                         </div>
                                     </div>
 
-                                    <div className={`tab-pane fade ${activeMobileTab === 2 ? "show active" : ""}`} role="tabpanel">
+                                    <div className="tab-pane fade" id="tv-tab-pane" role="tabpanel" aria-labelledby="tv-tab" tabIndex={0}>
                                         <div className="row">
                                             <div className="col-md-6">
                                                 <div className="start-work-txt">
                                                     <h2>
-                                                        <span className="green-txt">Diverse connectivity of </span>OxyCo
+                                                        <span className="green-txt">{t("oxygenMobileDashboard.tv.title.part1")}</span>{" "}
+                                                        {t("oxygenMobileDashboard.tv.title.part2")}
                                                     </h2>
-                                                    <p>
-                                                        Display your OxyCo monitors data on a big screen for better and enhanced visibility for
-                                                        all.
-                                                    </p>
+                                                    <p>{t("oxygenMobileDashboard.tv.description")}</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
                                                 <a className="btn" href="https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew">
                                                     <i className="fas fa-arrow-right"></i>
-                                                    View TV
+                                                    {t("oxygenMobileDashboard.tv.buttonText")}
                                                 </a>
                                             </div>
                                         </div>
                                         <div className="dash-mob-img tv">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/12/Smart-TV-App-OxyCo-monitor.webp"
-                                                alt="Smart TV App for OxyCo monitor"
+                                                alt={t("oxygenMobileDashboard.tv.altText")}
                                             />
                                         </div>
                                     </div>
@@ -716,16 +729,13 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="oxygen-tracking-heading">
-                                <h2>On-the-Go</h2>
+                                <h2>{t("oxygenTracking.leftHeading")}</h2>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="oxygen-tracking-heading track-head">
-                                <p>
-                                    Your handy OxyCo monitor can ensure accurate oxygen levels for tracking an ideal choice for athletes,
-                                    hikers, or anyone on the track.
-                                </p>
-                                <h2>Oxygen Tracking</h2>
+                                <p>{t("oxygenTracking.description")}</p>
+                                <h2>{t("oxygenTracking.rightHeading")}</h2>
                             </div>
                         </div>
                     </div>
@@ -734,7 +744,7 @@ export default function OxygenMonitor() {
                             <div className="oxygen-tracking-img">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2024/10/athletes-hikers-or-anyone-on-the-track.webp"
-                                    alt="Tracking O2 level in high peak area with Prana Air Oxygen Monitor"
+                                    alt={t("oxygenTracking.altText")}
                                 />
                             </div>
                         </div>
@@ -748,68 +758,20 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="app-txt">
-                                <h2>Applications</h2>
+                                <h2>{t("oxygenApplicationsText.title")}</h2>
                                 <h3>
-                                    Where can <strong>OxyCo</strong> shine?
+                                    {t("oxygenApplicationsText.subtitle.part1")}{" "}
+                                    <strong>{t("oxygenApplicationsText.subtitle.highlight")}</strong>{" "}
+                                    {t("oxygenApplicationsText.subtitle.part2")}
                                 </h3>
-                                <p>OxyCo monitor is beneficial for many applications and usage:</p>
+                                <p>{t("oxygenApplicationsText.description")}</p>
                             </div>
                         </div>
                         <div className="col-md-6"></div>
                     </div>
                     <div className="row">
                         <div className="col-md-12">
-                            <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={3000} className="app-slide">
-                                <div className="app-img">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/Residential-Use.webp"
-                                        alt="application of Oxygen Monitor for Residential Use"
-                                    />
-                                    <h4>Residential Use</h4>
-                                </div>
-                                <div className="app-img">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/front-view-kids-cheating-school.webp"
-                                        alt="application of Oxygen Monitor for Educational Institutes"
-                                    />
-                                    <h4>Educational Institutes</h4>
-                                </div>
-                                <div className="app-img">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/front-view-family-celebrating-birthday.webp"
-                                        alt="application of Oxygen Monitor for Outdoor Events"
-                                    />
-                                    <h4>Outdoor Events</h4>
-                                </div>
-                                <div className="app-img">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/12/healthcare-center.webp"
-                                        alt="application of Oxygen Monitor for Healthcare Facilities"
-                                    />
-                                    <h4>Healthcare Facilities</h4>
-                                </div>
-                                <div className="app-img">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/industrial-health-measures-corona-virus-pandemic.webp"
-                                        alt="application of Oxygen Monitor for Industrial Applications"
-                                    />
-                                    <h4>Industrial Applications</h4>
-                                </div>
-                                <div className="app-img">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/10/so-many-vegetables-this-field.webp"
-                                        alt="application of Oxygen Monitor for Agricultural Settings"
-                                    />
-                                    <h4>Agricultural Settings</h4>
-                                </div>
-                                <div className="app-img">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2024/12/colleagues-in-workplace.webp"
-                                        alt="application of Oxygen Monitor for Workplace"
-                                    />
-                                    <h4>Workplace</h4>
-                                </div>
-                            </Carousel>
+                            <OxyGenslider appresponsive={appresponsive} />
                         </div>
                     </div>
                 </div>
@@ -821,14 +783,17 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-md-3">
                             <div className="spec-heading">
-                                <h4>Technical Specifications</h4>
+                                <h4>{t("oxygenTechSpecs.title")}</h4>
                             </div>
                         </div>
                         <div className="col-md-9">
                             <div className="brochore-btn">
                                 <a href="https://www.pranaair.com/wp-content/uploads/2024/12/Prana-air-OxyCO-Monitor-Brochure.pdf">
-                                    Brochure{" "}
-                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png" alt="brochore-btn" />
+                                    {t("oxygenTechSpecs.brochure")}{" "}
+                                    <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                        alt={t("oxygenTechSpecs.altTexts.brochureBtn")}
+                                    />
                                 </a>
                             </div>
                         </div>
@@ -836,51 +801,53 @@ export default function OxygenMonitor() {
                     <div className="row mid-box mob-scroll">
                         <div className="col-md-6">
                             <div className="product-specifi">
-                                Product Name :<h4>OxyCo</h4>
+                                {t("oxygenTechSpecs.specs.productName.label")}
+                                <h4>{t("oxygenTechSpecs.specs.productName.value")}</h4>
                             </div>
                             <div className="product-specifi shdw-line">
-                                Max detecting concentration:
-                                <h4>30% Vol</h4>
+                                {t("oxygenTechSpecs.specs.maxConcentration.label")}
+                                <h4>{t("oxygenTechSpecs.specs.maxConcentration.value")}</h4>
                             </div>
                             <div className="product-specifi">
-                                LED Screen Size:
-                                <h4>2.8inch</h4>
+                                {t("oxygenTechSpecs.specs.screenSize.label")}
+                                <h4>{t("oxygenTechSpecs.specs.screenSize.value")}</h4>
                             </div>
                             <div className="product-specifi shdw-line">
-                                Dimension :<h4>8 * 8 cm</h4>
+                                {t("oxygenTechSpecs.specs.dimension.label")}
+                                <h4>{t("oxygenTechSpecs.specs.dimension.value")}</h4>
                             </div>
                             <div className="product-specifi">
-                                Weight:
-                                <h4>113g</h4>
+                                {t("oxygenTechSpecs.specs.weight.label")}
+                                <h4>{t("oxygenTechSpecs.specs.weight.value")}</h4>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="product-specifi">
-                                Parameters:
-                                <h4>O2, CO, Temp, Humid.</h4>
+                                {t("oxygenTechSpecs.specs.parameters.label")}
+                                <h4>{t("oxygenTechSpecs.specs.parameters.value")}</h4>
                             </div>
                             <div className="product-specifi shdw-line">
-                                Battery capacity:
-                                <h4>1000mAh</h4>
+                                {t("oxygenTechSpecs.specs.batteryCapacity.label")}
+                                <h4>{t("oxygenTechSpecs.specs.batteryCapacity.value")}</h4>
                             </div>
                             <div className="product-specifi">
-                                Connectivity:
-                                <h4>WiFi</h4>
+                                {t("oxygenTechSpecs.specs.connectivity.label")}
+                                <h4>{t("oxygenTechSpecs.specs.connectivity.value")}</h4>
                             </div>
                             <div className="product-specifi shdw-line">
-                                Sensitivity:
-                                <h4>(0.1~0.3) mA (In air)</h4>
+                                {t("oxygenTechSpecs.specs.sensitivity.label")}
+                                <h4>{t("oxygenTechSpecs.specs.sensitivity.value")}</h4>
                             </div>
                             <div className="product-specifi">
-                                data Accessibility:
-                                <h4>Mobile & TV app and Web-Dashboard</h4>
+                                {t("oxygenTechSpecs.specs.dataAccessibility.label")}
+                                <h4>{t("oxygenTechSpecs.specs.dataAccessibility.value")}</h4>
                             </div>
                             <div className="row">
                                 <div className="col-md-8"></div>
                                 <div className="col-md-4">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                        alt="rosh-icon"
+                                        alt={t("oxygenTechSpecs.altTexts.downloadIcon")}
                                         className="rosh-iocn"
                                     />
                                 </div>
@@ -896,81 +863,31 @@ export default function OxygenMonitor() {
                     <div className="row">
                         <div className="col-12">
                             <div className="faq-heading">
-                                <h2>Frequently Asked Questions</h2>
+                                <h2>{t("oxygenFAQ.title")}</h2>
                             </div>
                             <div className="accordion" id="faqAccordion">
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq1"
-                                            aria-expanded="true"
+                                {t("oxygenFAQ.questions", { returnObjects: true }).map((faq, index) => (
+                                    <div className="accordion-item" key={index}>
+                                        <h2 className="accordion-header">
+                                            <button
+                                                className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target={`#faq${index + 1}`}
+                                                aria-expanded={index === 0 ? "true" : "false"}
+                                            >
+                                                {faq.question}
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id={`faq${index + 1}`}
+                                            className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}
+                                            data-bs-parent="#faqAccordion"
                                         >
-                                            1. What parameters OxyCo does monitor?
-                                        </button>
-                                    </h2>
-                                    <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            OxyCo is designed to monitor real-time Oxygen, carbon monoxide, temperature and humidity in your air.
+                                            <div className="accordion-body faq-tab-para">{faq.answer}</div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq2"
-                                            aria-expanded="false"
-                                        >
-                                            2. What is the battery capacity of the OxyCo?
-                                        </button>
-                                    </h2>
-                                    <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            The compact monitor is packed with a 1000mAh battery that works for a long time.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq3"
-                                            aria-expanded="false"
-                                        >
-                                            3. How can I access OxyCo data?
-                                        </button>
-                                    </h2>
-                                    <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            You can seamlessly access the OxyCo data by downloading it in different formats or transferring it to your email.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq4"
-                                            aria-expanded="false"
-                                        >
-                                            4. Why do Oxygen Calibration?
-                                        </button>
-                                    </h2>
-                                    <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            The OxyCo monitor performs Oxygen Calibration to maintain optimal accuracy in the device readings.
-                                        </div>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -979,4 +896,3 @@ export default function OxygenMonitor() {
         </div>
     )
 }
-

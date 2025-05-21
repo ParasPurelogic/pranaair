@@ -1,0 +1,341 @@
+{
+  "airMask": {
+    "motorized": "Motorized",
+    "heading": "Be safe out there with N95 pollution mask",
+    "description": "Maximum protection from dangerous pollutants",
+    "buyNow": "Buy Now",
+    "price": "₹2,990"
+  },
+   "heading": {
+    "title": "Anti Pollution Mask",
+    "subtitle": "Stay healthy and breathe clean air with Prana Air N95 pollution mask which has a highly advanced hepa filter."
+  },
+  "image": {
+    "alt": "Prana Air N95 Mask"
+  },
+  "features": {
+    "title": "Product Features:",
+    "layer": {
+      "title": "5 Layer Hepa Filters",
+      "desc": "Maximum protection from PM2.5, pollen, dust, and smoke"
+    },
+    "fan": {
+      "title": "3 Modes of Fan Speed",
+      "desc": "Control the air volume and circulation with different modes"
+    },
+    "vent": {
+      "title": "Micro Ventilator",
+      "desc": "Acts as a wall between outdoor polluted air and indoor purified air"
+    },
+    "efficiency": {
+      "title": "95.99% Efficiency",
+      "desc": "Advanced filtration technology to filter polluted air particles"
+    },
+    "usb": {
+      "title": "Micro USB Charging",
+      "desc": "Easily rechargeable battery with a micro USB cable"
+    }
+  },
+  "need": {
+      "title": "What is the need to use an air mask?",
+      "description": "According to WHO statistics, there were an estimated 6.5 million deaths globally in 2012 from air pollution-related disorders. That amounts to 11.6% of all homicides worldwide, more than the number of deaths from tuberculosis, HIV/AIDS, and traffic accidents. According to a new report by the WHO, fine particles (PM2.5) kill 7 million of the global population annually. According to a paper published in the Lancet Planetary Health, air pollution causes approximately 9 million premature deaths each year, or one in every six deaths worldwide. That is why it is important to save ourselves and our loved ones from harmful air pollution."
+    },
+    "effectiveness": {
+      "title": "Is Prana Air mask effective against viruses such as Sars-Cov-2?",
+      "description": "Prana Air mask can prevent the spread and inhalation of droplets larger than 0.3μg in size. When a person sneezes or coughs, the >5μg Droplets fall to the ground due to gravity, while the 0.3μg droplets move through the air. The danger of infection is greatly decreased when the mask is used properly and in accordance with the instructions."
+    },
+    "winter": {
+      "title": "Breathe Clean Air this Winter",
+      "description": "Every year India sees an alarming increase in air pollution around the Diwali festival. The concentration of PM2.5 is recorded 5–6 times higher than safe limits set by NAAQS (National Ambient Air Quality Standards). Breathing this air puts you and your loved ones at risk of heart diseases, respiratory diseases, and lung cancer. Relieve yourself and your loved ones from the clutches of these fatal ailments and switch to the Prana 2nd Gen N95 mask which has the 5-layer filtration system so that you can breathe clean and fresh air. It has a HEPA filter which is known to filter out particles as small as 2.5 microns. It also ensures comfort with its adjustable fan feature."
+    },
+    "noMask": {
+    "title": {
+      "part1": "What ",
+      "part2": "happens if you dont wear a pollution mask?"
+    },
+    "paragraph1": "According to WHO recommendations, annual average PM2.5 concentrations should be under 10 micrograms (mcg) per cubic meter, however, the vast majority of people (99%) on earth live in places where this limit is exceeded.",
+    "paragraph2": "Many individuals believe that the only air pollutants present are dirt and smoke. The real culprit, however, is PM2.5. These are fine particulate particles about 1/13th the size of human hair. This pollutant is hazardous because it penetrates deeply into your respiratory tract, reaching your lungs, and then can enter your bloodstream, triggering a variety of health problems.",
+    "paragraph3": "When exposed to such fine particles, it can produce short-term health effects such as irritation of the eyes, nose, and throat, which can lead to coughing, sneezing, runny nose, and shortness of breath, to mention a few. Long-term exposure to PM2.5 can harm the lungs and cause asthma and heart problems."
+  },
+  "noMaskMobile": {
+    "title": {
+      "part1": "What",
+      "part2": " happens if you dont wear a pollution mask?"
+    },
+    "paragraph1": "Many people think dirt and smoke are the only air pollutants present in the air. However, the real culprit of all is PM2.5. It is a fine particulate matter that is 1/13th of the diameter of a human hair. This pollutant is dangerous as they penetrate deep into your respiratory tract, reaching your lungs and causing you various health trouble.",
+    "paragraph2": "Once exposed to such fine particles, it can cause short-term health effects such as eyes, nose, throat irritation, which can further become a cause to coughing, sneezing, runny nose, shortness of breath to name a few. Exposed to PM2.5 for a long time can affect the lungs and may also cause asthma and heart disease."
+  },
+  "filtration": {
+    "title": "Air Mask Filtration",
+    "imageAlt": "Prana Air Mask Filtration",
+    "features": {
+      "fanSpeed": {
+        "title": "3 Different Fan Speeds",
+        "iconAlt": "mask fan icon"
+      },
+      "layerProtection": {
+        "title": "5 Layer Protection",
+        "iconAlt": "mask filter layer icon"
+      },
+      "batteryLife": {
+        "title": "Upto 2 Hrs Battery Life",
+        "iconAlt": "mask battery icon"
+      },
+      "lightweight": {
+        "title": "70 Grams Lightweight",
+        "iconAlt": "mask weight icon"
+      }
+    },
+    "description": "Our masks come with 5 different filter layers that serve as multiple layers of protection against different air pollutants:"
+  },
+   "companions": {
+    "title": "Perfect Outdoor Companions",
+    "imageAlt": "Prana Air N95 Mask 2nd Gen",
+    "description": "Prana Air Anti Pollution Mask is designed with comfort in mind to provide optimum protection from hazardous pollutants such as dust, particle matter (PM2.5 and PM10), carbon monoxide, and sulphur dioxide, which are commonly found in smoke from vehicle exhausts, factories, and bushfires.",
+    "pollutants": {
+      "pm25": {
+        "title": "PM 2.5",
+        "iconAlt": "pm2.5 icon"
+      },
+      "carbonMonoxide": {
+        "title": "Carbon Monoxide",
+        "iconAlt": "carbon monoxide icon"
+      },
+      "sulphurDioxide": {
+        "title": "Sulphur Dioxide",
+        "iconAlt": "so2 icon"
+      },
+      "dust": {
+        "title": "Dust",
+        "iconAlt": "dust icon"
+      },
+      "smoke": {
+        "title": "Smoke",
+        "iconAlt": "smoke icon"
+      }
+    }
+  },
+   "ventilator": {
+    "title": "Micro Ventilator",
+    "imageAlt": "Prana Air Mask Micro Ventilator",
+    "description": "The best thing with our air mask is that they have a micro-ventilator which eliminates the unpleasant build-up of carbon dioxide, and prevents you from breathing in recycled air. It is easily chargeable with a micro USB cable and comes with different fan modes. It is adjustable depending on the pollution level."
+  },
+   "stylish": {
+    "title": "Stylish",
+    "imageAlt": "Prana Air N95 Mask Stylish",
+    "description": "Our fashionable and stylish anti-pollution face mask can be worn anywhere. You are protected wherever and everywhere you go."
+  },
+   "productTabs": {
+    "tabs": {
+      "secondGen": "2nd Gen Mask",
+      "junior": "Junior Mask"
+    },
+    "specs": {
+      "colors": "Colors",
+      "filterLayers": "Filter layers",
+      "hepaCompliant": "HEPA compliant",
+      "purificationEfficiency": "Purification efficiency",
+      "fanSpeed": "Fan speed",
+      "chargingMode": "Charging mode",
+      "chargingTime": "Charging time",
+      "batteryDuration": "Battery duration",
+      "batteryCapacity": "Battery capacity",
+      "dimensions": "Dimensions",
+      "weight": "Weight",
+      "voltage": "Voltage",
+      "noise": "Noise",
+      "price": "Price"
+    },
+    "secondGen": {
+      "imageAlt": "Prana Air N95 Mask",
+      "colors": "White with 3 caps - pink, grey, white",
+      "filterLayers": "5",
+      "hepaCompliant": "Yes",
+      "purificationEfficiency": "upto 95.99%",
+      "fanSpeed": "3 modes",
+      "chargingMode": "USB charging",
+      "chargingTime": "1 to 1.5 hours",
+      "batteryDuration": "Upto 2 hours",
+      "batteryCapacity": "680 mAh",
+      "weight": "70 grams",
+      "voltage": "3.7V-5.2V",
+      "noise": "<28dB(A)",
+      "price": "2990 INR"
+    },
+    "junior": {
+      "imageAlt": "Prana Air Junior Mask",
+      "colors": "White, Pink, Blue",
+      "filterLayers": "5",
+      "hepaCompliant": "Yes",
+      "purificationEfficiency": ">95%",
+      "fanSpeed": "3 modes",
+      "chargingMode": "USB charging",
+      "chargingTime": "1.5 hours",
+      "batteryDuration": "upto 3 hours",
+      "batteryCapacity": "1000 mAh",
+      "dimensions": "120x110x50 (mm)",
+      "weight": "62 grams",
+      "voltage": "5V",
+      "noise": "<28db(A)",
+      "price": "2499 INR"
+    }
+  },
+  "unboxing": {
+    "title": "Unboxing Video of 2nd Gen Pollution Mask"
+  },
+  "boxContents": {
+    "title": "What is in the box?",
+    "maskType": "2nd Gen Mask"
+  },
+   "specifications": {
+    "title": "Mask Product Specification",
+    "imageAlt": "Prana Air N95 Mask Specification",
+    "table": {
+      "header": {
+        "features": "PRODUCT FEATURES",
+        "juniorMask": "JUNIOR MASK",
+        "secondGenMask": "2nd Gen Mask"
+      },
+      "rows": {
+        "colors": {
+          "label": "Colors",
+          "juniorMask": "White, Pink, Yellow",
+          "secondGenMask": "White, Pink, Grey"
+        },
+        "filterLayers": {
+          "label": "Filter layers",
+          "juniorMask": "5",
+          "secondGenMask": "5"
+        },
+        "hepaCompliant": {
+          "label": "HEPA compliant",
+          "juniorMask": "Yes",
+          "secondGenMask": "Yes"
+        },
+        "purificationEfficiency": {
+          "label": "Purification efficiency",
+          "juniorMask": ">upto 95%",
+          "secondGenMask": "upto 95.99%"
+        },
+        "fanSpeed": {
+          "label": "Fan speed",
+          "juniorMask": "3 modes",
+          "secondGenMask": "3 modes"
+        },
+        "chargingMode": {
+          "label": "Charging mode",
+          "juniorMask": "USB charging",
+          "secondGenMask": "USB charging"
+        },
+        "chargingTime": {
+          "label": "Charging time",
+          "juniorMask": "1.5-2 hours",
+          "secondGenMask": "1.5 hours"
+        },
+        "batteryDuration": {
+          "label": "Battery duration",
+          "juniorMask": "upto 3 hours",
+          "secondGenMask": "upto 2 hours"
+        },
+        "batteryCapacity": {
+          "label": "Battery capacity",
+          "juniorMask": "1000 mAh",
+          "secondGenMask": "680 mAh"
+        },
+        "dimensions": {
+          "label": "Dimensions",
+          "juniorMask": "120x110x50 (mm)",
+          "secondGenMask": "110x90x50 (mm)"
+        },
+        "weight": {
+          "label": "Weight",
+          "juniorMask": "62 grams",
+          "secondGenMask": "78 grams"
+        },
+        "voltage": {
+          "label": "Voltage",
+          "juniorMask": "5V",
+          "secondGenMask": "3.7V-5.2V"
+        },
+        "noise": {
+          "label": "Noise",
+          "juniorMask": "<28db(A)",
+          "secondGenMask": "<28db(A)"
+        },
+        "price": {
+          "label": "Price",
+          "juniorMask": "1990 INR",
+          "secondGenMask": "999 INR"
+        }
+      }
+    }
+  },
+  "protect": {
+    "heading": {
+      "line1": "Dont wait any longer.",
+      "line2": "Start protecting yourself",
+      "line3": "today."
+    },
+    "description": {
+      "line1": "Our pollution masks are made of eco-friendly",
+      "line2": "plastic, lightweight and comfortable to wear."
+    },
+    "buttons": {
+      "buyNow": "Buy Now",
+      "amazon": "amazon",
+      "amazonAlt": "Amazon logo"
+    }
+  },
+   "faq": {
+    "title": {
+      "line1": "Frequently Asked Questions",
+      "line2": "About Prana Air Mask"
+    },
+    "questions": [
+      {
+        "question": "Is the air mask available in white color only?",
+        "answer": "- There are 3 colors of the cap only for 2nd Gen Mask- White, Pink, Grey."
+      },
+      {
+        "question": "Are the mask straps adjustable?",
+        "answer": "- Yes, you can adjust the air mask straps."
+      },
+      {
+        "question": "How to charge it?",
+        "answer": "- It is easily chargeable with a micro USB cable."
+      },
+      {
+        "question": "How many modes of the fan are there?",
+        "answer": "- The air mask comes with 3 different fan modes. It is adjustable depending on the pollution level."
+      },
+      {
+        "question": "How much does it weigh?",
+        "answer": "- It is a lightweight air mask, with a weight of 70 grams."
+      },
+      {
+        "question": "How long does the battery last when fully charged?",
+        "answer": "- The battery lasts up to 2 hours on a single full charge."
+      },
+      {
+        "question": "Does the air mask help protect from viruses like COVID-19?",
+        "answer": "-Yes, it is highly recommended to wear a mask to stop the virus from spreading."
+      },
+      {
+        "question": "How many filters does the mask have?",
+        "answer": "- There is only 1 filter with multi-layer of pre-filter & HEPA filter."
+      },
+      {
+        "question": "What air pollutants can the mask filter out?",
+        "answer": "- Dust (PM10, PM2.5), Carbon Monoxide, Sulphur Dioxide, Smoke, etc."
+      },
+      {
+        "question": "Is the fan speed adjustable?",
+        "answer": "- Yes, the fan speed is adjustable, you can adjust it with 3 different modes."
+      },
+      {
+        "question": "How efficient is the Prana Air- Air Mask?",
+        "answer": "- The purification efficiency of the air mask is up to 95.99%."
+      }
+    ]
+  }
+}

@@ -1,15 +1,29 @@
-
 import Link from "next/link"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import TVOCProductNavbar from "@/Components/Pages/NanoTvocmonitor/tvoc-product-navbar"
 import TVOCProductGallery from "@/Components/Pages/NanoTvocmonitor/tvoc-product-gallery"
 import TVOCMonitorSlider from "@/Components/Pages/NanoTvocmonitor/tvoc-monitor-slider"
-import TVOCProductComparison from "@/Components/Pages/NanoTvocmonitor/tvoc-product-comparison"
-import TVOCFaqAccordion from "@/Components/Pages/NanoTvocmonitor/tvoc-faq-accordion"
-
-export default function NanoTVOCMonitorPage() {
-
+import { getServerTranslation } from "@/i18n/server"
+export default async function NanoTVOCMonitorPage() {
+  const { t } = await getServerTranslation("nano-tvoc")
+  const tvocSliderContent = [
+    {
+      id: 1,
+      heading: t("nano-tvoc:slider.item1.heading"),
+      paragraph: t("nano-tvoc:slider.item1.paragraph"),
+      image:
+        "https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-odor-tvoc-monitor-with-real-time-data.jpeg",
+      alt: t("nano-tvoc:alt.item1.paragraph"),
+    },
+    {
+      id: 2,
+      heading: t("nano-tvoc:slider.item2.heading"),
+      paragraph: t("nano-tvoc:slider.item2.paragraph"),
+      image: "https://www.pranaair.com/wp-content/uploads/2023/05/portable-nano-tvoc-hcho-monitor.jpg",
+      alt: t("nano-tvoc:alt.item2.paragraph"),
+    },
+  ]
   return (
     <main className="nano-tvoc-monitor-page">
 
@@ -23,14 +37,14 @@ export default function NanoTVOCMonitorPage() {
             <div className="static-breadcrums">
               <ul>
                 <li>
-                  <Link href="/">Home</Link> &gt;
+                  <Link href="/">{t("breadcrumbs.home")}</Link> &gt;
                 </li>
                 <li>
-                  <Link href="/air-quality-monitor">Air Quality Monitors</Link> &gt;
+                  <Link href="/air-quality-monitor">{t("breadcrumbs.airQualityMonitors")}</Link> &gt;
                 </li>
                 <li>
                   <Link href="#">
-                    <b>Nano TVOC &amp; HCHO</b>
+                    <b>{t("breadcrumbs.nanoTvoc")}</b>
                   </Link>
                 </li>
               </ul>
@@ -50,27 +64,23 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-lg-4 col-md-12 ipad">
               <div className="product-text">
                 <div className="inner-product-txt">
-                  <h1>Nano TVOC & HCHO</h1>
-                  <h4>Odor Monitor</h4>
-                  Your portable health device
+                  <h1>{t("productInfo.title")}</h1>
+                  <h4>{t("productInfo.subtitle")}</h4>
+                  {t("productInfo.tagline")}
                 </div>
                 <div className="mrp-sec">
                   <div className="discount-mrp woocom-list-content">
-                    <h6>m.r.p.</h6>
-                    <h5>₹ 4,990.00</h5>
+                    <h6>{t("productInfo.mrp")}</h6>
+                    <h5>{t("productInfo.price")}</h5>
                   </div>
 
                   <section className="articles-container">
                     <article className="article">
-                      <p>
-                        Prana Air Nano TVOC & HCHO monitor is a handy air quality monitoring device that helps you
-                        monitor Total Volatile Organic Compounds & Formaldehyde levels in real-time along temperature
-                        and humidity.
-                      </p>
+                      <p>{t("productInfo.description")}</p>
                       <p className="extra-content" data-is-toggled="false">
-                        Monitor odor in real-time with an advanced and innovative cutting edge technology.
+                        {t("productInfo.extraContent")}
                       </p>
-                      <button className="read-more btn">Show More</button>
+                      <button className="read-more btn">{t("productInfo.showMore")}</button>
                     </article>
                   </section>
                 </div>
@@ -81,7 +91,7 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-lg-4 col-md-12 ipad">
               <div className="add-cart-box">
                 <div className="model-box">
-                  <h5>model</h5>
+                  <h5>{t("buySection.model")}</h5>
                   <center>
                     <select className="nav dropbtn">
                       <option value="https://www.pranaair.com/air-quality-monitor/handheld/nano-tvoc-monitor/">
@@ -97,7 +107,7 @@ export default function NanoTVOCMonitorPage() {
                   </center>
 
                   <div className="model-box">
-                    <h5>Quantity</h5>
+                    <h5>{t("buySection.quantity")}</h5>
                     <div className="stepper">
                       <input type="number" className="form-control" min="1" defaultValue="1" />
                     </div>
@@ -115,7 +125,7 @@ export default function NanoTVOCMonitorPage() {
                           value="76924"
                           className="single_add_to_cart_button button alt"
                         >
-                          Buy Now
+                          {t("buySection.buyNow")}
                         </button>
                       </form>
                     </div>
@@ -135,13 +145,13 @@ export default function NanoTVOCMonitorPage() {
               <div className="monitoring-image-container">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-portable-nano-odor-tvoc-monitor.jpeg"
-                  alt="Person wearing backpack with Prana Air nano TVOC monitor"
+                  alt={t("monitoringBanner.personImg")}
                   className="img-fluid monitoring-person-img"
                 />
                 <div className="device-zoom-circle">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-tvoc-hcho-odor-monitor.png"
-                    alt="Prana Air nano TVOC monitor closeup"
+                    alt={t("monitoringBanner.deviceImg")}
                     className="device-zoom-img"
                   />
                 </div>
@@ -149,32 +159,32 @@ export default function NanoTVOCMonitorPage() {
             </div>
             <div className="col-md-6">
               <div className="monitoring-content">
-                <h2 className="monitoring-title">Monitoring</h2>
-                <h3 className="monitoring-subtitle">has never been this easy!</h3>
-                <p className="monitoring-description">
-                  Prana Air nano TVOC/HCHO monitor possesses an elegant and attractive design, facilitating effortless
-                  portability even during extensive travels.
-                </p>
+                <h2 className="monitoring-title">{t("monitoringBanner.title")}</h2>
+                <h3 className="monitoring-subtitle">{t("monitoringBanner.subtitle")}</h3>
+                <p className="monitoring-description">{t("monitoringBanner.description")}</p>
                 <div className="activity-icons">
                   <div className="activity-icon-circle">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/05/cycing-icon.png" alt="cycling icon" />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/cycing-icon.png"
+                      alt={t("monitoringBanner.cyclingIcon")}
+                    />
                   </div>
                   <div className="activity-icon-circle">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/05/work-out-icon.png"
-                      alt="work out icon"
+                      alt={t("monitoringBanner.workoutIcon")}
                     />
                   </div>
                   <div className="activity-icon-circle">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/05/running-fitness-icon.png"
-                      alt="running fitness icon"
+                      alt={t("monitoringBanner.runningIcon")}
                     />
                   </div>
                   <div className="activity-icon-circle">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/05/working-in-office-icon.png"
-                      alt="working in office icon"
+                      alt={t("monitoringBanner.officeIcon")}
                     />
                   </div>
                 </div>
@@ -190,11 +200,8 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-6 features-left-col">
               <div className="features-content">
-                <h2 className="features-title">Outstanding features of the Monitor</h2>
-                <p className="features-description">
-                  It has a small, compact body with a minimal and attractive style that seamlessly blends aesthetics and
-                  technology to create a product thats both beautiful and practical.
-                </p>
+                <h2 className="features-title">{t("features.title")}</h2>
+                <p className="features-description">{t("features.description")}</p>
 
                 <div className="features-list">
                   <div className="feature-row">
@@ -202,19 +209,19 @@ export default function NanoTVOCMonitorPage() {
                       <div className="feature-icon">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/05/real-time-monitor-icon.png"
-                          alt="real time monitoring icon"
+                          alt={t("features.altTexts.realTimeMonitoring")}
                         />
                       </div>
-                      <div className="feature-text">Real-time Monitoring</div>
+                      <div className="feature-text">{t("features.featureTexts.realTimeMonitoring")}</div>
                     </div>
                     <div className="feature-item">
                       <div className="feature-icon">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/05/tvoc-device-battery-icon.png"
-                          alt="battery icon"
+                          alt={t("features.altTexts.battery")}
                         />
                       </div>
-                      <div className="feature-text">1000 mAh Lithium battery</div>
+                      <div className="feature-text">{t("features.featureTexts.battery")}</div>
                     </div>
                   </div>
 
@@ -223,19 +230,19 @@ export default function NanoTVOCMonitorPage() {
                       <div className="feature-icon">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/05/pocket-friendly-device-icon.png"
-                          alt="portable device icon"
+                          alt={t("features.altTexts.portable")}
                         />
                       </div>
-                      <div className="feature-text">Mini & Portable Device</div>
+                      <div className="feature-text">{t("features.featureTexts.portable")}</div>
                     </div>
                     <div className="feature-item">
                       <div className="feature-icon">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/05/hd-display-icon.png"
-                          alt="HD display icon"
+                          alt={t("features.altTexts.hdDisplay")}
                         />
                       </div>
-                      <div className="feature-text">HD Color Display</div>
+                      <div className="feature-text">{t("features.featureTexts.hdDisplay")}</div>
                     </div>
                   </div>
 
@@ -244,19 +251,19 @@ export default function NanoTVOCMonitorPage() {
                       <div className="feature-icon">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/05/mos-sensor-icon.png"
-                          alt="Metal Oxide Semiconductor icon"
+                          alt={t("features.altTexts.metalOxide")}
                         />
                       </div>
-                      <div className="feature-text">Metal Oxide Semiconductor</div>
+                      <div className="feature-text">{t("features.featureTexts.metalOxide")}</div>
                     </div>
                     <div className="feature-item">
                       <div className="feature-icon">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/05/type-c-icon.png"
-                          alt="type-c interface icon"
+                          alt={t("features.altTexts.typeC")}
                         />
                       </div>
-                      <div className="feature-text">Type-C interface</div>
+                      <div className="feature-text">{t("features.featureTexts.typeC")}</div>
                     </div>
                   </div>
 
@@ -265,10 +272,10 @@ export default function NanoTVOCMonitorPage() {
                       <div className="feature-icon">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/05/tvoc-monitor-dynamic-ui-icon.png"
-                          alt="dynamic UI icon"
+                          alt={t("features.altTexts.dynamicUI")}
                         />
                       </div>
-                      <div className="feature-text">Dynamic UI</div>
+                      <div className="feature-text">{t("features.featureTexts.dynamicUI")}</div>
                     </div>
                   </div>
                 </div>
@@ -277,16 +284,13 @@ export default function NanoTVOCMonitorPage() {
 
             <div className="col-md-6 features-right-col">
               <div className="ultra-hd-content">
-                <h2 className="ultra-hd-title">Ultra HD</h2>
-                <h3 className="ultra-hd-subtitle">1.9 Vibrant Color Screen With Unparalleled Ultra High Definition</h3>
-                <p className="ultra-hd-description">
-                  High-precision sensors for real-time gas concentration monitoring on a vivid color display, with a
-                  user-friendly interface for easy reading and interpretation.
-                </p>
+                <h2 className="ultra-hd-title">{t("features.ultraHD.title")}</h2>
+                <h3 className="ultra-hd-subtitle">{t("features.ultraHD.subtitle")}</h3>
+                <p className="ultra-hd-description">{t("features.ultraHD.description")}</p>
                 <div className="ultra-hd-image">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-odor-tvoc-hd-display.png"
-                    alt="TVOC monitor high definition display"
+                    alt={t("features.altTexts.tvocDisplay")}
                     className="img-fluid"
                   />
                 </div>
@@ -305,15 +309,12 @@ export default function NanoTVOCMonitorPage() {
                 <div className="handy-img">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-tvoc-monitor-is-handy.jpeg"
-                    alt="prana air nano tvoc monitor is handy"
+                    alt={t("handyPortable.altTexts.handy")}
                   />
                 </div>
                 <div className="handy-txt">
-                  <h4>Compact</h4>
-                  <p>
-                    Prana Air nano TVOC/ HCHO monitor is an incredibly handy device features a user-friendly interface
-                    that allows for hassle-free reading and interpretation of results.
-                  </p>
+                  <h4>{t("handyPortable.compact.title")}</h4>
+                  <p>{t("handyPortable.compact.description")}</p>
                 </div>
               </div>
             </div>
@@ -322,15 +323,12 @@ export default function NanoTVOCMonitorPage() {
                 <div className="handy-img portable-img">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-odor-tvoc-monitor-is-portable.jpeg"
-                    alt="prana air odor tvoc monitor is portable"
+                    alt={t("handyPortable.altTexts.portable")}
                   />
                 </div>
                 <div className="handy-txt portable-txt">
-                  <h4>Convenient</h4>
-                  <p>
-                    This device allows for convenient and hassle-free reading and interpretation of results, and its
-                    compact design makes it incredibly easy to carry around wherever you go.
-                  </p>
+                  <h4>{t("handyPortable.convenient.title")}</h4>
+                  <p>{t("handyPortable.convenient.description")}</p>
                 </div>
               </div>
             </div>
@@ -345,34 +343,30 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-md-5 ipad">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-odor-tvoc-formaldehyde-detector-device.jpeg"
-                alt="TVOC and Formaldehyde Dangers"
+                alt={t("tvocDangers.altTexts.dangers")}
                 className="img-fluid carbon-monoxide-img"
               />
               <div className="monoxide-txt">
-                <h4>TVOC and Formaldehyde Dangers</h4>
-                <p>
-                  Monitoring TVOC and formaldehyde in the respiratory environment is important as exposures can cause
-                  dizziness, respiratory disorders, skin problems, endocrine system disorders, dermatitis, headache, and
-                  even cancer.
-                </p>
+                <h4>{t("tvocDangers.title")}</h4>
+                <p>{t("tvocDangers.description")}</p>
               </div>
             </div>
             <div className="col-md-7 ipad tvoc-health-bg">
               <h4 className="hazard-txt-co">
-                Potential Health Risks from <span> TVOC & HCHO </span>
+                {t("tvocDangers.healthRisks.title")} <span> {t("tvocDangers.healthRisks.titleHighlight")} </span>
               </h4>
               <div className="row data-mob-row">
                 <div className="col-md-6">
                   <div className="inner-data">
-                    &lt;0.100mg/m<sup>3</sup>
-                    <h4>Security Range</h4>
+                    {t("tvocDangers.healthRisks.levels.safe.measurement")}
+                    <h4>{t("tvocDangers.healthRisks.levels.safe.effect")}</h4>
                     <div className="bar"></div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="inner-data innr-last-data">
-                    20.100mg/m<sup>3</sup>
-                    <h4>Pharyngeal Discomfort</h4>
+                    {t("tvocDangers.healthRisks.levels.moderate.measurement")}
+                    <h4>{t("tvocDangers.healthRisks.levels.moderate.effect")}</h4>
                     <div className="yellow"></div>
                   </div>
                 </div>
@@ -380,15 +374,15 @@ export default function NanoTVOCMonitorPage() {
               <div className="row data-mob-row">
                 <div className="col-md-6">
                   <div className="inner-data">
-                    &gt;0.500mg/m<sup>3</sup>
-                    <h4>Irritation in the eyes, tearing</h4>
+                    {t("tvocDangers.healthRisks.levels.high.measurement")}
+                    <h4>{t("tvocDangers.healthRisks.levels.high.effect")}</h4>
                     <div className="orange"></div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="inner-data innr-last-data">
-                    &gt;0.600mg/m<sup>3</sup>
-                    <h4>Brain damage, coma, or even death</h4>
+                    {t("tvocDangers.healthRisks.levels.severe.measurement")}
+                    <h4>{t("tvocDangers.healthRisks.levels.severe.effect")}</h4>
                     <div className="red"></div>
                   </div>
                 </div>
@@ -400,7 +394,7 @@ export default function NanoTVOCMonitorPage() {
 
       {/* SECTION 6: Slider Section */}
       <section className="co-monitore-outdoor-slider">
-        <TVOCMonitorSlider />
+        <TVOCMonitorSlider tvocSliderContent={tvocSliderContent} />
       </section>
 
       {/* SECTION 7: Real-Time Data */}
@@ -410,19 +404,15 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-md-7 ipad">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/real-time-tvoc-and-hcho-data.png"
-                alt="TVOC real-time data display"
+                alt={t("realTimeData.altTexts.display")}
                 className="img-fluid real-time-data-img"
               />
             </div>
             <div className="col-md-5 ipad">
               <div className="real-time-data-txt">
-                <h5>Real-Time Data</h5>
-                <h4>TVOC, HCHO, Temp., & Humidity</h4>
-                <p>
-                  Prana Air TVOC/HCHO monitor utilizes advanced MOS monitoring technology to provide real-time data and
-                  insights on indoor odor levels. This cutting-edge device empowers you to take control of your
-                  environment and making informed decisions to reduce odor and promote clean air.
-                </p>
+                <h5>{t("realTimeData.subtitle")}</h5>
+                <h4>{t("realTimeData.title")}</h4>
+                <p>{t("realTimeData.description")}</p>
               </div>
             </div>
           </div>
@@ -433,7 +423,7 @@ export default function NanoTVOCMonitorPage() {
       <section className="out-door-banner">
         <img
           src="https://www.pranaair.com/wp-content/uploads/2023/05/monitoring-real-time-odor-tvc-in-washroom.jpeg"
-          alt="measuring indoor tvoc level with prana air monitor"
+          alt={t("fullWidthBanner.altTexts.washroom")}
           className="img-fluid outdoor-monitor-device-img"
         />
       </section>
@@ -444,14 +434,9 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="electrochecmial-para">
-                <h5 className="heading-bg">MOS- Metal Oxide Semiconductor</h5>
-                <h4>For TVOC & HCHO Detection</h4>
-                <p>
-                  When TVOC & HCHO gases come in contact with the metal oxide surface, they change the resistance of the
-                  semiconductor material, causing a measurable change in the electrical current passing through it. This
-                  change is then recorded by the device and interpreted as a gas concentration level, providing
-                  real-time data on indoor air quality.
-                </p>
+                <h5 className="heading-bg">{t("mosTechnology.title")}</h5>
+                <h4>{t("mosTechnology.subtitle")}</h4>
+                <p>{t("mosTechnology.description")}</p>
               </div>
             </div>
           </div>
@@ -465,18 +450,15 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-md-5">
               <div className="smart-chip-txt">
                 <h5>
-                  High-sensitive <span>Smart Chip</span>
+                  {t("smartChip.title.part1")} <span>{t("smartChip.title.highlight")}</span>
                 </h5>
-                <h4>for more Accurate Detection</h4>
-                <p>
-                  The instrument has a built-in high-performance smart chip that detects TVOC and formaldehyde levels,
-                  ensuring more accurate measurements.
-                </p>
+                <h4>{t("smartChip.subtitle")}</h4>
+                <p>{t("smartChip.description")}</p>
                 <ul className="smart-chip-quality">
-                  <li>High Sensitivity</li>
-                  <li>Accurate Data</li>
-                  <li>Fast Operation Speed</li>
-                  <li>Energy Efficiency</li>
+                  <li>{t("smartChip.features.sensitivity")}</li>
+                  <li>{t("smartChip.features.accuracy")}</li>
+                  <li>{t("smartChip.features.speed")}</li>
+                  <li>{t("smartChip.features.efficiency")}</li>
                 </ul>
               </div>
             </div>
@@ -484,7 +466,7 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-md-5">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/05/smart-chip-on-prana-air-tvoc-odor-monitor.png"
-                alt="TVOC smart chip"
+                alt={t("smartChip.altTexts.chip")}
                 className="img-fluid smart-chip-img floating"
               />
             </div>
@@ -498,7 +480,7 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-3 ipad">
               <div className="attractive-txt">
-                <h4>Portable Convenience in Style</h4>
+                <h4>{t("attractiveDetails.title")}</h4>
               </div>
             </div>
           </div>
@@ -507,16 +489,17 @@ export default function NanoTVOCMonitorPage() {
               <div className="attract-bg-box">
                 <div className="top_head">
                   <p>
-                    <span className="range_no">01</span>
+                    <span className="range_no">{t("attractiveDetails.typeC.number")}</span>
                   </p>
                   <h4>
-                    Type C <span className="detail_text">Charging</span>
+                    {t("attractiveDetails.typeC.title")}{" "}
+                    <span className="detail_text">{t("attractiveDetails.typeC.subtitle")}</span>
                   </h4>
                 </div>
                 <img
                   className="mob-type-c-img"
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/tvoc-monitor-type-c-charging.png"
-                  alt="prana air nano tvoc monitor type c charging"
+                  alt={t("attractiveDetails.typeC.altText")}
                 />
               </div>
             </div>
@@ -524,15 +507,16 @@ export default function NanoTVOCMonitorPage() {
               <div className="attract-bg-box">
                 <div className="top_head">
                   <p>
-                    <span className="range_no">02</span>
+                    <span className="range_no">{t("attractiveDetails.lanyard.number")}</span>
                   </p>
                   <h4>
-                    Anti-loss <span className="detail_text">Lanyard</span>
+                    {t("attractiveDetails.lanyard.title")}{" "}
+                    <span className="detail_text">{t("attractiveDetails.lanyard.subtitle")}</span>
                   </h4>
                 </div>
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/anti-loss-lanyard-of-tvoc-monitor.png"
-                  alt="prana air tvoc monitor anti loss lanyard"
+                  alt={t("attractiveDetails.lanyard.altText")}
                 />
               </div>
             </div>
@@ -540,15 +524,16 @@ export default function NanoTVOCMonitorPage() {
               <div className="attract-bg-box">
                 <div className="top_head">
                   <p>
-                    <span className="range_no">03</span>
+                    <span className="range_no">{t("attractiveDetails.display.number")}</span>
                   </p>
                   <h4>
-                    Ultra HD <span className="detail_text">Color screen</span>
+                    {t("attractiveDetails.display.title")}{" "}
+                    <span className="detail_text">{t("attractiveDetails.display.subtitle")}</span>
                   </h4>
                 </div>
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/ulta-hd-display-of-tvoc-monitor.png"
-                  alt="prana air tvoc monitor ulta hd display"
+                  alt={t("attractiveDetails.display.altText")}
                 />
               </div>
             </div>
@@ -562,7 +547,7 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-3">
               <div className="product-function-txt">
-                <h4>Product Key functions</h4>
+                <h4>{t("productKeyFunctions.title")}</h4>
               </div>
             </div>
           </div>
@@ -570,44 +555,51 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-md-5">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-tvoc-monitor-key-functions.png"
-                alt="Product key functions"
+                alt={t("productKeyFunctions.altTexts.functions")}
                 className="img-fluid product-key-function"
               />
             </div>
             <div className="col-md-7">
               <div className="power-key-box">
                 <ul>
-                  <li>power key</li>
-                  <li>Long Press : On/Off</li>
-                  <li>Single Press : Change Temp. Unit (°C/F)</li>
+                  <li>{t("productKeyFunctions.powerKey.title")}</li>
+                  <li>{t("productKeyFunctions.powerKey.longPress")}</li>
+                  <li>{t("productKeyFunctions.powerKey.singlePress")}</li>
                 </ul>
               </div>
               <div className="turn-alarm">
                 <ul>
-                  <li>Single Press : Turn Alarm </li>
+                  <li>{t("productKeyFunctions.alarmKey.singlePress")}</li>
                   <li>
-                    on <img src="https://www.pranaair.com/wp-content/uploads/2023/05/volume-on.png" alt="volume-on" />
+                    {t("productKeyFunctions.alarmKey.on")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/volume-on.png"
+                      alt={t("productKeyFunctions.altTexts.volumeOn")}
+                    />
                     <span>|</span>
-                    off{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/05/volume-off.png" alt="volume-off" />
+                    {t("productKeyFunctions.alarmKey.off")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/volume-off.png"
+                      alt={t("productKeyFunctions.altTexts.volumeOff")}
+                    />
                   </li>
                 </ul>
               </div>
               <div className="brightness-levels">
                 <ul>
-                  <li>Single Press : Change Brightness Levels </li>
+                  <li>{t("productKeyFunctions.brightnessKey.singlePress")}</li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/05/full-brightness.png"
-                      alt="full-brightness"
+                      alt={t("productKeyFunctions.altTexts.fullBrightness")}
                     />
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/05/half-brightness.png"
-                      alt="half-brightness"
+                      alt={t("productKeyFunctions.altTexts.halfBrightness")}
                     />
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/05/low-brightness.png"
-                      alt="low-brightness.png"
+                      alt={t("productKeyFunctions.altTexts.lowBrightness")}
                     />
                   </li>
                 </ul>
@@ -623,15 +615,15 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="battery-txt">
-                <h5>Large-capacity Polymer</h5>
-                <h4>Battery Endurance (1000 mAh)</h4>
-                <p>A durable, high-performance polymer lithium-ion battery with a large capacity and long lifespan.</p>
+                <h5>{t("batteryEndurance.subtitle")}</h5>
+                <h4>{t("batteryEndurance.title")}</h4>
+                <p>{t("batteryEndurance.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/05/prana-air-nano-tvoc-odor-battery-capacity.png"
-                alt="TVOC battery endurance"
+                alt={t("batteryEndurance.altTexts.battery")}
                 className="img-fluid large-battery-img"
               />
             </div>
@@ -644,7 +636,7 @@ export default function NanoTVOCMonitorPage() {
         <div className="outdoor-device-bg">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2023/05/handy-and-portable-tvco-monitor-of-prana-air.png"
-            alt="measuring real-time tvoc hcho level with prana air monitor"
+            alt={t("handyPortableBanner.altTexts.monitor")}
           />
         </div>
       </section>
@@ -656,14 +648,16 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-md-5 ipad">
               <div className="tvoc-real-time">
                 <h4>
-                  Real-time <span> TVOC </span> and <span>HCHO</span> detection with An intelligent alarm system
+                  {t("realTimeTvocDetection.title.part1")} <span> {t("realTimeTvocDetection.title.highlight1")} </span>
+                  {t("realTimeTvocDetection.title.part2")} <span>{t("realTimeTvocDetection.title.highlight2")}</span>
+                  {t("realTimeTvocDetection.title.part3")}
                 </h4>
                 <ul>
                   <li>
-                    <p>Know the TVOC & HCHO levels around you </p>
+                    <p>{t("realTimeTvocDetection.features.levels")}</p>
                   </li>
                   <li>
-                    <p>Detects TVOC/ odor in real-time with 2 seconds data refresh rate. </p>
+                    <p>{t("realTimeTvocDetection.features.refresh")}</p>
                   </li>
                 </ul>
               </div>
@@ -673,12 +667,14 @@ export default function NanoTVOCMonitorPage() {
                     <span className="circule-icon">
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/05/green-circle.png"
-                        alt="green-circule"
+                        alt={t("realTimeTvocDetection.altTexts.greenCircle")}
                       />
                     </span>
                     <p>
                       {" "}
-                      <span className="green-txt">green:</span> <b>0-0.99 mg/m3,</b> Safe, No alarm sound:
+                      <span className="green-txt">{t("realTimeTvocDetection.indicators.green.color")}</span>
+                      <b>{t("realTimeTvocDetection.indicators.green.range")}</b>
+                      {t("realTimeTvocDetection.indicators.green.status")}
                     </p>
                   </li>
                 </ul>
@@ -689,13 +685,14 @@ export default function NanoTVOCMonitorPage() {
                     <span className="circule-icon">
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/05/yellow-circle.png"
-                        alt="yellow-circule"
+                        alt={t("realTimeTvocDetection.altTexts.yellowCircle")}
                       />
                     </span>
                     <p>
                       {" "}
-                      <span className="green-txt yelw-txt">Yellow:</span> <b>0.100mg/m3,</b> it will start a beep cycle
-                      alarm, once every 10 minutes.
+                      <span className="green-txt yelw-txt">{t("realTimeTvocDetection.indicators.yellow.color")}</span>
+                      <b>{t("realTimeTvocDetection.indicators.yellow.range")}</b>
+                      {t("realTimeTvocDetection.indicators.yellow.status")}
                     </p>
                   </li>
                 </ul>
@@ -704,38 +701,38 @@ export default function NanoTVOCMonitorPage() {
             <div className="col-md-3 ipad">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/05/alarm-system-in-prana-air-tvoc-monitor.png"
-                alt="TVOC detection alarm"
+                alt={t("realTimeTvocDetection.altTexts.alarm")}
                 className="img-fluid co-detection-img"
               />
             </div>
             <div className="col-md-4 ipad">
               <div className="co2-bar">
                 <ul className="security">
-                  <li>Security</li>
-                  <li>Cycle Alarm</li>
-                  <li>Cycle Alarm</li>
-                  <li>Cycle Alarm</li>
+                  <li>{t("realTimeTvocDetection.securityLevels.security")}</li>
+                  <li>{t("realTimeTvocDetection.securityLevels.cycleAlarm")}</li>
+                  <li>{t("realTimeTvocDetection.securityLevels.cycleAlarm")}</li>
+                  <li>{t("realTimeTvocDetection.securityLevels.cycleAlarm")}</li>
                 </ul>
                 <div className="bar-box">
                   <ul className="bar-colr">
                     <li>
                       <div className="co-data"></div>
                     </li>
-                    <li>0.000~0.080mg/m³</li>
+                    <li>{t("realTimeTvocDetection.securityLevels.ranges.safe")}</li>
                     <li>
                       <div className="co-data orange-bar"></div>
                     </li>
-                    <li>0.501~1.999mg/m³</li>
+                    <li>{t("realTimeTvocDetection.securityLevels.ranges.severe")}</li>
                   </ul>
                   <ul className="bar-colr">
                     <li>
                       <div className="co-data yellow-bar"></div>
                     </li>
-                    <li>0.201~0.500mg/m³</li>
+                    <li>{t("realTimeTvocDetection.securityLevels.ranges.high")}</li>
                     <li className="last-bar">
                       <div className="co-data red-bar"></div>
                     </li>
-                    <li>0.101~0.200mg/m³</li>
+                    <li>{t("realTimeTvocDetection.securityLevels.ranges.moderate")}</li>
                   </ul>
                 </div>
               </div>
@@ -750,15 +747,18 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-3">
               <div className="attractive-txt product-specification-heading">
-                Monitors
-                <h4>Technical Specifications</h4>
+                {t("technicalSpecifications.title.part1")}
+                <h4>{t("technicalSpecifications.title.part2")}</h4>
               </div>
             </div>
             <div className="col-md-9">
               <div className="brochore-btn">
                 <a href="/wp-content/uploads/2023/06/prana-air-nano-odor-tvoc-monitor-brochure.pdf">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png" alt="brochore-btn" />{" "}
-                  Download Brochure
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png"
+                    alt={t("technicalSpecifications.altTexts.brochure")}
+                  />{" "}
+                  {t("technicalSpecifications.brochure")}
                 </a>
               </div>
             </div>
@@ -766,38 +766,44 @@ export default function NanoTVOCMonitorPage() {
           <div className="row mid-box">
             <div className="col-md-4 box-line">
               <div className="product-specifi shdw-line">
-                Product Name :<h4>Nano TVOC & HCHO Monitor</h4>
+                {t("technicalSpecifications.specs.productName.label")}
+                <h4>{t("technicalSpecifications.specs.productName.value")}</h4>
               </div>
               <div className="product-specifi">
-                Warm-up time :<h4>35 Sec</h4>
+                {t("technicalSpecifications.specs.warmupTime.label")}
+                <h4>{t("technicalSpecifications.specs.warmupTime.value")}</h4>
               </div>
               <div className="product-specifi">
-                Working Temp. :<h4>-10~50°C</h4>
-              </div>
-            </div>
-            <div className="col-md-4 box-line">
-              <div className="product-specifi">
-                Detection Range :
-                <h4>
-                  0~9.999mg/m<sup>3</sup>
-                </h4>
-              </div>
-              <div className="product-specifi">
-                Data Refresh Rate :<h4>2 Sec</h4>
-              </div>
-              <div className="product-specifi">
-                Charging Mode :<h4>USB Type-C</h4>
+                {t("technicalSpecifications.specs.workingTemp.label")}
+                <h4>{t("technicalSpecifications.specs.workingTemp.value")}</h4>
               </div>
             </div>
             <div className="col-md-4 box-line">
               <div className="product-specifi">
-                Working Voltage :<h4>3.7 V</h4>
+                {t("technicalSpecifications.specs.detectionRange.label")}
+                <h4>{t("technicalSpecifications.specs.detectionRange.value")}</h4>
               </div>
               <div className="product-specifi">
-                Operating Humidity :<h4>0-95% RH</h4>
+                {t("technicalSpecifications.specs.refreshRate.label")}
+                <h4>{t("technicalSpecifications.specs.refreshRate.value")}</h4>
               </div>
               <div className="product-specifi">
-                Monitor Dimension :<h4>51 x 17 x 85 (mm)</h4>
+                {t("technicalSpecifications.specs.chargingMode.label")}
+                <h4>{t("technicalSpecifications.specs.chargingMode.value")}</h4>
+              </div>
+            </div>
+            <div className="col-md-4 box-line">
+              <div className="product-specifi">
+                {t("technicalSpecifications.specs.workingVoltage.label")}
+                <h4>{t("technicalSpecifications.specs.workingVoltage.value")}</h4>
+              </div>
+              <div className="product-specifi">
+                {t("technicalSpecifications.specs.operatingHumidity.label")}
+                <h4>{t("technicalSpecifications.specs.operatingHumidity.value")}</h4>
+              </div>
+              <div className="product-specifi">
+                {t("technicalSpecifications.specs.dimensions.label")}
+                <h4>{t("technicalSpecifications.specs.dimensions.value")}</h4>
               </div>
             </div>
           </div>
@@ -810,11 +816,67 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-5">
               <div className="attractive-txt comparision-heading">
-                <h4>Comparison of Our Nano TVOC/HCHO monitor vs a high-end monitor</h4>
+                <h4>{t("productComparison.title")}</h4>
               </div>
             </div>
           </div>
-          <TVOCProductComparison />
+          <div className="row mob-scroll">
+            <div className="col-md-3">
+              <div className="comp-heading mobshow">
+                <h4>TVOC Monitor</h4>
+              </div>
+              <div className="product-discription">
+                <ul>
+                  <li>{t("productComparison.parameters.description")}</li>
+                  <li>{t("productComparison.parameters.parameter")}</li>
+                  <li>{t("productComparison.parameters.price")}</li>
+                  <li>{t("productComparison.parameters.weight")}</li>
+                  <li>{t("productComparison.parameters.range")}</li>
+                  <li>{t("productComparison.parameters.accuracy")}</li>
+                  <li>{t("productComparison.parameters.technology")}</li>
+                  <li>{t("productComparison.parameters.portability")}</li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-md-9">
+              <div className="dis-img">
+                <div className="disc-inner-img-one">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-tvoc-hcho-odor-monitor.png"
+                    alt={t("productComparison.altTexts.pranaMonitor")}
+                  />
+                </div>
+                <div className="disc-inner-img-two">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2023/06/high-end-tvoc-monitor.png"
+                    alt={t("productComparison.altTexts.highEndMonitor")}
+                  />
+                </div>
+              </div>
+              <div className="product-feature">
+                <ul className="mini-co-monitor">
+                  <li>{t("productComparison.pranaMonitor.name")}</li>
+                  <li className="tab-bg">{t("productComparison.pranaMonitor.parameter")}</li>
+                  <li>{t("productComparison.pranaMonitor.price")}</li>
+                  <li className="tab-bg">{t("productComparison.pranaMonitor.weight")}</li>
+                  <li>{t("productComparison.pranaMonitor.range")}</li>
+                  <li className="tab-bg">{t("productComparison.pranaMonitor.accuracy")}</li>
+                  <li>{t("productComparison.pranaMonitor.technology")}</li>
+                  <li className="tab-bg">{t("productComparison.pranaMonitor.portability")}</li>
+                </ul>
+                <ul className="co-multifuntion-monitor">
+                  <li>{t("productComparison.highEndMonitor.name")}</li>
+                  <li>{t("productComparison.highEndMonitor.parameter")}</li>
+                  <li>{t("productComparison.highEndMonitor.price")}</li>
+                  <li>{t("productComparison.highEndMonitor.weight")}</li>
+                  <li>{t("productComparison.highEndMonitor.range")}</li>
+                  <li>{t("productComparison.highEndMonitor.accuracy")}</li>
+                  <li>{t("productComparison.highEndMonitor.technology")}</li>
+                  <li>{t("productComparison.highEndMonitor.portability")}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -824,13 +886,40 @@ export default function NanoTVOCMonitorPage() {
           <div className="row">
             <div className="col-md-3">
               <div className="attractive-txt faq-heading">
-                <h4>Frequently Asked Questions</h4>
+                <h4>{t("faqs.title")}</h4>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12">
-              <TVOCFaqAccordion />
+              <div className="accordion" id="tvocFaqAccordion">
+                {t("faqs.questions", { returnObjects: true }).map((faq, index) => (
+                  <div className="accordion-item faq-item" key={index}>
+                    <h4 className="accordion-header" id={`heading${index + 1}`}>
+                      <button
+                        className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#collapse${index + 1}`}
+                        aria-expanded={index === 0 ? "true" : "false"}
+                        aria-controls={`collapse${index + 1}`}
+                      >
+                        {faq.question}
+                      </button>
+                    </h4>
+                    <div
+                      id={`collapse${index + 1}`}
+                      className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}
+                      aria-labelledby={`heading${index + 1}`}
+                      data-bs-parent="#tvocFaqAccordion"
+                    >
+                      <div className="accordion-body faq-para">
+                        <p>{faq.answer}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

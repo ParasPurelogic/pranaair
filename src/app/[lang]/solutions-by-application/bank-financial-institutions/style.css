@@ -366,10 +366,10 @@ span.bold_text {
   padding: 0 !important;
 }
 
-.vc_col-has-fill > .vc_column-inner,
-.vc_row-has-fill + .vc_row-full-width + .vc_row > .vc_column_container > .vc_column-inner,
-.vc_row-has-fill + .vc_row > .vc_column_container > .vc_column-inner,
-.vc_row-has-fill > .vc_column_container > .vc_column-inner {
+.vc_col-has-fill>.vc_column-inner,
+.vc_row-has-fill+.vc_row-full-width+.vc_row>.vc_column_container>.vc_column-inner,
+.vc_row-has-fill+.vc_row>.vc_column_container>.vc_column-inner,
+.vc_row-has-fill>.vc_column_container>.vc_column-inner {
   padding: 0;
 }
 
@@ -436,7 +436,7 @@ span.bold_text {
   box-shadow: 2px 2px 8px -1px #ccc;
 }
 
-.air_quality_tab_sec .wpb_tabs.tab-style-one .wpb_tabs_nav > li.ui-state-active {
+.air_quality_tab_sec .wpb_tabs.tab-style-one .wpb_tabs_nav>li.ui-state-active {
   color: #000 !important;
   background-color: #fff !important;
 }
@@ -611,12 +611,12 @@ a.rent_btn {
   background: none;
 }
 
-.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title > a {
+.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title>a {
   color: #000;
   font-size: 20px;
 }
 
-.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title > a {
+.faq_section .vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title>a {
   color: #000;
 }
 
@@ -635,7 +635,7 @@ a.rent_btn {
   right: 15px;
 }
 
-.faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title > a {
+.faq_section .vc_tta.vc_tta-accordion .vc_tta-controls-icon-position-left.vc_tta-panel-title>a {
   padding-left: 0;
 }
 
@@ -1003,6 +1003,7 @@ label.message_text {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -1266,6 +1267,7 @@ label.message_text {
   padding: 60px 0;
   margin-top: 60px;
 }
+
 .contact-heading {
   padding-top: 20px !important;
 }
@@ -1568,9 +1570,11 @@ label.message_text {
   0% {
     transform: translatey(0px);
   }
+
   50% {
     transform: translatey(-10px);
   }
+
   100% {
     transform: translatey(0px);
   }
@@ -1630,3 +1634,14 @@ label.message_text {
   }
 }
 
+.slider-img img {
+  width: 80%;
+}
+
+.slidder-txt img {
+  width: 10%;
+}
+
+.air-quality-tab-img img {
+  width: 100%;
+}

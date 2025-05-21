@@ -1,0 +1,271 @@
+{
+     "squairBanner": {
+    "title": {
+      "brand": "Prana Air",
+      "product": "SQUAIR",
+      "subtitle": "Air Quality Monitor"
+    },
+    "description": "Know your harmful air pollutants with a smart indoor air quality monitoring device",
+    "buttons": {
+      "buyNow": "Buy Now",
+      "getQuote": "Get A Quote"
+    },
+    "altTexts": {
+      "monitorImage": "SQUAIR Air Quality Monitor"
+    },
+    "productDescription": {
+      "title": "SQUAIR (IAQ) Air Quality Monitor",
+      "paragraph1": "SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate matters and gas parameters. It detects PM10, PM2.5, CO, CO₂, O₃, NO₂, SO₂, TVOC, HCHO, noise, light, temperature & humidity. The monitor comes with two product variants like SQUAIR Lite & SQUAIR Pro which have a few different sensors inside the monitor.",
+      "paragraph2Part1": "The monitor also gives an alert system when the air quality around you is good, poor, or unhealthy. You can easily find out what quality of the air you are breathing in your house or office and control the alert system from the",
+      "paragraph2Part2": "AQI mobile app"
+    },
+    "video": {
+      "title": "SQUAIR Air Quality Monitor"
+    },
+    "features": {
+      "heading": "What Does Prana Air SQUAIR Air Monitor Offer?",
+      "realTime": {
+        "title": "Real-time Air Quality",
+        "description": "Get the real-time air pollution data of your monitor with the various air quality parameters anytime.",
+        "alt": "Real-time Air Quality"
+      },
+      "webDashboard": {
+        "title": "Reliable Web Dashboard Accessibility",
+        "description": "Explore our exclusive web dashboard and enjoy the amazing features like download data, scan QR code, link generation, and comparison with graphical representations.",
+        "alt": "Web Dashboard"
+      },
+      "mobileApp": {
+        "title": "Mobile & Smart TV App Enabled",
+        "description": "Get access to real-time & historic data with graphical representations, health recommendations, and many other features via AQI mobile & smart TV apps.",
+        "alt": "Mobile App"
+      },
+      "connectivity": {
+        "title": "Versatile Connectivity",
+        "description": "Wide range of connectivity options based on GSM, Wi-Fi, and RS-485 connection. Be assured to manage your indoor environment smartly.",
+        "alt": "Connectivity"
+      },
+      "sdCard": {
+        "title": "Micro SD-Card Data Storage",
+        "description": "Just insert your micro SD-card into the monitor to facilitate the continuous storage of all the air quality data for future use.",
+        "alt": "SD Card"
+      }
+    },
+    "compliance": {
+      "altText": "compliance icon",
+      "text": {
+        "complianceWith": "Compliance with",
+        "leedWell": "LEED, WELL,",
+        "and": "and",
+        "ashrae": "ASHRAE",
+        "standards": "standards"
+      }
+    },
+    "aqiRanges": {
+      "title": "Air Quality Index Ranges",
+      "ranges": {
+        "good": {
+          "range": "0-50",
+          "label": "Good"
+        },
+        "moderate": {
+          "range": "51-100",
+          "label": "Moderate"
+        },
+        "poor": {
+          "range": "101-200",
+          "label": "Poor"
+        },
+        "unhealthy": {
+          "range": "201-300",
+          "label": "Unhealthy"
+        },
+        "severe": {
+          "range": "301-400",
+          "label": "Severe"
+        },
+        "hazardous": {
+          "range": "401-500+",
+          "label": "Hazardous"
+        }
+      }
+    },
+    "variants": {
+      "title": "Squair Variants",
+      "description": "Prana Air indoor air quality monitors use advanced sensors for real-time tracking of indoor air pollutants, delivering a thorough insight into your indoor air quality.",
+      "tabs": {
+        "lite": {
+          "title": "Squair lite",
+          "description": "Squair Lite is, an affordable air quality monitor, a compact version of Prana Air Squair with essential features. Ideal for those prioritizing both functionality and cost.",
+          "variant": "Lite",
+          "image": "pranaair SQUAIR lite"
+        },
+        "standard": {
+          "title": "Squair",
+          "description": "Prana Air Squair offers real-time indoor air quality monitoring, featuring sensors for a detailed understanding of your indoor environment.",
+          "image": "pranaair SQUAIR"
+        },
+        "pro": {
+          "title": "Squair Pro",
+          "description": "Squair Pro, an advanced variant in Prana Air Squair series, prioritizing precision and high-performance air quality monitoring with enhanced sensors and extra features.",
+          "variant": "Pro",
+          "image": "pranaair SQUAIR Pro"
+        }
+      },
+      "common": {
+        "getQuote": "Get a quote",
+        "brochure": "Brochure",
+        "parameters": "Parameters :",
+        "connectivity": "Connectivity :",
+        "optional": "(optional)"
+      },
+      "parameters": {
+        "aqi": "AQI",
+        "pm1": "PM1",
+        "pm25": "PM2.5",
+        "pm10": "PM10",
+        "co2": "CO2",
+        "hcho": "HCHO",
+        "tvoc": "TVOC",
+        "particlesCount": "Particles\nCount",
+        "co": "CO",
+        "so2": "SO2",
+        "no2": "NO2",
+        "h2s": "H2S",
+        "nh3": "NH3",
+        "o3": "O3",
+        "light": "Light",
+        "noise": "Noise",
+        "humidity": "Humi.",
+        "temperature": "Temp.",
+        "o2": "O2",
+        "pressure": "Pressure",
+        "ch4": "CH4"
+      },
+      "connectivity": {
+        "wifi": "Wifi",
+        "rs485": "RS-485",
+        "gsm": "GSM (Optional)",
+        "lora": "LORA"
+      }
+    }
+  },
+   "squairQrCode": {
+    "manual": {
+      "scanText": "Scan this QR Code to",
+      "downloadText": "Download Manual",
+      "altText": "prana air squair air monitor manual QR code"
+    },
+    "brochure": {
+      "scanText": "Scan this QR Code to",
+      "downloadText": "Download Brochure",
+      "altText": "prana air squair air monitor brochure qr code"
+    }
+  },
+  "qrCodeSection": {
+    "manual": {
+      "scanText": "Scan this QR Code to",
+      "downloadText": "Download Manual",
+      "altText": "sensible plus monitor manual"
+    },
+    "brochure": {
+      "scanText": "Scan this QR Code to",
+      "downloadText": "Download Brochure",
+      "altText": "prana air sensible plus air monitor brochure qr code"
+    }
+  },
+   "indoorAirQualityMonitoring": {
+    "title": "Indoor Air Quality Monitoring",
+    "paragraph1": "Indoor air pollution is a big matter of concern and an environmental risk to our health. 80-90% of the time, People stay indoors at home and working places. Due to this huge exposure to harmful indoor air quality, there are 3.8 million premature deaths annually caused only by indoor (household) air pollution according to WHO. This impact is not only limited to rural homes, but also to modern housing in urban cities. There are causes and effects of indoor air contamination like cooking, cleaning chemicals, paints, smoking, dust, etc., how a building is ventilated, room temperature, dampness, and condensation.",
+    "paragraph2": "Some of the main pollutants like particulate matter - (PM1, PM2.5, PM10), CO, TVOC, Formaldehyde, CO2, NO2, etc. are to measure and control from sources inside the building and drawn outdoor. Prana Air uses low-cost, highly responsive, compact design, energy-efficient, and RoHS compliant air quality sensors in our air quality monitoring devices to detect these air pollutants."
+  },
+  "monitorConnectivityProcess": {
+    "title": "Monitor Connectivity Process",
+    "altText": "prana air SQUAIR indoor air quality monitor connectivity process"
+  },
+  "comparisonChart": {
+    "title": {
+      "line1": "Prana Air PM2.5 Data Accuracy Level",
+      "line2": "Comparison Chart With BAM"
+    },
+    "altText": "BAM VS PRANA AIR PM2 accuracy comparison chart"
+  },
+   "invisiblePollutants": {
+    "title": "See the Invisible Air Pollutants"
+  },
+  "mobileApp": {
+    "title": "To get the updates about Air Quality near you, Download AQI India app",
+    "description": "To track the quality of the air you inhale, download the AQI India app on your iOS/Android device(s) and forget all your worries. Download the app via Google Play Store (for Android), or Apple App Store (for iOS).",
+    "altTexts": {
+      "mobileApp": "AQI Mobile App",
+      "googlePlayStore": "google playstore icon",
+      "appStore": "app store icon"
+    }
+  },
+   "webDashboard": {
+    "altTexts": {
+      "dashboard": "Web Dashboard"
+    },
+    "realTimeData": {
+      "title": "Real-time & Historical Data",
+      "description": "Access the real-time or historic air pollution data with AQI, PM2.5, PM10, Temperature, Humidity & Noise parameters of your city anytime, anywhere."
+    },
+    "reliableDashboard": {
+      "title": "Reliable Dashboard",
+      "description": "Log in to the web dashboard and explore the amazing features. It provides meaningful and more understandable monitor data."
+    }
+  },
+  "qrCodeHeading": {
+    "title": "Scan QR Code & Check the Air Quality Around You"
+  },
+  "contactHeading": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faqSection": {
+    "heading": "Frequently asked questions",
+    "questions": {
+      "q1": "1. What air quality parameters are measured by SQUAIR Monitor ?",
+      "q2": "2. Is SQUAIR monitor competent as per the international standards?",
+      "q3": "3. How can I connect my monitor to get the data?",
+      "q4": "4. Do I get any on-board storage with SQUAIR?",
+      "q5": "5. Can I connect my SQUAIR monitor with my Building Management System (BMS)?",
+      "q6": "6. How much does SQUAIR monitor weigh?"
+    },
+    "answers": {
+      "a1": "SQUAIR is an indoor air quality monitor that effectively measures a wide range of primary and secondary air pollutants. Parameters: SQUAIR+ (Lite): PM 2.5, PM 10, CO2, TVOC, HCHO, Noise, Light, Temperature, Humidity SQUAIR+ (Pro): PM 2.5, PM 10, CO, O3, CO2, SO2, NO2, TVOC, Noise, Light, Temperature, Humidity",
+      "a2": "Yes. It has been curated with cutting-edge technology, keeping national and international requirements in mind. SQUAIR is compliant with the standards set by WELL, LEED, ISHRAE, and WHO.",
+      "a3": "Yes. You can connect your SQUAIR monitor through Wi-Fi, GSM SIM, and RS-485 connectivity. Go through the above video on this page about the whole process of connectivity process.",
+      "a4": "Yes. SQUAIR monitor comes with on-board micro-SD card storage.",
+      "a5": "Yes, absolutely. the monitor is extremely versatile and flexible in terms of connectivity. It comes with RS-485 connectivity which renders it compatible with your BMS.",
+      "a6": "SQUAIR monitor weighs 475 gm (16.75 oz)."
+    }
+  },
+   "relatedProducts": {
+    "title": {
+      "part1": "You May Also Like Other",
+      "part2": "Air Quality Monitors"
+    },
+    "altTexts": {
+      "logo": "logo"
+    },
+    "products": {
+      "pocket": {
+        "name": "Pocket+",
+        "alt": "prana air pocket air quality monitor"
+      },
+      "cair": {
+        "name": "CAIR+",
+        "alt": "prana air cair air quality monitor"
+      },
+      "sensible": {
+        "name": "Sensible",
+        "alt": "prana air sensible air quality monitor"
+      },
+      "sensiblePlus": {
+        "name": "Sensible+",
+        "alt": "prana air sensible plus air quality monitor"
+      }
+    }
+  }
+  
+}

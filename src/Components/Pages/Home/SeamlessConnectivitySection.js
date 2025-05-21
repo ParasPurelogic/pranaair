@@ -5,8 +5,6 @@ import { getServerTranslation } from "@/i18n/server"
 
 export default async function SeamleassConnectivitySection() {
   const { t } = await getServerTranslation("home")
-
-
   return (
     <section className="seamless-connective">
       <div className="container">

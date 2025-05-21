@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
 body {
   font-family: "Poppins", sans-serif !important;
 }
@@ -324,13 +325,13 @@ a.rent img {
   width: 30px;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a {
   border-color: #dcdcdc !important;
   background-color: #fff !important;
   color: #000 !important;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a {
   border-color: #78ae60 !important;
   background-color: #78ae60 !important;
   color: #fff !important;
@@ -341,11 +342,11 @@ a.rent img {
   margin-bottom: 40px !important;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active > a:hover {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a:hover {
   box-shadow: 0 0 20px #d0d0d0e6 !important;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab > a:hover {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a:hover {
   border-color: #78ae60 !important;
   background-color: #78ae60 !important;
   color: #fff !important;
@@ -576,7 +577,7 @@ label.message_text {
   background-size: 66%;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title>a {
   color: #000;
 }
 
@@ -591,7 +592,7 @@ label.message_text {
   background: none;
 }
 
-.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title > a {
+.vc_tta-color-grey.vc_tta-style-classic .vc_tta-panel .vc_tta-panel-title>a {
   color: #000;
 }
 
@@ -774,13 +775,6 @@ img.power {
   box-shadow: 0 0 20px #d0d0d0e6;
 }
 
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
 
 /* Accordion styles */
 .accordion {
@@ -872,22 +866,6 @@ img.power {
   background-color: #f5f5f5;
 }
 
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.faq-answer.active {
-  padding: 0 20px 20px;
-  max-height: 300px;
-}
-
-.faq-toggle {
-  font-size: 24px;
-  font-weight: bold;
-}
 
 /* Contact form styles */
 .contact-section-box {
@@ -895,9 +873,11 @@ img.power {
   padding: 60px 0;
   margin-top: 100px;
 }
+
 .contact-heading {
   padding-top: 30px !important;
 }
+
 /* Fix for the slider section */
 .carousel-item {
   flex: 0 0 100%;
@@ -932,84 +912,105 @@ img.power {
     overflow: visible !important;
     margin-bottom: 300px;
   }
+
   .pocket_title_box.school_aqi_box {
     padding-top: 400px;
     text-align: center;
   }
+
   .pocket_title_box.school_aqi_box p {
     font-size: 14px;
     padding-bottom: 10px;
     padding-right: 0;
   }
+
   .pocket_title_box.school_aqi_box h1 {
     font-size: 30px;
     line-height: 38px;
     margin-bottom: 10px;
   }
+
   .hero-section {
     overflow: visible !important;
   }
+
   .banner-btn {
     font-size: 16px;
     width: 80%;
     margin: 0 auto;
   }
+
   .pocket_title_box.school_aqi_box:before {
     width: 100%;
     bottom: 64px;
     margin: 0 auto;
   }
+
   .mg-pd {
     top: 0;
     left: 0;
   }
+
   .source-heading h2 {
     font-size: 26px;
     line-height: 36px;
   }
+
   .source-heading {
     padding-top: 40px;
   }
+
   .source-heading p {
     font-size: 16px;
     padding: 0;
   }
+
   p.animal-facility {
     font-size: 16px;
     padding-bottom: 20px;
   }
+
   .source-box img {
     width: 50px;
     height: 50px;
   }
+
   .source-box {
     height: 180px;
     padding-top: 30px;
     margin-bottom: 10px !important;
   }
+
   .sub_title_box p {
     padding: 0 0;
   }
+
   .factors-affect-box {
     width: 100%;
     height: 150px;
   }
+
   .quote-heading {
     padding: 0;
   }
+
   .feature_box img {
     width: 100px !important;
   }
+
   .quote-heading h2 {
     font-size: 20px;
   }
+
   .quote-heading p {
     font-size: 14px;
     padding-top: 0;
   }
+
   .mg-l {
     padding: 0 10px;
   }
+
   .quote {
     padding: 10px 0 30px;
     margin-top: 50px;
@@ -1017,92 +1018,115 @@ img.power {
     border: 1px solid #68b554;
     border-radius: 10px;
   }
+
   .introducing_box.sub_title_box {
     padding: 0 0 30px;
   }
+
   .area-para {
     padding-bottom: 0;
   }
+
   .area-para h3 {
     font-size: 20px !important;
   }
+
   .area-para p {
     font-size: 14px;
   }
+
   .passengers-box {
     margin-bottom: 20px !important;
     height: 330px;
   }
+
   .guidelines-logo img {
     width: 40%;
   }
+
   .guidelines-logo a {
     font-size: 14px;
     margin-top: 15px;
     margin-bottom: 15px !important;
   }
+
   .vc_tta.vc_tta-spacing-1 .vc_tta-tab {
     margin-top: 0;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 0;
   }
+
   .vc_tta-panel-heading {
     display: none;
   }
+
   .air-quality-heading {
     padding-left: 0;
     padding-top: 0;
   }
+
   .air-quality-heading h3 {
     font-size: 25px;
     line-height: 28px;
   }
+
   .vc_tta-panel-body p {
     font-size: 14px;
   }
+
   ul.airquality_list {
     padding: 0 0 0 0;
   }
+
   .btns-bottom {
     gap: 15px;
     padding-left: 0;
   }
+
   .sub_title_box .title_heading {
     font-size: 24px;
     margin: 50px 0 10px;
   }
+
   .air_quality_box {
     padding-left: 0;
     padding-bottom: 50px;
   }
+
   .air_quality_box h3 {
     padding-left: 0;
     padding-bottom: 0;
   }
+
   .line:before {
     width: 100%;
     height: 1px;
     left: 0;
     top: 215px;
   }
+
   .slider {
     margin-top: 50px;
   }
+
   .slidder-txt {
     padding-top: 0;
     padding-left: 0;
   }
+
   .slidder-txt p {
     font-size: 14px;
     line-height: 26px;
     width: 100%;
     padding-bottom: 20px;
   }
+
   .slidder-txt h3 {
     font-size: 20px;
     margin-top: -10px;
   }
+
   .slider:before {
     width: 100%;
     height: 400px;
@@ -1111,62 +1135,79 @@ img.power {
     right: 0;
     margin: 0 auto;
   }
+
   .airqulality_contact_section .contact_content_box {
     padding: 20px 15px 45px;
     width: 100%;
   }
+
   .airqulality_contact_section .wpb_column.vc_column_container.vc_col-sm-9 {
     width: 100%;
     padding: 50px 0 0;
   }
+
   .airquality_contact_box label {
     font-size: 14px;
   }
+
   .introducing_box.sub_title_box {
     padding: 0 0 10px;
   }
+
   .faq-tab-heading .vc_tta-panel-heading {
     display: block;
   }
+
   span.vc_tta-title-text {
     font-size: 14px;
   }
+
   .faq-tab-heading {
     margin-bottom: 10px;
   }
+
   .client-logo {
     height: 50px;
     margin-bottom: 10px !important;
     padding: 10px 10px;
   }
+
   .client-logo img {
     width: 100%;
   }
+
   .client_logo_section {
     display: flex;
   }
+
   .railway-staion-plateform {
     margin-top: 100px;
     padding-top: 30px;
     height: auto;
   }
+
   .risk-img {
     height: 130px;
   }
+
   .source-heading h3 {
     padding-bottom: 40px;
     font-size: 26px;
   }
+
   img.loco {
     margin-top: 10px;
   }
+
   .stationary {
     left: 30px;
     top: -40px;
   }
+
   .owl-slider button.owl-prev {
     left: -25px;
   }
+
   .owl-slider button.owl-next {
     right: -25px;
   }
@@ -1181,236 +1222,292 @@ img.power {
   }
 
 }
+
 @media only screen and (max-width: 767px) {
-    .pollutants-grid {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    
-    .bottom-pollutants {
-      grid-column: 1;
-      grid-template-columns: 1fr;
-    }
-    
-    .contact-container {
-      flex-direction: column;
-    }
-    
-    .contact-info, .contact-form {
-      width: 100%;
-    }
-    
-    .form-row {
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .app_img_bx {
-      height: 150px;
-    }
+  .pollutants-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .pollutants-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .bottom-pollutants {
-      grid-column: 1 / span 2;
-    }
+
+  .bottom-pollutants {
+    grid-column: 1;
+    grid-template-columns: 1fr;
   }
-  
-  @media only screen and (min-width: 767px) and (max-width: 1023px) {
-    .school_banner_box {
-      padding: 0 0 0;
-      margin-top: 0;
-      height: 350px;
-    }
-    .pocket_title_box.school_aqi_box {
-      padding-top: 0;
-    }
-    .pocket_title_box.school_aqi_box p {
-      font-size: 14px;
-      padding-right: 0;
-      padding-bottom: 0;
-    }
-    .pocket_title_box.school_aqi_box h1 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-    .feature_box img {
-      width: 60px;
-      height: 50px;
-    }
-    .feature_box h2 {
-      font-size: 12px;
-    }
-    .quote {
-      background-size: 720px;
-      padding: 0 0 190px;
-      margin-top: 100px;
-    }
-    .area-para p {
-      font-size: 14px;
-    }
-    .area-para h3 {
-      font-size: 18px;
-    }
-    .passengers-box img {
-      width: 60%;
-    }
-    .loco-pilot {
-      width: 70% !important;
-    }
-    .guidelines-logo a {
-      font-size: 14px;
-      margin-top: 10px;
-    }
-    .passengers-box h3 {
-      font-size: 18px;
-    }
-    .passengers-box {
-      height: 480px;
-      margin-bottom: 50px !important;
-    }
-    .air-quality-heading h3 {
-      font-size: 28px;
-    }
-    .air-quality-heading {
-      padding-left: 10px;
-      padding-top: 0;
-    }
-    ul.airquality_list {
-      padding: 0 0 0 10px;
-      margin: 0 0 20px;
-    }
-    .btns-bottom {
-      gap: 10px;
-      padding-left: 30px;
-    }
-    a.knowmore_btn {
-      padding: 8px 21px;
-      border-radius: 5px;
-      font-size: 12px;
-    }
-    .air_quality_box {
-      padding-left: 20px;
-    }
-    .air_quality_box h3 {
-      padding-left: 10px;
-    }
-    .slidder-txt {
-      padding-top: 50px;
-      padding-left: 20px;
-    }
-    .slidder-txt p {
-      width: 95%;
-      font-size: 14px;
-      line-height: 25px;
-    }
-    .slider:before {
-      top: 0;
-      height: 340px;
-    }
-    .client-logo img {
-      width: 70%;
-    }
-    .client-logo {
-      height: 120px;
-    }
-    .quote-heading {
-      padding: 0 80px 50px;
-    }
-    .introducing_box.sub_title_box {
-      padding: 0 0 40px;
-    }
-    .railway-staion-plateform {
-      height: 600px;
-    }
-    .factors-affect-box {
-      height: 220px;
-    }
-    .stationary {
-      left: 80px;
-    }
-    .owl-slider button.owl-prev {
-      left: -20px;
-    }
-    .owl-slider button.owl-next {
-      right: -20px;
-    }
-    .banner-btn {
-      width: 45%;
-    }
-    .mg-pd {
-      left: 20px;
-    }
-    .source-heading p {
-      padding: 0;
-    }
-    .source-wrap_box h2 {
-      font-size: 15px;
-      padding: 0 10px;
-    }
-    .sub_title_box .title_heading {
-      font-size: 30px;
-      margin: 50px 0 15px;
-    }
-    .pocket_title_box.school_aqi_box h1 {
-        font-size: 28px;
-        line-height: 40px;
-    }
-    .pocket_title_box.school_aqi_box p {
-        padding-right: 0px;
-        padding-top: 10px;
-    }
-    .banner-btn {
-        width: 60%;
-    }
-    .introducing_box.sub_title_box {
-        padding: 90px 0 10px;
-    }
-    .source-wrap_box h2 {
-        padding: 10px;
-    }
-    .mg-l {
-        padding: 0;
-    }
-    .area-para h3 {
-        padding-top: 20px;
-    }
-    .risk-img {
-        height: auto;
-        padding-bottom: 20px;
-    }
-    .air-quality-heading {
-        padding-top: 0px;
-    }
-    .air-quality-heading h3 {
-        font-size: 26px;
-        line-height: 32px;
-    }
-    .air_quality_box {
-        padding-left: 0px;
-        padding-top: 20px;
-    }
-    .slidder-txt {
-        padding-top: 0px;
-        padding-left: 0px;
-    }
-    .slider:before {
-        display: none;
-    }
-    .slidder-txt p {
-        width: 100%;
-    }
-    .client-logo {
-        height: 110px;
-    }
-    .client-logo img {
-        width: 60%;
-    }
-    .contact-heading p {    
-        width: 60%;
-    }
+
+  .contact-container {
+    flex-direction: column;
   }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .app_img_bx {
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .pollutants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottom-pollutants {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .school_banner_box {
+    padding: 0 0 0;
+    margin-top: 0;
+    height: 350px;
+  }
+
+  .pocket_title_box.school_aqi_box {
+    padding-top: 0;
+  }
+
+  .pocket_title_box.school_aqi_box p {
+    font-size: 14px;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .pocket_title_box.school_aqi_box h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .feature_box img {
+    width: 60px;
+    height: 50px;
+  }
+
+  .feature_box h2 {
+    font-size: 12px;
+  }
+
+  .quote {
+    background-size: 720px;
+    padding: 0 0 190px;
+    margin-top: 100px;
+  }
+
+  .area-para p {
+    font-size: 14px;
+  }
+
+  .area-para h3 {
+    font-size: 18px;
+  }
+
+  .passengers-box img {
+    width: 60%;
+  }
+
+  .loco-pilot {
+    width: 70% !important;
+  }
+
+  .guidelines-logo a {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .passengers-box h3 {
+    font-size: 18px;
+  }
+
+  .passengers-box {
+    height: 480px;
+    margin-bottom: 50px !important;
+  }
+
+  .air-quality-heading h3 {
+    font-size: 28px;
+  }
+
+  .air-quality-heading {
+    padding-left: 10px;
+    padding-top: 0;
+  }
+
+  ul.airquality_list {
+    padding: 0 0 0 10px;
+    margin: 0 0 20px;
+  }
+
+  .btns-bottom {
+    gap: 10px;
+    padding-left: 30px;
+  }
+
+  a.knowmore_btn {
+    padding: 8px 21px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .air_quality_box {
+    padding-left: 20px;
+  }
+
+  .air_quality_box h3 {
+    padding-left: 10px;
+  }
+
+  .slidder-txt {
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+
+  .slidder-txt p {
+    width: 95%;
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .slider:before {
+    top: 0;
+    height: 340px;
+  }
+
+  .client-logo img {
+    width: 70%;
+  }
+
+  .client-logo {
+    height: 120px;
+  }
+
+  .quote-heading {
+    padding: 0 80px 50px;
+  }
+
+  .introducing_box.sub_title_box {
+    padding: 0 0 40px;
+  }
+
+  .railway-staion-plateform {
+    height: 600px;
+  }
+
+  .factors-affect-box {
+    height: 220px;
+  }
+
+  .stationary {
+    left: 80px;
+  }
+
+  .owl-slider button.owl-prev {
+    left: -20px;
+  }
+
+  .owl-slider button.owl-next {
+    right: -20px;
+  }
+
+  .banner-btn {
+    width: 45%;
+  }
+
+  .mg-pd {
+    left: 20px;
+  }
+
+  .source-heading p {
+    padding: 0;
+  }
+
+  .source-wrap_box h2 {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .sub_title_box .title_heading {
+    font-size: 30px;
+    margin: 50px 0 15px;
+  }
+
+  .pocket_title_box.school_aqi_box h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .pocket_title_box.school_aqi_box p {
+    padding-right: 0px;
+    padding-top: 10px;
+  }
+
+  .banner-btn {
+    width: 60%;
+  }
+
+  .introducing_box.sub_title_box {
+    padding: 90px 0 10px;
+  }
+
+  .source-wrap_box h2 {
+    padding: 10px;
+  }
+
+  .mg-l {
+    padding: 0;
+  }
+
+  .area-para h3 {
+    padding-top: 20px;
+  }
+
+  .risk-img {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .air-quality-heading {
+    padding-top: 0px;
+  }
+
+  .air-quality-heading h3 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .air_quality_box {
+    padding-left: 0px;
+    padding-top: 20px;
+  }
+
+  .slidder-txt {
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+
+  .slider:before {
+    display: none;
+  }
+
+  .slidder-txt p {
+    width: 100%;
+  }
+
+  .client-logo {
+    height: 110px;
+  }
+
+  .client-logo img {
+    width: 60%;
+  }
+
+  .contact-heading p {
+    width: 60%;
+  }
+}

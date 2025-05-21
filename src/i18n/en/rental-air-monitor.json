@@ -1,0 +1,215 @@
+{
+    "rentalBanner": {
+    "title": {
+      "part1": "Purchase an air quality monitor - the lowest price @Rs.1499 with a minimum quantity on",
+      "highlight": "Rental Service"
+    },
+    "description": "Rentable smart indoor air quality monitoring equipment can help you identify dangerous air pollution!",
+    "benefits": {
+      "lowCost": "Low-Cost",
+      "timeSaving": "Time Saving",
+      "hassleFree": "Hassle Free"
+    },
+    "contactButton": "Contact Us",
+    "altTexts": {
+      "wifi": "wifi",
+      "app": "app",
+      "data": "data",
+      "rentalMonitor": "Rental Air Monitor"
+    },
+    "features": {
+      "wifi": "Wifi Connectivity",
+      "mobileApp": "Mobile App Enabled",
+      "realTimeData": "Real-time & historic data"
+    }
+  },
+  "rentalBenefits": {
+    "title": "What Makes Rental the Best Option?",
+    "description": "Obtain your company's real-time air quality statistics without any ownership hassles. Remotely access and evaluate the data.",
+    "benefits": {
+      "minimalPrice": {
+        "title": "Minimal Price",
+        "description": "The product is not required for purchase. Pay as specified in your rental agreement.",
+        "altText": "low cost device"
+      },
+      "simpleProcedure": {
+        "title": "Simple Procedure",
+        "description": "A quick and simple method for configuring the gadgets",
+        "altText": "easy procedure"
+      },
+      "noUpkeep": {
+        "title": "No Upkeep Expense",
+        "description": "No high maintenance expenses to pay. We've got you covered.",
+        "altText": "no maintenance cost"
+      },
+      "preciseReports": {
+        "title": "Precise Reports",
+        "description": "Using our dashboard, get accurate and dependable reports on air quality.",
+        "altText": "data accurate reports"
+      }
+    }
+  },
+  "rentalSquairMonitor": {
+    "title": "Prana Air SQUAIR Monitor",
+    "description": "With Prana Air, you can now rent the ability to know the levels of TVOCs, temperature, Humidity, and PM2.5, among other pollution characteristics!",
+    "knowMoreButton": "Know More",
+    "altTexts": {
+      "squairMonitor": "SQUAIR Monitor"
+    },
+    "features": {
+      "pm25": {
+        "title": "PM2.5",
+        "altText": "pm2.5 icon"
+      },
+      "co2": {
+        "title": "CO2",
+        "altText": "co2 icon"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "altText": "TVOC icon"
+      },
+      "noise": {
+        "title": "Noise",
+        "altText": "noise icon"
+      },
+      "light": {
+        "title": "Light",
+        "altText": "light icon"
+      },
+      "temperature": {
+        "title": "Temp.",
+        "altText": "temperature icon"
+      },
+      "humidity": {
+        "title": "Humidity",
+        "altText": "humidity icon"
+      }
+    }
+  },
+   "rentalDataAccessibility": {
+    "title": "Remote Data Accessibility Anytime Anywhere",
+    "description": "Remote access and analysis of the data are possible. Just use the AQI mobile app to access the data after connecting the device to WiFi.",
+    "featuresTitle": "Features of the AQI Mobile App:",
+    "features": {
+      "remoteAccess": "Accessible data remotely",
+      "realTimeUpdates": "Updates to data in real-time",
+      "historicalAnalytics": "Analytics using historical data",
+      "graphicalRepresentations": "Graphical representations"
+    },
+    "altTexts": {
+      "mobileApp": "Mobile App",
+      "okayIcon": "okay icon"
+    }
+  },
+   "rentalProcess": {
+    "title": "Rental Process",
+    "description": "To obtain our rental service, the process is quite simple and quick. To use the service, simply follow these 5 steps.",
+    "steps": {
+      "payment": {
+        "title": "Payment Received",
+        "description": "1. An order is placed and payment is received.",
+        "altText": "payment received icon"
+      },
+      "shipment": {
+        "title": "Shipment",
+        "description": "2. The products are shipped & delivered to your doorstep.",
+        "altText": "shipment icon"
+      },
+      "setup": {
+        "title": "Product Setup",
+        "description": "3. The device is set up and is ready to use.",
+        "altText": "product setup icon"
+      },
+      "support": {
+        "title": "Support",
+        "description": "4. For any technical issues, the support is provided.",
+        "altText": "support icon"
+      },
+      "return": {
+        "title": "Return Product",
+        "description": "5. The products have to be returned after the rental period.",
+        "altText": "product return icon"
+      }
+    },
+    "images": {
+      "image1": "Process Image 1",
+      "image2": "Process Image 2",
+      "image3": "Process Image 3",
+      "image4": "Process Image 4"
+    }
+  },
+  "rentalTerms": {
+    "title": "Terms & Conditions",
+    "description": "These are the terms and conditions that apply to Prana Air rental services.",
+    "terms": [
+      "Ten units or more must be rented for a minimum of twelve months.",
+      "You must pay a rental security amount in advance at the time of ordering.",
+      "Only after the rental time has ended is the security deposit returned.",
+      "You are responsible for covering the cost of any physical damage to the merchandise. The quantity of security will be taken into account.",
+      "Prana Air will offer technical support for any issues pertaining to the product and data accessibility for the duration of the rental.",
+      "The product, technical help for device setup, and cloud server for data accessibility are all included in the rental service.",
+      "The WiFi service is not included in the rental package."
+    ]
+  },
+  "contactSection": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+   "rentalFAQ": {
+    "title": {
+      "part1": "Frequently Asked",
+      "part2": "Questions"
+    },
+    "subtitle": "Have questions about our rental process? We are here to help.",
+    "questions": [
+      {
+        "question": "What is the device setup process?",
+        "answer": "- Place the device and provide electricity in an indoor location where you wish to keep an eye on the quality of the air. After that, use the AQI mobile app to connect the device to WiFi."
+      },
+      {
+        "question": "How can I get the devices air quality data?",
+        "answer": "- The AQI mobile or smart app TV app and web-dashboard provide remote access to the data for analysis and access."
+      },
+      {
+        "question": "The Minimum Order Quantity (MOQ) is what?",
+        "answer": "- For a 12-month period, you must buy a minimum of 10 units."
+      },
+      {
+        "question": "Does the full sum have to be paid up front?",
+        "answer": "- Yes, there is a requirement to pay the full cost upfront along with a refundable deposit."
+      },
+      {
+        "question": "Is the money used as security refundable?",
+        "answer": "- After the rental period ends, the security deposit is returned in full. Should the unit sustain any physical harm, the security value will be reduced accordingly."
+      },
+      {
+        "question": "What should you do in the event of a technical problem?",
+        "answer": "There would be technical support available in the event of any problems. You must first get in touch with the <strong>Prana Air support staff.</strong>"
+      },
+      {
+        "question": "What advantages does this renting service offer me?",
+        "answer": "- You can quickly and affordably monitor the quality of the air, analyze, and compare your organizations data, all without having to deal with ownership issues."
+      },
+      {
+        "question": "For rentals, what should be the minimum duration?",
+        "answer": "- The service must be used for a minimum of 24 months."
+      },
+      {
+        "question": "What kind of business will be able to implement the renting model?",
+        "answer": "- Any kind of organization, including schools, office buildings, industries, power plants, industrial zones, shopping centers, and residential buildings, can adopt the leasing model."
+      },
+      {
+        "question": "Can residential buildings use it?",
+        "answer": "- Indeed, it is possible to utilize it to keep an eye on the indoor air quality of residential structures."
+      }
+    ]
+  },
+    "clientele": {
+    "title": "Our Clientele",
+    "description": "We are honored to work with so many well-known companies.",
+    "altTexts": {
+      "leafIcon": "Leaf icon"
+    }
+  }
+}

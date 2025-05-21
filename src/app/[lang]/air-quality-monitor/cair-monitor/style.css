@@ -753,6 +753,17 @@ a {
   background: #68b555;
 }
 
+#visualTabs {
+  position: relative;
+  z-index: 1;
+}
+
+.show-img h5 {
+  position: relative;
+  color: #ffffffd4;
+  padding-top: 30px;
+}
+
 .show-img img {
   width: 55%;
   position: relative;

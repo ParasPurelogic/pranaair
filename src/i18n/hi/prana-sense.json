@@ -1,0 +1,499 @@
+{
+    "applications": {
+        "heading": {
+      "title": "अनुप्रयोग",
+      "subtitle": "हर अनुप्रयोग में बहुमुखी प्रतिभा",
+      "description": "विविध वातावरण और आवश्यकताओं में प्राणा सेंस के साथ वायु गुणवत्ता की निगरानी करें।"
+    },
+     "title": "प्राणा सेंस के अनुप्रयोग",
+    "description": "प्राणा सेंस का उपयोग इष्टतम वायु गुणवत्ता और सुरक्षा सुनिश्चित करने के लिए विभिन्न वातावरणों में किया जा सकता है।",
+  "items": {
+    "1": {
+      "title": "निर्माण स्थल",
+      "alt": "निर्माण स्थलों पर प्राणा सेंस का अनुप्रयोग"
+    },
+    "2": {
+      "title": "समुद्री बंदरगाह",
+      "alt": "समुद्री बंदरगाहों पर प्राणा सेंस का अनुप्रयोग"
+    },
+    "3": {
+      "title": "स्कूल और विश्वविद्यालय",
+      "alt": "स्कूलों और विश्वविद्यालयों में प्राणा सेंस का अनुप्रयोग"
+    },
+    "4": {
+      "title": "रेलवे और मेट्रो",
+      "alt": "रेलवे और मेट्रो में प्राणा सेंस का अनुप्रयोग"
+    },
+    "5": {
+      "title": "सड़कें और राजमार्ग",
+      "alt": "सड़कों और राजमार्गों पर प्राणा सेंस का अनुप्रयोग"
+    },
+    "6": {
+      "title": "उद्योग",
+      "alt": "उद्योगों और कारखानों में प्राणा सेंस का अनुप्रयोग"
+    },
+    "7": {
+      "title": "पार्किंग स्थल",
+      "alt": "पार्किंग स्थलों पर प्राणा सेंस का अनुप्रयोग"
+    }
+  }
+},
+"hero": {
+    "logo": {
+      "alt": "प्राणा"
+    },
+    "title": "प्राणा सेंस आउटडोर एयर क्वालिटी मॉनिटर",
+    "description": "बेहतर सटीकता और विश्वसनीयता के लिए अत्याधुनिक तकनीक के साथ वायु गुणवत्ता निगरानी में क्रांति, निर्बाध कनेक्टिविटी और व्यापक डेटा एक्सेस के साथ।",
+    "contactButton": "संपर्क करें",
+    "buttonIcon": {
+      "alt": "बटन आइकन"
+    }
+  },
+  "whyChoose": {
+    "featuresTitle": "विशेषताएं",
+    "title": "प्राणा सेंस को क्यों चुनें?",
+    "features": {
+      "1": {
+        "title": "अत्याधुनिक सेंसर तकनीक",
+        "alt": "उच्च तकनीक वाले वायु गुणवत्ता सेंसर"
+      },
+      "2": {
+        "title": "स्मार्ट कैलिब्रेशन",
+        "alt": "सेंसर के लिए स्मार्ट कैलिब्रेशन"
+      },
+      "3": {
+        "title": "किफायती उत्कृष्टता",
+        "alt": "आसान किफायती मूल्य"
+      },
+      "4": {
+        "title": "हमेशा कनेक्टेड",
+        "alt": "परेशानी मुक्त डेटा कनेक्टिविटी"
+      },
+      "5": {
+        "title": "रीयल-टाइम अंतर्दृष्टि",
+        "alt": "रीयल-टाइम वायु गुणवत्ता डेटा अंतर्दृष्टि"
+      },
+      "6": {
+        "title": "अप्रतिम सटीकता",
+        "alt": "अत्यधिक सटीक वायु गुणवत्ता डेटा"
+      },
+      "7": {
+        "title": "निर्बाध कनेक्टिविटी",
+        "alt": "निर्बाध डेटा कनेक्टिविटी वाईफाई और जीएसएम"
+      },
+      "8": {
+        "title": "किफायती रखरखाव",
+        "alt": "लागत प्रभावी रखरखाव"
+      }
+    }
+  },
+   "gasMonitor": {
+    "title": "सटीक प्रदूषक पहचान:",
+    "subtitle": "आउटडोर वायु गुणवत्ता निगरानी",
+    "pollutants": {
+      "pm": {
+        "title": "कण पदार्थ (पीएम1, 2.5 और 10)",
+        "alt": "पार्टिकुलर मैटर पीएम2.5, पीएम10, पीएम1 का सेंसर"
+      },
+      "temp": {
+        "title": "तापमान और आर्द्रता",
+        "alt": "तापमान और आर्द्रता का सेंसर"
+      },
+      "noise": {
+        "title": "शोर निगरानी",
+        "alt": "शोर निगरानी का सेंसर"
+      },
+      "so2": {
+        "title": "सल्फर डाइऑक्साइड (SO2)",
+        "alt": "SO2 गैस का सेंसर"
+      },
+      "no2": {
+        "title": "नाइट्रोजन डाइऑक्साइड (NO2)",
+        "alt": "NO2 गैस का सेंसर"
+      },
+      "o3": {
+        "title": "ओजोन (O3)",
+        "alt": "ओजोन गैस का सेंसर"
+      },
+      "h2s": {
+        "title": "हाइड्रोजन सल्फाइड (H2S)",
+        "alt": "H2S गैस का सेंसर"
+      },
+      "nh3": {
+        "title": "अमोनिया (NH3)",
+        "alt": "अमोनिया NH3 का सेंसर"
+      },
+      "co": {
+        "title": "कार्बन मोनोऑक्साइड (CO)",
+        "alt": "CO गैस का सेंसर"
+      },
+      "ch4": {
+        "title": "मीथेन (CH4)",
+        "alt": "मीथेन CH4 का सेंसर"
+      },
+      "tvoc": {
+        "title": "टीवीओसी निगरानी",
+        "alt": "टीवीओसी गंध निगरानी का सेंसर"
+      },
+      "co2": {
+        "title": "CO₂ सेंसिंग",
+        "alt": "CO2 गैस का सेंसर"
+      }
+    }
+  },
+   "powerBackup": {
+    "title": "बिना रुकावट के चलने वाली पावर",
+    "description": "मेगा पावर बैकअप प्राप्त करें जो आपकी वायु गुणवत्ता निगरानी को दिनों तक चालू रखता है।",
+    "batteryLabel": "बैटरी",
+    "batteryCapacity": "40,000",
+    "mah": "mAh",
+    "backupLabel": "बैटरी बैकअप",
+    "backupHours": "96",
+    "hours": "घंटे",
+    "imageAlt": "अंतर्निहित बैटरी के साथ प्राणा सेंस एम्बिएंट एयर क्वालिटी मॉनिटरिंग डिवाइस"
+  },
+  "solarInnovation": {
+    "title": "सौर नवाचार",
+    "subtitle": "सूरज की रोशनी से अपने वायु गुणवत्ता मॉनिटर को पावर दें",
+    "description": "बिना बिजली आपूर्ति के निरंतर संचालन के लिए सौर-संचालित विश्वसनीयता और पर्यावरण अनुकूल निगरानी।",
+    "solarPanel": {
+      "title": "सोलर पैनल",
+      "power": "30",
+      "unit": "वाट",
+      "imageAlt": "सोलर पैनल के साथ प्राणा सेंस एम्बिएंट एयर क्वालिटी मॉनिटर"
+    },
+    "noController": {
+      "title": "कोई अतिरिक्त कंट्रोलर या कनेक्टर की आवश्यकता नहीं",
+      "description": "बिना किसी अतिरिक्त कंट्रोलर या कनेक्टर के सोलर पैनल को सीधे वायु गुणवत्ता मॉनिटर से जोड़ें।",
+      "imageAlt": "बिना अतिरिक्त कंट्रोलर के प्राणा सेंस एम्बिएंट एयर क्वालिटी मॉनिटर"
+    }
+  },
+   "waterproof": {
+    "title": "All-Weather Warrior",
+    "description": "Built to Last that stands in every Weather condition and ensures reliable performance in rain, heatwaves, dust etc.",
+    "ipRating": {
+      "alt": "Prana Sense is a weatherproof ambient air quality monitor"
+    },
+    "image": {
+      "alt": "Weather resistant ambient air quality monitor"
+    }
+  },
+  "weatherData": {
+    "title": "मौसम डेटा",
+    "description": "सिर्फ एक वायु गुणवत्ता मॉनिटर नहीं: मौसम की निगरानी"
+  },
+  "weatherMonitor": {
+    "overview": {
+      "strong": "एक पूर्ण पर्यावरणीय अवलोकन प्राप्त करें:",
+      "text": "रीयल-टाइम डेटा मौसम निगरानी क्षमताओं के लिए वैकल्पिक मौसम स्टेशन।",
+      "link": "मौसम स्टेशन"
+    },
+    "parameters": {
+      "windGust": {
+        "alt": "हवा के झोंके के पैरामीटर को मापना"
+      },
+      "solarIrradiance": {
+        "alt": "सौर विकिरण को मापना"
+      },
+      "windDirection": {
+        "alt": "हवा की दिशा को मापना"
+      },
+      "windSpeedDirection": {
+        "alt": "हवा की गति और दिशा को मापना"
+      },
+      "windRoseChart": {
+        "alt": "विंड रोज चार्ट"
+      },
+      "uvIndex": {
+        "alt": "यूवी इंडेक्स को मापना"
+      }
+    },
+    "image": {
+      "alt": "वायु गुणवत्ता और मौसम डेटा की निगरानी करने वाले मौसम स्टेशन के साथ प्राणा सेंस एम्बिएंट एयर क्वालिटी मॉनिटर"
+    }
+  },
+   "smartFeatures": {
+    "heading": "नवाचार",
+    "subheading": "निर्बाध संचालन के लिए स्मार्ट विशेषताएं",
+    "gps": {
+      "title": "सटीक स्थान निर्धारण",
+      "description": "सटीक स्थान ट्रैकिंग के लिए एकीकृत जीपीएस",
+      "imageAlt": "सटीक स्थान का पता लगाने के लिए जीपीएस एकीकरण के साथ प्राणा सेंस"
+    },
+    "display": {
+      "title": "क्रिस्टल क्लियर डिस्प्ले",
+      "description": "आसान डेटा विज़ुअलाइज़ेशन के लिए 3.5-इंच मोनोक्रोम स्क्रीन",
+      "size": "3.5",
+      "label": "डिस्प्ले",
+      "imageAlt": "स्पष्ट बड़े स्क्रीन पर वायु गुणवत्ता डेटा प्रदर्शन"
+    },
+    "storage": {
+      "title": "ऑनबोर्ड डेटा स्टोरेज",
+      "description": "सुरक्षित, स्थानीय डेटा लॉगिंग के लिए एसडी कार्ड समर्थन",
+      "imageAlt": "माइक्रो एसडी कार्ड पर ऑनबोर्ड डेटा स्टोरेज"
+    }
+  },
+   "advancedTech": {
+    "heading": "Prana Sense",
+    "subheading": "Air Quality Monitoring with Advanced Technology",
+    "image": {
+      "alt": "Prana Sense Air Quality Monitoring with Advanced Technology"
+    },
+    "powerSource": {
+      "title": "Power Source",
+      "solar": {
+        "label": "Solar",
+        "imageAlt": "solar power source in Prana Sense ambient air quality monitor"
+      },
+      "dc": {
+        "label": "D/C",
+        "imageAlt": "DC power source in Prana Sense ambient air quality monitor"
+      }
+    },
+    "offlineStorage": {
+      "title": "Offline Data Storage",
+      "sdCard": {
+        "label": "SD Card",
+        "imageAlt": "data storage in micro SD card in Prana Sense ambient air quality monitor"
+      }
+    },
+    "connectivity": {
+      "title": "Connectivity",
+      "or": "Or",
+      "wifi": {
+        "label": "Wi-Fi",
+        "imageAlt": "wifi connectivity"
+      },
+      "gsm": {
+        "label": "GSM",
+        "imageAlt": "GSM connectivity"
+      },
+      "lora": {
+        "label": "LoRa",
+        "imageAlt": "LoRa connectivity"
+      },
+      "rs485": {
+        "label": "RS485",
+        "modbus": "(MODBUS)",
+        "imageAlt": "RS485 connectivity"
+      }
+    },
+    "cloudStorage": {
+      "title": "Cloud Storage",
+      "imageAlt": "cloud data storage"
+    },
+    "applications": {
+      "mobile": {
+        "title": "AQI Mobile Application",
+        "imageAlt": "data connectivity on AQI mobile app"
+      },
+      "web": {
+        "title": "AQI Web Dashboard",
+        "imageAlt": "air quality data accessibility on AQI web-dashboard"
+      },
+      "tv": {
+        "title": "AQI TV Application",
+        "imageAlt": "air quality data accessibility on AQI TV app"
+      }
+    }
+  },
+   "connectivity": {
+    "title": "Connectivity",
+    "subtitle": "Stay Connected Anytime, Anywhere",
+    "description": "Always stay connected and informed with Multi-Mode Connectivity: RS485, WiFi, LoRa, and 4G options in your Prana Sense.",
+    "mainImage": {
+      "alt": "Easy data connectivity of Prana Sense Outdoor air quality monitor"
+    },
+    "options": {
+      "wifi": {
+        "label": "Wi-Fi",
+        "imageAlt": "wifi connectivity on Prana Sense"
+      },
+      "rs485": {
+        "label": "RS485",
+        "modbus": "(MODBUS)",
+        "imageAlt": "RS485 connectivity on Prana Sense"
+      },
+      "gsm": {
+        "label": "GSM",
+        "imageAlt": "GSM connectivity on Prana Sense"
+      },
+      "lora": {
+        "label": "LoRa",
+        "imageAlt": "LoRa connectivity on Prana Sense"
+      }
+    }
+  },
+   "noiseMonitor": {
+    "title": "शोर निगरानी",
+    "subtitle": "प्राणा सेंस के साथ अंतर सुनें",
+    "description": "प्राणा सेंस 1 डीबी सटीकता के साथ 30 से 130 डीबी तक शोर के स्तर की निगरानी करता है, जो सटीक ध्वनिक माप सुनिश्चित करता है।",
+    "range": {
+      "label": "शोर के स्तर की निगरानी",
+      "value": "30 - 130 डीबी"
+    },
+    "accuracy": {
+      "label": "सटीकता",
+      "value": "1 डीबी"
+    }
+  },
+  "dataAccessibility": {
+    "title": "निर्बाध पहुंच",
+    "subtitle": "आपकी उंगलियों पर वायु गुणवत्ता डेटा",
+    "tabs": {
+      "mobileApp": {
+        "tabLabel": "मोबाइल ऐप",
+        "title": "अपने स्मार्टफोन पर डेटा देखें",
+        "description": "सुविधाजनक निगरानी और मन की शांति के लिए प्राणा सेंस के रीयल-टाइम पर्यावरणीय अंतर्दृष्टि सीधे अपनी जेब में प्राप्त करें।",
+        "appStore": {
+          "smallText": "पर डाउनलोड करें",
+          "largeText": "ऐप स्टोर",
+          "imageAlt": "आईओएस ऐप लोगो"
+        },
+        "googlePlay": {
+          "smallText": "पर उपलब्ध",
+          "largeText": "गूगल प्ले",
+          "imageAlt": "एंड्रॉइड ऐप"
+        },
+        "image": {
+          "alt": "एक्यूआई मोबाइल ऐप पर अंतर्दृष्टिपूर्ण वायु गुणवत्ता डेटा पहुंच"
+        }
+      },
+      "webDashboard": {
+        "tabLabel": "वेब डैशबोर्ड",
+        "title": "वेब डैशबोर्ड पर वायु गुणवत्ता डेटा",
+        "description": "वेब-डैशबोर्ड डेटा पहुंच सुविधा के साथ अपने लैपटॉप पर कभी भी कहीं भी प्राणा सेंस के रीयल-टाइम डेटा की निगरानी करें।",
+        "image": {
+          "alt": "एक्यूआई वेब-डैशबोर्ड पर अधिक विवरण वाले वायु गुणवत्ता डेटा अंतर्दृष्टि"
+        }
+      },
+      "tvApplication": {
+        "tabLabel": "टीवी एप्लिकेशन",
+        "title": "अपने स्मार्ट टीवी पर डेटा देखें",
+        "description": "निरंतर निगरानी सुनिश्चित करने के लिए अपने स्मार्ट टीवी पर प्राणा सेंस की रीयल-टाइम पर्यावरणीय अंतर्दृष्टि प्राप्त करें।",
+        "image": {
+          "alt": "एक्यूआई टीवी ऐप पर वायु गुणवत्ता डेटा"
+        }
+      }
+    }
+  },
+   "sensorInnovation": {
+    "title": "सेंसर नवाचार",
+    "strong1": "दोगुना",
+    "middle": "सेंसर,",
+    "strong2": "दोगुनी",
+    "end": "सुरक्षा",
+    "paragraph1": "हमारे मॉनिटर में",
+    "dualSensors": "दोहरे सेंसर",
+    "paragraph1End": "की उन्नत तकनीक संभावित सेंसर विफलता से सुरक्षा प्रदान करती है।",
+    "paragraph2Start": "साथ ही",
+    "paragraph2Strong": "शून्य डाउनटाइम के साथ निरंतर निगरानी सुनिश्चित करता है",
+    "paragraph2End": "यह किसी भी विसंगति में तेज़ प्रतिक्रिया समय प्रदान करता है और स्थिति से निपटने के लिए एक विश्वसनीय विकल्प भी है।",
+    "image": {
+      "alt": "प्राणा सेंस मॉनिटर में अत्यधिक सटीक और उन्नत वायु गुणवत्ता सेंसर"
+    },
+    "primarySensor": "प्राथमिक सेंसर",
+    "reserveSensor": "रिज़र्व सेंसर"
+  },
+   "sensorData": {
+    "scenario1": {
+      "title": "परिदृश्य 1",
+      "heading": "सेंसर डेटा",
+      "status": "संरेखित",
+      "description": "निरंतर पीएम निगरानी सुनिश्चित करने के लिए दोहरी सेंसर तकनीक। प्राथमिक और रिज़र्व सेंसर डेटा संरेखित हो रहे हैं। इसलिए, रिज़र्व सेंसर स्लीप मोड में चला जाता है।",
+      "image": {
+        "alt": "संरेखित वायु गुणवत्ता सेंसर डेटा दिखाने वाला चार्ट"
+      }
+    },
+    "scenario2": {
+      "title": "परिदृश्य 2",
+      "heading": "सेंसर डेटा",
+      "status": "संरेखित नहीं",
+      "description": "प्राथमिक सेंसर और रिज़र्व सेंसर का डेटा संरेखित नहीं है। इसलिए रिज़र्व सेंसर बिना बदले प्राथमिक सेंसर का कार्य संभाल लेता है।",
+      "image": {
+        "alt": "असंरेखित वायु गुणवत्ता सेंसर डेटा दिखाने वाला चार्ट"
+      }
+    }
+  },
+    "productManufacturing": {
+    "title": "उत्पाद",
+    "subtitle": "इन-हाउस मैन्युफैक्चरिंग"
+  },
+   "techSpecsCompact": {
+    "title": "तकनीकी विनिर्देश",
+    "brochure": {
+      "text": "ब्रोशर",
+      "iconAlt": "ब्रोशर-बटन"
+    },
+    "specs": {
+      "productName": {
+        "label": "उत्पाद का नाम :",
+        "value": "प्राणा सेंस"
+      },
+      "solarPanel": {
+        "label": "सोलर पैनल:",
+        "value": "30वाट"
+      },
+      "ledScreen": {
+        "label": "एलईडी स्क्रीन का आकार:",
+        "value": "3.5इंच"
+      },
+      "dimension": {
+        "label": "आयाम :",
+        "value": "230*150*85मिमी"
+      },
+      "weight": {
+        "label": "वजन:",
+        "value": "1किग्रा"
+      },
+      "batteryHours": {
+        "label": "बैटरी कार्य घंटे :",
+        "value": "96घंटे"
+      },
+      "batteryCapacity": {
+        "label": "बैटरी क्षमता:",
+        "value": "40,000mAh"
+      },
+      "connectivity": {
+        "label": "कनेक्टिविटी:",
+        "value": "LoRa, GSM, WiFi, RS485"
+      },
+      "locationTracking": {
+        "label": "स्थान ट्रैकिंग:",
+        "value": "GPS"
+      },
+      "weatherRating": {
+        "label": "मौसम रेटिंग:",
+        "value": "IP68"
+      }
+    }
+  },
+  "getInTouch": {
+    "title": "संपर्क करें",
+    "description": "कृपया हमें बताएं कि आपकी क्या आवश्यकताएं हैं। हमारी टीम बहुत जल्द आपसे संपर्क करेगी।"
+  },
+   "faq": {
+    "heading": {
+      "part1": "अक्सर पूछे जाने वाले",
+      "part2": "प्रश्न"
+    },
+    "questions": {
+      "1": {
+        "question": "1. प्राणा सेंस अन्य वायु गुणवत्ता मॉनिटर से अलग क्या है?",
+        "answer": "प्राणा सेंस आपका साधारण आउटडोर वायु गुणवत्ता मॉनिटर नहीं है क्योंकि यह एक पूर्ण पर्यावरण निगरानी उपकरण है। इसके अतिरिक्त, यह सौर ऊर्जा से संचालित हो सकता है।"
+      },
+      "2": {
+        "question": "2. क्या मैं प्राणा सेंस का उपयोग दूरस्थ क्षेत्रों में कर सकता हूं?",
+        "answer": "हां, प्राणा सेंस मॉनिटर का उपयोग दूरस्थ क्षेत्रों में किया जा सकता है क्योंकि इसमें सोलर पैनल का विकल्प है। यह बिना किसी कंट्रोलर की आवश्यकता के सीधे डिवाइस से जुड़ सकता है।"
+      },
+      "3": {
+        "question": "3. दोहरी सेंसर तकनीक के साथ किन पैरामीटर्स की निगरानी की जा सकती है?",
+        "answer": "दोहरी सेंसर तकनीक कण पदार्थ (पार्टिकुलेट मैटर) के लिए उपलब्ध है। यह बिना किसी कठिनाई का सामना किए हवा में पीएम की निरंतर निगरानी प्रदान करता है।"
+      },
+      "4": {
+        "question": "4. अगर दोनों सेंसर का डेटा संरेखित नहीं होता है तो क्या होगा?",
+        "answer": "दोहरी सेंसर तकनीक में, रिज़र्व सेंसर प्राथमिक सेंसर की कार्य क्षमताओं की जांच के लिए एक महीने तक काम करता है। यदि दोनों सेंसर का डेटा संरेखित नहीं है, तो रिज़र्व सेंसर कार्य संभाल लेता है और प्राथमिक सेंसर स्लीप मोड में चला जाता है।"
+      }
+    }
+  }
+}

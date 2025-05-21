@@ -1,19 +1,12 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import "./style.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function WashroomPage() {
-  const [activeTab, setActiveTab] = useState("monitors")
-  const [activeAccordion, setActiveAccordion] = useState(0)
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [currentFreshAirSlide, setCurrentFreshAirSlide] = useState(0)
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -32,64 +25,6 @@ export default function WashroomPage() {
       items: 1,
     },
   }
-
-  const toggleAccordion = (index) => {
-    if (activeAccordion === index) {
-      setActiveAccordion(null)
-    } else {
-      setActiveAccordion(index)
-    }
-  }
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === 1 ? 0 : prev + 1))
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? 1 : prev - 1))
-  }
-
-  const nextFreshAirSlide = () => {
-    setCurrentFreshAirSlide((prev) => (prev === 0 ? 0 : prev + 1))
-  }
-
-  const prevFreshAirSlide = () => {
-    setCurrentFreshAirSlide((prev) => (prev === 0 ? 0 : prev - 1))
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
-
-  // Toggle school box text on mobile
-  useEffect(() => {
-    const handleSchoolBoxClick = () => {
-      const schoolBoxes = document.querySelectorAll(".school_box_cntr li")
-      schoolBoxes.forEach((box) => {
-        box.addEventListener("click", function () {
-          const textBox = this.querySelector(".schhol_text_box")
-          if (textBox) {
-            // Hide all other text boxes
-            document.querySelectorAll(".schhol_text_box").forEach((tb) => {
-              if (tb !== textBox) tb.style.display = "none"
-            })
-
-            // Toggle current text box
-            textBox.style.display = textBox.style.display === "block" ? "none" : "block"
-          }
-        })
-      })
-    }
-
-    handleSchoolBoxClick()
-
-    return () => {
-      // Cleanup event listeners if needed
-    }
-  }, [])
 
   const industrialSlides = [
     {
@@ -482,7 +417,7 @@ export default function WashroomPage() {
         </div>
       </section>
 
-      {/* Air Quality Solutions Section - Updated to match reference design */}
+      {/* Air Quality Solutions Section - Updated with Bootstrap tabs */}
       <section className="solutions-section">
         <div className="container">
           <h2 className="section-title">
@@ -494,37 +429,44 @@ export default function WashroomPage() {
             air purification, ease of use, and effectiveness.
           </p>
 
-          {/* Tabs Section - Updated to match reference design */}
+          {/* Bootstrap Tabs */}
           <div className="solutions-tabs">
-            <div className="tab-header">
-              <button
-                className={`tab-button ${activeTab === "monitors" ? "active" : ""}`}
-                onClick={() => setActiveTab("monitors")}
-              >
-                Air Quality Monitors
-              </button>
-              <button
-                className={`tab-button ${activeTab === "fresh-air" ? "active" : ""}`}
-                onClick={() => setActiveTab("fresh-air")}
-              >
-                Fresh Air Machine
-              </button>
-            </div>
+            <ul className="nav nav-tabs" id="solutionsTabs" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="monitors-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#monitors"
+                  type="button"
+                  role="tab"
+                  aria-controls="monitors"
+                  aria-selected="true"
+                >
+                  Air Quality Monitors
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="fresh-air-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#fresh-air"
+                  type="button"
+                  role="tab"
+                  aria-controls="fresh-air"
+                  aria-selected="false"
+                >
+                  Fresh Air Machine
+                </button>
+              </li>
+            </ul>
 
-            <div className="tab-content">
-              {activeTab === "monitors" && (
-                <div className="product-slider">
-                  <div className="slider-controls">
-                    <button className="slider-arrow prev" onClick={prevSlide}>
-                      &lt;
-                    </button>
-                    <button className="slider-arrow next" onClick={nextSlide}>
-                      &gt;
-                    </button>
-                  </div>
-
-                  <div className="slider-container">
-                    {currentSlide === 0 && (
+            <div className="tab-content" id="solutionsTabsContent">
+              <div className="tab-pane fade show active" id="monitors" role="tabpanel" aria-labelledby="monitors-tab">
+                <div id="monitorsCarousel" className="carousel slide" data-bs-ride="carousel">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
                       <div className="product-slide">
                         <div className="product-info">
                           <h3>SQUAIR Air Monitor</h3>
@@ -556,9 +498,8 @@ export default function WashroomPage() {
                           />
                         </div>
                       </div>
-                    )}
-
-                    {currentSlide === 1 && (
+                    </div>
+                    <div className="carousel-item">
                       <div className="product-slide">
                         <div className="product-info">
                           <h3>Sensible+ Monitor</h3>
@@ -587,56 +528,75 @@ export default function WashroomPage() {
                           />
                         </div>
                       </div>
-                    )}
+                    </div>
                   </div>
-
-                  <div className="slider-dots">
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#monitorsCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#monitorsCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                  <div className="carousel-indicators">
                     <button
-                      className={`dot ${currentSlide === 0 ? "active" : ""}`}
-                      onClick={() => setCurrentSlide(0)}
+                      type="button"
+                      data-bs-target="#monitorsCarousel"
+                      data-bs-slide-to="0"
+                      className="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
                     ></button>
                     <button
-                      className={`dot ${currentSlide === 1 ? "active" : ""}`}
-                      onClick={() => setCurrentSlide(1)}
+                      type="button"
+                      data-bs-target="#monitorsCarousel"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
                     ></button>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTab === "fresh-air" && (
-                <div className="product-slider">
-                  <div className="slider-container">
-                    <div className="product-slide">
-                      <div className="product-image">
-                        <Image
-                          src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
-                          alt="Fresh Air Machine for washrooms"
-                          width={500}
-                          height={400}
-                          className="rounded"
-                        />
-                      </div>
-                      <div className="product-info">
-                        <h3>Fresh Air Machine As IAQ Solution</h3>
-                        <p>
-                          Prana Air Fresh Air Machine is a one-stop solution for indoor air pollution, functioning as an
-                          air purifier with a 99.5% efficiency rate and multi-layer HEPA filters.
-                        </p>
-                        <ul className="feature-list">
-                          <li>Comes with multi-layers HEPA Filters</li>
-                          <li>Compact Design makes it easy to place</li>
-                          <li>Promising you up to 99.5% efficiency</li>
-                        </ul>
-                        <div className="product-actions">
-                          <a href="#" className="action-button primary">
-                            Know More
-                          </a>
-                        </div>
-                      </div>
+              <div className="tab-pane fade" id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
+                <div className="product-slide">
+                  <div className="product-image">
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
+                      alt="Fresh Air Machine for washrooms"
+                      width={500}
+                      height={400}
+                      className="rounded"
+                    />
+                  </div>
+                  <div className="product-info">
+                    <h3>Fresh Air Machine As IAQ Solution</h3>
+                    <p>
+                      Prana Air Fresh Air Machine is a one-stop solution for indoor air pollution, functioning as an air
+                      purifier with a 99.5% efficiency rate and multi-layer HEPA filters.
+                    </p>
+                    <ul className="feature-list">
+                      <li>Comes with multi-layers HEPA Filters</li>
+                      <li>Compact Design makes it easy to place</li>
+                      <li>Promising you up to 99.5% efficiency</li>
+                    </ul>
+                    <div className="product-actions">
+                      <a href="#" className="action-button primary">
+                        Know More
+                      </a>
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -748,7 +708,7 @@ export default function WashroomPage() {
         </div>
       </section>
 
-      {/* FAQ Section - Updated to match reference design */}
+      {/* FAQ Section - Updated with Bootstrap accordion */}
       <section className="faq-section">
         <div className="container">
           <h2 className="section-title">
@@ -758,59 +718,80 @@ export default function WashroomPage() {
             About Air Quality Solution for washrooms / bathroom Have questions? Were here to help.
           </p>
 
-          <div className="faq-accordion">
+          <div className="accordion" id="faqAccordion">
             {[
               {
+                id: "faqOne",
                 title: "1. Why is air quality important in restrooms?",
                 content:
                   "- Poor air quality in restrooms can lead to unpleasant odors, the growth of mold and mildew, and the spread of bacteria and viruses. It can also cause health problems for people who have allergies or asthma.",
               },
               {
+                id: "faqTwo",
                 title: "2. What are some common sources of poor air quality in restrooms?",
                 content:
                   "- Poor ventilation, lack of proper cleaning, moisture buildup, and the use of harsh cleaning chemicals can all contribute to poor air quality in restrooms.",
               },
               {
+                id: "faqThree",
                 title: "3. What are some solutions for improving air quality in restrooms?",
                 content:
                   "- Some solutions include improving ventilation through the use of fans or opening windows, using natural cleaning products, maintaining a regular cleaning schedule, and addressing any moisture issues.",
               },
               {
+                id: "faqFour",
                 title: "4. How can I tell if the air quality in my restroom is poor?",
                 content:
                   "- Signs of poor air quality in restrooms can include unpleasant odors, mold or mildew growth, and visible moisture or condensation on surfaces.",
               },
               {
+                id: "faqFive",
                 title: "5. Are there any regulations or standards for air quality in restrooms?",
                 content:
                   "- Yes, there are regulations and standards set by organizations such as the Occupational Safety and Health Administration (OSHA) and the ASHRAE that set guidelines for air quality in commercial and public spaces, including restrooms.",
               },
               {
+                id: "faqSix",
                 title: "6. Can air purifiers help improve air quality in restrooms?",
                 content:
                   "- Yes, air purifiers can help to remove pollutants and odors from the air in restrooms. However, it's important to choose an air purifier that is designed for use in commercial spaces and to properly maintain and replace the filters as needed.",
               },
               {
+                id: "faqSeven",
                 title: "7. Why is it necessary to have air quality monitoring solutions?",
                 content:
                   "- To know the nature of pollutants and how much are they present in a space so that necessary actions can be taken.",
               },
               {
+                id: "faqEight",
                 title: "8. How often should I clean and maintain the ventilation system in my restroom?",
                 content:
                   "- It's recommended to clean and maintain the ventilation system in restrooms at least twice a year, or more frequently if there are signs of poor air quality or moisture buildup.",
               },
             ].map((faq, index) => (
-              <div key={index} className={`faq-item ${activeAccordion === index ? "active" : ""}`}>
-                <div className="faq-question" onClick={() => toggleAccordion(index)}>
-                  {faq.title}
-                  <span className="faq-icon">{activeAccordion === index ? "-" : "+"}</span>
-                </div>
-                {activeAccordion === index && (
-                  <div className="faq-answer">
+              <div key={index} className="accordion-item">
+                <h2 className="accordion-header" id={`heading${faq.id}`}>
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapse${faq.id}`}
+                    aria-expanded="false"
+                    aria-controls={`collapse${faq.id}`}
+                  >
+                    {faq.title}
+                  </button>
+                </h2>
+                <div
+                  id={`collapse${faq.id}`}
+                  className="accordion-collapse collapse"
+                  aria-labelledby={`heading${faq.id}`}
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
                     <p>{faq.content}</p>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
@@ -868,10 +849,7 @@ export default function WashroomPage() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -919,7 +897,38 @@ export default function WashroomPage() {
           </div>
         </div>
       </section>
+
+      {/* Bootstrap initialization script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all Bootstrap components
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+              return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Handle school box text on mobile
+            const schoolBoxes = document.querySelectorAll(".school_box_cntr li");
+            schoolBoxes.forEach((box) => {
+              box.addEventListener("click", function () {
+                const textBox = this.querySelector(".schhol_text_box");
+                if (textBox) {
+                  // Hide all other text boxes
+                  document.querySelectorAll(".schhol_text_box").forEach((tb) => {
+                    if (tb !== textBox) tb.style.display = "none";
+                  });
+                  
+                  // Toggle current text box
+                  textBox.style.display = textBox.style.display === "block" ? "none" : "block";
+                }
+              });
+            });
+          });
+        `,
+        }}
+      />
     </main>
   )
 }
-

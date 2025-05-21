@@ -1,0 +1,151 @@
+{
+    "pcbBanner": {
+    "title": {
+      "brand": "Prana Air",
+      "airQuality": "Air Quality",
+      "pcbBoard": "PCB Board",
+      "forIndoorOutdoor": "For indoor & outdoor"
+    },
+    "pollutants": {
+      "so2": "SO2",
+      "no2": "NO2",
+      "co": "CO",
+      "pm25": "PM2.5",
+      "ozone": "Ozone"
+    },
+    "description": "Cutting-edge PCB technology to identify and detect indoor and outdoor air pollutants",
+    "requestButton": "Request A Quote",
+    "altTexts": {
+      "buttonArrow": "Arrow icon"
+    }
+  },
+  "circuitBoard": {
+    "title": {
+      "airQuality": "Air Quality",
+      "pcb": "Printed Circuit Board (PCBs)"
+    },
+    "altTexts": {
+      "chipIcon": "Chip computer icon"
+    }
+  },
+  "pcbDescription": {
+    "mainText": "Air pollutions impact on human life necessitates the monitoring of air quality. To assess pollution levels, Printed Circuit Boards (PCBs), which consist of embedded metal wires (traces) and metal areas (planes) within a rigid structure housing electrical circuitry, play a crucial role. PCBs enable the precise measurement and analysis of air pollutants, contributing to effective environmental monitoring and mitigation strategies.",
+    "summary": "PCBs are vital for air quality monitoring, providing intricate circuit platforms for connectivity, integration, and analysis.",
+    "features": {
+      "sensors": {
+        "title": "Gas+Environmental Sensors",
+        "altText": "gas environmental sensors"
+      },
+      "sensitivity": {
+        "title": "Sensitivity & Selectivity",
+        "altText": "selectivity & sensitivity"
+      },
+      "communication": {
+        "title": "Communication Flexibility",
+        "altText": "flexibility communication"
+      },
+      "robustness": {
+        "title": "Robustness & Durability",
+        "altText": "durability & robustness"
+      },
+      "calibration": {
+        "title": "Calibration Capability",
+        "altText": "capability calibration"
+      },
+      "costEffectiveness": {
+        "title": "Cost-Effectiveness",
+        "altText": "effectiveness cost"
+      },
+      "accuracy": {
+        "title": "Accuracy & Reliability",
+        "altText": "reliability accuracy"
+      },
+      "powerConsumption": {
+        "title": "Low Power Consumption",
+        "altText": "power low consumption"
+      }
+    }
+  },
+  "communicationInterfaces": {
+    "title": "Multiple Communication Interfaces",
+    "tabs": {
+      "wifi": "WiFi",
+      "uart": "UART",
+      "gsm": "GSM",
+      "rs485": "RS-485"
+    },
+    "wifi": {
+      "title": "WiFi Connectivity",
+      "description": "PCBs with WiFi connectivity integrate air quality sensors, enabling the measurement of various parameters crucial for effective air quality monitoring. This enables wireless communication with the help of IoT.",
+      "altText": "wifi svgrepo com",
+      "imageAlt": "WiFi PCB"
+    },
+    "uart": {
+      "title": "UART",
+      "description": "The UART (Universal Asynchronous Receiver-Transmitter) is a form of hardware communication interface that can be found in microcontrollers and other electronic devices. By sequentially transmitting and receiving data, UART enables serial communication.",
+      "altText": "uart icon",
+      "imageAlt": "UART PCB"
+    },
+    "gsm": {
+      "title": "GSM",
+      "description": "GSM integration links PCBs to cellular networks, enabling remote monitoring, control, and communication. Enhances connectivity, facilitates wireless data transmission and control.",
+      "altText": "gsm icon",
+      "imageAlt": "GSM PCB"
+    },
+    "rs485": {
+      "title": "RS-485",
+      "description": "RS-485 is a balanced transmission line standard facilitating high-speed, long-distance data transmission for multi-drop communication in PCBs, commonly used in industrial automation and control systems.",
+      "altText": "rs 485 icon",
+      "imageAlt": "RS-485 PCB"
+    }
+  },
+  "pcbVariations": {
+    "title": {
+      "main": "PCB",
+      "sub": "Variations"
+    },
+    "description": "Explore Prana Airs extensive selection of Printed Circuit Boards, providing seamless customization options to meet diverse air quality monitoring needs with precision and satisfaction.",
+    "images": {
+      "main": {
+        "alt": "PCB Variation"
+      },
+      "ambientLite": {
+        "alt": "PCB Variation"
+      },
+      "airQualityMonitor": {
+        "alt": "PCB Variation"
+      },
+      "pmAirQuality": {
+        "alt": "PCB Variation"
+      },
+      "sensorDigitalBoard": {
+        "alt": "PCB Variation"
+      }
+    }
+  },
+  "pcbFAQ": {
+    "title": "FAQs of Cair+ Monitor",
+    "question1": "1. What types of Printed Circuit Boards (PCBs) does Prana Air offer?",
+    "answer1": "Prana Air offers a range of PCBs tailored for air quality monitoring, ensuring efficient and accurate data collection.",
+    "question2": "2. Can Prana Air PCBs be customized to specific requirements?",
+    "answer2": "Prana Air PCBs are designed to be easily customized, allowing for seamless integration with various air quality monitoring systems.",
+    "question3": "3. Are Prana Air PCBs compatible with different air quality sensors?",
+    "answer3": "Yes, Prana Air PCBs are versatile and compatible with a wide range of Prana Air- air quality sensors, enabling comprehensive monitoring of pollutants.",
+    "question4": "4. How reliable are Prana Air PCBs for long-term air quality monitoring?",
+    "answer4": "Prana Air PCBs are built to withstand long-term operation, providing reliable and consistent performance for continuous air quality monitoring.",
+    "question5": "5. Does Prana Air provide technical support for their PCBs?",
+    "answer5": "Prana Air offers comprehensive technical support to ensure smooth implementation and operation of their PCBs for air quality monitoring.",
+    "question6": "6. Are Prana Air PCBs compliant with industry standards and regulations?",
+    "answer6": "Yes, Prana Air PCBs adhere to industry standards and regulations, ensuring reliable performance and compliance with air quality monitoring requirements.",
+    "question7": "7. What are the different communication modes available for connecting PCBs?",
+    "answer7": "PCBs can be connected using various communication modes, such as UART, WiFi, RS-485, and GSM, offering flexibility and compatibility with diverse systems and devices."
+  },
+   "contactHeadingNew": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "relatedProductsHeading": {
+    "title": "You May Also Like",
+    "subtitle": "These Products"
+  }
+}

@@ -1,0 +1,354 @@
+{
+     "oxygenHero": {
+    "title": "Oxygen Monitor",
+    "subtitle": "Live Easy with OxyCO Monitor",
+    "description": "Monitor Real-Time Oxygen and Carbon Monoxide Levels",
+    "buyButton": "Buy Now",
+    "altTexts": {
+      "buyIcon": "buy now icon"
+    }
+  },
+   "oxygenApplications": {
+    "title": "Applications of Oxygen Monitor",
+    "subtitle": "Versatile Monitoring Solutions for Various Environments",
+    "description": "Our Oxygen Monitor provides reliable monitoring across diverse settings, ensuring safety and optimal air quality wherever you need it.",
+    "learnMoreButton": "Learn More",
+    "altTexts": {
+      "leafIcon": "Leaf icon"
+    },
+    "items": {
+      "residential": {
+        "title": "Residential Use",
+        "alt": "Application of Oxygen Monitor for Residential Use"
+      },
+      "educational": {
+        "title": "Educational Institutes",
+        "alt": "Application of Oxygen Monitor for Educational Institutes"
+      },
+      "outdoor": {
+        "title": "Outdoor Events",
+        "alt": "Application of Oxygen Monitor for Outdoor Events"
+      },
+      "healthcare": {
+        "title": "Healthcare Facilities",
+        "alt": "Application of Oxygen Monitor for Healthcare Facilities"
+      },
+      "industrial": {
+        "title": "Industrial Applications",
+        "alt": "Application of Oxygen Monitor for Industrial Applications"
+      },
+      "agricultural": {
+        "title": "Agricultural Settings",
+        "alt": "Application of Oxygen Monitor for Agricultural Settings"
+      },
+      "workplace": {
+        "title": "Workplace",
+        "alt": "Application of Oxygen Monitor for Workplace"
+      }
+    }
+  },
+  "oxygenFeatures": {
+    "title": "Features",
+    "subtitle": {
+      "part1": "Key Features Of",
+      "highlight": "Oxygen Monitor"
+    },
+    "description": "Experience cutting-edge monitoring of Oxygen and Carbon Monoxide with advanced and intelligent features of the device.",
+    "items": {
+      "compact": {
+        "title": "Compact and Portable",
+        "description": "Fits into any space—home, office, classroom, or outdoors.",
+        "alt": "Prana Air oxygen monitor of Compact and Portable design"
+      },
+      "connectivity": {
+        "title": "Connectivity Options",
+        "description": "Mobile app and dashboard connectivity.",
+        "alt": "Prana Air oxygen monitor of multiple Connectivity Options"
+      },
+      "calibration": {
+        "title": "Oxygen Calibration",
+        "description": "Ensure accuracy with our O2 calibration feature",
+        "alt": "Prana Air oxygen monitor calibration for higher accuracy"
+      },
+      "cloudStorage": {
+        "title": "Cloud Storage",
+        "description": "Store your data securely in the cloud",
+        "alt": "data Cloud Storage available in Prana Air oxygen monitor"
+      },
+      "realTime": {
+        "title": "Real-Time Data Monitoring",
+        "description": "Monitor Oxygen, Carbon Monoxide, humidity, and temperature in real-time.",
+        "alt": "Real-Time Data Monitoring by Prana Air oxygen monitor"
+      },
+      "battery": {
+        "title": "Built-in Battery",
+        "description": "The in-built battery keeps your monitor operational.",
+        "alt": "Built-in Battery in Prana Air oxygen monitor"
+      }
+    }
+  },
+  "oxygenVariants": {
+    "title": "Variants",
+    "subtitle": "Variants of OxyCo",
+    "buyButton": "Buy Now",
+    "altTexts": {
+      "buyIcon": "buy now icon",
+      "oxygenMonitor": "Prana Air oxygen monitor",
+      "oxyCO2Monitor": "prana air oxygen monitor",
+      "coIcon": "co icon",
+      "temperatureIcon": "temperature icon",
+      "o2Icon": "o2 icon",
+      "humidityIcon": "humidity icon"
+    },
+    "tabs": {
+      "oxygenCO": {
+        "title": "Oxygen + CO",
+        "description": "Get real-time oxygen levels and also detect harmful carbon monoxide with precision. The perfect device to ensuring safety in enclosed spaces."
+      },
+      "oxygenCO2": {
+        "title": "Oxygen + CO2",
+        "description": "Track real-time oxygen and carbon dioxide levels with advanced sensors. The ideal device for labs, greenhouses, and controlled environments."
+      }
+    },
+    "parameters": {
+      "co": "Carbon Monoxide(CO)",
+      "co2": "Carbon Monoxide(CO2)",
+      "temperature": "Temperature",
+      "oxygen": "Oxygen(O2)",
+      "humidity": "Humidity"
+    }
+  },
+   "visualizeData": {
+    "title": "Intuitive screen types",
+    "subtitle": "Visualise your data",
+    "description": {
+      "part1": "The",
+      "highlight": "OxyCO",
+      "part2": "monitor features four distinct screens to enhance your monitoring experience"
+    },
+    "altTexts": {
+      "mainScreen": "Prana Air oxygen monitor main screen",
+      "o2Graph": "Prana Air oxygen monitor O2 graph",
+      "coGraph": "Prana Air oxygen monitor CO graph",
+      "calibration": "Prana Air oxygen monitor calibration"
+    },
+    "screens": {
+      "main": {
+        "title": "Main Screen",
+        "description": "Instant overview of all key parameters for quick assessments"
+      },
+      "o2Curve": {
+        "title": "O2 Curve",
+        "description": "Check the historical O2 condition in your environment with the curve."
+      },
+      "coCurve": {
+        "title": "CO Curve",
+        "description": "Review the historical CO in your environment."
+      },
+      "calibration": {
+        "title": "Calibration Screen",
+        "description": "Calibrate your devices O2 sensor for accurate readings."
+      }
+    }
+  },
+  "oxygenHospital": {
+    "title": "Hospital-Grade Precision",
+    "description": "OxyCO monitor provides real-time and accurate oxygen level tracking that can help in ensuring patient safety and optimal care in hospitals or health care centres.",
+    "altTexts": {
+      "hospitalImage": "Prana Air oxygen monitor in hospital measuring O2 level"
+    }
+  },
+  "oxygenWhyChoose": {
+    "title": {
+      "part1": "Why Choose",
+      "highlight": "OxyCo?"
+    },
+    "subtitle": "OxyCo monitor is your one search go for better living and health environment.",
+    "reasons": [
+      {
+        "number": "01",
+        "title": {
+          "part1": "Better",
+          "highlight": "health and safety"
+        },
+        "description": "Detect CO and Oxygen levels to ensure safe environment for yourself and your loved ones.",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/10/oxyco-monitor-Better-health-and-safety.webp",
+        "altText": "Prana Air Oxygen Monitor (OxyCO) for Better health and safety",
+        "colorClass": ""
+      },
+      {
+        "number": "02",
+        "title": {
+          "part1": "Improved",
+          "highlight": "productivity"
+        },
+        "description": "Do you know maintained oxygen levels helps in improving focus and productivity in work and study?",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/10/Improved-productivity.webp",
+        "altText": "Prana Air Oxygen Monitor (OxyCO) for improving productivity",
+        "colorClass": "grey-green"
+      },
+      {
+        "number": "03",
+        "title": {
+          "part1": "Informed",
+          "highlight": "decisions"
+        },
+        "description": "Know the real-time and accurate readings of Oxygen and CO in your environment to make informed decision.",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/10/informed-decisions.webp",
+        "altText": "Prana Air Oxygen Monitor (OxyCO) helps in your environment to make informed decision",
+        "colorClass": "blue"
+      },
+      {
+        "number": "04",
+        "title": {
+          "part1": "Stay",
+          "highlight": "informed"
+        },
+        "description": "Track air pollution round you to check your environmental health and protect yourself.",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/10/Stay-informed.webp",
+        "altText": "Prana Air Oxygen Monitor detects O2 along CO gas level",
+        "colorClass": "purpel"
+      }
+    ]
+  },
+  "oxygenDataExport": {
+    "title": {
+      "part1": "Data at your fingertips:",
+      "part2": "Export with ease"
+    },
+    "subtitle": "Your Data, Your Way",
+    "description": "Easily download your OxyCo monitor data in multiple formats, including .csv and .xls, for seamless access.",
+    "formats": [".CSV", ".Xls"],
+    "emailTransfer": {
+      "title": "Email Transfers",
+      "description": "Quickly share data via email for online access and collaborative analysis."
+    },
+    "altTexts": {
+      "exportData": "Data of Prana Air Oxygen Monitor can be exported in .csv file"
+    }
+  },
+  "oxygenMobileDashboard": {
+    "title": {
+      "part1": "Command your environment anytime, anywhere",
+      "highlight": "Mobile, Web-dashboard, TV app connectivity"
+    },
+    "tabs": {
+      "mobile": "Mobile App",
+      "web": "Web Dashboard",
+      "tv": "Smart TV App"
+    },
+    "mobile": {
+      "title": {
+        "part1": "Diverse connectivity of",
+        "part2": "OxyCo"
+      },
+      "description": "Connect your OxyCo monitor with AQI mobile app to access air quality data on your fingertips.",
+      "buttonText": "Download Mob App",
+      "altText": "Mobile App for OxyCo monitor"
+    },
+    "web": {
+      "title": {
+        "part1": "Diverse connectivity of",
+        "part2": "OxyCo"
+      },
+      "description": "Access your OxyCo monitors reading directly to Web-Dashboard to see data anytime anywhere.",
+      "buttonText": "View Dashboard",
+      "altText": "Web Dashboard for OxyCo monitor"
+    },
+    "tv": {
+      "title": {
+        "part1": "Diverse connectivity of",
+        "part2": "OxyCo"
+      },
+      "description": "Display your OxyCo monitors data on a big screen for better and enhanced visibility for all.",
+      "buttonText": "View TV",
+      "altText": "Smart TV App for OxyCo monitor"
+    }
+  },
+   "oxygenTracking": {
+    "leftHeading": "On-the-Go",
+    "rightHeading": "Oxygen Tracking",
+    "description": "Your handy OxyCo monitor can ensure accurate oxygen levels for tracking an ideal choice for athletes, hikers, or anyone on the track.",
+    "altText": "Tracking O2 level in high peak area with Prana Air Oxygen Monitor"
+  },
+   "oxygenApplicationsText": {
+    "title": "Applications",
+    "subtitle": {
+      "part1": "Where can",
+      "highlight": "OxyCo",
+      "part2": "shine?"
+    },
+    "description": "OxyCo monitor is beneficial for many applications and usage:"
+  },
+  "oxygenTechSpecs": {
+    "title": "Technical Specifications",
+    "brochure": "Brochure",
+    "altTexts": {
+      "brochureBtn": "brochure button",
+      "downloadIcon": "download icon"
+    },
+    "specs": {
+      "productName": {
+        "label": "Product Name :",
+        "value": "OxyCo"
+      },
+      "maxConcentration": {
+        "label": "Max detecting concentration:",
+        "value": "30% Vol"
+      },
+      "screenSize": {
+        "label": "LED Screen Size:",
+        "value": "2.8inch"
+      },
+      "dimension": {
+        "label": "Dimension :",
+        "value": "8 * 8 cm"
+      },
+      "weight": {
+        "label": "Weight:",
+        "value": "113g"
+      },
+      "parameters": {
+        "label": "Parameters:",
+        "value": "O2, CO, Temp, Humid."
+      },
+      "batteryCapacity": {
+        "label": "Battery capacity:",
+        "value": "1000mAh"
+      },
+      "connectivity": {
+        "label": "Connectivity:",
+        "value": "WiFi"
+      },
+      "sensitivity": {
+        "label": "Sensitivity:",
+        "value": "(0.1~0.3) mA (In air)"
+      },
+      "dataAccessibility": {
+        "label": "data Accessibility:",
+        "value": "Mobile & TV app and Web-Dashboard"
+      }
+    }
+  },
+  "oxygenFAQ": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "1. What parameters OxyCo does monitor?",
+        "answer": "OxyCo is designed to monitor real-time Oxygen, carbon monoxide, temperature and humidity in your air."
+      },
+      {
+        "question": "2. What is the battery capacity of the OxyCo?",
+        "answer": "The compact monitor is packed with a 1000mAh battery that works for a long time."
+      },
+      {
+        "question": "3. How can I access OxyCo data?",
+        "answer": "You can seamlessly access the OxyCo data by downloading it in different formats or transferring it to your email."
+      },
+      {
+        "question": "4. Why do Oxygen Calibration?",
+        "answer": "The OxyCo monitor performs Oxygen Calibration to maintain optimal accuracy in the device readings."
+      }
+    ]
+  }
+}

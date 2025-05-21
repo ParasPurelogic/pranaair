@@ -275,15 +275,15 @@ a {
 }
 
 .tab button {
-  background-color: inherit;
+  background-color: transparent !important;
   float: left;
-  border: none;
+  border: none !important;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
+  transition: all .3s;
   font-size: 18px;
-  color: #fff;
+  color: #fff !important;
 }
 
 .hide {
@@ -291,12 +291,12 @@ a {
 }
 
 .tab button:hover {
-  color: #7ab261;
+  color: #7ab261 !important;
 }
 
 .tab button.active {
-  color: #7ab261;
-  border-bottom: 2px solid #7ab261;
+  color: #7ab261 !important;
+  border-bottom: 2px solid #7ab261 !important;
 }
 
 .tabcontent {
@@ -314,7 +314,7 @@ a {
 }
 
 .oxy-co-box img {
-  width: 100%;
+  width: 100% !important;
 }
 
 .content-para p {
@@ -363,10 +363,11 @@ a {
 
 .content-para {
   position: relative;
-  top: 250px;
-  left: -660px;
-  width: 70%;
+  top: 210px;
+  left: -710px;
+  width: 80%;
   height: 0;
+  text-align: left;
 }
 
 .oxy-co-box {
@@ -397,7 +398,7 @@ a {
 }
 
 .oxy-co-box ul li img {
-  width: 60px;
+  width: 60px !important;
 }
 
 .oxy-co-box ul li h5 {

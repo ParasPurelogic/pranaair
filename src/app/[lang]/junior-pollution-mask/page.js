@@ -1,19 +1,8 @@
-"use client"
 
-import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 
 export default function JuniorPollutionMask() {
-  const [activeTab, setActiveTab] = useState(0)
-  const [hoverStates, setHoverStates] = useState([false, false, false, false])
-
-  const toggleHover = (index) => {
-    const newHoverStates = [...hoverStates]
-    newHoverStates[index] = !newHoverStates[index]
-    setHoverStates(newHoverStates)
-  }
-
   return (
     <main>
       {/* Banner Section */}
@@ -480,61 +469,45 @@ export default function JuniorPollutionMask() {
 
           <div className="row">
             <div className="col-lg-3 col-md-3 col-xs-12 mt-30">
-              <div
-                className="hover-box animateme scrollme"
-                onMouseEnter={() => toggleHover(0)}
-                onMouseLeave={() => toggleHover(0)}
-              >
+              <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-junior-pollution-mask-box.png"
                   alt="Prana Air junior pollution mask box"
                 />
-                <div className={`hover-body ${hoverStates[0] ? "visible" : ""}`}>
+                <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-xs-12 mt-30">
-              <div
-                className="hover-box animateme scrollme"
-                onMouseEnter={() => toggleHover(1)}
-                onMouseLeave={() => toggleHover(1)}
-              >
+              <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-children-mask-box-backview.png"
                   alt="Prana Air children mask box backview"
                 />
-                <div className={`hover-body ${hoverStates[1] ? "visible" : ""}`}>
+                <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-xs-12 mt-30">
-              <div
-                className="hover-box animateme scrollme"
-                onMouseEnter={() => toggleHover(2)}
-                onMouseLeave={() => toggleHover(2)}
-              >
+              <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/junior-pollution-mask-box-topview.png"
                   alt="Prana Air adult-kid mask box"
                 />
-                <div className={`hover-body ${hoverStates[2] ? "visible" : ""}`}>
+                <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-xs-12 mt-30">
-              <div
-                className="hover-box animateme scrollme"
-                onMouseEnter={() => toggleHover(3)}
-                onMouseLeave={() => toggleHover(3)}
-              >
+              <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-junior-pollution-mask-parts.png"
                   alt="Prana Air children pollution mask parts"
                 />
-                <div className={`hover-body ${hoverStates[3] ? "visible" : ""}`}>
+                <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
                 </div>
               </div>
@@ -581,7 +554,7 @@ export default function JuniorPollutionMask() {
                   <img src="https://www.pranaair.com/wp-content/uploads/2021/02/quality-amazon.png" alt="amazon logo" />
                   amazon
                 </a>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -589,4 +562,3 @@ export default function JuniorPollutionMask() {
     </main>
   )
 }
-

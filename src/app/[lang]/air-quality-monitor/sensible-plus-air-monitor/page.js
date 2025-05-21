@@ -1,43 +1,10 @@
-'use client';
+import SensiblePluseSlider from "@/Components/Pages/SensiblePluse/carousel"
+import "./style.css"
+import ContactForm from "@/Components/Contacform/ContactForm"
+import { getServerTranslation } from "@/i18n/server"
 
-import React, { useState, useEffect } from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import './style.css';
-import ContactForm from "@/Components/Contacform/ContactForm";
-
-export default function SensiblePlusAirMonitor() {
-  // State for tabs
-  const [activeBasicAdvancedTab, setActiveBasicAdvancedTab] = useState('Basic');
-  const [activeAqiTab, setActiveAqiTab] = useState('AQI');
-
-  // Carousel responsive settings
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
-  useEffect(() => {
-    import("bootstrap/dist/js/bootstrap.bundle.min.js")
-      .then(() => {
-        console.log("Bootstrap JS loaded");
-      })
-      .catch((err) => console.error("Error loading Bootstrap JS:", err));
-  }, []);
-
+export default async function SensiblePlusAirMonitor() {
+  const { t } = await getServerTranslation("sensiblepluse-monitor")
   return (
     <div>
       {/* Banner Section */}
@@ -46,13 +13,31 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-md-6 bannet_title_box sensible_banner sensible_plus_banner">
               <div className="sensibleplusbanner">
-                <h2><span className="heading-bg">Sensible+</span> Air Monitor</h2>
-                <p>Keep track of indoor air quality along-with ambient indoor & outdoor pollutants</p>
+                <h2>
+                  <span className="heading-bg">{t("sensibleBanner.title.highlight")}</span>{" "}
+                  {t("sensibleBanner.title.main")}
+                </h2>
+                <p>{t("sensibleBanner.description")}</p>
                 <div className="banner-btns">
-                  <form class="cart" action="https://www.pranaair.com/product/sensible-plus-air-monitor/" enctype="multipart/form-data"
-                    method="post"><button class="single_add_to_cart_button button alt btnbuynow" name="add-to-cart" type="submit"
-                      value="15945">Buy Now <img decoding="async"
-                        src="https://www.pranaair.com/wp-content/uploads/2024/11/butnow-btn.png" alt="" /></button>
+                  <form
+                    className="cart"
+                    action="https://www.pranaair.com/product/sensible-plus-air-monitor/"
+                    encType="multipart/form-data"
+                    method="post"
+                  >
+                    <button
+                      className="single_add_to_cart_button button alt btnbuynow"
+                      name="add-to-cart"
+                      type="submit"
+                      value="15945"
+                    >
+                      {t("sensibleBanner.buyButton")}{" "}
+                      <img
+                        decoding="async"
+                        src="https://www.pranaair.com/wp-content/uploads/2024/11/butnow-btn.png"
+                        alt={t("sensibleBanner.altTexts.buyButtonIcon")}
+                      />
+                    </button>
                   </form>
                 </div>
               </div>
@@ -67,122 +52,287 @@ export default function SensiblePlusAirMonitor() {
         <div className="row">
           <div className="col-12">
             <div className="specification_box monitor_box text-center">
-              <h1 className="specification_heading">SENSIBLE+ AIR QUALITY MONITOR<sup><img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></sup></h1>
-              <h3 className="aqi_heading">An intelligent smart portable indoor air pollution monitor to keep a tab over the air you breathe</h3>
+              <h1 className="specification_heading">
+                {t("specificationBox.title")}
+                <sup>
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                    alt={t("specificationBox.altTexts.logo")}
+                  />
+                </sup>
+              </h1>
+              <h3 className="aqi_heading">{t("specificationBox.description")}</h3>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Tab AQI Section */}
+      {/* Tab AQI Section - Using Bootstrap Tabs */}
       <div className="tab_aqi_section aqi_sec">
         <div className="container-fluid">
           <div className="row">
             <div className="col-12">
               <div className="tabs-container">
-                <div className="tabs-header">
-                  <button
-                    className={activeBasicAdvancedTab === 'Basic' ? 'active' : ''}
-                    onClick={() => setActiveBasicAdvancedTab('Basic')}
+                {/* Bootstrap Nav Tabs */}
+                <ul className="nav nav-tabs" id="basicAdvancedTab" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="basic-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#basic-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="basic-tab-pane"
+                      aria-selected="true"
+                    >
+                      {t("tabAqiSection.tabs.basic")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="advanced-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#advanced-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="advanced-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("tabAqiSection.tabs.advanced")}
+                    </button>
+                  </li>
+                </ul>
+
+                {/* Bootstrap Tab Content */}
+                <div className="tab-content" id="basicAdvancedTabContent">
+                  <div
+                    className="tab-pane fade show active"
+                    id="basic-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="basic-tab"
+                    tabIndex={0}
                   >
-                    Basic
-                  </button>
-                  <button
-                    className={activeBasicAdvancedTab === 'Advanced' ? 'active' : ''}
-                    onClick={() => setActiveBasicAdvancedTab('Advanced')}
+                    <section className="aqi_icon_section">
+                      <div className="aqi_box">
+                        <ul>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/Pm10.png"
+                                alt={t("tabAqiSection.altTexts.pm10")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.pm10")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/pm2.5.png"
+                                alt={t("tabAqiSection.altTexts.pm25")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.pm25")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/co2.png"
+                                alt={t("tabAqiSection.altTexts.co2")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.co2")}</code>
+                          </li>
+                          <li className="icon_fix_size">
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/tvoc.png"
+                                alt={t("tabAqiSection.altTexts.tvoc")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.tvoc")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/hcho.png"
+                                alt={t("tabAqiSection.altTexts.hcho")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.hcho")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/temperature-icon.png"
+                                alt={t("tabAqiSection.altTexts.temperature")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.temperature")}</code>
+                          </li>
+                          <li className="icon_fix_size">
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/humidity-icon.png"
+                                alt={t("tabAqiSection.altTexts.humidity")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.humidity")}</code>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="pranaair_img_box">
+                        <img
+                          src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-plus-air-quality-monitor-1.jpg"
+                          alt={t("tabAqiSection.altTexts.basicMonitor")}
+                        />
+                      </div>
+                    </section>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="advanced-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="advanced-tab"
+                    tabIndex={0}
                   >
-                    Advanced
-                  </button>
+                    <section className="aqi_icon_section">
+                      <div className="aqi_box">
+                        <ul>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/Pm10.png"
+                                alt={t("tabAqiSection.altTexts.pm10")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.pm10")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/pm2.5.png"
+                                alt={t("tabAqiSection.altTexts.pm25")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.pm25")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/co.png"
+                                alt={t("tabAqiSection.altTexts.co")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.co")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/co2.png"
+                                alt={t("tabAqiSection.altTexts.co2")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.co2")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/No2.png"
+                                alt={t("tabAqiSection.altTexts.no2")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.no2")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/so2.png"
+                                alt={t("tabAqiSection.altTexts.so2")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.so2")}</code>
+                          </li>
+                          <li>
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/tvoc.png"
+                                alt={t("tabAqiSection.altTexts.tvoc")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.tvoc")}</code>
+                          </li>
+                          <li className="icon_fix_size">
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/temperature-icon.png"
+                                alt={t("tabAqiSection.altTexts.temperature")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.temperature")}</code>
+                          </li>
+                          <li className="icon_fix_size">
+                            <h3>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2021/03/humidity-icon.png"
+                                alt={t("tabAqiSection.altTexts.humidity")}
+                              />
+                            </h3>
+                            <code>{t("tabAqiSection.parameters.humidity")}</code>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="pranaair_img_box">
+                        <img
+                          src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-plus-air-quality-monitor-1.jpg"
+                          alt={t("tabAqiSection.altTexts.advancedMonitor")}
+                        />
+                      </div>
+                    </section>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <div className="tabs-content">
-                  {activeBasicAdvancedTab === 'Basic' && (
-                    <section className="aqi_icon_section">
-                      <div className="aqi_box">
-                        <ul>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Pm10.png" alt="pm10 icon" /></h3>
-                            <code>PM10</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/pm2.5.png" alt="pm2.5 icon" /></h3>
-                            <code>PM2.5</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/co2.png" alt="co2 icon" /></h3>
-                            <code>CO2</code>
-                          </li>
-                          <li className="icon_fix_size">
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/tvoc.png" alt="tvoc icon" /></h3>
-                            <code>TVOC</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/hcho.png" alt="hcho" /></h3>
-                            <code>HCHO</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/temperature-icon.png" alt="temperature icon" /></h3>
-                            <code>Temperature</code>
-                          </li>
-                          <li className="icon_fix_size">
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/humidity-icon.png" alt="humidity icon" /></h3>
-                            <code>Humidity</code>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="pranaair_img_box">
-                        <img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-plus-air-quality-monitor-1.jpg" alt="Prana Air sensible+ basic air pollution monitor" />
-                      </div>
-                    </section>
-                  )}
+      {/* AQI Tab Section - Using Bootstrap Tabs */}
+      <div className="tab_aqi_section aqi_sec">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12">
+              <div className="tabs-container">
+                {/* Bootstrap Nav Tabs for AQI */}
+                <ul className="nav nav-tabs" id="aqiTab" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="aqi-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#aqi-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="aqi-tab-pane"
+                      aria-selected="true"
+                    >
+                      {t("aqiTabSection.tabs.aqi")}
+                    </button>
+                  </li>
+                </ul>
 
-                  {activeBasicAdvancedTab === 'Advanced' && (
-                    <section className="aqi_icon_section">
-                      <div className="aqi_box">
-                        <ul>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Pm10.png" alt="pm10 icon" /></h3>
-                            <code>PM10</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/pm2.5.png" alt="pm2.5 icon" /></h3>
-                            <code>PM2.5</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/co.png" alt="co icon" /></h3>
-                            <code>CO</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/co2.png" alt="co2 icon" /></h3>
-                            <code>CO2</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/No2.png" alt="no2 icon" /></h3>
-                            <code>NO2</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/so2.png" alt="so2 icon" /></h3>
-                            <code>SO2</code>
-                          </li>
-                          <li>
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/tvoc.png" alt="tvoc icon" /></h3>
-                            <code>TVOC</code>
-                          </li>
-                          <li className="icon_fix_size">
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/temperature-icon.png" alt="temperature icon" /></h3>
-                            <code>Temperature</code>
-                          </li>
-                          <li className="icon_fix_size">
-                            <h3><img src="https://www.pranaair.com/wp-content/uploads/2021/03/humidity-icon.png" alt="humidity icon" /></h3>
-                            <code>Humidity</code>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="pranaair_img_box">
-                        <img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-plus-air-quality-monitor-1.jpg" alt="Prana Air sensible+ advanced air pollution monitor" />
-                      </div>
-                    </section>
-                  )}
+                {/* Bootstrap Tab Content for AQI */}
+                <div className="tab-content" id="aqiTabContent">
+                  <div
+                    className="tab-pane fade show active"
+                    id="aqi-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="aqi-tab"
+                    tabIndex={0}
+                  >
+                    {/* AQI content here if needed */}
+                  </div>
                 </div>
               </div>
             </div>
@@ -198,8 +348,13 @@ export default function SensiblePlusAirMonitor() {
               <div className="sensor_feature_list sensible_feature_list">
                 <ul>
                   <li className="top_sensibel_space">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/real-time-air-quality.png" alt="real-time air quality graph" /></small>
-                    Real-Time & Historic Air Quality Data (Hourly, Weekly & Monthly)
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/real-time-air-quality.png"
+                        alt={t("monitorSection.altTexts.realTimeAirQuality")}
+                      />
+                    </small>
+                    {t("monitorSection.features.realTimeData")}
                   </li>
                 </ul>
               </div>
@@ -209,8 +364,13 @@ export default function SensiblePlusAirMonitor() {
               <div className="sensor_feature_list sensible_feature_list">
                 <ul>
                   <li className="top_sensibel_space">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/wifi-connectivity.png" alt="wifi connectivity" /></small>
-                    Easy Access of Data via Web & Mobile App Through WiFi Connection
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/wifi-connectivity.png"
+                        alt={t("monitorSection.altTexts.wifiConnectivity")}
+                      />
+                    </small>
+                    {t("monitorSection.features.easyAccess")}
                   </li>
                 </ul>
               </div>
@@ -227,8 +387,13 @@ export default function SensiblePlusAirMonitor() {
               <div className="sensor_feature_list sensible_feature_list">
                 <ul>
                   <li>
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/monitor-battery.png" alt="monitor battery" /></small>
-                    5000 mAh Inbuilt Battery Long Screen-Time
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/monitor-battery.png"
+                        alt={t("monitorSectionNew.altTexts.battery")}
+                      />
+                    </small>
+                    {t("monitorSectionNew.features.battery")}
                   </li>
                 </ul>
               </div>
@@ -237,8 +402,13 @@ export default function SensiblePlusAirMonitor() {
               <div className="sensor_feature_list sensible_feature_list">
                 <ul>
                   <li>
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/on-board.png" alt="micro sd card" /></small>
-                    On-board Micro SD Card Data Storage
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/on-board.png"
+                        alt={t("monitorSectionNew.altTexts.sdCard")}
+                      />
+                    </small>
+                    {t("monitorSectionNew.features.sdCard")}
                   </li>
                 </ul>
               </div>
@@ -247,8 +417,13 @@ export default function SensiblePlusAirMonitor() {
               <div className="sensor_feature_list sensible_feature_list">
                 <ul>
                   <li>
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/touch-screen.png" alt="touch screen" /></small>
-                    7 inch Touch Screen To Have Smarter Access
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/touch-screen.png"
+                        alt={t("monitorSectionNew.altTexts.touchScreen")}
+                      />
+                    </small>
+                    {t("monitorSectionNew.features.touchScreen")}
                   </li>
                 </ul>
               </div>
@@ -257,8 +432,13 @@ export default function SensiblePlusAirMonitor() {
               <div className="sensor_feature_list sensible_feature_list">
                 <ul>
                   <li>
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/typec-usb.png" alt="type-c cable" /></small>
-                    Micro USB Charging Easily Recharging Cable
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/typec-usb.png"
+                        alt={t("monitorSectionNew.altTexts.usbCharging")}
+                      />
+                    </small>
+                    {t("monitorSectionNew.features.usbCharging")}
                   </li>
                 </ul>
               </div>
@@ -271,13 +451,29 @@ export default function SensiblePlusAirMonitor() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p style={{ textAlign: 'center' }}>
+            <p style={{ textAlign: "center" }}>
               <em>
-                <span style={{ fontSize: '16pt' }}>
+                <span style={{ fontSize: "16pt" }}>
                   <sup>
-                    <span style={{ fontSize: '16pt' }}>
-                      <sub><img className="alignnone size-full wp-image-52304" src="https://www.pranaair.com/wp-content/uploads/2022/07/compliance-icon.png" alt="compliance icon" width="30" height="30" /></sub>
-                      {' '}Compliance with <span style={{ color: '#4cae51' }}><strong>LEED, WELL,</strong></span> and <span style={{ color: '#4cae51' }}><strong>ASHRAE</strong></span> standards
+                    <span style={{ fontSize: "16pt" }}>
+                      <sub>
+                        <img
+                          className="alignnone size-full wp-image-52304"
+                          src="https://www.pranaair.com/wp-content/uploads/2022/07/compliance-icon.png"
+                          alt={t("complianceSection.altTexts.complianceIcon")}
+                          width="30"
+                          height="30"
+                        />
+                      </sub>{" "}
+                      {t("complianceSection.text.complianceWith")}{" "}
+                      <span style={{ color: "#4cae51" }}>
+                        <strong>{t("complianceSection.text.leedWell")}</strong>
+                      </span>{" "}
+                      {t("complianceSection.text.and")}{" "}
+                      <span style={{ color: "#4cae51" }}>
+                        <strong>{t("complianceSection.text.ashrae")}</strong>
+                      </span>{" "}
+                      {t("complianceSection.text.standards")}
                     </span>
                   </sup>
                 </span>
@@ -293,10 +489,20 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="specification_box monitor_box text-center">
-                <h2 className="specification_heading">Accuracy of Prana Air Monitor<img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></h2>
+                <h2 className="specification_heading">
+                  {t("accuracySection.title")}
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                    alt={t("accuracySection.altTexts.logo")}
+                  />
+                </h2>
               </div>
               <div className="comparison_graph_img">
-                <img className="aligncenter" src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-pm2.5-data-comparison-with-dusttrak.jpeg" alt="prana air monitor pm2.5 accuracy" />
+                <img
+                  className="aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-pm2.5-data-comparison-with-dusttrak.jpeg"
+                  alt={t("accuracySection.altTexts.comparisonGraph")}
+                />
               </div>
             </div>
           </div>
@@ -307,53 +513,23 @@ export default function SensiblePlusAirMonitor() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-plus-air-quality-monitor-1.jpg" alt="Sensible+ monitor" className="img-fluid" />
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-plus-air-quality-monitor-1.jpg"
+              alt={t("howToConnect.altTexts.sensibleMonitor")}
+              className="img-fluid"
+            />
           </div>
           <div className="col-md-6">
             <div className="step-dots">
-              <h2 className="specification_heading">How to connect SENSIBLE+ with dashboard?</h2>
-              <button>
-                <div>
-                  <h5>1</h5>
-                  <p>Click on the Settings icon and select Wi-Fi option.</p>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <h5>2</h5>
-                  <p>Enter the required details and connect the device with Wi-Fi.</p>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <h5>3</h5>
-                  <p>Keep Your Device on Graph Screen by pressing the touch button.</p>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <h5>4</h5>
-                  <p>Download AQI India app and sign up.</p>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <h5>5</h5>
-                  <p>Click Add Device and choose the Sensible+ monitor out of the options given.</p>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <h5>6</h5>
-                  <p>Enter the Device ID or scan the QR code from the device screen.</p>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <h5>7</h5>
-                  <p>Device is now connected.</p>
-                </div>
-              </button>
+              <h2 className="specification_heading">{t("howToConnect.title")}</h2>
+              {t("howToConnect.steps", { returnObjects: true }).map((step, index) => (
+                <button key={index}>
+                  <div>
+                    <h5>{index + 1}</h5>
+                    <p>{step}</p>
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -363,21 +539,46 @@ export default function SensiblePlusAirMonitor() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <p style={{ textAlign: 'center' }}>
-              <span style={{ fontSize: '14pt' }}><strong><span style={{ fontSize: '18pt' }}>Scan this QR Code to</span>
-                <br />
-                <img className="size-full wp-image-24466 aligncenter" src="https://www.pranaair.com/wp-content/uploads/2022/09/sensible-plus-monitor-manual.png" alt="prana air sensible+ air quality monitor manual" width="200" height="200" /></strong></span>
+            <p style={{ textAlign: "center" }}>
+              <span style={{ fontSize: "14pt" }}>
+                <strong>
+                  <span style={{ fontSize: "18pt" }}>{t("qrCodeSection.manual.scanText")}</span>
+                  <br />
+                  <img
+                    className="size-full wp-image-24466 aligncenter"
+                    src="https://www.pranaair.com/wp-content/uploads/2022/09/sensible-plus-monitor-manual.png"
+                    alt={t("qrCodeSection.manual.altText")}
+                    width="200"
+                    height="200"
+                  />
+                </strong>
+              </span>
               <br />
-              <span style={{ fontSize: '14pt' }}> <strong>Download Products Manual</strong></span>
+              <span style={{ fontSize: "14pt" }}>
+                {" "}
+                <strong>{t("qrCodeSection.manual.downloadText")}</strong>
+              </span>
             </p>
           </div>
           <div className="col-md-6">
-            <p style={{ textAlign: 'center' }}>
-              <span style={{ fontSize: '18pt' }}><strong>Scan this QR Code to</strong></span>
+            <p style={{ textAlign: "center" }}>
+              <span style={{ fontSize: "18pt" }}>
+                <strong>{t("qrCodeSection.brochure.scanText")}</strong>
+              </span>
               <br />
-              <strong><img className="aligncenter wp-image-24465 size-full" src="https://www.pranaair.com/wp-content/uploads/2022/04/prana-air-sensible-plus-air-monitor-brochure-qr-code.png" alt="prana air sensible+ air quality monitor brochure" width="200" height="200" /></strong>
+              <strong>
+                <img
+                  className="aligncenter wp-image-24465 size-full"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/04/prana-air-sensible-plus-air-monitor-brochure-qr-code.png"
+                  alt={t("qrCodeSection.brochure.altText")}
+                  width="200"
+                  height="200"
+                />
+              </strong>
               <br />
-              <span style={{ fontSize: '14pt' }}><strong>Download Products Brochure</strong></span>
+              <span style={{ fontSize: "14pt" }}>
+                <strong>{t("qrCodeSection.brochure.downloadText")}</strong>
+              </span>
             </p>
           </div>
         </div>
@@ -388,7 +589,13 @@ export default function SensiblePlusAirMonitor() {
         <div className="row">
           <div className="col-12">
             <div className="qualitymonitor_heading_box text-center">
-              <h2>One-Stop Solution- AQI App & Dashboard <img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></h2>
+              <h2>
+                {t("aqiAppDashboard.title")}{" "}
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                  alt={t("aqiAppDashboard.altTexts.logo")}
+                />
+              </h2>
             </div>
           </div>
         </div>
@@ -400,14 +607,22 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="downloadapp_deail_box hidemobile">
-                <h3>To get the updates about Air Quality near you, Download AQI App</h3>
-                <p>To track the quality of air you inhale, download the AQI app on your iOS/Android device(s) and forget all your worries.
-                  Download the app via Google Play Store (for Android), or Apple App Store (for iOS).</p>
-                <a className="download_app_btn" href="https://apps.apple.com/in/app/air-quality-index-aqi-india/id1439684571">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/02/app-store.png" alt="App Store" />
+                <h3>{t("aqiAppDashboard.downloadSection.heading")}</h3>
+                <p>{t("aqiAppDashboard.downloadSection.description")}</p>
+                <a
+                  className="download_app_btn"
+                  href="https://apps.apple.com/in/app/air-quality-index-aqi-india/id1439684571"
+                >
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/app-store.png"
+                    alt={t("aqiAppDashboard.altTexts.appStore")}
+                  />
                 </a>
                 <a className="download_app_btn" href="https://play.google.com/store/apps/details?id=com.aqi.data&hl=en">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/02/play-store.png" alt="Play Store" />
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/play-store.png"
+                    alt={t("aqiAppDashboard.altTexts.playStore")}
+                  />
                 </a>
               </div>
             </div>
@@ -421,15 +636,28 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-md-6">
               <div className="qualitymonitor_heading_box italic_para tv_app_box">
-                <h2>Download AQI TV App<img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></h2>
-                <p>Install our app in your smart TV, and connect your monitors to display air quality data on your television sets 24*7.</p>
-                <a className="tv_app_btn" href="https://drive.google.com/file/d/1y9IBVJ_8zYclSKtfEYR7qhnMII5XQ-Ie/view?usp=sharing">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/03/tv-app.png" alt="AQI tv app" />
+                <h2>
+                  {t("tvAppSection.title")}
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                    alt={t("tvAppSection.logoAlt")}
+                  />
+                </h2>
+                <p>{t("tvAppSection.description")}</p>
+                <a className="tv_app_btn" href={t("tvAppSection.downloadLink")}>
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/03/tv-app.png"
+                    alt={t("tvAppSection.downloadBtnAlt")}
+                  />
                 </a>
               </div>
             </div>
             <div className="col-md-6">
-              <img className="img-fluid" src="https://www.pranaair.com/wp-content/uploads/2023/07/air-quality-data-on-aqi-tv-app.png" alt="air quality data on aqi tv app" />
+              <img
+                className="img-fluid"
+                src="https://www.pranaair.com/wp-content/uploads/2023/07/air-quality-data-on-aqi-tv-app.png"
+                alt={t("tvAppSection.appImageAlt")}
+              />
             </div>
           </div>
         </div>
@@ -441,41 +669,19 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="qualitymonitor_heading_box web_heading text-center">
-                <h2 style={{ textAlign: 'center' }}>AQI Web Dashboard<img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></h2>
+                <h2 style={{ textAlign: "center" }}>
+                  {t("aqiWebDashboard.title")}
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                    alt={t("aqiWebDashboard.logoAlt")}
+                  />
+                </h2>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                className="new-slider"
-              >
-                <div className="slide-img">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/05/aqi-web-dashboard-graph.png" alt="aqi-web-dashboard-graph.png" />
-                </div>
-                <div className="slide-img">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/05/aqi-web-dashboard-monitor-data-comparison.png" alt="aqi-web-dashboard-monitor-data-comparison" />
-                </div>
-                <div className="slide-img">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/05/aqi-web-dashboard-data-download.png" alt="aqi-web-dashboard-data-download" />
-                </div>
-                <div className="slide-img">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/05/aqi-web-dashboard-monitor-data.png" alt="aqi-web-dashboard-monitor-data" />
-                </div>
-                <div className="slide-img">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/05/aqi-web-dashboard-for-prana-air-monitor.png" alt="aqi-web-dashboard-for-prana-air-monitor" />
-                </div>
-                <div className="slide-img">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/05/aqi-web-dashboard-home-screen.png" alt="aqi-web-dashboard-home-screen" />
-                </div>
-                <div className="slide-img">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/05/aqi-web-dashboard-qr-code-scan.png" alt="aqi-web-dashboard-qr-code-scan" />
-                </div>
-              </Carousel>
+              <SensiblePluseSlider />
             </div>
           </div>
         </div>
@@ -489,55 +695,85 @@ export default function SensiblePlusAirMonitor() {
               <ul className="feature_quality_cntr">
                 <li>
                   <div className="feature_sensor_box">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/historical-data.png" alt="historical data" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/historical-data.png"
+                        alt={t("aqiWebDashboard.features.historicalData.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3>Real-time & Historical Data</h3>
-                      <p>Access your citys data on real-time or historic air pollution parameters like AQI, PM2.5, PM10, Temperature, Humidity & Noise parameters anytime, anywhere.</p>
+                      <h3>{t("aqiWebDashboard.features.historicalData.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.historicalData.description")}</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="feature_sensor_box">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Health-Recommendations.png" alt="Health Recommendations" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Health-Recommendations.png"
+                        alt={t("aqiWebDashboard.features.healthRecommendations.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3>Health Recommendations</h3>
-                      <p>Get health recommendations according to the current air quality. These will be particularly helpful to you on the days with high pollution levels.</p>
+                      <h3>{t("aqiWebDashboard.features.healthRecommendations.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.healthRecommendations.description")}</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="feature_sensor_box height_fix_sensor">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Scan-the-QR.png" alt="Scan the QR" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Scan-the-QR.png"
+                        alt={t("aqiWebDashboard.features.scanQR.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3 className="smart_height_fix">Generate a Link/Scan the QR</h3>
-                      <p>Share the live monitoring data externally by generating a link or a QR code.</p>
+                      <h3 className="smart_height_fix">{t("aqiWebDashboard.features.scanQR.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.scanQR.description")}</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="feature_sensor_box height_fix_sensor">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Comprehensive-Air-Quality-Data.png" alt="Comprehensive Air Quality Data" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Comprehensive-Air-Quality-Data.png"
+                        alt={t("aqiWebDashboard.features.comprehensiveData.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3>Comprehensive Air Quality Data</h3>
-                      <p>Place AQI India widget on your home screen to view AQI information on the go.</p>
+                      <h3>{t("aqiWebDashboard.features.comprehensiveData.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.comprehensiveData.description")}</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="feature_sensor_box height_fix_sensor2">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Reliable-Dashboard.png" alt="Reliable Dashboard" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Reliable-Dashboard.png"
+                        alt={t("aqiWebDashboard.features.reliableDashboard.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3>Reliable Dashboard</h3>
-                      <p>Log in to our exclusive AQI dashboard with your credentials for a reliable experience.</p>
+                      <h3>{t("aqiWebDashboard.features.reliableDashboard.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.reliableDashboard.description")}</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="feature_sensor_box height_fix_sensor2">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Export-Data.png" alt="Export Data" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Export-Data.png"
+                        alt={t("aqiWebDashboard.features.exportData.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3>Export Data</h3>
-                      <p>Export the air quality data of your device(s) in an Excel Sheet format for future reference.</p>
+                      <h3>{t("aqiWebDashboard.features.exportData.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.exportData.description")}</p>
                     </div>
                   </div>
                 </li>
@@ -545,19 +781,29 @@ export default function SensiblePlusAirMonitor() {
               <ul className="feature_quality_cntr feature_width_auto">
                 <li>
                   <div className="feature_sensor_box">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Convergence-of-Multiple-Devices.png" alt="Convergence of Multiple Devices" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Convergence-of-Multiple-Devices.png"
+                        alt={t("aqiWebDashboard.features.multipleDevices.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3>Convergence of Multiple Devices at one place</h3>
-                      <p>Pair one or multiple Prana Air – Air Pollution Monitors with the dashboard through WiFi/GSM SIM connectivity.</p>
+                      <h3>{t("aqiWebDashboard.features.multipleDevices.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.multipleDevices.description")}</p>
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="feature_sensor_box">
-                    <small><img src="https://www.pranaair.com/wp-content/uploads/2021/03/Graphical-Representation.png" alt="Graphical Representation" /></small>
+                    <small>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Graphical-Representation.png"
+                        alt={t("aqiWebDashboard.features.graphicalRepresentation.altText")}
+                      />
+                    </small>
                     <div className="features_detail_box">
-                      <h3>Graphical Representation for Comparative Ease</h3>
-                      <p>Get graphical representation of air quality data for your ease. Also, you can compare multiple data and make inferences.</p>
+                      <h3>{t("aqiWebDashboard.features.graphicalRepresentation.title")}</h3>
+                      <p>{t("aqiWebDashboard.features.graphicalRepresentation.description")}</p>
                     </div>
                   </div>
                 </li>
@@ -571,9 +817,15 @@ export default function SensiblePlusAirMonitor() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h3 className="text-center" style={{ fontSize: '28px' }}>Check Your Air Pollution Data By Scan QR Code</h3>
-            <p style={{ textAlign: 'center' }}>
-              <img className="img-fluid" src="https://www.pranaair.com/wp-content/uploads/2021/06/check-air-pollution-by-qr-code-scan.gif" alt="check air pollution by qr code scan" />
+            <h3 className="text-center" style={{ fontSize: "28px" }}>
+              {t("aqiWebDashboard.qrCodeSection.title")}
+            </h3>
+            <p style={{ textAlign: "center" }}>
+              <img
+                className="img-fluid"
+                src="https://www.pranaair.com/wp-content/uploads/2021/06/check-air-pollution-by-qr-code-scan.gif"
+                alt={t("aqiWebDashboard.qrCodeSection.altText")}
+              />
             </p>
           </div>
         </div>
@@ -584,64 +836,80 @@ export default function SensiblePlusAirMonitor() {
         <div className="container">
           <div className="row">
             <div className="col-12 product-slider-sec product-slider-first">
-              <h2 className="specification_heading specific_head">Technical Specification <img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></h2>
+              <h2 className="specification_heading specific_head">
+                {t("technicalSpecificationSection.title")}{" "}
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                  alt={t("technicalSpecificationSection.altTexts.logo")}
+                />
+              </h2>
               <div className="table_box">
                 <table className="table table-striped">
                   <thead>
                     <tr>
-                      <th style={{ width: '195px', textAlign: 'center' }}>Parameter name</th>
-                      <th style={{ width: '216px', textAlign: 'center' }}>Index</th>
+                      <th style={{ width: "195px", textAlign: "center" }}>
+                        {t("technicalSpecificationSection.table.headers.parameterName")}
+                      </th>
+                      <th style={{ width: "216px", textAlign: "center" }}>
+                        {t("technicalSpecificationSection.table.headers.index")}
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Operating Temperature</td>
-                      <td>5°C to 50°C [40°F to 122°F]</td>
+                      <td>{t("technicalSpecificationSection.table.rows.operatingTemperature.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.operatingTemperature.value")}</td>
                     </tr>
                     <tr>
-                      <td>Storage temperature</td>
-                      <td>-20°C to 60°C [-4° to 140°F]</td>
+                      <td>{t("technicalSpecificationSection.table.rows.storageTemperature.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.storageTemperature.value")}</td>
                     </tr>
                     <tr>
-                      <td>Dimension</td>
-                      <td>185 x 30 x 110 mm</td>
+                      <td>{t("technicalSpecificationSection.table.rows.dimension.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.dimension.value")}</td>
                     </tr>
                     <tr>
-                      <td>Weight</td>
-                      <td>475 gram</td>
+                      <td>{t("technicalSpecificationSection.table.rows.weight.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.weight.value")}</td>
                     </tr>
                     <tr>
-                      <td>Power Supply</td>
-                      <td>5V DC</td>
+                      <td>{t("technicalSpecificationSection.table.rows.powerSupply.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.powerSupply.value")}</td>
                     </tr>
                     <tr>
-                      <td>Display</td>
-                      <td>7 Inch Color LED Display [Touch Screen]</td>
+                      <td>{t("technicalSpecificationSection.table.rows.display.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.display.value")}</td>
                     </tr>
                     <tr>
-                      <td>Connectivity</td>
-                      <td>WiFi [2.4GHz]</td>
+                      <td>{t("technicalSpecificationSection.table.rows.connectivity.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.connectivity.value")}</td>
                     </tr>
                     <tr>
-                      <td>Storage</td>
-                      <td>Micro SD Card + Cloud Storage [AQI dashboard]</td>
+                      <td>{t("technicalSpecificationSection.table.rows.storage.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.storage.value")}</td>
                     </tr>
                     <tr>
-                      <td>Mobile App</td>
-                      <td>AQI India [iOS & android]</td>
+                      <td>{t("technicalSpecificationSection.table.rows.mobileApp.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.mobileApp.value")}</td>
                     </tr>
                     <tr>
-                      <td>Battery</td>
-                      <td>5000 mAh rechargeable battery</td>
+                      <td>{t("technicalSpecificationSection.table.rows.battery.name")}</td>
+                      <td>{t("technicalSpecificationSection.table.rows.battery.value")}</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div className="sensible_popup broucher_download_cntr text-center">
-                <span style={{ fontSize: '12pt' }}>
-                  <a href="/wp-content/uploads/2022/04/prana-air-sensible-plus-air-quality-monitor-brochure.pdf">Download Brochure</a>
-                  <a href="/wp-content/uploads/2022/09/Prana-air-sensible-plus-monitor-manual.pdf">Download Manual</a>
-                  <a className="btn btn-primary btnbuynow" href="#form">Request A Quote</a>
+                <span style={{ fontSize: "12pt" }}>
+                  <a href="/wp-content/uploads/2022/04/prana-air-sensible-plus-air-quality-monitor-brochure.pdf">
+                    {t("technicalSpecificationSection.downloads.brochure")}
+                  </a>
+                  <a href="/wp-content/uploads/2022/09/Prana-air-sensible-plus-monitor-manual.pdf">
+                    {t("technicalSpecificationSection.downloads.manual")}
+                  </a>
+                  <a className="btn btn-primary btnbuynow" href="#form">
+                    {t("technicalSpecificationSection.downloads.requestQuote")}
+                  </a>
                 </span>
               </div>
             </div>
@@ -655,7 +923,13 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="discreet_box text-center">
-                <h2 className="specification_heading green_heading">Solution Applications <img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></h2>
+                <h2 className="specification_heading green_heading">
+                  {t("solutionApplications.title")}{" "}
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                    alt={t("solutionApplications.altTexts.logo")}
+                  />
+                </h2>
               </div>
             </div>
           </div>
@@ -671,26 +945,38 @@ export default function SensiblePlusAirMonitor() {
                 <div className="row">
                   <div className="col-md-3">
                     <div className="sensible_point_box">
-                      <img src="https://www.pranaair.com/wp-content/uploads/2021/03/PM2.jpg" alt="use of sensible+ monitor in office" />
-                      <code>Office</code>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/PM2.jpg"
+                        alt={t("productDirection.altTexts.office")}
+                      />
+                      <code>{t("productDirection.locations.office")}</code>
                     </div>
                   </div>
                   <div className="col-md-3">
                     <div className="sensible_point_box">
-                      <img src="https://www.pranaair.com/wp-content/uploads/2021/03/Hotel.jpg" alt="use of sensible+ monitor in hotel" />
-                      <code>Hotel</code>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Hotel.jpg"
+                        alt={t("productDirection.altTexts.hotel")}
+                      />
+                      <code>{t("productDirection.locations.hotel")}</code>
                     </div>
                   </div>
                   <div className="col-md-3">
                     <div className="sensible_point_box">
-                      <img src="https://www.pranaair.com/wp-content/uploads/2021/03/hospital.jpg" alt="use of sensible+ monitor in hospital" />
-                      <code>Hospital</code>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/hospital.jpg"
+                        alt={t("productDirection.altTexts.hospital")}
+                      />
+                      <code>{t("productDirection.locations.hospital")}</code>
                     </div>
                   </div>
                   <div className="col-md-3">
                     <div className="sensible_point_box">
-                      <img src="https://www.pranaair.com/wp-content/uploads/2021/03/Factory.jpg" alt="use of sensible+ monitor in factory" />
-                      <code>Factory</code>
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2021/03/Factory.jpg"
+                        alt={t("productDirection.altTexts.factory")}
+                      />
+                      <code>{t("productDirection.locations.factory")}</code>
                     </div>
                   </div>
                 </div>
@@ -706,14 +992,17 @@ export default function SensiblePlusAirMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="specification_box monitor_box text-center">
-                <h2 className="specification_heading">FAQs<img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" /></h2>
+                <h2 className="specification_heading">
+                  FAQs
+                  <img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" />
+                </h2>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Accordion Section */}
+      {/* Accordion Section - Using Bootstrap Accordion */}
       <div className="accordian_section accordian_section2 sinitizer_faq_section">
         <div className="container">
           <div className="row">
@@ -721,73 +1010,153 @@ export default function SensiblePlusAirMonitor() {
               <div className="accordion" id="faqAccordion">
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingOne">
-                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      1. Which air quality parameters can be monitored by SENSIBLE+ ?
+                    <button
+                      className="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      {t("faqAccordion.questions.q1")}
                     </button>
                   </h2>
-                  <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div
+                    id="collapseOne"
+                    className="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion"
+                  >
                     <div className="accordion-body">
-                      <p style={{ textAlign: 'justify' }}>SENSIBLE+ is an indoor air quality monitor that effectively measures a wide range of primary and secondary air pollutants. It monitors and gives user the account of Air Quality Index (AQI), Temperature, Relative Humidity, PM (10, 2.5, and 1), CO<sub>2</sub>, and Total Volatile Organic Compounds (TVOCs) in the air around them.</p>
+                      <p style={{ textAlign: "justify" }}>
+                        {t("faqAccordion.answers.a1")}
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingTwo">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      2. Is SENSIBLE+ monitor competent as per the international standards?
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      {t("faqAccordion.questions.q2")}
                     </button>
                   </h2>
-                  <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div
+                    id="collapseTwo"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion"
+                  >
                     <div className="accordion-body">
-                      <p style={{ textAlign: 'justify' }}>Yes. It has been curated with cutting edge technology, keeping national and international requirements in mind. SENSIBLE+ is compliant with the standards set by WELL, LEED, ISHRAE and WHO.</p>
+                      <p style={{ textAlign: "justify" }}>
+                        {t("faqAccordion.answers.a2")}
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingThree">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      3. Can I connect my device with Wi-Fi?
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      {t("faqAccordion.questions.q3")}
                     </button>
                   </h2>
-                  <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div
+                    id="collapseThree"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion"
+                  >
                     <div className="accordion-body">
-                      <p style={{ textAlign: 'justify' }}>Yes. SENSIBLE+ comes with Wi-Fi connectivity. You can connect your device with the Wi-Fi of your place by accessing the Settings menu.</p>
+                      <p style={{ textAlign: "justify" }}>
+                        {t("faqAccordion.answers.a3")}
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingFour">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      4. Do I get any on-board storage with SENSIBLE+ ?
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      {t("faqAccordion.questions.q4")}
                     </button>
                   </h2>
-                  <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div
+                    id="collapseFour"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion"
+                  >
                     <div className="accordion-body">
-                      Yes. SENSIBLE+ comes with on-board micro-SD card storage.
+                      {t("faqAccordion.answers.a4")}
                     </div>
                   </div>
                 </div>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingFive">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      5. Can I connect my SENSIBLE+ with my Building Management System (BMS)?
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      {t("faqAccordion.questions.q5")}
                     </button>
                   </h2>
-                  <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div
+                    id="collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion"
+                  >
                     <div className="accordion-body">
-                      <p style={{ textAlign: 'justify' }}>Yes, absolutely. SENSIBLE+ air quality monitor is extremely versatile and flexible in terms of connectivity. It comes with RS-485 connectivity which renders it compatible with your BMS.</p>
+                      <p style={{ textAlign: "justify" }}>
+                        {t("faqAccordion.answers.a5")}
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingSix">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      6. How much does SENSIBLE+ monitor weigh?
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="collapseSix"
+                    >
+                      {t("faqAccordion.questions.q6")}
                     </button>
                   </h2>
-                  <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                  <div
+                    id="collapseSix"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion"
+                  >
                     <div className="accordion-body">
-                      SENSIBLE+ monitor weighs 475 gm (16.75 oz).
+                      {t("faqAccordion.answers.a6")}
                     </div>
                   </div>
                 </div>
@@ -802,11 +1171,8 @@ export default function SensiblePlusAirMonitor() {
         <div className="row">
           <div className="col-md-12">
             <div className="contact-heading">
-              <h2>Get in Touch</h2>
-              <p>
-                Please help us know what requirements you have. Our team will
-                contact you very soon.
-              </p>
+              <h2>{t("contactHeading.title")}</h2>
+              <p>{t("contactHeading.description")}</p>
             </div>
           </div>
         </div>
@@ -818,32 +1184,68 @@ export default function SensiblePlusAirMonitor() {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h3 style={{ textAlign: 'center' }}><span className="nova-light" style={{ fontSize: '20pt' }}><strong className="nova-bold">You May Also Like Other</strong></span></h3>
-              <p style={{ textAlign: 'center' }}><span style={{ fontSize: '18pt' }}>Air Quality Monitors</span><sup><img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" width="32" height="24" /></sup></p>
+              <h3 style={{ textAlign: "center" }}>
+                <span className="nova-light" style={{ fontSize: "20pt" }}>
+                  <strong className="nova-bold">{t("productCompare.title.part1")}</strong>
+                </span>
+              </h3>
+              <p style={{ textAlign: "center" }}>
+                <span style={{ fontSize: "18pt" }}>{t("productCompare.title.part2")}</span>
+                <sup>
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                    alt={t("productCompare.altTexts.logo")}
+                    width="32"
+                    height="24"
+                  />
+                </sup>
+              </p>
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <div className="product_compare_box">
-                <a href="/air-quality-monitor/cair-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg" alt="prana air cair air quality monitor" /></a>
-                <h3>CAIR+</h3>
-              </div>
-              <div className="product_compare_box">
-                <a href="/air-quality-monitor/sensible-air-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-monitor-on-table.jpg" alt="prana air sensible air quality monitor" /></a>
-                <h3>Sensible</h3>
-              </div>
-              <div className="product_compare_box">
-                <a href="/air-quality-monitor/squair-air-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-squair-air-quality-monitor.jpg" alt="prana air squair air quality monitor" /></a>
-                <h3>SQUAIR</h3>
-              </div>
-              <div className="product_compare_box">
-                <a href="/air-quality-monitor/ambient-air-monitor"><img src="https://www.pranaair.com/wp-content/uploads/2022/06/prana-air-caaqms-ambient-air-quality-monitor.jpg" alt="prana air caaqms ambient air quality monitor" /></a>
-                <h3>Ambient</h3>
+              <div className="product_compare_container">
+                <div className="product_compare_box">
+                  <a href="/air-quality-monitor/cair-monitor">
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg"
+                      alt={t("productCompare.products.cair.alt")}
+                    />
+                  </a>
+                  <h3>{t("productCompare.products.cair.name")}</h3>
+                </div>
+                <div className="product_compare_box">
+                  <a href="/air-quality-monitor/sensible-air-monitor">
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-monitor-on-table.jpg"
+                      alt={t("productCompare.products.sensible.alt")}
+                    />
+                  </a>
+                  <h3>{t("productCompare.products.sensible.name")}</h3>
+                </div>
+                <div className="product_compare_box">
+                  <a href="/air-quality-monitor/squair-air-monitor">
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-squair-air-quality-monitor.jpg"
+                      alt={t("productCompare.products.squair.alt")}
+                    />
+                  </a>
+                  <h3>{t("productCompare.products.squair.name")}</h3>
+                </div>
+                <div className="product_compare_box">
+                  <a href="/air-quality-monitor/ambient-air-monitor">
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2022/06/prana-air-caaqms-ambient-air-quality-monitor.jpg"
+                      alt={t("productCompare.products.ambient.alt")}
+                    />
+                  </a>
+                  <h3>{t("productCompare.products.ambient.name")}</h3>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

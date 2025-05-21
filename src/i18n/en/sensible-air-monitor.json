@@ -1,0 +1,175 @@
+{
+     "homeBanner": {
+    "title": "Sensible Air Monitor",
+    "description": "keep a track of indoor air quality along-with ambient indoor & outdoor PM level.",
+    "buyButton": "Buy Now"
+  },
+   "featuredSection": {
+    "title": "Sensible Air Quality Monitor",
+    "description": "Know the real-time air quality (AQI) along with different air quality parameters.",
+    "requestQuoteButton": "Request a Quote",
+    "altTexts": {
+      "logo": "logo",
+      "realTimeData": "real-time aqi icon",
+      "portable": "sensible air monitor portable icon",
+      "toxicGases": "toxic gases icon",
+      "featuredBanner": "Featured Banner",
+      "sdCard": "sd card data card icon",
+      "ledDisplay": "led display icon",
+      "usbCharging": "sensible usb charging icon"
+    },
+    "features": {
+      "realTimeData": "Real-Time & Historic Air Quality <br />Hourly, Weekly & Monthly",
+      "portable": "Easily Portable<br /> air quality device",
+      "detectGases": "Detect Gase Air Pollutants <br />CO, CO2, O3, HCHO, TVOCs",
+      "sdCardStorage": "Micro SD Card Data Storage<br />Access data anytime",
+      "healthTips": "Health Tips For Air Pollution <br /> To Get Precautions",
+      "typeCPower": "Type-C USB Power Source<br /> No Inbuilt Battery"
+    }
+  },
+  "whatDoesItDo": {
+    "title": "What does it do?",
+    "description": "Our air quality sensor measures the concentration of PM in real time, along with complex parameters that contribute to indoor and outdoor air pollution. Our monitoring device is ideal for residential, commercial and commercial purposes.",
+    "altTexts": {
+      "logo": "logo"
+    }
+  },
+  "technologySection": {
+    "title": "What technology is used?",
+    "paragraph1": "In order to provide innovative and productive quality products, our team of experts has been constantly working on how to reduce pollution using various pollution detection methods.",
+    "paragraph2": "Our main focus revolves around developing sensors that provide accurate, real-time pollution data. As we continue to explore our horizons in researching and developing new ways to benefit our customers needs, we are currently using technologies that include electrochemical, catalytic, optical (including NDIR and PID/metal oxide semiconductors) and spectroscopy.",
+    "altTexts": {
+      "technologyImage": "Technology sensors used in sensible air monitor",
+      "logo": "logo"
+    }
+  },
+  "indoorAirPollutionSensors": {
+    "title": "Indoor Air Pollution Sensors",
+    "description": "Our Sensible Portable Air Quality Monitor comes with highly accurate sensors and provides accurate real-time AQI reading within seconds to understand indoor air quality (IAQ).",
+    "altTexts": {
+      "logo": "logo",
+      "monitorImage": "Indoor Air Pollution Sensors"
+    },
+    "sensors": {
+      "particulateMatters": {
+        "title": "Particulate Matters",
+        "description": "0-8.9 ug/m3 is considered low as per 24-hour PM2.5,where as, 0-16.4 ug/m3 is considered standard as per 24-hour PM10 …"
+      },
+      "carbonMonoxide": {
+        "title": "Carbon Monoxide",
+        "description": "It is a colorless, odorless, and tasteless flammable gas that is slightly less dense than air. Standard CO level  to 70 ppm …"
+      },
+      "carbonDioxide": {
+        "title": "Carbon Dioxide",
+        "description": "At room temperature, carbon dioxide is a colorless, odorless, faintly acidic-tasting, non-flammable gas. In an occupied space …"
+      },
+      "formaldehyde": {
+        "title": "FormalDehyde",
+        "description": "Known as formaldehyde, it is a poisonous, colorless, highly water-soluble gas with a pungent smell. 0.1 mg/m3 (30-minute average concentration) …"
+      },
+      "voc": {
+        "title": "VOC",
+        "description": "Organic chemicals that have a high vapor pressure at an ordinary room temperature is called Total Volatile Organic Compounds …"
+      },
+      "ozone": {
+        "title": "Ozone",
+        "description": "It is a gas made of three oxygen atom and is a pale blue with a strong smell. Exposure limit for ozone is 0.1 ppm (0.2 mg/m3) …"
+      },
+      "temperature": {
+        "title": "Temparature",
+        "description": "Owing to variations in humidity, standard temperature in summer is 23 to 25.5°C and in winters is 20 to 23.5 °C and in winters is …"
+      },
+      "humidity": {
+        "title": "Humidity",
+        "description": "It has been proven that higher humidity level can result in better air quality. indoor humidity level must range between 40-60% …"
+      }
+    },
+    "altTextss": {
+      "particulateMatters": "particulate matters icon",
+      "carbonMonoxide": "carbon monoxide icon",
+      "carbonDioxide": "carbon dioxide icon",
+      "formaldehyde": "FormalDehyde icon",
+      "voc": "voc gas icon",
+      "ozone": "ozone gas icon",
+      "temperature": "temperature icon",
+      "humidity": "humidity icon"
+    }
+  },
+   "accuracyComparison": {
+    "title": "How Accurate is Sensible Monitor",
+    "questionMark": "?",
+    "description": "Comparison of our Sensible Monitor with other high-cost pollution monitors in real-time.",
+    "altTexts": {
+      "logo": "logo"
+    }
+},
+ "comparison": {
+    "title": "Comparison",
+    "description": "Prana Air Sensible Air Monitor measures real-time indoor air pollution level that helps you understand the quality of the air you breathe.",
+    "altTexts": {
+      "logo": "logo"
+    }
+  },
+  "solutionApplications": {
+    "title": "Solution Applications",
+    "altTexts": {
+      "logo": "logo"
+    },
+    "qrCodes": {
+      "brochure": {
+        "scanText": "Scan this QR Code to",
+        "downloadText": "Download Brochure",
+        "altText": "prana air sensible air quality monitor brochure qr code"
+      },
+      "manual": {
+        "scanText": "Scan this QR Code to",
+        "downloadText": "Download Manual",
+        "altText": "prana air sensible air quality monitor manual qr code"
+      }
+    },
+    "applications": {
+      "office": {
+        "title": "Office",
+        "description": "Use the air quality monitor to know the indoor pollution level in the office and keep your employees safe from breathing polluted air particles.",
+        "altText": "Office"
+      },
+      "hotel": {
+        "title": "Hotel",
+        "description": "Many visitors come every day to stay a night at the hotel. It is important to make sure that the premise is a very clean environment and make comfort for the visitors.",
+        "altText": "Hotel"
+      },
+      "school": {
+        "title": "School",
+        "description": "Students are the future pillars of a nation. It is the duty of the authority to keep them safe and breathe clean air. The air quality monitor can help to understand the air quality level in school.",
+        "altText": "School"
+      },
+      "hospital": {
+        "title": "Hospital",
+        "description": "This is one of the most important places where the authorities need to take care very seriously. Through a good air quality monitor, it will be easily understood air pollution levels.",
+        "altText": "Hospital"
+      },
+      "factory": {
+        "title": "Factory",
+        "description": "Safety is the main priority in factories where the workers use very harmful machines and tools. There is a very high chance of high pollution level. With a pollution device, it is very easy to understand the level of air quality at the factory.",
+        "altText": "Factory"
+      },
+      "college": {
+        "title": "College & University",
+        "description": "Educational institutes are the places where professors impart knowledge in many fields. Air pollution is also a field of study the professors teach to the students.",
+        "altText": "College & University"
+      }
+    }
+  },
+  "ctaSection": {
+    "title": "Smallest, Affordable & Portable Air Quality Monitor",
+    "buyNowButton": "Buy Now",
+    "amazonButton": "amazon",
+    "altTexts": {
+      "amazon": "amazon"
+    }
+  },
+   "contactSection": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  }
+}

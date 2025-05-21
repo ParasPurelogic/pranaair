@@ -1,0 +1,367 @@
+{
+  "slider": {
+    "item1": {
+      "heading": "Accurate · Compact · Reliable",
+      "paragraph": "Experience the convenience of this sleek and compact TVOC monitoring device, which eliminates the need for bulky and complex equipment. With its reliable data on indoor air quality you can stay informed and take control of your environment effortlessly.",
+      "alt": "prana air nano odor tvoc monitor with real-time data"
+    },
+    "item2": {
+      "heading": "Versatile · Convenient · Sleek",
+      "paragraph": "Experience the ultimate in practicality and versatility with our sleek and convenient TVOC pocket monitor. From tracking indoor air quality to adapting to different air quality environments its the must-have device for effortless monitoring wherever you go.",
+      "alt": "prana air nano odor tvoc monitor with real-time data"
+    }
+  },
+   "breadcrumbs": {
+    "home": "Home",
+    "airQualityMonitors": "Air Quality Monitors",
+    "nanoTvoc": "Nano TVOC & HCHO"
+  },
+  "productInfo": {
+    "title": "Nano TVOC & HCHO",
+    "subtitle": "Odor Monitor",
+    "tagline": "Your portable health device",
+    "mrp": "m.r.p.",
+    "price": "₹ 4,990.00",
+    "description": "Prana Air Nano TVOC & HCHO monitor is a handy air quality monitoring device that helps you monitor Total Volatile Organic Compounds & Formaldehyde levels in real-time along temperature and humidity.",
+    "extraContent": "Monitor odor in real-time with an advanced and innovative cutting edge technology.",
+    "showMore": "Show More"
+  },
+  "buySection": {
+    "model": "model",
+    "quantity": "Quantity",
+    "buyNow": "Buy Now"
+  },
+  "monitoringBanner": {
+    "title": "Monitoring",
+    "subtitle": "has never been this easy!",
+    "description": "Prana Air nano TVOC/HCHO monitor possesses an elegant and attractive design, facilitating effortless portability even during extensive travels.",
+    "personImg": "Person wearing backpack with Prana Air nano TVOC monitor",
+    "deviceImg": "Prana Air nano TVOC monitor closeup",
+    "cyclingIcon": "cycling icon",
+    "workoutIcon": "work out icon",
+    "runningIcon": "running fitness icon",
+    "officeIcon": "working in office icon"
+  },
+   "features": {
+    "title": "Outstanding features of the Monitor",
+    "description": "It has a small, compact body with a minimal and attractive style that seamlessly blends aesthetics and technology to create a product thats both beautiful and practical.",
+    "altTexts": {
+      "realTimeMonitoring": "real time monitoring icon",
+      "battery": "battery icon",
+      "portable": "portable device icon",
+      "hdDisplay": "HD display icon",
+      "metalOxide": "Metal Oxide Semiconductor icon",
+      "typeC": "type-c interface icon",
+      "dynamicUI": "dynamic UI icon",
+      "tvocDisplay": "TVOC monitor high definition display"
+    },
+    "featureTexts": {
+      "realTimeMonitoring": "Real-time Monitoring",
+      "battery": "1000 mAh Lithium battery",
+      "portable": "Mini & Portable Device",
+      "hdDisplay": "HD Color Display",
+      "metalOxide": "Metal Oxide Semiconductor",
+      "typeC": "Type-C interface",
+      "dynamicUI": "Dynamic UI"
+    },
+    "ultraHD": {
+      "title": "Ultra HD",
+      "subtitle": "1.9 Vibrant Color Screen With Unparalleled Ultra High Definition",
+      "description": "High-precision sensors for real-time gas concentration monitoring on a vivid color display, with a user-friendly interface for easy reading and interpretation."
+    }
+  },
+   "handyPortable": {
+    "altTexts": {
+      "handy": "prana air nano tvoc monitor is handy",
+      "portable": "prana air odor tvoc monitor is portable"
+    },
+    "compact": {
+      "title": "Compact",
+      "description": "Prana Air nano TVOC/ HCHO monitor is an incredibly handy device features a user-friendly interface that allows for hassle-free reading and interpretation of results."
+    },
+    "convenient": {
+      "title": "Convenient",
+      "description": "This device allows for convenient and hassle-free reading and interpretation of results, and its compact design makes it incredibly easy to carry around wherever you go."
+    }
+  },
+  "tvocDangers": {
+    "altTexts": {
+      "dangers": "TVOC and Formaldehyde Dangers"
+    },
+    "title": "TVOC and Formaldehyde Dangers",
+    "description": "Monitoring TVOC and formaldehyde in the respiratory environment is important as exposures can cause dizziness, respiratory disorders, skin problems, endocrine system disorders, dermatitis, headache, and even cancer.",
+    "healthRisks": {
+      "title": "Potential Health Risks from",
+      "titleHighlight": "TVOC & HCHO",
+      "levels": {
+        "safe": {
+          "measurement": "<0.100mg/m³",
+          "effect": "Security Range"
+        },
+        "moderate": {
+          "measurement": "20.100mg/m³",
+          "effect": "Pharyngeal Discomfort"
+        },
+        "high": {
+          "measurement": ">0.500mg/m³",
+          "effect": "Irritation in the eyes, tearing"
+        },
+        "severe": {
+          "measurement": ">0.600mg/m³",
+          "effect": "Brain damage, coma, or even death"
+        }
+      }
+    }
+  },
+   "realTimeData": {
+    "altTexts": {
+      "display": "TVOC real-time data display"
+    },
+    "subtitle": "Real-Time Data",
+    "title": "TVOC, HCHO, Temp., & Humidity",
+    "description": "Prana Air TVOC/HCHO monitor utilizes advanced MOS monitoring technology to provide real-time data and insights on indoor odor levels. This cutting-edge device empowers you to take control of your environment and making informed decisions to reduce odor and promote clean air."
+  },
+  "fullWidthBanner": {
+    "altTexts": {
+      "washroom": "measuring indoor tvoc level with prana air monitor"
+    }
+  },
+  "mosTechnology": {
+    "title": "MOS- Metal Oxide Semiconductor",
+    "subtitle": "For TVOC & HCHO Detection",
+    "description": "When TVOC & HCHO gases come in contact with the metal oxide surface, they change the resistance of the semiconductor material, causing a measurable change in the electrical current passing through it. This change is then recorded by the device and interpreted as a gas concentration level, providing real-time data on indoor air quality."
+  },
+  "smartChip": {
+    "altTexts": {
+      "chip": "TVOC smart chip"
+    },
+    "title": {
+      "part1": "High-sensitive",
+      "highlight": "Smart Chip"
+    },
+    "subtitle": "for more Accurate Detection",
+    "description": "The instrument has a built-in high-performance smart chip that detects TVOC and formaldehyde levels, ensuring more accurate measurements.",
+    "features": {
+      "sensitivity": "High Sensitivity",
+      "accuracy": "Accurate Data",
+      "speed": "Fast Operation Speed",
+      "efficiency": "Energy Efficiency"
+    }
+  },
+  "attractiveDetails": {
+    "title": "Portable Convenience in Style",
+    "typeC": {
+      "number": "01",
+      "title": "Type C",
+      "subtitle": "Charging",
+      "altText": "prana air nano tvoc monitor type c charging"
+    },
+    "lanyard": {
+      "number": "02",
+      "title": "Anti-loss",
+      "subtitle": "Lanyard",
+      "altText": "prana air tvoc monitor anti loss lanyard"
+    },
+    "display": {
+      "number": "03",
+      "title": "Ultra HD",
+      "subtitle": "Color screen",
+      "altText": "prana air tvoc monitor ulta hd display"
+    }
+  },
+  "productKeyFunctions": {
+    "altTexts": {
+      "functions": "Product key functions",
+      "volumeOn": "volume-on",
+      "volumeOff": "volume-off",
+      "fullBrightness": "full-brightness",
+      "halfBrightness": "half-brightness",
+      "lowBrightness": "low-brightness.png"
+    },
+    "title": "Product Key functions",
+    "powerKey": {
+      "title": "power key",
+      "longPress": "Long Press : On/Off",
+      "singlePress": "Single Press : Change Temp. Unit (°C/F)"
+    },
+    "alarmKey": {
+      "singlePress": "Single Press : Turn Alarm",
+      "on": "on",
+      "off": "off"
+    },
+    "brightnessKey": {
+      "singlePress": "Single Press : Change Brightness Levels"
+    }
+  },
+  "batteryEndurance": {
+    "altTexts": {
+      "battery": "TVOC battery endurance"
+    },
+    "subtitle": "Large-capacity Polymer",
+    "title": "Battery Endurance (1000 mAh)",
+    "description": "A durable, high-performance polymer lithium-ion battery with a large capacity and long lifespan."
+  },
+  "handyPortableBanner": {
+    "altTexts": {
+      "monitor": "measuring real-time tvoc hcho level with prana air monitor"
+    }
+  },
+  "realTimeTvocDetection": {
+    "altTexts": {
+      "alarm": "TVOC detection alarm",
+      "greenCircle": "green-circule",
+      "yellowCircle": "yellow-circule"
+    },
+    "title": {
+      "part1": "Real-time",
+      "highlight1": "TVOC",
+      "part2": "and",
+      "highlight2": "HCHO",
+      "part3": "detection with An intelligent alarm system"
+    },
+    "features": {
+      "levels": "Know the TVOC & HCHO levels around you",
+      "refresh": "Detects TVOC/ odor in real-time with 2 seconds data refresh rate."
+    },
+    "indicators": {
+      "green": {
+        "color": "green:",
+        "range": "0-0.99 mg/m3,",
+        "status": "Safe, No alarm sound:"
+      },
+      "yellow": {
+        "color": "Yellow:",
+        "range": "0.100mg/m3,",
+        "status": "it will start a beep cycle alarm, once every 10 minutes."
+      }
+    },
+    "securityLevels": {
+      "security": "Security",
+      "cycleAlarm": "Cycle Alarm",
+      "ranges": {
+        "safe": "0.000~0.080mg/m³",
+        "moderate": "0.101~0.200mg/m³",
+        "high": "0.201~0.500mg/m³",
+        "severe": "0.501~1.999mg/m³"
+      }
+    }
+  },
+  "technicalSpecifications": {
+    "altTexts": {
+      "brochure": "brochore-btn"
+    },
+    "title": {
+      "part1": "Monitors",
+      "part2": "Technical Specifications"
+    },
+    "brochure": "Download Brochure",
+    "specs": {
+      "productName": {
+        "label": "Product Name :",
+        "value": "Nano TVOC & HCHO Monitor"
+      },
+      "warmupTime": {
+        "label": "Warm-up time :",
+        "value": "35 Sec"
+      },
+      "workingTemp": {
+        "label": "Working Temp. :",
+        "value": "-10~50°C"
+      },
+      "detectionRange": {
+        "label": "Detection Range :",
+        "value": "0~9.999mg/m³"
+      },
+      "refreshRate": {
+        "label": "Data Refresh Rate :",
+        "value": "2 Sec"
+      },
+      "chargingMode": {
+        "label": "Charging Mode :",
+        "value": "USB Type-C"
+      },
+      "workingVoltage": {
+        "label": "Working Voltage :",
+        "value": "3.7 V"
+      },
+      "operatingHumidity": {
+        "label": "Operating Humidity :",
+        "value": "0-95% RH"
+      },
+      "dimensions": {
+        "label": "Monitor Dimension :",
+        "value": "51 x 17 x 85 (mm)"
+      }
+    }
+  },
+  "productComparison": {
+    "altTexts": {
+      "pranaMonitor": "prana air nano tvoc monitor low cost",
+      "highEndMonitor": "tsi high end tvoc monitor"
+    },
+    "title": "Comparison of Our Nano TVOC/HCHO monitor vs a high-end monitor",
+    "parameters": {
+      "description": "Description :",
+      "parameter": "Parameter :",
+      "price": "Price :",
+      "weight": "Weight :",
+      "range": "Range :",
+      "accuracy": "Accuracy :",
+      "technology": "Technology :",
+      "portability": "Portability :"
+    },
+    "pranaMonitor": {
+      "name": "Nano TVOC Monitor",
+      "parameter": "TVOC, HCHO, Temp, Humidity",
+      "price": "Low Cost",
+      "weight": "75g",
+      "range": "0~9.999 mg/m3",
+      "accuracy": "±5%",
+      "technology": "MOS Sensing",
+      "portability": "Small & easy to carry"
+    },
+    "highEndMonitor": {
+      "name": "High-End TVOC Monitor",
+      "parameter": "TVOC",
+      "price": "High Cost",
+      "weight": "Almost 1 Kg",
+      "range": "0-20,000 ppb",
+      "accuracy": "±3%",
+      "technology": "PID Sensing",
+      "portability": "Comparatively less portable"
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "1. What gases can this nano monitor of Prana Air detect?",
+        "answer": "This nano monitor is designed to detect TVOC and HCHO gases."
+      },
+      {
+        "question": "2. Can this nano monitor detect gases other than TVOC and HCHO?",
+        "answer": "No, this device is specifically designed to detect TVOC and HCHO gases only."
+      },
+      {
+        "question": "3. Can Prana Air nano TVOC/HCHO monitor measure temperature and humidity levels?",
+        "answer": "Yes, this device also measures temperature and humidity levels in addition to TVOC and HCHO gases."
+      },
+      {
+        "question": "4. How accurate is this nano TVOC/HCHO monitor?",
+        "answer": "The device is equipped with high-precision sensors that provide accurate and reliable data (±5%)."
+      },
+      {
+        "question": "5. Is this nano monitor easy to use?",
+        "answer": "Yes, the device is designed to be user-friendly and easy to operate."
+      },
+      {
+        "question": "6. Is Prana Air nano monitor portable?",
+        "answer": "Yes, the device is small and compact, making it easy to carry around wherever you go."
+      },
+      {
+        "question": "7. Does this monitor have alarm system?",
+        "answer": "Yes, it gives an alarm sound when the TVOCs value is yellow color 0.100mg/m³. It will start a beep cycle alarm, once every 10 minutes."
+      }
+    ]
+  }
+}

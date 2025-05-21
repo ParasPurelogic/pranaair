@@ -1,0 +1,800 @@
+{
+  "banner": {
+    "titleHighlight": "केयर+",
+    "titleRest": "इनडोर एयर क्वालिटी मॉनिटर",
+    "description": "कम लागत, अत्यधिक सटीक और पोर्टेबल डिवाइस के साथ अपनी इनडोर एयर क्वालिटी को ट्रैक करें। यह आपके घर में अदृश्य वायु प्रदूषकों की उपस्थिति को दृश्यमान बनाता है।",
+    "feature1": "कम लागत",
+    "feature2": "सटीक",
+    "feature3": "पोर्टेबल",
+    "buyNowText": "अभी खरीदें",
+    "buyNowLink": "https://www.pranaair.com/product/cair-plus-monitor/",
+    "arrowImageSrc": "https://www.pranaair.com/wp-content/uploads/2023/12/Vector-1.png",
+    "arrowImageAlt": "दाएं तीर"
+  },
+  "features": {
+    "title": "केयर+ मॉनिटर की विशेषताएं",
+    "subtitle": "केयर+ मॉनिटरिंग डिवाइस वह है जहां आपकी खोज समाप्त होती है",
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/11/pranaair-cair-monitor-all-specifications.webp",
+      "alt": "प्राणएयर केयर मॉनिटर सभी विशिष्टताएं"
+    },
+    "items": {
+      "1": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/real-time-monitoring-icon.png",
+          "alt": "रीयल टाइम एयर क्वालिटी मॉनिटरिंग आइकन"
+        },
+        "title": "रीयल-टाइम मॉनिटरिंग",
+        "description": "AQI, PM2.5, PM10, CO2, TVOC, HCHO, तापमान और आर्द्रता।"
+      },
+      "2": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/micro-sd-card-storage.png",
+          "alt": "माइक्रो एसडी कार्ड स्टोरेज"
+        },
+        "title": "माइक्रो एसडी कार्ड स्टोरेज",
+        "description": "माइक्रो एसडी कार्ड के साथ बेहतर डेटा स्टोरेज प्रदान करें"
+      },
+      "3": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/type-c-usb-cable.png",
+          "alt": "टाइप सी यूएसबी केबल"
+        },
+        "title": "टाइप-सी यूएसबी केबल",
+        "description": "टाइप-सी यूएसबी केबल के साथ किसी भी समय एयर क्वालिटी डिवाइस को चार्ज करें।"
+      },
+      "4": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/wifi-cloud-data-storage.png",
+          "alt": "वाईफाई क्लाउड डेटा स्टोरेज"
+        },
+        "title": "वाई-फाई + क्लाउड डेटा स्टोरेज",
+        "description": "AQI मोबाइल, टीवी, टैबलेट ऐप या वेब-डैशबोर्ड पर डेटा की पहुंच।"
+      },
+      "5": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/lithium-ion-battery.png",
+          "alt": "लिथियम-आयन बैटरी"
+        },
+        "title": "बैटरी क्षमता",
+        "description": "1600 mAh लिथियम-आयन बैटरी के साथ, यह पूरी तरह से चार्ज होने पर 3 घंटे तक चल सकता है।"
+      },
+      "6": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/portable-device.png",
+          "alt": "पोर्टेबल डिवाइस"
+        },
+        "title": "पोर्टेबल डिवाइस",
+        "description": "डिवाइस को कहीं भी ले जाएं और अपने आप वायु गुणवत्ता को मापें।"
+      }
+    }
+  },
+  "leedWell": {
+    "title": "केयर+ IAQ के सभी मानकों को पूरा करता है",
+    "subtitle": "LEED v4.1, WELL, WHO, ASHRAE - अपने मानकों को पूरा करें"
+  },
+  "parameters": {
+    "titleHighlight": "केयर +",
+    "titleRest": "इनडोर एयर क्वालिटी मॉनिटर",
+    "description": "अपने स्थान की वायु गुणवत्ता को अपने स्वयं के वायु प्रदूषण उपकरण से इनडोर और आउटडोर के लिए मापें। हमारे नए केयर+ एयर मॉनिटर के साथ, आपको एक मुफ्त एम्बिएंट एयर क्वालिटी मॉनिटर मिलेगा।",
+    "sectionTitle": "पैरामीटर्स",
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/11/cair-indoor-air-quality-monitor.webp",
+      "alt": "प्राणा एयर केयर इनडोर एयर क्वालिटी मॉनिटर डिवाइस"
+    },
+    "items": {
+      "1": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-aqi-parameter.png",
+          "alt": "केयर एक्यूआई पैरामीटर"
+        },
+        "title": "AQI"
+      },
+      "2": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/pm1-parameter.png",
+          "alt": "पीएम1 पैरामीटर"
+        },
+        "title": "PM1"
+      },
+      "3": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-pm2.5-parameter.png",
+          "alt": "केयर पीएम2.5 पैरामीटर"
+        },
+        "title": "PM2.5"
+      },
+      "4": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-pm10-parameter.png",
+          "alt": "केयर पीएम10 पैरामीटर"
+        },
+        "title": "PM10"
+      },
+      "5": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-co2-parameter.png",
+          "alt": "केयर सीओ2 पैरामीटर"
+        },
+        "title": "CO2"
+      },
+      "6": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-tvoc-parameter.png",
+          "alt": "केयर टीवीओसी पैरामीटर"
+        },
+        "title": "TVOC"
+      },
+      "7": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-hcho-parameter.png",
+          "alt": "केयर एचसीएचओ पैरामीटर"
+        },
+        "title": "HCHO"
+      },
+      "8": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-temp-parameter.png",
+          "alt": "केयर तापमान पैरामीटर"
+        },
+        "title": "तापमान"
+      },
+      "9": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-humidity-parameter.png",
+          "alt": "केयर आर्द्रता पैरामीटर"
+        },
+        "title": "आर्द्रता"
+      },
+      "10": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-pc0.3-parameter.png",
+          "alt": "केयर पीसी0.3 पैरामीटर"
+        },
+        "title": "कण गणना",
+        "subtitle": "(0.3, 0.5, 1.0, 2.5, 5.0, 10 μm)"
+      }
+    }
+  },
+   "installation": {
+    "titleBold": "केयर+",
+    "title": "इंस्टॉलेशन",
+    "description": "केयर+ डिवाइस को अपने घर, ऑफिस, रेस्टोरेंट आदि के अंदर कहीं भी इंस्टॉल करें"
+  },
+  "clock": {
+    "title": "अपने डिवाइस को बदलें",
+    "specialTitle": {
+      "before": "घ",
+      "after": "ड़ी"
+    },
+    "icon": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/clock-icon.png",
+      "alt": "घड़ी आइकन"
+    },
+    "description": "स्क्रीन सेवर मोड को सक्रिय करके अपने डिवाइस को AQI डिस्प्ले के साथ एक घड़ी में बदलें। AQI (एयर क्वालिटी इंडेक्स) इनडोर एयर क्वालिटी भी प्रदर्शित करता है।"
+  },
+  "airPollution": {
+    "title": "इनडोर एयर प्रदूषण क्या है?",
+    "description": "इनडोर एयर प्रदूषण, जो तंबाकू के धुएं और घरेलू उत्पादों जैसे विभिन्न स्रोतों से उत्पन्न होता है, श्वसन संबंधी समस्याओं और एलर्जी जैसे स्वास्थ्य जोखिम पैदा करता है। सामान्य प्रदूषकों में कण पदार्थ और वाष्पशील कार्बनिक यौगिक शामिल हैं। इन चिंताओं को कम करने के लिए पर्याप्त वेंटिलेशन महत्वपूर्ण है, क्योंकि खराब वायु गुणवत्ता सिरदर्द और थकान का कारण बन सकती है। नियमित निगरानी, मानकों का पालन और शमन रणनीतियां कल्याण के अनुकूल वातावरण बनाने के लिए महत्वपूर्ण हैं।",
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/01/health-problem-of-indoor-air-pollution.jpg",
+      "alt": "इनडोर एयर प्रदूषण की स्वास्थ्य समस्या"
+    }
+  },
+  "wifiConnectivity": {
+    "title": "वाईफाई कनेक्टिविटी",
+    "icon": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/01/wifi.png",
+      "alt": "वाईफाई कनेक्टिविटी"
+    },
+    "description": "अपने स्मार्टफोन, AQI इंडिया ऐप, एंड्रॉइड टीवी और टैब पर टूल्स डेटा एक्सेस करने के लिए वाईफाई कनेक्टिविटी फीचर। इसके साथ, आप जब भी चाहें विशेष स्थानों की जानकारी सुनिश्चित कर सकते हैं।",
+    "subtitle": "रिमोट डेटा एक्सेसिबिलिटी"
+  },
+  "quote": {
+    "icon": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/quote-icon.png",
+      "alt": "उद्धरण आइकन"
+    },
+    "title": "केयर+",
+    "subtitle": "इनडोर क्वालिटी मॉनिटर",
+    "description": "इनडोर प्रदूषण कई मुद्दों के कारण एक बड़ी चिंता है। केयर+ आपके घर में थर्मल आराम सुनिश्चित करता है। क्योंकि यह वास्तविक समय के तापमान और आर्द्रता को प्रदर्शित करता है। हवा में प्रदूषक स्तरों के साथ फिल्ट्रेशन और वेंटिलेशन की जांच करें।"
+  },
+   "aqiMobileApp": {
+    "title": {
+      "logo": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+        "alt": "एक्यूआई लोगो"
+      },
+      "text": "मोबाइल"
+    },
+    "subtitle": "एप्लिकेशन",
+    "features": {
+      "1": "आपके क्षेत्र में वायु गुणवत्ता अलर्ट की प्राप्ति।",
+      "2": "वायु गुणवत्ता ग्राफ, वास्तविक समय की वायु गुणवत्ता के अनुसार स्वास्थ्य सलाह,",
+      "3": "दुनिया भर में AQI की जांच के लिए देशों के माध्यम से नेविगेट करें",
+      "4": "अपने एयर क्वालिटी मॉनिटर का आसान प्रबंधन"
+    },
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-cair-air-quality-monitor-connected-with-aqi-app.jpg",
+      "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर एक्यूआई मोबाइल ऐप से जुड़ा हुआ"
+    }
+  },
+  "ventilationRisks": {
+    "co2Image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/high-co2-level.png",
+      "alt": "उच्च सीओ2 स्तर"
+    },
+    "title": "उच्च CO2 स्तर और खराब वेंटिलेशन स्वास्थ्य जोखिम पैदा करते हैं",
+    "description": "जब वेंटिलेशन अपर्याप्त होता है, तो CO2 का संचय बढ़ जाता है, जिससे वायु गुणवत्ता पर नकारात्मक प्रभाव पड़ता है।",
+    "ventilationScore": {
+      "icon": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/12/ventilation.png",
+        "alt": "उच्च सीओ2 स्तर के कारण खराब वेंटिलेशन"
+      },
+      "title": "वेंटिलेशन स्कोर",
+      "description": "आपके कमरे में ताजी हवा का प्रावधान",
+      "score": "05",
+      "rating": "मध्यम"
+    }
+  },
+  "aqiRanges": {
+    "title": "प्रदूषक रेंज",
+    "description": "अपने क्षेत्र में हर प्रदूषक के मान की जांच करने के लिए एयर क्वालिटी इंडेक्स। इसके माध्यम से, आप इनडोर एयर क्वालिटी के लिए सूचित निर्णय ले सकते हैं।",
+    "tabs": {
+      "aqi": "AQI",
+      "pm1": "PM1",
+      "pm25": "PM2.5",
+      "pm10": "PM10",
+      "co2": "CO2",
+      "hcho": "HCHO",
+      "tvoc": "TVOC"
+    },
+    "categories": {
+      "good": "अच्छा",
+      "moderate": "मध्यम",
+      "poor": "खराब",
+      "unhealthy": "अस्वास्थ्यकर",
+      "severe": "गंभीर",
+      "hazardous": "खतरनाक"
+    },
+    "values": {
+      "aqi": {
+        "0": "0",
+        "1": "50",
+        "2": "100",
+        "3": "150",
+        "4": "200",
+        "5": "300",
+        "6": "300+"
+      },
+      "pm1": {
+        "0": "0",
+        "1": "10",
+        "2": "20",
+        "3": "40",
+        "4": "60",
+        "5": "90",
+        "6": "90+"
+      },
+      "pm25": {
+        "0": "0",
+        "1": "30",
+        "2": "60",
+        "3": "90",
+        "4": "120",
+        "5": "250",
+        "6": "250+"
+      },
+      "pm10": {
+        "0": "0",
+        "1": "50",
+        "2": "100",
+        "3": "250",
+        "4": "350",
+        "5": "430",
+        "6": "430+"
+      },
+      "co2": {
+        "0": "0",
+        "1": "600",
+        "2": "800",
+        "3": "1000",
+        "4": "1200",
+        "5": "1500",
+        "6": "1500+"
+      },
+      "hcho": {
+        "0": "0",
+        "1": "0.025",
+        "2": "0.050",
+        "3": "0.100",
+        "4": "0.200",
+        "5": "0.350",
+        "6": "0.350+"
+      },
+      "tvoc": {
+        "0": "0",
+        "1": "0.060",
+        "2": "0.220",
+        "3": "0.660",
+        "4": "1",
+        "5": "2.220",
+        "6": "2.220+"
+      }
+    }
+  },
+   "typesOfVisuals": {
+    "title": "विज़ुअल के प्रकार",
+    "description": "विभिन्न स्क्रीन एक ही डिवाइस पर विभिन्न जानकारी तक पहुंचती हैं। बेहतर फॉलो-अप के लिए अधिक सुविधाजनक बनाता है",
+    "screens": {
+      "main": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Main-screen.webp",
+          "alt": "पॉकेट पीएम2.5 मॉनिटर के लिए एक्यूआई टीवी ऐप"
+        },
+        "description": "एलईडी लाइट्स के साथ AQI के इनडोर और आउटडोर डेटा प्रदर्शित करता है जो प्रत्येक प्रदूषक को हाइलाइट करता है।"
+      },
+      "graph": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Graph-screen.webp",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर ग्राफ स्क्रीन"
+        },
+        "description": "गुणवत्ता के उतार-चढ़ाव के ग्राफ के साथ अपने घर में वायु गुणवत्ता के रुझान की जांच करें।"
+      },
+      "concentrated": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Concentrated-Value-visuals.webp",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर पार्टिकल काउंट्स"
+        },
+        "description": "विभिन्न रंगों द्वारा इसकी स्थिति के साथ प्रत्येक प्रदूषक के रीयल-टाइम मान सुनिश्चित करें"
+      },
+      "clock": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Clock-Screen.webp",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर क्लॉक स्क्रीन"
+        },
+        "description": "अपने डिवाइस पर स्क्रीन सेवर सक्रिय करें ताकि इसे AQI के साथ एक डिजिटल घड़ी बना सकें।"
+      },
+      "parameter": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Parameter-Ranges.webp",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर पैरामीटर रेंज"
+        },
+        "description": "अपने कमरे में एयर क्वालिटी पैरामीटर्स की जांच करें और अच्छे से गंभीर तक की स्थिति के अनुसार निर्णय लें।"
+      }
+    },
+    "tabs": {
+      "main": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/concentrated-values.png",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर पार्टिकल काउंट्स"
+        },
+        "title": "मुख्य स्क्रीन"
+      },
+      "graph": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/humi-graph.png",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर ग्राफ स्क्रीन"
+        },
+        "title": "ऐतिहासिक ग्राफ"
+      },
+      "concentrated": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/concentration-value.png",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर कॉन्सेंट्रेशन स्क्रीन"
+        },
+        "title": "केंद्रित मान"
+      },
+      "clock": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/clock-screen.png",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर क्लॉक स्क्रीन"
+        },
+        "title": "स्क्रीन सेवर"
+      },
+      "parameter": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/air-qualtiy-parameters.png",
+          "alt": "प्राणा एयर केयर एयर क्वालिटी मॉनिटर पैरामीटर्स"
+        },
+        "title": "पैरामीटर रेंज"
+      }
+    }
+  },
+   "graphHeading": {
+    "title": "डेटा तुलना ग्राफ",
+    "description": "BAM और प्राणा एयर्स केयर+ की तुलना दिखाती है कि दोनों डेटा सहसंबंधित हैं। हमारा डिवाइस भी उच्च-अंत डिवाइस के रूप में सटीक डेटा दिखाता है।"
+  },
+   "aqiTvApp": {
+    "logo": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+      "alt": "एक्यूआई-लोगो"
+    },
+    "title": "टीवी एप्लिकेशन",
+    "subtitle": {
+      "before": "एक ही स्थान पर रीयल-टाइम",
+      "indoor": "इनडोर",
+      "and": "और",
+      "outdoor": "आउटडोर",
+      "after": "वायु गुणवत्ता की तुलना करें।"
+    },
+    "description": "ताकि आप अंदर रहने या बाहर जाने का सही निर्णय ले सकें।"
+  },
+   "trackQuality": {
+    "title": {
+      "before": "अलग-अलग",
+      "highlight": "हवा की गुणवत्ता",
+      "middle": "को ट्रैक करें जिसे आप",
+      "after": "प्लेटफॉर्म पर सांस लेते हैं"
+    },
+    "logo": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+      "alt": "एक्यूआई लोगो"
+    },
+    "subtitle": "टीवी, मोबाइल ऐप, वेब डैशबोर्ड पर वायु गुणवत्ता डेटा तक पहुंच प्राप्त करें",
+    "tabs": {
+      "mobileApp": "मोबाइल ऐप",
+      "tvApp": "टीवी ऐप",
+      "webDashboard": "वेब डैशबोर्ड"
+    },
+    "mobileApp": {
+      "title": "मोबाइल ऐप",
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2024/01/aqi-mobile-application.png",
+        "alt": "एक्यूआई मोबाइल एप्लिकेशन"
+      },
+      "features": {
+        "health": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/health-advice.png",
+            "alt": "स्वास्थ्य सलाह आइकन"
+          },
+          "title": "स्वास्थ्य सलाह प्राप्त करें",
+          "description": "जब वायु गुणवत्ता अच्छी और खराब हो तो क्या करें और क्या न करें, इसके बारे में कुछ सावधानियां बरतें।"
+        },
+        "realTime": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/real-time-data.png",
+            "alt": "रीयल टाइम और ऐतिहासिक डेटा आइकन"
+          },
+          "title": "रीयल-टाइम और ऐतिहासिक डेटा एक्सेस",
+          "description": "AQI ऐप के माध्यम से रीयल-टाइम और ऐतिहासिक वायु गुणवत्ता डेटा (24 घंटे, सप्ताह, या महीने) तक पहुंचें।"
+        },
+        "buttons": {
+          "ios": {
+            "icon": {
+              "src": "https://www.pranaair.com/wp-content/uploads/2024/01/ios-icon.png",
+              "alt": "आईओएस आइकन"
+            },
+            "textBefore": "डाउनलोड करें",
+            "textHighlight": "आईओएस",
+            "link": "#"
+          },
+          "android": {
+            "icon": {
+              "src": "https://www.pranaair.com/wp-content/uploads/2024/01/android-icon.png",
+              "alt": "एंड्रॉइड आइकन"
+            },
+            "textBefore": "डाउनलोड करें",
+            "textHighlight": "एंड्रॉइड",
+            "link": "#"
+          }
+        }
+      }
+    },
+    "tvApp": {
+      "title": "टीवी ऐप",
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2024/01/aqi-tv-app-interface.png",
+        "alt": "एक्यूआई टीवी ऐप इंटरफेस"
+      },
+      "features": {
+        "themes": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/theme-option.png",
+            "alt": "थीम विकल्प"
+          },
+          "title": "थीम्स विकल्प",
+          "description": "आपके टीवी पर डेटा तक बेहतर पहुंच के लिए विभिन्न थीम प्रदान करता है।"
+        },
+        "connect": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/connect-mob-app.png",
+            "alt": "मोबाइल ऐप कनेक्ट करें"
+          },
+          "title": "मोबाइल ऐप कनेक्ट करें",
+          "description": "मोबाइल ऐप आपके टीवी स्क्रीन से जुड़ सकता है ताकि बड़े स्क्रीन पर विवरण प्राप्त कर सके।"
+        },
+        "button": {
+          "textBefore": "डाउनलोड करें",
+          "textHighlight": "टीवी",
+          "link": "https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew"
+        }
+      }
+    },
+    "webDashboard": {
+      "title": "वेब डैशबोर्ड",
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2024/01/aqi-website-dashboard.png",
+        "alt": "एक्यूआई-वेबसाइट-डैशबोर्ड"
+      },
+      "features": {
+        "remote": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/remote-access.png",
+            "alt": "रिमोट एक्सेस"
+          },
+          "title": "रिमोट एक्सेस",
+          "description": "चलते-फिरते AQI या तापमान के 24*7 मॉनिटर किए गए डेटा तक पहुंच प्राप्त करें।"
+        },
+        "comparison": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/data-comprasion.png",
+            "alt": "डेटा तुलना"
+          },
+          "title": "डेटा तुलना",
+          "description": "एक ही स्थान पर दो अलग-अलग स्थानों के डेटा की तुलना करें और रीयल-टाइम परिणाम प्राप्त करें"
+        },
+        "button": {
+          "textBefore": "लॉगिन",
+          "textHighlight": "एक्यूआई डैशबोर्ड",
+          "link": "https://www.aqi.in/userlogin"
+        }
+      }
+    }
+  },
+   "healthIndex": {
+    "title": {
+      "ai": "एआई",
+      "calculated": "कैलकुलेटेड",
+      "health": "हेल्थ",
+      "indexScore": "इंडेक्स-स्कोर"
+    },
+    "description": "सुनिश्चित करें कि आपका इनडोर वातावरण और थर्मल आराम कैसा है। हमारा डिवाइस तापमान, आर्द्रता और वायु प्रदूषकों की सांद्रता द्वारा इसकी पुष्टि करता है।",
+    "scale": {
+      "bad": "खराब",
+      "moderate": "मध्यम",
+      "good": "अच्छा",
+      "min": "0",
+      "mid": "5",
+      "max": "10"
+    },
+    "scores": {
+      "ventilation": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/ventilation.png",
+          "alt": "वेंटिलेशन"
+        },
+        "title": "वेंटिलेशन स्कोर",
+        "description": "आपके कमरे में ताजी हवा का प्रावधान",
+        "score": "05",
+        "rating": "मध्यम"
+      },
+      "odor": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/odor-score.png",
+          "alt": "गंध स्कोर"
+        },
+        "title": "गंध स्कोर",
+        "description": "कमरे में एक विशिष्ट गंध",
+        "score": "05",
+        "rating": "खराब"
+      },
+      "mold": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/mold-score.png",
+          "alt": "मोल्ड स्कोर"
+        },
+        "title": "मोल्ड स्कोर",
+        "description": "कमरे में मोल्ड गठन की संभावना",
+        "score": "05",
+        "rating": "अच्छा"
+      },
+      "capacity": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/capacity-index.png",
+          "alt": "क्षमता इंडेक्स"
+        },
+        "title": "क्षमता इंडेक्स",
+        "description": "कमरे की लोगों की क्षमता",
+        "score": "05",
+        "rating": "अच्छा"
+      },
+      "comfort": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/comfort-score.png",
+          "alt": "आराम स्कोर"
+        },
+        "title": "आराम स्कोर",
+        "description": "कमरे में शारीरिक आराम की स्थिति",
+        "score": "10",
+        "rating": "अच्छा"
+      },
+      "filtration": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/filtration-score.png",
+          "alt": "फिल्ट्रेशन स्कोर"
+        },
+        "title": "फिल्ट्रेशन स्कोर",
+        "description": "कमरे में फिल्टर की दक्षता",
+        "score": "10",
+        "rating": "खराब"
+      },
+      "mites": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/mites-scroe.png",
+          "alt": "माइट्स स्कोर"
+        },
+        "title": "माइट्स स्कोर",
+        "description": "कमरे में किसी भी माइट्स की उपस्थिति",
+        "score": "02",
+        "rating": "खराब"
+      },
+      "virus": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/virus-index.png",
+          "alt": "वायरस इंडेक्स"
+        },
+        "title": "वायरस इंडेक्स",
+        "description": "कमरे में वायरस गठन की संभावना",
+        "score": "02",
+        "rating": "खराब"
+      }
+    }
+  },
+  "historicData": {
+    "logo": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+      "alt": "एक्यूआई-लोगो"
+    },
+    "title": "वेब डैशबोर्ड",
+    "subtitle": {
+      "icon": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/12/quote-data.png",
+        "alt": "कोट डेटा"
+      },
+      "text": "रीयल-टाइम और ऐतिहासिक डेटा एक्सेस करें"
+    },
+    "description": "हमारा प्लेटफॉर्म वायु गुणवत्ता के लिए महत्वपूर्ण जानकारी तक आसान पहुंच प्रदान करता है। व्यक्ति आसानी से सर्वोत्तम निर्णय ले सकते हैं। अपने स्थान या दिन के समय की परवाह किए बिना रीयल-टाइम डेटा तक पहुंच प्राप्त करें।"
+  },
+  "partsAndLabels": {
+    "title": "पार्ट्स और लेबल्स",
+    "tabs": {
+      "partsLabel": "पार्ट्स और लेबल",
+      "disassembly": "डिसअसेंबली"
+    },
+    "partsLabel": {
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/12/parts-and-label-cair-monitor.png",
+        "alt": "केयर मॉनिटर के पार्ट्स और लेबल"
+      },
+      "components": {
+        "1": "एनडीआईआर सीओ2 सेंसर",
+        "2": "लेजर पार्टिकुलेट सेंसर (पीएम1, पीएम2.5, पीएम10)",
+        "3": "एमईएमएस वोलेटाइल ऑर्गेनिक कंपाउंड सेंसर",
+        "4": "इलेक्ट्रोकेमिकल आधारित फॉर्मलडिहाइड (एचसीएचओ) सेंसर",
+        "5": "वाईफाई मॉड्यूल",
+        "6": "बज़र",
+        "7": "तापमान और आर्द्रता सेंसर"
+      }
+    },
+    "disassembly": {
+      "images": {
+        "main": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/disassambley-cair-monitor.png",
+          "alt": "केयर मॉनिटर डिसअसेंबली"
+        },
+        "inside": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-inside-parts-1.png",
+          "alt": "केयर के अंदर के पार्ट्स"
+        }
+      },
+      "title": "केयर+",
+      "subtitle": "एयर क्वालिटी मॉनिटर",
+      "description": "प्राणा एयर अपने स्वामित्व वाले एयर क्वालिटी इंडेक्स (एक्यूआई) का उपयोग करके इनडोर एयर क्वालिटी का आकलन करने के लिए एक समग्र दृष्टिकोण अपनाता है। अपनी नवीन तकनीक के माध्यम से, प्राणा एयर पीएम2.5 और पीएम10 जैसे प्रदूषकों की निगरानी करता है, साथ ही कण गिनती, तापमान, आर्द्रता, कुल वाष्पशील कार्बनिक यौगिक (टीवीओसी), और फॉर्मलडिहाइड (एचसीएचओ) की भी निगरानी करता है।"
+    }
+  },
+  "longBattery": {
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/1600mah-long-battery.jpg",
+      "alt": "1600mAh लॉन्ग बैटरी"
+    },
+    "capacity": "1600mAh",
+    "title": "बैटरी मॉनिटर",
+    "description": "1600 mAh बैटरी इसे मोबाइल और अधिक उत्पादक बनाती है। USB टाइप-C केबल से जल्दी चार्ज होती है।"
+  },
+   "techSpecs": {
+    "title": "Technical Specifications",
+    "brochure": {
+      "link": "https://www.pranaair.com/wp-content/uploads/2024/02/Prana-air-Cair-Air-quality-monitor-brochure.pdf",
+      "icon": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png",
+        "alt": "brochure-icon"
+      },
+      "text": "Brochure"
+    },
+    "specs": {
+      "parameters": {
+        "title": "Parameters:",
+        "value": "AQI, PM1, PM2.5, PM10, TVOCs, HCHO, CO2, Particle Counts, Temp. & Humi."
+      },
+      "connectivity": {
+        "title": "Connectivity:",
+        "value": "Wi-Fi"
+      },
+      "color": {
+        "title": "Color:",
+        "value": "Ivory"
+      },
+      "size": {
+        "title": "Size:",
+        "value": "11 x 3.4 x 7.5 (in cm)"
+      },
+      "storage": {
+        "title": "Storage:",
+        "value": "Micro SD Card Storage +<br />AQI Cloud Storage"
+      },
+      "weight": {
+        "title": "Weight:",
+        "value": "175g"
+      },
+      "screen": {
+        "title": "Screen:",
+        "value": "Color LED Display"
+      },
+      "powerSupply": {
+        "title": "Power Supply:",
+        "value": "Type C USB Cable"
+      }
+    },
+    "howToConnect": {
+      "title": "How to connect",
+      "qrCode": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2024/04/cair-manual.png",
+          "alt": "QR code for manual"
+        },
+        "text": "SCAN THE QR CODE"
+      },
+      "or": "or",
+      "manual": {
+        "link": "https://www.pranaair.com/wp-content/uploads/2024/02/Prana-Air-Cair-Air-Quality-Monitor-Manual.pdf",
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png",
+          "alt": "brochure-icon"
+        },
+        "text": "Download Manual"
+      }
+    }
+  },
+   "contact": {
+    "title": "संपर्क करें",
+    "description": "कृपया हमें बताएं कि आपकी क्या आवश्यकताएं हैं। हमारी टीम बहुत जल्द आपसे संपर्क करेगी।"
+  },
+  "faqs": {
+    "title": "केयर+ मॉनिटर के अक्सर पूछे जाने वाले प्रश्न",
+    "items": {
+      "1": {
+        "question": "1. प्राणा एयर केयर+ एयर क्वालिटी मॉनिटर क्या मापता है?",
+        "answer": "प्राणा एयर केयर+ एक एयर क्वालिटी मॉनिटर है जो इनडोर एयर पॉल्यूटेंट्स - AQI, PM2.5, PM10, CO2, TVOC, HCHO, तापमान और आर्द्रता को मापने के लिए डिज़ाइन किया गया है। यह विभिन्न प्रदूषकों पर सटीक डेटा प्रदान करता है, जिससे आपको अपनी इनडोर एयर क्वालिटी को समझने और सुधारने में मदद मिलती है।"
+      },
+      "2": {
+        "question": "2. डिवाइस इंटरनेट से कैसे कनेक्ट होता है?",
+        "answer": "केयर+ मॉनिटर में वाई-फाई कनेक्टिविटी है, जिससे यह आपके होम नेटवर्क से आसानी से कनेक्ट हो जाता है। इससे आप अपने मोबाइल, टैबलेट, टीवी ऐप और वेब डैशबोर्ड सहित विभिन्न डिवाइसों पर रीयल-टाइम एयर क्वालिटी डेटा एक्सेस कर सकते हैं।"
+      },
+      "3": {
+        "question": "3. डेटा एक्सेस करने के लिए कौन से प्लेटफॉर्म समर्थित हैं?",
+        "answer": "प्राणा एयर केयर+ डिवाइस डेटा एक्सेस के लिए कई प्लेटफॉर्म का समर्थन करता है। आप अपने मोबाइल डिवाइस (iOS और Android), टैबलेट और यहां तक कि अपने टेलीविजन पर भी एयर क्वालिटी डेटा की निगरानी कर सकते हैं। इसके अतिरिक्त, कंप्यूटर के माध्यम से आसान पहुंच के लिए एक वेब डैशबोर्ड भी उपलब्ध है।"
+      },
+      "4": {
+        "question": "4. क्या केयर+ मॉनिटर पोर्टेबल है?",
+        "answer": "हां, प्राणा एयर केयर+ मॉनिटर पोर्टेबल होने के लिए डिज़ाइन किया गया है। इसका कॉम्पैक्ट आकार आपको अपने रहने के स्थानों के आसपास इसे आसानी से ले जाने की अनुमति देता है, यह सुनिश्चित करता है कि आप अपने घर के विभिन्न कमरों या क्षेत्रों में एयर क्वालिटी की निगरानी कर सकते हैं।"
+      },
+      "5": {
+        "question": "5. केयर+ द्वारा प्रदान किया गया एयर क्वालिटी डेटा कितना सटीक है?",
+        "answer": "केयर+ मॉनिटर एयर क्वालिटी को मापने में अपनी उच्च सटीकता के लिए जाना जाता है। इसके उन्नत सेंसर विभिन्न प्रदूषकों के सटीक रीडिंग प्रदान करते हैं, जिससे आपको अपनी इनडोर एयर क्वालिटी को सुधारने के बारे में सूचित निर्णय लेने के लिए विश्वसनीय जानकारी मिलती है।"
+      }
+    }
+  }
+  
+}

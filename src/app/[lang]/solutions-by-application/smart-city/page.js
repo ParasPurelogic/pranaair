@@ -1,20 +1,10 @@
 "use client"
-
-import { useEffect, useState, useRef } from "react"
 import "./style.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function SmartCityPage() {
-  const [activeSlide, setActiveSlide] = useState(0)
-  const [activeTab, setActiveTab] = useState(0)
-  const [activeFrameTab, setActiveFrameTab] = useState(0)
-  const [activeTechTab, setActiveTechTab] = useState(0)
-  const [activeAccordion, setActiveAccordion] = useState(0)
-  const sliderInterval = useRef(null)
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -72,33 +62,6 @@ export default function SmartCityPage() {
     },
   }
 
-  useEffect(() => {
-    // Auto-slide functionality
-    sliderInterval.current = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % 3)
-    }, 6000)
-
-    return () => {
-      if (sliderInterval.current) {
-        clearInterval(sliderInterval.current)
-      }
-    }
-  }, [])
-
-  const handleSlideChange = (index) => {
-    setActiveSlide(index)
-    if (sliderInterval.current) {
-      clearInterval(sliderInterval.current)
-    }
-    sliderInterval.current = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % 3)
-    }, 6000)
-  }
-
-  const toggleAccordion = (index) => {
-    setActiveAccordion(activeAccordion === index ? null : index)
-  }
-
   return (
     <main className="smart-city-page">
       {/* Banner Section */}
@@ -128,9 +91,6 @@ export default function SmartCityPage() {
             containerClass="carousel-container"
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
-            afterChange={(previousSlide, { currentSlide }) => {
-              setActiveSlide(currentSlide)
-            }}
           >
             <div className="slide">
               <div className="banner-content">
@@ -182,16 +142,16 @@ export default function SmartCityPage() {
             </div>
           </Carousel>
           <div className="slider-buttons">
-            <button className={`slider-button ${activeSlide === 0 ? "active" : ""}`} onClick={() => setActiveSlide(0)}>
+            <button className="slider-button" data-bs-slide="0">
               Real-time Data <br />
               <p>Monitoring</p>
             </button>
-            <button className={`slider-button ${activeSlide === 1 ? "active" : ""}`} onClick={() => setActiveSlide(1)}>
+            <button className="slider-button" data-bs-slide="1">
               Analytical Dashboards
               <br />
               <p>Insightful Data</p>
             </button>
-            <button className={`slider-button ${activeSlide === 2 ? "active" : ""}`} onClick={() => setActiveSlide(2)}>
+            <button className="slider-button" data-bs-slide="2">
               Air Purification <br />
               <p>An Ultimate Solution</p>
             </button>
@@ -227,26 +187,81 @@ export default function SmartCityPage() {
           </div>
 
           <div className="factor-affect-tab">
-            <div className="tab-buttons">
-              <button className={`tab-heading ${activeTab === 0 ? "current" : ""}`} onClick={() => setActiveTab(0)}>
-                PM2.5
-              </button>
-              <button className={`tab-heading ${activeTab === 1 ? "current" : ""}`} onClick={() => setActiveTab(1)}>
-                CO
-              </button>
-              <button className={`tab-heading ${activeTab === 2 ? "current" : ""}`} onClick={() => setActiveTab(2)}>
-                NO2
-              </button>
-              <button className={`tab-heading ${activeTab === 3 ? "current" : ""}`} onClick={() => setActiveTab(3)}>
-                SO2
-              </button>
-              <button className={`tab-heading ${activeTab === 4 ? "current" : ""}`} onClick={() => setActiveTab(4)}>
-                Ozone
-              </button>
-            </div>
+            <ul className="nav nav-tabs" id="factorTab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="pm25-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#pm25"
+                  type="button"
+                  role="tab"
+                  aria-controls="pm25"
+                  aria-selected="true"
+                >
+                  PM2.5
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="co-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#co"
+                  type="button"
+                  role="tab"
+                  aria-controls="co"
+                  aria-selected="false"
+                >
+                  CO
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="no2-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#no2"
+                  type="button"
+                  role="tab"
+                  aria-controls="no2"
+                  aria-selected="false"
+                >
+                  NO2
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="so2-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#so2"
+                  type="button"
+                  role="tab"
+                  aria-controls="so2"
+                  aria-selected="false"
+                >
+                  SO2
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="ozone-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#ozone"
+                  type="button"
+                  role="tab"
+                  aria-controls="ozone"
+                  aria-selected="false"
+                >
+                  Ozone
+                </button>
+              </li>
+            </ul>
 
-            <div className="tab-content">
-              {activeTab === 0 && (
+            <div className="tab-content" id="factorTabContent">
+              <div className="tab-pane fade show active" id="pm25" role="tabpanel" aria-labelledby="pm25-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="factor-tab-image">
@@ -265,9 +280,9 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTab === 1 && (
+              <div className="tab-pane fade" id="co" role="tabpanel" aria-labelledby="co-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="factor-tab-image">
@@ -285,9 +300,9 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTab === 2 && (
+              <div className="tab-pane fade" id="no2" role="tabpanel" aria-labelledby="no2-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="factor-tab-image">
@@ -306,9 +321,9 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTab === 3 && (
+              <div className="tab-pane fade" id="so2" role="tabpanel" aria-labelledby="so2-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="factor-tab-image">
@@ -327,9 +342,9 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTab === 4 && (
+              <div className="tab-pane fade" id="ozone" role="tabpanel" aria-labelledby="ozone-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="factor-tab-image">
@@ -348,7 +363,7 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -502,46 +517,65 @@ export default function SmartCityPage() {
           </div>
 
           <div className="frame-section">
-            <div className="frame-tabs">
-              <button
-                className={`frame-tab ${activeFrameTab === 0 ? "active" : ""}`}
-                onClick={() => setActiveFrameTab(0)}
-              >
-                <div className="frame-tab-number">01</div>
-                <div className="frame-tab-content">
-                  <div className="frame-tab-title">Step 1</div>
-                  <div className="frame-tab-subtitle">Monitor</div>
-                </div>
-                {activeFrameTab === 0 && <div className="frame-tab-arrows">»»»</div>}
-              </button>
+            <ul className="nav nav-tabs" id="frameTab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="monitor-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#monitor"
+                  type="button"
+                  role="tab"
+                  aria-controls="monitor"
+                  aria-selected="true"
+                >
+                  <div className="frame-tab-number">01</div>
+                  <div className="frame-tab-content">
+                    <div className="frame-tab-title">Step 1</div>
+                    <div className="frame-tab-subtitle">Monitor</div>
+                  </div>
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="drone-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#drone"
+                  type="button"
+                  role="tab"
+                  aria-controls="drone"
+                  aria-selected="false"
+                >
+                  <div className="frame-tab-number">02</div>
+                  <div className="frame-tab-content">
+                    <div className="frame-tab-title">Step 2</div>
+                    <div className="frame-tab-subtitle">Drone</div>
+                  </div>
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="purifier-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#purifier"
+                  type="button"
+                  role="tab"
+                  aria-controls="purifier"
+                  aria-selected="false"
+                >
+                  <div className="frame-tab-number">03</div>
+                  <div className="frame-tab-content">
+                    <div className="frame-tab-title">Step 3</div>
+                    <div className="frame-tab-subtitle">Air Purifier</div>
+                  </div>
+                </button>
+              </li>
+            </ul>
 
-              <button
-                className={`frame-tab ${activeFrameTab === 1 ? "active" : ""}`}
-                onClick={() => setActiveFrameTab(1)}
-              >
-                <div className="frame-tab-number">02</div>
-                <div className="frame-tab-content">
-                  <div className="frame-tab-title">Step 2</div>
-                  <div className="frame-tab-subtitle">Drone</div>
-                </div>
-                {activeFrameTab === 1 && <div className="frame-tab-arrows">»»»</div>}
-              </button>
-
-              <button
-                className={`frame-tab ${activeFrameTab === 2 ? "active" : ""}`}
-                onClick={() => setActiveFrameTab(2)}
-              >
-                <div className="frame-tab-number">03</div>
-                <div className="frame-tab-content">
-                  <div className="frame-tab-title">Step 3</div>
-                  <div className="frame-tab-subtitle">Air Purifier</div>
-                </div>
-                {activeFrameTab === 2 && <div className="frame-tab-arrows reverse">«««</div>}
-              </button>
-            </div>
-
-            <div className="frame-content">
-              {activeFrameTab === 0 && (
+            <div className="tab-content" id="frameTabContent">
+              <div className="tab-pane fade show active" id="monitor" role="tabpanel" aria-labelledby="monitor-tab">
                 <div className="frame-content-item">
                   <div className="frame-image">
                     <img
@@ -559,9 +593,9 @@ export default function SmartCityPage() {
                     </p>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeFrameTab === 1 && (
+              <div className="tab-pane fade" id="drone" role="tabpanel" aria-labelledby="drone-tab">
                 <div className="frame-content-item">
                   <div className="frame-image">
                     <img
@@ -579,9 +613,9 @@ export default function SmartCityPage() {
                     </p>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeFrameTab === 2 && (
+              <div className="tab-pane fade" id="purifier" role="tabpanel" aria-labelledby="purifier-tab">
                 <div className="frame-content-item">
                   <div className="frame-image">
                     <img
@@ -599,7 +633,7 @@ export default function SmartCityPage() {
                     </p>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -627,24 +661,34 @@ export default function SmartCityPage() {
             </div>
           </div>
 
-          <div className="accordian-tabs">
+          <div className="accordion" id="accordionAirQuality">
             <div className="accordion-item">
+              <h2 className="accordion-header" id="headingOne">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <div className="accord-icons">
+                    <img
+                      className="heading-icon"
+                      src="https://www.pranaair.com/wp-content/uploads/2023/08/ambient-air-monitor-green-icon.png"
+                      alt=""
+                    />
+                  </div>
+                  <h4>Ambient Air Quality Monitor</h4>
+                </button>
+              </h2>
               <div
-                className={`accordian-tab-heading one-num ${activeAccordion === 0 ? "active" : ""}`}
-                onClick={() => toggleAccordion(0)}
+                id="collapseOne"
+                className="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionAirQuality"
               >
-                <div className="accord-icons">
-                  <img
-                    className="heading-icon"
-                    src="https://www.pranaair.com/wp-content/uploads/2023/08/ambient-air-monitor-green-icon.png"
-                    alt=""
-                  />
-                </div>
-                <h4>Ambient Air Quality Monitor</h4>
-              </div>
-
-              {activeAccordion === 0 && (
-                <div className="accordion-content">
+                <div className="accordion-body">
                   <div className="main-box">
                     <div className="row">
                       <div className="col-lg-5">
@@ -842,9 +886,7 @@ export default function SmartCityPage() {
                           <div className="overlay">
                             <div className="text">
                               <h3>AQI Air Quality App</h3>
-                              <p>
-                                The free AQI mobile app for people to check the air quality level anytime anywhere.
-                              </p>
+                              <p>The free AQI mobile app for people to check the air quality level anytime anywhere.</p>
                             </div>
                           </div>
                         </li>
@@ -899,26 +941,36 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  <div className="accord-icons">
+                    <img
+                      className="heading-icon drone-icon"
+                      src="https://www.pranaair.com/wp-content/uploads/2023/08/drone-green-icon.png"
+                      alt="drone icon"
+                    />
+                  </div>
+                  <h4>Air Quality Drone</h4>
+                </button>
+              </h2>
               <div
-                className={`accordian-tab-heading two-num ${activeAccordion === 1 ? "active" : ""}`}
-                onClick={() => toggleAccordion(1)}
+                id="collapseTwo"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionAirQuality"
               >
-                <div className="accord-icons">
-                  <img
-                    className="heading-icon drone-icon"
-                    src="https://www.pranaair.com/wp-content/uploads/2023/08/drone-green-icon.png"
-                    alt="drone icon"
-                  />
-                </div>
-                <h4>Air Quality Drone</h4>
-              </div>
-
-              {activeAccordion === 1 && (
-                <div className="accordion-content">
+                <div className="accordion-body">
                   <div className="main-box">
                     <div className="row">
                       <div className="col-lg-5">
@@ -1142,26 +1194,36 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             <div className="accordion-item">
+              <h2 className="accordion-header" id="headingThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  <div className="accord-icons">
+                    <img
+                      className="heading-icon purifier-icon"
+                      src="https://www.pranaair.com/wp-content/uploads/2023/08/purifier-green-icon.png"
+                      alt="purifier icon"
+                    />
+                  </div>
+                  <h4>Outdoor Air Purifier</h4>
+                </button>
+              </h2>
               <div
-                className={`accordian-tab-heading three-num ${activeAccordion === 2 ? "active" : ""}`}
-                onClick={() => toggleAccordion(2)}
+                id="collapseThree"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionAirQuality"
               >
-                <div className="accord-icons">
-                  <img
-                    className="heading-icon purifier-icon"
-                    src="https://www.pranaair.com/wp-content/uploads/2023/08/purifier-green-icon.png"
-                    alt="purifier icon"
-                  />
-                </div>
-                <h4>Outdoor Air Purifier</h4>
-              </div>
-
-              {activeAccordion === 2 && (
-                <div className="accordion-content">
+                <div className="accordion-body">
                   <div className="main-box">
                     <div className="row">
                       <div className="col-lg-5">
@@ -1353,7 +1415,7 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -1367,29 +1429,53 @@ export default function SmartCityPage() {
           </h2>
 
           <div className="tech-spec-tab">
-            <div className="tab-buttons">
-              <button
-                className={`tab-heading ${activeTechTab === 0 ? "current" : ""}`}
-                onClick={() => setActiveTechTab(0)}
-              >
-                Ambient Monitor
-              </button>
-              <button
-                className={`tab-heading ${activeTechTab === 1 ? "current" : ""}`}
-                onClick={() => setActiveTechTab(1)}
-              >
-                Drone
-              </button>
-              <button
-                className={`tab-heading ${activeTechTab === 2 ? "current" : ""}`}
-                onClick={() => setActiveTechTab(2)}
-              >
-                Air Purifier
-              </button>
-            </div>
+            <ul className="nav nav-tabs" id="techTab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="ambient-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#ambient"
+                  type="button"
+                  role="tab"
+                  aria-controls="ambient"
+                  aria-selected="true"
+                >
+                  Ambient Monitor
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="tech-drone-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tech-drone"
+                  type="button"
+                  role="tab"
+                  aria-controls="tech-drone"
+                  aria-selected="false"
+                >
+                  Drone
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="tech-purifier-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tech-purifier"
+                  type="button"
+                  role="tab"
+                  aria-controls="tech-purifier"
+                  aria-selected="false"
+                >
+                  Air Purifier
+                </button>
+              </li>
+            </ul>
 
-            <div className="tab-content">
-              {activeTechTab === 0 && (
+            <div className="tab-content" id="techTabContent">
+              <div className="tab-pane fade show active" id="ambient" role="tabpanel" aria-labelledby="ambient-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="tech-spec">
@@ -1456,9 +1542,9 @@ export default function SmartCityPage() {
                     </ul>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTechTab === 1 && (
+              <div className="tab-pane fade" id="tech-drone" role="tabpanel" aria-labelledby="tech-drone-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="tech-spec">
@@ -1517,9 +1603,9 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTechTab === 2 && (
+              <div className="tab-pane fade" id="tech-purifier" role="tabpanel" aria-labelledby="tech-purifier-tab">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="tech-spec">
@@ -1578,7 +1664,7 @@ export default function SmartCityPage() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
 
@@ -1758,7 +1844,6 @@ export default function SmartCityPage() {
             </div>
           </div>
           <ContactForm pageName="Cair Monitor Page" />
-          
         </div>
       </section>
 
@@ -1778,13 +1863,27 @@ export default function SmartCityPage() {
             </div>
           </div>
 
-          <div className="my-tab">
+          <div className="accordion" id="faqAccordion">
             <div className="accordion-item my-tab-section">
-              <div className="accordion-header" onClick={() => toggleAccordion(10)}>
-                <h4>1. What is Prana Airs smart city air quality monitoring and solutions project?</h4>
-              </div>
-              {activeAccordion === 10 && (
-                <div className="accordion-content faq-tab-para">
+              <h2 className="accordion-header" id="headingFaq1">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFaq1"
+                  aria-expanded="true"
+                  aria-controls="collapseFaq1"
+                >
+                  <h4>1. What is Prana Airs smart city air quality monitoring and solutions project?</h4>
+                </button>
+              </h2>
+              <div
+                id="collapseFaq1"
+                className="accordion-collapse collapse show"
+                aria-labelledby="headingFaq1"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body faq-tab-para">
                   <p>
                     Prana Airs smart city air quality monitoring and solutions project is a comprehensive solution that
                     provides air quality monitors, air quality drones, outdoor air purifiers, and data dashboards to
@@ -1792,17 +1891,31 @@ export default function SmartCityPage() {
                     standards, protect public health, and reduce greenhouse gas emissions.
                   </p>
                 </div>
-              )}
+              </div>
             </div>
 
             <div className="accordion-item my-tab-section">
-              <div className="accordion-header" onClick={() => toggleAccordion(11)}>
-                <h4>
-                  2. What are the benefits of Prana Airs smart city air quality monitoring and solutions project?
-                </h4>
-              </div>
-              {activeAccordion === 11 && (
-                <div className="accordion-content faq-tab-para">
+              <h2 className="accordion-header" id="headingFaq2">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFaq2"
+                  aria-expanded="false"
+                  aria-controls="collapseFaq2"
+                >
+                  <h4>
+                    2. What are the benefits of Prana Airs smart city air quality monitoring and solutions project?
+                  </h4>
+                </button>
+              </h2>
+              <div
+                id="collapseFaq2"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingFaq2"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body faq-tab-para">
                   <p>
                     Prana Airs smart city air quality monitoring and solutions project offers a number of benefits,
                     including:
@@ -1821,7 +1934,7 @@ export default function SmartCityPage() {
                     emissions by promoting the use of cleaner fuels and technologies.
                   </p>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Add more FAQ items as needed */}
@@ -1961,7 +2074,39 @@ export default function SmartCityPage() {
           </div>
         </div>
       </section>
+
+      {/* Bootstrap initialization script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all Bootstrap components
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+              return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Handle slider buttons
+            var sliderButtons = document.querySelectorAll('.slider-button');
+            sliderButtons.forEach(function(button, index) {
+              button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                sliderButtons.forEach(function(btn) {
+                  btn.classList.remove('active');
+                });
+                // Add active class to clicked button
+                button.classList.add('active');
+              });
+            });
+            
+            // Set first slider button as active by default
+            if (sliderButtons.length > 0) {
+              sliderButtons[0].classList.add('active');
+            }
+          });
+        `,
+        }}
+      />
     </main>
   )
 }
-

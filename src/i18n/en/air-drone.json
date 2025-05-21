@@ -1,0 +1,188 @@
+{
+  "hero": {
+    "title": "AIR QUALITY MONITORING DRONE",
+    "subtitle": "Transforming Environmental Insights Real-time Air Quality Data with Cutting-edge Drone Technology"
+  },
+  "features": {
+    "intro": "Industry leaders trust Prana Air to grow their revenue",
+    "realTimeData": "Real-Time Data",
+    "lightweightDesign": "Lightweight Design",
+    "modularSensors": "Modular Sensors",
+    "highAccuracy": "High Accuracy",
+    "robustConnectivity": "Robust Connectivity"
+  },
+  "droneCategory": {
+    "title": "Drone Category",
+    "vtol": {
+      "title": "Prana VTOL",
+      "description": "The Prana VTOL (Vertical Takeoff and Landing) is a high-tech fixed-wing FPV drone designed for long-range air quality monitoring. It combines the ability to take off vertically with a long flight range of up to 90 km. This makes it perfect for mapping pollution, checking industrial compliance, and conducting environmental research. With a thermal camera and advanced sensors, it provides real-time data, even in remote or difficult areas.",
+      "specs": {
+        "largeAreaCoverage": "large-area coverage",
+        "longDurationMissions": "long-duration missions",
+        "thermalImaging": "thermal imaging",
+        "range": "range",
+        "flightSpeed": "flight speed",
+        "cruisingSpeed": "cruising speed",
+        "altitudeTolerance": "altitude tolerance",
+        "maxEnduranceTime": "Maximum Endurance Time",
+        "maxEnduranceTimeDesc": "50 minutes to 90 minutes",
+        "maximumRange": "Maximum Range",
+        "maximumRangeDesc": "50 km to 90 km",
+        "remoteControlRange": "Remote Control Range",
+        "remoteControlRangeDesc": "15 km in open conditions",
+        "windResistance": "Wind Resistance",
+        "windResistanceDesc": "Level 5"
+      }
+    },
+    "quad": {
+      "title": "Prana Quad",
+      "description": "The Prana Quad is a small and fast quadcopter designed for detailed air quality monitoring in specific areas. It is perfect for cities and quick operations because it is easy to set up, carry, and use. With a 20-minute flight time and high-precision sensors, it helps detect pollution sources and monitor air quality in real-time.",
+      "specs": {
+        "rapidResponse": "rapid response",
+        "localizedPollutionTracking": "localized pollution tracking",
+        "laserRanging": "laser ranging",
+        "controlRange": "1km control range",
+        "ultraPortability": "ultra-portability",
+        "maxSpeed": "max speed",
+        "maxFlightAltitude": "max flight altitude",
+        "maxFlightTime": "max flight time",
+        "maxFlightTimeDesc": "20 minutes with payload",
+        "takeoffWeight": "takeoff weight: approx.",
+        "maxPayload": "max payload"
+      }
+    },
+    "buttons": {
+      "requestQuote": "Request a quote",
+      "brochure": "Brochure"
+    }
+  },
+  "airQualityMonitor": {
+    "title": "Advanced Air Quality Monitoring Technology",
+    "subtitle": "Both drones leverage AI-powered sensor suites to detect and map pollutants, enabling",
+    "pollutionSource": "Pollution Source Identification",
+    "environmentalCompliance": "Environmental Compliance",
+    "healthRisk": "Health Risk Mitigation"
+  },
+  "parameters": {
+    "title": "Parameters",
+    "subtitle": "Measured",
+    "pm1": "PM1",
+    "pm25": "PM2.5",
+    "pm10": "PM10",
+    "temp": "TEMP",
+    "humid": "Humid",
+    "ch4": "CH4",
+    "co": "CO",
+    "h2s": "H2S",
+    "nh3": "NH3",
+    "no2": "NO2",
+    "o3": "O3",
+    "so2": "SO2"
+  },
+  "appController": {
+    "title": "Data Insights from Controller or App Connectivity",
+    "realTimeMaps": {
+      "title": "Real-Time Maps",
+      "description": "Visual representation of current air quality data"
+    },
+    "historicalData": {
+      "title": "Historical Data",
+      "description": "Analysis of past measurements for trend identification"
+    },
+    "graphGeneration": {
+      "title": "Graph Generation",
+      "description": "Visual graphs for easy interpretation"
+    },
+    "dataPlotting": {
+      "title": "Data Plotting",
+      "description": "Detailed plots for in-depth analysis"
+    },
+    "heatMaps": {
+      "title": "Heat Maps",
+      "description": "Colour-coded maps highlighting pollution hotspots"
+    },
+    "customData": {
+      "title": "Custom Data",
+      "description": "Tailored reports based on user needs"
+    }
+  },
+  "thermalCamera": {
+    "title": "Dual Night vision + Thermal camera",
+    "description": "High-resolution camera with GNSS integration for precise geo-tagging.",
+    "aiObjectTracking": "AI Object Tracking",
+    "stabilization": "±0.01° stabilization"
+  },
+  "battery": {
+    "title": "5000 mAh",
+    "subtitle": "High capacity Battery",
+    "description": "Up to 90km range with 90minute flight time (4SP and 3S Li-ion)",
+    "type1": "4SP",
+    "type2": "3S Li-ion"
+  },
+  "lightweightDrone": {
+    "title": "Lightweight Drone for Quick & Easy Air Monitoring",
+    "description": "Smallest, fastest Air Quality Drone as Weighing just 720g—perfect for quick pollution checks in cities. it is easy to deploy and manoeuvre, making it perfect for localized pollution tracking."
+  },
+  "longEnduranceDrone": {
+    "title": "Long-Endurance Drone for Large-Scale Pollution Mapping",
+    "description": "Designed for big missions, the Prana Air Drone can fly up to 90 km and stay airborne for long time. As whether monitoring industrial regions or large areas, it ensures maximum coverage with precise air quality insights!"
+  },
+  "advancedAirQuality": {
+    "title": "Advanced Air Quality",
+    "subtitle": "Monitoring Technology"
+  },
+  "labellingDrone": {
+    "title": "Labelling of Drone",
+    "requestQuote": "Request a quote",
+    "description": "High-resolution camera with GNSS integration for precise geo-tagging."
+  },
+  "gallery": {
+    "title": "Product Gallery"
+  },
+  "comparison": {
+    "title": "VTOL vs. Quad: Tailored for Your Needs",
+    "categories": {
+      "flightRange": "Flight Range",
+      "useCase": "Use Case",
+      "camera": "Camera",
+      "portability": "Portability"
+    },
+    "vtol": {
+      "title": "Prana VTOL",
+      "range": "90km (long-endurance)",
+      "useCase": "Industrial sites, environmental research",
+      "camera": "Thermal + 4K night vision",
+      "portability": "Compact design, 1.8kg max weight",
+      "requestQuote": "Request a quote"
+    },
+    "quad": {
+      "title": "Prana QUAD",
+      "range": "1km (localized precision)",
+      "useCase": "Urban areas, rapid deployments",
+      "camera": "High-resolution with GNSS",
+      "portability": "Ultra-lightweight (720g), 5-inch props",
+      "requestQuote": "Request a quote"
+    }
+  },
+  "techSpecs": {
+    "title": "Technical Specifications",
+    "brochure": "Brochure",
+    "parameters": "Parameters:",
+    "materials": "Materials:",
+    "workingCurrent": "Working current:",
+    "deviceDimension": "Device dimension:"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "question1": "1. What does Prana Air Cair+ air quality monitor measure?",
+    "answer1": "Prana Air Cair+ is an air quality monitor designed to measure indoor air pollutants - AQI, PM2.5, PM10, CO2, TVOC, HCHO, Temperature, and Humidity. It provides accurate data on various pollutants, helping you understand and improve your indoor air quality.",
+    "question2": "2. How does the device connect to the internet?",
+    "answer2": "Cair+ monitor features WiFi connectivity, allowing it to seamlessly connect to your home network. This enables you to access real-time air quality data on various devices, including your mobile, tablet, TV app, and through a web dashboard.",
+    "question3": "3. What platforms are supported for accessing data?",
+    "answer3": "Prana Air Cair+ device supports multiple platforms for data access. You can monitor air quality data on your mobile devices (iOS and Android), tablets, and even your television. Additionally, a web dashboard is available for easy access via a computer.",
+    "question4": "4. Is Cair+ monitor portable?",
+    "answer4": "Yes, Prana Air Cair+ monitor is designed to be portable. Its compact size allows you to move it around your living spaces effortlessly, ensuring that you can monitor air quality in different rooms or areas of your home.",
+    "question5": "5. How accurate is the air quality data provided by Cair+?",
+    "answer5": "Cair+ monitor is known for its high accuracy in measuring air quality. Its advanced sensors provide precise readings of various pollutants, giving you reliable information to make informed decisions about improving your indoor air quality."
+  }
+}

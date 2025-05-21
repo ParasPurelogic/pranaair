@@ -55,7 +55,7 @@ export default async function AirMaskPage() {
         <div className="row">
           <div className="col-md-12">
             <h2 style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "22pt" }}>Anti Pollution Mask</span>
+              <span style={{ fontSize: "22pt" }}>{t("heading.title")}</span>
               <sup>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
@@ -66,10 +66,7 @@ export default async function AirMaskPage() {
               </sup>
             </h2>
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "13pt" }}>
-                Stay healthy and breathe clean air with <strong>Prana Air</strong> N95 pollution mask which has a highly
-                advanced hepa filter.
-              </span>
+              <span style={{ fontSize: "13pt" }}>{t("heading.subtitle")}</span>
             </p>
           </div>
         </div>
@@ -79,7 +76,7 @@ export default async function AirMaskPage() {
             <div style={{ height: "45px" }}></div>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2021/02/prana-air-2nd-gen-n95-pollution-mask-online.jpg"
-              alt="Prana Air N95 Mask"
+              alt={t("image.alt")}
               width={600}
               height={600}
             />
@@ -88,101 +85,55 @@ export default async function AirMaskPage() {
             <div style={{ height: "20px" }}></div>
             <h2>
               <strong>
-                <span style={{ fontSize: "16pt" }}>Product Features:</span>
+                <span style={{ fontSize: "16pt" }}>{t("features.title")}</span>
               </strong>
             </h2>
 
             <div className="info-list">
-              <div className="info-list-item">
-                <div className="info-icon">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2021/02/layer.png"
-                    alt="Layer Icon"
-                    width={50}
-                    height={50}
-                  />
+              {[
+                {
+                  icon: "layer.png",
+                  title: t("features.layer.title"),
+                  desc: t("features.layer.desc"),
+                },
+                {
+                  icon: "fan.png",
+                  title: t("features.fan.title"),
+                  desc: t("features.fan.desc"),
+                },
+                {
+                  icon: "ventilation.png",
+                  title: t("features.vent.title"),
+                  desc: t("features.vent.desc"),
+                },
+                {
+                  icon: "95.png",
+                  title: t("features.efficiency.title"),
+                  desc: t("features.efficiency.desc"),
+                },
+                {
+                  icon: "usb.png",
+                  title: t("features.usb.title"),
+                  desc: t("features.usb.desc"),
+                },
+              ].map((item, i) => (
+                <div className="info-list-item" key={i}>
+                  <div className="info-icon">
+                    <Image
+                      src={`https://www.pranaair.com/wp-content/uploads/2021/02/${item.icon}`}
+                      alt={item.title}
+                      width={50}
+                      height={50}
+                    />
+                  </div>
+                  <div className="info-content">
+                    <h3>{item.title}</h3>
+                    <p>
+                      <span style={{ fontSize: "12pt" }}>{item.desc}</span>
+                    </p>
+                  </div>
                 </div>
-                <div className="info-content">
-                  <h3>5 Layer Hepa Filters</h3>
-                  <p>
-                    <span style={{ fontSize: "12pt" }}>Maximum protection from PM2.5, pollen, dust, and smoke</span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="info-list-item">
-                <div className="info-icon">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2021/02/fan.png"
-                    alt="Fan Icon"
-                    width={50}
-                    height={50}
-                  />
-                </div>
-                <div className="info-content">
-                  <h3>3 Modes of Fan Speed</h3>
-                  <p>
-                    <span style={{ fontSize: "12pt" }}>
-                      Control the air volume and circulation with different modes
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="info-list-item">
-                <div className="info-icon">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2021/02/ventilation.png"
-                    alt="Ventilation Icon"
-                    width={50}
-                    height={50}
-                  />
-                </div>
-                <div className="info-content">
-                  <h3>Micro Ventilator</h3>
-                  <p>
-                    <span style={{ fontSize: "12pt" }}>
-                      Acts as a wall between outdoor polluted air and indoor purified air
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="info-list-item">
-                <div className="info-icon">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2021/02/95.png"
-                    alt="95% Icon"
-                    width={50}
-                    height={50}
-                  />
-                </div>
-                <div className="info-content">
-                  <h3>95.99% Efficiency</h3>
-                  <p>
-                    <span style={{ fontSize: "12pt" }}>
-                      Advanced filtration technology to filter polluted air particles
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="info-list-item">
-                <div className="info-icon">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2021/02/usb.png"
-                    alt="USB Icon"
-                    width={50}
-                    height={50}
-                  />
-                </div>
-                <div className="info-content">
-                  <h3>Micro USB Charging</h3>
-                  <p>
-                    <span style={{ fontSize: "12pt" }}>Easily rechargeable battery with a micro USB cable</span>
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -193,17 +144,9 @@ export default async function AirMaskPage() {
         <div className="row">
           <div className="col-md-12">
             <h2 style={{ fontSize: "13pt", textAlign: "center" }}>
-              <span style={{ fontSize: "18pt" }}>What is the need to use an air mask?</span>
+              <span style={{ fontSize: "18pt" }}>{t("need.title")}</span>
             </h2>
-            <p style={{ fontSize: "13pt", textAlign: "center" }}>
-              According to WHO statistics, there were an estimated 6.5 million deaths globally in 2012 from air
-              pollution-related disorders. That amounts to 11.6% of all homicides worldwide, more than the number of
-              deaths from tuberculosis, HIV/AIDS, and traffic accidents. According to a new report by the WHO, fine
-              particles (PM2.5) kill 7 million of the global population annually. According to a paper published in the
-              Lancet Planetary Health, air pollution causes approximately 9 million premature deaths each year, or one
-              in every six deaths worldwide. That is why it is important to save ourselves and our loved ones from
-              harmful air pollution.
-            </p>
+            <p style={{ fontSize: "13pt", textAlign: "center" }}>{t("need.description")}</p>
           </div>
         </div>
       </div>
@@ -223,15 +166,10 @@ export default async function AirMaskPage() {
             <div className="col-md-2"></div>
             <div className="col-md-8">
               <h3 className="whitetext" style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "18pt" }}>
-                  Is Prana Air mask effective against viruses such as Sars-Cov-2?
-                </span>
+                <span style={{ fontSize: "18pt" }}>{t("effectiveness.title")}</span>
               </h3>
               <p className="whitetext" style={{ fontSize: "13pt", textAlign: "center" }}>
-                Prana Air mask can prevent the spread and inhalation of droplets larger than 0.3μg in size. When a
-                person sneezes or coughs, the &gt;5μg Droplets fall to the ground due to gravity, while the 0.3μg
-                droplets move through the air. The danger of infection is greatly decreased when the mask is used
-                properly and in accordance with the instructions.
+                {t("effectiveness.description")}
               </p>
             </div>
             <div className="col-md-2"></div>
@@ -244,16 +182,10 @@ export default async function AirMaskPage() {
         <div className="row">
           <div className="col-md-12">
             <h3 style={{ textAlign: "center", fontSize: "22px", fontWeight: "500", paddingTop: "25px" }}>
-              Breathe Clean Air this Winter
+              {t("winter.title")}
             </h3>
             <p style={{ fontSize: "13pt", textAlign: "center" }}>
-              Every year India sees an alarming increase in air pollution around the Diwali festival. The concentration
-              of PM2.5 is recorded 5–6 times higher than safe limits set by NAAQS (National Ambient Air Quality
-              Standards). Breathing this air puts you and your loved ones at risk of heart diseases, respiratory
-              diseases, and lung cancer. Relieve yourself and your loved ones from the clutches of these fatal ailments
-              and switch to the Prana 2nd Gen N95 mask which has the 5-layer filtration system so that you can breathe
-              clean and fresh air. It has a HEPA filter which is known to filter out particles as small as 2.5 microns.
-              It also ensures comfort with its adjustable fan feature.
+              {t("winter.description")}
             </p>
           </div>
         </div>
@@ -278,7 +210,7 @@ export default async function AirMaskPage() {
                 <h2 style={{ textAlign: "left" }}>
                   <span style={{ color: "#000000" }}>
                     <span style={{ fontSize: "18pt" }}>
-                      What<strong> happens if you dont wear a pollution mask?</strong>
+                      {t("noMask.title.part1")}<strong>{t("noMask.title.part2")}</strong>
                     </span>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
@@ -291,26 +223,18 @@ export default async function AirMaskPage() {
                 <div style={{ textAlign: "justify" }}>
                   <span style={{ fontSize: "14pt", color: "#000000" }}>
                     <span style={{ color: "#000000" }}>
-                      According to WHO recommendations, annual average PM2.5 concentrations should be under 10
-                      micrograms (mcg) per cubic meter, however, the vast majority of people (99%) on earth live in
-                      places where this limit is exceeded.
+                      {t("noMask.paragraph1")}
                     </span>
                   </span>
                   <br />
                   <br />
                   <span style={{ color: "#000000", fontSize: "14pt" }}>
-                    Many individuals believe that the only air pollutants present are dirt and smoke. The real culprit,
-                    however, is PM2.5. These are fine particulate particles about 1/13th the size of human hair. This
-                    pollutant is hazardous because it penetrates deeply into your respiratory tract, reaching your
-                    lungs, and then can enter your bloodstream, triggering a variety of health problems.
+                    {t("noMask.paragraph2")}
                   </span>
                   <br />
                   <br />
                   <span style={{ color: "#000000", fontSize: "14pt" }}>
-                    When exposed to such fine particles, it can produce short-term health effects such as irritation of
-                    the eyes, nose, and throat, which can lead to coughing, sneezing, runny nose, and shortness of
-                    breath, to mention a few. Long-term exposure to PM2.5 can harm the lungs and cause asthma and heart
-                    problems.
+                    {t("noMask.paragraph3")}
                   </span>
                 </div>
               </div>
@@ -325,9 +249,9 @@ export default async function AirMaskPage() {
           <div className="col-md-12">
             <h2 style={{ textAlign: "center" }}>
               <span style={{ fontSize: "16pt" }}>
-                <span style={{ color: "#000" }}>What</span>
+                <span style={{ color: "#000" }}>{t("noMaskMobile.title.part1")}</span>
                 <strong>
-                  <span style={{ color: "#000" }}> happens if you dont wear a pollution mask?</span>
+                  <span style={{ color: "#000" }}>{t("noMaskMobile.title.part2")}</span>
                 </strong>
               </span>
               <Image
@@ -338,20 +262,10 @@ export default async function AirMaskPage() {
               />
             </h2>
             <div style={{ textAlign: "center" }}>
-              <span style={{ color: "#000", fontSize: "12pt" }}>
-                Many people think dirt and smoke are the only air pollutants present in the air. However, the real
-                culprit of all is PM2.5. It is a fine particulate matter that is 1/13th of the diameter of a human hair.
-                This pollutant is dangerous as they penetrate deep into your respiratory tract, reaching your lungs and
-                causing you various health trouble.
-              </span>
+              <span style={{ color: "#000", fontSize: "12pt" }}>{t("noMaskMobile.paragraph1")}</span>
             </div>
             <div style={{ textAlign: "center" }}>
-              <span style={{ color: "#000", fontSize: "12pt" }}>
-                Once exposed to such fine particles, it can cause short-term health effects such as eyes, nose, throat
-                irritation, which can further become a cause to coughing, sneezing, runny nose, shortness of breath to
-                name a few. Exposed to PM2.5 for a long time can affect the lungs and may also cause asthma and heart
-                disease.
-              </span>
+              <span style={{ color: "#000", fontSize: "12pt" }}>{t("noMaskMobile.paragraph2")}</span>
             </div>
           </div>
         </div>
@@ -364,12 +278,12 @@ export default async function AirMaskPage() {
             <div className="col-md-12">
               <h2 style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "22pt" }}>
-                  <span style={{ fontSize: "22pt" }}>Air Mask Filtration</span>
+                  <span style={{ fontSize: "22pt" }}>{t("filtration.title")}</span>
                 </span>
                 <sup>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                    alt="logo"
+                    alt={t("airMask.logoAlt")}
                     width={30}
                     height={30}
                   />
@@ -379,7 +293,7 @@ export default async function AirMaskPage() {
               <div className="text-center">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/prana-air-multi-layers-filter-of-n95-mask.png"
-                  alt="Prana Air Mask Filtration"
+                  alt={t("filtration.imageAlt")}
                   width={745}
                   height={538}
                 />
@@ -389,38 +303,38 @@ export default async function AirMaskPage() {
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/motion-mask-fan-icon.png"
-                    alt="mask fan icon"
+                    alt={t("filtration.features.fanSpeed.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>3 Different Fan Speeds</h4>
+                  <h4>{t("filtration.features.fanSpeed.title")}</h4>
                 </div>
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/motion-mask-filter-layer-icon.png"
-                    alt="mask filter layer icon"
+                    alt={t("filtration.features.layerProtection.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>5 Layer Protection</h4>
+                  <h4>{t("filtration.features.layerProtection.title")}</h4>
                 </div>
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/mask-battery-icon.png"
-                    alt="mask battery icon"
+                    alt={t("filtration.features.batteryLife.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>Upto 2 Hrs Battery Life</h4>
+                  <h4>{t("filtration.features.batteryLife.title")}</h4>
                 </div>
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/motion-mask-weight-icon.png"
-                    alt="mask battery icon"
+                    alt={t("filtration.features.lightweight.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>70 Grams Lightweight</h4>
+                  <h4>{t("filtration.features.lightweight.title")}</h4>
                 </div>
                 <div className="clear"></div>
               </div>
@@ -430,8 +344,7 @@ export default async function AirMaskPage() {
                 style={{ fontSize: "20px", textAlign: "center", color: "#383838", lineHeight: "1.8" }}
                 className="head-proxima"
               >
-                Our masks come with 5 different filter layers that serve as multiple layers of protection against
-                different air pollutants:
+                {t("filtration.description")}
               </p>
             </div>
           </div>
@@ -453,7 +366,7 @@ export default async function AirMaskPage() {
             >
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2021/09/2nd-gen-95-mask.jpg"
-                alt="Prana Air N95 Mask 2nd Gen"
+                alt={t("companions.imageAlt")}
                 width={900}
                 height={577}
                 className="mask-img"
@@ -465,10 +378,10 @@ export default async function AirMaskPage() {
                 style={{ textAlign: "left" }}
               >
                 <strong>
-                  <span style={{ fontSize: "24pt" }}>Perfect Outdoor Companions</span>
+                  <span style={{ fontSize: "24pt" }}>{t("companions.title")}</span>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                    alt="logo"
+                    alt={t("airMask.logoAlt")}
                     width={30}
                     height={30}
                   />
@@ -476,56 +389,54 @@ export default async function AirMaskPage() {
               </h4>
               <div style={{ height: "10px" }}></div>
               <p style={{ fontSize: "16px", textAlign: "left", color: "#383838", lineHeight: "1.8" }}>
-                Prana Air Anti Pollution Mask is designed with comfort in mind to provide optimum protection from
-                hazardous pollutants such as dust, particle matter (PM2.5 and PM10), carbon monoxide, and sulphur
-                dioxide, which are commonly found in smoke from vehicle exhausts, factories, and bushfires.
+                {t("companions.description")}
               </p>
 
               <div className="animateme scrollme">
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/pm2.5-icon.png"
-                    alt="pm2.5 icon"
+                    alt={t("companions.pollutants.pm25.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>PM 2.5</h4>
+                  <h4>{t("companions.pollutants.pm25.title")}</h4>
                 </div>
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/carbon-monoxide-icon.png"
-                    alt="carbon monoxide icon"
+                    alt={t("companions.pollutants.carbonMonoxide.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>Carbon Monoxide</h4>
+                  <h4>{t("companions.pollutants.carbonMonoxide.title")}</h4>
                 </div>
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/so2-icon.png"
-                    alt="so2 icon"
+                    alt={t("companions.pollutants.sulphurDioxide.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>Sulphur Dioxide</h4>
+                  <h4>{t("companions.pollutants.sulphurDioxide.title")}</h4>
                 </div>
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/dust-icon.png"
-                    alt="dust icon"
+                    alt={t("companions.pollutants.dust.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>Dust</h4>
+                  <h4>{t("companions.pollutants.dust.title")}</h4>
                 </div>
                 <div className="icon-col">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/05/smoke-icon.png"
-                    alt="smoke icon"
+                    alt={t("companions.pollutants.smoke.iconAlt")}
                     width={80}
                     height={80}
                   />
-                  <h4>Smoke</h4>
+                  <h4>{t("companions.pollutants.smoke.title")}</h4>
                 </div>
                 <div className="clear"></div>
               </div>
@@ -550,7 +461,7 @@ export default async function AirMaskPage() {
             >
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2021/02/prana-air-motorizied-system-n95-mask.png"
-                alt="Prana Air Mask Micro Ventilator"
+                alt={t("ventilator.imageAlt")}
                 width={576}
                 height={570}
                 className="mask-img"
@@ -559,21 +470,18 @@ export default async function AirMaskPage() {
             <div className="col-md-6 padd companions-col">
               <h4 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated">
                 <strong>
-                  <span style={{ fontSize: "24pt" }}>Micro Ventilator</span>
+                  <span style={{ fontSize: "24pt" }}>{t("ventilator.title")}</span>
                 </strong>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
+                  alt={t("airMask.logoAlt")}
                   width={30}
                   height={30}
                 />
               </h4>
               <div style={{ height: "10px" }}></div>
               <p style={{ textAlign: "justify" }}>
-                The best thing with our air mask is that they have a micro-ventilator which eliminates the unpleasant
-                build-up of carbon dioxide, and prevents you from breathing in recycled air. It is easily chargeable
-                with a micro USB cable and comes with different fan modes. It is adjustable depending on the pollution
-                level.
+                {t("ventilator.description")}
               </p>
             </div>
           </div>
@@ -595,7 +503,7 @@ export default async function AirMaskPage() {
             >
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2021/10/a-lady-wearing-prana-air-n95-pollution-mask.jpg"
-                alt="Prana Air N95 Mask Stylish"
+                alt={t("stylish.imageAlt")}
                 width={900}
                 height={584}
                 className="mask-img"
@@ -604,28 +512,25 @@ export default async function AirMaskPage() {
             <div className="col-md-6 padd companions-col">
               <h4 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated">
                 <span style={{ fontSize: "24pt" }}>
-                  <strong>Stylish</strong>
+                  <strong>{t("stylish.title")}</strong>
                 </span>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
+                  alt={t("airMask.logoAlt")}
                   width={30}
                   height={30}
                 />
               </h4>
               <div style={{ height: "10px" }}></div>
               <p style={{ textAlign: "justify" }}>
-                <span style={{ fontSize: "12pt" }}>
-                  Our fashionable and stylish anti-pollution face mask can be worn anywhere. You are protected wherever
-                  and everywhere you go.
-                </span>
+                <span style={{ fontSize: "12pt" }}>{t("stylish.description")}</span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Product Section with Tabs - Using Bootstrap Tabs */}
+      {/* Product Section with Tabs */}
       <div className="product-sec">
         <div className="container">
           <div className="row">
@@ -644,7 +549,7 @@ export default async function AirMaskPage() {
                       aria-controls="motion-mask-tab-pane"
                       aria-selected="true"
                     >
-                      2nd Gen Mask
+                      {t("productTabs.tabs.secondGen")}
                     </button>
                   </li>
                   <li className="nav-item" role="presentation">
@@ -658,7 +563,7 @@ export default async function AirMaskPage() {
                       aria-controls="city-mask-tab-pane"
                       aria-selected="false"
                     >
-                      Junior Mask
+                      {t("productTabs.tabs.junior")}
                     </button>
                   </li>
                 </ul>
@@ -676,7 +581,7 @@ export default async function AirMaskPage() {
                       <div className="col-md-6">
                         <Image
                           src="https://www.pranaair.com/wp-content/uploads/2021/02/prana-air-2nd-gen-n95-pollution-mask-online.jpg"
-                          alt="Prana Air N95 Mask"
+                          alt={t("productTabs.secondGen.imageAlt")}
                           width={572}
                           height={429}
                         />
@@ -687,56 +592,56 @@ export default async function AirMaskPage() {
                           <table>
                             <tbody>
                               <tr>
-                                <th>Colors</th>
-                                <td>White with 3 caps - pink, grey, white</td>
+                                <th>{t("productTabs.specs.colors")}</th>
+                                <td>{t("productTabs.secondGen.colors")}</td>
                               </tr>
                               <tr>
-                                <th>Filter layers</th>
-                                <td>5</td>
+                                <th>{t("productTabs.specs.filterLayers")}</th>
+                                <td>{t("productTabs.secondGen.filterLayers")}</td>
                               </tr>
                               <tr>
-                                <th>HEPA compliant</th>
-                                <td>Yes</td>
+                                <th>{t("productTabs.specs.hepaCompliant")}</th>
+                                <td>{t("productTabs.secondGen.hepaCompliant")}</td>
                               </tr>
                               <tr>
-                                <th>Purification efficiency</th>
-                                <td>upto 95.99%</td>
+                                <th>{t("productTabs.specs.purificationEfficiency")}</th>
+                                <td>{t("productTabs.secondGen.purificationEfficiency")}</td>
                               </tr>
                               <tr>
-                                <th>Fan speed</th>
-                                <td>3 modes</td>
+                                <th>{t("productTabs.specs.fanSpeed")}</th>
+                                <td>{t("productTabs.secondGen.fanSpeed")}</td>
                               </tr>
                               <tr>
-                                <th>Charging mode</th>
-                                <td>USB charging</td>
+                                <th>{t("productTabs.specs.chargingMode")}</th>
+                                <td>{t("productTabs.secondGen.chargingMode")}</td>
                               </tr>
                               <tr>
-                                <th>Charging time</th>
-                                <td>1 to 1.5 hours</td>
+                                <th>{t("productTabs.specs.chargingTime")}</th>
+                                <td>{t("productTabs.secondGen.chargingTime")}</td>
                               </tr>
                               <tr>
-                                <th>Battery duration</th>
-                                <td> Upto 2 hours</td>
+                                <th>{t("productTabs.specs.batteryDuration")}</th>
+                                <td>{t("productTabs.secondGen.batteryDuration")}</td>
                               </tr>
                               <tr>
-                                <th>Battery capacity</th>
-                                <td>680 mAh</td>
+                                <th>{t("productTabs.specs.batteryCapacity")}</th>
+                                <td>{t("productTabs.secondGen.batteryCapacity")}</td>
                               </tr>
                               <tr>
-                                <th>Weight</th>
-                                <td>70 grams</td>
+                                <th>{t("productTabs.specs.weight")}</th>
+                                <td>{t("productTabs.secondGen.weight")}</td>
                               </tr>
                               <tr>
-                                <th>Voltage</th>
-                                <td>3.7V-5.2V</td>
+                                <th>{t("productTabs.specs.voltage")}</th>
+                                <td>{t("productTabs.secondGen.voltage")}</td>
                               </tr>
                               <tr>
-                                <th>Noise</th>
-                                <td>&lt;28dB(A)</td>
+                                <th>{t("productTabs.specs.noise")}</th>
+                                <td>{t("productTabs.secondGen.noise")}</td>
                               </tr>
                               <tr>
-                                <th>Price</th>
-                                <td>2990 INR</td>
+                                <th>{t("productTabs.specs.price")}</th>
+                                <td>{t("productTabs.secondGen.price")}</td>
                               </tr>
                             </tbody>
                           </table>
@@ -756,7 +661,7 @@ export default async function AirMaskPage() {
                       <div className="col-md-6">
                         <Image
                           src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-adult-kid-n95-mask.jpg"
-                          alt="Prana Air Junior Mask"
+                          alt={t("productTabs.junior.imageAlt")}
                           width={600}
                           height={600}
                         />
@@ -767,60 +672,60 @@ export default async function AirMaskPage() {
                           <table>
                             <tbody>
                               <tr>
-                                <th>Colors</th>
-                                <td>White, Pink, Blue</td>
+                                <th>{t("productTabs.specs.colors")}</th>
+                                <td>{t("productTabs.junior.colors")}</td>
                               </tr>
                               <tr>
-                                <th>Filter layers</th>
-                                <td>5</td>
+                                <th>{t("productTabs.specs.filterLayers")}</th>
+                                <td>{t("productTabs.junior.filterLayers")}</td>
                               </tr>
                               <tr>
-                                <th>HEPA compliant</th>
-                                <td>Yes</td>
+                                <th>{t("productTabs.specs.hepaCompliant")}</th>
+                                <td>{t("productTabs.junior.hepaCompliant")}</td>
                               </tr>
                               <tr>
-                                <th>Purification efficiency</th>
-                                <td>&gt;95%</td>
+                                <th>{t("productTabs.specs.purificationEfficiency")}</th>
+                                <td>{t("productTabs.junior.purificationEfficiency")}</td>
                               </tr>
                               <tr>
-                                <th>Fan speed</th>
-                                <td>3 modes</td>
+                                <th>{t("productTabs.specs.fanSpeed")}</th>
+                                <td>{t("productTabs.junior.fanSpeed")}</td>
                               </tr>
                               <tr>
-                                <th>Charging mode</th>
-                                <td>USB charging</td>
+                                <th>{t("productTabs.specs.chargingMode")}</th>
+                                <td>{t("productTabs.junior.chargingMode")}</td>
                               </tr>
                               <tr>
-                                <th>Charging time</th>
-                                <td>1.5 hours</td>
+                                <th>{t("productTabs.specs.chargingTime")}</th>
+                                <td>{t("productTabs.junior.chargingTime")}</td>
                               </tr>
                               <tr>
-                                <th>Battery duration</th>
-                                <td>upto 3 hours</td>
+                                <th>{t("productTabs.specs.batteryDuration")}</th>
+                                <td>{t("productTabs.junior.batteryDuration")}</td>
                               </tr>
                               <tr>
-                                <th>Battery capacity</th>
-                                <td>1000 mAh</td>
+                                <th>{t("productTabs.specs.batteryCapacity")}</th>
+                                <td>{t("productTabs.junior.batteryCapacity")}</td>
                               </tr>
                               <tr>
-                                <th>Dimensions</th>
-                                <td>120x110x50 (mm)</td>
+                                <th>{t("productTabs.specs.dimensions")}</th>
+                                <td>{t("productTabs.junior.dimensions")}</td>
                               </tr>
                               <tr>
-                                <th>Weight</th>
-                                <td>62 grams</td>
+                                <th>{t("productTabs.specs.weight")}</th>
+                                <td>{t("productTabs.junior.weight")}</td>
                               </tr>
                               <tr>
-                                <th>Voltage</th>
-                                <td>5V</td>
+                                <th>{t("productTabs.specs.voltage")}</th>
+                                <td>{t("productTabs.junior.voltage")}</td>
                               </tr>
                               <tr>
-                                <th>Noise</th>
-                                <td>&lt;28db(A)</td>
+                                <th>{t("productTabs.specs.noise")}</th>
+                                <td>{t("productTabs.junior.noise")}</td>
                               </tr>
                               <tr>
-                                <th>Price</th>
-                                <td>2499 INR</td>
+                                <th>{t("productTabs.specs.price")}</th>
+                                <td>{t("productTabs.junior.price")}</td>
                               </tr>
                             </tbody>
                           </table>
@@ -847,7 +752,7 @@ export default async function AirMaskPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h5 style={{ fontSize: "25px", textAlign: "center" }}>Unboxing Video of 2nd Gen Pollution Mask</h5>
+              <h5 style={{ fontSize: "25px", textAlign: "center" }}>{t("unboxing.title")}</h5>
               <div className="row">
                 <div className="col-md-12">
                   <iframe
@@ -881,7 +786,7 @@ export default async function AirMaskPage() {
                 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated"
                 style={{ textAlign: "center" }}
               >
-                What is in the box?
+                {t("boxContents.title")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                   alt="logo"
@@ -893,7 +798,7 @@ export default async function AirMaskPage() {
                 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated"
                 style={{ textAlign: "center" }}
               >
-                <span style={{ fontSize: "18pt" }}>2nd Gen Mask</span>
+                <span style={{ fontSize: "18pt" }}>{t("boxContents.maskType")}</span>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                   alt="logo"
@@ -960,12 +865,12 @@ export default async function AirMaskPage() {
                 style={{
                   fontSize: "30px",
                   textAlign: "left",
-                  color: "#040404",
+                  color: "#fff",
                   lineHeight: "36px",
                 }}
                 className="head-proxima"
               >
-                Mask Product Specification
+                {t("specifications.title")}
               </h4>
               <div style={{ height: "15px" }}></div>
             </div>
@@ -974,7 +879,7 @@ export default async function AirMaskPage() {
             <div className="col-md-6 detail-img-col">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2021/10/box-content-of-2nd-gen-mask.jpg"
-                alt="Prana Air N95 Mask Specification"
+                alt={t("specifications.imageAlt")}
                 width={592}
                 height={395}
               />
@@ -984,79 +889,79 @@ export default async function AirMaskPage() {
                 <table>
                   <tbody>
                     <tr>
-                      <th>PRODUCT FEATURES</th>
-                      <th>JUNIOR MASK</th>
-                      <th>2nd Gen Mask</th>
+                      <th>{t("specifications.table.header.features")}</th>
+                      <th>{t("specifications.table.header.juniorMask")}</th>
+                      <th>{t("specifications.table.header.secondGenMask")}</th>
                     </tr>
                     <tr>
-                      <th>Colors</th>
-                      <td>White, Pink, Yellow</td>
-                      <td>White, Pink, Grey</td>
+                      <th>{t("specifications.table.rows.colors.label")}</th>
+                      <td>{t("specifications.table.rows.colors.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.colors.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Filter layers</th>
-                      <td>5</td>
-                      <td>5</td>
+                      <th>{t("specifications.table.rows.filterLayers.label")}</th>
+                      <td>{t("specifications.table.rows.filterLayers.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.filterLayers.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>HEPA compliant</th>
-                      <td>Yes</td>
-                      <td>Yes</td>
+                      <th>{t("specifications.table.rows.hepaCompliant.label")}</th>
+                      <td>{t("specifications.table.rows.hepaCompliant.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.hepaCompliant.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Purification efficiency</th>
-                      <td>&gt;upto 95%</td>
-                      <td>upto 95.99%</td>
+                      <th>{t("specifications.table.rows.purificationEfficiency.label")}</th>
+                      <td>{t("specifications.table.rows.purificationEfficiency.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.purificationEfficiency.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Fan speed</th>
-                      <td>3 modes</td>
-                      <td>3 modes</td>
+                      <th>{t("specifications.table.rows.fanSpeed.label")}</th>
+                      <td>{t("specifications.table.rows.fanSpeed.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.fanSpeed.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Charging mode</th>
-                      <td>USB charging</td>
-                      <td>USB charging</td>
+                      <th>{t("specifications.table.rows.chargingMode.label")}</th>
+                      <td>{t("specifications.table.rows.chargingMode.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.chargingMode.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Charging time</th>
-                      <td>1.5-2 hours</td>
-                      <td>1.5 hours</td>
+                      <th>{t("specifications.table.rows.chargingTime.label")}</th>
+                      <td>{t("specifications.table.rows.chargingTime.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.chargingTime.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Battery duration</th>
-                      <td>upto 3 hours</td>
-                      <td>upto 2 hours</td>
+                      <th>{t("specifications.table.rows.batteryDuration.label")}</th>
+                      <td>{t("specifications.table.rows.batteryDuration.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.batteryDuration.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Battery capacity</th>
-                      <td>1000 mAh</td>
-                      <td>680 mAh</td>
+                      <th>{t("specifications.table.rows.batteryCapacity.label")}</th>
+                      <td>{t("specifications.table.rows.batteryCapacity.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.batteryCapacity.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Dimensions</th>
-                      <td>120x110x50 (mm)</td>
-                      <td>110x90x50 (mm)</td>
+                      <th>{t("specifications.table.rows.dimensions.label")}</th>
+                      <td>{t("specifications.table.rows.dimensions.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.dimensions.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Weight</th>
-                      <td>62 grams</td>
-                      <td>78 grams</td>
+                      <th>{t("specifications.table.rows.weight.label")}</th>
+                      <td>{t("specifications.table.rows.weight.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.weight.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Voltage</th>
-                      <td>5V</td>
-                      <td>3.7V-5.2V</td>
+                      <th>{t("specifications.table.rows.voltage.label")}</th>
+                      <td>{t("specifications.table.rows.voltage.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.voltage.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Noise</th>
-                      <td>&lt;28db(A)</td>
-                      <td>&lt;28db(A)</td>
+                      <th>{t("specifications.table.rows.noise.label")}</th>
+                      <td>{t("specifications.table.rows.noise.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.noise.secondGenMask")}</td>
                     </tr>
                     <tr>
-                      <th>Price</th>
-                      <td>1990 INR</td>
-                      <td>999 INR</td>
+                      <th>{t("specifications.table.rows.price.label")}</th>
+                      <td>{t("specifications.table.rows.price.juniorMask")}</td>
+                      <td>{t("specifications.table.rows.price.secondGenMask")}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1091,11 +996,11 @@ export default async function AirMaskPage() {
                 }}
                 className="head-proxima"
               >
-                Dont wait any longer.
+                {t("protect.heading.line1")}
                 <br />
-                Start protecting yourself
+                {t("protect.heading.line2")}
                 <br />
-                today.
+                {t("protect.heading.line3")}
               </h2>
               <div style={{ height: "20px" }}></div>
               <p
@@ -1106,26 +1011,28 @@ export default async function AirMaskPage() {
                   lineHeight: "1.6",
                 }}
               >
-                Our pollution masks are made of eco-friendly
+                {t("protect.description.line1")}
                 <br />
-                plastic, lightweight and comfortable to wear.
+                {t("protect.description.line2")}
               </p>
               <div style={{ height: "30px" }}></div>
               <p style={{ textAlign: "center" }}>
                 <a className="bg-btn bg-green" href="#">
-                  Buy Now
+                  {t("protect.buttons.buyNow")}
                 </a>
                 <a
                   className="bg-btn bg-orange alignnone"
                   href="https://www.amazon.in/Prana-Air-2nd-Gen-Multi-Layers/dp/B08F2LHKTV/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/02/quality-amazon.png"
-                    alt="amazon"
+                    alt={t("protect.buttons.amazonAlt")}
                     width={15}
                     height={15}
                   />
-                  amazon
+                  {t("protect.buttons.amazon")}
                 </a>
               </p>
             </div>
@@ -1138,276 +1045,36 @@ export default async function AirMaskPage() {
         <div className="row">
           <div className="col-md-12">
             <h3 style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "18pt" }}>Frequently Asked Questions</span>
+              <span style={{ fontSize: "18pt" }}>{t("faq.title.line1")}</span>
               <br />
-              <span style={{ fontSize: "18pt" }}>About Prana Air Mask</span>
+              <span style={{ fontSize: "18pt" }}>{t("faq.title.line2")}</span>
             </h3>
 
             <div className="accordion faq-accordion" id="faqAccordion">
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading1">
-                  <button
-                    className="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse1"
-                    aria-expanded="true"
-                    aria-controls="collapse1"
+              {t("faq.questions", { returnObjects: true }).map((question, index) => (
+                <div className="accordion-item" key={index}>
+                  <h2 className="accordion-header" id={`heading${index + 1}`}>
+                    <button
+                      className={`accordion-button ${index === 0 ? "" : "collapsed"}`}
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#collapse${index + 1}`}
+                      aria-expanded={index === 0 ? "true" : "false"}
+                      aria-controls={`collapse${index + 1}`}
+                    >
+                      {`${index + 1}. ${question.question}`}
+                    </button>
+                  </h2>
+                  <div
+                    id={`collapse${index + 1}`}
+                    className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}
+                    aria-labelledby={`heading${index + 1}`}
+                    data-bs-parent="#faqAccordion"
                   >
-                    1. Is the air mask available in white color only?
-                  </button>
-                </h2>
-                <div
-                  id="collapse1"
-                  className="accordion-collapse collapse show"
-                  aria-labelledby="heading1"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    - There are 3 colors of the cap only for 2nd Gen Mask- White, Pink, Grey.
+                    <div className="accordion-body">{question.answer}</div>
                   </div>
                 </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading2">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse2"
-                    aria-expanded="false"
-                    aria-controls="collapse2"
-                  >
-                    2. Are the mask straps adjustable?
-                  </button>
-                </h2>
-                <div
-                  id="collapse2"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading2"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">- Yes, you can adjust the air mask straps.</div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading3">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse3"
-                    aria-expanded="false"
-                    aria-controls="collapse3"
-                  >
-                    3. How to charge it?
-                  </button>
-                </h2>
-                <div
-                  id="collapse3"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading3"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">- It is easily chargeable with a micro USB cable.</div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading4">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse4"
-                    aria-expanded="false"
-                    aria-controls="collapse4"
-                  >
-                    4. How many modes of the fan are there?
-                  </button>
-                </h2>
-                <div
-                  id="collapse4"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading4"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    - The air mask comes with 3 different fan modes. It is adjustable depending on the pollution level.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading5">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse5"
-                    aria-expanded="false"
-                    aria-controls="collapse5"
-                  >
-                    5. How much does it weigh?
-                  </button>
-                </h2>
-                <div
-                  id="collapse5"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading5"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">- It is a lightweight air mask, with a weight of 70 grams.</div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading6">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse6"
-                    aria-expanded="false"
-                    aria-controls="collapse6"
-                  >
-                    6. How long does the battery last when fully charged?
-                  </button>
-                </h2>
-                <div
-                  id="collapse6"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading6"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">- The battery lasts up to 2 hours on a single full charge.</div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading7">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse7"
-                    aria-expanded="false"
-                    aria-controls="collapse7"
-                  >
-                    7. Does the air mask help protect from viruses like COVID-19?
-                  </button>
-                </h2>
-                <div
-                  id="collapse7"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading7"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    -Yes, it is highly recommended to wear a mask to stop the virus from spreading.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading8">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse8"
-                    aria-expanded="false"
-                    aria-controls="collapse8"
-                  >
-                    8. How many filters does the mask have?
-                  </button>
-                </h2>
-                <div
-                  id="collapse8"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading8"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    - There is only 1 filter with multi-layer of pre-filter & HEPA filter.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading9">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse9"
-                    aria-expanded="false"
-                    aria-controls="collapse9"
-                  >
-                    9. What air pollutants can the mask filter out?
-                  </button>
-                </h2>
-                <div
-                  id="collapse9"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading9"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    - Dust (PM10, PM2.5), Carbon Monoxide, Sulphur Dioxide, Smoke, etc.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading10">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse10"
-                    aria-expanded="false"
-                    aria-controls="collapse10"
-                  >
-                    10. Is the fan speed adjustable?
-                  </button>
-                </h2>
-                <div
-                  id="collapse10"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading10"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">
-                    - Yes, the fan speed is adjustable, you can adjust it with 3 different modes.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="heading11">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse11"
-                    aria-expanded="false"
-                    aria-controls="collapse11"
-                  >
-                    11. How efficient is the Prana Air- Air Mask?
-                  </button>
-                </h2>
-                <div
-                  id="collapse11"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="heading11"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">- The purification efficiency of the air mask is up to 95.99%.</div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

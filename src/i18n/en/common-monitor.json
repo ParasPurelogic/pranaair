@@ -1,0 +1,414 @@
+{
+    "ambientBanner": {
+    "headingPara": "Measure Air Pollution With",
+    "pranaText": "Prana Air",
+    "title": "Smart Air Quality Monitors",
+    "description": "Monitor, Analyze, and Control Your Air Quality with Precision Technology.",
+    "contactUs": "Contact Us",
+    "ariaLabel": "prana air ambient air quality all monitors",
+    "iconAlt": "Contact icon"
+  },
+  "productTabs": {
+    "explore": "Explore",
+    "title": "Air Quality Monitoring Devices",
+    "subtitle": "For Every Space: Home, Office, & Industrial Use",
+    "categories": {
+      "handheld": "Handheld",
+      "indoor": "Indoor",
+      "outdoor": "Outdoor"
+    },
+    "altTexts": {
+      "arrowIcon": "icon",
+      "rating": "card-rating"
+    },
+    "specs": {
+      "connectivity": "Connectivity",
+      "battery": "Battery"
+    },
+    "buttons": {
+      "buyNow": "Buy Now",
+      "knowMore": "Know More"
+    },
+    "products": {
+      "pocketCO2": {
+        "name": "Pocket CO2 Monitor",
+        "price": "₹4,999",
+        "connectivity": "WiFi",
+        "battery": "400 mAh",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-Co2.png",
+        "imageAlt": "prana air pocket co2 monitor",
+        "link": "/air-quality-monitor/pocket-co2-monitor/",
+        "formAction": "https://www.pranaair.com/product/pocket-co2-monitor/"
+      },
+      "pocketPM": {
+        "name": "Pocket PM2.5 Monitor",
+        "price": "₹3,499",
+        "connectivity": "WiFi",
+        "battery": "450 mAh",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.png",
+        "imageAlt": "prana air pocket pm2.5 monitor",
+        "link": "/air-quality-monitor/handheld/pocket-monitor/",
+        "formAction": "https://www.pranaair.com/product/pm2-5-pocket-monitor/"
+      },
+      "sensible": {
+        "name": "Sensible Monitor",
+        "price": "₹59,999",
+        "connectivity": "WiFi",
+        "battery": "NA",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/sensible-air-quality-monitor.png",
+        "imageAlt": "prana air sensible air quality monitor",
+        "link": "/air-quality-monitor/sensible-air-monitor/",
+        "formAction": "https://www.pranaair.com/product/sensible-air-monitor/"
+      },
+      "ambientPM": {
+        "name": "Ambient PM",
+        "price": "Request A Quote",
+        "connectivity": "WiFi / GSM",
+        "battery": "NA",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/07/Ambient-PM-product.png",
+        "imageAlt": "prana air sensible air quality monitor",
+        "link": "/air-quality-monitor/ambient-air-monitor/",
+        "formAction": "https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
+      }
+    }
+  },
+   "features": {
+    "title": {
+      "part1": "Why Should You Choose",
+      "part2": "Prana Air's Air Pollution Monitors?"
+    },
+    "compliance": {
+      "part1": "Compliance with",
+      "leedWell": "LEED, WELL,",
+      "and": "and",
+      "ashrae": "ASHRAE",
+      "standards": "standards"
+    },
+    "lowCost": {
+      "title": "Low-cost and Highly Reliable Data",
+      "description": "Cost-effective solutions without compromising on accuracy, using high-end sensors for measuring.",
+      "alt": "low-cost and reliable data"
+    },
+    "remoteData": {
+      "title": "Remote Data at Your Fingertips",
+      "description": "Monitor air quality anytime, anywhere through the AQI mobile app, TV app or web dashboard.",
+      "alt": "remote data connectivity"
+    },
+    "personalized": {
+      "title": "Personalized Air Quality Monitoring",
+      "description": "Customized solutions for various industries, offering clear, detailed data views.",
+      "alt": "air quality monitoring devices"
+    },
+    "perfect": {
+      "title": "Perfect for every application",
+      "description": "Accurate, real-time pollutant tracking with compact, easy-to-use devices.",
+      "alt": "hassle free precision monitoring"
+    },
+    "versatile": {
+      "title": "Versatile Connectivity",
+      "description": "Connect via Wi-Fi, GSM, or RS-485 and integrate with BMS for 24/7 real-time monitoring.",
+      "alt": "versatile connectivity"
+    }
+  },
+  "howItWorks": {
+    "title": "How Does An Air Quality Monitoring System Work?",
+    "pcb": {
+      "number": "01",
+      "title": "PCB Embedded or Platform",
+      "description": "The PCB manages power, processing, and communication. It converts analogue to digital output, supports BMS (Battery Management System), and enables data logging and communication via Wi-Fi, Bluetooth, or LoRa.",
+      "alt": "air quality PCB"
+    },
+    "sensors": {
+      "number": "02",
+      "title": "Sensors For Air Quality Detection",
+      "description": "Sensors detect pollutants and undergo calibration for accuracy. Automation helps them adjust to factors like temperature and humidity. Bisynking ensures multiple sensors cross-verify data for reliability.",
+      "alt": "air quality sensors"
+    },
+    "fromSensorToData": {
+      "title": "From Sensor to Data:",
+      "subtitle": "From Sensor to Data: How Air Quality Monitors Work"
+    },
+    "housing": {
+      "number": "03",
+      "title": "Housing Protecting the System",
+      "description": "The housing ensures proper sampling of air for precise readings. A perfection-oriented design reduces interference. Weatherproofing protects against environmental damage, while a robust structure ensures durability.",
+      "alt": "air quality monitor housing"
+    },
+    "dashboard": {
+      "number": "04",
+      "title": "Dashboard Analyzing and Visualizing Data",
+      "description": "The dashboard processes and displays air quality data. The backend (server) handles data storage and processing, while the frontend presents graphs, alerts, and insights for easy monitoring.",
+      "alt": "air quality dashboard"
+    }
+  },
+  "airPollutants": {
+    "title": "Air Pollutants, Its Sources & the Health Impacts",
+    "tabs": {
+      "pm": "PM2.5/10",
+      "co2": "CO2",
+      "tvoc": "TVOC",
+      "hcho": "HCHO"
+    },
+    "sourcesTitle": "Sources",
+    "healthImpactTitle": "Health Impact",
+    "exploreMore": "Explore More",
+    "backgroundImageAlt": "background img",
+    "pm": {
+      "title": "Particulate Matter",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/07/sources-of-pm2.5.jpg",
+      "imageAlt": "Sources of PM2.5",
+      "sources": "Indoor sources- cooking, candle burning, tobacco smoking, kerosene heaters, construction activities. Outdoor sources- forest fires, earthquakes, volcanic eruptions, power plants, waste treatment plants, oil refineries, etc.",
+      "healthImpact": "PM 2.5 diameter is less than 2.5 microns and easily enters the lungs and bloodstream. It causes sneezing, inflammation, skin allergies, asthma, coughing, pneumonia, irregular heartbeat, nonfatal heart attacks, etc. A high PM 2.5 level reduces the visibility. It can also lead to environmental changes as well. PM10 causes allergies that can influence sensitive groups.",
+      "link": "/what-is-particulate-matter-pm/",
+      "backgroundImage": "https://www.pranaair.com/wp-content/uploads/2024/02/pm-bg.png"
+    },
+    "co2": {
+      "title": "CO2",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/07/sources-of-CO2.jpg",
+      "imageAlt": "Sources of CO2",
+      "sources": "The top source of indoor presence of CO2 is humans. As humans inhale oxygen and exhale CO2. It also releases from heating devices, oil-burning coal, and gas burning. CO2 is also emitted because of Deforestation or soil degradation.",
+      "healthImpact": "High CO2 levels highly influence the individuals performance in a school or office. CO2 exposure can cause headaches, dizziness, restlessness, breathing difficulty, increased heart rate, and other symptoms. CO2 emissions also cause global warming. Long-term exposure can cause extreme health issues. Such as cardiac arrest, and impaired cognitive function.",
+      "link": "/what-is-carbon-dioxide-co2/",
+      "backgroundImage": "https://www.pranaair.com/wp-content/uploads/2024/03/CO2-bg.png"
+    },
+    "tvoc": {
+      "title": "TVOC",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/07/sources-of-tvoc-odor-gas.jpg",
+      "imageAlt": "Sources of TVOC",
+      "sources": "Indoor- Paint, glue, soaps, fabrics, wood, cleansers, plastic products, solvents, etc. TVOCs vaporate at room temperature and release into the air. Outdoor sources of TVOCs are industrial processes, wildfires, and vehicle emissions.",
+      "healthImpact": "TVOCs evaporate at room temperature. It causes strong odors that cause headaches, fatigue (tiredness), dizziness, nosebleeding, and eye, nose, and throat irritation. High exposure to TVOCs can cause severe health issues. Such as nausea, asthma, and damage to the kidneys, liver, or nervous system. Some chemicals can also cause cancer in animals.",
+      "link": "/what-is-voc/",
+      "backgroundImage": "https://www.pranaair.com/wp-content/uploads/2024/03/TVOC-bg.png"
+    },
+    "hcho": {
+      "title": "HCHO",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/07/sources-of-hcho-gas.jpg",
+      "imageAlt": "Sources of HCHO",
+      "sources": "Indoor: Smoking, cleaning products, furniture, burning fuel, cosmetics, paint, incense lighting, etc. releases HCHO in the indoor air. Outdoor: HCHO releases from natural gases burning, gasoline, etc.",
+      "healthImpact": "HCHO exposure can cause extreme health issues. Any individual can face irritation of the eyes, nose, and throat. It can also lead to skin or lung allergies. With it, it increases the chances of some types of cancer and also causes consciousness loss, pneumonia, and other extreme health issues. HCHO exposure can also affect reproductive health.",
+      "backgroundImage": "https://www.pranaair.com/wp-content/uploads/2024/03/HCHO-bg.png"
+    }
+  },
+  "typesAirQuality": {
+    "title": "Types of Air Quality Monitoring",
+    "tabs": {
+      "ambient": "Ambient Monitoring",
+      "indoor": "Indoor Monitoring"
+    },
+    "indoor": {
+      "title": "Indoor Air Quality",
+      "paragraph1": "Indoor air quality (IAQ) refers to the air quality within and around buildings and structures, especially as it relates to the health and comfort of building occupants. Understanding and controlling common pollutants indoors can help reduce your risk of indoor health concerns.",
+      "paragraph2": "Indoor air can be 2-5 times more polluted than outdoor air. Poor indoor air quality has been linked to a range of health issues, from minor discomfort to serious respiratory conditions.",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/09/Prana-sense.webp",
+      "imageAlt": "Indoor Air Quality"
+    },
+    "outdoor": {
+      "title": "Outdoor Air Quality",
+      "paragraph1": "Outdoor air quality refers to the condition of the air in the open environment. It is affected by a variety of factors including industrial emissions, vehicle exhaust, weather conditions, wildfires, and other natural and human activities.",
+      "paragraph2": "Poor outdoor air quality can have significant impacts on human health, particularly for vulnerable populations such as children, the elderly, and those with pre-existing respiratory or cardiovascular conditions.",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/09/Indoor-monitor.webp",
+      "imageAlt": "Outdoor Air Quality"
+    }
+  },
+   "aqiAppsSection": {
+    "heading": {
+      "connectText": "Connect your AQI Monitors",
+      "logoAlt": "logo",
+      "withVariousText": "with Various",
+      "aqiLogoAlt": "aqi logo",
+      "platformsText": "Platforms"
+    },
+    "tabs": {
+      "mobileApp": "Mobile App",
+      "tvApp": "TV App",
+      "webDashboard": "Web Dashboard"
+    },
+    "common": {
+      "oneStopSolution": "One-Stop Solution",
+      "aqiLogoAlt": "aqi logo"
+    },
+    "mobileApp": {
+      "imageAlt": "aqi mobile app dashboard",
+      "title": "Mobile App",
+      "features": {
+        "healthAdvice": {
+          "imageAlt": "Get health advices",
+          "title": "Get health advices",
+          "description": "Take some precautions about what to do and not to do when the air quality is good and bad."
+        },
+        "realTimeData": {
+          "imageAlt": "Real-time and historic data access",
+          "title": "Real-time and historic data access",
+          "description": "Access real-time and historic air quality data (24 hours, week, or months) via AQI app."
+        }
+      },
+      "downloadLinks": {
+        "ios": {
+          "url": "https://apps.apple.com/tt/app/aqi/id1439684571?utm_campaign=ios_app_install%27&utm_medium=iOS+app&utm_source=app+store",
+          "iconAlt": "ios icon",
+          "text": "Download for",
+          "platform": "iOS"
+        },
+        "android": {
+          "url": "https://play.google.com/store/apps/details?id=com.aqi.data&hl=en&utm_source=play+store&utm_medium=android&utm_campaign=android_app_install%27&pli=1",
+          "iconAlt": "android-icon",
+          "text": "Download for",
+          "platform": "android"
+        }
+      }
+    },
+    "tvApp": {
+      "imageAlt": "aqi tv app dashboard",
+      "title": "TV Application",
+      "features": {
+        "themesVariety": {
+          "imageAlt": "Themes variety",
+          "title": "Themes variety",
+          "description": "Get a variety of theme options to set on your TV for a better and more personalized data showcase."
+        },
+        "dataAccessibility": {
+          "imageAlt": "24*7 data accessibility",
+          "title": "24*7 data accessibility",
+          "description": "Connect your device with the TV app and get 24*7 air quality data on your TV screen."
+        }
+      },
+      "downloadLink": {
+        "url": "https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew",
+        "text": "Download for",
+        "platform": "TV"
+      }
+    },
+    "webDashboard": {
+      "imageAlt": "aqi web dashboard for prana air monitors",
+      "title": "Web Dashboard",
+      "features": {
+        "remoteAccess": {
+          "imageAlt": "remote access icon",
+          "title": "Remote Access",
+          "description": "Get Real-time and historical air quality, temperature, etc, data anytime and anywhere."
+        },
+        "dataComparison": {
+          "imageAlt": "Data comparison",
+          "title": "Data comparison",
+          "description": "Compare multiple data from outdoor air quality to make informed decisions."
+        }
+      },
+      "downloadLink": {
+        "url": "https://www.aqi.in/userlogin",
+        "text": "Download for",
+        "platform": "Dashboard"
+      }
+    }
+  },
+  "airQualityStandard": {
+    "title": "Our air quality monitoring devices comply with All Major Standards",
+    "description": "Our air quality monitors meet all air quality standards. These standards are just recommended to make them applicable to global solutions. With it, it also supports many air quality management policy alternatives. Check different pollutant parameters in outdoor or indoor air.",
+    "tabs": {
+      "indoor": "Indoor",
+      "outdoor": "Outdoor"
+    },
+    "indoor": {
+      "parameters": {
+        "title": "Parameters:",
+        "pm25": "PM 2.5",
+        "o3": "O3",
+        "tvoc": "TVOC",
+        "hcho": "HCHO",
+        "co": "CO"
+      },
+      "well": {
+        "title": "WELL:",
+        "pm25": "35 µg/m3",
+        "o3": "<9 ppm",
+        "tvoc": "<500 µg/m3",
+        "hcho": "<27 ppb",
+        "co": "<51 ppb"
+      },
+      "leed": {
+        "title": "LEED:",
+        "pm25": "15 µg/m3",
+        "o3": "10 ppm",
+        "tvoc": "500 µg/m3",
+        "hcho": "27 ppb",
+        "co": ".075 ppm"
+      },
+      "ashrae": {
+        "title": "ASHRAE:",
+        "pm25": "35 µg/m3",
+        "o3": "11 ppm",
+        "tvoc": "–",
+        "hcho": "33 µg/m3",
+        "co": ".075 ppm"
+      },
+      "whoEurope": {
+        "title": "WHO-Europe:",
+        "pm25": "–",
+        "o3": "10 ppm (8h)",
+        "tvoc": "–",
+        "hcho": "0.1 mg/m3",
+        "co": "0.064 ppm (8h)"
+      }
+    },
+    "outdoor": {
+      "parameters": {
+        "title": "Parameters:",
+        "pm25": "PM 2.5",
+        "pm10": "PM 10",
+        "o3": "O3",
+        "no2": "NO2",
+        "so2": "SO2"
+      },
+      "time": {
+        "title": "Time",
+        "pm25": "Annual Mean<br /> 24-hr Mean.",
+        "pm10": "Annual Mean<br /> 24-hr Mean.",
+        "o3": "8-hr Mean.",
+        "no2": "Annual Mean<br /> 1-hr Mean.",
+        "so2": "24-hr Mean."
+      },
+      "who": {
+        "title": "WHO",
+        "pm25": "5 µg/m3<br /> 15 µg/m3",
+        "pm10": "5 µg/m3<br /> 45 µg/m3",
+        "o3": "100 µg/m3",
+        "no2": "10 µg/m3<br /> 200 µg/m3",
+        "so2": "40 µg/m3"
+      },
+      "india": {
+        "title": "India (CPCB)",
+        "pm25": "40 µg/m3<br /> 60 µg/m3",
+        "pm10": "60 µg/m3<br /> 100 µg/m3",
+        "o3": "100 µg/m3",
+        "no2": "40 µg/m3<br /> 80 µg/m3 (24-hr)",
+        "so2": "80 µg/m3"
+      },
+      "us": {
+        "title": "US (EPA)",
+        "pm25": "15 µg/m3<br /> 35 µg/m3",
+        "pm10": "–<br /> 150 µg/m3",
+        "o3": "0.070 ppm",
+        "no2": "53 ppb<br /> 100 ppb",
+        "so2": "75 ppb (1-hr)"
+      },
+      "european": {
+        "title": "European (EEA)",
+        "pm25": "Limit value, 25 µg/m3<br /> –",
+        "pm10": "Limit value, 40 µg/m3<br /> Limit value, 50 µg/m3 (1-hr)",
+        "o3": "Target value, 120µg/m3",
+        "no2": "40 µg/m3<br /> Limit value, 200 µg/m3",
+        "so2": "–"
+      }
+    }
+  },
+  "applicationsHeading": {
+    "title": "Applications of Air Quality Monitor"
+  },
+  "customerExperience": {
+    "title": "We care about customer experience too",
+    "subtitle": "Some of the Top Organisations"
+  },
+  "contactHeading": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  }
+}

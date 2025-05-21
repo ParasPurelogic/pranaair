@@ -2,8 +2,7 @@
 import "./style.css"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function ParkingLotPage() {
   return (
@@ -380,58 +379,65 @@ export default function ParkingLotPage() {
         </div>
       </section>
 
-      {/* Air Quality Monitors Tab Section */}
+      {/* Air Quality Monitors Tab Section - Updated with Bootstrap tabs */}
       <section className="air_quality_tab_sec">
         <div className="container">
           <div className="tabs-container">
-            <div className="tab-content">
-              <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner">
-                  <div className="item active">
-                    <div className="slider_cntr">
-                      <div className="slider_details_box">
-                        <h3>Ambient Monitor</h3>
-                        <span>
-                          Its compact design and precise pollutant-sensing technology help you meet and exceed the
-                          expectations of environmental monitoring.
-                        </span>
-                        <ul className="airquality_list">
-                          <li>Detects PM, VOCs, CO, SOx, NOx pollutants</li>
-                          <li>Low-cost air monitoring</li>
-                          <li>Multiple connectivity (Wifi, GSM, RS-485)</li>
-                          <li>Data accessibility on mobile, tablet, TV apps, and web-dashboard</li>
-                        </ul>
-                        <br />
-                        <a
-                          href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
-                          className="knowmore_btn"
-                        >
-                          Know More
-                        </a>
-                      </div>
-                      <div className="slider_img_box">
-                        <a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
-                          <img
-                            style={{ width: "100%" }}
-                            src="https://www.pranaair.com/wp-content/uploads/2023/04/ambient-air-monitor-in-car-parking.jpg"
-                            alt="Prana Air ambient air monitor in car parking"
-                          />
-                        </a>
-                      </div>
-                    </div>
+            <ul className="nav nav-tabs" id="solutionTabs" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="ambient-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#ambient-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="ambient-tab-pane"
+                  aria-selected="true"
+                >
+                  Ambient Monitor
+                </button>
+              </li>
+            </ul>
+            <div className="tab-content" id="solutionTabsContent">
+              <div
+                className="tab-pane fade show active"
+                id="ambient-tab-pane"
+                role="tabpanel"
+                aria-labelledby="ambient-tab"
+
+              >
+                <div className="slider_cntr">
+                  <div className="slider_details_box">
+                    <h3>Ambient Monitor</h3>
+                    <span>
+                      Its compact design and precise pollutant-sensing technology help you meet and exceed the
+                      expectations of environmental monitoring.
+                    </span>
+                    <ul className="airquality_list">
+                      <li>Detects PM, VOCs, CO, SOx, NOx pollutants</li>
+                      <li>Low-cost air monitoring</li>
+                      <li>Multiple connectivity (Wifi, GSM, RS-485)</li>
+                      <li>Data accessibility on mobile, tablet, TV apps, and web-dashboard</li>
+                    </ul>
+                    <br />
+                    <a
+                      href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
+                      className="knowmore_btn"
+                    >
+                      Know More
+                    </a>
+                  </div>
+                  <div className="slider_img_box">
+                    <a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
+                      <img
+                        style={{ width: "100%" }}
+                        src="https://www.pranaair.com/wp-content/uploads/2023/04/ambient-air-monitor-in-car-parking.jpg"
+                        alt="Prana Air ambient air monitor in car parking"
+                      />
+                    </a>
                   </div>
                 </div>
-                <a className="left carousel-control" href="#myCarousel" data-slide="prev">
-                  <i className="fa fa-angle-left" aria-hidden="true"></i>
-                </a>
-                <a className="right carousel-control" href="#myCarousel" data-slide="next">
-                  <i className="fa fa-angle-right" aria-hidden="true"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -550,7 +556,7 @@ export default function ParkingLotPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Updated with Bootstrap accordion */}
       <section className="faq_ask_section">
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
@@ -559,77 +565,141 @@ export default function ParkingLotPage() {
             </h2>
             <p>About Air Quality Solution for car parking spaces Have questions? Were here to help.</p>
           </div>
-          <div className="faq-container">
-            <div className="faq-item">
-              <div className="faq-question">
-                <h3>1. Why is air quality a concern in parking lots?</h3>
-              </div>
-              <div className="faq-answer">
-                <p>
-                  - Poor air quality in parking lots can have adverse effects on the health of drivers, pedestrians, and
-                  nearby residents. It can also contribute to environmental pollution and climate change.
-                </p>
-              </div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-question">
-                <h3>2. What are the common sources of air pollution in parking lots?</h3>
-              </div>
-              <div className="faq-answer">
-                <p>
-                  - The most common sources of air pollution in parking lots are exhaust fumes from vehicles, as well as
-                  dust and particulate matter from tires and brakes.
-                </p>
-              </div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-question">
-                <h3>3. What are the health effects of poor air quality in parking lots?</h3>
-              </div>
-              <div className="faq-answer">
-                <p>
-                  - Exposure to poor air quality in parking lots can cause respiratory problems, eye irritation,
-                  headaches, and other health issues. Prolonged exposure can also increase the risk of cancer and other
-                  chronic diseases.
-                </p>
+          <div className="accordion" id="faqAccordion">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                  aria-expanded="true"
+                  aria-controls="faq1"
+                >
+                  1. Why is air quality a concern in parking lots?
+                </button>
+              </h2>
+              <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div className="accordion-body">
+                  <p>
+                    - Poor air quality in parking lots can have adverse effects on the health of drivers, pedestrians,
+                    and nearby residents. It can also contribute to environmental pollution and climate change.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="faq-item">
-              <div className="faq-question">
-                <h3>4. How can air quality be improved in parking lots?</h3>
-              </div>
-              <div className="faq-answer">
-                <p>
-                  - Air quality in parking lots can be improved by promoting the use of low-emission vehicles,
-                  implementing green infrastructure like trees and plants, continuous monitoring of air quality,
-                  installing air filtration systems, and improving ventilation.
-                </p>
-              </div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-question">
-                <h3>5. What are some effective air quality monitoring solutions for parking lots?</h3>
-              </div>
-              <div className="faq-answer">
-                <p>
-                  - Air quality monitoring solutions for parking lots can include sensor-based monitoring systems such
-                  as Prana Air monitors, real-time data analytics, and AQI mobile apps that provide users with air
-                  quality information.
-                </p>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                  aria-expanded="false"
+                  aria-controls="faq2"
+                >
+                  2. What are the common sources of air pollution in parking lots?
+                </button>
+              </h2>
+              <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div className="accordion-body">
+                  <p>
+                    - The most common sources of air pollution in parking lots are exhaust fumes from vehicles, as well
+                    as dust and particulate matter from tires and brakes.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="faq-item">
-              <div className="faq-question">
-                <h3>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                  aria-expanded="false"
+                  aria-controls="faq3"
+                >
+                  3. What are the health effects of poor air quality in parking lots?
+                </button>
+              </h2>
+              <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div className="accordion-body">
+                  <p>
+                    - Exposure to poor air quality in parking lots can cause respiratory problems, eye irritation,
+                    headaches, and other health issues. Prolonged exposure can also increase the risk of cancer and
+                    other chronic diseases.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                  aria-expanded="false"
+                  aria-controls="faq4"
+                >
+                  4. How can air quality be improved in parking lots?
+                </button>
+              </h2>
+              <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div className="accordion-body">
+                  <p>
+                    - Air quality in parking lots can be improved by promoting the use of low-emission vehicles,
+                    implementing green infrastructure like trees and plants, continuous monitoring of air quality,
+                    installing air filtration systems, and improving ventilation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                  aria-expanded="false"
+                  aria-controls="faq5"
+                >
+                  5. What are some effective air quality monitoring solutions for parking lots?
+                </button>
+              </h2>
+              <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div className="accordion-body">
+                  <p>
+                    - Air quality monitoring solutions for parking lots can include sensor-based monitoring systems such
+                    as Prana Air monitors, real-time data analytics, and AQI mobile apps that provide users with air
+                    quality information.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq6"
+                  aria-expanded="false"
+                  aria-controls="faq6"
+                >
                   6. How can air quality data collected in parking lots be used for research and public health purposes?
-                </h3>
-              </div>
-              <div className="faq-answer">
-                <p>
-                  - Air quality data collected in parking lots can be used to study the impacts of air pollution on
-                  human health and the environment. It can also inform public policy and regulatory decisions related to
-                  air quality.
-                </p>
+                </button>
+              </h2>
+              <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div className="accordion-body">
+                  <p>
+                    - Air quality data collected in parking lots can be used to study the impacts of air pollution on
+                    human health and the environment. It can also inform public policy and regulatory decisions related
+                    to air quality.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -687,16 +757,17 @@ export default function ParkingLotPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="contact-section-box" id="get_in_touch" style={{ backgroundColor: "#f5f8f5", padding: "60px 0" }}>
+      <section
+        className="contact-section-box"
+        id="get_in_touch"
+        style={{ backgroundColor: "#f5f8f5", padding: "60px 0" }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -882,7 +953,30 @@ export default function ParkingLotPage() {
           </Carousel>
         </div>
       </section>
+
+      {/* Add Bootstrap JS */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function() {
+              // Initialize Bootstrap components
+              if (typeof bootstrap !== 'undefined') {
+                // Initialize tooltips
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                  return new bootstrap.Tooltip(tooltipTriggerEl)
+                })
+                
+                // Initialize popovers
+                var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+                var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                  return new bootstrap.Popover(popoverTriggerEl)
+                })
+              }
+            });
+          `,
+        }}
+      />
     </div>
   )
 }
-

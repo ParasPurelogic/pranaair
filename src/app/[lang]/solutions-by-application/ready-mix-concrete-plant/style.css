@@ -19,6 +19,10 @@ body h2.sec-heading.sec-heading-sec {
     font-family: "Poppins", sans-serif !important;
 }
 
+.solutions-tabs ul li {
+    width: 33%;
+}
+
 p,
 .inner-real-time-aqi .countrey-sec {
     font-size: 18px;
@@ -1427,9 +1431,11 @@ label.message_text {
         background-repeat: no-repeat !important;
         background-size: 689px !important;
     }
+
     li.first_school_box {
         left: 60px;
     }
+
     .banner_quality_box {
         width: 100%;
         position: relative;
