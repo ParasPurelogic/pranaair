@@ -311,15 +311,8 @@ export default function AirQualitySolutions() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">
-                                Air quality <span className="bold_text">Solutions</span>
-                            </h2>
-                            <p>
-                                Prana Air air quality monitoring and purification solutions are suited for hotel rooms and large lobby
-                                areas. They empower you to understand the air quality you breathe and what you can do to clean the air
-                                for your guests  comfort and to create an air pollution-free zone, as well as view and analyze the IAQ
-                                of different floors of your hotel.
-                            </p>
+                            <h2 className="title_heading">Air quality <span className="bold_text">Solutions</span></h2>
+                            <p>Prana Air air quality monitoring and purification solutions are suited for hotel rooms and large lobby areas. They empower you to understand the air quality you breathe and what you can do to clean the air for your guests’ comfort and to create an air pollution-free zone, as well as view and analyze the IAQ of different floors of your hotel.</p>
                         </div>
                     </div>
                 </div>

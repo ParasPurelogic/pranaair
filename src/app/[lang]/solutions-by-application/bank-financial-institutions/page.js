@@ -23,133 +23,6 @@ export default function BankFinancePage() {
     },
   }
 
-  const industrialResponsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1200 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 1200, min: 992 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 992, min: 576 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 576, min: 0 },
-      items: 1,
-    },
-  }
-
-  // Carousel data
-  const carouselItems = [
-    {
-      id: 1,
-      icon: "https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png",
-      title: "AQI TV App",
-      description:
-        "Access real-time air quality data on a large TV screen in your bank or financial institution. Get continuous 24/7 remote monitoring to stay informed about AQI levels and ensure a healthier environment for customers and staff.",
-      image: "https://www.pranaair.com/wp-content/uploads/2023/01/aqi-tv-app-for-bank.jpg",
-    },
-    {
-      id: 2,
-      icon: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg",
-      title: "AQI Web-Dashboard",
-      description:
-        "Get real-time data from your financial institution on a web dashboard to make informed decisions. Explore global pollution trends receive health advice based on real-time air quality indexes and easily compare air quality parameters across multiple locations.",
-      image: "https://www.pranaair.com/wp-content/uploads/2023/01/Customised-App-for-banks.jpg",
-    },
-    {
-      id: 3,
-      icon: "https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png",
-      title: "AQI Mobile App",
-      description:
-        "Monitor real-time air quality data from your bank anytime anywhere with our mobile app. View global air pollution and weather maps and easily compare air quality parameters across multiple locations with the AQI App.",
-      image: "https://www.pranaair.com/wp-content/uploads/2023/01/qr-code-scan-for-bank.jpg",
-    },
-  ]
-
-  // FAQ items
-  const faqItems = [
-    {
-      question: "1. What are the major pollutants that are present in a bank?",
-      answer:
-        "Many pollutants can be present inside a typical bank setting. CO2 TVOC and dust particles are the main pollutants followed by noise CO airborne pathogens temperature etc."
-    },
-    {
-      question: "2. What are the health impacts of the pollutants present inside the bank?",
-      answer: "Physical discomforts like headaches nausea dizziness etc. among customers and staff.",
-    },
-    {
-      question: "3. What are some criteria that need to be kept in mind for a good and comfortable banking experience?",
-      answer: "Ventilation rate noise comfort level mold score organic aerosols etc. are some of the criteria.",
-    },
-    {
-      question: "4. Why is it necessary to have air quality monitoring solutions?",
-      answer:
-        "To know the nature of pollutants and how much are they present in a space so that necessary actions can be taken.",
-    },
-    {
-      question: "5. How can I check the AQI of my bank using your device?",
-      answer:
-        "Prana Air Monitors are WiFi enabled so you don't need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.",
-    },
-    {
-      question: "6. Are any other parameters included in the monitors other than the air pollutants?",
-      answer: "Yes you can monitor the temperature noise and humidity in an area.",
-    },
-    {
-      question: "7. Are there any additional benefits that come with the solutions?",
-      answer:
-        "Customizable dashboard 24*7 remote access to the data get health tips real-time and historical data analysis QR code to scan and know the real-time AQI of that area and many more.",
-    },
-  ]
-
-  // Industrial applications data
-  const industrialApplications = [
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-retail-outlets.jpg",
-      title: "Air quality Solutions for Retail Stores",
-      link: "https://www.pranaair.com/solutions-by-application/retail-stores/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
-      title: "Air quality Solutions for Hotel",
-      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
-      title: "Air quality Solutions for Restaurant",
-      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg",
-      title: "Air quality Solutions for Airport",
-      link: "https://www.pranaair.com/solutions-by-application/airports/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg",
-      title: "Air quality Solutions for Fitness & Gym",
-      link: "https://www.pranaair.com/solutions-by-application/fitness-center-gym/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg",
-      title: "Air quality Solutions for Parking Lot",
-      link: "https://www.pranaair.com/solutions-by-application/parking-lot/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/05/air-solutions-for-washroom-and-bathroom.jpg",
-      title: "Air quality Solutions for Washroom",
-      link: "https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
-      title: "Air quality Solutions for Institutes",
-      link: "https://www.pranaair.com/solutions-by-application/institutes/",
-    },
-  ]
-
   return (
     <div className="bank-financial-page">
       {/* SECTION 1: Hero Section */}
@@ -325,7 +198,7 @@ export default function BankFinancePage() {
               Air quality <span className="bold_text">Solutions</span>
             </h2>
             <p>
-              Prana Air is air quality monitoring and air purifying solutions give you the power to know what your
+              Prana Airs air quality monitoring and air purifying solutions give you the power to know what your
               customers and staff breathe and what you could do to clean the air to make banks/financial institutions
               air pollution-free zone and view and analyze your IAQ.
             </p>
@@ -566,51 +439,14 @@ export default function BankFinancePage() {
         </div>
       </div>
 
-      {/* SECTION 9: FAQ */}
-      <div className="faq_ask_section" id="faq_section">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="introducing_box sub_title_box text-center">
-                <h2 className="title_heading">
-                  Frequently Asked <span style={{ color: "#78ae60" }}>Questions</span>
-                </h2>
-                <p>About Air Quality Solution for Bank/Financial Institutions. Have questions? We are here to help.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-md-12">
-              <div className="accordion" id="faqAccordion">
-                {faqItems.map((item, index) => (
-                  <div className="accordion-item" key={index}>
-                    <h2 className="accordion-header" id={`heading${index}`}>
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#collapse${index}`}
-                        aria-expanded="false"
-                        aria-controls={`collapse${index}`}
-                      >
-                        {item.question}
-                      </button>
-                    </h2>
-                    <div
-                      id={`collapse${index}`}
-                      className="accordion-collapse collapse"
-                      aria-labelledby={`heading${index}`}
-                      data-bs-parent="#faqAccordion"
-                    >
-                      <div className="accordion-body">
-                        <p>{item.answer}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      {/* FAQ Section */}
+      <div className="vc_row full_width stretch_row faq_ask_section" style={{ paddingTop: "60px" }}>
+        <div className="vc_column">
+          <div className="introducing_box sub_title_box text-center">
+            <h2 className="title_heading">
+              Frequently Asked <span className="bold_text">Questions</span>
+            </h2>
+            <p>About Air Quality Solution for Bank/Financial Institutions Have questions? Were here to help.</p>
           </div>
         </div>
       </div>
@@ -701,43 +537,39 @@ export default function BankFinancePage() {
         <ContactForm pageName="Bank Financial institution Page" />
       </div>
 
-      {/* SECTION 12: Industrial Applications */}
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="introducing_box sub_title_box text-center">
-              <h2 className="title_heading">
-                Industrial{" "}
-                <span className="bold_text" style={{ color: "#78ae60" }}>
-                  Applications
-                </span>
-              </h2>
-              <p>
-                Regardless of how small or large a business is Prana Air offers a wide choice of Smart affordable and
-                highly accurate air quality solutions for various industries.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="row pd-bt">
-          <div className="col-md-12">
-            <div className="owl-slider">
-              <IndustrialApplicationsCarousel applications={industrialApplications} />
-            </div>
+      {/* Industrial Applications Section */}
+      <div className="vc_row full_width stretch_row seperate_industrial_box">
+        <div className="vc_column">
+          <div className="introducing_box sub_title_box text-center">
+            <h2 className="title_heading">
+              Industrial <span className="bold_text">Applications</span>
+            </h2>
+            <p>
+              Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and
+              highly accurate air quality solutions for various industries.
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Bootstrap Scripts */}
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
+      <div className="row pd-bt">
+        <div className="col-md-12">
+          <div className="owl-slider">
+            <IndustrialApplicationsCarousel applications={industrialApplications} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+      {/* Bootstrap Scripts */ }
+  <div
+    dangerouslySetInnerHTML={{
+      __html: `
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         `,
-        }}
-      />
-    </div>
+    }}
+  />
+    </div >
   )
 }

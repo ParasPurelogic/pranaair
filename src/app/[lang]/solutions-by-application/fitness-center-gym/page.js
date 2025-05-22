@@ -339,14 +339,8 @@ export default function AirQualitySolutionsFitnessPage() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">
-                                Air quality <span className="bold_text">Solutions</span>
-                            </h2>
-                            <p>
-                                Prana Air air quality monitoring and purifying solutions give you the power to know what your customers
-                                and staff breathe and what you could do to clean the air to make your fitness centers and gyms Air
-                                pollution-free zone and view and analyze your IAQ.
-                            </p>
+                            <h2 className="title_heading">Air quality <span className="bold_text">Solutions</span></h2>
+                            <p>Prana Air air quality monitoring and purifying solutions give you the power to know what your customers and staff breathe and what you could do to clean the air to make your fitness centers and gyms ‘Air pollution-free zone’ and view and analyze your IAQ.</p>
                         </div>
                     </div>
                 </div>
@@ -647,7 +641,7 @@ export default function AirQualitySolutionsFitnessPage() {
                                 <span style={{ fontSize: "15pt", color: "#e86868" }}> Without Clean Air</span>
                             </h3>
                             <ul className="airquality_list red_list">
-                                <li>Decrease members willingness</li>
+                                <li>Decrease members’ willingness</li>
                                 <li>Less comfort</li>
                                 <li>Bad odor and mold</li>
                                 <li>Members may get sick</li>
@@ -662,12 +656,6 @@ export default function AirQualitySolutionsFitnessPage() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <div className="introducing_box sub_title_box text-center">
-                                <h2 className="title_heading">
-                                    Frequently Asked <span className="bold_text">Questions</span>
-                                </h2>
-                                <p>About Air Quality Solution for Fitness Centers & Gyms. Have questions? We are here to help.</p>
-                            </div>
                             <div className="accordion" id="faqAccordion">
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="heading1">
@@ -789,9 +777,7 @@ export default function AirQualitySolutionsFitnessPage() {
                                         data-bs-parent="#faqAccordion"
                                     >
                                         <div className="accordion-body faq-tab-para">
-                                            Prana Air Monitors are WiFi enabled so you do not need to set up a wire framework to extract and
-                                            display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view
-                                            the real-time data on your screens.
+                                            Prana Air Monitors are WiFi enabled so you don’t need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
                                         </div>
                                     </div>
                                 </div>

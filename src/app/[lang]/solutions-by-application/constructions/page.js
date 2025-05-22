@@ -1126,10 +1126,10 @@ export default function ConstructionAirQualityPage() {
                 <div className="row testimonial-bg-image">
                     <div className="col-md-9">
                         <p>
-                            We have been using the PRANA AIR is Air Quality Monitors, installed by PURELOGIC LABS INDIA PVT. LTD., 706,
-                            7th Floor, Crown Heights, Sector - 10, Rohini, New Delhi, at our different construction sites and have
-                            found their product accurate and reliable. The devices installed have helped us to comply with the air
-                            quality standards and ensure the safety of our workers. The after-sales service is very prompt and
+                            We have been using the PRANA AIRs Air Quality Monitors, installed by PURELOGIC LABS INDIA PVT. LTD.,
+                            706, 7th Floor, Crown Heights, Sector - 10, Rohini, New Delhi, at our different construction sites and
+                            have found their product accurate and reliable. The devices installed have helped us to comply with the
+                            air quality standards and ensure the safety of our workers. The after-sales service is very prompt and
                             excellent.
                         </p>
                     </div>
@@ -1271,7 +1271,7 @@ export default function ConstructionAirQualityPage() {
                                 <p>
                                     About Air Quality Solution for construction sites
                                     <br />
-                                    Have questions? We are here to help.
+                                    Have questions? Were here to help.
                                 </p>
                             </div>
                         </div>

@@ -678,9 +678,7 @@ export default function AirQualitySolutions() {
                                     </h2>
                                     <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                         <div className="accordion-body faq-tab-para">
-                                            Prana Air Monitors are WiFi enabled so you do not need to set up a wire framework to extract and
-                                            display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view
-                                            the real-time data on your screens.
+                                            Prana Air Monitors are WiFi enabled so you don’t need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
                                         </div>
                                     </div>
                                 </div>

@@ -185,13 +185,19 @@ export default function AirDronePage() {
                                                 aria-labelledby="SensorDisc-tab"
                                             >
                                                 <div className="product-rate">
-                                                    <span>₹ 17990.00</span>
-                                                    <p>
-                                                        Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and
-                                                        consumer-grade safety monitoring. The sensor is based on electrochemical technology for
-                                                        highly toxic SO2 gas.{" "}
-                                                    </p>
-                                                    <QuantityCounter />
+                                                    <span>₹     17,990.00</span>
+                                                    <p>Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas. </p>
+                                                    <ul>
+                                                        <li>
+                                                            <button onClick={decrement} className="dicrement">–</button>
+                                                        </li>
+                                                        <li>
+                                                            {quantity}
+                                                        </li>
+                                                        <li>
+                                                            <button onClick={increment} className="increment">+</button>
+                                                        </li>
+                                                    </ul>
                                                     <ul className="buy-now-btn">
                                                         <li>
                                                             <button className="add-cart product-buy">
@@ -211,13 +217,16 @@ export default function AirDronePage() {
                                                 aria-labelledby="SensorDiscTVApp-tab"
                                             >
                                                 <div className="product-rate">
-                                                    <span>20990.00</span>
-                                                    <p>
-                                                        Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and
-                                                        consumer-grade safety monitoring. The sensor is based on electrochemical technology for
-                                                        highly toxic SO2 gas.{" "}
-                                                    </p>
-                                                    <QuantityCounter />
+                                                    <span>20,990.00</span>
+                                                    <p>Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas. </p>
+                                                    <ul>
+                                                        <li>
+                                                            <button onClick={decrement} className="dicrement">–</button>
+                                                        </li>
+                                                        <li>
+                                                            <button onClick={increment} className="increment">+</button>
+                                                        </li>
+                                                    </ul>
                                                     <ul className="buy-now-btn">
                                                         <li>
                                                             <button className="add-cart product-buy">
@@ -300,13 +309,8 @@ export default function AirDronePage() {
                                     >
                                         <div className="sensor-txt">
                                             <div className="content">
-                                                <p>
-                                                    The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and
-                                                    home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide
-                                                    (SO2) gas. This sensor is small lightweight and affordable making it easy to use in
-                                                    different monitoring and safety systems. It is durable lasts a long time and can be used in
-                                                    a variety of settings including factories businesses and homes.
-                                                </p>
+                                                <p>The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.
+                                                    This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes.</p>
                                                 <ul>
                                                     <li>
                                                         <strong>0.01 PPM</strong> Resolution
@@ -330,13 +334,8 @@ export default function AirDronePage() {
                                     <div className="tab-pane fade" id="IntroTVApp" role="tabpanel" aria-labelledby="IntroTVApp-tab">
                                         <div className="sensor-txt">
                                             <div className="content">
-                                                <p>
-                                                    The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and
-                                                    home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide
-                                                    (SO2) gas. This sensor is small lightweight and affordable making it easy to use in
-                                                    different monitoring and safety systems. It is durable lasts a long time and can be used in
-                                                    a variety of settings including factories businesses and homes.
-                                                </p>
+                                                <p>The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.
+                                                    This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes.</p>
                                                 <ul>
                                                     <li>
                                                         <strong>0.01 PPM</strong> Resolution
@@ -372,50 +371,32 @@ export default function AirDronePage() {
                                         <li>
                                             <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
                                             <h3>Compact</h3>
-                                            <p>
-                                                The sensors compact size allows easy installation in any space making it suitable for both
-                                                portable and fixed monitoring devices.
-                                            </p>
+                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
                                         </li>
                                         <li>
                                             <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
                                             <h3>Compact</h3>
-                                            <p>
-                                                The sensors compact size allows easy installation in any space making it suitable for both
-                                                portable and fixed monitoring devices.
-                                            </p>
+                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
                                         </li>
                                         <li>
                                             <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
                                             <h3>Compact</h3>
-                                            <p>
-                                                The sensors compact size allows easy installation in any space making it suitable for both
-                                                portable and fixed monitoring devices.
-                                            </p>
+                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
                                         </li>
                                         <li>
                                             <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
                                             <h3>Compact</h3>
-                                            <p>
-                                                The sensors compact size allows easy installation in any space making it suitable for both
-                                                portable and fixed monitoring devices.
-                                            </p>
+                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
                                         </li>
                                         <li>
                                             <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
                                             <h3>Compact</h3>
-                                            <p>
-                                                The sensors compact size allows easy installation in any space making it suitable for both
-                                                portable and fixed monitoring devices.
-                                            </p>
+                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
                                         </li>
                                         <li>
                                             <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
                                             <h3>Compact</h3>
-                                            <p>
-                                                The sensors compact size allows easy installation in any space making it suitable for both
-                                                portable and fixed monitoring devices.
-                                            </p>
+                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -433,13 +414,7 @@ export default function AirDronePage() {
                                 </div>
                                 <div className="video-txt">
                                     <h2>SO2 Sensor Calibration</h2>
-                                    <p>
-                                        Calibrating an SO2 sensor means checking if it gives correct readings by comparing it to a standard
-                                        measurement. This is done in specific conditions: a temperature of 23°C (plus or minus 3°C)
-                                        humidity of 50% (plus or minus 15%) air pressure between 0.9 and 1.1 atm and an airspeed of 0.05
-                                        m/s. This process makes sure the sensor gives accurate and reliable results. To do this a special
-                                        gas cylinder approved by NIST (a trusted measurement standard) is used as a reference.
-                                    </p>
+                                    <p>Calibrating an SO2 sensor means checking if it gives correct readings by comparing it to a standard measurement. This is done in specific conditions: a temperature of 23°C (plus or minus 3°C), humidity of 50% (plus or minus 15%), air pressure between 0.9 and 1.1 atm, and an airspeed of 0.05 m/s. This process makes sure the sensor gives accurate and reliable results. To do this, a special gas cylinder approved by NIST (a trusted measurement standard) is used as a reference.</p>
                                 </div>
                             </div>
                         </div>
@@ -489,15 +464,9 @@ export default function AirDronePage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="sulfur-txt">
-                                    <p>
-                                        Sulfur dioxide (SO₂) is a toxic gas with a strong burnt smell. Its odor is sharp and irritating
-                                        though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with
-                                        other substances in the air it can form harmful compounds like sulfuric acid and sulfate
-                                        pollutants which contribute to air pollution and acid rain. The main sources of SO₂ include burning
-                                        fossil fuels power plants metal extraction industrial processes volcanoes vehicle emissions
-                                        oil refining and diesel engines. However the Indian governments move toward BSVI-compliant
-                                        engines has helped reduce SO₂ emissions from vehicles.
-                                    </p>
+                                    <p>Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid.
+                                        SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain.
+                                        The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government’s move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.</p>
                                 </div>
                             </div>
                         </div>
@@ -516,13 +485,7 @@ export default function AirDronePage() {
                             <div className="light-mode-img">
                                 <Image src="/img/SO2-light-mode.webp" alt="so2-sensor" width={50} height={50} />
                                 <p>
-                                    The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our
-                                    monitors use a special sensor to detect sulfur dioxide (SO2) a harmful gas found in the air. This SO2
-                                    sensor works using a simple chemical process. It has two key parts called electrodes and a special
-                                    material that connects them. When SO2 enters the sensor a chemical reaction happens. This reaction
-                                    creates a tiny electric current. The more SO2 in the air the stronger the current.By measuring this
-                                    current our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and
-                                    keeping the air cleaner and safer for everyone.
+                                    The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our monitors use a special sensor to detect sulfur dioxide (SO2), a harmful gas found in the air. This SO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When SO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more SO2 in the air, the stronger the current.By measuring this current, our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone.
                                 </p>
                             </div>
                         </div>

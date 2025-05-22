@@ -2,8 +2,7 @@ import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import { getServerTranslation } from "@/i18n/server"
 
-export default async function AirQualitySensors() {
-  const { t } = await getServerTranslation("air-quality-sensor")
+export default function AirQualitySensors() {
   return (
     <div>
       {/* Banner Section */}

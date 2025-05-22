@@ -586,8 +586,8 @@ export default function BreathalyzerPage() {
                             height={100}
                           />
                           <p>Blow when the test bar shows blow for 5-6 seconds until the bar fills.</p>
-                        </div>
-                      </div>
+                        </div >
+                      </div >
                       <div className="col-md-4">
                         <div className="tab-logo-box">
                           <h3>03</h3>
@@ -600,7 +600,7 @@ export default function BreathalyzerPage() {
                           <p>Alcohol level (green/yellow/red) displays.</p>
                         </div>
                       </div>
-                    </div>
+                    </div >
 
                     <div className="row">
                       <div className="col-md-6">
@@ -623,7 +623,7 @@ export default function BreathalyzerPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div >
 
                   <div className="tab-pane fade" id="date-time" role="tabpanel" aria-labelledby="date-time-tab">
                     <div className="tab-content-box">
@@ -642,8 +642,8 @@ export default function BreathalyzerPage() {
                             height={100}
                           />
                           <p>Press the button for a second till the Prana Air Logo and Wait will appear.</p>
-                        </div>
-                      </div>
+                        </div >
+                      </div >
                       <div className="col-md-4">
                         <div className="tab-logo-box">
                           <h3>02</h3>
@@ -671,8 +671,8 @@ export default function BreathalyzerPage() {
                           </p>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    </div >
+                  </div >
 
                   <div
                     className="tab-pane fade"
@@ -715,8 +715,8 @@ export default function BreathalyzerPage() {
                             height={100}
                           />
                           <p>Short-press to view past records with date time and alcohol level.</p>
-                        </div>
-                      </div>
+                        </div >
+                      </div >
                       <div className="col-md-4">
                         <div className="tab-logo-box data-box">
                           <h3>03</h3>
@@ -727,12 +727,12 @@ export default function BreathalyzerPage() {
                             width={150}
                             height={100}
                           />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                        </div >
+                      </div >
+                    </div >
+                  </div >
+                </div >
+              </div >
 
               <div className="row br-top">
                 <div className="col-md-12">
@@ -770,13 +770,13 @@ export default function BreathalyzerPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </div >
+          </div >
+        </div >
+      </section >
 
       {/* Simplified Operation Section */}
-      <section className="simplify-section">
+      < section className="simplify-section" >
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-md-12 simplify-left-bg ipad">
@@ -825,10 +825,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Ranges Section */}
-      <section className="ranges-section">
+      < section className="ranges-section" >
         <div className="container">
           <div className="row">
             <div className="col-md-10">
@@ -894,10 +894,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Data Export Section */}
-      <section className="data-export-section">
+      < section className="data-export-section" >
         <div className="container">
           <div className="row">
             <div className="col-lg-5 col-md-12 ipad">
@@ -939,10 +939,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Fuel Cell Section */}
-      <section className="fule-cell-section">
+      < section className="fule-cell-section" >
         <div className="container">
           <div className="row fule-cell-bg">
             <div className="col-lg-7 col-md-12 ipad">
@@ -979,10 +979,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Quote Section */}
-      <section className="quote-section">
+      < section className="quote-section" >
         <div className="container">
           <div className="row">
             <div className="col-md-12 ipad">
@@ -997,10 +997,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Detection Section */}
-      <section className="detection-section">
+      < section className="detection-section" >
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-md-12 ipad">
@@ -1076,10 +1076,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Comparison Section */}
-      <section className="comparison-sec" id="compare">
+      < section className="comparison-sec" id="compare" >
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -1178,10 +1178,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* BAC Standard Section */}
-      <section className="data-export-section">
+      < section className="data-export-section" >
         <div className="container">
           <div className="row">
             <div className="col-lg-5 col-md-12 ipad">
@@ -1212,10 +1212,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Attractive Details Section */}
-      <section className="attractive-details-section">
+      < section className="attractive-details-section" >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -1274,10 +1274,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Technical Specifications Section */}
-      <section className="technical-specification" id="spec">
+      < section className="technical-specification" id="spec" >
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -1365,10 +1365,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Applications Section */}
-      <section className="co-monitore-outdoor-slider">
+      < section className="co-monitore-outdoor-slider" >
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -1443,10 +1443,10 @@ export default function BreathalyzerPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* FAQ Section */}
-      <section className="faq">
+      < section className="faq" >
         <div className="container">
           <div className="row">
             <div className="col-md-6">
@@ -1509,10 +1509,10 @@ export default function BreathalyzerPage() {
                       <p>
                         You can get the results within 10 seconds of blowing into the device providing quick and
                         convenient alcohol level readings.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      </p >
+                    </div >
+                  </div >
+                </div >
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingThree">
                     <button
@@ -1536,10 +1536,10 @@ export default function BreathalyzerPage() {
                       <p>
                         No Prana Air Breathalyzer is specifically designed to measure alcohol levels and does not
                         detect other substances.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      </p >
+                    </div >
+                  </div >
+                </div >
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingFour">
                     <button
@@ -1561,12 +1561,12 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        Yes the Prana Air Breathalyzer features a user-friendly design with simple one-button
+                        Yes the Prana Air Breathalyzer features a user - friendly design with simple one - button
                         operation making it easy for anyone to use.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      </p >
+                    </div >
+                  </div >
+                </div >
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingFive">
                     <button
@@ -1590,10 +1590,10 @@ export default function BreathalyzerPage() {
                       <p>
                         The device has a sleek and compact design making it highly portable and convenient to carry
                         wherever you go.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      </p >
+                    </div >
+                  </div >
+                </div >
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingSix">
                     <button
@@ -1617,10 +1617,10 @@ export default function BreathalyzerPage() {
                       <p>
                         Prana Air Breathalyzer utilizes advanced Gb05 Fuel cell technology providing highly accurate
                         alcohol level measurements for reliable results.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                      </p >
+                    </div >
+                  </div >
+                </div >
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingSeven">
                     <button
@@ -1643,11 +1643,11 @@ export default function BreathalyzerPage() {
                     <div className="accordion-body">
                       <p>
                         Yes Prana Air Breathalyzer allows you to export the test record data to a computer
-                        facilitating easy record-keeping in an excel file format.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                        facilitating easy record - keeping in an excel file format.
+                      </p >
+                    </div >
+                  </div >
+                </div >
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingEight">
                     <button
@@ -1672,15 +1672,15 @@ export default function BreathalyzerPage() {
                         Yes the devices high sensitivity stability and precise detection make it suitable for
                         professional applications such as law enforcement workplace safety and alcohol testing
                         centers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+                      </p >
+                    </div >
+                  </div >
+                </div >
+              </div >
+            </div >
+          </div >
+        </div >
+      </section >
+    </div >
   )
 }

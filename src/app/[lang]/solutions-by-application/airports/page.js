@@ -1,4 +1,4 @@
-import AirQualityTabs from "@/Components/Pages/Airports/air-quality-tabs"
+"use client"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import FaqAccordion from "@/Components/Pages/Airports/faq-accordion"

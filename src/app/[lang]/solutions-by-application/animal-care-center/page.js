@@ -70,109 +70,6 @@ export default function AnimalCarePage() {
     },
   ]
 
-  // FAQ items
-  const faqItems = [
-    {
-      question: "1. What are the air pollutants in any animal facility?",
-      answer:
-        "Animals poor ventilation and chemical use in farms health-care and labs emit various indoor air pollutants such as PM2.5 PM10 VOCs CO2 NH3 etc.",
-    },
-    {
-      question: "2. How does air pollution interfere with the research outcomes in labs?",
-      answer:
-        "Air pollutants can affect research outcomes in labs by contaminating data and resulting in inaccurate measurements that lead to invalid conclusions.",
-    },
-    {
-      question: "3. What solutions are the best for animal facilities?",
-      answer:
-        "Air quality monitors and high-quality air purifiers are the best solutions for poor air quality in animal farms hospitals care centers and labs.",
-    },
-    {
-      question: "4. How does temperature or humidity affect air quality in any lab facility?",
-      answer:
-        "Temperature and humidity levels depends on outdoor weather condition that can affect pollution emissions trap more pollutants in facilities and also lead to animal discomfort.",
-    },
-  ]
-
-  // Industrial applications data
-  const industrialApplications = [
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg",
-      title: "Air quality Solutions for Bank",
-      link: "https://www.pranaair.com/solutions-by-application/bank-financial-institutions/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
-      title: "Air quality Solutions for Hotel",
-      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
-      title: "Air quality Solutions for Restaurant",
-      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg",
-      title: "Air quality Solutions for Airport",
-      link: "https://www.pranaair.com/solutions-by-application/airports/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg",
-      title: "Air quality Solutions for Fitness & Gym",
-      link: "https://www.pranaair.com/solutions-by-application/fitness-center-gym/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg",
-      title: "Air quality Solutions for Parking Lot",
-      link: "https://www.pranaair.com/solutions-by-application/parking-lot/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/05/air-solutions-for-washroom-and-bathroom.jpg",
-      title: "Air quality Solutions for Washroom",
-      link: "https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
-      title: "Air quality Solutions for Institutes",
-      link: "https://www.pranaair.com/solutions-by-application/institutes/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
-      title: "Air quality Solutions for Cinema/Theatre",
-      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
-      title: "Air quality Solutions for Automobiles",
-      link: "https://www.pranaair.com/solutions-by-application/automobile/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
-      title: "Air quality Solutions for Real Estates",
-      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
-      title: "Air quality Solutions for Smartphone Makers",
-      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
-      title: "Air quality Solutions for Construction",
-      link: "https://www.pranaair.com/solutions-by-application/constructions/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
-      title: "Air quality Solutions for logistics",
-      link: "https://www.pranaair.com/solutions-by-application/logistics/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
-      title: "Air quality Solutions for Railways",
-      link: "https://www.pranaair.com/solutions-by-application/railway/",
-    },
-  ]
-
   return (
     <div>
       {/* SECTION 1: Hero Section */}
@@ -945,7 +842,7 @@ export default function AnimalCarePage() {
                 <h2 className="title_heading">
                   Frequently Asked <span style={{ color: "#78ae60" }}>Questions</span>
                 </h2>
-                <p>Have questions? We are here to help.</p>
+                <p>Have questions? Were here to help.</p>
               </div>
             </div>
           </div>

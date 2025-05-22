@@ -908,7 +908,7 @@ export default function HospitalPage() {
             <h2>
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
-            <p>Have questions? We are here to help.</p>
+            <p>Have questions? Were here to help.</p>
           </div>
 
           <div className="accordion" id="faqAccordion">
