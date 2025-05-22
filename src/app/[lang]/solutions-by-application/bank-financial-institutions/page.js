@@ -1,27 +1,66 @@
-"use client"
 
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
-import Carousel from "react-multi-carousel"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 
 export default function BankFinancePage() {
-  // Carousel responsive settings
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: "Solutions for Hotel",
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: "Solutions for Restaurant",
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: "Solutions for Institutes",
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
-  }
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: "Solutions for Cinema/Theatre",
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: "Solutions for Automobiles",
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: "Solutions for Real Estates",
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: "Solutions for Smartphone Makers",
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: "Solutions for Construction",
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: "Air quality Solutions for Animal care",
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: "Air quality Solutions for logistics",
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: "Air quality Solutions for Railways",
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    },
+  ]
 
   return (
     <div className="bank-financial-page">
@@ -551,11 +590,12 @@ export default function BankFinancePage() {
           </div>
         </div>
       </div>
-
-      <div className="row pd-bt">
-        <div className="col-md-12">
-          <div className="owl-slider">
-            <IndustrialApplicationsCarousel applications={industrialApplications} />
+      <div className="container">
+        <div className="row pd-bt">
+          <div className="col-md-12">
+            <div className="owl-slider">
+              <IndustrialApplicationsCarousel applications={industrialApplications} />
+            </div>
           </div>
         </div>
       </div>

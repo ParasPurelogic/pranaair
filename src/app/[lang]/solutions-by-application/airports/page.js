@@ -1,6 +1,7 @@
 "use client"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import AirQualityTabs from "@/Components/Pages/Airports/air-quality-tabs"
 import FaqAccordion from "@/Components/Pages/Airports/faq-accordion"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 

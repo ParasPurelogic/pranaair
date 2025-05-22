@@ -21,7 +21,7 @@ const responsive = {
     }
 };
 
-export default function IndustrialApplicationsCarousel({ applications }) {
+export default function IndustrialApplicationsCarousel({ applications = [] }) {
     return (
         <Carousel responsive={responsive}>
             {applications.map((app, index) => (
