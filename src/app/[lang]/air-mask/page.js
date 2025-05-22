@@ -1,60 +1,9 @@
-"use client"
-
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AirMaskPage() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
-
-  const [activeTab, setActiveTab] = useState("motion-maske529-7eaa")
-  const [activeFaq, setActiveFaq] = useState(null)
-
-  useEffect(() => {
-    // Initialize any client-side scripts here
-    const script = document.createElement("script")
-    script.innerHTML = `
-      jQuery(document).ready(function($) {
-        $('.hover-box').hover(function() {
-          $(this).find('.hover-body').css('visibility', 'visible').css('opacity', '1');
-        }, function() {
-          $(this).find('.hover-body').css('visibility', 'hidden').css('opacity', '0');
-        });
-      });
-    `
-    document.body.appendChild(script)
-
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
-
-  const toggleFaq = (id) => {
-    if (activeFaq === id) {
-      setActiveFaq(null)
-    } else {
-      setActiveFaq(id)
-    }
-  }
-
+export default async function AirMaskPage() {
+  const { t } = await getServerTranslation("air-mask")
   return (
     <div className="air-mask-page">
       {/* Banner Section */}
@@ -64,9 +13,9 @@ export default function AirMaskPage() {
             <div className="col-md-6 top-head"></div>
             <div className="col-md-6">
               <div className="banner-contant">
-                <span className="motorize">motorized</span>
-                <h1>be safe out there with n95 pollution mask</h1>
-                <p>maximum protection from dangerous pollutants</p>
+                <span className="motorize">{t("airMask.motorized")}</span>
+                <h1>{t("airMask.heading")}</h1>
+                <p>{t("airMask.description")}</p>
                 <ul>
                   <li>
                     <form
@@ -81,7 +30,7 @@ export default function AirMaskPage() {
                         type="submit"
                         value="9561"
                       >
-                        Buy Now
+                        {t("airMask.buyNow")}
                       </button>
                     </form>
                   </li>
@@ -89,7 +38,7 @@ export default function AirMaskPage() {
                     <div className="woocom-list-content">
                       <span className="woocs_price_code">
                         <span className="woocommerce-Price-amount amount">
-                          <bdi>₹2,990</bdi>
+                          <bdi>{t("airMask.price")}</bdi>
                         </span>
                       </span>
                     </div>
@@ -492,211 +441,237 @@ export default function AirMaskPage() {
       {/* Perfect Outdoor Companions Section */}
       <div className="col-push-sec">
         <div className="container-fluid">
-        <div className="row">
-          <div
-            className="col-md-6 bg-img-sec"
-            style={{
-              backgroundImage: "url(https://www.pranaair.com/wp-content/uploads/2019/09/adult-pollution-mask.jpg)",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          >
-            <Image
-              src="https://www.pranaair.com/wp-content/uploads/2021/09/2nd-gen-95-mask.jpg"
-              alt="Prana Air N95 Mask 2nd Gen"
-              width={900}
-              height={577}
-              className="mask-img"
-            />
-          </div>
-          <div className="col-md-6 padd companions-col">
-            <h4
-              className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated"
-              style={{ textAlign: "left" }}
+          <div className="row">
+            <div
+              className="col-md-6 bg-img-sec"
+              style={{
+                backgroundImage: "url(https://www.pranaair.com/wp-content/uploads/2019/09/adult-pollution-mask.jpg)",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
             >
-              <strong>
-                <span style={{ fontSize: "24pt" }}>Perfect Outdoor Companions</span>
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2021/09/2nd-gen-95-mask.jpg"
+                alt="Prana Air N95 Mask 2nd Gen"
+                width={900}
+                height={577}
+                className="mask-img"
+              />
+            </div>
+            <div className="col-md-6 padd companions-col">
+              <h4
+                className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated"
+                style={{ textAlign: "left" }}
+              >
+                <strong>
+                  <span style={{ fontSize: "24pt" }}>Perfect Outdoor Companions</span>
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                    alt="logo"
+                    width={30}
+                    height={30}
+                  />
+                </strong>
+              </h4>
+              <div style={{ height: "10px" }}></div>
+              <p style={{ fontSize: "16px", textAlign: "left", color: "#383838", lineHeight: "1.8" }}>
+                Prana Air Anti Pollution Mask is designed with comfort in mind to provide optimum protection from
+                hazardous pollutants such as dust, particle matter (PM2.5 and PM10), carbon monoxide, and sulphur
+                dioxide, which are commonly found in smoke from vehicle exhausts, factories, and bushfires.
+              </p>
+
+              <div className="animateme scrollme">
+                <div className="icon-col">
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2021/05/pm2.5-icon.png"
+                    alt="pm2.5 icon"
+                    width={80}
+                    height={80}
+                  />
+                  <h4>PM 2.5</h4>
+                </div>
+                <div className="icon-col">
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2021/05/carbon-monoxide-icon.png"
+                    alt="carbon monoxide icon"
+                    width={80}
+                    height={80}
+                  />
+                  <h4>Carbon Monoxide</h4>
+                </div>
+                <div className="icon-col">
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2021/05/so2-icon.png"
+                    alt="so2 icon"
+                    width={80}
+                    height={80}
+                  />
+                  <h4>Sulphur Dioxide</h4>
+                </div>
+                <div className="icon-col">
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2021/05/dust-icon.png"
+                    alt="dust icon"
+                    width={80}
+                    height={80}
+                  />
+                  <h4>Dust</h4>
+                </div>
+                <div className="icon-col">
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2021/05/smoke-icon.png"
+                    alt="smoke icon"
+                    width={80}
+                    height={80}
+                  />
+                  <h4>Smoke</h4>
+                </div>
+                <div className="clear"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Micro Ventilator Section */}
+      <div className="padd-more">
+        <div className="container-fluid">
+          <div className="row">
+            <div
+              className="col-md-6 bg-img-sec"
+              style={{
+                backgroundImage:
+                  "url(https://www.pranaair.com/wp-content/uploads/2019/09/air-mask-micro-ventilator.png)",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            >
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2021/02/prana-air-motorizied-system-n95-mask.png"
+                alt="Prana Air Mask Micro Ventilator"
+                width={576}
+                height={570}
+                className="mask-img"
+              />
+            </div>
+            <div className="col-md-6 padd companions-col">
+              <h4 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated">
+                <strong>
+                  <span style={{ fontSize: "24pt" }}>Micro Ventilator</span>
+                </strong>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                   alt="logo"
                   width={30}
                   height={30}
                 />
-              </strong>
-            </h4>
-            <div style={{ height: "10px" }}></div>
-            <p style={{ fontSize: "16px", textAlign: "left", color: "#383838", lineHeight: "1.8" }}>
-              Prana Air Anti Pollution Mask is designed with comfort in mind to provide optimum protection from
-              hazardous pollutants such as dust, particle matter (PM2.5 and PM10), carbon monoxide, and sulphur dioxide,
-              which are commonly found in smoke from vehicle exhausts, factories, and bushfires.
-            </p>
-
-            <div className="animateme scrollme">
-              <div className="icon-col">
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2021/05/pm2.5-icon.png"
-                  alt="pm2.5 icon"
-                  width={80}
-                  height={80}
-                />
-                <h4>PM 2.5</h4>
-              </div>
-              <div className="icon-col">
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2021/05/carbon-monoxide-icon.png"
-                  alt="carbon monoxide icon"
-                  width={80}
-                  height={80}
-                />
-                <h4>Carbon Monoxide</h4>
-              </div>
-              <div className="icon-col">
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2021/05/so2-icon.png"
-                  alt="so2 icon"
-                  width={80}
-                  height={80}
-                />
-                <h4>Sulphur Dioxide</h4>
-              </div>
-              <div className="icon-col">
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2021/05/dust-icon.png"
-                  alt="dust icon"
-                  width={80}
-                  height={80}
-                />
-                <h4>Dust</h4>
-              </div>
-              <div className="icon-col">
-                <Image
-                  src="https://www.pranaair.com/wp-content/uploads/2021/05/smoke-icon.png"
-                  alt="smoke icon"
-                  width={80}
-                  height={80}
-                />
-                <h4>Smoke</h4>
-              </div>
-              <div className="clear"></div>
+              </h4>
+              <div style={{ height: "10px" }}></div>
+              <p style={{ textAlign: "justify" }}>
+                The best thing with our air mask is that they have a micro-ventilator which eliminates the unpleasant
+                build-up of carbon dioxide, and prevents you from breathing in recycled air. It is easily chargeable
+                with a micro USB cable and comes with different fan modes. It is adjustable depending on the pollution
+                level.
+              </p>
             </div>
           </div>
-        </div>
-        </div>
-      </div>
-
-      {/* Micro Ventilator Section */}
-      <div className="padd-more">
-      <div className="container-fluid">
-        <div className="row">
-          <div
-            className="col-md-6 bg-img-sec"
-            style={{
-              backgroundImage: "url(https://www.pranaair.com/wp-content/uploads/2019/09/air-mask-micro-ventilator.png)",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          >
-            <Image
-              src="https://www.pranaair.com/wp-content/uploads/2021/02/prana-air-motorizied-system-n95-mask.png"
-              alt="Prana Air Mask Micro Ventilator"
-              width={576}
-              height={570}
-              className="mask-img"
-            />
-          </div>
-          <div className="col-md-6 padd companions-col">
-            <h4 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated">
-              <strong>
-                <span style={{ fontSize: "24pt" }}>Micro Ventilator</span>
-              </strong>
-              <Image
-                src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                alt="logo"
-                width={30}
-                height={30}
-              />
-            </h4>
-            <div style={{ height: "10px" }}></div>
-            <p style={{ textAlign: "justify" }}>
-              The best thing with our air mask is that they have a micro-ventilator which eliminates the unpleasant
-              build-up of carbon dioxide, and prevents you from breathing in recycled air. It is easily chargeable with
-              a micro USB cable and comes with different fan modes. It is adjustable depending on the pollution level.
-            </p>
-          </div>
-        </div>
         </div>
       </div>
 
       {/* Stylish Section */}
       <div className="col-push-sec padd-more">
         <div className="container-fluid">
-        <div className="row">
-          <div
-            className="col-md-6 bg-img-sec"
-            style={{
-              backgroundImage: "url(https://www.pranaair.com/wp-content/uploads/2019/09/prana-air-stylish-mask.jpg)",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          >
-            <Image
-              src="https://www.pranaair.com/wp-content/uploads/2021/10/a-lady-wearing-prana-air-n95-pollution-mask.jpg"
-              alt="Prana Air N95 Mask Stylish"
-              width={900}
-              height={584}
-              className="mask-img"
-            />
-          </div>
-          <div className="col-md-6 padd companions-col">
-            <h4 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated">
-              <span style={{ fontSize: "24pt" }}>
-                <strong>Stylish</strong>
-              </span>
+          <div className="row">
+            <div
+              className="col-md-6 bg-img-sec"
+              style={{
+                backgroundImage: "url(https://www.pranaair.com/wp-content/uploads/2019/09/prana-air-stylish-mask.jpg)",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            >
               <Image
-                src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                alt="logo"
-                width={30}
-                height={30}
+                src="https://www.pranaair.com/wp-content/uploads/2021/10/a-lady-wearing-prana-air-n95-pollution-mask.jpg"
+                alt="Prana Air N95 Mask Stylish"
+                width={900}
+                height={584}
+                className="mask-img"
               />
-            </h4>
-            <div style={{ height: "10px" }}></div>
-            <p style={{ textAlign: "justify" }}>
-              <span style={{ fontSize: "12pt" }}>
-                Our fashionable and stylish anti-pollution face mask can be worn anywhere. You are protected wherever
-                and everywhere you go.
-              </span>
-            </p>
+            </div>
+            <div className="col-md-6 padd companions-col">
+              <h4 className="cus-heading wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown wpb_start_animation animated">
+                <span style={{ fontSize: "24pt" }}>
+                  <strong>Stylish</strong>
+                </span>
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                  alt="logo"
+                  width={30}
+                  height={30}
+                />
+              </h4>
+              <div style={{ height: "10px" }}></div>
+              <p style={{ textAlign: "justify" }}>
+                <span style={{ fontSize: "12pt" }}>
+                  Our fashionable and stylish anti-pollution face mask can be worn anywhere. You are protected wherever
+                  and everywhere you go.
+                </span>
+              </p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
-      {/* Product Section with Tabs */}
+      {/* Product Section with Tabs - Using Bootstrap Tabs */}
       <div className="product-sec">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="tabs-container">
-                <div className="tabs-header">
-                  <button
-                    className={activeTab === "motion-maske529-7eaa" ? "active" : ""}
-                    onClick={() => setActiveTab("motion-maske529-7eaa")}
-                  >
-                    2nd Gen Mask
-                  </button>
-                  <button
-                    className={activeTab === "city-maske529-7eaa" ? "active" : ""}
-                    onClick={() => setActiveTab("city-maske529-7eaa")}
-                  >
-                    Junior Mask
-                  </button>
-                </div>
+                {/* Bootstrap Nav Tabs */}
+                <ul className="nav nav-tabs tabs-header" id="productTabs" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="motion-mask-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#motion-mask-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="motion-mask-tab-pane"
+                      aria-selected="true"
+                    >
+                      2nd Gen Mask
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="city-mask-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#city-mask-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="city-mask-tab-pane"
+                      aria-selected="false"
+                    >
+                      Junior Mask
+                    </button>
+                  </li>
+                </ul>
 
-                <div className="tabs-content">
-                  {activeTab === "motion-maske529-7eaa" && (
+                {/* Bootstrap Tab Content */}
+                <div className="tab-content tabs-content" id="productTabsContent">
+                  <div
+                    className="tab-pane fade show active"
+                    id="motion-mask-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="motion-mask-tab"
+                    tabIndex={0}
+                  >
                     <div className="row">
                       <div className="col-md-6">
                         <Image
@@ -710,65 +685,73 @@ export default function AirMaskPage() {
                       <div className="col-md-5">
                         <div className="animateme scrollme">
                           <table>
-                            <tr>
-                              <th>Colors</th>
-                              <td>White with 3 caps - pink, grey, white</td>
-                            </tr>
-                            <tr>
-                              <th>Filter layers</th>
-                              <td>5</td>
-                            </tr>
-                            <tr>
-                              <th>HEPA compliant</th>
-                              <td>Yes</td>
-                            </tr>
-                            <tr>
-                              <th>Purification efficiency</th>
-                              <td>upto 95.99%</td>
-                            </tr>
-                            <tr>
-                              <th>Fan speed</th>
-                              <td>3 modes</td>
-                            </tr>
-                            <tr>
-                              <th>Charging mode</th>
-                              <td>USB charging</td>
-                            </tr>
-                            <tr>
-                              <th>Charging time</th>
-                              <td>1 to 1.5 hours</td>
-                            </tr>
-                            <tr>
-                              <th>Battery duration</th>
-                              <td> Upto 2 hours</td>
-                            </tr>
-                            <tr>
-                              <th>Battery capacity</th>
-                              <td>680 mAh</td>
-                            </tr>
-                            <tr>
-                              <th>Weight</th>
-                              <td>70 grams</td>
-                            </tr>
-                            <tr>
-                              <th>Voltage</th>
-                              <td>3.7V-5.2V</td>
-                            </tr>
-                            <tr>
-                              <th>Noise</th>
-                              <td>&lt;28dB(A)</td>
-                            </tr>
-                            <tr>
-                              <th>Price</th>
-                              <td>2990 INR</td>
-                            </tr>
+                            <tbody>
+                              <tr>
+                                <th>Colors</th>
+                                <td>White with 3 caps - pink, grey, white</td>
+                              </tr>
+                              <tr>
+                                <th>Filter layers</th>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th>HEPA compliant</th>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <th>Purification efficiency</th>
+                                <td>upto 95.99%</td>
+                              </tr>
+                              <tr>
+                                <th>Fan speed</th>
+                                <td>3 modes</td>
+                              </tr>
+                              <tr>
+                                <th>Charging mode</th>
+                                <td>USB charging</td>
+                              </tr>
+                              <tr>
+                                <th>Charging time</th>
+                                <td>1 to 1.5 hours</td>
+                              </tr>
+                              <tr>
+                                <th>Battery duration</th>
+                                <td> Upto 2 hours</td>
+                              </tr>
+                              <tr>
+                                <th>Battery capacity</th>
+                                <td>680 mAh</td>
+                              </tr>
+                              <tr>
+                                <th>Weight</th>
+                                <td>70 grams</td>
+                              </tr>
+                              <tr>
+                                <th>Voltage</th>
+                                <td>3.7V-5.2V</td>
+                              </tr>
+                              <tr>
+                                <th>Noise</th>
+                                <td>&lt;28dB(A)</td>
+                              </tr>
+                              <tr>
+                                <th>Price</th>
+                                <td>2990 INR</td>
+                              </tr>
+                            </tbody>
                           </table>
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
 
-                  {activeTab === "city-maske529-7eaa" && (
+                  <div
+                    className="tab-pane fade"
+                    id="city-mask-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="city-mask-tab"
+                    tabIndex={0}
+                  >
                     <div className="row">
                       <div className="col-md-6">
                         <Image
@@ -782,67 +765,69 @@ export default function AirMaskPage() {
                       <div className="col-md-5">
                         <div className="animateme scrollme">
                           <table>
-                            <tr>
-                              <th>Colors</th>
-                              <td>White, Pink, Blue</td>
-                            </tr>
-                            <tr>
-                              <th>Filter layers</th>
-                              <td>5</td>
-                            </tr>
-                            <tr>
-                              <th>HEPA compliant</th>
-                              <td>Yes</td>
-                            </tr>
-                            <tr>
-                              <th>Purification efficiency</th>
-                              <td>&gt;95%</td>
-                            </tr>
-                            <tr>
-                              <th>Fan speed</th>
-                              <td>3 modes</td>
-                            </tr>
-                            <tr>
-                              <th>Charging mode</th>
-                              <td>USB charging</td>
-                            </tr>
-                            <tr>
-                              <th>Charging time</th>
-                              <td>1.5 hours</td>
-                            </tr>
-                            <tr>
-                              <th>Battery duration</th>
-                              <td>upto 3 hours</td>
-                            </tr>
-                            <tr>
-                              <th>Battery capacity</th>
-                              <td>1000 mAh</td>
-                            </tr>
-                            <tr>
-                              <th>Dimensions</th>
-                              <td>120x110x50 (mm)</td>
-                            </tr>
-                            <tr>
-                              <th>Weight</th>
-                              <td>62 grams</td>
-                            </tr>
-                            <tr>
-                              <th>Voltage</th>
-                              <td>5V</td>
-                            </tr>
-                            <tr>
-                              <th>Noise</th>
-                              <td>&lt;28db(A)</td>
-                            </tr>
-                            <tr>
-                              <th>Price</th>
-                              <td>2499 INR</td>
-                            </tr>
+                            <tbody>
+                              <tr>
+                                <th>Colors</th>
+                                <td>White, Pink, Blue</td>
+                              </tr>
+                              <tr>
+                                <th>Filter layers</th>
+                                <td>5</td>
+                              </tr>
+                              <tr>
+                                <th>HEPA compliant</th>
+                                <td>Yes</td>
+                              </tr>
+                              <tr>
+                                <th>Purification efficiency</th>
+                                <td>&gt;95%</td>
+                              </tr>
+                              <tr>
+                                <th>Fan speed</th>
+                                <td>3 modes</td>
+                              </tr>
+                              <tr>
+                                <th>Charging mode</th>
+                                <td>USB charging</td>
+                              </tr>
+                              <tr>
+                                <th>Charging time</th>
+                                <td>1.5 hours</td>
+                              </tr>
+                              <tr>
+                                <th>Battery duration</th>
+                                <td>upto 3 hours</td>
+                              </tr>
+                              <tr>
+                                <th>Battery capacity</th>
+                                <td>1000 mAh</td>
+                              </tr>
+                              <tr>
+                                <th>Dimensions</th>
+                                <td>120x110x50 (mm)</td>
+                              </tr>
+                              <tr>
+                                <th>Weight</th>
+                                <td>62 grams</td>
+                              </tr>
+                              <tr>
+                                <th>Voltage</th>
+                                <td>5V</td>
+                              </tr>
+                              <tr>
+                                <th>Noise</th>
+                                <td>&lt;28db(A)</td>
+                              </tr>
+                              <tr>
+                                <th>Price</th>
+                                <td>2499 INR</td>
+                              </tr>
+                            </tbody>
                           </table>
                         </div>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -997,81 +982,83 @@ export default function AirMaskPage() {
             <div className="col-md-6 table-col">
               <div className="animateme scrollme">
                 <table>
-                  <tr>
-                    <th>PRODUCT FEATURES</th>
-                    <th>JUNIOR MASK</th>
-                    <th>2nd Gen Mask</th>
-                  </tr>
-                  <tr>
-                    <th>Colors</th>
-                    <td>White, Pink, Yellow</td>
-                    <td>White, Pink, Grey</td>
-                  </tr>
-                  <tr>
-                    <th>Filter layers</th>
-                    <td>5</td>
-                    <td>5</td>
-                  </tr>
-                  <tr>
-                    <th>HEPA compliant</th>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                  </tr>
-                  <tr>
-                    <th>Purification efficiency</th>
-                    <td>&gt;upto 95%</td>
-                    <td>upto 95.99%</td>
-                  </tr>
-                  <tr>
-                    <th>Fan speed</th>
-                    <td>3 modes</td>
-                    <td>3 modes</td>
-                  </tr>
-                  <tr>
-                    <th>Charging mode</th>
-                    <td>USB charging</td>
-                    <td>USB charging</td>
-                  </tr>
-                  <tr>
-                    <th>Charging time</th>
-                    <td>1.5-2 hours</td>
-                    <td>1.5 hours</td>
-                  </tr>
-                  <tr>
-                    <th>Battery duration</th>
-                    <td>upto 3 hours</td>
-                    <td>upto 2 hours</td>
-                  </tr>
-                  <tr>
-                    <th>Battery capacity</th>
-                    <td>1000 mAh</td>
-                    <td>680 mAh</td>
-                  </tr>
-                  <tr>
-                    <th>Dimensions</th>
-                    <td>120x110x50 (mm)</td>
-                    <td>110x90x50 (mm)</td>
-                  </tr>
-                  <tr>
-                    <th>Weight</th>
-                    <td>62 grams</td>
-                    <td>78 grams</td>
-                  </tr>
-                  <tr>
-                    <th>Voltage</th>
-                    <td>5V</td>
-                    <td>3.7V-5.2V</td>
-                  </tr>
-                  <tr>
-                    <th>Noise</th>
-                    <td>&lt;28db(A)</td>
-                    <td>&lt;28db(A)</td>
-                  </tr>
-                  <tr>
-                    <th>Price</th>
-                    <td>1990 INR</td>
-                    <td>999 INR</td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <th>PRODUCT FEATURES</th>
+                      <th>JUNIOR MASK</th>
+                      <th>2nd Gen Mask</th>
+                    </tr>
+                    <tr>
+                      <th>Colors</th>
+                      <td>White, Pink, Yellow</td>
+                      <td>White, Pink, Grey</td>
+                    </tr>
+                    <tr>
+                      <th>Filter layers</th>
+                      <td>5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <th>HEPA compliant</th>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <th>Purification efficiency</th>
+                      <td>&gt;upto 95%</td>
+                      <td>upto 95.99%</td>
+                    </tr>
+                    <tr>
+                      <th>Fan speed</th>
+                      <td>3 modes</td>
+                      <td>3 modes</td>
+                    </tr>
+                    <tr>
+                      <th>Charging mode</th>
+                      <td>USB charging</td>
+                      <td>USB charging</td>
+                    </tr>
+                    <tr>
+                      <th>Charging time</th>
+                      <td>1.5-2 hours</td>
+                      <td>1.5 hours</td>
+                    </tr>
+                    <tr>
+                      <th>Battery duration</th>
+                      <td>upto 3 hours</td>
+                      <td>upto 2 hours</td>
+                    </tr>
+                    <tr>
+                      <th>Battery capacity</th>
+                      <td>1000 mAh</td>
+                      <td>680 mAh</td>
+                    </tr>
+                    <tr>
+                      <th>Dimensions</th>
+                      <td>120x110x50 (mm)</td>
+                      <td>110x90x50 (mm)</td>
+                    </tr>
+                    <tr>
+                      <th>Weight</th>
+                      <td>62 grams</td>
+                      <td>78 grams</td>
+                    </tr>
+                    <tr>
+                      <th>Voltage</th>
+                      <td>5V</td>
+                      <td>3.7V-5.2V</td>
+                    </tr>
+                    <tr>
+                      <th>Noise</th>
+                      <td>&lt;28db(A)</td>
+                      <td>&lt;28db(A)</td>
+                    </tr>
+                    <tr>
+                      <th>Price</th>
+                      <td>1990 INR</td>
+                      <td>999 INR</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -1146,7 +1133,7 @@ export default function AirMaskPage() {
         </div>
       </div>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Using Bootstrap Accordion */}
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -1156,76 +1143,271 @@ export default function AirMaskPage() {
               <span style={{ fontSize: "18pt" }}>About Prana Air Mask</span>
             </h3>
 
-            <div className="faq-accordion">
-              {[
-                {
-                  id: "1667288953965-0a9d58ab-c3f9",
-                  title: "1. Is the air mask available in white color only?",
-                  content: "- There are 3 colors of the cap only for 2nd Gen Mask- White, Pink, Grey.",
-                },
-                {
-                  id: "1667288954017-fb3771a6-6637",
-                  title: "2. Are the mask straps adjustable?",
-                  content: "- Yes, you can adjust the air mask straps.",
-                },
-                {
-                  id: "1667289148426-d491fd4f-7026",
-                  title: "3. How to charge it?",
-                  content: "- It is easily chargeable with a micro USB cable.",
-                },
-                {
-                  id: "1667289217175-68b2d6ce-4dac",
-                  title: "4. How many modes of the fan are there?",
-                  content:
-                    "- The air mask comes with 3 different fan modes. It is adjustable depending on the pollution level.",
-                },
-                {
-                  id: "1667289259502-b734c68d-149e",
-                  title: "5. How much does it weigh?",
-                  content: "- It is a lightweight air mask, with a weight of 70 grams.",
-                },
-                {
-                  id: "1667289285423-c80cdc61-69c1",
-                  title: "6. How long does the battery last when fully charged?",
-                  content: "- The battery lasts up to 2 hours on a single full charge.",
-                },
-                {
-                  id: "1667289334258-fca948b6-328d",
-                  title: "7. Does the air mask help protect from viruses like COVID-19?",
-                  content: "-Yes, it is highly recommended to wear a mask to stop the virus from spreading.",
-                },
-                {
-                  id: "1667289365537-f5ba1f76-cae2",
-                  title: "8. How many filters does the mask have?",
-                  content: "- There is only 1 filter with multi-layer of pre-filter & HEPA filter.",
-                },
-                {
-                  id: "1667289466514-cc0b4220-aa2f",
-                  title: "9. What air pollutants can the mask filter out?",
-                  content: "- Dust (PM10, PM2.5), Carbon Monoxide, Sulphur Dioxide, Smoke, etc.",
-                },
-                {
-                  id: "1667289527937-2ed42693-2d67",
-                  title: "10. Is the fan speed adjustable?",
-                  content: "- Yes, the fan speed is adjustable, you can adjust it with 3 different modes.",
-                },
-                {
-                  id: "1667289583946-bb4931b7-52aa",
-                  title: "11. How efficient is the Prana Air- Air Mask?",
-                  content: "- The purification efficiency of the air mask is up to 95.99%.",
-                },
-              ].map((faq) => (
-                <div key={faq.id} className="faq-item">
-                  <div
-                    className={`faq-title ${activeFaq === faq.id ? "active" : ""}`}
-                    onClick={() => toggleFaq(faq.id)}
+            <div className="accordion faq-accordion" id="faqAccordion">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading1">
+                  <button
+                    className="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="true"
+                    aria-controls="collapse1"
                   >
-                    {faq.title}
-                    <span className="faq-icon">{activeFaq === faq.id ? "-" : "+"}</span>
+                    1. Is the air mask available in white color only?
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  className="accordion-collapse collapse show"
+                  aria-labelledby="heading1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    - There are 3 colors of the cap only for 2nd Gen Mask- White, Pink, Grey.
                   </div>
-                  {activeFaq === faq.id && <div className="faq-content">{faq.content}</div>}
                 </div>
-              ))}
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading2">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                    aria-expanded="false"
+                    aria-controls="collapse2"
+                  >
+                    2. Are the mask straps adjustable?
+                  </button>
+                </h2>
+                <div
+                  id="collapse2"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">- Yes, you can adjust the air mask straps.</div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading3">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                  >
+                    3. How to charge it?
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">- It is easily chargeable with a micro USB cable.</div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading4">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="false"
+                    aria-controls="collapse4"
+                  >
+                    4. How many modes of the fan are there?
+                  </button>
+                </h2>
+                <div
+                  id="collapse4"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading4"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    - The air mask comes with 3 different fan modes. It is adjustable depending on the pollution level.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading5">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                    aria-expanded="false"
+                    aria-controls="collapse5"
+                  >
+                    5. How much does it weigh?
+                  </button>
+                </h2>
+                <div
+                  id="collapse5"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading5"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">- It is a lightweight air mask, with a weight of 70 grams.</div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading6">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse6"
+                    aria-expanded="false"
+                    aria-controls="collapse6"
+                  >
+                    6. How long does the battery last when fully charged?
+                  </button>
+                </h2>
+                <div
+                  id="collapse6"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading6"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">- The battery lasts up to 2 hours on a single full charge.</div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading7">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse7"
+                    aria-expanded="false"
+                    aria-controls="collapse7"
+                  >
+                    7. Does the air mask help protect from viruses like COVID-19?
+                  </button>
+                </h2>
+                <div
+                  id="collapse7"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading7"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    -Yes, it is highly recommended to wear a mask to stop the virus from spreading.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading8">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse8"
+                    aria-expanded="false"
+                    aria-controls="collapse8"
+                  >
+                    8. How many filters does the mask have?
+                  </button>
+                </h2>
+                <div
+                  id="collapse8"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading8"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    - There is only 1 filter with multi-layer of pre-filter & HEPA filter.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading9">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse9"
+                    aria-expanded="false"
+                    aria-controls="collapse9"
+                  >
+                    9. What air pollutants can the mask filter out?
+                  </button>
+                </h2>
+                <div
+                  id="collapse9"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading9"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    - Dust (PM10, PM2.5), Carbon Monoxide, Sulphur Dioxide, Smoke, etc.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading10">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse10"
+                    aria-expanded="false"
+                    aria-controls="collapse10"
+                  >
+                    10. Is the fan speed adjustable?
+                  </button>
+                </h2>
+                <div
+                  id="collapse10"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading10"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    - Yes, the fan speed is adjustable, you can adjust it with 3 different modes.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="heading11">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse11"
+                    aria-expanded="false"
+                    aria-controls="collapse11"
+                  >
+                    11. How efficient is the Prana Air- Air Mask?
+                  </button>
+                </h2>
+                <div
+                  id="collapse11"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="heading11"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">- The purification efficiency of the air mask is up to 95.99%.</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1233,4 +1415,3 @@ export default function AirMaskPage() {
     </div>
   )
 }
-
