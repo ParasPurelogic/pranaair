@@ -1,21 +1,12 @@
 "use client"
-
-import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
+import ContactForm from "@/Components/Contacform/ContactForm"
 import Carousel from "react-multi-carousel"
-import ContactForm from "@/Components/Contacform/ContactForm";
+import FaqAccordion from "@/Components/Pages/Airports/faq-accordion"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 
 export default function AnimalCarePage() {
-  // State for tabs in the air quality solutions section
-  const [activeTab, setActiveTab] = useState("Air quality Monitors")
-
-  // State for FAQ accordion
-  const [activeFaq, setActiveFaq] = useState(1)
-
-  // State for carousel
-  const [currentSlide, setCurrentSlide] = useState(0)
-
   // Carousel responsive settings
   const responsive = {
     desktop: {
@@ -51,20 +42,6 @@ export default function AnimalCarePage() {
     },
   }
 
-  // Handle tab change
-  const handleTabChange = (tab) => {
-    setActiveTab(tab)
-  }
-
-  // Handle FAQ toggle
-  const toggleFaq = (faqId) => {
-    if (activeFaq === faqId) {
-      setActiveFaq(null)
-    } else {
-      setActiveFaq(faqId)
-    }
-  }
-
   // Carousel data
   const carouselItems = [
     {
@@ -72,7 +49,7 @@ export default function AnimalCarePage() {
       icon: "https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png",
       title: "AQI TV App",
       description:
-        "Access real-time air quality data on a large TV screen in the animal health care, farm etc. Get continuous 24/7 remote monitoring to stay informed about AQI levels and ensure a healthier environment.",
+        "Access real-time air quality data on a large TV screen in the animal health care farm etc. Get continuous 24/7 remote monitoring to stay informed about AQI levels and ensure a healthier environment.",
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/animal-car-tv.jpg",
     },
     {
@@ -80,7 +57,7 @@ export default function AnimalCarePage() {
       icon: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg",
       title: "AQI Web-Dashboard",
       description:
-        "Get real-time data from animal facility on a web dashboard to make informed decisions. Explore global pollution trends, receive health advice based on real-time air quality indexes, and easily compare air quality parameters across multiple locations.",
+        "Get real-time data from animal facility on a web dashboard to make informed decisions. Explore global pollution trends receive health advice based on real-time air quality indexes and easily compare air quality parameters across multiple locations.",
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/animal-car-dashboard.jpg",
     },
     {
@@ -88,8 +65,111 @@ export default function AnimalCarePage() {
       icon: "https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png",
       title: "AQI Mobile App",
       description:
-        "Monitor real-time air quality data from animal facility anytime, anywhere with our mobile app. View global air pollution and weather maps, and easily compare air quality parameters across multiple locations with the AQI App.",
+        "Monitor real-time air quality data from animal facility anytime anywhere with our mobile app. View global air pollution and weather maps and easily compare air quality parameters across multiple locations with the AQI App.",
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/animal-car-phone.jpg",
+    },
+  ]
+
+  // FAQ items
+  const faqItems = [
+    {
+      question: "1. What are the air pollutants in any animal facility?",
+      answer:
+        "Animals poor ventilation and chemical use in farms health-care and labs emit various indoor air pollutants such as PM2.5 PM10 VOCs CO2 NH3 etc.",
+    },
+    {
+      question: "2. How does air pollution interfere with the research outcomes in labs?",
+      answer:
+        "Air pollutants can affect research outcomes in labs by contaminating data and resulting in inaccurate measurements that lead to invalid conclusions.",
+    },
+    {
+      question: "3. What solutions are the best for animal facilities?",
+      answer:
+        "Air quality monitors and high-quality air purifiers are the best solutions for poor air quality in animal farms hospitals care centers and labs.",
+    },
+    {
+      question: "4. How does temperature or humidity affect air quality in any lab facility?",
+      answer:
+        "Temperature and humidity levels depends on outdoor weather condition that can affect pollution emissions trap more pollutants in facilities and also lead to animal discomfort.",
+    },
+  ]
+
+  // Industrial applications data
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg",
+      title: "Air quality Solutions for Bank",
+      link: "https://www.pranaair.com/solutions-by-application/bank-financial-institutions/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: "Air quality Solutions for Hotel",
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: "Air quality Solutions for Restaurant",
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg",
+      title: "Air quality Solutions for Airport",
+      link: "https://www.pranaair.com/solutions-by-application/airports/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg",
+      title: "Air quality Solutions for Fitness & Gym",
+      link: "https://www.pranaair.com/solutions-by-application/fitness-center-gym/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg",
+      title: "Air quality Solutions for Parking Lot",
+      link: "https://www.pranaair.com/solutions-by-application/parking-lot/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2023/05/air-solutions-for-washroom-and-bathroom.jpg",
+      title: "Air quality Solutions for Washroom",
+      link: "https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: "Air quality Solutions for Institutes",
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: "Air quality Solutions for Cinema/Theatre",
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: "Air quality Solutions for Automobiles",
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: "Air quality Solutions for Real Estates",
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: "Air quality Solutions for Smartphone Makers",
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: "Air quality Solutions for Construction",
+      link: "https://www.pranaair.com/solutions-by-application/constructions/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: "Air quality Solutions for logistics",
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: "Air quality Solutions for Railways",
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
     },
   ]
 
@@ -141,7 +221,7 @@ export default function AnimalCarePage() {
               alt="Particulate Matter icon"
             />
             <h3>Particulate Matter</h3>
-            <p>Emits from Dust, dander, bedding particles, and feed etc.</p>
+            <p>Emits from Dust dander bedding particles and feed etc.</p>
           </div>
 
           <div className="pollutant-item">
@@ -153,14 +233,14 @@ export default function AnimalCarePage() {
           <div className="pollutant-item">
             <img src="https://www.pranaair.com/wp-content/uploads/2024/08/TVOC.png" alt="TVOC icon" />
             <h3>TVOC</h3>
-            <p>Emits from cleaning agents, disinfectants, and chemicals.</p>
+            <p>Emits from cleaning agents disinfectants and chemicals.</p>
           </div>
 
           <div className="bottom-pollutants">
             <div className="pollutant-item">
               <img src="https://www.pranaair.com/wp-content/uploads/2024/08/Pathogens.png" alt="Pathogens icon" />
               <h3>Pathogens</h3>
-              <p>Improper storage of feed can produce bacteria, viruses, and fungi</p>
+              <p>Improper storage of feed can produce bacteria viruses and fungi</p>
             </div>
 
             <div className="pollutant-item">
@@ -391,7 +471,7 @@ export default function AnimalCarePage() {
                   />
                 </div>
                 <h3>Animal Health</h3>
-                Poor air quality in any animal facility can cause respiratory distress, infections, and other health
+                Poor air quality in any animal facility can cause respiratory distress infections and other health
                 issues to animals.
               </div>
             </div>
@@ -405,7 +485,7 @@ export default function AnimalCarePage() {
                   />
                 </div>
                 <h3>Staff and farmworkers</h3>
-                Poor air quality in animal farms, labs, care centers can be harmful to staff health as well which can
+                Poor air quality in animal farms labs care centers can be harmful to staff health as well which can
                 lead to various health conditions.
               </div>
             </div>
@@ -518,7 +598,7 @@ export default function AnimalCarePage() {
                   </span>
                 </h2>
                 Installing air quality solutions throughout the facility allows for managing the air pollution exposure
-                to staff and animals health by providing clean air to breathe. Moreover, it helps in better and more
+                to staff and animals health by providing clean air to breathe. Moreover it helps in better and more
                 accurate research outcomes.
               </div>
             </div>
@@ -526,29 +606,53 @@ export default function AnimalCarePage() {
 
           <div className="row">
             <div className="col-md-12">
-              <div className="tab-container">
-                <div className="tab-buttons">
+              {/* Bootstrap Tabs */}
+              <ul className="nav nav-tabs" id="airQualityTabs" role="tablist">
+                <li className="nav-item" role="presentation">
                   <button
-                    className={`tab-button ${activeTab === "Air quality Monitors" ? "active" : ""}`}
-                    onClick={() => handleTabChange("Air quality Monitors")}
+                    className="nav-link active"
+                    id="monitors-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#monitors"
+                    type="button"
+                    role="tab"
+                    aria-controls="monitors"
+                    aria-selected="true"
                   >
                     Air quality Monitors
                   </button>
+                </li>
+                <li className="nav-item" role="presentation">
                   <button
-                    className={`tab-button ${activeTab === "Fresh air machine" ? "active" : ""}`}
-                    onClick={() => handleTabChange("Fresh air machine")}
+                    className="nav-link"
+                    id="fresh-air-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#fresh-air"
+                    type="button"
+                    role="tab"
+                    aria-controls="fresh-air"
+                    aria-selected="false"
                   >
                     Fresh air machine
                   </button>
+                </li>
+                <li className="nav-item" role="presentation">
                   <button
-                    className={`tab-button ${activeTab === "Data Display" ? "active" : ""}`}
-                    onClick={() => handleTabChange("Data Display")}
+                    className="nav-link"
+                    id="data-display-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#data-display"
+                    type="button"
+                    role="tab"
+                    aria-controls="data-display"
+                    aria-selected="false"
                   >
                     Data Display
                   </button>
-                </div>
-
-                <div className={`tab-content ${activeTab === "Air quality Monitors" ? "active" : ""}`}>
+                </li>
+              </ul>
+              <div className="tab-content" id="airQualityTabsContent">
+                <div className="tab-pane show active" id="monitors" role="tabpanel" aria-labelledby="monitors-tab">
                   <div className="row">
                     <div className="col-md-6">
                       <div className="air-quality-tab-img">
@@ -561,7 +665,7 @@ export default function AnimalCarePage() {
                     <div className="col-md-6">
                       <div className="air-quality-heading">
                         <h3>Prana Air Sensible+Air quality monitor</h3>
-                        Advanced air quality monitor can measures particulate matter, CO2, VOCs, and other pollutants.
+                        Advanced air quality monitor can measures particulate matter CO2 VOCs and other pollutants.
                       </div>
                       <ul className="airquality_list">
                         <li>Real-time air quality monitoring</li>
@@ -576,8 +680,7 @@ export default function AnimalCarePage() {
                     </div>
                   </div>
                 </div>
-
-                <div className={`tab-content ${activeTab === "Fresh air machine" ? "active" : ""}`}>
+                <div className="tab-pane " id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
                   <div className="row">
                     <div className="col-md-6">
                       <div className="air-quality-tab-img">
@@ -595,23 +698,18 @@ export default function AnimalCarePage() {
                       </div>
                       <ul className="airquality_list">
                         <li>Removes 99.5% of Indoor Pollutants</li>
-                        <li>Covers Up to 1,200 Sq Ft</li>
+                        <li>Covers Up to 1200 Sq Ft</li>
                         <li>AI-Powered Automatic Airflow</li>
                       </ul>
                       <div className="btns-bottom">
-                        <a
-                          className="knowmore_btn"
-                          href="#"
-                          aria-label="Fresh air machine for animal care center"
-                        >
+                        <a className="knowmore_btn" href="#" aria-label="Fresh air machine for animal care center">
                           Fresh Air Machine
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div className={`tab-content ${activeTab === "Data Display" ? "active" : ""}`}>
+                <div className="tab-pane " id="data-display" role="tabpanel" aria-labelledby="data-display-tab">
                   <div className="row">
                     <div className="col-md-6">
                       <div className="air-quality-tab-img">
@@ -652,7 +750,7 @@ export default function AnimalCarePage() {
                     <strong>Animal facilities</strong>
                   </span>
                 </h2>
-                Air quality in animal farm, hospitals and labs is crucial for animal health and accurate research
+                Air quality in animal farm hospitals and labs is crucial for animal health and accurate research
                 outcomes. Here check the comparison:
               </div>
             </div>
@@ -830,10 +928,7 @@ export default function AnimalCarePage() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -842,7 +937,7 @@ export default function AnimalCarePage() {
       </div>
 
       {/* SECTION 12: FAQ */}
-      <div className="faq_ask_section">
+      <div className="faq_ask_section" id="faq_section">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -850,66 +945,14 @@ export default function AnimalCarePage() {
                 <h2 className="title_heading">
                   Frequently Asked <span style={{ color: "#78ae60" }}>Questions</span>
                 </h2>
-                <p>Have questions? Were here to help.</p>
+                <p>Have questions? We are here to help.</p>
               </div>
             </div>
           </div>
 
           <div className="row">
             <div className="col-md-12">
-              <div className="faq-container">
-                <div className="faq-item">
-                  <div className="faq-question" onClick={() => toggleFaq(1)}>
-                    <span>1. What are the air pollutants in any animal facility?</span>
-                    <span className="faq-toggle">{activeFaq === 1 ? "−" : "+"}</span>
-                  </div>
-                  <div className={`faq-answer ${activeFaq === 1 ? "active" : ""}`}>
-                    <p>
-                      Animals, poor ventilation and chemical use in farms, health-care and labs emit various indoor air
-                      pollutants such as PM2.5, PM10, VOCs, CO2, NH3 etc.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="faq-item">
-                  <div className="faq-question" onClick={() => toggleFaq(2)}>
-                    <span>2. How does air pollution interfere with the research outcomes in labs?</span>
-                    <span className="faq-toggle">{activeFaq === 2 ? "−" : "+"}</span>
-                  </div>
-                  <div className={`faq-answer ${activeFaq === 2 ? "active" : ""}`}>
-                    <p>
-                      Air pollutants can affect research outcomes in labs by contaminating data and resulting in
-                      inaccurate measurements that lead to invalid conclusions.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="faq-item">
-                  <div className="faq-question" onClick={() => toggleFaq(3)}>
-                    <span>3. What solutions are the best for animal facilities?</span>
-                    <span className="faq-toggle">{activeFaq === 3 ? "−" : "+"}</span>
-                  </div>
-                  <div className={`faq-answer ${activeFaq === 3 ? "active" : ""}`}>
-                    <p>
-                      Air quality monitors and high-quality air purifiers are the best solutions for poor air quality in
-                      animal farms, hospitals, care centers and labs.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="faq-item">
-                  <div className="faq-question" onClick={() => toggleFaq(4)}>
-                    <span>4. How does temperature or humidity affect air quality in any lab facility?</span>
-                    <span className="faq-toggle">{activeFaq === 4 ? "−" : "+"}</span>
-                  </div>
-                  <div className={`faq-answer ${activeFaq === 4 ? "active" : ""}`}>
-                    <p>
-                      Temperature and humidity levels depends on outdoor weather condition that can affect pollution
-                      emissions trap more pollutants in facilities and also lead to animal discomfort.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <FaqAccordion faqItems={faqItems} />
             </div>
           </div>
         </div>
@@ -926,8 +969,8 @@ export default function AnimalCarePage() {
                   Applications
                 </span>
               </h2>
-              Prana Air offers a diverse selection of smart, affordable, and remarkably precise air quality solutions,
-              catering to various sectors, irrespective of their scale.
+              Prana Air offers a diverse selection of smart affordable and remarkably precise air quality solutions
+              catering to various sectors irrespective of their scale.
             </div>
           </div>
         </div>
@@ -935,389 +978,21 @@ export default function AnimalCarePage() {
         <div className="row pd-bt">
           <div className="col-md-12">
             <div className="owl-slider">
-              <Carousel
-                responsive={industrialResponsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={2000}
-                keyBoardControl={true}
-                customTransition="all .3s"
-                transitionDuration={500}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-              >
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/"
-                        aria-label="Air quality Solutions for Bank"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                          alt="air quality Air quality Solutions for banks"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/"
-                      aria-label="Air quality Solutions for Bank"
-                    >
-                      <h4>Air quality Solutions for Bank</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/hotel-businesses/"
-                        aria-label="Air quality Solutions for Hotel"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                          alt="air quality Air quality Solutions for hotel business"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/hotel-businesses/"
-                      aria-label="Air quality Solutions for Hotel"
-                    >
-                      <h4>Air quality Solutions for Hotel</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/restaurants/"
-                        aria-label="Air quality Solutions for Restaurant"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                          alt="air quality Air quality Solutions for restaurants"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/restaurants/"
-                      aria-label="Air quality Solutions for Restaurant"
-                    >
-                      <h4>Air quality Solutions for Restaurant</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/airports/"
-                        aria-label="Air quality Solutions for Airport"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg"
-                          alt="air quality Air quality Solutions for airport"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/airports/"
-                      aria-label="Air quality Solutions for Airport"
-                    >
-                      <h4>Air quality Solutions for Airport</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/"
-                        aria-label="Air quality Solutions for Fitness & Gym"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg"
-                          alt="air quality Air quality Solutions for fitness and gym"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/"
-                      aria-label="Air quality Solutions for Fitness & Gym"
-                    >
-                      <h4>Air quality Solutions for Fitness & Gym</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/parking-lot/"
-                        aria-label="Air quality Solutions for Parking Lot"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg"
-                          alt="prana air - air quality Air quality Solutions for car parking lot"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/parking-lot/"
-                      aria-label="Air quality Solutions for Parking Lot"
-                    >
-                      <h4>Air quality Solutions for Parking Lot</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/"
-                        aria-label="Air quality Solutions for Washroom"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/05/air-solutions-for-washroom-and-bathroom.jpg"
-                          alt="prana air - air quality Air quality Solutions for washroom or bathroom"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/"
-                      aria-label="Air quality Solutions for Washroom"
-                    >
-                      <h4>Air quality Solutions for Washroom</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/institutes/"
-                        aria-label="Air quality Solutions for Institutes"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg"
-                          alt="air quality Air quality Solutions for schools and institutes"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/institutes/"
-                      aria-label="Air quality Solutions for Institutes"
-                    >
-                      <h4>Air quality Solutions for Institutes</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/cinema-and-theatre/"
-                        aria-label="Air quality Solutions for Cinema/Theatre"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg"
-                          alt="air quality Air quality Solutions for cinema and theatre"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/cinema-and-theatre/"
-                      aria-label="Air quality Solutions for Cinema/Theatre"
-                    >
-                      <h4>Air quality Solutions for Cinema/Theatre</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/automobile/"
-                        aria-label="Air quality Solutions for Automobiles"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg"
-                          alt="air quality Air quality Solutions for automobiles"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/automobile/"
-                      aria-label="Air quality Solutions for Automobiles"
-                    >
-                      <h4>Air quality Solutions for Automobiles</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/real-estate/"
-                        aria-label="Air quality Solutions for Real Estates"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg"
-                          alt="air quality Air quality Solutions for real estates"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/real-estate/"
-                      aria-label="Air quality Solutions for Real Estates"
-                    >
-                      <h4>Air quality Solutions for Real Estates</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/smartphone-makers/"
-                        aria-label="Air quality Solutions for Smartphone Makers"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png"
-                          alt="air quality Air quality Solutions for smartphone makers"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/smartphone-makers/"
-                      aria-label="Air quality Solutions for Smartphone Makers"
-                    >
-                      <h4>Air quality Solutions for Smartphone Makers</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/constructions/"
-                        aria-label="air quality Air quality Solutions for construction sites"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg"
-                          alt="air quality Air quality Solutions for construction sites"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/constructions/"
-                      aria-label="Air quality Solutions for Construction sites"
-                    >
-                      <h4>Air quality Solutions for Construction</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/logistics/"
-                        aria-label="air quality Air quality Solutions for logistics"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg"
-                          alt="air quality Air quality Solutions for logistics"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/logistics/"
-                      aria-label="Air quality Solutions for logistics"
-                    >
-                      <h4>Air quality Solutions for logistics</h4>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="item">
-                  <div className="app_service_box">
-                    <div className="app_img_bx">
-                      <a
-                        href="https://www.pranaair.com/solutions-by-application/railway/"
-                        aria-label="air quality Air quality Solutions for railway"
-                      >
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg"
-                          alt="air quality Air quality Solutions for railway"
-                        />
-                      </a>
-                    </div>
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/railway/"
-                      aria-label="Air quality Solutions for railway"
-                    >
-                      <h4>Air quality Solutions for Railways</h4>
-                    </a>
-                  </div>
-                </div>
-              </Carousel>
+              <IndustrialApplicationsCarousel applications={industrialApplications} />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Add Bootstrap and Owl Carousel scripts */}
-      <script
+      {/* Bootstrap Scripts */}
+      <div
         dangerouslySetInnerHTML={{
           __html: `
-            jQuery(document).ready(function($) {
-              // Initialize carousel
-              $("#carousel").owlCarousel({
-                autoplay: true,
-                rewind: true,
-                margin: 30,
-                responsiveClass: true,
-                autoHeight: true,
-                autoplayTimeout: 7000,
-                smartSpeed: 800,
-                nav: true,
-                responsive: {
-                  0: {
-                    items: 1
-                  },
-                  600: {
-                    items: 3
-                  },
-                  1024: {
-                    items: 3
-                  },
-                  1366: {
-                    items: 3
-                  }
-                }
-              });
-            });
-          `,
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        `,
         }}
       />
     </div>
   )
 }
-

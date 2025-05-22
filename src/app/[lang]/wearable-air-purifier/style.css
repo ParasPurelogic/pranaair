@@ -21,6 +21,11 @@ a {
   font-family: 'Nunito Sans' !important;
 }
 
+.air-quality-monitor-manufacturing img {
+  width: 100%;
+  margin-top: 30px;
+}
+
 .vc_section[data-vc-full-width] {
   overflow: visible !important;
 }

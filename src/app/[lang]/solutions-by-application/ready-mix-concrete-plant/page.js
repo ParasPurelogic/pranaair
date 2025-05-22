@@ -1,20 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Image from "next/image"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import "./style.css"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
-
-// Update the Solutions Tabs section to match the reference design
-// Replace the existing MpcbGuidelinesSection component with this updated version
 
 const MpcbGuidelinesSection = () => {
-  const [showGuidelines, setShowGuidelines] = useState(false)
-  const [activeTab, setActiveTab] = useState("ambient")
-
   return (
     <section className="top_space_heading">
       <div className="introducing_box sub_title_box">
@@ -28,23 +19,33 @@ const MpcbGuidelinesSection = () => {
           in surrounding areas.
         </p>
         <div className="introduce_button">
-          <button className="bg-btn bg-green view_btn" onClick={() => setShowGuidelines(!showGuidelines)}>
-            {showGuidelines ? "Hide" : "Know More"}
+          <button
+            className="bg-btn bg-green view_btn"
+            data-bs-toggle="collapse"
+            data-bs-target="#guidelinesCollapse"
+            aria-expanded="false"
+            aria-controls="guidelinesCollapse"
+          >
+            <span className="btn-text">Know More</span>
             <Image
-              src={
-                showGuidelines
-                  ? "https://www.pranaair.com/wp-content/uploads/2023/05/close-button.png"
-                  : "https://www.pranaair.com/wp-content/uploads/2023/05/view-button.png"
-              }
-              alt={showGuidelines ? "Hide" : "Know More"}
+              src="https://www.pranaair.com/wp-content/uploads/2023/05/view-button.png"
+              alt="Know More"
               width={24}
               height={24}
+              className="show-icon"
+            />
+            <Image
+              src="https://www.pranaair.com/wp-content/uploads/2023/05/close-button.png"
+              alt="Hide"
+              width={24}
+              height={24}
+              className="hide-icon"
             />
           </button>
         </div>
       </div>
 
-      {showGuidelines && (
+      <div className="collapse" id="guidelinesCollapse">
         <div className="table_specifiction_collapse">
           <h3>Maharashtra Pollution Control Self Assessment</h3>
           <p>
@@ -128,57 +129,79 @@ const MpcbGuidelinesSection = () => {
 
           <h2 className="air_heading">How do we provide the solutions?</h2>
 
-          {/* Solutions tabs section - Updated to match reference design */}
+          {/* Solutions tabs section - Updated to use Bootstrap tabs */}
           <div className="solutions-tabs">
-            <div className="solution-tabs-container">
-              <div
-                className={`solution-tab ${activeTab === "ambient" ? "active" : ""}`}
-                onClick={() => setActiveTab("ambient")}
-              >
-                <div className="solution-tab-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/ambient-air-quality-monitor.png"
-                    alt="Ambient Monitor"
-                    width={150}
-                    height={150}
-                  />
-                </div>
-                <h3>Ambient Monitor</h3>
-              </div>
+            <ul className="nav nav-tabs" id="solutionTabs" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active solution-tab"
+                  id="ambient-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#ambient"
+                  type="button"
+                  role="tab"
+                  aria-controls="ambient"
+                  aria-selected="true"
+                >
+                  <div className="solution-tab-image">
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/ambient-air-quality-monitor.png"
+                      alt="Ambient Monitor"
+                      width={150}
+                      height={150}
+                    />
+                  </div>
+                  <h3>Ambient Monitor</h3>
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link solution-tab"
+                  id="api-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#api"
+                  type="button"
+                  role="tab"
+                  aria-controls="api"
+                  aria-selected="false"
+                >
+                  <div className="solution-tab-image">
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-api-for-construction.png"
+                      alt="API Data To Govt. Portal"
+                      width={150}
+                      height={150}
+                    />
+                  </div>
+                  <h3>API Data To Govt. Portal</h3>
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link solution-tab"
+                  id="cctv-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cctv"
+                  type="button"
+                  role="tab"
+                  aria-controls="cctv"
+                  aria-selected="false"
+                >
+                  <div className="solution-tab-image">
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/05/cctv-camera.png"
+                      alt="CCTV Camera"
+                      width={150}
+                      height={150}
+                    />
+                  </div>
+                  <h3>CCTV Camera</h3>
+                </button>
+              </li>
+            </ul>
 
-              <div
-                className={`solution-tab ${activeTab === "api" ? "active" : ""}`}
-                onClick={() => setActiveTab("api")}
-              >
-                <div className="solution-tab-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-api-for-construction.png"
-                    alt="API Data To Govt. Portal"
-                    width={150}
-                    height={150}
-                  />
-                </div>
-                <h3>API Data To Govt. Portal</h3>
-              </div>
-
-              <div
-                className={`solution-tab ${activeTab === "cctv" ? "active" : ""}`}
-                onClick={() => setActiveTab("cctv")}
-              >
-                <div className="solution-tab-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/cctv-camera.png"
-                    alt="CCTV Camera"
-                    width={150}
-                    height={150}
-                  />
-                </div>
-                <h3>CCTV Camera</h3>
-              </div>
-            </div>
-
-            <div className="solution-content">
-              {activeTab === "ambient" && (
+            <div className="tab-content" id="solutionTabsContent">
+              <div className="tab-pane fade show active" id="ambient" role="tabpanel" aria-labelledby="ambient-tab">
                 <div className="solution-content-inner">
                   <p>
                     Prana Air Ambient Air Quality Monitors help RMC companies monitor air quality and ensure worker
@@ -212,9 +235,9 @@ const MpcbGuidelinesSection = () => {
                     </a>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTab === "api" && (
+              <div className="tab-pane fade" id="api" role="tabpanel" aria-labelledby="api-tab">
                 <div className="solution-content-inner">
                   <p>
                     Prana Air offers seamless integration of air quality monitor data through an API, enabling easy
@@ -238,9 +261,9 @@ const MpcbGuidelinesSection = () => {
                     </a>
                   </div>
                 </div>
-              )}
+              </div>
 
-              {activeTab === "cctv" && (
+              <div className="tab-pane fade" id="cctv" role="tabpanel" aria-labelledby="cctv-tab">
                 <div className="solution-content-inner">
                   <p>
                     By providing remote access to live video footage and real-time air quality data, RMC teams can
@@ -265,139 +288,170 @@ const MpcbGuidelinesSection = () => {
                     </a>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             <div className="hide-button">
-              <button onClick={() => setShowGuidelines(false)}>
+              <button
+                data-bs-toggle="collapse"
+                data-bs-target="#guidelinesCollapse"
+                aria-expanded="true"
+                aria-controls="guidelinesCollapse"
+              >
                 Hide <span>▲</span>
               </button>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </section>
   )
 }
 
-// Update the Air Quality Monitoring section to match the design
+// Update the Air Quality Monitoring section to use Bootstrap tabs
 const AirQualityMonitoringSection = () => {
-  const [activeTab, setActiveTab] = useState("monitor")
-
   return (
     <section className="quality_solution_section">
-      <div className="introducing_box sub_title_box">
-        <h2 className="title_heading">
-          Air Quality <span className="bold_text">Monitoring at RMC Plants</span>
-        </h2>
-        <p>
-          Our cutting-edge monitoring systems are specifically designed to precisely measure various pollutants
-          including PM, SOx, NOx, CO, and more at RMC plants. With customizable Printed Circuit Boards (PCBs), our
-          monitors are adaptable to real-time applications and can be tailored to meet the specific air quality needs of
-          RMC plant environments.
-        </p>
+      <div className="container">
+        <div className="introducing_box sub_title_box">
+          <h2 className="title_heading">
+            Air Quality <span className="bold_text">Monitoring at RMC Plants</span>
+          </h2>
+          <p>
+            Our cutting-edge monitoring systems are specifically designed to precisely measure various pollutants
+            including PM, SOx, NOx, CO, and more at RMC plants. With customizable Printed Circuit Boards (PCBs), our
+            monitors are adaptable to real-time applications and can be tailored to meet the specific air quality needs of
+            RMC plant environments.
+          </p>
+        </div>
+
+        <ul className="nav nav-tabs monitoring-tabs" id="monitoringTabs" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link active monitoring-tab"
+              id="monitor-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#monitor"
+              type="button"
+              role="tab"
+              aria-controls="monitor"
+              aria-selected="true"
+            >
+              Air Quality Monitor
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link monitoring-tab"
+              id="display-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#display"
+              type="button"
+              role="tab"
+              aria-controls="display"
+              aria-selected="false"
+            >
+              LED/TV Display
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link monitoring-tab"
+              id="storage-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#storage"
+              type="button"
+              role="tab"
+              aria-controls="storage"
+              aria-selected="false"
+            >
+              Storage & Dashboard
+            </button>
+          </li>
+        </ul>
+
+        <div className="tab-content" id="monitoringTabsContent">
+          <div className="tab-pane fade show active" id="monitor" role="tabpanel" aria-labelledby="monitor-tab">
+            <div className="monitoring-content">
+              <div className="monitoring-text">
+                <h2>Ambient Air Monitor (CAAQMS)</h2>
+                <p>
+                  Prana Air monitors detect pollutants and function as a CAAQMS for RMC plants, enabling informed
+                  decisions, emission control strategies, and improved air quality for worker and community health.
+                </p>
+                <div className="parameter-tags">
+                  <div className="parameter-tag">PM1</div>
+                  <div className="parameter-tag">PM2.5</div>
+                  <div className="parameter-tag">PM10</div>
+                  <div className="parameter-tag">Noise</div>
+                  <div className="parameter-tag">Temperature</div>
+                  <div className="parameter-tag">Humidity</div>
+                </div>
+              </div>
+              <div className="monitoring-image">
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/05/ambient-air-quality-monitor-caaqms.jpg"
+                  alt="Ambient Air Monitor"
+                  width={300}
+                  height={400}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="tab-pane fade" id="display" role="tabpanel" aria-labelledby="display-tab">
+            <div className="monitoring-content">
+              <div className="monitoring-text">
+                <h2>LED Display & Android TV Dashboard</h2>
+                <p>
+                  Real-time air quality data on displays at construction sites enables informed decisions and proactive
+                  health risk mitigation for workers and communities.
+                </p>
+                <div className="parameter-tags">
+                  <div className="parameter-tag">TV Display</div>
+                  <div className="parameter-tag">Large Display</div>
+                  <div className="parameter-tag">More Insightful</div>
+                  <div className="parameter-tag">Real-time Data</div>
+                </div>
+              </div>
+              <div className="monitoring-image">
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/05/led-dispaly-and-tv-data.jpg"
+                  alt="LED Display & TV Dashboard"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="tab-pane fade" id="storage" role="tabpanel" aria-labelledby="storage-tab">
+            <div className="monitoring-content">
+              <div className="monitoring-text">
+                <h2>Cloud Storage & Data Dashboards</h2>
+                <p>
+                  Cloud storage is crucial for RMC Plants, offering secure remote access to monitored data through mobile
+                  apps, Android TV, & web dashboards, anytime, anywhere.
+                </p>
+                <div className="parameter-tags">
+                  <div className="parameter-tag">Mobile</div>
+                  <div className="parameter-tag">Tablet</div>
+                  <div className="parameter-tag">TV</div>
+                  <div className="parameter-tag">Web</div>
+                </div>
+              </div>
+              <div className="monitoring-image">
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-cloud-storage-and-dashboards.jpg"
+                  alt="Cloud Storage & Data Dashboards"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="monitoring-tabs">
-        <div
-          className={`monitoring-tab ${activeTab === "monitor" ? "active" : ""}`}
-          onClick={() => setActiveTab("monitor")}
-        >
-          Air Quality Monitor
-        </div>
-        <div
-          className={`monitoring-tab ${activeTab === "display" ? "active" : ""}`}
-          onClick={() => setActiveTab("display")}
-        >
-          LED/TV Display
-        </div>
-        <div
-          className={`monitoring-tab ${activeTab === "storage" ? "active" : ""}`}
-          onClick={() => setActiveTab("storage")}
-        >
-          Storage & Dashboard
-        </div>
-      </div>
-
-      {activeTab === "monitor" && (
-        <div className="monitoring-content">
-          <div className="monitoring-text">
-            <h2>Ambient Air Monitor (CAAQMS)</h2>
-            <p>
-              Prana Air monitors detect pollutants and function as a CAAQMS for RMC plants, enabling informed decisions,
-              emission control strategies, and improved air quality for worker and community health.
-            </p>
-            <div className="parameter-tags">
-              <div className="parameter-tag">PM1</div>
-              <div className="parameter-tag">PM2.5</div>
-              <div className="parameter-tag">PM10</div>
-              <div className="parameter-tag">Noise</div>
-              <div className="parameter-tag">Temperature</div>
-              <div className="parameter-tag">Humidity</div>
-            </div>
-          </div>
-          <div className="monitoring-image">
-            <Image
-              src="https://www.pranaair.com/wp-content/uploads/2023/05/ambient-air-quality-monitor-caaqms.jpg"
-              alt="Ambient Air Monitor"
-              width={300}
-              height={400}
-            />
-          </div>
-        </div>
-      )}
-
-      {activeTab === "display" && (
-        <div className="monitoring-content">
-          <div className="monitoring-text">
-            <h2>LED Display & Android TV Dashboard</h2>
-            <p>
-              Real-time air quality data on displays at construction sites enables informed decisions and proactive
-              health risk mitigation for workers and communities.
-            </p>
-            <div className="parameter-tags">
-              <div className="parameter-tag">TV Display</div>
-              <div className="parameter-tag">Large Display</div>
-              <div className="parameter-tag">More Insightful</div>
-              <div className="parameter-tag">Real-time Data</div>
-            </div>
-          </div>
-          <div className="monitoring-image">
-            <Image
-              src="https://www.pranaair.com/wp-content/uploads/2023/05/led-dispaly-and-tv-data.jpg"
-              alt="LED Display & TV Dashboard"
-              width={400}
-              height={300}
-            />
-          </div>
-        </div>
-      )}
-
-      {activeTab === "storage" && (
-        <div className="monitoring-content">
-          <div className="monitoring-text">
-            <h2>Cloud Storage & Data Dashboards</h2>
-            <p>
-              Cloud storage is crucial for RMC Plants, offering secure remote access to monitored data through mobile
-              apps, Android TV, & web dashboards, anytime, anywhere.
-            </p>
-            <div className="parameter-tags">
-              <div className="parameter-tag">Mobile</div>
-              <div className="parameter-tag">Tablet</div>
-              <div className="parameter-tag">TV</div>
-              <div className="parameter-tag">Web</div>
-            </div>
-          </div>
-          <div className="monitoring-image">
-            <Image
-              src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-cloud-storage-and-dashboards.jpg"
-              alt="Cloud Storage & Data Dashboards"
-              width={400}
-              height={300}
-            />
-          </div>
-        </div>
-      )}
     </section>
   )
 }
@@ -406,45 +460,46 @@ const AirQualityMonitoringSection = () => {
 const DataFreemiumSection = () => {
   return (
     <section className="data-freemium-section">
-      <div className="introducing_box sub_title_box">
-        <h2 className="title_heading">
-          Data Freemium <span className="bold_text">Services</span>
-        </h2>
-        <p>
-          Show the data on LED/LCD TV display or analyze it on a web dashboard or mobile & tablet apps with AQI data
-          cloud storage service. No more hassle of data accessibility.
-        </p>
-      </div>
-
-      <div className="services-grid">
-        <div className="service-card">
-          <Image
-            src="https://www.pranaair.com/wp-content/uploads/2023/05/ready-mix-concrete-plant.png"
-            alt="Prana Air ambient air monitor at ready mix concrete plant"
-            width={300}
-            height={200}
-          />
-          <h3>Ambient Monitor (CAAQMS)</h3>
+      <div className="container">
+        <div className="introducing_box sub_title_box">
+          <h2 className="title_heading">
+            Data Freemium <span className="bold_text">Services</span>
+          </h2>
+          <p>
+            Show the data on LED/LCD TV display or analyze it on a web dashboard or mobile & tablet apps with AQI data
+            cloud storage service. No more hassle of data accessibility.
+          </p>
         </div>
+        <div className="services-grid">
+          <div className="service-card">
+            <Image
+              src="https://www.pranaair.com/wp-content/uploads/2023/05/ready-mix-concrete-plant.png"
+              alt="Prana Air ambient air monitor at ready mix concrete plant"
+              width={300}
+              height={200}
+            />
+            <h3>Ambient Monitor (CAAQMS)</h3>
+          </div>
 
-        <div className="service-card">
-          <Image
-            src="https://www.pranaair.com/wp-content/uploads/2023/05/led-display-and-lcd-tv.png"
-            alt="prana air led display and lcd tv to show air quality data at RMC plant"
-            width={300}
-            height={200}
-          />
-          <h3>LED Display/TV Dashboard</h3>
-        </div>
+          <div className="service-card">
+            <Image
+              src="https://www.pranaair.com/wp-content/uploads/2023/05/led-display-and-lcd-tv.png"
+              alt="prana air led display and lcd tv to show air quality data at RMC plant"
+              width={300}
+              height={200}
+            />
+            <h3>LED Display/TV Dashboard</h3>
+          </div>
 
-        <div className="service-card">
-          <Image
-            src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-cloud-storage-and-dashboards.png"
-            alt="aqi customized data dashboard and cloud storage"
-            width={300}
-            height={200}
-          />
-          <h3>Data Dashboards & Cloud Storage</h3>
+          <div className="service-card">
+            <Image
+              src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-cloud-storage-and-dashboards.png"
+              alt="aqi customized data dashboard and cloud storage"
+              width={300}
+              height={200}
+            />
+            <h3>Data Dashboards & Cloud Storage</h3>
+          </div>
         </div>
       </div>
     </section>
@@ -884,10 +939,6 @@ const IndustrialApplicationsSection = () => {
 }
 
 export default function ReadyMixConcretePlant() {
-  const [showGuidelines, setShowGuidelines] = useState(false)
-  const [activeMonitoringTab, setActiveMonitoringTab] = useState("home")
-  const [activeFaq, setActiveFaq] = useState(null)
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1366 },
@@ -906,34 +957,6 @@ export default function ReadyMixConcretePlant() {
       items: 1,
     },
   }
-
-  const toggleFaq = (id) => {
-    if (activeFaq === id) {
-      setActiveFaq(null)
-    } else {
-      setActiveFaq(id)
-    }
-  }
-
-  useEffect(() => {
-    // Initialize school box interactions
-    const schoolBoxItems = document.querySelectorAll(".school_box_cntr li")
-    schoolBoxItems.forEach((item) => {
-      item.addEventListener("click", function () {
-        const textBox = this.querySelector(".schhol_text_box")
-        if (textBox) {
-          if (textBox.style.display === "none" || textBox.style.display === "") {
-            document.querySelectorAll(".schhol_text_box").forEach((box) => {
-              box.style.display = "none"
-            })
-            textBox.style.display = "inline-block"
-          } else {
-            textBox.style.display = "none"
-          }
-        }
-      })
-    })
-  }, [])
 
   return (
     <main>
@@ -1173,96 +1196,203 @@ export default function ReadyMixConcretePlant() {
       </section>
 
       <section className="faq_section faq_ask_section">
-        <div className="faq-accordion">
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleFaq("faq1")}>
-              <h3>1. Why is air quality monitoring important at RMC sites?</h3>
-              <span className="faq-icon">{activeFaq === "faq1" ? "−" : "+"}</span>
+        <div className="container">
+          <div className="accordion" id="faqAccordion">
+            <div className="accordion-item faq-item">
+              <h2 className="accordion-header" id="headingOne">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  1. Why is air quality monitoring important at RMC sites?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                className="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Air quality monitoring is crucial at RMC sites to ensure that the emissions from the plants do not
+                    cause harmful impacts on public health and the environment.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq1" ? "active" : ""}`}>
-              <p>
-                Air quality monitoring is crucial at RMC sites to ensure that the emissions from the plants do not cause
-                harmful impacts on public health and the environment.
-              </p>
-            </div>
-          </div>
 
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleFaq("faq2")}>
-              <h3>2. What pollutants are typically monitored at RMC sites?</h3>
-              <span className="faq-icon">{activeFaq === "faq2" ? "−" : "+"}</span>
+            <div className="accordion-item faq-item">
+              <h2 className="accordion-header" id="headingTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  2. What pollutants are typically monitored at RMC sites?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>Common pollutants monitored at RMC sites include particulate matter (PM), NOx, CO, and SOx.</p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq2" ? "active" : ""}`}>
-              <p>Common pollutants monitored at RMC sites include particulate matter (PM), NOx, CO, and SOx.</p>
-            </div>
-          </div>
 
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleFaq("faq3")}>
-              <h3>3. What are the typical monitoring methods used at RMC sites?</h3>
-              <span className="faq-icon">{activeFaq === "faq3" ? "−" : "+"}</span>
+            <div className="accordion-item faq-item">
+              <h2 className="accordion-header" id="headingThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  3. What are the typical monitoring methods used at RMC sites?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Monitoring methods can vary, but commonly used techniques include continuous ambient air quality
+                    monitoring stations (CAAQMS), and real-time monitoring instruments.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq3" ? "active" : ""}`}>
-              <p>
-                Monitoring methods can vary, but commonly used techniques include continuous ambient air quality
-                monitoring stations (CAAQMS), and real-time monitoring instruments.
-              </p>
-            </div>
-          </div>
 
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleFaq("faq4")}>
-              <h3>4. Who is responsible for conducting air quality monitoring at RMC sites?</h3>
-              <span className="faq-icon">{activeFaq === "faq4" ? "−" : "+"}</span>
+            <div className="accordion-item faq-item">
+              <h2 className="accordion-header" id="headingFour">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  4. Who is responsible for conducting air quality monitoring at RMC sites?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Typically, the RMC plant operators are responsible for conducting air quality monitoring at their
+                    sites. However, regulatory agencies may also conduct periodic inspections and monitoring to ensure
+                    compliance with environmental regulations.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq4" ? "active" : ""}`}>
-              <p>
-                Typically, the RMC plant operators are responsible for conducting air quality monitoring at their sites.
-                However, regulatory agencies may also conduct periodic inspections and monitoring to ensure compliance
-                with environmental regulations.
-              </p>
-            </div>
-          </div>
 
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleFaq("faq5")}>
-              <h3>5. What are the consequences of non-compliance with air quality standards at RMC sites?</h3>
-              <span className="faq-icon">{activeFaq === "faq5" ? "−" : "+"}</span>
+            <div className="accordion-item faq-item">
+              <h2 className="accordion-header" id="headingFive">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  5. What are the consequences of non-compliance with air quality standards at RMC sites?
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Non-compliance with air quality standards at RMC sites can lead to regulatory action such as fines,
+                    shutdowns, or legal action. Additionally, non-compliance can also lead to negative impacts on public
+                    health and the environment.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq5" ? "active" : ""}`}>
-              <p>
-                Non-compliance with air quality standards at RMC sites can lead to regulatory action such as fines,
-                shutdowns, or legal action. Additionally, non-compliance can also lead to negative impacts on public
-                health and the environment.
-              </p>
-            </div>
-          </div>
 
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleFaq("faq6")}>
-              <h3>6. What kind of equipment is used for air quality monitoring at RMC sites?</h3>
-              <span className="faq-icon">{activeFaq === "faq6" ? "−" : "+"}</span>
+            <div className="accordion-item faq-item">
+              <h2 className="accordion-header" id="headingSix">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  6. What kind of equipment is used for air quality monitoring at RMC sites?
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingSix"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Continuous Ambient Air Quality Monitoring Stations (CAAQMS) are commonly used for air quality
+                    monitoring at RMC sites. These systems are capable of measuring various pollutants in real-time and
+                    can be customized based on specific monitoring requirements.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq6" ? "active" : ""}`}>
-              <p>
-                Continuous Ambient Air Quality Monitoring Stations (CAAQMS) are commonly used for air quality monitoring
-                at RMC sites. These systems are capable of measuring various pollutants in real-time and can be
-                customized based on specific monitoring requirements.
-              </p>
-            </div>
-          </div>
 
-          <div className="faq-item">
-            <div className="faq-question" onClick={() => toggleFaq("faq7")}>
-              <h3>7. How often should air quality monitoring be conducted at RMC sites?</h3>
-              <span className="faq-icon">{activeFaq === "faq7" ? "−" : "+"}</span>
-            </div>
-            <div className={`faq-answer ${activeFaq === "faq7" ? "active" : ""}`}>
-              <p>
-                Air quality monitoring at RMC sites should be conducted continuously to ensure that the levels of
-                pollutants are within acceptable limits. The frequency of monitoring may vary depending on local
-                regulations and monitoring requirements.
-              </p>
+            <div className="accordion-item faq-item">
+              <h2 className="accordion-header" id="headingSeven">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  7. How often should air quality monitoring be conducted at RMC sites?
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingSeven"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Air quality monitoring at RMC sites should be conducted continuously to ensure that the levels of
+                    pollutants are within acceptable limits. The frequency of monitoring may vary depending on local
+                    regulations and monitoring requirements.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1273,7 +1403,39 @@ export default function ReadyMixConcretePlant() {
 
       {/* Industrial Applications Section */}
       <IndustrialApplicationsSection />
+
+      {/* Bootstrap initialization script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all Bootstrap components
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+              return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+            
+            // Initialize school box interactions
+            const schoolBoxItems = document.querySelectorAll(".school_box_cntr li")
+            schoolBoxItems.forEach((item) => {
+              item.addEventListener("click", function () {
+                const textBox = this.querySelector(".schhol_text_box")
+                if (textBox) {
+                  if (textBox.style.display === "none" || textBox.style.display === "") {
+                    document.querySelectorAll(".schhol_text_box").forEach((box) => {
+                      box.style.display = "none"
+                    })
+                    textBox.style.display = "inline-block"
+                  } else {
+                    textBox.style.display = "none"
+                  }
+                }
+              })
+            })
+          });
+        `,
+        }}
+      />
     </main>
   )
 }
-

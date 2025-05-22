@@ -1,0 +1,406 @@
+{
+    "durabilityImages": {
+    "title": "Weather Station Durability",
+    "description": "Our weather stations are built to withstand harsh environmental conditions while maintaining accuracy and reliability.",
+    "images": {
+      "weatherStation": {
+        "alt": "Weather station render"
+      },
+      "sideView": {
+        "alt": "Side view of the Prana Air weather station"
+      },
+      "topView": {
+        "alt": "Top view of the Prana Air weather station"
+      }
+    }
+  },
+  "variousApplications": {
+    "title": "Various Applications of Weather Stations",
+    "description": "Weather stations provide valuable data for a wide range of applications across different sectors.",
+    "applications": {
+      "urbanPlanning": {
+        "title": "Urban Planning and Infrastructure:",
+        "description": "Weather station data can be used in smart city solutions and construction project planning for better safety.",
+        "alt": "Use of weather station for Urban Planning and Infrastructure"
+      },
+      "publicSafety": {
+        "title": "Public Safety:",
+        "description": "Real-time weather data can enhance public safety measures and can also issue health advisories accordingly.",
+        "alt": "Use of weather station for Public Safety"
+      },
+      "sports": {
+        "title": "Sports and outdoor activities:",
+        "description": "Weather station data can be used for planning outdoor activities and managed as per weather disruptions.",
+        "alt": "Use of weather station for Sports and outdoor activities"
+      },
+      "education": {
+        "title": "Education and Research:",
+        "description": "Researchers can use weather data for scientific studies. The data can also help educational institutions.",
+        "alt": "Use of weather station for education and research"
+      },
+      "environmental": {
+        "title": "Environmental Monitoring",
+        "description": "Air quality and weather data can help in environmental protection and wildlife management.",
+        "alt": "Use of weather station for Environmental Monitoring"
+      }
+    }
+  },
+   "weatherStationHero": {
+    "title": "Weather Station",
+    "description": "Get accurate weather forecasts to predict weather conditions for different activities with stand-out features.",
+    "requestButton": "Request a Quote",
+    "altTexts": {
+      "buttonIcon": "button icon",
+      "weatherStation": "prana air weather station device"
+    }
+  },
+  "weatherStationKeyFeatures": {
+    "title": "Key Features of Automatic Weather Station",
+    "description": "Designed to provide users with a seamless monitoring experience. Get flexibility and adaptability to suit different requirements.",
+    "altTexts": {
+      "weatherStation": "prana air weather station installation",
+      "arrow": "icon"
+    },
+    "features": {
+      "integrated": {
+        "title": "Integrated Environmental Monitoring",
+        "description": "Combines Weather station with air quality monitoring"
+      },
+      "dataLogger": {
+        "title": "In-built data logger",
+        "description": "Access the device data without a separate data logger"
+      },
+      "connectivity": {
+        "title": "Effortless Connectivity",
+        "description": "WiFi and GSM for seamless and reliable data"
+      },
+      "realTime": {
+        "title": "Real-time Meteorological Data",
+        "description": "Access various meteorological parameters data"
+      }
+    }
+  },
+  "weatherStationParameters": {
+    "title": "Parameters It Can Measure",
+    "description": "Measures meteorological parameters in your immediate surroundings to provide reliable data.",
+    "parameters": {
+      "rainfall": {
+        "title": "Rainfall",
+        "alt": "rainfall icon"
+      },
+      "uvIndex": {
+        "title": "UV Index",
+        "alt": "uv index icon"
+      },
+      "windSpeed": {
+        "title": "Wind Speed",
+        "alt": "wind speed icon"
+      },
+      "windDirection": {
+        "title": "Wind Direction",
+        "alt": "wind speed icon"
+      },
+      "light": {
+        "title": "Light (Lux)",
+        "alt": "light icon"
+      },
+      "solarRadiance": {
+        "title": "Solar Radiance",
+        "alt": "solar radiance icon"
+      },
+      "humidity": {
+        "title": "Humidity",
+        "alt": "humidity icon"
+      },
+      "temperature": {
+        "title": "Temperature",
+        "alt": "temperature icon"
+      }
+    }
+  },
+   "weatherStationConnectivity": {
+    "title": "Connectivity",
+    "description": "Get effortless connectivity for seamless and reliable data transmission, ensuring constant access to data.",
+    "tabs": {
+      "wifi": {
+        "title": "Wifi",
+        "steps": {
+          "weatherStation": {
+            "title": "Weather station",
+            "alt": "prana air weather station connectivity"
+          },
+          "wifiConnectivity": {
+            "title": "Wifi Connectivity",
+            "alt": "wifi connectivity"
+          },
+          "cloudStorage": {
+            "title": "AQI Cloud Storage",
+            "alt": "aqi cloud"
+          },
+          "dataAccess": {
+            "title": "Data Accessibility via Mobile App, Web Dashboard and TV App",
+            "alt": "prana air weather station WiFi connected to aqi cloud"
+          }
+        }
+      },
+      "gsm": {
+        "title": "GSM (Optional)",
+        "steps": {
+          "weatherStation": {
+            "title": "Weather station",
+            "alt": "prana air weather station connectivity"
+          },
+          "gsmConnectivity": {
+            "title": "GSM Connectivity",
+            "alt": "gsm connectivity"
+          },
+          "cloudStorage": {
+            "title": "AQI Cloud Storage",
+            "alt": "aqi cloud"
+          },
+          "dataAccess": {
+            "title": "Data Accessibility via Mobile App, Web Dashboard and TV App",
+            "alt": "prana air weather station GSM connected to aqi cloud"
+          }
+        }
+      }
+    }
+  },
+  "weatherStationDurability": {
+    "title": "Durability to ensure longevity",
+    "description": "The weather station withstands various environmental conditions, from extreme heat to cold, rain, and even snow."
+  },
+  "weatherStationHyperlocal": {
+    "title": "Hyper-Local Networks",
+    "description": "Facilitating real-time data for governments, businesses, and individuals to proactively prepare and respond to adverse weather conditions.",
+    "altTexts": {
+      "networkImage": "prana air weather station used at hyperlocal network"
+    }
+  },
+   "title": {
+      "part1": "Convert into air quality monitor",
+      "part2": "with weather station."
+    },
+    "altTexts": {
+      "variants": "prana air weather station variants"
+    },
+    "variant1": {
+      "title": "Variant 1",
+      "subtitle": "Weather Station",
+      "param1": "Rainfall",
+      "param2": "UV Index",
+      "param3": "Light (Lux)",
+      "param4": "Solar Radiance",
+      "param5": "Wind Speed",
+      "param6": "Wind Direction",
+      "param7": "Humidity",
+      "param8": "Temperature"
+    },
+    "variant2": {
+      "title": "Variant 2",
+      "subtitle": "Weather Station with Air Quality Monitor",
+      "param1": "Rainfall",
+      "param2": "UV Index",
+      "param3": "Light (Lux)",
+      "param4": "Solar Radiance",
+      "param5": "Wind Speed",
+      "param6": "Wind Direction",
+      "param7": "AQI",
+      "param8": "PM1",
+      "param9": "PM2.5",
+      "param10": "PM10",
+      "param11": "H2S",
+      "param12": "O3",
+      "param13": "TVOC",
+      "param14": "CO",
+      "param15": "CO2",
+      "param16": "SO2",
+      "param17": "NO",
+      "param18": "NO2",
+      "param19": "Humi.",
+      "param20": "Temp."
+    },
+    "weatherStationAqiApp": {
+    "heading": "AQI Mobile App",
+    "appImageAlt": "prana air weather station mobile app",
+    "subheading": "Real-Time Weather Data on Your Smartphone",
+    "description": "Get real-time data of your weather station on your smartphone for seamless connectivity.",
+    "iosIconAlt": "ios icon",
+    "androidIconAlt": "android icon",
+    "downloadFor": "Download for",
+    "ios": "iOS",
+    "android": "android"
+  },
+  "weatherStationEnvironmental": {
+    "heading": "Environmental Monitoring",
+    "subheading": "with precision of weather station",
+    "description": "Advanced Monitoring of Key Weather Parameters in Diverse Outdoor Areas.",
+    "imageAlt": "weather station in open land"
+  },
+   "weatherStationWebDashboard": {
+    "title": "Web Dashboard",
+    "subtitle": "Enhanced Device Insights",
+    "description": "Access the device data on the web dashboard for better insight.",
+    "loginButton": "Login Dashboard",
+    "altTexts": {
+      "dashboard": "prana air weather station dashboard",
+      "temperatureCard": "temperature data on mobile app",
+      "uvIndexCard": "uv index data on mobile app",
+      "solarIrradianceCard": "solar irradiance data in mobile app",
+      "rainfallCard": "rainfall data on mobile app",
+      "wifiIcon": "wifi icon"
+    }
+  },
+   "weatherStationTvApp": {
+    "title": "TV App Integration",
+    "description": "Enables easy and customize environmental data monitoring with TV app feature to display the data on your television.",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew",
+    "downloadButton": {
+      "text": "Download for",
+      "highlight": "TV"
+    },
+    "altTexts": {
+      "tvAppIcon": "tv app icon",
+      "tvAppIntegration": "prana air weather station data on smart TV app"
+    },
+    "features": {
+      "multipleThemes": {
+        "title": "Multiple themes",
+        "description": "Choose from multiple ranges of themes",
+        "altText": "theme icon"
+      },
+      "controlViaMobile": {
+        "title": "Control via mobile app",
+        "description": "Integrated and controlled via the AQI mobile app",
+        "altText": "app connectivity icon"
+      },
+      "compareData": {
+        "title": "Compare data",
+        "description": "Compare weather parameters data of two locations.",
+        "altText": "data comparison icon"
+      }
+    }
+  },
+  "weatherStationPartsLabel": {
+    "title": "Parts & Label",
+    "description": "Access real-time, hyper-local weather data and go beyond basic forecasts to stay informed.",
+    "altTexts": {
+      "partsLabelImage": "parts and labels of prana air weather station"
+    }
+  },
+  "weatherStationInsideBox": {
+    "title": "Whats Inside the Box",
+    "description": "Inspect the weather station box contents to ensure everything needed for an easy installation is included.",
+    "items": {
+      "weatherStation": {
+        "title": "Weather Station",
+        "alt": "Weather Station"
+      },
+      "toolPouch": {
+        "title": "Tool Pouch",
+        "alt": "Tool Pouch"
+      },
+      "rainGauge": {
+        "title": "Rain Gauge",
+        "alt": "Rain Gauge"
+      },
+      "pole": {
+        "title": "Pole",
+        "alt": "Pole"
+      },
+      "attachmentBelt": {
+        "title": "Attachment Belt",
+        "alt": "Attachment Belt"
+      },
+      "cableAdapter": {
+        "title": "Cable & Adapter",
+        "alt": "Cable & Adapter"
+      },
+      "antenna": {
+        "title": "Antenna",
+        "alt": "Antenna"
+      },
+      "windVane": {
+        "title": "Wind Vane",
+        "alt": "Wind Vane"
+      },
+      "anemometer": {
+        "title": "Anemometer",
+        "alt": "Anemometer"
+      },
+      "uClamp": {
+        "title": "U- Clamp",
+        "alt": "U-Clamp"
+      },
+      "poleMountingBracket": {
+        "title": "Pole Mounting Bracket",
+        "alt": "Pole Mounting Bracket"
+      },
+      "airQualityMonitor": {
+        "title": "Air Quality Monitor",
+        "alt": "Air Quality Monitor"
+      }
+    }
+  },
+  "weatherStationAmbient": {
+    "title": "Ambient Air Monitor",
+    "description": "Prana Air ambient air quality monitor for precision monitoring & accurate insights",
+    "knowMoreButton": "Know More",
+    "altTexts": {
+      "icon": "icon",
+      "ambientMonitor": "prana air ambient air quality monitor"
+    }
+  },
+   "weatherStationFAQ": {
+    "heading": "Frequently asked questions",
+    "questions": {
+      "q1": "What kind of data can I collect from the weather station?",
+      "q2": "Can I access the weather stations real-time data remotely?",
+      "q3": "Is the weather station durable against harsh weather?",
+      "q4": "Do I have to install air quality monitors for air monitoring with the weather station?"
+    },
+    "answers": {
+      "a1": "Weather station measures various meteorological parameters including temperature, humidity, wind speed and direction, rainfall and many more.",
+      "a2": "Yes, accessing the weather station's real-time data is possible with remote monitoring capabilities.",
+      "a3": "Yes, the weather station is designed to resist various environmental conditions.",
+      "a4": "With Prana Air weather station, you can turn the device into air quality monitoring system with the advanced variant."
+    }
+  },
+  "contactHeading": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "weatherStationAlsoLike": {
+    "heading": "You may also like",
+    "altTexts": {
+      "pocketPM": "prana air Pocket PM2.5 monitor",
+      "cair": "prana air Cair+ air quality monitor",
+      "sensible": "prana air sensible indoor air quality monitor",
+      "ambientPro": "prana air Ambient pro air quality monitor",
+      "arrow": "icon"
+    },
+    "products": {
+      "pocketPM": {
+        "name": "Pocket PM",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.jpg",
+        "link": "/air-quality-monitor/handheld/pocket-monitor"
+      },
+      "cair": {
+        "name": "Cair+",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Cair.jpg",
+        "link": "/air-quality-monitor/cair-monitor"
+      },
+      "sensible": {
+        "name": "Sensible",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/06/prana-air-sensible-air-monitor.webp",
+        "link": "/air-quality-monitor/sensible-air-monitor"
+      },
+      "ambientPro": {
+        "name": "Ambient pro",
+        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Ambient-pro.jpg",
+        "link": "/air-quality-monitor/weather-station#"
+      }
+    }
+  }
+  
+}

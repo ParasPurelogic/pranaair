@@ -981,17 +981,6 @@ span.faq {
   color: white;
 }
 
-.tab-content {
-  display: none;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-top: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
 /* FAQ styling */
 .faq-heading {
   margin-bottom: 40px;

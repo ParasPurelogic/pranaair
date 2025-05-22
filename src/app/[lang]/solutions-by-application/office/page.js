@@ -1,29 +1,11 @@
 "use client"
-
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
-import ContactForm from "@/Components/Contacform/ContactForm";
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function OfficeSolutions() {
-  const [activeTab, setActiveTab] = useState("monitors")
-  const [activeFaq, setActiveFaq] = useState(1)
-  const [currentSlide, setCurrentSlide] = useState(0)
-
-  useEffect(() => {
-    // Initialize any client-side scripts here if needed
-    const handleScroll = () => {
-      // Scroll behavior if needed
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
   return (
     <main>
       {/* Banner Section */}
@@ -525,144 +507,157 @@ export default function OfficeSolutions() {
           </div>
 
           <div className="solutions-tabs-container">
-            <div className="tabs-header">
-              <button
-                className={`tab-button ${activeTab === "monitors" ? "active" : ""}`}
-                onClick={() => setActiveTab("monitors")}
-              >
-                Air Quality Monitors
-              </button>
-              <button
-                className={`tab-button ${activeTab === "fresh-air" ? "active" : ""}`}
-                onClick={() => setActiveTab("fresh-air")}
-              >
-                Fresh Air Solution
-              </button>
-            </div>
+            {/* Bootstrap Tabs */}
+            <ul className="nav nav-tabs" id="solutionsTabs" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="monitors-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#monitors"
+                  type="button"
+                  role="tab"
+                  aria-controls="monitors"
+                  aria-selected="true"
+                >
+                  Air Quality Monitors
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="fresh-air-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#fresh-air"
+                  type="button"
+                  role="tab"
+                  aria-controls="fresh-air"
+                  aria-selected="false"
+                >
+                  Fresh Air Solution
+                </button>
+              </li>
+            </ul>
 
-            <div className="tabs-content">
-              {activeTab === "monitors" && (
-                <div className="tab-pane">
-                  <Carousel
-                    responsive={{
-                      desktop: {
-                        breakpoint: { max: 3000, min: 1024 },
-                        items: 1,
-                      },
-                      tablet: {
-                        breakpoint: { max: 1024, min: 464 },
-                        items: 1,
-                      },
-                      mobile: {
-                        breakpoint: { max: 464, min: 0 },
-                        items: 1,
-                      },
-                    }}
-                    infinite={true}
-                    autoPlay={false}
-                    arrows={true}
-                    renderButtonGroupOutside={true}
-                    customLeftArrow={<button className="carousel-arrow left-arrow">‹</button>}
-                    customRightArrow={<button className="carousel-arrow right-arrow">›</button>}
-                  >
-                    <div className="product-slide">
-                      <div className="product-content">
-                        <div className="product-info">
-                          <h3>Sensible+ Monitor</h3>
-                          <p>
-                            This smart air quality monitor features a 7-inch touchscreen display that provides detailed
-                            data insights for washroom or bathroom
-                          </p>
-                          <ul className="feature-list">
-                            <li>7 Inch LED Touch Screen Display</li>
-                            <li>5000 mAh Battery InBuilt</li>
-                            <li>WiFi Connectivity With Mobile App</li>
-                          </ul>
-                          <a className="know-more-btn" href="#">
-                            Know More
-                          </a>
-                        </div>
-                        <div className="product-image">
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2023/07/sensible-plus-air-quality-monitor-scaled.jpg"
-                            alt="Prana air sensible+ air quality monitor for office"
-                            width={500}
-                            height={400}
-                            objectFit="contain"
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="product-slide">
-                      <div className="product-content">
-                        <div className="product-info">
-                          <h3>SQUAIR Air Monitor</h3>
-                          <p>
-                            This is a smart indoor air quality monitoring device that can detect the odor, humidity, and
-                            other toxic gas parameters.
-                          </p>
-                          <ul className="feature-list">
-                            <li>Detects TVOCs (odor), temperature, and humidity as well</li>
-                            <li>Mobile &amp; Smart TV App Enabled</li>
-                            <li>Reliable Web Dashboard Accessibility</li>
-                          </ul>
-                          <div className="button-group">
-                            <a className="know-more-btn" href="#">
-                              Know More
-                            </a>
-                            <a className="rent-btn" href="#">
-                              Looking for Rent?
-                            </a>
-                          </div>
-                        </div>
-                        <div className="product-image">
-                          <Image
-                            src="https://www.pranaair.com/wp-content/uploads/2023/07/squair-air-quality-monitor-scaled.jpg"
-                            alt="Prana air squair air quality monitor for offices"
-                            width={500}
-                            height={400}
-                            objectFit="contain"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </Carousel>
-                </div>
-              )}
-
-              {activeTab === "fresh-air" && (
-                <div className="tab-pane">
+            <div className="tab-content" id="solutionsTabsContent">
+              <div className="tab-pane fade show active" id="monitors" role="tabpanel" aria-labelledby="monitors-tab">
+                <Carousel
+                  responsive={{
+                    desktop: {
+                      breakpoint: { max: 3000, min: 1024 },
+                      items: 1,
+                    },
+                    tablet: {
+                      breakpoint: { max: 1024, min: 464 },
+                      items: 1,
+                    },
+                    mobile: {
+                      breakpoint: { max: 464, min: 0 },
+                      items: 1,
+                    },
+                  }}
+                  infinite={true}
+                  autoPlay={false}
+                  arrows={true}
+                  renderButtonGroupOutside={true}
+                  customLeftArrow={<button className="carousel-arrow left-arrow">‹</button>}
+                  customRightArrow={<button className="carousel-arrow right-arrow">›</button>}
+                >
                   <div className="product-slide">
-                    <div className="product-content fresh-air-content">
-                      <div className="product-image">
-                        <Image
-                          src="https://www.pranaair.com/wp-content/uploads/2023/07/for-fresh-air-machine-scaled.jpg"
-                          alt="For fresh air machine"
-                          width={500}
-                          height={400}
-                          objectFit="contain"
-                        />
-                      </div>
+                    <div className="product-content">
                       <div className="product-info">
-                        <h3>Fresh Air Machine</h3>
+                        <h3>Sensible+ Monitor</h3>
                         <p>
-                          It is an advanced air purifier designed to bring in fresh outdoor air and filter out
-                          pollutants, allergens, odors and enough oxygen.
+                          This smart air quality monitor features a 7-inch touchscreen display that provides detailed
+                          data insights for washroom or bathroom
                         </p>
                         <ul className="feature-list">
-                          <li>Comes with multi-layers HEPA Filters</li>
-                          <li>Promising you up to 99.5% efficiency</li>
-                          <li>Improves air ventilation</li>
+                          <li>7 Inch LED Touch Screen Display</li>
+                          <li>5000 mAh Battery InBuilt</li>
+                          <li>WiFi Connectivity With Mobile App</li>
                         </ul>
                         <a className="know-more-btn" href="#">
                           Know More
                         </a>
                       </div>
+                      <div className="product-image">
+                        <Image
+                          src="https://www.pranaair.com/wp-content/uploads/2023/07/sensible-plus-air-quality-monitor-scaled.jpg"
+                          alt="Prana air sensible+ air quality monitor for office"
+                          width={500}
+                          height={400}
+                          objectFit="contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="product-slide">
+                    <div className="product-content">
+                      <div className="product-info">
+                        <h3>SQUAIR Air Monitor</h3>
+                        <p>
+                          This is a smart indoor air quality monitoring device that can detect the odor, humidity, and
+                          other toxic gas parameters.
+                        </p>
+                        <ul className="feature-list">
+                          <li>Detects TVOCs (odor), temperature, and humidity as well</li>
+                          <li>Mobile &amp; Smart TV App Enabled</li>
+                          <li>Reliable Web Dashboard Accessibility</li>
+                        </ul>
+                        <div className="button-group">
+                          <a className="know-more-btn" href="#">
+                            Know More
+                          </a>
+                          <a className="rent-btn" href="#">
+                            Looking for Rent?
+                          </a>
+                        </div>
+                      </div>
+                      <div className="product-image">
+                        <Image
+                          src="https://www.pranaair.com/wp-content/uploads/2023/07/squair-air-quality-monitor-scaled.jpg"
+                          alt="Prana air squair air quality monitor for offices"
+                          width={500}
+                          height={400}
+                          objectFit="contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Carousel>
+              </div>
+
+              <div className="tab-pane fade" id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
+                <div className="product-slide">
+                  <div className="product-content fresh-air-content">
+                    <div className="product-image">
+                      <Image
+                        src="https://www.pranaair.com/wp-content/uploads/2023/07/for-fresh-air-machine-scaled.jpg"
+                        alt="For fresh air machine"
+                        width={500}
+                        height={400}
+                        objectFit="contain"
+                      />
+                    </div>
+                    <div className="product-info">
+                      <h3>Fresh Air Machine</h3>
+                      <p>
+                        It is an advanced air purifier designed to bring in fresh outdoor air and filter out pollutants,
+                        allergens, odors and enough oxygen.
+                      </p>
+                      <ul className="feature-list">
+                        <li>Comes with multi-layers HEPA Filters</li>
+                        <li>Promising you up to 99.5% efficiency</li>
+                        <li>Improves air ventilation</li>
+                      </ul>
+                      <a className="know-more-btn" href="#">
+                        Know More
+                      </a>
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -888,10 +883,7 @@ export default function OfficeSolutions() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -899,7 +891,7 @@ export default function OfficeSolutions() {
         <ContactForm pageName="Office Page" />
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Bootstrap Accordion */}
       <section className="faq-section">
         <div className="container">
           <div className="section-header text-center">
@@ -909,69 +901,144 @@ export default function OfficeSolutions() {
             <p>About Air Quality Solution for offices / corporates. Have questions? Were here to help.</p>
           </div>
 
-          <div className="faq-container">
-            <div className={`faq-item ${activeFaq === 1 ? "active" : ""}`}>
-              <div className="faq-question" onClick={() => setActiveFaq(activeFaq === 1 ? null : 1)}>
-                <h3>1. What is office air pollution, and how does it affect employees?</h3>
-                <span className="faq-toggle">{activeFaq === 1 ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === 1 ? "show" : ""}`}>
-                <p>
-                  Office air pollution is harmful indoor contaminants that can cause respiratory problems, allergies,
-                  headaches, and reduced productivity among employees.
-                </p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${activeFaq === 2 ? "active" : ""}`}>
-              <div className="faq-question" onClick={() => setActiveFaq(activeFaq === 2 ? null : 2)}>
-                <h3>2. Why is an Air Quality Monitor essential for offices?</h3>
-                <span className="faq-toggle">{activeFaq === 2 ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === 2 ? "show" : ""}`}>
-                <p>
-                  An Air Quality Monitor tracks indoor pollutants in real-time, ensuring a healthy work environment by
-                  identifying and addressing air quality issues promptly.
-                </p>
-              </div>
-            </div>
-
-            <div className={`faq-item ${activeFaq === 3 ? "active" : ""}`}>
-              <div className="faq-question" onClick={() => setActiveFaq(activeFaq === 3 ? null : 3)}>
-                <h3>3. How does Prana Airs Air Quality Monitor work?</h3>
-                <span className="faq-toggle">{activeFaq === 3 ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === 3 ? "show" : ""}`}>
-                <p>
-                  Prana Airs monitor uses advanced sensors to detect pollutants like PM2.5, PM10, CO2, VOCs, and
-                  temperature, providing real-time data via a user-friendly interface and app.
-                </p>
+          <div className="accordion" id="faqAccordion">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingOne">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  1. What is office air pollution, and how does it affect employees?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                className="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Office air pollution is harmful indoor contaminants that can cause respiratory problems, allergies,
+                    headaches, and reduced productivity among employees.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className={`faq-item ${activeFaq === 4 ? "active" : ""}`}>
-              <div className="faq-question" onClick={() => setActiveFaq(activeFaq === 4 ? null : 4)}>
-                <h3>4. What are the benefits of Prana Airs Air Quality Monitor?</h3>
-                <span className="faq-toggle">{activeFaq === 4 ? "−" : "+"}</span>
-              </div>
-              <div className={`faq-answer ${activeFaq === 4 ? "show" : ""}`}>
-                <p>
-                  It enables data-driven decisions for better air quality, leading to healthier employees and increased
-                  productivity.
-                </p>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  2. Why is an Air Quality Monitor essential for offices?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    An Air Quality Monitor tracks indoor pollutants in real-time, ensuring a healthy work environment by
+                    identifying and addressing air quality issues promptly.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className={`faq-item ${activeFaq === 5 ? "active" : ""}`}>
-              <div className="faq-question" onClick={() => setActiveFaq(activeFaq === 5 ? null : 5)}>
-                <h3>5. What is Prana Airs Fresh Air Machine, and how does it enhance office air quality?</h3>
-                <span className="faq-toggle">{activeFaq === 5 ? "−" : "+"}</span>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  3. How does Prana Airs Air Quality Monitor work?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Prana Airs monitor uses advanced sensors to detect pollutants like PM2.5, PM10, CO2, VOCs, and
+                    temperature, providing real-time data via a user-friendly interface and app.
+                  </p>
+                </div>
               </div>
-              <div className={`faq-answer ${activeFaq === 5 ? "show" : ""}`}>
-                <p>
-                  Prana Airs Fresh Air Machine filters outdoor air, removing pollutants and maintaining a constant
-                  supply of clean air indoors, promoting better respiratory health.
-                </p>
+            </div>
+
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFour">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  4. What are the benefits of Prana Airs Air Quality Monitor?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    It enables data-driven decisions for better air quality, leading to healthier employees and
+                    increased productivity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFive">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  5. What is Prana Airs Fresh Air Machine, and how does it enhance office air quality?
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Prana Airs Fresh Air Machine filters outdoor air, removing pollutants and maintaining a constant
+                    supply of clean air indoors, promoting better respiratory health.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1088,7 +1155,22 @@ export default function OfficeSolutions() {
           </div>
         </div>
       </section>
+
+      {/* Bootstrap JS */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function() {
+              // Load Bootstrap JS
+              const script = document.createElement('script');
+              script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+              script.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+              script.crossOrigin = 'anonymous';
+              document.body.appendChild(script);
+            });
+          `,
+        }}
+      />
     </main>
   )
 }
-

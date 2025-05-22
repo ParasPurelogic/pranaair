@@ -1,0 +1,11 @@
+{
+     "oxygenHero": {
+    "title": "Oxygen Monitor",
+    "subtitle": "Live Easy with OxyCO Monitor",
+    "description": "Monitor Real-Time Oxygen and Carbon Monoxide Levels",
+    "buyButton": "Buy Now",
+    "altTexts": {
+      "buyIcon": "buy now icon"
+    }
+  }
+}

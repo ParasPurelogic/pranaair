@@ -889,9 +889,11 @@ ul.brand-logo li img:hover {
 .all-brands-list {
   position: relative;
 }
+
 .select-brand-heading {
   position: relative;
 }
+
 .available-for-heading {
   padding-top: 150px;
   position: relative;
@@ -1067,8 +1069,6 @@ span.vc_tta-title-text {
 .faq-content {
   font-size: 1em;
   color: #555;
-  display: none;
-  padding: 10px 0;
 }
 
 .faq h2::after {

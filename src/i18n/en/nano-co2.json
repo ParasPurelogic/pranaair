@@ -1,0 +1,299 @@
+{
+  "slider": {
+    "slide1": {
+      "heading": "Small · Sleek · Reliable",
+      "paragraph": "Our mini air quality monitor is a perfect companion for a healthier lifestyle. Stay informed about the air you breathe without the hassle of large and complicated equipment."
+    },
+    "slide2": {
+      "heading": "Intelligent · Compact · Accurate",
+      "paragraph": "Real-time monitoring of indoor CO2 levels allows you to make data-driven decisions to improve the air quality of your indoor environments!"
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked",
+    "subtitle": "Questions About Nano CO2 Monitor",
+    "faq1": {
+      "question": "1. What is a nano portable CO2 monitor?",
+      "answer": "A nano CO2 monitor is a device used to measure the concentration of carbon dioxide in the air in real-time. It is small and portable, making it convenient to carry and use in various indoor spaces."
+    },
+    "faq2": {
+      "question": "2. How does Prana Air Nano CO2 monitor work?",
+      "answer": "This monitor operates by utilizing an NDIR sensor to detect the amount of carbon dioxide in the air. The sensor is capable of measuring the infrared radiation that is absorbed by CO2 molecules present in the air, and this data is then processed to determine the concentration of CO2 in the environment."
+    },
+    "faq3": {
+      "question": "3. Why is it important to monitor CO2 levels?",
+      "answer": "Maintaining optimal indoor air quality is crucial, and monitoring CO2 levels is an effective way to achieve this. Elevated CO2 levels signify inadequate ventilation, and can cause various health issues such as headaches, drowsiness, discomfort, and other related problems. By keeping track of CO2 levels, it is possible to identify when ventilation needs to be improved to ensure good indoor air quality."
+    },
+    "faq4": {
+      "question": "4. Where can this carbon dioxide monitor be used?",
+      "answer": "It is a versatile device suitable for use in diverse indoor environments such as homes, offices, schools, hospitals, and other public buildings. it proves to be especially valuable in areas where people tend to spend extended periods and where ventilation may be insufficient. These devices enable the monitoring of CO2 levels, ensuring optimal indoor air quality in various settings."
+    },
+    "faq5": {
+      "question": "5. How accurate is the data of this monitor?",
+      "answer": "When it comes to measuring CO2 levels, our Nano CO2 monitor has an exceptional quality, and regular calibration further enhances their accuracy. High-quality NDIR sensor is incorporated into the device to deliver precise measurements of CO2 levels, ensuring reliable results."
+    },
+    "faq6": {
+      "question": "6. How do I use this CO2 monitor?",
+      "answer": "To use the CO2 monitor, simply turn it on and let it run for a few minutes to allow it to calibrate and take readings. The device will display the current CO2 concentration in parts per million (ppm). You can then use this information to adjust ventilation and improve indoor air quality."
+    }
+  },
+   "productInfo": {
+    "title": "Nano CO2 Monitor",
+    "subtitle": "Your portable health consultant",
+    "priceLabel": "M.R.P.",
+    "priceValue": "₹ 2,490.00",
+    "description": "Prana Air Nano CO2 monitor with NDIR Sensor is a handy air quality monitoring device that helps you monitor CO2 levels in real-time. Track your carbon footprint in real-time with an advanced and innovative cutting edge technology. Empowering you to make informed decisions about CO2 levels around you."
+  },
+   "productOptions": {
+    "modelLabel": "Model",
+    "models": {
+      "nanoCO2": "Nano CO2",
+      "nanoCO": "Nano CO",
+      "nanoTVOC": "Nano TVOC/HCHO"
+    },
+    "quantityLabel": "Quantity",
+    "buyNowButton": "Buy Now"
+  },
+   "monitoringBanner": {
+    "title": "CO2 Monitoring has never been this easy!",
+    "description": "Prana Air Nano CO2 monitor is convenient to carry over larger distances with a simple yet attractive style."
+  },
+  "features": {
+    "title": "Qualitative features of Nano CO2 Monitor | Portable",
+    "description": "It has a small, compact body with a minimal and attractive style. People adore our mini health consultant and the way it combines aesthetics and technology.",
+    "items": {
+      "realTime": "Real-time CO2\nMonitoring",
+      "ndir": "NDIR\nTechnology",
+      "portable": "Mini & Portable\nDevice",
+      "display": "HD Color\nDisplay",
+      "battery": "700 mAh Lithium\nbattery",
+      "interface": "Type-C\ninterface",
+      "ui": "Dynamic UI"
+    }
+  },
+  "ultraHD": {
+    "title": "Ultra High Definition color Display",
+    "inch": "19",
+    "description": "The ultra-high definition color screen has high-precision sensors installed to precisely monitor the CO2 gas concentration in real-time, and reading is more user-friendly and convenient."
+  },
+  "handyPortable": {
+    "handy": {
+      "title": "Handy",
+      "description": "The monitor is very user-friendly and convenient to measure CO2 gas concentration in real-time. It is very easy to hold with one hand."
+    },
+    "portable": {
+      "title": "Portable",
+      "description": "It has a small, compact body with a simple, attractive style. People adore our mini health consultant and the way it combines aesthetics and technology."
+    }
+  },
+   "respiratoryEnvironment": {
+    "title": "Carbon Dioxide",
+    "subtitle": "in the respiratory environment",
+    "description": "The respiratory environment is critical. CO2 impacts the comfort levels of a person. When Its level exceeds the limits, it can do both short-term and long-term damage to ones health. Excess CO2 levels can result in stuffiness, dizziness, loss of attention, and other health issues.",
+    "healthHazards": {
+      "title": "Health Hazards of",
+      "highlight": "CO2",
+      "hazards": {
+        "sleepy": {
+          "title": "Feeling sleepy and drowsy",
+          "level": "1000-2000 PPM :",
+          "indicator": "yellow"
+        },
+        "breathing": {
+          "title": "Smooth Breathing",
+          "level": "400-1000 PPM :",
+          "indicator": "green"
+        },
+        "headache": {
+          "title": "Headache, lethargy, and inability to concentrate",
+          "level": "2000-3000 PPM :",
+          "indicator": "orange"
+        },
+        "brainDamage": {
+          "title": "Can cause brain damage, coma, even death",
+          "level": ">5000 PPM :",
+          "indicator": "red"
+        }
+      }
+    }
+  },
+  "realTimeMonitoring": {
+    "title": "Real-time CO2",
+    "subtitle": "Air quality monitoring",
+    "indicators": {
+      "co2Level": "CO2 Level",
+      "occupancy": "Occupancy"
+    },
+    "detection": {
+      "title": "Accurate",
+      "subtitle": "CO2 Detection",
+      "description": "Indoor CO2 levels are influenced by various factors, with occupancy being a significant one. Our advanced NDIR Sensor Technology monitor efficiently tracks and measures CO2 levels, helping maintain a healthy and comfortable indoor environment."
+    }
+  },
+  "ndirTechnology": {
+    "heading": "NDIR Technology",
+    "subtitle": "For CO2 Detection",
+    "description": "For monitoring CO2, NDIR sensors are preferred over other detection technologies due to their precision, long-term stability, and low power consumption. The sensor is comprised of an infrared emitter, a detector, an optical filter, a gas cell, and signal-processing circuitry that detects CO2 in the immediate environment by real-time air quality monitoring."
+  },
+   "smartChip": {
+    "title": "High-sensitive",
+    "highlight": "Smart Chip",
+    "subtitle": "for more Accurate Detection",
+    "description": "Built-in high-performance chip for air quality detection ensures more accurate instrument detection.",
+    "features": {
+      "sensitivity": "High-sensitivity",
+      "speed": "Fast Operation speed",
+      "accuracy": "Data Accuracy",
+      "efficiency": "Energy Efficient"
+    }
+  },
+  "attractiveDetails": {
+    "heading": "Attractive details for easy carrying",
+    "typeC": {
+      "number": "01",
+      "title": "Type C",
+      "subtitle": "Interface"
+    },
+    "lanyard": {
+      "number": "02",
+      "title": "Anti-loss",
+      "subtitle": "Lanyard"
+    },
+    "screen": {
+      "number": "03",
+      "title": "Ultra HD",
+      "subtitle": "Color screen"
+    }
+  },
+  "productKeyFunctions": {
+    "heading": "Product Key functions",
+    "onOff": "On/Off key",
+    "calibration": "One-button automatic calibration",
+    "brightness": "Brightness adjusting button"
+  },
+  "batteryCapacity": {
+    "title": "Large-capacity Polymer",
+    "subtitle": "Battery endurance",
+    "description": "Safe and Durable high-performance 700 mAh large capacity polymer lithium battery, with super long endurance."
+  },
+   "technicalSpecifications": {
+    "title": "Nano CO2 Monitor",
+    "subtitle": "Technical Specifications",
+    "downloadBrochure": "Download Brochure",
+    "specs": {
+      "productName": {
+        "label": "Product Name :",
+        "value": "Nano CO2 Monitor"
+      },
+      "warmupTime": {
+        "label": "Warm-up time :",
+        "value": "35 Sec"
+      },
+      "workingTemp": {
+        "label": "Working Temp. :",
+        "value": "-10~50°C"
+      },
+      "detectionRange": {
+        "label": "Detection Range :",
+        "value": "Upto -5000 PPM"
+      },
+      "refreshRate": {
+        "label": "Data Refresh Rate :",
+        "value": "2 Sec"
+      },
+      "chargingMode": {
+        "label": "Charging Mode :",
+        "value": "USB Type-C"
+      },
+      "workingVoltage": {
+        "label": "Working Voltage :",
+        "value": "3.6V"
+      },
+      "operatingHumidity": {
+        "label": "Operating Humidity :",
+        "value": "0-95% RH"
+      },
+      "dimensions": {
+        "label": "Interface Dimensions :",
+        "value": "50.6 x 17 x 85 (mm)"
+      }
+    }
+  },
+   "intelligentAlarm": {
+    "title": "Real-time",
+    "subtitle": "CO2 detection with an intelligent alarm system",
+    "highlight": "CO2",
+    "alarmLevels": {
+      "green": {
+        "label": "Green:",
+        "text": "Safe, No alarm sound"
+      },
+      "others": {
+        "label": "Yellow, Orange, and Red:",
+        "text": "Drip sound cycle alarm, once every 10 minutes."
+      }
+    },
+    "co2Levels": {
+      "green": "400 – 1000 ± 50PPM",
+      "yellow": "1001 – 1200 ± 50PPM",
+      "orange": "1201 – 1500 ± 50PPM",
+      "red": "1501 ± 50PPM"
+    },
+    "note": "Know the CO2 around you within 2 seconds:",
+    "noteText": "Detects CO2 in real-time with 2 seconds data refresh rate.",
+    "highlight2": "2 seconds",
+    "gradientLabels": {
+      "security": "Security",
+      "cycleAlarm": "Cycle Alarm"
+    }
+  },
+  "productComparison": {
+    "title": "Comparison of Nano CO2 vs High-End Monitor",
+    "products": {
+      "nanoCO2": "Nano CO2 Monitor",
+      "highEnd": "High-End Monitor"
+    },
+    "comparisonTable": {
+      "description": {
+        "label": "Description :",
+        "nanoCO2": "Nano CO2 Monitor",
+        "highEnd": "High-End Monitor"
+      },
+      "size": {
+        "label": "Size :",
+        "nanoCO2": "Small",
+        "highEnd": "Bulky"
+      },
+      "price": {
+        "label": "Price :",
+        "nanoCO2": "Low-cost",
+        "highEnd": "Expensive"
+      },
+      "weight": {
+        "label": "Weight :",
+        "nanoCO2": "Lightweight",
+        "highEnd": "Comparatively Heavy"
+      },
+      "range": {
+        "label": "Range :",
+        "nanoCO2": "Upto 5000 ppm",
+        "highEnd": "Upto 5000 ppm"
+      },
+      "accuracy": {
+        "label": "Accuracy :",
+        "nanoCO2": "±5%",
+        "highEnd": "±3%"
+      },
+      "technology": {
+        "label": "Technology :",
+        "nanoCO2": "NDIR Sensor",
+        "highEnd": "NDIR Sensor"
+      },
+      "portability": {
+        "label": "Portability :",
+        "nanoCO2": "High Portability",
+        "highEnd": "Comparatively less portable"
+      }
+    }
+  }
+}

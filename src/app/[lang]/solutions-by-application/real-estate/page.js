@@ -1,46 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function RealEstate() {
-  const [activeTab, setActiveTab] = useState("air-quality-monitors")
-  const [activeAccordion, setActiveAccordion] = useState(0)
-  const [activeSlide, setActiveSlide] = useState(0)
-
-  useEffect(() => {
-    // Initialize accordion functionality
-    const initAccordion = () => {
-      const accordionItems = document.querySelectorAll(".faq-item-header")
-      accordionItems.forEach((item, index) => {
-        item.addEventListener("click", () => {
-          setActiveAccordion(activeAccordion === index ? null : index)
-        })
-      })
-    }
-
-    // Run initializations
-    setTimeout(() => {
-      initAccordion()
-    }, 500)
-
-    return () => {
-      // Cleanup if needed
-    }
-  }, [activeAccordion])
-
-  const toggleAccordion = (index) => {
-    if (activeAccordion === index) {
-      setActiveAccordion(null)
-    } else {
-      setActiveAccordion(index)
-    }
-  }
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -72,7 +37,7 @@ export default function RealEstate() {
           </h1>
           <p>A complete solution for air quality monitoring, air purification, and other solutions for real-estates.</p>
           <div className="category-tabs">
-            <span>Residential</span>  <span>Commercial</span>
+            <span>Residential</span> <span>Commercial</span>
           </div>
           <a className="cta-button" href="#get_in_touch">
             Get a Quote
@@ -441,49 +406,78 @@ export default function RealEstate() {
         </div>
       </div>
 
-      {/* Air Quality Solutions Section */}
+      {/* Air Quality Solutions Section - Using Bootstrap Tabs */}
       <div className="section-container">
         <div className="section-header">
           <h2>
             Air quality <span className="highlight-text">Solutions</span>
           </h2>
           <p>
-            Prana Airs air quality monitoring and air purifying solutions give you the power to know what your
-            residents and visitors breathe and what you could do to clean the air to make real estate properties
-            pollution-free zones and view and analyze your IAQ.
+            Prana Airs air quality monitoring and air purifying solutions give you the power to know what your residents
+            and visitors breathe and what you could do to clean the air to make real estate properties pollution-free
+            zones and view and analyze your IAQ.
           </p>
         </div>
 
         <div className="solutions-tabs">
-          <div className="tabs-header">
-            <button
-              className={activeTab === "air-quality-monitors" ? "tab-button active" : "tab-button"}
-              onClick={() => setActiveTab("air-quality-monitors")}
-            >
-              Air Quality Monitors
-            </button>
-            <button
-              className={activeTab === "fresh-air-machine" ? "tab-button active" : "tab-button"}
-              onClick={() => setActiveTab("fresh-air-machine")}
-            >
-              Fresh Air Machine
-            </button>
-            <button
-              className={activeTab === "api-data" ? "tab-button active" : "tab-button"}
-              onClick={() => setActiveTab("api-data")}
-            >
-              API Data
-            </button>
-          </div>
+          <ul className="nav nav-tabs" id="solutionsTabs" role="tablist">
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link active"
+                id="air-quality-monitors-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#air-quality-monitors"
+                type="button"
+                role="tab"
+                aria-controls="air-quality-monitors"
+                aria-selected="true"
+              >
+                Air Quality Monitors
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="fresh-air-machine-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#fresh-air-machine"
+                type="button"
+                role="tab"
+                aria-controls="fresh-air-machine"
+                aria-selected="false"
+              >
+                Fresh Air Machine
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="api-data-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#api-data"
+                type="button"
+                role="tab"
+                aria-controls="api-data"
+                aria-selected="false"
+              >
+                API Data
+              </button>
+            </li>
+          </ul>
 
-          <div className="tabs-content">
-            {activeTab === "air-quality-monitors" && (
-              <div className="tab-content-item">
-                <div className="product-slider">
-                  {/* Slider for Air Quality Monitors */}
-                  <div className="slider-container">
-                    <div className="slider-wrapper">
-                      <div className={`product-slide ${activeSlide === 0 ? "active" : ""}`}>
+          <div className="tab-content" id="solutionsTabsContent">
+            <div
+              className="tab-pane fade show active"
+              id="air-quality-monitors"
+              role="tabpanel"
+              aria-labelledby="air-quality-monitors-tab"
+            >
+              <div className="product-slider">
+                {/* Slider for Air Quality Monitors */}
+                <div id="airQualityMonitorsCarousel" className="carousel slide" data-bs-ride="carousel">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <div className="product-slide">
                         <div className="product-info">
                           <h3>Sensible+ Air Monitor</h3>
                           <p>
@@ -512,8 +506,9 @@ export default function RealEstate() {
                           />
                         </div>
                       </div>
-
-                      <div className={`product-slide ${activeSlide === 1 ? "active" : ""}`}>
+                    </div>
+                    <div className="carousel-item">
+                      <div className="product-slide">
                         <div className="product-info">
                           <h3>SQUAIR Air Monitor</h3>
                           <p>
@@ -549,103 +544,112 @@ export default function RealEstate() {
                         </div>
                       </div>
                     </div>
-
-                    {/* Slider navigation */}
-                    <button
-                      className="slider-nav prev"
-                      onClick={() => {
-                        setActiveSlide(activeSlide === 0 ? 1 : 0)
-                      }}
-                    >
+                  </div>
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#airQualityMonitorsCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon" aria-hidden="true">
                       ❮
-                    </button>
-                    <button
-                      className="slider-nav next"
-                      onClick={() => {
-                        setActiveSlide(activeSlide === 1 ? 0 : 1)
-                      }}
-                    >
+                    </span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#airQualityMonitorsCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span className="carousel-control-next-icon" aria-hidden="true">
                       ❯
-                    </button>
-
-                    {/* Slider dots */}
-                    <div className="slider-dots">
-                      <span
-                        className={`slider-dot ${activeSlide === 0 ? "active" : ""}`}
-                        onClick={() => setActiveSlide(0)}
-                      ></span>
-                      <span
-                        className={`slider-dot ${activeSlide === 1 ? "active" : ""}`}
-                        onClick={() => setActiveSlide(1)}
-                      ></span>
-                    </div>
+                    </span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                  <div className="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#airQualityMonitorsCarousel"
+                      data-bs-slide-to="0"
+                      className="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#airQualityMonitorsCarousel"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
                   </div>
                 </div>
               </div>
-            )}
+            </div>
 
-            {activeTab === "fresh-air-machine" && (
-              <div className="tab-content-item">
-                <div className="product-slider">
-                  <div className="product-slide active">
-                    <div className="product-info">
-                      <h3>Fresh Air Machine</h3>
-                      <p>
-                        One-stop solution for indoor air pollution by Prana Air Fresh Air Machine working as an air
-                        purifier with the capability to filter out 99.5% efficiency and multi-layer HEPA filters.
-                      </p>
-                      <ul className="feature-list">
-                        <li>Comes with multi-layers HEPA Filters</li>
-                        <li>Compact Design makes it easy to place</li>
-                        <li>Promising you up to 99.5% efficiency</li>
-                      </ul>
-                      <div className="product-actions">
-                        <a href="https://www.pranaair.com/fresh-air-machine/" className="primary-button">
-                          Know More
-                        </a>
-                      </div>
+            <div
+              className="tab-pane fade"
+              id="fresh-air-machine"
+              role="tabpanel"
+              aria-labelledby="fresh-air-machine-tab"
+            >
+              <div className="product-slider">
+                <div className="product-slide active">
+                  <div className="product-info">
+                    <h3>Fresh Air Machine</h3>
+                    <p>
+                      One-stop solution for indoor air pollution by Prana Air Fresh Air Machine working as an air
+                      purifier with the capability to filter out 99.5% efficiency and multi-layer HEPA filters.
+                    </p>
+                    <ul className="feature-list">
+                      <li>Comes with multi-layers HEPA Filters</li>
+                      <li>Compact Design makes it easy to place</li>
+                      <li>Promising you up to 99.5% efficiency</li>
+                    </ul>
+                    <div className="product-actions">
+                      <a href="https://www.pranaair.com/fresh-air-machine/" className="primary-button">
+                        Know More
+                      </a>
                     </div>
-                    <div className="product-image">
-                      <img
-                        style={{ width: "100%" }}
-                        src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
-                        alt="prana air fresh air machine as iaq solution for real estates"
-                      />
-                    </div>
+                  </div>
+                  <div className="product-image">
+                    <img
+                      style={{ width: "100%" }}
+                      src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
+                      alt="prana air fresh air machine as iaq solution for real estates"
+                    />
                   </div>
                 </div>
               </div>
-            )}
+            </div>
 
-            {activeTab === "api-data" && (
-              <div className="tab-content-item">
-                <div className="product-slider">
-                  <div className="product-slide active">
-                    <div className="product-info">
-                      <h3>AQI API Data</h3>
-                      <p>Avail the real-time air quality data of nearby outdoor area on the web.</p>
-                      <ul className="feature-list">
-                        <li>Integrate air quality data on the web</li>
-                        <li>Access the real-time data quickly</li>
-                        <li>Take precautions from the air pollution</li>
-                      </ul>
-                      <div className="product-actions">
-                        <a href="#get_in_touch" className="primary-button">
-                          Know More
-                        </a>
-                      </div>
+            <div className="tab-pane fade" id="api-data" role="tabpanel" aria-labelledby="api-data-tab">
+              <div className="product-slider">
+                <div className="product-slide active">
+                  <div className="product-info">
+                    <h3>AQI API Data</h3>
+                    <p>Avail the real-time air quality data of nearby outdoor area on the web.</p>
+                    <ul className="feature-list">
+                      <li>Integrate air quality data on the web</li>
+                      <li>Access the real-time data quickly</li>
+                      <li>Take precautions from the air pollution</li>
+                    </ul>
+                    <div className="product-actions">
+                      <a href="#get_in_touch" className="primary-button">
+                        Know More
+                      </a>
                     </div>
-                    <div className="product-image">
-                      <img
-                        style={{ width: "100%" }}
-                        src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg"
-                        alt="aqi api data for real estates"
-                      />
-                    </div>
+                  </div>
+                  <div className="product-image">
+                    <img
+                      style={{ width: "100%" }}
+                      src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg"
+                      alt="aqi api data for real estates"
+                    />
                   </div>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
@@ -732,7 +736,7 @@ export default function RealEstate() {
         </div>
       </div>
 
-      {/* FAQ Section - Updated to match reference */}
+      {/* FAQ Section - Using Bootstrap Accordion */}
       <div className="section-container">
         <div className="section-header">
           <h2>
@@ -745,87 +749,175 @@ export default function RealEstate() {
           </p>
         </div>
 
-        <div className="faq-container">
-          <div className={`faq-item ${activeAccordion === 0 ? "active" : ""}`}>
-            <div className="faq-item-header" onClick={() => toggleAccordion(0)}>
-              <h4>1. What are the health impacts of the pollutants present inside a mall?</h4>
-              <span className="faq-icon">{activeAccordion === 0 ? "-" : "+"}</span>
-            </div>
-            <div className="faq-item-body" style={{ display: activeAccordion === 0 ? "block" : "none" }}>
-              <p>
-                Your health could be harmed by increased CO2 exposure. Health effects like nausea, vertigo, exhaustion,
-                difficulty breathing, and perspiration can be evident in public spaces. Transmission of chronic
-                illnesses like the flu and the common cold is fairly common.
-              </p>
-            </div>
-          </div>
-
-          <div className={`faq-item ${activeAccordion === 1 ? "active" : ""}`}>
-            <div className="faq-item-header" onClick={() => toggleAccordion(1)}>
-              <h4>2. What are the major pollutants that are present in residential buildings?</h4>
-              <span className="faq-icon">{activeAccordion === 1 ? "-" : "+"}</span>
-            </div>
-            <div className="faq-item-body" style={{ display: activeAccordion === 1 ? "block" : "none" }}>
-              <p>
-                Many pollutants can be present inside residential buildings. PM2.5, CO2, TVOC, CO, odor, smoke,
-                temperature, humidity, and noise are the main pollutants that affect indoor air quality.
-              </p>
-            </div>
-          </div>
-
-          <div className={`faq-item ${activeAccordion === 2 ? "active" : ""}`}>
-            <div className="faq-item-header" onClick={() => toggleAccordion(2)}>
-              <h4>3. Why is it necessary to have air quality monitoring solutions?</h4>
-              <span className="faq-icon">{activeAccordion === 2 ? "-" : "+"}</span>
-            </div>
-            <div className="faq-item-body" style={{ display: activeAccordion === 2 ? "block" : "none" }}>
-              <p>
-                To know the nature of pollutants and how much they are present in a space so that necessary actions can
-                be taken to improve air quality and protect occupants health.
-              </p>
+        <div className="accordion" id="faqAccordion">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingOne">
+              <button
+                className="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                1. What are the health impacts of the pollutants present inside a mall?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              className="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  Your health could be harmed by increased CO2 exposure. Health effects like nausea, vertigo,
+                  exhaustion, difficulty breathing, and perspiration can be evident in public spaces. Transmission of
+                  chronic illnesses like the flu and the common cold is fairly common.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className={`faq-item ${activeAccordion === 3 ? "active" : ""}`}>
-            <div className="faq-item-header" onClick={() => toggleAccordion(3)}>
-              <h4>
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingTwo">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                2. What are the major pollutants that are present in residential buildings?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  Many pollutants can be present inside residential buildings. PM2.5, CO2, TVOC, CO, odor, smoke,
+                  temperature, humidity, and noise are the main pollutants that affect indoor air quality.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingThree">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                3. Why is it necessary to have air quality monitoring solutions?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  To know the nature of pollutants and how much they are present in a space so that necessary actions
+                  can be taken to improve air quality and protect occupants health.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingFour">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
                 4. How can I check the AQI of a room and a specific lobby in a residential building using your device?
-              </h4>
-              <span className="faq-icon">{activeAccordion === 3 ? "-" : "+"}</span>
-            </div>
-            <div className="faq-item-body" style={{ display: activeAccordion === 3 ? "block" : "none" }}>
-              <p>
-                Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display
-                the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time
-                data on your screens or mobile app.
-              </p>
-            </div>
-          </div>
-
-          <div className={`faq-item ${activeAccordion === 4 ? "active" : ""}`}>
-            <div className="faq-item-header" onClick={() => toggleAccordion(4)}>
-              <h4>5. Are any other parameters included in the monitors other than the air pollutants?</h4>
-              <span className="faq-icon">{activeAccordion === 4 ? "-" : "+"}</span>
-            </div>
-            <div className="faq-item-body" style={{ display: activeAccordion === 4 ? "block" : "none" }}>
-              <p>
-                Yes, our monitors include additional parameters like temperature, humidity, and noise levels which are
-                important for overall comfort and well-being in indoor environments.
-              </p>
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#faqAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display
+                  the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time
+                  data on your screens or mobile app.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className={`faq-item ${activeAccordion === 5 ? "active" : ""}`}>
-            <div className="faq-item-header" onClick={() => toggleAccordion(5)}>
-              <h4>6. Are there any additional benefits that come with the solutions?</h4>
-              <span className="faq-icon">{activeAccordion === 5 ? "-" : "+"}</span>
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingFive">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                5. Are any other parameters included in the monitors other than the air pollutants?
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#faqAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  Yes, our monitors include additional parameters like temperature, humidity, and noise levels which are
+                  important for overall comfort and well-being in indoor environments.
+                </p>
+              </div>
             </div>
-            <div className="faq-item-body" style={{ display: activeAccordion === 5 ? "block" : "none" }}>
-              <p>
-                Yes, our solutions come with customized dashboards, mobile apps, and data analytics that help property
-                managers make informed decisions about ventilation, HVAC systems, and other air quality improvement
-                measures.
-              </p>
+          </div>
+
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingSix">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSix"
+                aria-expanded="false"
+                aria-controls="collapseSix"
+              >
+                6. Are there any additional benefits that come with the solutions?
+              </button>
+            </h2>
+            <div
+              id="collapseSix"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingSix"
+              data-bs-parent="#faqAccordion"
+            >
+              <div className="accordion-body">
+                <p>
+                  Yes, our solutions come with customized dashboards, mobile apps, and data analytics that help property
+                  managers make informed decisions about ventilation, HVAC systems, and other air quality improvement
+                  measures.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -838,10 +930,7 @@ export default function RealEstate() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -961,7 +1050,24 @@ export default function RealEstate() {
           </Carousel>
         </div>
       </div>
+
+      {/* Bootstrap initialization script */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Bootstrap components
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+              return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+            
+            // Initialize any other custom functionality
+            // For example, school box interactions if needed
+          });
+        `,
+        }}
+      />
     </div>
   )
 }
-

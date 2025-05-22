@@ -2,14 +2,12 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm";
-import AqiRangesTab from "@/Components/Pages/CairMonitor/AqiRangtab"
-import FaqAccordion from "@/Components/Pages/CairMonitor/FaqAccordion"
-import PartsLabelTabs from "@/Components/Pages/CairMonitor/PartsLabeltabs"
-import TrackQualityTabs from "@/Components/Pages/CairMonitor/TrackQualitytabs"
-import VisualTabs from "@/Components/Pages/CairMonitor/VisualTabs"
+import TvAppTabs from '@/Components/Pages/CairMonitor/TvApptabs'
 import InstallationSlider from "@/Components/Pages/CairMonitor/InstallationSlider"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function CairMonitor() {
+export default async function CairMonitor() {
+  const { t } = await getServerTranslation("cair")
 
   return (
     <div>
@@ -20,37 +18,34 @@ export default function CairMonitor() {
             <div className="col-md-6">
               <div className="banner-content">
                 <h1>
-                  <span className="hd-txt-color">Cair+</span>
+                  <span className="hd-txt-color">{t("banner.titleHighlight")}</span>
                   <br />
-                  Indoor Air Quality Monitor
+                  {t("banner.titleRest")}
                 </h1>
-                <p>
-                  Track your indoor air quality with a low-cost, highly accurate, and portable device. It makes
-                  invisible air contaminants presence visible in your house.
-                </p>
+                <p>{t("banner.description")}</p>
                 <ul className="banner-table">
-                  <li>Low Cost</li>
-                  <li>Accurate</li>
-                  <li>Portable</li>
+                  <li>{t("banner.feature1")}</li>
+                  <li>{t("banner.feature2")}</li>
+                  <li>{t("banner.feature3")}</li>
                 </ul>
 
-                <form className="cart" action="https://www.pranaair.com/product/cair-plus-monitor/" method="post">
+                <form className="cart" action={t("banner.buyNowLink")} method="post">
                   <button
                     className="single_add_to_cart_button button alt button button_slide slide_right"
                     name="add-to-cart"
                     type="submit"
                   >
-                    Buy Now{" "}
+                    {t("banner.buyNowText")}{" "}
                     <img
                       className="banner-btn-arrow"
-                      src="https://www.pranaair.com/wp-content/uploads/2023/12/Vector-1.png"
-                      alt=""
+                      src={t("banner.arrowImageSrc") || "/placeholder.svg"}
+                      alt={t("banner.arrowImageAlt")}
                     />
                   </button>
                 </form>
               </div>
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6">{/* Image placeholder - will be added in next section */}</div>
           </div>
         </div>
       </section>
@@ -61,22 +56,19 @@ export default function CairMonitor() {
           <div className="row">
             <div className="col-md-6">
               <div className="carin-in-outdoor-heading">
-                <h2>Features of Cair+ Monitor</h2>
+                <h2>{t("features.title")}</h2>
               </div>
             </div>
             <div className="col-md-6">
               <div className="car-in-outdoor-para">
-                <p>Cair+ monitoring device is where your search stops</p>
+                <p>{t("features.subtitle")}</p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-5">
               <div className="cair-indoor-img">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/11/pranaair-cair-monitor-all-specifications.webp"
-                  alt="pranaair cair monitor all specification"
-                />
+                <img src={t("features.image.src") || "/placeholder.svg"} alt={t("features.image.alt")} />
               </div>
             </div>
             <div className="col-md-7">
@@ -85,37 +77,37 @@ export default function CairMonitor() {
                   <ul>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/real-time-monitoring-icon.png"
-                        alt="real time air quality monitoring icon"
+                        src={t("features.items.1.icon.src") || "/placeholder.svg"}
+                        alt={t("features.items.1.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h4>Real-Time Monitoring</h4>
-                      <p>AQI, PM2.5, PM10, CO2, TVOC, HCHO, Temperature, and Humidity.</p>
+                      <h4>{t("features.items.1.title")}</h4>
+                      <p>{t("features.items.1.description")}</p>
                     </li>
                   </ul>
                   <ul>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/micro-sd-card-storage.png"
-                        alt="micro sd card storage"
+                        src={t("features.items.2.icon.src") || "/placeholder.svg"}
+                        alt={t("features.items.2.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h4>Micro SD Card Storage</h4>
-                      <p> Provide better data storage with a micro SD card</p>
+                      <h4>{t("features.items.2.title")}</h4>
+                      <p>{t("features.items.2.description")}</p>
                     </li>
                   </ul>
                   <ul>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/type-c-usb-cable.png"
-                        alt="type c usb cable"
+                        src={t("features.items.3.icon.src") || "/placeholder.svg"}
+                        alt={t("features.items.3.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h4>Type-C USB Cable</h4>
-                      <p>Charge the air quality device anytime with a Type-C USB cable.</p>
+                      <h4>{t("features.items.3.title")}</h4>
+                      <p>{t("features.items.3.description")}</p>
                     </li>
                   </ul>
                 </div>
@@ -123,37 +115,37 @@ export default function CairMonitor() {
                   <ul>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/wifi-cloud-data-storage.png"
-                        alt="wifi cloud data storage"
+                        src={t("features.items.4.icon.src") || "/placeholder.svg"}
+                        alt={t("features.items.4.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h4>Wi-Fi + Cloud Data Storage</h4>
-                      <p>Data accessibility on AQIs mobile, TV, Tablet App or web-dashboard.</p>
+                      <h4>{t("features.items.4.title")}</h4>
+                      <p>{t("features.items.4.description")}</p>
                     </li>
                   </ul>
                   <ul>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/lithium-ion-battery.png"
-                        alt="lithium-ion battery"
+                        src={t("features.items.5.icon.src") || "/placeholder.svg"}
+                        alt={t("features.items.5.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h4>Battery Capacity</h4>
-                      <p>With a 1600 mAh lithium-ion battery, it can last upto 3 Hrs on a full charge.</p>
+                      <h4>{t("features.items.5.title")}</h4>
+                      <p>{t("features.items.5.description")}</p>
                     </li>
                   </ul>
                   <ul>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/portable-device.png"
-                        alt="portable device"
+                        src={t("features.items.6.icon.src") || "/placeholder.svg"}
+                        alt={t("features.items.6.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h4>Portable Device</h4>
-                      <p>Carry the device anywhere and measure the air quality on your own.</p>
+                      <h4>{t("features.items.6.title")}</h4>
+                      <p>{t("features.items.6.description")}</p>
                     </li>
                   </ul>
                 </div>
@@ -168,8 +160,8 @@ export default function CairMonitor() {
         <div className="row leed-well">
           <div className="col-12">
             <div className="leed-well-heading">
-              <h2>Cair+ meets all standard of IAQ</h2>
-              <p>LEED v4.1, WELL, WHO, ASHRAE - Meet your standards</p>
+              <h2>{t("leedWell.title")}</h2>
+              <p>{t("leedWell.subtitle")}</p>
             </div>
           </div>
         </div>
@@ -182,69 +174,63 @@ export default function CairMonitor() {
             <div className="col-md-5">
               <div className="content-tab-box">
                 <h3>
-                  <span className="txt-color">Cair +</span>
+                  <span className="txt-color">{t("parameters.titleHighlight")}</span>
                   <br />
-                  Indoor Air Quality monitor
+                  {t("parameters.titleRest")}
                 </h3>
               </div>
             </div>
             <div className="col-md-7">
               <div className="parameter-para">
-                <p>
-                  Measure the air quality of your place on your own air pollution device for indoor and outdoor. Along
-                  our new Cair+ air monitor, you will get a free ambient air quality monitor.
-                </p>
+                <p>{t("parameters.description")}</p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-5">
               <div className="content-tab-box">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/11/cair-indoor-air-quality-monitor.webp"
-                  alt="prana air cair indoor air quality monitor device"
-                />
+                <img src={t("parameters.image.src") || "/placeholder.svg"} alt={t("parameters.image.alt")} />
               </div>
             </div>
             <div className="col-md-7">
               <div className="parameters-icons-box">
-                <h4>Parameters</h4>
+                <h4>{t("parameters.sectionTitle")}</h4>
                 <div className="parameter-icons">
                   <div className="parameter-icons-left">
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-aqi-parameter.png"
-                          alt="cair aqi parameter"
+                          src={t("parameters.items.1.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.1.icon.alt")}
                         />
-                        <h5>AQI</h5>
+                        <h5>{t("parameters.items.1.title")}</h5>
                       </li>
                     </ul>
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/pm1-parameter.png"
-                          alt="pm1 parameter"
+                          src={t("parameters.items.2.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.2.icon.alt")}
                         />
-                        <h5>PM1</h5>
+                        <h5>{t("parameters.items.2.title")}</h5>
                       </li>
                     </ul>
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-pm2.5-parameter.png"
-                          alt="cair pm2.5 parameter"
+                          src={t("parameters.items.3.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.3.icon.alt")}
                         />
-                        <h5>PM2.5</h5>
+                        <h5>{t("parameters.items.3.title")}</h5>
                       </li>
                     </ul>
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-pm10-parameter.png"
-                          alt="cair pm10 parameter"
+                          src={t("parameters.items.4.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.4.icon.alt")}
                         />
-                        <h5>PM10</h5>
+                        <h5>{t("parameters.items.4.title")}</h5>
                       </li>
                     </ul>
                   </div>
@@ -252,10 +238,10 @@ export default function CairMonitor() {
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-co2-parameter.png"
-                          alt="cair co2 parameter"
+                          src={t("parameters.items.5.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.5.icon.alt")}
                         />
-                        <h5>CO2</h5>
+                        <h5>{t("parameters.items.5.title")}</h5>
                       </li>
                     </ul>
                   </div>
@@ -265,38 +251,38 @@ export default function CairMonitor() {
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-tvoc-parameter.png"
-                          alt="cair tvoc parameter"
+                          src={t("parameters.items.6.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.6.icon.alt")}
                         />
-                        <h5>TVOC</h5>
+                        <h5>{t("parameters.items.6.title")}</h5>
                       </li>
                     </ul>
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-hcho-parameter.png"
-                          alt="cair hcho parameter"
+                          src={t("parameters.items.7.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.7.icon.alt")}
                         />
-                        <h5>HCHO</h5>
+                        <h5>{t("parameters.items.7.title")}</h5>
                       </li>
                     </ul>
                     <ul>
                       <li>
                         <img
                           className="temp-icon"
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-temp-parameter.png"
-                          alt="cair temp parameter"
+                          src={t("parameters.items.8.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.8.icon.alt")}
                         />
-                        <h5>Temp.</h5>
+                        <h5>{t("parameters.items.8.title")}</h5>
                       </li>
                     </ul>
                     <ul>
                       <li>
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-humidity-parameter.png"
-                          alt="cair humidity parameter"
+                          src={t("parameters.items.9.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.9.icon.alt")}
                         />
-                        <h5>Humi.</h5>
+                        <h5>{t("parameters.items.9.title")}</h5>
                       </li>
                     </ul>
                   </div>
@@ -304,13 +290,13 @@ export default function CairMonitor() {
                     <ul>
                       <li className="partical-count">
                         <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/12/cair-pc0.3-parameter.png"
-                          alt="cair pc0.3 parameter"
+                          src={t("parameters.items.10.icon.src") || "/placeholder.svg"}
+                          alt={t("parameters.items.10.icon.alt")}
                         />
                         <h5>
-                          Particle Counts
+                          {t("parameters.items.10.title")}
                           <br />
-                          (0.3, 0.5, 1.0, 2.5, 5.0, 10 μm)
+                          {t("parameters.items.10.subtitle")}
                         </h5>
                       </li>
                     </ul>
@@ -329,9 +315,9 @@ export default function CairMonitor() {
             <div className="col-12">
               <div className="app-heading">
                 <h2>
-                  <strong>Cair+</strong> Installation
+                  <strong>{t("installation.titleBold")}</strong> {t("installation.title")}
                 </h2>
-                <p>Install Cair+ device anywhere indoor your house, office, resturants etc</p>
+                <p>{t("installation.description")}</p>
               </div>
             </div>
           </div>
@@ -350,22 +336,19 @@ export default function CairMonitor() {
             <div className="col-md-6"></div>
             <div className="col-md-6">
               <div className="monitor-clock-text">
-                <h2>Transform Your Device into a</h2>
+                <h2>{t("clock.title")}</h2>
                 <h3>
-                  Cl
+                  {t("clock.specialTitle.before")}
                   <span className="clock-icon">
                     <img
                       className="hithere"
-                      src="https://www.pranaair.com/wp-content/uploads/2023/12/clock-icon.png"
-                      alt="clock icon"
+                      src={t("clock.icon.src") || "/placeholder.svg"}
+                      alt={t("clock.icon.alt")}
                     />
                   </span>
-                  ck
+                  {t("clock.specialTitle.after")}
                 </h3>
-                <p>
-                  Transit your device into a clock with an AQI display by activating the screen saver mode. AQI (Air
-                  Quality Index) also displays the indoor air quality.
-                </p>
+                <p>{t("clock.description")}</p>
               </div>
             </div>
           </div>
@@ -378,22 +361,13 @@ export default function CairMonitor() {
           <div className="row mob-img">
             <div className="col-md-6">
               <div className="air-pollution-para">
-                <h2>What is Indoor Air Pollution?</h2>
-                <p>
-                  Indoor air pollution, originating from various sources like tobacco smoke and household products,
-                  poses health risks such as respiratory issues and allergies. Common pollutants include particulate
-                  matter and volatile organic compounds. Adequate ventilation is crucial for mitigating these concerns,
-                  as poor air quality can lead to headaches and fatigue. Regular monitoring, adherence to standards, and
-                  mitigation strategies are key to creating environments conducive to well-being.
-                </p>
+                <h2>{t("airPollution.title")}</h2>
+                <p>{t("airPollution.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="pollution-img">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/01/health-problem-of-indoor-air-pollution.jpg"
-                  alt="health problem of indoor air pollution"
-                />
+                <img src={t("airPollution.image.src") || "/placeholder.svg"} alt={t("airPollution.image.alt")} />
               </div>
             </div>
           </div>
@@ -406,14 +380,11 @@ export default function CairMonitor() {
           <div className="row wifi-mob-row">
             <div className="col-md-5 wifi-connect-heading">
               <h2>
-                <img src="https://www.pranaair.com/wp-content/uploads/2024/01/wifi.png" alt="wifi connectivity" /> Wifi
-                Connectivity
+                <img src={t("wifiConnectivity.icon.src") || "/placeholder.svg"} alt={t("wifiConnectivity.icon.alt")} />{" "}
+                {t("wifiConnectivity.title")}
               </h2>
-              <p>
-                Wifi connectivity feature to access the tools data on your smartphones, AQI India app, android TV and
-                tabs. With it, you can ensure particular places information whenever you require.
-              </p>
-              <h3 className="bg">Remote Data Accessibility</h3>
+              <p>{t("wifiConnectivity.description")}</p>
+              <h3 className="bg">{t("wifiConnectivity.subtitle")}</h3>
             </div>
             <div className="col-md-7 wifi-connect-img"></div>
           </div>
@@ -442,14 +413,10 @@ export default function CairMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="quote-heading">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/12/quote-icon.png" alt="quote icon" />
-                <h2>Cair+</h2>
-                <h3>Indoor Quality monitor</h3>
-                <p>
-                  Indoor pollution is a major concern due to many issues. Cair+ ensures thermal comfort in your house.
-                  As it exhibits real-time temperature and humidity. Check the filtration and ventilation with pollutant
-                  levels in the air.
-                </p>
+                <img src={t("quote.icon.src") || "/placeholder.svg"} alt={t("quote.icon.alt")} />
+                <h2>{t("quote.title")}</h2>
+                <h3>{t("quote.subtitle")}</h3>
+                <p>{t("quote.description")}</p>
               </div>
             </div>
           </div>
@@ -463,23 +430,24 @@ export default function CairMonitor() {
             <div className="col-md-6">
               <div className="aqi-mobile-text">
                 <h2>
-                  <img src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png" alt="aqi logo" /> Mobile
+                  <img
+                    src={t("aqiMobileApp.title.logo.src") || "/placeholder.svg"}
+                    alt={t("aqiMobileApp.title.logo.alt")}
+                  />{" "}
+                  {t("aqiMobileApp.title.text")}
                 </h2>
-                <h3>Application</h3>
+                <h3>{t("aqiMobileApp.subtitle")}</h3>
                 <ul>
-                  <li>Attainability of Air quality alerts in your area.</li>
-                  <li>Air quality graph, health advice as per the real-time air quality,</li>
-                  <li>Steer through countries to check AQI across the world</li>
-                  <li>Easy managing of your Air quality monitors</li>
+                  <li>{t("aqiMobileApp.features.1")}</li>
+                  <li>{t("aqiMobileApp.features.2")}</li>
+                  <li>{t("aqiMobileApp.features.3")}</li>
+                  <li>{t("aqiMobileApp.features.4")}</li>
                 </ul>
               </div>
             </div>
             <div className="col-md-6">
               <div className="cair-data-on-app">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-cair-air-quality-monitor-connected-with-aqi-app.jpg"
-                  alt="prana air cair air quality monitor connected with aqi mobile app"
-                />
+                <img src={t("aqiMobileApp.image.src") || "/placeholder.svg"} alt={t("aqiMobileApp.image.alt")} />
               </div>
             </div>
           </div>
@@ -493,8 +461,8 @@ export default function CairMonitor() {
             <div className="col-md-6">
               <div className="high-co2level">
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/12/high-co2-level.png"
-                  alt="high co2 level"
+                  src={t("ventilationRisks.co2Image.src") || "/placeholder.svg"}
+                  alt={t("ventilationRisks.co2Image.alt")}
                 />
               </div>
             </div>
@@ -502,8 +470,8 @@ export default function CairMonitor() {
               <div className="high-co2level">
                 <img
                   className="right-icon"
-                  src="https://www.pranaair.com/wp-content/uploads/2023/12/high-co2-level.png"
-                  alt="high co2 level"
+                  src={t("ventilationRisks.co2Image.src") || "/placeholder.svg"}
+                  alt={t("ventilationRisks.co2Image.alt")}
                 />
               </div>
             </div>
@@ -511,27 +479,25 @@ export default function CairMonitor() {
           <div className="row">
             <div className="col-md-6">
               <div className="health-risk-text">
-                <h2>High CO2 Levels and Poor Ventilation Pose Health Risks</h2>
-                <p>
-                  When ventilation is inadequate, the accumulation of CO2 increases, negatively impacting air quality.
-                </p>
+                <h2>{t("ventilationRisks.title")}</h2>
+                <p>{t("ventilationRisks.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <ul className="poor-health-box" style={{ animationDuration: "4s" }}>
                 <li>
                   <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/12/ventilation.png"
-                    alt="bad ventilation due to high co2 level"
+                    src={t("ventilationRisks.ventilationScore.icon.src") || "/placeholder.svg"}
+                    alt={t("ventilationRisks.ventilationScore.icon.alt")}
                   />
                 </li>
                 <li>
-                  <h3>Ventilation Score</h3>
-                  the provision of fresh air to your room
+                  <h3>{t("ventilationRisks.ventilationScore.title")}</h3>
+                  {t("ventilationRisks.ventilationScore.description")}
                 </li>
                 <li>
-                  <h4 style={{ color: "#fb291e" }}>05</h4>
-                  <h5 style={{ color: "#fb291e" }}>Moderate</h5>
+                  <h4 style={{ color: "#fb291e" }}>{t("ventilationRisks.ventilationScore.score")}</h4>
+                  <h5 style={{ color: "#fb291e" }}>{t("ventilationRisks.ventilationScore.rating")}</h5>
                 </li>
               </ul>
             </div>
@@ -541,8 +507,8 @@ export default function CairMonitor() {
               <div className="high-co2level">
                 <img
                   className="bottm-left-icon"
-                  src="https://www.pranaair.com/wp-content/uploads/2023/12/high-co2-level.png"
-                  alt="high co2 level"
+                  src={t("ventilationRisks.co2Image.src") || "/placeholder.svg"}
+                  alt={t("ventilationRisks.co2Image.alt")}
                 />
               </div>
             </div>
@@ -550,8 +516,8 @@ export default function CairMonitor() {
               <div className="high-co2level">
                 <img
                   className="bottom-icon"
-                  src="https://www.pranaair.com/wp-content/uploads/2023/12/high-co2-level.png"
-                  alt="high co2 level"
+                  src={t("ventilationRisks.co2Image.src") || "/placeholder.svg"}
+                  alt={t("ventilationRisks.co2Image.alt")}
                 />
               </div>
             </div>
@@ -565,21 +531,408 @@ export default function CairMonitor() {
           <div className="row">
             <div className="col-md-6">
               <div className="tab-range-heading">
-                <h2>Pollutants Ranges</h2>
+                <h2>{t("aqiRanges.title")}</h2>
               </div>
             </div>
             <div className="col-md-6">
               <div className="tab-range-para">
-                <p>
-                  Air Quality Index to check the values of every pollutant in your area. Through it, you can make
-                  well-informed decisions for indoor air quality.
-                </p>
+                <p>{t("aqiRanges.description")}</p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <AqiRangesTab />
+              <div className="car-in-outdoor-tab">
+                <ul className="nav nav-tabs" id="aqiRangesTabs" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="aqi-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#aqi-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="aqi-tab-pane"
+                      aria-selected="true"
+                    >
+                      {t("aqiRanges.tabs.aqi")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="pm1-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pm1-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="pm1-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("aqiRanges.tabs.pm1")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="pm25-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pm25-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="pm25-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("aqiRanges.tabs.pm25")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="pm10-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pm10-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="pm10-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("aqiRanges.tabs.pm10")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="co2-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#co2-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="co2-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("aqiRanges.tabs.co2")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="hcho-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#hcho-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="hcho-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("aqiRanges.tabs.hcho")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="tvoc-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tvoc-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="tvoc-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("aqiRanges.tabs.tvoc")}
+                    </button>
+                  </li>
+                </ul>
+                <div className="tab-content" id="aqiRangesTabsContent">
+                  <div
+                    className="tab-pane fade show active"
+                    id="aqi-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="aqi-tab"
+                    tabIndex={0}
+                  >
+                    <div className="tab-aqi-ranges">
+                      <ul className="perameter">
+                        <li>{t("aqiRanges.categories.good")}</li>
+                        <li>{t("aqiRanges.categories.moderate")}</li>
+                        <li>{t("aqiRanges.categories.poor")}</li>
+                        <li>{t("aqiRanges.categories.unhealthy")}</li>
+                        <li>{t("aqiRanges.categories.severe")}</li>
+                        <li>{t("aqiRanges.categories.hazardous")}</li>
+                      </ul>
+                      <div className="d-flex">
+                        <p
+                          className="green-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#59B61F" }}
+                        ></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EEC732" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EA8C34" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#E95478" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#B33FBA" }}></p>
+                        <p
+                          className="red-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#C92033" }}
+                        ></p>
+                      </div>
+                      <ul className="aqi-rang">
+                        <li>{t("aqiRanges.values.aqi.0")}</li>
+                        <li>{t("aqiRanges.values.aqi.1")}</li>
+                        <li>{t("aqiRanges.values.aqi.2")}</li>
+                        <li>{t("aqiRanges.values.aqi.3")}</li>
+                        <li>{t("aqiRanges.values.aqi.4")}</li>
+                        <li>{t("aqiRanges.values.aqi.5")}</li>
+                        <li>{t("aqiRanges.values.aqi.6")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="pm1-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="pm1-tab"
+                    tabIndex={0}
+                  >
+                    <div className="tab-aqi-ranges">
+                      <ul className="perameter">
+                        <li>{t("aqiRanges.categories.good")}</li>
+                        <li>{t("aqiRanges.categories.moderate")}</li>
+                        <li>{t("aqiRanges.categories.poor")}</li>
+                        <li>{t("aqiRanges.categories.unhealthy")}</li>
+                        <li>{t("aqiRanges.categories.severe")}</li>
+                        <li>{t("aqiRanges.categories.hazardous")}</li>
+                      </ul>
+                      <div className="d-flex">
+                        <p
+                          className="green-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#59B61F" }}
+                        ></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EEC732" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EA8C34" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#E95478" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#B33FBA" }}></p>
+                        <p
+                          className="red-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#C92033" }}
+                        ></p>
+                      </div>
+                      <ul className="aqi-rang">
+                        <li>{t("aqiRanges.values.pm1.0")}</li>
+                        <li>{t("aqiRanges.values.pm1.1")}</li>
+                        <li>{t("aqiRanges.values.pm1.2")}</li>
+                        <li>{t("aqiRanges.values.pm1.3")}</li>
+                        <li>{t("aqiRanges.values.pm1.4")}</li>
+                        <li>{t("aqiRanges.values.pm1.5")}</li>
+                        <li>{t("aqiRanges.values.pm1.6")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="pm25-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="pm25-tab"
+                    tabIndex={0}
+                  >
+                    <div className="tab-aqi-ranges">
+                      <ul className="perameter">
+                        <li>{t("aqiRanges.categories.good")}</li>
+                        <li>{t("aqiRanges.categories.moderate")}</li>
+                        <li>{t("aqiRanges.categories.poor")}</li>
+                        <li>{t("aqiRanges.categories.unhealthy")}</li>
+                        <li>{t("aqiRanges.categories.severe")}</li>
+                        <li>{t("aqiRanges.categories.hazardous")}</li>
+                      </ul>
+                      <div className="d-flex">
+                        <p
+                          className="green-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#59B61F" }}
+                        ></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EEC732" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EA8C34" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#E95478" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#B33FBA" }}></p>
+                        <p
+                          className="red-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#C92033" }}
+                        ></p>
+                      </div>
+                      <ul className="aqi-rang">
+                        <li>{t("aqiRanges.values.pm25.0")}</li>
+                        <li>{t("aqiRanges.values.pm25.1")}</li>
+                        <li>{t("aqiRanges.values.pm25.2")}</li>
+                        <li>{t("aqiRanges.values.pm25.3")}</li>
+                        <li>{t("aqiRanges.values.pm25.4")}</li>
+                        <li>{t("aqiRanges.values.pm25.5")}</li>
+                        <li>{t("aqiRanges.values.pm25.6")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="pm10-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="pm10-tab"
+                    tabIndex={0}
+                  >
+                    <div className="tab-aqi-ranges">
+                      <ul className="perameter">
+                        <li>{t("aqiRanges.categories.good")}</li>
+                        <li>{t("aqiRanges.categories.moderate")}</li>
+                        <li>{t("aqiRanges.categories.poor")}</li>
+                        <li>{t("aqiRanges.categories.unhealthy")}</li>
+                        <li>{t("aqiRanges.categories.severe")}</li>
+                        <li>{t("aqiRanges.categories.hazardous")}</li>
+                      </ul>
+                      <div className="d-flex">
+                        <p
+                          className="green-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#59B61F" }}
+                        ></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EEC732" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EA8C34" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#E95478" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#B33FBA" }}></p>
+                        <p
+                          className="red-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#C92033" }}
+                        ></p>
+                      </div>
+                      <ul className="aqi-rang">
+                        <li>{t("aqiRanges.values.pm10.0")}</li>
+                        <li>{t("aqiRanges.values.pm10.1")}</li>
+                        <li>{t("aqiRanges.values.pm10.2")}</li>
+                        <li>{t("aqiRanges.values.pm10.3")}</li>
+                        <li>{t("aqiRanges.values.pm10.4")}</li>
+                        <li>{t("aqiRanges.values.pm10.5")}</li>
+                        <li>{t("aqiRanges.values.pm10.6")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="co2-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="co2-tab"
+                    tabIndex={0}
+                  >
+                    <div className="tab-aqi-ranges">
+                      <ul className="perameter">
+                        <li>{t("aqiRanges.categories.good")}</li>
+                        <li>{t("aqiRanges.categories.moderate")}</li>
+                        <li>{t("aqiRanges.categories.poor")}</li>
+                        <li>{t("aqiRanges.categories.unhealthy")}</li>
+                        <li>{t("aqiRanges.categories.severe")}</li>
+                        <li>{t("aqiRanges.categories.hazardous")}</li>
+                      </ul>
+                      <div className="d-flex">
+                        <p
+                          className="green-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#59B61F" }}
+                        ></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EEC732" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EA8C34" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#E95478" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#B33FBA" }}></p>
+                        <p
+                          className="red-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#C92033" }}
+                        ></p>
+                      </div>
+                      <ul className="aqi-rang">
+                        <li>{t("aqiRanges.values.co2.0")}</li>
+                        <li>{t("aqiRanges.values.co2.1")}</li>
+                        <li>{t("aqiRanges.values.co2.2")}</li>
+                        <li>{t("aqiRanges.values.co2.3")}</li>
+                        <li>{t("aqiRanges.values.co2.4")}</li>
+                        <li>{t("aqiRanges.values.co2.5")}</li>
+                        <li>{t("aqiRanges.values.co2.6")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="hcho-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="hcho-tab"
+                    tabIndex={0}
+                  >
+                    <div className="tab-aqi-ranges">
+                      <ul className="perameter">
+                        <li>{t("aqiRanges.categories.good")}</li>
+                        <li>{t("aqiRanges.categories.moderate")}</li>
+                        <li>{t("aqiRanges.categories.poor")}</li>
+                        <li>{t("aqiRanges.categories.unhealthy")}</li>
+                        <li>{t("aqiRanges.categories.severe")}</li>
+                        <li>{t("aqiRanges.categories.hazardous")}</li>
+                      </ul>
+                      <div className="d-flex">
+                        <p
+                          className="green-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#59B61F" }}
+                        ></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EEC732" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EA8C34" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#E95478" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#B33FBA" }}></p>
+                        <p
+                          className="red-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#C92033" }}
+                        ></p>
+                      </div>
+                      <ul className="aqi-rang">
+                        <li>{t("aqiRanges.values.hcho.0")}</li>
+                        <li>{t("aqiRanges.values.hcho.1")}</li>
+                        <li>{t("aqiRanges.values.hcho.2")}</li>
+                        <li>{t("aqiRanges.values.hcho.3")}</li>
+                        <li>{t("aqiRanges.values.hcho.4")}</li>
+                        <li>{t("aqiRanges.values.hcho.5")}</li>
+                        <li>{t("aqiRanges.values.hcho.6")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade"
+                    id="tvoc-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="tvoc-tab"
+                    tabIndex={0}
+                  >
+                    <div className="tab-aqi-ranges">
+                      <ul className="perameter">
+                        <li>{t("aqiRanges.categories.good")}</li>
+                        <li>{t("aqiRanges.categories.moderate")}</li>
+                        <li>{t("aqiRanges.categories.poor")}</li>
+                        <li>{t("aqiRanges.categories.unhealthy")}</li>
+                        <li>{t("aqiRanges.categories.severe")}</li>
+                        <li>{t("aqiRanges.categories.hazardous")}</li>
+                      </ul>
+                      <div className="d-flex">
+                        <p
+                          className="green-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#59B61F" }}
+                        ></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EEC732" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#EA8C34" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#E95478" }}></p>
+                        <p style={{ height: "25px", width: "15%", backgroundColor: "#B33FBA" }}></p>
+                        <p
+                          className="red-range"
+                          style={{ height: "25px", width: "15%", backgroundColor: "#C92033" }}
+                        ></p>
+                      </div>
+                      <ul className="aqi-rang">
+                        <li>{t("aqiRanges.values.tvoc.0")}</li>
+                        <li>{t("aqiRanges.values.tvoc.1")}</li>
+                        <li>{t("aqiRanges.values.tvoc.2")}</li>
+                        <li>{t("aqiRanges.values.tvoc.3")}</li>
+                        <li>{t("aqiRanges.values.tvoc.4")}</li>
+                        <li>{t("aqiRanges.values.tvoc.5")}</li>
+                        <li>{t("aqiRanges.values.tvoc.6")}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -591,45 +944,206 @@ export default function CairMonitor() {
           <div className="row">
             <div className="col-md-6">
               <div className="graph-title visual-title">
-                <h2>Types of Visuals</h2>
+                <h2>{t("typesOfVisuals.title")}</h2>
               </div>
             </div>
             <div className="col-md-6">
               <div className="graph-para visual-para">
-                <p>
-                  Different screens access various information on one device. Makes it more convenient for better
-                  follow-up
-                </p>
+                <p>{t("typesOfVisuals.description")}</p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              < VisualTabs />
+              {/* Tab Content */}
+              <div className="tab-content mb-4 mt-4">
+                <div className="tab-pane fade show active" id="section1" role="tabpanel" aria-labelledby="section1-tab">
+                  <div className="text-center show-img">
+                    <img
+                      src={t("typesOfVisuals.screens.main.image.src") || "/placeholder.svg"}
+                      alt={t("typesOfVisuals.screens.main.image.alt")}
+                      className="img-fluid"
+                    />
+                    <h5 className="mt-3">{t("typesOfVisuals.screens.main.description")}</h5>
+                  </div>
+                </div>
+
+                <div className="tab-pane fade" id="section2" role="tabpanel" aria-labelledby="section2-tab">
+                  <div className="text-center show-img">
+                    <img
+                      src={t("typesOfVisuals.screens.graph.image.src") || "/placeholder.svg"}
+                      alt={t("typesOfVisuals.screens.graph.image.alt")}
+                      className="img-fluid"
+                    />
+                    <h5 className="mt-3">{t("typesOfVisuals.screens.graph.description")}</h5>
+                  </div>
+                </div>
+
+                <div className="tab-pane fade" id="section3" role="tabpanel" aria-labelledby="section3-tab">
+                  <div className="text-center show-img">
+                    <img
+                      src={t("typesOfVisuals.screens.concentrated.image.src") || "/placeholder.svg"}
+                      alt={t("typesOfVisuals.screens.concentrated.image.alt")}
+                      className="img-fluid"
+                    />
+                    <h5 className="mt-3">{t("typesOfVisuals.screens.concentrated.description")}</h5>
+                  </div>
+                </div>
+
+                <div className="tab-pane fade" id="section4" role="tabpanel" aria-labelledby="section4-tab">
+                  <div className="text-center show-img">
+                    <img
+                      src={t("typesOfVisuals.screens.clock.image.src") || "/placeholder.svg"}
+                      alt={t("typesOfVisuals.screens.clock.image.alt")}
+                      className="img-fluid"
+                    />
+                    <h5 className="mt-3">{t("typesOfVisuals.screens.clock.description")}</h5>
+                  </div>
+                </div>
+
+                <div className="tab-pane fade" id="section5" role="tabpanel" aria-labelledby="section5-tab">
+                  <div className="text-center show-img">
+                    <img
+                      src={t("typesOfVisuals.screens.parameter.image.src") || "/placeholder.svg"}
+                      alt={t("typesOfVisuals.screens.parameter.image.alt")}
+                      className="img-fluid"
+                    />
+                    <h5 className="mt-3">{t("typesOfVisuals.screens.parameter.description")}</h5>
+                  </div>
+                </div>
+              </div>
+              {/* Tab Navigation */}
+              <ul className="nav nav-tabs justify-content-center" id="visualTabs" role="tablist">
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link active"
+                    id="section1-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#section1"
+                    type="button"
+                    role="tab"
+                    aria-controls="section1"
+                    aria-selected="true"
+                  >
+                    <div className="text-center">
+                      <img
+                        src={t("typesOfVisuals.tabs.main.icon.src") || "/placeholder.svg"}
+                        alt={t("typesOfVisuals.tabs.main.icon.alt")}
+                        className="img-fluid mb-2"
+                        style={{ maxHeight: "40px" }}
+                      />
+                      <h5 className="mb-0 small">{t("typesOfVisuals.tabs.main.title")}</h5>
+                    </div>
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="section2-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#section2"
+                    type="button"
+                    role="tab"
+                    aria-controls="section2"
+                    aria-selected="false"
+                  >
+                    <div className="text-center">
+                      <img
+                        src={t("typesOfVisuals.tabs.graph.icon.src") || "/placeholder.svg"}
+                        alt={t("typesOfVisuals.tabs.graph.icon.alt")}
+                        className="img-fluid mb-2"
+                        style={{ maxHeight: "40px" }}
+                      />
+                      <h5 className="mb-0 small">{t("typesOfVisuals.tabs.graph.title")}</h5>
+                    </div>
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="section3-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#section3"
+                    type="button"
+                    role="tab"
+                    aria-controls="section3"
+                    aria-selected="false"
+                  >
+                    <div className="text-center">
+                      <img
+                        src={t("typesOfVisuals.tabs.concentrated.icon.src") || "/placeholder.svg"}
+                        alt={t("typesOfVisuals.tabs.concentrated.icon.alt")}
+                        className="img-fluid mb-2"
+                        style={{ maxHeight: "40px" }}
+                      />
+                      <h5 className="mb-0 small">{t("typesOfVisuals.tabs.concentrated.title")}</h5>
+                    </div>
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="section4-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#section4"
+                    type="button"
+                    role="tab"
+                    aria-controls="section4"
+                    aria-selected="false"
+                  >
+                    <div className="text-center">
+                      <img
+                        src={t("typesOfVisuals.tabs.clock.icon.src") || "/placeholder.svg"}
+                        alt={t("typesOfVisuals.tabs.clock.icon.alt")}
+                        className="img-fluid mb-2"
+                        style={{ maxHeight: "40px" }}
+                      />
+                      <h5 className="mb-0 small">{t("typesOfVisuals.tabs.clock.title")}</h5>
+                    </div>
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="section5-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#section5"
+                    type="button"
+                    role="tab"
+                    aria-controls="section5"
+                    aria-selected="false"
+                  >
+                    <div className="text-center">
+                      <img
+                        src={t("typesOfVisuals.tabs.parameter.icon.src") || "/placeholder.svg"}
+                        alt={t("typesOfVisuals.tabs.parameter.icon.alt")}
+                        className="img-fluid mb-2"
+                        style={{ maxHeight: "40px" }}
+                      />
+                      <h5 className="mb-0 small">{t("typesOfVisuals.tabs.parameter.title")}</h5>
+                    </div>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-
       {/* Graph Heading Section */}
       <div className="container">
         <div className="row graph-heading">
           <div className="col-md-6">
             <div className="graph-title">
-              <h2>Data Comparing Graph</h2>
+              <h2>{t("graphHeading.title")}</h2>
             </div>
           </div>
           <div className="col-md-6">
             <div className="graph-para">
-              <p>
-                A comparison of BAM and Prana Airs Cair+ shows both data are correlated. Our device also shows accurate
-                data as a high-end device.
-              </p>
+              <p>{t("graphHeading.description")}</p>
             </div>
           </div>
         </div>
       </div>
-
       {/* Graph Chart Section */}
       <div className="container-fluid">
         <div className="row graph-chartt">
@@ -647,67 +1161,285 @@ export default function CairMonitor() {
           <div className="col-md-6">
             <div className="aqi-tv-app-title">
               <h2>
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png" alt="aqi-logo" /> TV
-                Application
+                <img src={t("aqiTvApp.logo.src") || "/placeholder.svg"} alt={t("aqiTvApp.logo.alt")} />{" "}
+                {t("aqiTvApp.title")}
               </h2>
               <h3>
-                Compare Real-time <span className="pink">Indoor</span> and <span className="pink">Outdoor</span> air
-                quality in one place.
+                {t("aqiTvApp.subtitle.before")} <span className="pink">{t("aqiTvApp.subtitle.indoor")}</span>{" "}
+                {t("aqiTvApp.subtitle.and")} <span className="pink">{t("aqiTvApp.subtitle.outdoor")}</span>{" "}
+                {t("aqiTvApp.subtitle.after")}
               </h3>
-              <p>So you can make the right decision whether to stay in or go out.</p>
+              <p>{t("aqiTvApp.description")}</p>
             </div>
           </div>
           <div className="col-md-6"></div>
         </div>
       </div>
 
-      {/* track quality Section */}
+      {/* Track Quality Section */}
       <section className="tv-app-section">
         <div className="container">
           <div className="row aqi-app-heading">
             <div className="col-md-6">
               <div className="track-aqi-heading">
                 <h2>
-                  Track the <span className="txt-color">quality of the air</span> you breathe on different
+                  {t("trackQuality.title.before")}{" "}
+                  <span className="txt-color">{t("trackQuality.title.highlight")}</span>{" "}
+                  {t("trackQuality.title.middle")}
                   <span className="aqi-logo">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png" />
+                    <img src={t("trackQuality.logo.src") || "/placeholder.svg"} alt={t("trackQuality.logo.alt")} />
                   </span>{" "}
-                  platforms
+                  {t("trackQuality.title.after")}
                 </h2>
               </div>
             </div>
             <div className="col-md-6">
               <div className="graph-para track-aqi-para">
-                <p>Get access of air quality data on TV, Mobile App, Web Dashboard</p>
+                <p>{t("trackQuality.subtitle")}</p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-12">
-              <TrackQualityTabs />
+              <div className="plateform-tab">
+                <ul className="nav nav-tabs" id="trackQualityTabs" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link active"
+                      id="mobile-app-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#mobile-app-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="mobile-app-tab-pane"
+                      aria-selected="true"
+                    >
+                      {t("trackQuality.tabs.mobileApp")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="tv-app-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#tv-app-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="tv-app-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("trackQuality.tabs.tvApp")}
+                    </button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button
+                      className="nav-link"
+                      id="web-dashboard-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#web-dashboard-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="web-dashboard-tab-pane"
+                      aria-selected="false"
+                    >
+                      {t("trackQuality.tabs.webDashboard")}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div className="tab-content" id="trackQualityTabsContent">
+                <div
+                  className="tab-pane fade show active"
+                  id="mobile-app-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="mobile-app-tab"
+                  tabIndex={0}
+                >
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="mobile-screen">
+                        <h3>{t("trackQuality.mobileApp.title")}</h3>
+                        <img
+                          src={t("trackQuality.mobileApp.image.src") || "/placeholder.svg"}
+                          alt={t("trackQuality.mobileApp.image.alt")}
+                        />
+                      </div>
+                      <div className="main-health-box">
+                        <div className="health-real-time">
+                          <div className="health-data-box">
+                            <ul>
+                              <li>
+                                <img
+                                  src={t("trackQuality.mobileApp.features.health.icon.src") || "/placeholder.svg"}
+                                  alt={t("trackQuality.mobileApp.features.health.icon.alt")}
+                                />
+                              </li>
+                              <li>
+                                <h4>{t("trackQuality.mobileApp.features.health.title")}</h4>
+                                {t("trackQuality.mobileApp.features.health.description")}
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="health-data-box">
+                            <ul>
+                              <li>
+                                <img
+                                  src={t("trackQuality.mobileApp.features.realTime.icon.src") || "/placeholder.svg"}
+                                  alt={t("trackQuality.mobileApp.features.realTime.icon.alt")}
+                                />
+                              </li>
+                              <li>
+                                <h4>{t("trackQuality.mobileApp.features.realTime.title")}</h4>
+                                {t("trackQuality.mobileApp.features.realTime.description")}
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mob-app-btn">
+                        <a className="m-btn iphone-btn" href={t("trackQuality.mobileApp.buttons.ios.link")}>
+                          <img
+                            src={t("trackQuality.mobileApp.buttons.ios.icon.src") || "/placeholder.svg"}
+                            alt={t("trackQuality.mobileApp.buttons.ios.icon.alt")}
+                          />{" "}
+                          {t("trackQuality.mobileApp.buttons.ios.textBefore")}{" "}
+                          <strong>{t("trackQuality.mobileApp.buttons.ios.textHighlight")}</strong>
+                        </a>
+                        <a className="m-btn anddro-btn" href={t("trackQuality.mobileApp.buttons.android.link")}>
+                          <img
+                            src={t("trackQuality.mobileApp.buttons.android.icon.src") || "/placeholder.svg"}
+                            alt={t("trackQuality.mobileApp.buttons.android.icon.alt")}
+                          />{" "}
+                          {t("trackQuality.mobileApp.buttons.android.textBefore")}{" "}
+                          <strong>{t("trackQuality.mobileApp.buttons.android.textHighlight")}</strong>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="tab-pane fade"
+                  id="tv-app-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="tv-app-tab"
+                  tabIndex={0}
+                >
+                  <div className="tv-screen">
+                    <h3>{t("trackQuality.tvApp.title")}</h3>
+                    <img
+                      src={t("trackQuality.tvApp.image.src") || "/placeholder.svg"}
+                      alt={t("trackQuality.tvApp.image.alt")}
+                    />
+                  </div>
+                  <TvAppTabs />
+                  <div className="main-health-box">
+                    <div className="health-real-time">
+                      <div className="health-data-box">
+                        <ul>
+                          <li>
+                            <img
+                              src={t("trackQuality.tvApp.features.themes.icon.src") || "/placeholder.svg"}
+                              alt={t("trackQuality.tvApp.features.themes.icon.alt")}
+                            />
+                          </li>
+                          <li>
+                            <h4>{t("trackQuality.tvApp.features.themes.title")}</h4>
+                            {t("trackQuality.tvApp.features.themes.description")}
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="health-data-box">
+                        <ul>
+                          <li>
+                            <img
+                              src={t("trackQuality.tvApp.features.connect.icon.src") || "/placeholder.svg"}
+                              alt={t("trackQuality.tvApp.features.connect.icon.alt")}
+                            />
+                          </li>
+                          <li>
+                            <h4>{t("trackQuality.tvApp.features.connect.title")}</h4>
+                            {t("trackQuality.tvApp.features.connect.description")}
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <a className="tv-app-btn" href={t("trackQuality.tvApp.button.link")}>
+                    {t("trackQuality.tvApp.button.textBefore")}{" "}
+                    <strong>{t("trackQuality.tvApp.button.textHighlight")}</strong>
+                  </a>
+                </div>
+                <div
+                  className="tab-pane fade"
+                  id="web-dashboard-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="web-dashboard-tab"
+                  tabIndex={0}
+                >
+                  <div className="web-screen">
+                    <h3>{t("trackQuality.webDashboard.title")}</h3>
+                    <img
+                      src={t("trackQuality.webDashboard.image.src") || "/placeholder.svg"}
+                      alt={t("trackQuality.webDashboard.image.alt")}
+                    />
+                  </div>
+                  <div className="main-health-box">
+                    <div className="health-real-time">
+                      <div className="health-data-box">
+                        <ul>
+                          <li>
+                            <img
+                              src={t("trackQuality.webDashboard.features.remote.icon.src") || "/placeholder.svg"}
+                              alt={t("trackQuality.webDashboard.features.remote.icon.alt")}
+                            />
+                          </li>
+                          <li>
+                            <h4>{t("trackQuality.webDashboard.features.remote.title")}</h4>
+                            {t("trackQuality.webDashboard.features.remote.description")}
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="health-data-box">
+                        <ul>
+                          <li>
+                            <img
+                              src={t("trackQuality.webDashboard.features.comparison.icon.src") || "/placeholder.svg"}
+                              alt={t("trackQuality.webDashboard.features.comparison.icon.alt")}
+                            />
+                          </li>
+                          <li>
+                            <h4>{t("trackQuality.webDashboard.features.comparison.title")}</h4>
+                            {t("trackQuality.webDashboard.features.comparison.description")}
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <a className="tv-app-btn" href={t("trackQuality.webDashboard.button.link")}>
+                    {t("trackQuality.webDashboard.button.textBefore")}{" "}
+                    <strong>{t("trackQuality.webDashboard.button.textHighlight")}</strong>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* health index Section */}
+      {/* Health Index Section */}
       <div className="graph-heading container">
         <div className="row">
           <div className="col-md-6">
             <div className="graph-title health-index-heading">
               <h2>
-                <span className="txt-color">AI</span> Calculated{" "}
-                <span className="txt-color">Health</span> Index-Score
+                <span className="txt-color">{t("healthIndex.title.ai")}</span> {t("healthIndex.title.calculated")}{" "}
+                <span className="txt-color">{t("healthIndex.title.health")}</span> {t("healthIndex.title.indexScore")}
               </h2>
             </div>
           </div>
           <div className="col-md-6">
             <div className="graph-para">
-              <p>
-                Ensure hows your indoor environment and thermal comfort. Our
-                device confirms it by temperature, Humidity, and concentrations of
-                Air pollutants.
-              </p>
+              <p>{t("healthIndex.description")}</p>
             </div>
           </div>
         </div>
@@ -718,14 +1450,14 @@ export default function CairMonitor() {
             <div className="col-12">
               <div className="co2-bar">
                 <ul className="security">
-                  <li>Bad</li>
-                  <li>Moderate</li>
-                  <li>Good</li>
+                  <li>{t("healthIndex.scale.bad")}</li>
+                  <li>{t("healthIndex.scale.moderate")}</li>
+                  <li>{t("healthIndex.scale.good")}</li>
                 </ul>
                 <ul className="rang">
-                  <li>0</li>
-                  <li>5</li>
-                  <li>10</li>
+                  <li>{t("healthIndex.scale.min")}</li>
+                  <li>{t("healthIndex.scale.mid")}</li>
+                  <li>{t("healthIndex.scale.max")}</li>
                 </ul>
               </div>
 
@@ -734,49 +1466,49 @@ export default function CairMonitor() {
                   <ul className="position-one" style={{ animationDuration: "4s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/ventilation.png"
-                        alt="ventilation"
+                        src={t("healthIndex.scores.ventilation.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.ventilation.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Ventilation Score</h3>
-                      <p>the provision of fresh air to your room</p>
+                      <h3>{t("healthIndex.scores.ventilation.title")}</h3>
+                      <p>{t("healthIndex.scores.ventilation.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#fbb400" }}>05</h4>
-                      <h5>Moderate</h5>
+                      <h4 style={{ color: "#fbb400" }}>{t("healthIndex.scores.ventilation.score")}</h4>
+                      <h5>{t("healthIndex.scores.ventilation.rating")}</h5>
                     </li>
                   </ul>
                   <ul className="position-two" style={{ animationDuration: "6s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/odor-score.png"
-                        alt="odor score"
+                        src={t("healthIndex.scores.odor.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.odor.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Odor score</h3>
-                      <p>a distinctive smell in the room</p>
+                      <h3>{t("healthIndex.scores.odor.title")}</h3>
+                      <p>{t("healthIndex.scores.odor.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#f4231c" }}>05</h4>
-                      <h5>Bad</h5>
+                      <h4 style={{ color: "#f4231c" }}>{t("healthIndex.scores.odor.score")}</h4>
+                      <h5>{t("healthIndex.scores.odor.rating")}</h5>
                     </li>
                   </ul>
                   <ul className="position-three" style={{ animationDuration: "4s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/mold-score.png"
-                        alt="mold score"
+                        src={t("healthIndex.scores.mold.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.mold.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Mold Score</h3>
-                      <p>probability of mold formation in the room</p>
+                      <h3>{t("healthIndex.scores.mold.title")}</h3>
+                      <p>{t("healthIndex.scores.mold.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#29b713" }}>05</h4>
-                      <h5>Good</h5>
+                      <h4 style={{ color: "#29b713" }}>{t("healthIndex.scores.mold.score")}</h4>
+                      <h5>{t("healthIndex.scores.mold.rating")}</h5>
                     </li>
                   </ul>
                 </div>
@@ -784,49 +1516,49 @@ export default function CairMonitor() {
                   <ul className="position-four" style={{ animationDuration: "6s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/capacity-index.png"
-                        alt="capacity index"
+                        src={t("healthIndex.scores.capacity.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.capacity.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Capacity index</h3>
-                      <p>people capacity of the room</p>
+                      <h3>{t("healthIndex.scores.capacity.title")}</h3>
+                      <p>{t("healthIndex.scores.capacity.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#29b713" }}>05</h4>
-                      <h5>Good</h5>
+                      <h4 style={{ color: "#29b713" }}>{t("healthIndex.scores.capacity.score")}</h4>
+                      <h5>{t("healthIndex.scores.capacity.rating")}</h5>
                     </li>
                   </ul>
                   <ul className="position-five" style={{ animationDuration: "4s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/comfort-score.png"
-                        alt="comfort score"
+                        src={t("healthIndex.scores.comfort.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.comfort.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Comfort score</h3>
-                      <p>a state of physical ease in the room</p>
+                      <h3>{t("healthIndex.scores.comfort.title")}</h3>
+                      <p>{t("healthIndex.scores.comfort.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#29b713" }}>10</h4>
-                      <h5>Good</h5>
+                      <h4 style={{ color: "#29b713" }}>{t("healthIndex.scores.comfort.score")}</h4>
+                      <h5>{t("healthIndex.scores.comfort.rating")}</h5>
                     </li>
                   </ul>
                   <ul className="position-six" style={{ animationDuration: "6s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/filtration-score.png"
-                        alt="filtration score"
+                        src={t("healthIndex.scores.filtration.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.filtration.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Filtration Score</h3>
-                      <p>efficiency of filter in the room</p>
+                      <h3>{t("healthIndex.scores.filtration.title")}</h3>
+                      <p>{t("healthIndex.scores.filtration.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#f4231c" }}>10</h4>
-                      <h5>Bad</h5>
+                      <h4 style={{ color: "#f4231c" }}>{t("healthIndex.scores.filtration.score")}</h4>
+                      <h5>{t("healthIndex.scores.filtration.rating")}</h5>
                     </li>
                   </ul>
                 </div>
@@ -834,33 +1566,33 @@ export default function CairMonitor() {
                   <ul className="position-seven" style={{ animationDuration: "4s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/mites-scroe.png"
-                        alt="mites score"
+                        src={t("healthIndex.scores.mites.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.mites.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Mites Score</h3>
-                      <p>presence of any mites in the room</p>
+                      <h3>{t("healthIndex.scores.mites.title")}</h3>
+                      <p>{t("healthIndex.scores.mites.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#f4231c" }}>02</h4>
-                      <h5>Bad</h5>
+                      <h4 style={{ color: "#f4231c" }}>{t("healthIndex.scores.mites.score")}</h4>
+                      <h5>{t("healthIndex.scores.mites.rating")}</h5>
                     </li>
                   </ul>
                   <ul className="position-eight" style={{ animationDuration: "6s" }}>
                     <li>
                       <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/12/virus-index.png"
-                        alt="virus index"
+                        src={t("healthIndex.scores.virus.icon.src") || "/placeholder.svg"}
+                        alt={t("healthIndex.scores.virus.icon.alt")}
                       />
                     </li>
                     <li>
-                      <h3>Virus Index</h3>
-                      <p>probability of virus formation in the room</p>
+                      <h3>{t("healthIndex.scores.virus.title")}</h3>
+                      <p>{t("healthIndex.scores.virus.description")}</p>
                     </li>
                     <li>
-                      <h4 style={{ color: "#f4231c" }}>02</h4>
-                      <h5>Bad</h5>
+                      <h4 style={{ color: "#f4231c" }}>{t("healthIndex.scores.virus.score")}</h4>
+                      <h5>{t("healthIndex.scores.virus.rating")}</h5>
                     </li>
                   </ul>
                 </div>
@@ -870,31 +1602,24 @@ export default function CairMonitor() {
         </div>
       </section>
 
-      {/* historic data Section */}
+      {/* Historic Data Section */}
       <section className="access-real-time-historic-data">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div className="historic-data-text">
                 <h2>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png"
-                    alt="aqi-logo"
-                  />
-                  Web Dashboard
+                  <img src={t("historicData.logo.src") || "/placeholder.svg"} alt={t("historicData.logo.alt")} />
+                  {t("historicData.title")}
                 </h2>
                 <h3>
                   <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/12/quote-data.png"
-                    alt="quote data"
+                    src={t("historicData.subtitle.icon.src") || "/placeholder.svg"}
+                    alt={t("historicData.subtitle.icon.alt")}
                   />
-                  Access Real-time and Historic Data
+                  {t("historicData.subtitle.text")}
                 </h3>
-                <p>
-                  Our platform offers easy access to crucial information for air quality.
-                  Individuals can make the best decision with ease. Accessing real-time
-                  data regardless of their location or daytime.
-                </p>
+                <p>{t("historicData.description")}</p>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -907,7 +1632,7 @@ export default function CairMonitor() {
         <div className="row parts-label-tabs">
           <div className="col-md-6">
             <div className="parts-label-heading">
-              <h2>Parts and Labels</h2>
+              <h2>{t("partsAndLabels.title")}</h2>
             </div>
           </div>
           <div className="col-md-6"></div>
@@ -916,43 +1641,162 @@ export default function CairMonitor() {
       <div className="container-fluid">
         <div className="row parts-label-tabsection">
           <div className="col-12">
-            <PartsLabelTabs />
+            <div className="label-part-tab">
+              <ul className="nav nav-tabs" id="partsLabelTabs" role="tablist">
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link active"
+                    id="parts-label-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#parts-label-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="parts-label-tab-pane"
+                    aria-selected="true"
+                  >
+                    {t("partsAndLabels.tabs.partsLabel")}
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="disassambley-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#disassambley-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="disassambley-tab-pane"
+                    aria-selected="false"
+                  >
+                    {t("partsAndLabels.tabs.disassembly")}
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div className="tab-content" id="partsLabelTabsContent">
+              <div
+                className="tab-pane fade show active"
+                id="parts-label-tab-pane"
+                role="tabpanel"
+                aria-labelledby="parts-label-tab"
+                tabIndex={0}
+              >
+                <div className="row part-labe-bg">
+                  <div className="col-md-6">
+                    <div className="part-lables-img">
+                      <img
+                        src={t("partsAndLabels.partsLabel.image.src") || "/placeholder.svg"}
+                        alt={t("partsAndLabels.partsLabel.image.alt")}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="part-label-box">
+                      <ul>
+                        <li>
+                          <span className="num">1</span>
+                          <h4>{t("partsAndLabels.partsLabel.components.1")}</h4>
+                        </li>
+                        <li>
+                          <span className="num">2</span>
+                          <h4>{t("partsAndLabels.partsLabel.components.2")}</h4>
+                        </li>
+                        <li>
+                          <span className="num">3</span>
+                          <h4>{t("partsAndLabels.partsLabel.components.3")}</h4>
+                        </li>
+                        <li>
+                          <span className="num">4</span>
+                          <h4>{t("partsAndLabels.partsLabel.components.4")}</h4>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <span className="num">5</span>
+                          <h4>{t("partsAndLabels.partsLabel.components.5")}</h4>
+                        </li>
+                        <li>
+                          <span className="num">6</span>
+                          <h4>{t("partsAndLabels.partsLabel.components.6")}</h4>
+                        </li>
+                        <li>
+                          <span className="num">7</span>
+                          <h4>{t("partsAndLabels.partsLabel.components.7")}</h4>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="tab-pane fade"
+                id="disassambley-tab-pane"
+                role="tabpanel"
+                aria-labelledby="disassambley-tab"
+                tabIndex={0}
+              >
+                <div className="row mob-disassamble">
+                  <div className="col-md-6">
+                    <div className="disassamble-img">
+                      <div className="glow-img">
+                        <img
+                          src={t("partsAndLabels.disassembly.images.main.src") || "/placeholder.svg"}
+                          alt={t("partsAndLabels.disassembly.images.main.alt")}
+                        />
+                      </div>
+                    </div>
+                    <div className="disassamble-glow-img">
+                      <div className="glow-img">
+                        <img
+                          src={t("partsAndLabels.disassembly.images.inside.src") || "/placeholder.svg"}
+                          alt={t("partsAndLabels.disassembly.images.inside.alt")}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="disassamble-text">
+                      <h2>{t("partsAndLabels.disassembly.title")}</h2>
+                      <h3>{t("partsAndLabels.disassembly.subtitle")}</h3>
+                      <p>{t("partsAndLabels.disassembly.description")}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* long battery Section */}
+      {/* Long Battery Section */}
       <section className="long-battery-section">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
               <div className="long-battery animated fadeInUp">
                 <p>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/12/1600mah-long-battery.jpg"
-                    alt="1600mAh long battery"
-                  />
+                  <img src={t("longBattery.image.src") || "/placeholder.svg"} alt={t("longBattery.image.alt")} />
                 </p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="long-battery-text animated fadeInUp">
-                <h2>1600mAh</h2>
-                <h5>Battery Monitor</h5>
-                <p>1600 mAh battery makes it mobile, and more productive. Quick to charge with a USB type-C cable.</p>
+                <h2>{t("longBattery.capacity")}</h2>
+                <h5>{t("longBattery.title")}</h5>
+                <p>{t("longBattery.description")}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* tech spec Section */}
+      {/* Technical Specifications Section */}
       <section className="tech-spec-section">
         <div className="container">
           <div className="row tech-spec-line">
             <div className="col-md-6">
               <div className="graph-title tech-spec-heading animated fadeInUp">
-                <h2>Technical Specifications</h2>
+                <h2>{t("techSpecs.title")}</h2>
               </div>
             </div>
             <div className="col-md-6">
@@ -960,15 +1804,15 @@ export default function CairMonitor() {
                 <p>
                   <a
                     className="tech-spec-btn"
-                    href="https://www.pranaair.com/wp-content/uploads/2024/02/Prana-air-Cair-Air-quality-monitor-brochure.pdf"
+                    href={t("techSpecs.brochure.link")}
                     target="_blank"
-                    rel="noopener"
+                    rel="noreferrer noopener"
                   >
                     <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
-                      alt="brochure-icon"
+                      src={t("techSpecs.brochure.icon.src") || "/placeholder.svg"}
+                      alt={t("techSpecs.brochure.icon.alt")}
                     />
-                    Brochure
+                    {t("techSpecs.brochure.text")}
                   </a>
                 </p>
               </div>
@@ -984,33 +1828,33 @@ export default function CairMonitor() {
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Parameters:</h5>
+                            <h5>{t("techSpecs.specs.parameters.title")}</h5>
                           </li>
-                          <li>AQI, PM1, PM2.5, PM10, TVOCs, HCHO, CO2, Particle Counts, Temp. & Humi.</li>
+                          <li>{t("techSpecs.specs.parameters.value")}</li>
                         </ul>
                       </div>
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Connectivity:</h5>
+                            <h5>{t("techSpecs.specs.connectivity.title")}</h5>
                           </li>
-                          <li>Wi-Fi</li>
+                          <li>{t("techSpecs.specs.connectivity.value")}</li>
                         </ul>
                       </div>
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Color:</h5>
+                            <h5>{t("techSpecs.specs.color.title")}</h5>
                           </li>
-                          <li>Ivory</li>
+                          <li>{t("techSpecs.specs.color.value")}</li>
                         </ul>
                       </div>
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Size:</h5>
+                            <h5>{t("techSpecs.specs.size.title")}</h5>
                           </li>
-                          <li>11 x 3.4 x 7.5 (in cm)</li>
+                          <li>{t("techSpecs.specs.size.value")}</li>
                         </ul>
                       </div>
                     </div>
@@ -1018,36 +1862,33 @@ export default function CairMonitor() {
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Storage:</h5>
+                            <h5>{t("techSpecs.specs.storage.title")}</h5>
                           </li>
-                          <li>
-                            Micro SD Card Storage +<br />
-                            AQI Cloud Storage
-                          </li>
+                          <li dangerouslySetInnerHTML={{ __html: t("techSpecs.specs.storage.value") }}></li>
                         </ul>
                       </div>
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Weight:</h5>
+                            <h5>{t("techSpecs.specs.weight.title")}</h5>
                           </li>
-                          <li>175g</li>
+                          <li>{t("techSpecs.specs.weight.value")}</li>
                         </ul>
                       </div>
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Screen:</h5>
+                            <h5>{t("techSpecs.specs.screen.title")}</h5>
                           </li>
-                          <li>Color LED Display</li>
+                          <li>{t("techSpecs.specs.screen.value")}</li>
                         </ul>
                       </div>
                       <div className="tech-spec-list">
                         <ul>
                           <li>
-                            <h5>Power Supply:</h5>
+                            <h5>{t("techSpecs.specs.powerSupply.title")}</h5>
                           </li>
-                          <li>Type C USB Cable</li>
+                          <li>{t("techSpecs.specs.powerSupply.value")}</li>
                         </ul>
                       </div>
                     </div>
@@ -1060,7 +1901,7 @@ export default function CairMonitor() {
           <div className="row how-to-connect">
             <div className="col-12">
               <div className="how-to-connect-heading animated fadeInUp">
-                <h2>How to connect</h2>
+                <h2>{t("techSpecs.howToConnect.title")}</h2>
               </div>
             </div>
           </div>
@@ -1070,17 +1911,20 @@ export default function CairMonitor() {
               <div className="qr-code-img">
                 <ul>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/04/cair-manual.png" alt="QR code for manual" />
+                    <img
+                      src={t("techSpecs.howToConnect.qrCode.image.src") || "/placeholder.svg"}
+                      alt={t("techSpecs.howToConnect.qrCode.image.alt")}
+                    />
                   </li>
                   <li>
-                    <h5>SCAN THE QR CODE</h5>
+                    <h5>{t("techSpecs.howToConnect.qrCode.text")}</h5>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-md-4">
               <div className="or-txt">
-                <p>or</p>
+                <p>{t("techSpecs.howToConnect.or")}</p>
               </div>
             </div>
             <div className="col-md-4">
@@ -1088,15 +1932,15 @@ export default function CairMonitor() {
                 <p>
                   <a
                     className="manual-btn"
-                    href="https://www.pranaair.com/wp-content/uploads/2024/02/Prana-Air-Cair-Air-Quality-Monitor-Manual.pdf"
+                    href={t("techSpecs.howToConnect.manual.link")}
                     target="_blank"
-                    rel="noopener"
+                    rel="noreferrer noopener"
                   >
                     <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
-                      alt="brochure-icon"
+                      src={t("techSpecs.howToConnect.manual.icon.src") || "/placeholder.svg"}
+                      alt={t("techSpecs.howToConnect.manual.icon.alt")}
                     />
-                    Download Manual
+                    {t("techSpecs.howToConnect.manual.text")}
                   </a>
                 </p>
               </div>
@@ -1110,11 +1954,8 @@ export default function CairMonitor() {
         <div className="row">
           <div className="col-md-12">
             <div className="contact-heading">
-              <h2>Get in Touch</h2>
-              <p>
-                Please help us know what requirements you have. Our team will
-                contact you very soon.
-              </p>
+              <h2>{t("contact.title")}</h2>
+              <p>{t("contact.description")}</p>
             </div>
           </div>
         </div>
@@ -1127,9 +1968,90 @@ export default function CairMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="faq-heading">
-                <h2>FAQs of Cair+ Monitor</h2>
+                <h2>{t("faqs.title")}</h2>
               </div>
-              <FaqAccordion />
+              <div className="accordion" id="faqAccordion">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                      aria-expanded="true"
+                    >
+                      {t("faqs.items.1.question")}
+                    </button>
+                  </h2>
+                  <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">{t("faqs.items.1.answer")}</div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                      aria-expanded="false"
+                    >
+                      {t("faqs.items.2.question")}
+                    </button>
+                  </h2>
+                  <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">{t("faqs.items.2.answer")}</div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                      aria-expanded="false"
+                    >
+                      {t("faqs.items.3.question")}
+                    </button>
+                  </h2>
+                  <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">{t("faqs.items.3.answer")}</div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4"
+                      aria-expanded="false"
+                    >
+                      {t("faqs.items.4.question")}
+                    </button>
+                  </h2>
+                  <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">{t("faqs.items.4.answer")}</div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq5"
+                      aria-expanded="false"
+                    >
+                      {t("faqs.items.5.question")}
+                    </button>
+                  </h2>
+                  <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body faq-tab-para">{t("faqs.items.5.answer")}</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

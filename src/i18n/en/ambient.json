@@ -1,0 +1,828 @@
+{
+  "ambient": {
+    "title": "Prana Air",
+    "heading": {
+      "highlight": "Ambient+",
+      "main": "Air Quality Monitor"
+    },
+    "description": "A compact and affordable solution for personal and community monitoring.",
+    "cta": "Request a Quote",
+    "ctaAriaLabel": "prana air ambient air quality all monitors",
+    "imageAlt": "ambient air quality monitors"
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "description": "See how our air quality monitors are making a difference for leading organizations",
+    "readMore": "Read More",
+    "items": [
+      {
+        "title": "Aided TATA STEEL Plant In Hyperlocal Air Monitoring",
+        "alt": "prana air ambient air quality monitors at tata steel"
+      },
+      {
+        "title": "Aided Ola & Microsoft studied street-level pollution",
+        "alt": "prana air ambient air quality monitors for ola and microsoft"
+      },
+      {
+        "title": "Mahindra Lifespaces to monitor air pollution due to construction activities.",
+        "alt": "prana air ambient air quality monitors for mahindra lifespaces"
+      },
+      {
+        "title": "CII to monitor air pollution due to stubble burning",
+        "alt": "prana air ambient air quality monitors for CII"
+      }
+    ]
+  },
+  "ambientMonitors": {
+    "variants": {
+      "title": "Ambient Monitor Variants",
+      "description": "Prana Airs ambient air quality monitoring devices are where your search stops.",
+      "ambientPM": {
+        "title": "Ambient PM",
+        "description": "It is the basic ambient monitor that measures AQI, PM2.5, PM10, temperature, and humidity providing a comprehensive overview of the air quality around you.",
+        "features": "Features",
+        "featuresList": {
+          "lowCost": {
+            "title": "Low-cost real-time air quality monitoring",
+            "alt": "low cost icon"
+          },
+          "compact": {
+            "title": "Compact and lightweight design",
+            "alt": "compact device"
+          },
+          "waterproof": {
+            "title": "Fully Waterproof Housing",
+            "alt": "weatherproof icon"
+          },
+          "portable": {
+            "title": "Portable and easy to carry anywhere",
+            "alt": "portable icon"
+          }
+        },
+        "parameters": ["AQI", "PM1", "PM2.5", "PM10", "Temp.", "Humid.", "Noise"],
+        "brochure": "Brochure",
+        "getQuote": "Get a Quote",
+        "viewDetails": "View Details",
+        "close": "Close",
+        "detailsTitle": "Ambient PM",
+        "detailsDescription": "Prana Air Ambient PM Basic Monitor is a comprehensive solution for measuring air quality. It accurately measures PM2.5, PM10, temperature, and humidity, providing you with valuable insights into the air you breathe. With an optional weather station, you can also gain data on wind speed, wind direction, rainfall, and barometric pressure. The compact and portable design of the Prana Air Ambient PM Basic Monitor makes it easy to use anywhere. The clear and easy-to-read screen displays real-time data, and built-in data logging allows you to track trends over time. Cloud connectivity provides remote access to data, so you can stay informed about air quality even when youe not on site.",
+        "detailsImageAlt": "prana air ambient air quality monitor for constructions site"
+      },
+      "pranaSense": {
+        "title": "Prana Sense",
+        "description": "Revolutionizing Air Quality Monitoring with cutting-edge technology for better accuracy and reliability with seamless connectivity and comprehensive data access.",
+        "features": "Features",
+        "featuresList": {
+          "lowCost": {
+            "title": "Low-cost real-time air quality monitoring",
+            "alt": "low cost icon"
+          },
+          "waterproof": {
+            "title": "Fully Waterproof Housing",
+            "alt": "weatherproof icon"
+          },
+          "solarPowered": {
+            "title": "Solar Powered",
+            "alt": "solar powered"
+          },
+          "batteryBackup": {
+            "title": "96h Battery Backup",
+            "alt": "battery-backup icon"
+          }
+        },
+        "parameters": [
+          "AQI",
+          "PM1",
+          "PM2.5",
+          "PM10",
+          "CO",
+          "CO2",
+          "SO2",
+          "NO",
+          "NO2",
+          "O3",
+          "CH4",
+          "TVOC",
+          "H2S",
+          "Temp.",
+          "Humid.",
+          "Noise",
+          "Wind Direction",
+          "Wind Speed",
+          "Rainfall",
+          "UV Index",
+          "LUX"
+        ],
+        "brochure": "Brochure",
+        "getQuote": "Get a Quote",
+        "viewDetails": "View Details",
+        "close": "Close",
+        "detailsTitle": "Prana Sense",
+        "detailsDescription": "Prana Sense offers the ultimate solution for continuous, real-time outdoor air quality monitoring. Monitor several parameters and pollutants with the advanced technology of the device. Connect the device with a solar panel for continuous power supply with a 40,000 mAh battery that can last long for 96 hours. The compact and portable design of the monitor makes it easy to install anywhere. Also provide real-time readings of temperature, humidity and noise for perfect environmental monitoring. Seamlessly connect to the AQI app or cloud storage to access your data from anywhere, anytime.",
+        "detailsImageAlt": "prana air ambient pro air quality monitor in used"
+      },
+      "ambientPro": {
+        "title": "Ambient Pro",
+        "description": "It is the most advanced monitor in Prana Airs Ambient family. It measures all of the same pollutants as the Ambient Lite monitor, plus temperature and humidity.",
+        "features": "Features",
+        "featuresList": {
+          "lowCost": {
+            "title": "Low-cost air quality monitors",
+            "alt": "low cost icon"
+          },
+          "dataAccess": {
+            "title": "Data on website, mobile & table apps, TV",
+            "alt": "online data access"
+          },
+          "waterproof": {
+            "title": "Fully Waterproof Housing",
+            "alt": "weatherproof icon"
+          },
+          "multipleSensors": {
+            "title": "Multiple air sensors (PM & Gases)",
+            "alt": "multiple sensors icon"
+          }
+        },
+        "parameters": [
+          "AQI",
+          "PM1",
+          "PM2.5",
+          "PM10",
+          "CO",
+          "CO2",
+          "SO2",
+          "NO",
+          "NO2",
+          "O3",
+          "CH4",
+          "TVOC",
+          "H2S",
+          "Temp.",
+          "Humid.",
+          "Noise",
+          "Wind Direction",
+          "Wind Speed",
+          "Rainfall",
+          "LUX",
+          "UV Index"
+        ],
+        "brochure": "Brochure",
+        "getQuote": "Get a Quote",
+        "weatherStation": {
+          "title": "Ambient Pro Monitor",
+          "description": "It is the most advanced ambient air quality monitor of Prana Air that comes with inbuilt weather station."
+        },
+        "viewDetails": "View Details",
+        "close": "Close",
+        "detailsTitle": "Ambient Pro Inbuilt Weather Station",
+        "detailsDescription": "The primary aspect for determining environmental stability is the Continuous Ambient Air Quality Monitoring System (CAAQMS). There are many factors that control the quality of air and many sources contributing to it such as natural, industrial and anthropogenic. Meteorological factors also alter and impact air quality. Outdoor air pollution does not just jeopardize the living. It is also detrimental to the ecology and the atmospheric chemistry of the earth. Chronic Obstructive Pulmonary Disease (COPD) and asthma are examples of bad air quality for human health.",
+        "detailsImageAlt": "prana air ambient pro air quality monitor in used"
+      }
+    },
+    "whyPranaAir": {
+      "title": "Why Prana Airs Ambient Air Monitors?",
+      "features": [
+        {
+          "title": "Real-time air quality monitoring",
+          "alt": "Real-time air quality monitoring"
+        },
+        {
+          "title": "Low-cost air quality monitors/sensors",
+          "alt": "Low-cost monitors & sensors"
+        },
+        {
+          "title": "Highly accurate and reliable sensors",
+          "alt": "accurate sensors"
+        },
+        {
+          "title": "Data accessibility on website, mobile & TV apps",
+          "alt": "cloud data access"
+        },
+        {
+          "title": "Multiple modes of connectivity",
+          "alt": "modes of data connectivity"
+        },
+        {
+          "title": "Low-cost maintenance expense",
+          "alt": "low cost maintenance"
+        }
+      ]
+    }
+  },
+  "applications": {
+    "title": "Applications of Ambient Air Quality Monitor",
+    "description": "Protecting public health and improving the environment in a variety of industries",
+    "exploreMore": "Explore More",
+    "items": [
+      {
+        "title": "Construction Site",
+        "description": "Construction sites are a major source of dust and other pollutants. Prana Air can help construction sites to monitor their air quality levels and take steps to reduce emissions.",
+        "alt": "Prana Air construction site air quality monitor"
+      },
+      {
+        "title": "Parking Lots",
+        "description": "Parking lots are a major source of vehicle emissions. Our solution can help parking lot operators to monitor their air quality levels and take steps to reduce emissions.",
+        "alt": "Prana Air parking lot air quality monitor"
+      },
+      {
+        "title": "Smart City Project",
+        "description": "Smart city projects are increasingly incorporating air quality monitoring into their designs. Prana Airs ambient air quality solution can help smart city projects to monitor their air quality levels.",
+        "alt": "Prana Air smart city air quality monitor"
+      },
+      {
+        "title": "Real Estates",
+        "description": "New real estate developments are often located in areas with poor air quality. Prana Airs solution can help real estate developers to identify areas with good air quality.",
+        "alt": "Prana Air real estates air quality monitor"
+      },
+      {
+        "title": "RMC Plant",
+        "description": "Ready-mix concrete plants are a major source of air pollution, emitting particulate matter, dust, and other pollutants. Our solution can help RMC plants to monitor their air quality levels.",
+        "alt": "Prana Air RMC air quality monitor"
+      },
+      {
+        "title": "Airports",
+        "description": "Airports are another major source of air pollution, emitting pollutants from aircraft, vehicles, and other sources. Prana Airs ambient air quality solution can help airports to monitor their air quality levels.",
+        "alt": "Prana Air airport air quality monitor"
+      }
+    ]
+  },
+  "weatherStation": {
+    "title": "Weather Station",
+    "description": "Get accurate weather forecasts to predict weather conditions for different activities with stand-out features.",
+    "knowMore": "Know More",
+    "imageAlt": "Prana Air accurate weather station"
+  },
+  "partsLabels": {
+    "title": "Parts & Labels",
+    "tabs": {
+      "ambientPM": "Ambient PM",
+      "ambientPro": "Ambient Pro",
+      "pranaSense": "Prana Sense"
+    },
+    "ambientPM": {
+      "imageAlt": "ambient-pm-monitor-pranaair",
+      "parts": {
+        "0": "Mode Button",
+        "1": "Power Button",
+        "2": "PM Sensor Inlet (2)",
+        "3": "Air Inlet - Temperature & Humidity",
+        "4": "Micro SD Card Slot",
+        "5": "Weather Station Slot",
+        "6": "12V DC"
+      }
+    },
+    "ambientPro": {
+      "imageAlt": "ambient-pro-monitor-pranaair",
+      "parts": {
+        "0": {
+          "title": "Gases Inlet",
+          "description": "SO2, NO2, CO, O3, TVOCS, H2S and NH3."
+        },
+        "1": {
+          "title": "7 inch LED Data Display",
+          "description": ""
+        },
+        "2": {
+          "title": "Air Inlet",
+          "description": "Noise & PM (1, 2.5, 10), Temperature, Humidity and Pressure."
+        },
+        "3": {
+          "title": "Weather",
+          "description": "LUX, Wind Speed, Wind Direction, UV and Rainfall."
+        }
+      }
+    },
+    "pranaSense": {
+      "imageAlt": "ambient-lite-monitor-pranaair",
+      "parts": {
+        "0": "PM Sensor Inlet (2)",
+        "1": "GPS Antenna",
+        "2": "Air Inlet - T/H",
+        "3": "Mode Button",
+        "4": "Micro SD Card Slot",
+        "5": "Power Button",
+        "6": "12V DC",
+        "7": "Weather Station Slot",
+        "8": "RS485/ Relay",
+        "9": "Air Out"
+      }
+    }
+  },
+  "techSpecs": {
+    "title": "Technical Specifications",
+    "tabs": {
+      "ambientPM": "Ambient PM",
+      "ambientPro": "Ambient Pro",
+      "pranaSense": "Prana Sense"
+    },
+    "brochure": "Brochure",
+    "brochureAlt": "Brochure icon",
+    "ambientPM": {
+      "basicParams": {
+        "title": "Basic Parameters:",
+        "description": "AQI, PM1, PM2.5, PM10, Temperature and Humidity"
+      },
+      "weatherStation": {
+        "title": "Basic PM + Weather Station:",
+        "description": "Basic parameters + LUX, Solar Irradiance, Wind Speed, Wind Direction, Rainfall, Gust & UV Index"
+      },
+      "specs": {
+        "connectivity": {
+          "title": "Connectivity",
+          "value": "Wifi or GSM"
+        },
+        "weight": {
+          "title": "Weight:",
+          "value": "600g (Approx)"
+        },
+        "dataInterval": {
+          "title": "Data Interval:",
+          "value": "30s to 1hour"
+        },
+        "usbType": {
+          "title": "USB Type:",
+          "value": "Micro USB"
+        },
+        "mobileApp": {
+          "title": "Mobile app:",
+          "value": "AQI App (available on ios and android)"
+        },
+        "dimensions": {
+          "title": "Dimensions:",
+          "value": "16.5 x 5 x 11.5 (cm)"
+        },
+        "storage": {
+          "title": "Storage:",
+          "value": "AQI Cloud Storage"
+        },
+        "housing": {
+          "title": "Housing",
+          "value": "Weatherproof"
+        }
+      }
+    },
+    "ambientPro": {
+      "params": {
+        "title": "Parameters:",
+        "description": "AQI, PM1, PM2.5, PM10, Temperature, Humidity, Pressure, Noise, SO2, NO2, CO, O3, TVOCS, H2S and NH3"
+      },
+      "specs": {
+        "connectivity": {
+          "title": "Connectivity",
+          "value": "Wifi or GSM"
+        },
+        "weight": {
+          "title": "Weight:",
+          "value": "1.5kg (Approx)"
+        },
+        "battery": {
+          "title": "Battery:",
+          "value": "Lithium-ion"
+        },
+        "usbType": {
+          "title": "USB Type:",
+          "value": "Micro USB"
+        },
+        "dataInterval": {
+          "title": "Data Interval:",
+          "value": "30s to 1hour"
+        },
+        "mobileApp": {
+          "title": "Mobile app:",
+          "value": "AQI App (available on ios and android)"
+        },
+        "dimensions": {
+          "title": "Dimensions:",
+          "value": "25 x 15 x 10 (cm)"
+        },
+        "storage": {
+          "title": "Storage:",
+          "value": "AQI Cloud Storage"
+        },
+        "housing": {
+          "title": "Housing",
+          "value": "Weatherproof"
+        }
+      }
+    },
+    "pranaSense": {
+      "params": {
+        "title": "Parameters:",
+        "description": "AQI, PM1, PM2.5, PM10, Temperature, Humidity, Pressure, CO2, TVOC"
+      },
+      "specs": {
+        "connectivity": {
+          "title": "Connectivity",
+          "value": "Wifi or GSM"
+        },
+        "weight": {
+          "title": "Weight:",
+          "value": "800g (Approx)"
+        },
+        "power": {
+          "title": "Power:",
+          "value": "12V DC"
+        },
+        "dataInterval": {
+          "title": "Data Interval:",
+          "value": "30s to 1hour"
+        },
+        "displaySize": {
+          "title": "Display Size:",
+          "value": "4.3 inch"
+        },
+        "battery": {
+          "title": "Battery:",
+          "value": "Lithium-ion"
+        },
+        "mobileApp": {
+          "title": "Mobile app:",
+          "value": "AQI App (available on ios and android)"
+        },
+        "dimensions": {
+          "title": "Dimensions:",
+          "value": "20 x 10 x 8 (cm)"
+        },
+        "housing": {
+          "title": "Housing",
+          "value": "Weatherproof"
+        },
+        "powerSupply": {
+          "title": "Power Supply:",
+          "value": "AC to DC Adapter"
+        },
+        "storage": {
+          "title": "Storage:",
+          "value": "AQI Cloud Storage"
+        }
+      }
+    }
+  },
+  "connectivity": {
+    "title": "Modes of Connectivity",
+    "arrowAlt": "Arrow pointing to next step",
+    "devices": {
+      "title": "Devices",
+      "imageAlt": "prana air ambient air quality monitors"
+    },
+    "types": {
+      "title": "Types of Connectivity",
+      "items": {
+        "0": {
+          "title": "Wifi",
+          "alt": "wifi connectivity",
+          "icon": "/placeholder.svg?height=35&width=35&query=wifi icon"
+        },
+        "1": {
+          "title": "GSM",
+          "alt": "gsm connectivity",
+          "icon": "/placeholder.svg?height=35&width=35&query=gsm icon"
+        },
+        "2": {
+          "title": "RS 485",
+          "alt": "rs485 connectivity",
+          "icon": "/placeholder.svg?height=35&width=35&query=rs485 icon"
+        }
+      }
+    },
+    "storage": {
+      "title": "SD Card & Cloud Storage",
+      "imageAlt": "micro sd card data storage"
+    },
+    "dashboard": {
+      "title": "Web-Dashboard, TV & Mobile",
+      "imageAlt": "aqi data dashboard and apps"
+    }
+  },
+  "dataAccess": {
+    "title": "Data Accessibility & Analysis",
+    "description": "Explore the most versatile ways of air quality data dashboards in various platforms.",
+    "tabs": {
+      "webDashboard": "Web-Dashboard",
+      "mobileApp": "Mobile App",
+      "tvApp": "TV App"
+    },
+    "webDashboard": {
+      "title": "AQI Web-Dashboard",
+      "description": "Analyze the real-time and historic data of your ambient monitor data on website.",
+      "iconAlt": "AQI Dashboard icon",
+      "features": {
+        "0": {
+          "text": "Analysis: Worlds most polluted cities and countries.",
+          "alt": "world pollution",
+          "icon": "/placeholder.svg?height=41&width=41&query=world pollution icon"
+        },
+        "1": {
+          "text": "Weather forecast of your current selected location",
+          "alt": "weather data",
+          "icon": "/placeholder.svg?height=41&width=41&query=weather data icon"
+        },
+        "2": {
+          "text": "Health advice based on real-time air quality index",
+          "alt": "health recommendation",
+          "icon": "/placeholder.svg?height=41&width=41&query=health recommendation icon"
+        },
+        "3": {
+          "text": "Compare different air quality parameters of two or more location",
+          "alt": "compare the air quality data",
+          "icon": "/placeholder.svg?height=41&width=41&query=compare data icon"
+        }
+      },
+      "viewButton": "View Dashboard",
+      "imageAlt": "aqi data web-dasbhoard"
+    },
+    "mobileApp": {
+      "title": "AQI Mobile App",
+      "description": "Access your ambient air monitor data on the app.",
+      "iconAlt": "AQI Mobile App icon",
+      "features": {
+        "0": {
+          "text": "Real-time air quality API for accurate global data",
+          "alt": "real-time data",
+          "icon": "/placeholder.svg?height=41&width=41&query=real-time data icon"
+        },
+        "1": {
+          "text": "Insightful air quality monitoring dashboard",
+          "alt": "air quality historical data",
+          "icon": "/placeholder.svg?height=41&width=41&query=historical data icon"
+        },
+        "2": {
+          "text": "World air pollution map and weather map",
+          "alt": "world air pollution data",
+          "icon": "/placeholder.svg?height=41&width=41&query=world pollution map icon"
+        },
+        "3": {
+          "text": "Compare different air quality parameters of two or more location",
+          "alt": "compare the air quality data",
+          "icon": "/placeholder.svg?height=41&width=41&query=compare data icon"
+        }
+      },
+      "iosButton": "Download for",
+      "iosAlt": "Apple iOS icon",
+      "androidButton": "Download for",
+      "androidAlt": "Android icon",
+      "imageAlt": "aqi mobile app"
+    },
+    "tvApp": {
+      "title": "AQI TV App",
+      "description": "Display your ambient monitor data on large TV screens.",
+      "iconAlt": "AQI TV App icon",
+      "features": {
+        "0": {
+          "text": "Outdoor vs Indoor air quality data",
+          "alt": "compare the air quality data",
+          "icon": "/placeholder.svg?height=41&width=41&query=indoor vs outdoor icon"
+        },
+        "1": {
+          "text": "24*7 remote access to monitored data",
+          "alt": "historical data on tv",
+          "icon": "/placeholder.svg?height=41&width=41&query=remote access icon"
+        },
+        "2": {
+          "text": "AQI TV app controlled by AQI mobile app.",
+          "alt": "aqi data on tv",
+          "icon": "/placeholder.svg?height=41&width=41&query=mobile control icon"
+        },
+        "3": {
+          "text": "Choose from multiple types of themes.",
+          "alt": "aqi tv app choose theme",
+          "icon": "/placeholder.svg?height=41&width=41&query=theme selection icon"
+        }
+      },
+      "downloadButton": "Download for",
+      "imageAlt": "aqi tv app"
+    }
+  },
+  "ambientAirQuality": {
+    "quote": "<strong>Ambient</strong> Air Quality Monitoring is one of the primary aspects that govern environmental stability. Air quality is dynamic. Several factors control the air quality of a place. There are numerous natural, industrial, and anthropogenic sources that emit air toxins. Meteorological factors also alter and impact air quality. Outdoor air pollution does not just jeopardize the living. It is also detrimental to the ecology and the atmospheric chemistry of the earth. Thus, outdoor air monitoring is essential.",
+    "quoteIconAlt": "Quote icon"
+  },
+  "caaqms": {
+    "title": "<strong>Ambient</strong> Air Quality Monitoring Devices",
+    "description1": "Outdoor air quality monitoring is an integral part of environmental assessments. Proper air monitoring helps in the formulation of an efficient action plan to mitigate air pollution. Conventionally, the Continuous Ambient Air Quality Management System (CAAQMS) used for ambient air monitoring is a very extensive and expensive set-up. However, not only does our device exemplify efficiency, but it is also compact and cost-efficient.",
+    "description2": "The primary aspect for determining environmental stability is the Continuous Ambient Air Quality Monitoring System (CAAQMS). There are many factors that control the quality of air and many sources contributing to it such as natural, industrial and anthropogenic. Meteorological factors also alter and impact air quality. Outdoor air pollution does not just jeopardize the living. It is also detrimental to the ecology and the atmospheric chemistry of the earth. Chronic Obstructive Pulmonary Disease (COPD) and asthma are examples of bad air quality for human health. Thus, outdoor air monitoring is essential. Conventionally, the Continuous Ambient Air Quality Management System (CAAQMS) used for ambient air monitoring is a very extensive and expensive set-up as it involves regular filter changes, and importing regulations. Prana Air provides ambient air quality monitors that are easy to regulations. Prana Air provides ambient air quality monitors that are easy to use, portable, and highly accurate and cost-effective. The monitors come with detecting sensors for particulate matter, nitrogen dioxide, sulfur dioxide, hydrogen sulfide, carbon monoxide, and ozone based on different sensing techniques.",
+    "description3": "Using Continuous Ambient Air Quality Management System helps you to assess pollution extent, create awareness among the general public, decisions, and policymaking, and provides you with data for air quality model evaluation and emission control strategies.",
+    "comparison": {
+      "title": "<strong>Prana Air</strong> CAAQMS vs Traditional CAAQMS",
+      "parameters": {
+        "0": "Pollutants",
+        "1": "Monitor Size",
+        "2": "Real-time Data",
+        "3": "Portability",
+        "4": "Device Cost",
+        "5": "Manpower",
+        "6": "Accuracy",
+        "7": "Technology",
+        "8": "Data Accessibility"
+      },
+      "pranaAir": {
+        "title": "Prana Air CAAQMS",
+        "values": {
+          "0": "PM10, PM2.5, SO2. NO2, O3, CO",
+          "1": "Compact & lightweight",
+          "2": "In less than 30 seconds.",
+          "3": "Easy portability",
+          "4": "Low cost",
+          "5": "Very less manpower",
+          "6": "Highly accurate & precise",
+          "7": "Sensor based",
+          "8": "Available on website, mobile & TV app"
+        }
+      },
+      "traditional": {
+        "title": "Traditional CAAQMS",
+        "values": {
+          "0": "Technology such as BAM",
+          "1": "Huge and bulky",
+          "2": "In 20-25 minutes.",
+          "3": "Restricted portability",
+          "4": "High cost",
+          "5": "Intensive Manpower",
+          "6": "Highly accurate results",
+          "7": "BAM/ Gravimetric etc.",
+          "8": "Centralized government websites"
+        }
+      }
+    },
+    "pranaAir": {
+      "brandName": "Prana Air",
+      "description": "Ambient Air monitor is CAAQMS (Continuous Ambient Air Quality Monitoring System) installed with sensors to detect the concentration of pollutants like PM10, PM2.5, SO2. NO2, O3, H2S, NH3, CO, etc. Prana Air monitor is smart, economical, easy to use, portable, compact lightweight, and consumes very less time for analysis and has Wi-Fi, GSM, and RS-485 type connectivity. The data is shown on a digital screen and provides 24×7 access to analytic results. The real-time data is given in less than 30 seconds with accuracy and precision.",
+      "imageAlt": "prana air ambient caaqms monitor"
+    },
+    "traditional": {
+      "brandName": "Traditional CAAQMS",
+      "description": "(Continuous Ambient Air Quality Monitoring System) is very big in size comparable to a small room. The system has different analyzers for different parameters such as BAM for Particulate Matter, pulsed UV fluorescence for SO2, chemiluminescence for NO2 and NH3, NDIR (Non-Dispersive Infrared Technology) for CO2, and UV photometric/ chemiluminescence for O3 and gives real-time data within 20-25 minutes. The system is bulky & huge and hence its portability is restricted. It requires manpower and high maintenance cost.",
+      "imageAlt": "traditional caaqms (Continuous Ambient Air Quality Monitoring System)"
+    }
+  },
+  "bamBanner": {
+    "title": "Beta Attenuation Mass (BAM) Monitor",
+    "description": "Prana Airs high-end, but low-cost, accurate and reliable air quality monitoring system",
+    "knowMore": "Know More"
+  },
+  "accuracyGraph": {
+    "title": "Data Accuracy Graph",
+    "description": "In a study comparing the data accuracy of Prana Airs PM2.5 monitor to a high-end BAM monitor, the results showed that the two monitors were highly correlated.",
+    "question": "How are Prana Airs sensors very reliable and accurate?",
+    "exploreMore": "Explore More",
+    "imageAlt": "prana air sensor data accuracy graph",
+    "comparisonAlt": "prana air data accuracy comparison"
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "description": "Here are some of the top organizations that have installed our ambient monitors.",
+    "readMore": "Read More",
+    "items": {
+      "0": {
+        "title": "Delhi Construction Site",
+        "alt": "Delhi construction site case study",
+        "image": "/placeholder.svg?height=200&width=300&query=construction site case study",
+        "link": "/case-studies/delhi-construction"
+      },
+      "1": {
+        "title": "Mumbai Smart City",
+        "alt": "Mumbai smart city case study",
+        "image": "/placeholder.svg?height=200&width=300&query=smart city case study",
+        "link": "/case-studies/mumbai-smart-city"
+      },
+      "2": {
+        "title": "Bangalore Tech Park",
+        "alt": "Bangalore tech park case study",
+        "image": "/placeholder.svg?height=200&width=300&query=tech park case study",
+        "link": "/case-studies/bangalore-tech-park"
+      },
+      "3": {
+        "title": "Chennai Airport",
+        "alt": "Chennai airport case study",
+        "image": "/placeholder.svg?height=200&width=300&query=airport case study",
+        "link": "/case-studies/chennai-airport"
+      }
+    }
+  },
+  "constructionSite": {
+    "count": "150+",
+    "description": "Constructions Sites Covered",
+    "according": "According to",
+    "guidelines": "DPCC Guidelines",
+    "knowMore": "Know More",
+    "imageAlt": "prana air ambient air quality monitors for construction sites",
+    "dpccLogoAlt": "DPCC logo",
+    "arrowAlt": "Arrow pointing right"
+  },
+  "chipSensor": {
+    "title": "Air Quality Sensors",
+    "description": "Prana Airs sensors are the most accurate and reliable sensors on the market, providing real-time monitoring of a wide range of air pollutants.",
+    "knowHow": "Know How"
+  },
+  "clients": {
+    "title": "Our Clientele",
+    "logos": {
+      "0": {
+        "name": "IGCAR",
+        "alt": "igcar org company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/igcar-org.png"
+      },
+      "1": {
+        "name": "Microsoft",
+        "alt": "microsoft company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/microsoft-company.png"
+      },
+      "2": {
+        "name": "Emaar",
+        "alt": "emaar company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/emaar-company.png"
+      },
+      "3": {
+        "name": "Siemens",
+        "alt": "siemens company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/siemens-company.png"
+      },
+      "4": {
+        "name": "Mahindra",
+        "alt": "mahindra company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/mahindra-company.png"
+      },
+      "5": {
+        "name": "Renault",
+        "alt": "renualt company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/renault-company.png"
+      },
+      "6": {
+        "name": "BCG",
+        "alt": "bcg company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/bcg-group.png"
+      },
+      "7": {
+        "name": "Taj",
+        "alt": "taj hotel logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/taj-hotel.png"
+      },
+      "8": {
+        "name": "Foodworks",
+        "alt": "foodworks logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/foodworks.png"
+      },
+      "9": {
+        "name": "Asian Paints",
+        "alt": "asianpaints logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/asianpaints.png"
+      },
+      "10": {
+        "name": "IIT",
+        "alt": "iit institute logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/iit-institutes.png"
+      },
+      "11": {
+        "name": "NEERI",
+        "alt": "neeri logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/neeri-company.png"
+      },
+      "12": {
+        "name": "Ola",
+        "alt": "ola cab",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/03/ola-cab.png"
+      },
+      "13": {
+        "name": "L&T",
+        "alt": "l & t company logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/l-and-t-company.png"
+      },
+      "14": {
+        "name": "JW Marriott",
+        "alt": "jw marriott logo",
+        "image": "https://www.pranaair.com/wp-content/uploads/2023/08/jw-marriott.png"
+      }
+    }
+  },
+  "contactForm": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon.",
+    "pageName": "Ambient Monitor Page",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "phonePlaceholder": "Your Phone",
+    "messagePlaceholder": "Your Message",
+    "submitButton": "Submit"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "0": {
+        "question": "1. What parameters OxyCo does monitor?",
+        "answer": "OxyCo is designed to monitor real-time Oxygen, carbon monoxide, temperature and humidity in your air."
+      },
+      "1": {
+        "question": "2. What is the battery capacity of the OxyCo?",
+        "answer": "The compact monitor is packed with a 1000mAh battery that works for a long time."
+      },
+      "2": {
+        "question": "3. How can I access OxyCo data?",
+        "answer": "You can seamlessly access the OxyCo data by downloading it in different formats or transferring it to your email."
+      },
+      "3": {
+        "question": "4. Why do Oxygen Calibration?",
+        "answer": "The OxyCo monitor performs Oxygen Calibration to maintain optimal accuracy in the device readings."
+      }
+    }
+  }
+}

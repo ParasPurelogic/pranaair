@@ -1,7 +1,9 @@
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AirQualitySensors() {
+export default async function AirQualitySensors() {
+  const { t } = await getServerTranslation("air-quality-sensor")
   return (
     <div>
       {/* Banner Section */}
@@ -17,12 +19,12 @@ export default function AirQualitySensors() {
             <div className="col-md-12">
               <div className="monitor_banner_box">
                 <h2>
-                  <span style={{ fontSize: "24pt" }}>Prana Air</span>
+                  <span style={{ fontSize: "24pt" }}>{t("airQualitySensorsBanner.companyName")}</span>
                 </h2>
                 <h2>
-                  <span style={{ fontSize: "36pt" }}>Air Quality Sensors</span>
+                  <span style={{ fontSize: "36pt" }}>{t("airQualitySensorsBanner.title")}</span>
                 </h2>
-                <span style={{ fontSize: "24pt" }}>Know the quality of the air you breathe.</span>
+                <span style={{ fontSize: "24pt" }}>{t("airQualitySensorsBanner.subtitle")}</span>
               </div>
             </div>
           </div>
@@ -35,28 +37,17 @@ export default function AirQualitySensors() {
           <div className="col-md-12">
             <div className="qualitymonitor_heading_box air_first_heading text-center">
               <h1>
-                <span style={{ fontSize: "18pt" }}>Air Quality Sensor</span>
+                <span style={{ fontSize: "18pt" }}>{t("airQualitySensorsIntro.title")}</span>
               </h1>
-              <span style={{ fontSize: "12pt" }}>
-                Prana Air provides low-cost air quality analyzers for particulate matters &amp; gases, that speak
-                durability and accuracy in volumes.
-              </span>
+              <span style={{ fontSize: "12pt" }}>{t("airQualitySensorsIntro.subtitle")}</span>
             </div>
           </div>
         </div>
       </div>
-
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <p style={{ textAlign: "center" }}>
-              Air quality sensors are used in air quality monitoring devices for both indoor and ambient environments.
-              They can detect the presence of air pollution in air. The sensors are of different types and applications.
-              Air pollution sensors are built for specific aspects of measuring particulate matters, carbon monoxide,
-              ozone, sulfur dioxide, nitrous oxide, etc. In the past, the sensors were not easily affordable. Now, with
-              the technological advancement, they become more and more affordable. The air pollution sensors have a very
-              important role to understand and study the environmental issues.
-            </p>
+            <p style={{ textAlign: "center" }}>{t("airQualitySensorsIntro.description")}</p>
           </div>
         </div>
       </div>
@@ -77,7 +68,7 @@ export default function AirQualitySensors() {
                     aria-controls="all"
                     aria-selected="true"
                   >
-                    All
+                    {t("airQualitySensorsTabs.tabs.all")}
                   </a>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -90,7 +81,7 @@ export default function AirQualitySensors() {
                     aria-controls="pm"
                     aria-selected="false"
                   >
-                    PM
+                    {t("airQualitySensorsTabs.tabs.pm")}
                   </a>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -103,7 +94,7 @@ export default function AirQualitySensors() {
                     aria-controls="gases"
                     aria-selected="false"
                   >
-                    Gases
+                    {t("airQualitySensorsTabs.tabs.gases")}
                   </a>
                 </li>
               </ul>
@@ -117,7 +108,7 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co2-sensor.png"
-                          alt="prana air NDIR co2 sensor"
+                          alt={t("airQualitySensorsTabs.sensors.co2.altText")}
                           width="100"
                           height="100"
                         />
@@ -125,18 +116,18 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Carbon Dioxide (CO2) Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.co2.name")}</a>
                       </h3>
-                      <div className="rate_compare_box">₹9,990</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.co2.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ Range: Upto 10,000 PPM</li>
-                        <li>✓ Accuracy: ± 200 ppm ± 2%</li>
-                        <li>✓ Resolution: 100 PPM</li>
-                        <li>✓ Type of Sensor: NDIR sensor</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.range")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.accuracy")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.type")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <form
                           className="cart"
@@ -150,7 +141,7 @@ export default function AirQualitySensors() {
                             type="submit"
                             value="15437"
                           >
-                            Buy Now
+                            {t("airQualitySensorsTabs.buttons.buyNow")}
                           </button>
                         </form>
                       </div>
@@ -162,7 +153,7 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co-sensor.png"
-                          alt="prana air co sensor"
+                          alt={t("airQualitySensorsTabs.sensors.co.altText")}
                           width="100"
                           height="100"
                         />
@@ -170,21 +161,21 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Carbon Monoxide (CO) Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.co.name")}</a>
                       </h3>
-                      <div className="rate_compare_box">₹9,990</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.co.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ Range: 500 PPM</li>
-                        <li>✓ Power Consumption: 10 to 50 uW</li>
-                        <li>✓ Resolution: 0.1 PPM</li>
-                        <li>✓ Response Time: &lt; 30 seconds</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.range")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.powerConsumption")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
-                          Buy Now
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
                       </div>
                     </div>
@@ -195,7 +186,7 @@ export default function AirQualitySensors() {
                       <a href="https://www.pranaair.com/product/carbon-monoxide-co-sensor/">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-so2-sensor.png"
-                          alt="prana air sulfur dioxide so2 sensor"
+                          alt={t("airQualitySensorsTabs.sensors.so2.altText")}
                           width="100"
                           height="100"
                         />
@@ -203,21 +194,21 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Sulful Dioxide SO2 Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.so2.name")}</a>
                       </h3>
-                      <div className="rate_compare_box">₹9,990</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.so2.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ Range: 50 PPM</li>
-                        <li>✓ Power Consumption: 10 to 50 uW</li>
-                        <li>✓ Resolution: 0.01 PPM</li>
-                        <li>✓ Response Time: &lt; 15 seconds</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.range")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.powerConsumption")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
-                          Buy Now
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
                       </div>
                     </div>
@@ -228,7 +219,7 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-no2-sensor.png"
-                          alt="Prana Air indoor pm sensor"
+                          alt={t("airQualitySensorsTabs.sensors.no2.altText")}
                           width="100"
                           height="100"
                         />
@@ -236,24 +227,24 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Nitrogen Dioxide NO2 Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.no2.name")}</a>
                       </h3>
-                      <div className="rate_compare_box">₹Request on quote</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.no2.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ PM Range: Upto 2000 μg/m3</li>
-                        <li>✓ Particle Size Resolution: 0.3 μm</li>
-                        <li>✓ Purpose: Indoor Monitors</li>
-                        <li>✓ Working Temp.: -20~70 °C</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.no2.features.pmRange")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.no2.features.particleSize")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.no2.features.purpose")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.no2.features.workingTemp")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <a
                           className="monitor_know_btn monitor_card_btn"
                           href="https://www.pranaair.com/product/nitrogen-dioxide-no2-sensor/"
                         >
-                          Buy Now
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
                       </div>
                     </div>
@@ -268,7 +259,7 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-indoor-pm-sensor.png"
-                          alt="prana air indoor pm sensor"
+                          alt={t("airQualitySensorsTabs.sensors.indoorPM.altText")}
                           width="100"
                           height="100"
                         />
@@ -276,21 +267,21 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Indoor PM Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.indoorPM.name")}</a>
                       </h3>
-                      <div className="rate_compare_box">₹Request on quote</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.indoorPM.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ PM Range: Upto 0-2000 μg/m3</li>
-                        <li>✓ Resolution: 0.3 μm</li>
-                        <li>✓ Purpose: Indoor Monitors</li>
-                        <li>✓ Working Temp.: -20~70 °C</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.indoorPM.features.pmRange")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.indoorPM.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.indoorPM.features.purpose")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.indoorPM.features.workingTemp")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
-                          Buy Now
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
                       </div>
                     </div>
@@ -301,31 +292,34 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2021/03/outdoor-pm2.5-sensor.png"
-                          alt="Prana Air outdoor pm sensor"
+                          alt={t("airQualitySensorsTabs.sensors.outdoorPM.altText")}
                         />
                       </a>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Outdoor Air Monitor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.outdoorPM.name")}</a>
                       </h3>
                       <span className="rating_box">
-                        <img src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png" alt="rating" />
+                        <img
+                          src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png"
+                          alt={t("airQualitySensorsTabs.common.ratingAlt")}
+                        />
                       </span>
                       <small className="price_tag">23%</small>
-                      <div className="rate_compare_box">₹Request on quote</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.outdoorPM.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ PM Range: Upto 31,000 μg/m3</li>
-                        <li>✓ Resolution: 0.3 μm</li>
-                        <li>✓ Purpose: Outdoor Monitors</li>
-                        <li>✓ Working Temp.: -20~70 °C</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.outdoorPM.features.pmRange")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.outdoorPM.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.outdoorPM.features.purpose")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.outdoorPM.features.workingTemp")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
-                          Buy Now
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
                       </div>
                     </div>
@@ -340,7 +334,7 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co2-sensor.png"
-                          alt="prana air NDIR co2 sensor"
+                          alt={t("airQualitySensorsTabs.sensors.co2.altText")}
                           width="100"
                           height="100"
                         />
@@ -348,24 +342,29 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Carbon Dioxide (CO2) Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.co2.name")}</a>
                       </h3>
                       <span className="rating_box">
-                        <img src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png" alt="rating" />
+                        <img
+                          src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png"
+                          alt={t("airQualitySensorsTabs.common.ratingAlt")}
+                        />
                       </span>
                       <small className="price_tag">23%</small>
-                      <div className="rate_compare_box">₹9,990</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.co2.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ Range: Upto 10,000 PPM</li>
-                        <li>✓ Accuracy: ± 200 ppm ± 2%</li>
-                        <li>✓ Resolution: 100 PPM</li>
-                        <li>✓ Type of Sensor: NDIR sensor</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.range")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.accuracy")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.type")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
-                        <button className="single_add_to_cart_button button alt banner-btn">Buy Now</button>
+                        <button className="single_add_to_cart_button button alt banner-btn">
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -375,7 +374,7 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co-sensor.png"
-                          alt="prana air co sensor"
+                          alt={t("airQualitySensorsTabs.sensors.co.altText")}
                           width="100"
                           height="100"
                         />
@@ -383,25 +382,28 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Carbon Monoxide (CO) Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.co.name")}</a>
                       </h3>
                       <span className="rating_box">
-                        <img src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png" alt="rating" />
+                        <img
+                          src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png"
+                          alt={t("airQualitySensorsTabs.common.ratingAlt")}
+                        />
                       </span>
                       <small className="price_tag">23%</small>
-                      <div className="rate_compare_box">₹9,990</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.co.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ Range: 500 PPM</li>
-                        <li>✓ Power Consumption: 10 to 50 uW</li>
-                        <li>✓ Resolution: 0.1 PPM</li>
-                        <li>✓ Response Time: &lt; 30 seconds</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.range")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.powerConsumption")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.co.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
-                          Buy Now
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
                       </div>
                     </div>
@@ -412,7 +414,7 @@ export default function AirQualitySensors() {
                       <a href="#">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-so2-sensor.png"
-                          alt="prana air sulfur dioxide so2 sensor"
+                          alt={t("airQualitySensorsTabs.sensors.so2.altText")}
                           width="100"
                           height="100"
                         />
@@ -420,25 +422,28 @@ export default function AirQualitySensors() {
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">Sulful Dioxide SO2 Sensor</a>
+                        <a href="#">{t("airQualitySensorsTabs.sensors.so2.name")}</a>
                       </h3>
                       <span className="rating_box">
-                        <img src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png" alt="rating" />
+                        <img
+                          src="https://www.pranaair.com/wp-content/uploads/2021/02/rating_img-1.png"
+                          alt={t("airQualitySensorsTabs.common.ratingAlt")}
+                        />
                       </span>
                       <small className="price_tag">23%</small>
-                      <div className="rate_compare_box">₹9,990</div>
+                      <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.so2.price")}</div>
                       <ul className="product_feature_list">
-                        <li>✓ Range: 50 PPM</li>
-                        <li>✓ Power Consumption: 10 to 50 uW</li>
-                        <li>✓ Resolution: 0.01 PPM</li>
-                        <li>✓ Response Time: &lt; 15 seconds</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.range")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.powerConsumption")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.resolution")}</li>
+                        <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
                         <a className="monitor_know_btn" href="#">
-                          Know More
+                          {t("airQualitySensorsTabs.buttons.knowMore")}
                         </a>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
-                          Buy Now
+                          {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
                       </div>
                     </div>
@@ -455,12 +460,8 @@ export default function AirQualitySensors() {
         <div className="row">
           <div className="col-md-12">
             <div className="qualitymonitor_heading_box italic_para text-center">
-              <h2>Why Should You Choose Prana Air Sensors ?</h2>
-              <p>
-                Prana Air has designed air quality sensors with finesse and precision for consumer- and industrial-grade
-                safety monitoring. Our state-of-art sensors come packed with cutting-edge technology for detection of
-                air contaminants.
-              </p>
+              <h2>{t("whyChoosePranaSensors.title")}</h2>
+              <p>{t("whyChoosePranaSensors.description")}</p>
             </div>
           </div>
         </div>
@@ -473,38 +474,28 @@ export default function AirQualitySensors() {
             <div className="monitor_feature_box green_border">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/structure-design-icon.png"
-                alt="sensor structure design"
+                alt={t("whyChoosePranaSensors.features.structuredDesign.altText")}
               />
-              <h4>Structured Design</h4>
-              <p style={{ textAlign: "justify" }}>
-                Prana Air sensors have an ultra-thin package and miniaturized design that enable them to fit in any kind
-                of device or instrument. They are an apt choice for both portable devices and real-time outdoor
-                monitoring.
-              </p>
+              <h4>{t("whyChoosePranaSensors.features.structuredDesign.title")}</h4>
+              <p style={{ textAlign: "justify" }}>{t("whyChoosePranaSensors.features.structuredDesign.description")}</p>
             </div>
 
             <div className="monitor_feature_box red_border">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/highly-receptive-icon.png"
-                alt="highly receptive icon"
+                alt={t("whyChoosePranaSensors.features.highlyReceptive.altText")}
               />
-              <h4>Highly Receptive</h4>
-              <p style={{ textAlign: "justify" }}>
-                The average response time of most of our gaseous sensors is less than 15 seconds rendering them robust
-                and responsive. Hence, they are tailor-made for real-time monitoring for faster and precise results.
-              </p>
+              <h4>{t("whyChoosePranaSensors.features.highlyReceptive.title")}</h4>
+              <p style={{ textAlign: "justify" }}>{t("whyChoosePranaSensors.features.highlyReceptive.description")}</p>
             </div>
 
             <div className="monitor_feature_box yellow_border">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/rohs-compliant-icon.png"
-                alt="rohs compliant icon"
+                alt={t("whyChoosePranaSensors.features.rohsCompliant.altText")}
               />
-              <h4>RoHS Compliant</h4>
-              <p style={{ textAlign: "justify" }}>
-                Our sensors comply with the Restriction of Hazardous Substances Directive (RoHS) for electrical and
-                electronic equipment.
-              </p>
+              <h4>{t("whyChoosePranaSensors.features.rohsCompliant.title")}</h4>
+              <p style={{ textAlign: "justify" }}>{t("whyChoosePranaSensors.features.rohsCompliant.description")}</p>
             </div>
           </div>
 
@@ -512,38 +503,29 @@ export default function AirQualitySensors() {
             <div className="monitor_feature_box purple_border">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/sturdy-build-icon.png"
-                alt="sensor sturdy built icon"
+                alt={t("whyChoosePranaSensors.features.sturdyBuilt.altText")}
               />
-              <h4>Sturdy-Built</h4>
-              <p style={{ textAlign: "justify" }}>
-                The highly accurate air pollution sensors can monitor your air hassle-free for up to a decade. Lodge
-                them in your instrument once and forget all your sensor-related worries.
-              </p>
+              <h4>{t("whyChoosePranaSensors.features.sturdyBuilt.title")}</h4>
+              <p style={{ textAlign: "justify" }}>{t("whyChoosePranaSensors.features.sturdyBuilt.description")}</p>
             </div>
 
             <div className="monitor_feature_box pink_border">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/low-carbon-sensor-icon.png"
-                alt="low carbon sensor icon"
+                alt={t("whyChoosePranaSensors.features.lowCarbonSensors.altText")}
               />
-              <h4>Low-Carbon Sensors</h4>
-              <p style={{ textAlign: "justify" }}>
-                Our air quality analyzers operate on low power input (0 mW at 0 mV bias). Therefore, these are
-                energy-saving options that produce less carbon footprint. They take you one step closer to
-                sustainability.
-              </p>
+              <h4>{t("whyChoosePranaSensors.features.lowCarbonSensors.title")}</h4>
+              <p style={{ textAlign: "justify" }}>{t("whyChoosePranaSensors.features.lowCarbonSensors.description")}</p>
             </div>
 
             <div className="monitor_feature_box blue_border">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/individually-calibrated-sensor.png"
-                alt="individually calibrated sensor"
+                alt={t("whyChoosePranaSensors.features.individuallyCalibrated.altText")}
               />
-              <h4>Individually Calibrated</h4>
+              <h4>{t("whyChoosePranaSensors.features.individuallyCalibrated.title")}</h4>
               <p style={{ textAlign: "justify" }}>
-                Individual calibration yields highly accurate readings for every device the sensors are lodged in. It
-                makes sure that you obtain the readings with minimum error. Thus, our sensors are a reliable choice for
-                precision.
+                {t("whyChoosePranaSensors.features.individuallyCalibrated.description")}
               </p>
             </div>
           </div>
@@ -574,10 +556,10 @@ export default function AirQualitySensors() {
       <div className="row data_accuracy_section">
         <div className="col-md-6">
           <div className="quality_real_box">
-            <h3>Most Accurate &amp; Low-Cost</h3>
-            <h2>Prana Airs Monitors, Reliable Alternative to Costly Devices</h2>
+            <h3>{t("sensorCalibration.dataAccuracy.heading")}</h3>
+            <h2>{t("sensorCalibration.dataAccuracy.subheading")}</h2>
             <a className="discover_btn" href="#">
-              Discover Now
+              {t("sensorCalibration.dataAccuracy.discoverButton")}
             </a>
           </div>
         </div>
@@ -585,10 +567,10 @@ export default function AirQualitySensors() {
           <div className="dataauracy_img_box">
             <img
               src="https://www.pranaair.com/wp-content/uploads/2023/03/air-quality-data-accuracy.png"
-              alt="air quality data accuracy"
+              alt={t("sensorCalibration.dataAccuracy.altTexts.accuracyImage")}
             />
             <a className="discover_btn accuracy_btn" href="#">
-              99% Accuracy
+              {t("sensorCalibration.dataAccuracy.accuracyButton")}
             </a>
           </div>
         </div>
@@ -599,8 +581,8 @@ export default function AirQualitySensors() {
         <div className="row">
           <div className="col-md-12">
             <div className="qualitymonitor_heading_box text-center">
-              <h2>Accuracy of Prana Air Sensors</h2>
-              <p>PM2.5 correlation with high-end instrument</p>
+              <h2>{t("sensorCalibration.accuracySection.title")}</h2>
+              <p>{t("sensorCalibration.accuracySection.subtitle")}</p>
             </div>
           </div>
         </div>
@@ -609,7 +591,7 @@ export default function AirQualitySensors() {
             <div className="comparison_graph_img">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/pm2.5-comparison-BAM-vs-Prana-Air-sensor.png"
-                alt="prana air quality sensor pm2.5 data accuracy"
+                alt={t("sensorCalibration.accuracySection.altTexts.comparisonGraph")}
               />
             </div>
           </div>
@@ -621,7 +603,7 @@ export default function AirQualitySensors() {
         <div className="row">
           <div className="col-md-12">
             <div className="qualitymonitor_heading_box text-center">
-              <h2>Air Quality PCBs</h2>
+              <h2>{t("airQualityPcbs.title")}</h2>
             </div>
           </div>
         </div>
@@ -632,7 +614,7 @@ export default function AirQualitySensors() {
                 <img
                   className="img-responsive center-block"
                   src="https://www.pranaair.com/wp-content/uploads/2021/09/air-quality-sensor-pcb-board-scaled.jpg"
-                  alt="prana air quality sensor pcb board"
+                  alt={t("airQualityPcbs.altTexts.pcbBoard")}
                 />
               </a>
             </p>
@@ -645,8 +627,8 @@ export default function AirQualitySensors() {
         <div className="row">
           <div className="col-md-12">
             <div className="contact-heading">
-              <h2>Get in Touch</h2>
-              <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+              <h2>{t("contactHeading.title")}</h2>
+              <p>{t("contactHeading.description")}</p>
             </div>
           </div>
         </div>
@@ -659,10 +641,10 @@ export default function AirQualitySensors() {
           <div className="row ourclient_section">
             <div className="col-md-12">
               <h2 style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "24pt" }}>Trusted By</span>
+                <span style={{ fontSize: "24pt" }}>{t("trustedBy.title")}</span>
               </h2>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "18pt" }}>Some of the industrys top organisations</span>
+                <span style={{ fontSize: "18pt" }}>{t("trustedBy.description")}</span>
               </p>
             </div>
             <div className="col-md-12">

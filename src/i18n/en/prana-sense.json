@@ -1,0 +1,485 @@
+{
+    "applications": {
+        "heading": {
+      "title": "Applications",
+      "subtitle": "Versatility in Every Application",
+      "description": "Monitor air quality with Prana Sense in diverse environments and needs."
+    },
+    "title": "Applications of Prana Sense",
+    "description": "Prana Sense can be used in various environments to ensure optimal air quality and safety.",
+  "items": {
+    "1": {
+      "title": "Construction Site",
+      "alt": "application of Prana Sense at Construction Sites"
+    },
+    "2": {
+      "title": "Sea Ports",
+      "alt": "Application of Prana Sense at Sea Ports"
+    },
+    "3": {
+      "title": "Schools and Universities",
+      "alt": "Application of Prana Sense at Schools and Universities"
+    },
+    "4": {
+      "title": "Railways and Metros",
+      "alt": "Application of Prana Sense at Railways and metros"
+    },
+    "5": {
+      "title": "Roads And Highways",
+      "alt": "Application of Prana Sense at Roads and Highways"
+    },
+    "6": {
+      "title": "Industries",
+      "alt": "Application of Prana Sense at industries and factories"
+    },
+    "7": {
+      "title": "Parking Lots",
+      "alt": "Application of Prana Sense at Parking lots"
+    }
+  }
+},
+"hero": {
+    "logo": {
+      "alt": "prana"
+    },
+    "title": "Prana Sense Outdoor Air Quality Monitor",
+    "description": "Revolutionizing Air Quality Monitoring with cutting-edge technology for better accuracy and reliability with seamless connectivity and comprehensive data access.",
+    "contactButton": "Contact Us",
+    "buttonIcon": {
+      "alt": "button icon"
+    }
+  },
+  "whyChoose": {
+    "featuresTitle": "Features",
+    "title": "Why Choose Prana Sense?",
+    "features": {
+      "1": {
+        "title": "Next-Gen Sensor Technology",
+        "alt": "high technology air quality sensors"
+      },
+      "2": {
+        "title": "Smart Calibration",
+        "alt": "smart calibration for the sensors"
+      },
+      "3": {
+        "title": "Affordable Excellence",
+        "alt": "easy affordable price"
+      },
+      "4": {
+        "title": "Always Connected",
+        "alt": "hassle free data connectivity"
+      },
+      "5": {
+        "title": "Real-time insights",
+        "alt": "real-time air quality data insights"
+      },
+      "6": {
+        "title": "Unbeatable Accuracy",
+        "alt": "highly accurate air quality data"
+      },
+      "7": {
+        "title": "Seamless Connectivity",
+        "alt": "seamless data connectivity wifi and GSM"
+      },
+      "8": {
+        "title": "Cost-Effective Maintenance",
+        "alt": "cost effective maintenance"
+      }
+    }
+  },
+  "gasMonitor": {
+    "title": "Precision Pollutant Detection:",
+    "subtitle": "Outdoor Air Quality Monitoring",
+    "pollutants": {
+      "pm": {
+        "title": "Particular Matter (PM1,2.5 & 10)",
+        "alt": "sensor of Particular Matter PM2.5, PM10, PM1"
+      },
+      "temp": {
+        "title": "Temperature & Humidity",
+        "alt": "sensor of Temperature and Humidity"
+      },
+      "noise": {
+        "title": "Noise Monitoring",
+        "alt": "sensor of noise monitoring"
+      },
+      "so2": {
+        "title": "Sulfur Dioxide (SO2)",
+        "alt": "sensor of SO2 gas"
+      },
+      "no2": {
+        "title": "Nitrogen Dioxide (NO2)",
+        "alt": "sensor of NO2 gas"
+      },
+      "o3": {
+        "title": "Ozone (O3)",
+        "alt": "sensor of Ozone gas"
+      },
+      "h2s": {
+        "title": "Hydrogen Sulfide (H2S)",
+        "alt": "sensor of H2S gas"
+      },
+      "nh3": {
+        "title": "Ammonia (NH3)",
+        "alt": "sensor of Ammonia NH3"
+      },
+      "co": {
+        "title": "Carbon Monoxide (CO)",
+        "alt": "sensor of CO gas"
+      },
+      "ch4": {
+        "title": "Methane (CH4)",
+        "alt": "sensor of Methane CH4"
+      },
+      "tvoc": {
+        "title": "TVOC Monitoring",
+        "alt": "sensor of TVOC odor monitoring"
+      },
+      "co2": {
+        "title": "CO₂ Sensing",
+        "alt": "sensor of CO2 gas"
+      }
+    }
+  },
+  "powerBackup": {
+    "title": "Power to Last without interruption",
+    "description": "Get mega power backup that keep your air quality monitoring working for days.",
+    "batteryLabel": "Battery",
+    "batteryCapacity": "40,000",
+    "mah": "mAh",
+    "backupLabel": "Battery Backup",
+    "backupHours": "96",
+    "hours": "Hours",
+    "imageAlt": "prana sense ambient air quality monitoring device with inbuilt battery"
+  },
+   "solarInnovation": {
+    "title": "Solar Innovation",
+    "subtitle": "power-up your air quality monitor with sunlight",
+    "description": "Solar-Powered Reliability for continuous operation without power supply and Eco-friendly monitoring.",
+    "solarPanel": {
+      "title": "Solar Panel",
+      "power": "30",
+      "unit": "Watt",
+      "imageAlt": "Prana Sense ambient air quality monitor with solar panel"
+    },
+    "noController": {
+      "title": "No additional controllers or connectors Needed",
+      "description": "Direct connect solar panel to the air quality monitor without additional controllers or connectors.",
+      "imageAlt": "Prana Sense ambient air quality monitor with No additional controllers"
+    }
+  },
+   "waterproof": {
+    "title": "All-Weather Warrior",
+    "description": "Built to Last that stands in every Weather condition and ensures reliable performance in rain, heatwaves, dust etc.",
+    "ipRating": {
+      "alt": "Prana Sense is a weatherproof ambient air quality monitor"
+    },
+    "image": {
+      "alt": "Weather resistant ambient air quality monitor"
+    }
+  },
+  "weatherData": {
+    "title": "Weather Data",
+    "description": "Not just an air quality monitor: Weather Monitoring"
+  },
+  "weatherMonitor": {
+    "overview": {
+      "strong": "Get a complete Environmental overview:",
+      "text": "Optional weather station for real-time data weather monitoring capabilities.",
+      "link": "Weather Station"
+    },
+    "parameters": {
+      "windGust": {
+        "alt": "measuring wind gust parameter"
+      },
+      "solarIrradiance": {
+        "alt": "measuring solar irradiance"
+      },
+      "windDirection": {
+        "alt": "measuring wind direction"
+      },
+      "windSpeedDirection": {
+        "alt": "measuring wind speed direction"
+      },
+      "windRoseChart": {
+        "alt": "wind rose chart"
+      },
+      "uvIndex": {
+        "alt": "measuring UV index"
+      }
+    },
+    "image": {
+      "alt": "Prana Sense ambient air quality monitor with weather station monitoring air quality and weather data"
+    }
+  },
+  "smartFeatures": {
+    "heading": "Innovations",
+    "subheading": "Smart Features for Seamless Operation",
+    "gps": {
+      "title": "Pinpoint Precision",
+      "description": "Integrated GPS for exact location tracking",
+      "imageAlt": "Prana Sense with GPS integration to locate exact location"
+    },
+    "display": {
+      "title": "Crystal Clear Display",
+      "description": "3.5-inch monochrome screen for easy data visualisation",
+      "size": "3.5",
+      "label": "Display",
+      "imageAlt": "air quality data display on clear big screen"
+    },
+    "storage": {
+      "title": "Onboard Data Storage",
+      "description": "SD card support for secure, local data logging",
+      "imageAlt": "onboard data storage on micro SD card"
+    }
+  },
+  "advancedTech": {
+    "heading": "Prana Sense",
+    "subheading": "Air Quality Monitoring with Advanced Technology",
+    "image": {
+      "alt": "Prana Sense Air Quality Monitoring with Advanced Technology"
+    },
+    "powerSource": {
+      "title": "Power Source",
+      "solar": {
+        "label": "Solar",
+        "imageAlt": "solar power source in Prana Sense ambient air quality monitor"
+      },
+      "dc": {
+        "label": "D/C",
+        "imageAlt": "DC power source in Prana Sense ambient air quality monitor"
+      }
+    },
+    "offlineStorage": {
+      "title": "Offline Data Storage",
+      "sdCard": {
+        "label": "SD Card",
+        "imageAlt": "data storage in micro SD card in Prana Sense ambient air quality monitor"
+      }
+    },
+    "connectivity": {
+      "title": "Connectivity",
+      "or": "Or",
+      "wifi": {
+        "label": "Wi-Fi",
+        "imageAlt": "wifi connectivity"
+      },
+      "gsm": {
+        "label": "GSM",
+        "imageAlt": "GSM connectivity"
+      },
+      "lora": {
+        "label": "LoRa",
+        "imageAlt": "LoRa connectivity"
+      },
+      "rs485": {
+        "label": "RS485",
+        "modbus": "(MODBUS)",
+        "imageAlt": "RS485 connectivity"
+      }
+    },
+    "cloudStorage": {
+      "title": "Cloud Storage",
+      "imageAlt": "cloud data storage"
+    }
+  },
+   "connectivity": {
+    "title": "Connectivity",
+    "subtitle": "Stay Connected Anytime, Anywhere",
+    "description": "Always stay connected and informed with Multi-Mode Connectivity: RS485, WiFi, LoRa, and 4G options in your Prana Sense.",
+    "mainImage": {
+      "alt": "Easy data connectivity of Prana Sense Outdoor air quality monitor"
+    },
+    "options": {
+      "wifi": {
+        "label": "Wi-Fi",
+        "imageAlt": "wifi connectivity on Prana Sense"
+      },
+      "rs485": {
+        "label": "RS485",
+        "modbus": "(MODBUS)",
+        "imageAlt": "RS485 connectivity on Prana Sense"
+      },
+      "gsm": {
+        "label": "GSM",
+        "imageAlt": "GSM connectivity on Prana Sense"
+      },
+      "lora": {
+        "label": "LoRa",
+        "imageAlt": "LoRa connectivity on Prana Sense"
+      }
+    }
+  },
+   "noiseMonitor": {
+    "title": "Noise Monitoring",
+    "subtitle": "Hear the difference with Prana Sense",
+    "description": "Prana Sense Monitor noise levels from 30 to 130 dB with 1 dB accuracy, ensuring precise acoustic measurements.",
+    "range": {
+      "label": "Monitor noise levels from",
+      "value": "30 - 130 dB"
+    },
+    "accuracy": {
+      "label": "Accuracy",
+      "value": "1 dB"
+    }
+  },
+  "dataAccessibility": {
+    "title": "Seamless accessibility",
+    "subtitle": "Air Quality Data at Your Fingertips",
+    "tabs": {
+      "mobileApp": {
+        "tabLabel": "Mobile App",
+        "title": "See the data on your smartphone",
+        "description": "Get Prana Senses real-time environmental insights right in your pocket for convenient monitoring and peace of mind.",
+        "appStore": {
+          "smallText": "Download on the",
+          "largeText": "App Store",
+          "imageAlt": "ios app logo"
+        },
+        "googlePlay": {
+          "smallText": "Get it on",
+          "largeText": "Google Play",
+          "imageAlt": "android app"
+        },
+        "image": {
+          "alt": "insightful air quality data accessibility on AQI mobile app"
+        }
+      },
+      "webDashboard": {
+        "tabLabel": "Web Dashboard",
+        "title": "Air Quality Data on Web Dashboard",
+        "description": "Monitor real-time Prana Senses data on your laptop anytime anywhere with the web-dashboard data accessibility feature.",
+        "image": {
+          "alt": "more details air quality data insights on AQI web-dashboard"
+        }
+      },
+      "tvApplication": {
+        "tabLabel": "TV Application",
+        "title": "See the data on your Smart TV",
+        "description": "Get real-time environmental insights of Prana Sense on your smart TV to ensure continuous monitoring.",
+        "image": {
+          "alt": "air quality data on AQI TV app"
+        }
+      }
+    }
+  },
+    "sensorInnovation": {
+    "title": "Sensor innovation",
+    "strong1": "Double",
+    "middle": "the Sensors,",
+    "strong2": "Double",
+    "end": "the Security",
+    "paragraph1": "The advanced technology of",
+    "dualSensors": "dual sensors",
+    "paragraph1End": "in our monitors safeguards against possible sensor failure.",
+    "paragraph2Start": "Also",
+    "paragraph2Strong": "ensures continuous monitoring with zero downtime",
+    "paragraph2End": "It offers a faster response time in any discrepancies and is also a reliable option to tackle the situation.",
+    "image": {
+      "alt": "highly accurate and advanced air quality sensors in Prana Sense Monitor"
+    },
+    "primarySensor": "Primary sensor",
+    "reserveSensor": "Reserve sensor"
+  },
+   "sensorData": {
+    "scenario1": {
+      "title": "Scenario 1",
+      "heading": "Sensor Data",
+      "status": "Aligned",
+      "description": "Dual sensor technology to ensure continuous PM monitoring. The primary and reserve sensors data are aligning. Thus, the reserve sensor goes on the sleep mode.",
+      "image": {
+        "alt": "chart showing air quality sensor Data Aligned"
+      }
+    },
+    "scenario2": {
+      "title": "Scenario 2",
+      "heading": "Sensor Data",
+      "status": "Not Aligned",
+      "description": "The data of primary sensor and reserve sensor not aligned. Hence the reserve sensor takes over the function on Primary sensor without changing.",
+      "image": {
+        "alt": "chart showing air quality sensor Data Not Aligned"
+      }
+    }
+  },
+    "productManufacturing": {
+    "title": "Product",
+    "subtitle": "In-house Manufacturing"
+  },
+   "techSpecsCompact": {
+    "title": "Technical Specifications",
+    "brochure": {
+      "text": "Brochure",
+      "iconAlt": "brochure-btn"
+    },
+    "specs": {
+      "productName": {
+        "label": "Product Name :",
+        "value": "Prana Sense"
+      },
+      "solarPanel": {
+        "label": "Solar Panel:",
+        "value": "30Watt"
+      },
+      "ledScreen": {
+        "label": "LED Screen Size:",
+        "value": "3.5inch"
+      },
+      "dimension": {
+        "label": "Dimension :",
+        "value": "230*150*85mm"
+      },
+      "weight": {
+        "label": "Weight:",
+        "value": "1kg"
+      },
+      "batteryHours": {
+        "label": "Battery working hours :",
+        "value": "96hrs"
+      },
+      "batteryCapacity": {
+        "label": "Battery capacity:",
+        "value": "40,000mAh"
+      },
+      "connectivity": {
+        "label": "Connectivity:",
+        "value": "LoRa, GSM, WiFi, RS485"
+      },
+      "locationTracking": {
+        "label": "Location Tracking:",
+        "value": "GPS"
+      },
+      "weatherRating": {
+        "label": "Weather Rating:",
+        "value": "IP68"
+      }
+    }
+  },
+   "getInTouch": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+   "faq": {
+    "heading": {
+      "part1": "Frequently Asked",
+      "part2": "Questions"
+    },
+    "questions": {
+      "1": {
+        "question": "1. What makes Prana Sense different from other air quality monitors?",
+        "answer": "Prana Sense is not your ordinary outdoor air quality monitor because it is a complete environmental monitoring device. Additionally, it can operate with solar power."
+      },
+      "2": {
+        "question": "2. Can I use Prana Sense in remote areas?",
+        "answer": "Yes, the Prana Sense monitor can be used in remote areas as it has an option for solar panels. It can connect directly to the device without the need for a controller."
+      },
+      "3": {
+        "question": "3. What parameters can be monitored with the Dual sensor technology?",
+        "answer": "Dual-sensor technology is available for Particulate Matter. It offers the continuous monitoring of PM in the air without facing any difficulty."
+      },
+      "4": {
+        "question": "4. What if both sensors data does not aligned?",
+        "answer": "In dual-sensor technology, the reserve sensor works for one month to check the primary sensors working capabilities. If both sensors data is not aligned, the reserve sensor takes over and the primary sensor goes to sleep."
+      }
+    }
+  }
+}

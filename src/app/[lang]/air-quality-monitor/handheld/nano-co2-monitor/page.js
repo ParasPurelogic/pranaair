@@ -1,12 +1,58 @@
-
 import ProductNavbar from "@/Components/Pages/NanoCo2monitor/product-navbar"
 import "./style.css"
 import ProductGalleryTabs from "@/Components/Pages/NanoCo2monitor/product-gallery-tabs"
 import CO2MonitorSlider from "@/Components/Pages/NanoCo2monitor/co2-monitor-slider"
-import ProductComparison from "@/Components/Pages/NanoCo2monitor/product-comparison"
 import FaqAccordionCO2 from "@/Components/Pages/NanoCo2monitor/faq-accordion-co2"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function NanoCO2MonitorPage() {
+export default async function NanoCO2MonitorPage() {
+  const { t } = await getServerTranslation("nano-co2")
+  const nanocoSliderContent = [
+    {
+      id: 1,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/06/portable-nano-co2-monitor-of-prana-air.jpg",
+      heading: t("slider.slide1.heading"),
+      paragraph: t("slider.slide1.paragraph"),
+    },
+    {
+      id: 2,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/06/easy-to-use-anywhere-prana-air-co2-monitor.jpg",
+      heading: t("slider.slide2.heading"),
+      paragraph: t("slider.slide2.paragraph"),
+    },
+  ]
+  const faqs = [
+    {
+      id: "faq1",
+      question: t("faqs.faq1.question"),
+      answer: t("faqs.faq1.answer"),
+    },
+    {
+      id: "faq2",
+      question: t("faqs.faq2.question"),
+      answer: t("faqs.faq2.answer"),
+    },
+    {
+      id: "faq3",
+      question: t("faqs.faq3.question"),
+      answer: t("faqs.faq3.answer"),
+    },
+    {
+      id: "faq4",
+      question: t("faqs.faq4.question"),
+      answer: t("faqs.faq4.answer"),
+    },
+    {
+      id: "faq5",
+      question: t("faqs.faq5.question"),
+      answer: t("faqs.faq5.answer"),
+    },
+    {
+      id: "faq6",
+      question: t("faqs.faq6.question"),
+      answer: t("faqs.faq6.answer"),
+    },
+  ]
   return (
     <main className="nano-co2-monitor-page">
       {/* Sticky Navigation Bar */}
@@ -20,44 +66,37 @@ export default function NanoCO2MonitorPage() {
             <div className="col-lg-4">
               <ProductGalleryTabs />
             </div>
-
             <div className="col-lg-4">
               <div className="product-info">
-                <h1 className="product-title">Nano CO2 Monitor</h1>
-                <p className="product-subtitle">Your portable health consultant</p>
+                <h1 className="product-title">{t("productInfo.title")}</h1>
+                <p className="product-subtitle">{t("productInfo.subtitle")}</p>
 
                 <div className="product-price">
-                  <span className="price-label">M.R.P.</span>
-                  <span className="price-value">₹ 2,490.00</span>
+                  <span className="price-label">{t("productInfo.priceLabel")}</span>
+                  <span className="price-value">{t("productInfo.priceValue")}</span>
                 </div>
 
                 <div className="product-description">
-                  <p>
-                    Prana Air Nano CO2 monitor with NDIR Sensor is a handy air quality monitoring device that helps you
-                    monitor CO2 levels in real-time. Track your carbon footprint in real-time with an advanced and
-                    innovative cutting edge technology. Empowering you to make informed decisions about CO2 levels
-                    around you.
-                  </p>
+                  <p>{t("productInfo.description")}</p>
                 </div>
               </div>
             </div>
-
             {/* Product Information */}
             <div className="col-lg-4">
               <div className="product-options">
                 <div className="option-group">
-                  <label>Model</label>
+                  <label>{t("productOptions.modelLabel")}</label>
                   <div className="select-wrapper">
                     <select className="form-select">
-                      <option>Nano CO2</option>
-                      <option>Nano CO</option>
-                      <option>Nano TVOC/HCHO</option>
+                      <option>{t("productOptions.models.nanoCO2")}</option>
+                      <option>{t("productOptions.models.nanoCO")}</option>
+                      <option>{t("productOptions.models.nanoTVOC")}</option>
                     </select>
                   </div>
                 </div>
 
                 <div className="option-group">
-                  <label>Quantity</label>
+                  <label>{t("productOptions.quantityLabel")}</label>
                   <input type="number" className="form-control" min="1" defaultValue="1" />
                 </div>
 
@@ -73,7 +112,7 @@ export default function NanoCO2MonitorPage() {
                     value="77731"
                     className="single_add_to_cart_button button alt"
                   >
-                    Buy Now
+                    {t("productOptions.buyNowButton")}
                   </button>
                 </form>
               </div>
@@ -82,18 +121,15 @@ export default function NanoCO2MonitorPage() {
         </div>
       </section>
 
-      {/* SECTION 2: CO2 Monitoring Banner */}
+      {/* CO2 Monitoring Banner */}
       <section className="new-monitor-section-feature">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">{/* This div will contain the background image */}</div>
             <div className="col-lg-6 col-md-12">
               <div className="monitor_right_box">
-                <h2>CO2 Monitoring has never been this easy!</h2>
-                <p>
-                  Prana Air Nano CO2 monitor is convenient to carry over larger distances with a simple yet attractive
-                  style.
-                </p>
+                <h2>{t("monitoringBanner.title")}</h2>
+                <p>{t("monitoringBanner.description")}</p>
                 <ul className="monitor_features">
                   <li>
                     <div className="feature-icon-circle">
@@ -134,17 +170,14 @@ export default function NanoCO2MonitorPage() {
         </div>
       </section>
 
-      {/* SECTION 3: Features */}
+      {/* Features */}
       <section className="monitor_section qualitative_feature_sec" id="Features">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-12">
               <div className="Qualitativ_feature_box feature-icon">
-                <h2>Qualitative features of Nano CO2 Monitor | Portable</h2>
-                <p>
-                  It has a small, compact body with a minimal and attractive style. People adore our mini health
-                  consultant and the way it combines aesthetics and technology.
-                </p>
+                <h2>{t("features.title")}</h2>
+                <p>{t("features.description")}</p>
               </div>
             </div>
             <div className="col-lg-7 col-md-12">
@@ -157,11 +190,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="feature-text">
-                    <span>
-                      Real-time CO2
-                      <br />
-                      Monitoring
-                    </span>
+                    <span>{t("features.items.realTime")}</span>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -169,11 +198,7 @@ export default function NanoCO2MonitorPage() {
                     <img src="https://www.pranaair.com/wp-content/uploads/2023/06/ndir.png" alt="NDIR Technology" />
                   </div>
                   <div className="feature-text">
-                    <span>
-                      NDIR
-                      <br />
-                      Technology
-                    </span>
+                    <span>{t("features.items.ndir")}</span>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -184,11 +209,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="feature-text">
-                    <span>
-                      Mini & Portable
-                      <br />
-                      Device
-                    </span>
+                    <span>{t("features.items.portable")}</span>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -199,11 +220,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="feature-text">
-                    <span>
-                      HD Color
-                      <br />
-                      Display
-                    </span>
+                    <span>{t("features.items.display")}</span>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -214,11 +231,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="feature-text">
-                    <span>
-                      700 mAh Lithium
-                      <br />
-                      battery
-                    </span>
+                    <span>{t("features.items.battery")}</span>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -229,11 +242,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="feature-text">
-                    <span>
-                      Type-C
-                      <br />
-                      interface
-                    </span>
+                    <span>{t("features.items.interface")}</span>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -244,7 +253,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="feature-text">
-                    <span>Dynamic UI</span>
+                    <span>{t("features.items.ui")}</span>
                   </div>
                 </div>
               </div>
@@ -253,7 +262,7 @@ export default function NanoCO2MonitorPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Ultra High Definition Display */}
+      {/* Ultra High Definition Display */}
       <section className="monitor_section ultra_high_section">
         <div className="container">
           <div className="row align-items-center">
@@ -267,20 +276,17 @@ export default function NanoCO2MonitorPage() {
             <div className="col-lg-6 col-md-12">
               <div className="ultra_heading">
                 <h2 className="display-title">
-                  <span className="inch_text">19</span>
-                  Ultra High Definition color Display
+                  <span className="inch_text">{t("ultraHD.inch")}</span>
+                  {t("ultraHD.title")}
                 </h2>
-                <p>
-                  The ultra-high definition color screen has high-precision sensors installed to precisely monitor the
-                  CO2 gas concentration in real-time, and reading is more user-friendly and convenient.
-                </p>
+                <p>{t("ultraHD.description")}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5: Handy & Portable */}
+      {/* Handy & Portable */}
       <section className="handy-portable-section">
         <div className="container">
           <div className="row">
@@ -294,11 +300,8 @@ export default function NanoCO2MonitorPage() {
                   />
                 </div>
                 <div className="handy-content">
-                  <h3>Handy</h3>
-                  <p>
-                    The monitor is very user-friendly and convenient to measure CO2 gas concentration in real-time. It
-                    is very easy to hold with one hand.
-                  </p>
+                  <h3>{t("handyPortable.handy.title")}</h3>
+                  <p>{t("handyPortable.handy.description")}</p>
                 </div>
               </div>
             </div>
@@ -312,11 +315,8 @@ export default function NanoCO2MonitorPage() {
                   />
                 </div>
                 <div className="portable-content">
-                  <h3>Portable</h3>
-                  <p>
-                    It has a small, compact body with a simple, attractive style. People adore our mini health
-                    consultant and the way it combines aesthetics and technology.
-                  </p>
+                  <h3>{t("handyPortable.portable.title")}</h3>
+                  <p>{t("handyPortable.portable.description")}</p>
                 </div>
               </div>
             </div>
@@ -330,13 +330,9 @@ export default function NanoCO2MonitorPage() {
           <div className="row">
             <div className="col-lg-4 col-md-12">
               <div className="carbon_dioxide_box">
-                <h2>Carbon Dioxide</h2>
-                <h3>in the respiratory environment</h3>
-                <p>
-                  The respiratory environment is critical. CO2 impacts the comfort levels of a person. When Its level
-                  exceeds the limits, it can do both short-term and long-term damage to ones health. Excess CO2 levels
-                  can result in stuffiness, dizziness, loss of attention, and other health issues.
-                </p>
+                <h2>{t("respiratoryEnvironment.title")}</h2>
+                <h3>{t("respiratoryEnvironment.subtitle")}</h3>
+                <p>{t("respiratoryEnvironment.description")}</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-12">
@@ -351,7 +347,8 @@ export default function NanoCO2MonitorPage() {
             <div className="col-lg-4 col-md-12">
               <div className="health-hazards">
                 <h3 className="health_head">
-                  Health Hazards of <span className="highlight_text">CO2</span>
+                  {t("respiratoryEnvironment.healthHazards.title")}{" "}
+                  <span className="highlight_text">{t("respiratoryEnvironment.healthHazards.highlight")}</span>
                 </h3>
                 <div className="hazard-grid">
                   <div className="hazard-item">
@@ -362,9 +359,9 @@ export default function NanoCO2MonitorPage() {
                       />
                     </div>
                     <div className="hazard-content">
-                      <h4>Feeling sleepy and drowsy</h4>
+                      <h4>{t("respiratoryEnvironment.healthHazards.hazards.sleepy.title")}</h4>
                       <div className="hazard-level">
-                        <span>1000-2000 PPM :</span>
+                        <span>{t("respiratoryEnvironment.healthHazards.hazards.sleepy.level")}</span>
                         <div className="hazard-indicator yellow"></div>
                       </div>
                     </div>
@@ -377,9 +374,9 @@ export default function NanoCO2MonitorPage() {
                       />
                     </div>
                     <div className="hazard-content">
-                      <h4>Smooth Breathing</h4>
+                      <h4>{t("respiratoryEnvironment.healthHazards.hazards.breathing.title")}</h4>
                       <div className="hazard-level">
-                        <span>400-1000 PPM :</span>
+                        <span>{t("respiratoryEnvironment.healthHazards.hazards.breathing.level")}</span>
                         <div className="hazard-indicator green"></div>
                       </div>
                     </div>
@@ -389,9 +386,9 @@ export default function NanoCO2MonitorPage() {
                       <img src="https://www.pranaair.com/wp-content/uploads/2023/06/headache.png" alt="Headache" />
                     </div>
                     <div className="hazard-content">
-                      <h4>Headache, lethargy, and inability to concentrate</h4>
+                      <h4>{t("respiratoryEnvironment.healthHazards.hazards.headache.title")}</h4>
                       <div className="hazard-level">
-                        <span>2000-3000 PPM :</span>
+                        <span>{t("respiratoryEnvironment.healthHazards.hazards.headache.level")}</span>
                         <div className="hazard-indicator orange"></div>
                       </div>
                     </div>
@@ -401,9 +398,9 @@ export default function NanoCO2MonitorPage() {
                       <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brain.png" alt="Brain damage" />
                     </div>
                     <div className="hazard-content">
-                      <h4>Can cause brain damage, coma, even death</h4>
+                      <h4>{t("respiratoryEnvironment.healthHazards.hazards.brainDamage.title")}</h4>
                       <div className="hazard-level">
-                        <span>&gt;5000 PPM :</span>
+                        <span>{t("respiratoryEnvironment.healthHazards.hazards.brainDamage.level")}</span>
                         <div className="hazard-indicator red"></div>
                       </div>
                     </div>
@@ -417,7 +414,7 @@ export default function NanoCO2MonitorPage() {
 
       {/* SECTION 7: Small, Sleek, Reliable */}
       <section className="slider_section">
-        <CO2MonitorSlider />
+        <CO2MonitorSlider nanocoSliderContent={nanocoSliderContent} />
       </section>
 
       {/* SECTION 8: Banner Image */}
@@ -436,8 +433,8 @@ export default function NanoCO2MonitorPage() {
             <div className="col-lg-6 col-md-12">
               <div className="mini-co-monitoring-keychain">
                 <div className="monitior-heading">
-                  <h3>Real-time CO2</h3>
-                  <h4>Air quality monitoring</h4>
+                  <h3>{t("realTimeMonitoring.title")}</h3>
+                  <h4>{t("realTimeMonitoring.subtitle")}</h4>
                 </div>
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/air-quality-monitoring-co2-gas.png"
@@ -447,26 +444,22 @@ export default function NanoCO2MonitorPage() {
                 <ul className="dot-icon">
                   <li>
                     <h3>
-                      CO<sub>2</sub> Level
+                      CO<sub>2</sub> {t("realTimeMonitoring.indicators.co2Level")}
                     </h3>
                   </li>
                   <li>
-                    <h3>Occupancy</h3>
+                    <h3>{t("realTimeMonitoring.indicators.occupancy")}</h3>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
               <div className="Qualitativ_feature_box mini-co2">
-                <h3>Accurate</h3>
+                <h3>{t("realTimeMonitoring.detection.title")}</h3>
                 <h2>
-                  CO<sub>2</sub> Detection
+                  CO<sub>2</sub> {t("realTimeMonitoring.detection.subtitle")}
                 </h2>
-                <p>
-                  Indoor CO<sub>2</sub> levels are influenced by various factors, with occupancy being a significant
-                  one. Our advanced NDIR Sensor Technology monitor efficiently tracks and measures CO<sub>2</sub>{" "}
-                  levels, helping maintain a healthy and comfortable indoor environment.
-                </p>
+                <p>{t("realTimeMonitoring.detection.description")}</p>
               </div>
             </div>
           </div>
@@ -477,16 +470,9 @@ export default function NanoCO2MonitorPage() {
       <section>
         <div className="container">
           <div className="ndirtechnology_box text-center electrochecmial-para">
-            <h5 className="heading-bg">NDIR Technology</h5>
-            <h4>
-              For CO<sub>2</sub> Detection
-            </h4>
-            <p>
-              For monitoring CO<sub>2</sub>, NDIR sensors are preferred over other detection technologies due to their
-              precision, long-term stability, and low power consumption. The sensor is comprised of an infrared emitter,
-              a detector, an optical filter, a gas cell, and signal-processing circuitry that detects CO2 in the
-              immediate environment by real-time air quality monitoring.
-            </p>
+            <h5 className="heading-bg">{t("ndirTechnology.heading")}</h5>
+            <h4>{t("ndirTechnology.subtitle")}</h4>
+            <p>{t("ndirTechnology.description")}</p>
           </div>
         </div>
       </section>
@@ -498,17 +484,15 @@ export default function NanoCO2MonitorPage() {
             <div className="col-lg-6 col-md-12">
               <div className="high_sensitive_box">
                 <h3>
-                  High-sensitive <span className="blue_head">Smart Chip</span>
+                  {t("smartChip.title")} <span className="blue_head">{t("smartChip.highlight")}</span>
                 </h3>
-                <h4>for more Accurate Detection</h4>
-                <p>
-                  Built-in high-performance chip for air quality detection ensures more accurate instrument detection.
-                </p>
+                <h4>{t("smartChip.subtitle")}</h4>
+                <p>{t("smartChip.description")}</p>
                 <ul className="sensitive_list">
-                  <li>High-sensitivity</li>
-                  <li>Fast Operation speed</li>
-                  <li>Data Accuracy</li>
-                  <li>Energy Efficient</li>
+                  <li>{t("smartChip.features.sensitivity")}</li>
+                  <li>{t("smartChip.features.speed")}</li>
+                  <li>{t("smartChip.features.accuracy")}</li>
+                  <li>{t("smartChip.features.efficiency")}</li>
                 </ul>
               </div>
             </div>
@@ -528,14 +512,15 @@ export default function NanoCO2MonitorPage() {
       {/* SECTION 12: Attractive details */}
       <section>
         <div className="container">
-          <h2 className="sub_heading">Attractive details for easy carrying</h2>
+          <h2 className="sub_heading">{t("attractiveDetails.heading")}</h2>
           <div className="row product_grid_section">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <div className="attractive_box interface_box">
                 <div className="top_head">
-                  <span className="range_no">01</span>
+                  <span className="range_no">{t("attractiveDetails.typeC.number")}</span>
                   <h4>
-                    Type C <span className="detail_text">Interface</span>
+                    {t("attractiveDetails.typeC.title")}{" "}
+                    <span className="detail_text">{t("attractiveDetails.typeC.subtitle")}</span>
                   </h4>
                 </div>
                 <img
@@ -548,9 +533,10 @@ export default function NanoCO2MonitorPage() {
             <div className="col-lg-4 col-md-4 col-sm-12">
               <div className="attractive_box anti_box">
                 <div className="top_head">
-                  <span className="range_no">02</span>
+                  <span className="range_no">{t("attractiveDetails.lanyard.number")}</span>
                   <h4>
-                    Anti-loss <span className="detail_text">Lanyard</span>
+                    {t("attractiveDetails.lanyard.title")}{" "}
+                    <span className="detail_text">{t("attractiveDetails.lanyard.subtitle")}</span>
                   </h4>
                 </div>
                 <img
@@ -563,9 +549,10 @@ export default function NanoCO2MonitorPage() {
             <div className="col-lg-4 col-md-4 col-sm-12">
               <div className="attractive_box">
                 <div className="top_head">
-                  <span className="range_no">03</span>
+                  <span className="range_no">{t("attractiveDetails.screen.number")}</span>
                   <h4>
-                    Ultra HD <span className="detail_text">Color screen</span>
+                    {t("attractiveDetails.screen.title")}{" "}
+                    <span className="detail_text">{t("attractiveDetails.screen.subtitle")}</span>
                   </h4>
                 </div>
                 <img
@@ -582,7 +569,7 @@ export default function NanoCO2MonitorPage() {
       {/* SECTION 13: Product Key functions */}
       <section className="product_key_section" id="Functions">
         <div className="container">
-          <h2 className="sub_heading">Product Key functions</h2>
+          <h2 className="sub_heading">{t("productKeyFunctions.heading")}</h2>
           <div className="row align-items-center">
             <div className="col-lg-5 col-md-12 mb-4 mb-lg-0">
               <div className="product-key-img text-center">
@@ -611,7 +598,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="key-function-text">
-                    <h3 className="mb-0 fs-5">On/Off key</h3>
+                    <h3 className="mb-0 fs-5">{t("productKeyFunctions.onOff")}</h3>
                   </div>
                 </div>
 
@@ -631,7 +618,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="key-function-text">
-                    <h3 className="mb-0 fs-5">One-button automatic calibration</h3>
+                    <h3 className="mb-0 fs-5">{t("productKeyFunctions.calibration")}</h3>
                   </div>
                 </div>
 
@@ -651,7 +638,7 @@ export default function NanoCO2MonitorPage() {
                     />
                   </div>
                   <div className="key-function-text">
-                    <h3 className="mb-0 fs-5">Brightness adjusting button</h3>
+                    <h3 className="mb-0 fs-5">{t("productKeyFunctions.brightness")}</h3>
                   </div>
                 </div>
               </div>
@@ -666,12 +653,9 @@ export default function NanoCO2MonitorPage() {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
               <div className="Qualitativ_feature_box">
-                <h2>Large-capacity Polymer</h2>
-                <span className="battery_text">Battery endurance</span>
-                <p>
-                  Safe and Durable high-performance 700 mAh large capacity polymer lithium battery, with super long
-                  endurance.
-                </p>
+                <h2>{t("batteryCapacity.title")}</h2>
+                <span className="battery_text">{t("batteryCapacity.subtitle")}</span>
+                <p>{t("batteryCapacity.description")}</p>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 capacity_img">
@@ -693,15 +677,15 @@ export default function NanoCO2MonitorPage() {
           <div className="row">
             <div className="col-lg-3 col-md-12">
               <div className="attractive-txt product-specification-heading">
-                <h3>Nano CO2 Monitor</h3>
-                <h4>Technical Specifications</h4>
+                <h3>{t("technicalSpecifications.title")}</h3>
+                <h4>{t("technicalSpecifications.subtitle")}</h4>
               </div>
             </div>
             <div className="col-lg-9 col-md-12">
               <div className="brochore-btn">
                 <a href="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-co2-monitor-brochure.pdf">
                   <img src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png" alt="brochore-btn" />{" "}
-                  Download Brochure
+                  {t("technicalSpecifications.downloadBrochure")}
                 </a>
               </div>
             </div>
@@ -710,35 +694,44 @@ export default function NanoCO2MonitorPage() {
           <div className="row mid-box">
             <div className="col-lg-4 col-md-12 box-line">
               <div className="product-specifi">
-                Product Name :<h4>Nano CO2 Monitor</h4>
+                {t("technicalSpecifications.specs.productName.label")}
+                <h4>{t("technicalSpecifications.specs.productName.value")}</h4>
               </div>
               <div className="product-specifi">
-                Warm-up time :<h4>35 Sec</h4>
+                {t("technicalSpecifications.specs.warmupTime.label")}
+                <h4>{t("technicalSpecifications.specs.warmupTime.value")}</h4>
               </div>
               <div className="product-specifi">
-                Working Temp. :<h4>-10~50°C</h4>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-12 box-line">
-              <div className="product-specifi">
-                Detection Range :<h4>Upto -5000 PPM</h4>
-              </div>
-              <div className="product-specifi">
-                Data Refresh Rate :<h4>2 Sec</h4>
-              </div>
-              <div className="product-specifi">
-                Charging Mode :<h4>USB Type-C</h4>
+                {t("technicalSpecifications.specs.workingTemp.label")}
+                <h4>{t("technicalSpecifications.specs.workingTemp.value")}</h4>
               </div>
             </div>
             <div className="col-lg-4 col-md-12 box-line">
               <div className="product-specifi">
-                Working Voltage :<h4>3.6V</h4>
+                {t("technicalSpecifications.specs.detectionRange.label")}
+                <h4>{t("technicalSpecifications.specs.detectionRange.value")}</h4>
               </div>
               <div className="product-specifi">
-                Operating Humidity :<h4>0-95% RH</h4>
+                {t("technicalSpecifications.specs.refreshRate.label")}
+                <h4>{t("technicalSpecifications.specs.refreshRate.value")}</h4>
               </div>
               <div className="product-specifi">
-                Interface Dimensions :<h4>50.6 x 17 x 85 (mm)</h4>
+                {t("technicalSpecifications.specs.chargingMode.label")}
+                <h4>{t("technicalSpecifications.specs.chargingMode.value")}</h4>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-12 box-line">
+              <div className="product-specifi">
+                {t("technicalSpecifications.specs.workingVoltage.label")}
+                <h4>{t("technicalSpecifications.specs.workingVoltage.value")}</h4>
+              </div>
+              <div className="product-specifi">
+                {t("technicalSpecifications.specs.operatingHumidity.label")}
+                <h4>{t("technicalSpecifications.specs.operatingHumidity.value")}</h4>
+              </div>
+              <div className="product-specifi">
+                {t("technicalSpecifications.specs.dimensions.label")}
+                <h4>{t("technicalSpecifications.specs.dimensions.value")}</h4>
               </div>
             </div>
           </div>
@@ -771,52 +764,55 @@ export default function NanoCO2MonitorPage() {
               </div>
             </div>
             <div className="alarm-content">
-              <h3 className="alarm-title">Real-time</h3>
+              <h3 className="alarm-title">{t("intelligentAlarm.title")}</h3>
               <h2 className="alarm-subtitle">
-                <span className="highlight">CO2</span> detection with an intelligent alarm system
+                <span className="highlight">{t("intelligentAlarm.highlight")}</span> {t("intelligentAlarm.subtitle")}
               </h2>
 
               <div className="alarm-description">
                 <div className="alarm-level-item">
-                  <span className="alarm-level-label">Green:</span>
-                  <span className="alarm-level-text">Safe, No alarm sound</span>
+                  <span className="alarm-level-label">{t("intelligentAlarm.alarmLevels.green.label")}</span>
+                  <span className="alarm-level-text">{t("intelligentAlarm.alarmLevels.green.text")}</span>
                 </div>
                 <div className="alarm-level-item">
-                  <span className="alarm-level-label">Yellow, Orange, and Red:</span>
-                  <span className="alarm-level-text">Drip sound cycle alarm, once every 10 minutes.</span>
+                  <span className="alarm-level-label">{t("intelligentAlarm.alarmLevels.others.label")}</span>
+                  <span className="alarm-level-text">{t("intelligentAlarm.alarmLevels.others.text")}</span>
                 </div>
               </div>
 
               <div className="co2-levels">
                 <div className="co2-level">
                   <div className="co2-level-indicator co2-level-green"></div>
-                  <span className="co2-level-text">400 – 1000 ± 50PPM</span>
+                  <span className="co2-level-text">{t("intelligentAlarm.co2Levels.green")}</span>
                 </div>
                 <div className="co2-level">
                   <div className="co2-level-indicator co2-level-yellow"></div>
-                  <span className="co2-level-text">1001 – 1200 ± 50PPM</span>
+                  <span className="co2-level-text">{t("intelligentAlarm.co2Levels.yellow")}</span>
                 </div>
                 <div className="co2-level">
                   <div className="co2-level-indicator co2-level-orange"></div>
-                  <span className="co2-level-text">1201 – 1500 ± 50PPM</span>
+                  <span className="co2-level-text">{t("intelligentAlarm.co2Levels.orange")}</span>
                 </div>
                 <div className="co2-level">
                   <div className="co2-level-indicator co2-level-red"></div>
-                  <span className="co2-level-text">1501 ± 50PPM</span>
+                  <span className="co2-level-text">{t("intelligentAlarm.co2Levels.red")}</span>
                 </div>
               </div>
 
-              <div className="alarm-note">Know the CO2 around you within 2 seconds:</div>
+              <div className="alarm-note">{t("intelligentAlarm.note")}</div>
               <div className="alarm-note-text">
-                Detects CO2 in real-time with <span className="highlight">2 seconds</span> data refresh rate.
+                {t("intelligentAlarm.noteText").replace(
+                  "2 seconds",
+                  `<span className="highlight">${t("intelligentAlarm.highlight2")}</span>`,
+                )}
               </div>
 
               <div className="gradient-bar"></div>
               <div className="gradient-labels">
-                <div className="gradient-label">Security</div>
-                <div className="gradient-label">Cycle Alarm</div>
-                <div className="gradient-label">Cycle Alarm</div>
-                <div className="gradient-label">Cycle Alarm</div>
+                <div className="gradient-label">{t("intelligentAlarm.gradientLabels.security")}</div>
+                <div className="gradient-label">{t("intelligentAlarm.gradientLabels.cycleAlarm")}</div>
+                <div className="gradient-label">{t("intelligentAlarm.gradientLabels.cycleAlarm")}</div>
+                <div className="gradient-label">{t("intelligentAlarm.gradientLabels.cycleAlarm")}</div>
               </div>
             </div>
           </div>
@@ -825,15 +821,82 @@ export default function NanoCO2MonitorPage() {
 
       {/* SECTION 18: Product Comparison */}
       <section className="comparison-section" id="Compare">
-        <ProductComparison />
-      </section>
+        <div className="comparison-section">
+          <div className="container">
+            <h2 className="comparison-title">{t("productComparison.title").replace("CO2", "CO<sub>2</sub>")}</h2>
 
+            <div className="comparison-products">
+              <div className="comparison-product">
+                <div className="comparison-product-image">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-nano-co2-monitor-portable.png"
+                    alt="Nano CO2 Monitor"
+                  />
+                </div>
+                <div className="comparison-product-name">{t("productComparison.products.nanoCO2")}</div>
+              </div>
+              <div className="comparison-product">
+                <div className="comparison-product-image">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2023/06/tsi-co2-monitor.png"
+                    alt="High-End Monitor"
+                  />
+                </div>
+                <div className="comparison-product-name">{t("productComparison.products.highEnd")}</div>
+              </div>
+            </div>
+
+            <div className="comparison-table">
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.description.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.description.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.description.highEnd")}</div>
+              </div>
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.size.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.size.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.size.highEnd")}</div>
+              </div>
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.price.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.price.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.price.highEnd")}</div>
+              </div>
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.weight.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.weight.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.weight.highEnd")}</div>
+              </div>
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.range.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.range.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.range.highEnd")}</div>
+              </div>
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.accuracy.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.accuracy.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.accuracy.highEnd")}</div>
+              </div>
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.technology.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.technology.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.technology.highEnd")}</div>
+              </div>
+              <div className="comparison-row">
+                <div className="comparison-label">{t("productComparison.comparisonTable.portability.label")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.portability.nanoCO2")}</div>
+                <div className="comparison-value">{t("productComparison.comparisonTable.portability.highEnd")}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* SECTION 19: FAQs */}
       <section className="faqs-section" id="FAQs">
         <div className="container">
-          <h2 className="faqs-title">Frequently Asked</h2>
-          <h3 className="faqs-subtitle">Questions About Nano CO2 Monitor</h3>
-          <FaqAccordionCO2 />
+          <h2 className="faqs-title">{t("faqs.title")}</h2>
+          <h3 className="faqs-subtitle">{t("faqs.subtitle")}</h3>
+          <FaqAccordionCO2 faqs={faqs} />
         </div>
       </section>
     </main>

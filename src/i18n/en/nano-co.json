@@ -1,0 +1,375 @@
+{
+  "faq": {
+    "faq1": {
+      "title": "1. What is the ideal range of CO levels in indoor environments?",
+      "content": "The ideal range of CO levels in indoor environments is below 9 parts per million (ppm). However, it is recommended to maintain levels below 5 ppm for better indoor air quality and to ensure safety."
+    },
+    "faq2": {
+      "title": "2. How often should I check the CO levels using the portable monitor?",
+      "content": "If you are exposed to CO gas, you should check it often. Due to the compact size of the monitor, it is easy to carry so you can carry it easily, without any hassle."
+    },
+    "faq3": {
+      "title": "3. How accurate are the readings on the monitor?",
+      "content": "±(5ppmm + 5%)"
+    },
+    "faq4": {
+      "title": "4. How does the alarm on the monitor work?",
+      "content": "To activate or deactivate the alarm, use the 'S' button on the monitor."
+    },
+    "faq5": {
+      "title": "5. How many times does the alarm work?",
+      "content": "50-100 ppm- 3 times per 3 minutes\n101-200 ppm- 5 times per 3 minutes\n> 200 ppm- 10 times per minute"
+    },
+    "faq6": {
+      "title": "6. What is the use time of the monitor?",
+      "content": "About 14 hours after a full charge"
+    },
+    "faq7": {
+      "title": "7. Can the portable CO monitor be used in vehicles, such as cars and trucks?",
+      "content": "Due to its compact size and accurate data, the mini air quality monitor is highly versatile and suitable for a wide range of indoor and outdoor applications."
+    }
+  },
+  "nanoSlider": {
+    "slide1": {
+      "alt": "real-time measuring of vehicle co emissions with prana air co monitor",
+      "heading": "Portable · Easy to Carry",
+      "description": "Prana Air's nano air quality monitor is designed to help you achieve a healthier lifestyle. With its compact and user-friendly design, you can easily stay informed about the air you breathe without the need for bulky and complex equipment."
+    },
+    "slide2": {
+      "alt": "prana air pocket friendly co monitor",
+      "heading": "Pocket-friendly · Lightweight",
+      "description": "Real-time monitoring of CO levels allows you to make data-driven decisions to improve the air quality of your surrounding environment!"
+    }
+  },
+   "breadcrumbs": {
+    "home": "Home",
+    "airQualityMonitors": "Air Quality Monitors",
+    "nanoMonitor": "Nano Monitor"
+  },
+   "keychainMonitor": {
+    "images": {
+      "device": {
+        "alt": "prana air nano co monitor device"
+      },
+      "frontView": {
+        "alt": "Prana Air nano co monitor front view"
+      },
+      "leftSideView": {
+        "alt": "prana air nano co monitor left side view"
+      },
+      "backSideView": {
+        "alt": "Prana Air nano co monitor back side view"
+      }
+    },
+    "productTitle": "Nano CO Monitor",
+    "productSubtitle": "Your portable health device",
+    "mrp": "m.r.p.",
+    "price": "₹8,990",
+    "description": {
+      "paragraph1": "Prana Air nano CO monitor is a small portable device that enables real-time monitoring of carbon monoxide (CO) levels. With its advanced and innovative cutting-edge technology, you can keep track of your carbon footprint in real-time.",
+      "paragraph2": "It is a low-cost monitor that can give the same data reading like the high-end equipments"
+    },
+    "model": {
+      "title": "model",
+      "options": {
+        "nanoCO": "Nano CO",
+        "nanoCO2": "Nano CO2",
+        "nanoTVOC": "Nano TVOC/HCHO",
+        "breathalyzer": "Breathalyzer"
+      }
+    },
+    "quantity": {
+      "title": "Quantity"
+    },
+    "buyNowButton": "Buy Now"
+  },
+   "womenBagBanner": {
+    "heading": "Monitoring CO Gas",
+    "subheading": "has never been this easy!",
+    "description": "Prana Air nano CO monitor is convenient to carry over larger distances with a simple yet attractive style and high data accuracy.",
+    "icons": {
+      "cycling": "cycling icon",
+      "health": "health icon",
+      "running": "running icon",
+      "sitting": "sitting icon"
+    },
+    "mainImage": "Woman with CO Monitor"
+  },
+  "productQuality": {
+    "title": "Nano CO Monitor",
+    "subtitle": "Qualitative features",
+    "description": "It has a small, compact body with a minimal and attractive style. People adore our nano health consultant and the way it combines aesthetics and technology.-",
+    "features": {
+      "realTimeMonitoring": {
+        "alt": "real-time co monitoring icon",
+        "text": "Real-time Monitoring"
+      },
+      "portableDevice": {
+        "alt": "portable co monitor icon",
+        "text": "Portable Device"
+      },
+      "electrochemicalSensor": {
+        "alt": "electrochemical sensor on nano co monitor",
+        "text": "Electrochemical Sensor"
+      },
+      "dynamicUI": {
+        "alt": "Dynamic UI on co monitor",
+        "text": "Dynamic UI"
+      },
+      "battery": {
+        "alt": "battery icon",
+        "text": "1000 mAh Battery"
+      },
+      "hdDisplay": {
+        "alt": "HD-Color-Display",
+        "text": "HD Color Display"
+      },
+      "typeCCharging": {
+        "alt": "type-c charging",
+        "text": "Type-C Charging"
+      }
+    }
+  },
+  "highDefinitionBanner": {
+    "displaySize": "1.9",
+    "displayTitle": "Ultra High Definition color Display",
+    "description": "Prana Air portable CO monitor is designed with a simple yet attractive style, making it convenient to carry over long distances.",
+    "imageAlt": "High Definition Display"
+  },
+  "handyPortableSection": {
+    "handy": {
+      "title": "Handy",
+      "description": "Equipped with high-precision sensors, the ultra-high definition color screen of Nano CO monitor offers a more user-friendly and convenient way to monitor the real-time CO levels.",
+      "imageAlt": "handy-device"
+    },
+    "portable": {
+      "title": "Portable",
+      "description": "The mini health consultant from Prana Air is loved for its sleek, compact design that seamlessly combines aesthetics and advanced technology, making it a popular choice among users.",
+      "imageAlt": "prana air portable co monitor detector"
+    }
+  },
+  "carbonMonoxide": {
+    "imageAlt": "Carbon Monoxide Hazards",
+    "title": "Carbon Monoxide Hazards: Why is it critical?",
+    "description": "Carbon monoxide is a colorless, odorless, and non-irritating gas, therefore it cannot be detected with mere human senses. It is also likely to explode when mixed with air (limit: 12.5%∼74.2%). CO is very easy to combine with hemoglobin, which further makes it difficult for the blood to carry oxygen to other body parts. This compromises the tissue respiration rate and even death in severe cases. CO gas has toxic effects on tissues and cells of the whole body, especially on the cerebral cortex.",
+    "hazards": {
+      "title": "Health Hazards of",
+      "titleSpan": "CO Gas",
+      "level1": {
+        "range": "0-1 ppm :",
+        "description": "normal level"
+      },
+      "level2": {
+        "range": "2-9 PPM :",
+        "description": "ASHRAE 62-1989 Specific standard living area"
+      },
+      "level3": {
+        "range": "10-50 PPM :",
+        "description": "Avg. 8-hour stay in OSHA confined spaces"
+      },
+      "level4": {
+        "range": "51-100 PPM :",
+        "description": "OSHA Exposure Limits"
+      },
+      "level5": {
+        "range": "101-200 PPM :",
+        "description": "Mild headache, fatigue, nausea, and dizziness"
+      },
+      "level6": {
+        "range": ">800 PPM :",
+        "description": "Dizziness, nausea, and convulsion, death within 2-3 hrs."
+      }
+    }
+  },
+  "realTimeData": {
+    "imageAlt": "Real Time Data",
+    "title": "Real-time Data",
+    "subtitle": "CO levels within seconds",
+    "description": "Our advanced CO-Electrochemical sensing technology provides real-time data and insights on carbon emissions, enabling you to stay informed and reduce harmful carbon monoxide levels for a healthier lifestyle."
+  },
+  "outdoorBanner": {
+    "imageAlt": "Outdoor Monitor Device"
+  },
+  "electrochemicalHeading": {
+    "title": "Electrochemical Sensing Technology",
+    "subtitle": "For CO Detection",
+    "description": "It works by electrochemically oxidizing the CO gas at a platinum electrode, which generates a current proportional to the CO gas concentration. The generated current is then measured and processed by an electronic circuit to determine the CO concentration."
+  },
+  "smartChip": {
+    "title": "High-sensitive Smart Chip",
+    "subtitle": "for more Accurate Detection",
+    "description": "Built-in high-performance smart chip for electrochemical carbon monoxide detection to ensure more accurate detection by the instrument.",
+    "imageAlt": "Smart Chip",
+    "features": {
+      "sensitivity": "High Sensitivity",
+      "accuracy": "Accurate Data",
+      "speed": "Fast Operation Speed",
+      "efficiency": "Energy Efficient"
+    }
+  },
+  "attractiveDetails": {
+    "title": "Attractive details for easy carrying",
+    "features": {
+      "typeC": {
+        "title": "Type C",
+        "subtitle": "Charging",
+        "imageAlt": "prana air nano co monitor with type c charger"
+      },
+      "lanyard": {
+        "title": "Anti-loss",
+        "subtitle": "Lanyard",
+        "imageAlt": "anti loss lanyard strap on co monitor"
+      },
+      "screen": {
+        "title": "Ultra HD",
+        "subtitle": "Color screen",
+        "imageAlt": "ultra hd screen on prana air co monitor"
+      }
+    }
+  },
+  "productKeyFunction": {
+    "title": "Product Key Functions",
+    "imageAlt": "Product Key Functions",
+    "powerKey": {
+      "title": "power key",
+      "longPress": "Long Press : On/Off",
+      "singlePress": "Single Press : Change Temp. Unit (°C/F)"
+    },
+    "alarmKey": {
+      "singlePress": "Single Press : Turn Alarm",
+      "on": "on",
+      "off": "off",
+      "volumeOnAlt": "volume-on",
+      "volumeOffAlt": "volume-off"
+    },
+    "brightnessKey": {
+      "singlePress": "Single Press : Change Brightness Levels",
+      "fullBrightnessAlt": "full-brightness",
+      "halfBrightnessAlt": "half-brightness",
+      "lowBrightnessAlt": "low-brightness"
+    }
+  },
+   "batteryEndurance": {
+    "title": "Large-capacity Polymer",
+    "subtitle": "1000 mAh Battery Endurance",
+    "description": "Safe and Durable high-performance 1000 mAh large capacity polymer lithium ion battery, with super long endurance.",
+    "imageAlt": "Large Battery"
+  },
+  "realTimeCODetection": {
+    "title": "Real-time CO detection with",
+    "subtitle": "An intelligent alarm system",
+    "imageAlt": "CO Detection",
+    "levels": {
+      "green": {
+        "color": "Green",
+        "description": "Safe, No alarm sound:"
+      },
+      "coloredLevels": {
+        "colors": "Yellow, Orange, Red",
+        "description": "Drip sound cycle alarm, once every 3 minutes."
+      }
+    },
+    "detectionSpeed": {
+      "title": "Know the CO around you within 2 seconds:",
+      "description": "Detects CO in real-time with",
+      "refreshRate": "2 seconds",
+      "suffix": "data refresh rate."
+    },
+    "barLevels": {
+      "security": "Security",
+      "cycleAlarm1": "Cycle Alarm",
+      "cycleAlarm2": "Cycle Alarm",
+      "cycleAlarm3": "Cycle Alarm"
+    },
+    "ppmLevels": {
+      "level1": "0-50 PPM",
+      "level2": "51-100 PPM",
+      "level3": "101-200 PPM",
+      "level4": "≥201 PPM"
+    }
+  },
+   "technicalSpecification": {
+    "heading": "CO Monitor",
+    "subheading": "Technical Specifications",
+    "brochure": {
+      "alt": "brochore-btn",
+      "text": "Download Brochure"
+    },
+    "specs": {
+      "productName": {
+        "label": "Product Name :",
+        "value": "Nano CO Monitor"
+      },
+      "warmupTime": {
+        "label": "Warm-up time :",
+        "value": "35 Sec"
+      },
+      "workingTemp": {
+        "label": "Working Temp. :",
+        "value": "-20~60°C"
+      },
+      "detectionRange": {
+        "label": "Detection Range :",
+        "value": "0-1000 PPM"
+      },
+      "refreshRate": {
+        "label": "Data Refresh Rate :",
+        "value": "2 Sec"
+      },
+      "chargingMode": {
+        "label": "Charging Mode :",
+        "value": "USB Type-C"
+      },
+      "workingVoltage": {
+        "label": "Working Voltage :",
+        "value": "DC5V0 . 5A"
+      },
+      "operatingHumidity": {
+        "label": "Operating Humidity :",
+        "value": "0-95% RH"
+      },
+      "dimensions": {
+        "label": "Product Dimensions :",
+        "value": "W85 x D51 x H17 (mm)"
+      }
+    }
+  },
+  "comparison": {
+    "heading": "Comparison of Prana Air Nano CO Monitor Vs A High-End Monitor",
+    "subheading": "CO Monitor",
+    "parameters": {
+      "description": "Description :",
+      "parameter": "Parameter :",
+      "price": "Price :",
+      "weight": "Weight :",
+      "range": "Range :",
+      "accuracy": "Accuracy :",
+      "technology": "Technology :",
+      "portability": "Portability :"
+    },
+    "images": {
+      "nanoMonitor": "prana air nano co monitor low cost",
+      "highEndMonitor": "tsi high end co monitor"
+    },
+    "nanoMonitor": {
+      "name": "Nano CO Monitor",
+      "parameter": "CO, Temperature, Humidity",
+      "price": "Low Cost",
+      "weight": "75g",
+      "range": "0-1000 ppm",
+      "accuracy": "±5%",
+      "technology": "Electrochemical Sensor",
+      "portability": "Small & easy to carry"
+    },
+    "highEndMonitor": {
+      "name": "High-End CO Monitor",
+      "parameter": "CO",
+      "price": "High Cost",
+      "weight": "Almost 1 Kg",
+      "range": "0-5000 ppm",
+      "accuracy": "±3%",
+      "technology": "Electrochemical Sensor",
+      "portability": "Comparatively less portable"
+    }
+  }
+}

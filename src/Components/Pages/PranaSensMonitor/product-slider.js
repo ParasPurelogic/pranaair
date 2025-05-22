@@ -23,16 +23,8 @@ export default function ProductSlider() {
     }
 
     return (
-        <section className="slider-sec">
+        <section className="newslider-sec">
             <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="video-txt">
-                            <h2>Product</h2>
-                            <h3>In-house Manufacturing</h3>
-                        </div>
-                    </div>
-                </div>
                 <div className="row">
                     <div className="col-md-1"></div>
                     <div className="col-md-10">

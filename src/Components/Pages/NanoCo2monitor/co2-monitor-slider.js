@@ -1,9 +1,8 @@
 "use client"
-
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
-export default function CO2MonitorSlider() {
+export default function CO2MonitorSlider({ nanocoSliderContent = [] }) {
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -32,54 +31,25 @@ export default function CO2MonitorSlider() {
             className="home-slider"
             arrows={true}
         >
-            <div>
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-5 col-md-12">
-                            <div className="slider-image">
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2023/06/portable-nano-co2-monitor-of-prana-air.jpg"
-                                    alt="portable nano co2 monitor of prana air"
-                                    className="img-fluid"
-                                />
+            {nanocoSliderContent.map((slide) => (
+                <div key={slide.id}>
+                    <div className="container">
+                        <div className="row align-items-center">
+                            <div className="col-lg-5 col-md-12">
+                                <div className="slider-image">
+                                    <img src={slide.image} alt={slide.heading} className="img-fluid" />
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-lg-7 col-md-12">
-                            <div className="slider-content">
-                                <h2>Small · Sleek · Reliable</h2>
-                                <p>
-                                    Our mini air quality monitor is a perfect companion for a healthier lifestyle. Stay informed about the
-                                    air you breathe without the hassle of large and complicated equipment.
-                                </p>
+                            <div className="col-lg-7 col-md-12">
+                                <div className="slider-content">
+                                    <h2>{slide.heading}</h2>
+                                    <p>{slide.paragraph}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-5 col-md-12">
-                            <div className="slider-image">
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2023/06/easy-to-use-anywhere-prana-air-co2-monitor.jpg"
-                                    alt="portable nano co2 monitor of prana air"
-                                    className="img-fluid"
-                                />
-                            </div>
-                        </div>
-                        <div className="col-lg-7 col-md-12">
-                            <div className="slider-content">
-                                <h2>Intelligent · Compact · Accurate</h2>
-                                <p>
-                                    Real-time monitoring of indoor CO2 levels allows you to make data-driven decisions to improve the air
-                                    quality of your indoor environments!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            ))}
         </Carousel>
     )
 }

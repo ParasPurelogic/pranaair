@@ -1,0 +1,383 @@
+{
+     "co2GraphAnimation": {
+    "title": "Create multiple alerts",
+    "description": "Carbon dioxide is a gas exhaled by human beings as a part of their respiration process. As  \"Carbon dioxide is a gas exhaled by human beings as a part of their respiration process. As the population grows and the number of individuals per square foot rises.",
+    "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/01/analysis-data.webp",
+    "altText": "CO2 data analysis graph"
+  },
+  "co2SensorHero": {
+    "title": {
+      "strong": "CO2",
+      "normal": "SENSOR",
+      "technology": "NDIR Technology"
+    },
+    "resolution": "1 PPM Resolution",
+    "requestButton": "Request A Quote",
+    "altTexts": {
+      "buttonIcon": "Button Icon"
+    }
+  },
+  "co2SensorFeature": {
+    "heading": {
+      "normal": "Advanced Carbon Dioxide (CO₂) sensor with",
+      "highlighted": "NDIR Technology"
+    },
+     "tabs": {
+      "tab1": {
+        "alt": "Prana Air PM Sensor"
+      },
+      "tab2": {
+        "alt": "Prana Air PM2.5 Sensor"
+      },
+      "tab3": {
+        "alt": "Prana Air PM Sensor of metallic body"
+      },
+      "tab4": {
+        "alt": "Prana Air PM2.5 Sensor of side view"
+      }
+    },
+    "description": {
+      "part1": "Breathe smarter with Prana Airs state-of-the-art CO₂ sensor, powered by",
+      "highlight1": "Non-Dispersive Infrared (NDIR) technology",
+      "part2": "This advanced sensor provides unparalleled accuracy in real-time CO₂ monitoring, ensuring healthier indoor environments for your",
+      "highlight2": "home, office, or industrial space"
+    }
+  },
+    "co2SensorKeyFeatures": {
+    "heading": "Key features of the CO2 sensor",
+    "features": {
+      "accuracy": {
+        "alt": "Unmatched Accuracy",
+        "title": "Unmatched Accuracy",
+        "description": "Our CO2 sensor offers the high accuracy for the CO2 concentration readings with a 1 PPM resolution."
+      },
+      "longTerm": {
+        "alt": "Long-term working power",
+        "title": "Long-term working power",
+        "description": "The robust NDIR technology in our sensor ensures the long-term performance with less drift over time."
+      },
+      "smallSize": {
+        "alt": "Smaller in size",
+        "title": "Smaller in size",
+        "description": "Its size makes our CO2 sensor easy to install in any system or device and make it portable for easy installation."
+      },
+      "adaptability": {
+        "alt": "Any environment adaptability",
+        "title": "Any environment adaptability",
+        "description": "Our CO2 sensor is suitable for various applications like air quality monitors, greenhouses, HVAC systems etc."
+      },
+      "calibration": {
+        "alt": "Auto and manual calibration",
+        "title": "Auto and manual calibration",
+        "description": "Our CO2 sensor offers the automatic and manual calibration function to maintain better accuracy in different condition."
+      },
+      "signalOutput": {
+        "alt": "Signal output PWM/UART",
+        "title": "Signal output PWM/UART",
+        "description": "This sensor supports 2 advanced CO2 data output formats for easy data transfer and compatibility with multiple platforms."
+      },
+      "energy": {
+        "alt": "Use less energy",
+        "title": "Use less energy",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      },
+      "support": {
+        "alt": "Better customer support",
+        "title": "Better customer support",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      }
+    }
+  },
+   "co2SensorTechnology": {
+    "heading": "Technology we use in Non Dispersive Infrared (NDIR) CO2 Sensor",
+    "subheading": "How does Prana Airs CO2 sensor work and calculate Its concentration?",
+    "description": {
+      "part1": "Our carbon dioxide (CO2) sensors are based on",
+      "highlight": "NDIR technology",
+      "part2": ", which stands for Non-Dispersive Infrared radiation. This procedure is commonly used to detect carbon-based gases in the atmosphere, such as CO2."
+    },
+    "image": {
+      "alt": "NDIR CO2 Sensor"
+    }
+  },
+  "co2SensorWhyNecessary": {
+    "heading": "Why is it necessary to monitor carbon dioxide gas?",
+    "description": "Carbon dioxide is a gas exhaled by human beings as a part of their respiration process. As the population grows and the number of individuals per square foot rises, CO2 concentrations can be substantially higher indoors than they are outside. The usual CO2 level in outdoor air is 400 parts per million or ppm, and it is now growing at a rate of 2 ppm every year. Indoors, due to stuffy rooms or insufficient ventilation,",
+    "healthImpacts": {
+      "title": "Health Impacts",
+      "item1": {
+        "alt": "Dizziness",
+        "title": "Dizziness"
+      },
+      "item2": {
+        "alt": "Restlessness",
+        "title": "Restlessness"
+      },
+      "item3": {
+        "alt": "Altered brain activity",
+        "title": "Altered brain activity"
+      },
+      "item4": {
+        "alt": "Breathing difficulty",
+        "title": "Breathing difficulty"
+      },
+      "item5": {
+        "alt": "Blood pressure elevation",
+        "title": "Blood pressure elevation"
+      },
+      "item6": {
+        "alt": "Nausea",
+        "title": "Nausea"
+      }
+    },
+    "analysis": {
+      "title": "Analysis of CO2 graph"
+    },
+    "crucial": {
+      "title": "Why is Monitoring CO₂ Crucial?",
+      "subtitle": "Excess CO₂ in enclosed spaces can lead to:",
+      "item1": {
+        "alt": "Reduced Alertness",
+        "title": "Reduced Alertness:",
+        "description": "High CO₂ levels impair focus and productivity."
+      },
+      "item2": {
+        "alt": "Health Issues",
+        "title": "Health Issues",
+        "description": "Long-term exposure impacts respiratory health and cognitive functions."
+      },
+      "item3": {            
+        "alt": "Poor Indoor Comfort",
+        "title": "Poor Indoor Comfort",
+        "description": "Stale air contributes to discomfort and fatigue."
+      }
+    }
+  },
+    "co2SensorIndexScore": {
+    "heading": "CO2 Air Quality Index Score and What does it say?",
+    "tab1": {
+      "title": "Good",
+      "iconAlt": "Good air quality icon",
+      "min": "0",
+      "max": "600",
+      "description": "Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+    },
+    "tab2": {
+      "title": "Moderate",
+      "iconAlt": "Moderate air quality icon",
+      "min": "601",
+      "max": "800",
+      "description": "Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+    },
+    "tab3": {
+      "title": "Poor",
+      "iconAlt": "Poor air quality icon",
+      "min": "0",
+      "max": "600",
+      "description": "Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+    },
+    "tab4": {
+      "title": "Unhealthy",
+      "iconAlt": "Unhealthy air quality icon",
+      "min": "0",
+      "max": "600",
+      "description": "Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+    },
+    "tab5": {
+      "title": "Severe",
+      "iconAlt": "Severe air quality icon",
+      "min": "0",
+      "max": "600",
+      "description": "Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+    },
+    "tab6": {
+      "title": "Hazardous",
+      "iconAlt": "Hazardous air quality icon",
+      "min": "0",
+      "max": "600",
+      "description": "Our CO2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+    }
+  },
+  "co2SensorCalibration": {
+    "heading": "Sensor Calibration",
+    "description": "Prana Air sensors are calibrated by the zero-point calibration method. This method reveals a range of measurements of the instrument. The zero point for sensor calibration is 400 ppm and the calibration cycle is of 96 hours (4 days) duration.",
+    "imageAlt": "Sensor Calibration Video"
+  },
+   "co2SensorApplications": {
+    "heading": "Applications of Prana Air CO2 Sensor",
+    "applications": {
+      "airFiltration": {
+        "alt": "Air Filtration Systems",
+        "title": "Air Filtration Systems",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      },
+      "hvac": {
+        "alt": "HVAC Industry",
+        "title": "HVAC Industry",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      },
+      "research": {
+        "alt": "Research Purposes",
+        "title": "Research Purposes",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      },
+      "landfill": {
+        "alt": "Landfill Gas Monitoring",
+        "title": "Landfill Gas Monitoring",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      },
+      "smartHomes": {
+        "alt": "Smart Homes",
+        "title": "Smart Homes",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      },
+      "offices": {
+        "alt": "Offices",
+        "title": "Offices",
+        "description": "Our co2 sensor is apt for real-time air monitoring due to low response time. They are quick and accurate."
+      }
+    }
+  },
+  "co2SensorSources": {
+    "heading": "Sources Of Carbon Dioxide Gas",
+    "manmadeHeading": "Manmade Sources",
+    "manmadeSources": {
+      "combustion": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/global-warming-pollution.webp",
+        "alt": "Combustion of fuel",
+        "description": "Combustion of fuel by cars, aircraft, or trucks."
+      },
+      "burning": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/burning-fire-background-green-trees.webp",
+        "alt": "Burning of waste",
+        "description": "Burning of waste in the open"
+      },
+      "industries": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/pollution-concept-factory-emision.webp",
+        "alt": "Industries",
+        "description": "Industries that use burning operations"
+      },
+      "smoking": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/man-smoking-cigarette.webp",
+        "alt": "Smoking",
+        "description": "Smoking"
+      }
+    },
+    "naturalHeading": "Natural Sources",
+    "naturalSources": {
+      "carbonateRocks": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/beautiful-shot-rocks-seashore.webp",
+        "alt": "Carbonate rocks",
+        "description": "Carbonate rocks after contact with water react and produce this gas"
+      },
+      "volcanicEruption": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/beautiful-shot-active-volcano-with-flowing-lava-smoke-clear-sky.webp",
+        "alt": "Volcanic eruption",
+        "description": "Volcanic eruption produces a large amount of CO2"
+      },
+      "glaciers": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/glaciers-icebergs-ai-generated-image.webp",
+        "alt": "Glaciers",
+        "description": "Occurs in glaciers as it is easily dissolved in water"
+      },
+      "petroleum": {
+        "imageUrl": "https://www.pranaair.com/wp-content/uploads/2025/02/oil-pump-background-industrial-landscape-winter-sky-smoke.webp",
+        "alt": "Petroleum deposits",
+        "description": "Petroleum deposits"
+      }
+    }
+  },
+   "co2SensorTechnicalSpecifications": {
+    "heading": "Technical Specifications",
+    "buttons": {
+      "arduinoCode": "Arduino Code",
+      "datasheet": "Datasheet",
+      "linkIconAlt": "link icon"
+    },
+    "specifications": {
+      "productName": {
+        "label": "Product Name:",
+        "value": "PM Sensor"
+      },
+      "ratedVoltage": {
+        "label": "Rated voltage:",
+        "value": "5V"
+      },
+      "communicationPortLevel": {
+        "label": "Communication Port Level:",
+        "value": "3.3 V"
+      },
+      "dimensions": {
+        "label": "Dimensions L x W x H :",
+        "value": "4.5 x 4.5 x 2 cm"
+      },
+      "particleSizeResolution": {
+        "label": "Particle Size Resolution:",
+        "value": "0.3 µm"
+      },
+      "storageTemperature": {
+        "label": "Storage Temperature :",
+        "value": "-20~85 C°"
+      },
+      "workingTemperature": {
+        "label": "Working Temperature:",
+        "value": "-20~70 C°"
+      },
+      "workingHumidity": {
+        "label": "Working humidity:",
+        "value": "0~99C%RH (No Moisture formation)"
+      },
+      "ratedCurrent": {
+        "label": "Rated current:",
+        "value": "70mA"
+      },
+      "massConcentrationDataResolution": {
+        "label": "Mass concentration data resolution:",
+        "value": "1 μg/m3"
+      }
+    },
+    "dimensionsImageAlt": "Dimensions CO2 Sensor"
+  },
+  "contactHeadingSensors": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "relatedSensors": {
+    "title": "Related Sensors",
+    "linkIconAlt": "link icon",
+    "sensors": {
+      "co2": {
+        "title": "Co2 Sensor",
+        "alt": "prana air co2 sensor"
+      },
+      "co": {
+        "title": "CO Sensor",
+        "alt": "Prana Air CO gas sensor"
+      },
+      "ammonia": {
+        "title": "Ammonia Sensor",
+        "alt": "prana air ammonia sensor NH3"
+      },
+      "h2s": {
+        "title": "H2S Sensor",
+        "alt": "Prana Air H2S sensor"
+      },
+      "ozone": {
+        "title": "Ozone Gas",
+        "alt": "Prana Air Ozone sensor O3"
+      },
+      "chlorine": {
+        "title": "Chlorine Gas",
+        "alt": "Prana Air Chlorine sensor"
+      },
+      "so2": {
+        "title": "SO2 Sensor",
+        "alt": "Prana Air SO2 sensor"
+      },
+      "no2": {
+        "title": "NO2 Sensor",
+        "alt": "Prana Air NO2 sensor"
+      }
+    }
+  }
+}

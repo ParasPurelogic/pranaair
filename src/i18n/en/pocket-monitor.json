@@ -1,0 +1,429 @@
+{
+      "hero": {
+    "title": {
+      "productName": "Pocket PM2.5",
+      "productType": "Monitor (WiFi)"
+    },
+    "description": {
+      "line1": "Track the real-time air quality levels on the go",
+      "line2": "with our pocket air monitor."
+    },
+    "features": {
+      "smallest": "Smallest",
+      "portable": "Portable",
+      "affordable": "Affordable"
+    },
+    "price": "₹ 3,990.00",
+    "buyButton": "Buy Now",
+    "altTexts": {
+      "buttonIcon": "icon"
+    }
+  },
+  "productFeatures": {
+    "title": "Pocket PM2.5 Monitor",
+    "subtitle": "Air Quality Monitor",
+    "altTexts": {
+      "wifiIcon": "WiFi",
+      "centerImage": "Pocket PM2.5 Monitor"
+    },
+    "features": {
+      "realTimePM25": {
+        "title": "Real-Time PM2.5",
+        "description": "Pocket Monitor helps you to track real-time PM2.5 pollution level wherever you go indoor & outdoor.",
+        "altText": "Real-Time PM2.5"
+      },
+      "lithiumBattery": {
+        "title": "450 mAh Lithium Battery",
+        "description": "Charge it once and use it a lot with 450 mAh lithium battery last for upto 3-4 hours.",
+        "altText": "450 mAh Lithium Battery"
+      },
+      "wifiEnabled": {
+        "title": "WiFi Enabled",
+        "description": "The smallest PM2.5 monitor has the WiFi connectivity feature to analyze the data on mobile app.",
+        "altText": "WiFi Enabled"
+      },
+      "lcdDisplay": {
+        "title": "LCD Display Screen",
+        "description": "The LCD display screen gives a clear PM reading indicating if the Air is safe or not.",
+        "altText": "LCD Display Screen"
+      }
+    },
+    "aqiTabs": {
+      "aqi": "AQI",
+      "pm1": "PM1",
+      "pm25": "PM2.5",
+      "pm10": "PM10"
+    },
+    "aqiIndicators": {
+      "good": {
+        "range": "0-50",
+        "label": "Good"
+      },
+      "moderate": {
+        "range": "51-100",
+        "label": "Moderate"
+      },
+      "poor": {
+        "range": "101+",
+        "label": "Poor"
+      }
+    }
+  },
+  "worldsSmallest": {
+    "title": {
+      "part1": "Worlds",
+      "highlight": "Smallest, Portable & Affordable",
+      "part2": "PM2.5 Air Quality Monitor"
+    },
+    "subtitle": "A smart portable device that monitors ambient dust particles",
+    "altTexts": {
+      "pranaAirLogo": "Prana Air"
+    }
+  },
+  "multipleDisplays": {
+    "title": "Multiple Data-Displays",
+    "description": "Displaying the real-time PM2.5 levels in form of both the emoticon and numerical levels like face, number and graph.",
+    "altTexts": {
+      "pranaAirLogo": "Prana Air",
+      "leafIcon": "Leaf icon",
+      "displayDevice": "PM2.5 monitor face and number screen",
+      "graphScreen": "PM2.5 monitor graph screen",
+      "particleCountScreen": "PM2.5 monitor particle count screen",
+      "faceNumberIcon": "Face and number icon",
+      "graphIcon": "Graph icon",
+      "numberIcon": "Number icon"
+    },
+    "tabs": {
+      "main": {
+        "title": "AQI, PM 1, PM2.5 & PM10 Display",
+        "description": "Front view"
+      },
+      "graph": {
+        "title": "Graph Screen",
+        "description": "Historical Data"
+      },
+      "particle": {
+        "title": "Particle Count",
+        "description": "Numerical View"
+      }
+    }
+  },
+   "aqiPlatforms": {
+    "tabs": {
+      "app": "AQI App",
+      "dashboard": "AQI Dashboard",
+      "tvApp": "AQI TV App"
+    },
+    "altTexts": {
+      "leafIcon": "Leaf icon",
+      "appPhone": "AQI Mobile App",
+      "healthAdvice": "health advice of pm pollution level on AQI app",
+      "historicData": "historic pm data on AQI app from Prana Air Pocket PM Monitor",
+      "monthlyInsight": "monthly calender pm data on AQI app",
+      "filtrationScore": "air pollution filtration score detected on AQI app",
+      "realTimePM25": "Real-time PM2.5 air quality level",
+      "insightfulDashboard": "Insightful air quality web-dashboard",
+      "historicalGraphs": "Historical air quality graphs of PM level",
+      "healthRecommendations": "Air quality health recommendations",
+      "dashboardPreview": "AQI Dashboard Preview",
+      "realTimePM": "Real-time PM1, PM2.5, PM10 air quality level",
+      "historicalPMData": "Historical PM data for 1, 8, 12 hours",
+      "controlTVApp": "Control AQI TV app from smartphone",
+      "airQualityScore": "The data indicates air quality score",
+      "tvAppPreview": "AQI TV App Preview"
+    },
+    "app": {
+      "description": "Access the real-time particulate matter PM1, PM2.5, PM10 data of your PM2.5 monitor in AQI mobile app.",
+      "title": "Health Advice",
+      "subtitle": "Prana Air Pocket PM2.5 Monitor offers real-time health advice based on current air quality conditions.",
+      "features": {
+        "healthAdvice": "Health Advice",
+        "historicData": "Historic Data",
+        "monthlyInsight": "Monthly Insight",
+        "filtrationScore": "Filtration Score"
+      }
+    },
+    "dashboard": {
+      "description": "The dashboard is a free and easy-to-use tool that allows you to connect your PM2.5 monitor and access your data from anywhere in the world.",
+      "features": {
+        "realTimePM25": "Real-time PM2.5 air quality level",
+        "insightfulDashboard": "Insightful air quality web-dashboard",
+        "historicalGraphs": "Historical air quality graphs of PM level",
+        "healthRecommendations": "Air quality health recommendations"
+      }
+    },
+    "tvApp": {
+      "description": "Get a real-time overview of your PM2.5 air quality on the big screen with AQI TV app.",
+      "features": {
+        "realTimePM": "Real-time PM1, PM2.5, PM10 air quality level",
+        "historicalPMData": "Historical PM data for 1, 8, 12 hours.",
+        "controlTVApp": "Control AQI TV app from smartphone.",
+        "airQualityScore": "The data indicates air quality score."
+      }
+    }
+  },
+    "remoteData": {
+    "title": "Remote Data Accessibility",
+    "description": "AQI data cloud storage eases the accessibility of the monitors air quality data remotely anytime anywhere wherever you go.",
+    "altTexts": {
+      "pranaAirLogo": "Prana Air",
+      "pmMonitor": "PM Monitor",
+      "wifiConnectivity": "Wifi Connectivity",
+      "aqiCloudServer": "AQI Cloud Server",
+      "pmDataOnApp": "PM2.5 Data on App"
+    },
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Device",
+        "label": "PM Monitor"
+      },
+      "step2": {
+        "number": "02",
+        "title": "Wifi",
+        "label": "Wifi Connectivity"
+      },
+      "step3": {
+        "number": "03",
+        "title": "AQI cloud",
+        "label": "AQI Cloud Server"
+      },
+      "step4": {
+        "number": "04",
+        "title": "AQI App",
+        "label": "PM2.5 Data on App"
+      }
+    }
+  },
+  "dataConnectivity": {
+    "title": "Pocket PM2.5 Monitor",
+    "subtitle": "Data connectivity to Mobile App",
+    "altTexts": {
+      "pranaAirLogo": "Prana Air",
+      "installApp": "Install AQI App",
+      "connectDevice": "Connect Device",
+      "scanQRCode": "Scan QR Code",
+      "getInsightfulData": "Get Insightful Data",
+      "installAppPreview": "Install AQI App Preview",
+      "connectDevicePreview": "Connect Device Preview",
+      "scanQRCodePreview": "Scan QR Code Preview",
+      "insightfulDataPreview": "Insightful Data Preview",
+      "googlePlayStore": "Google Play Store",
+      "appleAppStore": "Apple App Store"
+    },
+    "steps": {
+      "step1": {
+        "title": "1. INSTALL AQI APP & SIGN UP",
+        "description": "Install the AQI app on your smartphones from the app store. Sign up & log in through your account."
+      },
+      "step2": {
+        "title": "2. CONNECT THE DEVICE WITH THE APP",
+        "description": "Go to My Device & select Pocket PM2.5 Monitor. Long press the power button on top of the device until a QR code appears on the screen."
+      },
+      "step3": {
+        "title": "3. SCAN THE QR & CONFIGURE WIFI",
+        "description": "Scan the QR code or Enter the device ID displayed on your device screen. Fill in your Wi-Fi details. Your device should successfully be connected now."
+      },
+      "step4": {
+        "title": "4. NOW GET THE INSIGHTFUL DATA-",
+        "description": "Analyse the PM2.5 level in real-time & historical data stored in the AQI cloud through the app on your smartphone."
+      }
+    },
+    "downloadApp": {
+      "title": "Download the",
+      "highlightText": "AQI App",
+      "description": "Integrate your monitors data to our mobile application to access the data remotely and analyze the historical trend."
+    }
+  },
+  "easyMonitoring": {
+    "title": "Monitoring PM2.5",
+    "subtitle": "has never been this easy!",
+    "description": "Monitor PM2.5 levels in real time, easily and accurately with Prana Air Pocket PM2.5 Air Quality Monitor. This compact and portable monitor is perfect for tracking air quality in your home, office, car, or anywhere else you go. Simply turn it on and it will start measuring PM2.5 levels immediately. The large, easy-to-read display shows you the current PM2.5 level, as well as air quality recommendations.",
+    "altTexts": {
+      "pranaAirLogo": "Prana Air",
+      "monitorWithApp": "Prana Air PM2.5 Monitor with mobile app"
+    }
+  },
+  "unboxing": {
+    "title": "Unboxing of Prana Air Pocket PM2.5 Air Quality Monitor",
+    "altTexts": {
+      "pranaAirLogo": "Prana Air"
+    }
+},
+ "productGallery": {
+    "title": "Pocket PM2.5 Monitor",
+    "altTexts": {
+      "leafIcon": "Leaf icon",
+      "frontView": "Prana Air smart portable monitor",
+      "sideView": "Pocket monitor side view",
+      "backView": "PM pocket monitor side view",
+      "brochureBtn": "Download Brochure"
+    },
+    "brochure": "Download Brochure"
+  },
+  "salientFeatures": {
+    "title": "Salient Features",
+    "subtitle": "Pocket PM2.5 Monitor",
+    "description": "It is a smart portable monitor with amazing features that understand the quality of the air you breathe in real-time indoors & outdoor.",
+    "altTexts": {
+      "leafIcon": "Leaf icon"
+    },
+    "features": {
+      "particlesCount": {
+        "title": "PM1, PM2.5, PM10",
+        "value": "Particles Count"
+      },
+      "connectivity": {
+        "title": "Connectivity",
+        "value": "WiFi 2.4 GHz"
+      },
+      "battery": {
+        "title": "450mAh",
+        "value": "Battery"
+      },
+      "range": {
+        "title": "0-999µg/m³",
+        "value": "Range"
+      }
+    },
+    "buttons": {
+      "brochure": {
+        "text": "Brochure",
+        "altText": "Brochure"
+      },
+      "manual": {
+        "text": "Manual",
+        "altText": "Manual"
+      }
+    }
+  },
+  "techSpecs": {
+    "title": "Technical Specifications",
+    "subtitle": "Pocket PM2.5 Monitor",
+    "altTexts": {
+      "leafIcon": "Leaf icon"
+    },
+    "specs": {
+      "sensor": {
+        "label": "Sensor",
+        "value": "Laser sensor"
+      },
+      "weight": {
+        "label": "Weight",
+        "value": "60 gram"
+      },
+      "dimension": {
+        "label": "Dimension",
+        "value": "5.8 x 2.5 x 4.6 cm"
+      },
+      "range": {
+        "label": "Range",
+        "value": "Up to 999 µg/m³"
+      },
+      "powerSupply": {
+        "label": "Power Supply",
+        "value": "5V DC / Type-C USB cable"
+      },
+      "display": {
+        "label": "Display",
+        "value": "LCD Display"
+      },
+      "connectivity": {
+        "label": "Connectivity",
+        "value": "WiFi [2.4GHz]"
+      },
+      "dataStorage": {
+        "label": "Data Storage",
+        "value": "AQI Cloud Storage (option)"
+      },
+      "mobileApp": {
+        "label": "Mobile App Enabled",
+        "value": "AQI Mobile App [iOS & Android]"
+      },
+      "battery": {
+        "label": "Battery",
+        "value": "450 mAh"
+      }
+    }
+  },
+   "bannerSlider": {
+    "banner": {
+      "title": "Smallest & Portable\nAir Quality Monitor",
+      "altTexts": {
+        "leafIcon": "Leaf icon",
+        "monitorImage": "Smallest and Portable Air Quality Monitor"
+      },
+      "buttons": {
+        "buyNow": "Buy Now",
+        "amazon": "Amazon"
+      }
+    },
+    "slider": {
+      "controls": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "slides": {
+        "slide1": {
+          "altText": "PM2.5 Monitor Graphic Display"
+        },
+        "slide2": {
+          "altText": "PM2.5 Monitor Graphic Display"
+        },
+        "slide3": {
+          "altText": "PM2.5 Monitor Numeric Display"
+        }
+      }
+    }
+  },
+   "clientele": {
+    "title": "Our Clientele",
+    "altTexts": {
+      "leafIcon": "Leaf icon"
+    }
+  },
+   "faqSection": {
+    "title": "FAQs",
+    "altTexts": {
+      "leafIcon": "Leaf icon"
+    },
+    "items": [
+      {
+        "number": "1",
+        "question": "What is PM2.5, and why is it important to monitor?",
+        "answer": "PM2.5 refers to fine particulate matter with a diameter of 2.5 micrometers or smaller. It includes pollutants like dust, smoke, and pollutants that can be harmful to health. Monitoring PM2.5 levels is crucial because high concentrations can lead to respiratory and cardiovascular problems."
+      },
+      {
+        "number": "2",
+        "question": "How does Prana Air Pocket PM2.5 monitor work?",
+        "answer": "The Prana Air Pocket PM2.5 monitor uses a high-precision laser sensor to detect and measure airborne particles. The sensor counts the number of particles in different size ranges (PM1, PM2.5, and PM10) and calculates the concentration in micrograms per cubic meter (µg/m³). This data is then displayed on the LCD screen and can be transmitted via WiFi to the AQI app for remote monitoring and analysis."
+      },
+      {
+        "number": "3",
+        "question": "Is the Prana Air PM2.5 monitor easy to use?",
+        "answer": "Yes, the Prana Air PM2.5 monitor is designed for ease of use. Simply power it on, and it immediately begins measuring air quality. The clear LCD display shows readings in real-time, with color-coded indicators for easy interpretation. Connecting to the AQI app is straightforward with the step-by-step instructions provided."
+      },
+      {
+        "number": "4",
+        "question": "Is the device portable?",
+        "answer": "The Pocket PM2.5 Monitor is one of the smallest and most portable air quality monitors available. Weighing just 60 grams and measuring 5.8 x 2.5 x 4.6 cm, it fits easily in your pocket or bag. The 450 mAh battery provides 3-4 hours of continuous use, making it perfect for monitoring air quality on the go."
+      },
+      {
+        "number": "5",
+        "question": "Is there a mobile app for monitoring the data remotely?",
+        "answer": "Yes, the Prana Air Pocket PM2.5 Monitor connects to the AQI mobile app (available for both iOS and Android). Through the app, you can view real-time data, historical trends, health advice based on current air quality, and monthly insights. The data is stored in the AQI cloud, allowing you to access it from anywhere at any time."
+      },
+      {
+        "number": "6",
+        "question": "Is Prana Air PM2.5 monitor suitable for outdoor use?",
+        "answer": "Yes, the Prana Air PM2.5 monitor is designed for both indoor and outdoor use. Its portable design makes it ideal for checking air quality in various environments, from your home and office to outdoor spaces like parks or construction sites. The device can measure PM levels up to 999 µg/m³, making it suitable for a wide range of air quality conditions."
+      },
+      {
+        "number": "7",
+        "question": "Does it have warranty period?",
+        "answer": "Yes, the Prana Air Pocket PM2.5 Monitor comes with a standard 1-year manufacturers warranty that covers defects in materials and workmanship under normal use. Extended warranty options are also available at the time of purchase. For warranty claims or service, please contact our customer support team with your purchase details."
+      }
+    ]
+  }
+
+}

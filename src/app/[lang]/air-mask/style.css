@@ -16,6 +16,7 @@ body p,
 
 
 @media screen and (max-width: 767px) {
+
   #rev_slider_2_1,
   .tp-fullwidth-forcer {
     height: 300px !important;
@@ -354,6 +355,7 @@ a.bg-btn.bg-orange img {
   line-height: 1.4;
   font-size: 13px;
   padding: 10px;
+  color: #fff;
   text-align: left;
 }
 
@@ -387,12 +389,12 @@ a.bg-btn.bg-orange img {
     width: 50%;
   }
 
-  .padd-more .padd > .vc_column-inner {
+  .padd-more .padd>.vc_column-inner {
     position: relative;
     min-height: auto;
   }
 
-  .padd-more .padd > .vc_column-inner > .wpb_wrapper {
+  .padd-more .padd>.vc_column-inner>.wpb_wrapper {
     position: relative;
     top: auto;
     transform: none;
@@ -422,12 +424,12 @@ a.bg-btn.bg-orange img {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .padd-more .padd > .vc_column-inner {
+  .padd-more .padd>.vc_column-inner {
     position: relative;
     min-height: auto;
   }
 
-  .padd-more .padd > .vc_column-inner > .wpb_wrapper {
+  .padd-more .padd>.vc_column-inner>.wpb_wrapper {
     position: relative;
     top: auto;
     transform: none;
@@ -451,12 +453,12 @@ a.bg-btn.bg-orange img {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .padd-more .padd > .vc_column-inner {
+  .padd-more .padd>.vc_column-inner {
     position: relative;
     min-height: auto;
   }
 
-  .padd-more .padd > .vc_column-inner > .wpb_wrapper {
+  .padd-more .padd>.vc_column-inner>.wpb_wrapper {
     position: relative;
     top: auto;
     transform: none;
@@ -484,12 +486,12 @@ a.bg-btn.bg-orange img {
     padding-bottom: 80px !important;
   }
 
-  .companions-col > .vc_column-inner > .wpb_wrapper > .wpb_text_column:nth-child(2),
-  .companions-col > .vc_column-inner > .wpb_wrapper > .wpb_text_column:nth-child(3) {
+  .companions-col>.vc_column-inner>.wpb_wrapper>.wpb_text_column:nth-child(2),
+  .companions-col>.vc_column-inner>.wpb_wrapper>.wpb_text_column:nth-child(3) {
     float: left;
   }
 
-  .companions-col > .vc_column-inner > .wpb_wrapper > .wpb_text_column:nth-child(2) {
+  .companions-col>.vc_column-inner>.wpb_wrapper>.wpb_text_column:nth-child(2) {
     margin-right: 15px;
   }
 
@@ -773,6 +775,7 @@ a.bg-btn.bg-orange img {
 }
 
 @media (max-width: 767px) {
+
   .col-md-1,
   .col-md-2,
   .col-md-6,
@@ -816,4 +819,3 @@ span.woocommerce-Price-amount.amount {
   font-size: 32px !important;
   color: #ffffff !important;
 }
-

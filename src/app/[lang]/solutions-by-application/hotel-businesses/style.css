@@ -19,6 +19,10 @@ body p,
     font-family: 'Poppins', sans-serif !important;
 }
 
+.custom {
+    flex-wrap: nowrap;
+}
+
 .school_banner_box {
     padding: 0 0 160px;
     background-size: cover;
@@ -1187,6 +1191,7 @@ section.img-box-sec {
     .airqulality_contact_section {
         padding: 0 0px !important;
     }
+
     .custom {
         flex-wrap: wrap;
     }
@@ -1224,18 +1229,23 @@ section.img-box-sec {
     .airqulality_contact_section {
         padding: 0 !important;
     }
+
     .contact-heading p {
         width: 70%;
     }
+
     .client_logo_section img {
         width: 70%;
     }
+
     .airgraph_cntr {
         padding: 0 20px !important;
     }
+
     .slider_details_box h3 {
         font-size: 25px;
     }
+
     .custom {
         flex-wrap: wrap;
     }

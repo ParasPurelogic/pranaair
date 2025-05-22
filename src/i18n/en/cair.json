@@ -1,0 +1,799 @@
+{
+  "banner": {
+    "titleHighlight": "Cair+",
+    "titleRest": "Indoor Air Quality Monitor",
+    "description": "Track your indoor air quality with a low-cost, highly accurate, and portable device. It makes invisible air contaminants presence visible in your house.",
+    "feature1": "Low Cost",
+    "feature2": "Accurate",
+    "feature3": "Portable",
+    "buyNowText": "Buy Now",
+    "buyNowLink": "https://www.pranaair.com/product/cair-plus-monitor/",
+    "arrowImageSrc": "https://www.pranaair.com/wp-content/uploads/2023/12/Vector-1.png",
+    "arrowImageAlt": "Right arrow"
+  },
+  "features": {
+    "title": "Features of Cair+ Monitor",
+    "subtitle": "Cair+ monitoring device is where your search stops",
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/11/pranaair-cair-monitor-all-specifications.webp",
+      "alt": "pranaair cair monitor all specification"
+    },
+    "items": {
+      "1": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/real-time-monitoring-icon.png",
+          "alt": "real time air quality monitoring icon"
+        },
+        "title": "Real-Time Monitoring",
+        "description": "AQI, PM2.5, PM10, CO2, TVOC, HCHO, Temperature, and Humidity."
+      },
+      "2": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/micro-sd-card-storage.png",
+          "alt": "micro sd card storage"
+        },
+        "title": "Micro SD Card Storage",
+        "description": "Provide better data storage with a micro SD card"
+      },
+      "3": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/type-c-usb-cable.png",
+          "alt": "type c usb cable"
+        },
+        "title": "Type-C USB Cable",
+        "description": "Charge the air quality device anytime with a Type-C USB cable."
+      },
+      "4": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/wifi-cloud-data-storage.png",
+          "alt": "wifi cloud data storage"
+        },
+        "title": "Wi-Fi + Cloud Data Storage",
+        "description": "Data accessibility on AQIs mobile, TV, Tablet App or web-dashboard."
+      },
+      "5": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/lithium-ion-battery.png",
+          "alt": "lithium-ion battery"
+        },
+        "title": "Battery Capacity",
+        "description": "With a 1600 mAh lithium-ion battery, it can last upto 3 Hrs on a full charge."
+      },
+      "6": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/portable-device.png",
+          "alt": "portable device"
+        },
+        "title": "Portable Device",
+        "description": "Carry the device anywhere and measure the air quality on your own."
+      }
+    }
+  },
+  "leedWell": {
+    "title": "Cair+ meets all standard of IAQ",
+    "subtitle": "LEED v4.1, WELL, WHO, ASHRAE - Meet your standards"
+  },
+  "parameters": {
+    "titleHighlight": "Cair +",
+    "titleRest": "Indoor Air Quality monitor",
+    "description": "Measure the air quality of your place on your own air pollution device for indoor and outdoor. Along our new Cair+ air monitor, you will get a free ambient air quality monitor.",
+    "sectionTitle": "Parameters",
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/11/cair-indoor-air-quality-monitor.webp",
+      "alt": "prana air cair indoor air quality monitor device"
+    },
+    "items": {
+      "1": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-aqi-parameter.png",
+          "alt": "cair aqi parameter"
+        },
+        "title": "AQI"
+      },
+      "2": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/pm1-parameter.png",
+          "alt": "pm1 parameter"
+        },
+        "title": "PM1"
+      },
+      "3": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-pm2.5-parameter.png",
+          "alt": "cair pm2.5 parameter"
+        },
+        "title": "PM2.5"
+      },
+      "4": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-pm10-parameter.png",
+          "alt": "cair pm10 parameter"
+        },
+        "title": "PM10"
+      },
+      "5": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-co2-parameter.png",
+          "alt": "cair co2 parameter"
+        },
+        "title": "CO2"
+      },
+      "6": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-tvoc-parameter.png",
+          "alt": "cair tvoc parameter"
+        },
+        "title": "TVOC"
+      },
+      "7": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-hcho-parameter.png",
+          "alt": "cair hcho parameter"
+        },
+        "title": "HCHO"
+      },
+      "8": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-temp-parameter.png",
+          "alt": "cair temp parameter"
+        },
+        "title": "Temp."
+      },
+      "9": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-humidity-parameter.png",
+          "alt": "cair humidity parameter"
+        },
+        "title": "Humi."
+      },
+      "10": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-pc0.3-parameter.png",
+          "alt": "cair pc0.3 parameter"
+        },
+        "title": "Particle Counts",
+        "subtitle": "(0.3, 0.5, 1.0, 2.5, 5.0, 10 μm)"
+      }
+    }
+  },
+   "installation": {
+    "titleBold": "Cair+",
+    "title": "Installation",
+    "description": "Install Cair+ device anywhere indoor your house, office, resturants etc"
+  },
+   "clock": {
+    "title": "Transform Your Device into a",
+    "specialTitle": {
+      "before": "Cl",
+      "after": "ck"
+    },
+    "icon": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/clock-icon.png",
+      "alt": "clock icon"
+    },
+    "description": "Transit your device into a clock with an AQI display by activating the screen saver mode. AQI (Air Quality Index) also displays the indoor air quality."
+  },
+  "airPollution": {
+    "title": "What is Indoor Air Pollution?",
+    "description": "Indoor air pollution, originating from various sources like tobacco smoke and household products, poses health risks such as respiratory issues and allergies. Common pollutants include particulate matter and volatile organic compounds. Adequate ventilation is crucial for mitigating these concerns, as poor air quality can lead to headaches and fatigue. Regular monitoring, adherence to standards, and mitigation strategies are key to creating environments conducive to well-being.",
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/01/health-problem-of-indoor-air-pollution.jpg",
+      "alt": "health problem of indoor air pollution"
+    }
+  },
+  "wifiConnectivity": {
+    "title": "Wifi Connectivity",
+    "icon": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/01/wifi.png",
+      "alt": "wifi connectivity"
+    },
+    "description": "Wifi connectivity feature to access the tools data on your smartphones, AQI India app, android TV and tabs. With it, you can ensure particular places information whenever you require.",
+    "subtitle": "Remote Data Accessibility"
+  },
+   "quote": {
+    "icon": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/quote-icon.png",
+      "alt": "quote icon"
+    },
+    "title": "Cair+",
+    "subtitle": "Indoor Quality monitor",
+    "description": "Indoor pollution is a major concern due to many issues. Cair+ ensures thermal comfort in your house. As it exhibits real-time temperature and humidity. Check the filtration and ventilation with pollutant levels in the air."
+  },
+  "aqiMobileApp": {
+    "title": {
+      "logo": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+        "alt": "aqi logo"
+      },
+      "text": "Mobile"
+    },
+    "subtitle": "Application",
+    "features": {
+      "1": "Attainability of Air quality alerts in your area.",
+      "2": "Air quality graph, health advice as per the real-time air quality,",
+      "3": "Steer through countries to check AQI across the world",
+      "4": "Easy managing of your Air quality monitors"
+    },
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-cair-air-quality-monitor-connected-with-aqi-app.jpg",
+      "alt": "prana air cair air quality monitor connected with aqi mobile app"
+    }
+  },
+  "ventilationRisks": {
+    "co2Image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/high-co2-level.png",
+      "alt": "high co2 level"
+    },
+    "title": "High CO2 Levels and Poor Ventilation Pose Health Risks",
+    "description": "When ventilation is inadequate, the accumulation of CO2 increases, negatively impacting air quality.",
+    "ventilationScore": {
+      "icon": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/12/ventilation.png",
+        "alt": "bad ventilation due to high co2 level"
+      },
+      "title": "Ventilation Score",
+      "description": "the provision of fresh air to your room",
+      "score": "05",
+      "rating": "Moderate"
+    }
+  },
+   "aqiRanges": {
+    "title": "Pollutants Ranges",
+    "description": "Air Quality Index to check the values of every pollutant in your area. Through it, you can make well-informed decisions for indoor air quality.",
+    "tabs": {
+      "aqi": "AQI",
+      "pm1": "PM1",
+      "pm25": "PM2.5",
+      "pm10": "PM10",
+      "co2": "CO2",
+      "hcho": "HCHO",
+      "tvoc": "TVOC"
+    },
+    "categories": {
+      "good": "Good",
+      "moderate": "Moderate",
+      "poor": "Poor",
+      "unhealthy": "Unhealthy",
+      "severe": "Severe",
+      "hazardous": "Hazardous"
+    },
+    "values": {
+      "aqi": {
+        "0": "0",
+        "1": "50",
+        "2": "100",
+        "3": "150",
+        "4": "200",
+        "5": "300",
+        "6": "300+"
+      },
+      "pm1": {
+        "0": "0",
+        "1": "10",
+        "2": "20",
+        "3": "40",
+        "4": "60",
+        "5": "90",
+        "6": "90+"
+      },
+      "pm25": {
+        "0": "0",
+        "1": "30",
+        "2": "60",
+        "3": "90",
+        "4": "120",
+        "5": "250",
+        "6": "250+"
+      },
+      "pm10": {
+        "0": "0",
+        "1": "50",
+        "2": "100",
+        "3": "250",
+        "4": "350",
+        "5": "430",
+        "6": "430+"
+      },
+      "co2": {
+        "0": "0",
+        "1": "600",
+        "2": "800",
+        "3": "1000",
+        "4": "1200",
+        "5": "1500",
+        "6": "1500+"
+      },
+      "hcho": {
+        "0": "0",
+        "1": "0.025",
+        "2": "0.050",
+        "3": "0.100",
+        "4": "0.200",
+        "5": "0.350",
+        "6": "0.350+"
+      },
+      "tvoc": {
+        "0": "0",
+        "1": "0.060",
+        "2": "0.220",
+        "3": "0.660",
+        "4": "1",
+        "5": "2.220",
+        "6": "2.220+"
+      }
+    }
+  },
+    "typesOfVisuals": {
+    "title": "Types of Visuals",
+    "description": "Different screens access various information on one device. Makes it more convenient for better follow-up",
+    "screens": {
+      "main": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Main-screen.webp",
+          "alt": "aqi tv app for pocket pm2.5 monitor"
+        },
+        "description": "Displays indoor and outdoor data of AQI with LED lights highlighting each pollutant."
+      },
+      "graph": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Graph-screen.webp",
+          "alt": "prana air cair air quality monitor graph screen"
+        },
+        "description": "Check the air quality trend in your house with the graph of quality ups and downs."
+      },
+      "concentrated": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Concentrated-Value-visuals.webp",
+          "alt": "prana air cair air quality monitor particle counts"
+        },
+        "description": "Ensure real-time values of each pollutant with its condition as by different colors"
+      },
+      "clock": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Clock-Screen.webp",
+          "alt": "prana air cair air quality monitor clock screen"
+        },
+        "description": "Activate the screen saver on your device to make it a digital clock with AQI."
+      },
+      "parameter": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2025/01/Parameter-Ranges.webp",
+          "alt": "prana air cair air quality monitor parameter ranges"
+        },
+        "description": "Check the Air quality parameters in your room and decide per the status from good to severe."
+      }
+    },
+    "tabs": {
+      "main": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/concentrated-values.png",
+          "alt": "prana air cair air quality monitor particle counts"
+        },
+        "title": "Main Screens"
+      },
+      "graph": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/humi-graph.png",
+          "alt": "prana air cair air quality monitor graph screen"
+        },
+        "title": "Historic Graphs"
+      },
+      "concentrated": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/concentration-value.png",
+          "alt": "prana air cair air quality monitor concentration screen"
+        },
+        "title": "Concentrated Values"
+      },
+      "clock": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/clock-screen.png",
+          "alt": "prana air cair air quality monitor clock screen"
+        },
+        "title": "Screen saver"
+      },
+      "parameter": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/air-qualtiy-parameters.png",
+          "alt": "prana air cair air quality monitor parameters"
+        },
+        "title": "Parameter Range"
+      }
+    }
+  },
+    "graphHeading": {
+    "title": "Data Comparing Graph",
+    "description": "A comparison of BAM and Prana Airs Cair+ shows both data are correlated. Our device also shows accurate data as a high-end device."
+  },
+   "aqiTvApp": {
+    "logo": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+      "alt": "aqi-logo"
+    },
+    "title": "TV Application",
+    "subtitle": {
+      "before": "Compare Real-time",
+      "indoor": "Indoor",
+      "and": "and",
+      "outdoor": "Outdoor",
+      "after": "air quality in one place."
+    },
+    "description": "So you can make the right decision whether to stay in or go out."
+  },
+   "trackQuality": {
+    "title": {
+      "before": "Track the",
+      "highlight": "quality of the air",
+      "middle": "you breathe on different",
+      "after": "platforms"
+    },
+    "logo": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+      "alt": "aqi logo"
+    },
+    "subtitle": "Get access of air quality data on TV, Mobile App, Web Dashboard",
+    "tabs": {
+      "mobileApp": "Mobile App",
+      "tvApp": "TV App",
+      "webDashboard": "Web Dashboard"
+    },
+    "mobileApp": {
+      "title": "Mobile App",
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2024/01/aqi-mobile-application.png",
+        "alt": "aqi mobile application"
+      },
+      "features": {
+        "health": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/health-advice.png",
+            "alt": "health advice icon"
+          },
+          "title": "Get health advices",
+          "description": "Take some precautions about what to do and not to do when the air quality is good and bad."
+        },
+        "realTime": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/real-time-data.png",
+            "alt": "real time and historic data icon"
+          },
+          "title": "Real-time and historic data access",
+          "description": "Access real-time and historic air quality data (24 hours, week, or months) via AQI app."
+        }
+      },
+      "buttons": {
+        "ios": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/01/ios-icon.png",
+            "alt": "iOS icon"
+          },
+          "textBefore": "Download for",
+          "textHighlight": "iOS",
+          "link": "#"
+        },
+        "android": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/01/android-icon.png",
+            "alt": "Android icon"
+          },
+          "textBefore": "Download for",
+          "textHighlight": "android",
+          "link": "#"
+        }
+      }
+    },
+    "tvApp": {
+      "title": "TV App",
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2024/01/aqi-tv-app-interface.png",
+        "alt": "AQI TV app interface"
+      },
+      "features": {
+        "themes": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/theme-option.png",
+            "alt": "theme option"
+          },
+          "title": "Themes option",
+          "description": "Offers a variety of themes for better access to data on your TV."
+        },
+        "connect": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/connect-mob-app.png",
+            "alt": "connect mob app"
+          },
+          "title": "Connect Mobile App",
+          "description": "The mobile app can connect with your TV screen to have details on a big screen."
+        }
+      },
+      "button": {
+        "textBefore": "Download for",
+        "textHighlight": "TV",
+        "link": "https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew"
+      }
+    },
+    "webDashboard": {
+      "title": "Web Dashboard",
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2024/01/aqi-website-dashboard.png",
+        "alt": "aqi-website-dashboard"
+      },
+      "features": {
+        "remote": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/remote-access.png",
+            "alt": "remote access"
+          },
+          "title": "Remote access",
+          "description": "Get access to 24*7 monitored data of AQI or temperature on the go."
+        },
+        "comparison": {
+          "icon": {
+            "src": "https://www.pranaair.com/wp-content/uploads/2024/02/data-comprasion.png",
+            "alt": "data comprasion"
+          },
+          "title": "Data comparison",
+          "description": "Compare two different locations data at one place and get real-time results"
+        }
+      },
+      "button": {
+        "textBefore": "Login",
+        "textHighlight": "AQI dashboard",
+        "link": "https://www.aqi.in/userlogin"
+      }
+    }
+  },
+   "healthIndex": {
+    "title": {
+      "ai": "AI",
+      "calculated": "Calculated",
+      "health": "Health",
+      "indexScore": "Index-Score"
+    },
+    "description": "Ensure hows your indoor environment and thermal comfort. Our device confirms it by temperature, Humidity, and concentrations of Air pollutants.",
+    "scale": {
+      "bad": "Bad",
+      "moderate": "Moderate",
+      "good": "Good",
+      "min": "0",
+      "mid": "5",
+      "max": "10"
+    },
+    "scores": {
+      "ventilation": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/ventilation.png",
+          "alt": "ventilation"
+        },
+        "title": "Ventilation Score",
+        "description": "the provision of fresh air to your room",
+        "score": "05",
+        "rating": "Moderate"
+      },
+      "odor": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/odor-score.png",
+          "alt": "odor score"
+        },
+        "title": "Odor score",
+        "description": "a distinctive smell in the room",
+        "score": "05",
+        "rating": "Bad"
+      },
+      "mold": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/mold-score.png",
+          "alt": "mold score"
+        },
+        "title": "Mold Score",
+        "description": "probability of mold formation in the room",
+        "score": "05",
+        "rating": "Good"
+      },
+      "capacity": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/capacity-index.png",
+          "alt": "capacity index"
+        },
+        "title": "Capacity index",
+        "description": "people capacity of the room",
+        "score": "05",
+        "rating": "Good"
+      },
+      "comfort": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/comfort-score.png",
+          "alt": "comfort score"
+        },
+        "title": "Comfort score",
+        "description": "a state of physical ease in the room",
+        "score": "10",
+        "rating": "Good"
+      },
+      "filtration": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/filtration-score.png",
+          "alt": "filtration score"
+        },
+        "title": "Filtration Score",
+        "description": "efficiency of filter in the room",
+        "score": "10",
+        "rating": "Bad"
+      },
+      "mites": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/mites-scroe.png",
+          "alt": "mites score"
+        },
+        "title": "Mites Score",
+        "description": "presence of any mites in the room",
+        "score": "02",
+        "rating": "Bad"
+      },
+      "virus": {
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/virus-index.png",
+          "alt": "virus index"
+        },
+        "title": "Virus Index",
+        "description": "probability of virus formation in the room",
+        "score": "02",
+        "rating": "Bad"
+      }
+    }
+  },
+   "historicData": {
+    "logo": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/10/aqi-logo.png",
+      "alt": "aqi-logo"
+    },
+    "title": "Web Dashboard",
+    "subtitle": {
+      "icon": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/12/quote-data.png",
+        "alt": "quote data"
+      },
+      "text": "Access Real-time and Historic Data"
+    },
+    "description": "Our platform offers easy access to crucial information for air quality. Individuals can make the best decision with ease. Accessing real-time data regardless of their location or daytime."
+  },
+  "partsAndLabels": {
+    "title": "Parts and Labels",
+    "tabs": {
+      "partsLabel": "Parts & Label",
+      "disassembly": "Disassambley"
+    },
+    "partsLabel": {
+      "image": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/12/parts-and-label-cair-monitor.png",
+        "alt": "parts and label cair monitor"
+      },
+      "components": {
+        "1": "NDIR Co2 sensor",
+        "2": "Laser particulate sensor (PM1, PM2.5, PM10)",
+        "3": "MEMS volatile organic compound sensor",
+        "4": "Electrochemical based Formaldehyde (HCHO) sensor",
+        "5": "Wifi module",
+        "6": "Buzzer",
+        "7": "Temperature and Humidity Sensor"
+      }
+    },
+    "disassembly": {
+      "images": {
+        "main": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/disassambley-cair-monitor.png",
+          "alt": "disassembly cair monitor"
+        },
+        "inside": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/12/cair-inside-parts-1.png",
+          "alt": "cair inside parts"
+        }
+      },
+      "title": "CAir+",
+      "subtitle": "Air Quality Monitor",
+      "description": "Prana Air employs a holistic approach to assess indoor air quality using its proprietary Air Quality Index (AQI). Through its innovative technology, Prana Air monitors pollutants such as PM2.5 and PM10, alongside particle counts, temperature, humidity, total volatile organic compounds (TVOC), and formaldehyde (HCHO)."
+    }
+  },
+  "longBattery": {
+    "image": {
+      "src": "https://www.pranaair.com/wp-content/uploads/2023/12/1600mah-long-battery.jpg",
+      "alt": "1600mAh long battery"
+    },
+    "capacity": "1600mAh",
+    "title": "Battery Monitor",
+    "description": "1600 mAh battery makes it mobile, and more productive. Quick to charge with a USB type-C cable."
+  },
+   "techSpecs": {
+    "title": "Technical Specifications",
+    "brochure": {
+      "link": "https://www.pranaair.com/wp-content/uploads/2024/02/Prana-air-Cair-Air-quality-monitor-brochure.pdf",
+      "icon": {
+        "src": "https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png",
+        "alt": "brochure-icon"
+      },
+      "text": "Brochure"
+    },
+    "specs": {
+      "parameters": {
+        "title": "Parameters:",
+        "value": "AQI, PM1, PM2.5, PM10, TVOCs, HCHO, CO2, Particle Counts, Temp. & Humi."
+      },
+      "connectivity": {
+        "title": "Connectivity:",
+        "value": "Wi-Fi"
+      },
+      "color": {
+        "title": "Color:",
+        "value": "Ivory"
+      },
+      "size": {
+        "title": "Size:",
+        "value": "11 x 3.4 x 7.5 (in cm)"
+      },
+      "storage": {
+        "title": "Storage:",
+        "value": "Micro SD Card Storage +<br />AQI Cloud Storage"
+      },
+      "weight": {
+        "title": "Weight:",
+        "value": "175g"
+      },
+      "screen": {
+        "title": "Screen:",
+        "value": "Color LED Display"
+      },
+      "powerSupply": {
+        "title": "Power Supply:",
+        "value": "Type C USB Cable"
+      }
+    },
+    "howToConnect": {
+      "title": "How to connect",
+      "qrCode": {
+        "image": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2024/04/cair-manual.png",
+          "alt": "QR code for manual"
+        },
+        "text": "SCAN THE QR CODE"
+      },
+      "or": "or",
+      "manual": {
+        "link": "https://www.pranaair.com/wp-content/uploads/2024/02/Prana-Air-Cair-Air-Quality-Monitor-Manual.pdf",
+        "icon": {
+          "src": "https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png",
+          "alt": "brochure-icon"
+        },
+        "text": "Download Manual"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+   "faqs": {
+    "title": "FAQs of Cair+ Monitor",
+    "items": {
+      "1": {
+        "question": "1. What does Prana Air Cair+ air quality monitor measure?",
+        "answer": "Prana Air Cair+ is an air quality monitor designed to measure indoor air pollutants - AQI, PM2.5, PM10, CO2, TVOC, HCHO, Temperature, and Humidity. It provides accurate data on various pollutants, helping you understand and improve your indoor air quality."
+      },
+      "2": {
+        "question": "2. How does the device connect to the internet?",
+        "answer": "Cair+ monitor features WiFi connectivity, allowing it to seamlessly connect to your home network. This enables you to access real-time air quality data on various devices, including your mobile, tablet, TV app, and through a web dashboard."
+      },
+      "3": {
+        "question": "3. What platforms are supported for accessing data?",
+        "answer": "Prana Air Cair+ device supports multiple platforms for data access. You can monitor air quality data on your mobile devices (iOS and Android), tablets, and even your television. Additionally, a web dashboard is available for easy access via a computer."
+      },
+      "4": {
+        "question": "4. Is Cair+ monitor portable?",
+        "answer": "Yes, Prana Air Cair+ monitor is designed to be portable. Its compact size allows you to move it around your living spaces effortlessly, ensuring that you can monitor air quality in different rooms or areas of your home."
+      },
+      "5": {
+        "question": "5. How accurate is the air quality data provided by Cair+?",
+        "answer": "Cair+ monitor is known for its high accuracy in measuring air quality. Its advanced sensors provide precise readings of various pollutants, giving you reliable information to make informed decisions about improving your indoor air quality."
+      }
+    }
+  }
+}

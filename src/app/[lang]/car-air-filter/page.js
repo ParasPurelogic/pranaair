@@ -1,15 +1,68 @@
-"use client"
 
-import { useState } from "react"
+import FaqAccordion from "@/Components/Pages/Carfilter/faq-accordion"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 
 export default function CarAirFilter() {
-  const [activeToggle, setActiveToggle] = useState(null)
 
-  const handleToggleClick = (index) => {
-    setActiveToggle(activeToggle === index ? null : index)
-  }
+  // FAQ items data
+  const faqItems = [
+    {
+      question: "1. What is Prana Air Car Cabin Air Filter?",
+      answer:
+        "Prana Air Car Cabin Air Filter is a high-efficiency air filtration system with HEPA and activated carbon filter, designed to purify the air inside your vehicle. It removes dust, pollen, allergens, and other airborne particles to ensure a clean and healthy breathing environment while you drive.",
+    },
+    {
+      question: "2. How does Prana Air Car Cabin Air Filter work?",
+      answer:
+        "Our air filter utilizes advanced multi-layer filtration technology, including HEPA and activated carbon layers. The HEPA filter captures fine particulate matter, while the activated carbon layer absorbs odors, gases, and volatile organic compounds (VOCs), ensuring fresh and clean air inside your car.",
+    },
+    {
+      question: "3. Why should I choose Prana Air Car Cabin Air Filter over other brands?",
+      answer:
+        "Prana Air Car Cabin Air Filters are designed with cutting-edge filtration technology and superior materials to provide maximum efficiency and durability. They are tested and proven to remove up to 99% of pollutants and allergens, making them an excellent choice for individuals seeking better air quality in their vehicles.",
+    },
+    {
+      question: "4. How often should I replace Prana Air Car Cabin Air Filter?",
+      answer:
+        "For optimal performance, we recommend replacing Prana Air Car Cabin Air Filter every 6 to 12 months, depending on your driving conditions and the level of pollution in your area. Regular replacement ensures continuous protection against airborne contaminants.",
+    },
+    {
+      question: "5. Can I install Prana Air Car Cabin Air Filter myself?",
+      answer:
+        "Yes, Prana Air Car Air Filter is designed for easy installation. Each filter comes with clear instructions, and no special tools are required. If you need assistance, our customer support team is always available to help.",
+    },
+    {
+      question: "6. Is Prana Air Car Air Filter compatible with my vehicle?",
+      answer:
+        "Prana Air Car Cabin Air Filter is available in various sizes to fit a wide range of vehicle makes and models. Please refer to our compatibility guide or contact our customer service to find the right filter for your car.",
+    },
+    {
+      question: "7. What benefits can I expect from using Prana Air Car Cabin Air Filter?",
+      answer:
+        "By using Prana Air Car Cabin Air Filter, you can expect to experience cleaner, fresher air inside your car. This can lead to reduced allergic reactions, improved respiratory health, and a more pleasant driving experience free from unpleasant odors and harmful pollutants.",
+    },
+    {
+      question: "8. How do I know when its time to replace the filter?",
+      answer:
+        "There is no indicator to tell you about the replacement, but you have to check it manually. Its life depends on the frequency of use, rides and air quality level of the area. Regular checks can help maintain optimal air quality.",
+    },
+    {
+      question: "9. Where can I purchase Prana Air Car Cabin Air Filter?",
+      answer:
+        "It is available for purchase on our official website, as well as through Amazon online. Be sure to buy from trusted sources to guarantee the authenticity of the product.",
+    },
+    {
+      question: "10. Does Prana Air Car Cabin Air Filter come with a warranty?",
+      answer:
+        "Usually, warranty is not given to Filters. Most of the marketers also dont provide warranty on filters. But, you can avail the replacement option if there is any defect when you receive the product for the first time.",
+    },
+    {
+      question: "11. Can Prana Air Car Cabin Air Filter help with car exhaust fumes?",
+      answer:
+        "Yes, the activated carbon layer in the filter is specifically designed to absorb harmful gases and odors, including car exhaust fumes. This helps to reduce the presence of these pollutants inside your vehicle.",
+    },
+  ]
 
   return (
     <main>
@@ -844,131 +897,10 @@ export default function CarAirFilter() {
         </div>
         <div className="row">
           <div className="col-md-12">
-            <div className={`faq ${activeToggle === 1 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(1)}>1. What is Prana Air Car Cabin Air Filter?</h2>
-              <div className="faq-content" style={{ display: activeToggle === 1 ? "block" : "none" }}>
-                <p>
-                  Prana Air Car Cabin Air Filter is a high-efficiency air filtration system with HEPA and activated
-                  carbon filter, designed to purify the air inside your vehicle. It removes dust, pollen, allergens, and
-                  other airborne particles to ensure a clean and healthy breathing environment while you drive.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 2 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(2)}>2. How does Prana Air Car Cabin Air Filter work?</h2>
-              <div className="faq-content" style={{ display: activeToggle === 2 ? "block" : "none" }}>
-                <p>
-                  Our air filter utilizes advanced multi-layer filtration technology, including HEPA and activated
-                  carbon layers. The HEPA filter captures fine particulate matter, while the activated carbon layer
-                  absorbs odors, gases, and volatile organic compounds (VOCs), ensuring fresh and clean air inside your
-                  car.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 3 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(3)}>
-                3. Why should I choose Prana Air Car Cabin Air Filter over other brands?
-              </h2>
-              <div className="faq-content" style={{ display: activeToggle === 3 ? "block" : "none" }}>
-                <p>
-                  Prana Air Car Cabin Air Filters are designed with cutting-edge filtration technology and superior
-                  materials to provide maximum efficiency and durability. They are tested and proven to remove up to 99%
-                  of pollutants and allergens, making them an excellent choice for individuals seeking better air
-                  quality in their vehicles.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 4 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(4)}>
-                4. How often should I replace Prana Air Car Cabin Air Filter?
-              </h2>
-              <div className="faq-content" style={{ display: activeToggle === 4 ? "block" : "none" }}>
-                <p>
-                  For optimal performance, we recommend replacing Prana Air Car Cabin Air Filter every 6 to 12 months,
-                  depending on your driving conditions and the level of pollution in your area. Regular replacement
-                  ensures continuous protection against airborne contaminants.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 5 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(5)}>5. Can I install Prana Air Car Cabin Air Filter myself?</h2>
-              <div className="faq-content" style={{ display: activeToggle === 5 ? "block" : "none" }}>
-                <p>
-                  Yes, Prana Air Car Air Filter is designed for easy installation. Each filter comes with clear
-                  instructions, and no special tools are required. If you need assistance, our customer support team is
-                  always available to help.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 6 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(6)}>6. Is Prana Air Car Air Filter compatible with my vehicle?</h2>
-              <div className="faq-content" style={{ display: activeToggle === 6 ? "block" : "none" }}>
-                <p>
-                  Prana Air Car Cabin Air Filter is available in various sizes to fit a wide range of vehicle makes and
-                  models. Please refer to our compatibility guide or contact our customer service to find the right
-                  filter for your car.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 7 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(7)}>
-                7. What benefits can I expect from using Prana Air Car Cabin Air Filter?
-              </h2>
-              <div className="faq-content" style={{ display: activeToggle === 7 ? "block" : "none" }}>
-                <p>
-                  By using Prana Air Car Cabin Air Filter, you can expect to experience cleaner, fresher air inside your
-                  car. This can lead to reduced allergic reactions, improved respiratory health, and a more pleasant
-                  driving experience free from unpleasant odors and harmful pollutants.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 8 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(8)}>8. How do I know when its time to replace the filter?</h2>
-              <div className="faq-content" style={{ display: activeToggle === 8 ? "block" : "none" }}>
-                <p>
-                  There is no indicator to tell you about the replacement, but you have to check it manually. Its life
-                  depends on the frequency of use, rides and air quality level of the area. Regular checks can help
-                  maintain optimal air quality.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 9 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(9)}>9. Where can I purchase Prana Air Car Cabin Air Filter?</h2>
-              <div className="faq-content" style={{ display: activeToggle === 9 ? "block" : "none" }}>
-                <p>
-                  It is available for purchase on our official website, as well as through Amazon online. Be sure to buy
-                  from trusted sources to guarantee the authenticity of the product.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 10 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(10)}>
-                10. Does Prana Air Car Cabin Air Filter come with a warranty?
-              </h2>
-              <div className="faq-content" style={{ display: activeToggle === 10 ? "block" : "none" }}>
-                <p>
-                  Usually, warranty is not given to Filters. Most of the marketers also dont provide warranty on
-                  filters. But, you can avail the replacement option if there is any defect when you receive the product
-                  for the first time.
-                </p>
-              </div>
-            </div>
-            <div className={`faq ${activeToggle === 11 ? "active" : ""}`}>
-              <h2 onClick={() => handleToggleClick(11)}>
-                11. Can Prana Air Car Cabin Air Filter help with car exhaust fumes?
-              </h2>
-              <div className="faq-content" style={{ display: activeToggle === 11 ? "block" : "none" }}>
-                <p>
-                  Yes, the activated carbon layer in the filter is specifically designed to absorb harmful gases and
-                  odors, including car exhaust fumes. This helps to reduce the presence of these pollutants inside your
-                  vehicle.
-                </p>
-              </div>
-            </div>
+            <FaqAccordion faqItems={faqItems} />
           </div>
         </div>
       </div>
     </main>
   )
 }
-

@@ -1,13 +1,9 @@
 "use client"
-
-import { useEffect, useState } from "react"
-import Image from "next/image"
 import "./styles.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
 
 export default function ParticularMatterPage() {
-  const [activeTab, setActiveTab] = useState("AQI");
 
   const responsive = {
     superLargeDesktop: {
@@ -36,12 +32,12 @@ export default function ParticularMatterPage() {
           <div className="row">
             <div className="col-md-8 offset-md-2">
               <div className="banner-content">
-                <img 
-                  className="wp-image-60375 sick" 
-                  src="https://www.pranaair.com/wp-content/uploads/2022/12/what-is-particulate-matter-pm.png" 
-                  alt="what is particulate matter pm" 
-                  width="224" 
-                  height="194" 
+                <img
+                  className="wp-image-60375 sick"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/12/what-is-particulate-matter-pm.png"
+                  alt="what is particulate matter pm"
+                  width="224"
+                  height="194"
                 />
                 <h1 className="whitetext text-center">
                   <span className="heading_top_white">What is Particulate Matter (PM)?</span>
@@ -69,12 +65,12 @@ export default function ParticularMatterPage() {
               <p className="text-center">
                 <span>PM or particulates are fine breathable particles suspended in the air. And, PM is one of the air pollutants that are included in air pollution. As, many other air pollutants together form the broad category of air pollution. These pollutants include Carbon monoxide, Sulphur Dioxide, Nitrogen oxides, Carbon Dioxide, etc. Hence, PM is nothing but a measure to measure air pollution along with other air pollutants.</span>
               </p>
-              <img 
-                className="aligncenter wp-image-63976 size-large" 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/air-pollutants-in-the-air.jpg" 
-                alt="air pollution and particulate matters" 
-                width="1024" 
-                height="366" 
+              <img
+                className="aligncenter wp-image-63976 size-large"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/air-pollutants-in-the-air.jpg"
+                alt="air pollution and particulate matters"
+                width="1024"
+                height="366"
               />
             </div>
           </div>
@@ -97,9 +93,9 @@ export default function ParticularMatterPage() {
           <div className="row pm-types">
             <div className="col-md-4">
               <div className="pm-type-card">
-                <img 
-                  src="https://www.pranaair.com/wp-content/uploads/2022/12/pm1-size-300x300.png" 
-                  alt="PM1" 
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/12/pm1-size-300x300.png"
+                  alt="PM1"
                   className="aligncenter"
                 />
                 <h4 className="text-center"><strong>PM1</strong></h4>
@@ -108,9 +104,9 @@ export default function ParticularMatterPage() {
             </div>
             <div className="col-md-4">
               <div className="pm-type-card">
-                <img 
-                  src="https://www.pranaair.com/wp-content/uploads/2022/12/pm2.5-size-300x300.png" 
-                  alt="PM2.5" 
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/12/pm2.5-size-300x300.png"
+                  alt="PM2.5"
                   className="aligncenter"
                 />
                 <h4 className="text-center"><strong>PM2.5</strong></h4>
@@ -119,9 +115,9 @@ export default function ParticularMatterPage() {
             </div>
             <div className="col-md-4">
               <div className="pm-type-card">
-                <img 
-                  src="https://www.pranaair.com/wp-content/uploads/2022/12/pm10-size-300x300.png" 
-                  alt="PM10" 
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/12/pm10-size-300x300.png"
+                  alt="PM10"
                   className="aligncenter"
                 />
                 <h4 className="text-center"><strong>PM10</strong></h4>
@@ -147,12 +143,12 @@ export default function ParticularMatterPage() {
                 <span><strong>2. Secondary particles</strong> may generate in the air as a result of gas chemical changes. Since, they are generated indirectly when gases emitted by burning fuels combine with sunlight and water vapor. Also, these can produce by the combustion of gasoline in automobiles, power plants, and other industrial activities.</span>
               </p>
               <p className="text-center">
-                <img 
-                  className="aligncenter wp-image-64013 size-large" 
-                  src="https://www.pranaair.com/wp-content/uploads/2022/12/sources-of-particulate-matter-1024x452.jpg" 
-                  alt="sources of particulate matter" 
-                  width="1024" 
-                  height="452" 
+                <img
+                  className="aligncenter wp-image-64013 size-large"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/12/sources-of-particulate-matter-1024x452.jpg"
+                  alt="sources of particulate matter"
+                  width="1024"
+                  height="452"
                 />
               </p>
             </div>
@@ -169,12 +165,12 @@ export default function ParticularMatterPage() {
                 <span>PM - Air Quality Guidelines</span>
               </h2>
               <p className="text-center">
-                <img 
-                  className="wp-image-64034 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2022/12/PM-Air-Quaity-Guidelines-1024x414.jpg" 
-                  alt="PM Air Quality Guidelines" 
-                  width="751" 
-                  height="304" 
+                <img
+                  className="wp-image-64034 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/12/PM-Air-Quaity-Guidelines-1024x414.jpg"
+                  alt="PM Air Quality Guidelines"
+                  width="751"
+                  height="304"
                 />
               </p>
             </div>
@@ -195,24 +191,24 @@ export default function ParticularMatterPage() {
               </p>
             </div>
           </div>
-          
+
           {/* Tabs for AQI */}
           <div className="aqi-tabs">
             <div className="tab-buttons">
-              <button 
-                className={activeTab === "AQI" ? "active" : ""} 
+              <button
+                className={activeTab === "AQI" ? "active" : ""}
                 onClick={() => setActiveTab("AQI")}
               >
                 AQI
               </button>
-              <button 
-                className={activeTab === "PM25" ? "active" : ""} 
+              <button
+                className={activeTab === "PM25" ? "active" : ""}
                 onClick={() => setActiveTab("PM25")}
               >
                 PM 2.5
               </button>
             </div>
-            
+
             <div className="tab-content">
               {activeTab === "AQI" && (
                 <div className="tab-inner-aqi">
@@ -256,7 +252,7 @@ export default function ParticularMatterPage() {
                   </div>
                 </div>
               )}
-              
+
               {activeTab === "PM25" && (
                 <div className="tab-inner-aqi">
                   <div className="aqi-levels">
@@ -322,9 +318,9 @@ export default function ParticularMatterPage() {
           </div>
           <div className="row pm-effects">
             <div className="col-md-1-5">
-              <img 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/eyes-273x300.png" 
-                alt="eye irritation due to pm" 
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/eyes-273x300.png"
+                alt="eye irritation due to pm"
                 className="aligncenter"
               />
               <p className="text-center">
@@ -332,9 +328,9 @@ export default function ParticularMatterPage() {
               </p>
             </div>
             <div className="col-md-1-5">
-              <img 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/Nose-269x300.png" 
-                alt="nose irritation due to pm" 
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/Nose-269x300.png"
+                alt="nose irritation due to pm"
                 className="aligncenter"
               />
               <p className="text-center">
@@ -342,9 +338,9 @@ export default function ParticularMatterPage() {
               </p>
             </div>
             <div className="col-md-1-5">
-              <img 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/throat-269x300.png" 
-                alt="throat irritation due to pm" 
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/throat-269x300.png"
+                alt="throat irritation due to pm"
                 className="aligncenter"
               />
               <p className="text-center">
@@ -352,9 +348,9 @@ export default function ParticularMatterPage() {
               </p>
             </div>
             <div className="col-md-1-5">
-              <img 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/asthma-269x300.png" 
-                alt="asthma problem due to pm" 
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/asthma-269x300.png"
+                alt="asthma problem due to pm"
                 className="aligncenter"
               />
               <p className="text-center">
@@ -362,9 +358,9 @@ export default function ParticularMatterPage() {
               </p>
             </div>
             <div className="col-md-1-5">
-              <img 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/heart-269x300.png" 
-                alt="heart diseases due to pm" 
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/heart-269x300.png"
+                alt="heart diseases due to pm"
                 className="aligncenter"
               />
               <p className="text-center">
@@ -372,7 +368,7 @@ export default function ParticularMatterPage() {
               </p>
             </div>
           </div>
-          
+
           <div className="row">
             <div className="col-md-12">
               <h3 className="text-center">
@@ -381,14 +377,14 @@ export default function ParticularMatterPage() {
               <p className="text-center">
                 <span>Without a doubt, YES! Even in small amounts, particulate can make you feel uneasy or sick.</span>
               </p>
-              <img 
-                className="sick" 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/sick-due-to-pm-air-pollution-600x1024.png" 
-                alt="sick due to pm air pollution" 
-                width="200" 
-                height="200" 
+              <img
+                className="sick"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/sick-due-to-pm-air-pollution-600x1024.png"
+                alt="sick due to pm air pollution"
+                width="200"
+                height="200"
               />
-              
+
               <h3 className="text-center">
                 <span>Health Impacts of PM on Human Health</span>
               </h3>
@@ -411,21 +407,21 @@ export default function ParticularMatterPage() {
               <p className="text-center">
                 <span>PM can be present in both indoor and outdoor environments. So, you can easily monitor the PM levels in both environments using a PM air quality monitor.</span>
               </p>
-              
+
               <h4 className="text-center">
                 <strong><span>Indoor solution</span></strong>
               </h4>
               <p className="text-center">
                 <span>PM (Particulate Matter) can be easily monitored indoors. After the monitoring, if the levels exceed the limits so the proper measures can be taken to reduce the levels.</span>
               </p>
-              <img 
-                className="aligncenter" 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/air-purifier-as-the-solution-for-indoor-air-pollution.jpg" 
-                alt="air purifier as the solution for indoor air pollution" 
-                width="828" 
-                height="693" 
+              <img
+                className="aligncenter"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/air-purifier-as-the-solution-for-indoor-air-pollution.jpg"
+                alt="air purifier as the solution for indoor air pollution"
+                width="828"
+                height="693"
               />
-              
+
               <h4 className="text-center">
                 <strong><span>Outdoor Solution</span></strong>
               </h4>
@@ -433,12 +429,12 @@ export default function ParticularMatterPage() {
                 <span>We have a variety of outdoor air quality monitors that can measure the PM levels outdoors. As, when the levels exceed the limits, you can wear anti-pollution N-95 mask. As to prevent you from various hazards that can be caused to the PM / dust exposure.</span>
               </p>
               <p className="text-center">
-                <img 
-                  className="sick" 
-                  src="https://www.pranaair.com/wp-content/uploads/2022/12/N95-air-pollution-mask.jpg" 
-                  alt="N95 air pollution mask" 
-                  width="504" 
-                  height="473" 
+                <img
+                  className="sick"
+                  src="https://www.pranaair.com/wp-content/uploads/2022/12/N95-air-pollution-mask.jpg"
+                  alt="N95 air pollution mask"
+                  width="504"
+                  height="473"
                 />
               </p>
             </div>
@@ -457,13 +453,13 @@ export default function ParticularMatterPage() {
               <p className="text-center">
                 <span>Prana Air Pocket Monitor allows you to check real-time PM2.5 pollution levels indoors and outdoors. For it, Our pocket-sized monitor is the smallest and most convenient device. As it fits effortlessly into your pocket.</span>
               </p>
-              
-              <img 
-                className="sick" 
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/pm2.5-air-quality-monitor-1024x546.png" 
-                alt="pm2.5 air quality monitor" 
-                width="779" 
-                height="415" 
+
+              <img
+                className="sick"
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/pm2.5-air-quality-monitor-1024x546.png"
+                alt="pm2.5 air quality monitor"
+                width="779"
+                height="415"
               />
             </div>
           </div>
@@ -478,7 +474,7 @@ export default function ParticularMatterPage() {
               <h3 className="text-center">
                 <span>Choose Your Air Quality Monitor To Measure PM</span>
               </h3>
-              
+
               {/* Product Carousel */}
               <div className="product-carousel">
                 <Carousel
@@ -491,33 +487,33 @@ export default function ParticularMatterPage() {
                   transitionDuration={500}
                 >
                   <div className="product-item">
-                    <img 
-                      src="https://www.pranaair.com/wp-content/uploads/2023/10/prana-air-smart-portable-monitor-300x300.png" 
-                      alt="prana air Pocket PM2.5 Monitor" 
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/10/prana-air-smart-portable-monitor-300x300.png"
+                      alt="prana air Pocket PM2.5 Monitor"
                     />
                     <h4>Pocket Monitor</h4>
                     <p>Portable PM2.5 Air Quality Monitor</p>
                   </div>
                   <div className="product-item">
-                    <img 
-                      src="https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-squair-air-monitor-300x300.jpg" 
-                      alt="prana air squair PM2.5 air quality monitor" 
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-squair-air-monitor-300x300.jpg"
+                      alt="prana air squair PM2.5 air quality monitor"
                     />
                     <h4>SQUAIR Air Monitor</h4>
                     <p>Carbon Monoxide Air Quality Monitor</p>
                   </div>
                   <div className="product-item">
-                    <img 
-                      src="https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-sensible-plus-air-quality-monitor-300x300.jpg" 
-                      alt="prana air sensible plus PM2.5 monitor" 
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-sensible-plus-air-quality-monitor-300x300.jpg"
+                      alt="prana air sensible plus PM2.5 monitor"
                     />
                     <h4>Sensible Plus Monitor</h4>
                     <p>Carbon Dioxide Air Quality Monitor</p>
                   </div>
                   <div className="product-item">
-                    <img 
-                      src="https://www.pranaair.com/wp-content/uploads/2023/03/Sensible-monitor-prana-air-180x180.png" 
-                      alt="prana air senible pm2.5 monintor" 
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/03/Sensible-monitor-prana-air-180x180.png"
+                      alt="prana air senible pm2.5 monintor"
                     />
                     <h4>Sensible Air Monitor</h4>
                     <p>TVOC Air Quality Monitor</p>

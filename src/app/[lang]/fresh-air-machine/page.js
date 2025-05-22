@@ -1,83 +1,54 @@
-"use client"
 
-import { useEffect, useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
+import ContactForm from "@/Components/Contacform/ContactForm"
+import PollutantTabs from "@/Components/Pages/FreshAirMachine/pollutant-tabs"
+import FaqAccordion from "@/Components/Pages/FreshAirMachine/faq-accordion"
+import ProductImageTabs from "@/Components/Pages/FreshAirMachine/product-image-tabs"
 
 export default function FreshAirMachine() {
-  const [activeTab, setActiveTab] = useState("pm25")
-  const [activeImageTab, setActiveImageTab] = useState("Tokyo")
-  const [activeFaqItem, setActiveFaqItem] = useState(null)
-
-  useEffect(() => {
-    // Initialize any effects here
-  }, [])
-
-  const toggleFaqItem = (index) => {
-    setActiveFaqItem(activeFaqItem === index ? null : index)
-  }
-
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
+  const faqItems = [
+    {
+      question: "1. What is the difference between an air purifier and this fresh air machine?",
+      answer:
+        "Prana Air's fresh air machine filters the ambient air and then brings that air inside your home. Whereas, room air purifiers refilter and recirculate the same air inside your room again and again.",
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
+    {
+      question: "2. How many filters are present in the device?",
+      answer: "Our air purifying machine consists of three 13-grade HEPA filters.",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
+    {
+      question: "3. Is there any warranty on the machine?",
+      answer: "Yes, there is 1-year warranty on the fresh air machine",
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+    {
+      question: "4. How to install the machine?",
+      answer: "You don't have to be concerned about the setup. Our in-house technician will install the device.",
     },
-  }
-
-  const thumbnailResponsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 6,
+    {
+      question: "5. What is the dimension of filters used in the machine?",
+      answer:
+        "Prana Air Fresh Air Machine has three filters. 1st filter: 39.5 x 4.5 x 19 (cm), 2nd filter: 39.5 x 4.5 x 19 (cm), 3rd filter: 39.5 x 20 x 19 (cm).",
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 6,
+    {
+      question: "6. Can I change a particular filter from the 3 filters?",
+      answer: "Yes, you can change a filter individually if there is a need.",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 4,
+    {
+      question: "7. What air pollutants can this machine filter?",
+      answer:
+        "Air pollutants like PM1, PM2.5, and PM10, CO2, TVOC & HCHO can be excluded from the clean air coming out of the machine's outlet.",
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 3,
+    {
+      question: "8. What is the coverage area of the machine?",
+      answer:
+        "Prana Air Fresh Air Machine offers a coverage area of 1200 square feet. This means that our device can easily function in a very large room or two small rooms with utmost precision.",
     },
-  }
-
-  const applicationResponsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
+  ]
 
   return (
     <div className="fresh-air-machine-page">
+
       {/* Banner Section */}
       <div className="home-banner">
         <div className="container">
@@ -412,126 +383,7 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <div className="tabs-container">
-              <div className="tab-buttons">
-                <button
-                  className={`tab-button ${activeTab === "pm25" ? "active" : ""}`}
-                  onClick={() => setActiveTab("pm25")}
-                >
-                  PM2.5/10
-                </button>
-                <button
-                  className={`tab-button ${activeTab === "co2" ? "active" : ""}`}
-                  onClick={() => setActiveTab("co2")}
-                >
-                  CO2
-                </button>
-                <button
-                  className={`tab-button ${activeTab === "tvoc" ? "active" : ""}`}
-                  onClick={() => setActiveTab("tvoc")}
-                >
-                  TVOC
-                </button>
-                <button
-                  className={`tab-button ${activeTab === "hcho" ? "active" : ""}`}
-                  onClick={() => setActiveTab("hcho")}
-                >
-                  HCHO
-                </button>
-              </div>
-
-              <div className={`tab-content ${activeTab === "pm25" ? "active" : ""}`} id="pm25">
-                <div className="tab-para-txt">
-                  <h4 style={{ textAlign: "justify" }}>
-                    <strong>Its Sources:</strong>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    According to WHO, 9 out of 10 people breathe air containing high levels of pollutants and over 7
-                    million people die each year as a result of tiny particles in contaminated air. PM2.5 and PM10 are
-                    tiny breathable particles and major contributors to these pollutants that are suspended in the air.
-                    Some of the major sources include cooking, incense burning, fungi mold, and contaminants carried in
-                    by outsiders.
-                  </p>
-                  <h4 style={{ textAlign: "justify" }}>
-                    <strong>Health Impacts:</strong>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    Irritation in the eyes, nose, and throat, coughing, sneezing, and breathing difficulties are some of
-                    its short-term health impacts. Long-term exposures can worsen asthma and lung difficulties, as well
-                    as cause heart attacks and irregular heartbeat.
-                  </p>
-                </div>
-              </div>
-
-              <div className={`tab-content ${activeTab === "co2" ? "active" : ""}`} id="co2">
-                <div className="tab-para-txt">
-                  <h4 style={{ textAlign: "justify" }}>
-                    <strong>Its Sources:</strong>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    Outdoor CO2, breathing, contaminants carried in by outsiders, and the ventilation rate of the room
-                    or building are all major sources of CO2.
-                  </p>
-                  <h4 style={{ textAlign: "justify" }}>
-                    <strong>Health Impacts:</strong>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    Normal ambient CO2 levels are 220-400 ppm. but indoor CO2 levels can reach 2000 ppm, causing
-                    lethargy, drowsiness, and stale, stuffy air. Short-term impacts include poor focus and an elevated
-                    heart rate. Long-term consequences include coma, death, and impaired brain development in children
-                    due to oxygen deprivation.
-                  </p>
-                </div>
-              </div>
-
-              <div className={`tab-content ${activeTab === "tvoc" ? "active" : ""}`} id="tvoc">
-                <div className="tab-para-txt">
-                  <h4 style={{ textAlign: "justify" }}>
-                    <span style={{ color: "#000000" }}>
-                      <strong>Its Sources:</strong>
-                    </span>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    Total Volatile Organic Compounds (TVOC) are the total amount of gases and smells released by
-                    numerous toxins and chemicals present in daily items such as paints and varnishes, cosmetics,
-                    carpets, curtains, furniture, hobby products, and so on. If you have poor ventilation or an enclosed
-                    space, they contaminate the fresh air within.
-                  </p>
-                  <h4 style={{ textAlign: "justify" }}>
-                    <span style={{ color: "#000000" }}>
-                      <strong>Health Impacts:</strong>
-                    </span>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    Headaches, nausea, coughing, skin irritation, and other short-term consequences of TVOC include
-                    headaches, nausea, coughing, and skin irritation. Long-term effects on the liver, spleen, blood, and
-                    respiratory disorders such as asthma and cancer.
-                  </p>
-                </div>
-              </div>
-
-              <div className={`tab-content ${activeTab === "hcho" ? "active" : ""}`} id="hcho">
-                <div className="tab-para-txt">
-                  <h4 style={{ textAlign: "justify" }}>
-                    <strong>Its Sources:</strong>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    HCHO, or formaldehyde is a compound that evaporates at room temperature. It is a typical indoor air
-                    pollutant released by building materials (particleboard, plywood, and other pressed-wood products),
-                    smoking, household items, and the use of unvented, fuel-burning equipment such as gas stoves or
-                    kerosene space heaters (according to US EPA).
-                  </p>
-                  <h4 style={{ textAlign: "justify" }}>
-                    <strong>Health Impacts:</strong>
-                  </h4>
-                  <p style={{ textAlign: "justify" }}>
-                    Even at low concentrations, it can irritate a persons eyes, nose, throat, and lungs, or induce an
-                    asthma attack, according to CARB (California Air Resources Board). Prolonged exposure to
-                    formaldehyde can even cause cancer.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <PollutantTabs />
           </div>
           <div className="col-md-6">
             <div className="pollutant-icons">
@@ -597,112 +449,7 @@ export default function FreshAirMachine() {
 
       {/* Image Tabs */}
       <div className="container">
-        <div className="tabimgs">
-          <div id="Tokyo" className="tabcontent" style={{ display: activeImageTab === "Tokyo" ? "block" : "none" }}>
-            <img
-              src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-iaq-solution-machine-with-control-1024x467.jpg"
-              alt="prana-air-iaq-solution-machine-with-control"
-              className="main-product-image"
-            />
-          </div>
-
-          <div id="tab1" className="tabcontent" style={{ display: activeImageTab === "tab1" ? "block" : "none" }}>
-            <img
-              src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-fresher-air-machine-inner-parts.jpg"
-              alt="pranaair fresher air machine inner parts"
-              className="main-product-image"
-            />
-          </div>
-
-          <div id="tab2" className="tabcontent" style={{ display: activeImageTab === "tab2" ? "block" : "none" }}>
-            <img
-              src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-monitor.jpg"
-              alt="fresher air filter monitor"
-              className="main-product-image"
-            />
-          </div>
-
-          <div id="tab3" className="tabcontent" style={{ display: activeImageTab === "tab3" ? "block" : "none" }}>
-            <img
-              src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-layers.jpg"
-              alt="fresher air filter layers"
-              className="main-product-image"
-            />
-          </div>
-
-          <div id="tab4" className="tabcontent" style={{ display: activeImageTab === "tab4" ? "block" : "none" }}>
-            <img
-              src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter.jpg"
-              alt="fresher air filter"
-              className="main-product-image"
-            />
-          </div>
-
-          <div id="tab5" className="tabcontent" style={{ display: activeImageTab === "tab5" ? "block" : "none" }}>
-            <img
-              src="https://www.pranaair.com/wp-content/uploads/2024/01/prana-air-aqi-solution-inner.jpg"
-              alt="prana-air-aqi-solution-inner"
-              className="main-product-image"
-            />
-          </div>
-
-          <div className="product-thumbnails">
-            <button
-              className={`thumbnail-btn ${activeImageTab === "Tokyo" ? "active" : ""}`}
-              onClick={() => setActiveImageTab("Tokyo")}
-            >
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-iaq-solution-machine-with-control-1024x467.jpg"
-                alt="prana-air-iaq-solution-machine-with-control"
-              />
-            </button>
-            <button
-              className={`thumbnail-btn ${activeImageTab === "tab1" ? "active" : ""}`}
-              onClick={() => setActiveImageTab("tab1")}
-            >
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-fresher-air-machine-inner-parts.jpg"
-                alt="pranaair fresher air machine inner parts"
-              />
-            </button>
-            <button
-              className={`thumbnail-btn ${activeImageTab === "tab2" ? "active" : ""}`}
-              onClick={() => setActiveImageTab("tab2")}
-            >
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-monitor.jpg"
-                alt="fresher air filter monitor"
-              />
-            </button>
-            <button
-              className={`thumbnail-btn ${activeImageTab === "tab3" ? "active" : ""}`}
-              onClick={() => setActiveImageTab("tab3")}
-            >
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-layers.jpg"
-                alt="fresher air filter layers"
-              />
-            </button>
-            <button
-              className={`thumbnail-btn ${activeImageTab === "tab4" ? "active" : ""}`}
-              onClick={() => setActiveImageTab("tab4")}
-            >
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter.jpg"
-                alt="fresher air filter"
-              />
-            </button>
-            <button
-              className={`thumbnail-btn ${activeImageTab === "tab5" ? "active" : ""}`}
-              onClick={() => setActiveImageTab("tab5")}
-            >
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2024/01/prana-air-aqi-solution-inner.jpg"
-                alt="prana-air-aqi-solution-inner"
-              />
-            </button>
-          </div>
-        </div>
+        <ProductImageTabs />
       </div>
 
       {/* Machine Working Mechanism */}
@@ -1163,7 +910,8 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <img className="havc-img"
+            <img
+              className="havc-img"
               src="https://www.pranaair.com/wp-content/uploads/2022/06/hvac-machine-1024x572.jpg"
               alt="difference between hvac system and prana air fresh air machine"
             />
@@ -1317,10 +1065,7 @@ export default function FreshAirMachine() {
           <div className="col-md-12">
             <div className="contact-heading">
               <h2>Get in Touch</h2>
-              <p>
-                Please help us know what requirements you have. Our team will
-                contact you very soon.
-              </p>
+              <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
             </div>
           </div>
         </div>
@@ -1345,58 +1090,8 @@ export default function FreshAirMachine() {
             </span>
           </h3>
         </div>
-        <div className="faq-container">
-          {[
-            {
-              question: "1. What is the difference between an air purifier and this fresh air machine?",
-              answer:
-                "Prana Air's fresh air machine filters the ambient air and then brings that air inside your home. Whereas, room air purifiers refilter and recirculate the same air inside your room again and again.",
-            },
-            {
-              question: "2. How many filters are present in the device?",
-              answer: "Our air purifying machine consists of three 13-grade HEPA filters.",
-            },
-            {
-              question: "3. Is there any warranty on the machine?",
-              answer: "Yes, there is 1-year warranty on the fresh air machine",
-            },
-            {
-              question: "4. How to install the machine?",
-              answer:
-                "You don't have to be concerned about the setup. Our in-house technician will install the device.",
-            },
-            {
-              question: "5. What is the dimension of filters used in the machine?",
-              answer:
-                "Prana Air Fresh Air Machine has three filters. 1st filter: 39.5 x 4.5 x 19 (cm), 2nd filter: 39.5 x 4.5 x 19 (cm), 3rd filter: 39.5 x 20 x 19 (cm).",
-            },
-            {
-              question: "6. Can I change a particular filter from the 3 filters?",
-              answer: "Yes, you can change a filter individually if there is a need.",
-            },
-            {
-              question: "7. What air pollutants can this machine filter?",
-              answer:
-                "Air pollutants like PM1, PM2.5, and PM10, CO2, TVOC & HCHO can be excluded from the clean air coming out of the machine's outlet.",
-            },
-            {
-              question: "8. What is the coverage area of the machine?",
-              answer:
-                "Prana Air Fresh Air Machine offers a coverage area of 1200 square feet. This means that our device can easily function in a very large room or two small rooms with utmost precision.",
-            },
-          ].map((faq, index) => (
-            <div className="faq-item" key={index}>
-              <div className="faq-question" onClick={() => toggleFaqItem(index)}>
-                <h4 className={activeFaqItem === index ? "active" : ""}>{faq.question}</h4>
-              </div>
-              <div className="faq-answer" style={{ display: activeFaqItem === index ? "block" : "none" }}>
-                <p>{faq.answer}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <FaqAccordion faqItems={faqItems} />
       </div>
     </div>
   )
 }
-

@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "title": "Pioneering Clean Air Solutions for a Healthier Tomorrow",
+    "description": "With pollution taking a toll on everyone's life while risking their health – it is about time we increase our efforts in putting together relevant information, creating awareness and providing clean air solutions for a future that is truly sane for every individual.",
+    "exploreProducts": "Explore Our Products",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "subtitle": "About Prana Air",
+    "title": "Breathing Life Into a Cleaner Future",
+    "paragraph1": "Incepted from a personal experience of not being able to breathe fresh air, Prana Air came to life when people questioned the safety of their lives. No city in the country is immune to pollution anymore, and here is why we aim to address the issue at a mass level.",
+    "paragraph2": "Prana Air, a product brand under {{company}}, ensures the best of India's first low-cost, smart features enabled and highly accurate air quality monitoring devices & clean air solutions for both indoors and outdoors, households & businesses.",
+    "paragraph3": "Located in New Delhi, India, Prana Air is specialized in air quality monitors, sensors, fresh air machines, room air purifiers, and motorized HEPA filter pollution masks for the safety of your health.",
+    "logoAlt": "Prana Air logo",
+    "features": {
+      "innovative": {
+        "title": "Innovative Technology",
+        "description": "Cutting-edge solutions for monitoring and improving air quality"
+      },
+      "affordable": {
+        "title": "Affordable Solutions",
+        "description": "High-quality products at reasonable prices for wider accessibility"
+      },
+      "customerCentric": {
+        "title": "Customer-Centric Approach",
+        "description": "Focused on solving real problems with practical solutions"
+      }
+    }
+  },
+  "mission": {
+    "subtitle": "Our Mission",
+    "title": "Committed to Clean Air for All",
+    "description": "Our mission at Prana Air is to make Delhi – and India as a whole – a safe place to live, making use of innovation, modern technology and reasonable pricing. We believe that everyone deserves to breathe clean air, and we're dedicated to making that possible through our innovative products and solutions.",
+    "stats": {
+      "yearFounded": "Year Founded",
+      "products": "Products",
+      "livesImproved": "Lives Improved"
+    }
+  },
+  "solutions": {
+    "subtitle": "Our Solutions",
+    "title": "Comprehensive Air Quality Solutions",
+    "description": "Prana Air offers a wide range of products designed to monitor air quality and provide clean air solutions for various environments."
+  },
+  "company": {
+    "subtitle": "Company Structure",
+    "title": "Purelogic Labs India Pvt. Ltd.",
+    "description": "Established in 2016, Purelogic Labs India Pvt. Ltd. is the parent company behind Prana Air and AQI.IN, working together to combat air pollution through monitoring, awareness, and innovative solutions.",
+    "parentLogoAlt": "Purelogic Labs India Pvt. Ltd.",
+    "parentName": "Purelogic Labs India Pvt. Ltd.",
+    "parentLink": "Parent Company",
+    "pranaAirLogoAlt": "Prana Air",
+    "pranaAirName": "Prana Air",
+    "pranaAirDescription": "Air Quality Monitoring & Clean Air Solutions",
+    "exploreProducts": "Explore Products",
+    "aqiLogoAlt": "AQI.IN",
+    "aqiName": "AQI.IN",
+    "aqiDescription": "Real-time Air Quality Index & Pollution Data",
+    "visitWebsite": "Visit Website",
+    "info": {
+      "paragraph1": "Purelogic Labs India is an initiative to increase awareness about air pollution in India. As consciousness about poor air in society grows, people will want to take some action to protect themselves. Based on this premise, Purelogic Labs established Prana Air for providing the best clean air solution in India.",
+      "paragraph2": "To bring everyone's attention to the rising issue of air pollution while also providing real-time data and solutions for the same, Purelogic Labs India is currently working on a unique platform, AQI India – ",
+      "alsoAvailable": "– also available on",
+      "googlePlay": "Google Play Store",
+      "and": "and",
+      "appStore": "App Store"
+    }
+  },
+  "founder": {
+    "subtitle": "Leadership",
+    "title": "Meet Our Founder",
+    "name": "Rohit Bansal",
+    "position": "Founder & CEO",
+    "imageAlt": "Rohit Bansal, Founder and CEO",
+    "bio": {
+      "paragraph1": "Native from India, Rohit Bansal has been dealing with air pollution for quite a long time – until he decided to do something about it. Driven by personal experience and a vision for cleaner air, he founded Purelogic Labs India Pvt. Ltd. in 2016.",
+      "paragraph2": "Under his leadership, the company has developed two complementary brands: Prana Air for air quality monitoring and clean air solutions, and AQI.IN for real-time air quality data and awareness.",
+      "paragraph3": "One of his first projects was the successful E.T. scooter, an electric, sustainable and portable vehicle of transportation, showcasing his commitment to environmental sustainability."
+    }
+  },
+  "team": {
+    "subtitle": "Our Team",
+    "title": "The Minds Behind Our Mission",
+    "description": "Based in New Delhi, India, our office counts with a diverse and multicultural team. Young, passionate and motivated members from India, Brazil, Egypt, Sudan, Sweden and Taiwan have joined on board towards a sustainable environment and a healthier life.",
+    "imageAlt": "Purelogic Labs India Team"
+  },
+  "vision": {
+    "subtitle": "Our Vision",
+    "title": "Creating a Breathable Future",
+    "description": "Our vision at Prana Air is to make Delhi – and India as a whole – a safe place to live, making use of innovation, modern technology and reasonable pricing.",
+    "joinMission": "Join Our Mission",
+    "iconAlt": "Vision Icon"
+  }
+}

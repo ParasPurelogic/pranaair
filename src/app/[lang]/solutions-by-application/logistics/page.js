@@ -1,24 +1,10 @@
 "use client"
-
-import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
-import ContactForm from "@/Components/Contacform/ContactForm";
-
+import ContactForm from "@/Components/Contacform/ContactForm"
 
 export default function LogisticsPage() {
-  const [activeTab, setActiveTab] = useState("air-quality-monitors")
-  const [activeFaq, setActiveFaq] = useState("faq1")
-
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId)
-  }
-
-  const toggleFaq = (faqId) => {
-    setActiveFaq(activeFaq === faqId ? "" : faqId)
-  }
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1366 },
@@ -358,31 +344,57 @@ export default function LogisticsPage() {
         </div>
 
         <div className="tabs-container">
-          <div className="tab-buttons">
-            <button
-              className={`tab-btn ${activeTab === "air-quality-monitors" ? "active" : ""}`}
-              onClick={() => handleTabClick("air-quality-monitors")}
-            >
-              Air quality Monitors
-            </button>
-            <button
-              className={`tab-btn ${activeTab === "fresh-air-machine" ? "active" : ""}`}
-              onClick={() => handleTabClick("fresh-air-machine")}
-            >
-              Fresh air machine
-            </button>
-            <button
-              className={`tab-btn ${activeTab === "data-display" ? "active" : ""}`}
-              onClick={() => handleTabClick("data-display")}
-            >
-              Data Display
-            </button>
-          </div>
+          <ul className="nav nav-tabs" id="solutionsTabs" role="tablist">
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link active"
+                id="air-quality-monitors-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#air-quality-monitors"
+                type="button"
+                role="tab"
+                aria-controls="air-quality-monitors"
+                aria-selected="true"
+              >
+                Air quality Monitors
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="fresh-air-machine-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#fresh-air-machine"
+                type="button"
+                role="tab"
+                aria-controls="fresh-air-machine"
+                aria-selected="false"
+              >
+                Fresh air machine
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="data-display-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#data-display"
+                type="button"
+                role="tab"
+                aria-controls="data-display"
+                aria-selected="false"
+              >
+                Data Display
+              </button>
+            </li>
+          </ul>
 
-          <div className="tab-content">
+          <div className="tab-content" id="solutionsTabsContent">
             <div
-              className={`tab-pane ${activeTab === "air-quality-monitors" ? "active" : ""}`}
+              className="tab-pane fade show active"
               id="air-quality-monitors"
+              role="tabpanel"
+              aria-labelledby="air-quality-monitors-tab"
             >
               <div className="solution-card">
                 <div className="solution-image">
@@ -406,7 +418,12 @@ export default function LogisticsPage() {
               </div>
             </div>
 
-            <div className={`tab-pane ${activeTab === "fresh-air-machine" ? "active" : ""}`} id="fresh-air-machine">
+            <div
+              className="tab-pane fade"
+              id="fresh-air-machine"
+              role="tabpanel"
+              aria-labelledby="fresh-air-machine-tab"
+            >
               <div className="solution-card">
                 <div className="solution-image">
                   <img
@@ -432,7 +449,7 @@ export default function LogisticsPage() {
               </div>
             </div>
 
-            <div className={`tab-pane ${activeTab === "data-display" ? "active" : ""}`} id="data-display">
+            <div className="tab-pane fade" id="data-display" role="tabpanel" aria-labelledby="data-display-tab">
               <div className="solution-card">
                 <div className="solution-image">
                   <img
@@ -493,91 +510,93 @@ export default function LogisticsPage() {
 
       {/* AQI App Slider Section */}
       <section className="aqi-app-section">
-        <Carousel
-          responsive={appCarouselResponsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={7000}
-          keyBoardControl={true}
-          customTransition="all .5s"
-          transitionDuration={500}
-          containerClass="app-carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          dotListClass="app-dot-list"
-          itemClass="app-carousel-item"
-          showDots={true}
-        >
-          <div className="app-slide">
-            <div className="app-slide-content">
-              <div className="app-slide-text">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png"
-                  alt="AQI Mobile App"
-                  className="app-slide-icon"
-                />
-                <h3>AQI Mobile App</h3>
-                <p>
-                  Access a real-time air quality monitor data and API for accurate global data to stay informed. Check
-                  the world air pollution map and weather map, and easily compare air quality parameters across multiple
-                  locations with AQI App.
-                </p>
-              </div>
-              <div className="app-slide-image">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Mobile-Apps.jpg"
-                  alt="AQI Mobile App interface"
-                />
+        <div className="container">
+          <Carousel
+            responsive={appCarouselResponsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={7000}
+            keyBoardControl={true}
+            customTransition="all .5s"
+            transitionDuration={500}
+            containerClass="app-carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            dotListClass="app-dot-list"
+            itemClass="app-carousel-item"
+            showDots={true}
+          >
+            <div className="app-slide">
+              <div className="app-slide-content">
+                <div className="app-slide-text">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png"
+                    alt="AQI Mobile App"
+                    className="app-slide-icon"
+                  />
+                  <h3>AQI Mobile App</h3>
+                  <p>
+                    Access a real-time air quality monitor data and API for accurate global data to stay informed. Check
+                    the world air pollution map and weather map, and easily compare air quality parameters across multiple
+                    locations with AQI App.
+                  </p>
+                </div>
+                <div className="app-slide-image">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Mobile-Apps.jpg"
+                    alt="AQI Mobile App interface"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="app-slide">
-            <div className="app-slide-content">
-              <div className="app-slide-text">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png"
-                  alt="AQI TV App"
-                  className="app-slide-icon"
-                />
-                <h3>AQI TV App</h3>
-                <p>
-                  View real-time and historical air quality data on a large TV screen. Effortlessly enjoy 24/7 remote
-                  monitoring to stay informed about AQI levels with data accessibility to everyone.
-                </p>
-              </div>
-              <div className="app-slide-image">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-TV-Apps.jpg"
-                  alt="AQI TV App interface"
-                />
+            <div className="app-slide">
+              <div className="app-slide-content">
+                <div className="app-slide-text">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png"
+                    alt="AQI TV App"
+                    className="app-slide-icon"
+                  />
+                  <h3>AQI TV App</h3>
+                  <p>
+                    View real-time and historical air quality data on a large TV screen. Effortlessly enjoy 24/7 remote
+                    monitoring to stay informed about AQI levels with data accessibility to everyone.
+                  </p>
+                </div>
+                <div className="app-slide-image">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-TV-Apps.jpg"
+                    alt="AQI TV App interface"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="app-slide">
-            <div className="app-slide-content">
-              <div className="app-slide-text">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg"
-                  alt="AQI Web-Dashboard"
-                  className="app-slide-icon"
-                />
-                <h3>AQI Web-Dashboard</h3>
-                <p>
-                  Explore global pollution trends through detailed analyses of the worlds most polluted cities and
-                  countries. Receive health advice based on real-time air quality indexes, and easily compare air
-                  quality parameters across multiple locations with Web Dashboard.
-                </p>
-              </div>
-              <div className="app-slide-image">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Web-Dashboards.jpg"
-                  alt="AQI Web Dashboard interface"
-                />
+            <div className="app-slide">
+              <div className="app-slide-content">
+                <div className="app-slide-text">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg"
+                    alt="AQI Web-Dashboard"
+                    className="app-slide-icon"
+                  />
+                  <h3>AQI Web-Dashboard</h3>
+                  <p>
+                    Explore global pollution trends through detailed analyses of the worlds most polluted cities and
+                    countries. Receive health advice based on real-time air quality indexes, and easily compare air
+                    quality parameters across multiple locations with Web Dashboard.
+                  </p>
+                </div>
+                <div className="app-slide-image">
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Web-Dashboards.jpg"
+                    alt="AQI Web Dashboard interface"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </Carousel>
+          </Carousel>
+        </div>
       </section>
 
       {/* Clientele Section */}
@@ -638,10 +657,7 @@ export default function LogisticsPage() {
             <div className="col-md-12">
               <div className="contact-heading">
                 <h2>Get in Touch</h2>
-                <p>
-                  Please help us know what requirements you have. Our team will
-                  contact you very soon.
-                </p>
+                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
               </div>
             </div>
           </div>
@@ -651,63 +667,124 @@ export default function LogisticsPage() {
 
       {/* FAQ Section */}
       <section className="faq-section">
-        <div className="section-header">
-          <h2>
-            Frequently Asked <span className="highlight">Questions</span>
-          </h2>
-          <p className="section-description">Have questions? Were here to help.</p>
-        </div>
-
-        <div className="faq-container">
-          <div className={`faq-item ${activeFaq === "faq1" ? "active" : ""}`}>
-            <div className="faq-question" onClick={() => toggleFaq("faq1")}>
-              <h3>1. How do logistics sectors affect the nearby residents air quality?</h3>
-              <span className="faq-icon">{activeFaq === "faq1" ? "−" : "+"}</span>
-            </div>
-            <div className={`faq-answer ${activeFaq === "faq1" ? "show" : ""}`}>
-              <p>
-                The logistics sector involves several activities that involve diesel-powered transportation and various
-                operations that can impact nearby communities.
-              </p>
-            </div>
+        <div className="container">
+          <div className="section-header">
+            <h2>
+              Frequently Asked <span className="highlight">Questions</span>
+            </h2>
+            <p className="section-description">Have questions? Were here to help.</p>
           </div>
+          <div className="accordion" id="faqAccordion">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingOne">
+                <button
+                  className="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                  aria-expanded="true"
+                  aria-controls="faq1"
+                >
+                  1. How do logistics sectors affect the nearby residents air quality?
+                </button>
+              </h2>
+              <div
+                id="faq1"
+                className="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    The logistics sector involves several activities that involve diesel-powered transportation and
+                    various operations that can impact nearby communities.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          <div className={`faq-item ${activeFaq === "faq2" ? "active" : ""}`}>
-            <div className="faq-question" onClick={() => toggleFaq("faq2")}>
-              <h3>2. What are the major pollutants in the logistic sectors?</h3>
-              <span className="faq-icon">{activeFaq === "faq2" ? "−" : "+"}</span>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                  aria-expanded="false"
+                  aria-controls="faq2"
+                >
+                  2. What are the major pollutants in the logistic sectors?
+                </button>
+              </h2>
+              <div
+                id="faq2"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Logistics sectors include warehouses, transportation, and stationary that emit pollutants like PM2.5,
+                    NOx, CO, VOCs etc.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq2" ? "show" : ""}`}>
-              <p>
-                Logistics sectors include warehouses, transportation, and stationary that emit pollutants like PM2.5,
-                NOx, CO, VOCs etc.
-              </p>
-            </div>
-          </div>
 
-          <div className={`faq-item ${activeFaq === "faq3" ? "active" : ""}`}>
-            <div className="faq-question" onClick={() => toggleFaq("faq3")}>
-              <h3>3. Why air quality is a major issue in the warehouse?</h3>
-              <span className="faq-icon">{activeFaq === "faq3" ? "−" : "+"}</span>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                  aria-expanded="false"
+                  aria-controls="faq3"
+                >
+                  3. Why air quality is a major issue in the warehouse?
+                </button>
+              </h2>
+              <div
+                id="faq3"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Warehouses highly trap pollutants due to Congested operational areas and impact the indoor and outdoor
+                    air quality.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={`faq-answer ${activeFaq === "faq3" ? "show" : ""}`}>
-              <p>
-                Warehouses highly trap pollutants due to Congested operational areas and impact the indoor and outdoor
-                air quality.
-              </p>
-            </div>
-          </div>
 
-          <div className={`faq-item ${activeFaq === "faq4" ? "active" : ""}`}>
-            <div className="faq-question" onClick={() => toggleFaq("faq4")}>
-              <h3>4. What are the solutions for logistics sectors to improve air quality?</h3>
-              <span className="faq-icon">{activeFaq === "faq4" ? "−" : "+"}</span>
-            </div>
-            <div className={`faq-answer ${activeFaq === "faq4" ? "show" : ""}`}>
-              <p>
-                Prana Air offers practical solutions to improve air quality in the logistics sectors as air quality
-                monitoring systems, advanced air purifiers etc.
-              </p>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFour">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                  aria-expanded="false"
+                  aria-controls="faq4"
+                >
+                  4. What are the solutions for logistics sectors to improve air quality?
+                </button>
+              </h2>
+              <div
+                id="faq4"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>
+                    Prana Air offers practical solutions to improve air quality in the logistics sectors as air quality
+                    monitoring systems, advanced air purifiers etc.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -851,7 +928,21 @@ export default function LogisticsPage() {
           </Carousel>
         </div>
       </section>
+
+      {/* Bootstrap JS */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', function() {
+              // Initialize Bootstrap components
+              var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+              var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+              })
+            });
+          `,
+        }}
+      />
     </div>
   )
 }
-

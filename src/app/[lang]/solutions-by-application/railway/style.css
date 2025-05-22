@@ -1086,14 +1086,6 @@ label.message_text {
   padding: 15px;
 }
 
-.collapse {
-  display: none;
-}
-
-.collapse.in {
-  display: block;
-}
-
 /* Carousel Styling */
 .carousel-container {
   position: relative;

@@ -1,14 +1,11 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import "./styles.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
 
 export default function CarbonDioxidePage() {
-  const [activeTab, setActiveTab] = useState("aqi")
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },

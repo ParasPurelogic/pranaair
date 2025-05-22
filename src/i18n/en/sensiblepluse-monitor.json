@@ -1,0 +1,325 @@
+{
+     "sensibleBanner": {
+    "title": {
+      "highlight": "Sensible+",
+      "main": "Air Monitor"
+    },
+    "description": "Keep track of indoor air quality along-with ambient indoor & outdoor pollutants",
+    "buyButton": "Buy Now",
+    "altTexts": {
+      "buyButtonIcon": "Buy now button icon"
+    }
+  },
+   "specificationBox": {
+    "title": "SENSIBLE+ AIR QUALITY MONITOR",
+    "description": "An intelligent smart portable indoor air pollution monitor to keep a tab over the air you breathe",
+    "altTexts": {
+      "logo": "logo"
+    }
+  },
+  "tabAqiSection": {
+    "tabs": {
+      "basic": "Basic",
+      "advanced": "Advanced"
+    },
+    "altTexts": {
+      "pm10": "pm10 icon",
+      "pm25": "pm2.5 icon",
+      "co": "co icon",
+      "co2": "co2 icon",
+      "no2": "no2 icon",
+      "so2": "so2 icon",
+      "tvoc": "tvoc icon",
+      "hcho": "hcho",
+      "temperature": "temperature icon",
+      "humidity": "humidity icon",
+      "basicMonitor": "Prana Air sensible+ basic air pollution monitor",
+      "advancedMonitor": "Prana Air sensible+ advanced air pollution monitor"
+    },
+    "parameters": {
+      "pm10": "PM10",
+      "pm25": "PM2.5",
+      "co": "CO",
+      "co2": "CO2",
+      "no2": "NO2",
+      "so2": "SO2",
+      "tvoc": "TVOC",
+      "hcho": "HCHO",
+      "temperature": "Temperature",
+      "humidity": "Humidity"
+    }
+  },
+  "aqiTabSection": {
+    "tabs": {
+      "aqi": "AQI"
+    }
+  },
+   "monitorSection": {
+    "altTexts": {
+      "realTimeAirQuality": "real-time air quality graph",
+      "wifiConnectivity": "wifi connectivity"
+    },
+    "features": {
+      "realTimeData": "Real-Time & Historic Air Quality Data (Hourly, Weekly & Monthly)",
+      "easyAccess": "Easy Access of Data via Web & Mobile App Through WiFi Connection"
+    }
+  },
+  "monitorSectionNew": {
+    "altTexts": {
+      "battery": "monitor battery",
+      "sdCard": "micro sd card",
+      "touchScreen": "touch screen",
+      "usbCharging": "type-c cable"
+    },
+    "features": {
+      "battery": "5000 mAh Inbuilt Battery Long Screen-Time",
+      "sdCard": "On-board Micro SD Card Data Storage",
+      "touchScreen": "7 inch Touch Screen To Have Smarter Access",
+      "usbCharging": "Micro USB Charging Easily Recharging Cable"
+    }
+  },
+  "complianceSection": {
+    "altTexts": {
+      "complianceIcon": "Compliance with"
+    },
+    "text": {
+      "complianceWith": "Compliance with",
+      "leedWell": "LEED, WELL,",
+      "and": "and",
+      "ashrae": "ASHRAE",
+      "standards": "standards"
+    }
+  },
+  "accuracySection": {
+    "title": "Accuracy of Prana Air Monitor",
+    "altTexts": {
+      "logo": "लोगो",
+      "comparisonGraph": "prana-air-pm2.5-data-comparison-with-dusttrak"
+    }
+  },
+   "howToConnect": {
+    "title": "How to connect SENSIBLE+ with dashboard?",
+    "altTexts": {
+      "sensibleMonitor": "Sensible+ monitor"
+    },
+    "steps": [
+      "Click on the Settings icon and select Wi-Fi option.",
+      "Enter the required details and connect the device with Wi-Fi.",
+      "Keep Your Device on Graph Screen by pressing the touch button.",
+      "Download AQI India app and sign up.",
+      "Click Add Device and choose the Sensible+ monitor out of the options given.",
+      "Enter the Device ID or scan the QR code from the device screen.",
+      "Device is now connected."
+    ]
+  },
+  "qrCodeSection": {
+    "manual": {
+      "scanText": "Scan this QR Code to",
+      "downloadText": "Download Products Manual",
+      "altText": "prana air sensible+ air quality monitor manual"
+    },
+    "brochure": {
+      "scanText": "Scan this QR Code to",
+      "downloadText": "Download Products Brochure",
+      "altText": "prana air sensible+ air quality monitor brochure"
+    }
+  },
+    "aqiAppDashboard": {
+    "title": "One-Stop Solution- AQI App & Dashboard",
+    "altTexts": {
+      "logo": "logo",
+      "appStore": "App Store",
+      "playStore": "Play Store"
+    },
+    "downloadSection": {
+      "heading": "To get the updates about Air Quality near you, Download AQI App",
+      "description": "To track the quality of air you inhale, download the AQI app on your iOS/Android device(s) and forget all your worries. Download the app via Google Play Store (for Android), or Apple App Store (for iOS)."
+    }
+  },
+   "tvAppSection": {
+    "title": "Download AQI TV App",
+    "logoAlt": "logo",
+    "description": "Install our app in your smart TV, and connect your monitors to display air quality data on your television sets 24*7.",
+    "downloadLink": "https://drive.google.com/file/d/1y9IBVJ_8zYclSKtfEYR7qhnMII5XQ-Ie/view?usp=sharing",
+    "downloadBtnAlt": "AQI tv app",
+    "appImageAlt": "air quality data on aqi tv app"
+  },
+ "aqiWebDashboard": {
+    "title": "AQI Web Dashboard",
+    "logoAlt": "logo",
+    "features": {
+      "historicalData": {
+        "title": "Real-time & Historical Data",
+        "description": "Access your city's data on real-time or historic air pollution parameters like AQI, PM2.5, PM10, Temperature, Humidity & Noise parameters anytime, anywhere.",
+        "altText": "historical data"
+      },
+      "healthRecommendations": {
+        "title": "Health Recommendations",
+        "description": "Get health recommendations according to the current air quality. These will be particularly helpful to you on the days with high pollution levels.",
+        "altText": "Health Recommendations"
+      },
+      "scanQR": {
+        "title": "Generate a Link/Scan the QR",
+        "description": "Share the live monitoring data externally by generating a link or a QR code.",
+        "altText": "Scan the QR"
+      },
+      "comprehensiveData": {
+        "title": "Comprehensive Air Quality Data",
+        "description": "Place AQI India widget on your home screen to view AQI information on the go.",
+        "altText": "Comprehensive Air Quality Data"
+      },
+      "reliableDashboard": {
+        "title": "Reliable Dashboard",
+        "description": "Log in to our exclusive AQI dashboard with your credentials for a reliable experience.",
+        "altText": "Reliable Dashboard"
+      },
+      "exportData": {
+        "title": "Export Data",
+        "description": "Export the air quality data of your device(s) in an Excel Sheet format for future reference.",
+        "altText": "Export Data"
+      },
+      "multipleDevices": {
+        "title": "Convergence of Multiple Devices at one place",
+        "description": "Pair one or multiple Prana Air – Air Pollution Monitors with the dashboard through WiFi/GSM SIM connectivity.",
+        "altText": "Convergence of Multiple Devices"
+      },
+      "graphicalRepresentation": {
+        "title": "Graphical Representation for Comparative Ease",
+        "description": "Get graphical representation of air quality data for your ease. Also, you can compare multiple data and make inferences.",
+        "altText": "Graphical Representation"
+      }
+    },
+    "qrCodeSection": {
+      "title": "Check Your Air Pollution Data By Scan QR Code",
+      "altText": "check air pollution by qr code scan"
+    }
+  },
+   "technicalSpecificationSection": {
+    "title": "Technical Specification",
+    "altTexts": {
+      "logo": "logo"
+    },
+    "table": {
+      "headers": {
+        "parameterName": "Parameter name",
+        "index": "Index"
+      },
+      "rows": {
+        "operatingTemperature": {
+          "name": "Operating Temperature",
+          "value": "5°C to 50°C [40°F to 122°F]"
+        },
+        "storageTemperature": {
+          "name": "Storage temperature",
+          "value": "-20°C to 60°C [-4° to 140°F]"
+        },
+        "dimension": {
+          "name": "Dimension",
+          "value": "185 x 30 x 110 mm"
+        },
+        "weight": {
+          "name": "Weight",
+          "value": "475 gram"
+        },
+        "powerSupply": {
+          "name": "Power Supply",
+          "value": "5V DC"
+        },
+        "display": {
+          "name": "Display",
+          "value": "7 Inch Color LED Display [Touch Screen]"
+        },
+        "connectivity": {
+          "name": "Connectivity",
+          "value": "WiFi [2.4GHz]"
+        },
+        "storage": {
+          "name": "Storage",
+          "value": "Micro SD Card + Cloud Storage [AQI dashboard]"
+        },
+        "mobileApp": {
+          "name": "Mobile App",
+          "value": "AQI India [iOS & android]"
+        },
+        "battery": {
+          "name": "Battery",
+          "value": "5000 mAh rechargeable battery"
+        }
+      }
+    },
+    "downloads": {
+      "brochure": "Download Brochure",
+      "manual": "Download Manual",
+      "requestQuote": "Request A Quote"
+    }
+  },
+   "solutionApplications": {
+    "title": "Solution Applications",
+    "altTexts": {
+      "logo": "logo"
+    }
+  },
+   "productDirection": {
+    "altTexts": {
+      "office": "use of sensible+ monitor in office",
+      "hotel": "use of sensible+ monitor in hotel",
+      "hospital": "use of sensible+ monitor in hospital",
+      "factory": "use of sensible+ monitor in factory"
+    },
+    "locations": {
+      "office": "Office",
+      "hotel": "Hotel",
+      "hospital": "Hospital",
+      "factory": "Factory"
+    }
+  },
+   "faqAccordion": {
+    "questions": {
+      "q1": "1. Which air quality parameters can be monitored by SENSIBLE+ ?",
+      "q2": "2. Is SENSIBLE+ monitor competent as per the international standards?",
+      "q3": "3. Can I connect my device with Wi-Fi?",
+      "q4": "4. Do I get any on-board storage with SENSIBLE+ ?",
+      "q5": "5. Can I connect my SENSIBLE+ with my Building Management System (BMS)?",
+      "q6": "6. How much does SENSIBLE+ monitor weigh?"
+    },
+    "answers": {
+      "a1": "SENSIBLE+ is an indoor air quality monitor that effectively measures a wide range of primary and secondary air pollutants. It monitors and gives user the account of Air Quality Index (AQI), Temperature, Relative Humidity, PM (10, 2.5, and 1), CO₂, and Total Volatile Organic Compounds (TVOCs) in the air around them.",
+      "a2": "Yes. It has been curated with cutting edge technology, keeping national and international requirements in mind. SENSIBLE+ is compliant with the standards set by WELL, LEED, ISHRAE and WHO.",
+      "a3": "Yes. SENSIBLE+ comes with Wi-Fi connectivity. You can connect your device with the Wi-Fi of your place by accessing the Settings menu.",
+      "a4": "Yes. SENSIBLE+ comes with on-board micro-SD card storage.",
+      "a5": "Yes, absolutely. SENSIBLE+ air quality monitor is extremely versatile and flexible in terms of connectivity. It comes with RS-485 connectivity which renders it compatible with your BMS.",
+      "a6": "SENSIBLE+ monitor weighs 475 gm (16.75 oz)."
+    }
+  },
+    "contactHeading": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+   "productCompare": {
+    "title": {
+      "part1": "You May Also Like Other",
+      "part2": "Air Quality Monitors"
+    },
+    "altTexts": {
+      "logo": "logo"
+    },
+    "products": {
+      "cair": {
+        "name": "CAIR+",
+        "alt": "prana air cair air quality monitor"
+      },
+      "sensible": {
+        "name": "Sensible",
+        "alt": "prana air sensible air quality monitor"
+      },
+      "squair": {
+        "name": "SQUAIR",
+        "alt": "prana air squair air quality monitor"
+      },
+      "ambient": {
+        "name": "Ambient",
+        "alt": "prana air caaqms ambient air quality monitor"
+      }
+    }
+  }
+}

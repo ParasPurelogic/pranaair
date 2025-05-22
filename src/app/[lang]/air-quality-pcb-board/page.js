@@ -2,9 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import PCBProductSlider from "@/Components/Pages/AirPcbBoard/pcb-product-slider"
-
-
-export default function PranaAirPCB() {
+import { getServerTranslation } from "@/i18n/server"
+export default async function PranaAirPCB() {
+    const { t } = await getServerTranslation("air-quality-pcb-board")
     // Product data for carousel
     const sensorProducts = [
         {
@@ -43,7 +43,6 @@ export default function PranaAirPCB() {
             image: "https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-nitrogen-dioxide-no2-sensor-with-board.jpg",
         },
     ]
-
     const monitorProducts = [
         {
             id: 76353,
@@ -95,30 +94,30 @@ export default function PranaAirPCB() {
                     <div className="row">
                         <div className="col-md-6 fadeInLeft">
                             <div className="banner-txt">
-                                <h1>Prana Air</h1>
-                                <h2>Air Quality</h2>
-                                <h3>PCB Board</h3>
-                                <h4>For indoor &amp; outdoor</h4>
+                                <h1>{t("pcbBanner.title.brand")}</h1>
+                                <h2>{t("pcbBanner.title.airQuality")}</h2>
+                                <h3>{t("pcbBanner.title.pcbBoard")}</h3>
+                                <h4>{t("pcbBanner.title.forIndoorOutdoor")}</h4>
                                 <ul className="indoor-outdoor">
-                                    <li>SO2</li>
-                                    <li>NO2</li>
-                                    <li>CO</li>
-                                    <li>PM2.5</li>
-                                    <li>Ozone</li>
+                                    <li>{t("pcbBanner.pollutants.so2")}</li>
+                                    <li>{t("pcbBanner.pollutants.no2")}</li>
+                                    <li>{t("pcbBanner.pollutants.co")}</li>
+                                    <li>{t("pcbBanner.pollutants.pm25")}</li>
+                                    <li>{t("pcbBanner.pollutants.ozone")}</li>
                                 </ul>
                                 <p className="banner-para">
-                                    Cutting-edge PCB technology to identify and detect indoor and outdoor air pollutants
+                                    {t("pcbBanner.description")}
                                 </p>
                                 <div className="buy-now-box">
                                     <a
                                         className="single_add_to_cart_button button button_slide slide_right alt custom-checkout-btn"
                                         href="#get-in-touch"
                                     >
-                                        Request A Quote
+                                        {t("pcbBanner.requestButton")}
                                         <img
                                             className="banner-btn-arrow"
                                             src="https://www.pranaair.com/wp-content/uploads/2023/06/banner-btn-arrow.png"
-                                            alt=""
+                                            alt={t("pcbBanner.altTexts.buttonArrow")}
                                         />
                                     </a>
                                 </div>
@@ -137,11 +136,11 @@ export default function PranaAirPCB() {
                             <h2>
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/chip-computer-svgrepo-com.png"
-                                    alt="chip-computer-svgrepo-com"
+                                    alt={t("circuitBoard.altTexts.chipIcon")}
                                 />{" "}
-                                Air Quality
+                                {t("circuitBoard.title.airQuality")}
                             </h2>
-                            <h3>Printed Circuit Board (PCBs)</h3>
+                            <h3>{t("circuitBoard.title.pcb")}</h3>
                         </div>
                     </div>
                 </div>
@@ -153,15 +152,8 @@ export default function PranaAirPCB() {
                     <div className="row fadeIn printed-circuit-board-bg">
                         <div className="col-12">
                             <div className="pcb-board-txt">
-                                Air pollutions impact on human life necessitates the monitoring of air quality. To assess pollution
-                                levels, Printed Circuit Boards (PCBs), which consist of embedded metal wires (traces) and metal areas
-                                (planes) within a rigid structure housing electrical circuitry, play a crucial role. PCBs enable the
-                                precise measurement and analysis of air pollutants, contributing to effective environmental monitoring
-                                and mitigation strategies.
-                                <p className="para-txt">
-                                    PCBs are vital for air quality monitoring, providing intricate circuit platforms for connectivity,
-                                    integration, and analysis.
-                                </p>
+                                {t("pcbDescription.mainText")}
+                                <p className="para-txt">{t("pcbDescription.summary")}</p>
                             </div>
 
                             <div className="row">
@@ -170,16 +162,16 @@ export default function PranaAirPCB() {
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/gas-environmental-sensors.png"
-                                                alt="gas environmental sensors"
+                                                alt={t("pcbDescription.features.sensors.altText")}
                                             />
-                                            <h3>Gas+Environmental Sensors</h3>
+                                            <h3>{t("pcbDescription.features.sensors.title")}</h3>
                                         </div>
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/selectivity-sensitivity.png"
-                                                alt="selectivity & sensitivity"
+                                                alt={t("pcbDescription.features.sensitivity.altText")}
                                             />
-                                            <h3>Sensitivity &amp; Selectivity</h3>
+                                            <h3>{t("pcbDescription.features.sensitivity.title")}</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -188,16 +180,16 @@ export default function PranaAirPCB() {
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/flexibility-communication.png"
-                                                alt="flexibility communication"
+                                                alt={t("pcbDescription.features.communication.altText")}
                                             />
-                                            <h3>Communication Flexibility</h3>
+                                            <h3>{t("pcbDescription.features.communication.title")}</h3>
                                         </div>
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/durability-robustness-.png"
-                                                alt="durability & robustness"
+                                                alt={t("pcbDescription.features.robustness.altText")}
                                             />
-                                            <h3>Robustness &amp; Durability</h3>
+                                            <h3>{t("pcbDescription.features.robustness.title")}</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -209,16 +201,16 @@ export default function PranaAirPCB() {
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/capability-calibration.png"
-                                                alt="capability calibration"
+                                                alt={t("pcbDescription.features.calibration.altText")}
                                             />
-                                            <h3>Calibration Capability</h3>
+                                            <h3>{t("pcbDescription.features.calibration.title")}</h3>
                                         </div>
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/effectiveness-cost.png"
-                                                alt="effectiveness cost"
+                                                alt={t("pcbDescription.features.costEffectiveness.altText")}
                                             />
-                                            <h3>Cost-Effectiveness</h3>
+                                            <h3>{t("pcbDescription.features.costEffectiveness.title")}</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -227,16 +219,16 @@ export default function PranaAirPCB() {
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/reliability-accuracy-.png"
-                                                alt="reliability accuracy"
+                                                alt={t("pcbDescription.features.accuracy.altText")}
                                             />
-                                            <h3>Accuracy &amp; Reliability</h3>
+                                            <h3>{t("pcbDescription.features.accuracy.title")}</h3>
                                         </div>
                                         <div className="box-1">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/power-low-consumption.png"
-                                                alt="power low consumption"
+                                                alt={t("pcbDescription.features.powerConsumption.altText")}
                                             />
-                                            <h3>Low Power Consumption</h3>
+                                            <h3>{t("pcbDescription.features.powerConsumption.title")}</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +244,7 @@ export default function PranaAirPCB() {
                     <div className="row">
                         <div className="col-12">
                             <div className="tab-main-heading">
-                                <h2>Multiple Communication Interfaces</h2>
+                                <h2>{t("communicationInterfaces.title")}</h2>
                             </div>
                         </div>
                     </div>
@@ -273,7 +265,7 @@ export default function PranaAirPCB() {
                                                 aria-controls="wifi-content"
                                                 aria-selected="true"
                                             >
-                                                WiFi
+                                                {t("communicationInterfaces.tabs.wifi")}
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -287,7 +279,7 @@ export default function PranaAirPCB() {
                                                 aria-controls="uart-content"
                                                 aria-selected="false"
                                             >
-                                                UART
+                                                {t("communicationInterfaces.tabs.uart")}
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -301,7 +293,7 @@ export default function PranaAirPCB() {
                                                 aria-controls="gsm-content"
                                                 aria-selected="false"
                                             >
-                                                GSM
+                                                {t("communicationInterfaces.tabs.gsm")}
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -315,35 +307,28 @@ export default function PranaAirPCB() {
                                                 aria-controls="rs485-content"
                                                 aria-selected="false"
                                             >
-                                                RS-485
+                                                {t("communicationInterfaces.tabs.rs485")}
                                             </button>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div className="tab-content" id="communicationTabsContent">
-                                    <div
-                                        className="tab-pane fade show active"
-                                        id="wifi-content"
-                                        role="tabpanel"
-                                        aria-labelledby="wifi-tab"
-                                    >
+                                    <div className="tab-pane fade show active" id="wifi-content" role="tabpanel" aria-labelledby="wifi-tab">
                                         <div className="tab-img-para">
                                             <h2>
                                                 <img
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/wifi-svgrepo-com.png"
-                                                    alt="wifi svgrepo com"
+                                                    alt={t("communicationInterfaces.wifi.altText")}
                                                 />{" "}
-                                                WiFi Connectivity
+                                                {t("communicationInterfaces.wifi.title")}
                                             </h2>
-                                            PCBs with WiFi connectivity integrate air quality sensors, enabling the measurement of various
-                                            parameters crucial for effective air quality monitoring. This enables wireless communication with
-                                            the help of IoT.
+                                            {t("communicationInterfaces.wifi.description")}
                                         </div>
                                         <div className="text-center tab-image">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/pcb-board-wifi-connectivity-2048x945.jpg"
-                                                alt="WiFi PCB"
+                                                alt={t("communicationInterfaces.wifi.imageAlt")}
                                                 className="img-fluid"
                                             />
                                         </div>
@@ -352,17 +337,18 @@ export default function PranaAirPCB() {
                                     <div className="tab-pane fade" id="uart-content" role="tabpanel" aria-labelledby="uart-tab">
                                         <div className="tab-img-para">
                                             <h2>
-                                                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/uart-icon.png" alt="uart icon" />{" "}
-                                                UART
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2023/07/uart-icon.png"
+                                                    alt={t("communicationInterfaces.uart.altText")}
+                                                />{" "}
+                                                {t("communicationInterfaces.uart.title")}
                                             </h2>
-                                            The UART (Universal Asynchronous Receiver-Transmitter) is a form of hardware communication
-                                            interface that can be found in microcontrollers and other electronic devices. By sequentially
-                                            transmitting and receiving data, UART enables serial communication.
+                                            {t("communicationInterfaces.uart.description")}
                                         </div>
                                         <div className="text-center tab-image">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/pcb-board-wifi-connectivity-2048x945.jpg"
-                                                alt="UART PCB"
+                                                alt={t("communicationInterfaces.uart.imageAlt")}
                                                 className="img-fluid"
                                             />
                                         </div>
@@ -371,16 +357,18 @@ export default function PranaAirPCB() {
                                     <div className="tab-pane fade" id="gsm-content" role="tabpanel" aria-labelledby="gsm-tab">
                                         <div className="tab-img-para">
                                             <h2>
-                                                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/gsm-icom.png" alt="gsm icon" />{" "}
-                                                GSM
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2023/07/gsm-icom.png"
+                                                    alt={t("communicationInterfaces.gsm.altText")}
+                                                />{" "}
+                                                {t("communicationInterfaces.gsm.title")}
                                             </h2>
-                                            GSM integration links PCBs to cellular networks, enabling remote monitoring, control, and
-                                            communication. Enhances connectivity, facilitates wireless data transmission and control.
+                                            {t("communicationInterfaces.gsm.description")}
                                         </div>
                                         <div className="text-center tab-image">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/pcb-board-wifi-connectivity-2048x945.jpg"
-                                                alt="GSM PCB"
+                                                alt={t("communicationInterfaces.gsm.imageAlt")}
                                                 className="img-fluid"
                                             />
                                         </div>
@@ -391,18 +379,16 @@ export default function PranaAirPCB() {
                                             <h2>
                                                 <img
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/rs-485-jocn.png"
-                                                    alt="rs 485 icon"
+                                                    alt={t("communicationInterfaces.rs485.altText")}
                                                 />{" "}
-                                                RS-485
+                                                {t("communicationInterfaces.rs485.title")}
                                             </h2>
-                                            RS-485 is a balanced transmission line standard facilitating high-speed, long-distance data
-                                            transmission for multi-drop communication in PCBs, commonly used in industrial automation and
-                                            control systems.
+                                            {t("communicationInterfaces.rs485.description")}
                                         </div>
                                         <div className="text-center tab-image">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/07/pcb-board-wifi-connectivity-2048x945.jpg"
-                                                alt="RS-485 PCB"
+                                                alt={t("communicationInterfaces.rs485.imageAlt")}
                                                 className="img-fluid"
                                             />
                                         </div>
@@ -420,15 +406,12 @@ export default function PranaAirPCB() {
                     <div className="row fadeIn">
                         <div className="col-md-3">
                             <div className="air-quality-sensore">
-                                <h2>PCB</h2>
-                                <h3>Variations</h3>
+                                <h2>{t("pcbVariations.title.main")}</h2>
+                                <h3>{t("pcbVariations.title.sub")}</h3>
                             </div>
                         </div>
                         <div className="col-md-9">
-                            <div className="air-quality-sensore-para">
-                                Explore Prana Airs extensive selection of Printed Circuit Boards, providing seamless customization
-                                options to meet diverse air quality monitoring needs with precision and satisfaction.
-                            </div>
+                            <div className="air-quality-sensore-para">{t("pcbVariations.description")}</div>
                         </div>
                     </div>
 
@@ -437,7 +420,7 @@ export default function PranaAirPCB() {
                             <div className="text-center pcb-sensore-img fadeIn">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-ambient-air-quality-pcb-monitor-2048x1093.jpg"
-                                    alt="PCB Variation"
+                                    alt={t("pcbVariations.images.main.alt")}
                                     className="img-fluid"
                                 />
                             </div>
@@ -449,7 +432,7 @@ export default function PranaAirPCB() {
                             <div className="text-center pcb-sensore-img fadeIn">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-ambient-lite-air-quality-monitor-pcb.jpg"
-                                    alt="PCB Variation"
+                                    alt={t("pcbVariations.images.ambientLite.alt")}
                                     className="img-fluid"
                                 />
                             </div>
@@ -458,7 +441,7 @@ export default function PranaAirPCB() {
                             <div className="text-center pcb-sensore-img fadeIn">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/air-quality-monitor-pcb-768x395.jpg"
-                                    alt="PCB Variation"
+                                    alt={t("pcbVariations.images.airQualityMonitor.alt")}
                                     className="img-fluid"
                                 />
                             </div>
@@ -470,7 +453,7 @@ export default function PranaAirPCB() {
                             <div className="text-center pcb-sensore-img fadeIn">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-pm-air-quality-pcb-768x371.jpg"
-                                    alt="PCB Variation"
+                                    alt={t("pcbVariations.images.pmAirQuality.alt")}
                                     className="img-fluid"
                                 />
                             </div>
@@ -479,7 +462,7 @@ export default function PranaAirPCB() {
                             <div className="text-center pcb-sensore-img fadeIn">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-sensor-digital-board-768x370.jpg"
-                                    alt="PCB Variation"
+                                    alt={t("pcbVariations.images.sensorDigitalBoard.alt")}
                                     className="img-fluid"
                                 />
                             </div>
@@ -494,7 +477,7 @@ export default function PranaAirPCB() {
                     <div className="row">
                         <div className="col-12">
                             <div className="faq-heading">
-                                <h2>FAQs of Cair+ Monitor</h2>
+                                <h2>{t("pcbFAQ.title")}</h2>
                             </div>
                             <div className="accordion" id="faqAccordion">
                                 <div className="accordion-item">
@@ -507,7 +490,7 @@ export default function PranaAirPCB() {
                                             aria-expanded="true"
                                             aria-controls="collapseOne"
                                         >
-                                            1. What types of Printed Circuit Boards (PCBs) does Prana Air offer?
+                                            {t("pcbFAQ.question1")}
                                         </button>
                                     </h2>
                                     <div
@@ -516,12 +499,10 @@ export default function PranaAirPCB() {
                                         aria-labelledby="headingOne"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Prana Air offers a range of PCBs tailored for air quality monitoring, ensuring efficient and
-                                            accurate data collection.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("pcbFAQ.answer1")}</div>
                                     </div>
                                 </div>
+
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingTwo">
                                         <button
@@ -532,7 +513,7 @@ export default function PranaAirPCB() {
                                             aria-expanded="false"
                                             aria-controls="collapseTwo"
                                         >
-                                            2. Can Prana Air PCBs be customized to specific requirements?
+                                            {t("pcbFAQ.question2")}
                                         </button>
                                     </h2>
                                     <div
@@ -541,12 +522,10 @@ export default function PranaAirPCB() {
                                         aria-labelledby="headingTwo"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Prana Air PCBs are designed to be easily customized, allowing for seamless integration with
-                                            various air quality monitoring systems.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("pcbFAQ.answer2")}</div>
                                     </div>
                                 </div>
+
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingThree">
                                         <button
@@ -557,7 +536,7 @@ export default function PranaAirPCB() {
                                             aria-expanded="false"
                                             aria-controls="collapseThree"
                                         >
-                                            3. Are Prana Air PCBs compatible with different air quality sensors?
+                                            {t("pcbFAQ.question3")}
                                         </button>
                                     </h2>
                                     <div
@@ -566,12 +545,10 @@ export default function PranaAirPCB() {
                                         aria-labelledby="headingThree"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Yes, Prana Air PCBs are versatile and compatible with a wide range of Prana Air- air quality
-                                            sensors, enabling comprehensive monitoring of pollutants.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("pcbFAQ.answer3")}</div>
                                     </div>
                                 </div>
+
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingFour">
                                         <button
@@ -582,7 +559,7 @@ export default function PranaAirPCB() {
                                             aria-expanded="false"
                                             aria-controls="collapseFour"
                                         >
-                                            4. How reliable are Prana Air PCBs for long-term air quality monitoring?
+                                            {t("pcbFAQ.question4")}
                                         </button>
                                     </h2>
                                     <div
@@ -591,12 +568,10 @@ export default function PranaAirPCB() {
                                         aria-labelledby="headingFour"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Prana Air PCBs are built to withstand long-term operation, providing reliable and consistent
-                                            performance for continuous air quality monitoring.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("pcbFAQ.answer4")}</div>
                                     </div>
                                 </div>
+
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingFive">
                                         <button
@@ -607,7 +582,7 @@ export default function PranaAirPCB() {
                                             aria-expanded="false"
                                             aria-controls="collapseFive"
                                         >
-                                            5. Does Prana Air provide technical support for their PCBs?
+                                            {t("pcbFAQ.question5")}
                                         </button>
                                     </h2>
                                     <div
@@ -616,12 +591,10 @@ export default function PranaAirPCB() {
                                         aria-labelledby="headingFive"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Prana Air offers comprehensive technical support to ensure smooth implementation and operation of
-                                            their PCBs for air quality monitoring.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("pcbFAQ.answer5")}</div>
                                     </div>
                                 </div>
+
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingSix">
                                         <button
@@ -632,7 +605,7 @@ export default function PranaAirPCB() {
                                             aria-expanded="false"
                                             aria-controls="collapseSix"
                                         >
-                                            6. Are Prana Air PCBs compliant with industry standards and regulations?
+                                            {t("pcbFAQ.question6")}
                                         </button>
                                     </h2>
                                     <div
@@ -641,12 +614,10 @@ export default function PranaAirPCB() {
                                         aria-labelledby="headingSix"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Yes, Prana Air PCBs adhere to industry standards and regulations, ensuring reliable performance
-                                            and compliance with air quality monitoring requirements.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("pcbFAQ.answer6")}</div>
                                     </div>
                                 </div>
+
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingSeven">
                                         <button
@@ -657,7 +628,7 @@ export default function PranaAirPCB() {
                                             aria-expanded="false"
                                             aria-controls="collapseSeven"
                                         >
-                                            7. What are the different communication modes available for connecting PCBs?
+                                            {t("pcbFAQ.question7")}
                                         </button>
                                     </h2>
                                     <div
@@ -666,10 +637,7 @@ export default function PranaAirPCB() {
                                         aria-labelledby="headingSeven"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            PCBs can be connected using various communication modes, such as UART, WiFi, RS-485, and GSM,
-                                            offering flexibility and compatibility with diverse systems and devices.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("pcbFAQ.answer7")}</div>
                                     </div>
                                 </div>
                             </div>
@@ -684,8 +652,8 @@ export default function PranaAirPCB() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="contact-heading">
-                                <h2>Get in Touch</h2>
-                                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                                <h2>{t("contactHeadingNew.title")}</h2>
+                                <p>{t("contactHeadingNew.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -701,8 +669,8 @@ export default function PranaAirPCB() {
                             <div className="row">
                                 <div className="col-md-3">
                                     <div className="air-quality-sensore product-sldier-heading">
-                                        <h2>You May Also Like</h2>
-                                        <h3>These Products</h3>
+                                        <h2>{t("relatedProductsHeading.title")}</h2>
+                                        <h3>{t("relatedProductsHeading.subtitle")}</h3>
                                     </div>
                                 </div>
                                 <div className="col-md-9"></div>

@@ -1,7 +1,4 @@
 "use client"
-
-import { useEffect, useState } from "react"
-import Image from "next/image"
 import "./styles.css"
 import "react-multi-carousel/lib/styles.css"
 import Carousel from "react-multi-carousel"
@@ -36,12 +33,12 @@ export default function NitrogenDioxidePage() {
               <div className="empty-space-40"></div>
               <div className="text-center fade-in-up">
                 <h1 className="text-center">
-                  <img 
-                    className="wp-image-60375 aligncenter" 
-                    src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-formula.png" 
-                    alt="what is nitrogen dioxide (NO2)" 
-                    width="424" 
-                    height="70" 
+                  <img
+                    className="wp-image-60375 aligncenter"
+                    src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-formula.png"
+                    alt="what is nitrogen dioxide (NO2)"
+                    width="424"
+                    height="70"
                   />
                 </h1>
                 <h1 className="text-center">
@@ -90,12 +87,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-Volcanic.png" 
-                        alt="Volcano eruption or active volcanic sites. " 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-Volcanic.png"
+                        alt="Volcano eruption or active volcanic sites. "
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -112,12 +109,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-Fertilizer.png" 
-                        alt="no2 from Fertilizer " 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-Fertilizer.png"
+                        alt="no2 from Fertilizer "
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -134,12 +131,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-lighting.png" 
-                        alt="no2 from Fertilizer " 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-lighting.png"
+                        alt="no2 from Fertilizer "
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -160,12 +157,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-oceans.png" 
-                        alt="no2 from oceans" 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-oceans.png"
+                        alt="no2 from oceans"
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -192,12 +189,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-car-pollution.png" 
-                        alt="no2 from car pollution " 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-car-pollution.png"
+                        alt="no2 from car pollution "
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -206,7 +203,7 @@ export default function NitrogenDioxidePage() {
                   <span style={{ fontSize: "14pt" }}>
                     Car, truck, boots,
                     <br />
-                    and airplane emissions 
+                    and airplane emissions
                   </span>
                 </p>
               </div>
@@ -216,12 +213,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-power-plant.png" 
-                        alt="no2 from power plant " 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-power-plant.png"
+                        alt="no2 from power plant "
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -240,12 +237,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-ammonia-emiting-fertilizer.png" 
-                        alt="no2 from ammonia emitting fertilizers " 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-ammonia-emiting-fertilizer.png"
+                        alt="no2 from ammonia emitting fertilizers "
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -262,12 +259,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-big-machines.png" 
-                        alt="no2 from diesel vehicles" 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-big-machines.png"
+                        alt="no2 from diesel vehicles"
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -286,12 +283,12 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img 
-                        className="aligncenter wp-image-63805" 
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-gas-stove.png" 
-                        alt="no2 from Kerosene and gas stoves" 
-                        width="302" 
-                        height="302" 
+                      <img
+                        className="aligncenter wp-image-63805"
+                        src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-gas-stove.png"
+                        alt="no2 from Kerosene and gas stoves"
+                        width="302"
+                        height="302"
                       />
                     </strong>
                   </span>
@@ -344,12 +341,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/lungs-problem-due-to-no2.png" 
-                  alt="lungs problem due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/lungs-problem-due-to-no2.png"
+                  alt="lungs problem due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -362,12 +359,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/breathing-problems-due-to-no2.png" 
-                  alt="breathing problems due to no2 " 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/breathing-problems-due-to-no2.png"
+                  alt="breathing problems due to no2 "
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -380,12 +377,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/asthma-due-to-no2.png" 
-                  alt=" asthma due to no2s" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/asthma-due-to-no2.png"
+                  alt=" asthma due to no2s"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>Asthma</span>
@@ -394,12 +391,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/low-Immunity-due-to-no2.png" 
-                  alt="low Immunity due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/low-Immunity-due-to-no2.png"
+                  alt="low Immunity due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -415,12 +412,12 @@ export default function NitrogenDioxidePage() {
           <div className="row mb-70">
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/throat-problem-due-to-no2.png" 
-                  alt="throat problem due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/throat-problem-due-to-no2.png"
+                  alt="throat problem due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -433,12 +430,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/Coughing-due-to-no2.png" 
-                  alt="Coughing due to no2 " 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/Coughing-due-to-no2.png"
+                  alt="Coughing due to no2 "
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -451,12 +448,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/heart-problem-due-to-no2.png" 
-                  alt=" aheart problem due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/heart-problem-due-to-no2.png"
+                  alt=" aheart problem due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -469,12 +466,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/premature-death-due-to-no2.png" 
-                  alt="premature death due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/premature-death-due-to-no2.png"
+                  alt="premature death due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -502,12 +499,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/hazy-air-due-to-no2.png" 
-                  alt="hazy air due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/hazy-air-due-to-no2.png"
+                  alt="hazy air due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>Hazy air (smog)</span>
@@ -516,12 +513,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/polluting-water-due-to-no2.png" 
-                  alt="polluting water due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/polluting-water-due-to-no2.png"
+                  alt="polluting water due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>Polluting water</span>
@@ -530,36 +527,36 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/ground-ozone-due-to-no2.png" 
-                  alt="o3 due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/ground-ozone-due-to-no2.png"
+                  alt="o3 due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     Generates ground
                     <br />
-                    level O3 
+                    level O3
                   </span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/increasing-PM-level-due-to-no2.png" 
-                  alt="Increases PM levels due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/increasing-PM-level-due-to-no2.png"
+                  alt="Increases PM levels due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     Increases
                     <br />
-                    PM levels 
+                    PM levels
                   </span>
                 </h4>
               </div>
@@ -569,12 +566,12 @@ export default function NitrogenDioxidePage() {
           <div className="row">
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/acid-rain-caused-by-no2-gas.png" 
-                  alt="acid rain due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/acid-rain-caused-by-no2-gas.png"
+                  alt="acid rain due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -584,19 +581,19 @@ export default function NitrogenDioxidePage() {
                     <br />
                     with moisture present
                     <br />
-                    in the air 
+                    in the air
                   </span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/plant-growth-due-to-no2.png" 
-                  alt="plant growth due to no2 " 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/plant-growth-due-to-no2.png"
+                  alt="plant growth due to no2 "
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -609,12 +606,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/form-pm-due-to-nox.png" 
-                  alt=" nox" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/form-pm-due-to-nox.png"
+                  alt=" nox"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -629,12 +626,12 @@ export default function NitrogenDioxidePage() {
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img 
-                  className="size-medium wp-image-64434 aligncenter" 
-                  src="https://www.pranaair.com/wp-content/uploads/2023/01/stressor-to-plants-due-to-no2.png" 
-                  alt="stressor to plants due to no2" 
-                  width="288" 
-                  height="300" 
+                <img
+                  className="size-medium wp-image-64434 aligncenter"
+                  src="https://www.pranaair.com/wp-content/uploads/2023/01/stressor-to-plants-due-to-no2.png"
+                  alt="stressor to plants due to no2"
+                  width="288"
+                  height="300"
                 />
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
@@ -644,7 +641,7 @@ export default function NitrogenDioxidePage() {
                     <br />
                     in chlorophyll content
                     <br />
-                    reduction. 
+                    reduction.
                   </span>
                 </h4>
               </div>
@@ -742,8 +739,8 @@ export default function NitrogenDioxidePage() {
             <p><span>181-280</span><span className="mobile_mg_text">(mg/m<sup>3</sup>)</span></p>
           </div>
           <div className="health_color poor_color">
-            <span>Reduced brain functionality, 
-and lung function alterations</span>
+            <span>Reduced brain functionality,
+              and lung function alterations</span>
           </div>
         </div>
         <div className="level_range_cntr">
@@ -775,12 +772,12 @@ and lung function alterations</span>
             <h2 className="text-center">
               <span style={{ fontSize: "24pt" }}>Air quality sensor to measure NO<sub>2</sub></span>
             </h2>
-            <img 
-              className="aligncenter wp-image-64498" 
-              src="https://www.pranaair.com/wp-content/uploads/2023/01/Prana-air-nO2-sensors.jpg" 
-              alt="Prana Air NO2 gas sensor" 
-              width="683" 
-              height="383" 
+            <img
+              className="aligncenter wp-image-64498"
+              src="https://www.pranaair.com/wp-content/uploads/2023/01/Prana-air-nO2-sensors.jpg"
+              alt="Prana Air NO2 gas sensor"
+              width="683"
+              height="383"
             />
           </div>
         </div>
@@ -794,9 +791,9 @@ and lung function alterations</span>
               <span style={{ fontSize: "24pt" }}>Choose Your Air Quality Monitor To Measure NO<sub>2</sub> Gas</span>
             </h3>
           </div>
-          
+
           <div className="product-carousel-container">
-            <Carousel 
+            <Carousel
               responsive={responsive}
               infinite={true}
               autoPlay={true}
@@ -811,9 +808,9 @@ and lung function alterations</span>
             >
               <div className="product-card">
                 <div className="product-image-container">
-                  <img 
-                    src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-nitrogen-dioxide-no2-sensor-with-board.jpg" 
-                    alt="prana air no2 sensor" 
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-nitrogen-dioxide-no2-sensor-with-board.jpg"
+                    alt="prana air no2 sensor"
                     className="product-image"
                   />
                 </div>
@@ -821,28 +818,28 @@ and lung function alterations</span>
                   <h4 className="product-title">Prana Air NO2 Sensor</h4>
                 </div>
               </div>
-              
+
               <div className="product-card">
                 <div className="product-image-container">
-                  <img 
-                    src="https://www.pranaair.com/wp-content/uploads/2023/03/Sensible-monitor-prana-air.png" 
-                    alt="prana air sensible monitor for no2 monitoring" 
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2023/03/Sensible-monitor-prana-air.png"
+                    alt="prana air sensible monitor for no2 monitoring"
                     className="product-image"
                   />
                 </div>
                 <div className="product-info">
                   <h4 className="product-title">Sensible Monitor</h4>
-                  
+
                 </div>
               </div>
             </Carousel>
           </div>
-          
+
           <div className="text-center mt-40">
             <a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
-              <img 
-                src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-caaqms-outdoor-monitor-.jpg" 
-                alt="prana air Ambient Air Monitor" 
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-caaqms-outdoor-monitor-.jpg"
+                alt="prana air Ambient Air Monitor"
                 className="img-fluid"
               />
             </a>

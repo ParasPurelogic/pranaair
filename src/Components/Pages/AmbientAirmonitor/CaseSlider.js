@@ -1,9 +1,19 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
-export default function CaseStudiesSlider() {
+export default function CaseStudiesSlider({ caseStudies = [] }) {
+    // Check if caseStudies is provided and not empty
+    if (!caseStudies || caseStudies.length === 0) {
+        return (
+            <div className="no-case-studies">
+                <p>No case studies available at the moment.</p>
+            </div>
+        )
+    }
+
     // Responsive settings for carousel
     const responsive = {
         superLargeDesktop: {
@@ -23,33 +33,6 @@ export default function CaseStudiesSlider() {
             items: 1,
         },
     }
-
-    const caseStudies = [
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-tata.webp",
-            title: "Aided TATA STEEL Plant In Hyperlocal Air Monitoring",
-            link: "https://www.pranaair.com/blog/case-study-prana-air-aids-tata-steel-in-hyperlocal-air-quality-monitoring/",
-            alt: "prana air ambient air quality monitors at tata steel",
-        },
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-ola-and-microsoft.webp",
-            title: "Aided Ola & Microsoft studied street-level pollution",
-            link: "https://www.pranaair.com/blog/prana-air-monitors-street-level-pollution/",
-            alt: "prana air ambient air quality monitors for ola and microsoft",
-        },
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-mahindra-lifespaces.webp",
-            title: "Mahindra Lifespaces to monitor air pollution due to construction activities.",
-            link: "https://www.pranaair.com/blog/mahindra-lifespaces-air-quality-due-to-construction-and-demolition-activities/",
-            alt: "prana air ambient air quality monitors for mahindra lifespaces",
-        },
-        {
-            image: "https://www.pranaair.com/wp-content/uploads/2023/10/air-quality-monitors-for-CII.webp",
-            title: "CII to monitor air pollution due to stubble burning",
-            link: "https://www.pranaair.com/blog/case-study-air-pollution-due-to-stubble-burning/",
-            alt: "prana air ambient air quality monitors for CII",
-        },
-    ]
 
     return (
         <Carousel
