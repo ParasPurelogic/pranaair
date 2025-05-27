@@ -1,0 +1,707 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"smartCityBanner": {
+    "buttons": {
+      "0": {
+        "title": "Real-time Data",
+        "subtitle": "Monitoring"
+      },
+      "1": {
+        "title": "Analytical Dashboards",
+        "subtitle": "Insightful Data"
+      },
+      "2": {
+        "title": "Air Purification",
+        "subtitle": "An Ultimate Solution"
+      }
+    },
+    "scrollIconAlt": "scroll down icon"
+  },
+  "smartCitySlides": {
+    "slides": {
+      "0": {
+        "title": "Air Quality Solutions For Smart Cities",
+        "titleHighlight": "Smart Cities",
+        "subtitle": "Data Monitoring & Purification",
+        "buttonText": "Contact Us",
+        "imageAlt": "prana air smart city air quality solutions"
+      },
+      "1": {
+        "title": "Real-time Air Pollution Monitoring & Data Analytics",
+        "titleHighlight": "Data Analytics",
+        "subtitle": "Real-time & Historic Data Dashboards",
+        "buttonText": "Contact Us",
+        "imageAlt": "prana air smart city air quality monitoring"
+      },
+      "2": {
+        "title": "Purification, An Ultimate Solution To Air Pollution",
+        "titleHighlight": "Air Pollution",
+        "subtitle": "Outdoor Air Purifiers",
+        "buttonText": "Contact Us",
+        "imageAlt": "Prana Air smart city air quality solutions"
+      }
+    }
+  },
+  "smartCityHealthImpacts": {
+    "items": {
+      "0": {
+        "title": "Cardiovascular problems",
+        "description": "Air pollution can increase the risk of heart disease, stroke, and arrhythmias.",
+        "iconAlt": "Cardiovascular problems icon"
+      },
+      "1": {
+        "title": "Cancer",
+        "description": "Air pollution has been linked to an increased risk of lung cancer, as well as other types of cancer.",
+        "iconAlt": "Cancer icon"
+      },
+      "2": {
+        "title": "Neurological Problems",
+        "description": "Air pollution can damage the brain and nervous system, leading to cognitive decline, dementia, and Alzheimers disease.",
+        "iconAlt": "Neurological problems icon"
+      },
+      "3": {
+        "title": "Premature death",
+        "description": "Air pollution is estimated to cause millions of premature deaths each year worldwide.",
+        "iconAlt": "Premature death icon"
+      },
+      "4": {
+        "title": "Respiratory problems",
+        "description": "Air pollution can irritate the lungs and airways, leading to coughing, wheezing, shortness of breath, and asthma attacks.",
+        "iconAlt": "Respiratory problems icon"
+      }
+    }
+  },
+  "smartCityFactors": {
+    "title": "Factor affecting air quality in",
+    "highlight": "Smart Cities",
+    "description": "Air pollution in cities can be affected by traffic, industry, construction, vehicle emissions, waste disposal, and weather conditions.",
+    "tabs": {
+      "pm25": "PM2.5",
+      "co": "CO",
+      "no2": "NO2",
+      "so2": "SO2",
+      "ozone": "Ozone"
+    },
+    "content": {
+      "pm25": {
+        "title": "Particulate Matter PM2.5",
+        "description": "consists of fine particles with a diameter of 2.5 micrometers or smaller. These particles can originate from various sources in cities, including vehicle emissions, industrial processes, construction activities, and the burning of fossil fuels.",
+        "imageAlt": "PM2.5 pollutant in city"
+      },
+      "co": {
+        "title": "Carbon monoxide (CO)",
+        "description": "is produced from incomplete combustion of fossil fuels, primarily in vehicles. In urban environments, heavy traffic and congested roadways are major sources of carbon monoxide emissions.",
+        "imageAlt": "CO pollutant in city"
+      },
+      "no2": {
+        "title": "Nitrogen Dioxide NO2",
+        "description": "is mainly produced from the combustion of fossil fuels in vehicles and power plants. In cities, heavy traffic congestion is a significant source of NO2 emissions. Industrial activities and residential heating using fossil fuels can also release nitrogen dioxide.",
+        "imageAlt": "NO2 pollutant in city"
+      },
+      "so2": {
+        "title": "Sulfur Dioxide (SO2)",
+        "description": "is primarily emitted from the burning of coal and oil in power plants and industrial facilities. In urban areas, vehicles equipped with diesel engines can also contribute to SO2 emissions. Additionally, certain industrial processes, such as smelting and refining, release sulfur dioxide into the air.",
+        "imageAlt": "SO2 pollutant in city"
+      },
+      "ozone": {
+        "title": "Ground-level Ozone (O3)",
+        "description": "is not directly emitted, but it forms when pollutants like nitrogen oxides (NOx) and volatile organic compounds (VOCs) react in the presence of sunlight. In urban areas, vehicle emissions are a primary source of these precursor pollutants.",
+        "imageAlt": "Ozone pollutant in city"
+      }
+    }
+  },
+  "smartCityHealth": {
+    "title": "Health",
+    "highlight": "Impacts",
+    "description": "Air pollution in cities can have a significant impact on human health, the environment, and the economy. Short-term exposure to air pollution can cause respiratory problems, such as asthma and bronchitis. Long-term exposure can increase the risk of heart disease, stroke, cancer, and premature death.",
+    "pollutants": {
+      "so2": {
+        "imageAlt": "so2 pollutant in city"
+      },
+      "pm25": {
+        "imageAlt": "pm2.5 pollutant in city"
+      },
+      "co2": {
+        "imageAlt": "co pollutant in city"
+      },
+      "nh3": {
+        "imageAlt": "nh3 pollutant in city"
+      },
+      "no2": {
+        "imageAlt": "no2 pollutant in city"
+      },
+      "ozone": {
+        "imageAlt": "ozone pollutant in city"
+      }
+    }
+  },
+  "smartCityModel": {
+    "title": "Smart City Model- Air Quality Solutions",
+    "arrowIconAlt": "icon",
+    "steps": {
+      "monitor": {
+        "stepTitle": "Step 1",
+        "subtitle": "Monitor",
+        "title": "1st: Installation of Air Quality Monitors along LED Displays",
+        "description": "across the city where there are more public gathering, traffic junctions, and hubspots with the LED displays to dispay the real-time air pollution level of the areas.",
+        "imageAlt": "Smart city with air quality monitors"
+      },
+      "drone": {
+        "stepTitle": "Step 2",
+        "subtitle": "Drone",
+        "title": "2nd: Air Quality Drone",
+        "description": "along the ambient monitors are used to measure the air pollution level in the different areas of a city. Thus, it makes the data more reliable and accurate.",
+        "imageAlt": "Smart city with air quality drones"
+      },
+      "purifier": {
+        "stepTitle": "Step 3",
+        "subtitle": "Air Purifier",
+        "title": "3rd: Installation of Outdoor Air Purifiers",
+        "description": "is the very important solution to cope with the air pollution problem in the city. Besides air quality monitoring, purification is the ultimate solution to the problem.",
+        "imageAlt": "Smart city with outdoor air purifiers"
+      }
+    }
+  },
+  "smartCitySolutions": {
+    "title": "Prana Air Air quality solutions for",
+    "highlight": "Smart Cities",
+    "description": "Prana Airs Smart City air quality solutions provide a comprehensive approach to monitoring and improving air quality in cities. The solution includes air quality monitors, air quality drones, outdoor air purifiers, and data dashboards.",
+    "knowMore": "know more",
+    "knowMoreIconAlt": "know more icon",
+    "accordion": {
+      "ambient": {
+        "title": "Ambient Air Quality Monitor",
+        "imageAlt": "prana air ambient air quality monitor for smart city",
+        "brand": "Prana Air",
+        "productTitle": "Ambient Air Quality Monitor",
+        "features": {
+          "0": {
+            "title": "Low-Cost Monitor",
+            "imageAlt": "prana air low-cost air monitor"
+          },
+          "1": {
+            "title": "Highly Accurate Data",
+            "imageAlt": "highly accurate data"
+          },
+          "2": {
+            "title": "Weatherproof Device",
+            "imageAlt": "weatherproof monitor"
+          },
+          "3": {
+            "title": "Cloud Data, Dashboards, Apps",
+            "imageAlt": "cloud data and dashboards"
+          }
+        },
+        "parametersTitle": "Air Quality",
+        "parametersSubtitle": "Weather",
+        "parameters": {
+          "pm25": {
+            "title": "PM2.5",
+            "imageAlt": "PM2.5 parameter"
+          },
+          "pm10": {
+            "title": "PM10",
+            "imageAlt": "pm10 parameter"
+          },
+          "ozone": {
+            "title": "Ozone",
+            "imageAlt": "ozone parameter"
+          },
+          "so2": {
+            "title": "SO2",
+            "imageAlt": "so2 parameter"
+          },
+          "no2": {
+            "title": "NO2",
+            "imageAlt": "no2 parameter"
+          },
+          "co": {
+            "title": "CO",
+            "imageAlt": "co parameter"
+          },
+          "windSpeed": {
+            "title": "Wind Speed",
+            "imageAlt": "wind speed parameter"
+          },
+          "temp": {
+            "title": "Temp",
+            "imageAlt": "temperature parameter"
+          },
+          "humidity": {
+            "title": "Humidity",
+            "imageAlt": "humidity parameter"
+          },
+          "uvIndex": {
+            "title": "UV Index",
+            "imageAlt": "index parameter"
+          }
+        },
+        "cityTitle": "Ambient monitors in",
+        "cityHighlight": "Smart Cities",
+        "cityImageAlt": "Prana Air smart city ambient air quality monitor",
+        "insightTitle": "insights from the ambient monitors",
+        "insightHighlight": "Data",
+        "insightDescription": "Ambient air quality monitoring and data insights can be used in smart city projects to improve air quality and protect public health. Air quality data can be used to generate air quality alerts, optimize traffic flow, and encourage green building.",
+        "insights": {
+          "0": {
+            "title": "AQI LED Display for Public",
+            "description": "Anyone in the city can see and understand the real-time air quality level easily.",
+            "imageAlt": "prana air smart city air pollution led display"
+          },
+          "1": {
+            "title": "AQI Air Quality App",
+            "description": "The free AQI mobile app for people to check the air quality level anytime anywhere.",
+            "imageAlt": "prana air ambient air quality monitor data on aqi app"
+          },
+          "2": {
+            "title": "AQI LCD Displays",
+            "description": "Such screens/displays can be installed across the city to display the AQI level.",
+            "imageAlt": "prana air smart city air quality lcd dispay"
+          },
+          "3": {
+            "title": "AQI TV App",
+            "description": "The same data can be shown in smart TVs to check and analyze the air quality for a better decision making.",
+            "imageAlt": "prana air smart city air quality data dashboards"
+          },
+          "4": {
+            "title": "AQI Large Screen Displays",
+            "description": "Such large displays can be installed in places like airport, railways platforms.",
+            "imageAlt": "prana air smart city air quality data on smart tv"
+          }
+        }
+      },
+      "drone": {
+        "title": "Air Quality Drone",
+        "imageAlt": "Prana Air smart city air quality drone",
+        "brand": "Prana Air",
+        "productTitle": "Air Quality Drone",
+        "features": {
+          "0": {
+            "title": "Real-time Monitoring",
+            "imageAlt": "drone real-time monitoring"
+          },
+          "1": {
+            "title": "Very Accurate Method",
+            "imageAlt": "drone very accurate"
+          },
+          "2": {
+            "title": "Wide Coverage Area",
+            "imageAlt": "drone wide coverage area"
+          },
+          "3": {
+            "title": "4K Video Footage",
+            "imageAlt": "drone 4k video"
+          }
+        },
+        "parametersTitle": "Sensors",
+        "parameters": {
+          "pm": {
+            "title": "PM",
+            "imageAlt": "PM2.5 parameter"
+          },
+          "co": {
+            "title": "CO",
+            "imageAlt": "co parameter"
+          },
+          "no2": {
+            "title": "NO2",
+            "imageAlt": "no2 parameter"
+          },
+          "so2": {
+            "title": "SO2",
+            "imageAlt": "so2 parameter"
+          },
+          "nh3": {
+            "title": "NH3",
+            "imageAlt": "nh3 parameter"
+          },
+          "o3": {
+            "title": "O3",
+            "imageAlt": "o3 parameter"
+          },
+          "temp": {
+            "title": "Temp",
+            "imageAlt": "temperature parameter"
+          },
+          "humidity": {
+            "title": "Humidity",
+            "imageAlt": "humidity parameter"
+          }
+        },
+        "cityTitle": "Air quality drones in",
+        "cityHighlight": "Smart City",
+        "cityImageAlt": "Prana Air smart city air quality drone",
+        "insightTitle": "insights from the drones",
+        "insightHighlight": "Data",
+        "insightDescription": "Prana Airs drones can provide real-time air quality data, which can be used to identify and respond to air quality problems more quickly. It collects data from hard-to-reach or remote areas.",
+        "insights": {
+          "0": {
+            "title": "Real-time Air Quality Monitoring",
+            "description": "The air quality data collected by drone are very accurate and reliable source.",
+            "imageAlt": "Prana Air smart city air quality drone monitor"
+          },
+          "1": {
+            "title": "Remote Monitoring",
+            "description": "The drone can be easily controlled remotely by a device.",
+            "imageAlt": "Prana Air smart city air quality drone remote sensing"
+          },
+          "2": {
+            "title": "Real-time Data Insights",
+            "description": "While the drone is in the operation, the real-time data can be easily seen and analyzed remotely.",
+            "imageAlt": "Prana Air smart city air quality drone dashboard"
+          },
+          "3": {
+            "title": "Easy Decision Making",
+            "description": "The useful insights of air quality data from the drone helps to make good strategic decisions for the city.",
+            "imageAlt": "Prana Air smart city air quality drone data"
+          }
+        }
+      },
+      "purifier": {
+        "title": "Outdoor Air Purifier",
+        "imageAlt": "prana air smart city outdoor air purifier",
+        "brand": "Prana Air",
+        "productTitle": "Outdoor Air Purifier",
+        "features": {
+          "0": {
+            "title": "High CADR",
+            "imageAlt": "highly cadr"
+          },
+          "1": {
+            "title": "Electrostatic Filter",
+            "imageAlt": "electrostatic filter"
+          },
+          "2": {
+            "title": "Weatherproof Device",
+            "imageAlt": "weatherproof"
+          },
+          "3": {
+            "title": "Multiple Filtrations",
+            "imageAlt": "multiple filtrations"
+          }
+        },
+        "parametersTitle": "Parameters",
+        "parameters": {
+          "pm25": {
+            "title": "PM2.5",
+            "imageAlt": "PM2.5 parameter"
+          },
+          "pm10": {
+            "title": "PM10",
+            "imageAlt": "pm10 parameter"
+          },
+          "dust": {
+            "title": "Dust",
+            "imageAlt": "dust icon"
+          },
+          "smoke": {
+            "title": "Smoke",
+            "imageAlt": "smoke icon"
+          }
+        },
+        "cityTitle": "Outdoor Air Purifiers installed in",
+        "cityHighlight": "Smart City",
+        "cityImageAlt": "Prana Air smart city outdoor air purifier",
+        "insightTitle": "Multiple installations",
+        "insightHighlight": "at different areas",
+        "insightDescription": "Outdoor air purifiers installed in different areas of a city can remove air pollutants from the air and reduce the heat island effect, create a cleaner and healthier environment, and attract businesses and residents.",
+        "insights": {
+          "0": {
+            "title": "Air Purifier at Bus-Stop",
+            "description": "Bus stops are one of the most gathered places in the urban areas.",
+            "imageAlt": "prana air smart city outdoor air purifier at bus stop"
+          },
+          "1": {
+            "title": "Air Purifier at Park",
+            "description": "Many people go to the public parks to relax and enjoy their leisures.",
+            "imageAlt": "prana air smart city outdoor air purifier at public park"
+          },
+          "2": {
+            "title": "Air Purifier at Train Stations",
+            "description": "Usually, a huge number of people gather at train stations daily to commute for their jobs.",
+            "imageAlt": "prana air smart city outdoor air purifier at train station"
+          },
+          "3": {
+            "title": "Air Purifier at Airport",
+            "description": "Airport is also the same place where many people come to travel to another place daily.",
+            "imageAlt": "prana air smart city outdoor air purifier at airport"
+          }
+        }
+      }
+    }
+  },
+  "smartCityTech": {
+    "title": "Technical",
+    "highlight": "Specifications",
+    "tabs": {
+      "ambient": "Ambient Monitor",
+      "drone": "Drone",
+      "purifier": "Air Purifier"
+    },
+    "specs": {
+      "ambient": {
+        "left": {
+          "0": {
+            "label": "Product Name",
+            "value": "Ambient air monitor"
+          },
+          "1": {
+            "label": "Type",
+            "value": "CAAQMS monitor"
+          },
+          "2": {
+            "label": "Price",
+            "value": "Low-cost device"
+          },
+          "3": {
+            "label": "Battery",
+            "value": "No In-built Battery"
+          },
+          "4": {
+            "label": "Housing",
+            "value": "Weatherproof"
+          }
+        },
+        "right": {
+          "0": {
+            "label": "Size",
+            "value": "Portable & Light weight"
+          },
+          "1": {
+            "label": "Data Storage",
+            "value": "MicroSD card & AQI Cloud"
+          },
+          "2": {
+            "label": "Communication",
+            "value": "Wifi, GSM, RS-485"
+          },
+          "3": {
+            "label": "Sensor Accuracy",
+            "value": "Very High"
+          },
+          "4": {
+            "label": "Data Access",
+            "value": "AQI mobile & TV apps, Web-Dashboard"
+          }
+        }
+      },
+      "drone": {
+        "left": {
+          "0": {
+            "label": "Product",
+            "value": "Air quality drone"
+          },
+          "1": {
+            "label": "Product Name",
+            "value": "Breathalyzer"
+          },
+          "2": {
+            "label": "Camera",
+            "value": "FPV Camera"
+          },
+          "3": {
+            "label": "Video",
+            "value": "4K Resolution"
+          },
+          "4": {
+            "label": "Flying Range",
+            "value": "Up to 2 Km"
+          }
+        },
+        "right": {
+          "0": {
+            "label": "Max Speed",
+            "value": "10 m/s"
+          },
+          "1": {
+            "label": "Battery Endurance",
+            "value": "25 min (LiPO 12S)"
+          },
+          "2": {
+            "label": "Propulsion Type",
+            "value": "Electric"
+          },
+          "3": {
+            "label": "Maximum Payload",
+            "value": "Up to 2.5 kg"
+          },
+          "4": {
+            "label": "Maximum Take Off Weight",
+            "value": "Up to 15Kg"
+          }
+        }
+      },
+      "purifier": {
+        "left": {
+          "0": {
+            "label": "Product",
+            "value": "Outdoor air purifier"
+          },
+          "1": {
+            "label": "Parameters",
+            "value": "PM2.5, PM10, Dust, Smoke"
+          },
+          "2": {
+            "label": "Filter Used",
+            "value": "Electrostatic Filter"
+          },
+          "3": {
+            "label": "Life of filter",
+            "value": "Very long durability"
+          },
+          "4": {
+            "label": "Filtration",
+            "value": "Ionizer, UV light"
+          }
+        },
+        "right": {
+          "0": {
+            "label": "Housing",
+            "value": "Weatherproof"
+          },
+          "1": {
+            "label": "CADR",
+            "value": "High efficient"
+          },
+          "2": {
+            "label": "Power Consumption",
+            "value": "Very less"
+          },
+          "3": {
+            "label": "Maintenance",
+            "value": "Very low-cost"
+          },
+          "4": {
+            "label": "Manpower",
+            "value": "Only one person can handle it."
+          }
+        }
+      }
+    },
+    "certifications": {
+      "ce": "ce logo",
+      "rohs": "rohs certified"
+    },
+    "brochure": {
+      "question": "Need Detailed Specifications?",
+      "downloadText": "Download Brochure"
+    }
+  },
+  "smartCityClients": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "Prana Air works with a wide range of organizations to provide air quality monitoring and solutions. These organizations include government agencies, corporations, academic institutions, non-profit organizations, and individuals. Our goal is to help its clients improve air quality and protect public health.",
+    "logos": {
+      "client0": {
+        "alt": "Tata company logo"
+      },
+      "client1": {
+        "alt": "IGCAR organization logo"
+      },
+      "client2": {
+        "alt": "Microsoft company logo"
+      },
+      "client3": {
+        "alt": "Emaar company logo"
+      },
+      "client4": {
+        "alt": "L&T company logo"
+      },
+      "client5": {
+        "alt": "Siemens company logo"
+      },
+      "client6": {
+        "alt": "JW Marriott logo"
+      },
+      "client7": {
+        "alt": "BCG Group logo"
+      },
+      "client8": {
+        "alt": "Ola company logo"
+      },
+      "client9": {
+        "alt": "Mahindra company logo"
+      },
+      "client10": {
+        "alt": "Renault company logo"
+      },
+      "client11": {
+        "alt": "NEERI company logo"
+      },
+      "client12": {
+        "alt": "Taj Hotel logo"
+      },
+      "client13": {
+        "alt": "Foodworks logo"
+      },
+      "client14": {
+        "alt": "Asian Paints logo"
+      },
+      "client15": {
+        "alt": "IIT Institutes logo"
+      }
+    }
+  },
+  "smartCityFaq": {
+    "title": "Frequently Asked Questions",
+    "highlight": "About Smart City Air Quality Solutions",
+    "helpText": "Have questions? Were here to help.",
+    "questions": {
+      "q1": "1. What is Prana Airs smart city air quality monitoring and solutions project?",
+      "q2": "2. What are the benefits of Prana Airs smart city air quality monitoring and solutions project?"
+    },
+    "answers": {
+      "a1": "<p>Prana Airs smart city air quality monitoring and solutions project is a comprehensive solution that provides air quality monitors, air quality drones, outdoor air purifiers, and data dashboards to help cities improve their air quality. The project is designed to help cities meet air quality standards, protect public health, and reduce greenhouse gas emissions.</p>",
+      "a2": "<p>Prana Airs smart city air quality monitoring and solutions project offers a number of benefits, including:</p><p><strong>1. Improved air quality:</strong> The project can help cities improve their air quality by providing real-time data on air quality levels and by implementing targeted interventions to reduce pollution.</p><p><strong>2. Protected public health:</strong> The project can help protect public health by providing citizens with information about air quality levels and by alerting them to unhealthy conditions.</p><p><strong>3. Reduced greenhouse gas emissions:</strong> The project can help reduce greenhouse gas emissions by promoting the use of cleaner fuels and technologies.</p>"
+    }
+  },
+   "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in",
+    "highlight": "Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

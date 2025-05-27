@@ -1,0 +1,207 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"schoolBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Educational Institutes",
+    "description": "A complete solution including air quality monitoring, air purification & data accessibility",
+    "list": {
+      "schools": "Schools",
+      "colleges": "Colleges",
+      "institutes": "Institutes"
+    },
+    "cta": "Get a Quote"
+  },
+  "schoolMajorPollutants": {
+    "title": "Major Air",
+    "highlight": "Pollutants",
+    "description": "Compared to their homes, students spend more time in educational institutes. Following are some air pollutants that can potentially exist in educational institutes that could hamper students and staffs productivity."
+  },
+  "schoolPollutantFeatures": {
+    "pm25": {
+      "title": "PM2.5",
+      "description": "Small, breathable dust particles that can enter the bloodstream through respiration."
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "CO2 levels exceed the desired CO2 limits at times, especially in educational institutes."
+    },
+    "tvoc": {
+      "title": "TVOC",
+      "description": "Items like glue, markers, aerosol sprays are some of the potential sources."
+    },
+    "ozone": {
+      "title": "Ozone",
+      "description": "Ozone is very harmful especially for developing lungs in students."
+    }
+  },
+  "schoolImageBox": {
+    "pm25": {
+      "title": "PM2.5",
+      "description": "Chalkdust, outdoor PM coming in from windows"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "Respiration"
+    },
+    "ozone": {
+      "title": "Ozone",
+      "description": "Outdoor O3 coming in from windows, printers, photocopiers"
+    },
+    "tvocs": {
+      "title": "TVOCs",
+      "description": "Carpets, Furniture, Craft supplies like markers, glue, paints, etc."
+    }
+  },
+  "schoolRisk": {
+    "title": "Who are at",
+    "highlight": "Risk?",
+    "description": "Each category of people is at risk when exposed to air pollution in schools or institutes. But certain groups are significantly impacted as compared to healthy adults."
+  },
+  "schoolRiskFeatures": {
+    "respiratoryIllness": {
+      "title": "Respiratory Illness",
+      "description": "Students and staff with respiratory illnesses already have a weaker respiratory system."
+    },
+    "teachers": {
+      "title": "Teachers",
+      "description": "Lower productivity, absenteeism, and lower concentration are some of the side effects."
+    },
+    "sensitiveGroups": {
+      "title": "Sensitive Groups",
+      "description": "Old teachers, pregnant ladies, etc. have a high chance of acquiring respiratory illnesses."
+    },
+    "students": {
+      "title": "Student",
+      "description": "When they are exposed to the unhealthy air, the growing tissue & cells are hampered."
+    }
+  },
+  "schoolQualitySolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions For Schools",
+    "description": "Prana Air provides the solutions of air quality monitoring and fresh air that you can find out what quality of air your students and staff breathe and make your premises air pollution-free zone.",
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "freshAir": {
+      "title": "Fresh Air Machine\nAs IAQ Solution",
+      "subtitle": "It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Compact Design makes it easy to place",
+        "feature3": "Promising you up to 99.5% efficiency"
+      },
+      "knowMore": "Know More",
+      "rent": "Looking to Rent?"
+    },
+    "apiData": {
+      "title": "AQI API Data\nFor Institutes",
+      "subtitle": "Avail the real-time air quality data of your institutes nearby outdoor area on the web.",
+      "features": {
+        "feature1": "Integrate the institutes data on the web",
+        "feature2": "Access the real-time data quickly",
+        "feature3": "Take precautions from the air pollution"
+      },
+      "knowMore": "Know More"
+    }
+  },
+  "schoolDataServices": {
+    "title": "Data Freemium",
+    "highlight": "Services",
+    "description": "The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the QR to know the AQI of the area you are in.",
+    "tvApp": "TV Dashboard App",
+    "customApp": "Customised App for Schools",
+    "qrCode": "QR Code Scan"
+  },
+  "schoolEffects": {
+    "title": "The Effects of Air Pollution",
+    "highlight": "On Students",
+    "description": "When students are exposed to poor air quality a drastic drop in their overall performance is noticed. According to a study report of UNICEF, a four-point drop in IQ by the age of 5 among a sample of children exposed to toxic air pollution.",
+    "withCleanAir": {
+      "title": "Students With Clean Air",
+      "benefits": {
+        "benefit1": "Improved arithmetic and calculation skills",
+        "benefit2": "Pupil absence decreased by 10-20%",
+        "benefit3": "Improved memory, attention, and IQ skills"
+      }
+    },
+    "withoutCleanAir": {
+      "title": "Students Without Clean Air",
+      "drawbacks": {
+        "drawback1": "An increase in the absence rate is noticed",
+        "drawback2": "Lower IQ levels among the students",
+        "drawback3": "Reduced attention and concentration"
+      }
+    },
+    "iqImpact": {
+      "title": "Impact Of Clean Air on General IQ of Students"
+    }
+  },
+  "schoolFaq": {
+    "questions": {
+      "q1": "1. What are the major pollutants that are present in educational institutes?",
+      "q2": "2. Are any other parameters included in the monitors other than the air pollutants?",
+      "q3": "3. What are the health impacts of the pollutants present inside the classrooms and college premises?",
+      "q4": "4. How can I check the AQI in my classroom using your device?",
+      "q5": "5. Why is it necessary to have air quality monitoring solutions?",
+      "q6": "6. Are there any additional benefits that come with the solutions?"
+    },
+    "answers": {
+      "a1": "Many pollutants can be present inside a typical classroom. CO2 is the main pollutant followed by PM2.5 - dust, TVOCs, Ozone, etc.",
+      "a2": "Yes, you can monitor the temperature, noise, and humidity in an area.",
+      "a3": "Decreased IQ, alertness, attention, brain functioning, concentration, and increase in illness absence rates.",
+      "a4": "Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.",
+      "a5": "To know the nature of pollutants and by how much are they present in a classroom so that necessary actions can be taken.",
+      "a6": "Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more."
+    }
+  },
+   "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+   "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

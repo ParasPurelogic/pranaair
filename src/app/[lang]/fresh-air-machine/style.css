@@ -811,7 +811,7 @@ span.faq {
 }
 
 .comfort-icon img {
-  width: 115px;
+  width: 115px !important;
   position: relative;
   left: 70px;
   top: 50px;

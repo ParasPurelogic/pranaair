@@ -1,30 +1,94 @@
-"use client"
-
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
-import Carousel from "react-multi-carousel"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import { getServerTranslation } from "@/i18n/server"
+import RailwayApplicationsCarousel from "@/Components/Pages/Railway/appslider"
 
-export default function RailwayPage() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
+export default async function RailwayPage() {
+  const { t } = await getServerTranslation("railway")
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: t("industrialApplicationsData.hotel.title"),
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: t("industrialApplicationsData.restaurant.title"),
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: t("industrialApplicationsData.institutes.title"),
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
     },
-  }
-
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
+  ]
+  const railwayApplications = [
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png",
+      iconAlt: "aqi tv app logo",
+      title: t("railwayApplications.tvApp.title"),
+      description: t("railwayApplications.tvApp.description"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-TV-App.jpg",
+      imageAlt: "aqi android tv app data for railway stations"
+    },
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg",
+      iconAlt: "aqi web dashboard",
+      title: t("railwayApplications.webDashboard.title"),
+      description: t("railwayApplications.webDashboard.description"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/aqi-web-dashboard-screen.jpg",
+      imageAlt: "aqi web dashboard for railways"
+    },
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png",
+      iconAlt: "aqi mobile app",
+      title: t("railwayApplications.mobileApp.title"),
+      description: t("railwayApplications.mobileApp.description"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Mobile-App.jpg",
+      imageAlt: "aqi mobile app for railways"
+    }
+  ];
   return (
     <main>
       {/* Hero Section */}
@@ -35,21 +99,20 @@ export default function RailwayPage() {
               <div className="col-md-6">
                 <div className="pocket_title_box school_aqi_box">
                   <h1>
-                    Air quality solutions for{" "}
+                    {t("railwayBanner.title")}{" "}
                     <span className="bold_text" style={{ color: "#78ae60" }}>
                       {" "}
-                      Railways
+                      {t("railwayBanner.highlight")}
                     </span>
                   </h1>
-                  <p>
-                    Lets embark on a journey towards cleaner, healthier railways for everyone with comprehensive air
-                    monitoring, purification, and data management solutions.
-                  </p>
+                  <p>{t("railwayBanner.description")}</p>
                   <p className="banner-high-co2">
-                    <strong>Railways</strong> | <strong>Metros</strong> | <strong>Trains</strong>
+                    <strong>{t("railwayBanner.types.railways")}</strong> |{" "}
+                    <strong>{t("railwayBanner.types.metros")}</strong> |{" "}
+                    <strong>{t("railwayBanner.types.trains")}</strong>
                   </p>
                   <a className="banner-btn" href="#get_in_touch" aria-label="contact form">
-                    Contact Us
+                    {t("railwayBanner.cta")}
                   </a>
                 </div>
               </div>
@@ -65,10 +128,10 @@ export default function RailwayPage() {
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
               <span style={{ fontSize: "24pt" }}>
-                Factors affecting air quality in <span style={{ color: "#78ae60" }}>Railway Stations </span>
+                {t("railwayFactors.title")} <span style={{ color: "#78ae60" }}>{t("railwayFactors.highlight")}</span>
               </span>
             </h2>
-            <p>Diesel-powered trains and crowded stations are fueling a rise in air pollutants at railway stations.</p>
+            <p>{t("railwayFactors.description")}</p>
           </div>
 
           <div className="row">
@@ -82,13 +145,9 @@ export default function RailwayPage() {
                 />
                 <div className="feature_wrap_box">
                   <h2>
-                    <strong>
-                      Particulate Matter
-                      <br />
-                      (PM2.5 and PM10)
-                    </strong>
+                    <strong>{t("railwayFactors.pm.title")}</strong>
                   </h2>
-                  <p>Dust from rail systems, and dust from maintenance activities.</p>
+                  <p>{t("railwayFactors.pm.description")}</p>
                 </div>
               </div>
             </div>
@@ -102,13 +161,9 @@ export default function RailwayPage() {
                 />
                 <div className="feature_wrap_box">
                   <h2>
-                    <strong>
-                      Volatile Organic
-                      <br />
-                      Compounds (VOCs)
-                    </strong>
+                    <strong>{t("railwayFactors.vocs.title")}</strong>
                   </h2>
-                  <p>Emits from solvents used in maintenance, and chemical interactions.</p>
+                  <p>{t("railwayFactors.vocs.description")}</p>
                 </div>
               </div>
             </div>
@@ -122,13 +177,9 @@ export default function RailwayPage() {
                 />
                 <div className="feature_wrap_box">
                   <h2>
-                    <strong>
-                      Carbon
-                      <br />
-                      Monoxide (CO)
-                    </strong>
+                    <strong>{t("railwayFactors.co.title")}</strong>
                   </h2>
-                  <p>Emits from Diesel engines and incomplete combustion of fuel in trains.</p>
+                  <p>{t("railwayFactors.co.description")}</p>
                 </div>
               </div>
             </div>
@@ -142,13 +193,9 @@ export default function RailwayPage() {
                 />
                 <div className="feature_wrap_box">
                   <h2>
-                    <strong>
-                      Nitrogen
-                      <br />
-                      Oxides (NOx)
-                    </strong>
+                    <strong>{t("railwayFactors.nox.title")}</strong>
                   </h2>
-                  <p>Emits from diesel-powered locomotives and engines.</p>
+                  <p>{t("railwayFactors.nox.description")}</p>
                 </div>
               </div>
             </div>
@@ -170,9 +217,9 @@ export default function RailwayPage() {
                 />
                 <div className="feature_wrap_box">
                   <h2>
-                    <strong>Congested Stations</strong>
+                    <strong>{t("railwayPlatform.congested.title")}</strong>
                   </h2>
-                  <p>Crowded stations result in poor ventilation, trapping pollutants and worsening air quality.</p>
+                  <p>{t("railwayPlatform.congested.description")}</p>
                 </div>
               </div>
             </div>
@@ -186,11 +233,9 @@ export default function RailwayPage() {
                 />
                 <div className="feature_wrap_box">
                   <h2>
-                    <strong>Noise Pollution</strong>
+                    <strong>{t("railwayPlatform.noise.title")}</strong>
                   </h2>
-                  <p>
-                    High noise level increases the stress levels in a person and can exacerbate respiratory problems.
-                  </p>
+                  <p>{t("railwayPlatform.noise.description")}</p>
                 </div>
               </div>
             </div>
@@ -204,12 +249,9 @@ export default function RailwayPage() {
                 />
                 <div className="feature_wrap_box">
                   <h2>
-                    <strong>Diesel Emissions</strong>
+                    <strong>{t("railwayPlatform.diesel.title")}</strong>
                   </h2>
-                  <p>
-                    Diesel engines powered trains emit various pollutants such as nitrogen oxides (NOx) and particulate
-                    matter (PM).
-                  </p>
+                  <p>{t("railwayPlatform.diesel.description")}</p>
                 </div>
               </div>
             </div>
@@ -221,16 +263,12 @@ export default function RailwayPage() {
       <section className="quote">
         <div className="container">
           <div className="quote-heading">
-            <h2>DO YOU KNOW?</h2>
+            <h2>{t("railwayQuote.title")}</h2>
             <p>
-              According to the study by the California Air Resources Board (CARB), locomotives are projected to produce{" "}
-              <strong>Over 640 tons per year of PM2.5 and Over 29,800 tons per year of NOx in California.</strong>
+              {t("railwayQuote.content1")} <strong>{t("railwayQuote.highlight")}</strong>
             </p>
             <p>
-              <strong>
-                Such emissions not only deteriorate air quality within the state but can also contribute to global air
-                pollution.
-              </strong>
+              <strong>{t("railwayQuote.content2")}</strong>
             </p>
           </div>
         </div>
@@ -241,12 +279,12 @@ export default function RailwayPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Areas of{" "}
+              {t("railwayConcern.title")}{" "}
               <span style={{ color: "#78ae60" }}>
-                <strong>Concern</strong>{" "}
+                <strong>{t("railwayConcern.highlight")}</strong>{" "}
               </span>
             </h2>
-            <p>Railway stations are bustling activity hubs and also pose significant air quality challenges.</p>
+            <p>{t("railwayConcern.description")}</p>
           </div>
 
           <div className="row mg-l">
@@ -256,11 +294,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Railway-Stations.jpg"
                   alt="air pollution in railway station"
                 />
-                <h3>Railway Stations</h3>
-                <p>
-                  Train emissions and crowded conditions emit various pollutants that affect indoor and outdoor air
-                  quality.
-                </p>
+                <h3>{t("railwayConcern.stations.title")}</h3>
+                <p>{t("railwayConcern.stations.description")}</p>
               </div>
             </div>
             <div className="col-md-3">
@@ -269,8 +304,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Locomotive-Cabins.jpg"
                   alt="air pollution in locomotive cabins"
                 />
-                <h3>Locomotive Cabins</h3>
-                <p>Loco Pilot and other members are exposed to diesel emissions for extended periods.</p>
+                <h3>{t("railwayConcern.cabins.title")}</h3>
+                <p>{t("railwayConcern.cabins.description")}</p>
               </div>
             </div>
             <div className="col-md-3">
@@ -279,8 +314,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Rail-Tracks-in-Urban-Areas.jpg"
                   alt="air pollution in rail tracks"
                 />
-                <h3>Rail Tracks in Urban Areas</h3>
-                <p>The passing trains suspend pollutants from tracks in residential and commercial areas.</p>
+                <h3>{t("railwayConcern.tracks.title")}</h3>
+                <p>{t("railwayConcern.tracks.description")}</p>
               </div>
             </div>
             <div className="col-md-3">
@@ -289,8 +324,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Maintenance-Yards.jpg"
                   alt="air pollution in maintenance yards"
                 />
-                <h3>Maintenance Yards</h3>
-                <p>Train maintenance includes engines and other equipment repairs that release pollutants.</p>
+                <h3>{t("railwayConcern.yards.title")}</h3>
+                <p>{t("railwayConcern.yards.description")}</p>
               </div>
             </div>
           </div>
@@ -302,12 +337,12 @@ export default function RailwayPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Who is at{" "}
+              {t("railwayRisk.title")}{" "}
               <span style={{ color: "#78ae60" }}>
-                <strong>Risk?</strong>
+                <strong>{t("railwayRisk.highlight")}</strong>
               </span>
             </h2>
-            <p>The air quality issues at railway stations impact various groups, each facing unique risks.</p>
+            <p>{t("railwayRisk.description")}</p>
           </div>
 
           <div className="row">
@@ -317,8 +352,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Passengers.png"
                   alt="passengers in railways"
                 />
-                <h3>Passengers</h3>
-                <p>Children, older, and those with pre-existing respiratory conditions.</p>
+                <h3>{t("railwayRisk.passengers.title")}</h3>
+                <p>{t("railwayRisk.passengers.description")}</p>
               </div>
             </div>
             <div className="col-md-3">
@@ -328,8 +363,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Loco-Pilot.png"
                   alt="loco pilot in railway"
                 />
-                <h3>Loco Pilot</h3>
-                <p>Prolonged exposure to pollutants trapped in the cabin.</p>
+                <h3>{t("railwayRisk.pilot.title")}</h3>
+                <p>{t("railwayRisk.pilot.description")}</p>
               </div>
             </div>
             <div className="col-md-3">
@@ -338,8 +373,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Nearby-Residents.png"
                   alt="nearby residents in railway stations"
                 />
-                <h3>Nearby Residents</h3>
-                <p>Communities living close to railway tracks and stations.</p>
+                <h3>{t("railwayRisk.residents.title")}</h3>
+                <p>{t("railwayRisk.residents.description")}</p>
               </div>
             </div>
             <div className="col-md-3">
@@ -348,8 +383,8 @@ export default function RailwayPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Railway-Workers.png"
                   alt="railway workers"
                 />
-                <h3>Railway Workers</h3>
-                <p>Long-term exposure while performing their duties.</p>
+                <h3>{t("railwayRisk.workers.title")}</h3>
+                <p>{t("railwayRisk.workers.description")}</p>
               </div>
             </div>
           </div>
@@ -361,12 +396,9 @@ export default function RailwayPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Air quality <span style={{ color: "#78ae60" }}>Solutions</span>
+              {t("railwaySolutions.title")} <span style={{ color: "#78ae60" }}>{t("railwaySolutions.highlight")}</span>
             </h2>
-            <p>
-              Identifying and addressing these risks is essential to safeguard everyone affected by the air quality
-              challenges at railway stations.
-            </p>
+            <p>{t("railwaySolutions.description")}</p>
           </div>
 
           <div className="modern-tabs">
@@ -382,7 +414,7 @@ export default function RailwayPage() {
                   aria-controls="air-quality-monitors"
                   aria-selected="true"
                 >
-                  Air quality Monitors
+                  {t("railwaySolutions.tabs.monitors")}
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -396,7 +428,7 @@ export default function RailwayPage() {
                   aria-controls="outdoor-air-purifier"
                   aria-selected="false"
                 >
-                  Outdoor Air Purifier
+                  {t("railwaySolutions.tabs.purifier")}
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -410,7 +442,7 @@ export default function RailwayPage() {
                   aria-controls="data-display"
                   aria-selected="false"
                 >
-                  Data Display
+                  {t("railwaySolutions.tabs.display")}
                 </button>
               </li>
             </ul>
@@ -430,15 +462,15 @@ export default function RailwayPage() {
                     />
                   </div>
                   <div className="solution-details">
-                    <h3>Prana Air Ambient Air quality monitor</h3>
-                    <p>Integrating air quality monitoring systems is key to address concerns at railway stations.</p>
+                    <h3>{t("railwaySolutions.monitors.title")}</h3>
+                    <p>{t("railwaySolutions.monitors.description")}</p>
                     <ul className="solution-features">
-                      <li>Real-time air quality monitoring</li>
-                      <li>Fully Waterproof Housing</li>
-                      <li>Low-cost Multiple sensors available</li>
+                      <li>{t("railwaySolutions.monitors.features.feature1")}</li>
+                      <li>{t("railwaySolutions.monitors.features.feature2")}</li>
+                      <li>{t("railwaySolutions.monitors.features.feature3")}</li>
                     </ul>
                     <a className="solution-btn" href="#" aria-label="Know More about prana air monitors">
-                      Know More
+                      {t("railwaySolutions.monitors.cta")}
                     </a>
                   </div>
                 </div>
@@ -458,17 +490,15 @@ export default function RailwayPage() {
                     />
                   </div>
                   <div className="solution-details">
-                    <h3>Prana Air Outdoor Air Purifier</h3>
-                    <p>
-                      Implementing Air Purifiers can help in tackling air pollution effectively at railway stations.
-                    </p>
+                    <h3>{t("railwaySolutions.purifier.title")}</h3>
+                    <p>{t("railwaySolutions.purifier.description")}</p>
                     <ul className="solution-features">
-                      <li>Filter out PM2.5, NOx, and VOCs etc.</li>
-                      <li>High-capacity filtration system</li>
-                      <li>Reduces pollutant levels for better protection</li>
+                      <li>{t("railwaySolutions.purifier.features.feature1")}</li>
+                      <li>{t("railwaySolutions.purifier.features.feature2")}</li>
+                      <li>{t("railwaySolutions.purifier.features.feature3")}</li>
                     </ul>
                     <a className="solution-btn" href="#" aria-label="Know More about prana air outdoor air purifier">
-                      Know More
+                      {t("railwaySolutions.purifier.cta")}
                     </a>
                   </div>
                 </div>
@@ -483,15 +513,12 @@ export default function RailwayPage() {
                     />
                   </div>
                   <div className="solution-details">
-                    <h3>Prana Air Customized TV Displays</h3>
-                    <p>
-                      Tailor the interface to your specific needs and Monitor air quality in real-time for immediate
-                      insights.
-                    </p>
+                    <h3>{t("railwaySolutions.display.title")}</h3>
+                    <p>{t("railwaySolutions.display.description")}</p>
                     <ul className="solution-features">
-                      <li>Real-time air quality monitoring</li>
-                      <li>Customized display</li>
-                      <li>Accessible Data for everyone</li>
+                      <li>{t("railwaySolutions.display.features.feature1")}</li>
+                      <li>{t("railwaySolutions.display.features.feature2")}</li>
+                      <li>{t("railwaySolutions.display.features.feature3")}</li>
                     </ul>
                   </div>
                 </div>
@@ -506,34 +533,32 @@ export default function RailwayPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              The Effects of Air Pollution -
+              {t("railwayEffects.title")} -
               <span style={{ color: "#78ae60" }}>
-                <strong>Railway Station</strong>
+                <strong>{t("railwayEffects.highlight")}</strong>
               </span>
             </h2>
-            <p>
-              Poor Air Quality at railway stations affects every passenger and workers health causing various problems.
-            </p>
+            <p>{t("railwayEffects.description")}</p>
           </div>
 
           <div className="row line">
             <div className="col-md-6">
               <div className="air_quality_box">
-                <h3>Without Air Quality Solutions</h3>
+                <h3>{t("railwayEffects.without.title")}</h3>
                 <ul className="airquality_list red_list">
-                  <li>Poor airflow and pollutant upsurge</li>
-                  <li>Decreased comfort for everyone</li>
-                  <li>Unpleasant and stuffy environment.</li>
+                  <li>{t("railwayEffects.without.effects.effect1")}</li>
+                  <li>{t("railwayEffects.without.effects.effect2")}</li>
+                  <li>{t("railwayEffects.without.effects.effect3")}</li>
                 </ul>
               </div>
             </div>
             <div className="col-md-6">
               <div className="air_quality_box">
-                <h3>With Air Quality Solutions</h3>
+                <h3>{t("railwayEffects.with.title")}</h3>
                 <ul className="airquality_list">
-                  <li>Better airflow and pollutant removal</li>
-                  <li>Improve everyones comfort</li>
-                  <li>Cleaner and fresher environment.</li>
+                  <li>{t("railwayEffects.with.effects.effect1")}</li>
+                  <li>{t("railwayEffects.with.effects.effect2")}</li>
+                  <li>{t("railwayEffects.with.effects.effect3")}</li>
                 </ul>
               </div>
             </div>
@@ -542,116 +567,19 @@ export default function RailwayPage() {
       </section>
 
       {/* Slider Section */}
-      <section className="slider">
-        <div className="container">
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={7000}
-            keyBoardControl={true}
-            customTransition="all .5s"
-            transitionDuration={500}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-          >
-            <div>
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="slidder-txt">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png"
-                      alt="aqi tv app logo"
-                    />
-                    <h3>AQI TV App</h3>
-                    <p>
-                      Display monitor data on a large TV screen with the AQI TV app. Compare real-time and historical
-                      data, and access 24/7 remote monitoring to stay updated on AQI levels. Data availability to
-                      everyone.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="slider-img">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-TV-App.jpg"
-                      alt="aqi android tv app data for railway stations"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="slidder-txt">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg"
-                      alt="aqi web dashboard"
-                    />
-                    <h3>AQI Web-Dashboard</h3>
-                    <p>
-                      Analyze monitor data effortlessly with the AQI Web Dashboard. Access real-time and historic air
-                      quality data directly on our website, and explore global pollution trends with detailed analysis
-                      of the worlds most polluted cities and countries.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="slider-img">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/aqi-web-dashboard-screen.jpg"
-                      alt="aqi web dashboard for railways"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="slidder-txt">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png"
-                      alt="aqi mobile app"
-                    />
-                    <h3>AQI Mobile App</h3>
-                    <p>
-                      Access air monitor data anytime with the AQI Mobile App. Enjoy real-time air quality updates
-                      through our accurate global data API and advanced features. With the AQI Mobile App, you have all
-                      the essential air quality information right at your fingertips.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="slider-img">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Mobile-App.jpg"
-                      alt="aqi mobile app for railways"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Carousel>
-        </div>
-      </section>
+      <RailwayApplicationsCarousel applications={railwayApplications} />
 
       {/* Our Clientele Section */}
       <section className="our-client">
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Our{" "}
+              {t("clientele.title")}{" "}
               <span style={{ color: "#78ae60" }}>
-                <strong>Clientele</strong>
+                <strong>{t("clientele.highlight")}</strong>
               </span>
             </h2>
-            <p>
-              Our partnerships with these renowned organizations reflect our commitment to excellence and innovation.
-            </p>
+            <p>{t("railwayClientele.description")}</p>
           </div>
 
           <div className="row client_logo_section inner_container">
@@ -727,391 +655,18 @@ export default function RailwayPage() {
       </section>
 
       {/* Industrial Applications Section */}
-      <section className="industrial-applications">
+      <section className="industrial-applications-section">
         <div className="container">
-          <div className="introducing_box sub_title_box text-center">
-            <h2 className="title_heading">
-              <span className="industrial-text">Industrial</span>{" "}
-              <span className="applications-text">Applications</span>
+          <div className="section-header text-center">
+            <h2>
+              <span className="industrial-text">{t("industrial.title")}</span>{" "}
+              <span className="applications-text">{t("industrial.highlight")}</span>
             </h2>
-            <p>
-              Prana Air offers a diverse selection of smart, affordable, and remarkably precise air quality solutions,
-              catering to various sectors, irrespective of their scale.
-            </p>
+            <p>{t("railwayIndustrial.description")}</p>
           </div>
 
-          <div className="modern-carousel-container">
-            <Carousel
-              responsive={{
-                superLargeDesktop: {
-                  breakpoint: { max: 4000, min: 3000 },
-                  items: 3,
-                },
-                desktop: {
-                  breakpoint: { max: 3000, min: 1024 },
-                  items: 3,
-                },
-                tablet: {
-                  breakpoint: { max: 1024, min: 464 },
-                  items: 2,
-                },
-                mobile: {
-                  breakpoint: { max: 464, min: 0 },
-                  items: 1,
-                },
-              }}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={5000}
-              keyBoardControl={true}
-              customTransition="all .5s"
-              transitionDuration={500}
-              containerClass="modern-carousel"
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-              customLeftArrow={
-                <div className="custom-arrow left-arrow">
-                  <span>&#10094;</span>
-                </div>
-              }
-              customRightArrow={
-                <div className="custom-arrow right-arrow">
-                  <span>&#10095;</span>
-                </div>
-              }
-            >
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/"
-                      aria-label="Air quality Solutions for Bank"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                        alt="air quality Solutions for banks"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/"
-                    aria-label="Air quality Solutions for Bank"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Bank
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/parking-lot/"
-                      aria-label="Air quality Solutions for Parking Lot"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg"
-                        alt="air quality Solutions for car parking lot"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/parking-lot/"
-                    aria-label="Air quality Solutions for Parking Lot"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Parking Lot
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/"
-                      aria-label="Air quality Solutions for Washroom"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/05/air-solutions-for-washroom-and-bathroom.jpg"
-                        alt="air quality Solutions for washroom or bathroom"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/"
-                    aria-label="Air quality Solutions for Washroom"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Washroom
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/institutes/"
-                      aria-label="Air quality Solutions for Institutes"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg"
-                        alt="air quality Solutions for schools and institutes"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/institutes/"
-                    aria-label="Air quality Solutions for Institutes"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Institutes
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/hotel-businesses/"
-                      aria-label="Air quality Solutions for Hotel"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                        alt="air quality Solutions for hotel business"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/hotel-businesses/"
-                    aria-label="Air quality Solutions for Hotel"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Hotel
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/restaurants/"
-                      aria-label="Air quality Solutions for Restaurant"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                        alt="air quality Solutions for restaurants"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/restaurants/"
-                    aria-label="Air quality Solutions for Restaurant"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Restaurant
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/airports/"
-                      aria-label="Air quality Solutions for Airport"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg"
-                        alt="air quality Solutions for airport"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/airports/"
-                    aria-label="Air quality Solutions for Airport"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Airport
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/"
-                      aria-label="Air quality Solutions for Fitness & Gym"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg"
-                        alt="air quality Solutions for fitness and gym"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/"
-                    aria-label="Air quality Solutions for Fitness & Gym"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Fitness & Gym
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/cinema-and-theatre/"
-                      aria-label="Air quality Solutions for Cinema/Theatre"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg"
-                        alt="air quality Solutions for cinema and theatre"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/cinema-and-theatre/"
-                    aria-label="Air quality Solutions for Cinema/Theatre"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Cinema/Theatre
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/automobile/"
-                      aria-label="Air quality Solutions for Automobiles"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg"
-                        alt="air quality Solutions for automobiles"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/automobile/"
-                    aria-label="Air quality Solutions for Automobiles"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Automobiles
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/real-estate/"
-                      aria-label="Air quality Solutions for Real Estates"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg"
-                        alt="air quality Solutions for real estates"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/real-estate/"
-                    aria-label="Air quality Solutions for Real Estates"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Real Estates
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/smartphone-makers/"
-                      aria-label="Air quality Solutions for Smartphone Makers"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png"
-                        alt="air quality Solutions for smartphone makers"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/smartphone-makers/"
-                    aria-label="Air quality Solutions for Smartphone Makers"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Smartphone Makers
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/constructions/"
-                      aria-label="air quality Solutions for construction sites"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg"
-                        alt="air quality Solutions for construction sites"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/constructions/"
-                    aria-label="Air quality Solutions for Construction sites"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Construction
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/animal-care-center/"
-                      aria-label="air quality Solutions for animale-care"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg"
-                        alt="air quality Solutions for animale-care"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/animal-care-center/"
-                    aria-label="Air quality Solutions for Animal care"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for Animal care
-                  </a>
-                </div>
-              </div>
-              <div className="modern-item">
-                <div className="modern-service-box">
-                  <div className="modern-img-box">
-                    <a
-                      href="https://www.pranaair.com/solutions-by-application/logistics/"
-                      aria-label="air quality Solutions for logistics"
-                    >
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg"
-                        alt="air quality Solutions for logistics"
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://www.pranaair.com/solutions-by-application/logistics/"
-                    aria-label="Air quality Solutions for logistics"
-                    className="modern-title"
-                  >
-                    Air quality Solutions for logistics
-                  </a>
-                </div>
-              </div>
-            </Carousel>
+          <div className="industrial-carousel">
+            <IndustrialApplicationsCarousel applications={industrialApplications} />
           </div>
         </div>
       </section>
@@ -1122,8 +677,8 @@ export default function RailwayPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -1136,16 +691,12 @@ export default function RailwayPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Frequently Asked{" "}
+              {t("faq.title")}{" "}
               <span className="bold_text" style={{ color: "#78ae60" }}>
-                Questions
+                {t("faq.highlight")}
               </span>
             </h2>
-            <p>
-              About Air Quality Solution for Railways
-              <br />
-              Have questions? Were here to help.
-            </p>
+            <p>{t("railwayFaq.description")}</p>
           </div>
 
           <div className="accordion" id="faqAccordion">
@@ -1159,7 +710,7 @@ export default function RailwayPage() {
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  1. Why air quality is a concern at railway stations?
+                  {t("railwayFaq.questions.q1")}
                 </button>
               </h2>
               <div
@@ -1168,10 +719,7 @@ export default function RailwayPage() {
                 aria-labelledby="headingOne"
                 data-bs-parent="#faqAccordion"
               >
-                <div className="accordion-body">
-                  Trains operate with diesel engines and other activities emit various pollutants like PM2.5, NOx,
-                  carbon monoxide (CO), and volatile organic compounds (VOCs).
-                </div>
+                <div className="accordion-body">{t("railwayFaq.answers.a1")}</div>
               </div>
             </div>
 
@@ -1185,7 +733,7 @@ export default function RailwayPage() {
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  2. What are the health impacts of poor air quality at railway stations?
+                  {t("railwayFaq.questions.q2")}
                 </button>
               </h2>
               <div
@@ -1194,10 +742,7 @@ export default function RailwayPage() {
                 aria-labelledby="headingTwo"
                 data-bs-parent="#faqAccordion"
               >
-                <div className="accordion-body">
-                  Exposure to poor air quality can cause or worsen respiratory problems including asthma, bronchitis,
-                  cardiovascular issues etc.
-                </div>
+                <div className="accordion-body">{t("railwayFaq.answers.a2")}</div>
               </div>
             </div>
 
@@ -1211,7 +756,7 @@ export default function RailwayPage() {
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  3. Can air quality issues be managed without advanced solutions at railway stations?
+                  {t("railwayFaq.questions.q3")}
                 </button>
               </h2>
               <div
@@ -1220,10 +765,7 @@ export default function RailwayPage() {
                 aria-labelledby="headingThree"
                 data-bs-parent="#faqAccordion"
               >
-                <div className="accordion-body">
-                  Managing air quality without advanced solutions is challenging. Air quality monitors and purifiers
-                  have a proactive approach to maintaining healthy air quality.
-                </div>
+                <div className="accordion-body">{t("railwayFaq.answers.a3")}</div>
               </div>
             </div>
 
@@ -1237,7 +779,7 @@ export default function RailwayPage() {
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
-                  4. How does Prana Air Ambient Air Monitor improve air quality?
+                  {t("railwayFaq.questions.q4")}
                 </button>
               </h2>
               <div
@@ -1246,10 +788,7 @@ export default function RailwayPage() {
                 aria-labelledby="headingFour"
                 data-bs-parent="#faqAccordion"
               >
-                <div className="accordion-body">
-                  The Prana Air Ambient Air Monitor provides real-time data on pollutant levels, enabling timely
-                  responses and informed decision-making for air quality management.
-                </div>
+                <div className="accordion-body">{t("railwayFaq.answers.a4")}</div>
               </div>
             </div>
           </div>

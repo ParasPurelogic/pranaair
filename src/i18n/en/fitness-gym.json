@@ -1,0 +1,229 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"fitness": {
+    "banner": {
+      "title": "Air quality solutions for",
+      "highlight": "Fitness Center & Gym",
+      "description": "A complete solution for air monitoring, air purification, and data monitoring for your fitness centers and gyms.",
+      "cta": "Get a Quote"
+    },
+    "pollutants": {
+      "title": "Major Air",
+      "highlight": "Pollutants",
+      "description": "Fitness centers and gym areas are enclosed, high-density spaces where fresh air is extremely necessary. Occupancy, panting athletes, and ventilation rates are two factors that affect the air quality indoors. Due to this, the transmission of airborne diseases and pathogens is very easy. Therefore, it is necessary to monitor the air quality and take proper measures to avoid bad air quality scenarios."
+    },
+    "pollutantFeatures": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "Microscopic breathable dust and liquid particles that enter deep into our lungs.",
+        "imgAlt": "pm2.5 in fitness center and gym"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "The breathing rate of athletes is high in gyms which directly influences the CO2 levels.",
+        "imgAlt": "co2 gas in fitness center and gym"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "description": "Gym equipment and cleaning agents are some of the potential sources.",
+        "imgAlt": "tv  \"Gym equipment and cleaning agents are some of the potential sources.",
+        "imgAlt": "tvoc in fitness center and gym"
+      },
+      "microbial": {
+        "title": "Microbial Pollutants",
+        "description": "Flu, cough, cold, etc. are caused when exposed to microbial pollutants.",
+        "imgAlt": "microbial pollutants in fitness center and gym"
+      },
+      "odor": {
+        "title": "Odor",
+        "description": "When sweat and bacteria are exposed to gym fabric, produces a bad odor.",
+        "imgAlt": "odor in fitness center and gym"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Loud noise due to huge no. of people gathering",
+        "imgAlt": "noise in fitness center and gym"
+      }
+    },
+    "pollutionEffects": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "They have the ability to enter the bloodstream & can cause various diseases.",
+        "imgAlt": "pm2.5 effects in fitness center and gym"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "Excess CO2 can cause perspiration, fatigue, suffocation, convulsions",
+        "imgAlt": "co2 effects in fitness center and gym"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Excessive noise can result in headaches & high blood pressure.",
+        "imgAlt": "noise effects in fitness center and gym"
+      },
+      "microbe": {
+        "title": "Microbe",
+        "description": "Flu, cough, cold, etc. are caused when exposed to microbial pollutants.",
+        "imgAlt": "microbial effects in fitness center and gym"
+      }
+    },
+    "risk": {
+      "title": "Who are at",
+      "highlight": "Risk?",
+      "description": "Different people from different age groups can be present in a fitness center. But certain groups are significantly impacted as compared to healthy adults."
+    },
+    "riskGroups": {
+      "personalTrainer": {
+        "title": "Personal Trainer",
+        "description": "Unattentiveness, a high chance of acquiring respiratory illnesses, and loss of coordination.",
+        "imgAlt": "Personal Trainer in fitness center"
+      },
+      "serviceTechnician": {
+        "title": "Service Technician",
+        "description": "Loss of coordination, unattentiveness, etc. are very common if exposed to bad air quality.",
+        "imgAlt": "Service Technician in fitness center"
+      },
+      "frontDeskStaff": {
+        "title": "Front desk staff",
+        "description": "Bad air quality will affect every individual present in the same scenario, including the desk staff.",
+        "imgAlt": "Front desk staff in fitness center & gym"
+      },
+      "members": {
+        "title": "Members",
+        "description": "Nausea, uneasiness, headaches, and breathlessness are some of the side effects of exposure.",
+        "imgAlt": "gym members in fitness center"
+      }
+    },
+    "solutions": {
+      "title": "Air quality",
+      "highlight": "Solutions",
+      "description": "Prana Air air quality monitoring and purifying solutions give you the power to know what your customers and staff breathe and what you could do to clean the air to make your fitness centers and gyms 'Air pollution-free zone' and view and analyze your IAQ."
+    },
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "tabContent": {
+      "monitors": {
+        "description": "Air quality monitoring solutions for fitness centers and gyms."
+      },
+      "freshAir": {
+        "imgAlt": "prana air fresh air machine as iaq solution for fitness center & gym",
+        "title": "Fresh Air Machine",
+        "subtitle": "As IAQ Solution",
+        "description": "It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.",
+        "features": {
+          "item1": "Comes with multi-layers HEPA Filters",
+          "item2": "Compact Design makes it easy to place",
+          "item3": "Promising you up to 99.5% efficiency"
+        },
+        "knowMore": "Know More",
+        "rent": "Looking to Rent?"
+      },
+      "apiData": {
+        "imgAlt": "aqi api data for fitness center & gym",
+        "title": "AQI API Data",
+        "subtitle": "For Fitness Centers",
+        "description": "Avail the real-time air quality data of your fitness center nearby outdoor area on the web.",
+        "features": {
+          "item1": "Integrate the fitness center data on the web",
+          "item2": "Access the real-time data quickly",
+          "item3": "Take precautions from the air pollution"
+        },
+        "knowMore": "Know More"
+      }
+    },
+    "dataServices": {
+      "title": "Data Freemium",
+      "highlight": "Services",
+      "description": "The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the QR to know the AQI of the fitness center.",
+      "features": {
+        "tvDashboard": {
+          "title": "TV Dashboard App",
+          "imgAlt": "aqi tv app dashboard for fitness center & gym"
+        },
+        "customApp": {
+          "title": "Customised App for Fitness Centers",
+          "imgAlt": "aqi customized dashboard app for fitness center & gym"
+        },
+        "qrCode": {
+          "title": "QR Code Scan",
+          "imgAlt": "aqi monitor data qr code scan for fitness center"
+        }
+      }
+    },
+    "effects": {
+      "title": "The Effects of Air Pollution - In",
+      "highlight": "Fitness Center",
+      "description": "When gym members are exposed to poor air quality, they feel unwell, and headaches and nausea are common symptoms of air pollution exposure.",
+      "cleanAir": {
+        "title": "With Clean Air",
+        "benefits": {
+          "item1": "Improved ventilation",
+          "item2": "Improve the health of the members",
+          "item3": "Increase the activeness of the members",
+          "item4": "Decrease absenteeism"
+        }
+      },
+      "vsText": "VS",
+      "uncleanAir": {
+        "title": "Without Clean Air",
+        "drawbacks": {
+          "item1": "Decrease members' willingness",
+          "item2": "Less comfort",
+          "item3": "Bad odor and mold",
+          "item4": "Members may get sick"
+        }
+      }
+    },
+     "clientele": {
+      "title": "Our",
+      "highlight": "Clientele",
+      "description": "We are honored to work with so many well-known companies."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Please help us know what requirements you have. Our team will contact you very soon."
+    },
+    "industrialApplications": {
+      "title": "Industrial",
+      "highlight": "Applications",
+      "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+    }
+  }
+}

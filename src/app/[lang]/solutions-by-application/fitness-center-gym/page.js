@@ -1,81 +1,99 @@
-"use client"
-
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
-import Carousel from "react-multi-carousel"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import FitnessCarousel from "@/Components/Pages/FitnessCenterGym/fitness-gym"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AirQualitySolutionsFitnessPage() {
-    // Carousel responsive settings
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 3,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 600 },
-            items: 3,
-        },
-        mobile: {
-            breakpoint: { max: 600, min: 0 },
-            items: 1,
-        },
-    }
-
-    const sliderQuality = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 1,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 1,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 600 },
-            items: 1,
-        },
-        mobile: {
-            breakpoint: { max: 600, min: 0 },
-            items: 1,
-        },
-    }
-
-    // Carousel data for slider
-    const carouselItems = [
+export default async function AirQualitySolutionsFitnessPage() {
+    const { t } = await getServerTranslation("fitness-gym")
+    const industrialApplications = [
         {
-            id: 1,
-            icon: "https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png",
-            title: "AQI TV App",
-            description:
-                "Access real-time air quality data on a large TV screen in your fitness center or gym. Get continuous 24/7 remote monitoring to stay informed about AQI levels and ensure a healthier environment for members and staff.",
-            image: "https://www.pranaair.com/wp-content/uploads/2022/12/aqi-tv-app-dashboard.jpg",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+            title: t("industrialApplicationsData.hotel.title"),
+            link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
         },
         {
-            id: 2,
-            icon: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg",
-            title: "AQI Web-Dashboard",
-            description:
-                "Get real-time data from your fitness center on a web dashboard to make informed decisions. Explore global pollution trends, receive health advice based on real-time air quality indexes, and easily compare air quality parameters across multiple locations.",
-            image: "https://www.pranaair.com/wp-content/uploads/2022/12/aqi-customized-tablet-app.jpg",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+            title: t("industrialApplicationsData.restaurant.title"),
+            link: "https://www.pranaair.com/solutions-by-application/restaurants/",
         },
         {
-            id: 3,
-            icon: "https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png",
-            title: "AQI Mobile App",
-            description:
-                "Monitor real-time air quality data from your fitness center anytime, anywhere with our mobile app. View global air pollution and weather maps, and easily compare air quality parameters across multiple locations with the AQI App.",
-            image: "https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+            title: t("industrialApplicationsData.institutes.title"),
+            link: "https://www.pranaair.com/solutions-by-application/institutes/",
         },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+            title: t("industrialApplicationsData.cinema.title"),
+            link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+            title: t("industrialApplicationsData.automobiles.title"),
+            link: "https://www.pranaair.com/solutions-by-application/automobile/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+            title: t("industrialApplicationsData.realEstate.title"),
+            link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+            title: t("industrialApplicationsData.smartphone.title"),
+            link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+            title: t("industrialApplicationsData.construction.title"),
+            link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+            title: t("industrialApplicationsData.animalCare.title"),
+            link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+            title: t("industrialApplicationsData.logistics.title"),
+            link: "https://www.pranaair.com/solutions-by-application/logistics/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+            title: t("industrialApplicationsData.railways.title"),
+            link: "https://www.pranaair.com/solutions-by-application/railway/",
+        }
     ]
-
+    const airQualityMonitors = [
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-squair-air-monitor-in-fitness-center-gym.png",
+            imageAlt: "prana air squair monitor as the air quality solutions for restaurant or cafe",
+            title: "Prana Air SQUAIR<br /> Air quality monitor",
+            description: "SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate matters, temperature, humidity, and gas parameters.",
+            features: [
+                "Detects PM2.5, PM10, CO2, TVOC, Noise, Light (LUX), Temperature & humidity",
+                "Mode of connectivity: WiFi, GSM, BMS",
+                "Mobile & Smart TV App, web-dashboard",
+            ],
+            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            hasRentOption: true,
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-sensible-plus-air-monitor-for-fitness-center-gym.jpg",
+            imageAlt: "prana air sensible+ air quality monitor for restaurants and cafe",
+            title: "Prana Air Sensible+<br /> Air quality monitor",
+            description: "This is a smart air quality monitor that comes with 7 inch touch screen display that gives more insightful data.",
+            features: [
+                "Detects PM2.5, PM10, CO2, TVOC, HCHO, Temperature, Humidity",
+                "7 Inch LED Touch Screen Display",
+                "5000 mAh Battery InBuilt",
+                "WiFi Connectivity With Mobile App",
+            ],
+            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            hasRentOption: true,
+        },
+    ];
     return (
         <div>
-            {/* Banner Section */}
             <div
                 className="row school_banner_box"
                 style={{
@@ -86,14 +104,11 @@ export default function AirQualitySolutionsFitnessPage() {
                 <div className="col-md-6 banner_quality_box">
                     <div className="pocket_title_box school_aqi_box">
                         <h1>
-                            Air quality solutions for <span className="bold_text">Fitness Center & Gym</span>
+                            {t("fitness.banner.title")} <span className="bold_text">{t("fitness.banner.highlight")}</span>
                         </h1>
-                        <p>
-                            A complete solution for air monitoring, air purification, and data monitoring for your fitness centers and
-                            gyms.
-                        </p>
+                        <p>{t("fitness.banner.description")}</p>
                         <a className="pocket_buy_btn" href="#get_in_touch">
-                            Get a Quote
+                            {t("fitness.banner.cta")}
                         </a>
                     </div>
                 </div>
@@ -106,14 +121,9 @@ export default function AirQualitySolutionsFitnessPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Major Air <span className="bold_text">Pollutants</span>
+                                {t("fitness.pollutants.title")} <span className="bold_text">{t("fitness.pollutants.highlight")}</span>
                             </h2>
-                            <p>
-                                Fitness centers and gym areas are enclosed, high-density spaces where fresh air is extremely necessary.
-                                Occupancy, panting athletes, and ventilation rates are two factors that affect the air quality indoors.
-                                Due to this, the transmission of airborne diseases and pathogens is very easy. Therefore, it is
-                                necessary to monitor the air quality and take proper measures to avoid bad air quality scenarios.
-                            </p>
+                            <p>{t("fitness.pollutants.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -126,11 +136,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png"
-                                alt="pm2.5 in school and institutes"
+                                alt={t("fitness.pollutantFeatures.pm25.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>PM2.5</h2>
-                                <p>Microscopic breathable dust and liquid particles that enter deep into our lungs.</p>
+                                <h2>{t("fitness.pollutantFeatures.pm25.title")}</h2>
+                                <p>{t("fitness.pollutantFeatures.pm25.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -138,11 +148,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
-                                alt="co2 gas in schools and institutes"
+                                alt={t("fitness.pollutantFeatures.co2.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>CO2</h2>
-                                <p>The breathing rate of athletes is high in gyms which directly influences the CO2 levels.</p>
+                                <h2>{t("fitness.pollutantFeatures.co2.title")}</h2>
+                                <p>{t("fitness.pollutantFeatures.co2.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -150,11 +160,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png"
-                                alt="tvoc in schools and institutes"
+                                alt={t("fitness.pollutantFeatures.tvoc.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>TVOC</h2>
-                                <p>Gym equipment and cleaning agents are some of the potential sources.</p>
+                                <h2>{t("fitness.pollutantFeatures.tvoc.title")}</h2>
+                                <p>{t("fitness.pollutantFeatures.tvoc.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -162,11 +172,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/12/microbe-icon.png"
-                                alt="ozone in school & institutes"
+                                alt={t("fitness.pollutantFeatures.microbial.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Microbial Pollutants</h2>
-                                <p>Flu, cough, cold, etc. are caused when exposed to microbial pollutants.</p>
+                                <h2>{t("fitness.pollutantFeatures.microbial.title")}</h2>
+                                <p>{t("fitness.pollutantFeatures.microbial.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -174,11 +184,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/12/odor-icon.png"
-                                alt="ozone in school & institutes"
+                                alt={t("fitness.pollutantFeatures.odor.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Odor</h2>
-                                <p>When sweat and bacteria are exposed to gym fabric, produces a bad odor.</p>
+                                <h2>{t("fitness.pollutantFeatures.odor.title")}</h2>
+                                <p>{t("fitness.pollutantFeatures.odor.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -186,11 +196,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon.png"
-                                alt="ozone in school & institutes"
+                                alt={t("fitness.pollutantFeatures.noise.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Noise</h2>
-                                <p>Loud noise due to huge no. of people gathering</p>
+                                <h2>{t("fitness.pollutantFeatures.noise.title")}</h2>
+                                <p>{t("fitness.pollutantFeatures.noise.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -212,48 +222,48 @@ export default function AirQualitySolutionsFitnessPage() {
                                 <span className="school_icon_box">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-icon-2.png"
-                                        alt="pm2.5 in school & institutes"
+                                        alt={t("fitness.pollutionEffects.pm25.imgAlt")}
                                     />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>PM2.5</h3>
-                                    <p>They have the ability to enter the bloodstream & can cause various diseases.</p>
+                                    <h3>{t("fitness.pollutionEffects.pm25.title")}</h3>
+                                    <p>{t("fitness.pollutionEffects.pm25.description")}</p>
                                 </div>
                             </li>
                             <li className="second_school_box">
                                 <span className="school_icon_box">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-icon.png"
-                                        alt="co2 in school & institutes"
+                                        alt={t("fitness.pollutionEffects.co2.imgAlt")}
                                     />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>CO2</h3>
-                                    <p>Excess CO2 can cause perspiration, fatigue, suffocation, convulsions</p>
+                                    <h3>{t("fitness.pollutionEffects.co2.title")}</h3>
+                                    <p>{t("fitness.pollutionEffects.co2.description")}</p>
                                 </div>
                             </li>
                             <li className="third_school_box">
                                 <span className="school_icon_box">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2022/08/ozone-o3-icon.png"
-                                        alt="ozone o3 in school & institutes"
+                                        alt={t("fitness.pollutionEffects.noise.imgAlt")}
                                     />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>Noise</h3>
-                                    <p>Excessive noise can result in headaches & high blood pressure.</p>
+                                    <h3>{t("fitness.pollutionEffects.noise.title")}</h3>
+                                    <p>{t("fitness.pollutionEffects.noise.description")}</p>
                                 </div>
                             </li>
                             <li className="fourth_school_box">
                                 <span className="school_icon_box">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2022/12/bacteria-icon.png"
-                                        alt="tvoc in school & institutes"
+                                        alt={t("fitness.pollutionEffects.microbe.imgAlt")}
                                     />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>Microbe</h3>
-                                    <p>Flu, cough, cold, etc. are caused when exposed to microbial pollutants.</p>
+                                    <h3>{t("fitness.pollutionEffects.microbe.title")}</h3>
+                                    <p>{t("fitness.pollutionEffects.microbe.description")}</p>
                                 </div>
                             </li>
                         </ul>
@@ -267,12 +277,9 @@ export default function AirQualitySolutionsFitnessPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Who are at <span className="bold_text">Risk?</span>
+                                {t("fitness.risk.title")} <span className="bold_text">{t("fitness.risk.highlight")}</span>
                             </h2>
-                            <p>
-                                Different people from different age groups can be present in a fitness center. But certain groups are
-                                significantly impacted as compared to healthy adults.
-                            </p>
+                            <p>{t("fitness.risk.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -285,11 +292,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/12/gym-personal-trainer.png"
-                                alt="Personal Trainer in fitness center"
+                                alt={t("fitness.riskGroups.personalTrainer.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Personal Trainer</h2>
-                                <p>Unattentiveness, a high chance of acquiring respiratory illnesses, and loss of coordination.</p>
+                                <h2>{t("fitness.riskGroups.personalTrainer.title")}</h2>
+                                <p>{t("fitness.riskGroups.personalTrainer.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -297,11 +304,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/12/service-technicians.png"
-                                alt="Service Technician in fitness center"
+                                alt={t("fitness.riskGroups.serviceTechnician.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Service Technician</h2>
-                                <p>Loss of coordination, unattentiveness, etc. are very common if exposed to bad air quality.</p>
+                                <h2>{t("fitness.riskGroups.serviceTechnician.title")}</h2>
+                                <p>{t("fitness.riskGroups.serviceTechnician.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -309,13 +316,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/12/front-desk-staff.png"
-                                alt="Front desk staff in fitness center & gym"
+                                alt={t("fitness.riskGroups.frontDeskStaff.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Front desk staff</h2>
-                                <p>
-                                    Bad air quality will affect every individual present in the same scenario, including the desk staff.
-                                </p>
+                                <h2>{t("fitness.riskGroups.frontDeskStaff.title")}</h2>
+                                <p>{t("fitness.riskGroups.frontDeskStaff.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -323,11 +328,11 @@ export default function AirQualitySolutionsFitnessPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/12/gym-members.png"
-                                alt="a customer of a restaurant"
+                                alt={t("fitness.riskGroups.members.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Members</h2>
-                                <p>Nausea, uneasiness, headaches, and breathlessness are some of the side effects of exposure.</p>
+                                <h2>{t("fitness.riskGroups.members.title")}</h2>
+                                <p>{t("fitness.riskGroups.members.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -339,8 +344,10 @@ export default function AirQualitySolutionsFitnessPage() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">Air quality <span className="bold_text">Solutions</span></h2>
-                            <p>Prana Air air quality monitoring and purifying solutions give you the power to know what your customers and staff breathe and what you could do to clean the air to make your fitness centers and gyms ‘Air pollution-free zone’ and view and analyze your IAQ.</p>
+                            <h2 className="title_heading">
+                                {t("fitness.solutions.title")} <span className="bold_text">{t("fitness.solutions.highlight")}</span>
+                            </h2>
+                            <p>{t("fitness.solutions.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -362,7 +369,7 @@ export default function AirQualitySolutionsFitnessPage() {
                                     aria-controls="air-quality-monitors"
                                     aria-selected="true"
                                 >
-                                    Air Quality Monitors
+                                    {t("fitness.tabs.monitors")}
                                 </button>
                             </li>
                             <li className="nav-item" role="presentation">
@@ -376,7 +383,7 @@ export default function AirQualitySolutionsFitnessPage() {
                                     aria-controls="fresh-air-machine"
                                     aria-selected="false"
                                 >
-                                    Fresh Air Machine
+                                    {t("fitness.tabs.freshAir")}
                                 </button>
                             </li>
                             <li className="nav-item" role="presentation">
@@ -390,7 +397,7 @@ export default function AirQualitySolutionsFitnessPage() {
                                     aria-controls="api-data"
                                     aria-selected="false"
                                 >
-                                    API Data
+                                    {t("fitness.tabs.apiData")}
                                 </button>
                             </li>
                         </ul>
@@ -402,91 +409,10 @@ export default function AirQualitySolutionsFitnessPage() {
                                 aria-labelledby="air-quality-monitors-tab"
                             >
                                 <div className="owl-slider">
-                                    <Carousel
-                                        responsive={sliderQuality}
-                                        infinite={true}
-                                        autoPlay={true}
-                                        autoPlaySpeed={7000}
-                                        keyBoardControl={true}
-                                        customTransition="all .5"
-                                        transitionDuration={500}
-                                    >
-                                        <div className="item">
-                                            <div className="slider_cntr">
-                                                <div className="slider_img_box">
-                                                    <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
-                                                        <img
-                                                            style={{ width: "100%" }}
-                                                            src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-squair-air-monitor-in-fitness-center-gym.png"
-                                                            alt="prana air squair monitor as the air quality solutions for restaurant or cafe"
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div className="slider_details_box">
-                                                    <h3>
-                                                        Prana Air SQUAIR
-                                                        <br /> Air quality monitor
-                                                    </h3>
-                                                    <span>
-                                                        SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate
-                                                        matters, temperature, humidity, and gas parameters.
-                                                    </span>
-                                                    <ul className="airquality_list">
-                                                        <li>Detects PM2.5, PM10, CO2, TVOC, Noise, Light (LUX), Temperature & humidity</li>
-                                                        <li>Mode of connectivity: WiFi, GSM, BMS</li>
-                                                        <li>Mobile & Smart TV App, web-dashboard</li>
-                                                    </ul>
-                                                    <a
-                                                        href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/"
-                                                        className="knowmore_btn"
-                                                    >
-                                                        Know More
-                                                    </a>
-                                                    <a href="#" className="rent_btn">
-                                                        Looking to Rent?
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="slider_cntr">
-                                                <div className="slider_img_box">
-                                                    <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
-                                                        <img
-                                                            style={{ width: "100%" }}
-                                                            src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-sensible-plus-air-monitor-for-fitness-center-gym.jpg"
-                                                            alt="prana air sensible+ air quality monitor for restaurants and cafe"
-                                                        />
-                                                    </a>
-                                                </div>
-                                                <div className="slider_details_box">
-                                                    <h3>
-                                                        Prana Air Sensible+
-                                                        <br /> Air quality monitor
-                                                    </h3>
-                                                    <span>
-                                                        This is a smart air quality monitor that comes with 7 inch touch screen display that gives
-                                                        more insightful data.
-                                                    </span>
-                                                    <ul className="airquality_list">
-                                                        <li>Detects PM2.5, PM10, CO2, TVOC, HCHO, Temperature, Humidity</li>
-                                                        <li>7 Inch LED Touch Screen Display</li>
-                                                        <li>5000 mAh Battery InBuilt</li>
-                                                        <li>WiFi Connectivity With Mobile App</li>
-                                                    </ul>
-                                                    <a
-                                                        href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/"
-                                                        className="knowmore_btn"
-                                                    >
-                                                        Know More
-                                                    </a>
-                                                    <a href="#" className="rent_btn">
-                                                        Looking to Rent?
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Carousel>
+                                    {/* Air Quality Monitors content would go here */}
+                                    <div className="monitor-placeholder">
+                                        <FitnessCarousel appfitness={airQualityMonitors} />
+                                    </div>
                                 </div>
                             </div>
                             <div
@@ -501,28 +427,26 @@ export default function AirQualitySolutionsFitnessPage() {
                                             <img
                                                 style={{ width: "100%" }}
                                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
-                                                alt="prana air fresh air machine as iaq solution for school & institutes"
+                                                alt={t("fitness.tabContent.freshAir.imgAlt")}
                                             />
                                         </a>
                                     </div>
                                     <div className="slider_details_box">
                                         <h3>
-                                            Fresh Air Machine
-                                            <br /> As IAQ Solution
+                                            {t("fitness.tabContent.freshAir.title")}
+                                            <br /> {t("fitness.tabContent.freshAir.subtitle")}
                                         </h3>
-                                        <span>
-                                            It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.
-                                        </span>
+                                        <span>{t("fitness.tabContent.freshAir.description")}</span>
                                         <ul className="airquality_list">
-                                            <li>Comes with multi-layers HEPA Filters</li>
-                                            <li>Compact Design makes it easy to place</li>
-                                            <li>Promising you up to 99.5% efficiency</li>
+                                            <li>{t("fitness.tabContent.freshAir.features.item1")}</li>
+                                            <li>{t("fitness.tabContent.freshAir.features.item2")}</li>
+                                            <li>{t("fitness.tabContent.freshAir.features.item3")}</li>
                                         </ul>
                                         <a href="https://www.pranaair.com/fresh-air-machine/" className="knowmore_btn">
-                                            Know More
+                                            {t("fitness.tabContent.freshAir.knowMore")}
                                         </a>
                                         <a href="#" className="rent_btn">
-                                            Looking to Rent?
+                                            {t("fitness.tabContent.freshAir.rent")}
                                         </a>
                                     </div>
                                 </div>
@@ -533,23 +457,23 @@ export default function AirQualitySolutionsFitnessPage() {
                                         <img
                                             style={{ width: "100%" }}
                                             src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg"
-                                            alt="aqi api data for school & institutes"
+                                            alt={t("fitness.tabContent.apiData.imgAlt")}
                                         />
                                     </div>
                                     <div className="slider_details_box">
                                         <h3>
-                                            AQI API Data
-                                            <br /> For Institutes
+                                            {t("fitness.tabContent.apiData.title")}
+                                            <br /> {t("fitness.tabContent.apiData.subtitle")}
                                         </h3>
-                                        <span>Avail the real-time air quality data of your institutes nearby outdoor area on the web.</span>
+                                        <span>{t("fitness.tabContent.apiData.description")}</span>
                                         <ul className="airquality_list">
-                                            <li>Integrate the institutes data on the web</li>
-                                            <li>Access the real-time data quickly</li>
-                                            <li>Take precautions from the air pollution</li>
+                                            <li>{t("fitness.tabContent.apiData.features.item1")}</li>
+                                            <li>{t("fitness.tabContent.apiData.features.item2")}</li>
+                                            <li>{t("fitness.tabContent.apiData.features.item3")}</li>
                                         </ul>
                                         <br />
                                         <a href="#get_in_touch" className="knowmore_btn">
-                                            Know More
+                                            {t("fitness.tabContent.apiData.knowMore")}
                                         </a>
                                     </div>
                                 </div>
@@ -565,42 +489,45 @@ export default function AirQualitySolutionsFitnessPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Data Freemium <span className="bold_text">Services</span>
+                                {t("fitness.dataServices.title")}{" "}
+                                <span className="bold_text">{t("fitness.dataServices.highlight")}</span>
                             </h2>
-                            <p>
-                                The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan
-                                the QR to know the AQI of the fitness center.
-                            </p>
+                            <p>{t("fitness.dataServices.description")}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container inner_container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="app_service_box"><img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-tv-app-dashboard.jpg"
-                            alt="aqi tv app dashboard for fitness center &amp; gym" />
-                            <h4>TV Dashboard App</h4>
+            <div className="container inner_container">
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="app_service_box">
+                            <img
+                                src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-tv-app-dashboard.jpg"
+                                alt={t("fitness.dataServices.features.tvDashboard.imgAlt")}
+                            />
+                            <h4>{t("fitness.dataServices.features.tvDashboard.title")}</h4>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="app_service_box"><img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-customized-tablet-app.jpg"
-                            alt="aqi customized dashboard app for fitness center &amp; gym" />
-                            <h4>Customised App for Schools</h4>
+                    <div className="col-md-4">
+                        <div className="app_service_box">
+                            <img
+                                src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-customized-tablet-app.jpg"
+                                alt={t("fitness.dataServices.features.customApp.imgAlt")}
+                            />
+                            <h4>{t("fitness.dataServices.features.customApp.title")}</h4>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="app_service_box"><img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg"
-                            alt="aqi monitor data qr code scan for airport" />
-                            <h4>QR Code Scan</h4>
+                    <div className="col-md-4">
+                        <div className="app_service_box">
+                            <img
+                                src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg"
+                                alt={t("fitness.dataServices.features.qrCode.imgAlt")}
+                            />
+                            <h4>{t("fitness.dataServices.features.qrCode.title")}</h4>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             {/* Effects of Air Pollution */}
             <div className="container top_space_heading">
@@ -608,12 +535,9 @@ export default function AirQualitySolutionsFitnessPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                The Effects of Air Pollution - In <span className="bold_text">Fitness Center</span>
+                                {t("fitness.effects.title")} <span className="bold_text">{t("fitness.effects.highlight")}</span>
                             </h2>
-                            <p>
-                                When gym members are exposed to poor air quality, they feel unwell, and headaches and nausea are common
-                                symptoms of air pollution exposure.
-                            </p>
+                            <p>{t("fitness.effects.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -624,27 +548,27 @@ export default function AirQualitySolutionsFitnessPage() {
                     <div className="col-md-6 air_graph_box">
                         <div className="air_quality_box">
                             <h3>
-                                <span style={{ fontSize: "15pt", color: "#78ae60" }}> With Clean Air</span>
+                                <span style={{ fontSize: "15pt", color: "#78ae60" }}>{t("fitness.effects.cleanAir.title")}</span>
                             </h3>
                             <ul className="airquality_list">
-                                <li>Improved ventilation</li>
-                                <li>Improve the health of the members</li>
-                                <li>Increase the activeness of the members</li>
-                                <li>Decrease absenteeism</li>
+                                <li>{t("fitness.effects.cleanAir.benefits.item1")}</li>
+                                <li>{t("fitness.effects.cleanAir.benefits.item2")}</li>
+                                <li>{t("fitness.effects.cleanAir.benefits.item3")}</li>
+                                <li>{t("fitness.effects.cleanAir.benefits.item4")}</li>
                             </ul>
                         </div>
-                        <span className="vs_text">VS</span>
+                        <span className="vs_text">{t("fitness.effects.vsText")}</span>
                     </div>
                     <div className="col-md-6 air_qualiity_right">
                         <div className="air_quality_box">
                             <h3>
-                                <span style={{ fontSize: "15pt", color: "#e86868" }}> Without Clean Air</span>
+                                <span style={{ fontSize: "15pt", color: "#e86868" }}>{t("fitness.effects.uncleanAir.title")}</span>
                             </h3>
                             <ul className="airquality_list red_list">
-                                <li>Decrease members’ willingness</li>
-                                <li>Less comfort</li>
-                                <li>Bad odor and mold</li>
-                                <li>Members may get sick</li>
+                                <li>{t("fitness.effects.uncleanAir.drawbacks.item1")}</li>
+                                <li>{t("fitness.effects.uncleanAir.drawbacks.item2")}</li>
+                                <li>{t("fitness.effects.uncleanAir.drawbacks.item3")}</li>
+                                <li>{t("fitness.effects.uncleanAir.drawbacks.item4")}</li>
                             </ul>
                         </div>
                     </div>
@@ -919,8 +843,8 @@ export default function AirQualitySolutionsFitnessPage() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="contact-heading">
-                                <h2>Get in Touch</h2>
-                                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                                <h2>{t("fitness.contact.title")}</h2>
+                                <p>{t("fitness.contact.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -934,12 +858,10 @@ export default function AirQualitySolutionsFitnessPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Industrial <span className="bold_text">Applications</span>
+                                {t("fitness.industrialApplications.title")}{" "}
+                                <span className="bold_text">{t("fitness.industrialApplications.highlight")}</span>
                             </h2>
-                            <p>
-                                Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and
-                                highly accurate air quality solutions for various industries.
-                            </p>
+                            <p>{t("fitness.industrialApplications.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -949,76 +871,7 @@ export default function AirQualitySolutionsFitnessPage() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="owl-slider">
-                            <Carousel
-                                responsive={responsive}
-                                infinite={true}
-                                autoPlay={true}
-                                autoPlaySpeed={7000}
-                                keyBoardControl={true}
-                                customTransition="all .5"
-                                transitionDuration={500}
-                            >
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-retail-outlets.jpg"
-                                                    alt="air quality solutions for retail stores"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                            <h4>Solutions for Retail Stores</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                                                    alt="air quality solutions for banks"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                            <h4>Solutions for Bank</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                                                    alt="air quality solutions for hotel business"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                            <h4>Solutions for Hotel</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                                                    alt="air quality solutions for restaurants"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                            <h4>Solutions for Restaurant</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </Carousel>
+                            <IndustrialApplicationsCarousel applications={industrialApplications} />
                         </div>
                     </div>
                 </div>

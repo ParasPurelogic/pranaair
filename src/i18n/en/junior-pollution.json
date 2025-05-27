@@ -1,0 +1,181 @@
+{
+  "adultKidMask": {
+    "blueSection": {
+      "paragraph1": "Does your kid often complain about headaches? Is he/she suffering from cough and cold every now and then?",
+      "paragraph2": "If yes, Air Pollution could possibly be the reason."
+    },
+    "whatsInBox": {
+      "title": "What is in the box?",
+      "images": {
+        "box": {
+          "alt": "Prana Air junior pollution mask box"
+        },
+        "boxBack": {
+          "alt": "Prana Air children mask box backview"
+        },
+        "boxTop": {
+          "alt": "Prana Air adult-kid mask box"
+        },
+        "parts": {
+          "alt": "Prana Air children pollution mask parts"
+        }
+      }
+    },
+    "banner": {
+      "title": "Did you know that more than 90% of children are breathing toxic air every day?",
+      "cta": "buy now",
+      "imageAlt": "Boy and girl wearing adult-kid mask"
+    },
+    "product": {
+      "title": "Adult-Kid Pollution Mask",
+      "logoAlt": "logo",
+      "description": "The best N95 anti-pollution mask for children to keep maximum protection to them from breathing dangerous polluted air particles",
+      "mainImageAlt": "Adult-Kid Mask",
+      "features": {
+        "hepaFilter": {
+          "title": "5 Layer Hepa Filter",
+          "iconAlt": "HEPA filter layers"
+        },
+        "efficiency": {
+          "title": "95.99% Efficiency",
+          "iconAlt": "Efficiency rate"
+        },
+        "fanSpeed": {
+          "title": "3 Different Fan Speeds",
+          "iconAlt": "Fan speed"
+        },
+        "ventilators": {
+          "title": "Two Micro-Ventilators",
+          "iconAlt": "Micro ventilation"
+        },
+        "usbCharging": {
+          "title": "USB Cable Charging",
+          "iconAlt": "USB charger"
+        },
+        "batteryLife": {
+          "title": "8 Hours Long Battery Life",
+          "iconAlt": "Battery life"
+        }
+      }
+    },
+    "features": {
+      "hepaFilter": {
+        "title": "5 Layer HEPA Filter",
+        "description": "Grade 11 HEPA filters pollen, smoke, and fine dust particles as small as PM 2.5",
+        "imageAlt": "5 Layer HEPA Filter"
+      },
+      "efficiency": {
+        "title": "95.99% Efficiency",
+        "description": "Advanced filtration technology enables our air mask for anti-polluion to capture 95.99% polluted air particles.",
+        "imageAlt": "95.99% Efficiency"
+      },
+      "fanSpeed": {
+        "title": "3 Different Fan Speed",
+        "description": "The air volume can be adjusted as per the child's commuting to and from school, or going anywhere outdoor, etc.",
+        "imageAlt": "3 Different Fan Speed"
+      },
+      "ventilators": {
+        "title": "2 Micro Ventilators",
+        "description": "Allows kids to breathe fresh purified air from one side and breathe out the carbon dioxide from the other side.",
+        "imageAlt": "2 Micro Ventilators"
+      },
+      "usbCharging": {
+        "title": "USB Charging",
+        "description": "Comes with micro-USB charging cable that allows the mask function within 1.5 to 2 hours.",
+        "imageAlt": "USB Charging"
+      },
+      "batteryEfficiency": {
+        "title": "Battery Efficiency",
+        "description": "Runs on a 5-V lithium battery with an average of 8 hours long battery life daily.",
+        "imageAlt": "Battery Efficiency"
+      },
+      "unboxing": {
+        "title": "Unboxing of Adult-Kid Mask",
+        "imageAlt": "Unboxing of Adult-Kid Mask",
+        "videoTitle": "Unboxing video of Adult-Kid Mask",
+        "description": {
+          "part1": "Adults/Children can wear it at school or any outdoor activity.",
+          "part2": "No more worrying about catching airborne health issues.",
+          "part3": "Suitable for children aged between 5 and 15 years. The mask comes with two different size of seals - large and small, that can easily fit to adults and children."
+        }
+      }
+    },
+    "productDetails": {
+      "title": "Product Details: Children Pollution Mask",
+      "imageAlt": "Product Details",
+      "buyNow": "Buy Now",
+      "table": {
+        "header": {
+          "features": "PRODUCT FEATURES",
+          "mask": "Adult-Kid MASK"
+        },
+        "rows": {
+          "colors": {
+            "label": "Colors",
+            "value": "White, Pink, Blue"
+          },
+          "filterLayers": {
+            "label": "Filter layers",
+            "value": "5"
+          },
+          "hepaCompliant": {
+            "label": "HEPA compliant",
+            "value": "Yes"
+          },
+          "purificationEfficiency": {
+            "label": "Purification efficiency",
+            "value": ">95.99%"
+          },
+          "fanSpeed": {
+            "label": "Fan speed",
+            "value": "3 modes"
+          },
+          "chargingMode": {
+            "label": "Charging mode",
+            "value": "USB charging"
+          },
+          "chargingTime": {
+            "label": "Charging time",
+            "value": "1.5-2 hours"
+          },
+          "batteryDuration": {
+            "label": "Battery duration",
+            "value": "3 hours - 4 hours"
+          },
+          "batteryCapacity": {
+            "label": "Battery capacity",
+            "value": "1000 mAh"
+          },
+          "dimensions": {
+            "label": "Dimensions",
+            "value": "120x110x50 (mm)"
+          },
+          "weight": {
+            "label": "Weight",
+            "value": "62 grams"
+          },
+          "voltage": {
+            "label": "Voltage",
+            "value": "3.7V"
+          },
+          "noise": {
+            "label": "Noise",
+            "value": "<28db(A)"
+          },
+          "price": {
+            "label": "Price",
+            "value": "3490 INR"
+          }
+        }
+      }
+    },
+    "protectCta": {
+      "heading": "Dont wait any longer.\nStart protecting yourself and your\nChildren today.",
+      "description": "Our purification masks are Specially designed for\nYour kid & are made of eco-friendly plastic, lightweight,\nStylish and comfortable to wear.",
+      "buyNow": "Buy Now",
+      "amazon": "amazon",
+      "amazonLogoAlt": "amazon logo"
+    }
+  }
+   
+}

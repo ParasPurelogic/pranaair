@@ -1,28 +1,10 @@
-"use client"
 import "./styles.css"
-import "react-multi-carousel/lib/styles.css"
-import Carousel from "react-multi-carousel"
+import Image from "next/image"
+import Link from "next/link"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AirPollution() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
-
+export default async function AirPollution() {
+  const { t } = await getServerTranslation("pollution")
   return (
     <main>
       {/* Hero Section */}
@@ -35,22 +17,20 @@ export default function AirPollution() {
         <div className="container">
           <div className="hero-content">
             <h2 className="whitetext" style={{ fontSize: "24pt" }}>
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/02/air-icon.png"
-                alt="air icon"
-                width="38"
-                height="22"
+                alt={t("hero.iconAlt")}
+                width={38}
+                height={22}
                 style={{ display: "inline", marginRight: "10px" }}
               />
-              Air
+              {t("hero.title")}
             </h2>
             <p
               className="whitetext"
               style={{ textAlign: "left", wordWrap: "break-word", width: "auto", fontSize: "16pt" }}
             >
-              Air is an invisible mixture of various gases. It exists naturally in our environment. Oxygen is one of the
-              various gases present in the air that we breathe. Furthermore, various gases present in air causes air
-              pollution.
+              {t("hero.description")}
             </p>
           </div>
         </div>
@@ -60,29 +40,24 @@ export default function AirPollution() {
       <section className="what-is-section">
         <div className="container">
           <div className="content-wrapper">
-            <img
+            <Image
               className="full-width-image"
               src="https://www.pranaair.com/wp-content/uploads/2023/02/what-is-air-pollution-and-causes-1024x491.jpg"
-              alt="what is air pollution and causes"
-              width="1024"
-              height="491"
+              alt={t("whatIs.imageAlt")}
+              width={1024}
+              height={491}
             />
 
             <h1 style={{ textAlign: "center", marginTop: "20px" }}>
               <strong>
                 <span style={{ fontSize: "24pt" }}>
-                  <span style={{ color: "#2a2a2c" }}>What is</span>{" "}
-                  <span style={{ color: "#0687e3" }}>Air Pollution?</span>
+                  <span style={{ color: "#2a2a2c" }}>{t("whatIs.titlePart1")}</span>{" "}
+                  <span style={{ color: "#0687e3" }}>{t("whatIs.titlePart2")}</span>
                 </span>
               </strong>
             </h1>
 
-            <p style={{ textAlign: "center", fontSize: "14pt" }}>
-              Air pollution happens when gases, dust, dirt, pollen, soot, viruses, etc. contaminate the air making it
-              unclean, unhealthy, and toxic to breathe. The amount of air pollution present in the air determines its
-              effects on humans, animals, plants, and the entire ecosystem. Hence, the amount of pollution in the air
-              affects the level of harm it poses to humans, animals, and plants.
-            </p>
+            <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("whatIs.description")}</p>
           </div>
         </div>
       </section>
@@ -91,109 +66,105 @@ export default function AirPollution() {
       <section className="contaminants-section">
         <div className="container">
           <h2 className="air_heading" style={{ fontSize: "24pt" }}>
-            Some common but extremely dangerous air contaminants are
+            {t("contaminants.title")}
           </h2>
 
           <div className="contaminant-item">
             <h3 style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "36pt" }}>01</span> <span style={{ fontSize: "20pt" }}>Particulate Matter</span>
+              <span style={{ fontSize: "36pt" }}>01</span>{" "}
+              <span style={{ fontSize: "20pt" }}>{t("contaminants.pm.title")}</span>
             </h3>
-            <p style={{ textAlign: "center", fontSize: "14pt" }}>
-              Small breathable dust particles and liquid droplets suspended in the air. And it can easily enter deep
-              into the lungs.
-            </p>
+            <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("contaminants.pm.description")}</p>
           </div>
 
           <div className="card2-container">
             <div className="card2">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/pm1-parameter.png"
-                  alt="pm1 parameter"
-                  width="116"
-                  height="108"
+                  alt={t("contaminants.pm.pm1Alt")}
+                  width={116}
+                  height={108}
                 />
-              </a>
+              </Link>
             </div>
             <div className="card2">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/pm2.5-pollutant-icon.png"
-                  alt="pm2.5 parameter"
-                  width="116"
-                  height="108"
+                  alt={t("contaminants.pm.pm25Alt")}
+                  width={116}
+                  height={108}
                 />
-              </a>
+              </Link>
             </div>
             <div className="card2">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/pm10-pollutant-icon.png"
-                  alt="pm10 parameter"
-                  width="116"
-                  height="108"
+                  alt={t("contaminants.pm.pm10Alt")}
+                  width={116}
+                  height={108}
                 />
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="contaminant-item" style={{ marginTop: "40px" }}>
             <h3 style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "36pt" }}>02</span> <span style={{ fontSize: "20pt" }}>Harmful Gases</span>
+              <span style={{ fontSize: "36pt" }}>02</span>{" "}
+              <span style={{ fontSize: "20pt" }}>{t("contaminants.gases.title")}</span>
             </h3>
-            <p style={{ textAlign: "center", fontSize: "14pt" }}>
-              There are numerous gases in the air. But they become harmful when they exceed their desired limits. Some
-              examples are Nitrogen Dioxide, Sulphur Dioxide, Carbon Dioxide, Methane, Carbon Monoxide, etc.
-            </p>
+            <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("contaminants.gases.description")}</p>
           </div>
 
           <div className="card-container">
             <div className="card">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/no2-icon.png"
-                  alt="no2 icon"
-                  width="166"
-                  height="155"
+                  alt={t("contaminants.gases.no2Alt")}
+                  width={166}
+                  height={155}
                 />
-              </a>
+              </Link>
             </div>
             <div className="card">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/so2-icon.png"
-                  alt="so2 parameter"
-                  width="166"
-                  height="155"
+                  alt={t("contaminants.gases.so2Alt")}
+                  width={166}
+                  height={155}
                 />
-              </a>
+              </Link>
             </div>
             <div className="card">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
-                  alt="co2 parameter"
-                  width="166"
-                  height="155"
+                  alt={t("contaminants.gases.co2Alt")}
+                  width={166}
+                  height={155}
                 />
-              </a>
+              </Link>
             </div>
             <div className="card">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/co.png"
-                  alt="co parameter"
-                  width="166"
-                  height="155"
+                  alt={t("contaminants.gases.coAlt")}
+                  width={166}
+                  height={155}
                 />
-              </a>
+              </Link>
             </div>
             <div className="card">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/02/ch4-icon.png"
-                alt="ch4 parameter"
-                width="166"
-                height="155"
+                alt={t("contaminants.gases.ch4Alt")}
+                width={166}
+                height={155}
               />
             </div>
           </div>
@@ -204,62 +175,53 @@ export default function AirPollution() {
       <section className="types-section">
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            There are two types of <span style={{ color: "#0687e3" }}>Air Pollution</span>
+            {t("types.title")} <span style={{ color: "#0687e3" }}>{t("types.titleHighlight")}</span>
           </h2>
 
           <div className="pollution-type">
             <h3 style={{ textAlign: "center" }}>
               <span style={{ fontSize: "36pt" }}>01</span>{" "}
-              <span style={{ fontSize: "20pt" }}>Indoor Air Pollution</span>
+              <span style={{ fontSize: "20pt" }}>{t("types.indoor.title")}</span>
             </h3>
-            <p style={{ textAlign: "center", fontSize: "14pt" }}>
-              According to the WHO, when dust, gases, and allergens contaminate the air in indoor spaces like homes,
-              offices, schools, etc. it is known as indoor air pollution. Indoor air can be 10 times worse than
-              outdoors. Because these pollutants are trapped in closed spaces and cannot move freely.
-            </p>
+            <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("types.indoor.description")}</p>
 
-            <img
+            <Image
               className="full-width-image"
               src="https://www.pranaair.com/wp-content/uploads/2023/02/indoor-air-pollution-1024x653.jpg"
-              alt="indoor air pollution"
-              width="832"
-              height="530"
+              alt={t("types.indoor.imageAlt")}
+              width={832}
+              height={530}
             />
           </div>
 
           <div className="pollution-type" style={{ marginTop: "40px" }}>
             <h3 style={{ textAlign: "center" }}>
               <span style={{ fontSize: "36pt" }}>02</span>{" "}
-              <span style={{ fontSize: "20pt" }}>Outdoor Air Pollution</span>
+              <span style={{ fontSize: "20pt" }}>{t("types.outdoor.title")}</span>
             </h3>
-            <p style={{ textAlign: "center", fontSize: "14pt" }}>
-              Outdoor air pollution occurs when dangerous air pollutants contaminate the air outdoors. This can happen
-              due to natural events. Such as forest burning and volcanic eruptions or due to human activities such as
-              garbage burning, etc.
-            </p>
+            <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("types.outdoor.description")}</p>
 
-            <img
+            <Image
               className="full-width-image"
               src="https://www.pranaair.com/wp-content/uploads/2023/02/outdoor-air-pollution-sources-1024x815.jpg"
-              alt="outdoor air pollution sources"
-              width="841"
-              height="670"
+              alt={t("types.outdoor.imageAlt")}
+              width={841}
+              height={670}
             />
           </div>
 
           <div className="saveyourfuture_box">
             <span className="future_img">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/02/save-your-future.png"
-                alt="Save your future"
+                alt={t("types.quote.imageAlt")}
+                width={100}
+                height={100}
               />
             </span>
             <h3>
               <span style={{ fontSize: "16pt", color: "#0687e3" }}>
-                <em>
-                  According to the UN health organization air pollution exposure caused an estimated 1.1 million deaths
-                  in India in 2016 among people of all ages.
-                </em>
+                <em>{t("types.quote.text")}</em>
               </span>
             </h3>
           </div>
@@ -270,31 +232,21 @@ export default function AirPollution() {
       <section className="aqi-section">
         <div className="container">
           <h3 className="air_heading" style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "18pt" }}>
-              You must have read or heard somewhere that pollution levels are high or low.
-            </span>
+            <span style={{ fontSize: "18pt" }}>{t("aqi.question1")}</span>
             <br />
-            <span style={{ color: "#0687e3", fontSize: "18pt" }}>But what exactly does that mean?</span>
+            <span style={{ color: "#0687e3", fontSize: "18pt" }}>{t("aqi.question2")}</span>
           </h3>
 
           <div className="aqi-content">
             <div className="aqi-text">
-              <p style={{ textAlign: "center", fontSize: "14pt" }}>
-                High levels of air pollution indicate that the air is heavily contaminated. Thus, it can hurt people
-                more severely. Low air pollution levels imply few health risks. But How do we determine if air pollution
-                is high or low? By calculating the average air pollution concentration over a standard time, we can
-                determine the quality of the air. It is divided into six categories depending upon the level of harm
-                they can do and this index is known as the Air Quality Index (AQI). Hence, we can determine the quality
-                of the air around us with the use of this index. For example, an AQI value of 45 is considered good but
-                AQI levels above 300 represent hazardous air quality.
-              </p>
+              <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("aqi.description")}</p>
             </div>
             <div className="aqi-image">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/02/aqi-air-quality-index-mobile-app-263x300.jpg"
-                alt="aqi air quality index mobile app"
-                width="408"
-                height="466"
+                alt={t("aqi.imageAlt")}
+                width={408}
+                height={466}
               />
             </div>
           </div>
@@ -305,115 +257,107 @@ export default function AirPollution() {
       <section className="sources-section">
         <div className="container">
           <h2 style={{ textAlign: "center", fontSize: "24pt" }}>
-            Where does air pollution <span style={{ color: "#0687e3" }}>come from?</span>
+            {t("sources.title")} <span style={{ color: "#0687e3" }}>{t("sources.titleHighlight")}</span>
           </h2>
 
           {/* Indoor Pollution Sources */}
           <div className="pollution-sources">
-            <button className="source-button">Indoor Air Pollution Sources</button>
+            <button className="source-button">{t("sources.indoor.buttonText")}</button>
             <p
               className="air_heading"
               style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}
             >
-              Cooking, tobacco smoke, burning fuels and kerosene, mold, air fresheners, nail polish removers, pet
-              dander, and many more. When there is no circulation of air and indoor air is trapped inside, CO2 levels
-              will rise.
+              {t("sources.indoor.description")}
             </p>
 
             <div className="sources-grid">
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/tobacco-smoke.png"
-                  alt="tobacco smoke"
-                  width="300"
-                  height="300"
+                  alt={t("sources.indoor.items.tobacco.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Tobacco smoke</strong>
+                  <strong>{t("sources.indoor.items.tobacco.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Cigarette smoking is not only injurious to the person who is smoking. But it is equally injurious to
-                  people indoors who inhale second-hand smoke.
+                  {t("sources.indoor.items.tobacco.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/burning-fuels.png"
-                  alt="Burning Fuels & Kerosene"
-                  width="300"
-                  height="300"
+                  alt={t("sources.indoor.items.fuels.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Burning Fuels & Kerosene</strong>
+                  <strong>{t("sources.indoor.items.fuels.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Incomplete combustion of fuels in various home appliances such as stoves, furnaces, etc. release CO
-                  and PM.
+                  {t("sources.indoor.items.fuels.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/air-freshener.png"
-                  alt="Air fresheners"
-                  width="300"
-                  height="300"
+                  alt={t("sources.indoor.items.fresheners.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Air fresheners</strong>
+                  <strong>{t("sources.indoor.items.fresheners.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Air fresheners and cleaning agents are a potential source of VOCs. If used in excess amounts, they can
-                  cause headaches, nausea, etc.
+                  {t("sources.indoor.items.fresheners.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/cooking-fumes.png"
-                  alt="cooking fumes"
-                  width="300"
-                  height="300"
+                  alt={t("sources.indoor.items.cooking.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Cooing Fumes</strong>
+                  <strong>{t("sources.indoor.items.cooking.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Cooking activities can emit various air pollutants. Humidity levels inside the home can increase when
-                  more water is used in cooking.
+                  {t("sources.indoor.items.cooking.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/pet-dander.png"
-                  alt="pet dander"
-                  width="300"
-                  height="300"
+                  alt={t("sources.indoor.items.petDander.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Pet Dander</strong>
+                  <strong>{t("sources.indoor.items.petDander.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  This acts as a stressor for respiratory disorders as well as a trigger for asthma attacks. Therefore,
-                  animal contact must be reduced as much as possible
+                  {t("sources.indoor.items.petDander.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/photocopiers-and-printer.png"
-                  alt="Photocopiers and printers"
-                  width="300"
-                  height="300"
+                  alt={t("sources.indoor.items.printers.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Photocopiers & Printers</strong>
+                  <strong>{t("sources.indoor.items.printers.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  These are O3 emitters in a home or office setting. Ozone levels, when exceeding the limits can cause
-                  various health effects.
+                  {t("sources.indoor.items.printers.description")}
                 </p>
               </div>
             </div>
@@ -421,109 +365,102 @@ export default function AirPollution() {
 
           {/* Outdoor Pollution Sources */}
           <div className="pollution-sources">
-            <button className="source-button">Outdoor Pollution Sources</button>
+            <button className="source-button">{t("sources.outdoor.buttonText")}</button>
             <p
               className="air_heading"
               style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}
             >
-              Vehicles, factories, garbage burning, dust, power plants, construction and demolition activities, oil
-              refineries, emissions from aircraft and planes, wildfires, volcanic eruptions, etc.
+              {t("sources.outdoor.description")}
             </p>
 
             <div className="sources-grid">
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/power-plant.png"
-                  alt="power plan"
-                  width="300"
-                  height="300"
+                  alt={t("sources.outdoor.items.powerPlant.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Power Plant</strong>
+                  <strong>{t("sources.outdoor.items.powerPlant.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Industries and power plants are the main source of air pollution sources outdoors. Emissions from
-                  power plants cause photochemical smog.
+                  {t("sources.outdoor.items.powerPlant.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/garbage-burning.png"
-                  alt="Garbage Burning"
-                  width="300"
-                  height="300"
+                  alt={t("sources.outdoor.items.garbage.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Garbage Burning</strong>
+                  <strong>{t("sources.outdoor.items.garbage.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Emissions from burning garbage produce various toxic gases and air pollutants such as CO, CO2, NO2,
-                  Smoke, dust, etc.
+                  {t("sources.outdoor.items.garbage.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/cd-activities.png"
-                  alt="C&D activities"
-                  width="300"
-                  height="300"
+                  alt={t("sources.outdoor.items.construction.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>C&D activities</strong>
+                  <strong>{t("sources.outdoor.items.construction.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Waste generated at construction and destruction activities substantially increase PM2.5 and PM10
-                  levels in the air, hence in the nearby areas.
+                  {t("sources.outdoor.items.construction.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/unpaved-roads.png"
-                  alt="Unpaved roads"
-                  width="300"
-                  height="300"
+                  alt={t("sources.outdoor.items.roads.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Unpaved roads</strong>
+                  <strong>{t("sources.outdoor.items.roads.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Unpaved roads emit particulate matter, PM pollution (PM2.5, PM10), dust, and debris. Hence, it can
-                  increase the overall PM levels of that area.
+                  {t("sources.outdoor.items.roads.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/oil-refineries.png"
-                  alt="Oil refineries & brick kilns"
-                  width="300"
-                  height="300"
+                  alt={t("sources.outdoor.items.refineries.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Oil refineries & brick kilns</strong>
+                  <strong>{t("sources.outdoor.items.refineries.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  Pre-processing and processing of oil and bricks emit various pollutants including toxic metals,
-                  particulates, toxic gases like methane, etc.
+                  {t("sources.outdoor.items.refineries.description")}
                 </p>
               </div>
 
               <div className="source-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/wildfires-volcanic-eruptions.png"
-                  alt="Wildfires and Volcanic eruptions"
-                  width="300"
-                  height="300"
+                  alt={t("sources.outdoor.items.wildfires.imageAlt")}
+                  width={300}
+                  height={300}
                 />
                 <h3>
-                  <strong>Wildfires & Volcanic eruptions</strong>
+                  <strong>{t("sources.outdoor.items.wildfires.title")}</strong>
                 </h3>
                 <p style={{ textAlign: "center", wordWrap: "break-word", width: "100%", fontSize: "14pt" }}>
-                  These are natural sources of outdoor air pollution. Because they emit carbon monoxide, black carbon,
-                  etc. which is injurious to wildlife as well.
+                  {t("sources.outdoor.items.wildfires.description")}
                 </p>
               </div>
             </div>
@@ -535,52 +472,56 @@ export default function AirPollution() {
       <section className="health-impacts-section">
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            Health <span style={{ color: "#0687e3" }}>Impacts By Air Pollution</span>
+            {t("healthImpacts.title")} <span style={{ color: "#0687e3" }}>{t("healthImpacts.titleHighlight")}</span>
           </h2>
 
           <div className="health-impacts-content">
             <div className="health-impact-boxes left">
               <div className="impact-box">
-                <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>Headaches, dizziness, nausea</p>
-              </div>
-
-              <div className="impact-box">
                 <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>
-                  Difficulty in breathing, Sweating
+                  {t("healthImpacts.impacts.left.impact1")}
                 </p>
               </div>
 
               <div className="impact-box">
                 <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>
-                  Irritation in the eyes, nose, and throat
+                  {t("healthImpacts.impacts.left.impact2")}
+                </p>
+              </div>
+
+              <div className="impact-box">
+                <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>
+                  {t("healthImpacts.impacts.left.impact3")}
                 </p>
               </div>
             </div>
 
             <div className="health-impact-image">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/02/health-impacts-by-air-pollution-814x1024.png"
-                alt="health impacts by air pollution"
-                width="389"
-                height="489"
+                alt={t("healthImpacts.imageAlt")}
+                width={389}
+                height={489}
               />
             </div>
 
             <div className="health-impact-boxes right">
               <div className="impact-box">
                 <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>
-                  Worsen asthma & respiratory diseases
+                  {t("healthImpacts.impacts.right.impact1")}
                 </p>
               </div>
 
               <div className="impact-box">
                 <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>
-                  Damages to the lungs and kidney
+                  {t("healthImpacts.impacts.right.impact2")}
                 </p>
               </div>
 
               <div className="impact-box">
-                <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>Cancer</p>
+                <p style={{ textAlign: "center", fontSize: "16pt", color: "#646478" }}>
+                  {t("healthImpacts.impacts.right.impact3")}
+                </p>
               </div>
             </div>
           </div>
@@ -591,78 +532,74 @@ export default function AirPollution() {
       <section className="solutions-section">
         <div className="container">
           <h2 style={{ textAlign: "center", fontSize: "24pt" }}>
-            How you can effectively <span style={{ color: "#0687e3" }}>reduce air pollution</span>
+            {t("solutions.title")} <span style={{ color: "#0687e3" }}>{t("solutions.titleHighlight")}</span>
           </h2>
           <p className="air_heading" style={{ textAlign: "center", fontSize: "15pt" }}>
-            Adopt these simple yet effective tips and play your part in improving air quality.
+            {t("solutions.subtitle")}
           </p>
 
           {/* Indoor Solutions */}
           <div className="solutions-container">
-            <h3 style={{ textAlign: "center", fontSize: "24pt" }}>Indoor Solutions</h3>
+            <h3 style={{ textAlign: "center", fontSize: "24pt" }}>{t("solutions.indoor.title")}</h3>
 
             <div className="solutions-grid">
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/smoking-295x300.png"
-                  alt="air pollution by smoking"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.indoor.items.control.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Control indoor air pollution sources</strong>
+                  <strong>{t("solutions.indoor.items.control.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Actively identify and eliminate sources of indoor air pollution, such as cleaning agents, aerosol
-                  sprays, tobacco smoke, etc.
+                  {t("solutions.indoor.items.control.description")}
                 </p>
               </div>
 
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/Improve-ventilation-295x300.png"
-                  alt="Improve ventilation"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.indoor.items.ventilation.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Improve ventilation</strong>
+                  <strong>{t("solutions.indoor.items.ventilation.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Trapped spaces can feel stuffy and stale. Hence, good ventilation is a major factor when it comes to
-                  improving indoor air quality
+                  {t("solutions.indoor.items.ventilation.description")}
                 </p>
               </div>
 
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/humidity-level-295x300.png"
-                  alt="humidity level"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.indoor.items.humidity.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Monitor your humidity levels</strong>
+                  <strong>{t("solutions.indoor.items.humidity.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Excess moisture will promote mold and mildew growth and increases the chances of viral infections.
-                  Germ dispersion is easy in low humidity.
+                  {t("solutions.indoor.items.humidity.description")}
                 </p>
               </div>
 
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/Keep-your-indoor-spaces-clean-295x300.png"
-                  alt="Keep your indoor spaces clean"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.indoor.items.clean.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Keep your indoor spaces clean</strong>
+                  <strong>{t("solutions.indoor.items.clean.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Keeping your indoor spaces clean will help in reducing episodes of allergies build-up on certain
-                  surfaces indoors.
+                  {t("solutions.indoor.items.clean.description")}
                 </p>
               </div>
             </div>
@@ -670,70 +607,66 @@ export default function AirPollution() {
 
           {/* Outdoor Solutions */}
           <div className="solutions-container">
-            <h3 style={{ textAlign: "center", fontSize: "24pt" }}>Outdoor Solutions</h3>
+            <h3 style={{ textAlign: "center", fontSize: "24pt" }}>{t("solutions.outdoor.title")}</h3>
 
             <div className="solutions-grid">
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/Reduce-emissions.png"
-                  alt="reduce emissions"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.outdoor.items.emissions.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Reduce Emissions</strong>
+                  <strong>{t("solutions.outdoor.items.emissions.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Walk or ride. Avoid cars or bikes for short distances. Encourage usage of public transport,
-                  carpooling, biking, and support initiatives such as e-vehicles.
+                  {t("solutions.outdoor.items.emissions.description")}
                 </p>
               </div>
 
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/Avoid-waste-burning.png"
-                  alt="Avoid the burning of waste"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.outdoor.items.waste.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Avoid Waste Burning</strong>
+                  <strong>{t("solutions.outdoor.items.waste.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Avoid the burning of waste and garbage in the open and adopt proper garbage disposal methods. Because
-                  open burning can release pollutants into the air.
+                  {t("solutions.outdoor.items.waste.description")}
                 </p>
               </div>
 
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/Plant-more-trees.png"
-                  alt="plant more trees"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.outdoor.items.trees.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Plant more trees</strong>
+                  <strong>{t("solutions.outdoor.items.trees.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Planting more trees will assist in the natural filtration of air pollutants. This will further help in
-                  reducing the overall air pollution levels in the air.
+                  {t("solutions.outdoor.items.trees.description")}
                 </p>
               </div>
 
               <div className="solution-item">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/Support-clean-air-initiatives.png"
-                  alt="Support clean air initiatives"
-                  width="188"
-                  height="191"
+                  alt={t("solutions.outdoor.items.initiatives.imageAlt")}
+                  width={188}
+                  height={191}
                 />
                 <h4>
-                  <strong>Support clean air initiatives</strong>
+                  <strong>{t("solutions.outdoor.items.initiatives.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "14pt", color: "#646478" }}>
-                  Participate in local clean air programs. As to offer your support to groups that work to improve
-                  outdoor air quality.
+                  {t("solutions.outdoor.items.initiatives.description")}
                 </p>
               </div>
             </div>
@@ -748,8 +681,7 @@ export default function AirPollution() {
                 marginTop: "50px",
               }}
             >
-              Encourage your family and friends to adopt these tips to reduce air pollution and the health effects that
-              people face when exposed to air pollution.
+              {t("solutions.conclusion")}
             </p>
           </div>
         </div>
@@ -759,61 +691,61 @@ export default function AirPollution() {
       <section className="air-quality-solutions">
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            Air Quality <span style={{ color: "#0687e3" }}>Solutions</span>
+            {t("products.title")} <span style={{ color: "#0687e3" }}>{t("products.titleHighlight")}</span>
           </h2>
 
           <div className="solutions-products">
             <div className="product-item">
-              <a href="/air-quality-monitor">
-                <img
+              <Link href="/air-quality-monitor">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/air-pollution-monitor.jpg"
-                  alt="air quality monitor solution"
-                  width="300"
-                  height="160"
+                  alt={t("products.items.monitor.imageAlt")}
+                  width={300}
+                  height={160}
                 />
-              </a>
+              </Link>
               <h4 style={{ textAlign: "center" }}>
-                <a href="/air-quality-monitor">
+                <Link href="/air-quality-monitor">
                   <strong>
-                    <span style={{ fontSize: "14pt" }}>Air Quality Monitor</span>
+                    <span style={{ fontSize: "14pt" }}>{t("products.items.monitor.title")}</span>
                   </strong>
-                </a>
+                </Link>
               </h4>
             </div>
 
             <div className="product-item">
-              <a href="/fresh-air-machine">
-                <img
+              <Link href="/fresh-air-machine">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/fresh-air-machine-prana-air.jpg"
-                  alt="Fresh Air Machine"
-                  width="300"
-                  height="160"
+                  alt={t("products.items.freshAir.imageAlt")}
+                  width={300}
+                  height={160}
                 />
-              </a>
+              </Link>
               <h4 style={{ textAlign: "center" }}>
-                <a href="/fresh-air-machine">
+                <Link href="/fresh-air-machine">
                   <strong>
-                    <span style={{ fontSize: "14pt" }}>Fresh Air Machine</span>
+                    <span style={{ fontSize: "14pt" }}>{t("products.items.freshAir.title")}</span>
                   </strong>
-                </a>
+                </Link>
               </h4>
             </div>
 
             <div className="product-item">
-              <a href="/air-mask">
-                <img
+              <Link href="/air-mask">
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/02/anti-pollution-mask.jpg"
-                  alt="n95 anti pollution mask"
-                  width="300"
-                  height="160"
+                  alt={t("products.items.mask.imageAlt")}
+                  width={300}
+                  height={160}
                 />
-              </a>
+              </Link>
               <h4 style={{ textAlign: "center" }}>
-                <a href="/air-mask">
+                <Link href="/air-mask">
                   <strong>
-                    <span style={{ fontSize: "14pt" }}>N95 Mask</span>
+                    <span style={{ fontSize: "14pt" }}>{t("products.items.mask.title")}</span>
                   </strong>
-                </a>
+                </Link>
               </h4>
             </div>
           </div>
@@ -824,73 +756,19 @@ export default function AirPollution() {
       <section className="monitor-products-section">
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            Choose Your <span style={{ color: "#0687e3" }}>Air Quality Monitor</span> To
-            <br />
-            Measure Air Pollution
+            {t("monitors.title")} <span style={{ color: "#0687e3" }}>{t("monitors.titleHighlight")}</span>{" "}
+            {t("monitors.titleEnd")}
           </h2>
 
-          <div className="products-carousel">
-            <Carousel
-              responsive={responsive}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              keyBoardControl={true}
-              customTransition="all .5s"
-              transitionDuration={500}
-            >
-              <div className="carousel-item">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/02/product-1.jpg"
-                  alt="Air Quality Monitor"
-                  width="250"
-                  height="250"
-                />
-                <h4>Pocket Air Quality Monitor</h4>
-                <p>₹12,999.00</p>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/02/product-2.jpg"
-                  alt="Air Quality Monitor"
-                  width="250"
-                  height="250"
-                />
-                <h4>Nano CO Monitor</h4>
-                <p>₹7,999.00</p>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/02/product-3.jpg"
-                  alt="Air Quality Monitor"
-                  width="250"
-                  height="250"
-                />
-                <h4>Nano CO2 Monitor</h4>
-                <p>₹8,999.00</p>
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/02/product-4.jpg"
-                  alt="Air Quality Monitor"
-                  width="250"
-                  height="250"
-                />
-                <h4>Nano TVOC Monitor</h4>
-                <p>₹9,999.00</p>
-              </div>
-            </Carousel>
-          </div>
-
           <div className="caaqms-banner">
-            <a href="/air-quality-monitor">
-              <img
+            <Link href="/air-quality-monitor">
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-caaqms-outdoor-monitor--1024x512.jpg"
-                alt="prana air caaqms outdoor monitor"
-                width="1024"
-                height="512"
+                alt={t("monitors.imageAlt")}
+                width={1024}
+                height={512}
               />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

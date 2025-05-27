@@ -1,0 +1,122 @@
+{
+    "hero": {
+      "title": "What is Pollen?",
+      "description": "Pollen is a powdery substance that releases by certain plants and trees, especially flowers that helps them reproduce. As it carried by the wind or insects like bees and butterflies that act as an agent for reproduction in plants. But did you know it also acts as an air pollutant?",
+      "iconAlt": "what is pollen"
+    },
+    "importance": {
+      "howImportant": {
+        "prefix": "How is it",
+        "highlight": "important?",
+        "description": "Pollen is a powdery material discharged from a male flowers antlers that performs an important role in plant reproduction. And pollination is the process through which, it is conveyed by various agents. This occurs during the summer, spring, and autumn seasons. Hence, the fruits and vegetables we consume were once flowers that were pollinated and grown into fruits or vegetables."
+      },
+      "pollination": {
+        "prefix": "What is",
+        "highlight": "pollination?",
+        "description": "Pollination is the process of transferring pollen grains from one flower to the other. Or the same flower with the help of insects, wind, or sometimes even water. Two broad categories of plants that reproduce with the help of pollination are:"
+      },
+      "plantTypes": {
+        "angiosperms": {
+          "title": "Angiosperms",
+          "description": "Angiosperms are flowering plants with reproductive systems in their flowers (seeds enclosed within the ovary). They have a seasonal life cycle. And these pollinated by insects, wind, and water. With it, they usually have flat leaves and hardwood. For instance, apple, maple, rose, wheat, and dandelion, among others.",
+          "alt": "Angiosperms"
+        },
+        "gymnosperms": {
+          "title": "Gymnosperms",
+          "description": "Gymnosperms are non-flowering plants with reproductive systems in their cones (uncovered seeds). They are evergreen and pollinated primarily by wind. They have needle-like leaves and softwood. For example cypress, pine, yew, spruce, etc.",
+          "alt": "Gymnosperms"
+        }
+      }
+    },
+    "effects": {
+      "title": {
+        "prefix": "Does pollen affect",
+        "highlight": "humans?"
+      },
+      "description": "As discussed above, the wind is the common carrier of pollen grains. And it can remain suspended in the air for days. When inhaled, a person can experience sneezing, irritation in the eyes and the respiratory tract, runny nose, etc. Some people are more susceptible to these symptoms than others. This is commonly known as pollen allergy. This can be extremely dangerous for people with respiratory diseases like asthma, as it acts as a trigger for asthma.",
+      "imageAlt": "human health effects by pollen",
+      "quote": {
+        "text": "An allergen, such as pollen, can cause an asthma attack in someone who has allergic asthma. The frequency of allergic asthma is around 80% in children with asthma and 60% in adults.",
+        "attribution": "- Kenneth Mendez, President, and CEO of the Asthma and Allergy Foundation of America (AAFA)."
+      }
+    },
+    "healthEffects": {
+      "title": {
+        "prefix": "Health Effects of",
+        "highlight": "pollen on humans"
+      },
+      "description": "Allergic reactions from pollen can range from mild to severe and from person to person. In some cases, allergies can trigger a life-threatening reaction known as anaphylaxis. As, inhaling it can cause symptoms like:",
+      "symptoms": {
+        "sneezing": {
+          "title": "Sneezing",
+          "alt": "Pollen effects"
+        },
+        "noseIrritation": {
+          "title": "Irritation",
+          "subtitle": "in the nose",
+          "alt": "human health effects by pollen"
+        },
+        "eyeIrritation": {
+          "title": "Redness and",
+          "subtitle": "eye irritation",
+          "alt": "eye irritation due to pollen"
+        },
+        "scratchyThroat": {
+          "title": "Scratchy",
+          "subtitle": "throat",
+          "alt": "scratchy throat due to pollen"
+        },
+        "chestTightening": {
+          "title": "Chest",
+          "subtitle": "tightening",
+          "alt": "chest tightening due to pollen"
+        }
+      },
+      "hayFever": {
+        "title": "Hay fever",
+        "description": "(also known as allergic rhinitis) is an allergic reaction that can cause the above-mentioned symptoms. Anaphylaxis, triggering of asthma, and many more are life threatening effects of its allergies."
+      }
+    },
+    "protection": {
+      "title": {
+        "prefix": "How you can",
+        "highlight": "save yourself",
+        "suffix": "from pollen?"
+      },
+      "methods": {
+        "limitOutdoors": {
+          "title": "Limit outdoors",
+          "description": "If you suffer from pollen allergies, limit your outdoor activities when the count is high. This generally happens between 5 am to 10 am. Other than that, spring months contain the highest count throughout the year.",
+          "alt": "limit outdoors"
+        },
+        "takeBath": {
+          "title": "Take a bath and change your clothes",
+          "description": "When you come from outside, take a bath to wash off any pollen on your body. A fresh set of clothes will further help in reducing its allergy episodes.",
+          "alt": "take a bath"
+        },
+        "consultDoctor": {
+          "title": "Consult a doctor",
+          "description": "When you experience any symptoms, contact and consult a doctor to prevent any life-threatening allergy attacks.",
+          "alt": "consult a doctor"
+        },
+        "properMedication": {
+          "title": "Take proper medication",
+          "description": "If you already have allergy asthma, take proper medication as prescribed by your doctor to avoid any unforeseen circumstances.",
+          "alt": "Take proper medication"
+        },
+        "closeWindows": {
+          "title": "Windows closed during pollen season",
+          "description": "Keep your windows and doors closed around the pollen season when pollen levels are at their highest in the air. Since, it can enter your house and settle on surfaces like carpets, etc. And it is dangerous for asthmatic people who get triggered by allergic asthma.",
+          "alt": "close windows during pollen season"
+        }
+      }
+    },
+    "solutions": {
+      "title": {
+        "prefix": "Solutions for",
+        "highlight": "Pollen Allergies"
+      },
+      "description": "If you are allergic to it, consider purchasing an excellent N-95 mask. Because it can prevent the inhalation of pollen particles. When a proper mask is used effectively and per the recommendations. So the risk of pollen allergies is considerably reduced. Hence, an N95 anti anti-pollution mask will not only prevent you from pollen but also other air pollutants. Since, these are harmful to your and your loved ones healths.",
+      "maskImageAlt": "n95 mask for pollen allergies"
+    }
+}

@@ -1,67 +1,68 @@
-"use client"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import AirQualityTabs from "@/Components/Pages/Airports/air-quality-tabs"
 import FaqAccordion from "@/Components/Pages/Airports/faq-accordion"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AirportSolutions() {
+export default async function AirportSolutions() {
+  const { t } = await getServerTranslation("airports")
   const industrialApplications = [
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
-      title: "Solutions for Hotel",
+      title: t("industrialApplicationsData.hotel.title"),
       link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
-      title: "Solutions for Restaurant",
+      title: t("industrialApplicationsData.restaurant.title"),
       link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
-      title: "Solutions for Institutes",
+      title: t("industrialApplicationsData.institutes.title"),
       link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
-      title: "Solutions for Cinema/Theatre",
+      title: t("industrialApplicationsData.cinema.title"),
       link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
-      title: "Solutions for Automobiles",
+      title: t("industrialApplicationsData.automobiles.title"),
       link: "https://www.pranaair.com/solutions-by-application/automobile/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
-      title: "Solutions for Real Estates",
+      title: t("industrialApplicationsData.realEstate.title"),
       link: "https://www.pranaair.com/solutions-by-application/real-estate/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
-      title: "Solutions for Smartphone Makers",
+      title: t("industrialApplicationsData.smartphone.title"),
       link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
-      title: "Solutions for Construction",
+      title: t("industrialApplicationsData.construction.title"),
       link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
-      title: "Air quality Solutions for Animal care",
+      title: t("industrialApplicationsData.animalCare.title"),
       link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
-      title: "Air quality Solutions for logistics",
+      title: t("industrialApplicationsData.logistics.title"),
       link: "https://www.pranaair.com/solutions-by-application/logistics/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
-      title: "Air quality Solutions for Railways",
+      title: t("industrialApplicationsData.railways.title"),
       link: "https://www.pranaair.com/solutions-by-application/railway/",
-    },
+    }
   ]
 
   const faqItems = [
@@ -110,14 +111,11 @@ export default function AirportSolutions() {
             <div className="col-md-6">
               <div className="banner_content_wrapper">
                 <h1>
-                  Air quality solutions for <span className="bold_text">Airport</span>
+                  {t("airportBanner.title")} <span className="bold_text">{t("airportBanner.highlight")}</span>
                 </h1>
-                <p>
-                  A complete solution for air quality monitoring, air purification, data accessibility for areas in and
-                  around the airports.
-                </p>
+                <p>{t("airportBanner.description")}</p>
                 <a className="pocket_buy_btn" href="#get_in_touch">
-                  Get a Quote
+                  {t("airportBanner.cta")}
                 </a>
               </div>
             </div>
@@ -130,14 +128,9 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Major Air <span className="bold_text">Pollutants</span>
+              {t("airPollutants.title")} <span className="bold_text">{t("airPollutants.highlight")}</span>
             </h2>
-            <p>
-              The nature of air pollutants inside an airport is so vast that if ignored, they can have extreme effects
-              on passengers, staff, and people living near airports. Due to this, air monitoring becomes essential in
-              and around airports. A real-time air quality monitoring system will enable airport authorities to estimate
-              pollution levels caused by various sources to comply with regulatory standards.
-            </p>
+            <p>{t("airPollutants.description")}</p>
           </div>
         </div>
       </section>
@@ -151,13 +144,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png"
-                  alt="pm2.5 level in airport"
+                  alt={t("pollutants.pm25.imgAlt")}
                   width="76"
                   height="60"
                 />
                 <div className="feature_wrap_box">
-                  <h2>PM2.5</h2>
-                  <p>fine breathable water and dust particles</p>
+                  <h2>{t("pollutants.pm25.title")}</h2>
+                  <p>{t("pollutants.pm25.description")}</p>
                 </div>
               </div>
             </div>
@@ -166,13 +159,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
-                  alt="high co2 level in airport"
+                  alt={t("pollutants.co2.imgAlt")}
                   width="85"
                   height="83"
                 />
                 <div className="feature_wrap_box">
-                  <h2>CO2</h2>
-                  <p>High occupancy of passengers</p>
+                  <h2>{t("pollutants.co2.title")}</h2>
+                  <p>{t("pollutants.co2.description")}</p>
                 </div>
               </div>
             </div>
@@ -181,13 +174,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png"
-                  alt="tvoc in airport"
+                  alt={t("pollutants.tvoc.imgAlt")}
                   width="73"
                   height="79"
                 />
                 <div className="feature_wrap_box">
-                  <h2>TVOC</h2>
-                  <p>carpets, disinfectants, room fresheners, etc.</p>
+                  <h2>{t("pollutants.tvoc.title")}</h2>
+                  <p>{t("pollutants.tvoc.description")}</p>
                 </div>
               </div>
             </div>
@@ -196,13 +189,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/oxides-like-no2-and-so2.png"
-                  alt="oxides emissions in airport"
+                  alt={t("pollutants.oxides.imgAlt")}
                   width="74"
                   height="80"
                 />
                 <div className="feature_wrap_box">
-                  <h2>Oxides (NOx, SOx)</h2>
-                  <p>Emission of oxides during the operation</p>
+                  <h2>{t("pollutants.oxides.title")}</h2>
+                  <p>{t("pollutants.oxides.description")}</p>
                 </div>
               </div>
             </div>
@@ -214,13 +207,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/virus-and-bacteria-icon.png"
-                  alt="virus and bacteria in airport"
+                  alt={t("pollutants.virusBacteria.imgAlt")}
                   width="86"
                   height="89"
                 />
                 <div className="feature_wrap_box">
-                  <h2>Viruses &amp; Bacteria</h2>
-                  <p>Carrying diseases by passengers</p>
+                  <h2>{t("pollutants.virusBacteria.title")}</h2>
+                  <p>{t("pollutants.virusBacteria.description")}</p>
                 </div>
               </div>
             </div>
@@ -228,13 +221,13 @@ export default function AirportSolutions() {
               <div className="feature_box">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon.png"
-                  alt="noise in airport"
+                  alt={t("pollutants.noise.imgAlt")}
                   width="86"
                   height="89"
                 />
                 <div className="feature_wrap_box">
-                  <h2>Noise</h2>
-                  <p>Loud noise due to huge no. of people gathering</p>
+                  <h2>{t("pollutants.noise.title")}</h2>
+                  <p>{t("pollutants.noise.description")}</p>
                 </div>
               </div>
             </div>
@@ -248,13 +241,9 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Who are at <span className="bold_text">Risk?</span>
+              {t("risk.title")} <span className="bold_text">{t("risk.highlight")}</span>
             </h2>
-            <p>
-              The occupancy of hotels is one of the major reasons for bad air quality inside hotels. People with
-              underlying health issues, old age groups, children, and sensitive groups are at risk when exposed to air
-              pollution. Even healthy adults can feel sick due to exposure to bad air quality.
-            </p>
+            <p>{t("risk.description")}</p>
           </div>
         </div>
       </section>
@@ -268,13 +257,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/respiratory-illness-passengers-in-airport.png"
-                  alt="person with respiratory illness in hotel"
+                  alt={t("riskGroups.healthIssues.imgAlt")}
                   width="75"
                   height="163"
                 />
                 <div className="feature_wrap_box">
-                  <h2>Underlying Health Issues</h2>
-                  <p>Passengers and staff with respiratory illnesses already have a weaker respiratory system.</p>
+                  <h2>{t("riskGroups.healthIssues.title")}</h2>
+                  <p>{t("riskGroups.healthIssues.description")}</p>
                 </div>
               </div>
             </div>
@@ -283,13 +272,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/security-staff-in-airport.png"
-                  alt="hotel chef"
+                  alt={t("riskGroups.securityStaff.imgAlt")}
                   width="83"
                   height="159"
                 />
                 <div className="feature_wrap_box">
-                  <h2>Security Staff</h2>
-                  <p>The airport security staffs are also threat to the air pollution present inside the premises.</p>
+                  <h2>{t("riskGroups.securityStaff.title")}</h2>
+                  <p>{t("riskGroups.securityStaff.description")}</p>
                 </div>
               </div>
             </div>
@@ -298,13 +287,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/airport-staff.png"
-                  alt="hotel staff"
+                  alt={t("riskGroups.staff.imgAlt")}
                   width="55"
                   height="166"
                 />
                 <div className="feature_wrap_box">
-                  <h2>Staff</h2>
-                  <p>The staff may have low of coordination and performance, a high chance of illness.</p>
+                  <h2>{t("riskGroups.staff.title")}</h2>
+                  <p>{t("riskGroups.staff.description")}</p>
                 </div>
               </div>
             </div>
@@ -313,13 +302,13 @@ export default function AirportSolutions() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/passenger-in-airport.png"
-                  alt="hotel guests"
+                  alt={t("riskGroups.passenger.imgAlt")}
                   width="83"
                   height="159"
                 />
                 <div className="feature_wrap_box">
-                  <h2>Passenger</h2>
-                  <p>Even healthy passengers may experience uneasiness, headaches, etc.</p>
+                  <h2>{t("riskGroups.passenger.title")}</h2>
+                  <p>{t("riskGroups.passenger.description")}</p>
                 </div>
               </div>
             </div>
@@ -334,65 +323,74 @@ export default function AirportSolutions() {
             <ul>
               <li className="first_school_box">
                 <span className="school_icon_box">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-icon-2.png" alt="pm2.5 icon" />
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-icon-2.png"
+                    alt={t("pollutantsViz.pm25.imgAlt")}
+                  />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>PM2.5</h3>
-                  <p>Cardiorespiratory disorders due to particle exposure</p>
+                  <h3>{t("pollutantsViz.pm25.title")}</h3>
+                  <p>{t("pollutantsViz.pm25.description")}</p>
                 </div>
               </li>
               <li className="second_school_box">
                 <span className="school_icon_box">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-icon.png" alt="co2 icon" />
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-icon.png"
+                    alt={t("pollutantsViz.co2.imgAlt")}
+                  />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>CO2</h3>
-                  <p>People experience breathing issue, nausea, convulsions</p>
+                  <h3>{t("pollutantsViz.co2.title")}</h3>
+                  <p>{t("pollutantsViz.co2.description")}</p>
                 </div>
               </li>
               <li className="third_school_box">
                 <span className="school_icon_box">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon-for-restaurant.png"
-                    alt="noise icon"
+                    alt={t("pollutantsViz.noise.imgAlt")}
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>Noise</h3>
-                  <p>Stress, anxiety, high BP, headache due to noise</p>
+                  <h3>{t("pollutantsViz.noise.title")}</h3>
+                  <p>{t("pollutantsViz.noise.description")}</p>
                 </div>
               </li>
               <li className="fourth_school_box">
                 <span className="school_icon_box">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2022/09/oxide.png"
-                    alt="oxides like no2 and so2 in air port"
+                    alt={t("pollutantsViz.oxides.imgAlt")}
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>Oxides</h3>
-                  <p>Coughing, choking, fatigue, etc. are experienced if exposed</p>
+                  <h3>{t("pollutantsViz.oxides.title")}</h3>
+                  <p>{t("pollutantsViz.oxides.description")}</p>
                 </div>
               </li>
               <li className="fivth_school_box">
                 <span className="school_icon_box">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2022/09/Viruses.png"
-                    alt="viruses and bacteria in airport"
+                    alt={t("pollutantsViz.virusBacteria.imgAlt")}
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>Virus &amp; Bacteria</h3>
-                  <p>Infections are common when exposed to viruses &amp; bacteria</p>
+                  <h3>{t("pollutantsViz.virusBacteria.title")}</h3>
+                  <p>{t("pollutantsViz.virusBacteria.description")}</p>
                 </div>
               </li>
               <li className="six_school_box">
                 <span className="school_icon_box">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-icon.png" alt="tvoc icon" />
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-icon.png"
+                    alt={t("pollutantsViz.tvoc.imgAlt")}
+                  />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>TVOC</h3>
-                  <p>Headaches, and irritation in the eyes, nose, and throat</p>
+                  <h3>{t("pollutantsViz.tvoc.title")}</h3>
+                  <p>{t("pollutantsViz.tvoc.description")}</p>
                 </div>
               </li>
             </ul>
@@ -405,13 +403,11 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Air quality <span className="bold_text">Solutions</span>
+              {t("solutions.title")} <span className="bold_text">{t("solutions.highlight")}</span>
             </h2>
             <p>
-              As the aviation industry is growing rapidly, it becomes essential to monitor and control air pollution in
-              and around airports.
-              <strong>Prana Air</strong> air quality monitoring and air purifying solutions give you the power to know
-              what your passengers and staff breathe and analyze the IAQ at airports and in aircraft.
+              {t("solutions.description.part1")}
+              <strong>{t("solutions.description.brandName")}</strong> {t("solutions.description.part2")}
             </p>
           </div>
         </div>
@@ -433,12 +429,9 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Data Freemium <span className="bold_text">Services</span>
+              {t("dataServices.title")} <span className="bold_text">{t("dataServices.highlight")}</span>
             </h2>
-            <p>
-              You can examine data on LCD screens or in the app for additional analysis with the help of our customized
-              dashboard. To know the AQI for your current location, simply scan the QR code.
-            </p>
+            <p>{t("dataServices.description")}</p>
           </div>
         </div>
       </section>
@@ -451,27 +444,27 @@ export default function AirportSolutions() {
               <div className="app_service_box">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-tv-app-for-airport.jpg"
-                  alt="aqi tv app dashboard for airport"
+                  alt={t("dataServicesFeatures.tvDashboard.imgAlt")}
                 />
-                <h4>TV Dashboard App</h4>
+                <h4>{t("dataServicesFeatures.tvDashboard.title")}</h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="app_service_box">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-dashboard-for-airport.jpg"
-                  alt="aqi customized dashboard app for airport"
+                  alt={t("dataServicesFeatures.webDashboard.imgAlt")}
                 />
-                <h4>Web-Dashboard &amp; App for Airport</h4>
+                <h4>{t("dataServicesFeatures.webDashboard.title")}</h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="app_service_box">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg"
-                  alt="aqi monitor data qr code scan for airport"
+                  alt={t("dataServicesFeatures.qrCode.imgAlt")}
                 />
-                <h4>QR Code Scan</h4>
+                <h4>{t("dataServicesFeatures.qrCode.title")}</h4>
               </div>
             </div>
           </div>
@@ -483,12 +476,10 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              The Effects of Air Pollution -<span className="bold_text">In Airports</span>
+              {t("airPollutionEffects.title")}
+              <span className="bold_text">{t("airPollutionEffects.highlight")}</span>
             </h2>
-            <p>
-              When passengers and staff are exposed to poor air quality, they feel nauseous, dizzy, and unwell, and
-              headaches are common symptoms of air pollution exposure.
-            </p>
+            <p>{t("airPollutionEffects.description")}</p>
           </div>
         </div>
       </section>
@@ -500,27 +491,27 @@ export default function AirportSolutions() {
             <div className="col-md-6 air_graph_box">
               <div className="air_quality_box">
                 <h3>
-                  <span style={{ fontSize: "15pt", color: "#78ae60" }}>With Clean Air</span>
+                  <span style={{ fontSize: "15pt", color: "#78ae60" }}>{t("airComparison.cleanAir.title")}</span>
                 </h3>
                 <ul className="airquality_list">
-                  <li>Improved ventilation</li>
-                  <li>Good air quality</li>
-                  <li>Enhanced experience</li>
-                  <li>Increase staff performance</li>
+                  <li>{t("airComparison.cleanAir.benefits.item1")}</li>
+                  <li>{t("airComparison.cleanAir.benefits.item2")}</li>
+                  <li>{t("airComparison.cleanAir.benefits.item3")}</li>
+                  <li>{t("airComparison.cleanAir.benefits.item4")}</li>
                 </ul>
               </div>
-              <div className="vs_text">VS</div>
+              <div className="vs_text">{t("airComparison.vsText")}</div>
             </div>
             <div className="col-md-6 air_qualiity_right">
               <div className="air_quality_box">
                 <h3>
-                  <span style={{ fontSize: "15pt", color: "#e86868" }}>Without Clean Air</span>
+                  <span style={{ fontSize: "15pt", color: "#e86868" }}>{t("airComparison.uncleanAir.title")}</span>
                 </h3>
                 <ul className="airquality_list red_list">
-                  <li>Bad customer experience</li>
-                  <li>Passengers less comfort</li>
-                  <li>Staff low performance</li>
-                  <li>Unhealthy air quality</li>
+                  <li>{t("airComparison.uncleanAir.drawbacks.item1")}</li>
+                  <li>{t("airComparison.uncleanAir.drawbacks.item2")}</li>
+                  <li>{t("airComparison.uncleanAir.drawbacks.item3")}</li>
+                  <li>{t("airComparison.uncleanAir.drawbacks.item4")}</li>
                 </ul>
               </div>
             </div>
@@ -533,9 +524,9 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Frequently Asked <span className="bold_text">Questions</span>
+              {t("faq.title")} <span className="bold_text">{t("faq.highlight")}</span>
             </h2>
-            <p>About Air Quality Solution for Airports Have questions? Were here to help.</p>
+            <p>{t("faq.description")}</p>
           </div>
         </div>
       </section>
@@ -552,9 +543,9 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Our <span className="bold_text">Clientele</span>
+              {t("clientele.title")} <span className="bold_text">{t("clientele.highlight")}</span>
             </h2>
-            <p>We are honored to work with so many well-known companies.</p>
+            <p>{t("clientele.description")}</p>
           </div>
         </div>
       </section>
@@ -685,8 +676,8 @@ export default function AirportSolutions() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -699,12 +690,10 @@ export default function AirportSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Industrial <span className="bold_text">Applications</span>
+              {t("industrialApplications.title")}{" "}
+              <span className="bold_text">{t("industrialApplications.highlight")}</span>
             </h2>
-            <p>
-              Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and
-              highly accurate air quality solutions for various industries.
-            </p>
+            <p>{t("industrialApplications.description")}</p>
           </div>
         </div>
       </section>

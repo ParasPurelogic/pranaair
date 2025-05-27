@@ -1,65 +1,66 @@
-
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function BankFinancePage() {
+export default async function BankFinancePage() {
+  const { t } = await getServerTranslation("bank-financial")
   const industrialApplications = [
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
-      title: "Solutions for Hotel",
+      title: t("industrialApplicationsData.hotel.title"),
       link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
-      title: "Solutions for Restaurant",
+      title: t("industrialApplicationsData.restaurant.title"),
       link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
-      title: "Solutions for Institutes",
+      title: t("industrialApplicationsData.institutes.title"),
       link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
-      title: "Solutions for Cinema/Theatre",
+      title: t("industrialApplicationsData.cinema.title"),
       link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
-      title: "Solutions for Automobiles",
+      title: t("industrialApplicationsData.automobiles.title"),
       link: "https://www.pranaair.com/solutions-by-application/automobile/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
-      title: "Solutions for Real Estates",
+      title: t("industrialApplicationsData.realEstate.title"),
       link: "https://www.pranaair.com/solutions-by-application/real-estate/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
-      title: "Solutions for Smartphone Makers",
+      title: t("industrialApplicationsData.smartphone.title"),
       link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
-      title: "Solutions for Construction",
+      title: t("industrialApplicationsData.construction.title"),
       link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
-      title: "Air quality Solutions for Animal care",
+      title: t("industrialApplicationsData.animalCare.title"),
       link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
-      title: "Air quality Solutions for logistics",
+      title: t("industrialApplicationsData.logistics.title"),
       link: "https://www.pranaair.com/solutions-by-application/logistics/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
-      title: "Air quality Solutions for Railways",
+      title: t("industrialApplicationsData.railways.title"),
       link: "https://www.pranaair.com/solutions-by-application/railway/",
-    },
+    }
   ]
 
   return (
@@ -75,15 +76,12 @@ export default function BankFinancePage() {
         <div className="vc_column banner_quality_box" style={{ width: "50%" }}>
           <div className="pocket_title_box school_aqi_box">
             <h1>
-              Air quality solutions for <span className="bold_text">Bank / Financial Institutions</span>
+              {t("banking.banner.title")} <span className="bold_text">{t("banking.banner.highlight")}</span>
             </h1>
-            <p style={{ fontSize: "14pt" }}>
-              A complete solution for air monitoring air purification and data monitoring for banks and other
-              financial institutions.
-            </p>
+            <p style={{ fontSize: "14pt" }}>{t("banking.banner.description")}</p>
 
             <a className="pocket_buy_btn" href="#get_in_touch">
-              Get a Quote
+              {t("banking.banner.cta")}
             </a>
           </div>
         </div>
@@ -95,13 +93,9 @@ export default function BankFinancePage() {
         <div className="vc_column">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Major Air <span className="bold_text">Pollutants</span>
+              {t("banking.pollutants.title")} <span className="bold_text">{t("banking.pollutants.highlight")}</span>
             </h2>
-            <p>
-              Due to the diverse nature of air pollutants present in a bank setting precaution and mitigation
-              strategies have become a challenge. To prevent bad air quality it is critical to monitor air quality and
-              take appropriate precautions to avoid poor air quality episodes.
-            </p>
+            <p>{t("banking.pollutants.description")}</p>
           </div>
         </div>
       </div>
@@ -111,61 +105,61 @@ export default function BankFinancePage() {
         <div className="pollutant-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png"
-            alt="pm2.5 level"
+            alt={t("banking.pollutantFeatures.pm25.imgAlt")}
             className="pollutant-icon"
           />
-          <h3>PM2.5</h3>
-          <p>These are fine particles of dust and water that are suspended in the air.</p>
+          <h3>{t("banking.pollutantFeatures.pm25.title")}</h3>
+          <p>{t("banking.pollutantFeatures.pm25.description")}</p>
         </div>
 
         <div className="pollutant-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
-            alt="high co2 level"
+            alt={t("banking.pollutantFeatures.co2.imgAlt")}
             className="pollutant-icon"
           />
-          <h3>CO2</h3>
-          <p>Depends on the number of people in the room and its ventilation rate.</p>
+          <h3>{t("banking.pollutantFeatures.co2.title")}</h3>
+          <p>{t("banking.pollutantFeatures.co2.description")}</p>
         </div>
 
         <div className="pollutant-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png"
-            alt="tvoc gas"
+            alt={t("banking.pollutantFeatures.tvoc.imgAlt")}
             className="pollutant-icon"
           />
-          <h3>TVOC</h3>
-          <p>Cleaning agents markers tobacco smoke etc. emit TVOC</p>
+          <h3>{t("banking.pollutantFeatures.tvoc.title")}</h3>
+          <p>{t("banking.pollutantFeatures.tvoc.description")}</p>
         </div>
 
         <div className="pollutant-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon.png"
-            alt="noise pollution"
+            alt={t("banking.pollutantFeatures.noise.imgAlt")}
             className="pollutant-icon"
           />
-          <h3>Noise</h3>
-          <p>Noise levels rises when large number of customers are present.</p>
+          <h3>{t("banking.pollutantFeatures.noise.title")}</h3>
+          <p>{t("banking.pollutantFeatures.noise.description")}</p>
         </div>
 
         <div className="pollutant-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2022/12/odor-icon.png"
-            alt="Odor"
+            alt={t("banking.pollutantFeatures.odor.imgAlt")}
             className="pollutant-icon"
           />
-          <h3>Odor</h3>
-          <p>Sweaty customers & public washrooms release bad odor</p>
+          <h3>{t("banking.pollutantFeatures.odor.title")}</h3>
+          <p>{t("banking.pollutantFeatures.odor.description")}</p>
         </div>
 
         <div className="pollutant-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2022/12/microbe-icon.png"
-            alt="Microbial Pollutants"
+            alt={t("banking.pollutantFeatures.microbial.imgAlt")}
             className="pollutant-icon"
           />
-          <h3>Microbial Pollutants</h3>
-          <p>Microbiological contaminants spread easily in closed spaces.</p>
+          <h3>{t("banking.pollutantFeatures.microbial.title")}</h3>
+          <p>{t("banking.pollutantFeatures.microbial.description")}</p>
         </div>
       </div>
 
@@ -174,14 +168,9 @@ export default function BankFinancePage() {
         <div className="vc_column">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Who are at <span className="bold_text">Risk?</span>
+              {t("banking.risk.title")} <span className="bold_text">{t("banking.risk.highlight")}</span>
             </h2>
-            <p>
-              People in the bank/financial institutions experience stuffiness in the air as the occupancy rate increases
-              and there is poor ventilation. Customers and staff are exposed to other air pollutants like PM2.5
-              TVOC
-              etc.
-            </p>
+            <p>{t("banking.risk.description")}</p>
           </div>
         </div>
       </div>
@@ -191,41 +180,41 @@ export default function BankFinancePage() {
         <div className="risk-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2023/01/bank-customers.png"
-            alt="bank customers"
+            alt={t("banking.riskGroups.customers.imgAlt")}
             className="risk-icon"
           />
-          <h3>Customers</h3>
-          <p>Customers comfort level highly depend on the air quality inside your bank.</p>
+          <h3>{t("banking.riskGroups.customers.title")}</h3>
+          <p>{t("banking.riskGroups.customers.description")}</p>
         </div>
 
         <div className="risk-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2023/01/bankers.png"
-            alt="bankers"
+            alt={t("banking.riskGroups.banker.imgAlt")}
             className="risk-icon"
           />
-          <h3>Banker</h3>
-          <p>High risk of developing lung cancer etc. are some of the health effects</p>
+          <h3>{t("banking.riskGroups.banker.title")}</h3>
+          <p>{t("banking.riskGroups.banker.description")}</p>
         </div>
 
         <div className="risk-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2023/01/Cashiers.png"
-            alt="cashiers"
+            alt={t("banking.riskGroups.cashiers.imgAlt")}
             className="risk-icon"
           />
-          <h3>Cashiers</h3>
-          <p>Lack of attention & coordination a high risk of respiratory infections.</p>
+          <h3>{t("banking.riskGroups.cashiers.title")}</h3>
+          <p>{t("banking.riskGroups.cashiers.description")}</p>
         </div>
 
         <div className="risk-item">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2023/01/bank-manager.png"
-            alt="bank manager"
+            alt={t("banking.riskGroups.manager.imgAlt")}
             className="risk-icon"
           />
-          <h3>Manager</h3>
-          <p>Poor judgment inaptness more prone to make bad decisions</p>
+          <h3>{t("banking.riskGroups.manager.title")}</h3>
+          <p>{t("banking.riskGroups.manager.description")}</p>
         </div>
       </div>
 
@@ -234,17 +223,14 @@ export default function BankFinancePage() {
         <div className="vc_column">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Air quality <span className="bold_text">Solutions</span>
+              {t("banking.solutions.title")} <span className="bold_text">{t("banking.solutions.highlight")}</span>
             </h2>
-            <p>
-              Prana Airs air quality monitoring and air purifying solutions give you the power to know what your
-              customers and staff breathe and what you could do to clean the air to make banks/financial institutions
-              air pollution-free zone and view and analyze your IAQ.
-            </p>
+            <p>{t("banking.solutions.description")}</p>
           </div>
         </div>
       </div>
 
+      {/* Solutions Tabs Section */}
       {/* SECTION 5: Bootstrap Tabs */}
       <div className="container">
         <div className="row">
@@ -262,7 +248,7 @@ export default function BankFinancePage() {
                   aria-controls="monitors"
                   aria-selected="true"
                 >
-                  Air Quality Monitors
+                  {t("banking.tabs.monitors")}
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -276,7 +262,7 @@ export default function BankFinancePage() {
                   aria-controls="fresh-air"
                   aria-selected="false"
                 >
-                  Fresh Air Machine
+                  {t("banking.tabs.freshAir")}
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -290,7 +276,7 @@ export default function BankFinancePage() {
                   aria-controls="api-data"
                   aria-selected="false"
                 >
-                  API Data
+                  {t("banking.tabs.apiData")}
                 </button>
               </li>
             </ul>
@@ -301,30 +287,27 @@ export default function BankFinancePage() {
                     <div className="air-quality-tab-img">
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-sensible-plus-air-monitor-for-bank.jpg"
-                        alt="prana air sensible+ air quality monitor for banking services"
+                        alt={t("banking.tabContent.monitors.imgAlt")}
                       />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="air-quality-heading">
-                      <h3>Sensible+ Air Monitor</h3>
-                      <p>
-                        This is a smart air quality monitor that comes with 7 inch touch screen display that gives more
-                        insightful data for banks.
-                      </p>
+                      <h3>{t("banking.tabContent.monitors.title")}</h3>
+                      <p>{t("banking.tabContent.monitors.description")}</p>
                     </div>
                     <ul className="airquality_list">
-                      <li>7 Inch LED Touch Screen Display</li>
-                      <li>5000 mAh Battery InBuilt</li>
-                      <li>WiFi Connectivity With Mobile App</li>
+                      <li>{t("banking.tabContent.monitors.features.item1")}</li>
+                      <li>{t("banking.tabContent.monitors.features.item2")}</li>
+                      <li>{t("banking.tabContent.monitors.features.item3")}</li>
                     </ul>
                     <div className="btns-bottom">
                       <a
                         className="knowmore_btn"
                         href="https://www.pranaair.com/air-quality-monitor/sensible-plus-air-monitor/"
-                        aria-label="Know More about Sensible+ Air Monitor"
+                        aria-label={t("banking.tabContent.monitors.knowMoreAriaLabel")}
                       >
-                        Know More
+                        {t("banking.tabContent.monitors.knowMore")}
                       </a>
                     </div>
                   </div>
@@ -336,30 +319,27 @@ export default function BankFinancePage() {
                     <div className="air-quality-tab-img">
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
-                        alt="prana air fresh air machine as iaq solution for banks"
+                        alt={t("banking.tabContent.freshAir.imgAlt")}
                       />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="air-quality-heading">
-                      <h3>Fresh Air Machine As IAQ Solution</h3>
-                      <p>
-                        One-stop solution for indoor air pollution by Prana Air Fresh Air Machine working as an air
-                        purifier with the capability to filter out 99.5% efficiency and multi-layer HEPA filters.
-                      </p>
+                      <h3>{t("banking.tabContent.freshAir.title")}</h3>
+                      <p>{t("banking.tabContent.freshAir.description")}</p>
                     </div>
                     <ul className="airquality_list">
-                      <li>Comes with multi-layers HEPA Filters</li>
-                      <li>Compact Design makes it easy to place</li>
-                      <li>Promising you up to 99.5% efficiency</li>
+                      <li>{t("banking.tabContent.freshAir.features.item1")}</li>
+                      <li>{t("banking.tabContent.freshAir.features.item2")}</li>
+                      <li>{t("banking.tabContent.freshAir.features.item3")}</li>
                     </ul>
                     <div className="btns-bottom">
                       <a
                         className="knowmore_btn"
                         href="https://www.pranaair.com/fresh-air-machine/"
-                        aria-label="Know More about Fresh Air Machine"
+                        aria-label={t("banking.tabContent.freshAir.knowMoreAriaLabel")}
                       >
-                        Know More
+                        {t("banking.tabContent.freshAir.knowMore")}
                       </a>
                     </div>
                   </div>
@@ -371,23 +351,27 @@ export default function BankFinancePage() {
                     <div className="air-quality-tab-img">
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg"
-                        alt="aqi api data for banks"
+                        alt={t("banking.tabContent.apiData.imgAlt")}
                       />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="air-quality-heading">
-                      <h3>AQI API Data</h3>
-                      <p>Avail the real-time air quality data of nearby outdoor area on the web.</p>
+                      <h3>{t("banking.tabContent.apiData.title")}</h3>
+                      <p>{t("banking.tabContent.apiData.description")}</p>
                     </div>
                     <ul className="airquality_list">
-                      <li>Integrate air quality data on the web</li>
-                      <li>Access the real-time data quickly</li>
-                      <li>Take precautions from the air pollution</li>
+                      <li>{t("banking.tabContent.apiData.features.item1")}</li>
+                      <li>{t("banking.tabContent.apiData.features.item2")}</li>
+                      <li>{t("banking.tabContent.apiData.features.item3")}</li>
                     </ul>
                     <div className="btns-bottom">
-                      <a className="knowmore_btn" href="#get_in_touch" aria-label="Know More about API Data">
-                        Know More
+                      <a
+                        className="knowmore_btn"
+                        href="#get_in_touch"
+                        aria-label={t("banking.tabContent.apiData.knowMoreAriaLabel")}
+                      >
+                        {t("banking.tabContent.apiData.knowMore")}
                       </a>
                     </div>
                   </div>
@@ -403,37 +387,40 @@ export default function BankFinancePage() {
         <div className="vc_column">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Data Freemium <span className="bold_text">Services</span>
+              {t("banking.dataServices.title")} <span className="bold_text">{t("banking.dataServices.highlight")}</span>
             </h2>
-            <p>
-              The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the
-              QR to know the AQI of the area you are in.
-            </p>
+            <p>{t("banking.dataServices.description")}</p>
           </div>
         </div>
       </div>
 
-      <div class="container inner_container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="app_service_box">
-              <img src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-tv-app-dashboard.jpg"
-                alt="aqi tv app dashboard for fitness center &amp; gym" />
-              <h4>TV Dashboard App</h4>
+      <div className="container inner_container">
+        <div className="row">
+          <div className="col-md-4">
+            <div className="app_service_box">
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-tv-app-dashboard.jpg"
+                alt={t("banking.dataServicesFeatures.tvDashboard.imgAlt")}
+              />
+              <h4>{t("banking.dataServicesFeatures.tvDashboard.title")}</h4>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="app_service_box"><img
-              src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-customized-tablet-app.jpg"
-              alt="aqi customized dashboard app for fitness center &amp; gym" />
-              <h4>Customised App for Schools</h4>
+          <div className="col-md-4">
+            <div className="app_service_box">
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-customized-tablet-app.jpg"
+                alt={t("banking.dataServicesFeatures.webDashboard.imgAlt")}
+              />
+              <h4>{t("banking.dataServicesFeatures.webDashboard.title")}</h4>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="app_service_box"><img
-              src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg"
-              alt="aqi monitor data qr code scan for airport" />
-              <h4>QR Code Scan</h4>
+          <div className="col-md-4">
+            <div className="app_service_box">
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg"
+                alt={t("banking.dataServicesFeatures.qrCode.imgAlt")}
+              />
+              <h4>{t("banking.dataServicesFeatures.qrCode.title")}</h4>
             </div>
           </div>
         </div>
@@ -444,36 +431,34 @@ export default function BankFinancePage() {
         <div className="vc_column">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              The Effects of Air Pollution - <span className="bold_text">Banks/Financial Institutions</span>
+              {t("banking.airPollutionEffects.title")}
+              <span className="bold_text">{t("banking.airPollutionEffects.highlight")}</span>
             </h2>
-            <p>
-              When customers & staff members are exposed to poor air quality they feel unwell and irritation in the
-              eyes nose and throat headaches and nausea are common symptoms of air pollution exposure.
-            </p>
+            <p>{t("banking.airPollutionEffects.description")}</p>
           </div>
         </div>
       </div>
 
       <div className="modern-comparison-container inner_container mobile-friendly">
         <div className="comparison-column with-clean">
-          <h3>With Clean Air</h3>
+          <h3>{t("banking.airComparison.cleanAir.title")}</h3>
           <ul className="comparison-list">
-            <li>Improve ventilation</li>
-            <li>Good comfort score</li>
-            <li>Enhanced experience</li>
-            <li>Improved air filtration.</li>
+            <li>{t("banking.airComparison.cleanAir.benefits.item1")}</li>
+            <li>{t("banking.airComparison.cleanAir.benefits.item2")}</li>
+            <li>{t("banking.airComparison.cleanAir.benefits.item3")}</li>
+            <li>{t("banking.airComparison.cleanAir.benefits.item4")}</li>
           </ul>
         </div>
 
         <div className="comparison-divider"></div>
 
         <div className="comparison-column without-clean">
-          <h3>Without Clean Air</h3>
+          <h3>{t("banking.airComparison.uncleanAir.title")}</h3>
           <ul className="comparison-list red">
-            <li>Less comfort</li>
-            <li>Low ventilation score</li>
-            <li>Bad experience</li>
-            <li>Bad odor and mold score.</li>
+            <li>{t("banking.airComparison.uncleanAir.drawbacks.item1")}</li>
+            <li>{t("banking.airComparison.uncleanAir.drawbacks.item2")}</li>
+            <li>{t("banking.airComparison.uncleanAir.drawbacks.item3")}</li>
+            <li>{t("banking.airComparison.uncleanAir.drawbacks.item4")}</li>
           </ul>
         </div>
       </div>
@@ -483,9 +468,9 @@ export default function BankFinancePage() {
         <div className="vc_column">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Frequently Asked <span className="bold_text">Questions</span>
+              {t("banking.faq.title")} <span className="bold_text">{t("banking.faq.highlight")}</span>
             </h2>
-            <p>About Air Quality Solution for Bank/Financial Institutions Have questions? Were here to help.</p>
+            <p>{t("banking.faq.description")}</p>
           </div>
         </div>
       </div>
@@ -497,12 +482,12 @@ export default function BankFinancePage() {
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
                 <h2 className="title_heading">
-                  Our{" "}
+                  {t("banking.clientele.title")}{" "}
                   <span style={{ color: "#78ae60" }}>
-                    <strong>Clientele</strong>
+                    <strong>{t("banking.clientele.highlight")}</strong>
                   </span>
                 </h2>
-                <p>We are honored to work with so many well-known companies.</p>
+                <p>{t("banking.clientele.description")}</p>
               </div>
             </div>
           </div>
@@ -567,8 +552,8 @@ export default function BankFinancePage() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("banking.contact.title")}</h2>
+                <p>{t("banking.contact.description")}</p>
               </div>
             </div>
           </div>
@@ -581,12 +566,10 @@ export default function BankFinancePage() {
         <div className="vc_column">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Industrial <span className="bold_text">Applications</span>
+              {t("banking.industrialApplications.title")}{" "}
+              <span className="bold_text">{t("banking.industrialApplications.highlight")}</span>
             </h2>
-            <p>
-              Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and
-              highly accurate air quality solutions for various industries.
-            </p>
+            <p>{t("banking.industrialApplications.description")}</p>
           </div>
         </div>
       </div>

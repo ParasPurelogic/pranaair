@@ -1,29 +1,28 @@
-"use client"
 import VideoPlayer from "@/Components/Pages/WearableAirpurifier/VideoPlayer"
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
 import ProductSlider from "@/Components/Pages/PranaSensMonitor/product-slider"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function PranaAirPersonal() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
+export default async function PranaAirPersonal() {
+  const { t } = await getServerTranslation("wearable-air-purifier")
+  const manufacturingImages = [
+    {
+      src: "https://www.pranaair.com/wp-content/uploads/2024/10/prana-sense-and-its-pcb.jpg",
+      alt: "Prana sense and its PCB"
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+    {
+      src: "https://www.pranaair.com/wp-content/uploads/2024/10/internal-parts-of-prana-sense-monitor.jpg",
+      alt: "Internal parts of Prana sense monitor"
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+    {
+      src: "https://www.pranaair.com/wp-content/uploads/2024/10/assembling-prana-sense-monitor.jpg",
+      alt: "Assembling Prana sense monitor"
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
-
+    {
+      src: "https://www.pranaair.com/wp-content/uploads/2024/10/air-quality-sensors-of-prana-sense-monitor.jpg",
+      alt: "Air quality sensors of Prana sense monitor"
+    }
+  ];
   return (
     <div>
       {/* Header Section */}
@@ -35,27 +34,27 @@ export default function PranaAirPersonal() {
                 <ul className="nav navbar-nav new-nav-bar" id="pranaNavbar">
                   <li className="nav-item">
                     <a className="nav-link active" href="#overview" data-bs-toggle="tab" role="tab">
-                      Overview
+                      {t("personalPurifier.nav.overview")}
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#features" data-bs-toggle="tab" role="tab">
-                      Features
+                      {t("personalPurifier.nav.features")}
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#dual" data-bs-toggle="tab" role="tab">
-                      Dual-Ions
+                      {t("personalPurifier.nav.dualIons")}
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#comparison" data-bs-toggle="tab" role="tab">
-                      Comparison
+                      {t("personalPurifier.nav.comparison")}
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#spec" data-bs-toggle="tab" role="tab">
-                      Specs
+                      {t("personalPurifier.nav.specs")}
                     </a>
                   </li>
                 </ul>
@@ -71,8 +70,8 @@ export default function PranaAirPersonal() {
           <div className="row">
             <div className="col-md-6">
               <div className="banner-txt banner-txt-anim">
-                <h4>Prana Air Personal</h4>
-                <h2>Wearable Air</h2>
+                <h4>{t("personalPurifier.banner.subtitle")}</h4>
+                <h2>{t("personalPurifier.banner.title1")}</h2>
                 <ul>
                   <li>P</li>
                   <li>u</li>
@@ -83,14 +82,14 @@ export default function PranaAirPersonal() {
                   <li>e</li>
                   <li>r</li>
                 </ul>
-                Dual -VE Ions Emitter
+                {t("personalPurifier.banner.title2")}
                 <div className="buy-now-box">
                   <button className="single_add_to_cart_button button alt button button_slide slide_right">
-                    Buy Now{" "}
+                    {t("personalPurifier.banner.buyNow")}{" "}
                     <img
                       className="banner-btn-arrow"
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/banner-btn-arrow.png"
-                      alt=""
+                      alt={t("personalPurifier.banner.arrowAlt")}
                     />
                   </button>
                 </div>
@@ -99,7 +98,7 @@ export default function PranaAirPersonal() {
             <div className="col-md-6">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-personal-wearable-air-purifier.png"
-                alt="Banner Girl"
+                alt={t("personalPurifier.banner.imageAlt")}
                 className="banner-girl-img"
               />
             </div>
@@ -116,12 +115,11 @@ export default function PranaAirPersonal() {
                 <img
                   className="rotet"
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/heading-ion-icon.png"
-                  alt="heading ion icon"
+                  alt={t("personalPurifier.elimination.iconAlt")}
                 />
-                Effective Elimination from various Pollutants
+                {t("personalPurifier.elimination.title")}
               </h3>
-              Prana Air Personal Air Purifier, Ideal for Respiratory Disorders, Effectively Eliminates Pollutants for a
-              Healthier Environment.
+              {t("personalPurifier.elimination.description")}
             </div>
           </div>
         </div>
@@ -136,19 +134,22 @@ export default function PranaAirPersonal() {
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/ensuring-cleaner-air-icon.png"
-                      alt="ensuring cleaner air icon"
+                      alt={t("personalPurifier.elimination.pollen.iconAlt")}
                     />
                   </li>
                   <li>
-                    <h5>Eliminates Pollen, ensuring cleaner air.</h5>
+                    <h5>{t("personalPurifier.elimination.pollen.text")}</h5>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/06/effectively-traps-icon.png" />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/effectively-traps-icon.png"
+                      alt={t("personalPurifier.elimination.dust.iconAlt")}
+                    />
                   </li>
                   <li>
-                    <h5>Effectively traps Dust Particles with our hanging purifier.</h5>
+                    <h5>{t("personalPurifier.elimination.dust.text")}</h5>
                   </li>
                 </ul>
               </div>
@@ -156,7 +157,7 @@ export default function PranaAirPersonal() {
             <div className="col-md-4">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/personal-air-purifier-cleaning-pollutants.png"
-                alt="Elimination Device"
+                alt={t("personalPurifier.elimination.deviceAlt")}
                 className="elimination-device-img"
               />
             </div>
@@ -166,22 +167,22 @@ export default function PranaAirPersonal() {
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/tackles-harmful-icons.png"
-                      alt="tackles harmful icons"
+                      alt={t("personalPurifier.elimination.pm25.iconAlt")}
                     />
                   </li>
                   <li>
-                    <h5>Tackles harmful PM2.5 for fresher indoor and outdoor environments.</h5>
+                    <h5>{t("personalPurifier.elimination.pm25.text")}</h5>
                   </li>
                 </ul>
                 <ul>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/remove-smoke-.png"
-                      alt="remove smoke"
+                      alt={t("personalPurifier.elimination.smoke.iconAlt")}
                     />
                   </li>
                   <li>
-                    <h5>Removes Smoke, keeping surroundings fresh and clean.</h5>
+                    <h5>{t("personalPurifier.elimination.smoke.text")}</h5>
                   </li>
                 </ul>
               </div>
@@ -196,8 +197,8 @@ export default function PranaAirPersonal() {
           <div className="row">
             <div className="col-md-7">
               <div className="impressive-feature">
-                <h3>Impressive Features</h3>
-                <h5>That Redefine Air Purification</h5>
+                <h3>{t("personalPurifier.features.title")}</h3>
+                <h5>{t("personalPurifier.features.subtitle")}</h5>
               </div>
               <div className="impressive-feature-icon-box">
                 <div className="impressive-feature-icons">
@@ -205,12 +206,12 @@ export default function PranaAirPersonal() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/high-density-negative-ion.png"
-                        alt="high density negative ion"
+                        alt={t("personalPurifier.features.dualIon.iconAlt")}
                       />
                     </li>
                     <li>
-                      <h4>Dual (-ve) Ion Emitters</h4>
-                      High-Density Negative Ion Emission (80-150 million/cm3)
+                      <h4>{t("personalPurifier.features.dualIon.title")}</h4>
+                      {t("personalPurifier.features.dualIon.description")}
                     </li>
                   </ul>
                 </div>
@@ -219,12 +220,12 @@ export default function PranaAirPersonal() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/long-battery-life-icon.png"
-                        alt="long battery life icon"
+                        alt={t("personalPurifier.features.battery.iconAlt")}
                       />
                     </li>
                     <li>
-                      <h4>Long Battery Life</h4>
-                      Long-lasting Power with up to 30-60 Hours of Battery Life.
+                      <h4>{t("personalPurifier.features.battery.title")}</h4>
+                      {t("personalPurifier.features.battery.description")}
                     </li>
                   </ul>
                 </div>
@@ -235,12 +236,12 @@ export default function PranaAirPersonal() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/extended-runtime-icon.png"
-                        alt="extended runtime icon"
+                        alt={t("personalPurifier.features.runtime.iconAlt")}
                       />
                     </li>
                     <li>
-                      <h4>Extended Runtime</h4>
-                      Quick 2-Hour Charge, 45-Hour Purification with 700mAh Battery
+                      <h4>{t("personalPurifier.features.runtime.title")}</h4>
+                      {t("personalPurifier.features.runtime.description")}
                     </li>
                   </ul>
                 </div>
@@ -249,12 +250,12 @@ export default function PranaAirPersonal() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/ultra-quite-design-icon.png"
-                        alt="ultra quite design icon"
+                        alt={t("personalPurifier.features.quiet.iconAlt")}
                       />
                     </li>
                     <li>
-                      <h4>Ultra Quiet Design</h4>
-                      The Device Silently works its Magic by your side.
+                      <h4>{t("personalPurifier.features.quiet.title")}</h4>
+                      {t("personalPurifier.features.quiet.description")}
                     </li>
                   </ul>
                 </div>
@@ -265,12 +266,12 @@ export default function PranaAirPersonal() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/portable-and-wearable-icon.png"
-                        alt="portable and wearable icon"
+                        alt={t("personalPurifier.features.portable.iconAlt")}
                       />
                     </li>
                     <li>
-                      <h4>Portable and Wearable</h4>
-                      Purify the air on the go, wherever you are.
+                      <h4>{t("personalPurifier.features.portable.title")}</h4>
+                      {t("personalPurifier.features.portable.description")}
                     </li>
                   </ul>
                 </div>
@@ -279,12 +280,12 @@ export default function PranaAirPersonal() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/no-filter-replacements-icon.png"
-                        alt="no filter replacements icon"
+                        alt={t("personalPurifier.features.noFilter.iconAlt")}
                       />
                     </li>
                     <li>
-                      <h4>No Filter Replacements</h4>
-                      Hassle-free Maintenance with no Filter Replacement.
+                      <h4>{t("personalPurifier.features.noFilter.title")}</h4>
+                      {t("personalPurifier.features.noFilter.description")}
                     </li>
                   </ul>
                 </div>
@@ -293,7 +294,7 @@ export default function PranaAirPersonal() {
             <div className="col-md-5">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/portable-personal-air-purifier.png"
-                alt="Feature"
+                alt={t("personalPurifier.features.imageAlt")}
                 className="frature-img"
               />
             </div>
@@ -309,21 +310,18 @@ export default function PranaAirPersonal() {
               <img
                 className="wearable-arrow-icon"
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/wearable-arrow-icon.png"
-                alt="Wearable Arrow"
+                alt={t("personalPurifier.wearable.arrowAlt")}
               />
               <div className="wearable-box">
-                <h3>Wearable</h3>
-                <h4>Air Purifier</h4>
-                <p>
-                  Experience effortless protection with our wearable air purifier. Easy to carry and use, it ensures
-                  clean and fresh air wherever you go.
-                </p>
+                <h3>{t("personalPurifier.wearable.title")}</h3>
+                <h4>{t("personalPurifier.wearable.subtitle")}</h4>
+                <p>{t("personalPurifier.wearable.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-wearable-purifier-1024x466.jpeg"
-                alt="Wearable"
+                alt={t("personalPurifier.wearable.imageAlt")}
                 className="wearable-img"
               />
             </div>
@@ -336,8 +334,8 @@ export default function PranaAirPersonal() {
         <div className="row">
           <div className="col-md-12">
             <div className="benefit-section">
-              <h3>The Benefits</h3>
-              <h5>of Wearable Air Purification</h5>
+              <h3>{t("personalPurifier.benefits.title")}</h3>
+              <h5>{t("personalPurifier.benefits.subtitle")}</h5>
             </div>
           </div>
         </div>
@@ -351,12 +349,12 @@ export default function PranaAirPersonal() {
                 <div className="benefit-icons">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/healthier-breathing-icon.png"
-                    alt="healthier breathing icon"
+                    alt={t("personalPurifier.benefits.breathing.iconAlt")}
                   />
                 </div>
                 <div className="benfit-txt">
-                  <h3>Healthier Breathing</h3>
-                  <p>Eliminate pollutants and allergens for improved respiratory health.</p>
+                  <h3>{t("personalPurifier.benefits.breathing.title")}</h3>
+                  <p>{t("personalPurifier.benefits.breathing.description")}</p>
                 </div>
               </div>
             </div>
@@ -365,12 +363,12 @@ export default function PranaAirPersonal() {
                 <div className="benefit-icons">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/enhanced-focus-icon.png"
-                    alt="enhanced focus icon"
+                    alt={t("personalPurifier.benefits.focus.iconAlt")}
                   />
                 </div>
                 <div className="benfit-txt">
-                  <h3>Enhanced Focus</h3>
-                  <p>Breathe clean air to boost energy and mental clarity.</p>
+                  <h3>{t("personalPurifier.benefits.focus.title")}</h3>
+                  <p>{t("personalPurifier.benefits.focus.description")}</p>
                 </div>
               </div>
             </div>
@@ -379,12 +377,12 @@ export default function PranaAirPersonal() {
                 <div className="benefit-icons">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/smoke-removal-icon.png"
-                    alt="smoke removal icon"
+                    alt={t("personalPurifier.benefits.smoke.iconAlt")}
                   />
                 </div>
                 <div className="benfit-txt">
-                  <h3>Smoke Removal</h3>
-                  <p>Say goodbye to secondhand smoke with effective smoke elimination.</p>
+                  <h3>{t("personalPurifier.benefits.smoke.title")}</h3>
+                  <p>{t("personalPurifier.benefits.smoke.description")}</p>
                 </div>
               </div>
             </div>
@@ -393,12 +391,12 @@ export default function PranaAirPersonal() {
                 <div className="benefit-icons">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/strong-immunity-icn.png"
-                    alt="immunity icon"
+                    alt={t("personalPurifier.benefits.immunity.iconAlt")}
                   />
                 </div>
                 <div className="benfit-txt">
-                  <h3>Stronger Immunity</h3>
-                  <p>Reduce exposure to pathogens and boost your immune system.</p>
+                  <h3>{t("personalPurifier.benefits.immunity.title")}</h3>
+                  <p>{t("personalPurifier.benefits.immunity.description")}</p>
                 </div>
               </div>
             </div>
@@ -407,12 +405,12 @@ export default function PranaAirPersonal() {
                 <div className="benefit-icons">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/customizable-purification-icon.png"
-                    alt="customizable-purification-icon"
+                    alt={t("personalPurifier.benefits.customizable.iconAlt")}
                   />
                 </div>
                 <div className="benfit-txt">
-                  <h3>Customizable Purification</h3>
-                  <p>Adjust settings for personalized air cleansing.</p>
+                  <h3>{t("personalPurifier.benefits.customizable.title")}</h3>
+                  <p>{t("personalPurifier.benefits.customizable.description")}</p>
                 </div>
               </div>
             </div>
@@ -427,24 +425,21 @@ export default function PranaAirPersonal() {
             <div className="col-md-6">
               <div className="how-to-work-text">
                 <h3>
-                  How It Works{" "}
+                  {t("personalPurifier.howItWorks.title")}{" "}
                   <img
                     className="floating"
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/negetive-ions-.png"
-                    alt="negative-ions"
+                    alt={t("personalPurifier.howItWorks.iconAlt")}
                   />
                 </h3>
-                <h5>Harnessing the Power of Negative Ions</h5>
-                <p>
-                  Harnessing Negative Ions for Healthier Air. Neutralizes harmful particles, enhances mood, and promotes
-                  well-being. Breathe pure and revitalizing air now!
-                </p>
+                <h5>{t("personalPurifier.howItWorks.subtitle")}</h5>
+                <p>{t("personalPurifier.howItWorks.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/dual-negative-ions-emitter-in-prana-air-purifier--768x637.png"
-                alt="How Work"
+                alt={t("personalPurifier.howItWorks.imageAlt")}
                 className="how-work-img"
               />
             </div>
@@ -459,18 +454,15 @@ export default function PranaAirPersonal() {
             <div className="col-md-6">
               <div className="video-heading">
                 <h4>
-                  Efficiency Experiment: How <span className="prana">Prana Air</span> Personal Air Purifier Cleans The
-                  Air Pollutants
+                  {t("personalPurifier.video1.title1")}{" "}
+                  <span className="prana">{t("personalPurifier.video1.titleHighlight")}</span>{" "}
+                  {t("personalPurifier.video1.title2")}
                 </h4>
               </div>
             </div>
             <div className="col-md-6">
               <div className="video-paara">
-                <p>
-                  Find out how much filtration efficiency of Prana Airs Personal Wearable Air Purifier has. In this
-                  experiment, you will be able to see the efficiency of the product cleaning the smoke inside the small
-                  closed-chamber.
-                </p>
+                <p>{t("personalPurifier.video1.description")}</p>
               </div>
             </div>
           </div>
@@ -491,8 +483,8 @@ export default function PranaAirPersonal() {
           <div className="row">
             <div className="col-md-12">
               <div className="effortless-heading">
-                <h3>Effortless</h3>
-                <p>Operation</p>
+                <h3>{t("personalPurifier.operation.title")}</h3>
+                <p>{t("personalPurifier.operation.subtitle")}</p>
               </div>
             </div>
           </div>
@@ -503,14 +495,12 @@ export default function PranaAirPersonal() {
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/2nd-step-to-switch-the-mode-of-purifier.png"
-                      alt="power button"
+                      alt={t("personalPurifier.operation.step1.imageAlt")}
                     />
                   </li>
                   <li className="long-press-top">
-                    <h3>01</h3>
-                    <p>
-                      Long press the button to turn it on/off.and pressing the button once again shows blue (high gear).
-                    </p>
+                    <h3>{t("personalPurifier.operation.step1.number")}</h3>
+                    <p>{t("personalPurifier.operation.step1.description")}</p>
                   </li>
                 </ul>
               </div>
@@ -521,12 +511,12 @@ export default function PranaAirPersonal() {
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/2nd-step-to-switch-the-mode-of-purifier.png"
-                      alt="green indicator"
+                      alt={t("personalPurifier.operation.step2.imageAlt")}
                     />
                   </li>
                   <li className="green-top">
-                    <h3>02</h3>
-                    <p>After the negative ion purifier is turned on, the indicator light shows green (low gear),</p>
+                    <h3>{t("personalPurifier.operation.step2.number")}</h3>
+                    <p>{t("personalPurifier.operation.step2.description")}</p>
                   </li>
                 </ul>
               </div>
@@ -537,12 +527,12 @@ export default function PranaAirPersonal() {
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/red-indicator-when-need-to-charge.png"
-                      alt="red indicator"
+                      alt={t("personalPurifier.operation.step3.imageAlt")}
                     />
                   </li>
                   <li className="red-indicator-top">
-                    <h3>03</h3>
-                    <p>The low battery indicator light is red, and the indicator light is red when charging.</p>
+                    <h3>{t("personalPurifier.operation.step3.number")}</h3>
+                    <p>{t("personalPurifier.operation.step3.description")}</p>
                   </li>
                 </ul>
               </div>
@@ -557,24 +547,23 @@ export default function PranaAirPersonal() {
           <div className="row mob-revers">
             <div className="col-md-6 lonization-colm-bg">
               <div className="lonization-text">
-                <h4>Advanced</h4>
-                <h3>Ionization technology</h3>
-                <p>
-                  Now with Dual Ionizer! Effortlessly purify and freshen the air you breathe. Breathe cleaner, feel
-                  rejuvenated!
-                </p>
+                <h4>{t("personalPurifier.ionization.subtitle")}</h4>
+                <h3>{t("personalPurifier.ionization.title")}</h3>
+                <p>{t("personalPurifier.ionization.description")}</p>
               </div>
             </div>
             <div className="col-md-6 lonization-tech-img-bg">
               <div className="dual-icon-txt">
-                <h4>Dual</h4>
+                <h4>{t("personalPurifier.ionization.dual.title")}</h4>
                 <h5>
-                  Negative <span className="dual-icon">ion</span> emitter
+                  {t("personalPurifier.ionization.dual.subtitle1")}{" "}
+                  <span className="dual-icon">{t("personalPurifier.ionization.dual.highlight")}</span>{" "}
+                  {t("personalPurifier.ionization.dual.subtitle2")}
                 </h5>
               </div>
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/lonization-technology-of-prana-air-purifier-738x1024.png"
-                alt="Ionization Tech"
+                alt={t("personalPurifier.ionization.imageAlt")}
                 className="lonization-tech-img"
               />
             </div>
@@ -590,20 +579,17 @@ export default function PranaAirPersonal() {
               <div className="stay-protect-txt">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/stay-protected-icon.jpg"
-                  alt="Stay Protected Icon"
+                  alt={t("personalPurifier.protected.iconAlt")}
                 />
-                <h3>Stay Protected</h3>
-                <h4>On-the-Go</h4>
-                <p>
-                  Experience effortless protection with our wearable air purifier. Easy to carry and use, it ensures
-                  clean and fresh air wherever you go.
-                </p>
+                <h3>{t("personalPurifier.protected.title")}</h3>
+                <h4>{t("personalPurifier.protected.subtitle")}</h4>
+                <p>{t("personalPurifier.protected.description")}</p>
               </div>
             </div>
             <div className="col-md-6 stay-protect-ing-bg">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/stay-protected-with-prana-air-purifier-768x499.jpeg"
-                alt="Stay Protected"
+                alt={t("personalPurifier.protected.imageAlt")}
                 className="stay-protect-img"
               />
             </div>
@@ -617,14 +603,14 @@ export default function PranaAirPersonal() {
           <div className="row">
             <div className="col-md-7">
               <div className="purifier-heading">
-                <h3>Prana Airs</h3>
-                <h5>Air Purifier</h5>
+                <h3>{t("personalPurifier.comparison.pranaTitle")}</h3>
+                <h5>{t("personalPurifier.comparison.pranaSubtitle")}</h5>
               </div>
             </div>
             <div className="col-md-5">
               <div className="other-purifier-heading">
-                <h5>other</h5>
-                <h6>Air Purifier</h6>
+                <h5>{t("personalPurifier.comparison.otherTitle")}</h5>
+                <h6>{t("personalPurifier.comparison.otherSubtitle")}</h6>
               </div>
             </div>
           </div>
@@ -633,16 +619,18 @@ export default function PranaAirPersonal() {
               <div className="row">
                 <div className="col-md-6">
                   <div className="dual-icon-txt parna-purifieri-txt">
-                    <h4>Dual</h4>
+                    <h4>{t("personalPurifier.comparison.prana.title")}</h4>
                     <h5>
-                      Negative <span className="dual-icon">ion</span> emitter
+                      {t("personalPurifier.comparison.prana.subtitle1")}{" "}
+                      <span className="dual-icon">{t("personalPurifier.comparison.prana.highlight")}</span>{" "}
+                      {t("personalPurifier.comparison.prana.subtitle2")}
                     </h5>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-dual-negative-ions-emitters-768x739.png"
-                    alt="Prana Purifier"
+                    alt={t("personalPurifier.comparison.prana.imageAlt")}
                     className="prana-purifier-img"
                   />
                 </div>
@@ -652,14 +640,14 @@ export default function PranaAirPersonal() {
               <div className="row">
                 <div className="col-md-6">
                   <div className="other-purifieri-txt">
-                    <h4>single</h4>
-                    <h5>Negative ion emitter</h5>
+                    <h4>{t("personalPurifier.comparison.other.title")}</h4>
+                    <h5>{t("personalPurifier.comparison.other.subtitle")}</h5>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/other-purifier-with-single-ion-emitter-300x435.png"
-                    alt="Other Purifier"
+                    alt={t("personalPurifier.comparison.other.imageAlt")}
                     className="other-purifier-img"
                   />
                 </div>
@@ -676,16 +664,15 @@ export default function PranaAirPersonal() {
             <div className="col-md-6">
               <div className="video-heading">
                 <h4>
-                  Product Application: Use of <span className="prana">Prana Air</span> Personal Air Purifier
+                  {t("personalPurifier.video2.title1")}{" "}
+                  <span className="prana">{t("personalPurifier.video2.titleHighlight")}</span>{" "}
+                  {t("personalPurifier.video2.title2")}
                 </h4>
               </div>
             </div>
             <div className="col-md-6">
               <div className="video-paara">
-                <p>
-                  This innovative personal air purifier can be used by anyone anytime at home or any workplace. The
-                  small air purifier can help you breathe clean air and give your safety from the unhealthy air quality.
-                </p>
+                <p>{t("personalPurifier.video2.description")}</p>
               </div>
             </div>
           </div>
@@ -707,8 +694,8 @@ export default function PranaAirPersonal() {
           <div className="row">
             <div className="col-md-12">
               <div className="age-group-heading">
-                <h3>For Every</h3>
-                <h4>Age Group</h4>
+                <h3>{t("personalPurifier.ageGroups.title")}</h3>
+                <h4>{t("personalPurifier.ageGroups.subtitle")}</h4>
               </div>
             </div>
           </div>
@@ -717,36 +704,36 @@ export default function PranaAirPersonal() {
               <div className="age-group-imgs">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/personal-air-purifier-for-child-768x735.jpeg"
-                  alt="Kids"
+                  alt={t("personalPurifier.ageGroups.kids.imageAlt")}
                 />
               </div>
               <div className="age-group-txt-para">
-                <h4>Kids</h4>
-                <p>Clean air for little lungs, Prana Air cares!</p>
+                <h4>{t("personalPurifier.ageGroups.kids.title")}</h4>
+                <p>{t("personalPurifier.ageGroups.kids.description")}</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="age-group-imgs">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/use-of-prana-air-purifier-in-office-768x735.jpeg"
-                  alt="Adults"
+                  alt={t("personalPurifier.ageGroups.adults.imageAlt")}
                 />
               </div>
               <div className="age-group-txt-para">
-                <h4>Adults</h4>
-                <p>Breathe easy with Prana Air, your daily companion.</p>
+                <h4>{t("personalPurifier.ageGroups.adults.title")}</h4>
+                <p>{t("personalPurifier.ageGroups.adults.description")}</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="age-group-imgs">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/old-man-using-personal-air-purifier-768x735.jpeg"
-                  alt="Old Age"
+                  alt={t("personalPurifier.ageGroups.elderly.imageAlt")}
                 />
               </div>
               <div className="age-group-txt-para">
-                <h4>Old Age</h4>
-                <p>Nurture your health with Prana Air, age gracefully.</p>
+                <h4>{t("personalPurifier.ageGroups.elderly.title")}</h4>
+                <p>{t("personalPurifier.ageGroups.elderly.description")}</p>
               </div>
             </div>
           </div>
@@ -763,11 +750,11 @@ export default function PranaAirPersonal() {
                   <img
                     className="rotet"
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/heading-ion-icon.png"
-                    alt="heading ion icon"
+                    alt={t("personalPurifier.attractive.iconAlt")}
                   />{" "}
-                  Attractive
+                  {t("personalPurifier.attractive.title")}
                 </h3>
-                <h5>details for easy carrying</h5>
+                <h5>{t("personalPurifier.attractive.subtitle")}</h5>
               </div>
             </div>
           </div>
@@ -779,21 +766,21 @@ export default function PranaAirPersonal() {
                     <ul className="left-heading">
                       <li>
                         <h4>
-                          Low Gear
+                          {t("personalPurifier.attractive.features.lowGear")}
                           <img
                             className="deskshow"
                             src="https://www.pranaair.com/wp-content/uploads/2023/06/feature-line-upper.png"
-                            alt="Feature Line"
+                            alt={t("personalPurifier.attractive.features.lineAlt")}
                           />
                         </h4>
                       </li>
                       <li>
                         <h4>
-                          High Gear{" "}
+                          {t("personalPurifier.attractive.features.highGear")}{" "}
                           <img
                             className="deskshow"
                             src="https://www.pranaair.com/wp-content/uploads/2023/06/feature-line.png"
-                            alt="Feature Line"
+                            alt={t("personalPurifier.attractive.features.lineAlt")}
                           />
                         </h4>
                       </li>
@@ -803,7 +790,7 @@ export default function PranaAirPersonal() {
                 <div className="col-md-4">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-wearable-air-purifier-300x443.png"
-                    alt="Product Feature"
+                    alt={t("personalPurifier.attractive.productAlt")}
                     className="product-feature-img"
                   />
                 </div>
@@ -815,9 +802,9 @@ export default function PranaAirPersonal() {
                           <img
                             className="deskshow"
                             src="https://www.pranaair.com/wp-content/uploads/2023/06/feature-line-upper.png"
-                            alt="Feature Line"
+                            alt={t("personalPurifier.attractive.features.lineAlt")}
                           />
-                          Battery indicater
+                          {t("personalPurifier.attractive.features.batteryIndicator")}
                         </h4>
                       </li>
                       <li>
@@ -825,9 +812,9 @@ export default function PranaAirPersonal() {
                           <img
                             className="deskshow"
                             src="https://www.pranaair.com/wp-content/uploads/2023/06/feature-line-upper.png"
-                            alt="Feature Line"
+                            alt={t("personalPurifier.attractive.features.lineAlt")}
                           />{" "}
-                          ON &amp; OFF Switch Key
+                          {t("personalPurifier.attractive.features.switchKey")}
                         </h4>
                       </li>
                     </ul>
@@ -840,14 +827,14 @@ export default function PranaAirPersonal() {
                 <div className="col-md-6 mob-down-postion">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/air-purifier-type-c-charging-300x481.png"
-                    alt="Type C Charger"
+                    alt={t("personalPurifier.attractive.typeC.imageAlt")}
                     className="type-c-charger-img"
                   />
                 </div>
                 <div className="col-md-6">
                   <div className="type-c-heading">
-                    <h3>Type C</h3>
-                    <h5>Charging Port</h5>
+                    <h3>{t("personalPurifier.attractive.typeC.title")}</h3>
+                    <h5>{t("personalPurifier.attractive.typeC.subtitle")}</h5>
                   </div>
                 </div>
               </div>
@@ -859,14 +846,14 @@ export default function PranaAirPersonal() {
                 <div className="col-md-6">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/hanging-device-img-300x463.png"
-                    alt="Hanging Device"
+                    alt={t("personalPurifier.attractive.hanging.imageAlt")}
                     className="hanging-device-img"
                   />
                 </div>
                 <div className="col-md-6">
                   <div className="type-c-heading hanging-heading">
-                    <h3>Hanging</h3>
-                    <h5>Thread</h5>
+                    <h3>{t("personalPurifier.attractive.hanging.title")}</h3>
+                    <h5>{t("personalPurifier.attractive.hanging.subtitle")}</h5>
                   </div>
                 </div>
               </div>
@@ -876,16 +863,16 @@ export default function PranaAirPersonal() {
                 <div className="col-md-6">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/two-modes-of-speed-in-prana-air-personal-air-purifier-768x876.png"
-                    alt="Two Modes"
+                    alt={t("personalPurifier.attractive.modes.imageAlt")}
                     className="two-modes-img"
                   />
                 </div>
                 <div className="col-md-6">
                   <div className="two-mode-heading">
-                    <h3>2 Adjustable Modes</h3>
+                    <h3>{t("personalPurifier.attractive.modes.title")}</h3>
                     <ul>
-                      <li>High Gear</li>
-                      <li>Low Gear</li>
+                      <li>{t("personalPurifier.attractive.modes.highGear")}</li>
+                      <li>{t("personalPurifier.attractive.modes.lowGear")}</li>
                     </ul>
                   </div>
                 </div>
@@ -905,18 +892,21 @@ export default function PranaAirPersonal() {
                   <img
                     className="rotet"
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/heading-ion-icon.png"
-                    alt="heading ion icon"
+                    alt={t("personalPurifier.specs.iconAlt")}
                   />{" "}
-                  Product
+                  {t("personalPurifier.specs.title")}
                 </h3>
-                <h5>Technical specifications</h5>
+                <h5>{t("personalPurifier.specs.subtitle")}</h5>
               </div>
             </div>
             <div className="col-md-8">
               <div className="brochore-btn">
                 <a href="#">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png" alt="brochore-btn" />{" "}
-                  Download Brochure
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png"
+                    alt={t("personalPurifier.specs.brochureAlt")}
+                  />{" "}
+                  {t("personalPurifier.specs.downloadBrochure")}
                 </a>
               </div>
             </div>
@@ -924,44 +914,44 @@ export default function PranaAirPersonal() {
           <div className="row mid-box">
             <div className="col-md-4 box-line">
               <div className="product-specifi shdw-line">
-                <p>Negative ion concentration :</p>
-                <h4>80-150 million /cm3</h4>
+                <p>{t("personalPurifier.specs.ionConcentration.label")}</p>
+                <h4>{t("personalPurifier.specs.ionConcentration.value")}</h4>
               </div>
               <div className="product-specifi mrg-btm">
-                <p>Product weight :</p>
-                <h4>42g</h4>
+                <p>{t("personalPurifier.specs.weight.label")}</p>
+                <h4>{t("personalPurifier.specs.weight.value")}</h4>
               </div>
               <div className="product-specifi">
-                <p>Input voltage :</p>
-                <h4>DC5V C</h4>
+                <p>{t("personalPurifier.specs.voltage.label")}</p>
+                <h4>{t("personalPurifier.specs.voltage.value")}</h4>
               </div>
             </div>
             <div className="col-md-4 mob-product-spec-box1">
               <div className="product-specifi shdw-line">
-                <p>Model :</p>
-                <h4>M8</h4>
+                <p>{t("personalPurifier.specs.model.label")}</p>
+                <h4>{t("personalPurifier.specs.model.value")}</h4>
               </div>
               <div className="product-specifi mob-mrg-btm">
-                <p>Battery capacity :</p>
-                <h4>700mAh</h4>
+                <p>{t("personalPurifier.specs.batteryCapacity.label")}</p>
+                <h4>{t("personalPurifier.specs.batteryCapacity.value")}</h4>
               </div>
               <div className="product-specifi">
-                <p>Battery life. :</p>
-                <h4>30-60h</h4>
+                <p>{t("personalPurifier.specs.batteryLife.label")}</p>
+                <h4>{t("personalPurifier.specs.batteryLife.value")}</h4>
               </div>
             </div>
             <div className="col-md-4 mob-product-spec-box2">
               <div className="product-specifi">
-                <p>Charging time :</p>
-                <h4>About 2 hours</h4>
+                <p>{t("personalPurifier.specs.chargingTime.label")}</p>
+                <h4>{t("personalPurifier.specs.chargingTime.value")}</h4>
               </div>
               <div className="product-specifi mob-mrg-btm">
-                <p>Size :</p>
-                <h4>72*35*20mm</h4>
+                <p>{t("personalPurifier.specs.size.label")}</p>
+                <h4>{t("personalPurifier.specs.size.value")}</h4>
               </div>
               <div className="product-specifi">
-                <p>Filter :</p>
-                <h4>No filter replacement</h4>
+                <p>{t("personalPurifier.specs.filter.label")}</p>
+                <h4>{t("personalPurifier.specs.filter.value")}</h4>
               </div>
             </div>
           </div>
@@ -974,12 +964,12 @@ export default function PranaAirPersonal() {
           <div className="row">
             <div className="col-md-3">
               <div className="customize-slider-heading">
-                <h2>Customize</h2>
-                <h4>Your Air Purification Experience</h4>
+                <h2>{t("personalPurifier.customize.title")}</h2>
+                <h4>{t("personalPurifier.customize.subtitle")}</h4>
               </div>
             </div>
             <div className="col-md-9">
-              <ProductSlider responsive={responsive} />
+              <ProductSlider manufacturingImages={manufacturingImages} />
             </div>
           </div>
         </div>
@@ -993,7 +983,7 @@ export default function PranaAirPersonal() {
               <div className="row">
                 <div className="col-md-4">
                   <div className="frequently-asked-questions">
-                    <h4>Frequently Asked Questions</h4>
+                    <h4>{t("personalPurifier.faq.title")}</h4>
                   </div>
                 </div>
                 <div className="col-md-8"></div>
@@ -1010,7 +1000,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="true"
                       aria-controls="collapseOne"
                     >
-                      1. How does Prana Air Personal Air Purifier work?
+                      {t("personalPurifier.faq.q1")}
                     </button>
                   </h2>
                   <div
@@ -1019,10 +1009,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      Prana Air Personal Air Purifier utilizes advanced high-density dual negative ion emitters to
-                      purify the air around you, providing cleaner and healthier air to breathe.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a1")}</div>
                   </div>
                 </div>
 
@@ -1036,7 +1023,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      2. Is Prana Air Personal Air Purifier suitable for people with respiratory conditions?
+                      {t("personalPurifier.faq.q2")}
                     </button>
                   </h2>
                   <div
@@ -1045,11 +1032,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      Yes, Prana Air Personal Air Purifier is designed to improve air quality and can be beneficial for
-                      individuals with respiratory conditions by reducing pollutants and allergens in the surrounding
-                      air.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a2")}</div>
                   </div>
                 </div>
 
@@ -1063,7 +1046,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      3. How long does the battery of Prana Air Personal Air Purifier last?
+                      {t("personalPurifier.faq.q3")}
                     </button>
                   </h2>
                   <div
@@ -1072,10 +1055,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      The battery of Prana Air Personal Air Purifier can last up to 45 hours on a single charge,
-                      providing long-lasting usage before requiring a recharge.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a3")}</div>
                   </div>
                 </div>
 
@@ -1089,7 +1069,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                      4. Is Prana Air Personal Air Purifier easy to use?
+                      {t("personalPurifier.faq.q4")}
                     </button>
                   </h2>
                   <div
@@ -1098,10 +1078,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      Prana Air Personal Air Purifier features user-friendly controls, making it easy to operate and
-                      adjust settings according to your preferences.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a4")}</div>
                   </div>
                 </div>
 
@@ -1115,7 +1092,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="false"
                       aria-controls="collapseFive"
                     >
-                      5. Can I wear Prana Air Personal Air Purifier during physical activities?
+                      {t("personalPurifier.faq.q5")}
                     </button>
                   </h2>
                   <div
@@ -1124,10 +1101,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      Yes, Prana Air Personal Air Purifier is designed to be portable and wearable, making it suitable
-                      for use during various physical activities like workouts or outdoor adventures.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a5")}</div>
                   </div>
                 </div>
 
@@ -1141,7 +1115,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="false"
                       aria-controls="collapseSix"
                     >
-                      6. Is there any need to replace the filters?
+                      {t("personalPurifier.faq.q6")}
                     </button>
                   </h2>
                   <div
@@ -1150,10 +1124,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingSix"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      Prana Air Personal Air purifier works on the principle of negative ion emitters. It does not
-                      constitute any air filters thereby reducing the hassle of filter changes.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a6")}</div>
                   </div>
                 </div>
 
@@ -1167,7 +1138,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="false"
                       aria-controls="collapseSeven"
                     >
-                      7. Can I adjust the purification intensity of the Personal Air Purifier?
+                      {t("personalPurifier.faq.q7")}
                     </button>
                   </h2>
                   <div
@@ -1176,10 +1147,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingSeven"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      Yes, the Personal Air Purifier offers adjustable settings, allowing you to customize the
-                      purification intensity based on your preferences and the air quality of your surroundings.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a7")}</div>
                   </div>
                 </div>
 
@@ -1193,7 +1161,7 @@ export default function PranaAirPersonal() {
                       aria-expanded="false"
                       aria-controls="collapseEight"
                     >
-                      8. Is Prana Air Personal Air Purifier suitable for travel?
+                      {t("personalPurifier.faq.q8")}
                     </button>
                   </h2>
                   <div
@@ -1202,10 +1170,7 @@ export default function PranaAirPersonal() {
                     aria-labelledby="headingEight"
                     data-bs-parent="#faqAccordion"
                   >
-                    <div className="accordion-body">
-                      The compact and portable design of Prana Air Personal Air Purifier makes it perfect for travel,
-                      providing clean and fresh air wherever you go.
-                    </div>
+                    <div className="accordion-body">{t("personalPurifier.faq.a8")}</div>
                   </div>
                 </div>
               </div>

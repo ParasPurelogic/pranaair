@@ -1,0 +1,202 @@
+{
+     "hero": {
+      "iconAlt": "what is co carbon monoxide",
+      "title": "About Carbon Monoxide (CO) Gas",
+      "description": "Carbon monoxide (Co) is a flammable gas that is colorless, tasteless, and odorless. Moreover, It is the most frequent and dangerous gas found in both indoor and outdoor settings. Hence, Humans are unable to smell this gas. Carbon monoxide poisoning is caused by prolonged exposure to this gas at high levels. Furthermore, We can only discover and avoid any disasters caused by this toxic gas by co-monitoring. It is created both artificially and naturally. CO, on the other hand, is naturally present in the atmosphere but in extremely small amounts. On the other hand, it is naturally present in the atmosphere but in extremely small amounts."
+    },
+    "sources": {
+      "title": "Where does CO come from?",
+      "description": "Carbon monoxide (CO) is a dangerous toxic gas, and poisonous if inhaled in larger quantities. Because it can be released through various anthropogenic sources but CO can exist in the natural environment as well.",
+      "naturalTitle": "Natural Sources:",
+      "manmadeTitle": "Manmade Sources:",
+      "natural": {
+        "volcanic": {
+          "title": "1. Volcanic eruption",
+          "imageAlt": "co from Volcanic eruption"
+        },
+        "forestFires": {
+          "title": "3. Forest fires",
+          "imageAlt": "Carbon monoxide (CO) from Forest fires"
+        },
+        "coalMines": {
+          "title": "4. Natural gases released from coal mines",
+          "imageAlt": "Carbon monoxide (CO) from Natural gases released from coal mines"
+        }
+      },
+      "manmade": {
+        "vehicles": {
+          "title": "1. Combustion by commercial as well as airplanes, tractor, truck, etc.",
+          "imageAlt": "Carbon monoxide (CO) from vehicle pollution"
+        },
+        "industries": {
+          "title": "2. Industries working at high temperatures and using carbon compounds as raw products.",
+          "imageAlt": "co from Industries working at high temperatures and using carbon compounds as raw products."
+        },
+        "metalManufacturing": {
+          "title": "3. Metal Manufacturing",
+          "imageAlt": "co from Metal Manufacturing"
+        },
+        "electricitySupply": {
+          "title": "4. Electricity supply",
+          "imageAlt": "co from Electricity supply"
+        },
+        "smoking": {
+          "title": "5. Smoking",
+          "imageAlt": "co from Smoking"
+        },
+        "burningWaste": {
+          "title": "6. Burning waste",
+          "imageAlt": "co from Burning waste"
+        },
+        "powerPlants": {
+          "title": "7. Power plants",
+          "imageAlt": "Carbon monoxide (CO) from Power plants"
+        },
+        "gasExtraction": {
+          "title": "8. Extraction of gas from sea or land",
+          "imageAlt": "co from Extraction of gas from sea or land"
+        }
+      }
+    },
+    "healthImpacts": {
+      "title": "Health & Environmental Impacts of Carbon Monoxide (CO) Gas",
+      "description1": "CO levels in the atmosphere are generally normal, and they are unlikely to harm you. When these levels rise in an indoor or outdoor setting, various health risks to both people and the environment arise.",
+      "subtitle": "Lets find out the harmful effects of carbon monoxide (CO) gas on our health.",
+      "description2": "CO is one of the most toxic gases in the environment. Because it harms humans. The most prevalent and harmful health impact is that it interacts with hemoglobin. As by preventing oxygen from reacting with hemoglobin and being transferred to the bodys many organs. Hence, resulting in organ failure.",
+      "description3": "It is especially dangerous for heart patients. Since, it causes a lack of oxygen in the body. Hence, It makes us feel sick, and one of the most common symptoms is vomiting. Furthermore, CO poisoning can also cause the flu. If not treated promptly, it can result in coma and, in rare circumstances, death due to the severe range of effects on the body.",
+      "effects": {
+        "flu": {
+          "title": "Flu, Nausea",
+          "imageAlt": "Flu, nausea due to co gas"
+        },
+        "fatigue": {
+          "title": "Fatigue",
+          "imageAlt": "Fatigue due to co gas"
+        },
+        "headache": {
+          "title": "Headache",
+          "imageAlt": "Headache due to co gas"
+        },
+        "chestPain": {
+          "title": "Chest Pain",
+          "imageAlt": "Chest pain due to co gas"
+        }
+      }
+    },
+    "standards": {
+      "carbonMonoxideTitle": "Carbon Monoxide",
+      "govtBody": "Govt. Body",
+      "breakpoints": "Breakpoints",
+      "standardsTitle": "Carbon Monoxide Standards",
+      "india": {
+        "name": "India",
+        "value": "0.0-27 -> Good"
+      },
+      "epa": {
+        "name": "EPA",
+        "value": "0.0-4.4 -> Good"
+      },
+      "california": {
+        "name": "California",
+        "value": "8hrs - 9 PPM"
+      },
+      "aaqs": {
+        "name": "AAQS",
+        "value": "1 hour - 20 PPM"
+      },
+      "who": {
+        "name": "WHO",
+        "value": "24hrs - 3.5 PPM"
+      }
+    },
+    "healthEffectsTable": {
+      "title": "Carbon Monoxide (CO) and the harm it causes",
+      "subtitle": "CO Levels and their health effects",
+      "levelsHeader": "Levels",
+      "healthEffectsHeader": "Health Effects",
+      "levels": {
+        "good": {
+          "level": "Good",
+          "range": "0-1.0",
+          "effect": "Fresh air"
+        },
+        "satisfactory": {
+          "level": "Satisfactory",
+          "range": "1.1-2.0",
+          "effect": "Slight headache experienced after 1-3 hours"
+        },
+        "moderate": {
+          "level": "Moderately polluted",
+          "range": "2.1-10",
+          "effect": "Nausea, drowsiness, dangerous after 3hrs of exposure"
+        },
+        "poor": {
+          "level": "Poor",
+          "range": "10-17",
+          "effect": "Qualmish, headache, death within 3 hrs of exposure"
+        },
+        "veryPoor": {
+          "level": "Very poor",
+          "range": "17-34",
+          "effect": "Exposures can cause death within 2 hrs"
+        },
+        "severe": {
+          "level": "Severe",
+          "range": "34+",
+          "effect": "Fatal within 60 minutes of exposure"
+        }
+      },
+      "disclaimer": "*8-hour average for CO by CPCB"
+    },
+    "correctiveMeasures": {
+      "title": "Corrective Measures To Reduce Carbon Monoxide (CO) Gas",
+      "description": "CO cannot be readily eradicated with air purifiers or other ways. Thus corrective measures are the only option to avoid any exposure in real life. The only way to discover and avoid problems is to monitor them. To decrease exposure and generation of this hazardous gas, preventive measures must be performed.",
+      "subtitle": "Some of the measures are mentioned below;",
+      "measures": {
+        "ventilation": {
+          "title": "– Ventilation:",
+          "description": "A well-ventilated room is the easiest and most effective way to tackle CO pollution. Because ventilation not only reduces the concentration of CO. It also increases fresh air in the room.",
+          "imageAlt": "Ventilation"
+        },
+        "publicTransport": {
+          "title": "– Public transport:",
+          "description": "By using public transport we can easily reduce our carbon footprint and hence CO production.",
+          "imageAlt": "Public Transport"
+        },
+        "alternateFuels": {
+          "title": "– Alternate fuels:",
+          "description": "new power sources like hydrogen fuel cars or electric cars are good alternatives to traditional fuel cars. Because they help reduce emission pollution from these cars.",
+          "imageAlt": "Alternate Fuels"
+        },
+        "nonFuelAlternatives": {
+          "title": "– Non-fuel alternatives:",
+          "description": "Using cycles or other alternatives can be effective in keeping a check on the pollution",
+          "imageAlt": "Non-fuel Alternatives"
+        },
+        "recycling": {
+          "title": "– Recycling",
+          "description": "rather than burning waste is an option for reducing CO pollution in the surrounding.",
+          "imageAlt": "Recycling"
+        }
+      }
+    },
+    "monitoring": {
+      "title": "Air quality monitor to measure CO",
+      "imageAlt": "air quality monitor to measure Carbon monoxide (CO) level"
+    },
+    "products": {
+      "title": "Choose Your Air Quality Monitor To Measure CO Gas",
+      "modelA": {
+        "title": "CO Monitor Model A",
+        "imageAlt": "prana air CO sensor"
+      },
+      "modelB": {
+        "title": "CO Monitor Model B",
+        "imageAlt": "prana air co monitor"
+      },
+      "modelC": {
+        "title": "CO Monitor Model C",
+        "imageAlt": "prana air handheld CO Monitor"
+      }
+    }
+}

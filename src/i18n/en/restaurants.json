@@ -1,0 +1,278 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"restaurantBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Restaurant & Cafe",
+    "description": "A complete solution for air monitoring, air purification, and data monitoring for your restaurant spaces.",
+    "categories": {
+      "kitchen": "Kitchen",
+      "cafe": "Cafe",
+      "restaurant": "Restaurant"
+    },
+    "cta": "Get a Quote"
+  },
+  "restaurantPollutants": {
+    "title": "Major Air",
+    "highlight": "Pollutants",
+    "description": "Restaurants emit the greatest mean value of indoor air pollutants and are one of the major reasons for ambient pollution. That makes it extremely important to monitor the air quality inside and outside restaurants.",
+    "items": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "Ultra-fine breathable dust & liquid particles that enter deep into our lungs and cause many diseases.",
+        "imageAlt": "pm2.5 in school and institutes"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "At times, especially when there is a higher client occupancy, CO2 levels surpass the desired CO2 limitations.",
+        "imageAlt": "co2 gas in schools and institutes"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "description": "Emissions from urban cooking and its various methodologies, aerosol sprays are some of the potential sources.",
+        "imageAlt": "tvoc in schools and institutes"
+      },
+      "co": {
+        "title": "CO",
+        "description": "Cooking methods like barbequing, grilling and charbroiling emit CO inside & outside the restaurants.",
+        "imageAlt": "ozone in school & institutes"
+      },
+      "no2": {
+        "title": "NO2",
+        "description": "Gas stoves used in restaurant kitchens are a major source of indoor NO2 combustion of fuel.",
+        "imageAlt": "ozone in school & institutes"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Restaurants are busy and many restaurants play high music that can be irritating for some customers..",
+        "imageAlt": "ozone in school & institutes"
+      }
+    }
+  },
+  "restaurantImageBox": {
+    "items": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "Ultra-fine breathable dust and liquid particles",
+        "imageAlt": "pm2.5 in school & institutes"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "When customer occupancy is more, the desired CO2 limits exceed.",
+        "imageAlt": "co2 in school & institutes"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Playing high music that can be irritating for some customers",
+        "imageAlt": "ozone o3 in school & institutes"
+      },
+      "no2": {
+        "title": "NO2",
+        "description": "Gas stoves used in restaurant kitchens are a major source.",
+        "imageAlt": "tvoc in school & institutes"
+      }
+    }
+  },
+  "restaurantRisk": {
+    "title": "Who are at",
+    "highlight": "Risk?",
+    "description": "Different people from different age groups can be present in a restaurant. But certain groups are significantly impacted as compared to healthy adults.",
+    "items": {
+      "respiratory": {
+        "title": "Respiratory Illness",
+        "description": "Customers and staff with respiratory illnesses already have a weaker respiratory system.",
+        "imageAlt": "respiratory illness people in restaurant"
+      },
+      "staff": {
+        "title": "Staff",
+        "description": "Unattentiveness, a high chance of acquiring respiratory illnesses, and loss of coordination can be seen in the staff.",
+        "imageAlt": "staff of a restaurant"
+      },
+      "chef": {
+        "title": "Chef",
+        "description": "Children have developing organs. When exposed, the growing tissue and cell growth are hampered.",
+        "imageAlt": "chef of a restaurant"
+      },
+      "customers": {
+        "title": "Customers",
+        "description": "Uneasiness, headaches, respiratory irritation, and nausea are some of the side effects of exposure.",
+        "imageAlt": "a customer of a restaurant"
+      }
+    }
+  },
+  "restaurantSolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions For Restaurant",
+    "description": "Prana Airs air quality monitoring and air purifying solutions give you the power to know what your customers and staff breathe and what you could do to clean the air to make your restaurant an Air pollution-free zone and view and analyze your IAQ.",
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "knowMore": "Know More",
+    "lookingToRent": "Looking to Rent?",
+    "freshAir": {
+      "title": "Fresh Air Machine",
+      "subtitle": "As IAQ Solution",
+      "description": "It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Compact Design makes it easy to place",
+        "feature3": "Promising you up to 99.5% efficiency"
+      },
+      "imageAlt": "prana air fresh air machine as iaq solution for school & institutes"
+    },
+    "apiData": {
+      "title": "AQI API Data",
+      "subtitle": "For Institutes",
+      "description": "Avail the real-time air quality data of your institutes nearby outdoor area on the web.",
+      "features": {
+        "feature1": "Integrate the institutes data on the web",
+        "feature2": "Access the real-time data quickly",
+        "feature3": "Take precautions from the air pollution"
+      },
+      "imageAlt": "aqi api data for school & institutes"
+    }
+  },
+  "restaurantFreemium": {
+    "title": "Data Freemium",
+    "highlight": "Services",
+    "description": "The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the QR to know the AQI of the restaurant.",
+    "services": {
+      "tvApp": {
+        "title": "TV Dashboard App",
+        "imageAlt": "aqi tv app dashboard for restaurants"
+      },
+      "customApp": {
+        "title": "Customised App for Schools",
+        "imageAlt": "aqi customized dashboard app for a restaurant"
+      },
+      "qrCode": {
+        "title": "QR Code Scan",
+        "imageAlt": "aqi monitor data qr code scan in a restaurant"
+      }
+    }
+  },
+  "restaurantComparison": {
+    "title": "The Effects of Air Pollution",
+    "highlight": "In A Restaurant",
+    "description": "When customers are exposed to poor air quality, they feel dizzy and unwell, and headaches are a common symptom of air pollution exposure.",
+    "clean": {
+      "title": "With Clean Air",
+      "benefits": {
+        "benefit1": "Improved ventilation",
+        "benefit2": "Good comfort level",
+        "benefit3": "Improved air filtration"
+      }
+    },
+    "unclean": {
+      "title": "Without Clean Air",
+      "drawbacks": {
+        "drawback1": "Low ventilation score",
+        "drawback2": "Less comfort",
+        "drawback3": "Reduced Filtration score"
+      }
+    }
+  },
+  "restaurantFaq": {
+    "questions": {
+      "q1": "1. What are the major pollutants that present in a restaurant / Cafe?",
+      "q2": "2. How can I check the AQI of my restaurant using your device?",
+      "q3": "3. What are the health impacts of the pollutants present inside the restaurants?",
+      "q4": "4. Are any other parameters included in the monitors other than the air pollutants?",
+      "q5": "5. What are some criteria that need to be kept in mind for a healthy and comfortable restaurant experience?",
+      "q6": "6. Why is it necessary to have air quality monitoring solutions?",
+      "q7": "7. Are there any additional benefits that come with the solutions?"
+    },
+    "answers": {
+      "a1": "Many pollutants can be present inside a typical restaurant or diner. CO2 and CO are the main pollutants followed by PM2.5, NO2, TVOCs, SO2, Noise, etc.",
+      "a2": "Prana Air Monitors are WiFi enabled so you don't need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.",
+      "a3": "Physical discomforts like headaches, nausea, dizziness, etc. among customers and staff.",
+      "a4": "Yes, you can monitor the temperature, noise, and humidity in an area.",
+      "a5": "Ventilation rate, noise, comfort level, mold score, organic aerosols, etc. are some of the criteria.",
+      "a6": "To know the nature of pollutants and by how much are they present in a restaurant so that necessary actions can be taken.",
+      "a7": "Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more."
+    }
+  },
+  "restaurantClientele": {
+    "description": "We are honored to work with so many well-known companies.",
+    "clients": {
+      "morgan": {
+        "alt": "Morgan Stanley Logo"
+      },
+      "ola": {
+        "alt": "Ola Logo"
+      },
+      "microsoft": {
+        "alt": "Microsoft Logo"
+      },
+      "iit": {
+        "alt": "IIT-BHU Logo"
+      },
+      "renault": {
+        "alt": "Renault-Nissan Logo"
+      },
+      "tata": {
+        "alt": "Tata Logo"
+      },
+      "csir": {
+        "alt": "CSIR Logo"
+      },
+      "mahindra": {
+        "alt": "Mahindra Logo"
+      }
+    }
+  },
+   "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

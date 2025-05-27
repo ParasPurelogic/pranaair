@@ -1,28 +1,44 @@
-"use client"
 import "./styles.css"
-import "react-multi-carousel/lib/styles.css"
-import Carousel from "react-multi-carousel"
+import Image from "next/image"
+import { getServerTranslation } from "@/i18n/server"
+import MeasureCarousel from "@/Components/Pages/CarbonDioxide/measure-co2-slider"
 
-export default function NitrogenDioxidePage() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 2
+export default async function NitrogenDioxidePage() {
+  const { t } = await getServerTranslation("nitrogen")
+  const measureProducts = [
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-co2-sensor.jpg",
+      imageAlt: t("products.co2Sensor.imageAlt"),
+      title: t("products.co2Sensor.title"),
+      description: t("products.co2Sensor.description"),
+      width: 300,
+      height: 300
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 2
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-pocket-co2-monitor.jpg",
+      imageAlt: t("products.pocketCO2.imageAlt"),
+      title: t("products.pocketCO2.title"),
+      description: t("products.pocketCO2.description"),
+      width: 300,
+      height: 300
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-squair-air-monitor.jpg",
+      imageAlt: t("products.squair.imageAlt"),
+      title: t("products.squair.title"),
+      description: t("products.squair.description"),
+      width: 300,
+      height: 300
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-sensible-plus-air-quality-monitor.jpg",
+      imageAlt: t("products.sensiblePlus.imageAlt"),
+      title: t("products.sensiblePlus.title"),
+      description: t("products.sensiblePlus.description"),
+      width: 300,
+      height: 300
     }
-  };
-
+  ]
   return (
     <main>
       {/* Header Section */}
@@ -33,23 +49,21 @@ export default function NitrogenDioxidePage() {
               <div className="empty-space-40"></div>
               <div className="text-center fade-in-up">
                 <h1 className="text-center">
-                  <img
+                  <Image
                     className="wp-image-60375 aligncenter"
                     src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-formula.png"
-                    alt="what is nitrogen dioxide (NO2)"
-                    width="424"
-                    height="70"
+                    alt={t("no2.header.formulaAlt")}
+                    width={424}
+                    height={70}
                   />
                 </h1>
                 <h1 className="text-center">
                   <span className="heading_top_white" style={{ fontSize: "50pt", lineHeight: "1.1" }}>
-                    What is Nitrogen Dioxide NO<sub>2</sub>?
+                    {t("no2.header.title")}
                   </span>
                 </h1>
                 <p className="text-center">
-                  <span style={{ fontSize: "16pt" }}>
-                    Nitrogen Dioxide (NO<sub>2</sub>), accounts for more than 70% of the air present in the environment. And it is the most abundant gas present. For instance, Traffic on the road and the burning of fossil fuels result in poisonous NO<sub>2</sub> air pollution. Hence, it is harmful to humans, plants, and animals.
-                  </span>
+                  <span style={{ fontSize: "16pt" }}>{t("no2.header.description")}</span>
                 </p>
               </div>
             </div>
@@ -63,13 +77,11 @@ export default function NitrogenDioxidePage() {
           <div className="fade-in-up">
             <h4 className="text-center">
               <strong>
-                <span style={{ fontSize: "24pt" }}>Sources Of Nitrogen Dioxide (NO2) Gas</span>
+                <span style={{ fontSize: "24pt" }}>{t("no2.sources.title")}</span>
               </strong>
             </h4>
             <p className="text-center">
-              <span style={{ fontSize: "14pt" }}>
-                NO<sub>2</sub> is present in the environment in a very small quantity. But due to our excessive use of resources and other activities, nitrogen dioxide level is increasing to a troublesome level. There are both natural and men-made causes of the formation of the no2 gas.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("no2.sources.description")}</span>
             </p>
           </div>
 
@@ -78,7 +90,7 @@ export default function NitrogenDioxidePage() {
             <div className="col-12">
               <div className="fade-in-up">
                 <h3 className="text-center">
-                  <span style={{ fontSize: "18pt" }}>Natural causes include:</span>
+                  <span style={{ fontSize: "18pt" }}>{t("no2.sources.natural.title")}</span>
                 </h3>
               </div>
             </div>
@@ -87,20 +99,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-Volcanic.png"
-                        alt="Volcano eruption or active volcanic sites. "
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.natural.volcanic.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>Volcano eruption or</span>
-                  <br />
-                  <span style={{ fontSize: "14pt" }}>active volcanic sites.</span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.natural.volcanic.description")}</span>
                 </p>
               </div>
             </div>
@@ -109,20 +119,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-Fertilizer.png"
-                        alt="no2 from Fertilizer "
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.natural.fertilizer.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>Biological decay of</span>
-                  <br />
-                  <span style={{ fontSize: "14pt" }}>waste for fertilizer</span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.natural.fertilizer.description")}</span>
                 </p>
               </div>
             </div>
@@ -131,24 +139,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-lighting.png"
-                        alt="no2 from Fertilizer "
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.natural.lightning.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Lightning strikes-
-                    <br />
-                    facilitates the formation
-                    <br />
-                    of the NO<sub>2</sub> gas.
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.natural.lightning.description")}</span>
                 </p>
               </div>
             </div>
@@ -157,18 +159,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-oceans.png"
-                        alt="no2 from oceans"
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.natural.oceans.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>Oceans</span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.natural.oceans.description")}</span>
                 </p>
               </div>
             </div>
@@ -179,7 +181,7 @@ export default function NitrogenDioxidePage() {
             <div className="col-12">
               <div className="fade-in-up">
                 <h3 className="text-center">
-                  <span style={{ fontSize: "18pt" }}>Manmade means of production of Nitrogen Dioxide (NO2) gas are: </span>
+                  <span style={{ fontSize: "18pt" }}>{t("no2.sources.manmade.title")}</span>
                 </h3>
               </div>
             </div>
@@ -189,22 +191,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-car-pollution.png"
-                        alt="no2 from car pollution "
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.manmade.vehicles.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Car, truck, boots,
-                    <br />
-                    and airplane emissions
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.manmade.vehicles.description")}</span>
                 </p>
               </div>
             </div>
@@ -213,22 +211,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-power-plant.png"
-                        alt="no2 from power plant "
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.manmade.powerPlants.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Power
-                    <br />
-                    plants
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.manmade.powerPlants.description")}</span>
                 </p>
               </div>
             </div>
@@ -237,20 +231,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-ammonia-emiting-fertilizer.png"
-                        alt="no2 from ammonia emitting fertilizers "
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.manmade.ammoniaFertilizers.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Ammonia-emitting fertilizers
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.manmade.ammoniaFertilizers.description")}</span>
                 </p>
               </div>
             </div>
@@ -259,22 +251,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-big-machines.png"
-                        alt="no2 from diesel vehicles"
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.manmade.dieselMachines.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Diesel-powered
-                    <br />
-                    heavy machines
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.manmade.dieselMachines.description")}</span>
                 </p>
               </div>
             </div>
@@ -283,22 +271,18 @@ export default function NitrogenDioxidePage() {
                 <h4 className="text-center">
                   <span style={{ fontSize: "14pt" }}>
                     <strong>
-                      <img
+                      <Image
                         className="aligncenter wp-image-63805"
                         src="https://www.pranaair.com/wp-content/uploads/2023/01/no2-from-gas-stove.png"
-                        alt="no2 from Kerosene and gas stoves"
-                        width="302"
-                        height="302"
+                        alt={t("no2.sources.manmade.stoves.alt")}
+                        width={302}
+                        height={302}
                       />
                     </strong>
                   </span>
                 </h4>
                 <p className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Kerosene and
-                    <br />
-                    gas stoves
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.sources.manmade.stoves.description")}</span>
                 </p>
               </div>
             </div>
@@ -308,9 +292,7 @@ export default function NitrogenDioxidePage() {
           <div className="empty-space"></div>
           <div className="mb-50">
             <p className="text-center">
-              <span style={{ fontSize: "14pt" }}>
-                The main source of nitrogen dioxide produced by human activity is the combustion of fossil fuels. Such as the fuel used in automobiles, the creation of nitric acid, welding, explosives, refinement of petrol and metals, and commercial and food processing.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("no2.sources.mainSource")}</span>
             </p>
           </div>
         </div>
@@ -321,12 +303,10 @@ export default function NitrogenDioxidePage() {
         <div className="container">
           <div className="fade-in-up mb-30">
             <h2 className="text-center">
-              <span style={{ fontSize: "24pt" }}>Health &amp; Environmental Impacts of NO<sub>2</sub> Gas</span>
+              <span style={{ fontSize: "24pt" }}>{t("no2.impacts.title")}</span>
             </h2>
             <p className="text-center">
-              <span style={{ fontSize: "14pt" }}>
-                NO<sub>2</sub> is part of the NOx group of highly reactive gases. Whereas NO<sub>2</sub> is a brownish acidic gas with and pungent odor. It reacts with O2 to form nitric acid responsible for corrosion. And it also plays role in the formation of other pollutants like smog, PM, and acid rain. It is a flame accelerator but itself not combustible.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("no2.impacts.description")}</span>
             </p>
           </div>
 
@@ -335,75 +315,63 @@ export default function NitrogenDioxidePage() {
             <div className="col-12">
               <div className="fade-in-up">
                 <h3 className="text-center">
-                  <span style={{ fontSize: "18pt" }}>Health Impacts Due to Nitrogen Dioxide (NO2)</span>
+                  <span style={{ fontSize: "18pt" }}>{t("no2.impacts.health.title")}</span>
                 </h3>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/lungs-problem-due-to-no2.png"
-                  alt="lungs problem due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.lungs.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Altered lungs
-                    <br />
-                    function
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.lungs.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/breathing-problems-due-to-no2.png"
-                  alt="breathing problems due to no2 "
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.breathing.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Breathing
-                    <br />
-                    problem
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.breathing.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/asthma-due-to-no2.png"
-                  alt=" asthma due to no2s"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.asthma.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>Asthma</span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.asthma.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/low-Immunity-due-to-no2.png"
-                  alt="low Immunity due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.immunity.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Reduced
-                    <br />
-                    immunity
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.immunity.title")}</span>
                 </h4>
               </div>
             </div>
@@ -412,75 +380,57 @@ export default function NitrogenDioxidePage() {
           <div className="row mb-70">
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/throat-problem-due-to-no2.png"
-                  alt="throat problem due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.throat.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Irritation in
-                    <br />
-                    airways
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.throat.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/Coughing-due-to-no2.png"
-                  alt="Coughing due to no2 "
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.coughing.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Coughing, breathing
-                    <br />
-                    difficulty, wheezing
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.coughing.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/heart-problem-due-to-no2.png"
-                  alt=" aheart problem due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.heart.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Heart
-                    <br />
-                    failure
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.heart.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/premature-death-due-to-no2.png"
-                  alt="premature death due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.health.effects.premature.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Reduced birth
-                    <br />
-                    weight, high risk
-                    <br />
-                    of premature death
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.health.effects.premature.title")}</span>
                 </h4>
               </div>
             </div>
@@ -491,73 +441,63 @@ export default function NitrogenDioxidePage() {
             <div className="col-12">
               <div className="fade-in-up">
                 <h3 className="text-center">
-                  <span style={{ fontSize: "18pt" }}>Environmental effects are severe due to </span>
-                  <br />
-                  <span style={{ fontSize: "18pt" }}>excessive concentration of this gas:</span>
+                  <span style={{ fontSize: "18pt" }}>{t("no2.impacts.environmental.title")}</span>
                 </h3>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/hazy-air-due-to-no2.png"
-                  alt="hazy air due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.smog.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>Hazy air (smog)</span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.smog.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/polluting-water-due-to-no2.png"
-                  alt="polluting water due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.water.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>Polluting water</span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.water.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/ground-ozone-due-to-no2.png"
-                  alt="o3 due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.ozone.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Generates ground
-                    <br />
-                    level O3
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.ozone.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/increasing-PM-level-due-to-no2.png"
-                  alt="Increases PM levels due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.pm.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Increases
-                    <br />
-                    PM levels
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.pm.title")}</span>
                 </h4>
               </div>
             </div>
@@ -566,83 +506,57 @@ export default function NitrogenDioxidePage() {
           <div className="row">
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/acid-rain-caused-by-no2-gas.png"
-                  alt="acid rain due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.acidRain.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Acid rain- forming
-                    <br />
-                    an acidic compound
-                    <br />
-                    with moisture present
-                    <br />
-                    in the air
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.acidRain.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/plant-growth-due-to-no2.png"
-                  alt="plant growth due to no2 "
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.vegetation.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Affects the vegetation,
-                    <br />
-                    growth of plants
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.vegetation.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/form-pm-due-to-nox.png"
-                  alt=" nox"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.noxPm.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    NOx + other
-                    <br />
-                    chemicals leads
-                    <br />
-                    to formation of PM.
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.noxPm.title")}</span>
                 </h4>
               </div>
             </div>
             <div className="col-md-3">
               <div className="fade-in-up">
-                <img
+                <Image
                   className="size-medium wp-image-64434 aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/01/stressor-to-plants-due-to-no2.png"
-                  alt="stressor to plants due to no2"
-                  width="288"
-                  height="300"
+                  alt={t("no2.impacts.environmental.effects.plantStress.alt")}
+                  width={288}
+                  height={300}
                 />
                 <h4 className="text-center">
-                  <span style={{ fontSize: "14pt" }}>
-                    Acts as a stressor to
-                    <br />
-                    plants and results
-                    <br />
-                    in chlorophyll content
-                    <br />
-                    reduction.
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("no2.impacts.environmental.effects.plantStress.title")}</span>
                 </h4>
               </div>
             </div>
@@ -655,12 +569,10 @@ export default function NitrogenDioxidePage() {
         <div className="container">
           <div className="fade-in-up">
             <h2 className="text-center">
-              <span style={{ fontSize: "24pt" }}>Corrective Measures To Reduce Nitrogen Dioxide (NO2) Gas</span>
+              <span style={{ fontSize: "24pt" }}>{t("no2.measures.title")}</span>
             </h2>
             <p className="text-center">
-              <span style={{ fontSize: "14pt" }}>
-                The primary preventive measure is to monitor the concentration of NO<sub>2</sub> which our Prana air sensor and Air quality monitors are quite useful. Other than that there are some corrective measures that could help us keep safe from the respiratory repercussion of this gas:
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("no2.measures.description")}</span>
             </p>
           </div>
 
@@ -670,19 +582,19 @@ export default function NitrogenDioxidePage() {
             <div className="col-12">
               <div className="timeline">
                 <div className="timeline-item">
-                  <h4>Vehicles with low emission rates can help us with the reduced production of NO<sub>2</sub></h4>
+                  <h4>{t("no2.measures.steps.lowEmission")}</h4>
                 </div>
                 <div className="timeline-item">
-                  <h4>Alternate fuels including hydrogen cells and electric-powered cars can be useful in bringing down the overall footprint of NO<sub>2</sub> production.</h4>
+                  <h4>{t("no2.measures.steps.alternateFuels")}</h4>
                 </div>
                 <div className="timeline-item">
-                  <h4>Avoid traffic congestion. Improving engines to be more efficient</h4>
+                  <h4>{t("no2.measures.steps.avoidCongestion")}</h4>
                 </div>
                 <div className="timeline-item">
-                  <h4>Using public transport</h4>
+                  <h4>{t("no2.measures.steps.publicTransport")}</h4>
                 </div>
                 <div className="timeline-item">
-                  <h4>Use of a closed environment for the production of fertilizer and processing of the gases produced in it.</h4>
+                  <h4>{t("no2.measures.steps.closedEnvironment")}</h4>
                 </div>
               </div>
             </div>
@@ -694,75 +606,94 @@ export default function NitrogenDioxidePage() {
 
       {/* Health Effects Section */}
       <section className="health_effects_section">
-        <h2 className="health_heading">Nitrogen Dioxide (NO<sub>2</sub>) and the harm it causes</h2>
-        <h2 className="health_heading mobile_level_heading">NO<sub>2</sub> Levels and their health effects</h2>
+        <h2 className="health_heading">{t("no2.healthLevels.title")}</h2>
+        <h2 className="health_heading mobile_level_heading">{t("no2.healthLevels.mobileTitle")}</h2>
 
         <div className="level_range_cntr health_effect_box">
           <div className="lavel_box">
-            <span>Levels</span>
-            <span className="mg_text"><b>(µg/m<sup>3</sup>)</b></span>
+            <span>{t("no2.healthLevels.table.headers.levels")}</span>
+            <span className="mg_text">
+              <b>{t("no2.healthLevels.table.headers.units")}</b>
+            </span>
           </div>
           <div className="health_color">
-            <span>Health Effects</span>
+            <span>{t("no2.healthLevels.table.headers.healthEffects")}</span>
           </div>
         </div>
         <div className="level_range_cntr">
           <div className="lavel_box">
-            <span>Good</span>
-            <p><span>0-40 </span><span className="mobile_mg_text">(mg/m<sup>3</sup>)</span></p>
+            <span>{t("no2.healthLevels.table.levels.good.category")}</span>
+            <p>
+              <span>0-40 </span>
+              <span className="mobile_mg_text">{t("no2.healthLevels.table.mobileUnits")}</span>
+            </p>
           </div>
           <div className="health_color Good_color">
-            <span>Fresh air</span>
+            <span>{t("no2.healthLevels.table.levels.good.effect")}</span>
           </div>
         </div>
         <div className="level_range_cntr">
           <div className="lavel_box">
-            <span>Satisfactory</span>
-            <p><span>41-80</span><span className="mobile_mg_text">(mg/m<sup>3</sup>)</span></p>
+            <span>{t("no2.healthLevels.table.levels.satisfactory.category")}</span>
+            <p>
+              <span>41-80</span>
+              <span className="mobile_mg_text">{t("no2.healthLevels.table.mobileUnits")}</span>
+            </p>
           </div>
           <div className="health_color Satisfactory_color">
-            <span> Coughing, difficulty in breathing experienced</span>
+            <span>{t("no2.healthLevels.table.levels.satisfactory.effect")}</span>
           </div>
         </div>
         <div className="level_range_cntr">
           <div className="lavel_box">
-            <span>Moderately polluted</span>
-            <p><span>81-180</span><span className="mobile_mg_text">(mg/m<sup>3</sup>)</span></p>
+            <span>{t("no2.healthLevels.table.levels.moderate.category")}</span>
+            <p>
+              <span>81-180</span>
+              <span className="mobile_mg_text">{t("no2.healthLevels.table.mobileUnits")}</span>
+            </p>
           </div>
           <div className="health_color Moderately_color">
-            <span>Breathing difficulties, aggravation of asthma</span>
+            <span>{t("no2.healthLevels.table.levels.moderate.effect")}</span>
           </div>
         </div>
         <div className="level_range_cntr">
           <div className="lavel_box">
-            <span>Poor</span>
-            <p><span>181-280</span><span className="mobile_mg_text">(mg/m<sup>3</sup>)</span></p>
+            <span>{t("no2.healthLevels.table.levels.poor.category")}</span>
+            <p>
+              <span>181-280</span>
+              <span className="mobile_mg_text">{t("no2.healthLevels.table.mobileUnits")}</span>
+            </p>
           </div>
           <div className="health_color poor_color">
-            <span>Reduced brain functionality,
-              and lung function alterations</span>
+            <span>{t("no2.healthLevels.table.levels.poor.effect")}</span>
           </div>
         </div>
         <div className="level_range_cntr">
           <div className="lavel_box">
-            <span>Very poor</span>
-            <p><span>281-400</span><span className="mobile_mg_text">(mg/m<sup>3</sup>)</span></p>
+            <span>{t("no2.healthLevels.table.levels.veryPoor.category")}</span>
+            <p>
+              <span>281-400</span>
+              <span className="mobile_mg_text">{t("no2.healthLevels.table.mobileUnits")}</span>
+            </p>
           </div>
           <div className="health_color verypoor_color">
-            <span>Brain damage and heart failure</span>
+            <span>{t("no2.healthLevels.table.levels.veryPoor.effect")}</span>
           </div>
         </div>
         <div className="level_range_cntr">
           <div className="lavel_box">
-            <span>Severe</span>
-            <p><span>400+</span><span className="mobile_mg_text">(mg/m<sup>3</sup>)</span></p>
+            <span>{t("no2.healthLevels.table.levels.severe.category")}</span>
+            <p>
+              <span>400+</span>
+              <span className="mobile_mg_text">{t("no2.healthLevels.table.mobileUnits")}</span>
+            </p>
           </div>
           <div className="health_color Severe_color">
-            <span>Life-threatening </span>
+            <span>{t("no2.healthLevels.table.levels.severe.effect")}</span>
           </div>
         </div>
 
-        <i className="bottom_text">*NAQI as per CBCB. 2-h hourly average values.</i>
+        <i className="bottom_text">{t("no2.healthLevels.table.footnote")}</i>
       </section>
 
       {/* Air Quality Sensor Section */}
@@ -770,14 +701,14 @@ export default function NitrogenDioxidePage() {
         <div className="container">
           <div className="fade-in-up">
             <h2 className="text-center">
-              <span style={{ fontSize: "24pt" }}>Air quality sensor to measure NO<sub>2</sub></span>
+              <span style={{ fontSize: "24pt" }}>{t("no2.sensor.title")}</span>
             </h2>
-            <img
+            <Image
               className="aligncenter wp-image-64498"
               src="https://www.pranaair.com/wp-content/uploads/2023/01/Prana-air-nO2-sensors.jpg"
-              alt="Prana Air NO2 gas sensor"
-              width="683"
-              height="383"
+              alt={t("no2.sensor.imageAlt")}
+              width={683}
+              height={383}
             />
           </div>
         </div>
@@ -788,58 +719,21 @@ export default function NitrogenDioxidePage() {
         <div className="container">
           <div className="fade-in-up">
             <h3 className="text-center">
-              <span style={{ fontSize: "24pt" }}>Choose Your Air Quality Monitor To Measure NO<sub>2</sub> Gas</span>
+              <span style={{ fontSize: "24pt" }}>{t("no2.products.title")}</span>
             </h3>
           </div>
 
           <div className="product-carousel-container">
-            <Carousel
-              responsive={responsive}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              keyBoardControl={true}
-              customTransition="all .5s"
-              transitionDuration={500}
-              containerClass="carousel-container"
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-            >
-              <div className="product-card">
-                <div className="product-image-container">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-nitrogen-dioxide-no2-sensor-with-board.jpg"
-                    alt="prana air no2 sensor"
-                    className="product-image"
-                  />
-                </div>
-                <div className="product-info">
-                  <h4 className="product-title">Prana Air NO2 Sensor</h4>
-                </div>
-              </div>
-
-              <div className="product-card">
-                <div className="product-image-container">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/03/Sensible-monitor-prana-air.png"
-                    alt="prana air sensible monitor for no2 monitoring"
-                    className="product-image"
-                  />
-                </div>
-                <div className="product-info">
-                  <h4 className="product-title">Sensible Monitor</h4>
-
-                </div>
-              </div>
-            </Carousel>
+            <MeasureCarousel applications={measureProducts} />
           </div>
 
           <div className="text-center mt-40">
             <a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-caaqms-outdoor-monitor-.jpg"
-                alt="prana air Ambient Air Monitor"
+                alt={t("no2.products.ambientMonitorAlt")}
+                width={1024}
+                height={512}
                 className="img-fluid"
               />
             </a>

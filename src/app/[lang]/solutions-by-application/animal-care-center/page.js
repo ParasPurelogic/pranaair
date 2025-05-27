@@ -1,73 +1,114 @@
-"use client"
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
-import Carousel from "react-multi-carousel"
 import FaqAccordion from "@/Components/Pages/Airports/faq-accordion"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AnimalCarePage() {
-  // Carousel responsive settings
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
+export default async function AnimalCarePage() {
+  const { t } = await getServerTranslation("animal-care-center")
 
-  const industrialResponsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1200 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 1200, min: 992 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 992, min: 576 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 576, min: 0 },
-      items: 1,
-    },
-  }
-
-  // Carousel data
-  const carouselItems = [
+  const faqItems = [
     {
-      id: 1,
-      icon: "https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png",
-      title: "AQI TV App",
-      description:
-        "Access real-time air quality data on a large TV screen in the animal health care farm etc. Get continuous 24/7 remote monitoring to stay informed about AQI levels and ensure a healthier environment.",
-      image: "https://www.pranaair.com/wp-content/uploads/2024/08/animal-car-tv.jpg",
+      question: t("faqSection.items.1.question"),
+      answer: t("faqSection.items.1.answer"),
     },
     {
-      id: 2,
-      icon: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg",
-      title: "AQI Web-Dashboard",
-      description:
-        "Get real-time data from animal facility on a web dashboard to make informed decisions. Explore global pollution trends receive health advice based on real-time air quality indexes and easily compare air quality parameters across multiple locations.",
-      image: "https://www.pranaair.com/wp-content/uploads/2024/08/animal-car-dashboard.jpg",
+      question: t("faqSection.items.2.question"),
+      answer: t("faqSection.items.2.answer"),
     },
     {
-      id: 3,
-      icon: "https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png",
-      title: "AQI Mobile App",
-      description:
-        "Monitor real-time air quality data from animal facility anytime anywhere with our mobile app. View global air pollution and weather maps and easily compare air quality parameters across multiple locations with the AQI App.",
-      image: "https://www.pranaair.com/wp-content/uploads/2024/08/animal-car-phone.jpg",
+      question: t("faqSection.items.3.question"),
+      answer: t("faqSection.items.3.answer"),
     },
+    {
+      question: t("faqSection.items.4.question"),
+      answer: t("faqSection.items.4.answer"),
+    },
+    {
+      question: t("faqSection.items.5.question"),
+      answer: t("faqSection.items.5.answer"),
+    },
+    {
+      question: t("faqSection.items.6.question"),
+      answer: t("faqSection.items.6.answer"),
+    },
+    {
+      question: t("faqSection.items.7.question"),
+      answer: t("faqSection.items.7.answer"),
+    },
+    {
+      question: t("faqSection.items.8.question"),
+      answer: t("faqSection.items.8.answer"),
+    },
+    {
+      question: t("faqSection.items.9.question"),
+      answer: t("faqSection.items.9.answer"),
+    },
+    {
+      question: t("faqSection.items.10.question"),
+      answer: t("faqSection.items.10.answer"),
+    },
+    {
+      question: t("faqSection.items.11.question"),
+      answer: t("faqSection.items.11.answer"),
+    },
+  ]
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: t("industrialApplicationsData.hotel.title"),
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: t("industrialApplicationsData.restaurant.title"),
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: t("industrialApplicationsData.institutes.title"),
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
   ]
 
   return (
@@ -80,15 +121,15 @@ export default function AnimalCarePage() {
               <div className="col-md-6">
                 <div className="pocket_title_box school_aqi_box">
                   <h1>
-                    Air quality solutions for{" "}
+                    {t("animalFacilities.hero.title")}{" "}
                     <span className="bold_text" style={{ color: "#78ae60" }}>
-                      Animal Facilities
+                      {t("animalFacilities.hero.highlight")}
                     </span>
                   </h1>
-                  Advanced air quality solutions to enhance the well-being of animals and staff with research accuracy.
-                  <p className="banner-high-co2">Farms | Laboratories | Health-care</p>
-                  <a className="banner-btn" href="#get_in_touch" aria-label="Get a Quote">
-                    Get a Quote
+                  {t("animalFacilities.hero.description")}
+                  <p className="banner-high-co2">{t("animalFacilities.hero.facilities")}</p>
+                  <a className="banner-btn" href="#get_in_touch" aria-label={t("animalFacilities.hero.ctaAriaLabel")}>
+                    {t("animalFacilities.hero.cta")}
                   </a>
                 </div>
               </div>
@@ -104,9 +145,10 @@ export default function AnimalCarePage() {
           <div className="col-md-12">
             <div className="introducing_box sub_title_box text-center">
               <h2 className="title_heading">
-                Common Pollutants affecting air quality in <span style={{ color: "#78ae60" }}>Animal Facilities</span>
+                {t("animalFacilities.pollutants.title")}{" "}
+                <span style={{ color: "#78ae60" }}>{t("animalFacilities.pollutants.highlight")}</span>
               </h2>
-              <p>Animal facilities are highly exposed to various pollutants that are emitted from different sources.</p>
+              <p>{t("animalFacilities.pollutants.description")}</p>
             </div>
           </div>
         </div>
@@ -115,38 +157,47 @@ export default function AnimalCarePage() {
           <div className="pollutant-item">
             <img
               src="https://www.pranaair.com/wp-content/uploads/2024/08/Particulate-Matter.png"
-              alt="Particulate Matter icon"
+              alt={t("animalFacilities.pollutants.particulateMatter.imgAlt")}
             />
-            <h3>Particulate Matter</h3>
-            <p>Emits from Dust dander bedding particles and feed etc.</p>
+            <h3>{t("animalFacilities.pollutants.particulateMatter.title")}</h3>
+            <p>{t("animalFacilities.pollutants.particulateMatter.description")}</p>
           </div>
 
           <div className="pollutant-item">
-            <img src="https://www.pranaair.com/wp-content/uploads/2024/08/Ammonia.png" alt="Ammonia icon" />
-            <h3>Ammonia</h3>
-            <p>Produced by animal waste especially from urine.</p>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2024/08/Ammonia.png"
+              alt={t("animalFacilities.pollutants.ammonia.imgAlt")}
+            />
+            <h3>{t("animalFacilities.pollutants.ammonia.title")}</h3>
+            <p>{t("animalFacilities.pollutants.ammonia.description")}</p>
           </div>
 
           <div className="pollutant-item">
-            <img src="https://www.pranaair.com/wp-content/uploads/2024/08/TVOC.png" alt="TVOC icon" />
-            <h3>TVOC</h3>
-            <p>Emits from cleaning agents disinfectants and chemicals.</p>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2024/08/TVOC.png"
+              alt={t("animalFacilities.pollutants.tvoc.imgAlt")}
+            />
+            <h3>{t("animalFacilities.pollutants.tvoc.title")}</h3>
+            <p>{t("animalFacilities.pollutants.tvoc.description")}</p>
           </div>
 
           <div className="bottom-pollutants">
             <div className="pollutant-item">
-              <img src="https://www.pranaair.com/wp-content/uploads/2024/08/Pathogens.png" alt="Pathogens icon" />
-              <h3>Pathogens</h3>
-              <p>Improper storage of feed can produce bacteria viruses and fungi</p>
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2024/08/Pathogens.png"
+                alt={t("animalFacilities.pollutants.pathogens.imgAlt")}
+              />
+              <h3>{t("animalFacilities.pollutants.pathogens.title")}</h3>
+              <p>{t("animalFacilities.pollutants.pathogens.description")}</p>
             </div>
 
             <div className="pollutant-item">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2024/08/Carbon-Dioxide.png"
-                alt="Carbon Dioxide icon"
+                alt={t("animalFacilities.pollutants.carbonDioxide.imgAlt")}
               />
-              <h3>Carbon Dioxide</h3>
-              <p>Inadequate ventilation lead to High levels of CO2</p>
+              <h3>{t("animalFacilities.pollutants.carbonDioxide.title")}</h3>
+              <p>{t("animalFacilities.pollutants.carbonDioxide.description")}</p>
             </div>
           </div>
         </div>
@@ -157,18 +208,19 @@ export default function AnimalCarePage() {
         <div className="row">
           <div className="col-md-12">
             <div className="source-heading">
-              <h2>Air pollution sources in Animal facilities</h2>
-              Air pollution in animal facilities releases from various internal and external sources.
+              <h2>{t("animalFacilities.pollutionSources.title")}</h2>
+              {t("animalFacilities.pollutionSources.description")}
             </div>
           </div>
         </div>
       </div>
 
+      {/* Pollution Sources Grid */}
       <div className="railway-staion-plateform">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <p className="animal-facility">Farms | Laboratories | Health-care</p>
+              <p className="animal-facility">{t("animalFacilities.pollutionSources.facilities")}</p>
             </div>
           </div>
 
@@ -178,13 +230,13 @@ export default function AnimalCarePage() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Dust.png"
-                  alt="dust and particles"
+                  alt={t("animalFacilities.pollutionSources.sources.dustParticles.imgAlt")}
                   width="102"
                   height="99"
                 />
                 <div className="source-wrap_box">
                   <h2>
-                    <strong>Dust and particles</strong>
+                    <strong>{t("animalFacilities.pollutionSources.sources.dustParticles.title")}</strong>
                   </h2>
                 </div>
               </div>
@@ -194,13 +246,13 @@ export default function AnimalCarePage() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Cleaning-Agents-and-Disinfectants.png"
-                  alt="Cleaning Agents and Disinfectants"
+                  alt={t("animalFacilities.pollutionSources.sources.cleaningAgents.imgAlt")}
                   width="102"
                   height="99"
                 />
                 <div className="source-wrap_box">
                   <h2>
-                    <strong>Cleaning Agents and Disinfectants</strong>
+                    <strong>{t("animalFacilities.pollutionSources.sources.cleaningAgents.title")}</strong>
                   </h2>
                 </div>
               </div>
@@ -210,13 +262,13 @@ export default function AnimalCarePage() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Research-Activities.png"
-                  alt="Research Activities"
+                  alt={t("animalFacilities.pollutionSources.sources.researchActivities.imgAlt")}
                   width="102"
                   height="99"
                 />
                 <div className="source-wrap_box">
                   <h2>
-                    <strong>Research Activities</strong>
+                    <strong>{t("animalFacilities.pollutionSources.sources.researchActivities.title")}</strong>
                   </h2>
                 </div>
               </div>
@@ -226,13 +278,13 @@ export default function AnimalCarePage() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Ventilation-Systems.png"
-                  alt="Ventilation Systems"
+                  alt={t("animalFacilities.pollutionSources.sources.ventilationSystems.imgAlt")}
                   width="102"
                   height="99"
                 />
                 <div className="source-wrap_box">
                   <h2>
-                    <strong>Ventilation Systems</strong>
+                    <strong>{t("animalFacilities.pollutionSources.sources.ventilationSystems.title")}</strong>
                   </h2>
                 </div>
               </div>
@@ -246,13 +298,13 @@ export default function AnimalCarePage() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Animal-Bedding.png"
-                  alt="Animal Bedding"
+                  alt={t("animalFacilities.pollutionSources.sources.animalBedding.imgAlt")}
                   width="102"
                   height="99"
                 />
                 <div className="source-wrap_box">
                   <h2>
-                    <strong>Animal Bedding</strong>
+                    <strong>{t("animalFacilities.pollutionSources.sources.animalBedding.title")}</strong>
                   </h2>
                 </div>
               </div>
@@ -262,13 +314,13 @@ export default function AnimalCarePage() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Animal-Dander.png"
-                  alt="Animal Dander"
+                  alt={t("animalFacilities.pollutionSources.sources.animalDander.imgAlt")}
                   width="102"
                   height="99"
                 />
                 <div className="source-wrap_box">
                   <h2>
-                    <strong>Animal Dander</strong>
+                    <strong>{t("animalFacilities.pollutionSources.sources.animalDander.title")}</strong>
                   </h2>
                 </div>
               </div>
@@ -278,13 +330,13 @@ export default function AnimalCarePage() {
                 <img
                   className=""
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Animal-Feed.png"
-                  alt="Animal Feed"
+                  alt={t("animalFacilities.pollutionSources.sources.animalFeed.imgAlt")}
                   width="102"
                   height="99"
                 />
                 <div className="source-wrap_box">
                   <h2>
-                    <strong>Animal Feed</strong>
+                    <strong>{t("animalFacilities.pollutionSources.sources.animalFeed.title")}</strong>
                   </h2>
                 </div>
               </div>
@@ -300,8 +352,8 @@ export default function AnimalCarePage() {
           <div className="row">
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
-                <h2 className="title_heading">Challenges in Maintaining Air Quality</h2>
-                There are several challenges in maintaining good optimal air quality in animal facilities such as:
+                <h2 className="title_heading">{t("animalFacilities.challenges.title")}</h2>
+                {t("animalFacilities.challenges.description")}
               </div>
             </div>
           </div>
@@ -311,30 +363,30 @@ export default function AnimalCarePage() {
               <div className="area-para">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Ventilation-Systems.jpg"
-                  alt="Ventilation Systems in animal care center"
+                  alt={t("animalFacilities.challenges.items.ventilation.imgAlt")}
                 />
-                <h3>Ventilation Systems</h3>
-                Poor systems affect the proper ventilation and fail to provide adequate air exchange.
+                <h3>{t("animalFacilities.challenges.items.ventilation.title")}</h3>
+                {t("animalFacilities.challenges.items.ventilation.description")}
               </div>
             </div>
             <div className="col-md-4">
               <div className="area-para">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Temperature-and-Humidity-Control.jpg"
-                  alt="Temperature and Humidity Control in animal care center"
+                  alt={t("animalFacilities.challenges.items.temperatureHumidity.imgAlt")}
                 />
-                <h3>Temperature and Humidity Control</h3>
-                It is crucial for animal comfort but outdoor weather conditions can affect the control.
+                <h3>{t("animalFacilities.challenges.items.temperatureHumidity.title")}</h3>
+                {t("animalFacilities.challenges.items.temperatureHumidity.description")}
               </div>
             </div>
             <div className="col-md-4">
               <div className="area-para">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Cross-Contamination.jpg"
-                  alt="Cross-Contamination in animal facilities"
+                  alt={t("animalFacilities.challenges.items.crossContamination.imgAlt")}
                 />
-                <h3>Cross-Contamination</h3>
-                Improper airflow management in animal facilities spreads airborne pollutants between rooms.
+                <h3>{t("animalFacilities.challenges.items.crossContamination.title")}</h3>
+                {t("animalFacilities.challenges.items.crossContamination.description")}
               </div>
             </div>
           </div>
@@ -348,12 +400,12 @@ export default function AnimalCarePage() {
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
                 <h2 className="title_heading">
-                  Who is at{" "}
+                  {t("animalFacilities.whoAtRisk.title")}{" "}
                   <span style={{ color: "#78ae60" }}>
-                    <strong>Risk?</strong>
+                    <strong>{t("animalFacilities.whoAtRisk.highlight")}</strong>
                   </span>
                 </h2>
-                Air pollution have significant threat to everyones health in animal facilities.
+                {t("animalFacilities.whoAtRisk.description")}
               </div>
             </div>
           </div>
@@ -364,12 +416,11 @@ export default function AnimalCarePage() {
                 <div className="risk-img">
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/Animal-Health.png"
-                    alt="air quality and Animal Health"
+                    alt={t("animalFacilities.whoAtRisk.groups.animalHealth.imgAlt")}
                   />
                 </div>
-                <h3>Animal Health</h3>
-                Poor air quality in any animal facility can cause respiratory distress infections and other health
-                issues to animals.
+                <h3>{t("animalFacilities.whoAtRisk.groups.animalHealth.title")}</h3>
+                {t("animalFacilities.whoAtRisk.groups.animalHealth.description")}
               </div>
             </div>
             <div className="col-md-4">
@@ -378,12 +429,11 @@ export default function AnimalCarePage() {
                   <img
                     className="loco-pilot"
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/Staff-and-farmworkers.png"
-                    alt="air quality on the health of Staff and farmworkers"
+                    alt={t("animalFacilities.whoAtRisk.groups.staffFarmworkers.imgAlt")}
                   />
                 </div>
-                <h3>Staff and farmworkers</h3>
-                Poor air quality in animal farms labs care centers can be harmful to staff health as well which can
-                lead to various health conditions.
+                <h3>{t("animalFacilities.whoAtRisk.groups.staffFarmworkers.title")}</h3>
+                {t("animalFacilities.whoAtRisk.groups.staffFarmworkers.description")}
               </div>
             </div>
             <div className="col-md-4">
@@ -392,12 +442,11 @@ export default function AnimalCarePage() {
                   <img
                     className="driver"
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/Research-outcomes.png"
-                    alt="air quality studies on Research"
+                    alt={t("animalFacilities.whoAtRisk.groups.researchOutcomes.imgAlt")}
                   />
                 </div>
-                <h3>Research outcomes</h3>
-                Various air pollutants can affect the outcomes of research as can alter the data or cause invalid
-                conclusions.
+                <h3>{t("animalFacilities.whoAtRisk.groups.researchOutcomes.title")}</h3>
+                {t("animalFacilities.whoAtRisk.groups.researchOutcomes.description")}
               </div>
             </div>
           </div>
@@ -411,12 +460,12 @@ export default function AnimalCarePage() {
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
                 <h2 className="title_heading">
-                  Air pollution{" "}
+                  {t("animalFacilities.guidelines.title")}{" "}
                   <span style={{ color: "#78ae60" }}>
-                    <strong>Guidelines for Animal facilities</strong>{" "}
+                    <strong>{t("animalFacilities.guidelines.highlight")}</strong>{" "}
                   </span>
                 </h2>
-                <h3>Check out different countries guidelines for Air quality in Animal Care Centers</h3>
+                <h3>{t("animalFacilities.guidelines.subtitle")}</h3>
               </div>
             </div>
           </div>
@@ -426,13 +475,13 @@ export default function AnimalCarePage() {
               <div className="guidelines-logo">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/ccac.png"
-                  alt="CCAC guidelines for animal facilities"
+                  alt={t("animalFacilities.guidelines.organizations.ccac.imgAlt")}
                 />
                 <a
                   href="https://www.pranaair.com/wp-content/uploads/2024/08/CCAC_guidelines-Laboratory.pdf"
-                  aria-label="CCAC Guidelines Laboratory Animal Facilities"
+                  aria-label={t("animalFacilities.guidelines.organizations.ccac.ariaLabel")}
                 >
-                  CCAC Guidelines Laboratory Animal Facilities
+                  {t("animalFacilities.guidelines.organizations.ccac.title")}
                 </a>
               </div>
             </div>
@@ -440,13 +489,13 @@ export default function AnimalCarePage() {
               <div className="guidelines-logo">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/cpcsea-animal-facility.png"
-                  alt="CPCSEA GUIDELINES for animal facilities"
+                  alt={t("animalFacilities.guidelines.organizations.cpcsea.imgAlt")}
                 />
                 <a
                   href="https://www.pranaair.com/wp-content/uploads/2024/08/cpcsea.pdf"
-                  aria-label="CPCSEA Guidelines For Laboratory Animal Facility"
+                  aria-label={t("animalFacilities.guidelines.organizations.cpcsea.ariaLabel")}
                 >
-                  CPCSEA Guidelines For Laboratory Animal Facility
+                  {t("animalFacilities.guidelines.organizations.cpcsea.title")}
                 </a>
               </div>
             </div>
@@ -454,13 +503,13 @@ export default function AnimalCarePage() {
               <div className="guidelines-logo">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/Environmental-Quality-in-Animal-Production-Housing-Facilities.png"
-                  alt="Environmental Quality in Animal Production Housing Facilities"
+                  alt={t("animalFacilities.guidelines.organizations.environmental.imgAlt")}
                 />
                 <a
                   href="https://www.pranaair.com/wp-content/uploads/2024/08/airbase_11092.pdf"
-                  aria-label="Environmental Quality in Animal Production Housing Facilities"
+                  aria-label={t("animalFacilities.guidelines.organizations.environmental.ariaLabel")}
                 >
-                  Environmental Quality in Animal Production Housing Facilities
+                  {t("animalFacilities.guidelines.organizations.environmental.title")}
                 </a>
               </div>
             </div>
@@ -468,13 +517,13 @@ export default function AnimalCarePage() {
               <div className="guidelines-logo">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/animal-care-facility.png"
-                  alt="western illinois university guidelines for laboratory animal care facility"
+                  alt={t("animalFacilities.guidelines.organizations.laboratory.imgAlt")}
                 />
                 <a
                   href="https://www.pranaair.com/wp-content/uploads/2024/08/hs_Laboratory_Animal_Care_Facility.pdf"
-                  aria-label="Laboratory Animal Care Facility"
+                  aria-label={t("animalFacilities.guidelines.organizations.laboratory.ariaLabel")}
                 >
-                  Laboratory Animal Care Facility
+                  {t("animalFacilities.guidelines.organizations.laboratory.title")}
                 </a>
               </div>
             </div>
@@ -489,14 +538,12 @@ export default function AnimalCarePage() {
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
                 <h2 className="title_heading">
-                  Air quality{" "}
+                  {t("animalFacilities.solutions.title")}{" "}
                   <span style={{ color: "#78ae60" }}>
-                    <strong>Solutions</strong>{" "}
+                    <strong>{t("animalFacilities.solutions.highlight")}</strong>{" "}
                   </span>
                 </h2>
-                Installing air quality solutions throughout the facility allows for managing the air pollution exposure
-                to staff and animals health by providing clean air to breathe. Moreover it helps in better and more
-                accurate research outcomes.
+                {t("animalFacilities.solutions.description")}
               </div>
             </div>
           </div>
@@ -516,7 +563,7 @@ export default function AnimalCarePage() {
                     aria-controls="monitors"
                     aria-selected="true"
                   >
-                    Air quality Monitors
+                    {t("animalFacilities.solutions.tabs.monitors")}
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -530,7 +577,7 @@ export default function AnimalCarePage() {
                     aria-controls="fresh-air"
                     aria-selected="false"
                   >
-                    Fresh air machine
+                    {t("animalFacilities.solutions.tabs.freshAir")}
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -544,7 +591,7 @@ export default function AnimalCarePage() {
                     aria-controls="data-display"
                     aria-selected="false"
                   >
-                    Data Display
+                    {t("animalFacilities.solutions.tabs.dataDisplay")}
                   </button>
                 </li>
               </ul>
@@ -555,23 +602,27 @@ export default function AnimalCarePage() {
                       <div className="air-quality-tab-img">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-sensible-air-quality-device.jpg"
-                          alt="prana air sensible indoor air quality monitor for animal facilities"
+                          alt={t("animalFacilities.solutions.products.monitor.imgAlt")}
                         />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="air-quality-heading">
-                        <h3>Prana Air Sensible+Air quality monitor</h3>
-                        Advanced air quality monitor can measures particulate matter CO2 VOCs and other pollutants.
+                        <h3>{t("animalFacilities.solutions.products.monitor.title")}</h3>
+                        {t("animalFacilities.solutions.products.monitor.description")}
                       </div>
                       <ul className="airquality_list">
-                        <li>Real-time air quality monitoring</li>
-                        <li>Help in immediate adjustments</li>
-                        <li>Monitors Multiple Indoor Pollutants</li>
+                        <li>{t("animalFacilities.solutions.products.monitor.features.realTime")}</li>
+                        <li>{t("animalFacilities.solutions.products.monitor.features.adjustments")}</li>
+                        <li>{t("animalFacilities.solutions.products.monitor.features.multiple")}</li>
                       </ul>
                       <div className="btns-bottom">
-                        <a className="knowmore_btn" href="#" aria-label="Indoor Air Quality Monitor">
-                          Indoor Air Monitor
+                        <a
+                          className="knowmore_btn"
+                          href="#"
+                          aria-label={t("animalFacilities.solutions.products.monitor.ctaAriaLabel")}
+                        >
+                          {t("animalFacilities.solutions.products.monitor.cta")}
                         </a>
                       </div>
                     </div>
@@ -583,24 +634,27 @@ export default function AnimalCarePage() {
                       <div className="air-quality-tab-img">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2024/08/Prana-Air-Fresh-Air-Machines.jpg"
-                          alt="prana air fresh air machine for animal care falicities"
+                          alt={t("animalFacilities.solutions.products.freshAir.imgAlt")}
                         />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="air-quality-heading">
-                        <h3>Prana Air Fresh Air Machine</h3>
-                        Cutting-edge indoor air purifier to filter out various pollutants and provide clean air for
-                        everyone.
+                        <h3>{t("animalFacilities.solutions.products.freshAir.title")}</h3>
+                        {t("animalFacilities.solutions.products.freshAir.description")}
                       </div>
                       <ul className="airquality_list">
-                        <li>Removes 99.5% of Indoor Pollutants</li>
-                        <li>Covers Up to 1200 Sq Ft</li>
-                        <li>AI-Powered Automatic Airflow</li>
+                        <li>{t("animalFacilities.solutions.products.freshAir.features.removes")}</li>
+                        <li>{t("animalFacilities.solutions.products.freshAir.features.coverage")}</li>
+                        <li>{t("animalFacilities.solutions.products.freshAir.features.aiPowered")}</li>
                       </ul>
                       <div className="btns-bottom">
-                        <a className="knowmore_btn" href="#" aria-label="Fresh air machine for animal care center">
-                          Fresh Air Machine
+                        <a
+                          className="knowmore_btn"
+                          href="#"
+                          aria-label={t("animalFacilities.solutions.products.freshAir.ctaAriaLabel")}
+                        >
+                          {t("animalFacilities.solutions.products.freshAir.cta")}
                         </a>
                       </div>
                     </div>
@@ -612,19 +666,19 @@ export default function AnimalCarePage() {
                       <div className="air-quality-tab-img">
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2024/08/animal-car-tv-display.jpg"
-                          alt="AQI TV app for displaying air quality monitor for animal facilities"
+                          alt={t("animalFacilities.solutions.products.dataDisplay.imgAlt")}
                         />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="air-quality-heading">
-                        <h3>Prana Air Customized TV Display</h3>
-                        Customized digital display can install in the facilities for 24/7 real-time data visualization.
+                        <h3>{t("animalFacilities.solutions.products.dataDisplay.title")}</h3>
+                        {t("animalFacilities.solutions.products.dataDisplay.description")}
                       </div>
                       <ul className="airquality_list">
-                        <li>Real-Time Air Quality Data Display</li>
-                        <li>Customizable Display Settings</li>
-                        <li>Access to Both Indoor and Outdoor Data</li>
+                        <li>{t("animalFacilities.solutions.products.dataDisplay.features.realTimeData")}</li>
+                        <li>{t("animalFacilities.solutions.products.dataDisplay.features.customizable")}</li>
+                        <li>{t("animalFacilities.solutions.products.dataDisplay.features.indoorOutdoor")}</li>
                       </ul>
                     </div>
                   </div>
@@ -642,13 +696,12 @@ export default function AnimalCarePage() {
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
                 <h2 className="title_heading">
-                  The Effects of Air Pollution -
+                  {t("animalFacilities.effects.title")}
                   <span style={{ color: "#78ae60" }}>
-                    <strong>Animal facilities</strong>
+                    <strong>{t("animalFacilities.effects.highlight")}</strong>
                   </span>
                 </h2>
-                Air quality in animal farm hospitals and labs is crucial for animal health and accurate research
-                outcomes. Here check the comparison:
+                {t("animalFacilities.effects.description")}
               </div>
             </div>
           </div>
@@ -656,65 +709,23 @@ export default function AnimalCarePage() {
           <div className="row line">
             <div className="col-md-6">
               <div className="air_quality_box">
-                <h3>Without Air Quality Solutions</h3>
+                <h3>{t("animalFacilities.effects.without.title")}</h3>
                 <ul className="airquality_list red_list">
-                  <li>Poor health and discomfort for animals.</li>
-                  <li>High respiratory issues risks for staff.</li>
-                  <li>Inaccuracy in researches outcomes.</li>
+                  <li>{t("animalFacilities.effects.without.items.poorHealth")}</li>
+                  <li>{t("animalFacilities.effects.without.items.respiratoryRisks")}</li>
+                  <li>{t("animalFacilities.effects.without.items.inaccuracy")}</li>
                 </ul>
               </div>
             </div>
             <div className="col-md-6">
               <div className="air_quality_box">
-                <h3>With Air Quality Solutions</h3>
+                <h3>{t("animalFacilities.effects.with.title")}</h3>
                 <ul className="airquality_list">
-                  <li>Enhanced comfort and health for animals.</li>
-                  <li>Reduced staff risk for respiratory issues.</li>
-                  <li>Accurate and reliable research results.</li>
+                  <li>{t("animalFacilities.effects.with.items.enhancedComfort")}</li>
+                  <li>{t("animalFacilities.effects.with.items.reducedRisk")}</li>
+                  <li>{t("animalFacilities.effects.with.items.accurateResults")}</li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* SECTION 9: Slider */}
-      <div className="slider">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={7000}
-                keyBoardControl={true}
-                customTransition="all .5s"
-                transitionDuration={500}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-              >
-                {carouselItems.map((item) => (
-                  <div key={item.id}>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="slidder-txt">
-                          <img src={item.icon || "/placeholder.svg"} alt={item.title} />
-                          <h3>{item.title}</h3>
-                          <p>{item.description}</p>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="slider-img">
-                          <img src={item.image || "/placeholder.svg"} alt={`${item.title} for animal care center`} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Carousel>
             </div>
           </div>
         </div>
@@ -727,12 +738,12 @@ export default function AnimalCarePage() {
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
                 <h2 className="title_heading">
-                  Our{" "}
+                  {t("animalFacilities.clientele.title")}{" "}
                   <span style={{ color: "#78ae60" }}>
-                    <strong>Clientele</strong>
+                    <strong>{t("animalFacilities.clientele.highlight")}</strong>
                   </span>
                 </h2>
-                Our partnerships with these renowned organizations reflect our commitment to excellence and innovation.
+                {t("animalFacilities.clientele.description")}
               </div>
             </div>
           </div>
@@ -742,23 +753,32 @@ export default function AnimalCarePage() {
               <div className="client-logo">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
-                  alt="morgan stanley logo"
+                  alt={t("animalFacilities.clientele.logos.morganStanley")}
                 />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png" alt="ola logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
+                  alt={t("animalFacilities.clientele.logos.ola")}
+                />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png" alt="microsoft logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
+                  alt={t("animalFacilities.clientele.logos.microsoft")}
+                />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png" alt="iit banaras logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
+                  alt={t("animalFacilities.clientele.logos.iitBhu")}
+                />
               </div>
             </div>
           </div>
@@ -768,23 +788,32 @@ export default function AnimalCarePage() {
               <div className="client-logo">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/RENAULT-NISSAN.png"
-                  alt="renault nissan logo"
+                  alt={t("animalFacilities.clientele.logos.renaultNissan")}
                 />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png" alt="tata logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png"
+                  alt={t("animalFacilities.clientele.logos.tata")}
+                />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png" alt="csir logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png"
+                  alt={t("animalFacilities.clientele.logos.csir")}
+                />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png" alt="mahindra logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png"
+                  alt={t("animalFacilities.clientele.logos.mahindra")}
+                />
               </div>
             </div>
           </div>
@@ -792,12 +821,18 @@ export default function AnimalCarePage() {
           <div className="row client_logo_section">
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/INTERGLOBE.png" alt="interglobe logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/INTERGLOBE.png"
+                  alt={t("animalFacilities.clientele.logos.interglobe")}
+                />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/GMDA-1.png" alt="gmda logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/GMDA-1.png"
+                  alt={t("animalFacilities.clientele.logos.gmda")}
+                />
               </div>
             </div>
             <div className="col-md-3">
@@ -805,13 +840,16 @@ export default function AnimalCarePage() {
                 <img
                   style={{ paddingTop: "20px" }}
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/leighton-logo.png"
-                  alt="leighton logo"
+                  alt={t("animalFacilities.clientele.logos.leighton")}
                 />
               </div>
             </div>
             <div className="col-md-3">
               <div className="client-logo">
-                <img src="https://www.pranaair.com/wp-content/uploads/2022/08/HAVELLS.png" alt="havells logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2022/08/HAVELLS.png"
+                  alt={t("animalFacilities.clientele.logos.havells")}
+                />
               </div>
             </div>
           </div>
@@ -824,8 +862,8 @@ export default function AnimalCarePage() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -840,9 +878,9 @@ export default function AnimalCarePage() {
             <div className="col-md-12">
               <div className="introducing_box sub_title_box text-center">
                 <h2 className="title_heading">
-                  Frequently Asked <span style={{ color: "#78ae60" }}>Questions</span>
+                  {t("faq.title")} <span className="bold_text">{t("faq.highlight")}</span>
                 </h2>
-                <p>Have questions? Were here to help.</p>
+                <p>{t("faq.description")}</p>
               </div>
             </div>
           </div>
@@ -861,13 +899,10 @@ export default function AnimalCarePage() {
           <div className="col-md-12">
             <div className="introducing_box sub_title_box text-center">
               <h2 className="title_heading">
-                Industrial{" "}
-                <span className="bold_text" style={{ color: "#78ae60" }}>
-                  Applications
-                </span>
+                {t("industrialApplications.title")}{" "}
+                <span className="bold_text">{t("industrialApplications.highlight")}</span>
               </h2>
-              Prana Air offers a diverse selection of smart affordable and remarkably precise air quality solutions
-              catering to various sectors irrespective of their scale.
+              <p>{t("industrialApplications.description")}</p>
             </div>
           </div>
         </div>

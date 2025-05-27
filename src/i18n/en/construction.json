@@ -1,0 +1,404 @@
+{
+    "industrialApplicationsData": {
+        "hotel": {
+            "title": "Solutions for Hotel"
+        },
+        "restaurant": {
+            "title": "Solutions for Restaurant"
+        },
+        "institutes": {
+            "title": "Solutions for Institutes"
+        },
+        "cinema": {
+            "title": "Solutions for Cinema/Theatre"
+        },
+        "automobiles": {
+            "title": "Solutions for Automobiles"
+        },
+        "realEstate": {
+            "title": "Solutions for Real Estates"
+        },
+        "smartphone": {
+            "title": "Solutions for Smartphone Makers"
+        },
+        "construction": {
+            "title": "Solutions for Construction"
+        },
+        "animalCare": {
+            "title": "Air quality Solutions for Animal care"
+        },
+        "logistics": {
+            "title": "Air quality Solutions for logistics"
+        },
+        "railways": {
+            "title": "Air quality Solutions for Railways"
+        }
+    },
+     "construction": {
+    "banner": {
+      "title": "Air quality Monitoring solutions",
+      "highlight": " For Construction Sites",
+      "description": "A complete solution to air quality monitoring of PM2.5, PM10, dust emissions, and VOCs at construction and demolition sites.",
+      "cta": "Get a Quote"
+    },
+    "pollutants": {
+      "title": "Major Air",
+      "highlight": "Pollutants",
+      "description": "Air pollution has been a major cause of concern for a long time now and there one major aspect of it that goes unnoticed is the air pollution due to construction. 30% of the air pollution prevalent in Delhi is caused due to construction pollution i.e. particulate matter – pm2.5, pm10 dust particles produced from the construction sites."
+    },
+    "pollutantGrid": {
+      "pm": {
+        "title": "PM",
+        "description": "Fine particles suspended in the air, especially at the sites",
+        "imgAlt": "pm2.5 pm10 pollutants level at construction site"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Machinery on the sites creates noise that can cause ear injury.",
+        "imgAlt": "noise pollution"
+      },
+      "co": {
+        "title": "CO",
+        "description": "It is produced from the combustion of carbon-based fuels.",
+        "imgAlt": "co pollution at construction site"
+      },
+      "vocs": {
+        "title": "VOCs",
+        "description": "Activities like welding emits organic compounds & cause illness",
+        "imgAlt": "VOCs pollution at construction site"
+      },
+      "nox": {
+        "title": "NOx",
+        "description": "Burning of fuels used in machinery can release NOx into the air.",
+        "imgAlt": "no2 pollution at construction site"
+      }
+    },
+    "pollutionEffects": {
+      "vocs": {
+        "title": "VOCs",
+        "description": "Exposures can cause dizziness, headaches, and other discomforts.",
+        "imgAlt": "voc at construction site"
+      },
+      "sox": {
+        "title": "SOx",
+        "description": "Shifting to alternative fuels can decrease SOx emissions.",
+        "imgAlt": "noise at construction site"
+      },
+      "nox": {
+        "title": "NOx",
+        "description": "Causes respiratory problems and is a major cause of acid rain.",
+        "imgAlt": "NOx pollutant at construction site"
+      },
+      "pm": {
+        "title": "PM",
+        "description": "It can cause respiratory and cardiovascular problems.",
+        "imgAlt": "particulate matter pm2.5 and pm10 at construction site"
+      },
+      "co": {
+        "title": "CO",
+        "description": "It can cause nausea, dizziness, headaches, and even death at very high levels.",
+        "imgAlt": "co gas at construction site"
+      }
+    },
+    "risk": {
+      "title": "Who are at",
+      "highlight": "Risk?",
+      "description": "The workers working on the C&D site are affected the most by air pollution. Other than them, people living nearby these areas are affected by both indoor and outdoor air pollution caused by C&D emissions near their homes. These include:"
+    },
+     "peopleAtSite": {
+      "title": "People at the site",
+      "workers": {
+        "title": "Construction workers",
+        "description": "They are most exposed to various pollution sources",
+        "imgAlt": "Construction workers"
+      },
+      "inspector": {
+        "title": "Construction Inspector",
+        "description": "They can experience short-term health effects.",
+        "imgAlt": "Construction Inspector"
+      },
+      "surveyor": {
+        "title": "Surveyor",
+        "description": "Eye & respiratory tract irritations, & aggravation in asthma.",
+        "imgAlt": "construction surveyor"
+      },
+      "civilEngineer": {
+        "title": "Civil Engineer",
+        "description": "Exposure can impact attentiveness.",
+        "imgAlt": "civil engineer for construction"
+      }
+    },
+    "residentialAreas": {
+      "title": "Nearby Residential Areas",
+      "children": {
+        "title": "Children",
+        "description": "Their airways are narrower, resulting in more obstructions.",
+        "imgAlt": "Children"
+      },
+      "pregnantLadies": {
+        "title": "Pregnant ladies",
+        "description": "PM exposure can cause preterm labor, low-weight deliveries, etc.",
+        "imgAlt": "Pregnant ladies"
+      },
+      "oldPeople": {
+        "title": "Old people",
+        "description": "Aggravates COPD, asthma, and other disorders among old age people.",
+        "imgAlt": "Old people"
+      },
+      "healthIssues": {
+        "title": "People with health issues",
+        "description": "Their conditions might worsen and harm organs such as the kidneys, lungs, etc.",
+        "imgAlt": "People with health issues"
+      }
+    },
+    "guidelines": {
+      "title": "Guidelines for C&D sites",
+      "highlight": "as per the CAQM",
+      "description": "The government of India recognized the problem and has come up with a solution for dust mitigation. The Ministry of Environment, Forest, and Climate Change recently issued a notice regarding the construction pollution at the project sites in Delhi NCR and other regions that come under the Commission for Air Quality and Management (CAQM).",
+      "knowMore": "Know More",
+      "viewBtnAlt": "view button"
+    },
+    "guidelinesDetails": {
+      "title": "Dust Pollution Control Self Assessment",
+      "dpcc": {
+        "imgAlt": "DPCC",
+        "abbr": "DPCC",
+        "fullName": "(Delhi Pollution Control Committee)"
+      },
+      "hspcb": {
+        "imgAlt": "HSPCB (Haryana State Pollution Control Board)",
+        "abbr": "HSPCB",
+        "fullName": "(Haryana State Pollution Control Board)"
+      },
+      "uppcb": {
+        "imgAlt": "UPPCB (Uttar Pradesh Pollution Control Board)",
+        "abbr": "UPPCB",
+        "fullName": "(Uttar Pradesh Pollution Control Board)"
+      },
+      "instructions": {
+        "intro": "A bunch of instructions by Govt. of India is given in order to curb the Construction and Demolition activities in Delhi NCR, India which are as follows:-",
+        "item1": "The Government announced that an online tool should be introduced to keep track of whether the pollution control rules are being implemented as per said rules.",
+        "item2": "All projects of construction and demolition whose area is 500 square meters or more than 500 square meters which come under Delhi NCR have to register at the web portal.",
+        "item3": "Video fencing that is also well-found with remote 4G connectivity should be integrated with the web portal for effective observation of the implementation of pollution control measures.",
+        "item4": "All the construction and demolition sites need to be equipped with economical and accurate sensors of the particulate matter, PM10, AND PM2.5. The sensors should be linked to where they can be accessed live at all times by the CPCB, government, and other government bodies."
+      },
+      "pressRelease": {
+        "title": "Press Release by CAQM:",
+        "link": "https://pib.gov.in/Pressreleaseshare.aspx?PRID=1759914"
+      },
+      "howWeCanHelp": "How we can help?"
+    },
+    "ambientMonitor": {
+      "tabs": {
+        "monitor": {
+          "title": "Ambient Monitor",
+          "imgAlt": "Prana air construction ambient air quality monitor"
+        },
+        "apiData": {
+          "title": "API Data To Govt. Portal",
+          "imgAlt": "prana air monitor api data for construction site"
+        },
+        "cctvCamera": {
+          "title": "CCTV Camera",
+          "imgAlt": "construction cctv camera"
+        }
+      },
+      "content": {
+        "monitor": {
+          "description": "Prana Air Ambient Air Quality Monitors help construction companies monitor air quality and ensure worker safety. Accurate readings of different air quality parameters, including temperature, allow for proactive measures to mitigate air pollution and improve overall air quality on site.",
+          "featuresTitle": "Features",
+          "features": [
+            "Real-time and historical data analysis",
+            "Lightweight and Weatherproof monitor",
+            "Multiple sensor & connectivity available",
+            "Can be used as a CAAQMS"
+          ],
+          "parameters": ["AQI", "PM1.0", "PM2.5", "PM10", "Temperature", "Humidity"],
+          "brochureBtn": "Brochure",
+          "quoteBtn": "Get A Quote"
+        },
+        "apiData": {
+          "description": "As per the Govt. guidlines, the data has to be accessed on a website portal owned by the government. Prana Air will provide the data of the air quality monitor through an API that can be integrated on any website.",
+          "featuresTitle": "Features:",
+          "features": [
+            "Uninterrupted API data",
+            "Real-time and historical data",
+            "100% uptime data transfer",
+            "Reliable, stable & secure data"
+          ],
+          "brochureBtn": "Brochure",
+          "quoteBtn": "Get A Quote"
+        },
+        "cctvCamera": {
+          "description": "With the ability to remotely access live video footage and real-time air quality data, construction teams can make informed decisions to improve the air quality, and follow the standards, and safety of their work environment.",
+          "featuresTitle": "Features",
+          "features": [
+            "Live video footage of the site",
+            "Enables proactive measures to mitigate pollution",
+            "Real-time monitoring of actvities",
+            "Improves the saftety & security of the workers"
+          ],
+          "brochureBtn": "Brochure",
+          "quoteBtn": "Get A Quote"
+        }
+      }
+    },
+    "airQualityMonitoring": {
+      "title": "Air Quality",
+      "highlight": "Monitoring at Construction Sites",
+      "subtitle": "Bad air quality means bad health for construction workers and people living nearby",
+      "description": "Air quality assessment at C&D sites will help in monitoring and maintaining the air quality as per the Govt. norms, and therefore mitigation strategies can be adapted to maintain the air quality."
+    },
+    "airQualitySolutions": {
+      "tabs": {
+        "monitor": "Air Quality Monitor",
+        "display": "LED/TV Display",
+        "dashboard": "Storage & Dashboard"
+      },
+      "content": {
+        "monitor": {
+          "title": "Ambient Air Monitor (CAAQMS)",
+          "description": "Prana Air monitors detect various pollutants and can be used as a CAAQMS for construction sites. This Continuous Ambient Air Quality Management System enables informed decisions and emission control strategies, ensuring improved air quality and reducing health risks for workers and communities.",
+          "parameters": ["PM1", "PM2.5", "PM10", "Noise", "Temperature", "Humidity", "TVOC"],
+          "brochureLink": "Download Brochure",
+          "imgAlt": "prana air ambient caaqms air quality monitor for construction sites"
+        },
+        "display": {
+          "title": "LED Display & Android TV Dashboard",
+          "description": "Display real-time air quality data on your Android television sets or LED displays 24/7 at construction sites. This enables construction teams to easily monitor and analyze air quality data, helping them make informed decisions and take proactive measures to mitigate potential health risks for workers and nearby communities.",
+          "features": ["TV Display", "Large Display", "More Insightful", "Real-time Data"],
+          "imgAlt": "prana air construction monitor led and android tv display"
+        },
+        "dashboard": {
+          "title": "Cloud Storage & Data Dashboards",
+          "description": "Cloud storage is an essential tool for construction sites to remotely access monitored data. Cloud storage provides a secure backup for critical data, reducing the risk of data loss or corruption. The data can be accessed on mobile and tablet apps, android TV and web-dashboard anytime anywhere 24/7.",
+          "platforms": ["Mobile", "Tablet", "TV", "Web"],
+          "imgAlt": "aqi cloud storage and data dashboard"
+        }
+      }
+    },
+    "monitorFeatures": {
+      "uninterrupted": {
+        "title": "Uninterrupted Performance :",
+        "description": "No Continuous Power Needed",
+        "imgAlt": "uninterrupted performance of prana air ambient air quality monitor at constructions site"
+      },
+      "gps": {
+        "title": "GPS Enabled :",
+        "description": "Location-based deployment",
+        "imgAlt": "gps enabled on prana air ambient air quality monitor at constructions site"
+      },
+      "sdCard": {
+        "title": "SD Card Storage :",
+        "description": "Efficiently store data offline",
+        "imgAlt": "sd card offline data storage on prana air ambient air quality monitor at constructions site"
+      }
+    },
+    "waterproofBanner": {
+      "title": "Ambient Air Quality Monitor",
+      "description": "Monitor boasts an IP68 waterproof housing to provide unparalleled durability and performance in any weather condition. Ensures reliable data collection and analysis with accurate air quality.",
+      "imgAlt": "IP68 Weatherproof of Prana Air Ambient air quality monitor for construction sites"
+    },
+    "webDashboard": {
+      "title": "AQI App and Web Dashboard",
+      "description": "Access device data display with AQI App and Web Dashboard connectivity. Seamlessly navigate to trend analysis, leveraging historical and comparative insights on air quality.",
+      "downloadIOS": {
+        "prefix": "Download for",
+        "platform": "iOS"
+      },
+      "downloadAndroid": {
+        "prefix": "Download for",
+        "platform": "android"
+      },
+      "imgAlt": "aqi apps and web dashboard for prana air ambient air quality monitor at constructions sites"
+    },
+    "dataServices": {
+      "title": "Data Freemium",
+      "highlight": "Services",
+      "description": "You can access the real-time & historical air quality data of your monitor on multiple devices like mobile and tablet apps, android TV/LED display, and website 24*7. For more analytical and data reports, you can avail the premium data features of AQI dashboard."
+    },
+    "servicesGrid": {
+      "monitor": {
+        "title": "Ambient Monitor (CAAQMS)",
+        "imgAlt": "prana air ambient air quality monitor caaqms for construction sites"
+      },
+      "display": {
+        "title": "LED Display/TV Dashboard",
+        "imgAlt": "led display and android tv dashboard at construction site"
+      },
+      "dashboard": {
+        "title": "Data Dashboards & Cloud Storage",
+        "imgAlt": "aqi customized data dashboard and cloud storage"
+      }
+    },
+     "testimonial": {
+      "quote": "We have been using the PRANA AIRs Air Quality Monitors, installed by PURELOGIC LABS INDIA PVT. LTD., 706, 7th Floor, Crown Heights, Sector - 10, Rohini, New Delhi, at our different construction sites and have found their product accurate and reliable. The devices installed have helped us to comply with the air quality standards and ensure the safety of our workers. The after-sales service is very prompt and excellent.",
+      "logoAlt": "unity group logo",
+      "name": "Anil Sobti",
+      "position": "General Manager Commercial"
+    },
+    "rmcPlant": {
+      "description": {
+        "part1": "Discover the Importance of Air Quality Monitoring for",
+        "highlight": "RMC Plants:",
+        "part2": "Ensuring Compliance and Healthy Atmospheres."
+      },
+      "knowMore": "Know More",
+      "btnIconAlt": "button icon"
+    },
+    "clientele": {
+      "title": "Our",
+      "highlight": "Clientele",
+      "description": "We are honored to work with so many well-known companies."
+    },
+      "installation": {
+      "title": "Installation of Ambient Monitors at Construction Sites"
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "highlight": "Questions",
+      "description": "About Air Quality Solution for construction sites",
+      "helpText": "Have questions? We're here to help.",
+      "questions": {
+        "q1": {
+          "question": "1. What are some common air pollutants that are present at C&D sites?",
+          "answer": "– Common air pollutants present at C&D sites are PM2.5, PM10, CO, NOx, VOCs, etc, and noise."
+        },
+        "q2": {
+          "question": "2. What are the health impacts of the pollutants present at a C&D site?",
+          "answer": "– Workers and people living nearby are affected the most. The harm can be increased by subsequent exposure to PM and dust pollution. Health effects include eye and respiratory tract irritations, lung and kidney damage, and cancer."
+        },
+        "q3": {
+          "question": "3. What are some effective methods for reducing dust at C&D sites?",
+          "answer": "– The best methods for reducing dust at C&D facilities include routinely wetting down surfaces, employing dust suppression devices, and making sure enclosed spaces have adequate ventilation."
+        },
+        "q4": {
+          "question": "4. Why is it necessary to have air quality monitoring solutions?",
+          "answer": "– To know the nature of pollutants and how much they are present at the site so that necessary actions can be taken while complying with the standards under the CAQM."
+        },
+        "q5": {
+          "question": "5. What are some of the regulations that C&D sites must follow in order to maintain appropriate air quality?",
+          "answer": "– C&D sites are required to abide by rules established by the regional air quality management district or a state agency, which may include restrictions on the number of certain pollutants that can be emitted, measures to reduce dust, and reporting requirements."
+        },
+        "q6": {
+          "question": "6. Other than the air pollutants, do your monitors include any other parameters?",
+          "answer": "– Yes, you can keep an eye on the humidity, noise, and temperature of a place."
+        },
+        "q7": {
+          "question": "7. Are there any further advantages to the solutions?",
+          "answer": "– Customizable dashboard, 24*7 remote access to the data, health suggestions, real-time and historical data analysis, QR code to scan for real-time AQI in that location, and much more."
+        }
+      }
+    },
+     "contact": {
+      "title": "Get in Touch",
+      "description": "Please help us know what requirements you have. Our team will contact you very soon."
+    },
+    "industrialApplications": {
+      "title": "Industrial",
+      "highlight": "Applications",
+      "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart,",
+      "descriptionLine2": "affordable, and highly accurate air quality solutions for various industries."
+    }
+  }
+}

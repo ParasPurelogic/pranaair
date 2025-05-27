@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import "./style.css"
 import "react-multi-carousel/lib/styles.css"

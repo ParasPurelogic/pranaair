@@ -1,54 +1,144 @@
-
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
-import PollutantTabs from "@/Components/Pages/FreshAirMachine/pollutant-tabs"
 import FaqAccordion from "@/Components/Pages/FreshAirMachine/faq-accordion"
-import ProductImageTabs from "@/Components/Pages/FreshAirMachine/product-image-tabs"
+import { getServerTranslation } from "@/i18n/server"
+import Image from "next/image"
+import Link from "next/link"
 
-export default function FreshAirMachine() {
+export default async function FreshAirMachine() {
+  const { t } = await getServerTranslation("fresh-air-machine")
   const faqItems = [
     {
-      question: "1. What is the difference between an air purifier and this fresh air machine?",
-      answer:
-        "Prana Air's fresh air machine filters the ambient air and then brings that air inside your home. Whereas, room air purifiers refilter and recirculate the same air inside your room again and again.",
+      question: t("freshAirMachineFAQ.items.1.question"),
+      answer: t("freshAirMachineFAQ.items.1.answer"),
     },
     {
-      question: "2. How many filters are present in the device?",
-      answer: "Our air purifying machine consists of three 13-grade HEPA filters.",
+      question: t("freshAirMachineFAQ.items.2.question"),
+      answer: t("freshAirMachineFAQ.items.2.answer"),
     },
     {
-      question: "3. Is there any warranty on the machine?",
-      answer: "Yes, there is 1-year warranty on the fresh air machine",
+      question: t("freshAirMachineFAQ.items.3.question"),
+      answer: t("freshAirMachineFAQ.items.3.answer"),
     },
     {
-      question: "4. How to install the machine?",
-      answer: "You don't have to be concerned about the setup. Our in-house technician will install the device.",
+      question: t("freshAirMachineFAQ.items.4.question"),
+      answer: t("freshAirMachineFAQ.items.4.answer"),
     },
     {
-      question: "5. What is the dimension of filters used in the machine?",
-      answer:
-        "Prana Air Fresh Air Machine has three filters. 1st filter: 39.5 x 4.5 x 19 (cm), 2nd filter: 39.5 x 4.5 x 19 (cm), 3rd filter: 39.5 x 20 x 19 (cm).",
+      question: t("freshAirMachineFAQ.items.5.question"),
+      answer: t("freshAirMachineFAQ.items.5.answer"),
     },
     {
-      question: "6. Can I change a particular filter from the 3 filters?",
-      answer: "Yes, you can change a filter individually if there is a need.",
+      question: t("freshAirMachineFAQ.items.6.question"),
+      answer: t("freshAirMachineFAQ.items.6.answer"),
     },
     {
-      question: "7. What air pollutants can this machine filter?",
-      answer:
-        "Air pollutants like PM1, PM2.5, and PM10, CO2, TVOC & HCHO can be excluded from the clean air coming out of the machine's outlet.",
+      question: t("freshAirMachineFAQ.items.7.question"),
+      answer: t("freshAirMachineFAQ.items.7.answer"),
     },
     {
-      question: "8. What is the coverage area of the machine?",
-      answer:
-        "Prana Air Fresh Air Machine offers a coverage area of 1200 square feet. This means that our device can easily function in a very large room or two small rooms with utmost precision.",
+      question: t("freshAirMachineFAQ.items.8.question"),
+      answer: t("freshAirMachineFAQ.items.8.answer"),
+    },
+  ]
+  const featuresRow1 = [
+    {
+      id: 1,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/04/automatic-air-partition.png",
+      title: t("featuresSection.features.automaticAirPartition.title"),
+      description: t("featuresSection.features.automaticAirPartition.description"),
+      alt: t("featuresSection.features.automaticAirPartition.alt"),
+    },
+    {
+      id: 2,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/04/large-coverage-area.png",
+      title: t("featuresSection.features.largeCoverageArea.title"),
+      description: t("featuresSection.features.largeCoverageArea.description"),
+      alt: t("featuresSection.features.largeCoverageArea.alt"),
+    },
+    {
+      id: 3,
+      image: "https://www.pranaair.com/wp-content/uploads/2021/12/promising-99-efficiency-of-fresh-air-machine.jpg",
+      title: t("featuresSection.features.efficiency.title"),
+      description: t("featuresSection.features.efficiency.description"),
+      alt: t("featuresSection.features.efficiency.alt"),
+    },
+    {
+      id: 4,
+      image: "https://www.pranaair.com/wp-content/uploads/2021/12/fresh-air-machine-hepa-filter.jpg",
+      title: t("featuresSection.features.hepaFilter.title"),
+      description: t("featuresSection.features.hepaFilter.description"),
+      alt: t("featuresSection.features.hepaFilter.alt"),
     },
   ]
 
+  const featuresRow2 = [
+    {
+      id: 5,
+      image:
+        "https://www.pranaair.com/wp-content/uploads/2023/04/prana-air-fresh-air-machine-mobile-app-and-led-display-monitor.png",
+      title: t("featuresSection.features.mobileApp.title"),
+      description: t("featuresSection.features.mobileApp.description"),
+      alt: t("featuresSection.features.mobileApp.alt"),
+    },
+    {
+      id: 6,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/04/ionizer-in-prana-air-fresh-air-machine.png",
+      title: t("featuresSection.features.ionizer.title"),
+      description: t("featuresSection.features.ionizer.description"),
+      alt: t("featuresSection.features.ionizer.alt"),
+    },
+    {
+      id: 7,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/04/uv-light.png",
+      title: t("featuresSection.features.uvLight.title"),
+      description: t("featuresSection.features.uvLight.description"),
+      alt: t("featuresSection.features.uvLight.alt"),
+    },
+    {
+      id: 8,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/04/heat-exchanger.png",
+      title: t("featuresSection.features.heating.title"),
+      description: t("featuresSection.features.heating.description"),
+      alt: t("featuresSection.features.heating.alt"),
+    },
+  ]
+
+  const topImages = [
+    {
+      id: 1,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/07/multi-layer-hepa-filters.png",
+      title: t("multiImagesSection.images.hepaFilters.title"),
+      description: t("multiImagesSection.images.hepaFilters.description"),
+      alt: t("multiImagesSection.images.hepaFilters.alt"),
+    },
+    {
+      id: 2,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/07/large-coverage-area.png",
+      title: t("multiImagesSection.images.coverageArea.title"),
+      description: t("multiImagesSection.images.coverageArea.description"),
+      alt: t("multiImagesSection.images.coverageArea.alt"),
+    },
+  ]
+
+  const bottomImages = [
+    {
+      id: 3,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/07/filtration-of-99.5-efficiency.png",
+      title: t("multiImagesSection.images.efficiency.title"),
+      description: t("multiImagesSection.images.efficiency.description"),
+      alt: t("multiImagesSection.images.efficiency.alt"),
+    },
+    {
+      id: 4,
+      image: "https://www.pranaair.com/wp-content/uploads/2023/07/ai-enabled-airflow.png",
+      title: t("multiImagesSection.images.aiEnabled.title"),
+      description: t("multiImagesSection.images.aiEnabled.description"),
+      alt: t("multiImagesSection.images.aiEnabled.alt"),
+    },
+  ]
   return (
     <div className="fresh-air-machine-page">
-
       {/* Banner Section */}
       <div className="home-banner">
         <div className="container">
@@ -56,10 +146,10 @@ export default function FreshAirMachine() {
             <div className="col-md-6"></div>
             <div className="col-md-6">
               <div className="banner-text">
-                <h1>Prana air</h1>
-                <h2>Fresh Air Machine</h2>
-                <p>One stop air quality solution for indoor air pollution</p>
-                <a href="#fresh_air_machine_contact">Get In Touch</a>
+                <h1>{t("bannerSection.title")}</h1>
+                <h2>{t("bannerSection.subtitle")}</h2>
+                <p>{t("bannerSection.description")}</p>
+                <a href="#fresh_air_machine_contact">{t("bannerSection.ctaButton")}</a>
               </div>
             </div>
           </div>
@@ -73,17 +163,17 @@ export default function FreshAirMachine() {
             <div className="clean-air-para">
               <h1 style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "20pt", lineHeight: "1" }}>
-                  <strong>Clean Air Machine As (IAQ) Indoor Air Quality </strong>
+                  <strong>{t("cleanAirSection.title.part1")} </strong>
                 </span>
                 <span style={{ fontSize: "18pt" }}>
                   <strong>
-                    Solution
+                    {t("cleanAirSection.title.part2")}
                     <sup>
-                      <img
+                      <Image
                         src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                        alt="logo"
-                        width="32"
-                        height="24"
+                        alt={t("cleanAirSection.logoAlt")}
+                        width={32}
+                        height={24}
                       />
                     </sup>
                   </strong>
@@ -91,9 +181,9 @@ export default function FreshAirMachine() {
               </h1>
               <p style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "14pt" }}>
-                  One-stop solution for indoor air quality solution by Prana Air <strong>Fresh Air Machine, </strong>
-                  working as an air purifier with the capability to filter out air pollutants up to 99.5% efficiency and
-                  multi-layer HEPA filters.
+                  {t("cleanAirSection.description.part1")}{" "}
+                  <strong>{t("cleanAirSection.description.highlight")}, </strong>
+                  {t("cleanAirSection.description.part2")}
                 </span>
               </p>
             </div>
@@ -105,225 +195,83 @@ export default function FreshAirMachine() {
       <div className="featured_bg_section">
         <div className="container">
           <div className="featured_ctnr">
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/04/automatic-air-partition.png"
-                alt="automatic air intake partition in prana air fresh air machine"
-                width="175"
-                height="auto"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>Automatic Air Partition</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  There is a partition for air intake which can be controlled by a mobile app remotely.
-                </span>
+            {featuresRow1.map((feature) => (
+              <div key={feature.id} className="feature_box">
+                <Image
+                  src={feature.image || "/placeholder.svg"}
+                  alt={feature.alt}
+                  width={175}
+                  height={175}
+                  style={{ height: "auto" }}
+                />
+                <div className="feature_wrap_box">
+                  <h2>
+                    <span style={{ fontSize: "14pt" }}>
+                      <strong>{feature.title}</strong>
+                    </span>
+                  </h2>
+                  <span style={{ fontSize: "12pt" }}>{feature.description}</span>
+                </div>
               </div>
-            </div>
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/04/large-coverage-area.png"
-                alt="very large area coverage by prana air fresh air machine"
-                width="175"
-                height="auto"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>Large Coverage Area</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  Its area coverage size is very large as compared to the normal air purifier.
-                </span>
-              </div>
-            </div>
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2021/12/promising-99-efficiency-of-fresh-air-machine.jpg"
-                alt="promising 99% efficiency of prana air fresh air machine"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>99.5% Efficiency</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  Air pollutants like pm2.5, pm10 - dust particles, CO<sub>2</sub>, TVOC &amp; HCHO are easily filtered
-                  out up to 99.5%
-                </span>
-              </div>
-            </div>
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2021/12/fresh-air-machine-hepa-filter.jpg"
-                alt="hepa filter prana air fresh air machine"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>13 Grade HEPA</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  3 phases of multi-layer HEPA filters clean out maximum air pollutants.
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="featured_ctnr">
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/04/prana-air-fresh-air-machine-mobile-app-and-led-display-monitor.png"
-                alt="mobile app and led display for prana air fresh air machine as controller"
-                width="163"
-                height="auto"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>Mobile App &amp; LED Display</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  The machine can be controlled by a mobile app and led display monitor, and the data can be accessed on
-                  both remotely.
-                </span>
+            {featuresRow2.map((feature) => (
+              <div key={feature.id} className="feature_box">
+                <Image
+                  src={feature.image || "/placeholder.svg"}
+                  alt={feature.alt}
+                  width={163}
+                  height={163}
+                  style={{ height: "auto" }}
+                />
+                <div className="feature_wrap_box">
+                  <h2>
+                    <span style={{ fontSize: "14pt" }}>
+                      <strong>{feature.title}</strong>
+                    </span>
+                  </h2>
+                  <span style={{ fontSize: "12pt" }}>{feature.description}</span>
+                </div>
               </div>
-            </div>
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/04/ionizer-in-prana-air-fresh-air-machine.png"
-                alt="ionizer in prana air fresh air machine"
-                width="163"
-                height="auto"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>Ionizer</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  The function of an ionizer is to release negatively charged ions that can reduce airborne pollutants
-                  and improve indoor air quality.
-                </span>
-              </div>
-            </div>
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/04/uv-light.png"
-                alt="uv light in prana air fresh air machine"
-                width="163"
-                height="auto"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>UV Light</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  The function of UV light is to disinfect the air by neutralizing airborne germs, such as viruses,
-                  bacteria, and mold.
-                </span>
-              </div>
-            </div>
-            <div className="feature_box">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/04/heat-exchanger.png"
-                alt="heat exchanger in prana air fresh air machine"
-                width="163"
-                height="auto"
-              />
-              <div className="feature_wrap_box">
-                <h2>
-                  <span style={{ fontSize: "14pt" }}>
-                    <strong>Heating</strong>
-                  </span>
-                </h2>
-                <span style={{ fontSize: "12pt" }}>
-                  It can also provide warm air anytime whenever you feel cool, especially in winter.
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Multi Images Section */}
+      {/* Multi Images Section - Top Row */}
       <div className="container multi-imgs">
         <div className="row">
-          <div className="col-md-6">
-            <div className="clean-air-machine-imgs">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/07/multi-layer-hepa-filters.png"
-                alt="Multi-layer HEPA+ Carbon Filters"
-              />
+          {topImages.map((item) => (
+            <div key={item.id} className="col-md-6">
+              <div className="clean-air-machine-imgs">
+                <Image src={item.image || "/placeholder.svg"} alt={item.alt} width={500} height={300} />
+              </div>
+              <div className="air-quality-solution-txt">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
             </div>
-            <div className="air-quality-solution-txt">
-              <h3>Multi-layer HEPA+ Carbon Filters</h3>
-              <p>
-                There are multi-layer grade-13 HEPA+ Carbon filters that removes tiny particles like allergens, dust,
-                and fine particle matter. This provides more efficient air filtration.
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="clean-air-machine-imgs">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/07/large-coverage-area.png"
-                alt="Large Coverage Area"
-              />
-            </div>
-            <div className="air-quality-solution-txt">
-              <h3>Large Coverage Area</h3>
-              <p>
-                Its coverage area is 1200 square feet, which is perfect for large rooms or 2 small rooms.It covers 2-3x
-                more area than other air purifiers.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
+      {/* Multi Images Section - Bottom Row */}
       <div className="container multi-imgs-bottom">
         <div className="row">
-          <div className="col-md-6">
-            <div className="clean-air-machine-imgs">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/07/filtration-of-99.5-efficiency.png"
-                alt="Promising Upto 99.5% efficiency"
-              />
+          {bottomImages.map((item) => (
+            <div key={item.id} className="col-md-6">
+              <div className="clean-air-machine-imgs">
+                <Image src={item.image || "/placeholder.svg"} alt={item.alt} width={500} height={300} />
+              </div>
+              <div className="air-quality-solution-txt">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
             </div>
-            <div className="air-quality-solution-txt">
-              <h3>Promising Upto 99.5% efficiency</h3>
-              <p>
-                This fresh air machine can filter out upto 99.5% of unwanted particles, gems, mold, bacteria, etc.
-                providing garden-fresh air indoor environment.
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="clean-air-machine-imgs">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/07/ai-enabled-airflow.png"
-                alt="AI-Enabled Air Flow"
-              />
-            </div>
-            <div className="air-quality-solution-txt">
-              <h3>AI-Enabled Air Flow</h3>
-              <p>
-                The machine is designed to understand the number of occupancies present in a room. Then, it automates
-                the airflow accordingly without any human intervention.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -331,14 +279,14 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="lets-find-heading">
           <h2 style={{ textAlign: "center" }}>
-            Lets Find Out How Prana Air Fresh Air Machine Purifies Indoor Air Pollution
+            {t("purificationHeadingSection.mainTitle")}
             <span style={{ fontSize: "24pt" }}>
               <sup>
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
-                  width="32"
-                  height="24"
+                  alt={t("purificationHeadingSection.logoAlt")}
+                  width={32}
+                  height={24}
                 />
               </sup>
             </span>
@@ -361,17 +309,17 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="indoor-pollutant-heading">
           <h2 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "18pt" }}>Key Parameters, Its Sources &amp; the Health Impacts</span>
+            <span style={{ fontSize: "18pt" }}>{t("purificationHeadingSection.subTitle1")}</span>
           </h2>
           <h2 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "18pt" }}>By Indoor Air Pollution (AQI)</span>
+            <span style={{ fontSize: "18pt" }}>{t("purificationHeadingSection.subTitle2")}</span>
             <span style={{ fontSize: "24pt" }}>
               <sup>
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
-                  width="32"
-                  height="24"
+                  alt={t("purificationHeadingSection.logoAlt")}
+                  width={32}
+                  height={24}
                 />
               </sup>
             </span>
@@ -383,39 +331,190 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <PollutantTabs />
+            <div className="tabs-container">
+              <ul className="nav nav-tabs" id="pollutantTabs" role="tablist">
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link active"
+                    id="pm25-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#pm25-content"
+                    type="button"
+                    role="tab"
+                    aria-controls="pm25-content"
+                    aria-selected="true"
+                  >
+                    {t("pollutantTabsSection.tabs.pm25")}
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="co2-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#co2-content"
+                    type="button"
+                    role="tab"
+                    aria-controls="co2-content"
+                    aria-selected="false"
+                  >
+                    {t("pollutantTabsSection.tabs.co2")}
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="tvoc-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tvoc-content"
+                    type="button"
+                    role="tab"
+                    aria-controls="tvoc-content"
+                    aria-selected="false"
+                  >
+                    {t("pollutantTabsSection.tabs.tvoc")}
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button
+                    className="nav-link"
+                    id="hcho-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#hcho-content"
+                    type="button"
+                    role="tab"
+                    aria-controls="hcho-content"
+                    aria-selected="false"
+                  >
+                    {t("pollutantTabsSection.tabs.hcho")}
+                  </button>
+                </li>
+              </ul>
+
+              <div className="tab-content" id="pollutantTabsContent">
+                <div className="tab-pane fade show active" id="pm25-content" role="tabpanel" aria-labelledby="pm25-tab">
+                  <div className="tab-para-txt">
+                    <h4 style={{ textAlign: "justify" }}>
+                      <strong>{t("pollutantTabsSection.sourcesLabel")}</strong>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.pm25.sources")}</p>
+                    <h4 style={{ textAlign: "justify" }}>
+                      <strong>{t("pollutantTabsSection.healthImpactsLabel")}</strong>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.pm25.healthImpacts")}</p>
+                  </div>
+                </div>
+
+                <div className="tab-pane fade" id="co2-content" role="tabpanel" aria-labelledby="co2-tab">
+                  <div className="tab-para-txt">
+                    <h4 style={{ textAlign: "justify" }}>
+                      <strong>{t("pollutantTabsSection.sourcesLabel")}</strong>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.co2.sources")}</p>
+                    <h4 style={{ textAlign: "justify" }}>
+                      <strong>{t("pollutantTabsSection.healthImpactsLabel")}</strong>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.co2.healthImpacts")}</p>
+                  </div>
+                </div>
+
+                <div className="tab-pane fade" id="tvoc-content" role="tabpanel" aria-labelledby="tvoc-tab">
+                  <div className="tab-para-txt">
+                    <h4 style={{ textAlign: "justify" }}>
+                      <span style={{ color: "#000000" }}>
+                        <strong>{t("pollutantTabsSection.sourcesLabel")}</strong>
+                      </span>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.tvoc.sources")}</p>
+                    <h4 style={{ textAlign: "justify" }}>
+                      <span style={{ color: "#000000" }}>
+                        <strong>{t("pollutantTabsSection.healthImpactsLabel")}</strong>
+                      </span>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.tvoc.healthImpacts")}</p>
+                  </div>
+                </div>
+
+                <div className="tab-pane fade" id="hcho-content" role="tabpanel" aria-labelledby="hcho-tab">
+                  <div className="tab-para-txt">
+                    <h4 style={{ textAlign: "justify" }}>
+                      <strong>{t("pollutantTabsSection.sourcesLabel")}</strong>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.hcho.sources")}</p>
+                    <h4 style={{ textAlign: "justify" }}>
+                      <strong>{t("pollutantTabsSection.healthImpactsLabel")}</strong>
+                    </h4>
+                    <p style={{ textAlign: "justify" }}>{t("pollutantTabsSection.hcho.healthImpacts")}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="col-md-6">
             <div className="pollutant-icons">
               <div className="tvocs-iocn">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/tvocs.png" alt="TVOCs Icon" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/tvocs.png"
+                  alt={t("pollutantTabsSection.icons.tvoc")}
+                  width={100}
+                  height={100}
+                />
               </div>
               <div className="germs-iocn">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/07/germs-and-bacteria.png"
-                  alt="Germs Icon"
+                  alt={t("pollutantTabsSection.icons.germs")}
+                  width={100}
+                  height={100}
                 />
               </div>
               <div className="pollutant-indoor-bg">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/07/pollutants-indoor.jpg"
-                  alt="Pollutant Indoor Background"
+                  alt={t("pollutantTabsSection.icons.background")}
+                  width={400}
+                  height={400}
                 />
               </div>
               <div className="pm10-iocn">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/pm10.png" alt="PM10 Icon" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/pm10.png"
+                  alt={t("pollutantTabsSection.icons.pm10")}
+                  width={100}
+                  height={100}
+                />
               </div>
               <div className="pm25-iocn">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/pm2.5.png" alt="PM2.5 Icon" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/pm2.5.png"
+                  alt={t("pollutantTabsSection.icons.pm25")}
+                  width={100}
+                  height={100}
+                />
               </div>
               <div className="dust-icon">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/dust.png" alt="Dust Icon" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/dust.png"
+                  alt={t("pollutantTabsSection.icons.dust")}
+                  width={100}
+                  height={100}
+                />
               </div>
               <div className="co2-icon">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/co2.png" alt="CO2 Icon" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/co2.png"
+                  alt={t("pollutantTabsSection.icons.co2")}
+                  width={100}
+                  height={100}
+                />
               </div>
               <div className="hcho-icon">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/hcho.png" alt="HCHO Icon" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/hcho.png"
+                  alt={t("pollutantTabsSection.icons.hcho")}
+                  width={100}
+                  height={100}
+                />
               </div>
             </div>
           </div>
@@ -426,60 +525,248 @@ export default function FreshAirMachine() {
       <div className="container product-specifications">
         <div className="prana-air-clean-machine-heading">
           <h2 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "24pt" }}>Prana Air IAQ Solutions</span>
+            <span style={{ fontSize: "24pt" }}>{t("productSpecificationsSection.title")}</span>
             <span style={{ fontSize: "24pt" }}>
               <sup>
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
-                  width="32"
-                  height="24"
+                  alt={t("productSpecificationsSection.logoAlt")}
+                  width={32}
+                  height={24}
                 />
               </sup>
             </span>
           </h2>
           <p style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "12pt" }}>
-              Take a look at some photos of the clean air machine, internal and external parts how it looks like. You
-              can see the numbers and thickness of the filters.
-            </span>
+            <span style={{ fontSize: "12pt" }}>{t("productSpecificationsSection.description")}</span>
           </p>
         </div>
       </div>
 
       {/* Image Tabs */}
       <div className="container">
-        <ProductImageTabs />
+        <div className="tabimgs">
+          <div className="tab-content" id="productImageTabsContent">
+            <div className="tab-pane fade show active" id="image1" role="tabpanel" aria-labelledby="image1-tab">
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-iaq-solution-machine-with-control-1024x467.jpg"
+                alt={t("productSpecificationsSection.images.machineWithControl.alt")}
+                className="main-product-image"
+                width={1024}
+                height={467}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+
+            <div className="tab-pane fade" id="image2" role="tabpanel" aria-labelledby="image2-tab">
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-fresher-air-machine-inner-parts.jpg"
+                alt={t("productSpecificationsSection.images.innerParts.alt")}
+                className="main-product-image"
+                width={1024}
+                height={467}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+
+            <div className="tab-pane fade" id="image3" role="tabpanel" aria-labelledby="image3-tab">
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-monitor.jpg"
+                alt={t("productSpecificationsSection.images.filterMonitor.alt")}
+                className="main-product-image"
+                width={1024}
+                height={467}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+
+            <div className="tab-pane fade" id="image4" role="tabpanel" aria-labelledby="image4-tab">
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-layers.jpg"
+                alt={t("productSpecificationsSection.images.filterLayers.alt")}
+                className="main-product-image"
+                width={1024}
+                height={467}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+
+            <div className="tab-pane fade" id="image5" role="tabpanel" aria-labelledby="image5-tab">
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter.jpg"
+                alt={t("productSpecificationsSection.images.filter.alt")}
+                className="main-product-image"
+                width={1024}
+                height={467}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+
+            <div className="tab-pane fade" id="image6" role="tabpanel" aria-labelledby="image6-tab">
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2024/01/prana-air-aqi-solution-inner.jpg"
+                alt={t("productSpecificationsSection.images.aqiSolutionInner.alt")}
+                className="main-product-image"
+                width={1024}
+                height={467}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+          </div>
+
+          <ul className="nav nav-tabs product-thumbnails" id="productImageTabs" role="tablist">
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link active thumbnail-btn"
+                id="image1-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#image1"
+                type="button"
+                role="tab"
+                aria-controls="image1"
+                aria-selected="true"
+              >
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-iaq-solution-machine-with-control-1024x467.jpg"
+                  alt={t("productSpecificationsSection.images.machineWithControl.alt")}
+                  width={100}
+                  height={60}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link thumbnail-btn"
+                id="image2-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#image2"
+                type="button"
+                role="tab"
+                aria-controls="image2"
+                aria-selected="false"
+              >
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-fresher-air-machine-inner-parts.jpg"
+                  alt={t("productSpecificationsSection.images.innerParts.alt")}
+                  width={100}
+                  height={60}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link thumbnail-btn"
+                id="image3-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#image3"
+                type="button"
+                role="tab"
+                aria-controls="image3"
+                aria-selected="false"
+              >
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-monitor.jpg"
+                  alt={t("productSpecificationsSection.images.filterMonitor.alt")}
+                  width={100}
+                  height={60}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link thumbnail-btn"
+                id="image4-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#image4"
+                type="button"
+                role="tab"
+                aria-controls="image4"
+                aria-selected="false"
+              >
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter-layers.jpg"
+                  alt={t("productSpecificationsSection.images.filterLayers.alt")}
+                  width={100}
+                  height={60}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link thumbnail-btn"
+                id="image5-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#image5"
+                type="button"
+                role="tab"
+                aria-controls="image5"
+                aria-selected="false"
+              >
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2024/01/fresher-air-filter.jpg"
+                  alt={t("productSpecificationsSection.images.filter.alt")}
+                  width={100}
+                  height={60}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link thumbnail-btn"
+                id="image6-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#image6"
+                type="button"
+                role="tab"
+                aria-controls="image6"
+                aria-selected="false"
+              >
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2024/01/prana-air-aqi-solution-inner.jpg"
+                  alt={t("productSpecificationsSection.images.aqiSolutionInner.alt")}
+                  width={100}
+                  height={60}
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
 
       {/* Machine Working Mechanism */}
       <div className="container">
         <div className="machine-working-heading">
           <h2 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "24pt" }}>Machine Working Mechanism</span>
+            <span style={{ fontSize: "24pt" }}>{t("machineMechanismSection.title")}</span>
             <span style={{ fontSize: "24pt" }}>
               <sup>
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
-                  width="32"
-                  height="24"
+                  alt={t("machineMechanismSection.logoAlt")}
+                  width={32}
+                  height={24}
                 />
               </sup>
             </span>
           </h2>
         </div>
         <div className="matching-workig-img">
-          <img
+          <Image
             src="https://www.pranaair.com/wp-content/uploads/2024/01/pranaair-advanced-fresh-air-machine-scaled.jpg"
-            alt="pranaair-advanced-fresh-air-machine"
+            alt={t("machineMechanismSection.imageAlt")}
+            width={1200}
+            height={800}
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
         <div className="matching-workig-para">
-          <p>
-            Take a look at some photos of the clean air machine, internal and external parts how it looks like. You can
-            see the numbers and thickness of the filters.
-          </p>
+          <p>{t("machineMechanismSection.description")}</p>
         </div>
       </div>
 
@@ -487,25 +774,25 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="firsh-air-two-mode-heading tech-heading">
           <h2>
-            Filter Technology
-            <img
+            {t("filterTechnologySection.title")}
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-              alt="logo"
-              width="32"
-              height="24"
+              alt={t("filterTechnologySection.logoAlt")}
+              width={32}
+              height={24}
             />
           </h2>
         </div>
         <div className="matching-workig-para tech-para">
-          <p>
-            Advanced Multi-Layer HEPA and Carbon Filters ensure 99.97% particle capture. Say goodbye to impurities and
-            odors. Breathe fresh, live fresh – get yours now!
-          </p>
+          <p>{t("filterTechnologySection.description")}</p>
         </div>
         <div className="technology-image">
-          <img
+          <Image
             src="https://www.pranaair.com/wp-content/uploads/2023/07/technology.jpg"
-            alt="filter technology of prana air fresh air machine"
+            alt={t("filterTechnologySection.imageAlt")}
+            width={1200}
+            height={800}
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
       </div>
@@ -516,29 +803,27 @@ export default function FreshAirMachine() {
           <div className="row">
             <div className="col-md-6">
               <div className="control-air-breath-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/07/control-the-fresh-air-mahcine-remotely.png"
-                  alt="control the air you breathe with prana air fresh air machine"
+                  alt={t("controlAirSection.imageAlt")}
+                  width={600}
+                  height={400}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
             </div>
             <div className="col-md-6">
               <div className="control-breath-heading">
                 <h2>
-                  Control the Air You Breathe
-                  <img
+                  {t("controlAirSection.title")}
+                  <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                    alt="logo"
-                    width="32"
-                    height="24"
+                    alt={t("controlAirSection.logoAlt")}
+                    width={32}
+                    height={24}
                   />
                 </h2>
-                <p>
-                  The user has complete control over the machine with an smart app or LED-display Controller to
-                  customize and optimize air flow to their exact preferences. Enjoy the benefits of continuous flow of
-                  fresh, oxygen-rich air, creating a comfortable and healthy living space. Say goodbye to stale air,
-                  allergies, and unpleasant odors.
-                </p>
+                <p>{t("controlAirSection.description")}</p>
               </div>
             </div>
           </div>
@@ -551,30 +836,35 @@ export default function FreshAirMachine() {
           <div className="row">
             <div className="col-md-6">
               <div className="comfort-icon">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/winter-comfort.png" alt="comfort icon" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/winter-comfort.png"
+                  alt={t("energyEfficientSection.comfortIconAlt")}
+                  width={100}
+                  height={100}
+                  style={{ width: "auto", height: "auto" }}
+                />
               </div>
               <div className="control-breath-heading">
                 <h2>
-                  Energy-Efficient Heating (Winter Comfort)
-                  <img
+                  {t("energyEfficientSection.title")}
+                  <Image
                     src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                    alt="logo"
-                    width="32"
-                    height="24"
+                    alt={t("energyEfficientSection.logoAlt")}
+                    width={32}
+                    height={24}
                   />
                 </h2>
-                <p>
-                  During colder months, the heating plate warms the air, offering an energy-efficient solution. Users
-                  have the option to activate the heating plate, ensuring a comfortable and inviting environment
-                  throughout the winter season.
-                </p>
+                <p>{t("energyEfficientSection.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="control-air-breath-img hot-cold-air-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/07/energy-efficient-heating-winter-comfort.png"
-                  alt="energy efficient heating in prana air fresh air machine"
+                  alt={t("energyEfficientSection.mainImageAlt")}
+                  width={600}
+                  height={400}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
             </div>
@@ -586,64 +876,68 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="firsh-air-two-mode-heading">
           <h2>
-            Fresh Air - Two modes
-            <img
+            {t("freshAirModesSection.title")}
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-              alt="logo"
-              width="32"
-              height="24"
+              alt={t("freshAirModesSection.logoAlt")}
+              width={32}
+              height={24}
             />
           </h2>
         </div>
         <div className="row">
           <div className="col-md-6 shdw-line">
             <div className="recicular-img">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/07/recirculation-mode-on-fresh-air-machine.png"
-                alt="recirculation mode in prana air fresh air machine"
+                alt={t("freshAirModesSection.mode1.imageAlt")}
+                width={500}
+                height={300}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div className="firsh-air-two-modes-txt">
               <ul>
                 <li>
-                  <img
+                  <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/07/recirculation-door-img.png"
-                    alt="recirculation door img"
+                    alt={t("freshAirModesSection.mode1.doorImageAlt")}
+                    width={100}
+                    height={100}
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </li>
                 <li>
-                  <h3>Mode 1 : Recirculation</h3>
-                  <p>
-                    The air inside the room passes through the fresh air machine via an open damper. The machine filters
-                    and recirculates the air back into the room, which is advantageous during high pollution levels
-                    outside
-                  </p>
+                  <h3>{t("freshAirModesSection.mode1.title")}</h3>
+                  <p>{t("freshAirModesSection.mode1.description")}</p>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-md-6">
             <div className="recicular-img">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/07/outdoor-air-mode-on-fresh-air-machine.png"
-                alt="outdoor air mode in prana air fresh air machine"
+                alt={t("freshAirModesSection.mode2.imageAlt")}
+                width={500}
+                height={300}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div className="firsh-air-two-modes-txt outdoor-txt-mode">
               <ul>
                 <li>
-                  <img
+                  <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/07/outdoor-air-door-img.png"
-                    alt="outdoor air door img"
+                    alt={t("freshAirModesSection.mode2.doorImageAlt")}
+                    width={100}
+                    height={100}
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </li>
                 <li>
-                  <h3>Mode 2 : Outdoor Air</h3>
-                  <p>
-                    In this mode, the closed damper enables outside air to enter thefresh air machine for purification,
-                    before entering indoors. This is advantageous when indoor pollution levels are high, making air
-                    recirculation ineffective.
-                  </p>
+                  <h3>{t("freshAirModesSection.mode2.title")}</h3>
+                  <p>{t("freshAirModesSection.mode2.description")}</p>
                 </li>
               </ul>
             </div>
@@ -655,21 +949,26 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="firsh-air-two-mode-heading">
           <h2>
-            Technical Specifications
-            <img
+            {t("technicalSpecsSection.title")}
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-              alt="logo"
-              width="32"
-              height="24"
+              alt={t("technicalSpecsSection.logoAlt")}
+              width={32}
+              height={24}
             />
           </h2>
         </div>
         <div className="row">
           <div className="broucher-btn">
-            <a href="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-fresh-air-machine-brochure-doc.pdf">
-              <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" alt="brochure button" />
-              Download Brochure
-            </a>
+            <Link href="https://www.pranaair.com/wp-content/uploads/2023/07/prana-air-fresh-air-machine-brochure-doc.pdf">
+              <Image
+                src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png"
+                alt={t("technicalSpecsSection.brochureButtonAlt")}
+                width={30}
+                height={30}
+              />
+              {t("technicalSpecsSection.downloadBrochure")}
+            </Link>
           </div>
         </div>
         <div className="row box-bg">
@@ -677,36 +976,34 @@ export default function FreshAirMachine() {
             <div className="tech-spec">
               <ul>
                 <li>
-                  <h5>Product:</h5>
+                  <h5>{t("technicalSpecsSection.specs.product.label")}</h5>
                 </li>
                 <li>
-                  <h3>Air purifying machine</h3>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <h5>CADR:</h5>
-                </li>
-                <li>
-                  <h3>
-                    1000 m<sup>3</sup>/h
-                  </h3>
+                  <h3>{t("technicalSpecsSection.specs.product.value")}</h3>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <h5>Overbottom Pressure:</h5>
+                  <h5>{t("technicalSpecsSection.specs.cadr.label")}</h5>
                 </li>
                 <li>
-                  <h3>110 Pa</h3>
+                  <h3>{t("technicalSpecsSection.specs.cadr.value")}</h3>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <h5>No. of Filters:</h5>
+                  <h5>{t("technicalSpecsSection.specs.pressure.label")}</h5>
                 </li>
                 <li>
-                  <h3>Multilayer HEPA+ Carbon</h3>
+                  <h3>{t("technicalSpecsSection.specs.pressure.value")}</h3>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h5>{t("technicalSpecsSection.specs.filters.label")}</h5>
+                </li>
+                <li>
+                  <h3>{t("technicalSpecsSection.specs.filters.value")}</h3>
                 </li>
               </ul>
             </div>
@@ -715,34 +1012,34 @@ export default function FreshAirMachine() {
             <div className="tech-spec">
               <ul>
                 <li>
-                  <h5>Power:</h5>
+                  <h5>{t("technicalSpecsSection.specs.power.label")}</h5>
                 </li>
                 <li>
-                  <h3>0.45KW</h3>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <h5>Voltage:</h5>
-                </li>
-                <li>
-                  <h3>220V</h3>
+                  <h3>{t("technicalSpecsSection.specs.power.value")}</h3>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <h5>Purification Efficiency:</h5>
+                  <h5>{t("technicalSpecsSection.specs.voltage.label")}</h5>
                 </li>
                 <li>
-                  <h3>Up to 99.5%</h3>
+                  <h3>{t("technicalSpecsSection.specs.voltage.value")}</h3>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <h5>Product Dimension:</h5>
+                  <h5>{t("technicalSpecsSection.specs.efficiency.label")}</h5>
                 </li>
                 <li>
-                  <h3>1450 x 450 x 450 (mm)</h3>
+                  <h3>{t("technicalSpecsSection.specs.efficiency.value")}</h3>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h5>{t("technicalSpecsSection.specs.dimensions.label")}</h5>
+                </li>
+                <li>
+                  <h3>{t("technicalSpecsSection.specs.dimensions.value")}</h3>
                 </li>
               </ul>
             </div>
@@ -751,34 +1048,34 @@ export default function FreshAirMachine() {
             <div className="tech-spec">
               <ul>
                 <li>
-                  <h5>Coverage Area:</h5>
+                  <h5>{t("technicalSpecsSection.specs.coverage.label")}</h5>
                 </li>
                 <li>
-                  <h3>1200 Sq. Ft</h3>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <h5>Filtration Stage:</h5>
-                </li>
-                <li>
-                  <h3>Multiple stage</h3>
+                  <h3>{t("technicalSpecsSection.specs.coverage.value")}</h3>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <h5>Type of Filter:</h5>
+                  <h5>{t("technicalSpecsSection.specs.filtrationStage.label")}</h5>
                 </li>
                 <li>
-                  <h3>13 grade HEPA filters</h3>
+                  <h3>{t("technicalSpecsSection.specs.filtrationStage.value")}</h3>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <h5>Device Control:</h5>
+                  <h5>{t("technicalSpecsSection.specs.filterType.label")}</h5>
                 </li>
                 <li>
-                  <h3>Mobile app &amp; LED monitor</h3>
+                  <h3>{t("technicalSpecsSection.specs.filterType.value")}</h3>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h5>{t("technicalSpecsSection.specs.control.label")}</h5>
+                </li>
+                <li>
+                  <h3>{t("technicalSpecsSection.specs.control.value")}</h3>
                 </li>
               </ul>
             </div>
@@ -791,114 +1088,107 @@ export default function FreshAirMachine() {
         <div className="compare-heading">
           <div className="firsh-air-two-mode-heading">
             <h2>
-              Room Air Purifier Vs Prana Air Fresh Air Machine
-              <img
+              {t("comparisonSection.title")}
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                alt="logo"
-                width="32"
-                height="24"
+                alt={t("comparisonSection.logoAlt")}
+                width={32}
+                height={24}
               />
             </h2>
           </div>
         </div>
       </div>
-
       <div className="container mob-scroll">
         <div className="row">
           <div className="col-md-2">
             <div className="room-air-purifier-spec">
               <ul>
                 <li>
-                  <h5>Mode</h5>
+                  <h5>{t("comparisonSection.specs.mode")}</h5>
                 </li>
                 <li>
-                  <h5>Ventilation</h5>
+                  <h5>{t("comparisonSection.specs.ventilation")}</h5>
                 </li>
                 <li>
-                  <h5>CO2 emissions</h5>
+                  <h5>{t("comparisonSection.specs.co2Emissions")}</h5>
                 </li>
                 <li>
-                  <h5>Number of filters</h5>
+                  <h5>{t("comparisonSection.specs.numberOfFilters")}</h5>
                 </li>
                 <li>
-                  <h5>Filter life</h5>
+                  <h5>{t("comparisonSection.specs.filterLife")}</h5>
                 </li>
                 <li>
-                  <h5>Coverage Area</h5>
+                  <h5>{t("comparisonSection.specs.coverageArea")}</h5>
                 </li>
                 <li>
-                  <h5>Purification Efficiency</h5>
+                  <h5>{t("comparisonSection.specs.purificationEfficiency")}</h5>
                 </li>
                 <li>
-                  <h5>PM2.5 &amp; PM10</h5>
+                  <h5>{t("comparisonSection.specs.pm")}</h5>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-md-5">
             <div className="room-air-purifier">
-              <h3>Room Air Purifier</h3>
+              <h3>{t("comparisonSection.roomAirPurifier.title")}</h3>
               <ul>
                 <li className="list-bg">
-                  <h5>Re-circulation and re-filtration of the same air.</h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.mode")}</h5>
                 </li>
                 <li>
-                  <h5>It does not support a ventilation mechanism.</h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.ventilation")}</h5>
                 </li>
                 <li className="list-bg">
-                  <h5>No, it cannot purify co2 gas.</h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.co2Emissions")}</h5>
                 </li>
                 <li>
-                  <h5>It may have 1-2 filters which may or may not include HEPA filters.</h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.numberOfFilters")}</h5>
                 </li>
                 <li className="list-bg">
-                  <h5>The average life is 6 months depending on the air quality level.</h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.filterLife")}</h5>
                 </li>
                 <li>
-                  <h5>It can cover an area from 250 to 400 sq. ft.</h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.coverageArea")}</h5>
                 </li>
                 <li className="list-bg">
-                  <h5>Up to 98% efficiency rate</h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.purificationEfficiency")}</h5>
                 </li>
                 <li>
-                  <h5>
-                    It can filter particulate matter (PM2.5, PM10) to an extent, as the same air is recirculated inside
-                    the room.
-                  </h5>
+                  <h5>{t("comparisonSection.roomAirPurifier.pm")}</h5>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-md-5">
             <div className="room-air-purifier prana-air-fresh-machine">
-              <h3>Prana Air Fresh Air Machine</h3>
+              <h3>{t("comparisonSection.pranaAirMachine.title")}</h3>
               <ul className="tabs-list">
                 <li>
-                  <h5>It purifies the outside air and then brings that filtered air indoors.</h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.mode")}</h5>
                 </li>
                 <li>
-                  <h5>It supports the ventilation mechanism.</h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.ventilation")}</h5>
                 </li>
                 <li>
-                  <h5>Yes, it purifies gases including CO2.</h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.co2Emissions")}</h5>
                 </li>
                 <li>
-                  <h5>It has 3 separate 13-grade multi-layer True HEPA filters.</h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.numberOfFilters")}</h5>
                 </li>
                 <li>
-                  <h5>It can last up to 1 year depending upon the ambient air quality.</h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.filterLife")}</h5>
                 </li>
                 <li>
-                  <h5>It can cover a 1200 sq. ft. area.</h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.coverageArea")}</h5>
                 </li>
                 <li>
-                  <h5>Up to 99.5% efficiency rate</h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.purificationEfficiency")}</h5>
                 </li>
                 <li>
-                  <h5>
-                    It purifies the air from pollutants like PM2.5 and 10 as it filters these out from the air before
-                    they can enter indoors.
-                  </h5>
+                  <h5>{t("comparisonSection.pranaAirMachine.pm")}</h5>
                 </li>
               </ul>
             </div>
@@ -910,35 +1200,28 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <img
+            <Image
               className="havc-img"
               src="https://www.pranaair.com/wp-content/uploads/2022/06/hvac-machine-1024x572.jpg"
-              alt="difference between hvac system and prana air fresh air machine"
+              alt={t("hvacComparisonSection.imageAlt")}
+              width={1024}
+              height={572}
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
           <div className="col-md-6">
             <div className="diff-vs-fresh-air-heading">
-              <h2>A Big Difference Between HVAC System And</h2>
+              <h2>{t("hvacComparisonSection.titlePart1")}</h2>
               <h2>
-                Prana Air Fresh Air Machine
-                <img
+                {t("hvacComparisonSection.titlePart2")}
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
-                  width="32"
-                  height="24"
+                  alt={t("hvacComparisonSection.logoAlt")}
+                  width={32}
+                  height={24}
                 />
               </h2>
-              <p style={{ textAlign: "justify" }}>
-                HVAC (Heating, Ventilation, and Air Conditioning) systems are found in shopping malls, hotels, and
-                hospitals, among other places. HVAC systems are mostly used for heating, air conditioning, and
-                ventilation, as the name indicates. Although no such air filters are put within an HVAC system, it may
-                have 1-2 filters that may filter out dust particles visible to the naked eye. However, as the rate of
-                pollution and poor air quality rises, there is an urgent need to adopt smarter options. Dust, pollen,
-                mold, smoke, particulate matter, pet dander, and VOCs are all filtered out by the HEPA air filtering
-                system used in Prana Airs Fresh Air Machine. HEPA stands for High-Efficiency Particulate Absorbing
-                Filters, and it is, as the name implies, more efficient and less expensive than typical HVAC
-                purification systems.
-              </p>
+              <p style={{ textAlign: "justify" }}>{t("hvacComparisonSection.description")}</p>
             </div>
           </div>
         </div>
@@ -948,113 +1231,108 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="app-prana-heading">
           <h2 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "18pt" }}>Applications of Prana Air Fresh Air Machine</span>
+            <span style={{ fontSize: "18pt" }}>{t("applicationsSection.title")}</span>
             <span style={{ fontSize: "24pt" }}>
               <sup>
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
-                  width="32"
-                  height="24"
+                  alt={t("applicationsSection.logoAlt")}
+                  width={32}
+                  height={24}
                 />
               </sup>
             </span>
           </h2>
         </div>
-
         <div className="applications-grid">
+          {/* Hospital Application */}
           <div className="application-card">
             <div className="application-overlay">
-              <p>
-                In hospitals, the transmission of airborne viruses and bacteria pathogens, as well as diseases, is
-                highly common. Patients conditions may deteriorate and recovery may be hindered if they breathe
-                contaminated air. Prana Airs air Fresh air machines are essential for preventing the transmission of
-                such harmful pathogens.
-              </p>
+              <p>{t("applicationsSection.applications.hospital.description")}</p>
             </div>
-            <img
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/06/fresh-air-machine-for-hospital.jpg"
-              alt="fresh air machine for hospital"
+              alt={t("applicationsSection.applications.hospital.imageAlt")}
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto" }}
             />
-            <div className="application-title">HOSPITALS</div>
+            <div className="application-title">{t("applicationsSection.applications.hospital.title")}</div>
           </div>
 
+          {/* Hotel Application */}
           <div className="application-card">
             <div className="application-overlay">
-              <p>
-                In hotels, poor ventilation is a serious issue. Many chemicals used in hotel cleaning, sanitization, and
-                room refreshing may release pollutants that are potentially dangerous to people. They can irritate your
-                eyes, nose, and throat, as well as cause respiratory tract harm. Long-term side effects might aggravate
-                asthma and bronchitis. Fresh air machines are extremely helpful in such environments.
-              </p>
+              <p>{t("applicationsSection.applications.hotel.description")}</p>
             </div>
-            <img
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/06/fresh-air-machine-for-hotel.jpg"
-              alt="fresh air machine for hotel"
+              alt={t("applicationsSection.applications.hotel.imageAlt")}
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto" }}
             />
-            <div className="application-title">HOTELS</div>
+            <div className="application-title">{t("applicationsSection.applications.hotel.title")}</div>
           </div>
 
+          {/* Office Application */}
           <div className="application-card">
             <div className="application-overlay">
-              <p>
-                Fresh Air Machines are being installed in offices because they filter various contaminants and therefore
-                minimize air pollution indoors. Employees are more productive when they work in a cleaner atmosphere.
-              </p>
+              <p>{t("applicationsSection.applications.office.description")}</p>
             </div>
-            <img
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/06/fresh-air-machine-for-office.jpg"
-              alt="fresh air machine for office"
+              alt={t("applicationsSection.applications.office.imageAlt")}
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto" }}
             />
-            <div className="application-title">OFFICES</div>
+            <div className="application-title">{t("applicationsSection.applications.office.title")}</div>
           </div>
 
+          {/* School Application */}
           <div className="application-card">
             <div className="application-overlay">
-              <p>
-                Students are more susceptible to air-borne diseases as they inhale more air as compared to adults.
-                Stuffiness in the air can hinder their concentration levels as well as early lung development. Breathing
-                cleaner air will increase the concentration level among students and will prevent infections that spread
-                contagious diseases.
-              </p>
+              <p>{t("applicationsSection.applications.school.description")}</p>
             </div>
-            <img
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/06/fresh-air-machine-for-school.jpg"
-              alt="fresh air machine for school"
+              alt={t("applicationsSection.applications.school.imageAlt")}
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto" }}
             />
-            <div className="application-title">SCHOOLS/UNIVERSITIES</div>
+            <div className="application-title">{t("applicationsSection.applications.school.title")}</div>
           </div>
 
+          {/* Mall Application */}
           <div className="application-card">
             <div className="application-overlay">
-              <p>
-                Malls have traditionally used HVAC systems. However, as peoples health concerns grow, they want to
-                breathe clean air indoors as well. Because HVAC systems lack an air filtering component, HEPA filtration
-                systems are being added to clean the ambient air that enters congested locations such as malls.
-              </p>
+              <p>{t("applicationsSection.applications.mall.description")}</p>
             </div>
-            <img
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/06/fresh-air-machine-for-shopping-malls.png"
-              alt="fresh air machine for shopping malls"
+              alt={t("applicationsSection.applications.mall.imageAlt")}
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto" }}
             />
-            <div className="application-title">SHOPPING MALLS</div>
+            <div className="application-title">{t("applicationsSection.applications.mall.title")}</div>
           </div>
 
+          {/* Home Application */}
           <div className="application-card">
             <div className="application-overlay">
-              <p>
-                Pollutants can cause more harm to the human body indoors than outdoors. As we spent 80-95% of our life
-                indoors, there is a need for cleaner air to sustain. Major sources of indoor pollutants are those that
-                seep into your homes from ambient air. A fresh air machine will clean the air that enters indoors
-                beforehand so the cleaner air can enter indoors. This is especially good for youngsters in their growth
-                stages, the elderly, and healthy people as well.
-              </p>
+              <p>{t("applicationsSection.applications.home.description")}</p>
             </div>
-            <img
+            <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/06/fresh-air-machine-for-home.jpg"
-              alt="fresh air machine for home"
+              alt={t("applicationsSection.applications.home.imageAlt")}
+              width={400}
+              height={300}
+              style={{ width: "100%", height: "auto" }}
             />
-            <div className="application-title">HOME</div>
+            <div className="application-title">{t("applicationsSection.applications.home.title")}</div>
           </div>
         </div>
       </div>
@@ -1064,8 +1342,8 @@ export default function FreshAirMachine() {
         <div className="row">
           <div className="col-md-12">
             <div className="contact-heading">
-              <h2>Get in Touch</h2>
-              <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+              <h2>{t("contactSection.title")}</h2>
+              <p>{t("contactSection.description")}</p>
             </div>
           </div>
         </div>
@@ -1076,15 +1354,15 @@ export default function FreshAirMachine() {
       <div className="container">
         <div className="faq-heading">
           <h3 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "18pt" }}>Frequently Asked Questions</span>
+            <span style={{ fontSize: "18pt" }}>{t("faqHeadingSection.title")}</span>
             <span style={{ fontSize: "18pt" }}>
-              About Prana Air Fresh Air Machine
+              {t("faqHeadingSection.subtitle")}
               <sup>
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
-                  alt="logo"
-                  width="32"
-                  height="24"
+                  alt={t("faqHeadingSection.logoAlt")}
+                  width={32}
+                  height={24}
                 />
               </sup>
             </span>

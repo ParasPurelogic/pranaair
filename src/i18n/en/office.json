@@ -1,0 +1,250 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+ "officeBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Offices",
+    "description": "A complete solution for air quality monitoring, data analysis, and fresh air solutions in workplaces prioritizing employees health and productivity.",
+    "tagline": "Higher Occupancy, Higher CO2",
+    "cta": "Request A Quote"
+  },
+  "officeFactors": {
+    "title": "Factors affecting the health of",
+    "highlight": "Office Employees",
+    "description": "Exposure to air pollution in offices can lead to a range of health problems, including respiratory infections, headaches, fatigue, and difficulty concentrating.",
+    "pm": {
+      "title": "PM",
+      "description": "Fine particulate matter in an office environment primarily originates from outdoor air"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "Office CO2 originates from occupants respiration and is influenced by ventilation."
+    },
+    "vocs": {
+      "title": "VOCs",
+      "description": "Arises from office materials, equipment, cleaning agents, and personal care products."
+    },
+    "hcho": {
+      "title": "HCHO",
+      "description": "Found in office environment through off-gassing of furniture and carpets."
+    },
+    "ozone": {
+      "title": "Ozone",
+      "description": "Typically a byproduct of office equipment like printers and copiers"
+    },
+    "humidity": {
+      "title": "Humidity",
+      "description": "Indoor levels vary based on building design, occupancy, and weather."
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "Regulated by HVAC systems, weather, and heat from equipment and occupants"
+    },
+    "noise": {
+      "title": "Noise",
+      "description": "Comes from office machinery, HVAC systems, conversations, and external sources."
+    }
+  },
+  "officeHealthEffects": {
+    "pm": {
+      "title": "PM & PM10",
+      "description": "Harms breathing, heart, and cardiovascular health"
+    },
+    "vocs": {
+      "title": "VOCs",
+      "description": "Irritates eyes, nose, throat, some carcinogenic"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "Reduces focus, productivity, harms cognition"
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "Impacts mood, focus, productivity, risks heat illnesses"
+    },
+    "ozone": {
+      "title": "Ozone",
+      "description": "Irritates lungs, worsens existing conditions"
+    },
+    "noise": {
+      "title": "Noise",
+      "description": "Raises stress, hampers focus, affects mental health"
+    }
+  },
+  "officeHealthImpacts": {
+    "title": "Health",
+    "highlight": "Impacts on Employees",
+    "shortTerm": {
+      "title": "Some Short-Term Health Effects",
+      "irritation": {
+        "title": "Eye, nose, and throat irritation",
+        "description": "Air pollutants can also irritate the eyes, nose, and throat, causing symptoms such as redness, watering, burning, and sneezing."
+      },
+      "respiratory": {
+        "title": "Respiratory problems",
+        "description": "Air pollutants can irritate the airways & lungs leading to coughing, shortness of breath, & chest tightness."
+      },
+      "cardiovascular": {
+        "title": "Cardiovascular problems",
+        "description": "Short-term exposure to air pollution can increase the risk of heart attacks, strokes, and other cardiovascular events."
+      },
+      "headaches": {
+        "title": "Headaches",
+        "description": "Air pollutants that can cause headaches include PM2.5, NO2, and O3, that irritate the lining of the nose and throat."
+      }
+    },
+    "longTerm": {
+      "title": "Long-Term Health Effects:",
+      "respiratory": {
+        "title": "Chronic respiratory diseases",
+        "description": "Air pollutants can damage the lungs, leading to chronic respiratory diseases such as asthma, chronic obstructive pulmonary disease (COPD), and lung cancer."
+      },
+      "other": {
+        "title": "Other health problems",
+        "description": "Air pollutants have also been linked to a number of other health problems, including diabetes, reproductive problems, and neurological problems."
+      }
+    }
+  },
+  "officePollutionSources": {
+    "title": "Sources of air pollution in",
+    "highlight": "Offices",
+    "description": "Offices can be polluted by building materials, office equipment, personal care products, cigarette smoke, and outdoor air. These pollutants can irritate the eyes, nose, throat, and respiratory system, and can also cause headaches, dizziness, nausea, and asthma attacks.",
+    "equipment": {
+      "title": "Office equipment",
+      "description": "Printers, photocopiers, and computers can emit VOCs, ozone, and nitrogen dioxide."
+    },
+    "cleaning": {
+      "title": "Cleaning products",
+      "description": "Many cleaning products contain VOCs, which can irritate the eyes, nose, and throat."
+    },
+    "dusting": {
+      "title": "Dusting",
+      "description": "Dust can contain mold spores, bacteria, and other pollutants that can irritate the airways."
+    },
+    "occupancy": {
+      "title": "High occupancy",
+      "description": "High levels of CO2 can cause headaches, dizziness, nausea, reduced productivity, and other health problems."
+    }
+  },
+  "officeSolutions": {
+    "title": "Air Quality",
+    "highlight": "Solutions",
+    "description": "Prana Air offers air quality solutions for offices, including air quality monitors and fresh air machines. These solutions can improve air quality, reduce health risks, increase productivity, and reduce sick days.",
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Solution"
+    },
+    "freshAir": {
+      "title": "Fresh Air Machine",
+      "description": "It is an advanced air purifier designed to bring in fresh outdoor air and filter out pollutants, allergens, odors and enough oxygen.",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Promising you up to 99.5% efficiency",
+        "feature3": "Improves air ventilation"
+      },
+      "cta": "Know More"
+    }
+  },
+  "officeComparison": {
+    "title": "The",
+    "highlight": "Comparison",
+    "description": "Prana Air fresh air machine offer several benefits for office environments, including improved air quality, reduced illnesses, and increased productivity. Here, you can see the differences of impacts.",
+    "without": {
+      "title": "Without Fresh Air Solutions",
+      "points": {
+        "point1": "Reduce work productivity",
+        "point2": "Uncomfortable experience",
+        "point3": "Unhealthy environment"
+      }
+    },
+    "with": {
+      "title": "With Fresh Air Solutions",
+      "points": {
+        "point1": "Improve work productivity",
+        "point2": "More comfort level",
+        "point3": "Healthy environment"
+      }
+    },
+    "studies": {
+      "study1": "A study by the Harvard School of Public Health found that workers in offices with good air quality were 10% more productive than workers in offices with poor air quality.",
+      "study2": "Another study by the University of California, Berkeley found that workers in offices with fresh air machines had a 30% lower risk of developing asthma than workers in offices without fresh air machines."
+    }
+  },
+  "officeDataServices": {
+    "title": "Freemium",
+    "highlight": "Services",
+    "description": "You can display or analyze air quality data for your office on LCD screens or in AQI App and our web-dashboards.",
+    "tvApp": "TV Dashboard App",
+    "webDashboards": "Web-Dashboards for Offices",
+    "mobileApp": "AQI Mobile App"
+  },
+  "officeFaq": {
+    "description": "About Air Quality Solution for offices / corporates. Have questions? Were here to help.",
+    "questions": {
+      "q1": "1. What is office air pollution, and how does it affect employees?",
+      "q2": "2. Why is an Air Quality Monitor essential for offices?",
+      "q3": "3. How does Prana Airs Air Quality Monitor work?",
+      "q4": "4. What are the benefits of Prana Airs Air Quality Monitor?",
+      "q5": "5. What is Prana Airs Fresh Air Machine, and how does it enhance office air quality?"
+    },
+    "answers": {
+      "a1": "Office air pollution is harmful indoor contaminants that can cause respiratory problems, allergies, headaches, and reduced productivity among employees.",
+      "a2": "An Air Quality Monitor tracks indoor pollutants in real-time, ensuring a healthy work environment by identifying and addressing air quality issues promptly.",
+      "a3": "Prana Airs monitor uses advanced sensors to detect pollutants like PM2.5, PM10, CO2, VOCs, and temperature, providing real-time data via a user-friendly interface and app.",
+      "a4": "It enables data-driven decisions for better air quality, leading to healthier employees and increased productivity.",
+      "a5": "Prana Airs Fresh Air Machine filters outdoor air, removing pollutants and maintaining a constant supply of clean air indoors, promoting better respiratory health."
+    }
+  },
+  "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

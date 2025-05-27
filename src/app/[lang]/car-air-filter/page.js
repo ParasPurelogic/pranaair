@@ -1,69 +1,269 @@
-
 import FaqAccordion from "@/Components/Pages/Carfilter/faq-accordion"
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
+import Link from "next/link"
+import Image from "next/image"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function CarAirFilter() {
-
+export default async function CarAirFilter() {
+  const { t } = await getServerTranslation("car-air-filter")
   // FAQ items data
   const faqItems = [
     {
-      question: "1. What is Prana Air Car Cabin Air Filter?",
-      answer:
-        "Prana Air Car Cabin Air Filter is a high-efficiency air filtration system with HEPA and activated carbon filter, designed to purify the air inside your vehicle. It removes dust, pollen, allergens, and other airborne particles to ensure a clean and healthy breathing environment while you drive.",
+      question: t("faqSection.items.1.question"),
+      answer: t("faqSection.items.1.answer"),
     },
     {
-      question: "2. How does Prana Air Car Cabin Air Filter work?",
-      answer:
-        "Our air filter utilizes advanced multi-layer filtration technology, including HEPA and activated carbon layers. The HEPA filter captures fine particulate matter, while the activated carbon layer absorbs odors, gases, and volatile organic compounds (VOCs), ensuring fresh and clean air inside your car.",
+      question: t("faqSection.items.2.question"),
+      answer: t("faqSection.items.2.answer"),
     },
     {
-      question: "3. Why should I choose Prana Air Car Cabin Air Filter over other brands?",
-      answer:
-        "Prana Air Car Cabin Air Filters are designed with cutting-edge filtration technology and superior materials to provide maximum efficiency and durability. They are tested and proven to remove up to 99% of pollutants and allergens, making them an excellent choice for individuals seeking better air quality in their vehicles.",
+      question: t("faqSection.items.3.question"),
+      answer: t("faqSection.items.3.answer"),
     },
     {
-      question: "4. How often should I replace Prana Air Car Cabin Air Filter?",
-      answer:
-        "For optimal performance, we recommend replacing Prana Air Car Cabin Air Filter every 6 to 12 months, depending on your driving conditions and the level of pollution in your area. Regular replacement ensures continuous protection against airborne contaminants.",
+      question: t("faqSection.items.4.question"),
+      answer: t("faqSection.items.4.answer"),
     },
     {
-      question: "5. Can I install Prana Air Car Cabin Air Filter myself?",
-      answer:
-        "Yes, Prana Air Car Air Filter is designed for easy installation. Each filter comes with clear instructions, and no special tools are required. If you need assistance, our customer support team is always available to help.",
+      question: t("faqSection.items.5.question"),
+      answer: t("faqSection.items.5.answer"),
     },
     {
-      question: "6. Is Prana Air Car Air Filter compatible with my vehicle?",
-      answer:
-        "Prana Air Car Cabin Air Filter is available in various sizes to fit a wide range of vehicle makes and models. Please refer to our compatibility guide or contact our customer service to find the right filter for your car.",
+      question: t("faqSection.items.6.question"),
+      answer: t("faqSection.items.6.answer"),
     },
     {
-      question: "7. What benefits can I expect from using Prana Air Car Cabin Air Filter?",
-      answer:
-        "By using Prana Air Car Cabin Air Filter, you can expect to experience cleaner, fresher air inside your car. This can lead to reduced allergic reactions, improved respiratory health, and a more pleasant driving experience free from unpleasant odors and harmful pollutants.",
+      question: t("faqSection.items.7.question"),
+      answer: t("faqSection.items.7.answer"),
     },
     {
-      question: "8. How do I know when its time to replace the filter?",
-      answer:
-        "There is no indicator to tell you about the replacement, but you have to check it manually. Its life depends on the frequency of use, rides and air quality level of the area. Regular checks can help maintain optimal air quality.",
+      question: t("faqSection.items.8.question"),
+      answer: t("faqSection.items.8.answer"),
     },
     {
-      question: "9. Where can I purchase Prana Air Car Cabin Air Filter?",
-      answer:
-        "It is available for purchase on our official website, as well as through Amazon online. Be sure to buy from trusted sources to guarantee the authenticity of the product.",
+      question: t("faqSection.items.9.question"),
+      answer: t("faqSection.items.9.answer"),
     },
     {
-      question: "10. Does Prana Air Car Cabin Air Filter come with a warranty?",
-      answer:
-        "Usually, warranty is not given to Filters. Most of the marketers also dont provide warranty on filters. But, you can avail the replacement option if there is any defect when you receive the product for the first time.",
+      question: t("faqSection.items.10.question"),
+      answer: t("faqSection.items.10.answer"),
     },
     {
-      question: "11. Can Prana Air Car Cabin Air Filter help with car exhaust fumes?",
-      answer:
-        "Yes, the activated carbon layer in the filter is specifically designed to absorb harmful gases and odors, including car exhaust fumes. This helps to reduce the presence of these pollutants inside your vehicle.",
+      question: t("faqSection.items.11.question"),
+      answer: t("faqSection.items.11.answer"),
     },
   ]
-
+  const pollutionProblems = [
+    {
+      id: 1,
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Figure-nitroge.png",
+      iconAlt: t("carAirPollutionSection.problems.higherEmissions.iconAlt"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/High-Nitrogen-Dioxide.jpg",
+      imageAlt: t("carAirPollutionSection.problems.higherEmissions.imageAlt"),
+      title: t("carAirPollutionSection.problems.higherEmissions.title"),
+      description: t("carAirPollutionSection.problems.higherEmissions.description"),
+    },
+    {
+      id: 2,
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Figure-lungs.png",
+      iconAlt: t("carAirPollutionSection.problems.cardiovascularIssues.iconAlt"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Health-issues.jpg",
+      imageAlt: t("carAirPollutionSection.problems.cardiovascularIssues.imageAlt"),
+      title: t("carAirPollutionSection.problems.cardiovascularIssues.title"),
+      description: t("carAirPollutionSection.problems.cardiovascularIssues.description"),
+    },
+    {
+      id: 3,
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Figure-respiratory-icon.png",
+      iconAlt: t("carAirPollutionSection.problems.driverFatigue.iconAlt"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/PM2.5-exposure.jpg",
+      imageAlt: t("carAirPollutionSection.problems.driverFatigue.imageAlt"),
+      title: t("carAirPollutionSection.problems.driverFatigue.title"),
+      description: t("carAirPollutionSection.problems.driverFatigue.description"),
+    },
+    {
+      id: 4,
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Respiratory-icons.png",
+      iconAlt: t("carAirPollutionSection.problems.respiratoryProblems.iconAlt"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Respiratory-Problems.webp",
+      imageAlt: t("carAirPollutionSection.problems.respiratoryProblems.imageAlt"),
+      title: t("carAirPollutionSection.problems.respiratoryProblems.title"),
+      description: t("carAirPollutionSection.problems.respiratoryProblems.description"),
+    },
+    {
+      id: 5,
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Unpleasant-Odors-icon.png",
+      iconAlt: t("carAirPollutionSection.problems.unpleasantOdors.iconAlt"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Unpleasant-Odors.webp",
+      imageAlt: t("carAirPollutionSection.problems.unpleasantOdors.imageAlt"),
+      title: t("carAirPollutionSection.problems.unpleasantOdors.title"),
+      description: t("carAirPollutionSection.problems.unpleasantOdors.description"),
+    },
+    {
+      id: 6,
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Bad-Driving-Experience-icon.png",
+      iconAlt: t("carAirPollutionSection.problems.badDrivingExperience.iconAlt"),
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Bad-Driving-Experience.webp",
+      imageAlt: t("carAirPollutionSection.problems.badDrivingExperience.imageAlt"),
+      title: t("carAirPollutionSection.problems.badDrivingExperience.title"),
+      description: t("carAirPollutionSection.problems.badDrivingExperience.description"),
+    },
+  ]
+  const filterBenefits = [
+    {
+      id: 1,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Prevent-Indoor-Air-Pollution.png",
+      imageAlt: t("useRightFilterSection.benefits.freshAir.imageAlt"),
+      title: t("useRightFilterSection.benefits.freshAir.title"),
+      description: t("useRightFilterSection.benefits.freshAir.description"),
+    },
+    {
+      id: 2,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Reduces-Odors.png",
+      imageAlt: t("useRightFilterSection.benefits.reducesOdors.imageAlt"),
+      title: t("useRightFilterSection.benefits.reducesOdors.title"),
+      description: t("useRightFilterSection.benefits.reducesOdors.description"),
+    },
+    {
+      id: 3,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Allergen-Reduction-1.png",
+      imageAlt: t("useRightFilterSection.benefits.allergenReduction.imageAlt"),
+      title: t("useRightFilterSection.benefits.allergenReduction.title"),
+      description: t("useRightFilterSection.benefits.allergenReduction.description"),
+    },
+    {
+      id: 4,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Focus-and-Comfort-1.png",
+      imageAlt: t("useRightFilterSection.benefits.focusAndComfort.imageAlt"),
+      title: t("useRightFilterSection.benefits.focusAndComfort.title"),
+      description: t("useRightFilterSection.benefits.focusAndComfort.description"),
+    },
+    {
+      id: 5,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Fresher-Air.png",
+      imageAlt: t("useRightFilterSection.benefits.fresherAir.imageAlt"),
+      title: t("useRightFilterSection.benefits.fresherAir.title"),
+      description: t("useRightFilterSection.benefits.fresherAir.description"),
+    },
+    {
+      id: 6,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Cleaner-Interior.png",
+      imageAlt: t("useRightFilterSection.benefits.cleanerInterior.imageAlt"),
+      title: t("useRightFilterSection.benefits.cleanerInterior.title"),
+      description: t("useRightFilterSection.benefits.cleanerInterior.description"),
+    },
+  ]
+  const filtrationTechnologies = [
+    {
+      id: 1,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/car-hepa-filter.png",
+      imageAlt: t("filtrationTechSection.technologies.hepa.imageAlt"),
+      title: t("filtrationTechSection.technologies.hepa.title"),
+      description: t("filtrationTechSection.technologies.hepa.description"),
+    },
+    {
+      id: 2,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/OXYGEN-GENERATION.png",
+      imageAlt: t("filtrationTechSection.technologies.oxygenSieves.imageAlt"),
+      title: t("filtrationTechSection.technologies.oxygenSieves.title"),
+      description: t("filtrationTechSection.technologies.oxygenSieves.description"),
+    },
+    {
+      id: 3,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/FORMALDEHYDE-CATALYST.png",
+      imageAlt: t("filtrationTechSection.technologies.formaldehydeCatalyst.imageAlt"),
+      title: t("filtrationTechSection.technologies.formaldehydeCatalyst.title"),
+      description: t("filtrationTechSection.technologies.formaldehydeCatalyst.description"),
+    },
+    {
+      id: 4,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/NANO-CYSTALLINE-CARBON.png",
+      imageAlt: t("filtrationTechSection.technologies.nanoCarbon.imageAlt"),
+      title: t("filtrationTechSection.technologies.nanoCarbon.title"),
+      description: t("filtrationTechSection.technologies.nanoCarbon.description"),
+    },
+    {
+      id: 5,
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/PHOTO-CATALYSTS-COATING.png",
+      imageAlt: t("filtrationTechSection.technologies.photoCatalyst.imageAlt"),
+      title: t("filtrationTechSection.technologies.photoCatalyst.title"),
+      description: t("filtrationTechSection.technologies.photoCatalyst.description"),
+    },
+  ]
+  const carBrandsWithModels = [
+    {
+      id: 1,
+      name: "marutiSuzuki",
+      models: "Ciaz, Brezza, SX4, Swift (2015 to 2017), Ertiga, Dzire 2017, Baleno, Alto",
+    },
+    {
+      id: 2,
+      name: "honda",
+      models: "City, Amaze, Jazz, WR-V, Civic, Accord",
+    },
+    {
+      id: 3,
+      name: "toyota",
+      models: "Innova Crysta, Corolla Altis, Fortuner",
+    },
+    {
+      id: 4,
+      name: "hyundai",
+      models: "i10, i20, Verna, Creta",
+    },
+    {
+      id: 5,
+      name: "ford",
+      models: "Ford EcoSport, Ford Aspire",
+    },
+    {
+      id: 6,
+      name: "skoda",
+      models: "Skoda Octavia",
+    },
+    {
+      id: 7,
+      name: "volkswagen",
+      models: "Polo, Vento",
+    },
+    {
+      id: 8,
+      name: "chevrolet",
+      models: "Cruze",
+    },
+    {
+      id: 9,
+      name: "mahindra",
+      models: "Scorpio",
+    },
+  ]
+  const carBrands = [
+    {
+      id: 1,
+      name: "Toyota",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Toyota-car.png",
+    },
+    {
+      id: 2,
+      name: "Skoda",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Skoda-car.png",
+    },
+    {
+      id: 3,
+      name: "Hyundai",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/hyundai.png",
+    },
+    {
+      id: 4,
+      name: "Mercedes-benz",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Mercedes-benz.png",
+    },
+    {
+      id: 5,
+      name: "Volkswagen",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/06/Vlokswagen.png",
+    },
+  ]
   return (
     <main>
       {/* Hero Section */}
@@ -72,18 +272,18 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-6">
               <div className="hero-heding">
-                <h1>Anti-Pollution</h1>
-                <h2>Car Cabin Filter</h2>
-                <p>Use Prana Airs Car Air Filter As Air Purifier For Your Car. Stay Healthy!</p>
+                <h1>{t("heroSection.title")}</h1>
+                <h2>{t("heroSection.subtitle")}</h2>
+                <p>{t("heroSection.description")}</p>
                 <div className="car-filter-price">
                   <span className="woocs_price_code">
-                    <span className="woocommerce-Price-amount amount">₹1,990.00</span>
+                    <span className="woocommerce-Price-amount amount">{t("heroSection.price")}</span>
                   </span>
                 </div>
-                <a href="https://www.pranaair.com/product/car-cabin-air-filter/">Buy Now</a>
+                <Link href="https://www.pranaair.com/product/car-cabin-air-filter/">{t("heroSection.buyNowButton")} </Link>
               </div>
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6">{/* Hero image would go here */}</div>
           </div>
         </div>
       </section>
@@ -94,121 +294,32 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-6">
               <div className="car-air-heading">
-                <h2>Problems of Car Air Pollution</h2>
+                <h2>{t("carAirPollutionSection.title")}</h2>
               </div>
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6">{/* Empty column for layout */}</div>
           </div>
           <div className="row">
             <div className="col-md-12">
               <ul className="problem-of-car-solution mob-scroll">
-                <li>
-                  <div className="car-air-pollution-card">
-                    <img
-                      className="car-air-pollution-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Figure-nitroge.png"
-                      alt="NO2 gas Higher Emissions"
-                    />
-                    <img
-                      className="high-nitro-di-img"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/High-Nitrogen-Dioxide.jpg"
-                      alt="Higher Emissions of cars"
-                    />
-                    <h3>Higher Emissions</h3>
-                    <p className="cair-air-pollution-para">Poor air quality exacerbates environmental pollution.</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="car-air-pollution-card">
-                    <img
-                      className="car-air-pollution-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Figure-lungs.png"
-                      alt="Cardiovascular Issues"
-                    />
-                    <img
-                      className="high-nitro-di-img"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Health-issues.jpg"
-                      alt="Cardiovascular Issues due to bad air pollution in car"
-                    />
-                    <h3>Cardiovascular Issues</h3>
-                    <p className="cair-air-pollution-para">
-                      Inhaling pollutants increases heart attack and stroke risks.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div className="car-air-pollution-card">
-                    <img
-                      className="car-air-pollution-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Figure-respiratory-icon.png"
-                      alt="respiratory icon"
-                    />
-                    <img
-                      className="high-nitro-di-img"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/PM2.5-exposure.jpg"
-                      alt="Driver Fatigue due to the exposure to PM2.5 pollution in car"
-                    />
-                    <h3>Driver Fatigue</h3>
-                    <p className="cair-air-pollution-para">
-                      Poor air quality induces drowsiness, heightening accident risks.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div className="car-air-pollution-card">
-                    <img
-                      className="car-air-pollution-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Respiratory-icons.png"
-                      alt="Respiratory icons"
-                    />
-                    <img
-                      className="high-nitro-di-img"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Respiratory-Problems.webp"
-                      alt="Respiratory Problems due to car air pollution"
-                    />
-                    <h3>Respiratory Problems</h3>
-                    <p className="cair-air-pollution-para">
-                      Exposure to pollutants like PM2.5 and NO2 leads to asthma and bronchitis.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div className="car-air-pollution-card">
-                    <img
-                      className="car-air-pollution-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Unpleasant-Odors-icon.png"
-                      alt="Unpleasant Odors icon"
-                    />
-                    <img
-                      className="high-nitro-di-img"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Unpleasant-Odors.webp"
-                      alt="Unpleasant Odors in car due to air pollution"
-                    />
-                    <h3>Unpleasant Odors</h3>
-                    <p className="cair-air-pollution-para">
-                      VOCs from vehicle emissions, fuel vapors, and upholstery materials create bad smells inside your
-                      car.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div className="car-air-pollution-card">
-                    <img
-                      className="car-air-pollution-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Bad-Driving-Experience-icon.png"
-                      alt="Bad Driving Experience icon"
-                    />
-                    <img
-                      className="high-nitro-di-img"
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/Bad-Driving-Experience.webp"
-                      alt="Bad Driving Experience due to car air pollution"
-                    />
-                    <h3>Bad Driving Experience</h3>
-                    <p className="cair-air-pollution-para">
-                      Drowsiness, fatigue, and impaired concentration from poor air quality contribute to accidents.
-                    </p>
-                  </div>
-                </li>
+                {pollutionProblems.map((problem) => (
+                  <li key={problem.id}>
+                    <div className="car-air-pollution-card">
+                      <img
+                        className="car-air-pollution-icon"
+                        src={problem.iconSrc || "/placeholder.svg"}
+                        alt={problem.iconAlt}
+                      />
+                      <img
+                        className="high-nitro-di-img"
+                        src={problem.imageSrc || "/placeholder.svg"}
+                        alt={problem.imageAlt}
+                      />
+                      <h3>{problem.title}</h3>
+                      <p className="cair-air-pollution-para">{problem.description}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -221,7 +332,7 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-8">
               <div className="using-car-filter-heading">
-                <h2>Do you know how a Car Air Filter can improve the air quality inside your vehicle</h2>
+                <h2>{t("usingCarFilterSection.title")}</h2>
               </div>
             </div>
             <div className="col-md-4"></div>
@@ -229,27 +340,18 @@ export default function CarAirFilter() {
           <div className="row pd">
             <div className="col-md-6 using-bg">
               <div className="using-para">
-                <p>
-                  If it is yes, so its time to check your car cabin air filter. Because most standard air filters only
-                  circulate the air inside your car rather than purifying. It means the air is not clean inside your car
-                  even with filters.
-                </p>
-                <p>
-                  Check out the Prana Air Car Cabin Air Filter or the car air purifier. Gets the advanced features of
-                  multi-filtration technology. It captures the fine dust particles to ensures to purify and freshens the
-                  air for better air quality to breathe.
-                </p>
-                <p>
-                  The state-of-the-art filtration process makes it filters the fine pollutants. Also, filters capture
-                  any foul smell with fine particles entering your cas atmosphere.
-                </p>
+                <p>{t("usingCarFilterSection.paragraph1")}</p>
+                <p>{t("usingCarFilterSection.paragraph2")}</p>
+                <p>{t("usingCarFilterSection.paragraph3")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="using-car-air-filter-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Considered-Using-a-Car-Air-Filter.jpg"
-                  alt="Using car cabin air filter"
+                  alt={t("usingCarFilterSection.imageAlt")}
+                  width={500}
+                  height={300}
                 />
               </div>
             </div>
@@ -263,95 +365,29 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-12">
               <div className="use-right-filter-heading">
-                <h2>Ensuring Clean Air in Your Vehicle: Why the Right Car Air Filter Matters</h2>
+                <h2>{t("useRightFilterSection.title")}</h2>
               </div>
             </div>
           </div>
           <div className="row car-mob-row">
             <div className="col-md-12">
               <ul className="car-filter">
-                <li>
-                  <div className="right-filter-box-main">
-                    <div className="indor-box">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/06/Prevent-Indoor-Air-Pollution.png"
-                        alt="Improved Air Quality in car by using car cabin air filter"
-                      />
-                      <h3>Fresh Air</h3>
-                      <p>
-                        Reduces respiratory irritation and allergy symptoms by filtering dust, pollen, allergens,
-                        bacteria, and pollutants.
-                      </p>
+                {filterBenefits.map((benefit) => (
+                  <li key={benefit.id}>
+                    <div className="right-filter-box-main">
+                      <div className="indor-box">
+                        <Image
+                          src={benefit.imageSrc || "/placeholder.svg"}
+                          alt={benefit.imageAlt}
+                          width={80}
+                          height={80}
+                        />
+                        <h3>{benefit.title}</h3>
+                        <p>{benefit.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="right-filter-box-main">
-                    <div className="indor-box">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/06/Reduces-Odors.png"
-                        alt="Reduces Odors by using car cabin air filter"
-                      />
-                      <h3>Reduces Odors</h3>
-                      <p>
-                        Activated carbon filter eliminate unpleasant smells (VOCs) and harmful gases for a fresher
-                        cabin.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="right-filter-box-main">
-                    <div className="indor-box">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/06/Allergen-Reduction-1.png"
-                        alt="Allergen Reduction"
-                      />
-                      <h3>Allergen Reduction</h3>
-                      <p>
-                        Filters out pollen and allergens, making the cabin more comfortable for sensitive passengers.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="right-filter-box-main">
-                    <div className="indor-box">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/06/Focus-and-Comfort-1.png"
-                        alt="Focus and Comfort"
-                      />
-                      <h3>Focus and Comfort</h3>
-                      <p>
-                        Clean, odor-free air enhances driver comfort and focus, reducing distractions for safer driving.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="right-filter-box-main">
-                    <div className="indor-box">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/06/Fresher-Air.png"
-                        alt="Fresher Air by using car cabin air filter"
-                      />
-                      <h3>Fresher Air</h3>
-                      <p>Provides a pleasant environment, especially during allergy seasons or in polluted areas.</p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="right-filter-box-main">
-                    <div className="indor-box">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2024/06/Cleaner-Interior.png"
-                        alt="Cleaner Interior by using car cabin air filter"
-                      />
-                      <h3>Cleaner Interior</h3>
-                      <p>Prevents dust and debris from entering, reducing the need for frequent cleaning.</p>
-                    </div>
-                  </div>
-                </li>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -365,12 +401,10 @@ export default function CarAirFilter() {
             <div className="col-md-6">
               <div className="breathe-healthier-heaidng">
                 <h2>
-                  Breathe <strong>healthier</strong> and <strong>Drive easier</strong>
+                  {t("breatheHealthierSection.titlePart1")} <strong>{t("breatheHealthierSection.healthier")}</strong>{" "}
+                  {t("breatheHealthierSection.titlePart2")} <strong>{t("breatheHealthierSection.driveEasier")}</strong>
                 </h2>
-                <p>
-                  Prana Air Car Cabin Air Filter traps pollutants from the air inside your car and provides clean air to
-                  Breathe comfortably and drive safely.
-                </p>
+                <p>{t("breatheHealthierSection.description")}</p>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -384,8 +418,8 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-6">
               <div className="filtration-tec-heading">
-                <h2>Prana Air Car Filtration Technology</h2>
-                <p>Multi-Layer HEPA + Activated Carbon Filter</p>
+                <h2>{t("filtrationTechSection.title")}</h2>
+                <p>{t("filtrationTechSection.subtitle")}</p>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -393,82 +427,27 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-4">
               <div className="filtration-tec-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Filtration-Technology.png"
-                  alt="multiple layers of prana air car cabin air filter with HEPA and activated carbon layers"
+                  alt={t("filtrationTechSection.mainImageAlt")}
+                  width={400}
+                  height={600}
                 />
               </div>
             </div>
             <div className="col-md-8">
               <div className="filrtion-tech-point">
-                <ul>
-                  <li>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/car-hepa-filter.png"
-                      alt="car cabin hepa filter in prana air car cabin air filter"
-                    />
-                  </li>
-                  <li>
-                    <h3>High Efficiency & Low Resistance Hepa</h3>
-                    <p>
-                      It blocks a high concentration of dust and dirt particles, pollen and second hand smoke from
-                      entering your lungs.
-                    </p>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/OXYGEN-GENERATION.png"
-                      alt="oxygen molecular sieves in prana air car cabin air filter"
-                    />
-                  </li>
-                  <li>
-                    <h3>Manufacture of Oxygen molecular Sieves</h3>
-                    <p>The oxygen generating molecular sieve produces fresh, new oxygen.</p>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/FORMALDEHYDE-CATALYST.png"
-                      alt="formaldehyde catalyst in prana air car cabin air filter"
-                    />
-                  </li>
-                  <li>
-                    <h3>Formaldehyde catalyst</h3>
-                    <p>The catalyst removes the HCHO to improve the quality of the air.</p>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/NANO-CYSTALLINE-CARBON.png"
-                      alt="nanocystalline carbon in prana air car cabin air filter"
-                    />
-                  </li>
-                  <li>
-                    <h3>Nanocystalline Carbon</h3>
-                    <p>
-                      The carbon enables the removal of VOCs from off gasses, with reduction efficiencies above 99%.
-                    </p>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2024/06/PHOTO-CATALYSTS-COATING.png"
-                      alt="photocatalyst coating network in prana air car cabin air filter"
-                    />
-                  </li>
-                  <li>
-                    <h3>Photocatalyst coating network</h3>
-                    <p>
-                      In the presence of light, the photo catalyst transforms the coated surface, creating air
-                      purification and cleans the fine dust particles from inside the car.
-                    </p>
-                  </li>
-                </ul>
+                {filtrationTechnologies.map((tech) => (
+                  <ul key={tech.id}>
+                    <li>
+                      <Image src={tech.imageSrc || "/placeholder.svg"} alt={tech.imageAlt} width={80} height={80} />
+                    </li>
+                    <li>
+                      <h3>{tech.title}</h3>
+                      <p>{tech.description}</p>
+                    </li>
+                  </ul>
+                ))}
               </div>
             </div>
           </div>
@@ -482,20 +461,21 @@ export default function CarAirFilter() {
             <div className="col-md-6">
               <div className="ultimate-heading">
                 <h2>
-                  Ultimate protection for <strong>Your Loved once</strong>
+                  {t("ultimateProtectionSection.titlePart1")} <strong>{t("ultimateProtectionSection.lovedOnes")}</strong>
                 </h2>
-                <p>
-                  The multi-layer filter absorb various pollutants in one time and offers more filtering power and a
-                  longer service life
-                </p>
-                <a href="https://www.pranaair.com/product/car-cabin-air-filter/">Buy Now</a>
+                <p>{t("ultimateProtectionSection.description")}</p>
+                <Link href="https://www.pranaair.com/product/car-cabin-air-filter/">
+                  {t("ultimateProtectionSection.buyNowButton")}
+                </Link>
               </div>
             </div>
             <div className="col-md-6">
               <div className="ultimate-protection-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Unltimate-protection.png"
-                  alt="layers of prana air car cabin air filter"
+                  alt={t("ultimateProtectionSection.imageAlt")}
+                  width={500}
+                  height={400}
                 />
               </div>
             </div>
@@ -508,18 +488,17 @@ export default function CarAirFilter() {
         <div className="row guards-heading-box">
           <div className="col-md-6">
             <div className="gurad-heading">
-              <h2>Guards You From</h2>
-              <p>
-                Prana Airs Car cabin air filter safeguards you from harmful air pollutants, ensuring a healthier and
-                more enjoyable driving experience.
-              </p>
+              <h2>{t("guardsYouFromSection.title")}</h2>
+              <p>{t("guardsYouFromSection.description")}</p>
             </div>
           </div>
           <div className="col-md-6">
             <div className="guard-img">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2024/06/guard.png"
-                alt="protection from car air pollution"
+                alt={t("guardsYouFromSection.imageAlt")}
+                width={500}
+                height={400}
               />
             </div>
           </div>
@@ -588,13 +567,10 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-6">
               <div className="enjoy-fresh-air-heading">
-                <h2>Enjoy Fresh Air for Up to</h2>
-                <h3>2 Years on a 15,000km Drive</h3>
-                <span className="approx">(Approximately)</span>
-                <p>
-                  Various factors, including usage patterns, driving distance, outdoor pollution levels, and more,
-                  contribute to filter longevity.
-                </p>
+                <h2>{t("enjoyFreshAirSection.title")}</h2>
+                <h3>{t("enjoyFreshAirSection.subtitle")}</h3>
+                <span className="approx">{t("enjoyFreshAirSection.approximately")}</span>
+                <p>{t("enjoyFreshAirSection.description")}</p>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -602,9 +578,11 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-12">
               <div className="enjoy-fresh-air-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Car-Cabin-filter-page-gif.gif"
-                  alt="air pollution filtration by prana air car cabin air filter"
+                  alt={t("enjoyFreshAirSection.gifAlt")}
+                  width={800}
+                  height={400}
                 />
               </div>
             </div>
@@ -618,18 +596,22 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-4">
               <div className="how-to-install-img">
-                <h2>How to install a car cabin air filter?</h2>
-                <img
+                <h2>{t("howToInstallSection.title")}</h2>
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/How-to-install-a-car-cabin-air-filte.jpg"
-                  alt="how to install Prana Air Car cabin air filter"
+                  alt={t("howToInstallSection.imageAlt")}
+                  width={400}
+                  height={300}
                 />
               </div>
             </div>
             <div className="col-md-8">
               <div className="how-to-install-filter-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Car-Filter-Installation-Guide.png"
-                  alt="installation of Prana Air car cabin air filter"
+                  alt={t("howToInstallSection.guideImageAlt")}
+                  width={800}
+                  height={400}
                 />
               </div>
             </div>
@@ -643,7 +625,7 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-6">
               <div className="reason-to-choose-heading">
-                <h2>Reason To Choose Prana Air Car Cabin Air Filter</h2>
+                <h2>{t("reasonToChooseSection.title")}</h2>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -651,36 +633,28 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-6 red-box">
               <div className="reason-to-choose-filter-box">
-                <h3>Standard Filter</h3>
-                <p>
-                  Standard filters holds the single layer for air filtration that does not effectively capture various
-                  pollutants present in the car atmosphere.
-                </p>
-                <img
+                <h3>{t("reasonToChooseSection.standardFilter.title")}</h3>
+                <p>{t("reasonToChooseSection.standardFilter.description")}</p>
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Standard-Filter.png"
-                  alt="Bad AQI air quality after using standard or normal car cabin filter"
+                  alt={t("reasonToChooseSection.standardFilter.imageAlt")}
+                  width={400}
+                  height={300}
                 />
-                <p className="para-filter">
-                  Regular car Cabin air filter only circulates air from the outside to inside of the car and captures
-                  dust particles.
-                </p>
+                <p className="para-filter">{t("reasonToChooseSection.standardFilter.conclusion")}</p>
               </div>
             </div>
             <div className="col-md-6 green-box">
               <div className="reason-to-choose-filter-box">
-                <h3>Prana Air Car Air Filter (HEPA)</h3>
-                <p>
-                  The prana air car filter has several layers that actively capture all pollutants from the air before
-                  entering into the car atmosphere.
-                </p>
-                <img
+                <h3>{t("reasonToChooseSection.pranaFilter.title")}</h3>
+                <p>{t("reasonToChooseSection.pranaFilter.description")}</p>
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Prana-Air-Car-Air-Filter-HEPA.png"
-                  alt="Good AQI air quality after using Prana Air car cabin filter"
+                  alt={t("reasonToChooseSection.pranaFilter.imageAlt")}
+                  width={400}
+                  height={300}
                 />
-                <p className="para-filter">
-                  Prana Air car cabin filter purifies the air by capturing fine dust particles & odor from your car and
-                  creates a fresh indoor living environment for a healthy ride.
-                </p>
+                <p className="para-filter">{t("reasonToChooseSection.pranaFilter.conclusion")}</p>
               </div>
             </div>
           </div>
@@ -692,36 +666,36 @@ export default function CarAirFilter() {
         <div className="row tab-btn-row">
           <div className="col-md-6 red-bg">
             <div className="diff-table-heading">
-              <h2>Standard Filter</h2>
+              <h2>{t("comparisonTableSection.standardFilter.title")}</h2>
             </div>
             <div className="diff-table-para">
-              <h3>Standard Filter</h3>
-              <p>Standard filters can trap particles of 10 microns.</p>
+              <h3>{t("comparisonTableSection.standardFilter.filterType.title")}</h3>
+              <p>{t("comparisonTableSection.standardFilter.filterType.description")}</p>
             </div>
             <div className="diff-table-para">
-              <h3>Less-Protection</h3>
-              <p>Cannot protect from carbon monoxide, sulfur dioxide and other gases.</p>
+              <h3>{t("comparisonTableSection.standardFilter.protection.title")}</h3>
+              <p>{t("comparisonTableSection.standardFilter.protection.description")}</p>
             </div>
             <div className="diff-table-para">
-              <h3>Efficiency</h3>
-              <p>These filters typically remove between 80% and 95% of pollutants.</p>
+              <h3>{t("comparisonTableSection.standardFilter.efficiency.title")}</h3>
+              <p>{t("comparisonTableSection.standardFilter.efficiency.description")}</p>
             </div>
           </div>
           <div className="col-md-6 green-bg">
             <div className="diff-table-heading">
-              <h2>Prana Air Car Air Filter (HEPA)</h2>
+              <h2>{t("comparisonTableSection.pranaFilter.title")}</h2>
             </div>
             <div className="diff-table-para">
-              <h3>HEPA Filter</h3>
-              <p>Prana Air filter can trap small particles as 0.3 microns.</p>
+              <h3>{t("comparisonTableSection.pranaFilter.filterType.title")}</h3>
+              <p>{t("comparisonTableSection.pranaFilter.filterType.description")}</p>
             </div>
             <div className="diff-table-para">
-              <h3>Better Protection</h3>
-              <p>Activated carbon layer protects from harmful gases.</p>
+              <h3>{t("comparisonTableSection.pranaFilter.protection.title")}</h3>
+              <p>{t("comparisonTableSection.pranaFilter.protection.description")}</p>
             </div>
             <div className="diff-table-para">
-              <h3>Adequate Efficiency</h3>
-              <p>These filters can theoretically remove at least 99.97% of pollutants.</p>
+              <h3>{t("comparisonTableSection.pranaFilter.efficiency.title")}</h3>
+              <p>{t("comparisonTableSection.pranaFilter.efficiency.description")}</p>
             </div>
           </div>
         </div>
@@ -733,11 +707,11 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-12">
               <div className="car-cabin-filter-heading">
-                <h2>Prana Air Cabin Filter</h2>
-                <p>Check-out the air quality in two cars with air filters and without air filters.</p>
+                <h2>{t("pranaAirCabinFilterSection.title")}</h2>
+                <p>{t("pranaAirCabinFilterSection.description")}</p>
                 <ul>
-                  <li>Air quality inside Car A</li>
-                  <li>Air quality inside Car B</li>
+                  <li>{t("pranaAirCabinFilterSection.carA")}</li>
+                  <li>{t("pranaAirCabinFilterSection.carB")}</li>
                 </ul>
               </div>
             </div>
@@ -745,16 +719,15 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-12">
               <div className="graph-img">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/06/Prana-Air-Cabin-Filter-graph.jpg"
-                  alt="Efficiency graph of Prana Air car cabin air filter"
+                  alt={t("pranaAirCabinFilterSection.graphAlt")}
+                  width={800}
+                  height={400}
                 />
               </div>
               <div className="filter-graph-para">
-                <p>
-                  You can check the sudden down in PM2.5 measures in the car A after installing the Prana Air Car
-                  Filter. And the level remains in the good category.
-                </p>
+                <p>{t("pranaAirCabinFilterSection.graphDescription")}</p>
               </div>
             </div>
           </div>
@@ -767,30 +740,22 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-4">
               <div className="available-for-heading">
-                <h2>Available for</h2>
-                <p>We have filters available for various car models.</p>
+                <h2>{t("availableForSection.title")}</h2>
+                <p>{t("availableForSection.description")}</p>
               </div>
             </div>
             <div className="col-md-8">
               <ul className="brand-logo">
-                <li>
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/06/Toyota-car.png" alt="Toyota" />
-                </li>
-                <li>
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/06/Skoda-car.png" alt="Skoda" />
-                </li>
-                <li>
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/06/hyundai.png" alt="Hyundai" />
-                </li>
-                <li>
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/06/Mercedes-benz.png"
-                    alt="Mercedes-benz"
-                  />
-                </li>
-                <li>
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/06/Vlokswagen.png" alt="Volkswagen" />
-                </li>
+                {carBrands.map((brand) => (
+                  <li key={brand.id}>
+                    <Image
+                      src={brand.imageSrc || "/placeholder.svg"}
+                      alt={t(`availableForSection.brands.${brand.name.toLowerCase()}`)}
+                      width={100}
+                      height={50}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -803,7 +768,7 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-6">
               <div className="select-brand-heading">
-                <h2>Select Car Brand</h2>
+                <h2>{t("selectCarBrandSection.title")}</h2>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -811,74 +776,28 @@ export default function CarAirFilter() {
           <div className="row">
             <div className="col-md-8">
               <div className="all-brands-list">
-                <ul>
-                  <li>
-                    <h3>Maruti Suzuki</h3>
-                  </li>
-                  <li>Ciaz, Brezza, SX4, Swift (2015 to 2017), Ertiga, Dzire 2017, Baleno, Alto</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Honda</h3>
-                  </li>
-                  <li>City, Amaze, Jazz, WR-V, Civic, Accord</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Toyota</h3>
-                  </li>
-                  <li>Innova Crysta, Corolla Altis, Fortuner</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Hyundai</h3>
-                  </li>
-                  <li>i10, i20, Verna, Creta</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Ford</h3>
-                  </li>
-                  <li>Ford EcoSport, Ford Aspire</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Skoda</h3>
-                  </li>
-                  <li>Skoda Octavia</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Volkswagen</h3>
-                  </li>
-                  <li>Polo, Vento</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Chevrolet</h3>
-                  </li>
-                  <li>Cruze</li>
-                </ul>
-                <ul>
-                  <li>
-                    <h3>Mahindra</h3>
-                  </li>
-                  <li>Scorpio</li>
-                </ul>
+                {carBrandsWithModels.map((brand) => (
+                  <ul key={brand.id}>
+                    <li>
+                      <h3>{t(`selectCarBrandSection.brands.${brand.name}.name`)}</h3>
+                    </li>
+                    <li>{t(`selectCarBrandSection.brands.${brand.name}.models`)}</li>
+                  </ul>
+                ))}
               </div>
             </div>
             <div className="col-md-4">
               <div className="brand-btn">
-                <a className="buy-btn" href="https://www.pranaair.com/product/car-cabin-air-filter/">
-                  Buy Now
-                </a>
+                <Link className="buy-btn" href="https://www.pranaair.com/product/car-cabin-air-filter/">
+                  {t("selectCarBrandSection.buttons.buyNow")}
+                </Link>
                 <a
                   className="amazon-btn"
                   href="https://www.amazon.in/stores/page/195BC2CC-2B06-4801-895E-55E27CA6330F"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  Amazon
+                  {t("selectCarBrandSection.buttons.amazon")}
                 </a>
               </div>
             </div>
@@ -891,7 +810,7 @@ export default function CarAirFilter() {
         <div className="row">
           <div className="col-md-12">
             <div className="faq-heading">
-              <h2>Frequently Asked Questions</h2>
+              <h2>{t("faqSection.title")}</h2>
             </div>
           </div>
         </div>

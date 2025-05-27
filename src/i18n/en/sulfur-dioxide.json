@@ -1,0 +1,200 @@
+{
+      "products": {
+  "co2Sensor": {
+    "imageAlt": "CO2 Sensor",
+    "title": "CO2 Sensor",
+    "description": "Measures CO2 levels with high accuracy"
+  },
+  "pocketCO2": {
+    "imageAlt": "Pocket CO2 Monitor",
+    "title": "Pocket CO2 Monitor",
+    "description": "Portable CO2 monitoring solution"
+  },
+  "squair": {
+    "imageAlt": "SQUAIR Air Monitor",
+    "title": "SQUAIR Air Monitor",
+    "description": "Measures CO2 and other pollutants"
+  },
+  "sensiblePlus": {
+    "imageAlt": "Sensible+ Advanced CO2 Monitor",
+    "title": "Sensible+ Advanced CO2 Monitor",
+    "description": "Professional grade monitoring"
+  }
+},
+"so2": {
+    "hero": {
+      "formulaAlt": "Sulfur dioxide SO2 chemical formula",
+      "title": "What is Sulfur Dioxide SO₂?",
+      "description": "Sulfur Dioxide is a gaseous form of air pollution, made from two components- sulfur and oxygen. This forms when sulfur-rich fuels burn such as oil, diesel, or coal. Sulfur dioxide already exists in the air composition but due to its various natural and man-made sources, the SO2 concentration can rise, resulting in severe effects on humans, plants, and the entire ecosystem."
+    },
+    "sources": {
+      "title": "Sources Of Sulfur Dioxide Gas",
+      "volcanic": {
+        "imageAlt": "Volcanic eruption emitting sulfur dioxide",
+        "description": "–Volcanic eruption is one of the many natural causes of sulfur oxides. As molten lava rises to the surface, the pressure on the magma decreases, causing dissolved sulfur and other volatile components to combine to produce various new gases. Volcano eruptions emit sulfides that can travel upwards in the stratosphere and combines with water particles that cause acid rain."
+      },
+      "fossilFuels": {
+        "imageAlt": "Fossil fuel burning coal oil diesel",
+        "description": "– Fossil fuels and especially the ones with a low filtration process have a high volume of sulfur in it which helps in the formation of many sulfur oxides. The burning of fossil fuels such as oil, coal, diesel, and other elements that contain sulfur emits sulfur dioxide into the atmosphere."
+      },
+      "extraction": {
+        "imageAlt": "Fuel extraction oil refining industrial process",
+        "description": "– Among these combustion of fuels in plants and processes including extraction, refining of oil, etc are the major source of sulfur dioxide formation. Internal combustion engines, especially diesel engines are the major sources of sulfur dioxide production in urban areas. Indian governments push for BSVI engines has made a significant impact on pollution as a whole."
+      }
+    },
+    "atmosphere": {
+      "title": "SO₂ in the Atmosphere",
+      "description": "Sulfur Oxides are present in the atmosphere at low concentrations. Most of it is by human activities including the burning of fuel and essentially ship fuel as it has a high concentration of sulfur. In urban areas, a high concentration of sulfur oxides is detected. The life of sulfur dioxide in the atmosphere is less than a week during which it reacts with other atmospheric pollutants and forms various different compounds. When SO2 reacts with the oxygen present in the environment, it forms sulfur trioxide which dissolves with water vapor and forms sulfuric acid (H2SO4), a major acid rain component. It forms secondary pollutants like smog and particulate matter after attaching itself to dust particles which is quite harmful to the health and environment.",
+      "imageAlt": "Sulfur dioxide atmospheric reactions acid rain formation"
+    },
+    "healthImpacts": {
+      "title": "Health & Environmental Impacts of SO₂ Gas",
+      "subtitle": "Let's find out the harmful effects of sulfur dioxide gas on our health.",
+      "healthImpactTitle": "Health Impact",
+      "description": "If there is a high concentration of SO₂, you can easily inhale SO₂, which eventually sticks to the membrane of the nose and respiratory tract. Its short health impact can be felt quickly but the long-term impacts are very dangerous even to the extent of reduced lung capacity. It results in difficulty in breathing and tightening of airways. People with comorbidities are at high risk as it can aggravate those conditions to a point of no return.",
+      "symptoms": {
+        "eyes": {
+          "imageAlt": "Eye irritation nose irritation symptoms",
+          "title": "Eyes, nose, irritation"
+        },
+        "cough": {
+          "imageAlt": "Cough wheezing respiratory symptoms",
+          "title": "Cough, wheezing"
+        },
+        "throat": {
+          "imageAlt": "Throat irritation respiratory tract inflammation",
+          "title": "Respiratory tract inflammation & irritation"
+        },
+        "asthma": {
+          "imageAlt": "Child asthma attack breathing difficulty",
+          "title": "Risk of asthma attacks increases in children"
+        },
+        "heart": {
+          "imageAlt": "Heart disease cardiovascular problems",
+          "title": "Heart diseases"
+        }
+      }
+    },
+    "environmentalImpacts": {
+      "title": "Environmental Impact",
+      "description": "The impact of SO₂ on the environment is beyond comprehensible. It limits plant growth and also damages leaves turning them yellow. At a high concentration in the atmosphere, it reacts with atmospheric moisture to create an acidic compound responsible for acid rain and damaging soil properties.",
+      "effects": {
+        "monuments": {
+          "imageAlt": "Monument damage stone corrosion acid rain",
+          "title": "It damages and stains stones including culturally important monuments and statues."
+        },
+        "plantTissues": {
+          "imageAlt": "Plant tissue damage leaf damage pollution",
+          "title": "Impact plant growth by damaging exposed tissues in leaves"
+        },
+        "acidRain": {
+          "imageAlt": "Acid rain environmental damage pollution",
+          "title": "Increased chances of acid rain"
+        },
+        "vegetation": {
+          "imageAlt": "Plant growth vegetation damage pollution effects",
+          "title": "Affects the vegetation, growth of plants"
+        },
+        "leaves": {
+          "imageAlt": "Leaf damage plant deterioration pollution",
+          "title": "Deteriorates leaves quality and color"
+        },
+        "marineLife": {
+          "imageAlt": "Marine life damage ocean acidification pollution",
+          "title": "Affects marine life by acidifying the water ways"
+        },
+        "soil": {
+          "imageAlt": "Soil damage agricultural land pollution effects",
+          "title": "Alters soil properties, agricultural land properties"
+        },
+        "animals": {
+          "imageAlt": "Animal lung damage wildlife health pollution",
+          "title": "Destruction of parts of lungs and inflammation in the airways in animals"
+        }
+      }
+    },
+    "healthEffectsTable": {
+      "title": "Sulfur Dioxide (SO2) and the harm it causes",
+      "mobileTitle": "SO2 Levels and their health effects",
+      "levels": "Levels",
+      "unit": "(µg/m³)",
+      "mobileUnit": "(mg/m³)",
+      "healthEffects": "Health Effects",
+      "levels": {
+        "good": {
+          "label": "Good",
+          "range": "0-40",
+          "effect": "Fresh air"
+        },
+        "satisfactory": {
+          "label": "Satisfactory",
+          "range": "41-80",
+          "effect": "Irritation in the eyes and respiratory tract experienced"
+        },
+        "moderate": {
+          "label": "Moderately polluted",
+          "range": "81-380",
+          "effect": "Reflex bronchoconstriction with increased pulmonary resistance experienced"
+        },
+        "poor": {
+          "label": "Poor",
+          "range": "381-800",
+          "effect": "Brain and lung damages after exposure of 3 hours"
+        },
+        "veryPoor": {
+          "label": "Very poor",
+          "range": "801-1600",
+          "effect": "Exposures can cause Skin and respiratory tract burns"
+        },
+        "severe": {
+          "label": "Severe",
+          "range": "1600+",
+          "effect": "Life-threatening, Fatal within 60 minutes of exposure"
+        }
+      },
+      "note": "*NAQI as per CBCB. 2-h hourly average values."
+    },
+    "correctiveMeasures": {
+      "title": "Corrective Measures To Reduce SO₂ Gas",
+      "description": "For the solutions to contain so2 concentration, first we need to monitor it and identify the areas where its concentration doesn't meet the recommended standards. After identifying the target areas, some of the below mentioned corrective measures can be implemented:",
+      "measures": {
+        "sustainableEnergy": {
+          "imageAlt": "Sustainable energy renewable sources solar wind",
+          "description": "– Promote sustainable energy sources synergistic emission reduction includes the usage of water energy, wind energy, solar energy, etc. instead of fossil fuels to reduce SO2 emissions."
+        },
+        "alternativeFuels": {
+          "imageAlt": "Alternative fuels hydrogen electric vehicles",
+          "description": "– Alternative fuels like hydrogen cells, electrical, etc. This will help in reducing emissions from fossil fuel burning that emits SO2. Air pollution can be reduced substantially when we use alternative fuels."
+        },
+        "accommodations": {
+          "imageAlt": "Residential housing away from industrial areas",
+          "description": "– Accommodations away from industrial areas will help in reducing the effects of air pollution and harmful substances that can affect the residents, especially sensitive groups that live near industrial areas."
+        },
+        "renewableEnergy": {
+          "imageAlt": "Renewable energy sources solar wind hydropower",
+          "description": "– Switch to a renewable source of energy such as solar, wind, and hydropower. Air pollution and economic growth go hand-in-hand. Using renewable sources of energy would be an economic approach to reducing emissions."
+        },
+        "zeroSulfurFuels": {
+          "imageAlt": "Zero sulfur fuel clean gasoline diesel",
+          "description": "– Using zero sulfur content fuels in cars and other vehicles will help in reducing ambient air pollution. Reducing sulfur fuels will help in reducing tailpipe HC, CO, and NOx emissions."
+        },
+        "avoidExercise": {
+          "imageAlt": "Avoid exercise during pollution high air quality",
+          "description": "– Avoid exercising during high-pollution days as when you work out you inhale more O2 than normal along with other air pollutants. This means you inhale more air pollution when you work out during high-pollution days."
+        },
+        "scrubbers": {
+          "imageAlt": "Power plant scrubbers pollution control equipment",
+          "description": "– Installation of power plants with scrubbers. The smokestack scrubber helps in collecting harmful chemicals and toxins and then releases clean air into the atmosphere through the smokestack."
+        }
+      }
+    },
+    "sensor": {
+      "title": "Air quality sensor to measure SO₂",
+      "imageAlt": "Air quality sensor SO2 sulfur dioxide monitoring device"
+    },
+    "products": {
+      "title": "Choose Your Air Quality Monitor To Measure SO₂ Gas",
+      "learnMoreAlt": "Learn more about our air quality monitors"
+    }
+  }
+}

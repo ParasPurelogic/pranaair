@@ -1,0 +1,230 @@
+{
+     "productSection": {
+    "title": "SO2 SENSOR",
+    "imageAlt": "so2-sensor",
+    "precisionImageAlt": "highly precise so2 sensor",
+    "description": "Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas.",
+    "variants": {
+      "standard": {
+        "ppm": "0.01 PPM",
+        "price": "₹     17,990.00"
+      },
+      "premium": {
+        "ppm": "0.001 PPM",
+        "price": "20,990.00"
+      }
+    },
+    "buttons": {
+      "addToCart": "Add to cart",
+      "buyNow": "Buy now"
+    }
+  },
+    "introductionSection": {
+    "title": "Introduction",
+    "titleHighlight": "SO2 Sensor",
+    "variantIconAlt": "variant icon",
+    "variants": {
+      "variantA": "Variant A",
+      "variantB": "Variant B"
+    },
+    "description": "The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas. This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes.",
+    "specs": {
+      "resolution": {
+        "value": "0.01 PPM",
+        "label": "Resolution"
+      },
+      "range": {
+        "value": "50 PPM",
+        "label": "Range"
+      }
+    },
+    "sensorTitle": "SO2 SENSOR",
+    "variantBTitle": "SO SENSOR",
+    "sensorPcbAlt": "so2-sensor-inbuilt-pcb",
+    "whyChoose": {
+      "titleStart": "Why To Choose Prana Air",
+      "titleHighlight": "SO2 Sensor?",
+      "features": {
+        "feature1": {
+          "title": "Compact",
+          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "iconAlt": "compact icon"
+        },
+        "feature2": {
+          "title": "Compact",
+          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "iconAlt": "compact icon"
+        },
+        "feature3": {
+          "title": "Compact",
+          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "iconAlt": "compact icon"
+        },
+        "feature4": {
+          "title": "Compact",
+          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "iconAlt": "compact icon"
+        },
+        "feature5": {
+          "title": "Compact",
+          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "iconAlt": "compact icon"
+        },
+        "feature6": {
+          "title": "Compact",
+          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "iconAlt": "compact icon"
+        }
+      }
+    }
+  },
+  "calibrationSection": {
+    "title": "SO2 Sensor Calibration",
+    "videoAlt": "so2 sensor calibration video",
+    "description": "Calibrating an SO2 sensor means checking if it gives correct readings by comparing it to a standard measurement. This is done in specific conditions: a temperature of 23°C (plus or minus 3°C), humidity of 50% (plus or minus 15%), air pressure between 0.9 and 1.1 atm, and an airspeed of 0.05 m/s. This process makes sure the sensor gives accurate and reliable results. To do this, a special gas cylinder approved by NIST (a trusted measurement standard) is used as a reference."
+  },
+  "technologySection": {
+    "title": "What technology is being used in SO2 Sensor?",
+    "subtitle": "SO2 Sensor Introduction",
+    "backgroundAlt": "technology background image",
+    "learnMore": "Learn more"
+  },
+   "sulfurDioxideSection": {
+    "title": "What is Sulfur Di-Oxide?",
+    "imageAlt": "sulfur dioxide molecule illustration",
+    "description": "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles."
+  },
+  "lightModeSection": {
+    "title": "What technology is being used in SO2 Sensor?",
+    "imageAlt": "SO2 sensor light mode technology illustration",
+    "description": "The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our monitors use a special sensor to detect sulfur dioxide (SO2), a harmful gas found in the air. This SO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When SO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more SO2 in the air, the stronger the current.By measuring this current, our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone."
+  },
+  "sensorChipSection": {
+    "title": "SO2 Sensor Introduction",
+    "imageAlt": "SO2 sensor chip close-up",
+    "buyNowLink": "Buy Now",
+    "description": "Prana Air offers top-quality air quality monitoring solutions as our SO2 sensor that works with advanced technology and offering accurate readings."
+  },
+  "applicationsSO2Section": {
+    "title": "Applications of SO2 Sensor",
+    "applications": {
+      "airQualityMonitoring": {
+        "title": "Air Quality Monitoring Equipment",
+        "alt": "Air Quality Monitoring Equipment using SO2 sensor"
+      },
+      "industrialSafety": {
+        "title": "Industrial Safety Systems",
+        "alt": "Industrial Safety Systems using SO2 sensor"
+      },
+      "environmentalCompliance": {
+        "title": "Environmental Compliance",
+        "alt": "Environmental Compliance monitoring using SO2 sensor"
+      },
+      "smartCities": {
+        "title": "Smart City Infrastructure",
+        "alt": "Smart City Infrastructure using SO2 sensor"
+      },
+      "researchInstitutions": {
+        "title": "Research Institutions",
+        "alt": "Research Institutions using SO2 sensor"
+      }
+    }
+  },
+  "technicalSpecsSO2Section": {
+    "title": "Technical Specifications",
+    "variantIconAlt": "variant icon",
+    "variants": {
+      "variantA": "Variant A",
+      "variantB": "Variant B"
+    },
+    "variantBTitle": "Variant B Technical Specifications",
+    "sensorImageAlt": "SO2 sensor with circuit board",
+    "specs": {
+      "productName": {
+        "label": "Product Name:",
+        "value": "SO2 Sensor"
+      },
+      "resolution": {
+        "label": "Resolution:",
+        "value": "0.01 ppm"
+      },
+      "responseTime": {
+        "label": "Response Time:",
+        "value": "15 seconds"
+      },
+      "operatingTemperature": {
+        "label": "Operating Temperature Range:",
+        "value": "-20℃～50℃"
+      },
+      "operatingHumidity": {
+        "label": "Operating Humidity Range – non-condensing",
+        "value": "15%RH – 90%RH (no condensation)"
+      },
+      "measurementRange": {
+        "label": "Measurement Range:",
+        "value": "0 to 50 ppm"
+      },
+      "repeatability": {
+        "label": "Repeatability:",
+        "value": "+/- 3 % of reading"
+      },
+      "sensitivity": {
+        "label": "Sensitivity @ 200 mV bias:",
+        "value": "25 +/- 10 nA/ppm"
+      },
+      "operatingVoltage": {
+        "label": "Operating Voltage",
+        "value": "3.7V～5.5V"
+      }
+    },
+    "buttons": {
+      "buyNow": "Buy now",
+      "buyNowIconAlt": "buy now button icon",
+      "dataSheet": "Data Sheet",
+      "dataSheetIconAlt": "data sheet icon"
+    }
+  },
+  "sensorGallerySection": {
+    "titleStart": "Sensors",
+    "titleHighlight": "Gallery",
+    "description": "The SO2 sensor comes with a long life of almost 10 years. With this kind of longevity, there is no need to worry about calibration and breakdown."
+  },
+  "contactHeadingSection": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "youMayAlsoLikeSection": {
+    "title": "You may also like",
+    "iconAlt": "navigation arrow icon",
+    "products": {
+      "ethanol": {
+        "name": "Ethanol Sensor",
+        "alt": "Prana Air Ethanol Sensor"
+      },
+      "co2": {
+        "name": "CO2 Sensor",
+        "alt": "Prana Air CO2 Sensor"
+      },
+      "no2": {
+        "name": "NO2 Sensor",
+        "alt": "Prana Air NO2 Sensor"
+      },
+      "co": {
+        "name": "CO Sensor",
+        "alt": "Prana Air CO Sensor"
+      },
+      "ozone": {
+        "name": "Ozone Sensor",
+        "alt": "Prana Air Ozone Sensor"
+      },
+      "ammonia": {
+        "name": "Ammonia Sensor",
+        "alt": "Prana Air Ammonia Sensor"
+      },
+      "h2s": {
+        "name": "H2S Sensor",
+        "alt": "Prana Air H2S Sensor"
+      }
+    }
+  }
+}

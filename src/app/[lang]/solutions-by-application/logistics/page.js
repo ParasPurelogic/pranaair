@@ -1,69 +1,106 @@
-"use client"
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
-import Carousel from "react-multi-carousel"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import { getServerTranslation } from "@/i18n/server"
+import LogisticApplicationsCarousel from "@/Components/Pages/Logistics/app-slider"
 
-export default function LogisticsPage() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1366 },
-      items: 1,
+export default async function LogisticsPage() {
+  const { t } = await getServerTranslation("logstics")
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: t("industrialApplicationsData.hotel.title"),
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
-    desktop: {
-      breakpoint: { max: 1366, min: 1024 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: t("industrialApplicationsData.restaurant.title"),
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 600 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: t("industrialApplicationsData.institutes.title"),
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
-    mobile: {
-      breakpoint: { max: 600, min: 0 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
     },
-  }
-
-  const applicationsResponsive = {
-    desktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 3,
-      slidesToSlide: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 2,
-      slidesToSlide: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
     },
-    mobile: {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
     },
-  }
-
-  const appCarouselResponsive = {
-    all: {
-      breakpoint: { max: 4000, min: 0 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
     },
-  }
-
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
+  ]
+  const appSlides = [
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png",
+      iconAlt: "AQI Mobile App",
+      title: "AQI Mobile App",
+      description: "Access a real-time air quality monitor data and API for accurate global data to stay informed. Check the world air pollution map and weather map, and easily compare air quality parameters across multiple locations with AQI App.",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Mobile-Apps.jpg",
+      imageAlt: "AQI Mobile App interface"
+    },
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png",
+      iconAlt: "AQI TV App",
+      title: "AQI TV App",
+      description: "View real-time and historical air quality data on a large TV screen. Effortlessly enjoy 24/7 remote monitoring to stay informed about AQI levels with data accessibility to everyone.",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-TV-Apps.jpg",
+      imageAlt: "AQI TV App interface"
+    },
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg",
+      iconAlt: "AQI Web-Dashboard",
+      title: "AQI Web-Dashboard",
+      description: "Explore global pollution trends through detailed analyses of the worlds most polluted cities and countries. Receive health advice based on real-time air quality indexes, and easily compare air quality parameters across multiple locations with Web Dashboard.",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Web-Dashboards.jpg",
+      imageAlt: "AQI Web Dashboard interface"
+    }
+  ]
   return (
     <div className="logistics-page">
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
           <h1>
-            Air quality solutions for <span className="highlight">Logistics</span>
+            {t("logisticsBanner.title")} <span className="highlight">{t("logisticsBanner.highlight")}</span>
           </h1>
-          <p className="hero-description">
-            Innovative solutions for logistics firms to reduce their environmental impact, protect public wellness, and
-            contribute to a cleaner, greener future.
-          </p>
-          <p className="hero-subtitle">Warehouse | Ports | Transportation</p>
+          <p className="hero-description">{t("logisticsBanner.description")}</p>
+          <p className="hero-subtitle">{t("logisticsBanner.subtitle")}</p>
           <a className="primary-button" href="#get_in_touch">
-            Contact Us
+            {t("logisticsBanner.cta")}
           </a>
         </div>
       </section>
@@ -72,12 +109,9 @@ export default function LogisticsPage() {
       <section className="factors-section">
         <div className="section-header">
           <h2>
-            Factors affecting air quality in <span className="highlight">Logistics</span>
+            {t("logisticsFactors.title")} <span className="highlight">{t("logisticsFactors.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Logistics sectors involve various activities that contribute to air pollution through various pollutant
-            emissions, such as:
-          </p>
+          <p className="section-description">{t("logisticsFactors.description")}</p>
         </div>
 
         <div className="factors-grid">
@@ -85,12 +119,8 @@ export default function LogisticsPage() {
             <div className="factor-icon">
               <img src="https://www.pranaair.com/wp-content/uploads/2023/07/pm-icon.png" alt="Particulate Matter" />
             </div>
-            <h3>
-              Particulate Matter
-              <br />
-              (PM2.5 and PM10)
-            </h3>
-            <p>Diesel trucks and locomotives, handling equipment and loading operations emit PM.</p>
+            <h3>{t("logisticsFactors.pm.title")}</h3>
+            <p>{t("logisticsFactors.pm.description")}</p>
           </div>
 
           <div className="factor-card">
@@ -100,12 +130,8 @@ export default function LogisticsPage() {
                 alt="Volatile Organic Compounds"
               />
             </div>
-            <h3>
-              Volatile Organic
-              <br />
-              Compounds (VOCs)
-            </h3>
-            <p>Vehicles, industrial processes, heating systems, and packaging activities emit VOCs.</p>
+            <h3>{t("logisticsFactors.vocs.title")}</h3>
+            <p>{t("logisticsFactors.vocs.description")}</p>
           </div>
 
           <div className="factor-card">
@@ -115,12 +141,8 @@ export default function LogisticsPage() {
                 alt="Carbon Monoxide"
               />
             </div>
-            <h3>
-              Carbon
-              <br />
-              Monoxide (CO)
-            </h3>
-            <p>Fuel combustion, handling equipment, loading and unloading operations releases CO.</p>
+            <h3>{t("logisticsFactors.co.title")}</h3>
+            <p>{t("logisticsFactors.co.description")}</p>
           </div>
 
           <div className="factor-card">
@@ -130,12 +152,8 @@ export default function LogisticsPage() {
                 alt="Nitrogen Oxides"
               />
             </div>
-            <h3>
-              Nitrogen
-              <br />
-              Oxides (NOx)
-            </h3>
-            <p>Fossil fuel combustion in trucks and shipping vessels, heating systems, etc. suspend NOx.</p>
+            <h3>{t("logisticsFactors.nox.title")}</h3>
+            <p>{t("logisticsFactors.nox.description")}</p>
           </div>
         </div>
       </section>
@@ -144,12 +162,12 @@ export default function LogisticsPage() {
       <section className="transportation-section">
         <div className="split-container">
           <div className="split-half transportation">
-            <h3>Transportation</h3>
+            <h3>{t("logisticsTransportation.transportation.title")}</h3>
             <div className="icon-grid">
               <div className="icon-item">
                 <div className="round-icon">
                   <img src="https://www.pranaair.com/wp-content/uploads/2024/08/truck.png" alt="Trucks" />
-                  <span>Trucks</span>
+                  <span>{t("logisticsTransportation.transportation.trucks")}</span>
                 </div>
               </div>
               <div className="icon-item">
@@ -158,13 +176,13 @@ export default function LogisticsPage() {
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/marine-vessels.png"
                     alt="Marine Vessels"
                   />
-                  <span>Marine Vessels</span>
+                  <span>{t("logisticsTransportation.transportation.marineVessels")}</span>
                 </div>
               </div>
               <div className="icon-item">
                 <div className="round-icon">
                   <img src="https://www.pranaair.com/wp-content/uploads/2024/08/locomotive.png" alt="Locomotives" />
-                  <span>Locomotives</span>
+                  <span>{t("logisticsTransportation.transportation.locomotives")}</span>
                 </div>
               </div>
               <div className="icon-item">
@@ -173,19 +191,19 @@ export default function LogisticsPage() {
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/handling-equipment.png"
                     alt="Handling Equipment"
                   />
-                  <span>Handling Equipment</span>
+                  <span>{t("logisticsTransportation.transportation.handlingEquipment")}</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="split-half stationary">
-            <h3>Stationary</h3>
+            <h3>{t("logisticsTransportation.stationary.title")}</h3>
             <div className="icon-grid">
               <div className="icon-item">
                 <div className="round-icon">
                   <img src="https://www.pranaair.com/wp-content/uploads/2024/08/refineries.png" alt="Refineries" />
-                  <span>Refineries</span>
+                  <span>{t("logisticsTransportation.stationary.refineries")}</span>
                 </div>
               </div>
               <div className="icon-item">
@@ -194,7 +212,7 @@ export default function LogisticsPage() {
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/oil-gas-storage.png"
                     alt="Oil & Gas Storage"
                   />
-                  <span>Oil & Gas Storage</span>
+                  <span>{t("logisticsTransportation.stationary.oilGasStorage")}</span>
                 </div>
               </div>
               <div className="icon-item">
@@ -203,7 +221,7 @@ export default function LogisticsPage() {
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/storage-piles-of-coal.png"
                     alt="Storage of Coal"
                   />
-                  <span>Storage Piles of Coal</span>
+                  <span>{t("logisticsTransportation.stationary.storagePilesCoal")}</span>
                 </div>
               </div>
               <div className="icon-item">
@@ -212,7 +230,7 @@ export default function LogisticsPage() {
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/power-genration.png"
                     alt="Power Generation"
                   />
-                  <span>Power Generation</span>
+                  <span>{t("logisticsTransportation.stationary.powerGeneration")}</span>
                 </div>
               </div>
             </div>
@@ -223,11 +241,8 @@ export default function LogisticsPage() {
       {/* Quote Section */}
       <section className="quote-section">
         <div className="quote-container">
-          <h2>DO YOU KNOW?</h2>
-          <p>
-            According to the International Agency for Research on Cancer (IARC), diesel engine exhaust is carcinogenic
-            to humans as its exposure increases the risk of lung cancer.
-          </p>
+          <h2>{t("logisticsQuote.title")}</h2>
+          <p>{t("logisticsQuote.content")}</p>
         </div>
       </section>
 
@@ -235,12 +250,9 @@ export default function LogisticsPage() {
       <section className="concern-section">
         <div className="section-header">
           <h2>
-            Areas of <span className="highlight">Concern</span>
+            {t("logisticsConcern.title")} <span className="highlight">{t("logisticsConcern.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Logistics sectors are bustling with activity and face significant challenges when it comes to maintaining
-            good air quality.
-          </p>
+          <p className="section-description">{t("logisticsConcern.description")}</p>
         </div>
 
         <div className="concern-grid">
@@ -249,14 +261,14 @@ export default function LogisticsPage() {
               src="https://www.pranaair.com/wp-content/uploads/2024/08/Warehouse-Facilities.jpg"
               alt="Warehouse Facilities"
             />
-            <h3>Warehouse Facilities</h3>
-            <p>Highly trap pollutants due to enclosed spaces and heavy operations.</p>
+            <h3>{t("logisticsConcern.warehouse.title")}</h3>
+            <p>{t("logisticsConcern.warehouse.description")}</p>
           </div>
 
           <div className="concern-card">
             <img src="https://www.pranaair.com/wp-content/uploads/2024/08/Loading-Docks.jpg" alt="Loading Docks" />
-            <h3>Loading Docks</h3>
-            <p>Loading and unloading operations and vehicle emissions release pollutants emissions.</p>
+            <h3>{t("logisticsConcern.loadingDocks.title")}</h3>
+            <p>{t("logisticsConcern.loadingDocks.description")}</p>
           </div>
 
           <div className="concern-card">
@@ -264,14 +276,14 @@ export default function LogisticsPage() {
               src="https://www.pranaair.com/wp-content/uploads/2024/08/Transportation-Routes.jpg"
               alt="Transportation Routes"
             />
-            <h3>Transportation Routes</h3>
-            <p>Diesel vehicle emissions in major routes affect the nearby and commercial areas.</p>
+            <h3>{t("logisticsConcern.transportationRoutes.title")}</h3>
+            <p>{t("logisticsConcern.transportationRoutes.description")}</p>
           </div>
 
           <div className="concern-card">
             <img src="https://www.pranaair.com/wp-content/uploads/2024/08/Logistics-Hubs.jpg" alt="Logistics Hubs" />
-            <h3>Logistics Hubs</h3>
-            <p>Continuous operations in high-activity centres result in localized pollution.</p>
+            <h3>{t("logisticsConcern.logisticsHubs.title")}</h3>
+            <p>{t("logisticsConcern.logisticsHubs.description")}</p>
           </div>
         </div>
       </section>
@@ -280,11 +292,9 @@ export default function LogisticsPage() {
       <section className="risk-section">
         <div className="section-header">
           <h2>
-            Who is at <span className="highlight">Risk?</span>
+            {t("logisticsRisk.title")} <span className="highlight">{t("logisticsRisk.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Air quality issues in the logistics sector pose various health risk for everyone involved.
-          </p>
+          <p className="section-description">{t("logisticsRisk.description")}</p>
         </div>
 
         <div className="risk-grid">
@@ -295,8 +305,8 @@ export default function LogisticsPage() {
                 alt="Logistics Workers"
               />
             </div>
-            <h3>Logistics Workers</h3>
-            <p>Prolonged pollutants exposure lead to respiratory and cardiovascular issues.</p>
+            <h3>{t("logisticsRisk.workers.title")}</h3>
+            <p>{t("logisticsRisk.workers.description")}</p>
           </div>
 
           <div className="risk-card">
@@ -306,16 +316,16 @@ export default function LogisticsPage() {
                 alt="Nearby Residents"
               />
             </div>
-            <h3>Nearby Residents</h3>
-            <p>People living near logistics hubs have higher health risk due to pollutants.</p>
+            <h3>{t("logisticsRisk.residents.title")}</h3>
+            <p>{t("logisticsRisk.residents.description")}</p>
           </div>
 
           <div className="risk-card">
             <div className="risk-icon">
               <img src="https://www.pranaair.com/wp-content/uploads/2024/08/Drivers.png" alt="Drivers" />
             </div>
-            <h3>Drivers</h3>
-            <p>Drives highly exposed harmful pollutants due to Extended periods in vehicles.</p>
+            <h3>{t("logisticsRisk.drivers.title")}</h3>
+            <p>{t("logisticsRisk.drivers.description")}</p>
           </div>
 
           <div className="risk-card">
@@ -325,8 +335,8 @@ export default function LogisticsPage() {
                 alt="Delivery Personnel"
               />
             </div>
-            <h3>Delivery Personnel</h3>
-            <p>Long-term harmful pollutants exposure while delivering or pickups.</p>
+            <h3>{t("logisticsRisk.deliveryPersonnel.title")}</h3>
+            <p>{t("logisticsRisk.deliveryPersonnel.description")}</p>
           </div>
         </div>
       </section>
@@ -335,12 +345,9 @@ export default function LogisticsPage() {
       <section className="solutions-section">
         <div className="section-header">
           <h2>
-            Air quality <span className="highlight">Solutions</span>
+            {t("logisticsSolutions.title")} <span className="highlight">{t("logisticsSolutions.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Maintaining air quality is crucial in the logistics sector for the well-being of everyone. It requires a
-            multi-faceted approach with advanced air quality monitoring, pollution control strategies etc.
-          </p>
+          <p className="section-description">{t("logisticsSolutions.description")}</p>
         </div>
 
         <div className="tabs-container">
@@ -356,7 +363,7 @@ export default function LogisticsPage() {
                 aria-controls="air-quality-monitors"
                 aria-selected="true"
               >
-                Air quality Monitors
+                {t("logisticsSolutions.tabs.monitors")}
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -370,7 +377,7 @@ export default function LogisticsPage() {
                 aria-controls="fresh-air-machine"
                 aria-selected="false"
               >
-                Fresh air machine
+                {t("logisticsSolutions.tabs.freshAir")}
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -384,7 +391,7 @@ export default function LogisticsPage() {
                 aria-controls="data-display"
                 aria-selected="false"
               >
-                Data Display
+                {t("logisticsSolutions.tabs.dataDisplay")}
               </button>
             </li>
           </ul>
@@ -404,15 +411,15 @@ export default function LogisticsPage() {
                   />
                 </div>
                 <div className="solution-content">
-                  <h3>Prana Air Sensible+Air quality monitor</h3>
-                  <p>Installing indoor air quality monitor can help in maintaining a healthy working environment.</p>
+                  <h3>{t("logisticsSolutions.monitors.title")}</h3>
+                  <p>{t("logisticsSolutions.monitors.description")}</p>
                   <ul className="feature-list">
-                    <li>Real-time air quality monitoring</li>
-                    <li>5000 mAh Inbuilt Battery for Long Screen-Time</li>
-                    <li>Monitors Multiple Indoor Pollutants</li>
+                    <li>{t("logisticsSolutions.monitors.features.feature1")}</li>
+                    <li>{t("logisticsSolutions.monitors.features.feature2")}</li>
+                    <li>{t("logisticsSolutions.monitors.features.feature3")}</li>
                   </ul>
                   <a className="secondary-button" href="#">
-                    Know More
+                    {t("logisticsSolutions.monitors.cta")}
                   </a>
                 </div>
               </div>
@@ -432,18 +439,15 @@ export default function LogisticsPage() {
                   />
                 </div>
                 <div className="solution-content">
-                  <h3>Prana Air Fresh Air Machine</h3>
-                  <p>
-                    Integrating an Indoor Air Purifier can help in tackling air pollution effectively in the logistics
-                    sector.
-                  </p>
+                  <h3>{t("logisticsSolutions.freshAir.title")}</h3>
+                  <p>{t("logisticsSolutions.freshAir.description")}</p>
                   <ul className="feature-list">
-                    <li>Filter out up to 99.5% indoor pollutants</li>
-                    <li>Coverage area is 1200 square feet</li>
-                    <li>AI-Enabled for automates the airflow</li>
+                    <li>{t("logisticsSolutions.freshAir.features.feature1")}</li>
+                    <li>{t("logisticsSolutions.freshAir.features.feature2")}</li>
+                    <li>{t("logisticsSolutions.freshAir.features.feature3")}</li>
                   </ul>
                   <a className="secondary-button" href="#">
-                    Know More
+                    {t("logisticsSolutions.freshAir.cta")}
                   </a>
                 </div>
               </div>
@@ -458,15 +462,12 @@ export default function LogisticsPage() {
                   />
                 </div>
                 <div className="solution-content">
-                  <h3>Prana Air Customized Data Display</h3>
-                  <p>
-                    Implementing a customized digital display in the logistics sector allows continuous, 24/7 data
-                    visualization.
-                  </p>
+                  <h3>{t("logisticsSolutions.dataDisplay.title")}</h3>
+                  <p>{t("logisticsSolutions.dataDisplay.description")}</p>
                   <ul className="feature-list">
-                    <li>Real-Time Air Quality Data Display</li>
-                    <li>Customized display</li>
-                    <li>Access outdoor and indoor Data</li>
+                    <li>{t("logisticsSolutions.dataDisplay.features.feature1")}</li>
+                    <li>{t("logisticsSolutions.dataDisplay.features.feature2")}</li>
+                    <li>{t("logisticsSolutions.dataDisplay.features.feature3")}</li>
                   </ul>
                 </div>
               </div>
@@ -479,30 +480,27 @@ export default function LogisticsPage() {
       <section className="effects-section">
         <div className="section-header">
           <h2>
-            The Effects of Air Pollution - <span className="highlight">Logistics</span>
+            {t("logisticsEffects.title")} - <span className="highlight">{t("logisticsEffects.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Poor Air Quality in the logistics sector affects workers, drivers, Residents etc. health causing various
-            problems.
-          </p>
+          <p className="section-description">{t("logisticsEffects.description")}</p>
         </div>
 
         <div className="effects-container">
           <div className="effects-column negative">
-            <h3>Without Air Quality Solutions</h3>
+            <h3>{t("logisticsEffects.without.title")}</h3>
             <ul className="effects-list negative">
-              <li>Impacts workers and drivers productivity.</li>
-              <li>More risks of respiratory conditions.</li>
-              <li>Affecting nearby communities air.</li>
+              <li>{t("logisticsEffects.without.effects.effect1")}</li>
+              <li>{t("logisticsEffects.without.effects.effect2")}</li>
+              <li>{t("logisticsEffects.without.effects.effect3")}</li>
             </ul>
           </div>
 
           <div className="effects-column positive">
-            <h3>With Air Quality Solutions</h3>
+            <h3>{t("logisticsEffects.with.title")}</h3>
             <ul className="effects-list positive">
-              <li>Enhanced productivity for workers and drivers</li>
-              <li>Reduced risk of respiratory conditions</li>
-              <li>Clean and fresh air for everyone</li>
+              <li>{t("logisticsEffects.with.effects.effect1")}</li>
+              <li>{t("logisticsEffects.with.effects.effect2")}</li>
+              <li>{t("logisticsEffects.with.effects.effect3")}</li>
             </ul>
           </div>
         </div>
@@ -511,91 +509,7 @@ export default function LogisticsPage() {
       {/* AQI App Slider Section */}
       <section className="aqi-app-section">
         <div className="container">
-          <Carousel
-            responsive={appCarouselResponsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={7000}
-            keyBoardControl={true}
-            customTransition="all .5s"
-            transitionDuration={500}
-            containerClass="app-carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            dotListClass="app-dot-list"
-            itemClass="app-carousel-item"
-            showDots={true}
-          >
-            <div className="app-slide">
-              <div className="app-slide-content">
-                <div className="app-slide-text">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png"
-                    alt="AQI Mobile App"
-                    className="app-slide-icon"
-                  />
-                  <h3>AQI Mobile App</h3>
-                  <p>
-                    Access a real-time air quality monitor data and API for accurate global data to stay informed. Check
-                    the world air pollution map and weather map, and easily compare air quality parameters across multiple
-                    locations with AQI App.
-                  </p>
-                </div>
-                <div className="app-slide-image">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Mobile-Apps.jpg"
-                    alt="AQI Mobile App interface"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="app-slide">
-              <div className="app-slide-content">
-                <div className="app-slide-text">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png"
-                    alt="AQI TV App"
-                    className="app-slide-icon"
-                  />
-                  <h3>AQI TV App</h3>
-                  <p>
-                    View real-time and historical air quality data on a large TV screen. Effortlessly enjoy 24/7 remote
-                    monitoring to stay informed about AQI levels with data accessibility to everyone.
-                  </p>
-                </div>
-                <div className="app-slide-image">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-TV-Apps.jpg"
-                    alt="AQI TV App interface"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="app-slide">
-              <div className="app-slide-content">
-                <div className="app-slide-text">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg"
-                    alt="AQI Web-Dashboard"
-                    className="app-slide-icon"
-                  />
-                  <h3>AQI Web-Dashboard</h3>
-                  <p>
-                    Explore global pollution trends through detailed analyses of the worlds most polluted cities and
-                    countries. Receive health advice based on real-time air quality indexes, and easily compare air
-                    quality parameters across multiple locations with Web Dashboard.
-                  </p>
-                </div>
-                <div className="app-slide-image">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Web-Dashboards.jpg"
-                    alt="AQI Web Dashboard interface"
-                  />
-                </div>
-              </div>
-            </div>
-          </Carousel>
+          <LogisticApplicationsCarousel appSlides={appSlides} />
         </div>
       </section>
 
@@ -603,11 +517,9 @@ export default function LogisticsPage() {
       <section className="clientele-section">
         <div className="section-header">
           <h2>
-            Our <span className="highlight">Clientele</span>
+            {t("clientele.title")} <span className="highlight">{t("clientele.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Our partnerships with these renowned organizations reflect our commitment to excellence and innovation.
-          </p>
+          <p className="section-description">{t("logisticsClientele.description")}</p>
         </div>
 
         <div className="client-grid">
@@ -656,8 +568,8 @@ export default function LogisticsPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -670,9 +582,9 @@ export default function LogisticsPage() {
         <div className="container">
           <div className="section-header">
             <h2>
-              Frequently Asked <span className="highlight">Questions</span>
+              {t("faq.title")} <span className="highlight">{t("faq.highlight")}</span>
             </h2>
-            <p className="section-description">Have questions? Were here to help.</p>
+            <p className="section-description">{t("faq.description")}</p>
           </div>
           <div className="accordion" id="faqAccordion">
             <div className="accordion-item">
@@ -685,7 +597,7 @@ export default function LogisticsPage() {
                   aria-expanded="true"
                   aria-controls="faq1"
                 >
-                  1. How do logistics sectors affect the nearby residents air quality?
+                  {t("logisticsFaq.questions.q1")}
                 </button>
               </h2>
               <div
@@ -695,10 +607,7 @@ export default function LogisticsPage() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    The logistics sector involves several activities that involve diesel-powered transportation and
-                    various operations that can impact nearby communities.
-                  </p>
+                  <p>{t("logisticsFaq.answers.a1")}</p>
                 </div>
               </div>
             </div>
@@ -713,7 +622,7 @@ export default function LogisticsPage() {
                   aria-expanded="false"
                   aria-controls="faq2"
                 >
-                  2. What are the major pollutants in the logistic sectors?
+                  {t("logisticsFaq.questions.q2")}
                 </button>
               </h2>
               <div
@@ -723,10 +632,7 @@ export default function LogisticsPage() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    Logistics sectors include warehouses, transportation, and stationary that emit pollutants like PM2.5,
-                    NOx, CO, VOCs etc.
-                  </p>
+                  <p>{t("logisticsFaq.answers.a2")}</p>
                 </div>
               </div>
             </div>
@@ -741,7 +647,7 @@ export default function LogisticsPage() {
                   aria-expanded="false"
                   aria-controls="faq3"
                 >
-                  3. Why air quality is a major issue in the warehouse?
+                  {t("logisticsFaq.questions.q3")}
                 </button>
               </h2>
               <div
@@ -751,10 +657,7 @@ export default function LogisticsPage() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    Warehouses highly trap pollutants due to Congested operational areas and impact the indoor and outdoor
-                    air quality.
-                  </p>
+                  <p>{t("logisticsFaq.answers.a3")}</p>
                 </div>
               </div>
             </div>
@@ -769,7 +672,7 @@ export default function LogisticsPage() {
                   aria-expanded="false"
                   aria-controls="faq4"
                 >
-                  4. What are the solutions for logistics sectors to improve air quality?
+                  {t("logisticsFaq.questions.q4")}
                 </button>
               </h2>
               <div
@@ -779,10 +682,7 @@ export default function LogisticsPage() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    Prana Air offers practical solutions to improve air quality in the logistics sectors as air quality
-                    monitoring systems, advanced air purifiers etc.
-                  </p>
+                  <p>{t("logisticsFaq.answers.a4")}</p>
                 </div>
               </div>
             </div>
@@ -794,138 +694,13 @@ export default function LogisticsPage() {
       <section className="applications-section">
         <div className="section-header">
           <h2>
-            Industrial <span className="highlight">Applications</span>
+            {t("industrial.title")} <span className="highlight">{t("industrial.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Prana Air offers a diverse selection of smart, affordable, and remarkably precise air quality solutions,
-            catering to various sectors, irrespective of their scale.
-          </p>
+          <p className="section-description">{t("industrial.description")}</p>
         </div>
 
         <div className="modern-applications-container">
-          <Carousel
-            responsive={{
-              desktop: {
-                breakpoint: { max: 3000, min: 1024 },
-                items: 3,
-                slidesToSlide: 1,
-              },
-              tablet: {
-                breakpoint: { max: 1024, min: 768 },
-                items: 2,
-                slidesToSlide: 1,
-              },
-              mobile: {
-                breakpoint: { max: 768, min: 0 },
-                items: 1,
-                slidesToSlide: 1,
-              },
-            }}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={5000}
-            keyBoardControl={true}
-            customTransition="all .5s"
-            transitionDuration={500}
-            containerClass="applications-carousel"
-            itemClass="application-item-wrapper"
-            removeArrowOnDeviceType={["mobile"]}
-            dotListClass="applications-dots"
-            showDots={false}
-          >
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                    alt="Air quality Solutions for hotel business"
-                  />
-                </a>
-              </div>
-              <a
-                href="https://www.pranaair.com/solutions-by-application/hotel-businesses/"
-                className="application-title"
-              >
-                Air quality Solutions for Hotel
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                    alt="Air quality Solutions for restaurants"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/restaurants/" className="application-title">
-                Air quality Solutions for Restaurant
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/airports/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg"
-                    alt="Air quality Solutions for airport"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/airports/" className="application-title">
-                Air quality Solutions for Airport
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                    alt="Air quality Solutions for banks"
-                  />
-                </a>
-              </div>
-              <a
-                href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/"
-                className="application-title"
-              >
-                Air quality Solutions for Bank
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg"
-                    alt="Air quality Solutions for fitness and gym"
-                  />
-                </a>
-              </div>
-              <a
-                href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/"
-                className="application-title"
-              >
-                Air quality Solutions for Fitness & Gym
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/railway/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg"
-                    alt="Air quality Solutions for railway"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/railway/" className="application-title">
-                Air quality Solutions for Railways
-              </a>
-            </div>
-          </Carousel>
+          <IndustrialApplicationsCarousel applications={industrialApplications} />
         </div>
       </section>
 

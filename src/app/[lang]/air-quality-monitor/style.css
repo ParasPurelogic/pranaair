@@ -123,14 +123,14 @@ span.prana-txt {
 
 .page-tabs ul {
     background: #e4e7ec;
-    gap: 0px;
+    gap: 0;
     top: -85px;
-    left: 900px;
-    border-radius: 50px !important;
+    left: 800px;
     justify-content: space-between;
-    width: 25% !important;
-    padding: 5px 0 !important;
     position: relative;
+    border-radius: 50px !important;
+    width: 33% !important;
+    padding: 5px 0 !important;
 }
 
 li.ult_tab_li.home-tab-title.current {
@@ -584,8 +584,11 @@ ul.air-poll-box-last-row {
 .gaes-img img {
     width: 100%;
     position: relative;
-    left: -230px;
-    height: 540px
+    height: auto;
+}
+
+.app-air-sensor-slider {
+    margin: 20px 10px;
 }
 
 .gases-sec {
@@ -627,7 +630,7 @@ ul.air-poll-box-last-row {
 }
 
 .gases-text {
-    margin-left: -180px
+    margin-left: 40px
 }
 
 .gases-text a {

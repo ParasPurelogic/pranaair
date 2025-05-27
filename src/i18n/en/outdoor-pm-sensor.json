@@ -1,0 +1,398 @@
+{
+     "pmSensorHero": {
+    "title": "PM SENSOR (LASER)",
+    "description": {
+      "part1": "(PAS-OUT-01) - For outdoor air quality monitoring applications. Range up to",
+      "range": "(0-31,000 µg/m³)"
+    },
+    "requestButton": "Request A Quote",
+    "buttonIconAlt": "button icon"
+  },
+  "pmSensorFeature": {
+    "title": "Particulate Matter (PM) Sensor",
+    "subtitle": "amazing features"
+  },
+  "pmSensorFeatures": {
+    "fanControl": "Fan control for steady airflow",
+    "faultDetection": "Built-in fault detection",
+    "dustProof": "Dust-proof duct design",
+    "smallSize": "Small size and easy to install",
+    "interference": "Excellent resistance to interference",
+    "moistureResistant": "Moisture-resistant circuit board",
+    "communication": "Multiple communication modes",
+    "detection": "Quick detection capability"
+  },
+  "pmSensorAlt": {
+    "fanControl": "pm sensor of Fan",
+    "faultDetection": "pm sensor of Own fault",
+    "dustProof": "pm sensor of Design",
+    "smallSize": "pm sensor of Small size and easy to install",
+    "interference": "pm sensor of Strong",
+    "moistureResistant": "pm sensor of Circuit board",
+    "communication": "pm sensor of Multiple communication modes",
+    "detection": "pm sensor of Fast",
+    "frontView": "Prana Air PM Sensor",
+    "sideView": "Prana Air PM2.5 Sensor",
+    "metallicFront": "Prana Air PM Sensor of metallic body",
+    "metallicSide": "Prana Air PM2.5 Sensor of side view"
+  },
+   "pmTechSection": {
+    "title": "PM Sensor",
+    "laserTechnology": "Laser Technology",
+    "lightScattering": "Light scattering Method",
+    "imgAlt": "Prana Air PM laser sensor light scattering working mechanism"
+  },
+  "rangeSection": {
+    "description": {
+      "part1": "PAS-OUT-01 is a Light-based designed Built for industries, digital laser sensor to measure particulate matter – dust particles. Since it comes with an Inbuilt",
+      "laser": " laser",
+      "part2": " and Light-based receiving module. Different than its contemporaries, PAS-OUT-01 is Set accurately for PM10 and PM2.5 Apart. Because it works on the principle of",
+      "lightSpreading": " 90° light Spreading.",
+      "part3": ""
+    },
+    "rangeTitle": "Range upto",
+    "rangeValue": "(0-31,000 µg/m³)"
+  },
+  "seamlessSection": {
+    "title": "Seamless Connectivity",
+    "pmSensor": "PM Sensor",
+    "pmSensorAlt": "Prana Air PM2.5 sensor",
+    "monitorAndSensor": "Monitor and PM Sensor",
+    "monitorAndSensorAlt": "pm sensor and air quality monitor",
+    "wifiConnectivity": "WiFi connectivity to the monitor",
+    "wifiAlt": "wifi connectivity",
+    "cloudTransmission": "Sensors Data transmission to cloud.",
+    "cloudAlt": "aqi cloud data storage",
+    "displayingData": "Displaying the Sensors data on mobile, laptop or TV.",
+    "platformsAlt": "aqi monitoring platforms",
+    "description": "The PM sensor has a compact design which allows the sensor to fit easily in any air quality monitor. Besides, anyone can integrate or change the sensor without requiring advanced technical knowledge. Also, the network access of the sensor is smooth as can directly transfer the data from the sensor to cloud for easy technology for users."
+  },
+  "indoorOutdoorSection": {
+    "title": "PM Sensors for outdoor and indoor",
+    "description": "The PM Sensors has two options that meet the specific need of each environment so it offer optimal performance and better air quality monitoring.",
+    "outdoorTab": "Outdoor PM Sensor",
+    "indoorTab": "Indoor PM Sensor",
+    "requestQuote": "Request A Quote",
+    "linkIconAlt": "link icon",
+    "outdoor": {
+      "titlePart1": "Experience the ease of advanced",
+      "titlePart2": " Outdoor Sensor",
+      "description": "The outdoor PM sensor is built to resist any harsh environmental conditions. Hence, the advanced technology monitors the particulate matter levels in any open area. Moreover, with advanced filtration systems, the sensor offers consistent and reliable air quality data.",
+      "imgAlt": "prana air outdoor pm sensor"
+    },
+    "indoor": {
+      "titlePart1": "Experience the ease of advanced",
+      "titlePart2": " Indoor Sensor",
+      "description": "Indoor PM Sensor is designed to monitor air quality in closed spaces such as homes, offices, schools and other indoor spaces. By doing so, it ensures the accurate measurement of particulate matter levels in narrow spaces. Moreover, it is highly sensitive and can detect even a small changes in the air, offering a reliable means of keeping a healthy indoor atmosphere.",
+      "imgAlt": "prana air indoor pm sensor"
+    }
+  },
+  "sizeComparisonSection": {
+    "title": "PM Size Comparison",
+    "mainImgAlt": "PM pollutant size comparison with human hair",
+    "description": "Particulate Matter or PM is a mixture of tiny particles or liquid droplets. And these also emits in the air from different sources. As a result, these particles can enter the human lungs and cause many harm to health.",
+    "pm1": {
+      "title": "PM1",
+      "size": "Smaller than or 1µm",
+      "imgAlt": "PM1 size 1µm"
+    },
+    "pm25": {
+      "title": "PM2.5",
+      "size": "Smaller than or 2.5µm",
+      "imgAlt": "PM2 size 2.5µm"
+    },
+    "pm10": {
+      "title": "PM10",
+      "size": "Smaller than or 10µm",
+      "imgAlt": "PM10 size 10µm"
+    }
+  },
+  "particulateMatterSection": {
+    "title": "The Tiny Threats in the Air: Particulate Matter",
+    "descriptionPart1": "Particulate Matter (PM) comes in various sizes as",
+    "pm25Link": "PM2.5",
+    "descriptionPart2": "(particles smaller than 2.5 microns) and PM10 (particles smaller than 10 microns) the most common.",
+    "experience": {
+      "pm1": "PM1",
+      "pm10": "PM10",
+      "pm25": "PM2.5",
+      "pm1Alt": "PM1 pollutant icon",
+      "pm10Alt": "PM10 pollutant icon",
+      "pm25Alt": "PM2.5 pollutant icon"
+    },
+    "knowAbout": "Know about each PM size",
+    "details": {
+      "pm1": {
+        "title": "PM1",
+        "description": "PM1 are the particles with a diameter of 1 micrometre or smaller which also includes nanoparticles and emissions from burning. Hence, these can easily enter the blood flow and cause health conditions."
+      },
+      "pm25": {
+        "title": "PM2.5",
+        "description": "PM2.5 refers to fine particles with a diameter of 2.5 micrometres or more smaller. Because of their tiny size, these are enough to enter deep into the lungs and result in severe health issues."
+      },
+      "pm10": {
+        "title": "PM10",
+        "description": "The particles in the air with a diameter of 10 micrometres or others smaller than PM10. It includes dust, pollen and mould and is large enough that mostly trapped in the nose or throat and results in allergies."
+      },
+      "particleCount": {
+        "title": "Particle Count",
+        "description": "Lastly, these represent the total number of particles present in the air, without considering their individual sizes. Instead, it focuses on the overall particle load, including particles of various sizes."
+      }
+    }
+  },
+   "sourceSection": {
+    "title": "Sources:",
+    "sources": {
+      "vehicleExhaust": {
+        "label": "Vehicle Exhaust",
+        "alt": "Vehicle Exhaust as source of PM pollutant"
+      },
+      "factoryEmission": {
+        "label": "Factory Emission",
+        "alt": "Factory Emission as source of PM pollutant"
+      },
+      "constructionSites": {
+        "label": "Construction sites",
+        "alt": "Construction sites as source of PM pollutant"
+      },
+      "wildfires": {
+        "label": "Wildfires",
+        "alt": "Wildfires as source of PM pollutant"
+      },
+      "dustyRoads": {
+        "label": "Dusty roads",
+        "alt": "Dusty roads as source of PM pollutant"
+      }
+    }
+  },
+  "compareChartSection": {
+    "title": "Data Accuracy Level Comparison Chart With BAM",
+    "chartImgAlt": "data accuracy of Prana Air PM2.5 sensor comparing with BAM data",
+    "paragraph1": "In a comprehensive comparative study evaluating the data accuracy of Prana Airs PM2.5 sensor against a high-end Beta Attenuation Monitoring (BAM) system.",
+    "paragraph2": "Furthermore, the results demonstrated a high correlation between the two devices.",
+    "clients": {
+      "title": "Happy to serve our clients",
+      "logos": {
+        "symbiosis": "Symbiosis Pune logo",
+        "taj": "taj logo",
+        "tataSteel": "TATA Steel Jamshedpur logo",
+        "uoc": "UOC logo",
+        "wri": "WRI logo",
+        "adani": "Adani Group logo",
+        "barc": "BARC Bhabha Atomic Research Centre logo",
+        "bcg": "BCG Boston Consulting Group logo",
+        "birla": "BIRLA Ultratech logo",
+        "bits": "BITS pilani logo"
+      }
+    }
+  },
+   "applicationsSection": {
+    "title": "PM air quality sensor",
+    "subtitle": "applications",
+    "applications": {
+      "airport": {
+        "title": "Airport",
+        "alt": "application of PM sensor in airports"
+      },
+      "homes": {
+        "title": "Homes",
+        "alt": "application of PM sensor at home"
+      },
+      "offices": {
+        "title": "Offices",
+        "alt": "application of PM sensor in offices"
+      },
+      "railwayStations": {
+        "title": "Railway Stations",
+        "alt": "application of PM sensor in railway stations"
+      },
+      "schools": {
+        "title": "Schools",
+        "alt": "application of PM sensor in schools"
+      },
+      "smartCities": {
+        "title": "Smart cities",
+        "alt": "application of PM sensor for smart cities"
+      },
+      "constructionSites": {
+        "title": "Construction sites",
+        "alt": "application of PM sensor for construction sites"
+      },
+      "factories": {
+        "title": "Factories and warehouse",
+        "alt": "application of PM sensor in factories and warehouses"
+      },
+      "healthcare": {
+        "title": "Health care facilities",
+        "alt": "application of PM sensor in healthcare facilities"
+      }
+    }
+  },
+  "constructionSection": {
+    "title": "Construction Sites Covered by Prana Airs PM2.5 Sensor",
+    "description": "The PM Sensor has been used across multiple construction sites to monitor high PM levels produced from various activities at these sites. As a result, it helps ensure real-time tracking of air quality and enables timely interventions when necessary.",
+    "linkText": "Construction Sites",
+    "buttonIconAlt": "button icon",
+    "stats": {
+      "count": "500+",
+      "label": "Sites Covered"
+    },
+    "dpcc": {
+      "logoAlt": "DPCC Logo",
+      "text": "Sites Covered",
+      "guidelines": "DPCC Guidelines"
+    }
+  },
+  "caseStudiesSection": {
+    "title": "Outdoor PM",
+    "subtitle": "Case Study",
+    "caseStudy1": {
+      "title": "Laser PM sensor Case Study - I",
+      "subtitle": "Comparative Evaluation of New Low-Cost Particulate Matter Sensors",
+      "briefLabel": "Study Brief",
+      "brief": ": So, the paper involves our Prana Air device alongside other low-cost sensors for PM2.5 and PM10 measurements. For the results, they compared them to the standard Aeroqual Series-500. Since, their challenge with traditional devices was the high cost, heaviness, and frequent service needs, which limited usin in cities.",
+      "authorName": "By Dr. Sachin Chaudhari,",
+      "authorAffiliation": " International Institute of Information Technology Hyderabad, India",
+      "calibrationImgAlt": "comparison of PM sensor data between Aeroqual and Prana Air before and after calibration",
+      "noteLabel": "Note :",
+      "noteText": "Monitors update in every 30 seconds, moreover our PM sensors have a resolution of ±1.0 micrograms per cubic meter, and our NO2 sensors boast a resolution of ±1.0 ppb.",
+      "studyImgAlt": "case study of low-cost PM sensor using Prana Air's sensors by By Dr. Sachin Chaudhari, International Institute of Information Technology Hyderabad, India",
+      "findFullStudy": "Find Full Study Here :"
+    },
+    "caseStudy2": {
+      "title": "Laser PM sensor Case Study - II",
+      "subtitle": "Performance‐based protocol for selection of Affordable and easy to carry sensor for air quality measurement",
+      "briefLabel": "Study Brief :",
+      "brief": "In their research, they used our device in their Environmental Protection Sensors (EPS) assessment. So in this, they compared factory calibration data with reference monitors. Because, their challenge was reasonable cost with accuracy, sensitivity, and data management. In the result, Prana Air proved to be a reliable and affordable choice.",
+      "authorName": "By Dr. Sunil Gulia,",
+      "authorAffiliation": " National Environmental Engineering Research Institute, New Delhi, India",
+      "image1Alt": "Case Study of economical portable sensor by By Dr. Sunil Gulia, National Environmental Engineering Research Institute, New Delhi, India",
+      "image2Alt": "Ranking of EPS for air quality assessment from the case study By Dr. Sunil Gulia, National Environmental Engineering Research Institute, New Delhi, India",
+      "image3Alt": "Ranking of EPS on physical features and cost from the case study By Dr. Sunil Gulia, National Environmental Engineering Research Institute, New Delhi, India",
+      "findFullStudy": "Find Full Study Here :"
+    }
+  },
+  "healthImpactSection": {
+    "title": "Health Impacts - Why it is important to measure particulate matter?",
+    "impacts": {
+      "asthma": {
+        "title": "Asthma and Triggers",
+        "alt": "Asthma"
+      },
+      "lungCancer": {
+        "title": "High risk of lung cancer",
+        "alt": "High risk of lung cancer as health impacts by particulate matters"
+      },
+      "respiratoryInfections": {
+        "title": "Respiratory infections",
+        "alt": "Respiratory infections as health impact by particulate matters"
+      },
+      "lungDiseases": {
+        "title": "Lung diseases",
+        "alt": "Lung diseases as health impact by particulate matters"
+      },
+      "heartIssues": {
+        "title": "Heart-related issues",
+        "alt": "Heart-related issues as health impact by particulate matters"
+      }
+    }
+  },
+    "techSpecsSection": {
+    "title": "Technical Specifications",
+    "links": {
+      "arduinoCode": "Arduino Code",
+      "datasheet": "Datasheet",
+      "iconAlt": "link icon"
+    },
+    "specs": {
+      "productName": {
+        "label": "Product Name:",
+        "value": "PM Sensor"
+      },
+      "ratedVoltage": {
+        "label": "Rated voltage:",
+        "value": "5V"
+      },
+      "communicationPort": {
+        "label": "Communication Port Level:",
+        "value": "3.3 V"
+      },
+      "dimensions": {
+        "label": "Dimensions L x W x H :",
+        "value": "4.5 x 4.5 x 2 cm"
+      },
+      "particleSize": {
+        "label": "Particle Size Resolution:",
+        "value": "0.3 µm"
+      },
+      "storageTemp": {
+        "label": "Storage Temperature :",
+        "value": "-20~85 C°"
+      },
+      "workingTemp": {
+        "label": "Working Temperature:",
+        "value": "-20~70 C°"
+      },
+      "workingHumidity": {
+        "label": "Working humidity:",
+        "value": "0~99C%RH (No Moisture formation)"
+      },
+      "ratedCurrent": {
+        "label": "Rated current:",
+        "value": "70mA"
+      },
+      "massConcentration": {
+        "label": "Mass concentration data resolution:",
+        "value": "1 μg/m3"
+      }
+    },
+    "dimensions": {
+      "outdoor": "Outdoor Sensor Dimensions",
+      "outdoorImgAlt": "Prana Air outdoor PM sensor dimensions",
+      "indoor": "Indoor Sensor Dimensions",
+      "indoorImgAlt": "Prana Air indoor PM sensor dimensions"
+    }
+  },
+  "contactSection": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "alsoLikeSection": {
+    "title": "You may also like",
+    "linkIconAlt": "link icon",
+    "products": {
+      "co2": {
+        "title": "Co2 Sensor",
+        "alt": "prana air co2 sensor"
+      },
+      "co": {
+        "title": "CO Sensor",
+        "alt": "Prana Air CO gas sensor"
+      },
+      "ammonia": {
+        "title": "Ammonia Sensor",
+        "alt": "prana air ammonia sensor NH3"
+      },
+      "h2s": {
+        "title": "H2S Sensor",
+        "alt": "Prana Air H2S sensor"
+      },
+      "ozone": {
+        "title": "Ozone Gas",
+        "alt": "Prana Air Ozone sensor O3"
+      },
+      "chlorine": {
+        "title": "Chlorine Gas",
+        "alt": "Prana Air Chlorine sensor"
+      },
+      "so2": {
+        "title": "SO2 Sensor",
+        "alt": "Prana Air SO2 sensor"
+      },
+      "no2": {
+        "title": "NO2 Sensor",
+        "alt": "Prana Air NO2 sensor"
+      }
+    }
+  }
+}

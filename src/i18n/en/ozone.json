@@ -1,0 +1,125 @@
+{
+      "products": {
+  "co2Sensor": {
+    "imageAlt": "CO2 Sensor",
+    "title": "CO2 Sensor",
+    "description": "Measures CO2 levels with high accuracy"
+  },
+  "pocketCO2": {
+    "imageAlt": "Pocket CO2 Monitor",
+    "title": "Pocket CO2 Monitor",
+    "description": "Portable CO2 monitoring solution"
+  },
+  "squair": {
+    "imageAlt": "SQUAIR Air Monitor",
+    "title": "SQUAIR Air Monitor",
+    "description": "Measures CO2 and other pollutants"
+  },
+  "sensiblePlus": {
+    "imageAlt": "Sensible+ Advanced CO2 Monitor",
+    "title": "Sensible+ Advanced CO2 Monitor",
+    "description": "Professional grade monitoring"
+  }
+},
+ "ozone": {
+    "hero": {
+      "imageAlt": "what is ozone o3",
+      "title": "What is Ozone (O₃)?",
+      "description": "Ozone (O3) is a molecule composed of three oxygen atoms. It is found in the natural environment. Nitrogen (78%) is the most abundant gas found in the atmosphere, followed by oxygen (21%). The remaining 1% is a pool of several other gases. Such as carbon dioxide, neon, hydrogen, and so on. Ozone is also one of the gases included in this 1% share. As it corresponds to approximately 0.00001% ozone in the ambient air. Because of its active nature of oxidizing things, nature continuously creates it with various electrochemical and electrostatic effects. Thus, its nature regulates the amount of mold, viruses, bacteria, and VOCs in the ambient air in this way."
+    },
+    "friendOrFoe": {
+      "title": "Ozone (o3): A friend or a foe?",
+      "epaQuote": "As the EPA says, Ozone is good up there, but bad nearby.",
+      "stratosphericDescription": "1. Stratospheric ozone acts as our natural sunscreen. It absorbs the suns harmful UV rays. As preventing them from reaching the surface or the air. This layer is being depleted as a result of humans active use of CFCs. CFCs chlorinated organic chemicals utilized as propellants and refrigerants. They are used to keep things cool. And they are hence used in a variety of products such as air conditioners and refrigerators. They are also found in aerosol cans, spray paints, deodorants, and other products. Moreover, they are to blame for the ozone layers depletion. As a result of their extreme stability, they can persist in the atmosphere for a very long time after being discharged (10 -100 years).",
+      "groundLevelDescription": "2. When ozone is at ground level, especially when trapped indoors, it is a respiratory tract irritant that affects asthmatics and can harm plants. Because electrochemical and electrostatic effects are not naturally present indoors. Unless there is a continual flow of fresh air from outside. So, the quantity of ozone indoors will progressively drop to near zero. Giving spores, viruses, bacteria, and other airborne viruses a competitive advantage. So its safe to say that ozone should maintain indoors in a reasonable amount. As to prevent the growth of mold, bacteria, viruses, and other microbes. As these can cause further disruptions and physical discomfort."
+    },
+    "indoorPollutant": {
+      "title": "Is Ozone (o3) an indoor air pollutant?",
+      "description": "Ozone in the indoor environment can be exceedingly dangerous. Especially if it is confined indoors and fresh air from outside cannot enter via ventilation. It can have a detrimental effect on the occupants health."
+    },
+    "harmfulToHumans": {
+      "title": "Is ozone harmful to humans?",
+      "description": "When exposed to O3, it can induce a variety of diseases and discomforts. Ozone in high quantities can irritate the skin and cause cellular damage. For example, O3 can cause cellular damage in the same way as chlorine can cause skin damage in a swimming pool if used at high concentrations. Ozone can cause various health effects on the human body."
+    },
+    "healthEffects": {
+      "respiratoryIrritation": {
+        "title": "1. Respiratory tract irritation",
+        "description": "Ozone exposure can cause airway constriction. As causing air to become trapped in the alveoli and irritating the respiratory tract.",
+        "imageAlt": "respiratory tract irritation due to ozone"
+      },
+      "cough": {
+        "title": "2. Cough",
+        "description": "Depending upon the levels of exposure, ozone can cause coughing, soreness, and scratchiness in the throat.",
+        "imageAlt": "cough due to ozone"
+      },
+      "chestTightness": {
+        "title": "3. Chest Tightness",
+        "description": "Ozone exposure can cause tightness in the chest and the person may experience difficulty in breathing as well.",
+        "imageAlt": "chest tightness due to ozone"
+      },
+      "skinIrritation": {
+        "title": "4. Skin irritation",
+        "description": "O3 is one of the most hazardous pollutants. As it capable of initiating oxidative processes and activating inflammatory reactions. And it resulting in the start of a variety of skin issues.",
+        "imageAlt": "skin irritation due to ozone"
+      },
+      "reducedLungFunction": {
+        "title": "5. Reduced lung function",
+        "description": "Ozone exposure constricts the airways. And it obstructiveness restricts the lungs from functioning normally, reducing lung function.",
+        "imageAlt": "reduced lung function due to ozone"
+      },
+      "cellularDamage": {
+        "title": "6. Cellular Damages",
+        "description": "Excess ozone exposure for a longer duration may trigger cell damage and dysfunction. Thus, it is leading to metabolic alterations.",
+        "imageAlt": "cellular damages due to ozone"
+      }
+    },
+    "sources": {
+      "title": "Sources of Ozone (o3) indoors",
+      "description": "Ozone can come from outdoor smog via ventilation, but it also has indoor sources. These include:",
+      "photocopiers": {
+        "title": "1. Photocopiers",
+        "description": "A standard approach was used in a study by the AIHA to determine the O3 emission from 69 different photocopying machines. The emission rates ranged from 0 to 1350 g/min, with a mean of 259 and a standard deviation of 302.",
+        "imageAlt": "ozone from photocopier"
+      },
+      "airCleaners": {
+        "title": "2. Some electronic air cleaners",
+        "description": "Some air cleaning systems can generate O3. Which can be hazardous to ones health. A few machines marketed as air purifiers purposefully release high levels of O3, the major contributor to smog.",
+        "imageAlt": "ozone gas from air cleaner"
+      },
+      "homeAppliances": {
+        "title": "3. Home electrical appliances",
+        "description": "Many appliances used in homes such as refrigerators, air conditioners, vegetable washers, facial steamers, etc. use built-in ozone generators also known as ionizers.",
+        "imageAlt": "ozone from electrical appliances"
+      },
+      "uvLights": {
+        "title": "4. UV lights/lamps",
+        "description": "UV Light ranging from 160-240nm can create O3 from O2 by disrupting the O2 molecules by splitting them into two atoms. They further attach to other O2 molecules. And it creates ozone (O3).",
+        "imageAlt": "ozone from uv light"
+      },
+      "disinfectants": {
+        "title": "5. Disinfectants",
+        "description": "Ozone has a great oxidizing nature. Due to which it is utilized in many sterilizing agents and disinfectants that are generally used in hospitals. But these disinfectants emit ozone gas, and if trapped, this can be hazardous.",
+        "imageAlt": "ozone from disinfectants"
+      }
+    },
+    "detection": {
+      "title": "How to detect ozone (o3)?",
+      "description": "How to know if one of these above-mentioned appliances is producing Ozone? Ozone has a distinct odor that could describe as a fresh bleach-like smell. If you can smell it then theres too much O3 gas present in the air to be breathing continuously. It can also be measured using advanced instruments. Such as, Prana Air monitors to measure O3 in the air:",
+      "deviceImageAlt": "ozone monitoring device"
+    },
+    "levels": {
+      "title": "What do different ozone levels say?",
+      "description": "Ozone is an indoor air pollutant that can measure using modern technology. It measures in PPM (Parts Per Million). Hence, Ozone can be classified into six categories based on its concentration in a confined setting.",
+      "good": "Good: 0-0.05",
+      "moderate": "Moderate: 0.6-0.9",
+      "poor": "Poor: 0.10-0.12",
+      "unhealthy": "Unhealthy: 0.13-0.16",
+      "severe": "Severe: 0.17-0.20",
+      "hazardous": "Hazardous: Above 0.21",
+      "colorBarAlt": "ozone levels"
+    },
+    "products": {
+      "title": "Choose Your Air Quality Monitor To Measure Ozone (O3)"
+    }
+  }
+}

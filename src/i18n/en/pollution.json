@@ -1,0 +1,229 @@
+{
+      "hero": {
+        "title": "Air",
+        "description": "Air is an invisible mixture of various gases. It exists naturally in our environment. Oxygen is one of the various gases present in the air that we breathe. Furthermore, various gases present in air causes air pollution.",
+        "iconAlt": "air icon"
+      },
+      "whatIs": {
+        "titlePart1": "What is",
+        "titlePart2": "Air Pollution?",
+        "description": "Air pollution happens when gases, dust, dirt, pollen, soot, viruses, etc. contaminate the air making it unclean, unhealthy, and toxic to breathe. The amount of air pollution present in the air determines its effects on humans, animals, plants, and the entire ecosystem. Hence, the amount of pollution in the air affects the level of harm it poses to humans, animals, and plants.",
+        "imageAlt": "what is air pollution and causes"
+      },
+      "contaminants": {
+        "title": "Some common but extremely dangerous air contaminants are",
+        "pm": {
+          "title": "Particulate Matter",
+          "description": "Small breathable dust particles and liquid droplets suspended in the air. And it can easily enter deep into the lungs.",
+          "pm1Alt": "pm1 parameter",
+          "pm25Alt": "pm2.5 parameter",
+          "pm10Alt": "pm10 parameter"
+        },
+        "gases": {
+          "title": "Harmful Gases",
+          "description": "There are numerous gases in the air. But they become harmful when they exceed their desired limits. Some examples are Nitrogen Dioxide, Sulphur Dioxide, Carbon Dioxide, Methane, Carbon Monoxide, etc.",
+          "no2Alt": "no2 icon",
+          "so2Alt": "so2 parameter",
+          "co2Alt": "co2 parameter",
+          "coAlt": "co parameter",
+          "ch4Alt": "ch4 parameter"
+        }
+      },
+      "types": {
+        "title": "There are two types of",
+        "titleHighlight": "Air Pollution",
+        "indoor": {
+          "title": "Indoor Air Pollution",
+          "description": "According to the WHO, when dust, gases, and allergens contaminate the air in indoor spaces like homes, offices, schools, etc. it is known as indoor air pollution. Indoor air can be 10 times worse than outdoors. Because these pollutants are trapped in closed spaces and cannot move freely.",
+          "imageAlt": "indoor air pollution"
+        },
+        "outdoor": {
+          "title": "Outdoor Air Pollution",
+          "description": "Outdoor air pollution occurs when dangerous air pollutants contaminate the air outdoors. This can happen due to natural events. Such as forest burning and volcanic eruptions or due to human activities such as garbage burning, etc.",
+          "imageAlt": "outdoor air pollution sources"
+        },
+        "quote": {
+          "text": "According to the UN health organization air pollution exposure caused an estimated 1.1 million deaths in India in 2016 among people of all ages.",
+          "imageAlt": "Save your future"
+        }
+      },
+      "aqi": {
+        "question1": "You must have read or heard somewhere that pollution levels are high or low.",
+        "question2": "But what exactly does that mean?",
+        "description": "High levels of air pollution indicate that the air is heavily contaminated. Thus, it can hurt people more severely. Low air pollution levels imply few health risks. But How do we determine if air pollution is high or low? By calculating the average air pollution concentration over a standard time, we can determine the quality of the air. It is divided into six categories depending upon the level of harm they can do and this index is known as the Air Quality Index (AQI). Hence, we can determine the quality of the air around us with the use of this index. For example, an AQI value of 45 is considered good but AQI levels above 300 represent hazardous air quality.",
+        "imageAlt": "aqi air quality index mobile app"
+      },
+      "sources": {
+        "title": "Where does air pollution",
+        "titleHighlight": "come from?",
+        "indoor": {
+          "buttonText": "Indoor Air Pollution Sources",
+          "description": "Cooking, tobacco smoke, burning fuels and kerosene, mold, air fresheners, nail polish removers, pet dander, and many more. When there is no circulation of air and indoor air is trapped inside, CO2 levels will rise.",
+          "items": {
+            "tobacco": {
+              "title": "Tobacco smoke",
+              "description": "Cigarette smoking is not only injurious to the person who is smoking. But it is equally injurious to people indoors who inhale second-hand smoke.",
+              "imageAlt": "tobacco smoke"
+            },
+            "fuels": {
+              "title": "Burning Fuels & Kerosene",
+              "description": "Incomplete combustion of fuels in various home appliances such as stoves, furnaces, etc. release CO and PM.",
+              "imageAlt": "Burning Fuels & Kerosene"
+            },
+            "fresheners": {
+              "title": "Air fresheners",
+              "description": "Air fresheners and cleaning agents are a potential source of VOCs. If used in excess amounts, they can cause headaches, nausea, etc.",
+              "imageAlt": "Air fresheners"
+            },
+            "cooking": {
+              "title": "Cooing Fumes",
+              "description": "Cooking activities can emit various air pollutants. Humidity levels inside the home can increase when more water is used in cooking.",
+              "imageAlt": "cooking fumes"
+            },
+            "petDander": {
+              "title": "Pet Dander",
+              "description": "This acts as a stressor for respiratory disorders as well as a trigger for asthma attacks. Therefore, animal contact must be reduced as much as possible",
+              "imageAlt": "pet dander"
+            },
+            "printers": {
+              "title": "Photocopiers & Printers",
+              "description": "These are O3 emitters in a home or office setting. Ozone levels, when exceeding the limits can cause various health effects.",
+              "imageAlt": "Photocopiers and printers"
+            }
+          }
+        },
+        "outdoor": {
+          "buttonText": "Outdoor Pollution Sources",
+          "description": "Vehicles, factories, garbage burning, dust, power plants, construction and demolition activities, oil refineries, emissions from aircraft and planes, wildfires, volcanic eruptions, etc.",
+          "items": {
+            "powerPlant": {
+              "title": "Power Plant",
+              "description": "Industries and power plants are the main source of air pollution sources outdoors. Emissions from power plants cause photochemical smog.",
+              "imageAlt": "power plan"
+            },
+            "garbage": {
+              "title": "Garbage Burning",
+              "description": "Emissions from burning garbage produce various toxic gases and air pollutants such as CO, CO2, NO2, Smoke, dust, etc.",
+              "imageAlt": "Garbage Burning"
+            },
+            "construction": {
+              "title": "C&D activities",
+              "description": "Waste generated at construction and destruction activities substantially increase PM2.5 and PM10 levels in the air, hence in the nearby areas.",
+              "imageAlt": "C&D activities"
+            },
+            "roads": {
+              "title": "Unpaved roads",
+              "description": "Unpaved roads emit particulate matter, PM pollution (PM2.5, PM10), dust, and debris. Hence, it can increase the overall PM levels of that area.",
+              "imageAlt": "Unpaved roads"
+            },
+            "refineries": {
+              "title": "Oil refineries & brick kilns",
+              "description": "Pre-processing and processing of oil and bricks emit various pollutants including toxic metals, particulates, toxic gases like methane, etc.",
+              "imageAlt": "Oil refineries & brick kilns"
+            },
+            "wildfires": {
+              "title": "Wildfires & Volcanic eruptions",
+              "description": "These are natural sources of outdoor air pollution. Because they emit carbon monoxide, black carbon, etc. which is injurious to wildlife as well.",
+              "imageAlt": "Wildfires and Volcanic eruptions"
+            }
+          }
+        }
+      },
+      "healthImpacts": {
+        "title": "Health",
+        "titleHighlight": "Impacts By Air Pollution",
+        "imageAlt": "health impacts by air pollution",
+        "impacts": {
+          "left": {
+            "impact1": "Headaches, dizziness, nausea",
+            "impact2": "Difficulty in breathing, Sweating",
+            "impact3": "Irritation in the eyes, nose, and throat"
+          },
+          "right": {
+            "impact1": "Worsen asthma & respiratory diseases",
+            "impact2": "Damages to the lungs and kidney",
+            "impact3": "Cancer"
+          }
+        }
+      },
+      "solutions": {
+        "title": "How you can effectively",
+        "titleHighlight": "reduce air pollution",
+        "subtitle": "Adopt these simple yet effective tips and play your part in improving air quality.",
+        "indoor": {
+          "title": "Indoor Solutions",
+          "items": {
+            "control": {
+              "title": "Control indoor air pollution sources",
+              "description": "Actively identify and eliminate sources of indoor air pollution, such as cleaning agents, aerosol sprays, tobacco smoke, etc.",
+              "imageAlt": "air pollution by smoking"
+            },
+            "ventilation": {
+              "title": "Improve ventilation",
+              "description": "Trapped spaces can feel stuffy and stale. Hence, good ventilation is a major factor when it comes to improving indoor air quality",
+              "imageAlt": "Improve ventilation"
+            },
+            "humidity": {
+              "title": "Monitor your humidity levels",
+              "description": "Excess moisture will promote mold and mildew growth and increases the chances of viral infections. Germ dispersion is easy in low humidity.",
+              "imageAlt": "humidity level"
+            },
+            "clean": {
+              "title": "Keep your indoor spaces clean",
+              "description": "Keeping your indoor spaces clean will help in reducing episodes of allergies build-up on certain surfaces indoors.",
+              "imageAlt": "Keep your indoor spaces clean"
+            }
+          }
+        },
+        "outdoor": {
+          "title": "Outdoor Solutions",
+          "items": {
+            "emissions": {
+              "title": "Reduce Emissions",
+              "description": "Walk or ride. Avoid cars or bikes for short distances. Encourage usage of public transport, carpooling, biking, and support initiatives such as e-vehicles.",
+              "imageAlt": "reduce emissions"
+            },
+            "waste": {
+              "title": "Avoid Waste Burning",
+              "description": "Avoid the burning of waste and garbage in the open and adopt proper garbage disposal methods. Because open burning can release pollutants into the air.",
+              "imageAlt": "Avoid the burning of waste"
+            },
+            "trees": {
+              "title": "Plant more trees",
+              "description": "Planting more trees will assist in the natural filtration of air pollutants. This will further help in reducing the overall air pollution levels in the air.",
+              "imageAlt": "plant more trees"
+            },
+            "initiatives": {
+              "title": "Support clean air initiatives",
+              "description": "Participate in local clean air programs. As to offer your support to groups that work to improve outdoor air quality.",
+              "imageAlt": "Support clean air initiatives"
+            }
+          }
+        },
+        "conclusion": "Encourage your family and friends to adopt these tips to reduce air pollution and the health effects that people face when exposed to air pollution."
+      },
+      "products": {
+        "title": "Air Quality",
+        "titleHighlight": "Solutions",
+        "items": {
+          "monitor": {
+            "title": "Air Quality Monitor",
+            "imageAlt": "air quality monitor solution"
+          },
+          "freshAir": {
+            "title": "Fresh Air Machine",
+            "imageAlt": "Fresh Air Machine"
+          },
+          "mask": {
+            "title": "N95 Mask",
+            "imageAlt": "n95 anti pollution mask"
+          }
+        }
+      },
+      "monitors": {
+        "title": "Choose Your",
+        "titleHighlight": "Air Quality Monitor",
+        "titleEnd": "To Measure Air Pollution",
+        "imageAlt": "prana air caaqms outdoor monitor"
+      }
+}

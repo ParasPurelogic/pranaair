@@ -1,0 +1,220 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+ "banking": {
+    "banner": {
+      "title": "Air quality solutions for",
+      "highlight": "Bank / Financial Institutions",
+      "description": "A complete solution for air monitoring air purification and data monitoring for banks and other financial institutions.",
+      "cta": "Get a Quote"
+    },
+    "pollutants": {
+      "title": "Major Air",
+      "highlight": "Pollutants",
+      "description": "Due to the diverse nature of air pollutants present in a bank setting precaution and mitigation strategies have become a challenge. To prevent bad air quality it is critical to monitor air quality and take appropriate precautions to avoid poor air quality episodes."
+    },
+    "pollutantFeatures": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "These are fine particles of dust and water that are suspended in the air.",
+        "imgAlt": "pm2.5 level in bank"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "Depends on the number of people in the room and its ventilation rate.",
+        "imgAlt": "high co2 level in bank"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "description": "Cleaning agents markers tobacco smoke etc. emit TVOC",
+        "imgAlt": "tvoc gas in bank"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Noise levels rises when large number of customers are present.",
+        "imgAlt": "noise pollution in bank"
+      },
+      "odor": {
+        "title": "Odor",
+        "description": "Sweaty customers & public washrooms release bad odor",
+        "imgAlt": "odor in bank"
+      },
+      "microbial": {
+        "title": "Microbial Pollutants",
+        "description": "Microbiological contaminants spread easily in closed spaces.",
+        "imgAlt": "microbial pollutants in bank"
+      }
+    },
+    "risk": {
+      "title": "Who are at",
+      "highlight": "Risk?",
+      "description": "People in the bank/financial institutions experience stuffiness in the air as the occupancy rate increases and there is poor ventilation. Customers and staff are exposed to other air pollutants like PM2.5 TVOC etc."
+    },
+    "riskGroups": {
+      "customers": {
+        "title": "Customers",
+        "description": "Customers comfort level highly depend on the air quality inside your bank.",
+        "imgAlt": "bank customers"
+      },
+      "banker": {
+        "title": "Banker",
+        "description": "High risk of developing lung cancer etc. are some of the health effects",
+        "imgAlt": "bankers"
+      },
+      "cashiers": {
+        "title": "Cashiers",
+        "description": "Lack of attention & coordination a high risk of respiratory infections.",
+        "imgAlt": "cashiers"
+      },
+      "manager": {
+        "title": "Manager",
+        "description": "Poor judgment inaptness more prone to make bad decisions",
+        "imgAlt": "bank manager"
+      }
+    },
+    "solutions": {
+      "title": "Air quality",
+      "highlight": "Solutions",
+      "description": "Prana Airs air quality monitoring and air purifying solutions give you the power to know what your customers and staff breathe and what you could do to clean the air to make banks/financial institutions air pollution-free zone and view and analyze your IAQ."
+    },
+        "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "tabContent": {
+      "monitors": {
+        "title": "Sensible+ Air Monitor",
+        "description": "This is a smart air quality monitor that comes with 7 inch touch screen display that gives more insightful data for banks.",
+        "features": {
+          "item1": "7 Inch LED Touch Screen Display",
+          "item2": "5000 mAh Battery InBuilt",
+          "item3": "WiFi Connectivity With Mobile App"
+        },
+        "knowMore": "Know More",
+        "knowMoreAriaLabel": "Know More about Sensible+ Air Monitor",
+        "imgAlt": "prana air sensible+ air quality monitor for banking services"
+      },
+      "freshAir": {
+        "title": "Fresh Air Machine As IAQ Solution",
+        "description": "One-stop solution for indoor air pollution by Prana Air Fresh Air Machine working as an air purifier with the capability to filter out 99.5% efficiency and multi-layer HEPA filters.",
+        "features": {
+          "item1": "Comes with multi-layers HEPA Filters",
+          "item2": "Compact Design makes it easy to place",
+          "item3": "Promising you up to 99.5% efficiency"
+        },
+        "knowMore": "Know More",
+        "knowMoreAriaLabel": "Know More about Fresh Air Machine",
+        "imgAlt": "prana air fresh air machine as iaq solution for banks"
+      },
+      "apiData": {
+        "title": "AQI API Data",
+        "description": "Avail the real-time air quality data of nearby outdoor area on the web.",
+        "features": {
+          "item1": "Integrate air quality data on the web",
+          "item2": "Access the real-time data quickly",
+          "item3": "Take precautions from the air pollution"
+        },
+        "knowMore": "Know More",
+        "knowMoreAriaLabel": "Know More about API Data",
+        "imgAlt": "aqi api data for banks"
+      }
+    },
+    "dataServices": {
+      "title": "Data Freemium",
+      "highlight": "Services",
+      "description": "The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the QR to know the AQI of the area you are in."
+    },
+    "dataServicesFeatures": {
+      "tvDashboard": {
+        "title": "TV Dashboard App",
+        "imgAlt": "aqi tv app dashboard for banking institutions"
+      },
+      "webDashboard": {
+        "title": "Customised App for Banks",
+        "imgAlt": "aqi customized dashboard app for banking institutions"
+      },
+      "qrCode": {
+        "title": "QR Code Scan",
+        "imgAlt": "aqi monitor data qr code scan for banking"
+      }
+    },
+    "airPollutionEffects": {
+      "title": "The Effects of Air Pollution - ",
+      "highlight": "Banks/Financial Institutions",
+      "description": "When customers & staff members are exposed to poor air quality they feel unwell and irritation in the eyes nose and throat headaches and nausea are common symptoms of air pollution exposure."
+    },
+    "airComparison": {
+      "cleanAir": {
+        "title": "With Clean Air",
+        "benefits": {
+          "item1": "Improve ventilation",
+          "item2": "Good comfort score",
+          "item3": "Enhanced experience",
+          "item4": "Improved air filtration."
+        }
+      },
+      "uncleanAir": {
+        "title": "Without Clean Air",
+        "drawbacks": {
+          "item1": "Less comfort",
+          "item2": "Low ventilation score",
+          "item3": "Bad experience",
+          "item4": "Bad odor and mold score."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "highlight": "Questions",
+      "description": "About Air Quality Solution for Bank/Financial Institutions Have questions? Were here to help."
+    },
+    "clientele": {
+      "title": "Our",
+      "highlight": "Clientele",
+      "description": "We are honored to work with so many well-known companies."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Please help us know what requirements you have. Our team will contact you very soon."
+    },
+    "industrialApplications": {
+      "title": "Industrial",
+      "highlight": "Applications",
+      "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+    }
+  }
+}

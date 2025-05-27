@@ -1,8 +1,9 @@
-"use client"
 import "./styles.css"
-import "react-multi-carousel/lib/styles.css"
+import { getServerTranslation } from "@/i18n/server"
+import Image from "next/image"
 
-export default function RadonPage() {
+export default async function RadonPage() {
+  const { t } = await getServerTranslation("radon-rn")
   return (
     <main>
       {/* Hero Section */}
@@ -14,40 +15,30 @@ export default function RadonPage() {
               <div className="fadeInUp" style={{ paddingTop: "35px" }}>
                 <p className="whitetext" style={{ textAlign: "center" }}>
                   <span style={{ fontSize: "50pt", lineHeight: "1.1" }}>
-                    <img
+                    <Image
                       className="aligncenter"
                       src="https://www.pranaair.com/wp-content/uploads/2022/10/radon-rn-300x300.jpg"
-                      alt="radon rn"
-                      width="87"
-                      height="87"
+                      alt={t("radon.hero.iconAlt")}
+                      width={87}
+                      height={87}
                     />
                   </span>
                 </p>
 
                 <h1 className="whitetext" style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "50pt", lineHeight: "1.1" }}>What is Radon (Rn)?</span>
+                  <span style={{ fontSize: "50pt", lineHeight: "1.1" }}>{t("radon.hero.title")}</span>
                 </h1>
                 <p className="whitetext" style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "16pt" }}>
-                    Radon (Rn) is a naturally occurring radioactive gas that is formed by the decay of radium, which is
-                    found in most soils. Radon can be found in the atmosphere outdoors. But it is not a health concern
-                    as it rapidly dilutes in the atmosphere to very low levels. It is a health concern indoors where
-                    this dilution is not possible and the air is not disturbed.
-                  </span>
+                  <span style={{ fontSize: "16pt" }}>{t("radon.hero.description")}</span>
                 </p>
               </div>
               <div style={{ height: "42px" }}></div>
               <div>
                 <h2 className="whitetext" style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "24pt" }}>Radon, Radioactivity, and its decayed products</span>
+                  <span style={{ fontSize: "24pt" }}>{t("radon.radioactivity.title")}</span>
                 </h2>
                 <p className="whitetext" style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "14pt" }}>
-                    As radon decays, it emits a form of radiation known as alpha particles. These radon changes into
-                    other radioactive elements known as decay products. Hence, Radon and its decay products enter your
-                    lungs while you breathe. As a result, all of the lung cells can damage. Over time, radon exposure
-                    damages more and more cells, increasing the likelihood that one of the cells will develop cancer.
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("radon.radioactivity.description")}</span>
                 </p>
               </div>
             </div>
@@ -62,21 +53,18 @@ export default function RadonPage() {
           <div className="col-md-12">
             <div style={{ marginBottom: "50px" }}>
               <h2 style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "24pt" }}>Where does Radon (Rn) come from?</span>
+                <span style={{ fontSize: "24pt" }}>{t("radon.sources.title")}</span>
               </h2>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Radon is emitted from soil grains and rocks. It moves as a gas through the soil at varying rates and
-                  distances depending on soil texture and other natural and climatic factors. This can seep through
-                  cracks and openings in the floor into an enclosed space where radon can accumulate.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("radon.sources.description")}</span>
               </p>
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2022/10/radon-exhalation-from-soil.jpg"
-                alt="radon exhalation from soil"
-                width="100%"
-                height="auto"
+                alt={t("radon.sources.imageAlt")}
+                width={800}
+                height={600}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div style={{ height: "50px" }}></div>
@@ -84,24 +72,18 @@ export default function RadonPage() {
             {/* Sources of radon at homes */}
             <div style={{ marginBottom: "50px" }}>
               <h3 style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "24pt" }}>Sources of radon (Rn) at homes</span>
+                <span style={{ fontSize: "24pt" }}>{t("radon.homeSources.title")}</span>
               </h3>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Radon penetrates structures through floor splits or floor-wall joints, gaps around pipes or cables,
-                  tiny pores in block walls, cavities in the walls, or drainage systems or sewers. It doesnt matter if
-                  your house has a basement or not, the surface closest to the ground will have higher radon levels.
-                  Hence, Radon levels are typically higher in basements, cellars, and ground-level residential spaces.
-                  As more and more buildings and houses are becoming air-tight, it is impossible for radon gas to pass
-                  through the windows via ventilation and as a result, radon levels can be extremely high indoors.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("radon.homeSources.description")}</span>
               </p>
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2022/10/sources-of-radon-at-home.jpg"
-                alt="sources of radon at home"
-                width="100%"
-                height="auto"
+                alt={t("radon.homeSources.imageAlt")}
+                width={800}
+                height={600}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div style={{ height: "50px" }}></div>
@@ -109,45 +91,34 @@ export default function RadonPage() {
             {/* What makes radon more dangerous */}
             <div style={{ borderBottomWidth: "50px" }}>
               <h2 style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "24pt" }}>What makes radon (Rn) more dangerous?</span>
+                <span style={{ fontSize: "24pt" }}>{t("radon.dangerous.title")}</span>
               </h2>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Radon gas is radioactive and has no odor, taste, or smell which makes it difficult for the human body
-                  to sense it. It is a carcinogen proven to cause lung cancer in humans. As, Studies have shown an
-                  increase in lung cancer rates as a result of increased radon exposure. It classifies by health
-                  authorities as a category-one cancer-causing agent. It is the leading cause of lung cancer among
-                  non-smokers and the leading cause of cancer after smoking. Each year, around 21,000 people in the
-                  United States die from radon-induced lung cancer.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("radon.dangerous.description")}</span>
               </p>
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2022/10/health-impacts-of-radon.jpg"
-                alt="health impacts of radon"
-                width="100%"
-                height="auto"
+                alt={t("radon.dangerous.imageAlt")}
+                width={800}
+                height={600}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div style={{ height: "50px" }}></div>
 
             {/* Who is more affected by radon exposure */}
             <div style={{ paddingBottom: "50px" }}>
-              <h2 style={{ textAlign: "center" }}>Who is more affected by radon exposure?</h2>
+              <h2 style={{ textAlign: "center" }}>{t("radon.affected.title")}</h2>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Radon takes 5-10 years to develop. Children are the most affected by radon exposure, whether exposed
-                  in homes or schools. As they are still growing and their lungs and other organs are still at the
-                  developing stage. They have more life to live, and hence, the after-effects of radon exposure are very
-                  much visible in children, sooner or later.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("radon.affected.description")}</span>
               </p>
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2022/10/who-are-more-dangerous-to-radon-1024x906.png"
-                alt="who are more dangerous to exposure"
-                width="403"
-                height="357"
+                alt={t("radon.affected.imageAlt")}
+                width={403}
+                height={357}
               />
             </div>
 
@@ -155,25 +126,19 @@ export default function RadonPage() {
             <div style={{ height: "60px" }}></div>
             <div>
               <h2 style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "24pt" }}>Health Impacts By Radon</span>
+                <span style={{ fontSize: "24pt" }}>{t("radon.healthImpacts.title")}</span>
               </h2>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  It acts after 5-20 years of exposure. When exposed to radon, it wont seriously affect your health in
-                  the short term. But you will surely feel and see its serious effects on your health after 5-20 years.
-                  Alpha particles do not travel very far, but they travel at half the speed of light and with enough
-                  energy to dent bulletproof plastic. Imagine what it can do to your body. Radons radioactive particles
-                  can cause harm even decades after initial exposure. Each decade, 10 to 40 thousand people die from
-                  radon-induced lung cancer.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("radon.healthImpacts.description")}</span>
               </p>
               <p style={{ textAlign: "center" }}>
-                <img
+                <Image
                   className="aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2022/10/84000-deaths-from-lung-cancer-due-to-radon-1024x637.jpg"
-                  alt="84000 deaths from lung cancer due to radon"
-                  width="100%"
-                  height="auto"
+                  alt={t("radon.healthImpacts.imageAlt")}
+                  width={800}
+                  height={497}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </p>
             </div>
@@ -182,12 +147,10 @@ export default function RadonPage() {
             {/* Symptoms of radon sickness */}
             <div style={{ paddingBottom: "20px" }}>
               <h3 style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "24pt" }}>Symptoms of radon (Rn) sickness</span>
+                <span style={{ fontSize: "24pt" }}>{t("radon.symptoms.title")}</span>
               </h3>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  How to know if you are exposed to radon or not. Look for the following symptoms:
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("radon.symptoms.description")}</span>
               </p>
             </div>
 
@@ -196,18 +159,18 @@ export default function RadonPage() {
               <div className="col-md-6">
                 <p style={{ textAlign: "center" }}>
                   <span style={{ fontSize: "14pt" }}>
-                    <img
+                    <Image
                       className="aligncenter"
                       src="https://www.pranaair.com/wp-content/uploads/2022/10/difficulty-in-breathing-200x300.png"
-                      alt="difficulty in breathing due to radon"
-                      width="200"
-                      height="300"
+                      alt={t("radon.symptoms.breathingDifficulty.imageAlt")}
+                      width={200}
+                      height={300}
                     />
                   </span>
                 </p>
                 <h4 style={{ textAlign: "center" }}>
                   <strong>
-                    <span style={{ fontSize: "14pt" }}>Shortness or difficulty in breathing</span>
+                    <span style={{ fontSize: "14pt" }}>{t("radon.symptoms.breathingDifficulty.title")}</span>
                   </strong>
                 </h4>
               </div>
@@ -215,19 +178,19 @@ export default function RadonPage() {
                 <h4 style={{ textAlign: "center" }}>
                   <strong>
                     <span style={{ fontSize: "14pt" }}>
-                      <img
+                      <Image
                         className="alignnone"
                         src="https://www.pranaair.com/wp-content/uploads/2022/10/pain-in-the-chest-due-to-radon-239x300.png"
-                        alt="pain in the chest"
-                        width="239"
-                        height="300"
+                        alt={t("radon.symptoms.chestPain.imageAlt")}
+                        width={239}
+                        height={300}
                       />
                     </span>
                   </strong>
                 </h4>
                 <h4 style={{ textAlign: "center" }}>
                   <span style={{ fontSize: "14pt" }}>
-                    <strong>Pain or tightness in the chest</strong>
+                    <strong>{t("radon.symptoms.chestPain.title")}</strong>
                   </span>
                 </h4>
               </div>
@@ -238,33 +201,33 @@ export default function RadonPage() {
                 <h4 style={{ textAlign: "center" }}>
                   <strong>
                     <span style={{ fontSize: "14pt" }}>
-                      <img
+                      <Image
                         className="alignnone"
                         src="https://www.pranaair.com/wp-content/uploads/2022/10/worsenging-of-cough-due-to-radon-196x300.png"
-                        alt="worsening of cough"
-                        width="196"
-                        height="300"
+                        alt={t("radon.symptoms.worseningCough.imageAlt")}
+                        width={196}
+                        height={300}
                       />
                     </span>
                   </strong>
                 </h4>
                 <h4 style={{ textAlign: "center" }}>
                   <strong>
-                    <span style={{ fontSize: "14pt" }}>Worsening of cough</span>
+                    <span style={{ fontSize: "14pt" }}>{t("radon.symptoms.worseningCough.title")}</span>
                   </strong>
                 </h4>
               </div>
               <div className="col-md-6">
-                <img
+                <Image
                   className="aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2022/10/trouble-in-swallowing-due-to-radon-239x300.png"
-                  alt="trouble in swallowing"
-                  width="239"
-                  height="300"
+                  alt={t("radon.symptoms.swallowingTrouble.imageAlt")}
+                  width={239}
+                  height={300}
                 />
                 <h4 style={{ textAlign: "center" }}>
                   <strong>
-                    <span style={{ fontSize: "14pt" }}>Trouble in swallowing</span>
+                    <span style={{ fontSize: "14pt" }}>{t("radon.symptoms.swallowingTrouble.title")}</span>
                   </strong>
                 </h4>
               </div>
@@ -275,19 +238,10 @@ export default function RadonPage() {
               <div style={{ height: "60px" }}></div>
               <div>
                 <h2 style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "24pt" }}>Why is it important to monitor Radon?</span>
+                  <span style={{ fontSize: "24pt" }}>{t("radon.monitoring.title")}</span>
                 </h2>
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "12pt" }}>
-                    As we discussed, radon is an invisible, odorless, and tasteless gas, there is no possible way to
-                    know if it is present inside your premises or not using the human senses. Radon concentrations in a
-                    home should ideally be less than 100 Bq/m3. And as radon levels change depending on various factors
-                    such as temperature, ventilation,
-                    <a href="https://www.pranaair.com/?page_id=54100">humidity</a>, wind speed and direction, rainfall,
-                    snow, air pressure, the foundation of your building, building insulation, etc. there is the need to
-                    monitor it continuously, so that proper actions can be taken accordingly that will ensure that
-                    levels remain as low as possible.
-                  </span>
+                  <span style={{ fontSize: "12pt" }}>{t("radon.monitoring.description")}</span>
                 </p>
               </div>
             </div>

@@ -410,5 +410,174 @@
   "contactHeading": {
     "title": "Get in Touch",
     "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "youMayAlsoLike": {
+    "title": "You may also like",
+    "products": {
+      "pocketPM": "Pocket PM",
+      "cairPlus": "Cair+",
+      "sensible": "Sensible",
+      "ambientPro": "Ambient pro",
+      "squair": "SQUAIR"
+    }
+  },
+  "testimonials": {
+    "sameer": {
+      "name": "Sameer W.",
+      "review": "It's a great product that can indicate the level of PM2.5 in a closed or outdoor environment. It's not 100% accurate and given its size and price I think it would be an unrealistic expectation to have that level of accuracy. It tells you the order of magnitude of PM2.5 pollution in a place and it also indicates the measurement extremely fast. I have tested and triangulated the device output with other readings (from air purifiers) and I don't think the margin of error is beyond 10%. However, this has been at levels of PM2.5 below 100. I am not sure if the margin of error expands or reduces with the PM2.5 increases to levels beyond 150. If you wish to know, on an indicative basis, of the range of pollution in a place at a point of time, then this would be a highly recommended device."
+    },
+    "priya": {
+      "name": "Priya M.",
+      "review": "I purchased the Prana Air quality monitor for my home as my child has asthma. This device has been incredibly helpful in monitoring the air quality in different rooms and alerting us when we need to take action. The readings are consistent and the device is easy to use. The battery life is also impressive. I would definitely recommend this to anyone concerned about indoor air quality, especially those with respiratory conditions."
+    },
+    "rajesh": {
+      "name": "Rajesh K.",
+      "review": "I've been using the Prana Sense monitor for about 3 months now in my office space. The device is compact and portable, making it easy to move around different areas. The readings seem accurate when compared to other professional equipment. The only improvement I would suggest is making the app interface a bit more user-friendly. Otherwise, it's a solid product that delivers on its promises."
+    },
+    "anita": {
+      "name": "Anita S.",
+      "review": "Living in a city with high pollution levels, I wanted a reliable way to monitor air quality both inside and outside my home. The Prana Air monitor has exceeded my expectations. It detects even slight changes in air quality and the historical data tracking helps me understand patterns over time. The customer service team was also very responsive when I had questions about calibration. Highly recommended for urban dwellers!"
+    },
+    "michael": {
+      "name": "Michael T.",
+      "review": "As someone who works in environmental science, I was looking for a consumer-grade device that could provide reasonably accurate readings. This device strikes a good balance between accuracy and affordability. I've been using it for various field projects and it has proven to be reliable. The solar charging option is also a great sustainable feature that reduces the need for battery replacements."
+    }
+  },
+  "hiddenImpact": {
+    "title": "How Air Quality Monitoring Can Reveal the Hidden Impact of Air Pollution?",
+    "subtitle": "The harmful substances released into the air are air pollutants that negatively impact the environment and human health.",
+    "description1": "According to WHO research, nine out of ten people breathe poor air quality, with 99% of the global population exposed to levels exceeding recommended limits. Air pollution causes 8 million deaths each year—3.8 million indoors and 4.2 million outdoors.",
+    "description2": "The dramatic rise in population has increased energy consumption and resource use. It leads to higher pollutant levels and greater health risks, particularly respiratory illnesses. Therefore, air quality monitoring is crucial. Prana Air's air quality monitors helps in checking pollutants in your environment to make informed decisions for healthier, cleaner air.",
+    "learnMore": "Learn More"
+  },
+  "nextGenTechnology": {
+    "title": "Next-Gen Technology Used in Our Air Quality Monitoring Sensors",
+    "description": "Prana Air's uses advanced technology of air quality monitoring sensors in every device. These sensors can easily detect various pollutants as in indoor and outdoor settings."
+  },
+   "airQualitySensors": {
+    "title": "Air Quality Sensors",
+    "subtitle": "High Quality & Responsive",
+    "knowMore": "Know More",
+    "imageAlt": "Prana air quality sensors"
+  },
+  "airQualityManagement": {
+    "title": "Our Air Quality Monitoring System in the Management!",
+    "getQuote": "Get A Quote",
+    "systemTitle": "Air Quality Management System",
+    "description": "is a comprehensive plan to reduce air pollution by tracking root cause of air pollution in different settings. Prana Air's air quality monitors plays a crucial role in each step. As these needed for emission inventories, helping to identify and understand air quality problems. The real-time data from our monitors support effective decision-making for emission control and contribute to the overall assessment of air quality.",
+    "imageAlt": "Air quality management system"
+  },
+  "healthScore": {
+    "ai": "AI",
+    "calculated": "Calculated",
+    "health": "Health",
+    "indexScore": "Index-Score",
+    "description": "Get an insight into various scores such as thermal comfort, mold, ventilation, filtration, odor, mites, viruses, etc. Make well-informed decisions to control after monitoring.",
+    "ventilation": {
+      "title": "Ventilation Score",
+      "description": "the provision of fresh air to your room",
+      "score": "05",
+      "status": "Moderate"
+    },
+    "capacity": {
+      "title": "Capacity Index",
+      "description": "people capacity of the room",
+      "score": "02",
+      "status": "Good"
+    },
+    "mites": {
+      "title": "Mites score",
+      "description": "the provision of fresh air to your room",
+      "score": "03",
+      "status": "Moderate"
+    },
+    "virus": {
+      "title": "Virus Index",
+      "description": "probability of virus formation in the room",
+      "score": "02",
+      "status": "Bad"
+    },
+    "mold": {
+      "title": "Mold Score",
+      "description": "probability of mold formation in the room",
+      "score": "02",
+      "status": "Bad"
+    },
+    "odor": {
+      "title": "Odor score",
+      "description": "a distinctive smell in the room",
+      "score": "03",
+      "status": "Good"
+    },
+    "filtration": {
+      "title": "Filtration Score",
+      "description": "efficiency of filter in the room",
+      "score": "03",
+      "status": "Moderate"
+    },
+    "comfort": {
+      "title": "Comfort score",
+      "description": "a state of physical ease in the room",
+      "score": "04",
+      "status": "Bad"
+    }
+  },
+  "trustedBy": {
+    "title": "Trusted By",
+    "subtitle": "Some of the Industry's Top Organisations"
+  },
+   "constructionSite": {
+    "title": "Air Quality Monitoring at Construction Site",
+    "imageAlt": "Prana air air quality monitors at construction sites",
+    "learnMore": "Learn More",
+    "accordingTo": "According to",
+    "dpccGuidelines": "DPCC Guidelines",
+    "sitesCount": "150+",
+    "sitesDescription": "Constructions Sites Covered"
+  },
+   "dataInsight": {
+    "title": "Air Quality Data Insight on your TV or Web Dashboard",
+    "description": "Connect your device with a TV or Web Dashboard. As to showcase various sights for air quality monitoring on a big screen. As you can see the individual pollutant in the air. With it, it also displays the historical data to determine past exposure. You can also check the pollutant summary for the last 24 hours and the filtration score.",
+    "particleCountsAlt": "Particle counts data",
+    "aqiAverageAlt": "AQI average data",
+    "historyDataAlt": "Historical air quality data",
+    "dashboardAlt": "AQI dashboard for prana air monitors"
+  },
+  "highlyAccurate": {
+    "title": "Highly Accurate Prana Air Monitor",
+    "subtitle": "PM2.5 correlation with a high-end instrument",
+    "graphAlt": "Comparison of prana air monitor data with highly expensive equipment"
+  },
+   "sensors": {
+    "particulateMatter": {
+      "name": "Particulate Matter(PM10, 2.5)",
+      "principle": "Optical 90˚ Light Scattering",
+      "description": "Light enters the mirror's 90° opening and reflects toward the sensor. The photodiode records a pulse to create an electrical signal for the particulate matter concentration.",
+      "imageAlt": "Particulate matter sensor"
+    },
+    "tvoc": {
+      "name": "Total volatile organic compounds",
+      "principle": "Metal Oxide Sensors (MOS)",
+      "description": "Semiconductor particles absorb oxygen by capturing free electrons at high temperatures. The depletion layer determines the particle's size that can cover each particle entire surface.",
+      "imageAlt": "TVOC sensor"
+    },
+    "toxicGasesH2S": {
+      "name": "Toxic Gases(H2S & C2H5OH)",
+      "principle": "Electrochemical Sensors",
+      "description": "These amperometric fuel cells have two electrodes. It reacts with airborne water molecules and oxidizes when the poisonous gas and a working electrode contacts.",
+      "imageAlt": "Toxic gases H2S sensor"
+    },
+    "carbonDioxide": {
+      "name": "Carbon Dioxide",
+      "principle": "Non-Dispersive Infrared Sensors (NDIR)",
+      "description": "Gas molecule absorb infrared radiation (IR) at a specific wavelength and it vibrates. Sensors measures the decrease in transmitted IR light with the concentration of gas.",
+      "imageAlt": "Carbon dioxide sensor"
+    },
+    "toxicGasesCO": {
+      "name": "Toxic Gases (CO, O3, NOx, SOx)",
+      "principle": "Electrochemical Sensors",
+      "description": "These amperometric fuels have two electrodes. It oxidizes with airborne water molecules and the gas chemical when the gas contact with the working electrodes.",
+      "imageAlt": "Toxic gases CO sensor"
+    }
   }
 }

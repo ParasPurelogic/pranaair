@@ -1,0 +1,268 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+ "rmcBanner": {
+    "title": "Air Quality Solutions",
+    "highlight": "For Ready-Mix Concrete Plants",
+    "description": "A complete solution for air quality monitoring and data display at RMC Plants.",
+    "cta": "Get a Quote"
+  },
+  "rmcPollutants": {
+    "title": "Major Air",
+    "highlight": "Pollutants",
+    "description": "Emissions from RMC plants, including the burning of fossil fuels, material transportation, and heavy gear operation, release pollutants that can harm human health with respiratory difficulties, cardiovascular disease, cancer risks, and cause environmental damage like acid rain and smog. Monitoring and controlling these emissions is vital to minimize their impact on both the environment and human well-being.",
+    "pm": {
+      "title": "PM",
+      "description": "Fossil fuels, material transport, and heavy machinery contribute to PM emissions."
+    },
+    "noise": {
+      "title": "Noise",
+      "description": "Machinery on the sites creates noise that can cause ear injury and disturbance."
+    },
+    "co": {
+      "title": "CO",
+      "description": "Heavy machinery operation and transportation of equipment contribute to emissions."
+    },
+    "vocs": {
+      "title": "VOCs",
+      "description": "Released from the storage and handling of solvents, fuels, and certain chemical additives"
+    },
+    "sox": {
+      "title": "SOx",
+      "description": "Sulfur-containing fuels and raw materials contribute to emissions."
+    },
+    "nox": {
+      "title": "NOx",
+      "description": "Oxides of Nitrogen are released from the burning of fuel and natural gas."
+    }
+  },
+  "rmcImpact": {
+    "sox": {
+      "title": "SOx",
+      "description": "Exposure to SOx can cause irritation in the eyes and respiratory tract, and aggravate conditions like asthma, bronchitis, etc."
+    },
+    "noise": {
+      "title": "Noise",
+      "description": "Excessive noise can lead to hearing loss, sleep disturbances, high blood pressure, headaches, and other various discomforts."
+    },
+    "nox": {
+      "title": "NOx",
+      "description": "Nitrogen oxide can cause irritation in the eyes, nose, and throat. Symptoms may involve cough, shortness of breath, nausea, etc."
+    },
+    "pm": {
+      "title": "PM",
+      "description": "Particulate matter (PM) pollution from RMC plants can cause respiratory disorders, heart disease, and other health problems."
+    },
+    "co": {
+      "title": "CO",
+      "description": "Headaches, nausea, dizziness, and even death can happen when exposed to CO pollution from RMC plants at high concentrations."
+    }
+  },
+  "rmcGuidelines": {
+    "title": "MPCB Guidelines",
+    "subtitle": "RMC Plants",
+    "description": "Maharashtra Pollution Control Board, in consultation with the State Government, has issued guidelines for the siting criteria of Ready Mix Concrete Plants (RMC) in the state of Maharashtra, as well as environmental norms to be enforced on RMCs to implement additional control measures to reduce pollution and protect public health in surrounding areas.",
+    "knowMore": "Know More",
+    "selfAssessment": {
+      "title": "Maharashtra Pollution Control Self Assessment",
+      "description": "As per the MPCB, the authority shall comply with the provisions under the Air (Prevention and Control of Pollution) Act, 1981, and the following mentioned guidelines."
+    },
+    "mpcb": {
+      "title": "MPCB",
+      "fullName": "(Maharashtra Pollution Control Board)"
+    },
+    "guidelinesTitle": "Guidelines for RMC Plants in Maharashtra, India",
+    "guidelines": {
+      "guideline1": "The unit is required to monitor the ambient air quality at the plot boundary",
+      "guideline2": "The ambient air quality standards must be met for a 24-hour average",
+      "guideline3": "The maximum allowable concentration of Particulate Matter (PM10) is 100 μg/m³.",
+      "guideline4": "The maximum allowable concentration of Particulate Matter (PM2.5) is 60 μg/m³.",
+      "guideline5": "Commercial plants are required to install CAAQMS within their premises.",
+      "guideline6": "Captive plants must conduct ambient air quality monitoring twice a week for 24 hours.",
+      "guideline7": "Ready mix concrete industries must comply with the provisions under the Noise Pollution (Regulation and Control) Rule 2000 to control noise pollution."
+    },
+    "gazette": {
+      "title": "RMC Gazette circular"
+    },
+    "solutions": {
+      "title": "How do we provide the solutions?",
+      "tabs": {
+        "ambient": "Ambient Monitor",
+        "api": "API Data To Govt. Portal",
+        "cctv": "CCTV Camera"
+      },
+      "features": "Features",
+      "brochure": "Brochure",
+      "quote": "Get A Quote",
+      "ambient": {
+        "description": "Prana Air Ambient Air Quality Monitors help RMC companies monitor air quality and ensure worker safety. Accurate readings of different air quality parameters, including temperature, allow for proactive measures to mitigate air pollution and improve overall air quality on the plant.",
+        "features": {
+          "feature1": "Real-time and historical data analysis",
+          "feature2": "Lightweight, weatherproof monitor",
+          "feature3": "Multiple sensors & connectivity options",
+          "feature4": "Can function as a CAAQMS"
+        }
+      },
+      "api": {
+        "description": "Prana Air offers seamless integration of air quality monitor data through an API, enabling easy access and integration on any website, in accordance with government guidelines.",
+        "features": {
+          "feature1": "Uninterrupted API data delivery",
+          "feature2": "Real-time and historical data",
+          "feature3": "Guaranteed 100% uptime data",
+          "feature4": "Reliable, stable, and secure data"
+        }
+      },
+      "cctv": {
+        "description": "By providing remote access to live video footage and real-time air quality data, RMC teams can enhance decision- making processes, ensure compliance with standards, and prioritize the safety of their work environment.",
+        "features": {
+          "feature1": "Live video feed of the site",
+          "feature2": "Facilitates proactive pollution mitigation measures",
+          "feature3": "Real-time monitoring of activities",
+          "feature4": "Enhances worker safety and security"
+        }
+      }
+    },
+    "hide": "Hide"
+  },
+  "rmcMonitoring": {
+    "title": "Air Quality",
+    "highlight": "Monitoring at RMC Plants",
+    "description": "Our cutting-edge monitoring systems are specifically designed to precisely measure various pollutants including PM, SOx, NOx, CO, and more at RMC plants. With customizable Printed Circuit Boards (PCBs), our monitors are adaptable to real-time applications and can be tailored to meet the specific air quality needs of RMC plant environments.",
+    "tabs": {
+      "monitor": "Air Quality Monitor",
+      "display": "LED/TV Display",
+      "storage": "Storage & Dashboard"
+    },
+    "monitor": {
+      "title": "Ambient Air Monitor (CAAQMS)",
+      "description": "Prana Air monitors detect pollutants and function as a CAAQMS for RMC plants, enabling informed decisions, emission control strategies, and improved air quality for worker and community health."
+    },
+    "display": {
+      "title": "LED Display & Android TV Dashboard",
+      "description": "Real-time air quality data on displays at construction sites enables informed decisions and proactive health risk mitigation for workers and communities."
+    },
+    "storage": {
+      "title": "Cloud Storage & Data Dashboards",
+      "description": "Cloud storage is crucial for RMC Plants, offering secure remote access to monitored data through mobile apps, Android TV, & web dashboards, anytime, anywhere."
+    }
+  },
+  "rmcFreemium": {
+    "title": "Data Freemium",
+    "highlight": "Services",
+    "description": "Show the data on LED/LCD TV display or analyze it on a web dashboard or mobile & tablet apps with AQI data cloud storage service. No more hassle of data accessibility.",
+    "services": {
+      "monitor": {
+        "title": "Ambient Monitor (CAAQMS)",
+        "alt": "Prana Air ambient air monitor at ready mix concrete plant"
+      },
+      "display": {
+        "title": "LED Display/TV Dashboard",
+        "alt": "prana air led display and lcd tv to show air quality data at RMC plant"
+      },
+      "storage": {
+        "title": "Data Dashboards & Cloud Storage",
+        "alt": "aqi customized data dashboard and cloud storage"
+      }
+    }
+  },
+  "rmcConstruction": {
+    "title": "Discover the Importance of Air Quality Monitoring for",
+    "highlight": "Construction Sites:",
+    "subtitle": "Ensuring Compliance and Healthy Atmospheres.",
+    "cta": "Know More"
+  },
+  "rmcClientele": {
+    "description": "We are honored to work with so many well-known companies.",
+    "clients": {
+      "ultratech": {
+        "alt": "UltraTech Cement"
+      },
+      "speco": {
+        "alt": "Speco Technologies"
+      },
+      "starcrete": {
+        "alt": "StarCrete"
+      },
+      "indiscrete": {
+        "alt": "Indiscrete"
+      }
+    }
+  },
+  "rmcFaq": {
+    "description": "About Air Quality Monitoring Solutions for RMC Plants Have questions? Were here to help.",
+    "questions": {
+      "q1": "1. Why is air quality monitoring important at RMC sites?",
+      "q2": "2. What pollutants are typically monitored at RMC sites?",
+      "q3": "3. What are the typical monitoring methods used at RMC sites?",
+      "q4": "4. Who is responsible for conducting air quality monitoring at RMC sites?",
+      "q5": "5. What are the consequences of non-compliance with air quality standards at RMC sites?",
+      "q6": "6. What kind of equipment is used for air quality monitoring at RMC sites?",
+      "q7": "7. How often should air quality monitoring be conducted at RMC sites?"
+    },
+    "answers": {
+      "a1": "Air quality monitoring is crucial at RMC sites to ensure that the emissions from the plants do not cause harmful impacts on public health and the environment.",
+      "a2": "Common pollutants monitored at RMC sites include particulate matter (PM), NOx, CO, and SOx.",
+      "a3": "Monitoring methods can vary, but commonly used techniques include continuous ambient air quality monitoring stations (CAAQMS), and real-time monitoring instruments.",
+      "a4": "Typically, the RMC plant operators are responsible for conducting air quality monitoring at their sites. However, regulatory agencies may also conduct periodic inspections and monitoring to ensure compliance with environmental regulations.",
+      "a5": "Non-compliance with air quality standards at RMC sites can lead to regulatory action such as fines, shutdowns, or legal action. Additionally, non-compliance can also lead to negative impacts on public health and the environment.",
+      "a6": "Continuous Ambient Air Quality Monitoring Stations (CAAQMS) are commonly used for air quality monitoring at RMC sites. These systems are capable of measuring various pollutants in real-time and can be customized based on specific monitoring requirements.",
+      "a7": "Air quality monitoring at RMC sites should be conducted continuously to ensure that the levels of pollutants are within acceptable limits. The frequency of monitoring may vary depending on local regulations and monitoring requirements."
+    }
+  },
+  "rmcIndustrial": {
+    "description": "Irrespective of the business size, Prana Air provides an extensive range of intelligent, cost-effective, and exceptionally precise air quality solutions suitable for diverse industries."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help."
+  },
+   "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in",
+    "highlight": "Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+   "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

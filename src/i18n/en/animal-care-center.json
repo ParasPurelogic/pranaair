@@ -1,0 +1,252 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"animalFacilities": {
+    "hero": {
+      "title": "Air quality solutions for",
+      "highlight": "Animal Facilities",
+      "description": "Advanced air quality solutions to enhance the well-being of animals and staff with research accuracy.",
+      "facilities": "Farms | Laboratories | Health-care",
+      "cta": "Get a Quote",
+      "ctaAriaLabel": "Get a Quote"
+    },
+    "pollutants": {
+      "title": "Common Pollutants affecting air quality in",
+      "highlight": "Animal Facilities",
+      "description": "Animal facilities are highly exposed to various pollutants that are emitted from different sources.",
+      "particulateMatter": {
+        "title": "Particulate Matter",
+        "description": "Emits from Dust dander bedding particles and feed etc.",
+        "imgAlt": "Particulate Matter icon"
+      },
+      "ammonia": {
+        "title": "Ammonia",
+        "description": "Produced by animal waste especially from urine.",
+        "imgAlt": "Ammonia icon"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "description": "Emits from cleaning agents disinfectants and chemicals.",
+        "imgAlt": "TVOC icon"
+      },
+      "pathogens": {
+        "title": "Pathogens",
+        "description": "Improper storage of feed can produce bacteria viruses and fungi",
+        "imgAlt": "Pathogens icon"
+      },
+      "carbonDioxide": {
+        "title": "Carbon Dioxide",
+        "description": "Inadequate ventilation lead to High levels of CO2",
+        "imgAlt": "Carbon Dioxide icon"
+      }
+    },
+    "pollutionSources": {
+      "title": "Air pollution sources in Animal facilities",
+      "description": "Air pollution in animal facilities releases from various internal and external sources."
+    },
+    "challenges": {
+      "title": "Challenges in Maintaining Air Quality",
+      "description": "There are several challenges in maintaining good optimal air quality in animal facilities such as:",
+      "items": {
+        "ventilation": {
+          "title": "Ventilation Systems",
+          "description": "Poor systems affect the proper ventilation and fail to provide adequate air exchange.",
+          "imgAlt": "Ventilation Systems in animal care center"
+        },
+        "temperatureHumidity": {
+          "title": "Temperature and Humidity Control",
+          "description": "It is crucial for animal comfort but outdoor weather conditions can affect the control.",
+          "imgAlt": "Temperature and Humidity Control in animal care center"
+        },
+        "crossContamination": {
+          "title": "Cross-Contamination",
+          "description": "Improper airflow management in animal facilities spreads airborne pollutants between rooms.",
+          "imgAlt": "Cross-Contamination in animal facilities"
+        }
+      }
+    },
+    "whoAtRisk": {
+      "title": "Who is at",
+      "highlight": "Risk?",
+      "description": "Air pollution have significant threat to everyones health in animal facilities.",
+      "groups": {
+        "animalHealth": {
+          "title": "Animal Health",
+          "description": "Poor air quality in any animal facility can cause respiratory distress infections and other health issues to animals.",
+          "imgAlt": "air quality and Animal Health"
+        },
+        "staffFarmworkers": {
+          "title": "Staff and farmworkers",
+          "description": "Poor air quality in animal farms labs care centers can be harmful to staff health as well which can lead to various health conditions.",
+          "imgAlt": "air quality on the health of Staff and farmworkers"
+        },
+        "researchOutcomes": {
+          "title": "Research outcomes",
+          "description": "Various air pollutants can affect the outcomes of research as can alter the data or cause invalid conclusions.",
+          "imgAlt": "air quality studies on Research"
+        }
+      }
+    },
+    "guidelines": {
+      "title": "Air pollution",
+      "highlight": "Guidelines for Animal facilities",
+      "subtitle": "Check out different countries guidelines for Air quality in Animal Care Centers",
+      "organizations": {
+        "ccac": {
+          "title": "CCAC Guidelines Laboratory Animal Facilities",
+          "imgAlt": "CCAC guidelines for animal facilities",
+          "ariaLabel": "CCAC Guidelines Laboratory Animal Facilities"
+        },
+        "cpcsea": {
+          "title": "CPCSEA Guidelines For Laboratory Animal Facility",
+          "imgAlt": "CPCSEA GUIDELINES for animal facilities",
+          "ariaLabel": "CPCSEA Guidelines For Laboratory Animal Facility"
+        },
+        "environmental": {
+          "title": "Environmental Quality in Animal Production Housing Facilities",
+          "imgAlt": "Environmental Quality in Animal Production Housing Facilities",
+          "ariaLabel": "Environmental Quality in Animal Production Housing Facilities"
+        },
+        "laboratory": {
+          "title": "Laboratory Animal Care Facility",
+          "imgAlt": "western illinois university guidelines for laboratory animal care facility",
+          "ariaLabel": "Laboratory Animal Care Facility"
+        }
+      }
+    },
+    "solutions": {
+      "title": "Air quality",
+      "highlight": "Solutions",
+      "description": "Installing air quality solutions throughout the facility allows for managing the air pollution exposure to staff and animals health by providing clean air to breathe. Moreover it helps in better and more accurate research outcomes.",
+      "tabs": {
+        "monitors": "Air quality Monitors",
+        "freshAir": "Fresh air machine",
+        "dataDisplay": "Data Display"
+      },
+      "products": {
+        "monitor": {
+          "title": "Prana Air Sensible+Air quality monitor",
+          "description": "Advanced air quality monitor can measures particulate matter CO2 VOCs and other pollutants.",
+          "imgAlt": "prana air sensible indoor air quality monitor for animal facilities",
+          "features": {
+            "realTime": "Real-time air quality monitoring",
+            "adjustments": "Help in immediate adjustments",
+            "multiple": "Monitors Multiple Indoor Pollutants"
+          },
+          "cta": "Indoor Air Monitor",
+          "ctaAriaLabel": "Indoor Air Quality Monitor"
+        },
+        "freshAir": {
+          "title": "Prana Air Fresh Air Machine",
+          "description": "Cutting-edge indoor air purifier to filter out various pollutants and provide clean air for everyone.",
+          "imgAlt": "prana air fresh air machine for animal care falicities",
+          "features": {
+            "removes": "Removes 99.5% of Indoor Pollutants",
+            "coverage": "Covers Up to 1200 Sq Ft",
+            "aiPowered": "AI-Powered Automatic Airflow"
+          },
+          "cta": "Fresh Air Machine",
+          "ctaAriaLabel": "Fresh air machine for animal care center"
+        },
+        "dataDisplay": {
+          "title": "Prana Air Customized TV Display",
+          "description": "Customized digital display can install in the facilities for 24/7 real-time data visualization.",
+          "imgAlt": "AQI TV app for displaying air quality monitor for animal facilities",
+          "features": {
+            "realTimeData": "Real-Time Air Quality Data Display",
+            "customizable": "Customizable Display Settings",
+            "indoorOutdoor": "Access to Both Indoor and Outdoor Data"
+          }
+        }
+      }
+    },
+    "effects": {
+      "title": "The Effects of Air Pollution -",
+      "highlight": "Animal facilities",
+      "description": "Air quality in animal farm hospitals and labs is crucial for animal health and accurate research outcomes. Here check the comparison:",
+      "without": {
+        "title": "Without Air Quality Solutions",
+        "items": {
+          "poorHealth": "Poor health and discomfort for animals.",
+          "respiratoryRisks": "High respiratory issues risks for staff.",
+          "inaccuracy": "Inaccuracy in researches outcomes."
+        }
+      },
+      "with": {
+        "title": "With Air Quality Solutions",
+        "items": {
+          "enhancedComfort": "Enhanced comfort and health for animals.",
+          "reducedRisk": "Reduced staff risk for respiratory issues.",
+          "accurateResults": "Accurate and reliable research results."
+        }
+      }
+    },
+    "clientele": {
+      "title": "Our",
+      "highlight": "Clientele",
+      "description": "Our partnerships with these renowned organizations reflect our commitment to excellence and innovation.",
+      "logos": {
+        "morganStanley": "morgan stanley logo",
+        "ola": "ola logo",
+        "microsoft": "microsoft logo",
+        "iitBhu": "iit banaras logo",
+        "renaultNissan": "renault nissan logo",
+        "tata": "tata logo",
+        "csir": "csir logo",
+        "mahindra": "mahindra logo",
+        "interglobe": "interglobe logo",
+        "gmda": "gmda logo",
+        "leighton": "leighton logo",
+        "havells": "havells logo"
+      }
+    }
+  },
+   "contact": {
+      "title": "Get in Touch",
+      "description": "Please help us know what requirements you have. Our team will contact you very soon."
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "highlight": "Questions",
+      "description": "Have questions? Were here to help."
+    },
+    "industrialApplications": {
+      "title": "Industrial",
+      "highlight": "Applications",
+      "description": "Prana Air offers a diverse selection of smart affordable and remarkably precise air quality solutions catering to various sectors irrespective of their scale."
+    }
+   
+}

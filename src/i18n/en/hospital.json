@@ -1,0 +1,286 @@
+{
+    "industrialApplicationsData": {
+        "hotel": {
+            "title": "Solutions for Hotel"
+        },
+        "restaurant": {
+            "title": "Solutions for Restaurant"
+        },
+        "institutes": {
+            "title": "Solutions for Institutes"
+        },
+        "cinema": {
+            "title": "Solutions for Cinema/Theatre"
+        },
+        "automobiles": {
+            "title": "Solutions for Automobiles"
+        },
+        "realEstate": {
+            "title": "Solutions for Real Estates"
+        },
+        "smartphone": {
+            "title": "Solutions for Smartphone Makers"
+        },
+        "construction": {
+            "title": "Solutions for Construction"
+        },
+        "animalCare": {
+            "title": "Air quality Solutions for Animal care"
+        },
+        "logistics": {
+            "title": "Air quality Solutions for logistics"
+        },
+        "railways": {
+            "title": "Air quality Solutions for Railways"
+        }
+    },
+    "banking": {
+        "healthImpacts": {
+      "immunity": {
+        "title": "Weakened Immunity",
+        "description": "Lowered ability to fight infections."
+      },
+      "neurological": {
+        "title": "Neurological problems",
+        "description": "Dementia and Alzheimer's disease."
+      },
+      "respiratory": {
+        "title": "Respiratory problems",
+        "description": "Coughing, wheezing, and shortness of breath"
+      },
+      "cancer": {
+        "title": "Cancer",
+        "description": "Lung cancer, as well as other types of cancer."
+      },
+      "chronic": {
+        "title": "Chronic respiratory diseases",
+        "description": "Heart disease, stroke, and arrhythmias."
+      }
+    },
+    "pollutionSources": {
+      "equipment": {
+        "title": "Equipment",
+        "description": "Hospitals use a variety of equipment that can emit pollutants into the air, such as generators, sterilizers, and medical devices. These pollutants can include particulate matter (PM), VOCs, and ozone."
+      },
+      "waste": {
+        "title": "Waste",
+        "description": "Hospitals generate a lot of waste, some of which can be burned or incinerated, releasing pollutants into the air. These pollutants can include PM, VOCs, and heavy metals."
+      },
+      "cleaning": {
+        "title": "Cleaning products",
+        "description": "Hospitals use a variety of cleaning products that can contain VOCs, which can pollute the air. These pollutants can irritate the eyes, nose, and throat."
+      },
+      "occupancy": {
+        "title": "High occupancy",
+        "description": "Air pollution in hospitals due to high occupancy and CO2 can be a serious concern, as it can impact the health & well-being of patients, healthcare workers, and visitors."
+      }
+    },
+    "appSlides": {
+      "tvDashboard": {
+        "title": "TV Dashboard App",
+        "description": "AQI TV App can be used to track air pollution levels in a hospital by displaying real-time data on a large screen. This makes it easy for staff and patients to see the air quality levels and to take steps to protect their health if necessary."
+      },
+      "webDashboard": {
+        "title": "Web-Dashboard / Tablet App",
+        "description": "By using an AQI web-dashboard and table app, hospitals can improve their ability to monitor and track air pollution levels. This information can be used to protect the health of staff and patients and to improve the overall quality of care in the hospital."
+      },
+      "mobileApp": {
+        "title": "AQI Mobile App",
+        "description": "This app can be used to monitor and track air pollution levels in a hospital. It displays real-time data and sends alerts when air quality levels reach unhealthy levels."
+      }
+    },
+    "monitorSlides": {
+      "squair": {
+        "title": "SQUAIR Air Monitor",
+        "description": "Experience the remarkable Prana Air SQUAIR Monitor – a next-generation smart indoor air quality tracking device for hospital environments. This innovative device goes beyond the ordinary, with the ability to detect odors, gauge humidity levels, and meticulously analyze a wide range of toxic gas parameters.",
+        "features": {
+          "item1": "Detects TVOCs (odor), temperature, and humidity as well",
+          "item2": "Mobile & Smart TV App Enabled",
+          "item3": "Reliable Web Dashboard Accessibility"
+        }
+      },
+      "sensible": {
+        "title": "Sensible+ Monitor",
+        "description": "Presenting our state-of-the-art smart device, boasting a sleek 7-inch touchscreen display that delivers in-depth, real-time air quality data insights specifically tailored for hospitals.",
+        "features": {
+          "item1": "7 Inch LED Touch Screen Display",
+          "item2": "5000 mAh Battery InBuilt",
+          "item3": "WiFi Connectivity With Mobile App"
+        }
+      }
+    },
+    "faqData": {
+      "q1": {
+        "question": "1. What is Prana Air's expertise in air quality monitoring for hospitals?",
+        "answer": "Prana Air specializes in providing advanced air quality monitoring solutions specifically tailored for hospital environments, ensuring a healthier and safer indoor atmosphere."
+      },
+      "q2": {
+        "question": "2. What benefits can Prana Air system bring to hospitals?",
+        "answer": "Prana Air systems help hospitals improve patient recovery rates, enhance infection control, and create a more comfortable healing environment by providing purified air rich in oxygen while filtering out pollutants and odors."
+      },
+      "q3": {
+        "question": "3. Is Prana Air's system easy to integrate into existing hospital infrastructure?",
+        "answer": "Yes, Prana Air solutions are designed for seamless integration, minimizing disruption to hospital operations. Our team ensures a smooth setup and offers ongoing support."
+      },
+      "q4": {
+        "question": "4. What type of pollutants can the Prana Air fresh air system detect and filter?",
+        "answer": "The fresh air machine system can eliminate a wide range of pollutants, including VOCs, particulate matter, odors, and allergens. Its filtration technology effectively removes these contaminants."
+      },
+      "q5": {
+        "question": "5. Does Prana Air provide maintenance and support for their systems?",
+        "answer": "Yes, Prana Air offers comprehensive maintenance and support services to keep the air quality monitoring system running optimally in hospitals."
+      },
+      "q6": {
+        "question": "6. Is the data from the Prana Air monitor accessible remotely?",
+        "answer": "Absolutely. Prana Air provides a user-friendly platform that allows hospitals to access real-time and historical data remotely, enabling prompt decision-making and quick responses to air quality fluctuations."
+      },
+      "q7": {
+        "question": "7. Is the data generated by the Prana Air monitor compliant with industry standards?",
+        "answer": "Yes, Prana Air's monitoring solutions adhere to industry standards for accuracy and reliability, ensuring hospitals receive data that meets quality and regulatory requirements."
+      },
+      "q8": {
+        "question": "8. How does the Prana Air monitor contribute to creating a healthier hospital environment?",
+        "answer": "By providing accurate, real-time data, the Prana Air monitor empowers hospitals to proactively address air quality concerns, enhance patient care, protect staff health, and maintain a safe and comfortable atmosphere that supports healing and recovery."
+      }
+    }
+    },
+    "pmSensorHero": {
+    "title": "Air quality monitoring & solutions for Hospital",
+    "description": "Air quality management is essential for ensuring the health and safety of patients, staff, and visitors in hospitals.",
+    "tagline": "Fresh Air, Healthy Life",
+    "cta": "Request A Quote"
+  },
+  "factors": {
+    "title": "Factors affecting air quality in Hospital",
+    "subtitle": "Some of the key components of air pollution in hospitals include:",
+    "pm": {
+      "title": "PM",
+      "description": "Comes from surgeries, medical equipment, construction, HVAC systems"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "Higher the number of occupancies, higher the CO2 level"
+    },
+    "co": {
+      "title": "CO",
+      "description": "It can come from ventilation systems, medical equipment, and waste disposal"
+    },
+    "ozone": {
+      "title": "Ozone",
+      "description": "Ozone generators are used to disinfect water, air, and medical equipments"
+    },
+    "vocs": {
+      "title": "VOCs",
+      "description": "Found in cleaning agents, disinfectants, paints, adhesives, and medical gases"
+    },
+    "hcho": {
+      "title": "HCHO",
+      "description": "Building materials like pressed wood, carpets, furniture, and certain medical devices"
+    },
+    "microbes": {
+      "title": "Microbes",
+      "description": "Patients, healthcare workers, the environment, food, and water"
+    }
+  },
+  "pollutants": {
+    "title": "Air Pollutants in Hospitals",
+    "subtitle": "Common air pollutants found in hospitals and their health effects",
+    "pm": {
+      "title": "PM & PM10",
+      "description": "It irritates the lungs and airways, leading to respiratory problems."
+    },
+    "vocs": {
+      "title": "VOCs",
+      "description": "It irritates the eyes, nose, and throat."
+    },
+    "co": {
+      "title": "CO",
+      "description": "It reduces the amount of oxygen that the blood can carry"
+    },
+    "hcho": {
+      "title": "HCHO",
+      "description": "Irritation, allergies, respiratory discomfort"
+    },
+    "ozone": {
+      "title": "Ozone",
+      "description": "Respiratory irritation, worsens asthma"
+    },
+    "microbes": {
+      "title": "Microbes",
+      "description": "It can cause respiratory infections, skin infections"
+    }
+  },
+  "healthImpacts": {
+    "title": "Health Impacts",
+    "subtitle": "Poor air quality in hospitals can have a number of negative health impacts, including:"
+  },
+  "quote": {
+    "title": "DO YOU KNOW?",
+    "content": "The World Health Organization (WHO) estimates that indoor air pollution causes 4.3 million deaths each year worldwide."
+  },
+  "pollutionSources": {
+    "title": "Sources of air pollution in Hospital",
+    "description": "Air pollutants in hospitals stem from medical procedures (VOCs, aerosols), cleaning chemicals (VOC emissions), medical equipment (particulates), HVAC systems (contaminant recirculation), construction/renovation (dust, particles), and human activity (outdoor pollutants)"
+  },
+  "solutions": {
+    "title": "Air Quality Solutions",
+    "description": "Air quality monitoring is an essential part of air quality management in hospitals. By monitoring air quality, hospitals can identify areas where air quality is poor and take steps to improve it.",
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Solution"
+    },
+    "freshAir": {
+      "title": "Fresh Air Machine",
+      "description": "Prana Air fresh air machine is an advanced air purifier that can remove up to 99.5% of pollutants, allergens, odors, and enough oxygen for hospitals. It is easy to use and maintain, and it can be controlled with a mobile app or a remote control. The machine is a great way to improve the air quality in hospitals and create a healthier environment for patients, staff, and visitors.",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Promising you up to 99.5% efficiency",
+        "feature3": "Improves air ventilation"
+      },
+      "cta": "Know More"
+    }
+  },
+  "appSolutions": {
+    "title": "App Solutions",
+    "description": "Our mobile and dashboard applications help you monitor and manage air quality in real-time"
+  },
+  "comparison": {
+    "title": "The Comparison",
+    "description": "Prana Air Fresh Air Machine elevates hospital air quality by filtering out pollutants, allergens, and odors while delivering ample oxygen. Without it, the air may lack purification and oxygenation, potentially impacting both patient recovery and infection control.",
+    "without": {
+      "title": "Without Fresh Air Solutions",
+      "points": {
+        "point1": "Increase risk of infection",
+        "point2": "Reduce comfort level",
+        "point3": "Increase absenteeism"
+      }
+    },
+    "with": {
+      "title": "With Fresh Air Solutions",
+      "points": {
+        "point1": "Increase work productivity",
+        "point2": "Increase comfort level",
+        "point3": "Reduce risk of infection"
+      }
+    }
+  },
+  "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

@@ -6,45 +6,89 @@ import VideoPopup from "@/Components/Pages/AirQualityCommonMonitor/video-popup"
 import ApplicationsSlider from "@/Components/Pages/AirQualityCommonMonitor/applications-slider"
 import TestimonialsSlider from "@/Components/Pages/AirQualityCommonMonitor/testimonials-slider"
 import { getServerTranslation } from "@/i18n/server"
+import AirQualitySensorSlider from "@/Components/Pages/AirQualityCommonMonitor/air-quality-monitor-sensor";
 
 export default async function CommonMonitorPage() {
     const { t } = await getServerTranslation("common-monitor")
     const testimonials = [
         {
             id: 1,
-            name: "Sameer W.",
+            name: t("testimonials.sameer.name"),
             rating: 5,
-            review:
-                "It's a great product that can indicate the level of PM2.5 in a closed or outdoor environment. It's not 100% accurate and given its size and price I think it would be an unrealistic expectation to have that level of accuracy. It tells you the order of magnitude of PM2.5 pollution in a place and it also indicates the measurement extremely fast. I have tested and triangulated the device output with other readings (from air purifiers) and I don't think the margin of error is beyond 10%. However, this has been at levels of PM2.5 below 100. I am not sure if the margin of error expands or reduces with the PM2.5 increases to levels beyond 150. If you wish to know, on an indicative basis, of the range of pollution in a place at a point of time, then this would be a highly recommended device.",
+            review: t("testimonials.sameer.review"),
         },
         {
             id: 2,
-            name: "Priya M.",
+            name: t("testimonials.priya.name"),
             rating: 5,
-            review:
-                "I purchased the Prana Air quality monitor for my home as my child has asthma. This device has been incredibly helpful in monitoring the air quality in different rooms and alerting us when we need to take action. The readings are consistent and the device is easy to use. The battery life is also impressive. I would definitely recommend this to anyone concerned about indoor air quality, especially those with respiratory conditions.",
+            review: t("testimonials.priya.review"),
         },
         {
             id: 3,
-            name: "Rajesh K.",
+            name: t("testimonials.rajesh.name"),
             rating: 4,
-            review:
-                "I've been using the Prana Sense monitor for about 3 months now in my office space. The device is compact and portable, making it easy to move around different areas. The readings seem accurate when compared to other professional equipment. The only improvement I would suggest is making the app interface a bit more user-friendly. Otherwise, it's a solid product that delivers on its promises.",
+            review: t("testimonials.rajesh.review"),
         },
         {
             id: 4,
-            name: "Anita S.",
+            name: t("testimonials.anita.name"),
             rating: 5,
-            review:
-                "Living in a city with high pollution levels, I wanted a reliable way to monitor air quality both inside and outside my home. The Prana Air monitor has exceeded my expectations. It detects even slight changes in air quality and the historical data tracking helps me understand patterns over time. The customer service team was also very responsive when I had questions about calibration. Highly recommended for urban dwellers!",
+            review: t("testimonials.anita.review"),
         },
         {
             id: 5,
-            name: "Michael T.",
+            name: t("testimonials.michael.name"),
             rating: 5,
-            review:
-                "As someone who works in environmental science, I was looking for a consumer-grade device that could provide reasonably accurate readings. This device strikes a good balance between accuracy and affordability. I've been using it for various field projects and it has proven to be reliable. The solar charging option is also a great sustainable feature that reduces the need for battery replacements.",
+            review: t("testimonials.michael.review"),
         },
+    ]
+    const airQualitySensors = [
+        {
+            id: 1,
+            imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/09/Particulate-Matter.webp",
+            imageAlt: t("sensors.particulateMatter.imageAlt"),
+            sensorName: t("sensors.particulateMatter.name"),
+            sensorLink: "https://www.pranaair.com/air-quality-sensor/outdoor-pm-sensor/",
+            operatingPrinciple: t("sensors.particulateMatter.principle"),
+            description: t("sensors.particulateMatter.description"),
+        },
+        {
+            id: 2,
+            imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/09/Total-volatile-organic-compounds-tvoc.webp",
+            imageAlt: t("sensors.tvoc.imageAlt"),
+            sensorName: t("sensors.tvoc.name"),
+            sensorLink: "https://www.pranaair.com/air-quality-monitor/?y#",
+            operatingPrinciple: t("sensors.tvoc.principle"),
+            description: t("sensors.tvoc.description"),
+        },
+        {
+            id: 3,
+            imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/09/toxic-gases.webp",
+            imageAlt: t("sensors.toxicGasesH2S.imageAlt"),
+            sensorName: t("sensors.toxicGasesH2S.name"),
+            sensorLink: "https://www.pranaair.com/air-quality-sensor/outdoor-pm-sensor/",
+            operatingPrinciple: t("sensors.toxicGasesH2S.principle"),
+            description: t("sensors.toxicGasesH2S.description"),
+        },
+        {
+            id: 4,
+            imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/09/Carbon-Dioxide-co2.webp",
+            imageAlt: t("sensors.carbonDioxide.imageAlt"),
+            sensorName: t("sensors.carbonDioxide.name"),
+            sensorLink: "https://www.pranaair.com/air-quality-sensor/outdoor-pm-sensor/",
+            operatingPrinciple: t("sensors.carbonDioxide.principle"),
+            description: t("sensors.carbonDioxide.description"),
+        },
+        {
+            id: 5,
+            imageSrc: "https://www.pranaair.com/wp-content/uploads/2024/09/co-o3-toxic-gases.webp",
+            imageAlt: t("sensors.toxicGasesCO.imageAlt"),
+            sensorName: t("sensors.toxicGasesCO.name"),
+            sensorLink: "https://www.pranaair.com/air-quality-sensor/outdoor-pm-sensor/",
+            operatingPrinciple: t("sensors.toxicGasesCO.principle"),
+            description: t("sensors.toxicGasesCO.description"),
+        }
+
     ]
     return (
         <main>
@@ -622,6 +666,54 @@ export default async function CommonMonitorPage() {
                 </div>
             </section>
 
+            {/* Hidden Impact of Air Pollution */}
+            <section className="gases-sec">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="gaes-img">
+                                <Image
+                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/industries-gases.jpg"
+                                    alt="air pollution by industrial gases"
+                                    width={300}
+                                    height={300}
+                                />
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div class="gases-text">
+                                <h2>{t("hiddenImpact.title")}</h2>
+                                <p><strong>{t("hiddenImpact.subtitle")}</strong></p>
+                                <p>{t("hiddenImpact.description1")}</p>
+                                <p>{t("hiddenImpact.description2")}
+                                    <a href="https://www.pranaair.com/solutions-by-application/">{t("hiddenImpact.learnMore")}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Next-Gen Technology */}
+            <section className="require-slider">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="require-title">
+                                <h2>{t("nextGenTechnology.title")}</h2>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="require-para">
+                                <p>{t("nextGenTechnology.description")}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <AirQualitySensorSlider sensors={airQualitySensors} />
+                    </div>
+                </div>
+            </section>
+
             {/* Air Pollutants Section */}
             <section className="key-parameter-sec">
                 <div className="container">
@@ -825,6 +917,57 @@ export default async function CommonMonitorPage() {
                 </div>
             </section>
 
+            {/* Air Quality Sensors */}
+            <section className="air-quality-sensor">
+                <div className="container">
+                    <div className="row air-quality-sensor-bg">
+                        <div className="col-lg-6">
+                            <div className="air-quality-sensor-content">
+                                <h2>{t("airQualitySensors.title")}</h2>
+                                <h3>{t("airQualitySensors.subtitle")}</h3>
+                                <a class="know-more-btn" href="https://www.pranaair.com/air-quality-sensor/">{t("airQualitySensors.knowMore")}</a>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="sensor-img">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/air-quality-sensor.png" alt={t("airQualitySensors.imageAlt")} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Air Quality Monitoring System */}
+            <section className="air-quality-manage">
+                <div className="container">
+                    <div className="row borderr">
+                        <div className="col-lg-6">
+                            <div className="manage-heading">
+                                <h2>{t("airQualityManagement.title")}</h2>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="manage-btn">
+                                <a class="gtq-btn" href="#contact">{t("airQualityManagement.getQuote")}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row managment-data">
+                        <div className="col-lg-6">
+                            <div className="managment-img">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/air-quality-management-system.png" alt={t("airQualityManagement.imageAlt")} />
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="mannage-para data-para">
+                                <p><strong>{t("airQualityManagement.systemTitle")}</strong> {t("airQualityManagement.description")}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
             {/* Type of Air Quality Monitor */}
             <section className="types-air-quality">
                 <div className="container">
@@ -880,11 +1023,6 @@ export default async function CommonMonitorPage() {
                                     >
                                         <div className="ult_tabitemname">
                                             <div className="air-quality-type">
-                                                <div className="air-quality-type-content">
-                                                    <h3>{t("typesAirQuality.indoor.title")}</h3>
-                                                    <p>{t("typesAirQuality.indoor.paragraph1")}</p>
-                                                    <p>{t("typesAirQuality.indoor.paragraph2")}</p>
-                                                </div>
                                                 <div className="air-quality-type-image">
                                                     <img
                                                         className="types-img"
@@ -892,6 +1030,12 @@ export default async function CommonMonitorPage() {
                                                         alt={t("typesAirQuality.indoor.imageAlt")}
                                                     />
                                                 </div>
+                                                <div className="air-quality-type-content">
+                                                    <h3>{t("typesAirQuality.indoor.title")}</h3>
+                                                    <p>{t("typesAirQuality.indoor.paragraph1")}</p>
+                                                    <p>{t("typesAirQuality.indoor.paragraph2")}</p>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -899,11 +1043,6 @@ export default async function CommonMonitorPage() {
                                     <div className="tab-pane fade" id="outdoor-type" role="tabpanel" aria-labelledby="outdoor-type-tab">
                                         <div className="ult_tabitemname">
                                             <div className="air-quality-type">
-                                                <div className="air-quality-type-content">
-                                                    <h3>{t("typesAirQuality.outdoor.title")}</h3>
-                                                    <p>{t("typesAirQuality.outdoor.paragraph1")}</p>
-                                                    <p>{t("typesAirQuality.outdoor.paragraph2")}</p>
-                                                </div>
                                                 <div className="air-quality-type-image">
                                                     <img
                                                         className="types-img"
@@ -911,6 +1050,12 @@ export default async function CommonMonitorPage() {
                                                         alt={t("typesAirQuality.outdoor.imageAlt")}
                                                     />
                                                 </div>
+                                                <div className="air-quality-type-content">
+                                                    <h3>{t("typesAirQuality.outdoor.title")}</h3>
+                                                    <p>{t("typesAirQuality.outdoor.paragraph1")}</p>
+                                                    <p>{t("typesAirQuality.outdoor.paragraph2")}</p>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -1189,6 +1334,474 @@ export default async function CommonMonitorPage() {
                 </div>
             </section>
 
+            {/* AI Calculated Health Index-Score */}
+            <section className="health-score-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="health-score-title">
+                                <h2><span class="green-txt">{t("healthScore.ai")}</span> {t("healthScore.calculated")}
+                                    <span class="green-txt">{t("healthScore.health")}</span> {t("healthScore.indexScore")}</h2>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="health-score-para">
+                                <p>{t("healthScore.description")}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/ventilation-score.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.ventilation.title")}</h3>
+                                            <p>{t("healthScore.ventilation.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#fbb400' }}>
+                                                {t("healthScore.ventilation.score")} <br />
+                                                <span class="score-clr">{t("healthScore.ventilation.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Capacity-Index.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.capacity.title")}</h3>
+                                            <p>{t("healthScore.capacity.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#29b713' }}>
+                                                {t("healthScore.capacity.score")} <br />
+                                                <span class="score-clr">{t("healthScore.capacity.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Mites-Score.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.mites.title")}</h3>
+                                            <p>{t("healthScore.mites.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#fbb400' }}>
+                                                {t("healthScore.mites.score")} <br />
+                                                <span class="score-clr">{t("healthScore.mites.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Virus-Index.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.virus.title")}</h3>
+                                            <p>{t("healthScore.virus.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#f4231c' }}>
+                                                {t("healthScore.virus.score")} <br />
+                                                <span class="score-clr">{t("healthScore.virus.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Mold-Score.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.mold.title")}</h3>
+                                            <p>{t("healthScore.mold.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#f4231c' }}>
+                                                {t("healthScore.mold.score")} <br />
+                                                <span class="score-clr">{t("healthScore.mold.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Odor-score.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.odor.title")}</h3>
+                                            <p>{t("healthScore.odor.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#29b713' }}>
+                                                {t("healthScore.odor.score")} <br />
+                                                <span class="score-clr">{t("healthScore.odor.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Filtration-Score.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.filtration.title")}</h3>
+                                            <p>{t("healthScore.filtration.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#fbb400' }}>
+                                                {t("healthScore.filtration.score")} <br />
+                                                <span class="score-clr">{t("healthScore.filtration.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3">
+                            <div className="calculate-health-score">
+                                <div className="healt-score-img">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Comfort-score.jpg" alt="ventilation score" />
+                                </div>
+                                <div className="healt-score-text">
+                                    <ul>
+                                        <li>
+                                            <h3>{t("healthScore.comfort.title")}</h3>
+                                            <p>{t("healthScore.comfort.description")}</p>
+                                        </li>
+                                        <li>
+                                            <h4 style={{ color: '#f4231c' }}>
+                                                {t("healthScore.comfort.score")} <br />
+                                                <span class="score-clr">{t("healthScore.comfort.status")}</span>
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Trusted By */}
+            <section className="trust-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="trust-title">
+                                <h2>{t("trustedBy.title")}</h2>
+                                <p>{t("trustedBy.subtitle")}</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-6"></div>
+                    </div>
+                </div>
+            </section>
+            <section className="all-company-sec">
+                <div className="container-fluid">
+                    <div className="col-lg-12">
+                        <div className="container">
+                            <div className="marquee">
+                                <div className="marquee-inner">
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/taj.png" alt="taj logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/mahindra.png" alt="mahindra" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/renault-nissan.png" alt="renault logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/tata.png" alt="tata logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/havells.png" alt="havells logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/microsoft.png" alt="microsoft logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-bombay.png" alt="iit-bombay logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/UOC.png" alt="UOC logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Symbiosis-Pune.png" alt="Symbiosis logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Siemens.png" alt="Siemens logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Schneider-Electric-.png" alt="Schneider logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/OLA.png" alt="OLA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/WRI.png" alt="WRI logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BITS-pilani.png" alt="BITS-pilani logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BIRLA-Ultratech.png" alt="BIRLA-Ultratech logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/taj.png" alt="taj logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/mahindra.png" alt="mahindra" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/renault-nissan.png" alt="renault logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/tata.png" alt="tata logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/havells.png" alt="havells logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/microsoft.png" alt="microsoft logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-bombay.png" alt="iit-bombay logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/UOC.png" alt="UOC logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Symbiosis-Pune.png" alt="Symbiosis logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Siemens.png" alt="Siemens logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Schneider-Electric-.png" alt="Schneider logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/OLA.png" alt="OLA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/WRI.png" alt="WRI logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BITS-pilani.png" alt="BITS-pilani logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BIRLA-Ultratech.png" alt="BIRLA-Ultratech logo" /></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="container">
+                            <div className="marquee">
+                                <div className="marquee-inner-rgt">
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BCG-Boston-Consulting-Group.png" alt="BCG-Boston-Consulting-Group logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Adani-Group.png" alt="Adani-Group logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/hyderabad-iit.png" alt="hyderabad-iit logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-kanpur.png" alt="iit-kanpur logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/rorkee-iit.png" alt="iit roorkee logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/dae.png" alt="dae logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iiot.png" alt="iiot logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/bhu.png" alt="bhu logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-rorkee.png" alt="iit-rorkee logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/LODHA.png" alt="LODHA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Leighton.png" alt="Leighton logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/InterGlobe-Aviation-Indigo.png" alt="InterGlobe-Aviation-Indigo logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/IIT-Banaras.png" alt="IIT-Banaras" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/FOOD-works.png" alt="FOOD-works logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Emaar.png" alt="Emaar logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CII.png" alt="CII logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CEEW.png" alt="CEEW logo" /></li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BCG-Boston-Consulting-Group.png" alt="BCG-Boston-Consulting-Group logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Adani-Group.png" alt="Adani-Group logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/hyderabad-iit.png" alt="hyderabad-iit logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-kanpur.png" alt="iit-kanpur logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/rorkee-iit.png" alt="iit roorkee logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/dae.png" alt="dae logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iiot.png" alt="iiot logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/bhu.png" alt="bhu logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-rorkee.png" alt="iit-rorkee logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/LODHA.png" alt="LODHA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Leighton.png" alt="Leighton logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/InterGlobe-Aviation-Indigo.png" alt="InterGlobe-Aviation-Indigo logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/IIT-Banaras.png" alt="IIT-Banaras" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/FOOD-works.png" alt="FOOD-works logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Emaar.png" alt="Emaar logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CII.png" alt="CII logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CEEW.png" alt="CEEW logo" /></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Air Quality Monitoring at Construction Site */}
+            <section className="dppc-guidelines">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="dppc-heading">
+                                <h2>{t("constructionSite.title")}</h2>
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/03/air-quality-device-at-construction-site.jpg" alt={t("constructionSite.imageAlt")} />
+                                <a class="dpcc-btn" href="https://www.pranaair.com/solutions-by-application/constructions/">{t("constructionSite.learnMore")}</a>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="dpcc-guid-line">
+                                <h3>{t("constructionSite.accordingTo")}</h3>
+                                <h4><img src="https://www.pranaair.com/wp-content/uploads/2024/03/dpss-logo.png" alt="dpss-logo" />  {t("constructionSite.dpccGuidelines")}</h4>
+                            </div>
+                            <div className="site-coverd">
+                                <ul>
+                                    <li><span class="count">{t("constructionSite.sitesCount")}</span></li>
+                                    <li>
+                                        <h5>{t("constructionSite.sitesDescription")}</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Air Quality Standard */}
             <section className="air-quality-standard-sec">
                 <div className="container">
@@ -1384,6 +1997,64 @@ export default async function CommonMonitorPage() {
                 </div>
             </section>
 
+            {/* Air Quality Data Insight */}
+            <section className="historic-data-section">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4">
+                            <div className="historic-title">
+                                <h2>{t("dataInsight.title")}</h2>
+                            </div>
+                        </div>
+                        <div className="col-lg-8">
+                            <div className="historic-para">
+                                <p>{t("dataInsight.description")}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div class="historic-table-img">
+                                <ul>
+                                    <li><img src="https://www.pranaair.com/wp-content/uploads/2024/02/partical-counts.png" alt={t("dataInsight.particleCountsAlt")} /></li>
+                                    <li><img src="https://www.pranaair.com/wp-content/uploads/2024/02/aqi-avrage.png" alt={t("dataInsight.aqiAverageAlt")} /></li>
+                                </ul>
+                                <ul>
+                                    <li><img src="https://www.pranaair.com/wp-content/uploads/2024/02/history-data.png" alt={t("dataInsight.historyDataAlt")} /></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="aqi-dashbord-img">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/03/aqi-dashboard-for-prana-air-monitors.webp" alt={t("dataInsight.dashboardAlt")}></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Highly Accurate Prana Air Monitor */}
+            <section className="highly-accurate-monitor">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="highly-accurate-heading">
+                                <h2>{t("highlyAccurate.title")}</h2>
+                                <p>{t("highlyAccurate.subtitle")}</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-6"></div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="graph-img">
+                                <img src="https://www.pranaair.com/wp-content/uploads/2024/02/highly-accurate-graph-monitor.jpg" alt={t("highlyAccurate.graphAlt")} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Applications Section */}
             <div className="app-slider-row">
                 <div className="container">
@@ -1430,6 +2101,66 @@ export default async function CommonMonitorPage() {
                 </div>
             </div>
             <ContactForm pageName="Air Quality Monitor Common Page" />
+
+            <section className="also-like py-5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <h2 className="mb-4">{t("youMayAlsoLike.title")}</h2>
+                        </div>
+                    </div>
+                    <div className="row g-4">
+                        <div className="may-also">
+                            <ul>
+                                <li><a href="https://www.pranaair.com/air-quality-monitor/handheld/pocket-monitor/">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.jpg"
+                                        alt="Pocket-PM" />
+                                </a>
+                                    <h5>{t("youMayAlsoLike.products.pocketPM")} <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
+
+                                </li>
+                                <li><a href="https://www.pranaair.com/air-quality-monitor/cair-monitor/">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Cair.jpg" alt="Cair" />
+                                </a>
+
+                                    <h5>{t("youMayAlsoLike.products.cairPlus")} <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
+
+                                </li>
+                                <li><a href="https://www.pranaair.com/air-quality-monitor/sensible-air-monitor/">
+                                    <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/pranaair-sensible-air-monitor.webp"
+                                        alt="pranaair-sensible-air-monitor" />
+                                </a>
+
+                                    <h5>{t("youMayAlsoLike.products.sensible")} <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
+
+                                </li>
+                                <li><a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Ambient-pro.jpg"
+                                        alt="Ambient-pro" />
+                                </a>
+
+                                    <h5>{t("youMayAlsoLike.products.ambientPro")} <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
+
+                                </li>
+                                <li><a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
+                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/SQUAIR.jpg" alt="SQUAIR" />
+                                </a>
+
+                                    <h5>{t("youMayAlsoLike.products.squair")} <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
     )
 }

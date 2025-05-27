@@ -1,0 +1,168 @@
+{
+     "parkingBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Parking Spaces",
+    "description": "A complete solution for air monitoring, data analysis, and fresh air solutions for enclosed car parking areas and car lots.",
+    "types": {
+      "underground": "Underground",
+      "multiStorey": "Multi-storey",
+      "openArea": "Open Area"
+    },
+    "cta": "Request A Quote"
+  },
+  "parkingPollutants": {
+    "title": "Major air pollutants in",
+    "highlight": "Parking Spaces",
+    "description": "Enclosed parking areas can emit a variety of air pollutants, including carbon monoxide (CO), nitrogen oxides (NOx), volatile organic compounds (VOCs), sulfur oxides (SOx), and particulate matter (PM2.5 & PM10), all of which are harmful to human health.",
+    "pm": {
+      "title": "PM2.5 & PM10",
+      "description": "PM levels increase in poorly ventilated underground parking due to lack of particle dispersion."
+    },
+    "co": {
+      "title": "CO",
+      "description": "Sources can include exhaust emissions from vehicles, gasoline-powered equipment, and generators."
+    },
+    "voc": {
+      "title": "VOC",
+      "description": "Gasoline and diesel exhaust, as well as emissions from building materials, cleaning agents, etc."
+    },
+    "sox": {
+      "title": "SOx",
+      "description": "Carbon and gasoline emissions from various vehicles can release various toxins including SOx."
+    },
+    "nox": {
+      "title": "NOx",
+      "description": "High-temperature combustion processes like engine operation & fuel combustion can emit NOx."
+    }
+  },
+  "parkingEffects": {
+    "vocs": {
+      "title": "VOCs",
+      "description": "VOCs from vehicles can contribute to the formation of ground-level ozone."
+    },
+    "sox": {
+      "title": "SOx",
+      "description": "Shifting to alternative fuels can decrease SOx emissions."
+    },
+    "nox": {
+      "title": "NOx",
+      "description": "Driving habits such as avoiding hard acceleration & maintaining a steady speed can reduce NOx emissions."
+    },
+    "pm": {
+      "title": "PM2.5 & PM10",
+      "description": "PM levels increase in poorly ventilated underground parking due to lack of particle dispersion."
+    },
+    "co": {
+      "title": "CO",
+      "description": "Sources can include exhaust emissions from vehicles, gasoline-powered equipment, and generators."
+    }
+  },
+  "parkingHealthEffects": {
+    "title": "Health",
+    "highlight": "Effects",
+    "irritation": "Irritation in the eyes and the respiratory tract",
+    "respiratory": "Coughing, wheezing shortness of breath",
+    "stomach": "Vomiting & stomach discomfort",
+    "dizziness": "Dizziness, vertigo, and headaches",
+    "asthma": "Triggers asthma & other related illnesses"
+  },
+  "parkingTypes": {
+    "description": "Parking lots contribute to air pollution through exhaust emissions from cars, dust, and debris from unpaved surfaces, negatively impacting the health and well-being of nearby communities.",
+    "multiStorey": "Air pollution buildup on all floors",
+    "openArea": "Air pollution dispersion to nearby areas",
+    "underground": "Lack of natural air circulation"
+  },
+  "parkingSolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions",
+    "description": "Prana Air air quality monitoring and air purifying solutions help in making a green infrastructure, improved ventilation, eco-friendly materials, and sustainable transportation options that can reduce air pollution in urban areas, improve health, and promote sustainability.",
+    "tabs": {
+      "ambientMonitor": "Ambient Monitor"
+    },
+    "ambientMonitor": {
+      "title": "Ambient Monitor",
+      "description": "Its compact design and precise pollutant-sensing technology help you meet and exceed the expectations of environmental monitoring.",
+      "features": {
+        "feature1": "Detects PM, VOCs, CO, SOx, NOx pollutants",
+        "feature2": "Low-cost air monitoring",
+        "feature3": "Multiple connectivity (Wifi, GSM, RS-485)",
+        "feature4": "Data accessibility on mobile, tablet, TV apps, and web-dashboard"
+      },
+      "cta": "Know More"
+    }
+  },
+  "parkingDataAccess": {
+    "title": "Easy Data",
+    "highlight": "Accessibility",
+    "description": "Easy access to accurate air quality data for parking lots can aid stakeholders in making informed decisions to minimize their impact on public health and the environment, promoting sustainable urban development.",
+    "steps": {
+      "step1": "Air quality monitor installed on different parking space",
+      "step2": "Air quality monitor connected to Wifi/GSM/RS-485",
+      "step3": "Data is stored in AQI Cloud Storage.",
+      "step4": "The data can be accessed on AQI mobile, web-dashboard, tablet apps remotely."
+    }
+  },
+  "parkingDataServices": {
+    "description": "Our customized dashboard can display or analyze data on the LCD panels or the apps. Use AQI mobile app to find out the air quality around or inside the parking spaces.",
+    "tvDashboard": "Smart TV Dashboard App",
+    "webTabletApp": "Customized Web/Tablet App",
+    "mobileApp": "AQI Mobile App"
+  },
+  "parkingFaq": {
+    "description": "About Air Quality Solution for car parking spaces Have questions? Were here to help.",
+    "questions": {
+      "q1": "1. Why is air quality a concern in parking lots?",
+      "q2": "2. What are the common sources of air pollution in parking lots?",
+      "q3": "3. What are the health effects of poor air quality in parking lots?",
+      "q4": "4. How can air quality be improved in parking lots?",
+      "q5": "5. What are some effective air quality monitoring solutions for parking lots?",
+      "q6": "6. How can air quality data collected in parking lots be used for research and public health purposes?"
+    },
+    "answers": {
+      "a1": "- Poor air quality in parking lots can have adverse effects on the health of drivers, pedestrians, and nearby residents. It can also contribute to environmental pollution and climate change.",
+      "a2": "- The most common sources of air pollution in parking lots are exhaust fumes from vehicles, as well as dust and particulate matter from tires and brakes.",
+      "a3": "- Exposure to poor air quality in parking lots can cause respiratory problems, eye irritation, headaches, and other health issues. Prolonged exposure can also increase the risk of cancer and other chronic diseases.",
+      "a4": "- Air quality in parking lots can be improved by promoting the use of low-emission vehicles, implementing green infrastructure like trees and plants, continuous monitoring of air quality, installing air filtration systems, and improving ventilation.",
+      "a5": "- Air quality monitoring solutions for parking lots can include sensor-based monitoring systems such as Prana Air monitors, real-time data analytics, and AQI mobile apps that provide users with air quality information.",
+      "a6": "- Air quality data collected in parking lots can be used to study the impacts of air pollution on human health and the environment. It can also inform public policy and regulatory decisions related to air quality."
+    }
+  },
+  "parkingIndustrial": {
+    "description": "Prana Air provides a wide range of Smart, inexpensive, and highly accurate air quality solutions for a variety of sectors, regardless of their size."
+  },
+  "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+}
+}

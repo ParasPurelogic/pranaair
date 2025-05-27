@@ -1,0 +1,99 @@
+{
+  "temperature": {
+    "banner": {
+      "titleStart": "What does the word",
+      "titleHighlight": "Temperature",
+      "titleEnd": "mean?",
+      "description": "Temperature is an important physical quantity to determine how hot or cold a place is. This applies to both inside and outside areas. Usually, indoor places are more comfortable than outdoor places because we use air conditioners or heaters inside.",
+      "cloudAlt": "Cloud decoration",
+      "temperatureMeterAlt": "Temperature Meter",
+      "smallCloudAlt": "Small cloud decoration",
+      "bottomCloudAlt": "Bottom cloud decoration"
+    },
+    "classification": {
+      "title": "Temperature classification",
+      "description": "When it comes to temperature, it can be divided into two categories: hot and cold. Cold temperatures suggest a lower degree of warmth or even a chilliness in the air, whereas hot temperatures indicate a higher level of warmth. Air conditioning systems aid in temperature regulation, providing relaxation during hot weather, while room heaters provide warmth during colder weather.",
+      "hotImageAlt": "Hot Temperature",
+      "coldImageAlt": "Cold Temperature"
+    },
+    "units": {
+      "title": "Temperature measurement units",
+      "celsius": "Degrees Celsius",
+      "fahrenheit": "Degrees Fahrenheit",
+      "kelvin": "Kelvin",
+      "celsiusAlt": "Celsius temperature scale",
+      "fahrenheitAlt": "Fahrenheit temperature scale",
+      "kelvinAlt": "Kelvin temperature scale"
+    },
+    "airQuality": {
+      "title": "How temperature affects Air Quality?",
+      "description": "Air quality can influence in various ways by different temperatures. The impact of temperature on air quality is diverse and depends on specific conditions. For instance, high temperatures can exacerbate air pollution problems in several ways.",
+      "hotTitle": "Hot temperatures",
+      "coldTitle": "Cold temperatures",
+      "indoor": "Indoor",
+      "outdoor": "Outdoors",
+      "hotIndoorDescription": "High indoor temperature can have negative consequences on air quality. Indoor spaces can serve as sources of different air pollutants, including TVOCs (Total Volatile Organic Compounds), radon, CO2 (carbon dioxide), CO (carbon monoxide), PM1 (particulate matter with a diameter of 1 micrometer), O3 (ozone), and more. The combination of these pollutants can pose risks to the average individuals health.",
+      "hotOutdoorDescription": "Stagnant air becomes more widespread during hot weather, hindering the natural dispersion of contaminants. This can cause contaminants to accumulate in the atmosphere, resulting in lower air quality. Extreme heat can promote the development of ozone gas and particle pollution. High temperatures additionally trigger forest fires, which can worsen air quality and reduce forest land area.",
+      "coldIndoorDescription": "In colder temperatures, people often spend more time indoors compared to hot weather. Additionally, during this time, doors and windows are typically kept closed to retain warmth. However, this can lead to the trapping of pollutants indoors, which can have adverse effects, particularly on sensitive groups.",
+      "coldOutdoorDescription": "In colder temperatures, the air in the atmosphere becomes chilly. This cold air is denser compared to hot air, which leads to an interesting phenomenon: the trapping of pollutants. Due to the higher density, cold air has a tendency to trap pollutants closer to the ground, resulting in reduced air quality. This phenomenon is often observed during the winter season when fog becomes more prevalent. Other than this, temperature inversions are also tend to occur during winter season.",
+      "hotIndoorImageAlt": "Indoor Hot Temperature effects",
+      "hotOutdoorImageAlt": "Outdoor Hot Temperature effects",
+      "coldIndoorImageAlt": "Indoor Cold Temperature effects",
+      "coldOutdoorImageAlt": "Outdoor Cold Temperature effects"
+    },
+    "scale": {
+      "absoluteZeroDescription": "In theory, absolute zero is the lowest temperature at which a substance has no heat energy. It is defined as zero Kelvin (0 Kelvin), which corresponds to -273.16 degrees Celsius and -459.69 degrees Fahrenheit.",
+      "imageAlt": "Temperature Scale"
+    },
+    "inversion": {
+      "title": "Temperature Inversion",
+      "description1": "Temperature inversion is a common occurrence during winter, characterized by a unique temperature differentiation pattern. Normally, the temperature gradient follows a pattern from warm air to cooler air and then to the coldest air. However, during winter inversion, sometimes, the situation is reversed. The cooler layer rests immediately above the grounds surface, followed by warmer air and then the coldest air at higher altitudes.",
+      "description2": "This inversion phenomenon creates a trapping effect for air pollutants near the Earths surface. The pollutants, instead of dispersing into the atmosphere, become trapped within the lower layer of colder air. This stagnant condition makes it difficult for the pollutants to dissipate, leading to increased concentrations of air pollution.",
+      "description3": "The problem is further exacerbated during winter due to the burning of wood and coal for heating purposes. These activities release additional pollutants into the air, which, coupled with the inversion effect, contribute to deteriorating air quality during the winter season.",
+      "imageAlt": "Temperature Inversion diagram"
+    },
+    "meteorological": {
+      "title": "Other meteorological factors that affect air quality",
+      "description": "Air quality in a given geographical area is significantly influenced by various meteorological conditions. These weather conditions play a crucial role in shaping and altering the quality of the air we breathe. Some of these meteorological conditions that affect air quality are as follows:",
+      "windTitle": "Wind Speed and Direction",
+      "windDescription": "The wind is a natural mechanism for improving air quality. It can carry pollutants from hotspots to less polluted areas.",
+      "windImageAlt": "Wind Speed and Direction",
+      "humidityTitle": "Humidity",
+      "humidityDescription": "Humidity in the air makes the air more heavy and denser, which means it can trap air pollutants such as particle pollution, smoke, etc.",
+      "humidityImageAlt": "Humidity",
+      "densityTitle": "Density of air",
+      "densityDescription": "The density of air highly influences air pollution dispersal. The higher the air density, the higher the amount of pollutants that trap inside it.",
+      "densityImageAlt": "Density of air",
+      "solarTitle": "Solar radiation",
+      "solarDescription": "Solar radiation plays a vital role in photochemical reactions that take place on the earths surface. That mainly includes ozone (O3) gas generation.",
+      "solarImageAlt": "Solar radiation",
+      "rainfallTitle": "Rainfall",
+      "rainfallDescription": "Rainfall helps in clearing the air of dust particles, particle pollution, smoke, etc., and hence, influences the air quality by clearing the air quality of that area.",
+      "rainfallImageAlt": "Rainfall",
+      "pressureTitle": "Atmospheric Pressure",
+      "pressureDescription": "The vertical mixing of air contaminants can heavily influence by atmospheric pressure. This is where the concept of Temperature Inversion comes into play.",
+      "pressureImageAlt": "Atmospheric Pressure"
+    },
+    "health": {
+      "title": "How does temperature affect human health?",
+      "heatIllnessTitle": "Heat-related Illnesses",
+      "heatIllnessDescription": "High temperatures can cause heat exhaustion and heat stroke, leading to symptoms like dizziness and even organ failure in extreme cases.",
+      "heatIllnessImageAlt": "Heat-related Illnesses",
+      "cardiovascularTitle": "Cardiovascular Health",
+      "cardiovascularDescription": "Hot temperatures stress the cardiovascular system, increasing the risk of strokes, heart attacks, and other cardiovascular problems.",
+      "cardiovascularImageAlt": "Cardiovascular Health",
+      "respiratoryTitle": "Respiratory Effects",
+      "respiratoryDescription": "Temperature fluctuations can worsen respiratory issues like asthma, and COPD, making breathing more difficult and exacerbating symptoms.",
+      "respiratoryImageAlt": "Respiratory Effects",
+      "dehydrationTitle": "Dehydration",
+      "dehydrationDescription": "During a heatwave, staying hydrated is crucial as high temperatures and excessive sweating can cause dehydration, fatigue, and heat-related illnesses.",
+      "dehydrationImageAlt": "Dehydration",
+      "mentalTitle": "Impact on Mental Health",
+      "mentalDescription": "Extreme temperatures can disrupt sleep, increase stress levels, cause irritation, and contribute to seasonal affective disorder (SAD).",
+      "mentalImageAlt": "Impact on Mental Health",
+      "infectiousTitle": "Infectious Diseases",
+      "infectiousDescription": "Temperature impacts disease occurrence and spread by influencing the transmission and survival of diseases like malaria and respiratory infections.",
+      "infectiousImageAlt": "Infectious Diseases"
+    }
+  }
+}

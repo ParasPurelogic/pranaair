@@ -1,16 +1,15 @@
-
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import Link from "next/link"
 import Image from "next/image"
-import "react-multi-carousel/lib/styles.css"
 import SensorNavBar from "@/Components/Sensorbar/SensorNavBar"
-import ContactForm from "@/Components/Contacform/ContactForm"
 import QuantityCounter from "@/Components/Pages/SulfurDioxide/quantity-counter"
+import ContactForm from "@/Components/Contacform/ContactForm"
 import ProductCarousel from "@/Components/Pages/SulfurDioxide/product-carousel"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AirDronePage() {
-    // Carousel responsive settings
+export default async function AirDronePage() {
+    const { t } = await getServerTranslation("sulfur-dioxide-so2-sensor")
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -29,7 +28,6 @@ export default function AirDronePage() {
             items: 1,
         },
     }
-
     const gallery = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -48,7 +46,89 @@ export default function AirDronePage() {
             items: 1,
         },
     }
-
+    const applications = [
+        {
+            id: 1,
+            image: "/img/Air-Quality-Monitoring-Equipment.webp",
+            title: t("applicationsSO2Section.applications.airQualityMonitoring.title"),
+            alt: t("applicationsSO2Section.applications.airQualityMonitoring.alt")
+        },
+        {
+            id: 2,
+            image: "/img/Air-Quality-Monitoring-Equipment.webp",
+            title: t("applicationsSO2Section.applications.industrialSafety.title"),
+            alt: t("applicationsSO2Section.applications.industrialSafety.alt")
+        },
+        {
+            id: 3,
+            image: "/img/Air-Quality-Monitoring-Equipment.webp",
+            title: t("applicationsSO2Section.applications.environmentalCompliance.title"),
+            alt: t("applicationsSO2Section.applications.environmentalCompliance.alt")
+        },
+        {
+            id: 4,
+            image: "/img/Air-Quality-Monitoring-Equipment.webp",
+            title: t("applicationsSO2Section.applications.smartCities.title"),
+            alt: t("applicationsSO2Section.applications.smartCities.alt")
+        },
+        {
+            id: 5,
+            image: "/img/Air-Quality-Monitoring-Equipment.webp",
+            title: t("applicationsSO2Section.applications.researchInstitutions.title"),
+            alt: t("applicationsSO2Section.applications.researchInstitutions.alt")
+        }
+    ]
+    const relatedProducts = [
+        {
+            id: 1,
+            name: t("youMayAlsoLikeSection.products.ethanol.name"),
+            image: "/img/ethanol-sensor.webp",
+            alt: t("youMayAlsoLikeSection.products.ethanol.alt"),
+            link: "/sensors/ethanol",
+        },
+        {
+            id: 2,
+            name: t("youMayAlsoLikeSection.products.co2.name"),
+            image: "/img/ethanol-sensor.webp", // This would be replaced with the actual CO2 sensor image
+            alt: t("youMayAlsoLikeSection.products.co2.alt"),
+            link: "/sensors/co2",
+        },
+        {
+            id: 3,
+            name: t("youMayAlsoLikeSection.products.no2.name"),
+            image: "/img/ethanol-sensor.webp", // This would be replaced with the actual NO2 sensor image
+            alt: t("youMayAlsoLikeSection.products.no2.alt"),
+            link: "/sensors/no2",
+        },
+        {
+            id: 4,
+            name: t("youMayAlsoLikeSection.products.co.name"),
+            image: "/img/ethanol-sensor.webp", // This would be replaced with the actual CO sensor image
+            alt: t("youMayAlsoLikeSection.products.co.alt"),
+            link: "/sensors/co",
+        },
+        {
+            id: 5,
+            name: t("youMayAlsoLikeSection.products.ozone.name"),
+            image: "/img/ethanol-sensor.webp", // This would be replaced with the actual Ozone sensor image
+            alt: t("youMayAlsoLikeSection.products.ozone.alt"),
+            link: "/sensors/ozone",
+        },
+        {
+            id: 6,
+            name: t("youMayAlsoLikeSection.products.ammonia.name"),
+            image: "/img/ethanol-sensor.webp", // This would be replaced with the actual Ammonia sensor image
+            alt: t("youMayAlsoLikeSection.products.ammonia.alt"),
+            link: "/sensors/ammonia",
+        },
+        {
+            id: 7,
+            name: t("youMayAlsoLikeSection.products.h2s.name"),
+            image: "/img/ethanol-sensor.webp", // This would be replaced with the actual H2S sensor image
+            alt: t("youMayAlsoLikeSection.products.h2s.alt"),
+            link: "/sensors/h2s",
+        },
+    ]
     return (
         <div className="air-drone-page">
             <main className="air-drone-page">
@@ -68,17 +148,17 @@ export default function AirDronePage() {
                                             aria-labelledby="MobileApp-tab"
                                         >
                                             <div className="sensor-img">
-                                                <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={100} height={100} />
+                                                <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={100} height={100} />
                                             </div>
                                         </div>
                                         <div className="tab-pane fade" id="TVApp" role="tabpanel" aria-labelledby="TVApp-tab">
                                             <div className="sensor-img">
-                                                <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={100} height={100} />
+                                                <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={100} height={100} />
                                             </div>
                                         </div>
                                         <div className="tab-pane fade" id="WebDashboard" role="tabpanel" aria-labelledby="WebDashboard-tab">
                                             <div className="sensor-img">
-                                                <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={100} height={100} />
+                                                <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={100} height={100} />
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +175,7 @@ export default function AirDronePage() {
                                                 aria-selected="true"
                                             >
                                                 <div className="sensor-img-thumb">
-                                                    <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={100} height={100} />
+                                                    <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={100} height={100} />
                                                 </div>
                                             </button>
                                         </li>
@@ -111,7 +191,7 @@ export default function AirDronePage() {
                                                 aria-selected="false"
                                             >
                                                 <div className="sensor-img-thumb">
-                                                    <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={100} height={100} />
+                                                    <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={100} height={100} />
                                                 </div>
                                             </button>
                                         </li>
@@ -127,7 +207,7 @@ export default function AirDronePage() {
                                                 aria-selected="false"
                                             >
                                                 <div className="sensor-img-thumb">
-                                                    <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={100} height={100} />
+                                                    <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={100} height={100} />
                                                 </div>
                                             </button>
                                         </li>
@@ -136,9 +216,14 @@ export default function AirDronePage() {
                             </div>
                             <div className="col-lg-6">
                                 <div className="product-discription">
-                                    <h1>SO2 SENSOR</h1>
+                                    <h1>{t("productSection.title")}</h1>
                                     <span>
-                                        <Image src="/img/highly-precise.png" alt="so2-sensor" width={50} height={50} />
+                                        <Image
+                                            src="/img/highly-precise.png"
+                                            alt={t("productSection.precisionImageAlt")}
+                                            width={50}
+                                            height={50}
+                                        />
                                     </span>
                                     <ul className="nav nav-tabs sensor-disc-tab" role="tablist">
                                         <li className="nav-item" role="presentation">
@@ -153,8 +238,8 @@ export default function AirDronePage() {
                                                 aria-selected="true"
                                             >
                                                 <div className="sensor-tab-btn">
-                                                    <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                                    <span>0.01 PPM</span>
+                                                    <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={50} height={50} />
+                                                    <span>{t("productSection.variants.standard.ppm")}</span>
                                                 </div>
                                             </button>
                                         </li>
@@ -170,8 +255,8 @@ export default function AirDronePage() {
                                                 aria-selected="false"
                                             >
                                                 <div className="sensor-tab-btn">
-                                                    <Image src="/img/so2-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                                    <span>0.001 PPM</span>
+                                                    <Image src="/img/so2-sensor.webp" alt={t("productSection.imageAlt")} width={50} height={50} />
+                                                    <span>{t("productSection.variants.premium.ppm")}</span>
                                                 </div>
                                             </button>
                                         </li>
@@ -185,27 +270,17 @@ export default function AirDronePage() {
                                                 aria-labelledby="SensorDisc-tab"
                                             >
                                                 <div className="product-rate">
-                                                    <span>₹     17,990.00</span>
-                                                    <p>Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas. </p>
-                                                    <ul>
-                                                        <li>
-                                                            <button onClick={decrement} className="dicrement">–</button>
-                                                        </li>
-                                                        <li>
-                                                            {quantity}
-                                                        </li>
-                                                        <li>
-                                                            <button onClick={increment} className="increment">+</button>
-                                                        </li>
-                                                    </ul>
+                                                    <span>{t("productSection.variants.standard.price")}</span>
+                                                    <p>{t("productSection.description")}</p>
+                                                    <QuantityCounter />
                                                     <ul className="buy-now-btn">
                                                         <li>
                                                             <button className="add-cart product-buy">
-                                                                Add to cart <span className="fw-bold">+</span>
+                                                                {t("productSection.buttons.addToCart")} <span className="fw-bold">+</span>
                                                             </button>
                                                         </li>
                                                         <li>
-                                                            <button className="buy-now product-buy">Buy now</button>
+                                                            <button className="buy-now product-buy">{t("productSection.buttons.buyNow")}</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -217,24 +292,17 @@ export default function AirDronePage() {
                                                 aria-labelledby="SensorDiscTVApp-tab"
                                             >
                                                 <div className="product-rate">
-                                                    <span>20,990.00</span>
-                                                    <p>Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas. </p>
-                                                    <ul>
-                                                        <li>
-                                                            <button onClick={decrement} className="dicrement">–</button>
-                                                        </li>
-                                                        <li>
-                                                            <button onClick={increment} className="increment">+</button>
-                                                        </li>
-                                                    </ul>
+                                                    <span>{t("productSection.variants.premium.price")}</span>
+                                                    <p>{t("productSection.description")}</p>
+                                                    <QuantityCounter />
                                                     <ul className="buy-now-btn">
                                                         <li>
                                                             <button className="add-cart product-buy">
-                                                                Add to cart <span className="fw-bold">+</span>
+                                                                {t("productSection.buttons.addToCart")} <span className="fw-bold">+</span>
                                                             </button>
                                                         </li>
                                                         <li>
-                                                            <button className="buy-now product-buy">Buy now</button>
+                                                            <button className="buy-now product-buy">{t("productSection.buttons.buyNow")}</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -246,6 +314,7 @@ export default function AirDronePage() {
                         </div>
                     </div>
                 </section>
+
                 {/* sensor introduction */}
                 <section className="intro">
                     <div className="container">
@@ -253,7 +322,7 @@ export default function AirDronePage() {
                             <div className="col-lg-6">
                                 <div className="intro-heading">
                                     <h2>
-                                        <span>SO2 Sensor</span> Introduction
+                                        <span>{t("introductionSection.titleHighlight")}</span> {t("introductionSection.title")}
                                     </h2>
                                 </div>
                             </div>
@@ -272,8 +341,13 @@ export default function AirDronePage() {
                                                 aria-selected="true"
                                             >
                                                 <div className="variant-tab-btn">
-                                                    <span>Variant A</span>
-                                                    <Image src="/img/variant-icon.png" alt="so2-sensor" width={50} height={50} />
+                                                    <span>{t("introductionSection.variants.variantA")}</span>
+                                                    <Image
+                                                        src="/img/variant-icon.png"
+                                                        alt={t("introductionSection.variantIconAlt")}
+                                                        width={50}
+                                                        height={50}
+                                                    />
                                                 </div>
                                             </button>
                                         </li>
@@ -289,8 +363,13 @@ export default function AirDronePage() {
                                                 aria-selected="false"
                                             >
                                                 <div className="variant-tab-btn">
-                                                    <span>Variant B</span>
-                                                    <Image src="/img/variant-icon.png" alt="so2-sensor" width={50} height={50} />
+                                                    <span>{t("introductionSection.variants.variantB")}</span>
+                                                    <Image
+                                                        src="/img/variant-icon.png"
+                                                        alt={t("introductionSection.variantIconAlt")}
+                                                        width={50}
+                                                        height={50}
+                                                    />
                                                 </div>
                                             </button>
                                         </li>
@@ -309,22 +388,23 @@ export default function AirDronePage() {
                                     >
                                         <div className="sensor-txt">
                                             <div className="content">
-                                                <p>The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.
-                                                    This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes.</p>
+                                                <p>{t("introductionSection.description")}</p>
                                                 <ul>
                                                     <li>
-                                                        <strong>0.01 PPM</strong> Resolution
+                                                        <strong>{t("introductionSection.specs.resolution.value")}</strong>{" "}
+                                                        {t("introductionSection.specs.resolution.label")}
                                                     </li>
                                                     <li>
-                                                        <strong>50 PPM</strong> Range
+                                                        <strong>{t("introductionSection.specs.range.value")}</strong>{" "}
+                                                        {t("introductionSection.specs.range.label")}
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="sensor-imgs">
-                                                <h3>SO2 SENSOR </h3>
+                                                <h3>{t("introductionSection.sensorTitle")}</h3>
                                                 <Image
                                                     src="/img/so2-sensor-inbuilt-pcb.webp"
-                                                    alt="so2-sensor-inbuilt-pcb"
+                                                    alt={t("introductionSection.sensorPcbAlt")}
                                                     width={50}
                                                     height={50}
                                                 />
@@ -334,22 +414,23 @@ export default function AirDronePage() {
                                     <div className="tab-pane fade" id="IntroTVApp" role="tabpanel" aria-labelledby="IntroTVApp-tab">
                                         <div className="sensor-txt">
                                             <div className="content">
-                                                <p>The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.
-                                                    This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes.</p>
+                                                <p>{t("introductionSection.description")}</p>
                                                 <ul>
                                                     <li>
-                                                        <strong>0.01 PPM</strong> Resolution
+                                                        <strong>{t("introductionSection.specs.resolution.value")}</strong>{" "}
+                                                        {t("introductionSection.specs.resolution.label")}
                                                     </li>
                                                     <li>
-                                                        <strong>50 PPM</strong> Range
+                                                        <strong>{t("introductionSection.specs.range.value")}</strong>{" "}
+                                                        {t("introductionSection.specs.range.label")}
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="sensor-imgs">
-                                                <h3>SO SENSOR </h3>
+                                                <h3>{t("introductionSection.variantBTitle")}</h3>
                                                 <Image
                                                     src="/img/so2-sensor-inbuilt-pcb.webp"
-                                                    alt="so2-sensor-inbuilt-pcb"
+                                                    alt={t("introductionSection.sensorPcbAlt")}
                                                     width={50}
                                                     height={50}
                                                 />
@@ -363,99 +444,95 @@ export default function AirDronePage() {
                             <div className="col-lg-12">
                                 <div className="why-choose-heading">
                                     <h2>
-                                        Why To Choose Prana Air <span>SO2 Sensor?</span>{" "}
+                                        {t("introductionSection.whyChoose.titleStart")}{" "}
+                                        <span>{t("introductionSection.whyChoose.titleHighlight")}</span>{" "}
                                     </h2>
                                 </div>
                                 <div className="why-choose-icon">
                                     <ul>
-                                        <li>
-                                            <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
-                                            <h3>Compact</h3>
-                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
-                                            <h3>Compact</h3>
-                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
-                                            <h3>Compact</h3>
-                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
-                                            <h3>Compact</h3>
-                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
-                                            <h3>Compact</h3>
-                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/Compact.png" alt="so2-sensor" width={50} height={50} />
-                                            <h3>Compact</h3>
-                                            <p>The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.</p>
-                                        </li>
+                                        {[1, 2, 3, 4, 5, 6].map((index) => (
+                                            <li key={index}>
+                                                <Image
+                                                    src="/img/Compact.png"
+                                                    alt={t(`introductionSection.whyChoose.features.feature${index}.iconAlt`)}
+                                                    width={50}
+                                                    height={50}
+                                                />
+                                                <h3>{t(`introductionSection.whyChoose.features.feature${index}.title`)}</h3>
+                                                <p>{t(`introductionSection.whyChoose.features.feature${index}.description`)}</p>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {/* SO2 Sensor Calibration video */}
                 <section className="calibration-video">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="video-box">
-                                    <Image src="/img/so2-sensor-calibration.webp" alt="so2-sensor" width={50} height={50} />
+                                    <Image
+                                        src="/img/so2-sensor-calibration.webp"
+                                        alt={t("calibrationSection.videoAlt")}
+                                        width={50}
+                                        height={50}
+                                    />
                                 </div>
                                 <div className="video-txt">
-                                    <h2>SO2 Sensor Calibration</h2>
-                                    <p>Calibrating an SO2 sensor means checking if it gives correct readings by comparing it to a standard measurement. This is done in specific conditions: a temperature of 23°C (plus or minus 3°C), humidity of 50% (plus or minus 15%), air pressure between 0.9 and 1.1 atm, and an airspeed of 0.05 m/s. This process makes sure the sensor gives accurate and reliable results. To do this, a special gas cylinder approved by NIST (a trusted measurement standard) is used as a reference.</p>
+                                    <h2>{t("calibrationSection.title")}</h2>
+                                    <p>{t("calibrationSection.description")}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {/* what technology used */}
                 <section className="what-tech">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="what-tech-heading">
-                                    <h2>What technology is being used in SO2 Sensor?</h2>
+                                    <h2>{t("technologySection.title")}</h2>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="bg">
-                                    <Image src="/img/tech-bg.jpg" alt="so2-sensor" width={50} height={50} />
+                                    <Image src="/img/tech-bg.jpg" alt={t("technologySection.backgroundAlt")} width={50} height={50} />
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="tech-txt">
-                                    <h3>SO2 Sensor Introduction</h3>
-                                    <Link href="#">Learn more</Link>
+                                    <h3>{t("technologySection.subtitle")}</h3>
+                                    <Link href="#">{t("technologySection.learnMore")}</Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {/* what is sulfur */}
                 <section className="what-is-sulfur">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="sulfur-heading">
-                                    <h2>What is Sulfur Di-Oxide?</h2>
+                                    <h2>{t("sulfurDioxideSection.title")}</h2>
                                 </div>
                             </div>
                             <div className="col-lg-6"></div>
                             <div className="col-lg-12">
                                 <div className="sulfur-img">
-                                    <Image src="/img/what-is-sulfur-di-oxide.webp" alt="so2-sensor" width={50} height={50} />
+                                    <Image
+                                        src="/img/what-is-sulfur-di-oxide.webp"
+                                        alt={t("sulfurDioxideSection.imageAlt")}
+                                        width={50}
+                                        height={50}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -464,54 +541,49 @@ export default function AirDronePage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="sulfur-txt">
-                                    <p>Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid.
-                                        SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain.
-                                        The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government’s move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.</p>
+                                    <p>{t("sulfurDioxideSection.description")}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {/* light mode */}
                 <section className="light-mode">
                     <div className="container">
                         <div className="col-lg-6">
                             <div className="light-mode-txt">
-                                <h2>What technology is being used in SO2 Sensor?</h2>
+                                <h2>{t("lightModeSection.title")}</h2>
                             </div>
                         </div>
                         <div className="col-lg-6"></div>
                         <div className="col-lg-12">
                             <div className="light-mode-img">
-                                <Image src="/img/SO2-light-mode.webp" alt="so2-sensor" width={50} height={50} />
-                                <p>
-                                    The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our monitors use a special sensor to detect sulfur dioxide (SO2), a harmful gas found in the air. This SO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When SO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more SO2 in the air, the stronger the current.By measuring this current, our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone.
-                                </p>
+                                <Image src="/img/SO2-light-mode.webp" alt={t("lightModeSection.imageAlt")} width={50} height={50} />
+                                <p>{t("lightModeSection.description")}</p>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {/* sensor chip */}
                 <section className="sensor-chip">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-5">
                                 <div className="sensor-chip-img">
-                                    <Image src="/img/sensor-chip.webp" alt="so2-sensor" width={50} height={50} />
+                                    <Image src="/img/sensor-chip.webp" alt={t("sensorChipSection.imageAlt")} width={50} height={50} />
                                 </div>
                             </div>
                             <div className="col-lg-7">
                                 <div className="sensor-chip-txt">
                                     <ul>
                                         <li>
-                                            <h2>SO2 Sensor Introduction</h2>
-                                            <Link href="#">Buy Now</Link>
+                                            <h2>{t("sensorChipSection.title")}</h2>
+                                            <Link href="#">{t("sensorChipSection.buyNowLink")}</Link>
                                         </li>
                                         <li>
-                                            <p>
-                                                Prana Air offers top-quality air quality monitoring solutions as our SO2 sensor that works with
-                                                advanced technology and offering accurate readings.
-                                            </p>
+                                            <p>{t("sensorChipSection.description")}</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -519,13 +591,14 @@ export default function AirDronePage() {
                         </div>
                     </div>
                 </section>
+
                 {/* app slider */}
                 <section className="app-slider-sec">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="slider-title">
-                                    <h2>Applications of SO2 Sensor</h2>
+                                    <h2>{t("applicationsSO2Section.title")}</h2>
                                 </div>
                             </div>
                             <div className="col-lg-6"></div>
@@ -535,48 +608,29 @@ export default function AirDronePage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <ProductCarousel responsive={responsive} className="app-slider">
-                                    <div>
-                                        <div className="app-slide-img-box">
-                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
-                                            <h3>Air Quality Monitoring Equipment</h3>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="app-slide-img-box">
-                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
-                                            <h3>Air Quality Monitoring Equipment</h3>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="app-slide-img-box">
-                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
-                                            <h3>Air Quality Monitoring Equipment</h3>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="app-slide-img-box">
-                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
-                                            <h3>Air Quality Monitoring Equipment</h3>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="app-slide-img-box">
-                                            <Image src="/img/Air-Quality-Monitoring-Equipment.webp" alt="Logo" width={200} height={100} />
-                                            <h3>Air Quality Monitoring Equipment</h3>
-                                        </div>
+                                    <div className="applications-slider">
+                                        {applications.map((app) => (
+                                            <div key={app.id}>
+                                                <div className="app-slide-img-box">
+                                                    <Image src={app.image || "/placeholder.svg"} alt={app.alt} width={200} height={100} />
+                                                    <h3>{app.title}</h3>
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </ProductCarousel>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {/* technical Specifications */}
                 <section className="tech-spec-sec">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="tech-heading">
-                                    <h2>Technical Specifications</h2>
+                                    <h2>{t("technicalSpecsSO2Section.title")}</h2>
                                 </div>
                             </div>
                             <div className="col-lg-6">
@@ -594,8 +648,13 @@ export default function AirDronePage() {
                                                 aria-selected="true"
                                             >
                                                 <div className="variant-tab-btn">
-                                                    <span>Variant A</span>
-                                                    <Image src="/img/variant-icon.png" alt="so2-sensor" width={50} height={50} />
+                                                    <span>{t("technicalSpecsSO2Section.variants.variantA")}</span>
+                                                    <Image
+                                                        src="/img/variant-icon.png"
+                                                        alt={t("technicalSpecsSO2Section.variantIconAlt")}
+                                                        width={50}
+                                                        height={50}
+                                                    />
                                                 </div>
                                             </button>
                                         </li>
@@ -611,8 +670,13 @@ export default function AirDronePage() {
                                                 aria-selected="false"
                                             >
                                                 <div className="variant-tab-btn">
-                                                    <span>Variant B</span>
-                                                    <Image src="/img/variant-icon.png" alt="so2-sensor" width={50} height={50} />
+                                                    <span>{t("technicalSpecsSO2Section.variants.variantB")}</span>
+                                                    <Image
+                                                        src="/img/variant-icon.png"
+                                                        alt={t("technicalSpecsSO2Section.variantIconAlt")}
+                                                        width={50}
+                                                        height={50}
+                                                    />
                                                 </div>
                                             </button>
                                         </li>
@@ -627,42 +691,42 @@ export default function AirDronePage() {
                                         <div className="tech-spec-txt">
                                             <ul>
                                                 <li>
-                                                    <h4>Product Name: </h4>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.productName.label")}</h4>
                                                 </li>
                                                 <li>
-                                                    <h5>SO2 Sensor </h5>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <h4>Resolution: </h4>
-                                                </li>
-                                                <li>
-                                                    <h5>0.01 ppm</h5>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.productName.value")}</h5>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <h4>Response Time:</h4>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.resolution.label")}</h4>
                                                 </li>
                                                 <li>
-                                                    <h5> 15 seconds</h5>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <h4>Operating Temperature Range:</h4>
-                                                </li>
-                                                <li>
-                                                    <h5>-20℃～50℃</h5>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.resolution.value")}</h5>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <h4>Operating Humidity Range – non-condensing</h4>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.responseTime.label")}</h4>
                                                 </li>
                                                 <li>
-                                                    <h5>15%RH – 90%RH (no condensation)</h5>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.responseTime.value")}</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.operatingTemperature.label")}</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.operatingTemperature.value")}</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.operatingHumidity.label")}</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.operatingHumidity.value")}</h5>
                                                 </li>
                                             </ul>
                                         </div>
@@ -671,42 +735,42 @@ export default function AirDronePage() {
                                         <div className="tech-spec-txt">
                                             <ul>
                                                 <li>
-                                                    <h4>Measurement Range: </h4>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.measurementRange.label")}</h4>
                                                 </li>
                                                 <li>
-                                                    <h5>0 to 50 ppm </h5>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <h4>Repeatability: </h4>
-                                                </li>
-                                                <li>
-                                                    <h5> +/- 3 % of reading</h5>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.measurementRange.value")}</h5>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <h4>Sensitivity @ 200 mV bias:</h4>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.repeatability.label")}</h4>
                                                 </li>
                                                 <li>
-                                                    <h5>25 +/- 10 nA/ppm</h5>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <h4>Operating Voltage</h4>
-                                                </li>
-                                                <li>
-                                                    <h5>3.7V～5.5V</h5>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.repeatability.value")}</h5>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <h4>Operating Humidity Range – non-condensing</h4>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.sensitivity.label")}</h4>
                                                 </li>
                                                 <li>
-                                                    <h5>15%RH – 90%RH (no condensation)</h5>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.sensitivity.value")}</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.operatingVoltage.label")}</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.operatingVoltage.value")}</h5>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <h4>{t("technicalSpecsSO2Section.specs.operatingHumidity.label")}</h4>
+                                                </li>
+                                                <li>
+                                                    <h5>{t("technicalSpecsSO2Section.specs.operatingHumidity.value")}</h5>
                                                 </li>
                                             </ul>
                                         </div>
@@ -715,20 +779,31 @@ export default function AirDronePage() {
                                         <div className="tech-spec-img">
                                             <Image
                                                 src="/img/prana-air-sulfur-ioxide-so2-sensor-with-board.webp"
-                                                alt="so2-sensor"
+                                                alt={t("technicalSpecsSO2Section.sensorImageAlt")}
                                                 width={50}
                                                 height={50}
                                             />
                                             <ul>
                                                 <li>
                                                     <a href="#">
-                                                        Buy now <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
+                                                        {t("technicalSpecsSO2Section.buttons.buyNow")}{" "}
+                                                        <Image
+                                                            src="/img/tech-btn-icon.png"
+                                                            alt={t("technicalSpecsSO2Section.buttons.buyNowIconAlt")}
+                                                            width={50}
+                                                            height={50}
+                                                        />
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        <Image src="/img/data-document-sheet-icon.png" alt="so2-sensor" width={50} height={50} />{" "}
-                                                        Data Sheet{" "}
+                                                        <Image
+                                                            src="/img/data-document-sheet-icon.png"
+                                                            alt={t("technicalSpecsSO2Section.buttons.dataSheetIconAlt")}
+                                                            width={50}
+                                                            height={50}
+                                                        />{" "}
+                                                        {t("technicalSpecsSO2Section.buttons.dataSheet")}{" "}
                                                     </a>
                                                 </li>
                                             </ul>
@@ -738,12 +813,13 @@ export default function AirDronePage() {
                             </div>
                             <div className="tab-pane fade" id="TechTVApp" role="tabpanel" aria-labelledby="TechTVApp-tab">
                                 <div className="sensor-txt">
-                                    <h1>Variant B Technical Specifications</h1>
+                                    <h1>{t("technicalSpecsSO2Section.variantBTitle")}</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 {/* sensor gallery */}
                 <section className="sensor-gallery-sec">
                     <div className="container">
@@ -751,12 +827,9 @@ export default function AirDronePage() {
                             <div className="col-lg-12">
                                 <div className="sensor-gallery-heading">
                                     <h2>
-                                        Sensors <span>Gallery</span>
+                                        {t("sensorGallerySection.titleStart")} <span>{t("sensorGallerySection.titleHighlight")}</span>
                                     </h2>
-                                    <p>
-                                        The SO2 sensor comes with a long life of almost 10 years. With this kind of longevity, there is no
-                                        need to worry about calibration and breakdown.
-                                    </p>
+                                    <p>{t("sensorGallerySection.description")}</p>
                                 </div>
                                 <div className="sensor-gallery-img">
                                     <ProductCarousel responsive={gallery} className="sensor-slider">
@@ -787,8 +860,8 @@ export default function AirDronePage() {
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="contact-heading">
-                                    <h2>Get in Touch</h2>
-                                    <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                                    <h2>{t("contactHeadingSection.title")}</h2>
+                                    <p>{t("contactHeadingSection.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -801,50 +874,19 @@ export default function AirDronePage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="you-may-also-heading">
-                                    <h2>You may also like</h2>
+                                    <h2>{t("youMayAlsoLikeSection.title")}</h2>
                                     <ul>
-                                        <li>
-                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                            <span>
-                                                Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                            <span>
-                                                Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                            <span>
-                                                Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                            <span>
-                                                Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                            <span>
-                                                Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                            <span>
-                                                Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <Image src="/img/ethanol-sensor.webp" alt="so2-sensor" width={50} height={50} />
-                                            <span>
-                                                Ethanol Sensor <Image src="/img/tech-btn-icon.png" alt="so2-sensor" width={50} height={50} />
-                                            </span>
-                                        </li>
+                                        {relatedProducts.map((product) => (
+                                            <li key={product.id}>
+                                                <Link href={product.link}>
+                                                    <Image src={product.image || "/placeholder.svg"} alt={product.alt} width={50} height={50} />
+                                                    <span>
+                                                        {product.name}{" "}
+                                                        <Image src="/img/tech-btn-icon.png" alt={t("youMayAlsoLikeSection.iconAlt")} width={50} height={50} />
+                                                    </span>
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>

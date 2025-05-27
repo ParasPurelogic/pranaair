@@ -1,11 +1,98 @@
-"use client"
 import Image from "next/image"
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
-import Carousel from "react-multi-carousel"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import OfficeApplicationsCarousel from "@/Components/Pages/Office/app-slider"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function OfficeSolutions() {
+export default async function OfficeSolutions() {
+  const { t } = await getServerTranslation("office")
+
+  const officeProducts = [
+    {
+      title: "Sensible+ Monitor",
+      description: "This smart air quality monitor features a 7-inch touchscreen display that provides detailed data insights for washroom or bathroom",
+      features: [
+        "7 Inch LED Touch Screen Display",
+        "5000 mAh Battery InBuilt",
+        "WiFi Connectivity With Mobile App"
+      ],
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2023/07/sensible-plus-air-quality-monitor-scaled.jpg",
+      imageAlt: "Prana air sensible+ air quality monitor for office",
+      knowMoreLink: "#",
+      hasRentOption: false
+    },
+    {
+      title: "SQUAIR Air Monitor",
+      description: "This is a smart indoor air quality monitoring device that can detect the odor, humidity, and other toxic gas parameters.",
+      features: [
+        "Detects TVOCs (odor), temperature, and humidity as well",
+        "Mobile & Smart TV App Enabled",
+        "Reliable Web Dashboard Accessibility"
+      ],
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2023/07/squair-air-quality-monitor-scaled.jpg",
+      imageAlt: "Prana air squair air quality monitor for offices",
+      knowMoreLink: "#",
+      hasRentOption: true
+    }
+  ]
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: t("industrialApplicationsData.hotel.title"),
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: t("industrialApplicationsData.restaurant.title"),
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: t("industrialApplicationsData.institutes.title"),
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
+  ]
   return (
     <main>
       {/* Banner Section */}
@@ -15,15 +102,13 @@ export default function OfficeSolutions() {
             <div className="col-md-6 banner_quality_box">
               <div className="pocket_title_box school_aqi_box">
                 <h1>
-                  Air quality solutions for<span className="bold_text"> Offices </span>
+                  {t("officeBanner.title")}
+                  <span className="bold_text"> {t("officeBanner.highlight")} </span>
                 </h1>
-                <p>
-                  A complete solution for air quality monitoring, data analysis, and fresh air solutions in workplaces
-                  prioritizing employees health and productivity.
-                </p>
-                <p className="banner-high-co2">Higher Occupancy, Higher CO2</p>
+                <p>{t("officeBanner.description")}</p>
+                <p className="banner-high-co2">{t("officeBanner.tagline")}</p>
                 <a className="banner-btn" href="#get_in_touch">
-                  Request A Quote
+                  {t("officeBanner.cta")}
                 </a>
               </div>
             </div>
@@ -38,13 +123,10 @@ export default function OfficeSolutions() {
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
               <span style={{ fontSize: "24pt" }}>
-                Factors affecting the health of <span style={{ color: "#78ae60" }}>Office Employees </span>
+                {t("officeFactors.title")} <span style={{ color: "#78ae60" }}>{t("officeFactors.highlight")}</span>
               </span>
             </h2>
-            <p>
-              Exposure to air pollution in offices can lead to a range of health problems, including respiratory
-              infections, headaches, fatigue, and difficulty concentrating.
-            </p>
+            <p>{t("officeFactors.description")}</p>
           </div>
         </div>
       </section>
@@ -62,8 +144,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>PM</h2>
-                  <p>Fine particulate matter in an office environment primarily originates from outdoor air</p>
+                  <h2>{t("officeFactors.pm.title")}</h2>
+                  <p>{t("officeFactors.pm.description")}</p>
                 </div>
               </div>
             </div>
@@ -76,8 +158,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>CO2</h2>
-                  <p>Office CO2 originates from occupants respiration and is influenced by ventilation.</p>
+                  <h2>{t("officeFactors.co2.title")}</h2>
+                  <p>{t("officeFactors.co2.description")}</p>
                 </div>
               </div>
             </div>
@@ -90,8 +172,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>VOCs</h2>
-                  <p>Arises from office materials, equipment, cleaning agents, and personal care products.</p>
+                  <h2>{t("officeFactors.vocs.title")}</h2>
+                  <p>{t("officeFactors.vocs.description")}</p>
                 </div>
               </div>
             </div>
@@ -104,8 +186,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>HCHO</h2>
-                  <p>Found in office environment through off-gassing of furniture and carpets.</p>
+                  <h2>{t("officeFactors.hcho.title")}</h2>
+                  <p>{t("officeFactors.hcho.description")}</p>
                 </div>
               </div>
             </div>
@@ -125,8 +207,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>Ozone</h2>
-                  <p>Typically a byproduct of office equipment like printers and copiers</p>
+                  <h2>{t("officeFactors.ozone.title")}</h2>
+                  <p>{t("officeFactors.ozone.description")}</p>
                 </div>
               </div>
             </div>
@@ -139,8 +221,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>Humidity</h2>
-                  <p>Indoor levels vary based on building design, occupancy, and weather.</p>
+                  <h2>{t("officeFactors.humidity.title")}</h2>
+                  <p>{t("officeFactors.humidity.description")}</p>
                 </div>
               </div>
             </div>
@@ -153,8 +235,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>Temperature</h2>
-                  <p>Regulated by HVAC systems, weather, and heat from equipment and occupants</p>
+                  <h2>{t("officeFactors.temperature.title")}</h2>
+                  <p>{t("officeFactors.temperature.description")}</p>
                 </div>
               </div>
             </div>
@@ -167,8 +249,8 @@ export default function OfficeSolutions() {
                   height={99}
                 />
                 <div className="feature_wrap_box">
-                  <h2>Noise</h2>
-                  <p>Comes from office machinery, HVAC systems, conversations, and external sources.</p>
+                  <h2>{t("officeFactors.noise.title")}</h2>
+                  <p>{t("officeFactors.noise.description")}</p>
                 </div>
               </div>
             </div>
@@ -191,8 +273,8 @@ export default function OfficeSolutions() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>PM &amp; PM10</h3>
-                  <p>Harms breathing, heart, and cardiovascular health</p>
+                  <h3>{t("officeHealthEffects.pm.title")}</h3>
+                  <p>{t("officeHealthEffects.pm.description")}</p>
                 </div>
               </li>
               <li className="second_school_box">
@@ -205,8 +287,8 @@ export default function OfficeSolutions() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>VOCs</h3>
-                  <p>Irritates eyes, nose, throat, some carcinogenic</p>
+                  <h3>{t("officeHealthEffects.vocs.title")}</h3>
+                  <p>{t("officeHealthEffects.vocs.description")}</p>
                 </div>
               </li>
               <li className="third_school_box">
@@ -219,8 +301,8 @@ export default function OfficeSolutions() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>CO2</h3>
-                  <p>Reduces focus, productivity, harms cognition</p>
+                  <h3>{t("officeHealthEffects.co2.title")}</h3>
+                  <p>{t("officeHealthEffects.co2.description")}</p>
                 </div>
               </li>
               <li className="six_school_box">
@@ -233,8 +315,8 @@ export default function OfficeSolutions() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>Temperature</h3>
-                  <p>Impacts mood, focus, productivity, risks heat illnesses</p>
+                  <h3>{t("officeHealthEffects.temperature.title")}</h3>
+                  <p>{t("officeHealthEffects.temperature.description")}</p>
                 </div>
               </li>
               <li className="fivth_school_box">
@@ -247,8 +329,8 @@ export default function OfficeSolutions() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>Ozone</h3>
-                  <p>Irritates lungs, worsens existing conditions</p>
+                  <h3>{t("officeHealthEffects.ozone.title")}</h3>
+                  <p>{t("officeHealthEffects.ozone.description")}</p>
                 </div>
               </li>
               <li className="sixth_school_box">
@@ -261,8 +343,8 @@ export default function OfficeSolutions() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>Noise</h3>
-                  <p>Raises stress, hampers focus, affects mental health</p>
+                  <h3>{t("officeHealthEffects.noise.title")}</h3>
+                  <p>{t("officeHealthEffects.noise.description")}</p>
                 </div>
               </li>
             </ul>
@@ -275,9 +357,10 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2>
-              Health <span style={{ color: "#78ae60" }}>Impacts on Employees</span>
+              {t("officeHealthImpacts.title")}{" "}
+              <span style={{ color: "#78ae60" }}>{t("officeHealthImpacts.highlight")}</span>
             </h2>
-            <h3 className="heading-box">Some Short-Term Health Effects</h3>
+            <h3 className="heading-box">{t("officeHealthImpacts.shortTerm.title")}</h3>
           </div>
         </div>
       </section>
@@ -295,11 +378,8 @@ export default function OfficeSolutions() {
                   height={112}
                 />
                 <div className="feature_wrap_box">
-                  <h3>Eye, nose, and throat irritation</h3>
-                  <p>
-                    Air pollutants can also irritate the eyes, nose, and throat, causing symptoms such as redness,
-                    watering, burning, and sneezing.
-                  </p>
+                  <h3>{t("officeHealthImpacts.shortTerm.irritation.title")}</h3>
+                  <p>{t("officeHealthImpacts.shortTerm.irritation.description")}</p>
                 </div>
               </div>
             </div>
@@ -312,11 +392,8 @@ export default function OfficeSolutions() {
                   height={112}
                 />
                 <div className="feature_wrap_box">
-                  <h3>Respiratory problems</h3>
-                  <p>
-                    Air pollutants can irritate the airways &amp; lungs leading to coughing, shortness of breath, &amp;
-                    chest tightness.
-                  </p>
+                  <h3>{t("officeHealthImpacts.shortTerm.respiratory.title")}</h3>
+                  <p>{t("officeHealthImpacts.shortTerm.respiratory.description")}</p>
                 </div>
               </div>
             </div>
@@ -329,11 +406,8 @@ export default function OfficeSolutions() {
                   height={112}
                 />
                 <div className="feature_wrap_box">
-                  <h3>Cardiovascular problems</h3>
-                  <p>
-                    Short-term exposure to air pollution can increase the risk of heart attacks, strokes, and other
-                    cardiovascular events.
-                  </p>
+                  <h3>{t("officeHealthImpacts.shortTerm.cardiovascular.title")}</h3>
+                  <p>{t("officeHealthImpacts.shortTerm.cardiovascular.description")}</p>
                 </div>
               </div>
             </div>
@@ -346,11 +420,8 @@ export default function OfficeSolutions() {
                   height={112}
                 />
                 <div className="feature_wrap_box">
-                  <h3>Headaches</h3>
-                  <p>
-                    Air pollutants that can cause headaches include PM2.5, NO2, and O3, that irritate the lining of the
-                    nose and throat.
-                  </p>
+                  <h3>{t("officeHealthImpacts.shortTerm.headaches.title")}</h3>
+                  <p>{t("officeHealthImpacts.shortTerm.headaches.description")}</p>
                 </div>
               </div>
             </div>
@@ -361,7 +432,7 @@ export default function OfficeSolutions() {
       {/* Long-Term Health Effects */}
       <section className="pollution_heading">
         <div className="container">
-          <h3 className="heading-box long-term-heading">Long-Term Health Effects:</h3>
+          <h3 className="heading-box long-term-heading">{t("officeHealthImpacts.longTerm.title")}</h3>
         </div>
       </section>
 
@@ -377,11 +448,8 @@ export default function OfficeSolutions() {
                   height={112}
                 />
                 <div className="feature_wrap_box">
-                  <h3>Chronic respiratory diseases</h3>
-                  <p>
-                    Air pollutants can damage the lungs, leading to chronic respiratory diseases such as asthma, chronic
-                    obstructive pulmonary disease (COPD), and lung cancer.
-                  </p>
+                  <h3>{t("officeHealthImpacts.longTerm.respiratory.title")}</h3>
+                  <p>{t("officeHealthImpacts.longTerm.respiratory.description")}</p>
                 </div>
               </div>
             </div>
@@ -394,11 +462,8 @@ export default function OfficeSolutions() {
                   height={112}
                 />
                 <div className="feature_wrap_box">
-                  <h3>Other health problems</h3>
-                  <p>
-                    Air pollutants have also been linked to a number of other health problems, including diabetes,
-                    reproductive problems, and neurological problems.
-                  </p>
+                  <h3>{t("officeHealthImpacts.longTerm.other.title")}</h3>
+                  <p>{t("officeHealthImpacts.longTerm.other.description")}</p>
                 </div>
               </div>
             </div>
@@ -411,11 +476,8 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="quote-container">
             <div className="quote-content">
-              <h2>DO YOU KNOW?</h2>
-              <p>
-                The World Health Organization (WHO) estimates that indoor air pollution causes 4.3 million deaths each
-                year worldwide.
-              </p>
+              <h2>{t("quote.title")}</h2>
+              <p>{t("quote.content")}</p>
             </div>
           </div>
         </div>
@@ -426,13 +488,10 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="source-of-air-pollution-heading">
             <h2>
-              Sources of air pollution in <span style={{ color: "#78ae60" }}>Offices</span>
+              {t("officePollutionSources.title")}{" "}
+              <span style={{ color: "#78ae60" }}>{t("officePollutionSources.highlight")}</span>
             </h2>
-            <p>
-              Offices can be polluted by building materials, office equipment, personal care products, cigarette smoke,
-              and outdoor air. These pollutants can irritate the eyes, nose, throat, and respiratory system, and can
-              also cause headaches, dizziness, nausea, and asthma attacks.
-            </p>
+            <p>{t("officePollutionSources.description")}</p>
           </div>
 
           <div className="pollution-sources-slider">
@@ -445,8 +504,8 @@ export default function OfficeSolutions() {
                     width={325}
                     height={200}
                   />
-                  <h3>Office equipment</h3>
-                  <p>Printers, photocopiers, and computers can emit VOCs, ozone, and nitrogen dioxide.</p>
+                  <h3>{t("officePollutionSources.equipment.title")}</h3>
+                  <p>{t("officePollutionSources.equipment.description")}</p>
                 </div>
               </div>
               <div className="col-md-3">
@@ -457,8 +516,8 @@ export default function OfficeSolutions() {
                     width={325}
                     height={200}
                   />
-                  <h3>Cleaning products</h3>
-                  <p>Many cleaning products contain VOCs, which can irritate the eyes, nose, and throat.</p>
+                  <h3>{t("officePollutionSources.cleaning.title")}</h3>
+                  <p>{t("officePollutionSources.cleaning.description")}</p>
                 </div>
               </div>
               <div className="col-md-3">
@@ -469,8 +528,8 @@ export default function OfficeSolutions() {
                     width={325}
                     height={200}
                   />
-                  <h3>Dusting</h3>
-                  <p>Dust can contain mold spores, bacteria, and other pollutants that can irritate the airways.</p>
+                  <h3>{t("officePollutionSources.dusting.title")}</h3>
+                  <p>{t("officePollutionSources.dusting.description")}</p>
                 </div>
               </div>
               <div className="col-md-3">
@@ -481,11 +540,8 @@ export default function OfficeSolutions() {
                     width={325}
                     height={200}
                   />
-                  <h3>High occupancy</h3>
-                  <p>
-                    High levels of CO2 can cause headaches, dizziness, nausea, reduced productivity, and other health
-                    problems.
-                  </p>
+                  <h3>{t("officePollutionSources.occupancy.title")}</h3>
+                  <p>{t("officePollutionSources.occupancy.description")}</p>
                 </div>
               </div>
             </div>
@@ -498,12 +554,9 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">
-              Air Quality <span className="highlight">Solutions</span>
+              {t("officeSolutions.title")} <span className="highlight">{t("officeSolutions.highlight")}</span>
             </h2>
-            <p>
-              Prana Air offers air quality solutions for offices, including air quality monitors and fresh air machines.
-              These solutions can improve air quality, reduce health risks, increase productivity, and reduce sick days.
-            </p>
+            <p>{t("officeSolutions.description")}</p>
           </div>
 
           <div className="solutions-tabs-container">
@@ -520,7 +573,7 @@ export default function OfficeSolutions() {
                   aria-controls="monitors"
                   aria-selected="true"
                 >
-                  Air Quality Monitors
+                  {t("officeSolutions.tabs.monitors")}
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -534,98 +587,14 @@ export default function OfficeSolutions() {
                   aria-controls="fresh-air"
                   aria-selected="false"
                 >
-                  Fresh Air Solution
+                  {t("officeSolutions.tabs.freshAir")}
                 </button>
               </li>
             </ul>
 
             <div className="tab-content" id="solutionsTabsContent">
               <div className="tab-pane fade show active" id="monitors" role="tabpanel" aria-labelledby="monitors-tab">
-                <Carousel
-                  responsive={{
-                    desktop: {
-                      breakpoint: { max: 3000, min: 1024 },
-                      items: 1,
-                    },
-                    tablet: {
-                      breakpoint: { max: 1024, min: 464 },
-                      items: 1,
-                    },
-                    mobile: {
-                      breakpoint: { max: 464, min: 0 },
-                      items: 1,
-                    },
-                  }}
-                  infinite={true}
-                  autoPlay={false}
-                  arrows={true}
-                  renderButtonGroupOutside={true}
-                  customLeftArrow={<button className="carousel-arrow left-arrow">‹</button>}
-                  customRightArrow={<button className="carousel-arrow right-arrow">›</button>}
-                >
-                  <div className="product-slide">
-                    <div className="product-content">
-                      <div className="product-info">
-                        <h3>Sensible+ Monitor</h3>
-                        <p>
-                          This smart air quality monitor features a 7-inch touchscreen display that provides detailed
-                          data insights for washroom or bathroom
-                        </p>
-                        <ul className="feature-list">
-                          <li>7 Inch LED Touch Screen Display</li>
-                          <li>5000 mAh Battery InBuilt</li>
-                          <li>WiFi Connectivity With Mobile App</li>
-                        </ul>
-                        <a className="know-more-btn" href="#">
-                          Know More
-                        </a>
-                      </div>
-                      <div className="product-image">
-                        <Image
-                          src="https://www.pranaair.com/wp-content/uploads/2023/07/sensible-plus-air-quality-monitor-scaled.jpg"
-                          alt="Prana air sensible+ air quality monitor for office"
-                          width={500}
-                          height={400}
-                          objectFit="contain"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="product-slide">
-                    <div className="product-content">
-                      <div className="product-info">
-                        <h3>SQUAIR Air Monitor</h3>
-                        <p>
-                          This is a smart indoor air quality monitoring device that can detect the odor, humidity, and
-                          other toxic gas parameters.
-                        </p>
-                        <ul className="feature-list">
-                          <li>Detects TVOCs (odor), temperature, and humidity as well</li>
-                          <li>Mobile &amp; Smart TV App Enabled</li>
-                          <li>Reliable Web Dashboard Accessibility</li>
-                        </ul>
-                        <div className="button-group">
-                          <a className="know-more-btn" href="#">
-                            Know More
-                          </a>
-                          <a className="rent-btn" href="#">
-                            Looking for Rent?
-                          </a>
-                        </div>
-                      </div>
-                      <div className="product-image">
-                        <Image
-                          src="https://www.pranaair.com/wp-content/uploads/2023/07/squair-air-quality-monitor-scaled.jpg"
-                          alt="Prana air squair air quality monitor for offices"
-                          width={500}
-                          height={400}
-                          objectFit="contain"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </Carousel>
+                <OfficeApplicationsCarousel officeProducts={officeProducts} />
               </div>
 
               <div className="tab-pane fade" id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
@@ -641,18 +610,15 @@ export default function OfficeSolutions() {
                       />
                     </div>
                     <div className="product-info">
-                      <h3>Fresh Air Machine</h3>
-                      <p>
-                        It is an advanced air purifier designed to bring in fresh outdoor air and filter out pollutants,
-                        allergens, odors and enough oxygen.
-                      </p>
+                      <h3>{t("officeSolutions.freshAir.title")}</h3>
+                      <p>{t("officeSolutions.freshAir.description")}</p>
                       <ul className="feature-list">
-                        <li>Comes with multi-layers HEPA Filters</li>
-                        <li>Promising you up to 99.5% efficiency</li>
-                        <li>Improves air ventilation</li>
+                        <li>{t("officeSolutions.freshAir.features.feature1")}</li>
+                        <li>{t("officeSolutions.freshAir.features.feature2")}</li>
+                        <li>{t("officeSolutions.freshAir.features.feature3")}</li>
                       </ul>
                       <a className="know-more-btn" href="#">
-                        Know More
+                        {t("officeSolutions.freshAir.cta")}
                       </a>
                     </div>
                   </div>
@@ -668,22 +634,19 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">
-              The <span className="highlight">Comparison</span>
+              {t("officeComparison.title")} <span className="highlight">{t("officeComparison.highlight")}</span>
             </h2>
-            <p>
-              Prana Air fresh air machine offer several benefits for office environments, including improved air
-              quality, reduced illnesses, and increased productivity. Here, you can see the differences of impacts.
-            </p>
+            <p>{t("officeComparison.description")}</p>
           </div>
 
           <div className="comparison-container">
             <div className="comparison-columns">
               <div className="comparison-column without-solution">
-                <h3>Without Fresh Air Solutions</h3>
+                <h3>{t("officeComparison.without.title")}</h3>
                 <ul className="comparison-list negative-list">
-                  <li>Reduce work productivity</li>
-                  <li>Uncomfortable experience</li>
-                  <li>Unhealthy environment</li>
+                  <li>{t("officeComparison.without.points.point1")}</li>
+                  <li>{t("officeComparison.without.points.point2")}</li>
+                  <li>{t("officeComparison.without.points.point3")}</li>
                 </ul>
                 <div className="comparison-image">
                   <Image
@@ -698,11 +661,11 @@ export default function OfficeSolutions() {
               <div className="comparison-divider"></div>
 
               <div className="comparison-column with-solution">
-                <h3>With Fresh Air Solutions</h3>
+                <h3>{t("officeComparison.with.title")}</h3>
                 <ul className="comparison-list positive-list">
-                  <li>Improve work productivity</li>
-                  <li>More comfort level</li>
-                  <li>Healthy environment</li>
+                  <li>{t("officeComparison.with.points.point1")}</li>
+                  <li>{t("officeComparison.with.points.point2")}</li>
+                  <li>{t("officeComparison.with.points.point3")}</li>
                 </ul>
                 <div className="comparison-image">
                   <Image
@@ -716,14 +679,8 @@ export default function OfficeSolutions() {
             </div>
 
             <div className="comparison-studies">
-              <p>
-                A study by the Harvard School of Public Health found that workers in offices with good air quality were
-                10% more productive than workers in offices with poor air quality.
-              </p>
-              <p>
-                Another study by the University of California, Berkeley found that workers in offices with fresh air
-                machines had a 30% lower risk of developing asthma than workers in offices without fresh air machines.
-              </p>
+              <p>{t("officeComparison.studies.study1")}</p>
+              <p>{t("officeComparison.studies.study2")}</p>
             </div>
           </div>
         </div>
@@ -734,12 +691,9 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Freemium <span className="bold_text">Services</span>
+              {t("officeDataServices.title")} <span className="bold_text">{t("officeDataServices.highlight")}</span>
             </h2>
-            <p>
-              You can display or analyze air quality data for your office on LCD screens or in AQI App and our
-              web-dashboards.
-            </p>
+            <p>{t("officeDataServices.description")}</p>
           </div>
         </div>
       </section>
@@ -755,7 +709,7 @@ export default function OfficeSolutions() {
                   width={350}
                   height={200}
                 />
-                <h3>TV Dashboard App</h3>
+                <h3>{t("officeDataServices.tvApp")}</h3>
               </div>
             </div>
             <div className="col-md-4">
@@ -766,7 +720,7 @@ export default function OfficeSolutions() {
                   width={350}
                   height={200}
                 />
-                <h3>Web-Dashboards for Offices</h3>
+                <h3>{t("officeDataServices.webDashboards")}</h3>
               </div>
             </div>
             <div className="col-md-4">
@@ -777,7 +731,7 @@ export default function OfficeSolutions() {
                   width={350}
                   height={200}
                 />
-                <h3>AQI Mobile App</h3>
+                <h3>{t("officeDataServices.mobileApp")}</h3>
               </div>
             </div>
           </div>
@@ -789,9 +743,9 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">
-              Our <span className="highlight">Clientele</span>
+              {t("clientele.title")} <span className="highlight">{t("clientele.highlight")}</span>
             </h2>
-            <p>We are honored to work with so many well-known companies.</p>
+            <p>{t("clientele.description")}</p>
           </div>
 
           <div className="client-grid">
@@ -882,8 +836,8 @@ export default function OfficeSolutions() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -896,9 +850,9 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">
-              Frequently Asked <span className="highlight">Questions</span>
+              {t("faq.title")} <span className="highlight">{t("faq.highlight")}</span>
             </h2>
-            <p>About Air Quality Solution for offices / corporates. Have questions? Were here to help.</p>
+            <p>{t("officeFaq.description")}</p>
           </div>
 
           <div className="accordion" id="faqAccordion">
@@ -912,7 +866,7 @@ export default function OfficeSolutions() {
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  1. What is office air pollution, and how does it affect employees?
+                  {t("officeFaq.questions.q1")}
                 </button>
               </h2>
               <div
@@ -922,10 +876,7 @@ export default function OfficeSolutions() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    Office air pollution is harmful indoor contaminants that can cause respiratory problems, allergies,
-                    headaches, and reduced productivity among employees.
-                  </p>
+                  <p>{t("officeFaq.answers.a1")}</p>
                 </div>
               </div>
             </div>
@@ -940,7 +891,7 @@ export default function OfficeSolutions() {
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  2. Why is an Air Quality Monitor essential for offices?
+                  {t("officeFaq.questions.q2")}
                 </button>
               </h2>
               <div
@@ -950,10 +901,7 @@ export default function OfficeSolutions() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    An Air Quality Monitor tracks indoor pollutants in real-time, ensuring a healthy work environment by
-                    identifying and addressing air quality issues promptly.
-                  </p>
+                  <p>{t("officeFaq.answers.a2")}</p>
                 </div>
               </div>
             </div>
@@ -968,7 +916,7 @@ export default function OfficeSolutions() {
                   aria-expanded="false"
                   aria-controls="collapseThree"
                 >
-                  3. How does Prana Airs Air Quality Monitor work?
+                  {t("officeFaq.questions.q3")}
                 </button>
               </h2>
               <div
@@ -978,10 +926,7 @@ export default function OfficeSolutions() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    Prana Airs monitor uses advanced sensors to detect pollutants like PM2.5, PM10, CO2, VOCs, and
-                    temperature, providing real-time data via a user-friendly interface and app.
-                  </p>
+                  <p>{t("officeFaq.answers.a3")}</p>
                 </div>
               </div>
             </div>
@@ -996,7 +941,7 @@ export default function OfficeSolutions() {
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
-                  4. What are the benefits of Prana Airs Air Quality Monitor?
+                  {t("officeFaq.questions.q4")}
                 </button>
               </h2>
               <div
@@ -1006,10 +951,7 @@ export default function OfficeSolutions() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    It enables data-driven decisions for better air quality, leading to healthier employees and
-                    increased productivity.
-                  </p>
+                  <p>{t("officeFaq.answers.a4")}</p>
                 </div>
               </div>
             </div>
@@ -1024,7 +966,7 @@ export default function OfficeSolutions() {
                   aria-expanded="false"
                   aria-controls="collapseFive"
                 >
-                  5. What is Prana Airs Fresh Air Machine, and how does it enhance office air quality?
+                  {t("officeFaq.questions.q5")}
                 </button>
               </h2>
               <div
@@ -1034,10 +976,7 @@ export default function OfficeSolutions() {
                 data-bs-parent="#faqAccordion"
               >
                 <div className="accordion-body">
-                  <p>
-                    Prana Airs Fresh Air Machine filters outdoor air, removing pollutants and maintaining a constant
-                    supply of clean air indoors, promoting better respiratory health.
-                  </p>
+                  <p>{t("officeFaq.answers.a5")}</p>
                 </div>
               </div>
             </div>
@@ -1050,108 +989,13 @@ export default function OfficeSolutions() {
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">
-              Industrial <span className="highlight">Applications</span>
+              {t("industrial.title")} <span className="highlight">{t("industrial.highlight")}</span>
             </h2>
-            <p>
-              Prana Air offers a diverse selection of smart, affordable, and remarkably precise air quality solutions,
-              catering to various sectors, irrespective of their scale.
-            </p>
+            <p>{t("industrial.description")}</p>
           </div>
 
           <div className="applications-carousel">
-            <Carousel
-              responsive={{
-                desktop: {
-                  breakpoint: { max: 3000, min: 1024 },
-                  items: 3,
-                },
-                tablet: {
-                  breakpoint: { max: 1024, min: 464 },
-                  items: 2,
-                },
-                mobile: {
-                  breakpoint: { max: 464, min: 0 },
-                  items: 1,
-                },
-              }}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={5000}
-              keyBoardControl={true}
-              customTransition="all .5s"
-              transitionDuration={500}
-              containerClass="carousel-container"
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-              customLeftArrow={<button className="carousel-arrow left-arrow">‹</button>}
-              customRightArrow={<button className="carousel-arrow right-arrow">›</button>}
-            >
-              <div className="application-item">
-                <div className="application-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg"
-                    alt="Air quality solutions for airport"
-                    width={400}
-                    height={300}
-                    objectFit="cover"
-                  />
-                </div>
-                <h3>Solutions for Airport</h3>
-              </div>
-
-              <div className="application-item">
-                <div className="application-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg"
-                    alt="Air quality solutions for fitness and gym"
-                    width={400}
-                    height={300}
-                    objectFit="cover"
-                  />
-                </div>
-                <h3>Solutions for Fitness & Gym</h3>
-              </div>
-
-              <div className="application-item">
-                <div className="application-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg"
-                    alt="Air quality solutions for parking lot"
-                    width={400}
-                    height={300}
-                    objectFit="cover"
-                  />
-                </div>
-                <h3>Solutions for Parking Lot</h3>
-              </div>
-
-              <div className="application-item">
-                <div className="application-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                    alt="Air quality solutions for banks"
-                    width={400}
-                    height={300}
-                    objectFit="cover"
-                  />
-                </div>
-                <h3>Solutions for Bank</h3>
-              </div>
-
-              <div className="application-item">
-                <div className="application-image">
-                  <Image
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                    alt="Air quality solutions for hotel business"
-                    width={400}
-                    height={300}
-                    objectFit="cover"
-                  />
-                </div>
-                <h3>Solutions for Hotel</h3>
-              </div>
-            </Carousel>
+            <IndustrialApplicationsCarousel applications={industrialApplications} />
           </div>
         </div>
       </section>

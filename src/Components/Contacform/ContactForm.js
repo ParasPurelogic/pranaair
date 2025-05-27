@@ -1,13 +1,12 @@
 "use client";
-
 import { useForm } from "react-hook-form";
-import { usePathname, useRouter } from "next/navigation"; 
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import "./style.css";
 
 const ContactForm = ({ pageName }) => {
   const pathname = usePathname();
-  const router = useRouter(); 
+  const router = useRouter();
   const [status, setStatus] = useState("");
   const [isError, setIsError] = useState(false);
 
@@ -38,7 +37,7 @@ const ContactForm = ({ pageName }) => {
         setIsError(false);
         reset();
 
-        
+
         setTimeout(() => {
           router.push("/air-quality-monitor");
         }, 1000); // wait 1.5 seconds before redirecting
@@ -153,9 +152,8 @@ const ContactForm = ({ pageName }) => {
 
               {status && (
                 <p
-                  className={`mt-3 ${
-                    isError ? "text-danger" : "text-success"
-                  }`}
+                  className={`mt-3 ${isError ? "text-danger" : "text-success"
+                    }`}
                 >
                   {status}
                 </p>

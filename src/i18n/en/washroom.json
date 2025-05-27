@@ -1,0 +1,289 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+ "washroomBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Washroom | Bathroom",
+    "description": "A complete solution for air monitoring, data analysis, and fresh air solutions for bathrooms, restrooms, or washrooms.",
+    "cta": "Request A Quote",
+    "imageAlt": "Washroom and bathroom air quality solutions"
+  },
+  "washroomIntro": {
+    "title": "Factors affecting air quality in",
+    "highlight1": "Restrooms",
+    "and": "and",
+    "highlight2": "Bathrooms",
+    "description": "Restrooms and bathrooms can be significant contributors to unpleasant odors and harmful VOCs that can cause discomfort. This issue is not limited to residential spaces but also affects restrooms in public places such as malls, schools, and other institutions. It is crucial to monitor and control these pollutants to ensure a comfortable and healthy indoor environment for users."
+  },
+  "washroomFactors": {
+    "odor": {
+      "title": "Odor",
+      "description": "Washrooms release bad odors and TVOC",
+      "imageAlt": "Odor in washroom or bathroom"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "More occupancy, high co2 accumulation",
+      "imageAlt": "high co2 level in bathroom or washroom"
+    },
+    "microbes": {
+      "title": "Microbes",
+      "description": "Microbiological contaminants spread easily in closed spaces",
+      "imageAlt": "Microbial Pollutants in washroom and bathroom"
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "Comfort level and mold growth depend upon it",
+      "imageAlt": "temperature in bathroom and washroom"
+    },
+    "humidity": {
+      "title": "Humidity",
+      "description": "Depends on the number of people and the ventilation rate",
+      "imageAlt": "humidity in bathroom and washroom"
+    }
+  },
+  "washroomPollutants": {
+    "odor": {
+      "title": "Odor",
+      "description": "Poor ventilation can cause odor to trap inside that can be unpleasant and can cause discomfort.",
+      "imageAlt": "tvoc odor icon"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "Excess CO2 can cause lack of attentiveness, fatigue, suffocation, etc.",
+      "imageAlt": "co2 icon"
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "High temperature is very uncomfortable for everyone",
+      "imageAlt": "temperature icon"
+    },
+    "humidity": {
+      "title": "Humidity",
+      "description": "Water and condensation inside bathrooms & restrooms many times increase the humidity.",
+      "imageAlt": "humidity in washroom"
+    },
+    "microbes": {
+      "title": "Microbial Pollutants",
+      "description": "Poor maintenance and ventilation can cause the spreading of viruses and bacteria.",
+      "imageAlt": "microbes in washroom and bathroom"
+    }
+  },
+  "washroomHealth": {
+    "title": "Health",
+    "highlight": "Effects",
+    "effects": {
+      "irritation": {
+        "description": "Irritation in the eyes and the respiratory tract",
+        "imageAlt": "eyes and respiration irritation due to air quality"
+      },
+      "damages": {
+        "description": "Damages to the property",
+        "imageAlt": "building property damages due to air quality"
+      },
+      "infection": {
+        "description": "Infection and stomach illness",
+        "imageAlt": "infection and stomach illness due to air quality"
+      },
+      "headache": {
+        "description": "Headache and high BP",
+        "imageAlt": "headache and high bp due to air quality"
+      },
+      "asthma": {
+        "description": "Triggers asthma & other related illnesses",
+        "imageAlt": "trigger asthma and illness due to air quality"
+      }
+    }
+  },
+  "washroomQuote": {
+    "title": "DO YOU KNOW?",
+    "content1": "ASHRAE recommends relative humidity (RH) values between 30 and 60%.",
+    "content2": "Microbial growth may be promoted by increased humidity.",
+    "content3": "Minimum exhaust rates for Public and Private washrooms as per ASHRAE:",
+    "content4": "Public: 50/70 (Exhaust Rate cfm/unit), Private: 25/50 (Exhaust Rate cfm/unit)"
+  },
+  "washroomIssues": {
+    "description": "Poor ventilation, a lack of frequent maintenance and cleaning, and the buildup of mold and bacteria can all contribute to poor air quality and other inconveniences such as unpleasant odors, moisture, and germ spread in restrooms and washrooms.",
+    "humidity": {
+      "title": "Excessive humidity in Showers",
+      "imageAlt": "humidity in shower bathroom"
+    },
+    "condensation": {
+      "title": "High condensation = Mold growth & bad odor",
+      "imageAlt": "high condensation in bathroom"
+    },
+    "microbes": {
+      "title": "Cleaning agents increase TVOCs",
+      "imageAlt": "high microbes in washroom"
+    }
+  },
+  "washroomSolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions",
+    "description": "Prana Air provides air quality solutions intended exclusively for bathrooms and restrooms. Our products are developed for these spaces and help promote a healthier atmosphere for everyone, with a focus on efficiency, air purification, ease of use, and effectiveness.",
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine"
+    },
+    "knowMore": "Know More",
+    "lookingToRent": "Looking to Rent?",
+    "carousel": {
+      "previous": "Previous",
+      "next": "Next",
+      "slide1": "Slide 1",
+      "slide2": "Slide 2"
+    },
+    "monitors": {
+      "squair": {
+        "title": "SQUAIR Air Monitor",
+        "description": "This is a smart indoor air quality monitoring device that can detect the odor, humidity, and other toxic gas parameters.",
+        "features": {
+          "feature1": "Detects TVOCs (odor), temperature, and humidity as well",
+          "feature2": "Mobile & Smart TV App Enabled",
+          "feature3": "Reliable Web Dashboard Accessibility"
+        },
+        "imageAlt": "SQUAIR Air Monitor for washroom and bathroom"
+      },
+      "sensible": {
+        "title": "Sensible+ Monitor",
+        "description": "This smart air quality monitor features a 7-inch touchscreen display that provides detailed data insights for washroom or bathroom",
+        "features": {
+          "feature1": "7 Inch LED Touch Screen Display",
+          "feature2": "5000 mAh Battery InBuilt",
+          "feature3": "WiFi Connectivity With Mobile App"
+        },
+        "imageAlt": "Sensible+ Monitor for washroom and bathroom"
+      }
+    },
+    "freshAir": {
+      "title": "Fresh Air Machine As IAQ Solution",
+      "description": "Prana Air Fresh Air Machine is a one-stop solution for indoor air pollution, functioning as an air purifier with a 99.5% efficiency rate and multi-layer HEPA filters.",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Compact Design makes it easy to place",
+        "feature3": "Promising you up to 99.5% efficiency"
+      },
+      "imageAlt": "Fresh Air Machine for washrooms"
+    }
+  },
+  "washroomDataServices": {
+    "title": "Data Freemium",
+    "highlight": "Services",
+    "description": "Our customized dashboard can display or analyze data on the LCD panels or the apps. Use AQI mobile app to find out the air quality inside washroom or bathroom.",
+    "tvApp": {
+      "title": "TV Dashboard App",
+      "imageAlt": "aqi tv app data for washroom"
+    },
+    "webApp": {
+      "title": "Customized Web/Tablet App",
+      "imageAlt": "aqi web or table app for bathroom"
+    },
+    "mobileApp": {
+      "title": "AQI Mobile App",
+      "imageAlt": "aqi app to check washroom data"
+    }
+  },
+  "washroomComparison": {
+    "title": "The Effects of Air Pollution",
+    "highlight": "Fresh Air Machine",
+    "description": "Poor air quality in the washroom or bathroom is caused by high humidity, lack of ventilation, and toxic contaminants, leading to unpleasant smells, harmful pollutants, and health concerns. Fresh air solutions can improve ventilation rates and minimize pollutants, providing a clean and healthy environment for restroom users.",
+    "without": {
+      "title": "Without Fresh Air Solutions",
+      "points": {
+        "point1": "Very bad air quality",
+        "point2": "Uncomfortable experience",
+        "point3": "Increased health concerns",
+        "point4": "Unpleasant smells"
+      },
+      "imageAlt": "without fresh air solution in washroom"
+    },
+    "with": {
+      "title": "With Fresh Air Solutions",
+      "points": {
+        "point1": "Improve ventilation & air quality",
+        "point2": "Comfortable experience",
+        "point3": "Improved health and well-being",
+        "point4": "Reduced airborne pollutants"
+      },
+      "imageAlt": "with fresh air solution in washroom"
+    }
+  },
+  "washroomFaq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "About Air Quality Solution for washrooms / bathroom Have questions? Were here to help.",
+    "questions": {
+      "q1": "1. Why is air quality important in restrooms?",
+      "q2": "2. What are some common sources of poor air quality in restrooms?",
+      "q3": "3. What are some solutions for improving air quality in restrooms?",
+      "q4": "4. How can I tell if the air quality in my restroom is poor?",
+      "q5": "5. Are there any regulations or standards for air quality in restrooms?",
+      "q6": "6. Can air purifiers help improve air quality in restrooms?",
+      "q7": "7. Why is it necessary to have air quality monitoring solutions?",
+      "q8": "8. How often should I clean and maintain the ventilation system in my restroom?"
+    },
+    "answers": {
+      "a1": "- Poor air quality in restrooms can lead to unpleasant odors, the growth of mold and mildew, and the spread of bacteria and viruses. It can also cause health problems for people who have allergies or asthma.",
+      "a2": "- Poor ventilation, lack of proper cleaning, moisture buildup, and the use of harsh cleaning chemicals can all contribute to poor air quality in restrooms.",
+      "a3": "- Some solutions include improving ventilation through the use of fans or opening windows, using natural cleaning products, maintaining a regular cleaning schedule, and addressing any moisture issues.",
+      "a4": "- Signs of poor air quality in restrooms can include unpleasant odors, mold or mildew growth, and visible moisture or condensation on surfaces.",
+      "a5": "- Yes, there are regulations and standards set by organizations such as the Occupational Safety and Health Administration (OSHA) and the ASHRAE that set guidelines for air quality in commercial and public spaces, including restrooms.",
+      "a6": "- Yes, air purifiers can help to remove pollutants and odors from the air in restrooms. However, it's important to choose an air purifier that is designed for use in commercial spaces and to properly maintain and replace the filters as needed.",
+      "a7": "- To know the nature of pollutants and how much are they present in a space so that necessary actions can be taken.",
+      "a8": "- It's recommended to clean and maintain the ventilation system in restrooms at least twice a year, or more frequently if there are signs of poor air quality or moisture buildup."
+    }
+  },
+   "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies.",
+    "logos": {
+      "morgan": "Morgan Stanley Logo",
+      "ola": "Ola Logo",
+      "microsoft": "Microsoft Logo",
+      "iit": "IIT-BHU Logo"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

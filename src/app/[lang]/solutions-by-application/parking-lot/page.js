@@ -1,10 +1,67 @@
-"use client"
 import "./style.css"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import { getServerTranslation } from "@/i18n/server"
+export default async function ParkingLotPage() {
+  const { t } = await getServerTranslation("parking")
 
-export default function ParkingLotPage() {
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: t("industrialApplicationsData.hotel.title"),
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: t("industrialApplicationsData.restaurant.title"),
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: t("industrialApplicationsData.institutes.title"),
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
+  ]
   return (
     <div className="parking-lot-page">
       {/* Banner Section */}
@@ -20,19 +77,16 @@ export default function ParkingLotPage() {
             <div className="col-md-6 banner_quality_box">
               <div className="pocket_title_box school_aqi_box">
                 <h1>
-                  Air quality solutions for <span className="bold_text">Parking Spaces</span>
+                  {t("parkingBanner.title")} <span className="bold_text">{t("parkingBanner.highlight")}</span>
                 </h1>
-                <span style={{ fontSize: "14pt" }}>
-                  A complete solution for air monitoring, data analysis, and fresh air solutions for enclosed car
-                  parking areas and car lots.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("parkingBanner.description")}</span>
                 <ul className="rate_list">
-                  <li>Underground</li>
-                  <li>Multi-storey</li>
-                  <li>Open Area</li>
+                  <li>{t("parkingBanner.types.underground")}</li>
+                  <li>{t("parkingBanner.types.multiStorey")}</li>
+                  <li>{t("parkingBanner.types.openArea")}</li>
                 </ul>
                 <a className="pocket_buy_btn" href="#get_in_touch">
-                  Request A Quote
+                  {t("parkingBanner.cta")}
                 </a>
               </div>
             </div>
@@ -47,14 +101,11 @@ export default function ParkingLotPage() {
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
               <span style={{ fontSize: "24pt" }}>
-                Major air pollutants in <span style={{ color: "#78ae60" }}>Parking Spaces</span>
+                {t("parkingPollutants.title")}{" "}
+                <span style={{ color: "#78ae60" }}>{t("parkingPollutants.highlight")}</span>
               </span>
             </h2>
-            <p>
-              Enclosed parking areas can emit a variety of air pollutants, including carbon monoxide (CO), nitrogen
-              oxides (NOx), volatile organic compounds (VOCs), sulfur oxides (SOx), and particulate matter (PM2.5 &amp;
-              PM10), all of which are harmful to human health.
-            </p>
+            <p>{t("parkingPollutants.description")}</p>
           </div>
         </div>
       </section>
@@ -73,8 +124,8 @@ export default function ParkingLotPage() {
                   height="99"
                 />
                 <div className="feature_wrap_box">
-                  <h2>PM2.5 &amp; PM10</h2>
-                  <p>PM levels increase in poorly ventilated underground parking due to lack of particle dispersion.</p>
+                  <h2>{t("parkingPollutants.pm.title")}</h2>
+                  <p>{t("parkingPollutants.pm.description")}</p>
                 </div>
               </div>
             </div>
@@ -87,10 +138,8 @@ export default function ParkingLotPage() {
                   height="99"
                 />
                 <div className="feature_wrap_box">
-                  <h2>CO</h2>
-                  <p>
-                    Sources can include exhaust emissions from vehicles, gasoline-powered equipment, and generators.
-                  </p>
+                  <h2>{t("parkingPollutants.co.title")}</h2>
+                  <p>{t("parkingPollutants.co.description")}</p>
                 </div>
               </div>
             </div>
@@ -103,10 +152,8 @@ export default function ParkingLotPage() {
                   height="99"
                 />
                 <div className="feature_wrap_box">
-                  <h2>VOC</h2>
-                  <p>
-                    Gasoline and diesel exhaust, as well as emissions from building materials, cleaning agents, etc.
-                  </p>
+                  <h2>{t("parkingPollutants.voc.title")}</h2>
+                  <p>{t("parkingPollutants.voc.description")}</p>
                 </div>
               </div>
             </div>
@@ -128,8 +175,8 @@ export default function ParkingLotPage() {
                   height="99"
                 />
                 <div className="feature_wrap_box">
-                  <h2>SOx</h2>
-                  <p>Carbon and gasoline emissions from various vehicles can release various toxins including SOx.</p>
+                  <h2>{t("parkingPollutants.sox.title")}</h2>
+                  <p>{t("parkingPollutants.sox.description")}</p>
                 </div>
               </div>
             </div>
@@ -142,8 +189,8 @@ export default function ParkingLotPage() {
                   height="99"
                 />
                 <div className="feature_wrap_box">
-                  <h2>NOx</h2>
-                  <p>High-temperature combustion processes like engine operation &amp; fuel combustion can emit NOx.</p>
+                  <h2>{t("parkingPollutants.nox.title")}</h2>
+                  <p>{t("parkingPollutants.nox.description")}</p>
                 </div>
               </div>
             </div>
@@ -168,8 +215,8 @@ export default function ParkingLotPage() {
                   <img src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-icon.png" alt="voc icon" />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>VOCs</h3>
-                  <p>VOCs from vehicles can contribute to the formation of ground-level ozone.</p>
+                  <h3>{t("parkingEffects.vocs.title")}</h3>
+                  <p>{t("parkingEffects.vocs.description")}</p>
                 </div>
               </li>
               <li className="second_school_box">
@@ -180,8 +227,8 @@ export default function ParkingLotPage() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>SOx</h3>
-                  <p>Shifting to alternative fuels can decrease SOx emissions.</p>
+                  <h3>{t("parkingEffects.sox.title")}</h3>
+                  <p>{t("parkingEffects.sox.description")}</p>
                 </div>
               </li>
               <li className="third_school_box">
@@ -192,11 +239,8 @@ export default function ParkingLotPage() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>NOx</h3>
-                  <p>
-                    Driving habits such as avoiding hard acceleration &amp; maintaining a steady speed can reduce NOx
-                    emissions.
-                  </p>
+                  <h3>{t("parkingEffects.nox.title")}</h3>
+                  <p>{t("parkingEffects.nox.description")}</p>
                 </div>
               </li>
               <li className="fourth_school_box">
@@ -207,8 +251,8 @@ export default function ParkingLotPage() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>PM2.5 &amp; PM10</h3>
-                  <p>PM levels increase in poorly ventilated underground parking due to lack of particle dispersion.</p>
+                  <h3>{t("parkingEffects.pm.title")}</h3>
+                  <p>{t("parkingEffects.pm.description")}</p>
                 </div>
               </li>
               <li className="fivth_school_box">
@@ -219,10 +263,8 @@ export default function ParkingLotPage() {
                   />
                 </span>
                 <div className="schhol_text_box">
-                  <h3>CO</h3>
-                  <p>
-                    Sources can include exhaust emissions from vehicles, gasoline-powered equipment, and generators.
-                  </p>
+                  <h3>{t("parkingEffects.co.title")}</h3>
+                  <p>{t("parkingEffects.co.description")}</p>
                 </div>
               </li>
             </ul>
@@ -235,7 +277,8 @@ export default function ParkingLotPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2>
-              Health <span style={{ color: "#78ae60" }}>Effects</span>
+              {t("parkingHealthEffects.title")}{" "}
+              <span style={{ color: "#78ae60" }}>{t("parkingHealthEffects.highlight")}</span>
             </h2>
           </div>
         </div>
@@ -253,7 +296,7 @@ export default function ParkingLotPage() {
                   height="112"
                 />
                 <div className="feature_wrap_box">
-                  <span style={{ fontSize: "12pt" }}>Irritation in the eyes and the respiratory tract</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingHealthEffects.irritation")}</span>
                 </div>
               </div>
             </div>
@@ -266,7 +309,7 @@ export default function ParkingLotPage() {
                   height="112"
                 />
                 <div className="feature_wrap_box">
-                  <span style={{ fontSize: "12pt" }}>Coughing, wheezing shortness of breath</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingHealthEffects.respiratory")}</span>
                 </div>
               </div>
             </div>
@@ -279,7 +322,7 @@ export default function ParkingLotPage() {
                   height="112"
                 />
                 <div className="feature_wrap_box">
-                  <span style={{ fontSize: "12pt" }}>Vomiting &amp; stomach discomfort</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingHealthEffects.stomach")}</span>
                 </div>
               </div>
             </div>
@@ -292,7 +335,7 @@ export default function ParkingLotPage() {
                   height="112"
                 />
                 <div className="feature_wrap_box">
-                  <span style={{ fontSize: "12pt" }}>Dizziness, vertigo, and headaches</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingHealthEffects.dizziness")}</span>
                 </div>
               </div>
             </div>
@@ -305,7 +348,7 @@ export default function ParkingLotPage() {
                   height="112"
                 />
                 <div className="feature_wrap_box">
-                  <span style={{ fontSize: "12pt" }}>Triggers asthma &amp; other related illnesses</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingHealthEffects.asthma")}</span>
                 </div>
               </div>
             </div>
@@ -317,10 +360,7 @@ export default function ParkingLotPage() {
       <section className="parking-types-section">
         <div className="container">
           <div className="text-center mb-5">
-            <p style={{ fontSize: "12pt" }}>
-              Parking lots contribute to air pollution through exhaust emissions from cars, dust, and debris from
-              unpaved surfaces, negatively impacting the health and well-being of nearby communities.
-            </p>
+            <p style={{ fontSize: "12pt" }}>{t("parkingTypes.description")}</p>
           </div>
           <div className="row">
             <div className="col-md-4">
@@ -331,7 +371,7 @@ export default function ParkingLotPage() {
                   alt="Air pollution buildup on car parking multistorey floors"
                 />
                 <h4 style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "13pt" }}>Air pollution buildup on all floors</span>
+                  <span style={{ fontSize: "13pt" }}>{t("parkingTypes.multiStorey")}</span>
                 </h4>
               </div>
             </div>
@@ -343,7 +383,7 @@ export default function ParkingLotPage() {
                   alt="air pollution in open area car parking"
                 />
                 <h4 style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "13pt" }}>Air pollution dispersion to nearby areas</span>
+                  <span style={{ fontSize: "13pt" }}>{t("parkingTypes.openArea")}</span>
                 </h4>
               </div>
             </div>
@@ -355,7 +395,7 @@ export default function ParkingLotPage() {
                   alt="air pollution by car parking in underground close area"
                 />
                 <h4 style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "13pt" }}>Lack of natural air circulation</span>
+                  <span style={{ fontSize: "13pt" }}>{t("parkingTypes.underground")}</span>
                 </h4>
               </div>
             </div>
@@ -368,13 +408,9 @@ export default function ParkingLotPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Air quality <span className="bold_text">Solutions</span>
+              {t("parkingSolutions.title")} <span className="bold_text">{t("parkingSolutions.highlight")}</span>
             </h2>
-            <span style={{ fontSize: "12pt" }}>
-              Prana Air air quality monitoring and air purifying solutions help in making a green infrastructure,
-              improved ventilation, eco-friendly materials, and sustainable transportation options that can reduce air
-              pollution in urban areas, improve health, and promote sustainability.
-            </span>
+            <span style={{ fontSize: "12pt" }}>{t("parkingSolutions.description")}</span>
           </div>
         </div>
       </section>
@@ -395,7 +431,7 @@ export default function ParkingLotPage() {
                   aria-controls="ambient-tab-pane"
                   aria-selected="true"
                 >
-                  Ambient Monitor
+                  {t("parkingSolutions.tabs.ambientMonitor")}
                 </button>
               </li>
             </ul>
@@ -405,27 +441,23 @@ export default function ParkingLotPage() {
                 id="ambient-tab-pane"
                 role="tabpanel"
                 aria-labelledby="ambient-tab"
-
               >
                 <div className="slider_cntr">
                   <div className="slider_details_box">
-                    <h3>Ambient Monitor</h3>
-                    <span>
-                      Its compact design and precise pollutant-sensing technology help you meet and exceed the
-                      expectations of environmental monitoring.
-                    </span>
+                    <h3>{t("parkingSolutions.ambientMonitor.title")}</h3>
+                    <span>{t("parkingSolutions.ambientMonitor.description")}</span>
                     <ul className="airquality_list">
-                      <li>Detects PM, VOCs, CO, SOx, NOx pollutants</li>
-                      <li>Low-cost air monitoring</li>
-                      <li>Multiple connectivity (Wifi, GSM, RS-485)</li>
-                      <li>Data accessibility on mobile, tablet, TV apps, and web-dashboard</li>
+                      <li>{t("parkingSolutions.ambientMonitor.features.feature1")}</li>
+                      <li>{t("parkingSolutions.ambientMonitor.features.feature2")}</li>
+                      <li>{t("parkingSolutions.ambientMonitor.features.feature3")}</li>
+                      <li>{t("parkingSolutions.ambientMonitor.features.feature4")}</li>
                     </ul>
                     <br />
                     <a
                       href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
                       className="knowmore_btn"
                     >
-                      Know More
+                      {t("parkingSolutions.ambientMonitor.cta")}
                     </a>
                   </div>
                   <div className="slider_img_box">
@@ -449,13 +481,10 @@ export default function ParkingLotPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Easy Data <span style={{ color: "#78ae60" }}>Accessibility</span>
+              {t("parkingDataAccess.title")}{" "}
+              <span style={{ color: "#78ae60" }}>{t("parkingDataAccess.highlight")}</span>
             </h2>
-            <p>
-              Easy access to accurate air quality data for parking lots can aid stakeholders in making informed
-              decisions to minimize their impact on public health and the environment, promoting sustainable urban
-              development.
-            </p>
+            <p>{t("parkingDataAccess.description")}</p>
           </div>
           <div className="row">
             <div className="col-md-3">
@@ -466,7 +495,7 @@ export default function ParkingLotPage() {
                   alt="car parking spaces"
                 />
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "12pt" }}>Air quality monitor installed on different parking space</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingDataAccess.steps.step1")}</span>
                 </p>
               </div>
             </div>
@@ -478,7 +507,7 @@ export default function ParkingLotPage() {
                   alt="prana air sensible monitor for parking"
                 />
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "12pt" }}>Air quality monitor connected to Wifi/GSM/RS-485</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingDataAccess.steps.step2")}</span>
                 </p>
               </div>
             </div>
@@ -490,7 +519,7 @@ export default function ParkingLotPage() {
                   alt="aqi cloud storage server"
                 />
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "12pt" }}>Data is stored in AQI Cloud Storage.</span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingDataAccess.steps.step3")}</span>
                 </p>
               </div>
             </div>
@@ -502,9 +531,7 @@ export default function ParkingLotPage() {
                   alt="aqi dashboard web app and mobile app"
                 />
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "12pt" }}>
-                    The data can be accessed on AQI mobile, web-dashboard, tablet apps remotely.
-                  </span>
+                  <span style={{ fontSize: "12pt" }}>{t("parkingDataAccess.steps.step4")}</span>
                 </p>
               </div>
             </div>
@@ -517,12 +544,9 @@ export default function ParkingLotPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Data Freemium <span className="bold_text">Services</span>
+              {t("dataServices.title")} <span className="bold_text">{t("dataServices.highlight")}</span>
             </h2>
-            <p>
-              Our customized dashboard can display or analyze data on the LCD panels or the apps. Use{" "}
-              <strong>AQI</strong> mobile app to find out the air quality around or inside the parking spaces.
-            </p>
+            <p>{t("parkingDataServices.description")}</p>
           </div>
           <div className="row">
             <div className="col-md-4">
@@ -531,7 +555,7 @@ export default function ParkingLotPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/tv-dashboard-app-for-parking-space-for-car-parking-space.jpg"
                   alt="tv dashboard app for parking space for car parking space"
                 />
-                <span style={{ fontSize: "14pt" }}>Smart TV Dashboard App</span>
+                <span style={{ fontSize: "14pt" }}>{t("parkingDataServices.tvDashboard")}</span>
               </div>
             </div>
             <div className="col-md-4">
@@ -540,7 +564,7 @@ export default function ParkingLotPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/customized-aqi-web-or-tablet-app-for-car-parking-space.jpg"
                   alt="aqi mobile app to access air quality data for car parking space"
                 />
-                <span style={{ fontSize: "14pt" }}>Customized Web/Tablet App</span>
+                <span style={{ fontSize: "14pt" }}>{t("parkingDataServices.webTabletApp")}</span>
               </div>
             </div>
             <div className="col-md-4">
@@ -549,7 +573,7 @@ export default function ParkingLotPage() {
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/aqi-mobile-app-to-access-air-quality-data-for-car-parking-space.jpg"
                   alt="customized aqi web or tablet app for car parking space"
                 />
-                <span style={{ fontSize: "14pt" }}>AQI Mobile App</span>
+                <span style={{ fontSize: "14pt" }}>{t("parkingDataServices.mobileApp")}</span>
               </div>
             </div>
           </div>
@@ -561,9 +585,9 @@ export default function ParkingLotPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Frequently Asked <span className="bold_text">Questions</span>
+              {t("faq.title")} <span className="bold_text">{t("faq.highlight")}</span>
             </h2>
-            <p>About Air Quality Solution for car parking spaces Have questions? Were here to help.</p>
+            <p>{t("parkingFaq.description")}</p>
           </div>
           <div className="accordion" id="faqAccordion">
             <div className="accordion-item">
@@ -576,15 +600,12 @@ export default function ParkingLotPage() {
                   aria-expanded="true"
                   aria-controls="faq1"
                 >
-                  1. Why is air quality a concern in parking lots?
+                  {t("parkingFaq.questions.q1")}
                 </button>
               </h2>
               <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                 <div className="accordion-body">
-                  <p>
-                    - Poor air quality in parking lots can have adverse effects on the health of drivers, pedestrians,
-                    and nearby residents. It can also contribute to environmental pollution and climate change.
-                  </p>
+                  <p>{t("parkingFaq.answers.a1")}</p>
                 </div>
               </div>
             </div>
@@ -598,15 +619,12 @@ export default function ParkingLotPage() {
                   aria-expanded="false"
                   aria-controls="faq2"
                 >
-                  2. What are the common sources of air pollution in parking lots?
+                  {t("parkingFaq.questions.q2")}
                 </button>
               </h2>
               <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div className="accordion-body">
-                  <p>
-                    - The most common sources of air pollution in parking lots are exhaust fumes from vehicles, as well
-                    as dust and particulate matter from tires and brakes.
-                  </p>
+                  <p>{t("parkingFaq.answers.a2")}</p>
                 </div>
               </div>
             </div>
@@ -620,16 +638,12 @@ export default function ParkingLotPage() {
                   aria-expanded="false"
                   aria-controls="faq3"
                 >
-                  3. What are the health effects of poor air quality in parking lots?
+                  {t("parkingFaq.questions.q3")}
                 </button>
               </h2>
               <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div className="accordion-body">
-                  <p>
-                    - Exposure to poor air quality in parking lots can cause respiratory problems, eye irritation,
-                    headaches, and other health issues. Prolonged exposure can also increase the risk of cancer and
-                    other chronic diseases.
-                  </p>
+                  <p>{t("parkingFaq.answers.a3")}</p>
                 </div>
               </div>
             </div>
@@ -643,16 +657,12 @@ export default function ParkingLotPage() {
                   aria-expanded="false"
                   aria-controls="faq4"
                 >
-                  4. How can air quality be improved in parking lots?
+                  {t("parkingFaq.questions.q4")}
                 </button>
               </h2>
               <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div className="accordion-body">
-                  <p>
-                    - Air quality in parking lots can be improved by promoting the use of low-emission vehicles,
-                    implementing green infrastructure like trees and plants, continuous monitoring of air quality,
-                    installing air filtration systems, and improving ventilation.
-                  </p>
+                  <p>{t("parkingFaq.answers.a4")}</p>
                 </div>
               </div>
             </div>
@@ -666,16 +676,12 @@ export default function ParkingLotPage() {
                   aria-expanded="false"
                   aria-controls="faq5"
                 >
-                  5. What are some effective air quality monitoring solutions for parking lots?
+                  {t("parkingFaq.questions.q5")}
                 </button>
               </h2>
               <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div className="accordion-body">
-                  <p>
-                    - Air quality monitoring solutions for parking lots can include sensor-based monitoring systems such
-                    as Prana Air monitors, real-time data analytics, and AQI mobile apps that provide users with air
-                    quality information.
-                  </p>
+                  <p>{t("parkingFaq.answers.a5")}</p>
                 </div>
               </div>
             </div>
@@ -689,16 +695,12 @@ export default function ParkingLotPage() {
                   aria-expanded="false"
                   aria-controls="faq6"
                 >
-                  6. How can air quality data collected in parking lots be used for research and public health purposes?
+                  {t("parkingFaq.questions.q6")}
                 </button>
               </h2>
               <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div className="accordion-body">
-                  <p>
-                    - Air quality data collected in parking lots can be used to study the impacts of air pollution on
-                    human health and the environment. It can also inform public policy and regulatory decisions related
-                    to air quality.
-                  </p>
+                  <p>{t("parkingFaq.answers.a6")}</p>
                 </div>
               </div>
             </div>
@@ -711,9 +713,9 @@ export default function ParkingLotPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Our <span className="bold_text">Clientele</span>
+              {t("clientele.title")} <span className="bold_text">{t("clientele.highlight")}</span>
             </h2>
-            <p>We are honored to work with so many well-known companies.</p>
+            <p>{t("clientele.description")}</p>
           </div>
           <div className="row client_logo_section inner_container">
             <div className="col-md-3">
@@ -766,8 +768,8 @@ export default function ParkingLotPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -780,177 +782,16 @@ export default function ParkingLotPage() {
         <div className="container">
           <div className="introducing_box sub_title_box text-center">
             <h2 className="title_heading">
-              Industrial <span className="bold_text">Applications</span>
+              {t("industrial.title")} <span className="bold_text">{t("industrial.highlight")}</span>
             </h2>
-            <p>
-              Prana Air provides a wide range of Smart, inexpensive, and highly accurate air quality solutions for a
-              variety of sectors, regardless of their size.
-            </p>
+            <p>{t("parkingIndustrial.description")}</p>
           </div>
         </div>
       </section>
 
       <section className="inner_container industries_application_section">
         <div className="container">
-          <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            pauseOnHover
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024,
-                },
-                items: 3,
-                partialVisibilityGutter: 40,
-              },
-              mobile: {
-                breakpoint: {
-                  max: 464,
-                  min: 0,
-                },
-                items: 1,
-                partialVisibilityGutter: 30,
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 464,
-                },
-                items: 2,
-                partialVisibilityGutter: 30,
-              },
-            }}
-            rewind={false}
-            rewindWithAnimation={false}
-            rtl={false}
-            shouldResetAutoplay
-            showDots={false}
-            sliderClass=""
-            slidesToSlide={1}
-            swipeable
-          >
-            <div className="item">
-              <div className="app_service_box">
-                <div className="app_img_bx">
-                  <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-retail-outlets.jpg"
-                      alt="air quality solutions for retail stores"
-                    />
-                  </a>
-                </div>
-                <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                  <h4>Solutions for Retail Stores</h4>
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="app_service_box">
-                <div className="app_img_bx">
-                  <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                      alt="air quality solutions for banks"
-                    />
-                  </a>
-                </div>
-                <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                  <h4>Solutions for Bank</h4>
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="app_service_box">
-                <div className="app_img_bx">
-                  <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                      alt="air quality solutions for hotel business"
-                    />
-                  </a>
-                </div>
-                <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                  <h4>Solutions for Hotel</h4>
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="app_service_box">
-                <div className="app_img_bx">
-                  <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                      alt="air quality solutions for restaurants"
-                    />
-                  </a>
-                </div>
-                <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                  <h4>Solutions for Restaurant</h4>
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="app_service_box">
-                <div className="app_img_bx">
-                  <a href="https://www.pranaair.com/solutions-by-application/institutes/">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/07/solution-for-institutions.jpg"
-                      alt="air quality solutions for schools and institutes"
-                    />
-                  </a>
-                </div>
-                <a href="https://www.pranaair.com/solutions-by-application/institutes/">
-                  <h4>Solutions for Institutes</h4>
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="app_service_box">
-                <div className="app_img_bx">
-                  <a href="https://www.pranaair.com/solutions-by-application/cinema-and-theatre/">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg"
-                      alt="air quality solutions for cinema and theatre"
-                    />
-                  </a>
-                </div>
-                <a href="https://www.pranaair.com/solutions-by-application/cinema-and-theatre/">
-                  <h4>Solutions for Cinema/Theatre</h4>
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="app_service_box">
-                <div className="app_img_bx">
-                  <a href="https://www.pranaair.com/solutions-by-application/automobile/">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg"
-                      alt="air quality solutions for automobiles"
-                    />
-                  </a>
-                </div>
-                <a href="https://www.pranaair.com/solutions-by-application/automobile/">
-                  <h4>Solutions for Automobiles</h4>
-                </a>
-              </div>
-            </div>
-          </Carousel>
+          <IndustrialApplicationsCarousel applications={industrialApplications} />
         </div>
       </section>
 

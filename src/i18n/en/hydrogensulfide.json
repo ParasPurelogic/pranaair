@@ -1,0 +1,167 @@
+{
+  "h2s": {
+    "hero": {
+      "title": "Hydrogen Sulfide (H₂S)",
+      "description": "Hydrogen Sulfide, H₂S is a highly toxic gas that has a distinctive and unpleasant rotten-egg smell. It is a colorless gas, that can occur naturally in the air via various crude or natural oil sources, volcanic gases, and spring waters. Trace amounts of H₂S can be found in the atmosphere which is generally not harmful.",
+      "iconAlt": "h2s gas icon"
+    },
+    "environment": {
+      "titleHighlight": "Hydrogen Sulfide",
+      "titleSuffix": "in the Environment",
+      "description": "Hydrogen Sulfide is produced by bacterial breakage of animal, plant, and human waste. It can be produced by volcanic gases, and natural springs as well. H₂S gas dissolved in the soil helps in the root growth of plants.",
+      "imageAlt": "hydrogen sulfide in the environment"
+    },
+    "doYouKnow": {
+      "title": "DO YOU KNOW",
+      "description": "The primary target organ of hydrogen sulfide poisoning is the respiratory system. Once inhaled, hydrogen sulfide is quickly absorbed by the lungs. This may result in cardiac arrest or even death since it affects the neurological and cardiac tissues. The most well-known symptom of hydrogen sulfide poisoning is sudden death among sewage workers. All exposures to H₂S should be avoided because they have severe harmful effects.",
+      "source": "Saiyed, H N. Indian Journal of Medical Research; New Delhi"
+    },
+    "sources": {
+      "title": "Sources of Hydrogen Sulphide Gas",
+      "description": "Hydrogen sulphide gas is produced naturally from decaying organic matter and industrial processes, and can be lethal in high concentrations. Following are some of its potential sources:",
+      "natural": {
+        "title": "Natural Sources",
+        "volcanic": {
+          "title": "Volcanic Gases",
+          "description": "During volcanic activity, volcanoes naturally release H2S gas through their vents and cracks.",
+          "alt": "h2s from volcanic gases"
+        },
+        "gasWells": {
+          "title": "Gas wells",
+          "description": "H2S gas may be present in natural gas wells and could be released during production and drilling.",
+          "alt": "h2s from gas wells"
+        },
+        "reservoirs": {
+          "title": "Natural Gas Reservoirs",
+          "description": "It may be present in natural gas reservoirs, and can be discharged during processing and extraction.",
+          "alt": "h2s from natural reservoirs"
+        },
+        "springs": {
+          "title": "Natural Springs",
+          "description": "As sulfur-containing minerals react with water to produce H2S gas, natural springs can be a source of H2S gas.",
+          "alt": "h2s gas from natural springs"
+        },
+        "petroleum": {
+          "title": "Crude Petroleum",
+          "description": "Crude petroleum may produce H2S gas during extraction and processing, posing health and safety issues.",
+          "alt": "h2s from crude petroleum"
+        }
+      },
+      "industrial": {
+        "title": "Industrial Sources",
+        "sewage": {
+          "title": "Sewage Treatment",
+          "description": "From the decomposition of the organic content in wastewater, sewage treatment plants might emit H2S gas.",
+          "alt": "h2s from sewage treatment plants"
+        },
+        "refineries": {
+          "title": "Refineries",
+          "description": "Refineries can generate H2S gas by the processing of sulphur-containing crude oil. The gas can pose threat to ones health and safety.",
+          "alt": "h2s from refineries"
+        },
+        "paperMills": {
+          "title": "Kraft Paper Mills",
+          "description": "In the pulping process, kraft paper mills use chemicals based on sulphur, which produces H2S gas as a byproduct",
+          "alt": "h2s from kraft paper mills"
+        },
+        "foodProcessing": {
+          "title": "Food Processing",
+          "description": "Food processing units that utilize sulphurs and sulphuric acid emit H2S gas into the surrounding environment.",
+          "alt": "h2s from food processing"
+        },
+        "waterTreatment": {
+          "title": "Wastewater Treatment",
+          "description": "Wastewater treatment plants produce H2S gas during the breakdown of organic matter.",
+          "alt": "h2s from water treatment plants"
+        }
+      }
+    },
+    "healthHazards": {
+      "titlePrefix": "Hydrogen Sulphide gas",
+      "titleHighlight": "Health Hazards",
+      "description": "H2S is extremely hazardous for workers, laborers, miners, etc. that have to work with this gas continuously, on a regular basis. It is a highly flammable gas and can react with steel at ambient temperature. This makes handling, storage, transportation, and working with the gas very laborious and demanding.",
+      "imageAlt": "h2s health hazards",
+      "tableDescription": "Keeping in mind the acute health hazards of occupational hydrogen sulfide emissions, the following table shows the levels of H₂S in PPM by the Industrial Safety and Chemical Hazards Sectional Committee."
+    },
+    "levelsTable": {
+      "header": {
+        "levels": "H₂S levels (PPM)",
+        "duration": "Duration of exposure"
+      },
+      "timeHeaders": {
+        "fifteenMin": "15 min",
+        "moreThanFifteenMin": ">15 min",
+        "oneToFourHours": ">1h-4h",
+        "fourToEightHours": ">4-8ht"
+      },
+      "effects": {
+        "eyeIrritation": "Eye irritation",
+        "maxTolerable": "Maximum tolerable concentration for prolonged exposure",
+        "lossOfSmell": "Loss of olfactory perception",
+        "eyeBronchialIrritation": "Eye and bronchial irritation",
+        "respiratoryDistress": "Serious respiratory distress and asthenia",
+        "eyeSkinIrritation": "Eye and skin irritation",
+        "dangerContinuous": "Danger in case of continuous exposure",
+        "lossOfSmellEye": "Loss of olfactory perception eye",
+        "severeRespiratory": "Severe respiratory distress acute asthenia",
+        "pulmonaryEdema": "Pulmonary edema & risk of death",
+        "lossOfConsciousness": "Loss of consciousness respiratory distress",
+        "riskPulmonaryDeath": "Risk of pulmonary edema and death",
+        "immediateLoss": "Immediate loss of consciousness and respiratory distress"
+      },
+      "source": "* As per BUREAU OF INDIAN STANDARDS"
+    },
+    "preventiveMeasures": {
+      "titlePrefix": "Preventive measures",
+      "titleMiddle": "if you are working with",
+      "titleSuffix": "Hydrogen Sulphide",
+      "monitorStorage": {
+        "title": "Monitor your storage space",
+        "description": "Make sure to monitor the storage area in real time so that any spillages or leakages can be identified and immediate strategies can be adopted.",
+        "alt": "Monitor your storage space"
+      },
+      "temperature": {
+        "title": "Keep an eye on the temperature",
+        "description": "Maintain the temperature where the gas is stored as the higher temperature can decompose the gass elements that can cause the bursting of the storage container.",
+        "alt": "Keep an eye on the temperature"
+      },
+      "noSmoking": {
+        "title": "No smoking near storage area",
+        "description": "The area where the gas is stored should be NO SMOKING AREA as the gas is highly flammable. A small spark can be deadly if there is hydrogen sulphide gas in the air.",
+        "alt": "No smoking near storage area"
+      },
+      "ventilation": {
+        "title": "Ventilation is the key",
+        "description": "The area must be highly ventilated. Hydrogen sulfide is heavier than air. It can easily travel to any source of ignition. That is why ventilation is important in storage areas.",
+        "alt": "Ventilation is the key"
+      },
+      "protectiveGear": {
+        "title": "Use precautionary measure",
+        "description": "Protective gear must be used while handling the gas such as safety goggles, airtight clothing, respiratory protection gear, etc. Prevent direct skin contact.",
+        "alt": "Use precautionary measure"
+      },
+      "fireSafety": {
+        "title": "Ready to use fire safety",
+        "description": "Keep a fire extinguisher in hand if any accident happens. There are high chances of fire as the hydrogen sulphide gas is highly flammable.",
+        "alt": "Ready to use fire safety"
+      }
+    },
+    "detection": {
+      "title": "How To Detect",
+      "titleHighlight": "H₂S Gas",
+      "description": "An air quality monitor/sensor can detect H2S gas and furnish real-time information on its concentration in the air. This data can aid in making well-informed decisions to safeguard public health and the environment.",
+      "sensor": {
+        "title": "H₂S Sensor",
+        "alt": "prana air h2s sensor of highly accurate"
+      },
+      "monitor": {
+        "title": "H₂S Monitor",
+        "alt": "h2s ambient air quality monitor"
+      }
+    },
+    "chooseMonitor": {
+      "title": "Choose An Air Quality Monitor To Measure Hydrogen Sulfide (H₂S) Gas",
+      "imageAlt": "prana air caaqms outdoor monitor"
+    }
+  }
+}

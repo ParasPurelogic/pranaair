@@ -1,14 +1,14 @@
-
 import Image from "next/image"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Link from "next/link"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import ProductCarousel from "@/Components/Pages/OutPmSensor/product-carousel"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function PMSensorPage() {
+export default async function PMSensorPage() {
+  const { t } = await getServerTranslation("outdoor-pm-sensor")
 
-  // Responsive settings for the applications carousel
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -27,8 +27,6 @@ export default function PMSensorPage() {
       items: 1,
     },
   }
-
-  // Responsive settings for the "You may also like" carousel
   const alsoLikeResponsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -48,29 +46,6 @@ export default function PMSensorPage() {
     },
   }
 
-  const appSensor = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1200 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 1200, min: 992 },
-      items: 4,
-    },
-    tablet: {
-      breakpoint: { max: 992, min: 768 },
-      items: 3,
-    },
-    mobile: {
-      breakpoint: { max: 768, min: 576 },
-      items: 2,
-    },
-    smallMobile: {
-      breakpoint: { max: 576, min: 0 },
-      items: 1,
-    },
-  }
-
   return (
     <div>
       {/* Hero Section */}
@@ -79,14 +54,17 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="hero-heading">
-                <h1>PM SENSOR (LASER)</h1>
+                <h1>{t("pmSensorHero.title")}</h1>
                 <p>
-                  (PAS-OUT-01) - For outdoor air quality monitoring applications. Range up to{" "}
-                  <span className="range">(0-31,000 µg/m³)</span>
+                  {t("pmSensorHero.description.part1")}{" "}
+                  <span className="range">{t("pmSensorHero.description.range")}</span>
                 </p>
                 <a href="#contact">
-                  Request A Quote{" "}
-                  <img src="https://www.pranaair.com/wp-content/uploads/2024/12/btn-icon.jpg" alt="button icon" />
+                  {t("pmSensorHero.requestButton")}{" "}
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2024/12/btn-icon.jpg"
+                    alt={t("pmSensorHero.buttonIconAlt")}
+                  />
                 </a>
               </div>
             </div>
@@ -101,8 +79,8 @@ export default function PMSensorPage() {
             <div className="col-md-6">
               <div className="feature-heading">
                 <h2>
-                  Particulate Matter (PM) Sensor
-                  <span className="amazing">amazing features</span>
+                  {t("pmSensorFeature.title")}
+                  <span className="amazing">{t("pmSensorFeature.subtitle")}</span>
                 </h2>
               </div>
             </div>
@@ -120,62 +98,62 @@ export default function PMSensorPage() {
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Fan-closed-loop-control-stable-flow.png"
-                      alt="pm sensor of Fan"
+                      alt={t("pmSensorAlt.fanControl")}
                     />
-                    <h3>Fan control for steady airflow</h3>
+                    <h3>{t("pmSensorFeatures.fanControl")}</h3>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Own-fault-detection-function.png"
-                      alt="pm sensor of Own fault"
+                      alt={t("pmSensorAlt.faultDetection")}
                     />
-                    <h3>Built-in fault detection</h3>
+                    <h3>{t("pmSensorFeatures.faultDetection")}</h3>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/anti-dust-duct.png"
-                      alt="pm sensor of Design"
+                      alt={t("pmSensorAlt.dustProof")}
                     />
-                    <h3>Dust-proof duct design</h3>
+                    <h3>{t("pmSensorFeatures.dustProof")}</h3>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/easy-to-install.png"
-                      alt="pm sensor of Small size and easy to install"
+                      alt={t("pmSensorAlt.smallSize")}
                     />
                     <div className="img-bx">
-                      <h3>Small size and easy to install</h3>
+                      <h3>{t("pmSensorFeatures.smallSize")}</h3>
                     </div>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/anti-interferene-ability.png"
-                      alt="pm sensor of Strong"
+                      alt={t("pmSensorAlt.interference")}
                     />
-                    <h3>Excellent resistance to interference</h3>
+                    <h3>{t("pmSensorFeatures.interference")}</h3>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/moisture-proof-design.png"
-                      alt="pm sensor of Circuit board"
+                      alt={t("pmSensorAlt.moistureResistant")}
                     />
-                    <h3>Moisture-resistant circuit board</h3>
+                    <h3>{t("pmSensorFeatures.moistureResistant")}</h3>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/multiple-communication.png"
-                      alt="pm sensor of Multiple communication modes"
+                      alt={t("pmSensorAlt.communication")}
                     />
                     <div className="img-bx">
-                      <h3>Multiple communication modes</h3>
+                      <h3>{t("pmSensorFeatures.communication")}</h3>
                     </div>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/fast-detection-speed.png"
-                      alt="pm sensor of Fast"
+                      alt={t("pmSensorAlt.detection")}
                     />
-                    <h3>Quick detection capability</h3>
+                    <h3>{t("pmSensorFeatures.detection")}</h3>
                   </li>
                 </ul>
               </div>
@@ -187,25 +165,25 @@ export default function PMSensorPage() {
                   <div className="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Front-View.webp"
-                      alt="Prana Air PM Sensor"
+                      alt={t("pmSensorAlt.frontView")}
                     />
                   </div>
                   <div className="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Particulate-matter-Sensor-Side-View.webp"
-                      alt="Prana Air PM2.5 Sensor"
+                      alt={t("pmSensorAlt.sideView")}
                     />
                   </div>
                   <div className="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Front-View.webp"
-                      alt="Prana Air PM Sensor of metallic body"
+                      alt={t("pmSensorAlt.metallicFront")}
                     />
                   </div>
                   <div className="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Side-View.webp"
-                      alt="Prana Air PM2.5 Sensor of side view"
+                      alt={t("pmSensorAlt.metallicSide")}
                     />
                   </div>
                 </div>
@@ -225,7 +203,7 @@ export default function PMSensorPage() {
                     >
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Front-View.webp"
-                        alt="Prana Air PM Sensor"
+                        alt={t("pmSensorAlt.frontView")}
                       />
                     </button>
                   </li>
@@ -242,7 +220,7 @@ export default function PMSensorPage() {
                     >
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/Particulate-matter-Sensor-Side-View.webp"
-                        alt="Prana Air PM2.5 Sensor"
+                        alt={t("pmSensorAlt.sideView")}
                       />
                     </button>
                   </li>
@@ -259,7 +237,7 @@ export default function PMSensorPage() {
                     >
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Front-View.webp"
-                        alt="Prana Air PM Sensor of metallic body"
+                        alt={t("pmSensorAlt.metallicFront")}
                       />
                     </button>
                   </li>
@@ -276,7 +254,7 @@ export default function PMSensorPage() {
                     >
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/PM-Sensor-Metallic-Side-View.webp"
-                        alt="Prana Air PM2.5 Sensor of side view"
+                        alt={t("pmSensorAlt.metallicSide")}
                       />
                     </button>
                   </li>
@@ -294,17 +272,17 @@ export default function PMSensorPage() {
             <div className="col-md-5">
               <div className="feature-heading">
                 <h2>
-                  PM Sensor
-                  <span className="amazing">Laser Technology</span>
+                  {t("pmTechSection.title")}
+                  <span className="amazing">{t("pmTechSection.laserTechnology")}</span>
                 </h2>
-                <p>Light scattering Method</p>
+                <p>{t("pmTechSection.lightScattering")}</p>
               </div>
             </div>
             <div className="col-md-7">
               <div className="tech-img">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/pm-laser-sensor-light-scattering-working-mechanism.webp"
-                  alt="Prana Air PM laser sensor light scattering working mechanism"
+                  alt={t("pmTechSection.imgAlt")}
                 />
               </div>
             </div>
@@ -319,19 +297,19 @@ export default function PMSensorPage() {
             <div className="col-md-8">
               <div className="range-para">
                 <p>
-                  PAS-OUT-01 is a Light-based designed Built for industries, digital laser sensor to measure particulate
-                  matter – dust particles. Since it comes with an Inbuilt<span className="green"> laser</span> and
-                  Light-based receiving module. Different than its contemporaries, PAS-OUT-01 is Set accurately for PM10
-                  and PM2.5 Apart. Because it works on the principle of{" "}
-                  <span className="green"> 90° light Spreading.</span>
+                  {t("rangeSection.description.part1")}
+                  <span className="green">{t("rangeSection.description.laser")}</span>
+                  {t("rangeSection.description.part2")}
+                  <span className="green">{t("rangeSection.description.lightSpreading")}</span>
+                  {t("rangeSection.description.part3")}
                 </p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="range-heading">
                 <h3>
-                  Range upto
-                  <strong>(0-31,000 µg/m³)</strong>
+                  {t("rangeSection.rangeTitle")}
+                  <strong>{t("rangeSection.rangeValue")}</strong>
                 </h3>
               </div>
             </div>
@@ -345,7 +323,7 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="seamless-txt">
-                <h2>Seamless Connectivity</h2>
+                <h2>{t("seamlessSection.title")}</h2>
               </div>
             </div>
           </div>
@@ -358,22 +336,22 @@ export default function PMSensorPage() {
                       <img
                         className="pm-sensor"
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/pm-sensor-of-laser.webp"
-                        alt="Prana Air PM2.5 sensor"
+                        alt={t("seamlessSection.pmSensorAlt")}
                       />
                     </li>
                     <li>
-                      <h3>PM Sensor</h3>
+                      <h3>{t("seamlessSection.pmSensor")}</h3>
                     </li>
                   </ul>
                   <ul>
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/pm-sensor-and-air-quality-monitor.webp"
-                        alt="pm sensor and air quality monitor"
+                        alt={t("seamlessSection.monitorAndSensorAlt")}
                       />
                     </li>
                     <li>
-                      <h3>Monitor and PM Sensor</h3>
+                      <h3>{t("seamlessSection.monitorAndSensor")}</h3>
                     </li>
                   </ul>
                 </div>
@@ -382,22 +360,22 @@ export default function PMSensorPage() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/wifi-connectivity.webp"
-                        alt="wifi connectivity"
+                        alt={t("seamlessSection.wifiAlt")}
                       />
                     </li>
                     <li>
-                      <h3>WiFi connectivity to the monitor</h3>
+                      <h3>{t("seamlessSection.wifiConnectivity")}</h3>
                     </li>
                   </ul>
                   <ul>
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/aqi-cloud.png"
-                        alt="aqi cloud data storage"
+                        alt={t("seamlessSection.cloudAlt")}
                       />
                     </li>
                     <li>
-                      <h3>Sensors Data transmission to cloud.</h3>
+                      <h3>{t("seamlessSection.cloudTransmission")}</h3>
                     </li>
                   </ul>
                 </div>
@@ -406,11 +384,11 @@ export default function PMSensorPage() {
                     <li>
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2025/01/aqi-monitoring-platforms.webp"
-                        alt="aqi monitoring platforms"
+                        alt={t("seamlessSection.platformsAlt")}
                       />
                     </li>
                     <li>
-                      <h3>Displaying the Sensors data on mobile, laptop or TV.</h3>
+                      <h3>{t("seamlessSection.displayingData")}</h3>
                     </li>
                   </ul>
                 </div>
@@ -418,12 +396,7 @@ export default function PMSensorPage() {
             </div>
             <div className="col-md-3">
               <div className="seamless-para">
-                <p>
-                  The PM sensor has a compact design which allows the sensor to fit easily in any air quality monitor.
-                  Besides, anyone can integrate or change the sensor without requiring advanced technical knowledge.
-                  Also, the network access of the sensor is smooth as can directly transfer the data from the sensor to
-                  cloud for easy technology for users.
-                </p>
+                <p>{t("seamlessSection.description")}</p>
               </div>
             </div>
           </div>
@@ -436,11 +409,8 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="tab-heading">
-                <h2>PM Sensors for outdoor and indoor</h2>
-                <p>
-                  The PM Sensors has two options that meet the specific need of each environment so it offer optimal
-                  performance and better air quality monitoring.
-                </p>
+                <h2>{t("indoorOutdoorSection.title")}</h2>
+                <p>{t("indoorOutdoorSection.description")}</p>
               </div>
             </div>
           </div>
@@ -460,7 +430,7 @@ export default function PMSensorPage() {
                       aria-controls="outdoor"
                       aria-selected="true"
                     >
-                      Outdoor PM Sensor <i className="far fa-arrow-alt-circle-right"></i>
+                      {t("indoorOutdoorSection.outdoorTab")} <i className="far fa-arrow-alt-circle-right"></i>
                     </button>
                   </li>
                   <li className="nav-item" role="presentation">
@@ -474,7 +444,7 @@ export default function PMSensorPage() {
                       aria-controls="indoor"
                       aria-selected="false"
                     >
-                      Indoor PM Sensor <i className="far fa-arrow-alt-circle-right"></i>
+                      {t("indoorOutdoorSection.indoorTab")} <i className="far fa-arrow-alt-circle-right"></i>
                     </button>
                   </li>
                 </ul>
@@ -487,19 +457,15 @@ export default function PMSensorPage() {
                         <div className="col-md-6">
                           <div className="tab-content-box">
                             <h2>
-                              Experience the ease of advanced <strong> Outdoor Sensor</strong>
+                              {t("indoorOutdoorSection.outdoor.titlePart1")}{" "}
+                              <strong>{t("indoorOutdoorSection.outdoor.titlePart2")}</strong>
                             </h2>
-                            <p>
-                              The outdoor PM sensor is built to resist any harsh environmental conditions. Hence, the
-                              advanced technology monitors the particulate matter levels in any open area. Moreover,
-                              with advanced filtration systems, the sensor offers consistent and reliable air quality
-                              data.
-                            </p>
+                            <p>{t("indoorOutdoorSection.outdoor.description")}</p>
                             <a href="#contact">
-                              Request A Quote{" "}
+                              {t("indoorOutdoorSection.requestQuote")}{" "}
                               <img
                                 src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
-                                alt="link icon"
+                                alt={t("indoorOutdoorSection.linkIconAlt")}
                               />
                             </a>
                           </div>
@@ -508,7 +474,7 @@ export default function PMSensorPage() {
                           <div className="sensor-img">
                             <img
                               src="https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-outdoor-pm-sensor.webp"
-                              alt="prana air outdoor pm sensor"
+                              alt={t("indoorOutdoorSection.outdoor.imgAlt")}
                             />
                           </div>
                         </div>
@@ -522,20 +488,15 @@ export default function PMSensorPage() {
                         <div className="col-md-6">
                           <div className="tab-content-box">
                             <h2>
-                              Experience the ease of advanced <strong> Indoor Sensor</strong>
+                              {t("indoorOutdoorSection.indoor.titlePart1")}{" "}
+                              <strong>{t("indoorOutdoorSection.indoor.titlePart2")}</strong>
                             </h2>
-                            <p>
-                              Indoor PM Sensor is designed to monitor air quality in closed spaces such as homes,
-                              offices, schools and other indoor spaces. By doing so, it ensures the accurate measurement
-                              of particulate matter levels in narrow spaces. Moreover, it is highly sensitive and can
-                              detect even a small changes in the air, offering a reliable means of keeping a healthy
-                              indoor atmosphere.
-                            </p>
+                            <p>{t("indoorOutdoorSection.indoor.description")}</p>
                             <a href="#">
-                              Request A Quote{" "}
+                              {t("indoorOutdoorSection.requestQuote")}{" "}
                               <img
                                 src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
-                                alt="link icon"
+                                alt={t("indoorOutdoorSection.linkIconAlt")}
                               />
                             </a>
                           </div>
@@ -544,7 +505,7 @@ export default function PMSensorPage() {
                           <div className="sensor-img">
                             <img
                               src="https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-indoor-pm-sensor.webp"
-                              alt="prana air indoor pm sensor"
+                              alt={t("indoorOutdoorSection.indoor.imgAlt")}
                             />
                           </div>
                         </div>
@@ -564,45 +525,50 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-8">
               <div className="size-compare-img">
-                <h2>PM Size Comparison</h2>
+                <h2>{t("sizeComparisonSection.title")}</h2>
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2024/12/PM2.5-size.webp"
-                  alt="PM pollutant size comparison with human hair"
+                  alt={t("sizeComparisonSection.mainImgAlt")}
                 />
               </div>
             </div>
             <div className="col-md-4">
               <div className="size-compare-box-txt">
-                <p>
-                  Particulate Matter or PM is a mixture of tiny particles or liquid droplets. And these also emits in
-                  the air from different sources. As a result, these particles can enter the human lungs and cause many
-                  harm to health.
-                </p>
+                <p>{t("sizeComparisonSection.description")}</p>
                 <ul>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/12/pm1.webp" alt="PM1 size 1µm" />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/12/pm1.webp"
+                      alt={t("sizeComparisonSection.pm1.imgAlt")}
+                    />
                   </li>
                   <li>
-                    <h3>PM1</h3>
-                    <p>Smaller than or 1µm</p>
+                    <h3>{t("sizeComparisonSection.pm1.title")}</h3>
+                    <p>{t("sizeComparisonSection.pm1.size")}</p>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2025/01/pm2.5.png" alt="PM2 size 2.5µm" />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2025/01/pm2.5.png"
+                      alt={t("sizeComparisonSection.pm25.imgAlt")}
+                    />
                   </li>
                   <li>
-                    <h3>PM2.5</h3>
-                    <p>Smaller than or 2.5µm</p>
+                    <h3>{t("sizeComparisonSection.pm25.title")}</h3>
+                    <p>{t("sizeComparisonSection.pm25.size")}</p>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2025/01/pm10.png" alt="PM10 size 10µm" />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2025/01/pm10.png"
+                      alt={t("sizeComparisonSection.pm10.imgAlt")}
+                    />
                   </li>
                   <li>
-                    <h3>PM10</h3>
-                    <p>Smaller than or 10µm</p>
+                    <h3>{t("sizeComparisonSection.pm10.title")}</h3>
+                    <p>{t("sizeComparisonSection.pm10.size")}</p>
                   </li>
                 </ul>
               </div>
@@ -616,11 +582,13 @@ export default function PMSensorPage() {
         <div className="row">
           <div className="col-md-12">
             <div className="particulate-matter-heading">
-              <h2>The Tiny Threats in the Air: Particulate Matter</h2>
+              <h2>{t("particulateMatterSection.title")}</h2>
               <p>
-                Particulate Matter (PM) comes in various sizes as{" "}
-                <a href="https://www.aqi.in/blog/pm2-5-pollution-is-threatening-the-tourism-industry-in-bali/">PM2.5</a>{" "}
-                (particles smaller than 2.5 microns) and PM10 (particles smaller than 10 microns) the most common.
+                {t("particulateMatterSection.descriptionPart1")}{" "}
+                <a href="https://www.aqi.in/blog/pm2-5-pollution-is-threatening-the-tourism-industry-in-bali/">
+                  {t("particulateMatterSection.pm25Link")}
+                </a>{" "}
+                {t("particulateMatterSection.descriptionPart2")}
               </p>
             </div>
           </div>
@@ -635,39 +603,51 @@ export default function PMSensorPage() {
               <div className="experince-heading">
                 <ul>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/12/pm1.webp" alt="PM1 pollutant icon" />
-                    PM1
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/12/pm1.webp"
+                      alt={t("particulateMatterSection.experience.pm1Alt")}
+                    />
+                    {t("particulateMatterSection.experience.pm1")}
                   </li>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2025/01/pm10.png" alt="PM10 pollutant icon" />
-                    PM10
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2025/01/pm10.png"
+                      alt={t("particulateMatterSection.experience.pm10Alt")}
+                    />
+                    {t("particulateMatterSection.experience.pm10")}
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/pm2.5.png"
-                      alt="PM2.5 pollutant icon"
+                      alt={t("particulateMatterSection.experience.pm25Alt")}
                     />
-                    PM2.5
+                    {t("particulateMatterSection.experience.pm25")}
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/pm2.5.png"
-                      alt="PM2.5 pollutant icon"
+                      alt={t("particulateMatterSection.experience.pm25Alt")}
                     />
-                    PM2.5
+                    {t("particulateMatterSection.experience.pm25")}
                   </li>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/12/pm1.webp" alt="PM1 pollutant icon" />
-                    PM1
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/12/pm1.webp"
+                      alt={t("particulateMatterSection.experience.pm1Alt")}
+                    />
+                    {t("particulateMatterSection.experience.pm1")}
                   </li>
                   <li>
-                    <img src="https://www.pranaair.com/wp-content/uploads/2025/01/pm10.png" alt="PM10 pollutant icon" />
-                    PM10
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2025/01/pm10.png"
+                      alt={t("particulateMatterSection.experience.pm10Alt")}
+                    />
+                    {t("particulateMatterSection.experience.pm10")}
                   </li>
                 </ul>
               </div>
               <div className="pm-indoor-heading">
-                <h3>Know about each PM size</h3>
+                <h3>{t("particulateMatterSection.knowAbout")}</h3>
               </div>
             </div>
           </div>
@@ -681,35 +661,20 @@ export default function PMSensorPage() {
             <div className="col-md-12">
               <ul>
                 <li>
-                  <h4>PM1</h4>
-                  <p>
-                    PM1 are the particles with a diameter of 1 micrometre or smaller which also includes nanoparticles
-                    and emissions from burning. Hence, these can easily enter the blood flow and cause health
-                    conditions.
-                  </p>
+                  <h4>{t("particulateMatterSection.details.pm1.title")}</h4>
+                  <p>{t("particulateMatterSection.details.pm1.description")}</p>
                 </li>
                 <li>
-                  <h4>PM2.5</h4>
-                  <p>
-                    PM2.5 refers to fine particles with a diameter of 2.5 micrometres or more smaller. Because of their
-                    tiny size, these are enough to enter deep into the lungs and result in severe health issues.
-                  </p>
+                  <h4>{t("particulateMatterSection.details.pm25.title")}</h4>
+                  <p>{t("particulateMatterSection.details.pm25.description")}</p>
                 </li>
                 <li>
-                  <h4>PM10</h4>
-                  <p>
-                    The particles in the air with a diameter of 10 micrometres or others smaller than PM10. It includes
-                    dust, pollen and mould and is large enough that mostly trapped in the nose or throat and results in
-                    allergies.
-                  </p>
+                  <h4>{t("particulateMatterSection.details.pm10.title")}</h4>
+                  <p>{t("particulateMatterSection.details.pm10.description")}</p>
                 </li>
                 <li>
-                  <h4>Particle Count</h4>
-                  <p>
-                    Lastly, these represent the total number of particles present in the air, without considering their
-                    individual sizes. Instead, it focuses on the overall particle load, including particles of various
-                    sizes.
-                  </p>
+                  <h4>{t("particulateMatterSection.details.particleCount.title")}</h4>
+                  <p>{t("particulateMatterSection.details.particleCount.description")}</p>
                 </li>
               </ul>
             </div>
@@ -723,42 +688,42 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="source-box">
-                <h2>Sources:</h2>
+                <h2>{t("sourceSection.title")}</h2>
                 <ul>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Vehicle-Exhaust.webp"
-                      alt="Vehicle Exhaust as source of PM pollutant"
+                      alt={t("sourceSection.sources.vehicleExhaust.alt")}
                     />
-                    Vehicle Exhaust
+                    {t("sourceSection.sources.vehicleExhaust.label")}
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Factory-Emission.webp"
-                      alt="Factory Emission as source of PM pollutant"
+                      alt={t("sourceSection.sources.factoryEmission.alt")}
                     />
-                    Factory Emission
+                    {t("sourceSection.sources.factoryEmission.label")}
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Construction-sites-area.webp"
-                      alt="Construction sites as source of PM pollutant"
+                      alt={t("sourceSection.sources.constructionSites.alt")}
                     />
-                    Construction sites
+                    {t("sourceSection.sources.constructionSites.label")}
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Wildfires.webp"
-                      alt="Wildfires as source of PM pollutant"
+                      alt={t("sourceSection.sources.wildfires.alt")}
                     />
-                    Wildfires
+                    {t("sourceSection.sources.wildfires.label")}
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Dusty-roads.webp"
-                      alt="Dusty roads as source of PM pollutant"
+                      alt={t("sourceSection.sources.dustyRoads.alt")}
                     />
-                    Dusty roads
+                    {t("sourceSection.sources.dustyRoads.label")}
                   </li>
                 </ul>
               </div>
@@ -773,12 +738,12 @@ export default function PMSensorPage() {
           <div className="row border-line">
             <div className="col-md-12">
               <div className="data-compare-chart-heading">
-                <h2>Data Accuracy Level Comparison Chart With BAM</h2>
+                <h2>{t("compareChartSection.title")}</h2>
               </div>
               <div className="data-compare-chart-img">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/data-accuracy-of-prana-air-pm2.5-sensor.webp"
-                  alt="data accuracy of Prana Air PM2.5 sensor comparing with BAM data"
+                  alt={t("compareChartSection.chartImgAlt")}
                 />
               </div>
             </div>
@@ -786,22 +751,19 @@ export default function PMSensorPage() {
           <div className="row border-line border-left">
             <div className="col-md-6">
               <div className="comapre-chart-para">
-                <p>
-                  In a comprehensive comparative study evaluating the data accuracy of Prana Airs PM2.5 sensor against a
-                  high-end Beta Attenuation Monitoring (BAM) system.
-                </p>
+                <p>{t("compareChartSection.paragraph1")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="comapre-chart-para">
-                <p>Furthermore, the results demonstrated a high correlation between the two devices.</p>
+                <p>{t("compareChartSection.paragraph2")}</p>
               </div>
             </div>
           </div>
           <div className="row border-line border-bg">
             <div className="col-md-12">
               <div className="clinet-heading">
-                <h3>Happy to serve our clients</h3>
+                <h3>{t("compareChartSection.clients.title")}</h3>
               </div>
               <div className="container">
                 <div className="marquee">
@@ -812,14 +774,14 @@ export default function PMSensorPage() {
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/Symbiosis-Pune.webp"
-                            alt="Symbiosis Pune logo"
+                            alt={t("compareChartSection.clients.logos.symbiosis")}
                           />
                         </li>
                         <li>
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/taj.webp"
-                            alt="taj logo"
+                            alt={t("compareChartSection.clients.logos.taj")}
                           />
                         </li>
                       </ul>
@@ -830,14 +792,14 @@ export default function PMSensorPage() {
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/TATA-Steel-Jamshedpur.webp"
-                            alt="TATA Steel Jamshedpur logo"
+                            alt={t("compareChartSection.clients.logos.tataSteel")}
                           />
                         </li>
                         <li>
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/UOC.webp"
-                            alt="UOC logo"
+                            alt={t("compareChartSection.clients.logos.uoc")}
                           />
                         </li>
                       </ul>
@@ -848,14 +810,14 @@ export default function PMSensorPage() {
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/WRI.webp"
-                            alt="WRI logo"
+                            alt={t("compareChartSection.clients.logos.wri")}
                           />
                         </li>
                         <li>
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/Adani-Group.webp"
-                            alt="Adani Group logo"
+                            alt={t("compareChartSection.clients.logos.adani")}
                           />
                         </li>
                       </ul>
@@ -866,14 +828,14 @@ export default function PMSensorPage() {
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/BARC-Bhabha-Atomic-Research-Centre.webp"
-                            alt="BARC Bhabha Atomic Research Centre logo"
+                            alt={t("compareChartSection.clients.logos.barc")}
                           />
                         </li>
                         <li>
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/BCG-Boston-Consulting-Group.webp"
-                            alt="BCG Boston Consulting Group logo"
+                            alt={t("compareChartSection.clients.logos.bcg")}
                           />
                         </li>
                       </ul>
@@ -884,14 +846,14 @@ export default function PMSensorPage() {
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/BIRLA-Ultratech.webp"
-                            alt="BIRLA Ultratech logo"
+                            alt={t("compareChartSection.clients.logos.birla")}
                           />
                         </li>
                         <li>
                           <img
                             className="arrow"
                             src="https://www.pranaair.com/wp-content/uploads/2025/01/BITS-pilani.webp"
-                            alt="BITS pilani logo"
+                            alt={t("compareChartSection.clients.logos.bits")}
                           />
                         </li>
                       </ul>
@@ -911,9 +873,9 @@ export default function PMSensorPage() {
             <div className="col-sm-6">
               <div className="feature-heading fadeInUp animated">
                 <h2>
-                  PM air quality sensor
+                  {t("applicationsSection.title")}
                   <br />
-                  <span className="amazing">applications</span>
+                  <span className="amazing">{t("applicationsSection.subtitle")}</span>
                 </h2>
               </div>
             </div>
@@ -927,117 +889,117 @@ export default function PMSensorPage() {
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Airport.webp"
-                      alt="application of PM sensor in airports"
+                      alt={t("applicationsSection.applications.airport.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Airport</h4>
+                  <h4>{t("applicationsSection.applications.airport.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Homes.webp"
-                      alt="application of PM sensor at home"
+                      alt={t("applicationsSection.applications.homes.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Homes</h4>
+                  <h4>{t("applicationsSection.applications.homes.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Office.webp"
-                      alt="application of PM sensor in offices"
+                      alt={t("applicationsSection.applications.offices.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Offices</h4>
+                  <h4>{t("applicationsSection.applications.offices.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Railway-stations.webp"
-                      alt="application of PM sensor in railway stations"
+                      alt={t("applicationsSection.applications.railwayStations.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Railway Stations</h4>
+                  <h4>{t("applicationsSection.applications.railwayStations.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Schools.webp"
-                      alt="application of PM sensor in schools"
+                      alt={t("applicationsSection.applications.schools.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Schools</h4>
+                  <h4>{t("applicationsSection.applications.schools.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Smart-citie.webp"
-                      alt="application of PM sensor for smart cities"
+                      alt={t("applicationsSection.applications.smartCities.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Smart cities</h4>
+                  <h4>{t("applicationsSection.applications.smartCities.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Construction-sites.webp"
-                      alt="application of PM sensor for construction sites"
+                      alt={t("applicationsSection.applications.constructionSites.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Construction sites</h4>
+                  <h4>{t("applicationsSection.applications.constructionSites.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Factories-and-warehouse.webp"
-                      alt="application of PM sensor in factories and warehouses"
+                      alt={t("applicationsSection.applications.factories.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Factories and warehouse</h4>
+                  <h4>{t("applicationsSection.applications.factories.title")}</h4>
                 </div>
 
                 <div className="app-sensor-title">
                   <p>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Health-care-facilities.webp"
-                      alt="application of PM sensor in healthcare facilities"
+                      alt={t("applicationsSection.applications.healthcare.alt")}
                       width={300}
                       height={250}
                       className="img-fluid"
                     />
                   </p>
-                  <h4>Health care facilities</h4>
+                  <h4>{t("applicationsSection.applications.healthcare.title")}</h4>
                 </div>
               </ProductCarousel>
             </div>
@@ -1051,22 +1013,18 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-sm-6">
               <div className="construction-heading fadeInUp animated">
-                <h2>Construction Sites Covered by Prana Airs PM2.5 Sensor</h2>
-                <p>
-                  The PM Sensor has been used across multiple construction sites to monitor high PM levels produced from
-                  various activities at these sites. As a result, it helps ensure real-time tracking of air quality and
-                  enables timely interventions when necessary.
-                </p>
+                <h2>{t("constructionSection.title")}</h2>
+                <p>{t("constructionSection.description")}</p>
               </div>
             </div>
             <div className="col-sm-6">
               <div className="construction-btn fadeInUp animated">
                 <p>
                   <Link href="https://www.pranaair.com/solutions-by-application/constructions/" className="btn-link">
-                    Construction Sites{" "}
+                    {t("constructionSection.linkText")}{" "}
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
-                      alt="button icon"
+                      alt={t("constructionSection.buttonIconAlt")}
                       width={20}
                       height={20}
                     />
@@ -1081,23 +1039,23 @@ export default function PMSensorPage() {
               <div className="construction-bg">
                 <ul className="construct-site">
                   <li>
-                    <h3>500+</h3>
+                    <h3>{t("constructionSection.stats.count")}</h3>
                   </li>
-                  <li>Sites Covered</li>
+                  <li>{t("constructionSection.stats.label")}</li>
                 </ul>
                 <ul className="dpcc">
                   <li>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/DPCC-logo.png"
-                      alt="DPCC Logo"
+                      alt={t("constructionSection.dpcc.logoAlt")}
                       width={80}
                       height={80}
                     />
                   </li>
                   <li>
-                    Sites Covered
+                    {t("constructionSection.dpcc.text")}
                     <br />
-                    <h4>DPCC Guidelines</h4>
+                    <h4>{t("constructionSection.dpcc.guidelines")}</h4>
                   </li>
                 </ul>
               </div>
@@ -1114,8 +1072,8 @@ export default function PMSensorPage() {
             <div className="col-md-6">
               <div className="feature-heading">
                 <h2>
-                  Outdoor PM
-                  <span className="amazing">Case Study</span>
+                  {t("caseStudiesSection.title")}
+                  <span className="amazing">{t("caseStudiesSection.subtitle")}</span>
                 </h2>
               </div>
             </div>
@@ -1123,23 +1081,21 @@ export default function PMSensorPage() {
           <div className="row laser-br">
             <div className="col-md-6">
               <div className="laser-heading">
-                <h3>Laser PM sensor Case Study - I</h3>
-                <h4>Comparative Evaluation of New Low-Cost Particulate Matter Sensors</h4>
+                <h3>{t("caseStudiesSection.caseStudy1.title")}</h3>
+                <h4>{t("caseStudiesSection.caseStudy1.subtitle")}</h4>
               </div>
             </div>
             <div className="col-md-6">
               <div className="laser-para">
                 <p>
-                  <strong>Study Brief</strong> : So, the paper involves our Prana Air device alongside other low-cost
-                  sensors for PM2.5 and PM10 measurements. For the results, they compared them to the standard Aeroqual
-                  Series-500. Since, their challenge with traditional devices was the high cost, heaviness, and frequent
-                  service needs, which limited usin in cities.
+                  <strong>{t("caseStudiesSection.caseStudy1.briefLabel")}</strong>{" "}
+                  {t("caseStudiesSection.caseStudy1.brief")}
                 </p>
               </div>
               <div className="laser-author">
                 <p>
-                  - <strong>By Dr. Sachin Chaudhari,</strong>
-                  International Institute of Information Technology Hyderabad, India
+                  - <strong>{t("caseStudiesSection.caseStudy1.authorName")}</strong>
+                  {t("caseStudiesSection.caseStudy1.authorAffiliation")}
                 </p>
               </div>
             </div>
@@ -1149,11 +1105,11 @@ export default function PMSensorPage() {
               <div className="note-para">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/pm2.5-calibration.webp"
-                  alt="comparison of PM sensor data between Aeroqual and Prana Air before and after calibration"
+                  alt={t("caseStudiesSection.caseStudy1.calibrationImgAlt")}
                 />
                 <p className="pm-note-para">
-                  <strong>Note :</strong> Monitors update in every 30 seconds, moreover our PM sensors have a resolution
-                  of ±1.0 micrograms per cubic meter, and our NO2 sensors boast a resolution of ±1.0 ppb.
+                  <strong>{t("caseStudiesSection.caseStudy1.noteLabel")}</strong>{" "}
+                  {t("caseStudiesSection.caseStudy1.noteText")}
                 </p>
               </div>
             </div>
@@ -1161,10 +1117,10 @@ export default function PMSensorPage() {
               <div className="study-link">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/full-study-here.webp"
-                  alt="case study of low-cost PM sensor using Prana Air's sensors by By Dr. Sachin Chaudhari, International Institute of Information Technology Hyderabad, India"
+                  alt={t("caseStudiesSection.caseStudy1.studyImgAlt")}
                 />
                 <p className="study-para">
-                  Find Full Study Here :
+                  {t("caseStudiesSection.caseStudy1.findFullStudy")}
                   <a href="https://www.pranaair.com/wp-content/uploads/2025/01/C33_Comp_Eval_PM_Sensors_FiCloud2021_Ishan.pdf">
                     https://pubmed.ncbi.nlm.nih.gov/37318651/
                   </a>
@@ -1175,26 +1131,21 @@ export default function PMSensorPage() {
           <div className="row laser-br green-bg">
             <div className="col-md-6">
               <div className="laser-heading">
-                <h3>Laser PM sensor Case Study - II</h3>
-                <h4>
-                  Performance‐based protocol for selection of Affordable and easy to carry sensor for air quality
-                  measurement
-                </h4>
+                <h3>{t("caseStudiesSection.caseStudy2.title")}</h3>
+                <h4>{t("caseStudiesSection.caseStudy2.subtitle")}</h4>
               </div>
             </div>
             <div className="col-md-6">
               <div className="laser-para">
                 <p>
-                  <strong>Study Brief :</strong> In their research, they used our device in their Environmental
-                  Protection Sensors (EPS) assessment. So in this, they compared factory calibration data with reference
-                  monitors. Because, their challenge was reasonable cost with accuracy, sensitivity, and data
-                  management. In the result, Prana Air proved to be a reliable and affordable choice.
+                  <strong>{t("caseStudiesSection.caseStudy2.briefLabel")}</strong>{" "}
+                  {t("caseStudiesSection.caseStudy2.brief")}
                 </p>
               </div>
               <div className="laser-author">
                 <p>
-                  - <strong>By Dr. Sunil Gulia,</strong>
-                  National Environmental Engineering Research Institute, New Delhi, India
+                  - <strong>{t("caseStudiesSection.caseStudy2.authorName")}</strong>
+                  {t("caseStudiesSection.caseStudy2.authorAffiliation")}
                 </p>
               </div>
             </div>
@@ -1206,22 +1157,22 @@ export default function PMSensorPage() {
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/economical-portable-sensor-eps.webp"
-                      alt="Case Study of economical portable sensor by By Dr. Sunil Gulia, National Environmental Engineering Research Institute, New Delhi, India"
+                      alt={t("caseStudiesSection.caseStudy2.image1Alt")}
                     />
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/ranking-eps.webp"
-                      alt="Ranking of EPS for air quality assessment from the case study By Dr. Sunil Gulia, National Environmental Engineering Research Institute, New Delhi, India"
+                      alt={t("caseStudiesSection.caseStudy2.image2Alt")}
                     />
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/ranking-of-eps-on-physical.webp"
-                      alt="Ranking of EPS on physical features and cost from the case study By Dr. Sunil Gulia, National Environmental Engineering Research Institute, New Delhi, India"
+                      alt={t("caseStudiesSection.caseStudy2.image3Alt")}
                     />
                     <p className="study-para">
-                      Find Full Study Here :
+                      {t("caseStudiesSection.caseStudy2.findFullStudy")}
                       <a href="https://www.pranaair.com/wp-content/uploads/2025/01/0e5918e1-0456-44a7-847e-a576447b8c62_230615_221224.pdf">
                         https://pubmed.ncbi.nlm.nih.gov/37318651/
                       </a>
@@ -1240,51 +1191,54 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="healt-impact-heading">
-                <h2>Health Impacts - Why it is important to measure particulate matter?</h2>
+                <h2>{t("healthImpactSection.title")}</h2>
               </div>
             </div>
           </div>
           <div className="mob-flex">
             <div className="col-md-1/5">
               <div className="healt-impact-img">
-                <img src="https://www.pranaair.com/wp-content/uploads/2025/01/Asthma-and-allergies.webp" alt="Asthma" />
-                <h4>Asthma and Triggers</h4>
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2025/01/Asthma-and-allergies.webp"
+                  alt={t("healthImpactSection.impacts.asthma.alt")}
+                />
+                <h4>{t("healthImpactSection.impacts.asthma.title")}</h4>
               </div>
             </div>
             <div className="col-md-1/5">
               <div className="healt-impact-img">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/High-risk-of-lung-cancer.webp"
-                  alt="High risk of lung cancer as health impacts by particulate matters"
+                  alt={t("healthImpactSection.impacts.lungCancer.alt")}
                 />
-                <h4>High risk of lung cancer</h4>
+                <h4>{t("healthImpactSection.impacts.lungCancer.title")}</h4>
               </div>
             </div>
             <div className="col-md-1/5">
               <div className="healt-impact-img">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/Respiratory-infections.webp"
-                  alt="Respiratory infections as health impact by particulate matters"
+                  alt={t("healthImpactSection.impacts.respiratoryInfections.alt")}
                 />
-                <h4>Respiratory infections</h4>
+                <h4>{t("healthImpactSection.impacts.respiratoryInfections.title")}</h4>
               </div>
             </div>
             <div className="col-md-1/5">
               <div className="healt-impact-img">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/Lung-diseases.webp"
-                  alt="Lung diseases as health impact by particulate matters"
+                  alt={t("healthImpactSection.impacts.lungDiseases.alt")}
                 />
-                <h4>Lung diseases</h4>
+                <h4>{t("healthImpactSection.impacts.lungDiseases.title")}</h4>
               </div>
             </div>
             <div className="col-md-1/5">
               <div className="healt-impact-img">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2025/01/Heart-related-issues.webp"
-                  alt="Heart-related issues as health impact by particulate matters"
+                  alt={t("healthImpactSection.impacts.heartIssues.alt")}
                 />
-                <h4>Heart-related issues</h4>
+                <h4>{t("healthImpactSection.impacts.heartIssues.title")}</h4>
               </div>
             </div>
           </div>
@@ -1297,7 +1251,7 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="tech-spec-heading">
-                <h2>Technical Specifications</h2>
+                <h2>{t("techSpecsSection.title")}</h2>
               </div>
             </div>
             <div className="col-md-6">
@@ -1305,14 +1259,20 @@ export default function PMSensorPage() {
                 <ul>
                   <li>
                     <a href="#">
-                      Arduino Code
-                      <img src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png" alt="link icon" />
+                      {t("techSpecsSection.links.arduinoCode")}
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
+                        alt={t("techSpecsSection.links.iconAlt")}
+                      />
                     </a>
                   </li>
                   <li>
                     <a href="https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-pas-out-1-outdoor-pm-sensor-datasheet.pdf">
-                      Datasheet
-                      <img src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png" alt="link icon" />
+                      {t("techSpecsSection.links.datasheet")}
+                      <img
+                        src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
+                        alt={t("techSpecsSection.links.iconAlt")}
+                      />
                     </a>
                   </li>
                 </ul>
@@ -1324,82 +1284,82 @@ export default function PMSensorPage() {
               <div className="tech-spec-tabel">
                 <ul>
                   <li>
-                    <h3>Product Name:</h3>
+                    <h3>{t("techSpecsSection.specs.productName.label")}</h3>
                   </li>
                   <li>
-                    <h4>PM Sensor</h4>
+                    <h4>{t("techSpecsSection.specs.productName.value")}</h4>
                   </li>
                 </ul>
                 <ul className="tech-bg">
                   <li>
-                    <h3>Rated voltage:</h3>
+                    <h3>{t("techSpecsSection.specs.ratedVoltage.label")}</h3>
                   </li>
                   <li>
-                    <h4>5V</h4>
+                    <h4>{t("techSpecsSection.specs.ratedVoltage.value")}</h4>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <h3>Communication Port Level:</h3>
+                    <h3>{t("techSpecsSection.specs.communicationPort.label")}</h3>
                   </li>
                   <li>
-                    <h4>3.3 V</h4>
+                    <h4>{t("techSpecsSection.specs.communicationPort.value")}</h4>
                   </li>
                 </ul>
                 <ul className="tech-bg">
                   <li>
-                    <h3>Dimensions L x W x H :</h3>
+                    <h3>{t("techSpecsSection.specs.dimensions.label")}</h3>
                   </li>
                   <li>
-                    <h4>4.5 x 4.5 x 2 cm</h4>
+                    <h4>{t("techSpecsSection.specs.dimensions.value")}</h4>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <h3>Particle Size Resolution:</h3>
+                    <h3>{t("techSpecsSection.specs.particleSize.label")}</h3>
                   </li>
                   <li>
-                    <h4>0.3 µm</h4>
+                    <h4>{t("techSpecsSection.specs.particleSize.value")}</h4>
                   </li>
                 </ul>
                 <ul className="tech-bg">
                   <li>
-                    <h3>Storage Temperature :</h3>
+                    <h3>{t("techSpecsSection.specs.storageTemp.label")}</h3>
                   </li>
                   <li>
-                    <h4>-20~85 C°</h4>
+                    <h4>{t("techSpecsSection.specs.storageTemp.value")}</h4>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <h3>Working Temperature:</h3>
+                    <h3>{t("techSpecsSection.specs.workingTemp.label")}</h3>
                   </li>
                   <li>
-                    <h4>-20~70 C°</h4>
+                    <h4>{t("techSpecsSection.specs.workingTemp.value")}</h4>
                   </li>
                 </ul>
                 <ul className="tech-bg">
                   <li>
-                    <h3>Working humidity:</h3>
+                    <h3>{t("techSpecsSection.specs.workingHumidity.label")}</h3>
                   </li>
                   <li>
-                    <h4>0~99C%RH (No Moisture formation)</h4>
+                    <h4>{t("techSpecsSection.specs.workingHumidity.value")}</h4>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <h3>Rated current:</h3>
+                    <h3>{t("techSpecsSection.specs.ratedCurrent.label")}</h3>
                   </li>
                   <li>
-                    <h4>70mA</h4>
+                    <h4>{t("techSpecsSection.specs.ratedCurrent.value")}</h4>
                   </li>
                 </ul>
                 <ul className="tech-bg">
                   <li>
-                    <h3>Mass concentration data resolution:</h3>
+                    <h3>{t("techSpecsSection.specs.massConcentration.label")}</h3>
                   </li>
                   <li>
-                    <h4>1 μg/m3</h4>
+                    <h4>{t("techSpecsSection.specs.massConcentration.value")}</h4>
                   </li>
                 </ul>
               </div>
@@ -1408,23 +1368,23 @@ export default function PMSensorPage() {
               <div className="outdoor-bg-box">
                 <ul>
                   <li>
-                    <h3>Outdoor Sensor Dimensions</h3>
+                    <h3>{t("techSpecsSection.dimensions.outdoor")}</h3>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/outdoor-PM-sensor-dimensions.png"
-                      alt="Prana Air outdoor PM sensor dimensions"
+                      alt={t("techSpecsSection.dimensions.outdoorImgAlt")}
                     />
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <h3>Indoor Sensor Dimensions</h3>
+                    <h3>{t("techSpecsSection.dimensions.indoor")}</h3>
                   </li>
                   <li>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2025/01/Indoor-Sensor-Dimensions.png"
-                      alt="Prana Air indoor PM sensor dimensions"
+                      alt={t("techSpecsSection.dimensions.indoorImgAlt")}
                     />
                   </li>
                 </ul>
@@ -1440,8 +1400,8 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contactSection.title")}</h2>
+                <p>{t("contactSection.description")}</p>
               </div>
             </div>
           </div>
@@ -1455,7 +1415,7 @@ export default function PMSensorPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="also-like-heading">
-                <h2>You may also like</h2>
+                <h2>{t("alsoLikeSection.title")}</h2>
               </div>
             </div>
           </div>
@@ -1466,96 +1426,120 @@ export default function PMSensorPage() {
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/CO2-gas-sensor.jpg"
-                      alt="prana air co2 sensor"
+                      alt={t("alsoLikeSection.products.co2.alt")}
                     />
                   </a>
                   <h5>
-                    Co2 Sensor{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.co2.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
                 <div className="may-also">
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/CO-gas-sensor.jpg"
-                      alt="Prana Air CO gas sensor"
+                      alt={t("alsoLikeSection.products.co.alt")}
                     />
                   </a>
                   <h5>
-                    CO Sensor{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.co.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
                 <div className="may-also">
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/Ammonia-gas-sensor.jpg"
-                      alt="prana air ammonia sensor NH3"
+                      alt={t("alsoLikeSection.products.ammonia.alt")}
                     />
                   </a>
                   <h5>
-                    Ammonia Sensor{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.ammonia.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
                 <div className="may-also">
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/H2S-gas-sensor.jpg"
-                      alt="Prana Air H2S sensor"
+                      alt={t("alsoLikeSection.products.h2s.alt")}
                     />
                   </a>
                   <h5>
-                    H2S Sensor{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.h2s.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
                 <div className="may-also">
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/Ozone-gas-sensor.jpg"
-                      alt="Prana Air Ozone sensor O3"
+                      alt={t("alsoLikeSection.products.ozone.alt")}
                     />
                   </a>
                   <h5>
-                    Ozone Gas{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.ozone.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
                 <div className="may-also">
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/Chlorine-gas-sensor.jpg"
-                      alt="Prana Air Chlorine sensor "
+                      alt={t("alsoLikeSection.products.chlorine.alt")}
                     />
                   </a>
                   <h5>
-                    Chlorine Gas{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.chlorine.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
                 <div className="may-also">
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/SO2-gas-sensor.jpg"
-                      alt="Prana Air SO2 sensor"
+                      alt={t("alsoLikeSection.products.so2.alt")}
                     />
                   </a>
                   <h5>
-                    SO2 Sensor{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.so2.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
                 <div className="may-also">
                   <a href="#">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/No2-gas-sensor.jpg"
-                      alt="Prana Air NO2 sensor"
+                      alt={t("alsoLikeSection.products.no2.alt")}
                     />
                   </a>
                   <h5>
-                    NO2 Sensor{" "}
-                    <img src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="link icon" />
+                    {t("alsoLikeSection.products.no2.title")}{" "}
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png"
+                      alt={t("alsoLikeSection.linkIconAlt")}
+                    />
                   </h5>
                 </div>
               </ProductCarousel>

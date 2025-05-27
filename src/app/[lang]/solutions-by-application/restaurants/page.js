@@ -1,48 +1,97 @@
-"use client"
-
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import { getServerTranslation } from "@/i18n/server"
+import RestaurantsApplicationsCarousel from "@/Components/Pages/Restaurants/sliderquality"
 
-export default function AirQualitySolutions() {
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 3,
+export default async function AirQualitySolutions() {
+    const { t } = await getServerTranslation("restaurants")
+    const industrialApplications = [
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+            title: t("industrialApplicationsData.hotel.title"),
+            link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
         },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+            title: t("industrialApplicationsData.restaurant.title"),
+            link: "https://www.pranaair.com/solutions-by-application/restaurants/",
         },
-        tablet: {
-            breakpoint: { max: 1024, min: 600 },
-            items: 3,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+            title: t("industrialApplicationsData.institutes.title"),
+            link: "https://www.pranaair.com/solutions-by-application/institutes/",
         },
-        mobile: {
-            breakpoint: { max: 600, min: 0 },
-            items: 1,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+            title: t("industrialApplicationsData.cinema.title"),
+            link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
         },
-    }
-    const sliderQuality = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 1,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+            title: t("industrialApplicationsData.automobiles.title"),
+            link: "https://www.pranaair.com/solutions-by-application/automobile/",
         },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 1,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+            title: t("industrialApplicationsData.realEstate.title"),
+            link: "https://www.pranaair.com/solutions-by-application/real-estate/",
         },
-        tablet: {
-            breakpoint: { max: 1024, min: 600 },
-            items: 1,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+            title: t("industrialApplicationsData.smartphone.title"),
+            link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
         },
-        mobile: {
-            breakpoint: { max: 600, min: 0 },
-            items: 1,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+            title: t("industrialApplicationsData.construction.title"),
+            link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
         },
-    }
-
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+            title: t("industrialApplicationsData.animalCare.title"),
+            link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+            title: t("industrialApplicationsData.logistics.title"),
+            link: "https://www.pranaair.com/solutions-by-application/logistics/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+            title: t("industrialApplicationsData.railways.title"),
+            link: "https://www.pranaair.com/solutions-by-application/railway/",
+        }
+    ]
+    const restaurantProducts = [
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-squair-monitor-for-restaurant.jpg",
+            imageAlt: "prana air squair monitor as the air quality solutions for restaurant or cafe",
+            title: "Prana Air SQUAIR<br /> Air quality monitor",
+            description: "SQUAIR monitor is a smart indoor air quality monitoring device that measures particulate matters & toxic gases of a restaurant or cafe.",
+            features: [
+                "Detects PM2.5, PM10, CO2, TVOC, Noise, Light (LUX), Temperature & humidity",
+                "Mode of connectivity: WiFi, GSM, BMS",
+                "Mobile & Smart TV App, web-dashboard"
+            ],
+            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            hasRentOption: true
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-sensible-plus-monitor-for-restaurant.jpg",
+            imageAlt: "prana air sensible+ air quality monitor for restaurants and cafe",
+            title: "Prana Air Sensible+<br /> Air quality monitor",
+            description: "This is a smart air quality monitor with a touch screen display that gives you more insightful data for a restaurant.",
+            features: [
+                "Detects PM2.5, PM10, CO2, TVOC, HCHO, Temperature, Humidity",
+                "7 Inch LED Touch Screen Display",
+                "5000 mAh Battery InBuilt",
+                "WiFi Connectivity With Mobile App"
+            ],
+            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            hasRentOption: true
+        }
+    ];
     return (
         <div>
             {/* Banner Section */}
@@ -56,18 +105,16 @@ export default function AirQualitySolutions() {
                 <div className="col-md-6 banner_quality_box">
                     <div className="pocket_title_box school_aqi_box">
                         <h1>
-                            Air quality solutions for <span className="bold_text">Restaurant & Cafe</span>
+                            {t("restaurantBanner.title")} <span className="bold_text">{t("restaurantBanner.highlight")}</span>
                         </h1>
-                        <p>
-                            A complete solution for air monitoring, air purification, and data monitoring for your restaurant spaces.
-                        </p>
+                        <p>{t("restaurantBanner.description")}</p>
                         <ul className="rate_list">
-                            <li>Kitchen</li>
-                            <li>Cafe</li>
-                            <li>Restaurant</li>
+                            {["kitchen", "cafe", "restaurant"].map((item) => (
+                                <li key={item}>{t(`restaurantBanner.categories.${item}`)}</li>
+                            ))}
                         </ul>
                         <a className="pocket_buy_btn" href="#get_in_touch">
-                            Get a Quote
+                            {t("restaurantBanner.cta")}
                         </a>
                     </div>
                 </div>
@@ -80,13 +127,10 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Major Air <span className="bold_text">Pollutants</span>
+                                {t("restaurantPollutants.title")}{" "}
+                                <span className="bold_text">{t("restaurantPollutants.highlight")}</span>
                             </h2>
-                            <p>
-                                Restaurants emit the greatest mean value of indoor air pollutants and are one of the major reasons for
-                                ambient pollution. That makes it extremely important to monitor the air quality inside and outside
-                                restaurants.
-                            </p>
+                            <p>{t("restaurantPollutants.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -95,90 +139,31 @@ export default function AirQualitySolutions() {
             {/* Pollutants Features */}
             <div className="container pollution_cntr inner_container">
                 <div className="row">
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png"
-                                alt="pm2.5 in school and institutes"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>PM2.5</h2>
-                                <p>
-                                    Ultra-fine breathable dust & liquid particles that enter deep into our lungs and cause many diseases.
-                                </p>
+                    {["pm25", "co2", "tvoc", "co", "no2", "noise"].map((pollutant) => (
+                        <div className="col-md-3" key={pollutant}>
+                            <div className="feature_box">
+                                <img
+                                    src={`https://www.pranaair.com/wp-content/uploads/2022/08/${pollutant === "pm25"
+                                            ? "pm2.5-parameter.png"
+                                            : pollutant === "co2"
+                                                ? "co2-gas-icon.png"
+                                                : pollutant === "tvoc"
+                                                    ? "tvoc-parameter-icon.png"
+                                                    : pollutant === "co"
+                                                        ? "co-icon.png"
+                                                        : pollutant === "no2"
+                                                            ? "no2-icon.png"
+                                                            : "noise-icon.png"
+                                        }`}
+                                    alt={t(`restaurantPollutants.items.${pollutant}.imageAlt`)}
+                                />
+                                <div className="feature_wrap_box">
+                                    <h2>{t(`restaurantPollutants.items.${pollutant}.title`)}</h2>
+                                    <p>{t(`restaurantPollutants.items.${pollutant}.description`)}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
-                                alt="co2 gas in schools and institutes"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>CO2</h2>
-                                <p>
-                                    At times, especially when there is a higher client occupancy, CO2 levels surpass the desired CO2
-                                    limitations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png"
-                                alt="tvoc in schools and institutes"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>TVOC</h2>
-                                <p>
-                                    Emissions from urban cooking and its various methodologies, aerosol sprays are some of the potential
-                                    sources.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/co-icon.png"
-                                alt="ozone in school & institutes"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>CO</h2>
-                                <p>
-                                    Cooking methods like barbequing, grilling and charbroiling emit CO inside & outside the restaurants.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/no2-icon.png"
-                                alt="ozone in school & institutes"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>NO2</h2>
-                                <p>Gas stoves used in restaurant kitchens are a major source of indoor NO2 combustion of fuel.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="feature_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon.png"
-                                alt="ozone in school & institutes"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>Noise</h2>
-                                <p>
-                                    Restaurants are busy and many restaurants play high music that can be irritating for some customers..
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
@@ -193,54 +178,27 @@ export default function AirQualitySolutions() {
                 <div className="col-md-12">
                     <div className="school_box_cntr">
                         <ul>
-                            <li className="first_school_box">
-                                <span className="school_icon_box">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-icon-2.png"
-                                        alt="pm2.5 in school & institutes"
-                                    />
-                                </span>
-                                <div className="schhol_text_box">
-                                    <h3>PM2.5</h3>
-                                    <p>Ultra-fine breathable dust and liquid particles</p>
-                                </div>
-                            </li>
-                            <li className="second_school_box">
-                                <span className="school_icon_box">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-icon.png"
-                                        alt="co2 in school & institutes"
-                                    />
-                                </span>
-                                <div className="schhol_text_box">
-                                    <h3>CO2</h3>
-                                    <p>When customer occupancy is more, the desired CO2 limits exceed.</p>
-                                </div>
-                            </li>
-                            <li className="third_school_box">
-                                <span className="school_icon_box">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2022/08/ozone-o3-icon.png"
-                                        alt="ozone o3 in school & institutes"
-                                    />
-                                </span>
-                                <div className="schhol_text_box">
-                                    <h3>Noise</h3>
-                                    <p>Playing high music that can be irritating for some customers</p>
-                                </div>
-                            </li>
-                            <li className="fourth_school_box">
-                                <span className="school_icon_box">
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2022/08/no2-icon-for-restaurant.png"
-                                        alt="tvoc in school & institutes"
-                                    />
-                                </span>
-                                <div className="schhol_text_box">
-                                    <h3>NO2</h3>
-                                    <p>Gas stoves used in restaurant kitchens are a major source.</p>
-                                </div>
-                            </li>
+                            {["pm25", "co2", "noise", "no2"].map((pollutant, index) => (
+                                <li className={`${["first", "second", "third", "fourth"][index]}_school_box`} key={pollutant}>
+                                    <span className="school_icon_box">
+                                        <img
+                                            src={`https://www.pranaair.com/wp-content/uploads/2022/08/${pollutant === "pm25"
+                                                    ? "pm2.5-icon-2.png"
+                                                    : pollutant === "co2"
+                                                        ? "co2-icon.png"
+                                                        : pollutant === "noise"
+                                                            ? "ozone-o3-icon.png"
+                                                            : "no2-icon-for-restaurant.png"
+                                                }`}
+                                            alt={t(`restaurantImageBox.items.${pollutant}.imageAlt`)}
+                                        />
+                                    </span>
+                                    <div className="schhol_text_box">
+                                        <h3>{t(`restaurantImageBox.items.${pollutant}.title`)}</h3>
+                                        <p>{t(`restaurantImageBox.items.${pollutant}.description`)}</p>
+                                    </div>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -252,12 +210,9 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Who are at <span className="bold_text">Risk?</span>
+                                {t("restaurantRisk.title")} <span className="bold_text">{t("restaurantRisk.highlight")}</span>
                             </h2>
-                            <p>
-                                Different people from different age groups can be present in a restaurant. But certain groups are
-                                significantly impacted as compared to healthy adults.
-                            </p>
+                            <p>{t("restaurantRisk.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -266,53 +221,27 @@ export default function AirQualitySolutions() {
             {/* Risk Features */}
             <div className="container pollution_cntr inner_container">
                 <div className="row">
-                    <div className="col-md-3">
-                        <div className="risk_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/respiratory-ill.png"
-                                alt="respiratory illness people in restaurant"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>Respiratory Illness</h2>
-                                <p>Customers and staff with respiratory illnesses already have a weaker respiratory system.</p>
+                    {["respiratory", "staff", "chef", "customers"].map((risk) => (
+                        <div className="col-md-3" key={risk}>
+                            <div className="risk_box">
+                                <img
+                                    src={`https://www.pranaair.com/wp-content/uploads/2022/08/${risk === "respiratory"
+                                            ? "respiratory-ill.png"
+                                            : risk === "staff"
+                                                ? "staff.png"
+                                                : risk === "chef"
+                                                    ? "chef.png"
+                                                    : "customer.png"
+                                        }`}
+                                    alt={t(`restaurantRisk.items.${risk}.imageAlt`)}
+                                />
+                                <div className="feature_wrap_box">
+                                    <h2>{t(`restaurantRisk.items.${risk}.title`)}</h2>
+                                    <p>{t(`restaurantRisk.items.${risk}.description`)}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="risk_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/08/staff.png" alt="staff of a restaurant" />
-                            <div className="feature_wrap_box">
-                                <h2>Staff</h2>
-                                <p>
-                                    Unattentiveness, a high chance of acquiring respiratory illnesses, and loss of coordination can be
-                                    seen in the staff.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="risk_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/08/chef.png" alt="chef of a restaurant" />
-                            <div className="feature_wrap_box">
-                                <h2>Chef</h2>
-                                <p>Children have developing organs. When exposed, the growing tissue and cell growth are hampered.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="risk_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/customer.png"
-                                alt="a customer of a restaurant"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>Customers</h2>
-                                <p>
-                                    Uneasiness, headaches, respiratory irritation, and nausea are some of the side effects of exposure.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
@@ -322,13 +251,9 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Air quality <span className="bold_text">Solutions For Restaurant</span>
+                                {t("restaurantSolutions.title")} <span className="bold_text">{t("restaurantSolutions.highlight")}</span>
                             </h2>
-                            <p>
-                                Prana Airs air quality monitoring and air purifying solutions give you the power to know what your
-                                customers and staff breathe and what you could do to clean the air to make your restaurant an Air
-                                pollution-free zone and view and analyze your IAQ.
-                            </p>
+                            <p>{t("restaurantSolutions.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -340,200 +265,88 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="solution-tab">
                             <ul className="nav nav-tabs" id="airQualityTabs" role="tablist">
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className="nav-link active"
-                                        id="monitors-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#monitors"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="monitors"
-                                        aria-selected="true"
-                                    >
-                                        Air Quality Monitors
-                                    </button>
-                                </li>
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className="nav-link"
-                                        id="fresh-air-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#fresh-air"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="fresh-air"
-                                        aria-selected="false"
-                                    >
-                                        Fresh Air Machine
-                                    </button>
-                                </li>
-                                <li className="nav-item" role="presentation">
-                                    <button
-                                        className="nav-link"
-                                        id="api-data-tab"
-                                        data-bs-toggle="tab"
-                                        data-bs-target="#api-data"
-                                        type="button"
-                                        role="tab"
-                                        aria-controls="api-data"
-                                        aria-selected="false"
-                                    >
-                                        API Data
-                                    </button>
-                                </li>
+                                {["monitors", "freshAir", "apiData"].map((tab, index) => (
+                                    <li className="nav-item" role="presentation" key={tab}>
+                                        <button
+                                            className={`nav-link ${index === 0 ? "active" : ""}`}
+                                            id={`${tab}-tab`}
+                                            data-bs-toggle="tab"
+                                            data-bs-target={`#${tab}`}
+                                            type="button"
+                                            role="tab"
+                                            aria-controls={tab}
+                                            aria-selected={index === 0 ? "true" : "false"}
+                                        >
+                                            {t(`restaurantSolutions.tabs.${tab}`)}
+                                        </button>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                         <div className="tab-content" id="airQualityTabsContent">
                             <div className="tab-pane fade show active" id="monitors" role="tabpanel" aria-labelledby="monitors-tab">
                                 <div className="tab-pane active inner_container">
                                     <div className="owl-slider">
-                                        <Carousel
-                                            responsive={sliderQuality}
-                                            infinite={true}
-                                            autoPlay={true}
-                                            autoPlaySpeed={7000}
-                                            keyBoardControl={true}
-                                            customTransition="all .5"
-                                            transitionDuration={500}
-                                        >
-                                            <div className="item">
-                                                <div className="slider_cntr">
-                                                    <div className="slider_img_box">
-                                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
-                                                            <img
-                                                                style={{ width: "100%" }}
-                                                                src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-squair-monitor-for-restaurant.jpg"
-                                                                alt="prana air squair monitor as the air quality solutions for restaurant or cafe"
-                                                            />
-                                                        </a>
-                                                    </div>
-                                                    <div className="slider_details_box">
-                                                        <h3>
-                                                            Prana Air SQUAIR
-                                                            <br /> Air quality monitor
-                                                        </h3>
-                                                        <span>
-                                                            SQUAIR monitor is a smart indoor air quality monitoring device that measures particulate
-                                                            matters & toxic gases of a restaurant or cafe.
-                                                        </span>
-                                                        <ul className="airquality_list">
-                                                            <li>Detects PM2.5, PM10, CO2, TVOC, Noise, Light (LUX), Temperature & humidity</li>
-                                                            <li>Mode of connectivity: WiFi, GSM, BMS</li>
-                                                            <li>Mobile & Smart TV App, web-dashboard</li>
-                                                        </ul>
-                                                        <a
-                                                            href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/"
-                                                            className="knowmore_btn"
-                                                        >
-                                                            Know More
-                                                        </a>
-                                                        <a href="#" className="rent_btn">
-                                                            Looking to Rent?
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="item">
-                                                <div className="slider_cntr">
-                                                    <div className="slider_img_box">
-                                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
-                                                            <img
-                                                                style={{ width: "100%" }}
-                                                                src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-sensible-plus-monitor-for-restaurant.jpg"
-                                                                alt="prana air sensible+ air quality monitor for restaurants and cafe"
-                                                            />
-                                                        </a>
-                                                    </div>
-                                                    <div className="slider_details_box">
-                                                        <h3>
-                                                            Prana Air Sensible+
-                                                            <br /> Air quality monitor
-                                                        </h3>
-                                                        <span>
-                                                            This is a smart air quality monitor with a touch screen display that gives you more
-                                                            insightful data for a restaurant.
-                                                        </span>
-                                                        <ul className="airquality_list">
-                                                            <li>Detects PM2.5, PM10, CO2, TVOC, HCHO, Temperature, Humidity</li>
-                                                            <li>7 Inch LED Touch Screen Display</li>
-                                                            <li>5000 mAh Battery InBuilt</li>
-                                                            <li>WiFi Connectivity With Mobile App</li>
-                                                        </ul>
-                                                        <a
-                                                            href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/"
-                                                            className="knowmore_btn"
-                                                        >
-                                                            Know More
-                                                        </a>
-                                                        <a href="#" className="rent_btn">
-                                                            Looking to Rent?
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Carousel>
+                                        <RestaurantsApplicationsCarousel applications={restaurantProducts} />
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="tab-pane fade" id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
+                            <div className="tab-pane fade" id="freshAir" role="tabpanel" aria-labelledby="freshAir-tab">
                                 <div className="slider_cntr">
                                     <div className="slider_img_box">
                                         <a href="https://www.pranaair.com/fresh-air-machine/">
                                             <img
                                                 style={{ width: "100%" }}
                                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
-                                                alt="prana air fresh air machine as iaq solution for school & institutes"
+                                                alt={t("restaurantSolutions.freshAir.imageAlt")}
                                             />
                                         </a>
                                     </div>
                                     <div className="slider_details_box">
                                         <h3>
-                                            Fresh Air Machine
-                                            <br /> As IAQ Solution
+                                            {t("restaurantSolutions.freshAir.title")}
+                                            <br /> {t("restaurantSolutions.freshAir.subtitle")}
                                         </h3>
-                                        <span>
-                                            It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.
-                                        </span>
+                                        <span>{t("restaurantSolutions.freshAir.description")}</span>
                                         <ul className="airquality_list">
-                                            <li>Comes with multi-layers HEPA Filters</li>
-                                            <li>Compact Design makes it easy to place</li>
-                                            <li>Promising you up to 99.5% efficiency</li>
+                                            {[1, 2, 3].map((num) => (
+                                                <li key={num}>{t(`restaurantSolutions.freshAir.features.feature${num}`)}</li>
+                                            ))}
                                         </ul>
                                         <a href="https://www.pranaair.com/fresh-air-machine/" className="knowmore_btn">
-                                            Know More
+                                            {t("restaurantSolutions.knowMore")}
                                         </a>
                                         <a href="#" className="rent_btn">
-                                            Looking to Rent?
+                                            {t("restaurantSolutions.lookingToRent")}
                                         </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="tab-pane fade" id="api-data" role="tabpanel" aria-labelledby="api-data-tab">
+                            <div className="tab-pane fade" id="apiData" role="tabpanel" aria-labelledby="apiData-tab">
                                 <div className="slider_cntr">
                                     <div className="slider_img_box">
                                         <img
                                             style={{ width: "100%" }}
                                             src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg"
-                                            alt="aqi api data for school & institutes"
+                                            alt={t("restaurantSolutions.apiData.imageAlt")}
                                         />
                                     </div>
                                     <div className="slider_details_box">
                                         <h3>
-                                            AQI API Data
-                                            <br /> For Institutes
+                                            {t("restaurantSolutions.apiData.title")}
+                                            <br /> {t("restaurantSolutions.apiData.subtitle")}
                                         </h3>
-                                        <span>Avail the real-time air quality data of your institutes nearby outdoor area on the web.</span>
+                                        <span>{t("restaurantSolutions.apiData.description")}</span>
                                         <ul className="airquality_list">
-                                            <li>Integrate the institutes data on the web</li>
-                                            <li>Access the real-time data quickly</li>
-                                            <li>Take precautions from the air pollution</li>
+                                            {[1, 2, 3].map((num) => (
+                                                <li key={num}>{t(`restaurantSolutions.apiData.features.feature${num}`)}</li>
+                                            ))}
                                         </ul>
                                         <br />
                                         <a href="#get_in_touch" className="knowmore_btn">
-                                            Know More
+                                            {t("restaurantSolutions.knowMore")}
                                         </a>
                                     </div>
                                 </div>
@@ -549,12 +362,9 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Data Freemium <span className="bold_text">Services</span>
+                                {t("restaurantFreemium.title")} <span className="bold_text">{t("restaurantFreemium.highlight")}</span>
                             </h2>
-                            <p>
-                                The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan
-                                the QR to know the AQI of the restaurant.
-                            </p>
+                            <p>{t("restaurantFreemium.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -562,33 +372,22 @@ export default function AirQualitySolutions() {
 
             <div className="container inner_container">
                 <div className="row">
-                    <div className="col-md-4">
-                        <div className="app_service_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/restaurant-tv-dashboard-app.jpg"
-                                alt="aqi tv app dashboard for restaurants"
-                            />
-                            <h4>TV Dashboard App</h4>
+                    {["tvApp", "customApp", "qrCode"].map((service) => (
+                        <div className="col-md-4" key={service}>
+                            <div className="app_service_box">
+                                <img
+                                    src={`https://www.pranaair.com/wp-content/uploads/2022/08/restaurant-${service === "tvApp"
+                                            ? "tv-dashboard-app.jpg"
+                                            : service === "customApp"
+                                                ? "aqi-customized-dashboard-app.jpg"
+                                                : "aqi-qr-code-scan.jpg"
+                                        }`}
+                                    alt={t(`restaurantFreemium.services.${service}.imageAlt`)}
+                                />
+                                <h4>{t(`restaurantFreemium.services.${service}.title`)}</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="app_service_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/restaurant-aqi-customized-dashboard-app.jpg"
-                                alt="aqi customized dashboard app for a restaurant"
-                            />
-                            <h4>Customised App for Schools</h4>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="app_service_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/restaurant-aqi-qr-code-scan.jpg"
-                                alt="aqi monitor data qr code scan in a restaurant"
-                            />
-                            <h4>QR Code Scan</h4>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
@@ -598,12 +397,9 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                The Effects of Air Pollution - In <span className="bold_text">A Restaurant</span>
+                                {t("restaurantComparison.title")} - {t("restaurantComparison.highlight")}
                             </h2>
-                            <p>
-                                When customers are exposed to poor air quality, they feel dizzy and unwell, and headaches are a common
-                                symptom of air pollution exposure.
-                            </p>
+                            <p>{t("restaurantComparison.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -614,12 +410,12 @@ export default function AirQualitySolutions() {
                     <div className="col-md-6 air_graph_box">
                         <div className="air_quality_box">
                             <h3>
-                                <span style={{ fontSize: "15pt", color: "#78ae60" }}> With Clean Air</span>
+                                <span style={{ fontSize: "15pt", color: "#78ae60" }}> {t("restaurantComparison.clean.title")}</span>
                             </h3>
                             <ul className="airquality_list">
-                                <li>Improved ventilation</li>
-                                <li>Good comfort level</li>
-                                <li>Improved air filtration</li>
+                                {[1, 2, 3].map((num) => (
+                                    <li key={num}>{t(`restaurantComparison.clean.benefits.benefit${num}`)}</li>
+                                ))}
                             </ul>
                         </div>
                         <span className="vs_text">VS</span>
@@ -627,12 +423,12 @@ export default function AirQualitySolutions() {
                     <div className="col-md-6 air_qualiity_right">
                         <div className="air_quality_box">
                             <h3>
-                                <span style={{ fontSize: "15pt", color: "#e86868" }}> Without Clean Air</span>
+                                <span style={{ fontSize: "15pt", color: "#e86868" }}> {t("restaurantComparison.unclean.title")}</span>
                             </h3>
                             <ul className="airquality_list red_list">
-                                <li>Low ventilation score</li>
-                                <li>Less comfort</li>
-                                <li>Reduced Filtration score</li>
+                                {[1, 2, 3].map((num) => (
+                                    <li key={num}>{t(`restaurantComparison.unclean.drawbacks.drawback${num}`)}</li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -645,137 +441,28 @@ export default function AirQualitySolutions() {
                     <div className="row">
                         <div className="col-12">
                             <div className="accordion" id="faqAccordion">
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq1"
-                                            aria-expanded="true"
+                                {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+                                    <div className="accordion-item" key={num}>
+                                        <h2 className="accordion-header">
+                                            <button
+                                                className={`accordion-button ${num === 1 ? "" : "collapsed"}`}
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target={`#faq${num}`}
+                                                aria-expanded={num === 1 ? "true" : "false"}
+                                            >
+                                                {t(`restaurantFaq.questions.q${num}`)}
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id={`faq${num}`}
+                                            className={`accordion-collapse collapse ${num === 1 ? "show" : ""}`}
+                                            data-bs-parent="#faqAccordion"
                                         >
-                                            1. What are the major pollutants that present in a restaurant / Cafe?
-                                        </button>
-                                    </h2>
-                                    <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            Many pollutants can be present inside a typical restaurant or diner. CO2 and CO are the main
-                                            pollutants followed by PM2.5, NO2, TVOCs, SO2, Noise, etc.
+                                            <div className="accordion-body faq-tab-para">{t(`restaurantFaq.answers.a${num}`)}</div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq2"
-                                            aria-expanded="false"
-                                        >
-                                            2. How can I check the AQI of my restaurant using your device?
-                                        </button>
-                                    </h2>
-                                    <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            Prana Air Monitors are WiFi enabled so you don’t need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq3"
-                                            aria-expanded="false"
-                                        >
-                                            3. What are the health impacts of the pollutants present inside the restaurants?
-                                        </button>
-                                    </h2>
-                                    <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            Physical discomforts like headaches, nausea, dizziness, etc. among customers and staff.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq4"
-                                            aria-expanded="false"
-                                        >
-                                            4. Are any other parameters included in the monitors other than the air pollutants?
-                                        </button>
-                                    </h2>
-                                    <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            Yes, you can monitor the temperature, noise, and humidity in an area.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq5"
-                                            aria-expanded="false"
-                                        >
-                                            5. What are some criteria that need to be kept in mind for a healthy and comfortable restaurant
-                                            experience?
-                                        </button>
-                                    </h2>
-                                    <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            Ventilation rate, noise, comfort level, mold score, organic aerosols, etc. are some of the
-                                            criteria.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq6"
-                                            aria-expanded="false"
-                                        >
-                                            6. Why is it necessary to have air quality monitoring solutions?
-                                        </button>
-                                    </h2>
-                                    <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            To know the nature of pollutants and by how much are they present in a restaurant so that
-                                            necessary actions can be taken.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#faq7"
-                                            aria-expanded="false"
-                                        >
-                                            7. Are there any additional benefits that come with the solutions?
-                                        </button>
-                                    </h2>
-                                    <div id="faq7" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                        <div className="accordion-body faq-tab-para">
-                                            Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical
-                                            data analysis, QR code to scan and know the real-time AQI of that area, and many more.
-                                        </div>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -788,9 +475,9 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Our <span className="bold_text">Clientele</span>
+                                {t("clientele.title")} <span className="bold_text">{t("clientele.highlight")}</span>
                             </h2>
-                            <p>We are honored to work with so many well-known companies.</p>
+                            <p>{t("restaurantClientele.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -798,64 +485,40 @@ export default function AirQualitySolutions() {
 
             <div className="container client_logo_section inner_container">
                 <div className="row">
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
+                    {["morgan", "ola", "microsoft", "iit"].map((client) => (
+                        <div className="col-md-3" key={client}>
+                            <img
+                                src={`https://www.pranaair.com/wp-content/uploads/2022/08/${client === "morgan"
+                                        ? "MORGAN-STANLEY.png"
+                                        : client === "ola"
+                                            ? "OLA.png"
+                                            : client === "microsoft"
+                                                ? "MICROSOFT.png"
+                                                : "IIT-BHU.png"
+                                    }`}
+                                className="img-responsive"
+                                alt={t(`restaurantClientele.clients.${client}.alt`)}
+                            />
+                        </div>
+                    ))}
                 </div>
                 <div className="row">
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/RENAULT-NISSAN.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/TATA.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/CSIR.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
-                    <div className="col-md-3">
-                        <img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/08/MAHINDRA.png"
-                            className="img-responsive"
-                            alt="Client Logo"
-                        />
-                    </div>
+                    {["renault", "tata", "csir", "mahindra"].map((client) => (
+                        <div className="col-md-3" key={client}>
+                            <img
+                                src={`https://www.pranaair.com/wp-content/uploads/2022/08/${client === "renault"
+                                        ? "RENAULT-NISSAN.png"
+                                        : client === "tata"
+                                            ? "TATA.png"
+                                            : client === "csir"
+                                                ? "CSIR.png"
+                                                : "MAHINDRA.png"
+                                    }`}
+                                className="img-responsive"
+                                alt={t(`restaurantClientele.clients.${client}.alt`)}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
 
@@ -865,8 +528,8 @@ export default function AirQualitySolutions() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="contact-heading">
-                                <h2>Get in Touch</h2>
-                                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                                <h2>{t("contact.title")}</h2>
+                                <p>{t("contact.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -880,12 +543,9 @@ export default function AirQualitySolutions() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Industrial <span className="bold_text">Applications</span>
+                                {t("industrial.title")} <span className="bold_text">{t("industrial.highlight")}</span>
                             </h2>
-                            <p>
-                                Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and
-                                highly accurate air quality solutions for various industries.
-                            </p>
+                            <p>{t("industrial.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -895,76 +555,7 @@ export default function AirQualitySolutions() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="owl-slider">
-                            <Carousel
-                                responsive={responsive}
-                                infinite={true}
-                                autoPlay={true}
-                                autoPlaySpeed={7000}
-                                keyBoardControl={true}
-                                customTransition="all .5"
-                                transitionDuration={500}
-                            >
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-retail-outlets.jpg"
-                                                    alt="air quality solutions for retail stores"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                            <h4>Solutions for Retail Stores</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                                                    alt="air quality solutions for banks"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                            <h4>Solutions for Bank</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                                                    alt="air quality solutions for hotel business"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                            <h4>Solutions for Hotel</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                                                    alt="air quality solutions for restaurants"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                            <h4>Solutions for Restaurant</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </Carousel>
+                            <IndustrialApplicationsCarousel applications={industrialApplications} />
                         </div>
                     </div>
                 </div>

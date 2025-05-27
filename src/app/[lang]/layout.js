@@ -1,9 +1,6 @@
 import { I18nProvider } from "../..//i18n/client"
 import MainHeader from './../../Components/MainHeader';
 import MainFooter from './../../Components/MainFooter';
-import { CartProvider } from "@/context/CartProvider"
-import { AuthProvider } from "@/context/AuthProvider"
-import BootstrapProvider from '@/Components/bootstrap-provider';
 
 export const metadata = {
   title: "Prana Air - Air Quality Monitoring Solutions",

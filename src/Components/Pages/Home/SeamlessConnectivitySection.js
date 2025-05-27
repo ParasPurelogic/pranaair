@@ -1,7 +1,6 @@
-
 import Image from "next/image"
 import Link from "next/link"
-import { getServerTranslation } from "@/i18n/server"
+import { getServerTranslation } from "../../../i18n/server";
 
 export default async function SeamleassConnectivitySection() {
   const { t } = await getServerTranslation("home")

@@ -1,0 +1,128 @@
+{
+      "products": {
+  "co2Sensor": {
+    "imageAlt": "CO2 Sensor",
+    "title": "CO2 Sensor",
+    "description": "Measures CO2 levels with high accuracy"
+  },
+  "pocketCO2": {
+    "imageAlt": "Pocket CO2 Monitor",
+    "title": "Pocket CO2 Monitor",
+    "description": "Portable CO2 monitoring solution"
+  },
+  "squair": {
+    "imageAlt": "SQUAIR Air Monitor",
+    "title": "SQUAIR Air Monitor",
+    "description": "Measures CO2 and other pollutants"
+  },
+  "sensiblePlus": {
+    "imageAlt": "Sensible+ Advanced CO2 Monitor",
+    "title": "Sensible+ Advanced CO2 Monitor",
+    "description": "Professional grade monitoring"
+  }
+},
+"pm": {
+    "hero": {
+      "imageAlt": "what is particulate matter pm",
+      "title": "What is Particulate Matter (PM)?",
+      "description": "PM, Particulate matter, or Particulate is a mixture of liquid and solid particles that are suspended in the air. So, they can range from microscopic particles to particles like smoke, soot, liquid particles, and dust. And it can be seen by the naked eye. Hence, these categorized into 3 categories, based on their size. Thus, these are PM10 (coarse, visible to the naked eye), PM2.5 (fine particles), and PM1 (ultra-fine particles).",
+      "aqliInfo": "According to the AQLI (Air Quality Life Index), Particulate air pollution reduces the average persons life by 2.2 years, which is more than deadly infectious illnesses like HIV/AIDS and TB, cigarette smoking, or even war. Some parts of the world more affected than others. For instance, in the U.S.A, where pollution is lower, life expectancy is reduced by only 0.1 years, compared to the WHO standard. In China and India, where pollution levels are significantly higher. Hence, the lowering particle concentrations to the WHO limit would enhance life expectancy by 2.6 and 5.9 years, respectively."
+    },
+    "particulates": {
+      "title": "Are Particulates and Air Pollution the same thing?",
+      "description": "PM or particulates are fine breathable particles suspended in the air. And, PM is one of the air pollutants that are included in air pollution. As, many other air pollutants together form the broad category of air pollution. These pollutants include Carbon monoxide, Sulphur Dioxide, Nitrogen oxides, Carbon Dioxide, etc. Hence, PM is nothing but a measure to measure air pollution along with other air pollutants.",
+      "imageAlt": "air pollution and particulate matters"
+    },
+    "types": {
+      "title": "Types of Particulate Matter (PM)",
+      "description": "For air quality regulation, particles divided into three categories based on their diameter. These are:",
+      "pm1": {
+        "imageAlt": "PM1 ultra-fine particles",
+        "title": "PM1",
+        "description": "These are ultra-fine particles with a size of 1 micron or less. Examples: Airborne pathogens, bacteria, viruses, etc."
+      },
+      "pm25": {
+        "imageAlt": "PM2.5 fine particles",
+        "title": "PM2.5",
+        "description": "These are fine breathable particles with a size of 2.5 microns or less. Examples: Smoke, tobacco smoke, haze, etc"
+      },
+      "pm10": {
+        "imageAlt": "PM10 inhalable particles",
+        "title": "PM10",
+        "description": "The inhalable particles with a size of 10 microns or less come under this category. Examples: Windblown dust, mold spores, pollen, etc."
+      }
+    },
+    "sources": {
+      "title": "Where does Particulate Matter (PM) come from and its main sources?",
+      "primary": "1. Primary particulate matter (PM) is directly released into the atmosphere. Because, they are produced by a multitude of sources, including cars, trucks, buses, factories, building sites, replanted fields, dirt roads, rock crushers, and wood burning.",
+      "secondary": "2. Secondary particles may generate in the air as a result of gas chemical changes. Since, they are generated indirectly when gases emitted by burning fuels combine with sunlight and water vapor. Also, these can produce by the combustion of gasoline in automobiles, power plants, and other industrial activities.",
+      "imageAlt": "sources of particulate matter"
+    },
+    "guidelines": {
+      "title": "PM - Air Quality Guidelines",
+      "imageAlt": "PM Air Quality Guidelines"
+    },
+    "unhealthy": {
+      "title": "What level of Particulate Matter (PM) is unhealthy?",
+      "description": "Most studies show that PM2.5 levels of 12 μg/m3 or below are deemed healthy, with little to no danger from exposure. But, if the quantity reaches or exceeds 35 μg/m3 in 24 hours, the air is classified as hazardous. Hence, it might create problems for persons who already have breathing problems, such as asthma. Moreover, prolonged exposure to levels exceeding 50 μg/m3 can result in major health problems and untimely death."
+    },
+    "care": {
+      "title": "Why you should care about",
+      "subtitle": "Particulate Matter (PM)?",
+      "description": "Particulates are smaller, microscopic particles invisible to the naked eye. Thus, PM1 and PM2.5 can enter your bloodstream via respiration. Further, Short-term and long-term exposure to PM has a variety of health effects including various cardiorespiratory diseases. Hence, short-term impacts include irritation in the eyes, nose, and throat. And long-term impacts are permanent respiratory problems such as asthma and bronchitis, heart diseases, and heart failure.",
+      "effects": {
+        "eyes": {
+          "imageAlt": "eye irritation due to pm",
+          "text": "Irritation in the eyes"
+        },
+        "nose": {
+          "imageAlt": "nose irritation due to pm",
+          "text": "Irritation in the nose"
+        },
+        "throat": {
+          "imageAlt": "throat irritation due to pm",
+          "text": "Irritation in the throat"
+        },
+        "asthma": {
+          "imageAlt": "asthma problem due to pm",
+          "text": "Asthma Problem"
+        },
+        "heart": {
+          "imageAlt": "heart diseases due to pm",
+          "text": "Heart diseases and Heart failure"
+        }
+      },
+      "sickness": {
+        "title": "Can it make me sick by PM?",
+        "description": "Without a doubt, YES! Even in small amounts, particulate can make you feel uneasy or sick.",
+        "imageAlt": "sick due to pm air pollution"
+      },
+      "healthImpacts": {
+        "title": "Health Impacts of PM on Human Health",
+        "description": "The ability of a particle to evade the bodys defences and enter the lungs deeply increases with particle size. But, people with respiratory and heart conditions, children, and the elderly may be more vulnerable to PM2.5. Furthermore, Long-term exposure to fine particulate matter may also be associated with increased cases of chronic bronchitis, impaired lung function, and an increase in mortality rates from cardiorespiratory disease, according to research."
+      }
+    },
+    "reduce": {
+      "title": "How to reduce Particulate Matter (PM) exposure?",
+      "description": "PM can be present in both indoor and outdoor environments. So, you can easily monitor the PM levels in both environments using a PM air quality monitor.",
+      "indoor": {
+        "title": "Indoor solution",
+        "description": "PM (Particulate Matter) can be easily monitored indoors. After the monitoring, if the levels exceed the limits so the proper measures can be taken to reduce the levels.",
+        "imageAlt": "air purifier as the solution for indoor air pollution"
+      },
+      "outdoor": {
+        "title": "Outdoor Solution",
+        "description": "We have a variety of outdoor air quality monitors that can measure the PM levels outdoors. As, when the levels exceed the limits, you can wear anti-pollution N-95 mask. As to prevent you from various hazards that can be caused to the PM / dust exposure.",
+        "imageAlt": "N95 air pollution mask"
+      }
+    },
+    "monitor": {
+      "title": "PM2.5 Air Quality Monitor",
+      "description": "Prana Air Pocket Monitor allows you to check real-time PM2.5 pollution levels indoors and outdoors. For it, Our pocket-sized monitor is the smallest and most convenient device. As it fits effortlessly into your pocket.",
+      "imageAlt": "pm2.5 air quality monitor"
+    },
+    "products": {
+      "title": "Choose Your Air Quality Monitor To Measure PM"
+    }
+  }
+}

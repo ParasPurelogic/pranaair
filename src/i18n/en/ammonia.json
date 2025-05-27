@@ -1,0 +1,186 @@
+{
+    "ammonia": {
+    "hero": {
+      "title": "Ammonia (NH₃)",
+      "description": "Ammonia (NH₃) is a toxic gas that is made up of one nitrogen and three hydrogen atoms. Naturally, it is found in small amounts, but can be produced through industries. Since, ammonia uses in the manufacturing of fertilizers, refrigeration, and cleaning products. It used as a raw product for making chemicals such as nitric oxide.",
+      "iconAlt": "nh3 ammonia icon"
+    },
+    "humanBody": {
+      "titlePart1": "Ammonia in the",
+      "titlePart2": "human body",
+      "description": "Ammonia can found in the blood culture of humans. Normal ammonia blood levels range between 15 to 45 micrograms/dL. There are medical reasons as well as external factors that can increase blood ammonia toxicity in the body. Hence it can result in various health problems, that depend on the nature of ammonia exposure. These include inhalation, ingestion, or direct contact with the eyes or the skin, which can cause a severe burn.",
+      "imageAlt": "ammonia nh3 in human body"
+    },
+    "quote": {
+      "text": "A single episode of exposure to chemicals or chemical compounds resulted in 41 U.S. workers dying on the job in 2017; this is an increase of 7 deaths from 2016. From 2011 to 2017, this number fluctuated between 33 and 55 fatal injuries every year, for a total of 297 fatalities for the seven years.",
+      "source": "US Bureau of Labour Statistics"
+    },
+    "emissionSources": {
+      "titlePart1": "Ammonia (NH₃)",
+      "titlePart2": ": Main Emission Sources",
+      "description": "Cooking, tobacco smoke, burning fuels and kerosene, mold, air fresheners, nail polish removers, pet dander, and many more. When there is no circulation of air and indoor air trapped inside, CO2 levels will rise.",
+      "vehicle": {
+        "title": "Vehicle emissions",
+        "description": "Gasoline burning produces ammonia in the air by 0.30–0.47 g/kg. Whereas diesel burning contributes 0.34–0.50 g/kg.",
+        "imageAlt": "ammonia from vehicular emissions"
+      },
+      "agriculture": {
+        "title": "Agricultural activities",
+        "description": "Chemical fertilizers, slurries, and synthetic manures carry ammonia, hence farmers are at a high risk of ammonia exposure.",
+        "imageAlt": "ammonia from agriculture activities"
+      },
+      "industries": {
+        "title": "Industries",
+        "description": "Ammonia is used in various manufacturing processes such as fertilizer industries, urea manufacturing industries, and many more.",
+        "imageAlt": "ammonia from factories"
+      },
+      "household": {
+        "title": "Household emissions",
+        "description": "Sources such as cooking, cleaning agents, metabolic activities, and smoking can all contribute to household ammonia emitters.",
+        "imageAlt": "ammonia from household emissions"
+      },
+      "sewage": {
+        "title": "Sewage Treatment plants",
+        "description": "Processing of sewage waste can produce a high amount of ammonia. If not monitored and controlled, it can be fatal.",
+        "imageAlt": "ammonia from sewage plant"
+      },
+      "building": {
+        "title": "Building materials",
+        "description": "Cement concretes that are used to build houses release ammonia. Paint and solvents also have traces of ammonia gas.",
+        "imageAlt": "ammonia from building material"
+      }
+    },
+    "environment": {
+      "titlePart1": "Ammonia",
+      "titlePart2": "in Enviornment",
+      "atmospheric": "tmospheric sulfates and nitrates mix with ammonia which further forms into second-hand particle pollution (PM2.5).",
+      "atmosphericImageAlt": "Ammonia in environment",
+      "waterways": "mmonia assists in the acidification, salinization, and oxidation of ammonium salts in waterways that affect the marine life.",
+      "waterwaysImageAlt": "Ammonia in waterways"
+    },
+    "healthEffects": {
+      "titlePart1": "Ammonia concentrations",
+      "titlePart2": "and Health Affects",
+      "subtitle": "NH3 Levels and their health effects",
+      "levels": {
+        "title": "Levels",
+        "healthEffects": "Health Effects",
+        "good": {
+          "title": "Good",
+          "range": "0-200",
+          "description": "Air is good to inhale"
+        },
+        "satisfactory": {
+          "title": "Satisfactory",
+          "range": "201-400",
+          "description": "Irritation in the eyes and respiratory tract"
+        },
+        "moderate": {
+          "title": "Moderate",
+          "range": "401-800",
+          "description": "Skin and mouth irritation can be experienced"
+        },
+        "poor": {
+          "title": "Poor",
+          "range": "801-1200",
+          "description": "Exposures can cause skin, eyes, and respiratory tract burns"
+        },
+        "veryPoor": {
+          "title": "Very poor",
+          "range": "1200-1800",
+          "description": "30-minute exposure can be fatal"
+        },
+        "severe": {
+          "title": "Severe",
+          "range": "1800+",
+          "description": "Can result in rapid Respiratory Arrest"
+        }
+      },
+      "disclaimer": "*NAQI as per CBCB. 2-h hourly average values."
+    },
+    "healthHazards": {
+      "titlePart1": "Health Hazards of",
+      "titlePart2": "Ammonia Poisoning",
+      "description1": "Ammonia gas can be bad for health due to its irritant and toxic properties. Thus, it is essential to take proper",
+      "description2": " precautions when handling it to prevent exposure and ensure personal safety.",
+      "subtitle": "Following are some common health hazards one can experience if exposed to ammonia gas:",
+      "skinIrritation": {
+        "title": "Skin irritation",
+        "description": "It can cause skin irritation, including burning and itching, which may lead to rashes and blisters with prolonged exposure.",
+        "imageAlt": "skin irritation due to ammonia"
+      },
+      "seizures": {
+        "title": "Seizures",
+        "description": "High levels of ammonia exposure can lead to poisoning, which can cause symptoms such as confusion, dizziness, and seizures, and can even be fatal in severe cases.",
+        "imageAlt": "seizure due to ammonia"
+      },
+      "breathingIssues": {
+        "title": "Long-term breathing issues",
+        "description": "Chronic exposure to low levels of ammonia can also lead to long-term health effects such as chronic bronchitis, asthma, and lung damage.",
+        "imageAlt": "Long-term breathing issues due to ammonia"
+      },
+      "digestiveIssues": {
+        "title": "Digestive issues",
+        "description": "Ingestion of ammonia can lead to digestive issues such as nausea, vomiting, and abdominal pain.",
+        "imageAlt": "Digestive issues due to ammonia"
+      },
+      "conclusion": "It is essential to take proper precautions when handling ammonia to prevent exposure and ensure personal safety. This includes wearing protective gear, using proper ventilation, and following safe handling procedures."
+    },
+    "safetyRegulations": {
+      "titlePart1": "Safety",
+      "titlePart2": "Regulations",
+      "titlePart3": "and",
+      "titlePart4": "guidelines",
+      "titlePart5": "for",
+      "titlePart6": "handling",
+      "titlePart7": "Ammonia gas",
+      "titlePart8": "in different industries",
+      "subtitle": "Some common safety regulations and guidelines include:",
+      "ppe": {
+        "title": "Personal protective equipment (PPE)",
+        "description": "Workers handling ammonia gas should wear appropriate PPE, such as respirators, goggles, gloves, and protective clothing, to prevent exposure.",
+        "imageAlt": "Personal protective equipment"
+      },
+      "ventilation": {
+        "title": "Proper ventilation",
+        "description": "Facilities handling ammonia gas should have proper ventilation systems to prevent the buildup of hazardous concentrations of ammonia gas in the air.",
+        "imageAlt": "Proper ventilation"
+      },
+      "transportation": {
+        "title": "Transportation regulations",
+        "description": "Ammonia gas is considered a hazardous material for transportation, and specific regulations apply to its transport by road, rail, or sea.",
+        "imageAlt": "Transportation regulations"
+      },
+      "inspection": {
+        "title": "Inspection and maintenance",
+        "description": "Equipment and facilities handling ammonia gas should be regularly inspected and maintained to prevent leaks or other safety hazards.",
+        "imageAlt": "Inspection and maintenance"
+      },
+      "emergency": {
+        "title": "Emergency response plans",
+        "description": "Facilities must have emergency plans for ammonia gas incidents. Workers need training and access to gas masks, air supply systems, and emergency showers.",
+        "imageAlt": "Emergency response plans"
+      },
+      "compliance": {
+        "title": "Regulatory compliance",
+        "description": "Facilities handling ammonia gas must comply with relevant safety regulations and standards, such as those set by OSHA, EPA, or local authorities.",
+        "imageAlt": "Regulatory compliance"
+      },
+      "alertIconAlt": "alert icon",
+      "conclusion": "Overall, safety regulations and guidelines for handling ammonia gas are essential to prevent accidents, protect workers and the public, and ensure compliance with environmental and safety regulations."
+    },
+    "airQualityMonitoring": {
+      "titlePart1": "Ambient",
+      "titlePart2": "Air Quality Monitoring",
+      "description": "It is important to regularly monitor ammonia gas in the ambient air, especially in industrial and agricultural settings where it is commonly used. This can help prevent exposure to harmful levels of ammonia gas and protect the environment. Monitoring ammonia gas in the ambient air is important for protecting human health, and the environment, and ensuring regulatory compliance. Regular monitoring can help identify sources of ammonia emissions and implement measures to reduce them, leading to a safer and healthier environment for everyone.",
+      "imageAlt": "ammonia sensor on ambient monitor"
+    },
+    "product": {
+      "titlePart1": "Choose Your",
+      "titlePart2": "Air Quality Monitor",
+      "titlePart3": "To",
+      "titlePart4": "Measure Ammonia (NH₃) Pollutant",
+      "imageAlt": "prana air caaqms outdoor monitor"
+    }
+  }
+}

@@ -1,9 +1,9 @@
-"use client"
 import Image from "next/image"
 import "./styles.css"
-import "react-multi-carousel/lib/styles.css"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function HydrogenSulfidePage() {
+export default async function HydrogenSulfidePage() {
+  const { t } = await getServerTranslation("hydrogensulfide")
   return (
     <main>
       {/* Hero Section */}
@@ -13,7 +13,7 @@ export default function HydrogenSulfidePage() {
             <div style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/h2s-gas-icon.png"
-                alt="h2s gas icon"
+                alt={t("h2s.hero.iconAlt")}
                 width={180}
                 height={176}
                 className="aligncenter"
@@ -21,18 +21,11 @@ export default function HydrogenSulfidePage() {
             </div>
 
             <h2 style={{ textAlign: "center", fontSize: "36pt", lineHeight: "1.2" }}>
-              <span className="whitetext">
-                Hydrogen Sulfide (H<sub>2</sub>S)
-              </span>
+              <span className="whitetext">{t("h2s.hero.title")}</span>
             </h2>
 
             <p className="whitetext" style={{ overflowWrap: "break-word", width: "auto", textAlign: "center" }}>
-              <span style={{ fontSize: "18pt" }}>
-                Hydrogen Sulfide, H<sub>2</sub>S is a highly toxic gas that has a distinctive and unpleasant rotten-egg
-                smell. It is a colorless gas, that can occur naturally in the air via various crude or natural oil
-                sources, volcanic gases, and spring waters. Trace amounts of H<sub>2</sub>S can be found in the
-                atmosphere which is generally not harmful.
-              </span>
+              <span style={{ fontSize: "18pt" }}>{t("h2s.hero.description")}</span>
             </p>
           </div>
         </div>
@@ -46,24 +39,21 @@ export default function HydrogenSulfidePage() {
               <strong>
                 <span style={{ fontSize: "24pt" }}>
                   <span style={{ color: "#2a2a2c" }}>
-                    <span style={{ color: "#60cadf" }}>Hydrogen Sulfide</span> in the Environment
+                    <span style={{ color: "#60cadf" }}>{t("h2s.environment.titleHighlight")}</span>{" "}
+                    {t("h2s.environment.titleSuffix")}
                   </span>
                 </span>
               </strong>
             </h4>
 
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                Hydrogen Sulfide is produced by bacterial breakage of animal, plant, and human waste. It can be produced
-                by volcanic gases, and natural springs as well. H<sub>2</sub>S gas dissolved in the soil helps in the
-                root growth of plants.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("h2s.environment.description")}</span>
             </p>
 
             <div style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/hydrogen-sulfide-in-the-environment-1024x526.jpg"
-                alt="hydrogen sulfide in the environment"
+                alt={t("h2s.environment.imageAlt")}
                 width={1024}
                 height={526}
                 className="aligncenter"
@@ -92,16 +82,12 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-1"></div>
             <div className="col-md-11" style={{ paddingLeft: "30px" }}>
               <h2 className="douknow_text">
-                <span style={{ color: "#60cadf" }}>DO YOU KNOW</span>
+                <span style={{ color: "#60cadf" }}>{t("h2s.doYouKnow.title")}</span>
               </h2>
               <p style={{ textAlign: "left" }}>
                 <span style={{ fontSize: "15pt" }}>
-                  The primary target organ of hydrogen sulfide poisoning is the respiratory system. Once inhaled,
-                  hydrogen sulfide is quickly absorbed by the lungs. This may result in cardiac arrest or even death
-                  since it affects the neurological and cardiac tissues. The most well-known symptom of hydrogen sulfide
-                  poisoning is sudden death among sewage workers. All exposures to H<sub>2</sub>S should be avoided
-                  because they have severe harmful effects.
-                  <em> - Saiyed, H N. Indian Journal of Medical Research; New Delhi</em>
+                  {t("h2s.doYouKnow.description")}
+                  <em> - {t("h2s.doYouKnow.source")}</em>
                 </span>
               </p>
             </div>
@@ -112,32 +98,27 @@ export default function HydrogenSulfidePage() {
       {/* Sources Section */}
       <section className="sources-section" style={{ paddingTop: "90px", backgroundColor: "#bbe5fb" }}>
         <div className="container">
-          <h2 style={{ textAlign: "center", fontSize: "24pt" }}>Sources of Hydrogen Sulphide Gas</h2>
+          <h2 style={{ textAlign: "center", fontSize: "24pt" }}>{t("h2s.sources.title")}</h2>
           <p style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "14pt" }}>
-              Hydrogen sulphide gas is produced naturally from decaying organic matter and industrial processes, and can
-              be lethal in high concentrations. Following are some of its potential sources:
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("h2s.sources.description")}</span>
           </p>
 
-          <h3 style={{ textAlign: "center", fontSize: "18pt" }}>Natural Sources</h3>
+          <h3 style={{ textAlign: "center", fontSize: "18pt" }}>{t("h2s.sources.natural.title")}</h3>
 
           <div className="row">
             <div className="col-md-1-5">
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/volcanic-gases.png"
-                  alt="h2s from volcanic gases"
+                  alt={t("h2s.sources.natural.volcanic.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Volcanic Gases</strong>
+                  <strong>{t("h2s.sources.natural.volcanic.title")}</strong>
                 </h4>
-                <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  During volcanic activity, volcanoes naturally release H2S gas through their vents and cracks.
-                </p>
+                <p style={{ textAlign: "center", fontSize: "13pt" }}>{t("h2s.sources.natural.volcanic.description")}</p>
               </div>
             </div>
 
@@ -145,17 +126,15 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/gas-wells.png"
-                  alt="h2s from gas wells"
+                  alt={t("h2s.sources.natural.gasWells.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Gas wells</strong>
+                  <strong>{t("h2s.sources.natural.gasWells.title")}</strong>
                 </h4>
-                <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  H2S gas may be present in natural gas wells and could be released during production and drilling.
-                </p>
+                <p style={{ textAlign: "center", fontSize: "13pt" }}>{t("h2s.sources.natural.gasWells.description")}</p>
               </div>
             </div>
 
@@ -163,16 +142,16 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/natural-reservoirs.png"
-                  alt="h2s from natural reservoirs"
+                  alt={t("h2s.sources.natural.reservoirs.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Natural Gas Reservoirs</strong>
+                  <strong>{t("h2s.sources.natural.reservoirs.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  It may be present in natural gas reservoirs, and can be discharged during processing and extraction.
+                  {t("h2s.sources.natural.reservoirs.description")}
                 </p>
               </div>
             </div>
@@ -181,18 +160,15 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/natural-springs.png"
-                  alt="h2s gas from natural springs"
+                  alt={t("h2s.sources.natural.springs.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Natural Springs</strong>
+                  <strong>{t("h2s.sources.natural.springs.title")}</strong>
                 </h4>
-                <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  As sulfur-containing minerals react with water to produce H2S gas, natural springs can be a source of
-                  H2S gas.
-                </p>
+                <p style={{ textAlign: "center", fontSize: "13pt" }}>{t("h2s.sources.natural.springs.description")}</p>
               </div>
             </div>
 
@@ -200,23 +176,23 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/crude-petroleum.png"
-                  alt="h2s from crude petroleum"
+                  alt={t("h2s.sources.natural.petroleum.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Crude Petroleum</strong>
+                  <strong>{t("h2s.sources.natural.petroleum.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  Crude petroleum may produce H2S gas during extraction and processing, posing health and safety issues.
+                  {t("h2s.sources.natural.petroleum.description")}
                 </p>
               </div>
             </div>
           </div>
 
           <div style={{ paddingTop: "30px" }}>
-            <h3 style={{ textAlign: "center", fontSize: "18pt" }}>Industrial Sources</h3>
+            <h3 style={{ textAlign: "center", fontSize: "18pt" }}>{t("h2s.sources.industrial.title")}</h3>
           </div>
 
           <div className="row" style={{ paddingBottom: "40px" }}>
@@ -224,17 +200,16 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/sewage-treatment-plants.png"
-                  alt="h2s from sewage treatment plants"
+                  alt={t("h2s.sources.industrial.sewage.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Sewage Treatment</strong>
+                  <strong>{t("h2s.sources.industrial.sewage.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  From the decomposition of the organic content in wastewater, sewage treatment plants might emit H2S
-                  gas.
+                  {t("h2s.sources.industrial.sewage.description")}
                 </p>
               </div>
             </div>
@@ -243,17 +218,16 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/refineries.png"
-                  alt="h2s from refineries"
+                  alt={t("h2s.sources.industrial.refineries.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Refineries</strong>
+                  <strong>{t("h2s.sources.industrial.refineries.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  Refineries can generate H2S gas by the processing of sulphur-containing crude oil. The gas can pose
-                  threat to ones health and safety.
+                  {t("h2s.sources.industrial.refineries.description")}
                 </p>
               </div>
             </div>
@@ -262,17 +236,16 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/kraft-paper-mills.png"
-                  alt="h2s from kraft paper mills"
+                  alt={t("h2s.sources.industrial.paperMills.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Kraft Paper Mills</strong>
+                  <strong>{t("h2s.sources.industrial.paperMills.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  In the pulping process, kraft paper mills use chemicals based on sulphur, which produces H2S gas as a
-                  byproduct
+                  {t("h2s.sources.industrial.paperMills.description")}
                 </p>
               </div>
             </div>
@@ -281,17 +254,16 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/food-processing.png"
-                  alt="h2s from food processing"
+                  alt={t("h2s.sources.industrial.foodProcessing.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Food Processing</strong>
+                  <strong>{t("h2s.sources.industrial.foodProcessing.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  Food processing units that utilize sulphurs and sulphuric acid emit H2S gas into the surrounding
-                  environment.
+                  {t("h2s.sources.industrial.foodProcessing.description")}
                 </p>
               </div>
             </div>
@@ -300,16 +272,16 @@ export default function HydrogenSulfidePage() {
               <div style={{ textAlign: "center" }}>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/water-treatment-plants.png"
-                  alt="h2s from water treatment plants"
+                  alt={t("h2s.sources.industrial.waterTreatment.alt")}
                   width={200}
                   height={200}
                   className="aligncenter"
                 />
                 <h4 style={{ textAlign: "center", fontSize: "13pt" }}>
-                  <strong>Wastewater Treatment</strong>
+                  <strong>{t("h2s.sources.industrial.waterTreatment.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center", fontSize: "13pt" }}>
-                  Wastewater treatment plants produce H2S gas during the breakdown of organic matter.
+                  {t("h2s.sources.industrial.waterTreatment.description")}
                 </p>
               </div>
             </div>
@@ -321,29 +293,23 @@ export default function HydrogenSulfidePage() {
       <section className="health-hazards-section" style={{ paddingTop: "90px" }}>
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            Hydrogen Sulphide gas <span style={{ color: "#60cadf" }}>Health Hazards</span>
+            {t("h2s.healthHazards.titlePrefix")}{" "}
+            <span style={{ color: "#60cadf" }}>{t("h2s.healthHazards.titleHighlight")}</span>
           </h2>
 
-          <p style={{ textAlign: "center", fontSize: "13pt" }}>
-            H2S is extremely hazardous for workers, laborers, miners, etc. that have to work with this gas continuously,
-            on a regular basis. It is a highly flammable gas and can react with steel at ambient temperature. This makes
-            handling, storage, transportation, and working with the gas very laborious and demanding.
-          </p>
+          <p style={{ textAlign: "center", fontSize: "13pt" }}>{t("h2s.healthHazards.description")}</p>
 
           <div style={{ textAlign: "center" }}>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2023/03/h2s-health-hazards-1024x763.jpg"
-              alt="h2s health hazards"
+              alt={t("h2s.healthHazards.imageAlt")}
               width={800}
               height={596}
               className="aligncenter"
             />
           </div>
 
-          <p style={{ textAlign: "center", fontSize: "14pt" }}>
-            Keeping in mind the acute health hazards of occupational hydrogen sulfide emissions, the following table
-            shows the levels of H<sub>2</sub>S in PPM by the Industrial Safety and Chemical Hazards Sectional Committee.
-          </p>
+          <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("h2s.healthHazards.tableDescription")}</p>
         </div>
       </section>
 
@@ -353,10 +319,8 @@ export default function HydrogenSulfidePage() {
           <div className="h2levels_table">
             <div className="thead_top">
               <ul>
-                <li>
-                  H<sub>2</sub>S levels (PPM)
-                </li>
-                <li>Duration of exposure</li>
+                <li>{t("h2s.levelsTable.header.levels")}</li>
+                <li>{t("h2s.levelsTable.header.duration")}</li>
               </ul>
             </div>
 
@@ -364,10 +328,10 @@ export default function HydrogenSulfidePage() {
               <thead className="thead_row">
                 <tr>
                   <th></th>
-                  <th>15 min</th>
-                  <th>&gt;15 min</th>
-                  <th>&gt;1h-4h</th>
-                  <th>&gt;4-8ht</th>
+                  <th>{t("h2s.levelsTable.timeHeaders.fifteenMin")}</th>
+                  <th>{t("h2s.levelsTable.timeHeaders.moreThanFifteenMin")}</th>
+                  <th>{t("h2s.levelsTable.timeHeaders.oneToFourHours")}</th>
+                  <th>{t("h2s.levelsTable.timeHeaders.fourToEightHours")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -375,76 +339,34 @@ export default function HydrogenSulfidePage() {
                   <td>10</td>
                   <td>-</td>
                   <td>-</td>
-                  <td>Eye irritation</td>
-                  <td>
-                    Maximum tolerable <br /> concentration for prolonged exposure
-                  </td>
+                  <td>{t("h2s.levelsTable.effects.eyeIrritation")}</td>
+                  <td>{t("h2s.levelsTable.effects.maxTolerable")}</td>
                 </tr>
                 <tr className="Satisfactory_color">
                   <td>50-100</td>
-                  <td>
-                    Loss of olfactory
-                    <br /> perception
-                  </td>
-                  <td>Eye irritation</td>
-                  <td>
-                    Eye and
-                    <br />
-                    bronchial irritation
-                  </td>
-                  <td>
-                    Serious respiratory <br />
-                    distress and asthenia
-                  </td>
+                  <td>{t("h2s.levelsTable.effects.lossOfSmell")}</td>
+                  <td>{t("h2s.levelsTable.effects.eyeIrritation")}</td>
+                  <td>{t("h2s.levelsTable.effects.eyeBronchialIrritation")}</td>
+                  <td>{t("h2s.levelsTable.effects.respiratoryDistress")}</td>
                 </tr>
                 <tr className="Moderately_color">
                   <td>150-250</td>
-                  <td>Eye and skin irritation</td>
-                  <td>Eye and bronchial irritation</td>
-                  <td>
-                    Serious respiratory
-                    <br />
-                    distress and asthenia
-                  </td>
-                  <td>
-                    Danger in case of
-                    <br />
-                    continuous exposure
-                  </td>
+                  <td>{t("h2s.levelsTable.effects.eyeSkinIrritation")}</td>
+                  <td>{t("h2s.levelsTable.effects.eyeBronchialIrritation")}</td>
+                  <td>{t("h2s.levelsTable.effects.respiratoryDistress")}</td>
+                  <td>{t("h2s.levelsTable.effects.dangerContinuous")}</td>
                 </tr>
                 <tr className="poor_color">
                   <td>300-400</td>
-                  <td>
-                    Loss of olfactory
-                    <br />
-                    perception eye
-                  </td>
-                  <td>
-                    Severe respiratory distress
-                    <br />
-                    acute asthenia
-                  </td>
-                  <td>
-                    Pulmonary edema &<br />
-                    risk of death
-                  </td>
-                  <td>
-                    Pulmonary edema &<br />
-                    risk of death
-                  </td>
+                  <td>{t("h2s.levelsTable.effects.lossOfSmellEye")}</td>
+                  <td>{t("h2s.levelsTable.effects.severeRespiratory")}</td>
+                  <td>{t("h2s.levelsTable.effects.pulmonaryEdema")}</td>
+                  <td>{t("h2s.levelsTable.effects.pulmonaryEdema")}</td>
                 </tr>
                 <tr className="verypoor_color">
                   <td>500-1,000</td>
-                  <td>
-                    Loss of consciousness
-                    <br />
-                    respiratory distress
-                  </td>
-                  <td>
-                    Risk of pulmonary
-                    <br />
-                    edema and death
-                  </td>
+                  <td>{t("h2s.levelsTable.effects.lossOfConsciousness")}</td>
+                  <td>{t("h2s.levelsTable.effects.riskPulmonaryDeath")}</td>
                   <td>-</td>
                   <td>-</td>
                 </tr>
@@ -454,17 +376,13 @@ export default function HydrogenSulfidePage() {
             <div className="thead_top Severe_color">
               <ul>
                 <li>&gt;1,000</li>
-                <li>
-                  Immediate loss of consciousness and
-                  <br />
-                  respiratory distress
-                </li>
+                <li>{t("h2s.levelsTable.effects.immediateLoss")}</li>
               </ul>
             </div>
           </div>
 
           <p style={{ textAlign: "right" }}>
-            <em>* As per BUREAU OF INDIAN STANDARDS</em>
+            <em>{t("h2s.levelsTable.source")}</em>
           </p>
         </div>
       </section>
@@ -473,15 +391,16 @@ export default function HydrogenSulfidePage() {
       <section className="preventive-measures-section" style={{ paddingTop: "90px" }}>
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            <span style={{ color: "#60cadf" }}>Preventive measures</span> if you are working with{" "}
-            <span style={{ color: "#60cadf" }}>Hydrogen Sulphide</span>
+            <span style={{ color: "#60cadf" }}>{t("h2s.preventiveMeasures.titlePrefix")}</span>{" "}
+            {t("h2s.preventiveMeasures.titleMiddle")}{" "}
+            <span style={{ color: "#60cadf" }}>{t("h2s.preventiveMeasures.titleSuffix")}</span>
           </h2>
 
           <div className="row prevention_section">
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/storage-space-200x200.png"
-                alt="Monitor your storage space"
+                alt={t("h2s.preventiveMeasures.monitorStorage.alt")}
                 width={200}
                 height={200}
               />
@@ -489,14 +408,11 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-9">
               <p>
                 <span style={{ fontSize: "14pt" }}>
-                  <strong>Monitor your storage space</strong>
+                  <strong>{t("h2s.preventiveMeasures.monitorStorage.title")}</strong>
                 </span>
               </p>
               <p>
-                <span style={{ fontSize: "14pt" }}>
-                  Make sure to monitor the storage area in real time so that any spillages or leakages can be identified
-                  and immediate strategies can be adopted.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.monitorStorage.description")}</span>
               </p>
             </div>
           </div>
@@ -505,7 +421,7 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/maintain-temperature-200x200.png"
-                alt="Keep an eye on the temperature"
+                alt={t("h2s.preventiveMeasures.temperature.alt")}
                 width={200}
                 height={200}
               />
@@ -513,14 +429,11 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-9">
               <p>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Keep an eye on the temperature</span>
+                  <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.temperature.title")}</span>
                 </strong>
               </p>
               <p>
-                <span style={{ fontSize: "14pt" }}>
-                  Maintain the temperature where the gas is stored as the higher temperature can decompose the gass
-                  elements that can cause the bursting of the storage container.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.temperature.description")}</span>
               </p>
             </div>
           </div>
@@ -529,7 +442,7 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/no-smoking-area-200x200.png"
-                alt="No smoking near storage area"
+                alt={t("h2s.preventiveMeasures.noSmoking.alt")}
                 width={200}
                 height={200}
               />
@@ -537,14 +450,11 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-9">
               <p>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>No smoking near storage area</span>
+                  <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.noSmoking.title")}</span>
                 </strong>
               </p>
               <p>
-                <span style={{ fontSize: "14pt" }}>
-                  The area where the gas is stored should be NO SMOKING AREA as the gas is highly flammable. A small
-                  spark can be deadly if there is hydrogen sulphide gas in the air.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.noSmoking.description")}</span>
               </p>
             </div>
           </div>
@@ -553,7 +463,7 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/proper-ventilation-200x200.png"
-                alt="Ventilation is the key"
+                alt={t("h2s.preventiveMeasures.ventilation.alt")}
                 width={200}
                 height={200}
               />
@@ -561,14 +471,11 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-9">
               <p>
                 <span style={{ fontSize: "14pt" }}>
-                  <strong>Ventilation is the key</strong>
+                  <strong>{t("h2s.preventiveMeasures.ventilation.title")}</strong>
                 </span>
               </p>
               <p>
-                <span style={{ fontSize: "14pt" }}>
-                  The area must be highly ventilated. Hydrogen sulfide is heavier than air. It can easily travel to any
-                  source of ignition. That is why ventilation is important in storage areas.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.ventilation.description")}</span>
               </p>
             </div>
           </div>
@@ -577,7 +484,7 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/precautionary-measure-200x200.png"
-                alt="Use precautionary measure"
+                alt={t("h2s.preventiveMeasures.protectiveGear.alt")}
                 width={200}
                 height={200}
               />
@@ -585,14 +492,11 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-9">
               <p>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Use precautionary measure</span>
+                  <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.protectiveGear.title")}</span>
                 </strong>
               </p>
               <p>
-                <span style={{ fontSize: "14pt" }}>
-                  Protective gear must be used while handling the gas such as safety goggles, airtight clothing,
-                  respiratory protection gear, etc. Prevent direct skin contact.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.protectiveGear.description")}</span>
               </p>
             </div>
           </div>
@@ -601,7 +505,7 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-3" style={{ textAlign: "center" }}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/fire-extinguisher-200x200.png"
-                alt="Ready to use fire safety"
+                alt={t("h2s.preventiveMeasures.fireSafety.alt")}
                 width={200}
                 height={200}
               />
@@ -609,14 +513,11 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-9">
               <p>
                 <span style={{ fontSize: "14pt" }}>
-                  <strong>Ready to use fire safety</strong>
+                  <strong>{t("h2s.preventiveMeasures.fireSafety.title")}</strong>
                 </span>
               </p>
               <p>
-                <span style={{ fontSize: "14pt" }}>
-                  Keep a fire extinguisher in hand if any accident happens. There are high chances of fire as the
-                  hydrogen sulphide gas is highly flammable.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("h2s.preventiveMeasures.fireSafety.description")}</span>
               </p>
             </div>
           </div>
@@ -627,24 +528,16 @@ export default function HydrogenSulfidePage() {
       <section className="detect-h2s-section" style={{ paddingTop: "90px", paddingBottom: "25px" }}>
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            How To Detect{" "}
-            <span style={{ color: "#2fbcbc" }}>
-              H<sub>2</sub>S Gas
-            </span>
+            {t("h2s.detection.title")} <span style={{ color: "#2fbcbc" }}>{t("h2s.detection.titleHighlight")}</span>
           </h2>
 
-          <p style={{ textAlign: "center", fontSize: "14pt" }}>
-            An air quality monitor/sensor can detect H2S gas and furnish real-time information on its concentration in
-            the air. This data can aid in making well-informed decisions to safeguard public health and the environment.
-          </p>
+          <p style={{ textAlign: "center", fontSize: "14pt" }}>{t("h2s.detection.description")}</p>
 
           <div className="row">
             <div className="col-md-6">
               <h4 style={{ textAlign: "center", fontSize: "18pt" }}>
                 <strong>
-                  <span style={{ color: "#020303" }}>
-                    H<sub>2</sub>S Sensor
-                  </span>
+                  <span style={{ color: "#020303" }}>{t("h2s.detection.sensor.title")}</span>
                 </strong>
               </h4>
 
@@ -652,7 +545,7 @@ export default function HydrogenSulfidePage() {
                 <a href="#">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-h2s-sensor-of-highly-accurate-1024x788.jpg"
-                    alt="prana air h2s sensor of highly accurate"
+                    alt={t("h2s.detection.sensor.alt")}
                     width={350}
                     height={269}
                     className="aligncenter"
@@ -664,9 +557,7 @@ export default function HydrogenSulfidePage() {
             <div className="col-md-6">
               <h3 style={{ textAlign: "center", fontSize: "18pt" }}>
                 <strong>
-                  <span style={{ color: "#000000" }}>
-                    H<sub>2</sub>S Monitor
-                  </span>
+                  <span style={{ color: "#000000" }}>{t("h2s.detection.monitor.title")}</span>
                 </strong>
               </h3>
 
@@ -674,7 +565,7 @@ export default function HydrogenSulfidePage() {
                 <a href="#">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/03/h2s-ambient-air-quality-monitor-932x1024.png"
-                    alt="h2s ambient air quality monitor"
+                    alt={t("h2s.detection.monitor.alt")}
                     width={300}
                     height={330}
                     className="aligncenter"
@@ -690,16 +581,14 @@ export default function HydrogenSulfidePage() {
       <section className="choose-monitor-section" style={{ paddingTop: "80px" }}>
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center", fontSize: "24pt" }}>
-            Choose An Air Quality Monitor To Measure
-            <br />
-            Hydrogen Sulfide (H<sub>2</sub>S) Gas
+            {t("h2s.chooseMonitor.title")}
           </h2>
 
           <p style={{ textAlign: "center" }}>
             <a href="#">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-caaqms-outdoor-monitor--1024x512.jpg"
-                alt="prana air caaqms outdoor monitor"
+                alt={t("h2s.chooseMonitor.imageAlt")}
                 width={1024}
                 height={512}
                 className="aligncenter"

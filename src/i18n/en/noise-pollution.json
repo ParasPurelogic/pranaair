@@ -1,0 +1,368 @@
+{
+  "noise": {
+    "hero": {
+      "title": "What is Noise pollution?",
+      "description": "Noise is a term used to describe any excessive or unwanted sound that can negatively impact humans and animals. As it causing physical and psychological stress to those who are exposed to it for longer durations. It is usually caused by human activities. Such as transportation, construction, industrial activities, and recreational activities. And it causes noise pollution.",
+      "iconAlt": "what is noise pollution"
+    },
+    "soundVsNoise": {
+      "titlePrefix": "Difference between",
+      "sound": "Sound",
+      "and": "and",
+      "noise": "Noise",
+      "paragraph1": "Noise and sound are two related but distinct concepts in acoustics and communication. Sound refers to any audible vibration of air particles that propagate through a medium, such as air, water, or solids. Hence, it is a physical phenomenon that can perceive by the human ear and has characteristics such as frequency, amplitude, and waveform.",
+      "paragraph2": "On the other hand, noise refers to any unwanted or disturbing sound that causes physical discomfort. Because, it is a type of sound that is considered undesirable or irrelevant in a particular context or situation. Noise can characterize by its randomness, irregularity, or unpredictability. And it can arise from various sources, such as machinery, traffic, crowds, or environmental factors.",
+      "paragraph3": "Thus, the main difference between noise and sound is that sound is a physical phenomenon. And it can be intentional or desired. While noise is a subjective perception of sound that is unwanted or distracting. Additionally, while sound can have positive effects on human emotions and behavior. Noise can cause stress, annoyance, or even health problems in certain cases.",
+      "imageAlt": "differences of sound and noise"
+    },
+    "irritation": {
+      "titlePrefix": "When can",
+      "titleHighlight": "noise irritate you?",
+      "description": "When noise irritates you, it can cause physical and psychological discomfort, stress, and distraction. The degree of irritation can vary depending on the type, intensity, duration, and frequency of the noise. As well as individual factors such as personality, mood, and sensitivity to sound.",
+      "signsTitle": "Common signs of noise irritation include:",
+      "signs": {
+        "annoyance": {
+          "title": "Annoyance",
+          "description": "Feeling agitated, frustrated, or impatient due to the noise."
+        },
+        "distraction": {
+          "title": "Distraction",
+          "description": "Having difficulty focusing, concentrating, or completing tasks due to noise."
+        },
+        "stress": {
+          "title": "Stress",
+          "description": "Feeling tense, anxious, or overwhelmed due to the noise."
+        },
+        "sleep": {
+          "title": "Sleep disturbances",
+          "description": "Having difficulty falling or staying asleep due to the noise."
+        },
+        "discomfort": {
+          "title": "Discomfort",
+          "description": "Experiencing physical discomforts, such as headaches, nausea, or muscle tension due to the noise."
+        },
+        "imageAlt": "noise irritation"
+      },
+      "prevention": "To avoid or reduce noise irritation, it is important to identify the sources of noise. As to minimize exposure to them. And to use protective measures such as earplugs or noise-canceling headphones. Additionally, creating a quiet and peaceful environment, practicing relaxation techniques, and engaging in stress-reducing activities can help alleviate the negative effects of noise on your well-being."
+    },
+    "definition": {
+      "titlePrefix": "What is",
+      "titleHighlight": "noise pollution?",
+      "description": "Unwanted, disturbing, and distractive levels of sound that can cause discomfort to humans and animals is called noise pollution. It can also affect wildlife by interfering with their communication, migration patterns, and feeding habits. Moreover, it can also have ecological effects, such as the disruption of animal behavior, communication, and migration patterns.",
+      "imageAlt": "noise pollution definition"
+    },
+    "causes": {
+      "titleHighlight": "Causes",
+      "titleSuffix": "of noise pollution",
+      "description": "Various human activities cause noise pollution. This can result in discomfort experienced by humans especially small children and the elderly and animals. Some common sources of noise pollution include:",
+      "sources": {
+        "industrial": {
+          "title": "Industrial Activities",
+          "description": "C&D activities, industrial processes, loud machinery processes, etc. can generate noise. Moreover, excessive noise from industrial processes can reduce productivity and increase worker safety risks.",
+          "alt": "noise pollution by industrial activities"
+        },
+        "entertainment": {
+          "title": "Entertainment activities",
+          "description": "Loud music, fireworks, etc. can cause an excessive amount of noise. Long-term exposure to loud noise from recreational activities can also cause hearing loss and other related health problems.",
+          "alt": "noise pollution by entertainment activities"
+        },
+        "urbanization": {
+          "title": "Urbanization",
+          "description": "Increased urbanization, including the construction of buildings and roads, can lead to increased noise pollution. Noise pollution in urban areas can also have an impact on wildlife. As by changing their behaviour and communication patterns.",
+          "alt": "noise pollution by urbanization"
+        },
+        "naturalDisasters": {
+          "title": "Natural disasters",
+          "description": "Natural disasters such as earthquakes, hurricanes, volcanic eruptions, tornadoes, and thunderstorms can also cause noise pollution. As through the sound of strong winds, thunder, and other related sounds.",
+          "alt": "noise pollution by natural disasters"
+        },
+        "household": {
+          "title": "Household activities",
+          "description": "Various household activities such as vacuum cleaning, blenders, and certain household appliances can generate noise. Noise can be annoying to family members, neighbours, and even pets, resulting in increased stress.",
+          "alt": "noise pollution by household activities"
+        }
+      },
+      "mitigation": "To mitigate the negative effects of noise pollution, various strategies have used. As by including noise barriers, soundproofing, and regulations to limit noise levels from various sources."
+    },
+    "who": {
+      "recommendation": "The World Health Organization (WHO) and the United States Environmental Protection Agency (EPA) recommend reducing environmental noise levels to less than 70 decibels (dBA) during a 24-hour period to prevent noise-induced hearing loss (or 75 dBA over an 8-hour period).",
+      "iconAlt": "WHO logo"
+    },
+    "homeAppliances": {
+      "titlePrefix": "How",
+      "titleHighlight1": "loud",
+      "titleMiddle": "are your",
+      "titleHighlight2": "home appliances?",
+      "imageAlt": "home appliances noise levels",
+      "appliances": {
+        "refrigerators": {
+          "range": "32 to 80 (dB)",
+          "description": "Refrigerators and air conditioning units"
+        },
+        "vacuum": {
+          "range": "56 to 80 (dB)",
+          "description": "Vacuum Cleaners and blenders"
+        },
+        "washing": {
+          "range": "47 to 65 (dB)",
+          "description": "Washing machines and dishwashers"
+        },
+        "smokeAlarms": {
+          "range": "85 to 110 (dB)",
+          "description": "Smoke alarms in the building"
+        },
+        "homeTheatre": {
+          "range": "Up to 100 (dB)",
+          "description": "Home theatre and soundbars"
+        }
+      },
+      "warning": "It is important to keep in mind in the context of noise pollution that long term exposure to noise levels exceeding 70 dB can induce hearing loss over time. Furthermore, noise levels exceeding 85 decibels (dB) can be hazardous after only a few hours of exposure, while levels above 100 decibels (dB) can cause rapid hearing impairment. To safeguard your hearing and overall well-being, its critical to monitor sound levels and take efforts to limit noise pollution in the home, such as choosing quieter appliances or installing soundproofing materials."
+    },
+    "acoustics": {
+      "titlePrefix": "What is",
+      "titleHighlight1": "Acoustics",
+      "titleMiddle": "and",
+      "titleSuffix": "how is it related to",
+      "titleHighlight2": "Noise pollution?",
+      "description": "Acoustics are critical for the efficient operation of a wide range of settings, including corporate offices, retail stores, restaurants, performance halls, home theatres, and even private spaces such as bathrooms and living rooms where noise control is critical. This enables comfortable working conditions, a good dining experience, improved audio quality for entertainment, and the creation of an engaging ambiance that attracts and retains people.",
+      "buildingComfort": {
+        "titlePrefix": "ACOUSTIC",
+        "titleHighlight": "BUILDING COMFORT",
+        "description": "The degree of sound quality and comfort within a building is referred to as acoustic building comfort. It is frequently assessed in terms of noise levels, as excessive noise can cause residents discomfort, stress, and even health problems.",
+        "imageAlt": "acoustic building comfort",
+        "factors": "To calculate acoustic building comfort with the help of monitored noise levels in decibels (dB), a number of factors need to consider. These include:",
+        "factorsList": {
+          "frequency": {
+            "title": "Frequency of noise",
+            "alt": "frequency of noise"
+          },
+          "duration": {
+            "title": "Duration of noise",
+            "alt": "duration of noise"
+          },
+          "background": {
+            "title": "Background noise levels",
+            "alt": "background noise levels"
+          }
+        }
+      }
+    },
+    "acceptableLevels": {
+      "titlePrefix": "Acceptable",
+      "titleHighlight": "noise levels",
+      "titleSuffix": "for indoor environment:",
+      "levels": {
+        "sleeping": {
+          "description": "Noise levels in sleeping areas should be kept below 35 dB(A).",
+          "colorAlt": "green"
+        },
+        "living": {
+          "description": "The Noise levels in living areas should be kept below 45 dB(A).",
+          "colorAlt": "light green"
+        },
+        "work": {
+          "description": "Noise levels in work areas should be kept below 55 dB(A).",
+          "colorAlt": "yellow"
+        }
+      }
+    },
+    "funFact": {
+      "title": "Fun Fact",
+      "description": "Humans can typically hear sounds between 20 Hz and 20,000 Hz, but some animals can hear sounds at much higher or lower frequencies. For example, dogs can hear frequencies up to 65,000 Hz, while whales can communicate with sounds at frequencies as low as 10 Hz."
+    },
+    "excessiveEffects": {
+      "titlePrefix": "What can",
+      "titleHighlight": "excessive noise do?",
+      "description": "High noise levels can cause various negative effects on humans, animals, wildlife, and the overall ecosystem. Noise in excessive levels can cause:",
+      "effects": {
+        "stress": {
+          "title": "Stress and anxiety",
+          "description": "Prolonged exposure to excessive noise can cause stress and anxiety, leading to physical and mental health problems.",
+          "alt": "stress and anxiety due to noise"
+        },
+        "communication": {
+          "title": "Interference with communication",
+          "description": "Excessive noise can make it difficult to communicate, leading to social and psychological problems.",
+          "alt": "Interference with communication due to noise"
+        },
+        "deafness": {
+          "title": "Deafness",
+          "description": "Exposure to high levels of noise can damage the cells in the inner ear, which can lead to hearing loss and deafness.",
+          "alt": "Deafness due to noise"
+        },
+        "sleep": {
+          "title": "Troubled Sleep",
+          "description": "Prolonged exposure to excessive noise can cause trouble in sleeping whichleads to insomnia and sleep disturbances.",
+          "alt": "Troubled sleep due to noise"
+        },
+        "bloodPressure": {
+          "title": "High Blood Pressure",
+          "description": "Excessive noise can cause hypertension and various cardiovascular problems, especially in old people.",
+          "alt": "High blood pressure due to noise"
+        },
+        "wildlife": {
+          "title": "Wildlife",
+          "description": "High levels of noise can cause disturbances among wildlife. This includes disturbance in mating calls, breeding patterns, etc.",
+          "alt": "Impact on Health of Wildlife due to noise"
+        }
+      }
+    },
+    "environmentalEffects": {
+      "titlePrefix": "How does noise pollution",
+      "titleHighlight": "affects the environment?",
+      "description": "Noise pollution can have negative effects on the environment, including wildlife and ecosystems. Some of these negative effects include:",
+      "imageAlt": "noise pollution effects on environment",
+      "effects": {
+        "community": {
+          "title": "Changes in community",
+          "description": "Noise pollution can alter the composition of animal communities. As some species are more sensitive to noise than others."
+        },
+        "habitat": {
+          "title": "Habitat loss",
+          "description": "Noise pollution can cause animals to avoid certain areas. It can lead to habitat loss and fragmentation."
+        },
+        "plantGrowth": {
+          "title": "Changes in plant growth",
+          "description": "Excessive noise can affect the growth and development of plants. It leads to the changes in the structure of ecosystems."
+        },
+        "ecosystem": {
+          "title": "Ecosystem imbalance",
+          "description": "The negative effects of noise pollution on animals and plants can lead to imbalances in ecosystems."
+        }
+      },
+      "study": {
+        "description": "According to a study conducted by experts at California Polytechnic State University, human noise pollution has an impact on the diversity of plant life in an environment even after the noise is eliminated.",
+        "iconAlt": "study icon"
+      }
+    },
+    "noiseLevels": {
+      "titlePrefix": "What do the",
+      "titleHighlight": "noise levels",
+      "titleSuffix": "say?",
+      "table": {
+        "headers": {
+          "levels": "Noise levels",
+          "units": "dB",
+          "healthEffects": "Health Effects"
+        },
+        "mobileUnits": "dB",
+        "levels": {
+          "peace": {
+            "category": "Peace",
+            "effect": "No harmful effects"
+          },
+          "silent": {
+            "category": "Silent",
+            "effect": "Minor disturbance, difficulty concentrating"
+          },
+          "disturbing": {
+            "category": "Disturbing",
+            "effect": "Annoyance, sleep disturbance, increased stress levels"
+          },
+          "bustling": {
+            "category": "Bustling",
+            "effect": "Significant health effects, including hearing loss, high blood pressure, and cardiovascular diseases"
+          },
+          "loud": {
+            "category": "Loud",
+            "effect": "Severe hearing damage, tinnitus (ringing in the ears), and speech interference"
+          },
+          "extremelyLoud": {
+            "category": "Extremely Loud",
+            "effect": "Permanent hearing loss and other serious health problems, including stress, anxiety, and sleep disturbance"
+          }
+        }
+      },
+      "disclaimer": "Its important to note that these effects can vary depending on factors such as duration of exposure, frequency of exposure, and individual susceptibility to noise. Therefore, its crucial to take steps to reduce noise pollution whenever possible, regardless of the noise level.",
+      "examples": {
+        "title": "Some examples of different sound pressure levels measured in decibels (dB):",
+        "table": {
+          "headers": {
+            "levels": "Noise Levels",
+            "indoor": "Indoor",
+            "outdoor": "Outdoor"
+          },
+          "rows": {
+            "conversation": {
+              "indoor": "Normal conversation",
+              "outdoor": "Quiet suburb or light traffic on a highway"
+            },
+            "music": {
+              "indoor": "Background music at a low volume",
+              "outdoor": "Normal conversation or a busy street"
+            },
+            "traffic": {
+              "indoor": "Busy street noise heard from indoors",
+              "outdoor": "Traffic noise or a motorcycle passing by"
+            },
+            "vacuum": {
+              "indoor": "Vacuum cleaner",
+              "outdoor": "Noisy restaurant kitchen or a jackhammer"
+            },
+            "loudMusic": {
+              "indoor": "Loud music from speakers",
+              "outdoor": "Concert music or a car horn"
+            },
+            "powerTools": {
+              "indoor": "Power tools",
+              "outdoor": "Thunder or a jet plane taking off"
+            }
+          }
+        }
+      }
+    },
+    "reducing": {
+      "titleHighlight": "Reducing",
+      "titleSuffix": "noise pollution",
+      "description": "Noise pollution can have negative effects on the environment, including wildlife and ecosystems. Some of these negative effects include:",
+      "methods": {
+        "barriers": {
+          "title": "Use noise barriers",
+          "description": "Noise barriers can be used to reduce noise pollution from highways, railways, and other sources.",
+          "alt": "use noise barriers"
+        },
+        "trees": {
+          "title": "Plant trees",
+          "description": "Trees and vegetation can help absorb sound waves, reducing the amount of noise that reaches people.",
+          "alt": "plant trees"
+        },
+        "regulations": {
+          "title": "Govt. Regulations",
+          "description": "Governments can enforce regulations and standards for noise levels, which can include limits on noise emissions from various sources, and can require noise-reducing technologies to be used.",
+          "alt": "government regulations to reduce noise"
+        },
+        "insulation": {
+          "title": "Insulate buildings",
+          "description": "Insulating buildings can reduce the amount of noise that enters them. This can be done by using double-glazed windows, soundproof curtains, and acoustic panels.",
+          "alt": "insulate buildings to reduce noise pollution"
+        },
+        "education": {
+          "title": "Educate people",
+          "description": "Educating people about the negative impacts of noise pollution and the ways to control it can be an effective way to raise awareness and encourage action. Overall, controlling noise pollution requires a combination of efforts from individuals, businesses, and governments.",
+          "alt": "educate people"
+        }
+      }
+    },
+    "precautions": {
+      "titlePrefix": "When to know",
+      "titleHighlight": "precautions are needed?",
+      "description": "In outdoor settings, the volume of noise can often reach excessive levels. As a result, it is important for authorities and other concerned parties to monitor sound levels, particularly in areas where there is a high degree of noise pollution, such as construction sites, industrial zones, and other similarly noisy environments. This enables them to keep the noise within acceptable limits.",
+      "imageAlt": "air quality device to detect noise"
+    },
+    "devices": {
+      "titlePrefix": "Use a device to measure",
+      "titleHighlight": "Noise",
+      "titleSuffix": "level indoor & outdoor",
+      "squair": {
+        "title": "SQUAIR Air Monitor",
+        "description": "This is an ultimate indoor air quality monitoring device that is designed to keep you informed about the air you breathe. The device is capable of measuring indoor noise level also.",
+        "alt": "prana air squair monitor"
+      },
+      "ambient": {
+        "title": "Ambient Air Monitor",
+        "description": "This ambient air monitor detects noise and air quality parameters outdoors. This is compact, user-friendly and can be used for real-time data monitoring/alerts.",
+        "alt": "prana air noise sensor in ambient monitor"
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+    "products": {
+  "co2Sensor": {
+    "imageAlt": "CO2 Sensor",
+    "title": "CO2 Sensor",
+    "description": "Measures CO2 levels with high accuracy"
+  },
+  "pocketCO2": {
+    "imageAlt": "Pocket CO2 Monitor",
+    "title": "Pocket CO2 Monitor",
+    "description": "Portable CO2 monitoring solution"
+  },
+  "squair": {
+    "imageAlt": "SQUAIR Air Monitor",
+    "title": "SQUAIR Air Monitor",
+    "description": "Measures CO2 and other pollutants"
+  },
+  "sensiblePlus": {
+    "imageAlt": "Sensible+ Advanced CO2 Monitor",
+    "title": "Sensible+ Advanced CO2 Monitor",
+    "description": "Professional grade monitoring"
+  }
+},
+ "banner": {
+      "iconAlt": "what is co2 carbon dioxide",
+      "title": "What is Carbon Dioxide (CO₂)?",
+      "description": "Carbon Dioxide (CO₂) is a transparent gas and natural component of air, that acts as a greenhouse gas in the atmosphere. It is generally harmless in small quantities but can affect severely as the quantities rise, especially indoors where ventilation is low and indoor air cannot recirculate. Hence, it can impact sleep patterns, productivity, concentration levels, etc."
+    },
+    "environment": {
+      "title": "How is it important in the environment?",
+      "description1": "CO₂ helps plants in the process of photosynthesis, a process through which plants make their food. Many animals and humans both depend on plants for their survival. Therefore photosynthesis is important for the survival of plants, animals, and humans.",
+      "description2": "CO₂ helps in trapping the heat and energy from the sun within the earths atmosphere. Because this helps in preventing the temperature from getting inhospitably cold and oceans from freezing into solid.",
+      "iconAlt": "plant icon"
+    },
+    "indoorLevels": {
+      "title": "What do indoor Carbon Dioxide (CO₂) levels say?",
+      "description": "CO₂ is commonly measured in PPM (Parts Per Million). ASHRAE (The American Society of Heating, Refrigerating and Air-Conditioning Engineers) recommended that carbon dioxide levels indoors should be maintained below 1000 ppm.",
+      "levels": {
+        "good": "Good – 300-600",
+        "moderate": "Moderate – 601-800",
+        "poor": "Poor – 801-1000",
+        "unhealthy": "Unhealthy – 1001-1200",
+        "severe": "Severe – 1201-1500",
+        "hazardous": "Hazardous – Above 1051"
+      },
+      "chartAlt": "CO2 levels chart"
+    },
+    "sources": {
+      "title": "Where does Carbon Dioxide (CO2) come from indoors?",
+      "description": "The main source of CO₂ indoors is respiration. Because as we inhale oxygen and release CO₂. In the modern age, homes are becoming more airtight, ventilation does not happen that frequently and fresh air cannot enter indoors. Many ventilation systems that are used nowadays recirculate the air indoors rather than bringing less CO₂ contaminated air from outdoors. As a result, the same air is recirculating and recirculating. Hence, this increases the carbon dioxide contamination indoors.",
+      "imageAlt": "sources of indoor Carbon Dioxide (CO2) level"
+    },
+    "healthEffects": {
+      "title": "Health Effects",
+      "subtitle": "High levels of CO₂ are responsible for",
+      "effects": {
+        "productivity": {
+          "title": "1. Lower productivity",
+          "description": "High CO₂ affects concentration and attention and in turn productivity.",
+          "imageAlt": "low productivity due to high Carbon Dioxide (CO2)"
+        },
+        "sleep": {
+          "title": "2. Disturbed sleep",
+          "description": "When limits exceed, one can have difficulty in their sleeping patterns as well.",
+          "imageAlt": "disturbing sleep due to high Carbon Dioxide (CO2)"
+        },
+        "bloodPressure": {
+          "title": "3. Increased blood pressure & heart rate",
+          "description": "High CO₂ levels can trigger high BP problems due to the vasodilating effect.",
+          "imageAlt": "Increased blood pressure and heart rate"
+        },
+        "headache": {
+          "title": "4. Headache",
+          "description": "CO₂ levels highly influence cerebral blood flow, which can cause headache problems.",
+          "imageAlt": "headache due to high Carbon Dioxide (CO2)"
+        },
+        "restlessness": {
+          "title": "5. Restlessness",
+          "description": "Disorders such as hypercapnia can happen when CO₂ levels are high.",
+          "imageAlt": "restlessness due to high Carbon Dioxide (CO2)"
+        },
+        "dizziness": {
+          "title": "6. Dizziness",
+          "description": "At high levels, CO₂ is known to cause dizziness, vertigo, and other symptoms.",
+          "imageAlt": "diziness due to high Carbon Dioxide (CO2)"
+        }
+      }
+    },
+    "tips": {
+      "title": "How to achieve the ideal Carbon Dioxide (CO2) levels indoors?",
+      "subtitle": "10 tips to reduce carbon dioxide levels indoors:",
+      "items": {
+        "ventilation": {
+          "title": "1. Ventilation",
+          "description": "Makes it easy for the flow of air. Besides, it is the easiest and most economical way of reducing CO₂.",
+          "imageAlt": "Ventilation"
+        },
+        "filtration": {
+          "title": "2. Filtration",
+          "description": "Air filters with activated carbon filters will help reduce the CO₂ concentration indoors.",
+          "imageAlt": "Filtration"
+        },
+        "plants": {
+          "title": "3. Plants",
+          "description": "Indoor plants such as Snake Plant, Aloe vera, and money plant are known as the natural air filters.",
+          "imageAlt": "Plants"
+        },
+        "decreasing": {
+          "title": "4. Decreasing",
+          "description": "The number of people in a room also helps in reducing CO₂ concentrations.",
+          "imageAlt": "Decreasing people"
+        },
+        "monitor": {
+          "title": "5. Use an air quality monitor",
+          "description": "This will help in tracking and keeping a check on the CO₂ levels indoors.",
+          "imageAlt": "Air quality monitor"
+        },
+        "emissions": {
+          "title": "6. Control CO2 emissions",
+          "description": "The usage of gas-powered heaters, coal burning, etc. must be controlled.",
+          "imageAlt": "Control CO2 emissions"
+        },
+        "smoking": {
+          "title": "7. Avoid smoking",
+          "description": "Indoors as smoking contributes to the overall CO₂ concentrations indoors.",
+          "imageAlt": "Avoid smoking"
+        },
+        "purification": {
+          "title": "8. Air purification",
+          "description": "It does not help in reducing the CO₂ levels but filtered air is better than unfiltered air.",
+          "imageAlt": "Air purification"
+        },
+        "flames": {
+          "title": "9. Open flames",
+          "description": "Must be limited as CO₂ is the primary pollutant emitted by an open fire, such as fireplaces.",
+          "imageAlt": "Open flames"
+        },
+        "fuelLeaks": {
+          "title": "10. Keep a check on fuel leaks",
+          "description": "CO₂ is released when fuels are burned improperly.",
+          "imageAlt": "Check fuel leaks"
+        }
+      }
+    },
+    "measure": {
+      "title": "How to Measure CO2 level?",
+      "description": "Prana Air CO₂ monitor has an embedded sensor that is a Non-Dispersive InfraRed (NDIR) sensor with 1 PPM resolution and a 10,000 PPM range. With an LCD screen and multiple data displays, monitor the carbon dioxide levels indoors as well as outdoors.",
+      "imageAlt": "good co2 level with pocket monitor"
+    },
+    "productCarousel": {
+      "title": "Choose Your Air Quality Monitor To Measure CO2"
+    }
+}

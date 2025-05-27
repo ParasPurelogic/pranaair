@@ -1,57 +1,98 @@
-"use client"
-
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
-import Carousel from "react-multi-carousel"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import ProductCarousel from "@/Components/Pages/CinemaTheatre/airQualityMonitors"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function AirQualitySolutionsPage() {
-    // Carousel responsive settings
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 3,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 600 },
-            items: 3,
-        },
-        mobile: {
-            breakpoint: { max: 600, min: 0 },
-            items: 1,
-        },
-    }
+export default async function AirQualitySolutionsPage() {
+    const { t } = await getServerTranslation("cinema-theatre")
 
-    const sliderQuality = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 1,
+    const industrialApplications = [
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+            title: t("industrialApplicationsData.hotel.title"),
+            link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
         },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 1,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+            title: t("industrialApplicationsData.restaurant.title"),
+            link: "https://www.pranaair.com/solutions-by-application/restaurants/",
         },
-        tablet: {
-            breakpoint: { max: 1024, min: 600 },
-            items: 1,
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+            title: t("industrialApplicationsData.institutes.title"),
+            link: "https://www.pranaair.com/solutions-by-application/institutes/",
         },
-        mobile: {
-            breakpoint: { max: 600, min: 0 },
-            items: 1
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+            title: t("industrialApplicationsData.cinema.title"),
+            link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+            title: t("industrialApplicationsData.automobiles.title"),
+            link: "https://www.pranaair.com/solutions-by-application/automobile/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+            title: t("industrialApplicationsData.realEstate.title"),
+            link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+            title: t("industrialApplicationsData.smartphone.title"),
+            link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+            title: t("industrialApplicationsData.construction.title"),
+            link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+            title: t("industrialApplicationsData.animalCare.title"),
+            link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+            title: t("industrialApplicationsData.logistics.title"),
+            link: "https://www.pranaair.com/solutions-by-application/logistics/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+            title: t("industrialApplicationsData.railways.title"),
+            link: "https://www.pranaair.com/solutions-by-application/railway/",
         }
-    };
-    useEffect(() => {
-        import("bootstrap/dist/js/bootstrap.bundle.min.js")
-            .then(() => {
-                console.log("Bootstrap JS loaded");
-            })
-            .catch((err) => console.error("Error loading Bootstrap JS:", err));
-    }, []);
-
+    ]
+    const airQualityMonitors = [
+        {
+            image: "/air-quality-monitor.png",
+            imageAlt: t("airQualityMonitors.squair.imageAlt"),
+            title: t("airQualityMonitors.squair.title"),
+            description: t("airQualityMonitors.squair.description"),
+            features: [
+                t("airQualityMonitors.squair.features.item1"),
+                t("airQualityMonitors.squair.features.item2"),
+                t("airQualityMonitors.squair.features.item3"),
+            ],
+            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            hasRentOption: true,
+        },
+        {
+            image: "/sensible-plus-monitor.png",
+            imageAlt: t("airQualityMonitors.sensiblePlus.imageAlt"),
+            title: t("airQualityMonitors.sensiblePlus.title"),
+            description: t("airQualityMonitors.sensiblePlus.description"),
+            features: [
+                t("airQualityMonitors.sensiblePlus.features.item1"),
+                t("airQualityMonitors.sensiblePlus.features.item2"),
+                t("airQualityMonitors.sensiblePlus.features.item3"),
+                t("airQualityMonitors.sensiblePlus.features.item4"),
+            ],
+            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            hasRentOption: true,
+        },
+    ]
     return (
         <div>
             {/* Banner Section */}
@@ -60,14 +101,16 @@ export default function AirQualitySolutionsPage() {
                 style={{
                     backgroundImage:
                         "url('https://www.pranaair.com/wp-content/uploads/2022/09/air-quality-solutions-for-cinema-halls-by-prana-air.jpg')",
-                }}
-            >
+                }}>
                 <div className="col-md-6 banner_quality_box">
                     <div className="pocket_title_box school_aqi_box">
-                        <h1>Air quality solutions for <span className="bold_text">Cinema Halls & Theatre</span></h1>
-                        <p>A complete solution including air quality monitoring,
-                            air purification & data accessibility</p>
-                        <a className="pocket_buy_btn" href="#get_in_touch">Get a Quote</a>
+                        <h1>
+                            {t("cinema.banner.title")} <span className="bold_text">{t("cinema.banner.highlight")}</span>
+                        </h1>
+                        <p>{t("cinema.banner.description")}</p>
+                        <a className="pocket_buy_btn" href="#get_in_touch">
+                            {t("cinema.banner.cta")}
+                        </a>
                     </div>
                 </div>
                 <div className="col-md-6 banner_quality_img_box"></div>
@@ -78,10 +121,10 @@ export default function AirQualitySolutionsPage() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">Major Air <span className="bold_text">Pollutants</span></h2>
-                            <p>When the cinema halls and theatres are packed, there is no movement in the pollution particles, and as a result, they build up within the enclosed spaces. As a result, movie-goers will feel uneasy and unwell. This will reduce the number of their visits. In short, cinema halls will lose money.
-
-                            </p>
+                            <h2 className="title_heading">
+                                {t("cinema.pollutants.title")} <span className="bold_text">{t("cinema.pollutants.highlight")}</span>
+                            </h2>
+                            <p>{t("cinema.pollutants.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -94,11 +137,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png"
-                                alt="pm2.5 in school and institutes"
+                                alt={t("cinema.pollutantFeatures.pm25.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>PM2.5</h2>
-                                <p>Fine dust particles & water droplets suspended in the air (diameter of 2.5 microns)</p>
+                                <h2>{t("cinema.pollutantFeatures.pm25.title")}</h2>
+                                <p>{t("cinema.pollutantFeatures.pm25.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -106,11 +149,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
-                                alt="co2 gas in schools and institutes"
+                                alt={t("cinema.pollutantFeatures.co2.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>CO2</h2>
-                                <p>CO2 levels exceed the desired CO2 limits at times when there is no movement in the air</p>
+                                <h2>{t("cinema.pollutantFeatures.co2.title")}</h2>
+                                <p>{t("cinema.pollutantFeatures.co2.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -118,11 +161,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png"
-                                alt="tvoc in schools and institutes"
+                                alt={t("cinema.pollutantFeatures.tvoc.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>TVOC</h2>
-                                <p>The fabric used in seating furniture or wooden products paints carpets</p>
+                                <h2>{t("cinema.pollutantFeatures.tvoc.title")}</h2>
+                                <p>{t("cinema.pollutantFeatures.tvoc.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -130,11 +173,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/09/hcho-icon-plain.png"
-                                alt="ozone in school & institutes"
+                                alt={t("cinema.pollutantFeatures.hcho.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>HCHO</h2>
-                                <p>Aerosol sprays perfumes and room fresheners are some of the potential sources</p>
+                                <h2>{t("cinema.pollutantFeatures.hcho.title")}</h2>
+                                <p>{t("cinema.pollutantFeatures.hcho.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -156,38 +199,36 @@ export default function AirQualitySolutionsPage() {
                                 <span className="school_icon_box">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-icon-2.png"
-                                        alt="pm2.5 in school & institutes"
+                                        alt={t("cinema.pollutantSources.pm25.imgAlt")}
                                     />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>PM2.5</h3>
-                                    <p>Carpet and clothing fibers,
-                                        degradation of buildings</p>
+                                    <h3>{t("cinema.pollutantSources.pm25.title")}</h3>
+                                    <p>{t("cinema.pollutantSources.pm25.description")}</p>
                                 </div>
                             </li>
                             <li className="second_school_box">
                                 <span className="school_icon_box">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-icon.png"
-                                        alt="co2 in school & institutes"
+                                        alt={t("cinema.pollutantSources.co2.imgAlt")}
                                     />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>CO2</h3>
-                                    <p>Respiration or breathing</p>
+                                    <h3>{t("cinema.pollutantSources.co2.title")}</h3>
+                                    <p>{t("cinema.pollutantSources.co2.description")}</p>
                                 </div>
                             </li>
                             <li className="third_school_box">
                                 <span className="school_icon_box">
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2022/08/ozone-o3-icon.png"
-                                        alt="ozone o3 in school & institutes"
+                                        alt={t("cinema.pollutantSources.tvocs.imgAlt")}
                                     />
                                 </span>
                                 <div className="schhol_text_box">
-                                    <h3>TVOCs</h3>
-                                    <p>Paints, carpets,
-                                        disinfectants</p>
+                                    <h3>{t("cinema.pollutantSources.tvocs.title")}</h3>
+                                    <p>{t("cinema.pollutantSources.tvocs.description")}</p>
                                 </div>
                             </li>
                         </ul>
@@ -201,12 +242,9 @@ export default function AirQualitySolutionsPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Who are at <span className="bold_text">Risk?</span>
+                                {t("cinema.risk.title")} <span className="bold_text">{t("cinema.risk.highlight")}</span>
                             </h2>
-                            <p>
-                                Different people from different age groups can be present in a cinema hall. But certain groups are
-                                significantly impacted as compared to healthy adults.
-                            </p>
+                            <p>{t("cinema.risk.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -219,14 +257,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/09/respiratory-illness-in-cinema-hall.png"
-                                alt="Personal Trainer in fitness center"
+                                alt={t("cinema.riskGroups.respiratoryIllness.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Respiratory Illness </h2>
-                                <p>
-                                    Movie-goers and staff with respiratory or other illnesses already have a weaker respiratory and immune
-                                    system.
-                                </p>
+                                <h2>{t("cinema.riskGroups.respiratoryIllness.title")}</h2>
+                                <p>{t("cinema.riskGroups.respiratoryIllness.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -234,11 +269,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/09/children-in-cinemal-hall.png"
-                                alt="Service Technician in fitness center"
+                                alt={t("cinema.riskGroups.children.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Children</h2>
-                                <p>Children have developing organs. When exposed the growing tissue and cell growth are hampered.</p>
+                                <h2>{t("cinema.riskGroups.children.title")}</h2>
+                                <p>{t("cinema.riskGroups.children.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -246,12 +281,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/09/cinema-hall-staff.png"
-                                alt="Front desk staff in fitness center & gym"
+                                alt={t("cinema.riskGroups.staff.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Staff
-                                </h2>
-                                <p>Lower productivity, absenteeism, and lower concentration are some of the side effects of exposure.</p>
+                                <h2>{t("cinema.riskGroups.staff.title")}</h2>
+                                <p>{t("cinema.riskGroups.staff.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -259,11 +293,11 @@ export default function AirQualitySolutionsPage() {
                         <div className="risk_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/09/movie-goers.png"
-                                alt="a customer of a restaurant"
+                                alt={t("cinema.riskGroups.movieGoers.imgAlt")}
                             />
                             <div className="feature_wrap_box">
-                                <h2>Movie-Goers</h2>
-                                <p>Healthy adults will experience side effects like headaches dizziness stuffiness and nausea.</p>
+                                <h2>{t("cinema.riskGroups.movieGoers.title")}</h2>
+                                <p>{t("cinema.riskGroups.movieGoers.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -275,8 +309,10 @@ export default function AirQualitySolutionsPage() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
-                            <h2 className="title_heading">Air quality <span className="bold_text">Solutions</span></h2>
-                            <p>Prana Air air quality monitoring and purifying solutions give you the power to know what your customers and staff breathe and what you could do to clean the air to make your fitness centers and gyms ‘Air pollution-free zone’ and view and analyze your IAQ.</p>
+                            <h2 className="title_heading">
+                                {t("cinema.solutions.title")} <span className="bold_text">{t("cinema.solutions.highlight")}</span>
+                            </h2>
+                            <p>{t("cinema.solutions.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -286,139 +322,120 @@ export default function AirQualitySolutionsPage() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className='solution-tab'>
-                            <ul className="nav nav-tabs">
-                                <li className="nav-item">
-                                    <button className={`nav-link ${activeTab === "air-quality-monitors" ? "active" : ""}`} onClick={() => setActiveTab("air-quality-monitors")}
-                                        href="#"
+                        <div className="solution-tab">
+                            {/* Bootstrap Tabs */}
+                            <ul className="nav nav-tabs" id="airQualityTabs" role="tablist">
+                                <li className="nav-item" role="presentation">
+                                    <button
+                                        className="nav-link active"
+                                        id="monitors-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#monitors"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="monitors"
+                                        aria-selected="true"
                                     >
-                                        Air Quality Monitors
+                                        {t("cinema.tabs.monitors")}
                                     </button>
                                 </li>
-                                <li className="nav-item">
-                                    <button className={`nav-link ${activeTab === "fresh-air-machine" ? "active" : ""}`} onClick={() => setActiveTab("fresh-air-machine")}
-                                        href="#"
+                                <li className="nav-item" role="presentation">
+                                    <button
+                                        className="nav-link"
+                                        id="fresh-air-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#fresh-air"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="fresh-air"
+                                        aria-selected="false"
                                     >
-                                        Fresh Air Machine
+                                        {t("cinema.tabs.freshAir")}
                                     </button>
                                 </li>
-                                <li className="nav-item">
-                                    <button className={`nav-link ${activeTab === "api-data" ? "active" : ""}`} onClick={() => setActiveTab("api-data")}
-                                        href="#"
+                                <li className="nav-item" role="presentation">
+                                    <button
+                                        className="nav-link"
+                                        id="data-display-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#data-display"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="data-display"
+                                        aria-selected="false"
                                     >
-                                        API Data
+                                        {t("cinema.tabs.apiData")}
                                     </button>
                                 </li>
                             </ul>
                         </div>
 
-
+                        {/* Tab Content */}
                         <div className="tab-content">
-                            {activeTab === 'air-quality-monitors' && (
-                                <div className="tab-pane active inner_container">
-                                    <div className="owl-slider">
-                                        <Carousel
-                                            responsive={sliderQuality}
-                                            infinite={true}
-                                            autoPlay={true}
-                                            autoPlaySpeed={7000}
-                                            keyBoardControl={true}
-                                            customTransition="all .5"
-                                            transitionDuration={500}
-                                        >
-                                            <div className="item">
-                                                <div className="slider_cntr">
-                                                    <div className="slider_img_box">
-                                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
-                                                            <img style={{ width: '100%' }} src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-squair-air-monitor-in-fitness-center-gym.png" alt="prana air squair monitor as the air quality solutions for restaurant or cafe" />
-                                                        </a>
-                                                    </div>
-                                                    <div className="slider_details_box">
-                                                        <h3>Prana Air SQUAIR<br /> Air quality monitor</h3>
-                                                        <span>SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate matters, temperature, humidity, and gas parameters.</span>
-                                                        <ul className="airquality_list">
-                                                            <li>Detects PM2.5, PM10, CO2, TVOC, Noise, Light (LUX), Temperature & humidity</li>
-                                                            <li>Mode of connectivity: WiFi, GSM, BMS</li>
-                                                            <li>Mobile & Smart TV App, web-dashboard</li>
-                                                        </ul>
-                                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/" className="knowmore_btn">Know More</a>
-                                                        <a href="#" className="rent_btn">Looking to Rent?</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="item">
-                                                <div className="slider_cntr">
-                                                    <div className="slider_img_box">
-                                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
-                                                            <img style={{ width: '100%' }} src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-sensible-plus-air-monitor-for-fitness-center-gym.jpg" alt="prana air sensible+ air quality monitor for restaurants and cafe" />
-                                                        </a>
-                                                    </div>
-                                                    <div className="slider_details_box">
-                                                        <h3>Prana Air Sensible+<br /> Air quality monitor</h3>
-                                                        <span>This is a smart air quality monitor that comes with 7 inch touch screen display that gives more insightful data.
-                                                        </span>
-                                                        <ul className="airquality_list">
-                                                            <li>Detects PM2.5, PM10, CO2, TVOC, HCHO, Temperature, Humidity</li>
-                                                            <li>7 Inch LED Touch Screen Display
-                                                            </li>
-                                                            <li>5000 mAh Battery InBuilt
-                                                            </li>
-                                                            <li>WiFi Connectivity With Mobile App
-                                                            </li>
-                                                        </ul>
-                                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/" className="knowmore_btn">Know More</a>
-                                                        <a href="#" className="rent_btn">Looking to Rent?</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Carousel>
-                                    </div>
-                                </div>
-                            )}
+                            <div
+                                className="tab-pane active inner_container"
+                                id="monitors"
+                                role="tabpanel"
+                                aria-labelledby="monitors-tab"
+                            >
+                                <ProductCarousel airQualityMonitors={airQualityMonitors} />
+                            </div>
 
-                            {activeTab === 'fresh-air-machine' && (
-                                <div className="tab-pane active">
-                                    <div className="slider_cntr">
-                                        <div className="slider_img_box">
-                                            <a href="https://www.pranaair.com/fresh-air-machine/">
-                                                <img style={{ width: '100%' }} src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg" alt="prana air fresh air machine as iaq solution for school & institutes" />
-                                            </a>
-                                        </div>
-                                        <div className="slider_details_box">
-                                            <h3>Fresh Air Machine<br /> As IAQ Solution</h3>
-                                            <span>It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.</span>
-                                            <ul className="airquality_list">
-                                                <li>Comes with multi-layers HEPA Filters</li>
-                                                <li>Compact Design makes it easy to place</li>
-                                                <li>Promising you up to 99.5% efficiency</li>
-                                            </ul>
-                                            <a href="https://www.pranaair.com/fresh-air-machine/" className="knowmore_btn">Know More</a>
-                                            <a href="#" className="rent_btn">Looking to Rent?</a>
-                                        </div>
+                            <div className="tab-pane" id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
+                                <div className="slider_cntr">
+                                    <div className="slider_img_box">
+                                        <a href="https://www.pranaair.com/fresh-air-machine/">
+                                            <img
+                                                style={{ width: "100%" }}
+                                                src="/fresh-air-machine.png"
+                                                alt={t("cinema.tabContent.freshAir.imgAlt")}
+                                            />
+                                        </a>
+                                    </div>
+                                    <div className="slider_details_box">
+                                        <h3>
+                                            {t("cinema.tabContent.freshAir.title")}
+                                            <br /> {t("cinema.tabContent.freshAir.subtitle")}
+                                        </h3>
+                                        <span>{t("cinema.tabContent.freshAir.description")}</span>
+                                        <ul className="airquality_list">
+                                            <li>{t("cinema.tabContent.freshAir.features.item1")}</li>
+                                            <li>{t("cinema.tabContent.freshAir.features.item2")}</li>
+                                            <li>{t("cinema.tabContent.freshAir.features.item3")}</li>
+                                        </ul>
+                                        <a href="https://www.pranaair.com/fresh-air-machine/" className="knowmore_btn">
+                                            {t("cinema.tabContent.freshAir.knowMore")}
+                                        </a>
+                                        <a href="#" className="rent_btn">
+                                            {t("cinema.tabContent.freshAir.rent")}
+                                        </a>
                                     </div>
                                 </div>
-                            )}
+                            </div>
 
-                            {activeTab === 'api-data' && (
-                                <div className="tab-pane active">
-                                    <div className="slider_cntr">
-                                        <div className="slider_img_box">
-                                            <img style={{ width: '100%' }} src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg" alt="aqi api data for school & institutes" />
-                                        </div>
-                                        <div className="slider_details_box">
-                                            <h3>AQI API Data<br /> For Institutes</h3>
-                                            <span>Avail the real-time air quality data of your institutes nearby outdoor area on the web.</span>
-                                            <ul className="airquality_list">
-                                                <li>Integrate the institutes data on the web</li>
-                                                <li>Access the real-time data quickly</li>
-                                                <li>Take precautions from the air pollution</li>
-                                            </ul>
-                                            <br />
-                                            <a href="#get_in_touch" className="knowmore_btn">Know More</a>
-                                        </div>
+                            <div className="tab-pane" id="data-display" role="tabpanel" aria-labelledby="data-display-tab">
+                                <div className="slider_cntr">
+                                    <div className="slider_img_box">
+                                        <img style={{ width: "100%" }} src="/api-data.png" alt={t("cinema.tabContent.apiData.imgAlt")} />
+                                    </div>
+                                    <div className="slider_details_box">
+                                        <h3>
+                                            {t("cinema.tabContent.apiData.title")}
+                                            <br /> {t("cinema.tabContent.apiData.subtitle")}
+                                        </h3>
+                                        <span>{t("cinema.tabContent.apiData.description")}</span>
+                                        <ul className="airquality_list">
+                                            <li>{t("cinema.tabContent.apiData.features.item1")}</li>
+                                            <li>{t("cinema.tabContent.apiData.features.item2")}</li>
+                                            <li>{t("cinema.tabContent.apiData.features.item3")}</li>
+                                        </ul>
+                                        <br />
+                                        <a href="#get_in_touch" className="knowmore_btn">
+                                            {t("cinema.tabContent.apiData.knowMore")}
+                                        </a>
                                     </div>
                                 </div>
-                            )}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -430,85 +447,84 @@ export default function AirQualitySolutionsPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Data Freemium <span className="bold_text">Services</span>
+                                {t("cinema.dataServices.title")} <span className="bold_text">{t("cinema.dataServices.highlight")}</span>
                             </h2>
-                            <p>
-                                The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan
-                                the QR to know the AQI of the cinema hall.
-                            </p>
+                            <p>{t("cinema.dataServices.description")}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container inner_container">
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="app_service_box">
+                            <img
+                                src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-tv-app-dashboard.jpg"
+                                alt={t("cinema.dataServices.features.tvDashboard.imgAlt")}
+                            />
+                            <h4>{t("cinema.dataServices.features.tvDashboard.title")}</h4>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="app_service_box">
+                            <img
+                                src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-customized-tablet-app.jpg"
+                                alt={t("cinema.dataServices.features.customApp.imgAlt")}
+                            />
+                            <h4>{t("cinema.dataServices.features.customApp.title")}</h4>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="app_service_box">
+                            <img
+                                src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg"
+                                alt={t("cinema.dataServices.features.qrCode.imgAlt")}
+                            />
+                            <h4>{t("cinema.dataServices.features.qrCode.title")}</h4>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container inner_container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="app_service_box">
-                            <img src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-tv-app-dashboard.jpg"
-                                alt="aqi tv app dashboard for fitness center &amp; gym" />
-                            <h4>TV Dashboard App</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="app_service_box"><img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-customized-tablet-app.jpg"
-                            alt="aqi customized dashboard app for fitness center &amp; gym" />
-                            <h4>Customised App for Schools</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="app_service_box"><img
-                            src="https://www.pranaair.com/wp-content/uploads/2022/09/aqi-data-qrcode-for-airpot.jpg"
-                            alt="aqi monitor data qr code scan for airport" />
-                            <h4>QR Code Scan</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
             {/* Effects of Air Pollution */}
             <div className="container top_space_heading">
                 <div className="row">
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                The Effects of Air Pollution - In <span className="bold_text">Cinema Halls</span>
+                                {t("cinema.effects.title")} <span className="bold_text">{t("cinema.effects.highlight")}</span>
                             </h2>
-                            <p>
-                                When movie-goers are exposed to poor air quality, they feel unwell, and headaches and nausea are common
-                                symptoms of air pollution exposure.
-                            </p>
+                            <p>{t("cinema.effects.description")}</p>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div className="container inner_container airgraph_cntr">
                 <div className="row">
                     <div className="col-md-6 air_graph_box">
                         <div className="air_quality_box">
                             <h3>
-                                <span style={{ fontSize: "15pt", color: "#78ae60" }}> With Clean Air</span>
+                                <span style={{ fontSize: "15pt", color: "#78ae60" }}>{t("cinema.effects.cleanAir.title")}</span>
                             </h3>
                             <ul className="airquality_list">
-                                <li>Improved ventilation</li>
-                                <li>Improve the health of the movie-goers</li>
-                                <li>Increase the comfort of the audience</li>
-                                <li>Better movie experience</li>
+                                <li>{t("cinema.effects.cleanAir.benefits.item1")}</li>
+                                <li>{t("cinema.effects.cleanAir.benefits.item2")}</li>
+                                <li>{t("cinema.effects.cleanAir.benefits.item3")}</li>
+                                <li>{t("cinema.effects.cleanAir.benefits.item4")}</li>
                             </ul>
                         </div>
-                        <span className="vs_text">VS</span>
+                        <span className="vs_text">{t("cinema.effects.vsText")}</span>
                     </div>
                     <div className="col-md-6 air_qualiity_right">
                         <div className="air_quality_box">
                             <h3>
-                                <span style={{ fontSize: "15pt", color: "#e86868" }}> Without Clean Air</span>
+                                <span style={{ fontSize: "15pt", color: "#e86868" }}>{t("cinema.effects.uncleanAir.title")}</span>
                             </h3>
                             <ul className="airquality_list red_list">
-                                <li>Decrease audience comfort</li>
-                                <li>Less enjoyable experience</li>
-                                <li>Bad odor and stuffiness</li>
-                                <li>Movie-goers may feel unwell</li>
+                                <li>{t("cinema.effects.uncleanAir.drawbacks.item1")}</li>
+                                <li>{t("cinema.effects.uncleanAir.drawbacks.item2")}</li>
+                                <li>{t("cinema.effects.uncleanAir.drawbacks.item3")}</li>
+                                <li>{t("cinema.effects.uncleanAir.drawbacks.item4")}</li>
                             </ul>
                         </div>
                     </div>
@@ -531,7 +547,7 @@ export default function AirQualitySolutionsPage() {
                                             aria-expanded="true"
                                             aria-controls="collapse1"
                                         >
-                                            1. What are the major pollutants that are present in a cinema hall?
+                                            {t("cinema.faq.questions.q1.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -540,10 +556,7 @@ export default function AirQualitySolutionsPage() {
                                         data-bs-parent="#faqAccordion"
                                         aria-labelledby="heading1"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Many pollutants can be present inside a typical cinema hall setting. CO2, TVOC, and dust particles
-                                            are the main pollutants followed by noise, CO, airborne pathogens, temperature, etc.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("cinema.faq.questions.q1.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -556,7 +569,7 @@ export default function AirQualitySolutionsPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse2"
                                         >
-                                            2. What are the health impacts of the pollutants present inside the cinema hall?
+                                            {t("cinema.faq.questions.q2.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -565,9 +578,7 @@ export default function AirQualitySolutionsPage() {
                                         data-bs-parent="#faqAccordion"
                                         aria-labelledby="heading2"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Physical discomforts like headaches, nausea, dizziness, etc. among movie-goers and staff.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("cinema.faq.questions.q2.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -580,7 +591,7 @@ export default function AirQualitySolutionsPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse3"
                                         >
-                                            3. What are some criteria that need to be kept in mind for a comfortable movie experience?
+                                            {t("cinema.faq.questions.q3.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -589,10 +600,7 @@ export default function AirQualitySolutionsPage() {
                                         data-bs-parent="#faqAccordion"
                                         aria-labelledby="heading3"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Ventilation rate, noise, comfort level, mold score, organic aerosols, etc. are some of the
-                                            criteria.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("cinema.faq.questions.q3.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -605,7 +613,7 @@ export default function AirQualitySolutionsPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse4"
                                         >
-                                            4. Why is it necessary to have air quality monitoring solutions?
+                                            {t("cinema.faq.questions.q4.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -614,10 +622,7 @@ export default function AirQualitySolutionsPage() {
                                         data-bs-parent="#faqAccordion"
                                         aria-labelledby="heading4"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            To know the nature of pollutants and by how much are they present in a cinema hall so that
-                                            necessary actions can be taken.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("cinema.faq.questions.q4.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -630,7 +635,7 @@ export default function AirQualitySolutionsPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse5"
                                         >
-                                            5. How can I check the AQI of my cinema hall using your device?
+                                            {t("cinema.faq.questions.q5.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -639,9 +644,7 @@ export default function AirQualitySolutionsPage() {
                                         data-bs-parent="#faqAccordion"
                                         aria-labelledby="heading5"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Prana Air Monitors are WiFi enabled so you don’t need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("cinema.faq.questions.q5.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -654,7 +657,7 @@ export default function AirQualitySolutionsPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse6"
                                         >
-                                            6. Are any other parameters included in the monitors other than the air pollutants?
+                                            {t("cinema.faq.questions.q6.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -663,9 +666,7 @@ export default function AirQualitySolutionsPage() {
                                         data-bs-parent="#faqAccordion"
                                         aria-labelledby="heading6"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Yes, you can monitor the temperature, noise, and humidity in an area.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("cinema.faq.questions.q6.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -678,7 +679,7 @@ export default function AirQualitySolutionsPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse7"
                                         >
-                                            7. Are there any additional benefits that come with the solutions?
+                                            {t("cinema.faq.questions.q7.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -687,10 +688,7 @@ export default function AirQualitySolutionsPage() {
                                         data-bs-parent="#faqAccordion"
                                         aria-labelledby="heading7"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical
-                                            data analysis, QR code to scan and know the real-time AQI of that area, and many more.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("cinema.faq.questions.q7.answer")}</div>
                                     </div>
                                 </div>
                             </div>
@@ -705,9 +703,9 @@ export default function AirQualitySolutionsPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Our <span className="bold_text">Clientele</span>
+                                {t("cinema.clientele.title")} <span className="bold_text">{t("cinema.clientele.highlight")}</span>
                             </h2>
-                            <p>We are honored to work with so many well-known companies.</p>
+                            <p>{t("cinema.clientele.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -782,8 +780,8 @@ export default function AirQualitySolutionsPage() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="contact-heading">
-                                <h2>Get in Touch</h2>
-                                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                                <h2>{t("cinema.contact.title")}</h2>
+                                <p>{t("cinema.contact.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -797,12 +795,10 @@ export default function AirQualitySolutionsPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Industrial <span className="bold_text">Applications</span>
+                                {t("cinema.industrialApplications.title")}{" "}
+                                <span className="bold_text">{t("cinema.industrialApplications.highlight")}</span>
                             </h2>
-                            <p>
-                                Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and
-                                highly accurate air quality solutions for various industries.
-                            </p>
+                            <p>{t("cinema.industrialApplications.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -812,76 +808,7 @@ export default function AirQualitySolutionsPage() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="owl-slider">
-                            <Carousel
-                                responsive={responsive}
-                                infinite={true}
-                                autoPlay={true}
-                                autoPlaySpeed={7000}
-                                keyBoardControl={true}
-                                customTransition="all .5"
-                                transitionDuration={500}
-                            >
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-retail-outlets.jpg"
-                                                    alt="air quality solutions for retail stores"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                            <h4>Solutions for Retail Stores</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                                                    alt="air quality solutions for banks"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                            <h4>Solutions for Bank</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                                                    alt="air quality solutions for hotel business"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                            <h4>Solutions for Hotel</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="app_service_box">
-                                        <div className="app_img_bx">
-                                            <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                                                    alt="air quality solutions for restaurants"
-                                                />
-                                            </a>
-                                        </div>
-                                        <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                            <h4>Solutions for Restaurant</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </Carousel>
+                            <IndustrialApplicationsCarousel applications={industrialApplications} />
                         </div>
                     </div>
                 </div>

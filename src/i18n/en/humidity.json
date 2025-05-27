@@ -1,0 +1,239 @@
+{
+      "products": {
+  "co2Sensor": {
+    "imageAlt": "CO2 Sensor",
+    "title": "CO2 Sensor",
+    "description": "Measures CO2 levels with high accuracy"
+  },
+  "pocketCO2": {
+    "imageAlt": "Pocket CO2 Monitor",
+    "title": "Pocket CO2 Monitor",
+    "description": "Portable CO2 monitoring solution"
+  },
+  "squair": {
+    "imageAlt": "SQUAIR Air Monitor",
+    "title": "SQUAIR Air Monitor",
+    "description": "Measures CO2 and other pollutants"
+  },
+  "sensiblePlus": {
+    "imageAlt": "Sensible+ Advanced CO2 Monitor",
+    "title": "Sensible+ Advanced CO2 Monitor",
+    "description": "Professional grade monitoring"
+  },
+  "title": "Choose Your Air Quality Monitor To Measure Humidity Level"
+},
+"humidity": {
+    "hero": {
+      "title": "What Is Humidity?",
+      "description": "Humidity is the term for the gaseous water content in the air. The quantity of gaseous water (water vapor) in the atmosphere is known as HUMIDITY, which can change when water is present in excess amounts. For example, when it is about to rain, there is a lot of water vapor in the air.",
+      "iconAlt": "Humidity Icon"
+    },
+    "origin": {
+      "title": "Where does Humidity come from?",
+      "description": "There are many factors that decide the humidity of a place, both indoors and outdoors. Temperature plays an important role in deciding the relative humid levels indoors as well as outdoors. For example, when the temperature is hot, the humid level decreases as the air can hold more water content. But when the temperature decreases, the air cannot hold much moisture. Hence, the relative humid level increases. Therefore, when the temperature indoors is cold or hot enough, we need to warm or cool it up, respectfully, to maintain the ideal humidity levels. When there is 100% humidity in the air, it will rain as the air wont be able to hold more water vapour.",
+      "imageAlt": "Humidity Cloud Image"
+    },
+    "types": {
+      "title": "What is the difference between Relative & Absolute Humidity?",
+      "relative": {
+        "title": "Relative Humidity",
+        "description": "The ratio of the amount of water vapour in the atmosphere to the highest amount of vapour that the air can hold is known as relative humidity."
+      },
+      "absolute": {
+        "title": "Absolute Humidity",
+        "description": "Whereas the quantity of water vapour present in a particular amount of air at a given time and temperature is known as absolute humidity."
+      }
+    },
+    "moisture": {
+      "title": "Are humidity and moisture the same?",
+      "description": "Humidity is the amount of water vapour in the air in its gaseous state. Whereas moisture is the content of water in its liquid state. When air reaches its limit to absorb water in the form of water vapour, water will begin to condense as drops in the air that is why clouds form. That is known as moisture. When humidity reaches its peak, rainfall happens, that is moisture.",
+      "iconAlt": "Humidity Icon"
+    },
+    "factors": {
+      "title": "Factors that affect Humidity Level Indoor & Outdoor",
+      "outdoor": {
+        "title": "Outdoors Environment",
+        "airMovement": {
+          "title": "Air Movement",
+          "description": "Higher wind speeds result in less water evaporation and lowers it, while lower wind speeds result in more evaporation & higher humidity.",
+          "alt": "Humidity due to air movement"
+        },
+        "temperature": {
+          "title": "Temperature",
+          "description": "The air can store more water vapour when the temperature increases, hence a warmer atmosphere may have a higher level of it.",
+          "alt": "Humidity due to temperature"
+        },
+        "windSpeed": {
+          "title": "Wind Speed",
+          "description": "Lower wind speeds result in more water evaporation & higher humidity, while higher wind speeds result in less evaporation & lower its level.",
+          "alt": "Humidity due to wind speed"
+        },
+        "precipitation": {
+          "title": "Precipitation",
+          "description": "Its level will rise the longer it rains because the air is constantly absorbing water.",
+          "alt": "Precipitation"
+        },
+        "airPressure": {
+          "title": "Air Pressure",
+          "description": "It depends on the atmospheric pressures at different geographical locations, temperature, and air pressure in the respective area.",
+          "alt": "Humidity due to air pressure"
+        }
+      },
+      "indoor": {
+        "title": "Indoor Environment",
+        "cooking": {
+          "title": "Cooking or boiling water",
+          "description": "Cooking and water boiling activities release water vapour in the air. This will add to the relative level of that room.",
+          "alt": "Humidity due to cooking or boiling water"
+        },
+        "gasHeaters": {
+          "title": "Appliances such as Gas Heaters",
+          "description": "One litre of moisture is produced every hour while using a non-fueled gas heater.",
+          "alt": "Gas heater"
+        },
+        "ventilation": {
+          "title": "Ventilation Rate",
+          "description": "Its high level indicates inadequate ventilation. Extremely high indoor humidity is linked to an increase in the development of bacteria and mould.",
+          "alt": "Ventilation rate"
+        },
+        "dryingClothes": {
+          "title": "Drying the clothes indoors",
+          "description": "Drying the clothes indoors can increase its relative level in a room and therefore will increase the risks of mould and bacteria growth.",
+          "alt": "Humidity due to drying cloths indoor"
+        },
+        "waterLeakages": {
+          "title": "Water leakages",
+          "description": "Water leakages can increase both moisture & humidity. As a result, the air will become stale & the chances of getting sick due to bacteria will increase.",
+          "alt": "Water leakages"
+        }
+      }
+    },
+    "effects": {
+      "title": "What Happens When Humidity Level Is Very Low & High?",
+      "description": "The ideal or healthy range of it should be maintained between 30-60%. Because it is unhealthy when it exceeds or is lower than the ideal limit, it causes many discomforts. Hence, it can result in the growth of mold and bacteria.",
+      "high": {
+        "title": "When humidity is high (> or = to 60%)",
+        "mold": {
+          "title": "Encourages Mold & Mildew",
+          "description": "When its relative level is more than 60%, it can promote the growth of mold and mildew. Certain types of toxic molds can seriously impact ones health. For example, black mold is considered very dangerous for humans.",
+          "alt": "Encourages Mold & Mildew due to high humidity"
+        },
+        "bacteria": {
+          "title": "Virus and bacteria",
+          "description": "When you spend too much time in too humid conditions, it might trigger allergies & make you sick. Because viruses and bacteria thrive in humidity above 60% which can cause various respiratory illness symptoms.",
+          "alt": "Virus and bacteria due to high humidity"
+        },
+        "sweating": {
+          "title": "Excess Sweating",
+          "description": "Humidity means that the air contains water vapour. When the air becomes more humid, people experience excessive sweating. Because the sweat will not evaporate easily. Or it will take more time than usual due to high water vapour in the air.",
+          "alt": "Excess sweating due to high humidity"
+        },
+        "respiration": {
+          "title": "Increased Respiration",
+          "description": "Due to high temperature, when our bodies heat up naturally, we sweat. That sweat then evaporates to keep our bodies cool. Due to excess moisture in the air, our bodies need to work harder to cool off. This increases blood circulation and respiration.",
+          "alt": "Increase respiratory due to high humidity"
+        },
+        "damage": {
+          "title": "Damage Your Belongings",
+          "description": "High humidity can damage your furniture, floorings, wallpaper, paintwork, etc. High humidity results in condensation that gather on your walls. So, the paint will start to flake and the wallpaper will curl up.",
+          "alt": "Wall damage due to high humidity"
+        }
+      },
+      "low": {
+        "title": "When humidity is low (< 30%)",
+        "germs": {
+          "title": "Germs and Viruses",
+          "description": "Due to low humid level, germs & viruses disperse, and travel around freely. As a result, they thrive in low humid level, and diseases such as RTIs are more common when relative level is low.",
+          "alt": "Virus and germs due to low humidity"
+        },
+        "respiratory": {
+          "title": "Susceptibility to respiratory diseases",
+          "description": "Low humid level and low temperatures result in more susceptibility to catching respiratory diseases, colds, and many other respiratory tract infections like sinusitis, otitis, bronchitis, and pneumonia. This is because low humid level will result in drying out the airways.",
+          "alt": "Sceptibility to respiratory due to low humidity"
+        },
+        "drySkin": {
+          "title": "Dry Hair and Dry Skin",
+          "description": "When the air has low humid, skin, and hair do not retain or get enough moisture. As a result, the skin will flake resulting in skin irritation and itching and can worsen skin conditions like eczema and psoriasis. Whereas hair will become more dry, frizzy, dull, and will break more often.",
+          "alt": "Dry skin due to low humidity"
+        },
+        "influenza": {
+          "title": "Influenza",
+          "description": "Low relative humidity results in chances of spreading influenza. Low humidity further reduces the ability of cilia (hair-like structures in the airway cells) in removing viruses such as Covid 19 and preventing damage done to the lungs due to such viruses.",
+          "alt": "Influenza due to low humidity"
+        },
+        "performance": {
+          "title": "Decreased performance",
+          "description": "Even minor variations in relative humidity and temperature can create measurable changes in your abilities to concentrate or accomplish tasks, especially in places like schools and offices where concentration is extremely important.",
+          "alt": "Low performance of student due to low humidity"
+        }
+      }
+    },
+    "maintenance": {
+      "title": "How To Maintain the Good Humidity Indoor?",
+      "subtitle": "Healthy or ideal indoor relative humid levels should be between 30-60%.",
+      "fixLeakage": {
+        "title": "Fix any leakages or pipe leaks",
+        "description": "Fix any broken pipes, faucets, and leakages that can result in more moisture and condensation indoors.",
+        "alt": "Fix leakage or any pipe leak"
+      },
+      "dryOutside": {
+        "title": "Dry your clothes outside",
+        "description": "Its recommended to dry your laundry outdoors as they can increase the relative humid level of a room if dried indoors.",
+        "alt": "Dry cloths outside"
+      },
+      "relocatePlants": {
+        "title": "Relocate your indoor plants",
+        "description": "If the relative humid level of a room is higher and it has plants in that room, consider relocating them as they are a potential source.",
+        "alt": "Relocate indoor plants"
+      },
+      "dehumidifier": {
+        "title": "Use Dehumidifiers",
+        "description": "Dehumidifiers will help you reduce the relative humid level of your space if you have high level problems in your room.",
+        "alt": "Use a dehumidifier"
+      },
+      "charcoal": {
+        "title": "Use charcoal pieces",
+        "description": "Charcoal is a great absorber. A single piece of charcoal can reduce humid levels in your air. They just need to be replaced every 2-3 months.",
+        "alt": "Use charcoal pieces"
+      },
+      "openWindows": {
+        "title": "Open windows",
+        "description": "Opening windows in areas with high level of it, such as bathrooms is one of the easy solutions. This will increase ventilation as well.",
+        "alt": "Open windows"
+      }
+    },
+    "levels": {
+      "title": "Humidity levels and what do they mean?",
+      "subtitle": "Healthy or ideal indoor relative humid levels should be between 30-60%",
+      "table": {
+        "humidityLevel": "Humidity Level",
+        "meaning": "What does it mean?",
+        "seventyPercent": "Dust mites, the most common dust allergens for asthma, thrive when relative humid level is at or above 70.",
+        "ideal": "Ideal relative humidity indoors.",
+        "belowThirty": "Low relative humid level. Increases the chances of catching airborne viruses. Eye, nose, and throat dryness."
+      },
+      "conclusion": "Healthy or ideal indoor relative humidity levels should be between 30-60%. It levels >= 70% promote the growth of dust mites, the most common dust allergens for asthma, and they thrive when relative humidity is at or above 70. Further, its level below 30% mean relative humid level is low that increases the chances of catching airborne viruses. Eye, nose, and throat dryness."
+    },
+    "who": {
+      "title": "WHO Guidelines of Humidity",
+      "table": {
+        "measure": "Measure",
+        "riskEstimate": "Risk Estimate",
+        "selfReported": "Self-reported humidity",
+        "coldRisk": "- 2.71 (1.07–6.91) for cold",
+        "soreThroatRisk": "- 3.02 (1.14–7.98) for sore throat",
+        "signsHigh": "Signs of high humidity",
+        "signsHighRisk": "- 3.97 (3.74–4.22)",
+        "absoluteIndoor": "Absolute indoor humidity > median, 5.8 g/kg",
+        "absoluteRisk": "- 1.7 (1.0–2.9)",
+        "relative45": "Relative humidity > 45%",
+        "relative45Risk": "- 0.8 (0.4–1.5)",
+        "absoluteLevel": "Absolute indoor humidity level",
+        "absoluteLevelRisk": "- > 5.8 g/m3, 2.0 (1.2–3.4)"
+      }
+    },
+    "monitor": {
+      "title": "Choose Your Air Quality Monitor To Measure Humidity Level"
+    }
+  }
+}

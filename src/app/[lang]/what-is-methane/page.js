@@ -1,8 +1,9 @@
-"use client"
 import "./styles.css"
-import "react-multi-carousel/lib/styles.css"
+import { getServerTranslation } from "@/i18n/server"
+import Image from "next/image"
 
-export default function Methane() {
+export default async function Methane() {
+  const { t } = await getServerTranslation("methane")
   return (
     <main>
       {/* Banner Section */}
@@ -12,20 +13,24 @@ export default function Methane() {
             <div className="col-md-6">
               <div className="banner-txt" data-aos="fade-in">
                 <h1>
-                  Methane (CH4){" "}
-                  <img src="https://www.pranaair.com/wp-content/uploads/2023/06/methane-icon.png" alt="methane icon" />
+                  {t("methane.banner.title")}{" "}
+                  <Image
+                    src="https://www.pranaair.com/wp-content/uploads/2023/06/methane-icon.png"
+                    alt={t("methane.banner.iconAlt")}
+                    width={50}
+                    height={50}
+                  />
                 </h1>
-                <p>
-                  Methane (CH4) is a colorless and odorless gas that makes it impossible to detect by the human senses.
-                  It is a flammable gas that is used as fuel for vehicles, water heaters, etc.
-                </p>
+                <p>{t("methane.banner.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="banner-img" data-aos="fade-in">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/methane-gas-banner.png"
-                  alt="methane banner"
+                  alt={t("methane.banner.bannerAlt")}
+                  width={600}
+                  height={400}
                 />
               </div>
             </div>
@@ -40,25 +45,18 @@ export default function Methane() {
             <div className="col-md-12">
               <div className="climate-change-heading" data-aos="fade-left">
                 <h2 className="climate-headings">
-                  Climate <span className="change">Change</span>
+                  {t("methane.climateChange.titlePrefix")}{" "}
+                  <span className="change">{t("methane.climateChange.titleHighlight")}</span>
                 </h2>
-                <p>
-                  Methane is the main component of natural gas. Therefore a major contributor to vehicle emissions that
-                  run on CNG. Furthermore, Methane is a greenhouse gas. Hence, CH4 vehicle emissions add to the methane
-                  gas levels in the air. This further results in climate change and global warming.
-                </p>
-                <p>
-                  It has a higher warming potential than carbon dioxide. As making it essential for any strategies that
-                  seek to reduce global warming. Hence, Reductions in methane emissions can result in immediate health
-                  benefits. As well as being an important component of energy systems that are less reliant on fossil
-                  fuels. Governments should put measures in place to facilitate the reduction of methane emissions from
-                  all sources. Such as through improved agricultural practices and livestock management techniques.
-                </p>
+                <p>{t("methane.climateChange.paragraph1")}</p>
+                <p>{t("methane.climateChange.paragraph2")}</p>
               </div>
               <div className="climate-change-cars-img" data-aos="fade-right">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/climate-change-due-to-methane-gas.png"
-                  alt="climate change cars"
+                  alt={t("methane.climateChange.imageAlt")}
+                  width={800}
+                  height={500}
                 />
               </div>
             </div>
@@ -73,18 +71,17 @@ export default function Methane() {
             <div className="col-md-12">
               <div className="climate-change-heading mithane-in-enviroment" data-aos="fade-left">
                 <h2 className="climate-headings">
-                  Methane (CH4) <span className="change"> in the Environment</span>
+                  {t("methane.environment.titlePrefix")}{" "}
+                  <span className="change">{t("methane.environment.titleHighlight")}</span>
                 </h2>
-                <p>
-                  Methane is a potent greenhouse gas that helps in trapping the heat inside the earths environment
-                  resulting in global warming. It uses as a coolant in refrigerators and air conditioners. And in some
-                  industrial refrigerant applications, such as food industries. It majorly used as a natural gas.
-                </p>
+                <p>{t("methane.environment.description")}</p>
               </div>
               <div className="climate-change-cars-img" data-aos="fade-right">
-                <img
+                <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/methane-in-the-environment.png"
-                  alt="methane in environment"
+                  alt={t("methane.environment.imageAlt")}
+                  width={800}
+                  height={500}
                 />
               </div>
             </div>
@@ -99,98 +96,96 @@ export default function Methane() {
             <div className="col-md-12">
               <div className="climate-change-heading source-of-methane-heading" data-aos="fade-left">
                 <h2 className="climate-headings">
-                  Sources of <span className="change"> Methane (CH4)</span>
+                  {t("methane.sources.titlePrefix")}{" "}
+                  <span className="change">{t("methane.sources.titleHighlight")}</span>
                 </h2>
-                <p>
-                  Methane (CH4) occurs naturally and produce by a variety of sources. Some of the sources of methane gas
-                  are as follows:
-                </p>
+                <p>{t("methane.sources.description")}</p>
               </div>
               <div className="row methane-sources-box">
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/sewage-treatment-plants.png"
-                      alt="industrial processes"
+                      alt={t("methane.sources.industrial.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para">
-                    <h3>Industrial processes</h3>
-                    <p>
-                      Methane is produced during the production of some industrial chemicals. Moreover, it is also used
-                      as fuel in various industrial processes.
-                    </p>
+                    <h3>{t("methane.sources.industrial.title")}</h3>
+                    <p>{t("methane.sources.industrial.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/biomass-burning.png"
-                      alt="biomass burning"
+                      alt={t("methane.sources.biomass.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para">
-                    <h3>Biomass burning</h3>
-                    <p>
-                      Methane produces when organic matter is burned. Such as during forest fires or the burning of
-                      crops.
-                    </p>
+                    <h3>{t("methane.sources.biomass.title")}</h3>
+                    <p>{t("methane.sources.biomass.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/06/landfills.png" alt="landfills" />
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/landfills.png"
+                      alt={t("methane.sources.landfills.alt")}
+                      width={200}
+                      height={200}
+                    />
                   </div>
                   <div className="source-inner-txt-para">
-                    <h3>Landfills</h3>
-                    <p>
-                      Landfills are a major source of methane emissions. Because organic waste in the landfill breaks
-                      down and produces methane gas
-                    </p>
+                    <h3>{t("methane.sources.landfills.title")}</h3>
+                    <p>{t("methane.sources.landfills.description")}</p>
                   </div>
                 </div>
               </div>
               <div className="row methane-sources-box">
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/manure-production.png"
-                      alt="manure production"
+                      alt={t("methane.sources.manure.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para">
-                    <h3>Manure Production</h3>
-                    <p>
-                      Digestive processes of livestock produce CH4. Further manure decomposition results in methane gas
-                      in the soil.
-                    </p>
+                    <h3>{t("methane.sources.manure.title")}</h3>
+                    <p>{t("methane.sources.manure.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/energy-production.png"
-                      alt="energy production"
+                      alt={t("methane.sources.energy.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para">
-                    <h3>Energy Production</h3>
-                    <p>
-                      Methane is a byproduct of coal mining. It is also produced during the extraction of oil and
-                      natural gas.
-                    </p>
+                    <h3>{t("methane.sources.energy.title")}</h3>
+                    <p>{t("methane.sources.energy.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/waste-water-treatment.png"
-                      alt="waste water treatment"
+                      alt={t("methane.sources.wastewater.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para">
-                    <h3>Waste Water Treatment</h3>
-                    <p>Methane is produced during the treatment of wastewater in sewage treatment plants.</p>
+                    <h3>{t("methane.sources.wastewater.title")}</h3>
+                    <p>{t("methane.sources.wastewater.description")}</p>
                   </div>
                 </div>
               </div>
@@ -205,15 +200,17 @@ export default function Methane() {
           <div className="row">
             <div className="col-md-8">
               <div className="earth-para">
-                <p>
-                  Thus, Its important to note that while some sources of methane are natural and unavoidable. Besides,
-                  many human activities contribute to the release of methane into the atmosphere,
-                </p>
+                <p>{t("methane.earth.description")}</p>
               </div>
             </div>
             <div className="col-md-4">
               <div className="earth-img" data-aos="fade-down">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/07/souce-of-methane-gas.png" alt="earth" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/07/souce-of-methane-gas.png"
+                  alt={t("methane.earth.imageAlt")}
+                  width={300}
+                  height={300}
+                />
               </div>
             </div>
           </div>
@@ -227,113 +224,113 @@ export default function Methane() {
             <div className="col-md-12">
               <div className="climate-change-heading methane-poisioning-heading" data-aos="fade-left">
                 <h2 className="climate-headings">
-                  How to know that you have <span className="change"> Methane (CH4) poisoning?</span>
+                  {t("methane.poisoning.titlePrefix")}{" "}
+                  <span className="change">{t("methane.poisoning.titleHighlight")}</span>
                 </h2>
-                <p>
-                  Methane poisoning can cause a range of symptoms, but not all symptoms are present in every case. If
-                  you are someone who works with methane gas on a regular basis, look out for the following symptoms to
-                  know if you have methane poisoning or not. Here are some signs and symptoms that may indicate methane
-                  poisoning:
-                </p>
+                <p>{t("methane.poisoning.description")}</p>
               </div>
               <div className="row methane-sources-box">
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/06/dizziness.png" alt="dizziness" />
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/dizziness.png"
+                      alt={t("methane.poisoning.symptoms.dizziness.alt")}
+                      width={200}
+                      height={200}
+                    />
                   </div>
                   <div className="source-inner-txt-para methane-poisoning-inner-txt">
-                    <h3>Dizziness</h3>
-                    <p>Methane can cause dizziness, which may be accompanied by a headache.</p>
+                    <h3>{t("methane.poisoning.symptoms.dizziness.title")}</h3>
+                    <p>{t("methane.poisoning.symptoms.dizziness.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/Nausea-and-vomiting.png"
-                      alt="nausea and vomiting"
+                      alt={t("methane.poisoning.symptoms.nausea.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para methane-poisoning-inner-txt">
-                    <h3>Nausea and vomiting</h3>
-                    <p>
-                      Methane exposure can cause nausea and vomiting, especially if the exposure was through inhalation.
-                    </p>
+                    <h3>{t("methane.poisoning.symptoms.nausea.title")}</h3>
+                    <p>{t("methane.poisoning.symptoms.nausea.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/Breathing-difficulties.png"
-                      alt="breathing difficulties"
+                      alt={t("methane.poisoning.symptoms.breathing.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para methane-poisoning-inner-txt">
-                    <h3>Breathing difficulties</h3>
-                    <p>
-                      Methane can displace oxygen in enclosed spaces, leading to a shortage of oxygen and difficulty
-                      breathing.
-                    </p>
+                    <h3>{t("methane.poisoning.symptoms.breathing.title")}</h3>
+                    <p>{t("methane.poisoning.symptoms.breathing.description")}</p>
                   </div>
                 </div>
               </div>
               <div className="row methane-sources-box">
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/06/Confusion.png" alt="confusion" />
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/Confusion.png"
+                      alt={t("methane.poisoning.symptoms.confusion.alt")}
+                      width={200}
+                      height={200}
+                    />
                   </div>
                   <div className="source-inner-txt-para methane-poisoning-inner-txt">
-                    <h3>Confusion</h3>
-                    <p>Methane can affect the central nervous system, leading to confusion and disorientation.</p>
+                    <h3>{t("methane.poisoning.symptoms.confusion.title")}</h3>
+                    <p>{t("methane.poisoning.symptoms.confusion.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/Weakness-and-fatigue.png"
-                      alt="weakness and fatigue"
+                      alt={t("methane.poisoning.symptoms.weakness.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para methane-poisoning-inner-txt">
-                    <h3>Weakness and fatigue</h3>
-                    <p>
-                      Methane exposure can cause weakness and fatigue, which may be accompanied by changes in heart rate
-                      and blood pressure.
-                    </p>
+                    <h3>{t("methane.poisoning.symptoms.weakness.title")}</h3>
+                    <p>{t("methane.poisoning.symptoms.weakness.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="source-of-methane-img" data-aos="fade-in">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/Chest-pain-or-tightness.png"
-                      alt="chest pain or tightness"
+                      alt={t("methane.poisoning.symptoms.chestPain.alt")}
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="source-inner-txt-para methane-poisoning-inner-txt">
-                    <h3>Chest pain or tightness</h3>
-                    <p>
-                      Methane exposure can cause chest pain or tightness, especially if the exposure was through
-                      inhalation.
-                    </p>
+                    <h3>{t("methane.poisoning.symptoms.chestPain.title")}</h3>
+                    <p>{t("methane.poisoning.symptoms.chestPain.description")}</p>
                   </div>
                 </div>
               </div>
               <div className="row medical-txt-box">
                 <div className="col-md-3">
                   <div className="medical-icon" data-aos="fade-down">
-                    <img
+                    <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/medical-icon.png"
-                      alt="medical icon"
+                      alt={t("methane.poisoning.medical.iconAlt")}
+                      width={150}
+                      height={150}
                     />
                   </div>
                 </div>
                 <div className="col-md-9">
                   <div className="medical-para" data-aos="fade-in">
-                    <p>
-                      It is important to get fresh air immediately and to seek medical attention as soon as possible if
-                      you are someone who is exposed to methane gas. If exposure has occurred in an enclosed space, than
-                      it is important to evacuate the area and call emergency services. Since, Methane exposure can be
-                      life-threatening, so prompt medical attention is essential.
-                    </p>
+                    <p>{t("methane.poisoning.medical.advice")}</p>
                   </div>
                 </div>
               </div>
@@ -349,75 +346,68 @@ export default function Methane() {
             <div className="col-md-12">
               <div className="health-hazards-header">
                 <h2>
-                  <span className="health-hazards-blue">Health hazards of</span> Methane (CH4) poisoning
+                  <span className="health-hazards-blue">{t("methane.healthHazards.titlePrefix")}</span>{" "}
+                  {t("methane.healthHazards.titleSuffix")}
                 </h2>
                 <div className="divider"></div>
-                <p>
-                  Methane is a highly flammable gas that can pose serious health hazards if it accumulates in enclosed
-                  spaces or if it is ingested or inhaled. Some of the health hazards associated with methane poisoning
-                  include:
-                </p>
+                <p>{t("methane.healthHazards.description")}</p>
               </div>
 
               <div className="row hazard-cards">
                 <div className="col-md-3">
                   <div className="hazard-card">
                     <div className="hazard-icon">
-                      <img
+                      <Image
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/Asphyxiation.png"
-                        alt="asphyxiation"
+                        alt={t("methane.healthHazards.asphyxiation.alt")}
+                        width={100}
+                        height={100}
                       />
                     </div>
-                    <h3>Asphyxiation</h3>
-                    <p>
-                      Methane is an odorless and tasteless gas that can displace oxygen in enclosed spaces, leading to
-                      asphyxiation and death.
-                    </p>
+                    <h3>{t("methane.healthHazards.asphyxiation.title")}</h3>
+                    <p>{t("methane.healthHazards.asphyxiation.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-3">
                   <div className="hazard-card">
                     <div className="hazard-icon">
-                      <img
+                      <Image
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/Explosive-risk.png"
-                        alt="explosive risk"
+                        alt={t("methane.healthHazards.explosive.alt")}
+                        width={100}
+                        height={100}
                       />
                     </div>
-                    <h3>Explosive risk</h3>
-                    <p>
-                      Methane is highly flammable and can easily ignite, presenting an explosive risk in enclosed spaces
-                      where concentrations of the gas are high.
-                    </p>
+                    <h3>{t("methane.healthHazards.explosive.title")}</h3>
+                    <p>{t("methane.healthHazards.explosive.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-3">
                   <div className="hazard-card">
                     <div className="hazard-icon">
-                      <img
+                      <Image
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/Neurological-effects.png"
-                        alt="neurological effects"
+                        alt={t("methane.healthHazards.neurological.alt")}
+                        width={100}
+                        height={100}
                       />
                     </div>
-                    <h3>Neurological effects</h3>
-                    <p>
-                      Methane can cause headaches, dizziness, and nausea if inhaled in high concentrations. Long-term
-                      exposure to low levels of methane can also affect the central nervous system.
-                    </p>
+                    <h3>{t("methane.healthHazards.neurological.title")}</h3>
+                    <p>{t("methane.healthHazards.neurological.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-3">
                   <div className="hazard-card">
                     <div className="hazard-icon">
-                      <img
+                      <Image
                         src="https://www.pranaair.com/wp-content/uploads/2023/06/Respiratory-irritation.png"
-                        alt="respiratory irritation"
+                        alt={t("methane.healthHazards.respiratory.alt")}
+                        width={100}
+                        height={100}
                       />
                     </div>
-                    <h3>Respiratory irritation</h3>
-                    <p>
-                      Inhaling high concentrations of methane can irritate the eyes, nose, and throat and cause
-                      respiratory symptoms such as coughing and wheezing.
-                    </p>
+                    <h3>{t("methane.healthHazards.respiratory.title")}</h3>
+                    <p>{t("methane.healthHazards.respiratory.description")}</p>
                   </div>
                 </div>
               </div>
@@ -425,16 +415,14 @@ export default function Methane() {
               <div className="row quote-section">
                 <div className="col-md-12">
                   <div className="quote-para">
-                    <img
+                    <Image
                       className="quote-icon"
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/quote-icon.png"
-                      alt="quote icon"
+                      alt={t("methane.healthHazards.quote.iconAlt")}
+                      width={50}
+                      height={50}
                     />
-                    <p>
-                      It is important to properly ventilate enclosed spaces where methane may be present and to take
-                      appropriate safety measures to avoid exposure to the gas. If you suspect methane poisoning, it is
-                      important to seek medical attention immediately.
-                    </p>
+                    <p>{t("methane.healthHazards.quote.text")}</p>
                   </div>
                 </div>
               </div>
@@ -450,34 +438,48 @@ export default function Methane() {
             <div className="col-md-12">
               <div className="climate-change-heading methane-work-place-heading" data-aos="fade-left">
                 <h2 className="climate-headings">
-                  Methane Work Place <span className="change"> Exposure Limits</span>
+                  {t("methane.workplaceExposure.titlePrefix")}{" "}
+                  <span className="change">{t("methane.workplaceExposure.titleHighlight")}</span>
                 </h2>
               </div>
               <div className="row">
                 <div className="col-md-4">
                   <div className="wrk-place-exposure-limits-logo single-logo-img" data-aos="fade-down">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/06/osha-logo.png" alt="osha logo" />
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/osha-logo.png"
+                      alt={t("methane.workplaceExposure.osha.alt")}
+                      width={200}
+                      height={100}
+                    />
                   </div>
                   <div className="work-place-exposure-limits-para" data-aos="fade-up">
-                    <p>
-                      The legal airborne permissible exposure limit (PEL) is 100 ppm averaged over an 8-hour work shift.
-                    </p>
+                    <p>{t("methane.workplaceExposure.osha.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="wrk-place-exposure-limits-logo" data-aos="fade-down">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/06/niosh-logo.png" alt="niosh logo" />
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/niosh-logo.png"
+                      alt={t("methane.workplaceExposure.niosh.alt")}
+                      width={200}
+                      height={100}
+                    />
                   </div>
                   <div className="work-place-exposure-limits-para" data-aos="fade-up">
-                    <p>The recommended airborne exposure limit is 100 ppm averaged over a 10-hour work shift.</p>
+                    <p>{t("methane.workplaceExposure.niosh.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="wrk-place-exposure-limits-logo" data-aos="fade-down">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2023/06/acgih-logo.png" alt="acgih logo" />
+                    <Image
+                      src="https://www.pranaair.com/wp-content/uploads/2023/06/acgih-logo.png"
+                      alt={t("methane.workplaceExposure.acgih.alt")}
+                      width={200}
+                      height={100}
+                    />
                   </div>
                   <div className="work-place-exposure-limits-para" data-aos="fade-up">
-                    <p>The recommended airborne exposure limit is 100 ppm averaged over an 8-hour work shift.</p>
+                    <p>{t("methane.workplaceExposure.acgih.description")}</p>
                   </div>
                 </div>
               </div>
@@ -493,7 +495,9 @@ export default function Methane() {
             <div className="col-md-12">
               <div className="climate-change-heading methane-reduce-heading" data-aos="fade-left">
                 <h2 className="climate-headings">
-                  To <span className="change"> reduce methane poisoning</span> episodes, some ways are:
+                  {t("methane.prevention.titlePrefix")}{" "}
+                  <span className="change">{t("methane.prevention.titleHighlight")}</span>{" "}
+                  {t("methane.prevention.titleSuffix")}
                 </h2>
               </div>
             </div>
@@ -501,72 +505,82 @@ export default function Methane() {
           <div className="row">
             <div className="col-md-6">
               <div className="reduce-methane-ways-imgs" data-aos="fade-down">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/ventilation.png" alt="ventilation" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/06/ventilation.png"
+                  alt={t("methane.prevention.ventilation.alt")}
+                  width={200}
+                  height={200}
+                />
               </div>
               <div className="reduce-methane-ways-txts">
-                <h3>Ventilation</h3>
-                <p>
-                  Increasing airflow in areas where methane is present can dilute the concentration and reduce the risk
-                  of poisoning.
-                </p>
+                <h3>{t("methane.prevention.ventilation.title")}</h3>
+                <p>{t("methane.prevention.ventilation.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="reduce-methane-ways-imgs" data-aos="fade-down">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/detection.png" alt="detection" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/06/detection.png"
+                  alt={t("methane.prevention.detection.alt")}
+                  width={200}
+                  height={200}
+                />
               </div>
               <div className="reduce-methane-ways-txts">
-                <h3>Detection</h3>
-                <p>
-                  As by increasing airflow in areas where methane is present can dilute the concentration and reduce the
-                  risk of poisoning.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6">
-              <div className="reduce-methane-ways-imgs" data-aos="fade-down">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/maintenance.png" alt="maintenance" />
-              </div>
-              <div className="reduce-methane-ways-txts">
-                <h3>Maintenance</h3>
-                <p>Regular maintenance of equipment and infrastructure can reduce the risk of leaks and emissions.</p>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="reduce-methane-ways-imgs" data-aos="fade-down">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/training.png" alt="training" />
-              </div>
-              <div className="reduce-methane-ways-txts">
-                <h3>Training</h3>
-                <p>
-                  Providing training to workers on how to recognize and respond to methane exposure can help prevent
-                  poisonings.
-                </p>
+                <h3>{t("methane.prevention.detection.title")}</h3>
+                <p>{t("methane.prevention.detection.description")}</p>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-6">
               <div className="reduce-methane-ways-imgs" data-aos="fade-down">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/regulation.png" alt="regulations" />
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/06/maintenance.png"
+                  alt={t("methane.prevention.maintenance.alt")}
+                  width={200}
+                  height={200}
+                />
               </div>
               <div className="reduce-methane-ways-txts">
-                <h3>Regulations</h3>
-                <p>
-                  Implementing and enforcing regulations on methane emissions can reduce the overall release of the gas
-                  into the atmosphere.
-                </p>
+                <h3>{t("methane.prevention.maintenance.title")}</h3>
+                <p>{t("methane.prevention.maintenance.description")}</p>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="reduce-methane-ways-imgs" data-aos="fade-down">
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/06/training.png"
+                  alt={t("methane.prevention.training.alt")}
+                  width={200}
+                  height={200}
+                />
+              </div>
+              <div className="reduce-methane-ways-txts">
+                <h3>{t("methane.prevention.training.title")}</h3>
+                <p>{t("methane.prevention.training.description")}</p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="reduce-methane-ways-imgs" data-aos="fade-down">
+                <Image
+                  src="https://www.pranaair.com/wp-content/uploads/2023/06/regulation.png"
+                  alt={t("methane.prevention.regulations.alt")}
+                  width={200}
+                  height={200}
+                />
+              </div>
+              <div className="reduce-methane-ways-txts">
+                <h3>{t("methane.prevention.regulations.title")}</h3>
+                <p>{t("methane.prevention.regulations.description")}</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="note-box">
-                <h3>Note:</h3>
-                <p>
-                  This list is not exhaustive and the best course of action may depend on the specific circumstances and
-                  location of the potential exposure.
-                </p>
+                <h3>{t("methane.prevention.note.title")}</h3>
+                <p>{t("methane.prevention.note.description")}</p>
               </div>
             </div>
           </div>

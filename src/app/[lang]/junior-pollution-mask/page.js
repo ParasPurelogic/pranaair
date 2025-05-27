@@ -1,8 +1,8 @@
-
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function JuniorPollutionMask() {
+export default async function JuniorPollutionMask() {
+  const { t } = await getServerTranslation("junior-pollution")
   return (
     <main>
       {/* Banner Section */}
@@ -11,15 +11,22 @@ export default function JuniorPollutionMask() {
           <div className="row">
             <div className="col-md-6">
               <div className="banner-content">
-                <h1>Did you know that more than 90% of children are breathing toxic air every day?</h1>
-                <a href="https://www.pranaair.com/checkout/?add-to-cart=6257">buy now</a>
+                <h1>
+                  {t(
+                    "adultKidMask.banner.title",
+
+                  )}
+                </h1>
+                <a href="https://www.pranaair.com/checkout/?add-to-cart=6257">
+                  {t("adultKidMask.banner.cta")}
+                </a>
               </div>
             </div>
             <div className="col-md-6">
               <img
                 className="clid-mask-img"
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/Boy-and-girl-wearing-adult-kid-mask.png"
-                alt="Boy and girl wearing adult-kid mask"
+                alt={t("adultKidMask.banner.imageAlt")}
               />
             </div>
           </div>
@@ -31,15 +38,15 @@ export default function JuniorPollutionMask() {
         <div className="container">
           <div className="text-center">
             <h1>
-              <span style={{ fontSize: "24pt" }}>Adult-Kid Pollution Mask</span>
+              <span style={{ fontSize: "24pt" }}>{t("adultKidMask.product.title")}</span>
               <sup>
-                <img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" />
+                <img
+                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                  alt={t("adultKidMask.product.logoAlt")}
+                />
               </sup>
             </h1>
-            <p>
-              The best N95 anti-pollution mask for children to keep maximum protection to them from breathing dangerous
-              polluted air particles
-            </p>
+            <p>{t("adultKidMask.product.description")}</p>
           </div>
 
           <div className="row">
@@ -49,13 +56,13 @@ export default function JuniorPollutionMask() {
                   <div className="icon-wrapper">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2021/03/mask-hepa-filter-layers.png"
-                      alt="HEPA filter layers"
+                      alt={t("adultKidMask.product.features.hepaFilter.iconAlt")}
                     />
                   </div>
                   <div className="info-content">
                     <h3>
                       <span style={{ fontSize: "15pt" }}>
-                        <strong>5 Layer Hepa Filter</strong>
+                        <strong>{t("adultKidMask.product.features.hepaFilter.title")}</strong>
                       </span>
                     </h3>
                   </div>
@@ -67,13 +74,13 @@ export default function JuniorPollutionMask() {
                   <div className="icon-wrapper">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2021/03/efficiency-rate.png"
-                      alt="Efficiency rate"
+                      alt={t("adultKidMask.product.features.efficiency.iconAlt")}
                     />
                   </div>
                   <div className="info-content">
                     <h3>
                       <span style={{ fontSize: "15pt" }}>
-                        <strong>95.99% Efficiency</strong>
+                        <strong>{t("adultKidMask.product.features.efficiency.title")}</strong>
                       </span>
                     </h3>
                   </div>
@@ -83,12 +90,15 @@ export default function JuniorPollutionMask() {
               <div className="info-list position-right">
                 <div className="info-list-item">
                   <div className="icon-wrapper">
-                    <img src="https://www.pranaair.com/wp-content/uploads/2021/03/fan-speed.png" alt="Fan speed" />
+                    <img
+                      src="https://www.pranaair.com/wp-content/uploads/2021/03/fan-speed.png"
+                      alt={t("adultKidMask.product.features.fanSpeed.iconAlt")}
+                    />
                   </div>
                   <div className="info-content">
                     <h3>
                       <span style={{ fontSize: "15pt" }}>
-                        <strong>3 Different Fan Speeds</strong>
+                        <strong>{t("adultKidMask.product.features.fanSpeed.title")}</strong>
                       </span>
                     </h3>
                   </div>
@@ -99,7 +109,7 @@ export default function JuniorPollutionMask() {
             <div className="col-md-4 text-center">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-junior-pollution-mask.png"
-                alt="Adult-Kid Mask"
+                alt={t("adultKidMask.product.mainImageAlt")}
                 className="img-fluid"
               />
             </div>
@@ -110,13 +120,13 @@ export default function JuniorPollutionMask() {
                   <div className="icon-wrapper">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2021/03/micro-ventilation.png"
-                      alt="Micro ventilation"
+                      alt={t("adultKidMask.product.features.ventilators.iconAlt")}
                     />
                   </div>
                   <div className="info-content">
                     <h3>
                       <span style={{ fontSize: "15pt" }}>
-                        <strong>Two Micro-Ventilators</strong>
+                        <strong>{t("adultKidMask.product.features.ventilators.title")}</strong>
                       </span>
                     </h3>
                   </div>
@@ -128,13 +138,13 @@ export default function JuniorPollutionMask() {
                   <div className="icon-wrapper">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2021/03/micro-usb-charger.png"
-                      alt="USB charger"
+                      alt={t("adultKidMask.product.features.usbCharging.iconAlt")}
                     />
                   </div>
                   <div className="info-content">
                     <h3>
                       <span style={{ fontSize: "15pt" }}>
-                        <strong>USB Cable Charging</strong>
+                        <strong>{t("adultKidMask.product.features.usbCharging.title")}</strong>
                       </span>
                     </h3>
                   </div>
@@ -146,13 +156,13 @@ export default function JuniorPollutionMask() {
                   <div className="icon-wrapper">
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2021/03/battery-life.png"
-                      alt="Battery life"
+                      alt={t("adultKidMask.product.features.batteryLife.iconAlt")}
                     />
                   </div>
                   <div className="info-content">
                     <h3>
                       <span style={{ fontSize: "15pt" }}>
-                        <strong>8 Hours Long Battery Life</strong>
+                        <strong>{t("adultKidMask.product.features.batteryLife.title")}</strong>
                       </span>
                     </h3>
                   </div>
@@ -171,7 +181,7 @@ export default function JuniorPollutionMask() {
             <div className="col-lg-6 col-md-6">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-5-layers-hepa-filter.png"
-                alt="5 Layer HEPA Filter"
+                alt={t("adultKidMask.features.hepaFilter.imageAlt")}
                 className="img-fluid"
               />
             </div>
@@ -179,12 +189,10 @@ export default function JuniorPollutionMask() {
               <div style={{ height: "10px" }}></div>
               <h2 className="cus-heading">
                 <span style={{ fontSize: "23pt" }}>
-                  <strong>5 Layer HEPA Filter</strong>
+                  <strong>{t("adultKidMask.features.hepaFilter.title")}</strong>
                 </span>
               </h2>
-              <span style={{ fontSize: "13pt" }}>
-                Grade 11 HEPA filters pollen, smoke, and fine dust particles as small as PM 2.5
-              </span>
+              <span style={{ fontSize: "13pt" }}>{t("adultKidMask.features.hepaFilter.description")}</span>
             </div>
           </div>
 
@@ -193,7 +201,7 @@ export default function JuniorPollutionMask() {
             <div className="col-lg-6 col-md-6 paddcompanions-col">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-mask-filter-efficiency.png"
-                alt="95.99% Efficiency"
+                alt={t("adultKidMask.features.efficiency.imageAlt")}
                 className="img-fluid"
               />
             </div>
@@ -201,13 +209,10 @@ export default function JuniorPollutionMask() {
               <div style={{ height: "10px" }}></div>
               <h2 className="cus-heading">
                 <span style={{ fontSize: "23pt" }}>
-                  <strong>95.99% Efficiency</strong>
+                  <strong>{t("adultKidMask.features.efficiency.title")}</strong>
                 </span>
               </h2>
-              <span style={{ fontSize: "13pt" }}>
-                Advanced filtration technology enables our air mask for anti-polluion to capture 95.99% polluted air
-                particles.
-              </span>
+              <span style={{ fontSize: "13pt" }}>{t("adultKidMask.features.efficiency.description")}</span>
             </div>
           </div>
 
@@ -216,7 +221,7 @@ export default function JuniorPollutionMask() {
             <div className="col-lg-6 col-md-6">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-mask-fan-speeds.png"
-                alt="3 Different Fan Speed"
+                alt={t("adultKidMask.features.fanSpeed.imageAlt")}
                 className="img-fluid"
               />
             </div>
@@ -224,13 +229,10 @@ export default function JuniorPollutionMask() {
               <div style={{ height: "10px" }}></div>
               <h2 className="cus-heading">
                 <span style={{ fontSize: "23pt" }}>
-                  <strong>3 Different Fan Speed</strong>
+                  <strong>{t("adultKidMask.features.fanSpeed.title")}</strong>
                 </span>
               </h2>
-              <span style={{ fontSize: "13pt" }}>
-                The air volume can be adjusted as per the childs commuting to and from school, or going anywhere
-                outdoor, etc.
-              </span>
+              <span style={{ fontSize: "13pt" }}>{t("adultKidMask.features.fanSpeed.description")}</span>
             </div>
           </div>
 
@@ -239,7 +241,7 @@ export default function JuniorPollutionMask() {
             <div className="col-lg-6 col-md-6 paddcompanions-col">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/junior-mask-micro-ventilators.jpeg"
-                alt="2 Micro Ventilators"
+                alt={t("adultKidMask.features.ventilators.imageAlt")}
                 className="img-fluid"
               />
             </div>
@@ -247,13 +249,10 @@ export default function JuniorPollutionMask() {
               <div style={{ height: "10px" }}></div>
               <h2 className="cus-heading">
                 <span style={{ fontSize: "23pt" }}>
-                  <strong>2 Micro Ventilators</strong>
+                  <strong>{t("adultKidMask.features.ventilators.title")}</strong>
                 </span>
               </h2>
-              <span style={{ fontSize: "13pt" }}>
-                Allows kids to breathe fresh purified air from one side and breathe out the carbon dioxide from the
-                other side.
-              </span>
+              <span style={{ fontSize: "13pt" }}>{t("adultKidMask.features.ventilators.description")}</span>
             </div>
           </div>
 
@@ -262,7 +261,7 @@ export default function JuniorPollutionMask() {
             <div className="col-lg-6 col-md-6">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-usb-charging-junior-mask.png"
-                alt="USB Charging"
+                alt={t("adultKidMask.features.usbCharging.imageAlt")}
                 className="img-fluid"
               />
             </div>
@@ -270,12 +269,10 @@ export default function JuniorPollutionMask() {
               <div style={{ height: "10px" }}></div>
               <h2 className="cus-heading">
                 <span style={{ fontSize: "23pt" }}>
-                  <strong>USB Charging</strong>
+                  <strong>{t("adultKidMask.features.usbCharging.title")}</strong>
                 </span>
               </h2>
-              <span style={{ fontSize: "13pt" }}>
-                Comes with micro-USB charging cable that allows the mask function within 1.5 to 2 hours.
-              </span>
+              <span style={{ fontSize: "13pt" }}>{t("adultKidMask.features.usbCharging.description")}</span>
             </div>
           </div>
 
@@ -284,18 +281,16 @@ export default function JuniorPollutionMask() {
             <div className="col-lg-6 col-md-6 paddcompanions-col">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/usb-recharging-battery-mask.jpeg"
-                alt="Battery Efficiency"
+                alt={t("adultKidMask.features.batteryEfficiency.imageAlt")}
                 className="img-fluid"
               />
             </div>
             <div className="col-lg-6 col-md-6 padd companions-col">
               <div style={{ height: "10px" }}></div>
               <h2 className="cus-heading">
-                <span style={{ fontSize: "23pt" }}>Battery Efficiency</span>
+                <span style={{ fontSize: "23pt" }}>{t("adultKidMask.features.batteryEfficiency.title")}</span>
               </h2>
-              <span style={{ fontSize: "13pt" }}>
-                Runs on a 5-V lithium battery with an average of 8 hours long battery life daily.
-              </span>
+              <span style={{ fontSize: "13pt" }}>{t("adultKidMask.features.batteryEfficiency.description")}</span>
             </div>
           </div>
         </div>
@@ -349,13 +344,13 @@ export default function JuniorPollutionMask() {
       {/* Product Details Section */}
       <section className="detail-row">
         <div className="container">
-          <h2 className="head-proxima">Product Details: Children Pollution Mask</h2>
+          <h2 className="head-proxima">{t("adultKidMask.productDetails.title")}</h2>
 
           <div className="row">
             <div className="col-lg-6 col-md-6 detail-img-col">
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-adult-kid-mask.jpeg"
-                alt="Product Details"
+                alt={t("adultKidMask.productDetails.imageAlt")}
                 className="img-fluid"
               />
             </div>
@@ -364,71 +359,71 @@ export default function JuniorPollutionMask() {
                 <table>
                   <tbody>
                     <tr>
-                      <th>PRODUCT FEATURES</th>
-                      <th>Adult-Kid MASK</th>
+                      <th>{t("adultKidMask.productDetails.table.header.features")}</th>
+                      <th>{t("adultKidMask.productDetails.table.header.mask")}</th>
                     </tr>
                     <tr>
-                      <th>Colors</th>
-                      <td>White, Pink, Blue</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.colors.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.colors.value")}</td>
                     </tr>
                     <tr>
-                      <th>Filter layers</th>
-                      <td>5</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.filterLayers.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.filterLayers.value")}</td>
                     </tr>
                     <tr>
-                      <th>HEPA compliant</th>
-                      <td>Yes</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.hepaCompliant.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.hepaCompliant.value")}</td>
                     </tr>
                     <tr>
-                      <th>Purification efficiency</th>
-                      <td>&gt;95.99%</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.purificationEfficiency.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.purificationEfficiency.value")}</td>
                     </tr>
                     <tr>
-                      <th>Fan speed</th>
-                      <td>3 modes</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.fanSpeed.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.fanSpeed.value")}</td>
                     </tr>
                     <tr>
-                      <th>Charging mode</th>
-                      <td>USB charging</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.chargingMode.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.chargingMode.value")}</td>
                     </tr>
                     <tr>
-                      <th>Charging time</th>
-                      <td>1.5-2 hours</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.chargingTime.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.chargingTime.value")}</td>
                     </tr>
                     <tr>
-                      <th>Battery duration</th>
-                      <td>3 hours - 4 hours</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.batteryDuration.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.batteryDuration.value")}</td>
                     </tr>
                     <tr>
-                      <th>Battery capacity</th>
-                      <td>1000 mAh</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.batteryCapacity.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.batteryCapacity.value")}</td>
                     </tr>
                     <tr>
-                      <th>Dimensions</th>
-                      <td>120x110x50 (mm)</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.dimensions.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.dimensions.value")}</td>
                     </tr>
                     <tr>
-                      <th>Weight</th>
-                      <td>62 grams</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.weight.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.weight.value")}</td>
                     </tr>
                     <tr>
-                      <th>Voltage</th>
-                      <td>3.7V</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.voltage.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.voltage.value")}</td>
                     </tr>
                     <tr>
-                      <th>Noise</th>
-                      <td>&lt;28db(A)</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.noise.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.noise.value")}</td>
                     </tr>
                     <tr>
-                      <th>Price</th>
-                      <td>3490 INR</td>
+                      <th>{t("adultKidMask.productDetails.table.rows.price.label")}</th>
+                      <td>{t("adultKidMask.productDetails.table.rows.price.value")}</td>
                     </tr>
                     <tr>
                       <th></th>
                       <th>
                         <p style={{ textAlign: "center" }}>
                           <a className="bg-btn bg-green" href="https://www.pranaair.com/checkout/?add-to-cart=6257">
-                            Buy Now
+                            {t("adultKidMask.productDetails.buyNow")}
                           </a>
                         </p>
                       </th>
@@ -445,10 +440,10 @@ export default function JuniorPollutionMask() {
       <section style={{ backgroundColor: "#385266", padding: "30px 0" }}>
         <div className="container">
           <p style={{ textAlign: "center", fontSize: "14pt", color: "#ffffff", fontWeight: "bold" }}>
-            Does your kid often complain about headaches? Is he/she suffering from cough and cold every now and then?
+            {t("adultKidMask.blueSection.paragraph1")}
           </p>
           <p style={{ textAlign: "center", fontSize: "14pt", color: "#ffffff", fontWeight: "bold" }}>
-            If yes, Air Pollution could possibly be the reason.
+            {t("adultKidMask.blueSection.paragraph2")}
           </p>
         </div>
       </section>
@@ -457,13 +452,19 @@ export default function JuniorPollutionMask() {
       <section className="bg-grey content-row">
         <div className="container">
           <h2 className="cus-heading" style={{ textAlign: "center" }}>
-            What is in the box?{" "}
-            <img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" />
+            {t("adultKidMask.whatsInBox.title")}{" "}
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+              alt={t("adultKidMask.product.logoAlt")}
+            />
           </h2>
           <h2 className="cus-heading" style={{ textAlign: "center" }}>
             <span style={{ fontSize: "14pt" }}>
-              Adult-Kid Pollution Mask
-              <img src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png" alt="logo" />
+              {t("adultKidMask.product.title")}
+              <img
+                src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
+                alt={t("adultKidMask.product.logoAlt")}
+              />
             </span>
           </h2>
 
@@ -472,7 +473,7 @@ export default function JuniorPollutionMask() {
               <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-junior-pollution-mask-box.png"
-                  alt="Prana Air junior pollution mask box"
+                  alt={t("adultKidMask.whatsInBox.images.box.alt")}
                 />
                 <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
@@ -483,7 +484,7 @@ export default function JuniorPollutionMask() {
               <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-children-mask-box-backview.png"
-                  alt="Prana Air children mask box backview"
+                  alt={t("adultKidMask.whatsInBox.images.boxBack.alt")}
                 />
                 <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
@@ -494,7 +495,7 @@ export default function JuniorPollutionMask() {
               <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/junior-pollution-mask-box-topview.png"
-                  alt="Prana Air adult-kid mask box"
+                  alt={t("adultKidMask.whatsInBox.images.boxTop.alt")}
                 />
                 <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
@@ -505,7 +506,7 @@ export default function JuniorPollutionMask() {
               <div className="hover-box animateme scrollme">
                 <img
                   src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-junior-pollution-mask-parts.png"
-                  alt="Prana Air children pollution mask parts"
+                  alt={t("adultKidMask.whatsInBox.images.parts.alt")}
                 />
                 <div className="hover-body">
                   <a title="Motion Mask" data-rel="lightbox-gallery-1"></a>
@@ -531,28 +532,23 @@ export default function JuniorPollutionMask() {
           <div className="row">
             <div className="col-md-12 hideatmobile setheight">
               <h2 className="head-proxima" style={{ fontSize: "46px", color: "#ffffff", lineHeight: "1.3" }}>
-                Dont wait any longer.
-                <br />
-                Start protecting yourself and your
-                <br />
-                Children today.
+                {t("adultKidMask.protectCta.heading")}
               </h2>
               <div style={{ height: "20px" }}></div>
               <p style={{ fontSize: "20px", color: "#ffffff", lineHeight: "1.6" }}>
-                Our purification masks are Specially designed for
-                <br />
-                Your kid &amp; are made of eco-friendly plastic, lightweight,
-                <br />
-                Stylish and comfortable to wear.
+                {t("adultKidMask.protectCta.description")}
               </p>
               <div style={{ height: "55px" }}></div>
               <div className="amazone-btn">
                 <a className="bg-btn bg-green" href="https://www.pranaair.com/checkout/?add-to-cart=6257">
-                  Buy Now
+                  {t("adultKidMask.protectCta.buyNow")}
                 </a>
                 <a className="bg-btn bg-orange alignnone" href="https://www.amazon.in/dp/B08JQK2Z3N?ref=myi_title_dp">
-                  <img src="https://www.pranaair.com/wp-content/uploads/2021/02/quality-amazon.png" alt="amazon logo" />
-                  amazon
+                  <img
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/quality-amazon.png"
+                    alt={t("adultKidMask.protectCta.amazonLogoAlt")}
+                  />
+                  {t("adultKidMask.protectCta.amazon")}
                 </a>
               </div>
             </div>

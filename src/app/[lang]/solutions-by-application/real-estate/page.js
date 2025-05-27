@@ -1,186 +1,139 @@
-"use client"
-
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
-import Carousel from "react-multi-carousel"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function RealEstate() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+export default async function RealEstate() {
+  const { t } = await getServerTranslation("real-estate")
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: t("industrialApplicationsData.hotel.title"),
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: t("industrialApplicationsData.restaurant.title"),
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: t("industrialApplicationsData.institutes.title"),
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
     },
-  }
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
+  ]
 
   return (
     <div className="real-estate-page">
-      {/* Banner Section - Updated to match reference design */}
+      {/* Banner Section */}
       <div className="hero-banner">
         <div className="hero-content">
           <h1>
-            Air quality solutions for
+            {t("realEstateBanner.title")}
             <br />
-            <span className="highlight-text">Real Estates</span>
+            <span className="highlight-text">{t("realEstateBanner.highlight")}</span>
           </h1>
-          <p>A complete solution for air quality monitoring, air purification, and other solutions for real-estates.</p>
+          <p>{t("realEstateBanner.description")}</p>
           <div className="category-tabs">
-            <span>Residential</span> <span>Commercial</span>
+            <span>{t("realEstateBanner.categories.residential")}</span>{" "}
+            <span>{t("realEstateBanner.categories.commercial")}</span>
           </div>
           <a className="cta-button" href="#get_in_touch">
-            Get a Quote
+            {t("realEstateBanner.cta")}
           </a>
         </div>
         <div className="hero-image">
           <img
             src="https://www.pranaair.com/wp-content/uploads/2022/12/air-quality-solutions-for-real-estates.jpg"
-            alt="Real estate cityscape with modern buildings"
+            alt={t("realEstateBanner.imageAlt")}
           />
         </div>
       </div>
 
-      {/* Major Air Pollutants Section - Updated to match reference */}
+      {/* Major Air Pollutants Section */}
       <div className="section-container">
         <div className="section-header">
           <h2>
-            Major Air <span className="highlight-text">Pollutants</span>
+            {t("realEstatePollutants.title")}{" "}
+            <span className="highlight-text">{t("realEstatePollutants.highlight")}</span>
           </h2>
-          <p>
-            We spend more than 90% of our lives indoors and the air pollutants present indoors are 10x times more
-            harmful than the ambient environment. Therefore, indoor air quality affects most occupants health. Various
-            air pollutants in real estate such as residential areas and malls can exist.
-          </p>
+          <p>{t("realEstatePollutants.description")}</p>
         </div>
 
         <div className="pollutants-grid">
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png"
-                alt="pm2.5 level"
-                width="76"
-                height="60"
-              />
+          {["pm25", "co2", "tvoc", "co", "odor", "smoke", "tempHumidity", "noise"].map((pollutant) => (
+            <div className="pollutant-item" key={pollutant}>
+              <div className="pollutant-icon">
+                <img
+                  src={`https://www.pranaair.com/wp-content/uploads/2022/${pollutant === "pm25"
+                    ? "08/pm2.5-parameter.png"
+                    : pollutant === "co2"
+                      ? "08/co2-gas-icon.png"
+                      : pollutant === "tvoc"
+                        ? "08/tvoc-parameter-icon.png"
+                        : pollutant === "co"
+                          ? "08/co-icon.png"
+                          : pollutant === "odor"
+                            ? "12/odor-icon.png"
+                            : pollutant === "smoke"
+                              ? "12/smoke.png"
+                              : pollutant === "tempHumidity"
+                                ? "12/temp-humidity.png"
+                                : "08/noise-icon.png"
+                    }`}
+                  alt={t(`realEstatePollutants.items.${pollutant}.imageAlt`)}
+                  width={pollutant === "co2" || pollutant === "tempHumidity" || pollutant === "noise" ? 85 : 75}
+                  height={pollutant === "co2" ? 83 : pollutant === "tvoc" ? 79 : pollutant === "co" ? 69 : 70}
+                />
+              </div>
+              <h3>{t(`realEstatePollutants.items.${pollutant}.title`)}</h3>
+              <p>{t(`realEstatePollutants.items.${pollutant}.description`)}</p>
             </div>
-            <h3>PM2.5</h3>
-            <p>
-              Indoor PM or dust can be generated due to smoking, and combustion activities, and brought in by
-              ventilation.
-            </p>
-          </div>
-
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
-                alt="high co2 level"
-                width="85"
-                height="83"
-              />
-            </div>
-            <h3>CO2</h3>
-            <p>Ventilation and occupancy rates highly influence the CO2 levels in a room or enclosed area.</p>
-          </div>
-
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png"
-                alt="tvoc gas"
-                width="73"
-                height="79"
-              />
-            </div>
-            <h3>TVOC</h3>
-            <p>Air fresheners, cleaning agents, paints, carpets, and furniture are some potential sources of TVOC.</p>
-          </div>
-
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/co-icon.png"
-                alt="co gas"
-                width="66"
-                height="69"
-              />
-            </div>
-            <h3>CO</h3>
-            <p>Various utilities such as fireplaces and coal burning emit gases such as carbon monoxide.</p>
-          </div>
-
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/odor-icon.png"
-                alt="Odor"
-                width="66"
-                height="69"
-              />
-            </div>
-            <h3>Odor</h3>
-            <p>
-              Odor is one of the factors that affect the comfort level of occupants. Restrooms are a major source of the
-              odor.
-            </p>
-          </div>
-
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/smoke.png"
-                alt="smoke icon"
-                width="66"
-                height="69"
-              />
-            </div>
-            <h3>Smoke</h3>
-            <p>Cooking, fireplaces, burning of fuels, smoking, etc. release various air pollutants including smoke.</p>
-          </div>
-
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/temp-humidity.png"
-                alt="temperature and humidity"
-                width="86"
-                height="89"
-              />
-            </div>
-            <h3>Temp. & Humidity</h3>
-            <p>These two air factors play an important role in the comfort level of the occupants.</p>
-          </div>
-
-          <div className="pollutant-item">
-            <div className="pollutant-icon">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon.png"
-                alt="noise pollution"
-                width="86"
-                height="89"
-              />
-            </div>
-            <h3>Noise</h3>
-            <p>
-              Hustle and bustle in hotels are quite normal. This sometimes creates a nuisance and disturbance for
-              guests.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* Pollutants Effects Section - Updated to match reference design */}
+      {/* Pollutants Effects Section */}
       <div
         className="pollutants-overlay-section"
         style={{
@@ -189,71 +142,38 @@ export default function RealEstate() {
         }}
       >
         <div className="overlay-content">
-          <div className="pollutant-marker" style={{ top: "15%", left: "25%" }}>
-            <div className="marker-circle">
-              <img src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-icon-2.png" alt="pm2.5 icon" />
+          {[
+            { id: "pm25", position: { top: "15%", left: "25%" } },
+            { id: "co2", position: { top: "15%", right: "15%" } },
+            { id: "noise", position: { top: "40%", left: "10%" } },
+            { id: "tempHumidity", position: { top: "35%", right: "10%" } },
+            { id: "odor", position: { bottom: "10%", left: "15%" } },
+            { id: "tvoc", position: { bottom: "25%", right: "15%" } },
+          ].map((marker) => (
+            <div className="pollutant-marker" style={marker.position} key={marker.id}>
+              <div className="marker-circle">
+                <img
+                  src={`https://www.pranaair.com/wp-content/uploads/2022/${marker.id === "pm25"
+                    ? "08/pm2.5-icon-2.png"
+                    : marker.id === "co2"
+                      ? "08/co2-icon.png"
+                      : marker.id === "noise"
+                        ? "08/noise-icon-for-restaurant.png"
+                        : marker.id === "tempHumidity"
+                          ? "12/temp-and-humidity-icon.png"
+                          : marker.id === "odor"
+                            ? "12/odor.png"
+                            : "08/tvoc-icon.png"
+                    }`}
+                  alt={t(`realEstateEffects.markers.${marker.id}.imageAlt`)}
+                />
+              </div>
+              <div className="marker-box">
+                <h3>{t(`realEstateEffects.markers.${marker.id}.title`)}</h3>
+                <p>{t(`realEstateEffects.markers.${marker.id}.description`)}</p>
+              </div>
             </div>
-            <div className="marker-box">
-              <h3>PM2.5</h3>
-              <p>They have the ability to enter the bloodstream & can cause various diseases.</p>
-            </div>
-          </div>
-
-          <div className="pollutant-marker" style={{ top: "15%", right: "15%" }}>
-            <div className="marker-circle">
-              <img src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-icon.png" alt="co2 icon" />
-            </div>
-            <div className="marker-box">
-              <h3>CO2</h3>
-              <p>Excess CO2 can cause perspiration, fatigue, suffocation, convulsions.</p>
-            </div>
-          </div>
-
-          <div className="pollutant-marker" style={{ top: "40%", left: "10%" }}>
-            <div className="marker-circle">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon-for-restaurant.png"
-                alt="noise icon"
-              />
-            </div>
-            <div className="marker-box">
-              <h3>Noise</h3>
-              <p>Excessive noise can result in headaches & high blood pressure.</p>
-            </div>
-          </div>
-
-          <div className="pollutant-marker" style={{ top: "35%", right: "10%" }}>
-            <div className="marker-circle">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/temp-and-humidity-icon.png"
-                alt="temperature and humidity"
-              />
-            </div>
-            <div className="marker-box">
-              <h3>Temp-Humidity</h3>
-              <p>Presence of more people increases more temp-humidity level.</p>
-            </div>
-          </div>
-
-          <div className="pollutant-marker" style={{ bottom: "10%", left: "15%" }}>
-            <div className="marker-circle">
-              <img src="https://www.pranaair.com/wp-content/uploads/2022/12/odor.png" alt="odor problem" />
-            </div>
-            <div className="marker-box">
-              <h3>Odor</h3>
-              <p>When sweat and bacteria are exposed to gym fabric, produces a bad odor.</p>
-            </div>
-          </div>
-
-          <div className="pollutant-marker" style={{ bottom: "25%", right: "15%" }}>
-            <div className="marker-circle">
-              <img src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-icon.png" alt="tvoc icon" />
-            </div>
-            <div className="marker-box">
-              <h3>TVOC</h3>
-              <p>Headaches, and irritation in the eyes, nose, and throat.</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -261,148 +181,61 @@ export default function RealEstate() {
       <div className="section-container">
         <div className="section-header">
           <h2>
-            Who are at <span className="highlight-text">Risk?</span>
+            {t("realEstateRisk.title")} <span className="highlight-text">{t("realEstateRisk.highlight")}</span>
           </h2>
-          <p>
-            People experience stuffiness in the air as the breathing rate goes up while exercising. That means people
-            inhale more oxygen and release more O2 than the normal rate.
-          </p>
+          <p>{t("realEstateRisk.description")}</p>
         </div>
 
-        <h3 className="subsection-title">Residential Areas</h3>
+        <h3 className="subsection-title">{t("realEstateRisk.residential.title")}</h3>
 
         <div className="risk-grid">
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/children.png"
-                alt="children"
-                width="75"
-                height="163"
-              />
+          {["children", "pregnant", "old", "healthIssues"].map((risk) => (
+            <div className="risk-item" key={risk}>
+              <div className="risk-image">
+                <img
+                  src={`https://www.pranaair.com/wp-content/uploads/2022/12/${risk === "children"
+                    ? "children.png"
+                    : risk === "pregnant"
+                      ? "pregnant-women.png"
+                      : risk === "old"
+                        ? "old-people.png"
+                        : "people-with-health-issues.png"
+                    }`}
+                  alt={t(`realEstateRisk.residential.items.${risk}.imageAlt`)}
+                  width={risk === "old" ? 35 : risk === "children" ? 75 : 80}
+                  height={risk === "children" ? 163 : risk === "pregnant" ? 159 : 150}
+                />
+              </div>
+              <h3>{t(`realEstateRisk.residential.items.${risk}.title`)}</h3>
+              <p>{t(`realEstateRisk.residential.items.${risk}.description`)}</p>
             </div>
-            <h3>Children</h3>
-            <p>
-              Air pollution severely hampers and impacts cognitive abilities and growth, tissue building, organ
-              functioning, etc. among children.
-            </p>
-          </div>
-
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/pregnant-women.png"
-                alt="pregnant women"
-                width="83"
-                height="159"
-              />
-            </div>
-            <h3>Pregnant Ladies</h3>
-            <p>
-              When they are exposed to poor air quality, both mothers and childs health are affected. Poor air can
-              affect prenatal development.
-            </p>
-          </div>
-
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/old-people.png"
-                alt="old people"
-                width="35"
-                height="146"
-              />
-            </div>
-            <h3>Old People</h3>
-            <p>
-              Bad air quality promotes respiratory illnesses and disorders among old age people. Their old age makes
-              them more vulnerable to illness.
-            </p>
-          </div>
-
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/people-with-health-issues.png"
-                alt="person with health issues"
-                width="73"
-                height="149"
-              />
-            </div>
-            <h3>People with underlying health issues</h3>
-            <p>
-              People with underlying disorders are highly susceptible to air pollution since their immune system is
-              already weak.
-            </p>
-          </div>
+          ))}
         </div>
 
-        <h3 className="subsection-title">Commercial Buildings</h3>
+        <h3 className="subsection-title">{t("realEstateRisk.commercial.title")}</h3>
 
         <div className="risk-grid">
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/returning-customer.png"
-                alt="returning customers"
-                width="65"
-                height="176"
-              />
+          {["returning", "staff", "sensitive", "healthy"].map((risk) => (
+            <div className="risk-item" key={risk}>
+              <div className="risk-image">
+                <img
+                  src={`https://www.pranaair.com/wp-content/uploads/2022/12/${risk === "returning"
+                    ? "returning-customer.png"
+                    : risk === "staff"
+                      ? "staff-member.png"
+                      : risk === "sensitive"
+                        ? "sensitive-person.png"
+                        : "healthy-individual.png"
+                    }`}
+                  alt={t(`realEstateRisk.commercial.items.${risk}.imageAlt`)}
+                  width={risk === "returning" || risk === "sensitive" ? 65 : 83}
+                  height={risk === "returning" || risk === "sensitive" ? 176 : 159}
+                />
+              </div>
+              <h3>{t(`realEstateRisk.commercial.items.${risk}.title`)}</h3>
+              <p>{t(`realEstateRisk.commercial.items.${risk}.description`)}</p>
             </div>
-            <h3>Returning Customers</h3>
-            <p>
-              Good air quality encourages good business by creating a healthy and comfortable environment, especially
-              for returning consumers.
-            </p>
-          </div>
-
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/staff-member.png"
-                alt="Staff Members"
-                width="83"
-                height="159"
-              />
-            </div>
-            <h3>Staff Members</h3>
-            <p>
-              When staff members are exposed to poor air quality, they experience reduced attentiveness and bad health
-              that influences their attendance.
-            </p>
-          </div>
-
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/sensitive-person.png"
-                alt="sensitive group"
-                width="65"
-                height="176"
-              />
-            </div>
-            <h3>Sensitive Group</h3>
-            <p>
-              Children, old age people, pregnant ladies, and people with underlying health issues like cardiovascular
-              disorders come under the sensitive group.
-            </p>
-          </div>
-
-          <div className="risk-item">
-            <div className="risk-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/healthy-individual.png"
-                alt="healthy individual"
-                width="83"
-                height="159"
-              />
-            </div>
-            <h3>Healthy Individual</h3>
-            <p>
-              Even in healthy people, different air pollution parameters have varied effects on the body. Headaches &
-              nausea are some of the symptoms.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -410,68 +243,34 @@ export default function RealEstate() {
       <div className="section-container">
         <div className="section-header">
           <h2>
-            Air quality <span className="highlight-text">Solutions</span>
+            {t("realEstateSolutions.title")}{" "}
+            <span className="highlight-text">{t("realEstateSolutions.highlight")}</span>
           </h2>
-          <p>
-            Prana Airs air quality monitoring and air purifying solutions give you the power to know what your residents
-            and visitors breathe and what you could do to clean the air to make real estate properties pollution-free
-            zones and view and analyze your IAQ.
-          </p>
+          <p>{t("realEstateSolutions.description")}</p>
         </div>
 
         <div className="solutions-tabs">
           <ul className="nav nav-tabs" id="solutionsTabs" role="tablist">
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link active"
-                id="air-quality-monitors-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#air-quality-monitors"
-                type="button"
-                role="tab"
-                aria-controls="air-quality-monitors"
-                aria-selected="true"
-              >
-                Air Quality Monitors
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link"
-                id="fresh-air-machine-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#fresh-air-machine"
-                type="button"
-                role="tab"
-                aria-controls="fresh-air-machine"
-                aria-selected="false"
-              >
-                Fresh Air Machine
-              </button>
-            </li>
-            <li className="nav-item" role="presentation">
-              <button
-                className="nav-link"
-                id="api-data-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#api-data"
-                type="button"
-                role="tab"
-                aria-controls="api-data"
-                aria-selected="false"
-              >
-                API Data
-              </button>
-            </li>
+            {["monitors", "freshAir", "apiData"].map((tab, index) => (
+              <li className="nav-item" role="presentation" key={tab}>
+                <button
+                  className={`nav-link ${index === 0 ? "active" : ""}`}
+                  id={`${tab}-tab`}
+                  data-bs-toggle="tab"
+                  data-bs-target={`#${tab}`}
+                  type="button"
+                  role="tab"
+                  aria-controls={tab}
+                  aria-selected={index === 0 ? "true" : "false"}
+                >
+                  {t(`realEstateSolutions.tabs.${tab}`)}
+                </button>
+              </li>
+            ))}
           </ul>
 
           <div className="tab-content" id="solutionsTabsContent">
-            <div
-              className="tab-pane fade show active"
-              id="air-quality-monitors"
-              role="tabpanel"
-              aria-labelledby="air-quality-monitors-tab"
-            >
+            <div className="tab-pane fade show active" id="monitors" role="tabpanel" aria-labelledby="monitors-tab">
               <div className="product-slider">
                 {/* Slider for Air Quality Monitors */}
                 <div id="airQualityMonitorsCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -479,22 +278,19 @@ export default function RealEstate() {
                     <div className="carousel-item active">
                       <div className="product-slide">
                         <div className="product-info">
-                          <h3>Sensible+ Air Monitor</h3>
-                          <p>
-                            This is a smart air quality monitor that comes with 7 inch touch screen display that gives
-                            more insightful data for real estate properties.
-                          </p>
+                          <h3>{t("realEstateSolutions.monitors.sensible.title")}</h3>
+                          <p>{t("realEstateSolutions.monitors.sensible.description")}</p>
                           <ul className="feature-list">
-                            <li>7 Inch LED Touch Screen Display</li>
-                            <li>5000 mAh Battery InBuilt</li>
-                            <li>WiFi Connectivity With Mobile App</li>
+                            {[1, 2, 3].map((num) => (
+                              <li key={num}>{t(`realEstateSolutions.monitors.sensible.features.feature${num}`)}</li>
+                            ))}
                           </ul>
                           <div className="product-actions">
                             <a
                               href="https://www.pranaair.com/air-quality-monitor/sensible-plus-air-monitor/"
                               className="primary-button"
                             >
-                              Know More
+                              {t("realEstateSolutions.knowMore")}
                             </a>
                           </div>
                         </div>
@@ -502,7 +298,7 @@ export default function RealEstate() {
                           <img
                             style={{ width: "100%" }}
                             src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-sensible-plus-air-monitor-for-real-estates.png"
-                            alt="prana air sensible+ air quality monitor for real estates"
+                            alt={t("realEstateSolutions.monitors.sensible.imageAlt")}
                           />
                         </div>
                       </div>
@@ -510,28 +306,25 @@ export default function RealEstate() {
                     <div className="carousel-item">
                       <div className="product-slide">
                         <div className="product-info">
-                          <h3>SQUAIR Air Monitor</h3>
-                          <p>
-                            SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate
-                            matters, temperature, humidity, and gas parameters in real estate properties.
-                          </p>
+                          <h3>{t("realEstateSolutions.monitors.squair.title")}</h3>
+                          <p>{t("realEstateSolutions.monitors.squair.description")}</p>
                           <ul className="feature-list">
-                            <li>Detects PM2.5, CO, CO2, TVOC, noise, temp., & humidity</li>
-                            <li>Mobile & Smart TV App Enabled</li>
-                            <li>Reliable Web Dashboard Accessibility</li>
+                            {[1, 2, 3].map((num) => (
+                              <li key={num}>{t(`realEstateSolutions.monitors.squair.features.feature${num}`)}</li>
+                            ))}
                           </ul>
                           <div className="product-actions">
                             <a
                               href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/"
                               className="primary-button"
                             >
-                              Know More
+                              {t("realEstateSolutions.knowMore")}
                             </a>
                             <a
                               href="https://www.pranaair.com/air-quality-monitor/rental-air-monitor/"
                               className="secondary-link"
                             >
-                              Looking to Rent?
+                              {t("realEstateSolutions.lookingToRent")}
                             </a>
                           </div>
                         </div>
@@ -539,7 +332,7 @@ export default function RealEstate() {
                           <img
                             style={{ width: "100%" }}
                             src="https://www.pranaair.com/wp-content/uploads/2022/12/prana-air-squair-air-monitor-for-real-estates.png"
-                            alt="prana air squair air quality monitor for real estates"
+                            alt={t("realEstateSolutions.monitors.squair.imageAlt")}
                           />
                         </div>
                       </div>
@@ -554,7 +347,7 @@ export default function RealEstate() {
                     <span className="carousel-control-prev-icon" aria-hidden="true">
                       ❮
                     </span>
-                    <span className="visually-hidden">Previous</span>
+                    <span className="visually-hidden">{t("realEstateSolutions.previous")}</span>
                   </button>
                   <button
                     className="carousel-control-next"
@@ -565,7 +358,7 @@ export default function RealEstate() {
                     <span className="carousel-control-next-icon" aria-hidden="true">
                       ❯
                     </span>
-                    <span className="visually-hidden">Next</span>
+                    <span className="visually-hidden">{t("realEstateSolutions.next")}</span>
                   </button>
                   <div className="carousel-indicators">
                     <button
@@ -587,28 +380,20 @@ export default function RealEstate() {
               </div>
             </div>
 
-            <div
-              className="tab-pane fade"
-              id="fresh-air-machine"
-              role="tabpanel"
-              aria-labelledby="fresh-air-machine-tab"
-            >
+            <div className="tab-pane fade" id="freshAir" role="tabpanel" aria-labelledby="freshAir-tab">
               <div className="product-slider">
                 <div className="product-slide active">
                   <div className="product-info">
-                    <h3>Fresh Air Machine</h3>
-                    <p>
-                      One-stop solution for indoor air pollution by Prana Air Fresh Air Machine working as an air
-                      purifier with the capability to filter out 99.5% efficiency and multi-layer HEPA filters.
-                    </p>
+                    <h3>{t("realEstateSolutions.freshAir.title")}</h3>
+                    <p>{t("realEstateSolutions.freshAir.description")}</p>
                     <ul className="feature-list">
-                      <li>Comes with multi-layers HEPA Filters</li>
-                      <li>Compact Design makes it easy to place</li>
-                      <li>Promising you up to 99.5% efficiency</li>
+                      {[1, 2, 3].map((num) => (
+                        <li key={num}>{t(`realEstateSolutions.freshAir.features.feature${num}`)}</li>
+                      ))}
                     </ul>
                     <div className="product-actions">
                       <a href="https://www.pranaair.com/fresh-air-machine/" className="primary-button">
-                        Know More
+                        {t("realEstateSolutions.knowMore")}
                       </a>
                     </div>
                   </div>
@@ -616,27 +401,27 @@ export default function RealEstate() {
                     <img
                       style={{ width: "100%" }}
                       src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
-                      alt="prana air fresh air machine as iaq solution for real estates"
+                      alt={t("realEstateSolutions.freshAir.imageAlt")}
                     />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="tab-pane fade" id="api-data" role="tabpanel" aria-labelledby="api-data-tab">
+            <div className="tab-pane fade" id="apiData" role="tabpanel" aria-labelledby="apiData-tab">
               <div className="product-slider">
                 <div className="product-slide active">
                   <div className="product-info">
-                    <h3>AQI API Data</h3>
-                    <p>Avail the real-time air quality data of nearby outdoor area on the web.</p>
+                    <h3>{t("realEstateSolutions.apiData.title")}</h3>
+                    <p>{t("realEstateSolutions.apiData.description")}</p>
                     <ul className="feature-list">
-                      <li>Integrate air quality data on the web</li>
-                      <li>Access the real-time data quickly</li>
-                      <li>Take precautions from the air pollution</li>
+                      {[1, 2, 3].map((num) => (
+                        <li key={num}>{t(`realEstateSolutions.apiData.features.feature${num}`)}</li>
+                      ))}
                     </ul>
                     <div className="product-actions">
                       <a href="#get_in_touch" className="primary-button">
-                        Know More
+                        {t("realEstateSolutions.knowMore")}
                       </a>
                     </div>
                   </div>
@@ -644,7 +429,7 @@ export default function RealEstate() {
                     <img
                       style={{ width: "100%" }}
                       src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg"
-                      alt="aqi api data for real estates"
+                      alt={t("realEstateSolutions.apiData.imageAlt")}
                     />
                   </div>
                 </div>
@@ -654,83 +439,63 @@ export default function RealEstate() {
         </div>
       </div>
 
-      {/* Data Freemium Services Section - Updated to match reference */}
+      {/* Data Freemium Services Section */}
       <div className="section-container">
         <div className="section-header">
           <h2>
-            Data Freemium <span className="highlight-text">Services</span>
+            {t("realEstateFreemium.title")} <span className="highlight-text">{t("realEstateFreemium.highlight")}</span>
           </h2>
-          <p>
-            The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the
-            QR to know the AQI of the area you are in.
-          </p>
+          <p>{t("realEstateFreemium.description")}</p>
         </div>
 
         <div className="services-grid">
-          <div className="service-item">
-            <div className="service-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/tv-app-dashboard-for-real-estates.png"
-                alt="aqi tv app dashboard for real estates"
-              />
+          {["tvApp", "customApp", "qrCode"].map((service) => (
+            <div className="service-item" key={service}>
+              <div className="service-image">
+                <img
+                  src={`https://www.pranaair.com/wp-content/uploads/2022/12/${service === "tvApp"
+                    ? "tv-app-dashboard-for-real-estates.png"
+                    : service === "customApp"
+                      ? "customized-app-dashboard-for-real-estates.png"
+                      : "aqi-qr-code-scan.png"
+                    }`}
+                  alt={t(`realEstateFreemium.services.${service}.imageAlt`)}
+                />
+              </div>
+              <h3>{t(`realEstateFreemium.services.${service}.title`)}</h3>
             </div>
-            <h3>TV Dashboard App</h3>
-          </div>
-
-          <div className="service-item">
-            <div className="service-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/customized-app-dashboard-for-real-estates.png"
-                alt="aqi customized dashboard app for real estates"
-              />
-            </div>
-            <h3>Customized App for Real Estates</h3>
-          </div>
-
-          <div className="service-item">
-            <div className="service-image">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2022/12/aqi-qr-code-scan.png"
-                alt="aqi monitor data qr code scan for real estates"
-              />
-            </div>
-            <h3>QR Code Scan</h3>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* Effects of Air Pollution Section - Updated to match reference */}
+      {/* Effects of Air Pollution Section */}
       <div className="section-container">
         <div className="section-header">
           <h2>
-            The Effects of Air Pollution - <span className="highlight-text">Real Estates</span>
+            {t("realEstateComparison.title")} -{" "}
+            <span className="highlight-text">{t("realEstateComparison.highlight")}</span>
           </h2>
-          <p>
-            When residents, customers, and staff are exposed to bad air quality, it affects their health, and therefore
-            their overall experience. This majorly affects the real estate business.
-          </p>
+          <p>{t("realEstateComparison.description")}</p>
         </div>
 
         <div className="comparison-container">
           <div className="comparison-column clean">
-            <h3>With Clean Air</h3>
+            <h3>{t("realEstateComparison.clean.title")}</h3>
             <ul className="comparison-list">
-              <li>Improve ventilation</li>
-              <li>Good comfort score</li>
-              <li>Enhanced experience</li>
-              <li>Profits will increase</li>
+              {[1, 2, 3, 4].map((num) => (
+                <li key={num}>{t(`realEstateComparison.clean.benefits.benefit${num}`)}</li>
+              ))}
             </ul>
           </div>
 
           <div className="comparison-divider"></div>
 
           <div className="comparison-column unclean">
-            <h3>Without Clean Air</h3>
+            <h3>{t("realEstateComparison.unclean.title")}</h3>
             <ul className="comparison-list">
-              <li>Less comfort</li>
-              <li>Low ventilation score</li>
-              <li>Bad experience</li>
-              <li>Profits will decrease</li>
+              {[1, 2, 3, 4].map((num) => (
+                <li key={num}>{t(`realEstateComparison.unclean.drawbacks.drawback${num}`)}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -740,186 +505,42 @@ export default function RealEstate() {
       <div className="section-container">
         <div className="section-header">
           <h2>
-            Frequently Asked <span className="highlight-text">Questions</span>
+            {t("faq.title")} <span className="highlight-text">{t("faq.highlight")}</span>
           </h2>
           <p>
-            About Air Quality Solution for Real Estates
+            {t("realEstateFaq.description")}
             <br />
-            Have questions? Were here to help.
+            {t("realEstateFaq.helpText")}
           </p>
         </div>
 
         <div className="accordion" id="faqAccordion">
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingOne">
-              <button
-                className="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
+          {[1, 2, 3, 4, 5, 6].map((num) => (
+            <div className="accordion-item" key={num}>
+              <h2 className="accordion-header" id={`heading${num}`}>
+                <button
+                  className={`accordion-button ${num === 1 ? "" : "collapsed"}`}
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target={`#collapse${num}`}
+                  aria-expanded={num === 1 ? "true" : "false"}
+                  aria-controls={`collapse${num}`}
+                >
+                  {t(`realEstateFaq.questions.q${num}`)}
+                </button>
+              </h2>
+              <div
+                id={`collapse${num}`}
+                className={`accordion-collapse collapse ${num === 1 ? "show" : ""}`}
+                aria-labelledby={`heading${num}`}
+                data-bs-parent="#faqAccordion"
               >
-                1. What are the health impacts of the pollutants present inside a mall?
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              className="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#faqAccordion"
-            >
-              <div className="accordion-body">
-                <p>
-                  Your health could be harmed by increased CO2 exposure. Health effects like nausea, vertigo,
-                  exhaustion, difficulty breathing, and perspiration can be evident in public spaces. Transmission of
-                  chronic illnesses like the flu and the common cold is fairly common.
-                </p>
+                <div className="accordion-body">
+                  <p>{t(`realEstateFaq.answers.a${num}`)}</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingTwo">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                2. What are the major pollutants that are present in residential buildings?
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              className="accordion-collapse collapse"
-              aria-labelledby="headingTwo"
-              data-bs-parent="#faqAccordion"
-            >
-              <div className="accordion-body">
-                <p>
-                  Many pollutants can be present inside residential buildings. PM2.5, CO2, TVOC, CO, odor, smoke,
-                  temperature, humidity, and noise are the main pollutants that affect indoor air quality.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingThree">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                3. Why is it necessary to have air quality monitoring solutions?
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              className="accordion-collapse collapse"
-              aria-labelledby="headingThree"
-              data-bs-parent="#faqAccordion"
-            >
-              <div className="accordion-body">
-                <p>
-                  To know the nature of pollutants and how much they are present in a space so that necessary actions
-                  can be taken to improve air quality and protect occupants health.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingFour">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                4. How can I check the AQI of a room and a specific lobby in a residential building using your device?
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              className="accordion-collapse collapse"
-              aria-labelledby="headingFour"
-              data-bs-parent="#faqAccordion"
-            >
-              <div className="accordion-body">
-                <p>
-                  Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display
-                  the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time
-                  data on your screens or mobile app.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingFive">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
-                5. Are any other parameters included in the monitors other than the air pollutants?
-              </button>
-            </h2>
-            <div
-              id="collapseFive"
-              className="accordion-collapse collapse"
-              aria-labelledby="headingFive"
-              data-bs-parent="#faqAccordion"
-            >
-              <div className="accordion-body">
-                <p>
-                  Yes, our monitors include additional parameters like temperature, humidity, and noise levels which are
-                  important for overall comfort and well-being in indoor environments.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingSix">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseSix"
-                aria-expanded="false"
-                aria-controls="collapseSix"
-              >
-                6. Are there any additional benefits that come with the solutions?
-              </button>
-            </h2>
-            <div
-              id="collapseSix"
-              className="accordion-collapse collapse"
-              aria-labelledby="headingSix"
-              data-bs-parent="#faqAccordion"
-            >
-              <div className="accordion-body">
-                <p>
-                  Yes, our solutions come with customized dashboards, mobile apps, and data analytics that help property
-                  managers make informed decisions about ventilation, HVAC systems, and other air quality improvement
-                  measures.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -929,8 +550,8 @@ export default function RealEstate() {
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -942,112 +563,13 @@ export default function RealEstate() {
       <div className="section-container">
         <div className="section-header">
           <h2>
-            Industrial <span className="highlight-text">Applications</span>
+            {t("industrial.title")} <span className="highlight-text">{t("industrial.highlight")}</span>
           </h2>
-          <p>
-            Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and
-            highly accurate air quality solutions for various industries.
-          </p>
+          <p>{t("industrial.description")}</p>
         </div>
 
         <div className="applications-slider">
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={5000}
-            keyBoardControl={true}
-            customTransition="all .5s"
-            transitionDuration={500}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-          >
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-retail-outlets.jpg"
-                    alt="air quality solutions for retail stores"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                <h4>Solutions for Retail Stores</h4>
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                    alt="air quality solutions for banks"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                <h4>Solutions for Bank</h4>
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                    alt="air quality solutions for hotel business"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                <h4>Solutions for Hotel</h4>
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                    alt="air quality solutions for restaurants"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                <h4>Solutions for Restaurant</h4>
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/institutes/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/07/solution-for-institutions.jpg"
-                    alt="air quality solutions for schools and institutes"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/institutes/">
-                <h4>Solutions for Institutes</h4>
-              </a>
-            </div>
-
-            <div className="application-item">
-              <div className="application-image">
-                <a href="https://www.pranaair.com/solutions-by-application/office/">
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg"
-                    alt="air quality solutions for cinema and theatre"
-                  />
-                </a>
-              </div>
-              <a href="https://www.pranaair.com/solutions-by-application/office/">
-                <h4>Solutions for Office</h4>
-              </a>
-            </div>
-          </Carousel>
+          <IndustrialApplicationsCarousel applications={industrialApplications} />
         </div>
       </div>
 

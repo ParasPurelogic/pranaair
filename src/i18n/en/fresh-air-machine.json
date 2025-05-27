@@ -1,0 +1,376 @@
+{
+     "bannerSection": {
+    "title": "Prana air",
+    "subtitle": "Fresh Air Machine",
+    "description": "One stop air quality solution for indoor air pollution",
+    "ctaButton": "Get In Touch"
+  },
+  "cleanAirSection": {
+    "title": {
+      "part1": "Clean Air Machine As (IAQ) Indoor Air Quality",
+      "part2": "Solution"
+    },
+    "logoAlt": "logo",
+    "description": {
+      "part1": "One-stop solution for indoor air quality solution by Prana Air",
+      "highlight": "Fresh Air Machine",
+      "part2": "working as an air purifier with the capability to filter out air pollutants up to 99.5% efficiency and multi-layer HEPA filters."
+    }
+  },
+   "featuresSection": {
+    "features": {
+      "automaticAirPartition": {
+        "title": "Automatic Air Partition",
+        "description": "There is a partition for air intake which can be controlled by a mobile app remotely.",
+        "alt": "automatic air intake partition in prana air fresh air machine"
+      },
+      "largeCoverageArea": {
+        "title": "Large Coverage Area",
+        "description": "Its area coverage size is very large as compared to the normal air purifier.",
+        "alt": "very large area coverage by prana air fresh air machine"
+      },
+      "efficiency": {
+        "title": "99.5% Efficiency",
+        "description": "Air pollutants like pm2.5, pm10 - dust particles, CO2, TVOC & HCHO are easily filtered out up to 99.5%",
+        "alt": "promising 99% efficiency of prana air fresh air machine"
+      },
+      "hepaFilter": {
+        "title": "13 Grade HEPA",
+        "description": "3 phases of multi-layer HEPA filters clean out maximum air pollutants.",
+        "alt": "hepa filter prana air fresh air machine"
+      },
+      "mobileApp": {
+        "title": "Mobile App & LED Display",
+        "description": "The machine can be controlled by a mobile app and led display monitor, and the data can be accessed on both remotely.",
+        "alt": "mobile app and led display for prana air fresh air machine as controller"
+      },
+      "ionizer": {
+        "title": "Ionizer",
+        "description": "The function of an ionizer is to release negatively charged ions that can reduce airborne pollutants and improve indoor air quality.",
+        "alt": "ionizer in prana air fresh air machine"
+      },
+      "uvLight": {
+        "title": "UV Light",
+        "description": "The function of UV light is to disinfect the air by neutralizing airborne germs, such as viruses, bacteria, and mold.",
+        "alt": "uv light in prana air fresh air machine"
+      },
+      "heating": {
+        "title": "Heating",
+        "description": "It can also provide warm air anytime whenever you feel cool, especially in winter.",
+        "alt": "heat exchanger in prana air fresh air machine"
+      }
+    }
+  },
+  "multiImagesSection": {
+    "images": {
+      "hepaFilters": {
+        "title": "Multi-layer HEPA+ Carbon Filters",
+        "description": "There are multi-layer grade-13 HEPA+ Carbon filters that removes tiny particles like allergens, dust, and fine particle matter. This provides more efficient air filtration.",
+        "alt": "Multi-layer HEPA+ Carbon Filters"
+      },
+      "coverageArea": {
+        "title": "Large Coverage Area",
+        "description": "Its coverage area is 1200 square feet, which is perfect for large rooms or 2 small rooms.It covers 2-3x more area than other air purifiers.",
+        "alt": "Large Coverage Area"
+      },
+      "efficiency": {
+        "title": "Promising Upto 99.5% efficiency",
+        "description": "This fresh air machine can filter out upto 99.5% of unwanted particles, gems, mold, bacteria, etc. providing garden-fresh air indoor environment.",
+        "alt": "Promising Upto 99.5% efficiency"
+      },
+      "aiEnabled": {
+        "title": "AI-Enabled Air Flow",
+        "description": "The machine is designed to understand the number of occupancies present in a room. Then, it automates the airflow accordingly without any human intervention.",
+        "alt": "AI-Enabled Air Flow"
+      }
+    }
+  },
+   "purificationHeadingSection": {
+    "mainTitle": "Lets Find Out How Prana Air Fresh Air Machine Purifies Indoor Air Pollution",
+    "logoAlt": "Prana Air logo",
+    "subTitle1": "Key Parameters, Its Sources & the Health Impacts",
+    "subTitle2": "By Indoor Air Pollution (AQI)"
+  },
+   "pollutantTabsSection": {
+    "tabs": {
+      "pm25": "PM2.5/10",
+      "co2": "CO2",
+      "tvoc": "TVOC",
+      "hcho": "HCHO"
+    },
+    "sourcesLabel": "Its Sources:",
+    "healthImpactsLabel": "Health Impacts:",
+    "pm25": {
+      "sources": "According to WHO, 9 out of 10 people breathe air containing high levels of pollutants and over 7 million people die  9 out of 10 people breathe air containing high levels of pollutants and over 7 million people die each year as a result of tiny particles in contaminated air. PM2.5 and PM10 are tiny breathable particles and major contributors to these pollutants that are suspended in the air. Some of the major sources include cooking, incense burning, fungi mold, and contaminants carried in by outsiders.",
+      "healthImpacts": "Irritation in the eyes, nose, and throat, coughing, sneezing, and breathing difficulties are some of its short-term health impacts. Long-term exposures can worsen asthma and lung difficulties, as well as cause heart attacks and irregular heartbeat."
+    },
+    "co2": {
+      "sources": "Outdoor CO2, breathing, contaminants carried in by outsiders, and the ventilation rate of the room or building are all major sources of CO2.",
+      "healthImpacts": "Normal ambient CO2 levels are 220-400 ppm. but indoor CO2 levels can reach 2000 ppm, causing lethargy, drowsiness, and stale, stuffy air. Short-term impacts include poor focus and an elevated heart rate. Long-term consequences include coma, death, and impaired brain development in children due to oxygen deprivation."
+    },
+    "tvoc": {
+      "sources": "Total Volatile Organic Compounds (TVOC) are the total amount of gases and smells released by numerous toxins and chemicals present in daily items such as paints and varnishes, cosmetics, carpets, curtains, furniture, hobby products, and so on. If you have poor ventilation or an enclosed space, they contaminate the fresh air within.",
+      "healthImpacts": "Headaches, nausea, coughing, skin irritation, and other short-term consequences of TVOC include headaches, nausea, coughing, and skin irritation. Long-term effects on the liver, spleen, blood, and respiratory disorders such as asthma and cancer."
+    },
+    "hcho": {
+      "sources": "HCHO, or formaldehyde is a compound that evaporates at room temperature. It is a typical indoor air pollutant released by building materials (particleboard, plywood, and other pressed-wood products), smoking, household items, and the use of unvented, fuel-burning equipment such as gas stoves or kerosene space heaters (according to US EPA).",
+      "healthImpacts": "Even at low concentrations, it can irritate a persons eyes, nose, throat, and lungs, or induce an asthma attack, according to CARB (California Air Resources Board). Prolonged exposure to formaldehyde can even cause cancer."
+    },
+    "icons": {
+      "tvoc": "TVOCs Icon",
+      "germs": "Germs and Bacteria Icon",
+      "background": "Pollutant Indoor Background",
+      "pm10": "PM10 Icon",
+      "pm25": "PM2.5 Icon",
+      "dust": "Dust Icon",
+      "co2": "CO2 Icon",
+      "hcho": "HCHO Icon"
+    }
+  },
+  "productSpecificationsSection": {
+    "title": "Prana Air IAQ Solutions",
+    "logoAlt": "Prana Air logo",
+    "description": "Take a look at some photos of the clean air machine, internal and external parts how it looks like. You can see the numbers and thickness of the filters.",
+    "images": {
+      "machineWithControl": {
+        "alt": "Prana Air IAQ solution machine with control panel"
+      },
+      "innerParts": {
+        "alt": "Prana Air fresher air machine inner parts"
+      },
+      "filterMonitor": {
+        "alt": "Fresher air filter monitor display"
+      },
+      "filterLayers": {
+        "alt": "Multiple layers of the fresher air filter"
+      },
+      "filter": {
+        "alt": "Fresher air filter"
+      },
+      "aqiSolutionInner": {
+        "alt": "Inner components of Prana Air AQI solution"
+      }
+    }
+  },
+  "machineMechanismSection": {
+    "title": "Machine Working Mechanism",
+    "logoAlt": "Prana Air logo",
+    "imageAlt": "Prana Air advanced fresh air machine",
+    "description": "Take a look at some photos of the clean air machine, internal and external parts how it looks like. You can see the numbers and thickness of the filters."
+  },
+  "filterTechnologySection": {
+    "title": "Filter Technology",
+    "logoAlt": "Prana Air logo",
+    "description": "Advanced Multi-Layer HEPA and Carbon Filters ensure 99.97% particle capture. Say goodbye to impurities and odors. Breathe fresh, live fresh – get yours now!",
+    "imageAlt": "Filter technology of Prana Air fresh air machine"
+  },
+  "controlAirSection": {
+    "title": "Control the Air You Breathe",
+    "logoAlt": "Prana Air logo",
+    "imageAlt": "Control the air you breathe with Prana Air fresh air machine",
+    "description": "The user has complete control over the machine with an smart app or LED-display Controller to customize and optimize air flow to their exact preferences. Enjoy the benefits of continuous flow of fresh, oxygen-rich air, creating a comfortable and healthy living space. Say goodbye to stale air, allergies, and unpleasant odors."
+  },
+  "energyEfficientSection": {
+    "title": "Energy-Efficient Heating (Winter Comfort)",
+    "logoAlt": "Prana Air logo",
+    "comfortIconAlt": "comfort icon for winter heating",
+    "mainImageAlt": "energy efficient heating in prana air fresh air machine",
+    "description": "During colder months, the heating plate warms the air, offering an energy-efficient solution. Users have the option to activate the heating plate, ensuring a comfortable and inviting environment throughout the winter season."
+  },
+  "freshAirModesSection": {
+    "title": "Fresh Air - Two modes",
+    "logoAlt": "Prana Air logo",
+    "mode1": {
+      "title": "Mode 1 : Recirculation",
+      "imageAlt": "recirculation mode in prana air fresh air machine",
+      "doorImageAlt": "recirculation door img",
+      "description": "The air inside the room passes through the fresh air machine via an open damper. The machine filters and recirculates the air back into the room, which is advantageous during high pollution levels outside"
+    },
+    "mode2": {
+      "title": "Mode 2 : Outdoor Air",
+      "imageAlt": "outdoor air mode in prana air fresh air machine",
+      "doorImageAlt": "outdoor air door img",
+      "description": "In this mode, the closed damper enables outside air to enter thefresh air machine for purification, before entering indoors. This is advantageous when indoor pollution levels are high, making air recirculation ineffective."
+    }
+  },
+  "technicalSpecsSection": {
+    "title": "Technical Specifications",
+    "logoAlt": "Prana Air logo",
+    "brochureButtonAlt": "brochure button",
+    "downloadBrochure": "Download Brochure",
+    "specs": {
+      "product": {
+        "label": "Product:",
+        "value": "Air purifying machine"
+      },
+      "cadr": {
+        "label": "CADR:",
+        "value": "1000 m³/h"
+      },
+      "pressure": {
+        "label": "Overbottom Pressure:",
+        "value": "110 Pa"
+      },
+      "filters": {
+        "label": "No. of Filters:",
+        "value": "Multilayer HEPA+ Carbon"
+      },
+      "power": {
+        "label": "Power:",
+        "value": "0.45KW"
+      },
+      "voltage": {
+        "label": "Voltage:",
+        "value": "220V"
+      },
+      "efficiency": {
+        "label": "Purification Efficiency:",
+        "value": "Up to 99.5%"
+      },
+      "dimensions": {
+        "label": "Product Dimension:",
+        "value": "1450 x 450 x 450 (mm)"
+      },
+      "coverage": {
+        "label": "Coverage Area:",
+        "value": "1200 Sq. Ft"
+      },
+      "filtrationStage": {
+        "label": "Filtration Stage:",
+        "value": "Multiple stage"
+      },
+      "filterType": {
+        "label": "Type of Filter:",
+        "value": "13 grade HEPA filters"
+      },
+      "control": {
+        "label": "Device Control:",
+        "value": "Mobile app & LED monitor"
+      }
+    }
+  },
+  "comparisonSection": {
+    "title": "Room Air Purifier Vs Prana Air Fresh Air Machine",
+    "logoAlt": "Prana Air logo",
+    "specs": {
+      "mode": "Mode",
+      "ventilation": "Ventilation",
+      "co2Emissions": "CO2 emissions",
+      "numberOfFilters": "Number of filters",
+      "filterLife": "Filter life",
+      "coverageArea": "Coverage Area",
+      "purificationEfficiency": "Purification Efficiency",
+      "pm": "PM2.5 & PM10"
+    },
+    "roomAirPurifier": {
+      "title": "Room Air Purifier",
+      "mode": "Re-circulation and re-filtration of the same air.",
+      "ventilation": "It does not support a ventilation mechanism.",
+      "co2Emissions": "No, it cannot purify co2 gas.",
+      "numberOfFilters": "It may have 1-2 filters which may or may not include HEPA filters.",
+      "filterLife": "The average life is 6 months depending on the air quality level.",
+      "coverageArea": "It can cover an area from 250 to 400 sq. ft.",
+      "purificationEfficiency": "Up to 98% efficiency rate",
+      "pm": "It can filter particulate matter (PM2.5, PM10) to an extent, as the same air is recirculated inside the room."
+    },
+    "pranaAirMachine": {
+      "title": "Prana Air Fresh Air Machine",
+      "mode": "It purifies the outside air and then brings that filtered air indoors.",
+      "ventilation": "It supports the ventilation mechanism.",
+      "co2Emissions": "Yes, it purifies gases including CO2.",
+      "numberOfFilters": "It has 3 separate 13-grade multi-layer True HEPA filters.",
+      "filterLife": "It can last up to 1 year depending upon the ambient air quality.",
+      "coverageArea": "It can cover a 1200 sq. ft. area.",
+      "purificationEfficiency": "Up to 99.5% efficiency rate",
+      "pm": "It purifies the air from pollutants like PM2.5 and 10 as it filters these out from the air before they can enter indoors."
+    }
+  },
+  "hvacComparisonSection": {
+    "titlePart1": "A Big Difference Between HVAC System And",
+    "titlePart2": "Prana Air Fresh Air Machine",
+    "logoAlt": "Prana Air logo",
+    "imageAlt": "difference between hvac system and prana air fresh air machine",
+    "description": "HVAC (Heating, Ventilation, and Air Conditioning) systems are found in shopping malls, hotels, and hospitals, among other places. HVAC systems are mostly used for heating, air conditioning, and ventilation, as the name indicates. Although no such air filters are put within an HVAC system, it may have 1-2 filters that may filter out dust particles visible to the naked eye. However, as the rate of pollution and poor air quality rises, there is an urgent need to adopt smarter options. Dust, pollen, mold, smoke, particulate matter, pet dander, and VOCs are all filtered out by the HEPA air filtering system used in Prana Airs Fresh Air Machine. HEPA stands for High-Efficiency Particulate Absorbing Filters, and it is, as the name implies, more efficient and less expensive than typical HVAC purification systems."
+  },
+   "applicationsSection": {
+    "title": "Applications of Prana Air Fresh Air Machine",
+    "logoAlt": "Prana Air logo",
+    "applications": {
+      "hospital": {
+        "title": "HOSPITALS",
+        "imageAlt": "fresh air machine for hospital",
+        "description": "In hospitals, the transmission of airborne viruses and bacteria pathogens, as well as diseases, is highly common. Patients conditions may deteriorate and recovery may be hindered if they breathe contaminated air. Prana Airs air Fresh air machines are essential for preventing the transmission of such harmful pathogens."
+      },
+      "hotel": {
+        "title": "HOTELS",
+        "imageAlt": "fresh air machine for hotel",
+        "description": "In hotels, poor ventilation is a serious issue. Many chemicals used in hotel cleaning, sanitization, and room refreshing may release pollutants that are potentially dangerous to people. They can irritate your eyes, nose, and throat, as well as cause respiratory tract harm. Long-term side effects might aggravate asthma and bronchitis. Fresh air machines are extremely helpful in such environments."
+      },
+      "office": {
+        "title": "OFFICES",
+        "imageAlt": "fresh air machine for office",
+        "description": "Fresh Air Machines are being installed in offices because they filter various contaminants and therefore minimize air pollution indoors. Employees are more productive when they work in a cleaner atmosphere."
+      },
+      "school": {
+        "title": "SCHOOLS/UNIVERSITIES",
+        "imageAlt": "fresh air machine for school",
+        "description": "Students are more susceptible to air-borne diseases as they inhale more air as compared to adults. Stuffiness in the air can hinder their concentration levels as well as early lung development. Breathing cleaner air will increase the concentration level among students and will prevent infections that spread contagious diseases."
+      },
+      "mall": {
+        "title": "SHOPPING MALLS",
+        "imageAlt": "fresh air machine for shopping malls",
+        "description": "Malls have traditionally used HVAC systems. However, as peoples health concerns grow, they want to breathe clean air indoors as well. Because HVAC systems lack an air filtering component, HEPA filtration systems are being added to clean the ambient air that enters congested locations such as malls."
+      },
+      "home": {
+        "title": "HOME",
+        "imageAlt": "fresh air machine for home",
+        "description": "Pollutants can cause more harm to the human body indoors than outdoors. As we spent 80-95% of our life indoors, there is a need for cleaner air to sustain. Major sources of indoor pollutants are those that seep into your homes from ambient air. A fresh air machine will clean the air that enters indoors beforehand so the cleaner air can enter indoors. This is especially good for youngsters in their growth stages, the elderly, and healthy people as well."
+      }
+    }
+  },
+   "contactSection": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faqHeadingSection": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "About Prana Air Fresh Air Machine",
+    "logoAlt": "Prana Air logo"
+  },
+   "freshAirMachineFAQ": {
+    "items": {
+      "1": {
+        "question": "1. What is the difference between an air purifier and this fresh air machine?",
+        "answer": "Prana Air's fresh air machine filters the ambient air and then brings that air inside your home. Whereas, room air purifiers refilter and recirculate the same air inside your room again and again."
+      },
+      "2": {
+        "question": "2. How many filters are present in the device?",
+        "answer": "Our air purifying machine consists of three 13-grade HEPA filters."
+      },
+      "3": {
+        "question": "3. Is there any warranty on the machine?",
+        "answer": "Yes, there is 1-year warranty on the fresh air machine"
+      },
+      "4": {
+        "question": "4. How to install the machine?",
+        "answer": "You don't have to be concerned about the setup. Our in-house technician will install the device."
+      },
+      "5": {
+        "question": "5. What is the dimension of filters used in the machine?",
+        "answer": "Prana Air Fresh Air Machine has three filters. 1st filter: 39.5 x 4.5 x 19 (cm), 2nd filter: 39.5 x 4.5 x 19 (cm), 3rd filter: 39.5 x 20 x 19 (cm)."
+      },
+      "6": {
+        "question": "6. Can I change a particular filter from the 3 filters?",
+        "answer": "Yes, you can change a filter individually if there is a need."
+      },
+      "7": {
+        "question": "7. What air pollutants can this machine filter?",
+        "answer": "Air pollutants like PM1, PM2.5, and PM10, CO2, TVOC & HCHO can be excluded from the clean air coming out of the machine's outlet."
+      },
+      "8": {
+        "question": "8. What is the coverage area of the machine?",
+        "answer": "Prana Air Fresh Air Machine offers a coverage area of 1200 square feet. This means that our device can easily function in a very large room or two small rooms with utmost precision."
+      }
+    }
+  }
+}

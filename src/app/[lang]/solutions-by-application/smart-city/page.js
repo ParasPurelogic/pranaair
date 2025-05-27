@@ -1,165 +1,151 @@
-"use client"
 import "./style.css"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import SmartApplicationsCarousel from "@/Components/Pages/SmartCity/banner-slider"
+import HealthimpactCarousel from "@/Components/Pages/SmartCity/healthimpact"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function SmartCityPage() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4,
+export default async function SmartCityPage() {
+  const { t } = await getServerTranslation("smart-city")
+  const smartCitySlides = [
+    {
+      title: t("smartCitySlides.slides.0.title"),
+      titleHighlight: t("smartCitySlides.slides.0.titleHighlight"),
+      subtitle: t("smartCitySlides.slides.0.subtitle"),
+      buttonText: t("smartCitySlides.slides.0.buttonText"),
+      buttonLink: "#contact_form",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/prana-air-smart-city-air-quality-solutions.jpg",
+      imageAlt: t("smartCitySlides.slides.0.imageAlt"),
+      isMainHeading: true,
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+    {
+      title: t("smartCitySlides.slides.1.title"),
+      titleHighlight: t("smartCitySlides.slides.1.titleHighlight"),
+      subtitle: t("smartCitySlides.slides.1.subtitle"),
+      buttonText: t("smartCitySlides.slides.1.buttonText"),
+      buttonLink: "#contact_form",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/prana-air-smart-city-air-quality-monitoring.jpg",
+      imageAlt: t("smartCitySlides.slides.1.imageAlt"),
+      isMainHeading: false,
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+    {
+      title: t("smartCitySlides.slides.2.title"),
+      titleHighlight: t("smartCitySlides.slides.2.titleHighlight"),
+      subtitle: t("smartCitySlides.slides.2.subtitle"),
+      buttonText: t("smartCitySlides.slides.2.buttonText"),
+      buttonLink: "#contact_form",
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-solutions.jpg",
+      imageAlt: t("smartCitySlides.slides.2.imageAlt"),
+      isMainHeading: false,
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+  ]
+  const healthImpacts = [
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/Cardiovascular-problems.png",
+      iconAlt: t("smartCityHealthImpacts.items.0.iconAlt"),
+      title: t("smartCityHealthImpacts.items.0.title"),
+      description: t("smartCityHealthImpacts.items.0.description"),
     },
-  }
-
-  const healthImpactResponsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4,
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/cancer.png",
+      iconAlt: t("smartCityHealthImpacts.items.1.iconAlt"),
+      title: t("smartCityHealthImpacts.items.1.title"),
+      description: t("smartCityHealthImpacts.items.1.description"),
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/neurological-problems.png",
+      iconAlt: t("smartCityHealthImpacts.items.2.iconAlt"),
+      title: t("smartCityHealthImpacts.items.2.title"),
+      description: t("smartCityHealthImpacts.items.2.description"),
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/premature-death.png",
+      iconAlt: t("smartCityHealthImpacts.items.3.iconAlt"),
+      title: t("smartCityHealthImpacts.items.3.title"),
+      description: t("smartCityHealthImpacts.items.3.description"),
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+    {
+      iconSrc: "https://www.pranaair.com/wp-content/uploads/2023/08/respiratory-problems.png",
+      iconAlt: t("smartCityHealthImpacts.items.4.iconAlt"),
+      title: t("smartCityHealthImpacts.items.4.title"),
+      description: t("smartCityHealthImpacts.items.4.description"),
     },
-  }
-
-  const industrialResponsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
+  ]
+  const industrialApplications = [
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+      title: t("industrialApplicationsData.hotel.title"),
+      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+      title: t("industrialApplicationsData.restaurant.title"),
+      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+      title: t("industrialApplicationsData.institutes.title"),
+      link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
     },
-  }
-
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
+  ]
   return (
     <main className="smart-city-page">
       {/* Banner Section */}
       <section className="home-banner-section">
         <div className="slider-container">
-          <Carousel
-            responsive={{
-              desktop: {
-                breakpoint: { max: 3000, min: 1024 },
-                items: 1,
-              },
-              tablet: {
-                breakpoint: { max: 1024, min: 464 },
-                items: 1,
-              },
-              mobile: {
-                breakpoint: { max: 464, min: 0 },
-                items: 1,
-              },
-            }}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={6000}
-            keyBoardControl={true}
-            customTransition="all .5s"
-            transitionDuration={500}
-            containerClass="carousel-container"
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-          >
-            <div className="slide">
-              <div className="banner-content">
-                <h1>
-                  Air Quality Solutions For <span className="smart-city-txt">Smart Cities</span>
-                </h1>
-                <p>Data Monitoring & Purification</p>
-                <a href="#contact_form" className="banner-btn">
-                  Contact Us
-                </a>
-              </div>
-              <img
-                className="slide-img"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/prana-air-smart-city-air-quality-solutions.jpg"
-                alt="prana air smart city air quality solutions"
-              />
-            </div>
-            <div className="slide">
-              <div className="banner-content">
-                <h2>
-                  Real-time Air Pollution Monitoring & <span className="smart-city-txt">Data Analytics</span>
-                </h2>
-                <p>Real-time & Historic Data Dashboards</p>
-                <a href="#contact_form" className="banner-btn">
-                  Contact Us
-                </a>
-              </div>
-              <img
-                className="slide-img"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/prana-air-smart-city-air-quality-monitoring.jpg"
-                alt="prana air smart city air quality monitoring"
-              />
-            </div>
-            <div className="slide">
-              <div className="banner-content">
-                <h2>
-                  Purification, An Ultimate Solution To <span className="smart-city-txt">Air Pollution</span>
-                </h2>
-                <p>Outdoor Air Purifiers</p>
-                <a href="#contact_form" className="banner-btn">
-                  Contact Us
-                </a>
-              </div>
-              <img
-                className="slide-img"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-solutions.jpg"
-                alt="Prana Air smart city air quality solutions"
-              />
-            </div>
-          </Carousel>
+          <SmartApplicationsCarousel applications={smartCitySlides} />
           <div className="slider-buttons">
-            <button className="slider-button" data-bs-slide="0">
-              Real-time Data <br />
-              <p>Monitoring</p>
-            </button>
-            <button className="slider-button" data-bs-slide="1">
-              Analytical Dashboards
-              <br />
-              <p>Insightful Data</p>
-            </button>
-            <button className="slider-button" data-bs-slide="2">
-              Air Purification <br />
-              <p>An Ultimate Solution</p>
-            </button>
+            {[0, 1, 2].map((index) => (
+              <button key={index} className="slider-button" data-bs-slide={index}>
+                {t(`smartCityBanner.buttons.${index}.title`)} <br />
+                <p>{t(`smartCityBanner.buttons.${index}.subtitle`)}</p>
+              </button>
+            ))}
           </div>
           <div className="mouse-scroll-icon">
             <img
               src="https://www.pranaair.com/wp-content/uploads/2023/08/scroll-down-icon.png"
-              alt="scroll down icon"
+              alt={t("smartCityBanner.scrollIconAlt")}
             />
           </div>
         </div>
@@ -172,198 +158,74 @@ export default function SmartCityPage() {
             <div className="col-md-6">
               <div className="factor-heading">
                 <h2>
-                  Factor affecting air quality in <span className="smart-city-factor">Smart Cities</span>
+                  {t("smartCityFactors.title")}{" "}
+                  <span className="smart-city-factor">{t("smartCityFactors.highlight")}</span>
                 </h2>
               </div>
             </div>
             <div className="col-md-6">
               <div className="factor-para">
-                <p>
-                  Air pollution in cities can be affected by traffic, industry, construction, vehicle emissions, waste
-                  disposal, and weather conditions.
-                </p>
+                <p>{t("smartCityFactors.description")}</p>
               </div>
             </div>
           </div>
 
           <div className="factor-affect-tab">
             <ul className="nav nav-tabs" id="factorTab" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link active"
-                  id="pm25-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#pm25"
-                  type="button"
-                  role="tab"
-                  aria-controls="pm25"
-                  aria-selected="true"
-                >
-                  PM2.5
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="co-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#co"
-                  type="button"
-                  role="tab"
-                  aria-controls="co"
-                  aria-selected="false"
-                >
-                  CO
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="no2-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#no2"
-                  type="button"
-                  role="tab"
-                  aria-controls="no2"
-                  aria-selected="false"
-                >
-                  NO2
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="so2-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#so2"
-                  type="button"
-                  role="tab"
-                  aria-controls="so2"
-                  aria-selected="false"
-                >
-                  SO2
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="ozone-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#ozone"
-                  type="button"
-                  role="tab"
-                  aria-controls="ozone"
-                  aria-selected="false"
-                >
-                  Ozone
-                </button>
-              </li>
+              {["pm25", "co", "no2", "so2", "ozone"].map((pollutant, index) => (
+                <li className="nav-item" role="presentation" key={pollutant}>
+                  <button
+                    className={`nav-link ${index === 0 ? "active" : ""}`}
+                    id={`${pollutant}-tab`}
+                    data-bs-toggle="tab"
+                    data-bs-target={`#${pollutant}`}
+                    type="button"
+                    role="tab"
+                    aria-controls={pollutant}
+                    aria-selected={index === 0 ? "true" : "false"}
+                  >
+                    {t(`smartCityFactors.tabs.${pollutant}`)}
+                  </button>
+                </li>
+              ))}
             </ul>
 
             <div className="tab-content" id="factorTabContent">
-              <div className="tab-pane fade show active" id="pm25" role="tabpanel" aria-labelledby="pm25-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="factor-tab-image">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/08/pm2.5-from-constructions-sites.jpg"
-                        alt="PM2.5 pollutant in city"
-                      />
+              {["pm25", "co", "no2", "so2", "ozone"].map((pollutant, index) => (
+                <div
+                  key={pollutant}
+                  className={`tab-pane fade ${index === 0 ? "show active" : ""}`}
+                  id={pollutant}
+                  role="tabpanel"
+                  aria-labelledby={`${pollutant}-tab`}
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="factor-tab-image">
+                        <img
+                          src={`https://www.pranaair.com/wp-content/uploads/2023/08/${pollutant === "pm25"
+                            ? "pm2.5-from-constructions-sites.jpg"
+                            : pollutant === "co"
+                              ? "co-gas-from-vehicle-emissions.jpg"
+                              : pollutant === "no2"
+                                ? "no2-gas-from-power-plant.jpg"
+                                : pollutant === "so2"
+                                  ? "so2-gas-from-diesel-generator.jpg"
+                                  : "ozone-gas-from-factories.jpg"
+                            }`}
+                          alt={t(`smartCityFactors.content.${pollutant}.imageAlt`)}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="factor-tab-para">
-                      <span className="green-clr">Particulate Matter PM2.5</span> consists of fine particles with a
-                      diameter of 2.5 micrometers or smaller. These particles can originate from various sources in
-                      cities, including vehicle emissions, industrial processes, construction activities, and the
-                      burning of fossil fuels.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="tab-pane fade" id="co" role="tabpanel" aria-labelledby="co-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="factor-tab-image">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/08/co-gas-from-vehicle-emissions.jpg"
-                        alt="CO pollutant in city"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="factor-tab-para">
-                      <span className="green-clr">Carbon monoxide (CO)</span> is produced from incomplete combustion of
-                      fossil fuels, primarily in vehicles. In urban environments, heavy traffic and congested roadways
-                      are major sources of carbon monoxide emissions.
+                    <div className="col-md-6">
+                      <div className="factor-tab-para">
+                        <span className="green-clr">{t(`smartCityFactors.content.${pollutant}.title`)}</span>{" "}
+                        {t(`smartCityFactors.content.${pollutant}.description`)}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="tab-pane fade" id="no2" role="tabpanel" aria-labelledby="no2-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="factor-tab-image">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/08/no2-gas-from-power-plant.jpg"
-                        alt="NO2 pollutant in city"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="factor-tab-para">
-                      <span className="green-clr">Nitrogen Dioxide NO2</span> is mainly produced from the combustion of
-                      fossil fuels in vehicles and power plants. In cities, heavy traffic congestion is a significant
-                      source of NO2 emissions. Industrial activities and residential heating using fossil fuels can also
-                      release nitrogen dioxide.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="tab-pane fade" id="so2" role="tabpanel" aria-labelledby="so2-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="factor-tab-image">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/08/so2-gas-from-diesel-generator.jpg"
-                        alt="SO2 pollutant in city"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="factor-tab-para">
-                      <span className="green-clr">Sulfur Dioxide (SO2)</span> is primarily emitted from the burning of
-                      coal and oil in power plants and industrial facilities. In urban areas, vehicles equipped with
-                      diesel engines can also contribute to SO2 emissions. Additionally, certain industrial processes,
-                      such as smelting and refining, release sulfur dioxide into the air.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="tab-pane fade" id="ozone" role="tabpanel" aria-labelledby="ozone-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="factor-tab-image">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/08/ozone-gas-from-factories.jpg"
-                        alt="Ozone pollutant in city"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="factor-tab-para">
-                      <span className="green-clr">Ground-level Ozone (O3)</span> is not directly emitted, but it forms
-                      when pollutants like nitrogen oxides (NOx) and volatile organic compounds (VOCs) react in the
-                      presence of sunlight. In urban areas, vehicle emissions are a primary source of these precursor
-                      pollutants.
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -376,264 +238,113 @@ export default function SmartCityPage() {
             <div className="col-md-6">
               <div className="health-impact-heading">
                 <h2>
-                  Health <span className="healt-impaact">Impacts</span>
+                  {t("smartCityHealth.title")} <span className="healt-impaact">{t("smartCityHealth.highlight")}</span>
                 </h2>
               </div>
             </div>
             <div className="col-md-6">
               <div className="factor-para health-impact-para">
-                <p>
-                  Air pollution in cities can have a significant impact on human health, the environment, and the
-                  economy. Short-term exposure to air pollution can cause respiratory problems, such as asthma and
-                  bronchitis. Long-term exposure can increase the risk of heart disease, stroke, cancer, and premature
-                  death.
-                </p>
+                <p>{t("smartCityHealth.description")}</p>
               </div>
             </div>
           </div>
 
           <div className="office-pollutatnt-bg">
             <div className="office-pollutant-icons">
-              <img
-                className="so2"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/so2-pollutant.png"
-                alt="so2 pollutant in city"
-              />
-              <img
-                className="pm2.5"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/pm2.5-pollutant.png"
-                alt="pm2.5 pollutant in city"
-              />
-              <img
-                className="co2"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/co-pollutant.png"
-                alt="co pollutant in city"
-              />
-              <img
-                className="tvocs"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/nh3-pollutant.png"
-                alt="nh3 pollutant in city"
-              />
-              <img
-                className="no2"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/no2-pollutant.png"
-                alt="no2 pollutant in city"
-              />
-              <img
-                className="co"
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/ozone-pollutant.png"
-                alt="ozone pollutant in city"
-              />
+              {["so2", "pm25", "co2", "nh3", "no2", "ozone"].map((pollutant) => (
+                <img
+                  key={pollutant}
+                  className={pollutant}
+                  src={`https://www.pranaair.com/wp-content/uploads/2023/08/${pollutant === "so2"
+                    ? "so2-pollutant.png"
+                    : pollutant === "pm25"
+                      ? "pm2.5-pollutant.png"
+                      : pollutant === "co2"
+                        ? "co-pollutant.png"
+                        : pollutant === "nh3"
+                          ? "nh3-pollutant.png"
+                          : pollutant === "no2"
+                            ? "no2-pollutant.png"
+                            : "ozone-pollutant.png"
+                    }`}
+                  alt={t(`smartCityHealth.pollutants.${pollutant}.imageAlt`)}
+                />
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Health Impact Slider - Updated to match the design */}
+      {/* Health Impact Slider */}
       <section className="health-impact-slider">
         <div className="container">
-          <Carousel
-            responsive={healthImpactResponsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={5000}
-            keyBoardControl={true}
-            customTransition="all .5s"
-            transitionDuration={500}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-          >
-            <div className="health-impact-card">
-              <div className="health-impact-icon">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/Cardiovascular-problems.png"
-                  alt="Cardiovascular problems icon"
-                />
-              </div>
-              <h3>Cardiovascular problems</h3>
-              <p>Air pollution can increase the risk of heart disease, stroke, and arrhythmias.</p>
-            </div>
-
-            <div className="health-impact-card">
-              <div className="health-impact-icon">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/08/cancer.png" alt="Cancer icon" />
-              </div>
-              <h3>Cancer</h3>
-              <p>
-                Air pollution has been linked to an increased risk of lung cancer, as well as other types of cancer.
-              </p>
-            </div>
-
-            <div className="health-impact-card">
-              <div className="health-impact-icon">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/neurological-problems.png"
-                  alt="Neurological problems icon"
-                />
-              </div>
-              <h3>Neurological Problems</h3>
-              <p>
-                Air pollution can damage the brain and nervous system, leading to cognitive decline, dementia, and
-                Alzheimers disease.
-              </p>
-            </div>
-
-            <div className="health-impact-card">
-              <div className="health-impact-icon">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/premature-death.png"
-                  alt="Premature death icon"
-                />
-              </div>
-              <h3>Premature death</h3>
-              <p>Air pollution is estimated to cause millions of premature deaths each year worldwide.</p>
-            </div>
-
-            <div className="health-impact-card">
-              <div className="health-impact-icon">
-                <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/08/respiratory-problems.png"
-                  alt="Respiratory problems icon"
-                />
-              </div>
-              <h3>Respiratory problems</h3>
-              <p>
-                Air pollution can irritate the lungs and airways, leading to coughing, wheezing, shortness of breath,
-                and asthma attacks.
-              </p>
-            </div>
-          </Carousel>
+          <HealthimpactCarousel applications={healthImpacts} />
         </div>
       </section>
 
-      {/* City Frame Section - Updated to match the design */}
+      {/* City Frame Section */}
       <section className="city-frame">
         <div className="container">
           <div className="city-frame-heading">
-            <img src="https://www.pranaair.com/wp-content/uploads/2023/08/frame-arrow.png" alt="icon" />
-            <h2>Smart City Model- Air Quality Solutions</h2>
+            <img
+              src="https://www.pranaair.com/wp-content/uploads/2023/08/frame-arrow.png"
+              alt={t("smartCityModel.arrowIconAlt")}
+            />
+            <h2>{t("smartCityModel.title")}</h2>
           </div>
 
           <div className="frame-section">
             <ul className="nav nav-tabs" id="frameTab" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link active"
-                  id="monitor-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#monitor"
-                  type="button"
-                  role="tab"
-                  aria-controls="monitor"
-                  aria-selected="true"
-                >
-                  <div className="frame-tab-number">01</div>
-                  <div className="frame-tab-content">
-                    <div className="frame-tab-title">Step 1</div>
-                    <div className="frame-tab-subtitle">Monitor</div>
-                  </div>
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="drone-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#drone"
-                  type="button"
-                  role="tab"
-                  aria-controls="drone"
-                  aria-selected="false"
-                >
-                  <div className="frame-tab-number">02</div>
-                  <div className="frame-tab-content">
-                    <div className="frame-tab-title">Step 2</div>
-                    <div className="frame-tab-subtitle">Drone</div>
-                  </div>
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="purifier-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#purifier"
-                  type="button"
-                  role="tab"
-                  aria-controls="purifier"
-                  aria-selected="false"
-                >
-                  <div className="frame-tab-number">03</div>
-                  <div className="frame-tab-content">
-                    <div className="frame-tab-title">Step 3</div>
-                    <div className="frame-tab-subtitle">Air Purifier</div>
-                  </div>
-                </button>
-              </li>
+              {["monitor", "drone", "purifier"].map((step, index) => (
+                <li className="nav-item" role="presentation" key={step}>
+                  <button
+                    className={`nav-link ${index === 0 ? "active" : ""}`}
+                    id={`${step}-tab`}
+                    data-bs-toggle="tab"
+                    data-bs-target={`#${step}`}
+                    type="button"
+                    role="tab"
+                    aria-controls={step}
+                    aria-selected={index === 0 ? "true" : "false"}
+                  >
+                    <div className="frame-tab-number">{`0${index + 1}`}</div>
+                    <div className="frame-tab-content">
+                      <div className="frame-tab-title">{t(`smartCityModel.steps.${step}.stepTitle`)}</div>
+                      <div className="frame-tab-subtitle">{t(`smartCityModel.steps.${step}.subtitle`)}</div>
+                    </div>
+                  </button>
+                </li>
+              ))}
             </ul>
 
             <div className="tab-content" id="frameTabContent">
-              <div className="tab-pane fade show active" id="monitor" role="tabpanel" aria-labelledby="monitor-tab">
-                <div className="frame-content-item">
-                  <div className="frame-image">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/ambient-air-quality-monitors-for-smart-city.jpg"
-                      alt="Smart city with air quality monitors"
-                    />
-                  </div>
-                  <div className="frame-description">
-                    <h3>
-                      <span className="highlight">1st: Installation of Air Quality Monitors along LED Displays</span>
-                    </h3>
-                    <p>
-                      across the city where there are more public gathering, traffic junctions, and hubspots with the
-                      LED displays to dispay the real-time air pollution level of the areas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="tab-pane fade" id="drone" role="tabpanel" aria-labelledby="drone-tab">
-                <div className="frame-content-item">
-                  <div className="frame-image">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/ambient-air-quality-monitors-for-smart-city.jpg"
-                      alt="Smart city with air quality drones"
-                    />
-                  </div>
-                  <div className="frame-description">
-                    <h3>
-                      <span className="highlight">2nd: Air Quality Drone</span>
-                    </h3>
-                    <p>
-                      along the ambient monitors are used to measure the air pollution level in the different areas of a
-                      city. Thus, it makes the data more reliable and accurate.
-                    </p>
+              {["monitor", "drone", "purifier"].map((step, index) => (
+                <div
+                  key={step}
+                  className={`tab-pane fade ${index === 0 ? "show active" : ""}`}
+                  id={step}
+                  role="tabpanel"
+                  aria-labelledby={`${step}-tab`}
+                >
+                  <div className="frame-content-item">
+                    <div className="frame-image">
+                      <img
+                        src={`https://www.pranaair.com/wp-content/uploads/2023/08/${step === "monitor" || step === "drone"
+                          ? "ambient-air-quality-monitors-for-smart-city.jpg"
+                          : "air-quality-solutions-for-a-smart-city.jpg"
+                          }`}
+                        alt={t(`smartCityModel.steps.${step}.imageAlt`)}
+                      />
+                    </div>
+                    <div className="frame-description">
+                      <h3>
+                        <span className="highlight">{t(`smartCityModel.steps.${step}.title`)}</span>
+                      </h3>
+                      <p>{t(`smartCityModel.steps.${step}.description`)}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="tab-pane fade" id="purifier" role="tabpanel" aria-labelledby="purifier-tab">
-                <div className="frame-content-item">
-                  <div className="frame-image">
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/air-quality-solutions-for-a-smart-city.jpg"
-                      alt="Smart city with outdoor air purifiers"
-                    />
-                  </div>
-                  <div className="frame-description">
-                    <h3>
-                      <span className="highlight">3rd: Installation of Outdoor Air Purifiers</span>
-                    </h3>
-                    <p>
-                      is the very important solution to cope with the air pollution problem in the city. Besides air
-                      quality monitoring, purification is the ultimate solution to the problem.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -646,777 +357,403 @@ export default function SmartCityPage() {
             <div className="col-md-6">
               <div className="factor-heading air-quality-heading">
                 <h2>
-                  Prana Air Air quality solutions for <span className="smart-city-factor">Smart Cities</span>
+                  {t("smartCitySolutions.title")}{" "}
+                  <span className="smart-city-factor">{t("smartCitySolutions.highlight")}</span>
                 </h2>
               </div>
             </div>
             <div className="col-md-6">
               <div className="factor-para air-qaulity-para">
-                <p>
-                  <strong>Prana Airs</strong> Smart City air quality solutions provide a comprehensive approach to
-                  monitoring and improving air quality in cities. The solution includes air quality monitors, air
-                  quality drones, outdoor air purifiers, and data dashboards.
-                </p>
+                <p>{t("smartCitySolutions.description")}</p>
               </div>
             </div>
           </div>
 
           <div className="accordion" id="accordionAirQuality">
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="headingOne">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
+            {["ambient", "drone", "purifier"].map((solution, index) => (
+              <div className="accordion-item" key={solution}>
+                <h2 className="accordion-header" id={`heading${index + 1}`}>
+                  <button
+                    className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapse${index + 1}`}
+                    aria-expanded={index === 0 ? "true" : "false"}
+                    aria-controls={`collapse${index + 1}`}
+                  >
+                    <div className="accord-icons">
+                      <img
+                        className={`heading-icon ${solution === "drone" ? "drone-icon" : solution === "purifier" ? "purifier-icon" : ""}`}
+                        src={`https://www.pranaair.com/wp-content/uploads/2023/08/${solution === "ambient"
+                          ? "ambient-air-monitor-green-icon.png"
+                          : solution === "drone"
+                            ? "drone-green-icon.png"
+                            : "purifier-green-icon.png"
+                          }`}
+                        alt=""
+                      />
+                    </div>
+                    <h4>{t(`smartCitySolutions.accordion.${solution}.title`)}</h4>
+                  </button>
+                </h2>
+                <div
+                  id={`collapse${index + 1}`}
+                  className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}
+                  aria-labelledby={`heading${index + 1}`}
+                  data-bs-parent="#accordionAirQuality"
                 >
-                  <div className="accord-icons">
-                    <img
-                      className="heading-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/ambient-air-monitor-green-icon.png"
-                      alt=""
-                    />
-                  </div>
-                  <h4>Ambient Air Quality Monitor</h4>
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                className="accordion-collapse collapse show"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionAirQuality"
-              >
-                <div className="accordion-body">
-                  <div className="main-box">
-                    <div className="row">
-                      <div className="col-lg-5">
+                  <div className="accordion-body">
+                    <div className="main-box">
+                      <div className="row">
+                        <div className="col-lg-5">
+                          <a href="#">
+                            <img
+                              className={`ambient-monitor ${solution === "drone" ? "mob-drone" : ""}`}
+                              src={`https://www.pranaair.com/wp-content/uploads/2023/08/${solution === "ambient"
+                                ? "prana-air-ambient-air-quality-monitor-for-smart-city.png"
+                                : solution === "drone"
+                                  ? "smart-city-air-quality-drone.png"
+                                  : "smart-city-outdoor-air-purifier.png"
+                                }`}
+                              alt={t(`smartCitySolutions.accordion.${solution}.imageAlt`)}
+                            />
+                          </a>
+                        </div>
+                        <div className="col-lg-7">
+                          <div className="ambient-air-monitor-box">
+                            <h3>{t(`smartCitySolutions.accordion.${solution}.brand`)}</h3>
+                            <h4>{t(`smartCitySolutions.accordion.${solution}.productTitle`)}</h4>
+                            <ul>
+                              {[0, 1].map((featureIndex) => (
+                                <li key={featureIndex}>
+                                  <img
+                                    src={`https://www.pranaair.com/wp-content/uploads/2023/08/${solution === "ambient"
+                                      ? featureIndex === 0
+                                        ? "low-cost-air-monitor.png"
+                                        : "highly-accurate-data.png"
+                                      : solution === "drone"
+                                        ? featureIndex === 0
+                                          ? "real-time-monitoring.png"
+                                          : "very-accurate.png"
+                                        : featureIndex === 0
+                                          ? "highly-cadr.png"
+                                          : "electrostatic-filter.png"
+                                      }`}
+                                    alt={t(
+                                      `smartCitySolutions.accordion.${solution}.features.${featureIndex}.imageAlt`,
+                                    )}
+                                  />
+                                  <h5>
+                                    {t(`smartCitySolutions.accordion.${solution}.features.${featureIndex}.title`)}
+                                  </h5>
+                                </li>
+                              ))}
+                            </ul>
+                            <ul>
+                              {[2, 3].map((featureIndex) => (
+                                <li key={featureIndex}>
+                                  <img
+                                    src={`https://www.pranaair.com/wp-content/uploads/2023/08/${solution === "ambient"
+                                      ? featureIndex === 2
+                                        ? "weatherproof-monitor.png"
+                                        : "cloud-data-and-dashboards.png"
+                                      : solution === "drone"
+                                        ? featureIndex === 2
+                                          ? "wide-coverage-area.png"
+                                          : "4k-video.png"
+                                        : featureIndex === 2
+                                          ? "weatherproof.png"
+                                          : "multiple-filtrations.png"
+                                      }`}
+                                    alt={t(
+                                      `smartCitySolutions.accordion.${solution}.features.${featureIndex}.imageAlt`,
+                                    )}
+                                  />
+                                  <h5>
+                                    {t(`smartCitySolutions.accordion.${solution}.features.${featureIndex}.title`)}
+                                  </h5>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="row perameter-bg">
+                        <div className="col-lg-5">
+                          <h3 className={`perameter-heading ${solution === "ambient" ? "pera-line" : ""}`}>
+                            {t(`smartCitySolutions.accordion.${solution}.parametersTitle`)}
+                            {solution === "ambient" && (
+                              <span className="wheat">
+                                {" "}
+                                {t(`smartCitySolutions.accordion.${solution}.parametersSubtitle`)}
+                              </span>
+                            )}
+                          </h3>
+                        </div>
+                        <div className="col-lg-7">
+                          <div className={`parameter ${solution !== "ambient" ? "dronne-ul" : ""}`}>
+                            <ul>
+                              {solution === "ambient" ? (
+                                <>
+                                  {["pm25", "pm10", "ozone", "so2", "no2", "co"].map((param) => (
+                                    <li key={param}>
+                                      <img
+                                        className={param === "co" ? "carbon-icon" : ""}
+                                        src={`https://www.pranaair.com/wp-content/uploads/2023/08/${param === "pm25"
+                                          ? "pm2.5.png"
+                                          : param === "pm10"
+                                            ? "pm10.png"
+                                            : param === "ozone"
+                                              ? "ozone.png"
+                                              : param === "so2"
+                                                ? "so2.png"
+                                                : param === "no2"
+                                                  ? "no2.png"
+                                                  : "carbon-mono.png"
+                                          }`}
+                                        alt={t(`smartCitySolutions.accordion.${solution}.parameters.${param}.imageAlt`)}
+                                      />
+                                      <h6>{t(`smartCitySolutions.accordion.${solution}.parameters.${param}.title`)}</h6>
+                                    </li>
+                                  ))}
+                                </>
+                              ) : solution === "drone" ? (
+                                <>
+                                  {["pm", "co", "no2", "so2"].map((param) => (
+                                    <li key={param}>
+                                      <img
+                                        className={param === "co" ? "carbon-icon" : ""}
+                                        src={`https://www.pranaair.com/wp-content/uploads/2023/08/${param === "pm"
+                                          ? "pm2.5.png"
+                                          : param === "co"
+                                            ? "carbon-mono.png"
+                                            : param === "no2"
+                                              ? "no2.png"
+                                              : "so2.png"
+                                          }`}
+                                        alt={t(`smartCitySolutions.accordion.${solution}.parameters.${param}.imageAlt`)}
+                                      />
+                                      <h6>{t(`smartCitySolutions.accordion.${solution}.parameters.${param}.title`)}</h6>
+                                    </li>
+                                  ))}
+                                </>
+                              ) : (
+                                <>
+                                  {["pm25", "pm10", "dust", "smoke"].map((param) => (
+                                    <li key={param}>
+                                      <img
+                                        src={`https://www.pranaair.com/wp-content/uploads/2023/08/${param === "pm25"
+                                          ? "pm2.5.png"
+                                          : param === "pm10"
+                                            ? "pm10.png"
+                                            : param === "dust"
+                                              ? "dust-icon.png"
+                                              : "smoke-icon.png"
+                                          }`}
+                                        alt={t(`smartCitySolutions.accordion.${solution}.parameters.${param}.imageAlt`)}
+                                      />
+                                      <h6>{t(`smartCitySolutions.accordion.${solution}.parameters.${param}.title`)}</h6>
+                                    </li>
+                                  ))}
+                                </>
+                              )}
+                            </ul>
+                            {solution !== "purifier" && (
+                              <ul>
+                                {solution === "ambient" ? (
+                                  <>
+                                    {["windSpeed", "temp", "humidity", "uvIndex"].map((param) => (
+                                      <li key={param}>
+                                        <img
+                                          src={`https://www.pranaair.com/wp-content/uploads/2023/08/${param === "windSpeed"
+                                            ? "wind-speed.png"
+                                            : param === "temp"
+                                              ? "temperature.png"
+                                              : param === "humidity"
+                                                ? "humidity.png"
+                                                : "uv-index.png"
+                                            }`}
+                                          alt={t(
+                                            `smartCitySolutions.accordion.${solution}.parameters.${param}.imageAlt`,
+                                          )}
+                                        />
+                                        <h6>
+                                          {t(`smartCitySolutions.accordion.${solution}.parameters.${param}.title`)}
+                                        </h6>
+                                      </li>
+                                    ))}
+                                  </>
+                                ) : (
+                                  <>
+                                    {["nh3", "o3", "temp", "humidity"].map((param) => (
+                                      <li key={param}>
+                                        <img
+                                          src={`https://www.pranaair.com/wp-content/uploads/2023/08/${param === "nh3"
+                                            ? "nh3.png"
+                                            : param === "o3"
+                                              ? "ozone.png"
+                                              : param === "temp"
+                                                ? "temperature.png"
+                                                : "humidity.png"
+                                            }`}
+                                          alt={t(
+                                            `smartCitySolutions.accordion.${solution}.parameters.${param}.imageAlt`,
+                                          )}
+                                        />
+                                        <h6>
+                                          {t(`smartCitySolutions.accordion.${solution}.parameters.${param}.title`)}
+                                        </h6>
+                                      </li>
+                                    ))}
+                                  </>
+                                )}
+                              </ul>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="know-more">
                         <a href="#">
+                          {t("smartCitySolutions.knowMore")}{" "}
                           <img
-                            className="ambient-monitor"
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/prana-air-ambient-air-quality-monitor-for-smart-city.png"
-                            alt="prana air ambient air quality monitor for smart city"
+                            src="https://www.pranaair.com/wp-content/uploads/2023/08/know-more-icon.png"
+                            alt={t("smartCitySolutions.knowMoreIconAlt")}
                           />
                         </a>
                       </div>
-                      <div className="col-lg-7">
-                        <div className="ambient-air-monitor-box">
-                          <h3>Prana Air</h3>
-                          <h4>Ambient Air Quality Monitor</h4>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/low-cost-air-monitor.png"
-                                alt="prana air low-cost air monitor"
-                              />
-                              <h5>Low-Cost Monitor</h5>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/highly-accurate-data.png"
-                                alt="highly accurate data"
-                              />
-                              <h5>Highly Accurate Data</h5>
-                            </li>
-                          </ul>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/weatherproof-monitor.png"
-                                alt="weatherproof monitor"
-                              />
-                              <h5>Weatherproof Device</h5>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/cloud-data-and-dashboards.png"
-                                alt="cloud data and dashboards"
-                              />
-                              <h5>Cloud Data, Dashboards, Apps</h5>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
                     </div>
 
-                    <div className="row perameter-bg">
-                      <div className="col-lg-5">
-                        <h3 className="perameter-heading pera-line">
-                          Air Quality <span className="wheat"> Weather</span>
+                    <div className="ambient-monitor-city-img">
+                      <h3 className="ambient-monitorin-city">
+                        {t(`smartCitySolutions.accordion.${solution}.cityTitle`)}{" "}
+                        <span className="ambient-monitor-bold">
+                          {t(`smartCitySolutions.accordion.${solution}.cityHighlight`)}
+                        </span>
+                      </h3>
+                      <img
+                        src={`https://www.pranaair.com/wp-content/uploads/2023/08/${solution === "ambient"
+                          ? "smart-city-ambient-air-quality-monitor.jpg"
+                          : solution === "drone"
+                            ? "smart-city-air-quality-drone.jpg"
+                            : "smart-city-outdoor-air-purifier.jpg"
+                          }`}
+                        alt={t(`smartCitySolutions.accordion.${solution}.cityImageAlt`)}
+                      />
+                    </div>
+
+                    <div className="data-insight-box">
+                      <div className="data-insight-heading">
+                        <h3 className="data-insight">
+                          {solution === "purifier" ? (
+                            <>
+                              {t(`smartCitySolutions.accordion.${solution}.insightTitle`)}{" "}
+                              <span className="data-clr">
+                                {t(`smartCitySolutions.accordion.${solution}.insightHighlight`)}
+                              </span>
+                            </>
+                          ) : (
+                            <>
+                              <span className="data-clr">
+                                {t(`smartCitySolutions.accordion.${solution}.insightHighlight`)}
+                              </span>{" "}
+                              {t(`smartCitySolutions.accordion.${solution}.insightTitle`)}
+                            </>
+                          )}
                         </h3>
                       </div>
-                      <div className="col-lg-7">
-                        <div className="parameter">
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/pm2.5.png"
-                                alt="PM2.5 parameter"
-                              />
-                              <h6>PM2.5</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/pm10.png"
-                                alt="pm10 parameter"
-                              />
-                              <h6>PM10</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/ozone.png"
-                                alt="ozone parameter"
-                              />
-                              <h6>Ozone</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/so2.png"
-                                alt="so2 parameter"
-                              />
-                              <h6>SO2</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/no2.png"
-                                alt="no2 parameter"
-                              />
-                              <h6>NO2</h6>
-                            </li>
-                            <li>
-                              <img
-                                className="carbon-icon"
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/carbon-mono.png"
-                                alt="co parameter"
-                              />
-                              <h6>CO</h6>
-                            </li>
-                          </ul>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/wind-speed.png"
-                                alt="wind speed parameter"
-                              />
-                              <h6>Wind Speed</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/temperature.png"
-                                alt="temperature parameter"
-                              />
-                              <h6>Temp</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/humidity.png"
-                                alt="humidity parameter"
-                              />
-                              <h6>Humidity</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/uv-index.png"
-                                alt="index parameter"
-                              />
-                              <h6>UV Index</h6>
-                            </li>
-                          </ul>
-                        </div>
+                      <div className="data-insight-para">
+                        <p>{t(`smartCitySolutions.accordion.${solution}.insightDescription`)}</p>
                       </div>
                     </div>
 
-                    <div className="know-more">
-                      <a href="#">
-                        know more{" "}
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/08/know-more-icon.png"
-                          alt="know more icon"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="ambient-monitor-city-img">
-                    <h3 className="ambient-monitorin-city">
-                      Ambient monitors in <span className="ambient-monitor-bold">Smart Cities</span>
-                    </h3>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-ambient-air-quality-monitor.jpg"
-                      alt="Prana Air smart city ambient air quality monitor"
-                    />
-                  </div>
-
-                  <div className="data-insight-box">
-                    <div className="data-insight-heading">
-                      <h3 className="data-insight">
-                        <span className="data-clr">Data</span> insights from the ambient monitors
-                      </h3>
-                    </div>
-                    <div className="data-insight-para">
-                      <p>
-                        Ambient air quality monitoring and data insights can be used in smart city projects to improve
-                        air quality and protect public health. Air quality data can be used to generate air quality
-                        alerts, optimize traffic flow, and encourage green building.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="data-insight-img-box">
-                    <div className="image-row1">
-                      <ul>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-pollution-led-display.jpg"
-                            alt="prana air smart city air pollution led display"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>AQI LED Display for Public</h3>
-                              <p>Anyone in the city can see and understand the real-time air quality level easily.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/ambient-air-quality-data-on-aqi-app.jpg"
-                            alt="prana air ambient air quality monitor data on aqi app"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>AQI Air Quality App</h3>
-                              <p>The free AQI mobile app for people to check the air quality level anytime anywhere.</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="image-row1">
-                      <ul>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-lcd-dispay.jpg"
-                            alt="prana air smart city air quality lcd dispay"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>AQI LCD Displays</h3>
-                              <p>Such screens/displays can be installed across the city to display the AQI level.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-data-dashboards.jpg"
-                            alt="prana air smart city air quality data dashboards"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>AQI TV App</h3>
-                              <p>
-                                The same data can be shown in smart TVs to check and analyze the air quality for a
-                                better decision making.
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="image-row1 last-row">
-                      <ul>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-data-on-smart-tv.jpg"
-                            alt="prana air smart city air quality data on smart tv"
-                          />
-                          <div className="overlay">
-                            <div className="text last-text">
-                              <h3>AQI Large Screen Displays</h3>
-                              <p>Such large displays can be installed in places like airport, railways platforms.</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                    <div className="data-insight-img-box">
+                      <div className="image-row1">
+                        <ul>
+                          {[0, 1].map((imageIndex) => (
+                            <li key={imageIndex}>
+                              <img
+                                src={`https://www.pranaair.com/wp-content/uploads/2023/08/${solution === "ambient"
+                                  ? imageIndex === 0
+                                    ? "smart-city-air-pollution-led-display.jpg"
+                                    : "ambient-air-quality-data-on-aqi-app.jpg"
+                                  : solution === "drone"
+                                    ? imageIndex === 0
+                                      ? "smart-city-air-quality-drone-monitor.jpg"
+                                      : "smart-city-air-quality-drone-remote-sensing.jpg"
+                                    : imageIndex === 0
+                                      ? "smart-city-outdoor-air-purifier-at-bus-stop.jpg"
+                                      : "smart-city-outdoor-air-purifier-at-public-park.jpg"
+                                  }`}
+                                alt={t(`smartCitySolutions.accordion.${solution}.insights.${imageIndex}.imageAlt`)}
+                              />
+                              <div className="overlay">
+                                <div className="text">
+                                  <h3>{t(`smartCitySolutions.accordion.${solution}.insights.${imageIndex}.title`)}</h3>
+                                  <p>
+                                    {t(`smartCitySolutions.accordion.${solution}.insights.${imageIndex}.description`)}
+                                  </p>
+                                </div>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="image-row1">
+                        <ul>
+                          {[2, 3].map((imageIndex) => (
+                            <li key={imageIndex}>
+                              <img
+                                src={`https://www.pranaair.com/wp-content/uploads/2023/08/${solution === "ambient"
+                                  ? imageIndex === 2
+                                    ? "smart-city-air-quality-lcd-dispay.jpg"
+                                    : "smart-city-air-quality-data-dashboards.jpg"
+                                  : solution === "drone"
+                                    ? imageIndex === 2
+                                      ? "smart-city-air-quality-drone-dashboard.jpg"
+                                      : "smart-city-air-quality-drone-data.jpg"
+                                    : imageIndex === 2
+                                      ? "smart-city-outdoor-air-purifier-at-train-station.jpg"
+                                      : "smart-city-outdoor-air-purifier-at-airport.jpg"
+                                  }`}
+                                alt={t(`smartCitySolutions.accordion.${solution}.insights.${imageIndex}.imageAlt`)}
+                              />
+                              <div className="overlay">
+                                <div className="text">
+                                  <h3>{t(`smartCitySolutions.accordion.${solution}.insights.${imageIndex}.title`)}</h3>
+                                  <p>
+                                    {t(`smartCitySolutions.accordion.${solution}.insights.${imageIndex}.description`)}
+                                  </p>
+                                </div>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      {solution === "ambient" && (
+                        <div className="image-row1 last-row">
+                          <ul>
+                            <li>
+                              <img
+                                src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-data-on-smart-tv.jpg"
+                                alt={t("smartCitySolutions.accordion.ambient.insights.4.imageAlt")}
+                              />
+                              <div className="overlay">
+                                <div className="text last-text">
+                                  <h3>{t("smartCitySolutions.accordion.ambient.insights.4.title")}</h3>
+                                  <p>{t("smartCitySolutions.accordion.ambient.insights.4.description")}</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="headingTwo">
-                <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  <div className="accord-icons">
-                    <img
-                      className="heading-icon drone-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/drone-green-icon.png"
-                      alt="drone icon"
-                    />
-                  </div>
-                  <h4>Air Quality Drone</h4>
-                </button>
-              </h2>
-              <div
-                id="collapseTwo"
-                className="accordion-collapse collapse"
-                aria-labelledby="headingTwo"
-                data-bs-parent="#accordionAirQuality"
-              >
-                <div className="accordion-body">
-                  <div className="main-box">
-                    <div className="row">
-                      <div className="col-lg-5">
-                        <a href="#">
-                          <img
-                            className="ambient-monitor mob-drone"
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-drone.png"
-                            alt="Prana Air smart city air quality drone"
-                          />
-                        </a>
-                      </div>
-                      <div className="col-lg-7">
-                        <div className="ambient-air-monitor-box">
-                          <h3>Prana Air</h3>
-                          <h4>Air Quality Drone</h4>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/real-time-monitoring.png"
-                                alt="drone real-time monitoring"
-                              />
-                              <h5>Real-time Monitoring</h5>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/very-accurate.png"
-                                alt="drone very accurate"
-                              />
-                              <h5>Very Accurate Method</h5>
-                            </li>
-                          </ul>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/wide-coverage-area.png"
-                                alt="drone wide coverage area"
-                              />
-                              <h5>Wide Coverage Area</h5>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/4k-video.png"
-                                alt="drone 4k video"
-                              />
-                              <h5>4K Video Footage</h5>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="row perameter-bg">
-                      <div className="col-lg-5">
-                        <h3 className="perameter-heading">Sensors</h3>
-                      </div>
-                      <div className="col-lg-7">
-                        <div className="parameter dronne-ul">
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/pm2.5.png"
-                                alt="PM2.5 parameter"
-                              />
-                              <h6>PM</h6>
-                            </li>
-                            <li>
-                              <img
-                                className="carbon-icon"
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/carbon-mono.png"
-                                alt="co parameter"
-                              />
-                              <h6>CO</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/no2.png"
-                                alt="no2 parameter"
-                              />
-                              <h6>NO2</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/so2.png"
-                                alt="so2 parameter"
-                              />
-                              <h6>SO2</h6>
-                            </li>
-                          </ul>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/nh3.png"
-                                alt="nh3 parameter"
-                              />
-                              <h6>NH3</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/ozone.png"
-                                alt="o3 parameter"
-                              />
-                              <h6>O3</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/temperature.png"
-                                alt="temperature parameter"
-                              />
-                              <h6>Temp</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/humidity.png"
-                                alt="humidity parameter"
-                              />
-                              <h6>Humidity</h6>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="know-more">
-                      <a href="#">
-                        know more{" "}
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/08/know-more-icon.png"
-                          alt="know more icon"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="ambient-monitor-city-img">
-                    <h3 className="ambient-monitorin-city">
-                      Air quality drones in <span className="ambient-monitor-bold">Smart City</span>
-                    </h3>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-drone.jpg"
-                      alt="Prana Air smart city air quality drone"
-                    />
-                  </div>
-
-                  <div className="data-insight-box">
-                    <div className="data-insight-heading">
-                      <h3 className="data-insight">
-                        <span className="data-clr">Data</span> insights from the drones
-                      </h3>
-                    </div>
-                    <div className="data-insight-para">
-                      <p>
-                        Prana Airs drones can provide real-time air quality data, which can be used to identify and
-                        respond to air quality problems more quickly. It collects data from hard-to-reach or remote
-                        areas.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="data-insight-img-box">
-                    <div className="image-row1">
-                      <ul>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-drone-monitor.jpg"
-                            alt="Prana Air smart city air quality drone monitor"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Real-time Air Quality Monitoring</h3>
-                              <p>The air quality data collected by drone are very accurate and reliable source.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-drone-remote-sensing.jpg"
-                            alt="Prana Air smart city air quality drone remote sensing"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Remote Monitoring</h3>
-                              <p>The drone can be easily controlled remotely by a device.</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="image-row1">
-                      <ul>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-drone-dashboard.jpg"
-                            alt="Prana Air smart city air quality drone data dashboard"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Real-time Data Insights</h3>
-                              <p>
-                                While the drone is in the operation, the real-time data can be easily seen and analyzed
-                                remotely.
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-air-quality-drone-data.jpg"
-                            alt="Prana Air smart city air quality drone data"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Easy Decision Making</h3>
-                              <p>
-                                The useful insights of air quality data from the drone helps to make good strategic
-                                decisions for the city.
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="headingThree">
-                <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  <div className="accord-icons">
-                    <img
-                      className="heading-icon purifier-icon"
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/purifier-green-icon.png"
-                      alt="purifier icon"
-                    />
-                  </div>
-                  <h4>Outdoor Air Purifier</h4>
-                </button>
-              </h2>
-              <div
-                id="collapseThree"
-                className="accordion-collapse collapse"
-                aria-labelledby="headingThree"
-                data-bs-parent="#accordionAirQuality"
-              >
-                <div className="accordion-body">
-                  <div className="main-box">
-                    <div className="row">
-                      <div className="col-lg-5">
-                        <a href="#">
-                          <img
-                            className="ambient-monitor"
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-outdoor-air-purifier.png"
-                            alt="prana air smart city outdoor air purifier"
-                          />
-                        </a>
-                      </div>
-                      <div className="col-lg-7">
-                        <div className="ambient-air-monitor-box">
-                          <h3>Prana Air</h3>
-                          <h4>Outdoor Air Purifier</h4>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/highly-cadr.png"
-                                alt="highly cadr"
-                              />
-                              <h5>High CADR</h5>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/electrostatic-filter.png"
-                                alt="electrostatic filter"
-                              />
-                              <h5>Electrostatic Filter</h5>
-                            </li>
-                          </ul>
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/weatherproof.png"
-                                alt="weatherproof"
-                              />
-                              <h5>Weatherproof Device</h5>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/multiple-filtrations.png"
-                                alt="multiple filtrations"
-                              />
-                              <h5>Multiple Filtrations</h5>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="row perameter-bg">
-                      <div className="col-lg-5">
-                        <h3 className="perameter-heading">Parameters</h3>
-                      </div>
-                      <div className="col-lg-7">
-                        <div className="parameter dronne-ul">
-                          <ul>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/pm2.5.png"
-                                alt="PM2.5 parameter"
-                              />
-                              <h6>PM2.5</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/pm10.png"
-                                alt="pm10 parameter"
-                              />
-                              <h6>PM10</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/dust-icon.png"
-                                alt="dust icon"
-                              />
-                              <h6>Dust</h6>
-                            </li>
-                            <li>
-                              <img
-                                src="https://www.pranaair.com/wp-content/uploads/2023/08/smoke-icon.png"
-                                alt="smoke icon"
-                              />
-                              <h6>Smoke</h6>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="know-more">
-                      <a href="#">
-                        know more{" "}
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/08/know-more-icon.png"
-                          alt="know more icon"
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="ambient-monitor-city-img">
-                    <h3 className="ambient-monitorin-city">
-                      Outdoor Air Purifiers installed in <span className="ambient-monitor-bold">Smart City</span>
-                    </h3>
-                    <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-outdoor-air-purifier.jpg"
-                      alt="Prana Air smart city outdoor air purifier"
-                    />
-                  </div>
-
-                  <div className="data-insight-box">
-                    <div className="data-insight-heading">
-                      <h3 className="data-insight">
-                        Multiple installations <span className="data-clr">at different areas</span>
-                      </h3>
-                    </div>
-                    <div className="data-insight-para">
-                      <p>
-                        Outdoor air purifiers installed in different areas of a city can remove air pollutants from the
-                        air and reduce the heat island effect, create a cleaner and healthier environment, and attract
-                        businesses and residents.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="data-insight-img-box">
-                    <div className="image-row1">
-                      <ul>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-outdoor-air-purifier-at-bus-stop.jpg"
-                            alt="prana air smart city outdoor air purifier at bus stop"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Air Purifier at Bus-Stop</h3>
-                              <p>Bus stops are one of the most gathered places in the urban areas.</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-outdoor-air-purifier-at-public-park.jpg"
-                            alt="prana air smart city outdoor air purifier at public park"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Air Purifier at Park</h3>
-                              <p>Many people go to the public parks to relax and enjoy their leisures.</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="image-row1">
-                      <ul>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-outdoor-air-purifier-at-train-station.jpg"
-                            alt="prana air smart city outdoor air purifier at train station"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Air Purifier at Train Stations</h3>
-                              <p>
-                                Usually, a huge number of people gather at train stations daily to commute for their
-                                jobs.
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <img
-                            src="https://www.pranaair.com/wp-content/uploads/2023/08/smart-city-outdoor-air-purifier-at-airport.jpg"
-                            alt="prana air smart city outdoor air purifier at airport"
-                          />
-                          <div className="overlay">
-                            <div className="text">
-                              <h3>Air Purifier at Airport</h3>
-                              <p>
-                                Airport is also the same place where many people come to travel to another place daily.
-                              </p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1425,257 +762,99 @@ export default function SmartCityPage() {
       <section className="technical-spec">
         <div className="container">
           <h2 className="tech-heading">
-            Technical <span className="spec-bold">Specifications</span>
+            {t("smartCityTech.title")} <span className="spec-bold">{t("smartCityTech.highlight")}</span>
           </h2>
 
           <div className="tech-spec-tab">
             <ul className="nav nav-tabs" id="techTab" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link active"
-                  id="ambient-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#ambient"
-                  type="button"
-                  role="tab"
-                  aria-controls="ambient"
-                  aria-selected="true"
-                >
-                  Ambient Monitor
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="tech-drone-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tech-drone"
-                  type="button"
-                  role="tab"
-                  aria-controls="tech-drone"
-                  aria-selected="false"
-                >
-                  Drone
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="tech-purifier-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#tech-purifier"
-                  type="button"
-                  role="tab"
-                  aria-controls="tech-purifier"
-                  aria-selected="false"
-                >
-                  Air Purifier
-                </button>
-              </li>
+              {["ambient", "drone", "purifier"].map((tech, index) => (
+                <li className="nav-item" role="presentation" key={tech}>
+                  <button
+                    className={`nav-link ${index === 0 ? "active" : ""}`}
+                    id={`${tech === "drone" ? "tech-drone" : tech === "purifier" ? "tech-purifier" : tech}-tab`}
+                    data-bs-toggle="tab"
+                    data-bs-target={`#${tech === "drone" ? "tech-drone" : tech === "purifier" ? "tech-purifier" : tech}`}
+                    type="button"
+                    role="tab"
+                    aria-controls={tech === "drone" ? "tech-drone" : tech === "purifier" ? "tech-purifier" : tech}
+                    aria-selected={index === 0 ? "true" : "false"}
+                  >
+                    {t(`smartCityTech.tabs.${tech}`)}
+                  </button>
+                </li>
+              ))}
             </ul>
 
             <div className="tab-content" id="techTabContent">
-              <div className="tab-pane fade show active" id="ambient" role="tabpanel" aria-labelledby="ambient-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="tech-spec">
-                      <div className="tech-spec-colm">
-                        <ul>
-                          <li>
-                            <h6>Product Name:</h6>
-                            <h5>Ambient air monitor</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Type:</h6>
-                            <h5>CAAQMS monitor</h5>
-                          </li>
-                          <li>
-                            <h6>Price:</h6>
-                            <h5>Low-cost device</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Battery:</h6>
-                            <h5>No In-built Battery</h5>
-                          </li>
-                          <li>
-                            <h6>Housing:</h6>
-                            <h5>Weatherproof</h5>
-                          </li>
-                        </ul>
+              {["ambient", "drone", "purifier"].map((tech, index) => (
+                <div
+                  key={tech}
+                  className={`tab-pane fade ${index === 0 ? "show active" : ""}`}
+                  id={tech === "drone" ? "tech-drone" : tech === "purifier" ? "tech-purifier" : tech}
+                  role="tabpanel"
+                  aria-labelledby={`${tech === "drone" ? "tech-drone" : tech === "purifier" ? "tech-purifier" : tech}-tab`}
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="tech-spec">
+                        <div className="tech-spec-colm">
+                          <ul>
+                            {[0, 1, 2, 3, 4].map((specIndex) => (
+                              <li key={specIndex} className={specIndex % 2 === 1 ? "tech-spec-row-bg" : ""}>
+                                <h6>{t(`smartCityTech.specs.${tech}.left.${specIndex}.label`)}:</h6>
+                                <h5>{t(`smartCityTech.specs.${tech}.left.${specIndex}.value`)}</h5>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="tech-spec">
-                      <div className="tech-spec-colm">
-                        <ul>
+                    <div className="col-md-6">
+                      <div className="tech-spec">
+                        <div className="tech-spec-colm">
+                          <ul>
+                            {[0, 1, 2, 3, 4].map((specIndex) => (
+                              <li key={specIndex} className={specIndex % 2 === 1 ? "tech-spec-row-bg" : ""}>
+                                <h6>{t(`smartCityTech.specs.${tech}.right.${specIndex}.label`)}:</h6>
+                                <h5 className={specIndex === 4 ? "last-text" : ""}>
+                                  {t(`smartCityTech.specs.${tech}.right.${specIndex}.value`)}
+                                </h5>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                      {tech === "ambient" && (
+                        <ul className="logo-tech-spec">
                           <li>
-                            <h6>Size:</h6>
-                            <h5>Portable & Light weight</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Data Storage:</h6>
-                            <h5>MicroSD card & AQI Cloud</h5>
+                            <img
+                              src="https://www.pranaair.com/wp-content/uploads/2023/08/ce-logo.png"
+                              alt={t("smartCityTech.certifications.ce")}
+                            />
                           </li>
                           <li>
-                            <h6>Communication:</h6>
-                            <h5>Wifi, GSM, RS-485</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Sensor Accuracy:</h6>
-                            <h5>Very High</h5>
-                          </li>
-                          <li>
-                            <h6>Data Access:</h6>
-                            <h5 className="last-text">AQI mobile & TV apps, Web-Dashboard</h5>
+                            <img
+                              src="https://www.pranaair.com/wp-content/uploads/2023/08/RoHS.png"
+                              alt={t("smartCityTech.certifications.rohs")}
+                            />
                           </li>
                         </ul>
-                      </div>
-                    </div>
-                    <ul className="logo-tech-spec">
-                      <li>
-                        <img src="https://www.pranaair.com/wp-content/uploads/2023/08/ce-logo.png" alt="ce logo" />
-                      </li>
-                      <li>
-                        <img src="https://www.pranaair.com/wp-content/uploads/2023/08/RoHS.png" alt="rohs certified" />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="tab-pane fade" id="tech-drone" role="tabpanel" aria-labelledby="tech-drone-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="tech-spec">
-                      <div className="tech-spec-colm">
-                        <ul>
-                          <li>
-                            <h6>Product:</h6>
-                            <h5>Air quality drone</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Product Name:</h6>
-                            <h5>Breathalyzer</h5>
-                          </li>
-                          <li>
-                            <h6>Camera:</h6>
-                            <h5>FPV Camera</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Video:</h6>
-                            <h5>4K Resolution</h5>
-                          </li>
-                          <li>
-                            <h6>Flying Range:</h6>
-                            <h5>Up to 2 Km</h5>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="tech-spec">
-                      <div className="tech-spec-colm">
-                        <ul>
-                          <li>
-                            <h6>Max Speed:</h6>
-                            <h5>10 m/s</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Battery Endurance:</h6>
-                            <h5>25 min (LiPO 12S)</h5>
-                          </li>
-                          <li>
-                            <h6>Propulsion Type:</h6>
-                            <h5>Electric</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Maximum Payload:</h6>
-                            <h5>Up to 2.5 kg</h5>
-                          </li>
-                          <li>
-                            <h6>Maximum Take Off Weight:</h6>
-                            <h5>Up to 15Kg</h5>
-                          </li>
-                        </ul>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="tab-pane fade" id="tech-purifier" role="tabpanel" aria-labelledby="tech-purifier-tab">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="tech-spec">
-                      <div className="tech-spec-colm">
-                        <ul>
-                          <li>
-                            <h6>Product:</h6>
-                            <h5>Outdoor air purifier</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Parameters:</h6>
-                            <h5>PM2.5, PM10, Dust, Smoke</h5>
-                          </li>
-                          <li>
-                            <h6>Filter Used:</h6>
-                            <h5>Electrostatic Filter</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Life of filter:</h6>
-                            <h5>Very long durability</h5>
-                          </li>
-                          <li>
-                            <h6>Filtration:</h6>
-                            <h5>Ionizer, UV light</h5>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="tech-spec">
-                      <div className="tech-spec-colm">
-                        <ul>
-                          <li>
-                            <h6>Housing:</h6>
-                            <h5>Weatherproof</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>CADR:</h6>
-                            <h5>High efficient</h5>
-                          </li>
-                          <li>
-                            <h6>Power Consumption:</h6>
-                            <h5>Very less</h5>
-                          </li>
-                          <li className="tech-spec-row-bg">
-                            <h6>Maintenance:</h6>
-                            <h5>Very low-cost</h5>
-                          </li>
-                          <li>
-                            <h6>Manpower:</h6>
-                            <h5>Only one person can handle it.</h5>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
           <ul className="download-brochure">
             <li>
-              <h5>Need Detailed Specifications?</h5>
+              <h5>{t("smartCityTech.brochure.question")}</h5>
             </li>
             <li>
               <a href="https://www.pranaair.com/wp-content/uploads/2023/09/prana-air-smart-city-air-quality-solutions-brochure.pdf">
-                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" alt="" /> Download
-                Brochure
+                <img src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png" alt="" />{" "}
+                {t("smartCityTech.brochure.downloadText")}
               </a>
             </li>
           </ul>
@@ -1688,143 +867,64 @@ export default function SmartCityPage() {
           <div className="row">
             <div className="col-md-6">
               <h2 className="our-clinet-heading">
-                Our <span className="client-bold">Clientele</span>
+                {t("smartCityClients.title")} <span className="client-bold">{t("smartCityClients.highlight")}</span>
               </h2>
             </div>
             <div className="col-md-6">
               <div className="our-client-para">
-                <p>
-                  Prana Air works with a wide range of organizations to provide air quality monitoring and solutions.
-                  These organizations include government agencies, corporations, academic institutions, non-profit
-                  organizations, and individuals. Our goal is to help its clients improve air quality and protect public
-                  health.
-                </p>
+                <p>{t("smartCityClients.description")}</p>
               </div>
             </div>
           </div>
 
-          <div className="mob-row">
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/tata-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
+          {[0, 1, 2, 3].map((rowIndex) => (
+            <div className="mob-row" key={rowIndex}>
+              {[0, 1, 2, 3].map((colIndex) => {
+                const clientIndex = rowIndex * 4 + colIndex
+                const clientKey = `client${clientIndex}`
+                return (
+                  <div className="col-md-3" key={clientKey}>
+                    <img
+                      src={`https://www.pranaair.com/wp-content/uploads/2023/08/${clientIndex === 0
+                        ? "tata-company.png"
+                        : clientIndex === 1
+                          ? "igcar-org.png"
+                          : clientIndex === 2
+                            ? "microsoft-company.png"
+                            : clientIndex === 3
+                              ? "emaar-company.png"
+                              : clientIndex === 4
+                                ? "l-and-t-company.png"
+                                : clientIndex === 5
+                                  ? "siemens-company.png"
+                                  : clientIndex === 6
+                                    ? "jw-marriott.png"
+                                    : clientIndex === 7
+                                      ? "bcg-group.png"
+                                      : clientIndex === 8
+                                        ? "ola-company.png"
+                                        : clientIndex === 9
+                                          ? "mahindra-company.png"
+                                          : clientIndex === 10
+                                            ? "renault-company.png"
+                                            : clientIndex === 11
+                                              ? "neeri-company.png"
+                                              : clientIndex === 12
+                                                ? "taj-hotel.png"
+                                                : clientIndex === 13
+                                                  ? "foodworks.png"
+                                                  : clientIndex === 14
+                                                    ? "asianpaints.png"
+                                                    : "iit-institutes.png"
+                        }`}
+                      alt={t(`smartCityClients.logos.${clientKey}.alt`)}
+                      className="our-clients-logo"
+                    />
+                  </div>
+                )
+              })}
             </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/igcar-org.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/microsoft-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/emaar-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-          </div>
-
-          <div className="mob-row">
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/l-and-t-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/siemens-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/jw-marriott.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/bcg-group.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-          </div>
-
-          <div className="mob-row">
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/ola-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/mahindra-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/renault-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/neeri-company.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-          </div>
-          <div className="mob-row">
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/taj-hotel.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/foodworks.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/asianpaints.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-            <div className="col-md-3">
-              <img
-                src="https://www.pranaair.com/wp-content/uploads/2023/08/iit-institutes.png"
-                alt="client logo"
-                className="our-clients-logo"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -1834,12 +934,12 @@ export default function SmartCityPage() {
           <div className="row">
             <div className="col-md-6">
               <h2 className="get-in-heading">
-                Get in <span className="touch-bold">Touch</span>
+                {t("contact.title")} <span className="touch-bold">{t("contact.highlight")}</span>
               </h2>
             </div>
             <div className="col-md-6">
               <div className="get-in-touch-para">
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
@@ -1853,91 +953,44 @@ export default function SmartCityPage() {
           <div className="row">
             <div className="col-md-6">
               <h2 className="faq-heading">
-                Frequently Asked Questions<span className="question-bold"> About Smart City Air Quality Solutions</span>
+                {t("smartCityFaq.title")}
+                <span className="question-bold"> {t("smartCityFaq.highlight")}</span>
               </h2>
             </div>
             <div className="col-md-6">
               <div className="get-in-touch-para">
-                <p>Have questions? Were here to help.</p>
+                <p>{t("smartCityFaq.helpText")}</p>
               </div>
             </div>
           </div>
 
           <div className="accordion" id="faqAccordion">
-            <div className="accordion-item my-tab-section">
-              <h2 className="accordion-header" id="headingFaq1">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFaq1"
-                  aria-expanded="true"
-                  aria-controls="collapseFaq1"
+            {[0, 1].map((faqIndex) => (
+              <div className="accordion-item my-tab-section" key={faqIndex}>
+                <h2 className="accordion-header" id={`headingFaq${faqIndex + 1}`}>
+                  <button
+                    className={`accordion-button ${faqIndex !== 0 ? "collapsed" : ""}`}
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#collapseFaq${faqIndex + 1}`}
+                    aria-expanded={faqIndex === 0 ? "true" : "false"}
+                    aria-controls={`collapseFaq${faqIndex + 1}`}
+                  >
+                    <h4>{t(`smartCityFaq.questions.q${faqIndex + 1}`)}</h4>
+                  </button>
+                </h2>
+                <div
+                  id={`collapseFaq${faqIndex + 1}`}
+                  className={`accordion-collapse collapse ${faqIndex === 0 ? "show" : ""}`}
+                  aria-labelledby={`headingFaq${faqIndex + 1}`}
+                  data-bs-parent="#faqAccordion"
                 >
-                  <h4>1. What is Prana Airs smart city air quality monitoring and solutions project?</h4>
-                </button>
-              </h2>
-              <div
-                id="collapseFaq1"
-                className="accordion-collapse collapse show"
-                aria-labelledby="headingFaq1"
-                data-bs-parent="#faqAccordion"
-              >
-                <div className="accordion-body faq-tab-para">
-                  <p>
-                    Prana Airs smart city air quality monitoring and solutions project is a comprehensive solution that
-                    provides air quality monitors, air quality drones, outdoor air purifiers, and data dashboards to
-                    help cities improve their air quality. The project is designed to help cities meet air quality
-                    standards, protect public health, and reduce greenhouse gas emissions.
-                  </p>
+                  <div className="accordion-body faq-tab-para">
+                    <div dangerouslySetInnerHTML={{ __html: t(`smartCityFaq.answers.a${faqIndex + 1}`) }} />
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="accordion-item my-tab-section">
-              <h2 className="accordion-header" id="headingFaq2">
-                <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFaq2"
-                  aria-expanded="false"
-                  aria-controls="collapseFaq2"
-                >
-                  <h4>
-                    2. What are the benefits of Prana Airs smart city air quality monitoring and solutions project?
-                  </h4>
-                </button>
-              </h2>
-              <div
-                id="collapseFaq2"
-                className="accordion-collapse collapse"
-                aria-labelledby="headingFaq2"
-                data-bs-parent="#faqAccordion"
-              >
-                <div className="accordion-body faq-tab-para">
-                  <p>
-                    Prana Airs smart city air quality monitoring and solutions project offers a number of benefits,
-                    including:
-                  </p>
-                  <p>
-                    <strong>1. Improved air quality:</strong> The project can help cities improve their air quality by
-                    providing real-time data on air quality levels and by implementing targeted interventions to reduce
-                    pollution.
-                  </p>
-                  <p>
-                    <strong>2. Protected public health:</strong> The project can help protect public health by providing
-                    citizens with information about air quality levels and by alerting them to unhealthy conditions.
-                  </p>
-                  <p>
-                    <strong>3. Reduced greenhouse gas emissions:</strong> The project can help reduce greenhouse gas
-                    emissions by promoting the use of cleaner fuels and technologies.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Add more FAQ items as needed */}
+            ))}
           </div>
         </div>
       </section>
@@ -1948,129 +1001,18 @@ export default function SmartCityPage() {
           <div className="row">
             <div className="col-md-6">
               <h2 className="indusrial-heading">
-                Industrial <span className="appli-bold">Applications</span>
+                {t("industrial.title")} <span className="appli-bold">{t("industrial.highlight")}</span>
               </h2>
             </div>
             <div className="col-md-6">
               <div className="our-client-para">
-                <p>
-                  Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable,
-                  and highly accurate air quality solutions for various industries.
-                </p>
+                <p>{t("industrial.description")}</p>
               </div>
             </div>
           </div>
 
           <div className="owl-slider">
-            <Carousel
-              responsive={industrialResponsive}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              keyBoardControl={true}
-              customTransition="all .5s"
-              transitionDuration={500}
-              containerClass="carousel-container"
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-            >
-              <div className="item">
-                <div className="app_service_box">
-                  <div className="app_img_bx">
-                    <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg"
-                        alt="air quality solutions for banks"
-                      />
-                    </a>
-                  </div>
-                  <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                    <h4>Solutions for Bank</h4>
-                  </a>
-                </div>
-              </div>
-
-              <div className="item">
-                <div className="app_service_box">
-                  <div className="app_img_bx">
-                    <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg"
-                        alt="air quality solutions for hotel business"
-                      />
-                    </a>
-                  </div>
-                  <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                    <h4>Solutions for Hotel</h4>
-                  </a>
-                </div>
-              </div>
-
-              <div className="item">
-                <div className="app_service_box">
-                  <div className="app_img_bx">
-                    <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg"
-                        alt="air quality solutions for restaurants"
-                      />
-                    </a>
-                  </div>
-                  <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                    <h4>Solutions for Restaurant</h4>
-                  </a>
-                </div>
-              </div>
-
-              <div className="item">
-                <div className="app_service_box">
-                  <div className="app_img_bx">
-                    <a href="https://www.pranaair.com/solutions-by-application/airports/">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg"
-                        alt="air quality solutions for airport"
-                      />
-                    </a>
-                  </div>
-                  <a href="https://www.pranaair.com/solutions-by-application/airports/">
-                    <h4>Solutions for Airport</h4>
-                  </a>
-                </div>
-              </div>
-
-              <div className="item">
-                <div className="app_service_box">
-                  <div className="app_img_bx">
-                    <a href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg"
-                        alt="air quality solutions for fitness and gym"
-                      />
-                    </a>
-                  </div>
-                  <a href="https://www.pranaair.com/solutions-by-application/fitness-center-gym/">
-                    <h4>Solutions for Fitness & Gym</h4>
-                  </a>
-                </div>
-              </div>
-
-              <div className="item">
-                <div className="app_service_box">
-                  <div className="app_img_bx">
-                    <a href="https://www.pranaair.com/solutions-by-application/parking-lot/">
-                      <img
-                        src="https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg"
-                        alt="prana air - air quality solutions for car parking lot"
-                      />
-                    </a>
-                  </div>
-                  <a href="https://www.pranaair.com/solutions-by-application/parking-lot/">
-                    <h4>Solutions for Parking Lot</h4>
-                  </a>
-                </div>
-              </div>
-            </Carousel>
+            <IndustrialApplicationsCarousel applications={industrialApplications} />
           </div>
         </div>
       </section>

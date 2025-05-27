@@ -1,201 +1,163 @@
-"use client"
-
 import Image from "next/image"
 import "./style.css"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function WashroomPage() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
-
-  const industrialSlides = [
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-banks.jpg",
-      alt: "air quality solutions for banks",
-      title: "Solutions for Bank",
-      link: "https://www.pranaair.com/solutions-by-application/bank-financial-institutions/",
-    },
+export default async function WashroomPage() {
+  const { t } = await getServerTranslation("washroom")
+  const industrialApplications = [
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
-      alt: "air quality solutions for hotel business",
-      title: "Solutions for Hotel",
+      title: t("industrialApplicationsData.hotel.title"),
       link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
-      alt: "air quality solutions for restaurants",
-      title: "Solutions for Restaurant",
+      title: t("industrialApplicationsData.restaurant.title"),
       link: "https://www.pranaair.com/solutions-by-application/restaurants/",
     },
     {
-      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-airport.jpg",
-      alt: "air quality solutions for airport",
-      title: "Solutions for Airport",
-      link: "https://www.pranaair.com/solutions-by-application/airports/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solution-for-fitness-gym.jpg",
-      alt: "air quality solutions for fitness and gym",
-      title: "Solutions for Fitness & Gym",
-      link: "https://www.pranaair.com/solutions-by-application/fitness-center-gym/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/05/solution-for-parking-lot.jpg",
-      alt: "air quality solutions for car parking lot",
-      title: "Solutions for Parking Lot",
-      link: "https://www.pranaair.com/solutions-by-application/parking-lot/",
-    },
-    {
-      image: "https://www.pranaair.com/wp-content/uploads/2023/05/air-solutions-for-washroom-and-bathroom.jpg",
-      alt: "air quality solutions for washroom or bathroom",
-      title: "Solutions for Washroom",
-      link: "https://www.pranaair.com/solutions-by-application/washroom-and-bathroom/",
-    },
-    {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
-      alt: "air quality solutions for schools and institutes",
-      title: "Solutions for Institutes",
+      title: t("industrialApplicationsData.institutes.title"),
       link: "https://www.pranaair.com/solutions-by-application/institutes/",
     },
     {
-      image: "/placeholder.svg?height=300&width=400",
-      alt: "air quality solutions for real estates",
-      title: "Solutions for Real Estates",
-      link: "#",
+      image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+      title: t("industrialApplicationsData.cinema.title"),
+      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
     },
     {
-      image: "/placeholder.svg?height=300&width=400",
-      alt: "air quality solutions for smartphone makers",
-      title: "Solutions for Smartphone Makers",
-      link: "#",
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+      title: t("industrialApplicationsData.automobiles.title"),
+      link: "https://www.pranaair.com/solutions-by-application/automobile/",
     },
     {
-      image: "/placeholder.svg?height=300&width=400",
-      alt: "air quality solutions for construction",
-      title: "Solutions for Construction",
-      link: "#",
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+      title: t("industrialApplicationsData.realEstate.title"),
+      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
     },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+      title: t("industrialApplicationsData.smartphone.title"),
+      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+      title: t("industrialApplicationsData.construction.title"),
+      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+      title: t("industrialApplicationsData.animalCare.title"),
+      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+      title: t("industrialApplicationsData.logistics.title"),
+      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+    },
+    {
+      image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+      title: t("industrialApplicationsData.railways.title"),
+      link: "https://www.pranaair.com/solutions-by-application/railway/",
+    }
   ]
 
   return (
     <main>
-      {/* Banner Section - Updated to match reference design */}
+      {/* Banner Section */}
       <section className="hero-section">
         <div className="hero-content">
           <h1>
-            Air quality solutions for <span className="highlight">Washroom | Bathroom</span>
+            {t("washroomBanner.title")} <span className="highlight">{t("washroomBanner.highlight")}</span>
           </h1>
-          <p>
-            A complete solution for air monitoring, data analysis, and fresh air solutions for bathrooms, restrooms, or
-            washrooms.
-          </p>
+          <p>{t("washroomBanner.description")}</p>
           <a href="#get_in_touch" className="cta-button">
-            Request A Quote
+            {t("washroomBanner.cta")}
           </a>
         </div>
         <div className="hero-image">
           <Image
             src="https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-solutions-for-washroom-and-bathroom.jpg"
-            alt="Washroom and bathroom air quality solutions"
+            alt={t("washroomBanner.imageAlt")}
             fill
             style={{ objectFit: "cover" }}
           />
         </div>
       </section>
 
-      {/* Introduction Section - Updated to match reference design */}
+      {/* Introduction Section */}
       <section className="intro-section">
         <div className="container">
           <h2 className="section-title">
-            Factors affecting air quality in
-            <span className="highlight"> Restrooms</span> and <span className="highlight">Bathrooms</span>
+            {t("washroomIntro.title")}
+            <span className="highlight"> {t("washroomIntro.highlight1")}</span> {t("washroomIntro.and")}{" "}
+            <span className="highlight">{t("washroomIntro.highlight2")}</span>
           </h2>
-          <p className="section-description">
-            Restrooms and bathrooms can be significant contributors to unpleasant odors and harmful VOCs that can cause
-            discomfort. This issue is not limited to residential spaces but also affects restrooms in public places such
-            as malls, schools, and other institutions. It is crucial to monitor and control these pollutants to ensure a
-            comfortable and healthy indoor environment for users.
-          </p>
+          <p className="section-description">{t("washroomIntro.description")}</p>
 
-          {/* Factors Icons - Updated to match reference design */}
+          {/* Factors Icons */}
           <div className="factors-grid">
             <div className="factor-item">
               <div className="factor-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/odor-icon.png"
-                  alt="Odor in washroom or bathroom"
+                  alt={t("washroomFactors.odor.imageAlt")}
                   width={80}
                   height={80}
                 />
               </div>
-              <h3>Odor</h3>
-              <p>Washrooms release bad odors and TVOC</p>
+              <h3>{t("washroomFactors.odor.title")}</h3>
+              <p>{t("washroomFactors.odor.description")}</p>
             </div>
             <div className="factor-item">
               <div className="factor-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/co2-icon.png"
-                  alt="high co2 level in bathroom or washroom"
+                  alt={t("washroomFactors.co2.imageAlt")}
                   width={80}
                   height={80}
                 />
               </div>
-              <h3>CO2</h3>
-              <p>More occupancy, high co2 accumulation</p>
+              <h3>{t("washroomFactors.co2.title")}</h3>
+              <p>{t("washroomFactors.co2.description")}</p>
             </div>
             <div className="factor-item">
               <div className="factor-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/microbes-icon.png"
-                  alt="Microbial Pollutants in washroom and bathroom"
+                  alt={t("washroomFactors.microbes.imageAlt")}
                   width={80}
                   height={80}
                 />
               </div>
-              <h3>Microbes</h3>
-              <p>Microbiological contaminants spread easily in closed spaces</p>
+              <h3>{t("washroomFactors.microbes.title")}</h3>
+              <p>{t("washroomFactors.microbes.description")}</p>
             </div>
             <div className="factor-item">
               <div className="factor-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/temperature-icon.png"
-                  alt="temperature in bathroom and washroom"
+                  alt={t("washroomFactors.temperature.imageAlt")}
                   width={80}
                   height={80}
                 />
               </div>
-              <h3>Temperature</h3>
-              <p>Comfort level and mold growth depend upon it</p>
+              <h3>{t("washroomFactors.temperature.title")}</h3>
+              <p>{t("washroomFactors.temperature.description")}</p>
             </div>
             <div className="factor-item">
               <div className="factor-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/humidity-icon.png"
-                  alt="humidity in bathroom and washroom"
+                  alt={t("washroomFactors.humidity.imageAlt")}
                   width={80}
                   height={80}
                 />
               </div>
-              <h3>Humidity</h3>
-              <p>Depends on the number of people and the ventilation rate</p>
+              <h3>{t("washroomFactors.humidity.title")}</h3>
+              <p>{t("washroomFactors.humidity.description")}</p>
             </div>
           </div>
         </div>
@@ -215,70 +177,70 @@ export default function WashroomPage() {
               <span className="school_icon_box">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-icon.png"
-                  alt="tvoc odor icon"
+                  alt={t("washroomPollutants.odor.imageAlt")}
                   width={60}
                   height={60}
                 />
               </span>
               <div className="schhol_text_box">
-                <h3>Odor</h3>
-                <p>Poor ventilation can cause odor to trap inside that can be unpleasant and can cause discomfort.</p>
+                <h3>{t("washroomPollutants.odor.title")}</h3>
+                <p>{t("washroomPollutants.odor.description")}</p>
               </div>
             </li>
             <li className="second_school_box">
               <span className="school_icon_box">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-icon.png"
-                  alt="co2 icon"
+                  alt={t("washroomPollutants.co2.imageAlt")}
                   width={60}
                   height={60}
                 />
               </span>
               <div className="schhol_text_box">
-                <h3>CO2</h3>
-                <p>Excess CO2 can cause lack of attentiveness, fatigue, suffocation, etc.</p>
+                <h3>{t("washroomPollutants.co2.title")}</h3>
+                <p>{t("washroomPollutants.co2.description")}</p>
               </div>
             </li>
             <li className="third_school_box">
               <span className="school_icon_box">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/temperature-pollutant-icon.png"
-                  alt="temperature icon"
+                  alt={t("washroomPollutants.temperature.imageAlt")}
                   width={96}
                   height={96}
                 />
               </span>
               <div className="schhol_text_box">
-                <h3>Temperature</h3>
-                <p>High temperature is very uncomfortable for everyone</p>
+                <h3>{t("washroomPollutants.temperature.title")}</h3>
+                <p>{t("washroomPollutants.temperature.description")}</p>
               </div>
             </li>
             <li className="six_school_box">
               <span className="school_icon_box">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/humidity-pollutant-icon.png"
-                  alt="humidity in washroom"
+                  alt={t("washroomPollutants.humidity.imageAlt")}
                   width={60}
                   height={60}
                 />
               </span>
               <div className="schhol_text_box">
-                <h3>Humidity</h3>
-                <p>Water and condensation inside bathrooms & restrooms many times increase the humidity.</p>
+                <h3>{t("washroomPollutants.humidity.title")}</h3>
+                <p>{t("washroomPollutants.humidity.description")}</p>
               </div>
             </li>
             <li className="fivth_school_box">
               <span className="school_icon_box">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/bacteria-icon.png"
-                  alt="microbes in washroom and bathroom"
+                  alt={t("washroomPollutants.microbes.imageAlt")}
                   width={93}
                   height={93}
                 />
               </span>
               <div className="schhol_text_box">
-                <h3>Microbial Pollutants</h3>
-                <p>Poor maintenance and ventilation can cause the spreading of viruses and bacteria.</p>
+                <h3>{t("washroomPollutants.microbes.title")}</h3>
+                <p>{t("washroomPollutants.microbes.description")}</p>
               </div>
             </li>
           </ul>
@@ -289,79 +251,79 @@ export default function WashroomPage() {
       <section className="health-effects-section">
         <div className="container">
           <h2 className="section-title">
-            Health <span className="highlight">Effects</span>
+            {t("washroomHealth.title")} <span className="highlight">{t("washroomHealth.highlight")}</span>
           </h2>
           <div className="effects-grid">
             <div className="effect-item">
               <div className="effect-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/eyes-and-respiration-irritation.png"
-                  alt="eyes and respiration irritation due to air quality"
+                  alt={t("washroomHealth.effects.irritation.imageAlt")}
                   width={120}
                   height={100}
                 />
               </div>
-              <p>Irritation in the eyes and the respiratory tract</p>
+              <p>{t("washroomHealth.effects.irritation.description")}</p>
             </div>
             <div className="effect-item">
               <div className="effect-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/building-property-damages.png"
-                  alt="building property damages due to air quality"
+                  alt={t("washroomHealth.effects.damages.imageAlt")}
                   width={120}
                   height={100}
                 />
               </div>
-              <p>Damages to the property</p>
+              <p>{t("washroomHealth.effects.damages.description")}</p>
             </div>
             <div className="effect-item">
               <div className="effect-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/infection-and-stomach-illness.png"
-                  alt="infection and stomach illness due to air quality"
+                  alt={t("washroomHealth.effects.infection.imageAlt")}
                   width={120}
                   height={100}
                 />
               </div>
-              <p>Infection and stomach illness</p>
+              <p>{t("washroomHealth.effects.infection.description")}</p>
             </div>
             <div className="effect-item">
               <div className="effect-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/headache-and-high-bp.png"
-                  alt="headache and high bp due to air quality"
+                  alt={t("washroomHealth.effects.headache.imageAlt")}
                   width={120}
                   height={100}
                 />
               </div>
-              <p>Headache and high BP</p>
+              <p>{t("washroomHealth.effects.headache.description")}</p>
             </div>
             <div className="effect-item">
               <div className="effect-icon">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/trigger-asthma-and-illness.png"
-                  alt="trigger asthma and illness due to air quality"
+                  alt={t("washroomHealth.effects.asthma.imageAlt")}
                   width={120}
                   height={100}
                 />
               </div>
-              <p>Triggers asthma & other related illnesses</p>
+              <p>{t("washroomHealth.effects.asthma.description")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Do You Know Section - Updated to match reference design */}
+      {/* Do You Know Section */}
       <section className="do-you-know-section">
         <div className="container">
           <div className="quote-box">
             <div className="quote-mark quote-mark-left"></div>
             <div className="quote-content">
-              <h2>DO YOU KNOW?</h2>
-              <p>ASHRAE recommends relative humidity (RH) values between 30 and 60%.</p>
-              <p>Microbial growth may be promoted by increased humidity.</p>
-              <p>Minimum exhaust rates for Public and Private washrooms as per ASHRAE:</p>
-              <p>Public: 50/70 (Exhaust Rate cfm/unit), Private: 25/50 (Exhaust Rate cfm/unit)</p>
+              <h2>{t("washroomQuote.title")}</h2>
+              <p>{t("washroomQuote.content1")}</p>
+              <p>{t("washroomQuote.content2")}</p>
+              <p>{t("washroomQuote.content3")}</p>
+              <p>{t("washroomQuote.content4")}</p>
             </div>
             <div className="quote-mark quote-mark-right"></div>
           </div>
@@ -371,63 +333,55 @@ export default function WashroomPage() {
       {/* Bathroom Issues Section */}
       <section className="bathroom-issues-section">
         <div className="container">
-          <p className="section-description">
-            Poor ventilation, a lack of frequent maintenance and cleaning, and the buildup of mold and bacteria can all
-            contribute to poor air quality and other inconveniences such as unpleasant odors, moisture, and germ spread
-            in restrooms and washrooms.
-          </p>
+          <p className="section-description">{t("washroomIssues.description")}</p>
           <div className="issues-grid">
             <div className="issue-item">
               <div className="issue-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/humidity-in-shower-bathroom.jpg"
-                  alt="humidity in shower bathroom"
+                  alt={t("washroomIssues.humidity.imageAlt")}
                   width={325}
                   height={240}
                   className="rounded"
                 />
               </div>
-              <h4>Excessive humidity in Showers</h4>
+              <h4>{t("washroomIssues.humidity.title")}</h4>
             </div>
             <div className="issue-item">
               <div className="issue-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/high-condensation-in-bathroom.jpg"
-                  alt="high condensation in bathroom"
+                  alt={t("washroomIssues.condensation.imageAlt")}
                   width={325}
                   height={240}
                   className="rounded"
                 />
               </div>
-              <h4>High condensation = Mold growth & bad odor</h4>
+              <h4>{t("washroomIssues.condensation.title")}</h4>
             </div>
             <div className="issue-item">
               <div className="issue-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/high-microbes-in-washroom.jpg"
-                  alt="high microbes in washroom"
+                  alt={t("washroomIssues.microbes.imageAlt")}
                   width={325}
                   height={240}
                   className="rounded"
                 />
               </div>
-              <h4>Cleaning agents increase TVOCs</h4>
+              <h4>{t("washroomIssues.microbes.title")}</h4>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Air Quality Solutions Section - Updated with Bootstrap tabs */}
+      {/* Air Quality Solutions Section */}
       <section className="solutions-section">
         <div className="container">
           <h2 className="section-title">
-            Air quality <span className="highlight">Solutions</span>
+            {t("washroomSolutions.title")} <span className="highlight">{t("washroomSolutions.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Prana Air provides air quality solutions intended exclusively for bathrooms and restrooms. Our products are
-            developed for these spaces and help promote a healthier atmosphere for everyone, with a focus on efficiency,
-            air purification, ease of use, and effectiveness.
-          </p>
+          <p className="section-description">{t("washroomSolutions.description")}</p>
 
           {/* Bootstrap Tabs */}
           <div className="solutions-tabs">
@@ -443,7 +397,7 @@ export default function WashroomPage() {
                   aria-controls="monitors"
                   aria-selected="true"
                 >
-                  Air Quality Monitors
+                  {t("washroomSolutions.tabs.monitors")}
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -457,7 +411,7 @@ export default function WashroomPage() {
                   aria-controls="fresh-air"
                   aria-selected="false"
                 >
-                  Fresh Air Machine
+                  {t("washroomSolutions.tabs.freshAir")}
                 </button>
               </li>
             </ul>
@@ -469,29 +423,26 @@ export default function WashroomPage() {
                     <div className="carousel-item active">
                       <div className="product-slide">
                         <div className="product-info">
-                          <h3>SQUAIR Air Monitor</h3>
-                          <p>
-                            This is a smart indoor air quality monitoring device that can detect the odor, humidity, and
-                            other toxic gas parameters.
-                          </p>
+                          <h3>{t("washroomSolutions.monitors.squair.title")}</h3>
+                          <p>{t("washroomSolutions.monitors.squair.description")}</p>
                           <ul className="feature-list">
-                            <li>Detects TVOCs (odor), temperature, and humidity as well</li>
-                            <li>Mobile & Smart TV App Enabled</li>
-                            <li>Reliable Web Dashboard Accessibility</li>
+                            <li>{t("washroomSolutions.monitors.squair.features.feature1")}</li>
+                            <li>{t("washroomSolutions.monitors.squair.features.feature2")}</li>
+                            <li>{t("washroomSolutions.monitors.squair.features.feature3")}</li>
                           </ul>
                           <div className="product-actions">
                             <a href="#" className="action-button primary">
-                              Know More
+                              {t("washroomSolutions.knowMore")}
                             </a>
                             <a href="#" className="action-button secondary">
-                              Looking to Rent?
+                              {t("washroomSolutions.lookingToRent")}
                             </a>
                           </div>
                         </div>
                         <div className="product-image">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2023/04/air-quality-monitoring-in-bathroom.jpg"
-                            alt="SQUAIR Air Monitor for washroom and bathroom"
+                            alt={t("washroomSolutions.monitors.squair.imageAlt")}
                             width={500}
                             height={400}
                             className="rounded"
@@ -502,26 +453,23 @@ export default function WashroomPage() {
                     <div className="carousel-item">
                       <div className="product-slide">
                         <div className="product-info">
-                          <h3>Sensible+ Monitor</h3>
-                          <p>
-                            This smart air quality monitor features a 7-inch touchscreen display that provides detailed
-                            data insights for washroom or bathroom
-                          </p>
+                          <h3>{t("washroomSolutions.monitors.sensible.title")}</h3>
+                          <p>{t("washroomSolutions.monitors.sensible.description")}</p>
                           <ul className="feature-list">
-                            <li>7 Inch LED Touch Screen Display</li>
-                            <li>5000 mAh Battery InBuilt</li>
-                            <li>WiFi Connectivity With Mobile App</li>
+                            <li>{t("washroomSolutions.monitors.sensible.features.feature1")}</li>
+                            <li>{t("washroomSolutions.monitors.sensible.features.feature2")}</li>
+                            <li>{t("washroomSolutions.monitors.sensible.features.feature3")}</li>
                           </ul>
                           <div className="product-actions">
                             <a href="#" className="action-button primary">
-                              Know More
+                              {t("washroomSolutions.knowMore")}
                             </a>
                           </div>
                         </div>
                         <div className="product-image">
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2023/04/prana-air-quality-monitoring-in-washroom.jpg"
-                            alt="Sensible+ Monitor for washroom and bathroom"
+                            alt={t("washroomSolutions.monitors.sensible.imageAlt")}
                             width={500}
                             height={400}
                             className="rounded"
@@ -537,7 +485,7 @@ export default function WashroomPage() {
                     data-bs-slide="prev"
                   >
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
+                    <span className="visually-hidden">{t("washroomSolutions.carousel.previous")}</span>
                   </button>
                   <button
                     className="carousel-control-next"
@@ -546,7 +494,7 @@ export default function WashroomPage() {
                     data-bs-slide="next"
                   >
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
+                    <span className="visually-hidden">{t("washroomSolutions.carousel.next")}</span>
                   </button>
                   <div className="carousel-indicators">
                     <button
@@ -555,13 +503,13 @@ export default function WashroomPage() {
                       data-bs-slide-to="0"
                       className="active"
                       aria-current="true"
-                      aria-label="Slide 1"
+                      aria-label={t("washroomSolutions.carousel.slide1")}
                     ></button>
                     <button
                       type="button"
                       data-bs-target="#monitorsCarousel"
                       data-bs-slide-to="1"
-                      aria-label="Slide 2"
+                      aria-label={t("washroomSolutions.carousel.slide2")}
                     ></button>
                   </div>
                 </div>
@@ -572,26 +520,23 @@ export default function WashroomPage() {
                   <div className="product-image">
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
-                      alt="Fresh Air Machine for washrooms"
+                      alt={t("washroomSolutions.freshAir.imageAlt")}
                       width={500}
                       height={400}
                       className="rounded"
                     />
                   </div>
                   <div className="product-info">
-                    <h3>Fresh Air Machine As IAQ Solution</h3>
-                    <p>
-                      Prana Air Fresh Air Machine is a one-stop solution for indoor air pollution, functioning as an air
-                      purifier with a 99.5% efficiency rate and multi-layer HEPA filters.
-                    </p>
+                    <h3>{t("washroomSolutions.freshAir.title")}</h3>
+                    <p>{t("washroomSolutions.freshAir.description")}</p>
                     <ul className="feature-list">
-                      <li>Comes with multi-layers HEPA Filters</li>
-                      <li>Compact Design makes it easy to place</li>
-                      <li>Promising you up to 99.5% efficiency</li>
+                      <li>{t("washroomSolutions.freshAir.features.feature1")}</li>
+                      <li>{t("washroomSolutions.freshAir.features.feature2")}</li>
+                      <li>{t("washroomSolutions.freshAir.features.feature3")}</li>
                     </ul>
                     <div className="product-actions">
                       <a href="#" className="action-button primary">
-                        Know More
+                        {t("washroomSolutions.knowMore")}
                       </a>
                     </div>
                   </div>
@@ -606,79 +551,71 @@ export default function WashroomPage() {
       <section className="data-services-section">
         <div className="container">
           <h2 className="section-title">
-            Data Freemium <span className="highlight">Services</span>
+            {t("washroomDataServices.title")} <span className="highlight">{t("washroomDataServices.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Our customized dashboard can display or analyze data on the LCD panels or the apps. Use <strong>AQI</strong>{" "}
-            mobile app to find out the air quality inside washroom or bathroom.
-          </p>
+          <p className="section-description">{t("washroomDataServices.description")}</p>
           <div className="services-grid">
             <div className="service-item">
               <div className="service-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/aqi-tv-app-data-for-washroom.jpg"
-                  alt="aqi tv app data for washroom"
+                  alt={t("washroomDataServices.tvApp.imageAlt")}
                   width={400}
                   height={300}
                   className="rounded"
                 />
               </div>
-              <h4>TV Dashboard App</h4>
+              <h4>{t("washroomDataServices.tvApp.title")}</h4>
             </div>
             <div className="service-item">
               <div className="service-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/aqi-web-or-table-app-for-bathroom.jpg"
-                  alt="aqi web or table app for bathroom"
+                  alt={t("washroomDataServices.webApp.imageAlt")}
                   width={400}
                   height={300}
                   className="rounded"
                 />
               </div>
-              <h4>Customized Web/Tablet App</h4>
+              <h4>{t("washroomDataServices.webApp.title")}</h4>
             </div>
             <div className="service-item">
               <div className="service-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/aqi-app-to-check-washroom-data.jpg"
-                  alt="aqi app to check washroom data"
+                  alt={t("washroomDataServices.mobileApp.imageAlt")}
                   width={400}
                   height={300}
                   className="rounded"
                 />
               </div>
-              <h4>AQI Mobile App</h4>
+              <h4>{t("washroomDataServices.mobileApp.title")}</h4>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Fresh Air Machine Effects Section - Updated to match reference design */}
+      {/* Fresh Air Machine Effects Section */}
       <section className="effects-comparison-section">
         <div className="container">
           <h2 className="section-title">
-            The Effects of Air Pollution - <span className="highlight">Fresh Air Machine</span>
+            {t("washroomComparison.title")} - <span className="highlight">{t("washroomComparison.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Poor air quality in the washroom or bathroom is caused by high humidity, lack of ventilation, and toxic
-            contaminants, leading to unpleasant smells, harmful pollutants, and health concerns. Fresh air solutions can
-            improve ventilation rates and minimize pollutants, providing a clean and healthy environment for restroom
-            users.
-          </p>
+          <p className="section-description">{t("washroomComparison.description")}</p>
 
           <div className="comparison-container">
             <div className="comparison-column without">
-              <h3>Without Fresh Air Solutions</h3>
+              <h3>{t("washroomComparison.without.title")}</h3>
               <ul className="comparison-list">
-                <li>Very bad air quality</li>
-                <li>Uncomfortable experience</li>
-                <li>Increased health concerns</li>
-                <li>Unpleasant smells</li>
+                <li>{t("washroomComparison.without.points.point1")}</li>
+                <li>{t("washroomComparison.without.points.point2")}</li>
+                <li>{t("washroomComparison.without.points.point3")}</li>
+                <li>{t("washroomComparison.without.points.point4")}</li>
               </ul>
               <div className="comparison-chart">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/without-fresh-air-solution-in-washroom.jpg"
-                  alt="without fresh air solution in washroom"
+                  alt={t("washroomComparison.without.imageAlt")}
                   width={350}
                   height={186}
                   className="rounded"
@@ -687,17 +624,17 @@ export default function WashroomPage() {
             </div>
 
             <div className="comparison-column with">
-              <h3>With Fresh Air Solutions</h3>
+              <h3>{t("washroomComparison.with.title")}</h3>
               <ul className="comparison-list">
-                <li>Improve ventilation & air quality</li>
-                <li>Comfortable experience</li>
-                <li>Improved health and well-being</li>
-                <li>Reduced airborne pollutants</li>
+                <li>{t("washroomComparison.with.points.point1")}</li>
+                <li>{t("washroomComparison.with.points.point2")}</li>
+                <li>{t("washroomComparison.with.points.point3")}</li>
+                <li>{t("washroomComparison.with.points.point4")}</li>
               </ul>
               <div className="comparison-chart">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/with-fresh-air-solution-in-washroom.jpg"
-                  alt="with fresh air solution in washroom"
+                  alt={t("washroomComparison.with.imageAlt")}
                   width={350}
                   height={185}
                   className="rounded"
@@ -708,92 +645,207 @@ export default function WashroomPage() {
         </div>
       </section>
 
-      {/* FAQ Section - Updated with Bootstrap accordion */}
+      {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
           <h2 className="section-title">
-            Frequently Asked <span className="highlight">Questions</span>
+            {t("washroomFaq.title")} <span className="highlight">{t("washroomFaq.highlight")}</span>
           </h2>
-          <p className="section-description">
-            About Air Quality Solution for washrooms / bathroom Have questions? Were here to help.
-          </p>
+          <p className="section-description">{t("washroomFaq.description")}</p>
 
           <div className="accordion" id="faqAccordion">
-            {[
-              {
-                id: "faqOne",
-                title: "1. Why is air quality important in restrooms?",
-                content:
-                  "- Poor air quality in restrooms can lead to unpleasant odors, the growth of mold and mildew, and the spread of bacteria and viruses. It can also cause health problems for people who have allergies or asthma.",
-              },
-              {
-                id: "faqTwo",
-                title: "2. What are some common sources of poor air quality in restrooms?",
-                content:
-                  "- Poor ventilation, lack of proper cleaning, moisture buildup, and the use of harsh cleaning chemicals can all contribute to poor air quality in restrooms.",
-              },
-              {
-                id: "faqThree",
-                title: "3. What are some solutions for improving air quality in restrooms?",
-                content:
-                  "- Some solutions include improving ventilation through the use of fans or opening windows, using natural cleaning products, maintaining a regular cleaning schedule, and addressing any moisture issues.",
-              },
-              {
-                id: "faqFour",
-                title: "4. How can I tell if the air quality in my restroom is poor?",
-                content:
-                  "- Signs of poor air quality in restrooms can include unpleasant odors, mold or mildew growth, and visible moisture or condensation on surfaces.",
-              },
-              {
-                id: "faqFive",
-                title: "5. Are there any regulations or standards for air quality in restrooms?",
-                content:
-                  "- Yes, there are regulations and standards set by organizations such as the Occupational Safety and Health Administration (OSHA) and the ASHRAE that set guidelines for air quality in commercial and public spaces, including restrooms.",
-              },
-              {
-                id: "faqSix",
-                title: "6. Can air purifiers help improve air quality in restrooms?",
-                content:
-                  "- Yes, air purifiers can help to remove pollutants and odors from the air in restrooms. However, it's important to choose an air purifier that is designed for use in commercial spaces and to properly maintain and replace the filters as needed.",
-              },
-              {
-                id: "faqSeven",
-                title: "7. Why is it necessary to have air quality monitoring solutions?",
-                content:
-                  "- To know the nature of pollutants and how much are they present in a space so that necessary actions can be taken.",
-              },
-              {
-                id: "faqEight",
-                title: "8. How often should I clean and maintain the ventilation system in my restroom?",
-                content:
-                  "- It's recommended to clean and maintain the ventilation system in restrooms at least twice a year, or more frequently if there are signs of poor air quality or moisture buildup.",
-              },
-            ].map((faq, index) => (
-              <div key={index} className="accordion-item">
-                <h2 className="accordion-header" id={`heading${faq.id}`}>
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#collapse${faq.id}`}
-                    aria-expanded="false"
-                    aria-controls={`collapse${faq.id}`}
-                  >
-                    {faq.title}
-                  </button>
-                </h2>
-                <div
-                  id={`collapse${faq.id}`}
-                  className="accordion-collapse collapse"
-                  aria-labelledby={`heading${faq.id}`}
-                  data-bs-parent="#faqAccordion"
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqOne">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqOne"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqOne"
                 >
-                  <div className="accordion-body">
-                    <p>{faq.content}</p>
-                  </div>
+                  {t("washroomFaq.questions.q1")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqOne"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a1")}</p>
                 </div>
               </div>
-            ))}
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqTwo"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqTwo"
+                >
+                  {t("washroomFaq.questions.q2")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqTwo"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a2")}</p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqThree"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqThree"
+                >
+                  {t("washroomFaq.questions.q3")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqThree"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a3")}</p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqFour">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqFour"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqFour"
+                >
+                  {t("washroomFaq.questions.q4")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqFour"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a4")}</p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqFive">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqFive"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqFive"
+                >
+                  {t("washroomFaq.questions.q5")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqFive"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqFive"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a5")}</p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqSix">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqSix"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqSix"
+                >
+                  {t("washroomFaq.questions.q6")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqSix"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqSix"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a6")}</p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqSeven">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqSeven"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqSeven"
+                >
+                  {t("washroomFaq.questions.q7")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqSeven"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqSeven"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a7")}</p>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingfaqEight">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsefaqEight"
+                  aria-expanded="false"
+                  aria-controls="collapsefaqEight"
+                >
+                  {t("washroomFaq.questions.q8")}
+                </button>
+              </h2>
+              <div
+                id="collapsefaqEight"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingfaqEight"
+                data-bs-parent="#faqAccordion"
+              >
+                <div className="accordion-body">
+                  <p>{t("washroomFaq.answers.a8")}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -802,14 +854,14 @@ export default function WashroomPage() {
       <section className="clientele-section">
         <div className="container">
           <h2 className="section-title">
-            Our <span className="highlight">Clientele</span>
+            {t("clientele.title")} <span className="highlight">{t("clientele.highlight")}</span>
           </h2>
-          <p className="section-description">We are honored to work with so many well-known companies.</p>
+          <p className="section-description">{t("clientele.description")}</p>
           <div className="client-grid">
             <div className="client-logo">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/08/MORGAN-STANLEY.png"
-                alt="Client Logo"
+                alt={t("clientele.logos.morgan")}
                 width={200}
                 height={100}
               />
@@ -817,7 +869,7 @@ export default function WashroomPage() {
             <div className="client-logo">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/08/OLA.png"
-                alt="Client Logo"
+                alt={t("clientele.logos.ola")}
                 width={200}
                 height={100}
               />
@@ -825,7 +877,7 @@ export default function WashroomPage() {
             <div className="client-logo">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/08/MICROSOFT.png"
-                alt="Client Logo"
+                alt={t("clientele.logos.microsoft")}
                 width={200}
                 height={100}
               />
@@ -833,7 +885,7 @@ export default function WashroomPage() {
             <div className="client-logo">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/08/IIT-BHU.png"
-                alt="Client Logo"
+                alt={t("clientele.logos.iit")}
                 width={200}
                 height={100}
               />
@@ -842,58 +894,31 @@ export default function WashroomPage() {
         </div>
       </section>
 
-      {/* Contact Section - Updated to match reference design */}
+      {/* Contact Section */}
       <section id="get_in_touch" className="contact-section-box">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="contact-heading">
-                <h2>Get in Touch</h2>
-                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.description")}</p>
               </div>
             </div>
           </div>
         </div>
-        <ContactForm pageName="Cair Monitor Page" />
+        <ContactForm pageName="Washroom Page" />
       </section>
 
-      {/* Industrial Applications Section - Updated to fix missing carousel slides */}
+      {/* Industrial Applications Section */}
       <section className="industrial-section">
         <div className="container">
           <h2 className="section-title">
-            Industrial <span className="highlight">Applications</span>
+            {t("industrial.title")} <span className="highlight">{t("industrial.highlight")}</span>
           </h2>
-          <p className="section-description">
-            Prana Air provides a wide range of Smart, inexpensive, and highly accurate air quality solutions for a
-            variety of sectors, regardless of their size.
-          </p>
+          <p className="section-description">{t("industrial.description")}</p>
 
           <div className="industrial-carousel-container">
-            <Carousel
-              responsive={responsive}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={5000}
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              itemClass="carousel-item-padding"
-            >
-              {industrialSlides.map((slide, index) => (
-                <div key={index} className="industry-card">
-                  <a href={slide.link} className="industry-link">
-                    <div className="industry-image">
-                      <Image
-                        src={slide.image || "/placeholder.svg"}
-                        alt={slide.alt}
-                        width={350}
-                        height={250}
-                        className="rounded"
-                      />
-                    </div>
-                    <h3>{slide.title}</h3>
-                  </a>
-                </div>
-              ))}
-            </Carousel>
+            <IndustrialApplicationsCarousel applications={industrialApplications} />
           </div>
         </div>
       </section>

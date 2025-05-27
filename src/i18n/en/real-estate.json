@@ -1,0 +1,321 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+ "realEstateBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Real Estates",
+    "description": "A complete solution for air quality monitoring, air purification, and other solutions for real-estates.",
+    "categories": {
+      "residential": "Residential",
+      "commercial": "Commercial"
+    },
+    "cta": "Get a Quote",
+    "imageAlt": "Real estate cityscape with modern buildings"
+  },
+  "realEstatePollutants": {
+    "title": "Major Air",
+    "highlight": "Pollutants",
+    "description": "We spend more than 90% of our lives indoors and the air pollutants present indoors are 10x times more harmful than the ambient environment. Therefore, indoor air quality affects most occupants health. Various air pollutants in real estate such as residential areas and malls can exist.",
+    "items": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "Indoor PM or dust can be generated due to smoking, and combustion activities, and brought in by ventilation.",
+        "imageAlt": "pm2.5 level"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "Ventilation and occupancy rates highly influence the CO2 levels in a room or enclosed area.",
+        "imageAlt": "high co2 level"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "description": "Air fresheners, cleaning agents, paints, carpets, and furniture are some potential sources of TVOC.",
+        "imageAlt": "tvoc gas"
+      },
+      "co": {
+        "title": "CO",
+        "description": "Various utilities such as fireplaces and coal burning emit gases such as carbon monoxide.",
+        "imageAlt": "co gas"
+      },
+      "odor": {
+        "title": "Odor",
+        "description": "Odor is one of the factors that affect the comfort level of occupants. Restrooms are a major source of the odor.",
+        "imageAlt": "Odor"
+      },
+      "smoke": {
+        "title": "Smoke",
+        "description": "Cooking, fireplaces, burning of fuels, smoking, etc. release various air pollutants including smoke.",
+        "imageAlt": "smoke icon"
+      },
+      "tempHumidity": {
+        "title": "Temp. & Humidity",
+        "description": "These two air factors play an important role in the comfort level of the occupants.",
+        "imageAlt": "temperature and humidity"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Hustle and bustle in hotels are quite normal. This sometimes creates a nuisance and disturbance for guests.",
+        "imageAlt": "noise pollution"
+      }
+    }
+  },
+  "realEstateEffects": {
+    "markers": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "They have the ability to enter the bloodstream & can cause various diseases.",
+        "imageAlt": "pm2.5 icon"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "Excess CO2 can cause perspiration, fatigue, suffocation, convulsions.",
+        "imageAlt": "co2 icon"
+      },
+      "noise": {
+        "title": "Noise",
+        "description": "Excessive noise can result in headaches & high blood pressure.",
+        "imageAlt": "noise icon"
+      },
+      "tempHumidity": {
+        "title": "Temp-Humidity",
+        "description": "Presence of more people increases more temp-humidity level.",
+        "imageAlt": "temperature and humidity"
+      },
+      "odor": {
+        "title": "Odor",
+        "description": "When sweat and bacteria are exposed to gym fabric, produces a bad odor.",
+        "imageAlt": "odor problem"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "description": "Headaches, and irritation in the eyes, nose, and throat.",
+        "imageAlt": "tvoc icon"
+      }
+    }
+  },
+  "realEstateRisk": {
+    "title": "Who are at",
+    "highlight": "Risk?",
+    "description": "People experience stuffiness in the air as the breathing rate goes up while exercising. That means people inhale more oxygen and release more O2 than the normal rate.",
+    "residential": {
+      "title": "Residential Areas",
+      "items": {
+        "children": {
+          "title": "Children",
+          "description": "Air pollution severely hampers and impacts cognitive abilities and growth, tissue building, organ functioning, etc. among children.",
+          "imageAlt": "children"
+        },
+        "pregnant": {
+          "title": "Pregnant Ladies",
+          "description": "When they are exposed to poor air quality, both mothers and childs health are affected. Poor air can affect prenatal development.",
+          "imageAlt": "pregnant women"
+        },
+        "old": {
+          "title": "Old People",
+          "description": "Bad air quality promotes respiratory illnesses and disorders among old age people. Their old age makes them more vulnerable to illness.",
+          "imageAlt": "old people"
+        },
+        "healthIssues": {
+          "title": "People with underlying health issues",
+          "description": "People with underlying disorders are highly susceptible to air pollution since their immune system is already weak.",
+          "imageAlt": "person with health issues"
+        }
+      }
+    },
+    "commercial": {
+      "title": "Commercial Buildings",
+      "items": {
+        "returning": {
+          "title": "Returning Customers",
+          "description": "Good air quality encourages good business by creating a healthy and comfortable environment, especially for returning consumers.",
+          "imageAlt": "returning customers"
+        },
+        "staff": {
+          "title": "Staff Members",
+          "description": "When staff members are exposed to poor air quality, they experience reduced attentiveness and bad health that influences their attendance.",
+          "imageAlt": "Staff Members"
+        },
+        "sensitive": {
+          "title": "Sensitive Group",
+          "description": "Children, old age people, pregnant ladies, and people with underlying health issues like cardiovascular disorders come under the sensitive group.",
+          "imageAlt": "sensitive group"
+        },
+        "healthy": {
+          "title": "Healthy Individual",
+          "description": "Even in healthy people, different air pollution parameters have varied effects on the body. Headaches & nausea are some of the symptoms.",
+          "imageAlt": "healthy individual"
+        }
+      }
+    }
+  },
+  "realEstateSolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions",
+    "description": "Prana Airs air quality monitoring and air purifying solutions give you the power to know what your residents and visitors breathe and what you could do to clean the air to make real estate properties pollution-free zones and view and analyze your IAQ.",
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "knowMore": "Know More",
+    "lookingToRent": "Looking to Rent?",
+    "previous": "Previous",
+    "next": "Next",
+    "monitors": {
+      "sensible": {
+        "title": "Sensible+ Air Monitor",
+        "description": "This is a smart air quality monitor that comes with 7 inch touch screen display that gives more insightful data for real estate properties.",
+        "features": {
+          "feature1": "7 Inch LED Touch Screen Display",
+          "feature2": "5000 mAh Battery InBuilt",
+          "feature3": "WiFi Connectivity With Mobile App"
+        },
+        "imageAlt": "prana air sensible+ air quality monitor for real estates"
+      },
+      "squair": {
+        "title": "SQUAIR Air Monitor",
+        "description": "SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate matters, temperature, humidity, and gas parameters in real estate properties.",
+        "features": {
+          "feature1": "Detects PM2.5, CO, CO2, TVOC, noise, temp., & humidity",
+          "feature2": "Mobile & Smart TV App Enabled",
+          "feature3": "Reliable Web Dashboard Accessibility"
+        },
+        "imageAlt": "prana air squair air quality monitor for real estates"
+      }
+    },
+    "freshAir": {
+      "title": "Fresh Air Machine",
+      "description": "One-stop solution for indoor air pollution by Prana Air Fresh Air Machine working as an air purifier with the capability to filter out 99.5% efficiency and multi-layer HEPA filters.",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Compact Design makes it easy to place",
+        "feature3": "Promising you up to 99.5% efficiency"
+      },
+      "imageAlt": "prana air fresh air machine as iaq solution for real estates"
+    },
+    "apiData": {
+      "title": "AQI API Data",
+      "description": "Avail the real-time air quality data of nearby outdoor area on the web.",
+      "features": {
+        "feature1": "Integrate air quality data on the web",
+        "feature2": "Access the real-time data quickly",
+        "feature3": "Take precautions from the air pollution"
+      },
+      "imageAlt": "aqi api data for real estates"
+    }
+  },
+  "realEstateFreemium": {
+    "title": "Data Freemium",
+    "highlight": "Services",
+    "description": "The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the QR to know the AQI of the area you are in.",
+    "services": {
+      "tvApp": {
+        "title": "TV Dashboard App",
+        "imageAlt": "aqi tv app dashboard for real estates"
+      },
+      "customApp": {
+        "title": "Customized App for Real Estates",
+        "imageAlt": "aqi customized dashboard app for real estates"
+      },
+      "qrCode": {
+        "title": "QR Code Scan",
+        "imageAlt": "aqi monitor data qr code scan for real estates"
+      }
+    }
+  },
+  "realEstateComparison": {
+    "title": "The Effects of Air Pollution",
+    "highlight": "Real Estates",
+    "description": "When residents, customers, and staff are exposed to bad air quality, it affects their health, and therefore their overall experience. This majorly affects the real estate business.",
+    "clean": {
+      "title": "With Clean Air",
+      "benefits": {
+        "benefit1": "Improve ventilation",
+        "benefit2": "Good comfort score",
+        "benefit3": "Enhanced experience",
+        "benefit4": "Profits will increase"
+      }
+    },
+    "unclean": {
+      "title": "Without Clean Air",
+      "drawbacks": {
+        "drawback1": "Less comfort",
+        "drawback2": "Low ventilation score",
+        "drawback3": "Bad experience",
+        "drawback4": "Profits will decrease"
+      }
+    }
+  },
+  "realEstateFaq": {
+    "description": "About Air Quality Solution for Real Estates",
+    "helpText": "Have questions? Were here to help.",
+    "questions": {
+      "q1": "1. What are the health impacts of the pollutants present inside a mall?",
+      "q2": "2. What are the major pollutants that are present in residential buildings?",
+      "q3": "3. Why is it necessary to have air quality monitoring solutions?",
+      "q4": "4. How can I check the AQI of a room and a specific lobby in a residential building using your device?",
+      "q5": "5. Are any other parameters included in the monitors other than the air pollutants?",
+      "q6": "6. Are there any additional benefits that come with the solutions?"
+    },
+    "answers": {
+      "a1": "Your health could be harmed by increased CO2 exposure. Health effects like nausea, vertigo, exhaustion, difficulty breathing, and perspiration can be evident in public spaces. Transmission of chronic illnesses like the flu and the common cold is fairly common.",
+      "a2": "Many pollutants can be present inside residential buildings. PM2.5, CO2, TVOC, CO, odor, smoke, temperature, humidity, and noise are the main pollutants that affect indoor air quality.",
+      "a3": "To know the nature of pollutants and how much they are present in a space so that necessary actions can be taken to improve air quality and protect occupants health.",
+      "a4": "Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens or mobile app.",
+      "a5": "Yes, our monitors include additional parameters like temperature, humidity, and noise levels which are important for overall comfort and well-being in indoor environments.",
+      "a6": "Yes, our solutions come with customized dashboards, mobile apps, and data analytics that help property managers make informed decisions about ventilation, HVAC systems, and other air quality improvement measures."
+    }
+  },
+   "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

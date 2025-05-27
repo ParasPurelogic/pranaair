@@ -1,0 +1,62 @@
+{
+  "radon": {
+    "hero": {
+      "title": "What is Radon (Rn)?",
+      "description": "Radon (Rn) is a naturally occurring radioactive gas that is formed by the decay of radium, which is found in most soils. Radon can be found in the atmosphere outdoors. But it is not a health concern as it rapidly dilutes in the atmosphere to very low levels. It is a health concern indoors where this dilution is not possible and the air is not disturbed.",
+      "iconAlt": "radon rn"
+    },
+    "radioactivity": {
+      "title": "Radon, Radioactivity, and its decayed products",
+      "description": "As radon decays, it emits a form of radiation known as alpha particles. These radon changes into other radioactive elements known as decay products. Hence, Radon and its decay products enter your lungs while you breathe. As a result, all of the lung cells can damage. Over time, radon exposure damages more and more cells, increasing the likelihood that one of the cells will develop cancer."
+    },
+    "sources": {
+      "title": "Where does Radon (Rn) come from?",
+      "description": "Radon is emitted from soil grains and rocks. It moves as a gas through the soil at varying rates and distances depending on soil texture and other natural and climatic factors. This can seep through cracks and openings in the floor into an enclosed space where radon can accumulate.",
+      "imageAlt": "radon exhalation from soil"
+    },
+    "homeSources": {
+      "title": "Sources of radon (Rn) at homes",
+      "description": "Radon penetrates structures through floor splits or floor-wall joints, gaps around pipes or cables, tiny pores in block walls, cavities in the walls, or drainage systems or sewers. It doesnt matter if your house has a basement or not, the surface closest to the ground will have higher radon levels. Hence, Radon levels are typically higher in basements, cellars, and ground-level residential spaces. As more and more buildings and houses are becoming air-tight, it is impossible for radon gas to pass through the windows via ventilation and as a result, radon levels can be extremely high indoors.",
+      "imageAlt": "sources of radon at home"
+    },
+    "dangerous": {
+      "title": "What makes radon (Rn) more dangerous?",
+      "description": "Radon gas is radioactive and has no odor, taste, or smell which makes it difficult for the human body to sense it. It is a carcinogen proven to cause lung cancer in humans. As, Studies have shown an increase in lung cancer rates as a result of increased radon exposure. It classifies by health authorities as a category-one cancer-causing agent. It is the leading cause of lung cancer among non-smokers and the leading cause of cancer after smoking. Each year, around 21,000 people in the United States die from radon-induced lung cancer.",
+      "imageAlt": "health impacts of radon"
+    },
+    "affected": {
+      "title": "Who is more affected by radon exposure?",
+      "description": "Radon takes 5-10 years to develop. Children are the most affected by radon exposure, whether exposed in homes or schools. As they are still growing and their lungs and other organs are still at the developing stage. They have more life to live, and hence, the after-effects of radon exposure are very much visible in children, sooner or later.",
+      "imageAlt": "who are more dangerous to exposure"
+    },
+    "healthImpacts": {
+      "title": "Health Impacts By Radon",
+      "description": "It acts after 5-20 years of exposure. When exposed to radon, it wont seriously affect your health in the short term. But you will surely feel and see its serious effects on your health after 5-20 years. Alpha particles do not travel very far, but they travel at half the speed of light and with enough energy to dent bulletproof plastic. Imagine what it can do to your body. Radons radioactive particles can cause harm even decades after initial exposure. Each decade, 10 to 40 thousand people die from radon-induced lung cancer.",
+      "imageAlt": "84000 deaths from lung cancer due to radon"
+    },
+    "symptoms": {
+      "title": "Symptoms of radon (Rn) sickness",
+      "description": "How to know if you are exposed to radon or not. Look for the following symptoms:",
+      "breathingDifficulty": {
+        "title": "Shortness or difficulty in breathing",
+        "imageAlt": "difficulty in breathing due to radon"
+      },
+      "chestPain": {
+        "title": "Pain or tightness in the chest",
+        "imageAlt": "pain in the chest"
+      },
+      "worseningCough": {
+        "title": "Worsening of cough",
+        "imageAlt": "worsening of cough"
+      },
+      "swallowingTrouble": {
+        "title": "Trouble in swallowing",
+        "imageAlt": "trouble in swallowing"
+      }
+    },
+    "monitoring": {
+      "title": "Why is it important to monitor Radon?",
+      "description": "As we discussed, radon is an invisible, odorless, and tasteless gas, there is no possible way to know if it is present inside your premises or not using the human senses. Radon concentrations in a home should ideally be less than 100 Bq/m3. And as radon levels change depending on various factors such as temperature, ventilation, humidity, wind speed and direction, rainfall, snow, air pressure, the foundation of your building, building insulation, etc. there is the need to monitor it continuously, so that proper actions can be taken accordingly that will ensure that levels remain as low as possible."
+    }
+  }
+}

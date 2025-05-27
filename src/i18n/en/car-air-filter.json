@@ -1,0 +1,315 @@
+{
+     "heroSection": {
+    "title": "Anti-Pollution",
+    "subtitle": "Car Cabin Filter",
+    "description": "Use Prana Airs Car Air Filter As Air Purifier For Your Car. Stay Healthy!",
+    "price": "₹1,990.00",
+    "buyNowButton": "Buy Now"
+  },
+  "carAirPollutionSection": {
+    "title": "Problems of Car Air Pollution",
+    "problems": {
+      "higherEmissions": {
+        "iconAlt": "NO2 gas Higher Emissions icon",
+        "imageAlt": "Higher Emissions of cars",
+        "title": "Higher Emissions",
+        "description": "Poor air quality exacerbates environmental pollution."
+      },
+      "cardiovascularIssues": {
+        "iconAlt": "Cardiovascular Issues icon",
+        "imageAlt": "Cardiovascular Issues due to bad air pollution in car",
+        "title": "Cardiovascular Issues",
+        "description": "Inhaling pollutants increases heart attack and stroke risks."
+      },
+      "driverFatigue": {
+        "iconAlt": "respiratory icon",
+        "imageAlt": "Driver Fatigue due to the exposure to PM2.5 pollution in car",
+        "title": "Driver Fatigue",
+        "description": "Poor air quality induces drowsiness, heightening accident risks."
+      },
+      "respiratoryProblems": {
+        "iconAlt": "Respiratory icons",
+        "imageAlt": "Respiratory Problems due to car air pollution",
+        "title": "Respiratory Problems",
+        "description": "Exposure to pollutants like PM2.5 and NO2 leads to asthma and bronchitis."
+      },
+      "unpleasantOdors": {
+        "iconAlt": "Unpleasant Odors icon",
+        "imageAlt": "Unpleasant Odors in car due to air pollution",
+        "title": "Unpleasant Odors",
+        "description": "VOCs from vehicle emissions, fuel vapors, and upholstery materials create bad smells inside your car."
+      },
+      "badDrivingExperience": {
+        "iconAlt": "Bad Driving Experience icon",
+        "imageAlt": "Bad Driving Experience due to car air pollution",
+        "title": "Bad Driving Experience",
+        "description": "Drowsiness, fatigue, and impaired concentration from poor air quality contribute to accidents."
+      }
+    }
+  },
+  "usingCarFilterSection": {
+    "title": "Do you know how a Car Air Filter can improve the air quality inside your vehicle",
+    "paragraph1": "If it is yes, so its time to check your car cabin air filter. Because most standard air filters only circulate the air inside your car rather than purifying. It means the air is not clean inside your car even with filters.",
+    "paragraph2": "Check out the Prana Air Car Cabin Air Filter or the car air purifier. Gets the advanced features of multi-filtration technology. It captures the fine dust particles to ensures to purify and freshens the air for better air quality to breathe.",
+    "paragraph3": "The state-of-the-art filtration process makes it filters the fine pollutants. Also, filters capture any foul smell with fine particles entering your cas atmosphere.",
+    "imageAlt": "Using car cabin air filter"
+  },
+  "useRightFilterSection": {
+    "title": "Ensuring Clean Air in Your Vehicle: Why the Right Car Air Filter Matters",
+    "benefits": {
+      "freshAir": {
+        "imageAlt": "Improved Air Quality in car by using car cabin air filter",
+        "title": "Fresh Air",
+        "description": "Reduces respiratory irritation and allergy symptoms by filtering dust, pollen, allergens, bacteria, and pollutants."
+      },
+      "reducesOdors": {
+        "imageAlt": "Reduces Odors by using car cabin air filter",
+        "title": "Reduces Odors",
+        "description": "Activated carbon filter eliminate unpleasant smells (VOCs) and harmful gases for a fresher cabin."
+      },
+      "allergenReduction": {
+        "imageAlt": "Allergen Reduction",
+        "title": "Allergen Reduction",
+        "description": "Filters out pollen and allergens, making the cabin more comfortable for sensitive passengers."
+      },
+      "focusAndComfort": {
+        "imageAlt": "Focus and Comfort",
+        "title": "Focus and Comfort",
+        "description": "Clean, odor-free air enhances driver comfort and focus, reducing distractions for safer driving."
+      },
+      "fresherAir": {
+        "imageAlt": "Fresher Air by using car cabin air filter",
+        "title": "Fresher Air",
+        "description": "Provides a pleasant environment, especially during allergy seasons or in polluted areas."
+      },
+      "cleanerInterior": {
+        "imageAlt": "Cleaner Interior by using car cabin air filter",
+        "title": "Cleaner Interior",
+        "description": "Prevents dust and debris from entering, reducing the need for frequent cleaning."
+      }
+    }
+  },
+  "breatheHealthierSection": {
+    "titlePart1": "Breathe",
+    "healthier": "healthier",
+    "titlePart2": "and",
+    "driveEasier": "Drive easier",
+    "description": "Prana Air Car Cabin Air Filter traps pollutants from the air inside your car and provides clean air to Breathe comfortably and drive safely."
+  },
+  "filtrationTechSection": {
+    "title": "Prana Air Car Filtration Technology",
+    "subtitle": "Multi-Layer HEPA + Activated Carbon Filter",
+    "mainImageAlt": "multiple layers of prana air car cabin air filter with HEPA and activated carbon layers",
+    "technologies": {
+      "hepa": {
+        "imageAlt": "car cabin hepa filter in prana air car cabin air filter",
+        "title": "High Efficiency & Low Resistance Hepa",
+        "description": "It blocks a high concentration of dust and dirt particles, pollen and second hand smoke from entering your lungs."
+      },
+      "oxygenSieves": {
+        "imageAlt": "oxygen molecular sieves in prana air car cabin air filter",
+        "title": "Manufacture of Oxygen molecular Sieves",
+        "description": "The oxygen generating molecular sieve produces fresh, new oxygen."
+      },
+      "formaldehydeCatalyst": {
+        "imageAlt": "formaldehyde catalyst in prana air car cabin air filter",
+        "title": "Formaldehyde catalyst",
+        "description": "The catalyst removes the HCHO to improve the quality of the air."
+      },
+      "nanoCarbon": {
+        "imageAlt": "nanocystalline carbon in prana air car cabin air filter",
+        "title": "Nanocystalline Carbon",
+        "description": "The carbon enables the removal of VOCs from off gasses, with reduction efficiencies above 99%."
+      },
+      "photoCatalyst": {
+        "imageAlt": "photocatalyst coating network in prana air car cabin air filter",
+        "title": "Photocatalyst coating network",
+        "description": "In the presence of light, the photo catalyst transforms the coated surface, creating air purification and cleans the fine dust particles from inside the car."
+      }
+    }
+  },
+   "ultimateProtectionSection": {
+    "titlePart1": "Ultimate protection for",
+    "lovedOnes": "Your Loved ones",
+    "description": "The multi-layer filter absorb various pollutants in one time and offers more filtering power and a longer service life",
+    "buyNowButton": "Buy Now",
+    "imageAlt": "layers of prana air car cabin air filter"
+  },
+  "guardsYouFromSection": {
+    "title": "Guards You From",
+    "description": "Prana Airs Car cabin air filter safeguards you from harmful air pollutants, ensuring a healthier and more enjoyable driving experience.",
+    "imageAlt": "protection from car air pollution"
+  },
+  "enjoyFreshAirSection": {
+    "title": "Enjoy Fresh Air for Up to",
+    "subtitle": "2 Years on a 15,000km Drive",
+    "approximately": "(Approximately)",
+    "description": "Various factors, including usage patterns, driving distance, outdoor pollution levels, and more, contribute to filter longevity.",
+    "gifAlt": "air pollution filtration by prana air car cabin air filter"
+  },
+  "howToInstallSection": {
+    "title": "How to install a car cabin air filter?",
+    "imageAlt": "how to install Prana Air Car cabin air filter",
+    "guideImageAlt": "installation of Prana Air car cabin air filter"
+  },
+  "reasonToChooseSection": {
+    "title": "Reason To Choose Prana Air Car Cabin Air Filter",
+    "standardFilter": {
+      "title": "Standard Filter",
+      "description": "Standard filters holds the single layer for air filtration that does not effectively capture various pollutants present in the car atmosphere.",
+      "imageAlt": "Bad AQI air quality after using standard or normal car cabin filter",
+      "conclusion": "Regular car Cabin air filter only circulates air from the outside to inside of the car and captures dust particles."
+    },
+    "pranaFilter": {
+      "title": "Prana Air Car Air Filter (HEPA)",
+      "description": "The prana air car filter has several layers that actively capture all pollutants from the air before entering into the car atmosphere.",
+      "imageAlt": "Good AQI air quality after using Prana Air car cabin filter",
+      "conclusion": "Prana Air car cabin filter purifies the air by capturing fine dust particles & odor from your car and creates a fresh indoor living environment for a healthy ride."
+    }
+  },
+  "comparisonTableSection": {
+    "standardFilter": {
+      "title": "Standard Filter",
+      "filterType": {
+        "title": "Standard Filter",
+        "description": "Standard filters can trap particles of 10 microns."
+      },
+      "protection": {
+        "title": "Less-Protection",
+        "description": "Cannot protect from carbon monoxide, sulfur dioxide and other gases."
+      },
+      "efficiency": {
+        "title": "Efficiency",
+        "description": "These filters typically remove between 80% and 95% of pollutants."
+      }
+    },
+    "pranaFilter": {
+      "title": "Prana Air Car Air Filter (HEPA)",
+      "filterType": {
+        "title": "HEPA Filter",
+        "description": "Prana Air filter can trap small particles as 0.3 microns."
+      },
+      "protection": {
+        "title": "Better Protection",
+        "description": "Activated carbon layer protects from harmful gases."
+      },
+      "efficiency": {
+        "title": "Adequate Efficiency",
+        "description": "These filters can theoretically remove at least 99.97% of pollutants."
+      }
+    }
+  },
+  "pranaAirCabinFilterSection": {
+    "title": "Prana Air Cabin Filter",
+    "description": "Check-out the air quality in two cars with air filters and without air filters.",
+    "carA": "Air quality inside Car A",
+    "carB": "Air quality inside Car B",
+    "graphAlt": "Efficiency graph of Prana Air car cabin air filter",
+    "graphDescription": "You can check the sudden down in PM2.5 measures in the car A after installing the Prana Air Car Filter. And the level remains in the good category."
+  },
+  "availableForSection": {
+    "title": "Available for",
+    "description": "We have filters available for various car models.",
+    "brands": {
+      "toyota": "Toyota",
+      "skoda": "Skoda",
+      "hyundai": "Hyundai",
+      "mercedes-benz": "Mercedes-benz",
+      "volkswagen": "Volkswagen"
+    }
+  },
+  "selectCarBrandSection": {
+    "title": "Select Car Brand",
+    "brands": {
+      "marutiSuzuki": {
+        "name": "Maruti Suzuki",
+        "models": "Ciaz, Brezza, SX4, Swift (2015 to 2017), Ertiga, Dzire 2017, Baleno, Alto"
+      },
+      "honda": {
+        "name": "Honda",
+        "models": "City, Amaze, Jazz, WR-V, Civic, Accord"
+      },
+      "toyota": {
+        "name": "Toyota",
+        "models": "Innova Crysta, Corolla Altis, Fortuner"
+      },
+      "hyundai": {
+        "name": "Hyundai",
+        "models": "i10, i20, Verna, Creta"
+      },
+      "ford": {
+        "name": "Ford",
+        "models": "Ford EcoSport, Ford Aspire"
+      },
+      "skoda": {
+        "name": "Skoda",
+        "models": "Skoda Octavia"
+      },
+      "volkswagen": {
+        "name": "Volkswagen",
+        "models": "Polo, Vento"
+      },
+      "chevrolet": {
+        "name": "Chevrolet",
+        "models": "Cruze"
+      },
+      "mahindra": {
+        "name": "Mahindra",
+        "models": "Scorpio"
+      }
+    },
+    "buttons": {
+      "buyNow": "Buy Now",
+      "amazon": "Amazon"
+    }
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "1": {
+        "question": "1. What is Prana Air Car Cabin Air Filter?",
+        "answer": "Prana Air Car Cabin Air Filter is a high-efficiency air filtration system with HEPA and activated carbon filter, designed to purify the air inside your vehicle. It removes dust, pollen, allergens, and other airborne particles to ensure a clean and healthy breathing environment while you drive."
+      },
+      "2": {
+        "question": "2. How does Prana Air Car Cabin Air Filter work?",
+        "answer": "Our air filter utilizes advanced multi-layer filtration technology, including HEPA and activated carbon layers. The HEPA filter captures fine particulate matter, while the activated carbon layer absorbs odors, gases, and volatile organic compounds (VOCs), ensuring fresh and clean air inside your car."
+      },
+      "3": {
+        "question": "3. Why should I choose Prana Air Car Cabin Air Filter over other brands?",
+        "answer": "Prana Air Car Cabin Air Filters are designed with cutting-edge filtration technology and superior materials to provide maximum efficiency and durability. They are tested and proven to remove up to 99% of pollutants and allergens, making them an excellent choice for individuals seeking better air quality in their vehicles."
+      },
+      "4": {
+        "question": "4. How often should I replace Prana Air Car Cabin Air Filter?",
+        "answer": "For optimal performance, we recommend replacing Prana Air Car Cabin Air Filter every 6 to 12 months, depending on your driving conditions and the level of pollution in your area. Regular replacement ensures continuous protection against airborne contaminants."
+      },
+      "5": {
+        "question": "5. Can I install Prana Air Car Cabin Air Filter myself?",
+        "answer": "Yes, Prana Air Car Air Filter is designed for easy installation. Each filter comes with clear instructions, and no special tools are required. If you need assistance, our customer support team is always available to help."
+      },
+      "6": {
+        "question": "6. Is Prana Air Car Air Filter compatible with my vehicle?",
+        "answer": "Prana Air Car Cabin Air Filter is available in various sizes to fit a wide range of vehicle makes and models. Please refer to our compatibility guide or contact our customer service to find the right filter for your car."
+      },
+      "7": {
+        "question": "7. What benefits can I expect from using Prana Air Car Cabin Air Filter?",
+        "answer": "By using Prana Air Car Cabin Air Filter, you can expect to experience cleaner, fresher air inside your car. This can lead to reduced allergic reactions, improved respiratory health, and a more pleasant driving experience free from unpleasant odors and harmful pollutants."
+      },
+      "8": {
+        "question": "8. How do I know when its time to replace the filter?",
+        "answer": "There is no indicator to tell you about the replacement, but you have to check it manually. Its life depends on the frequency of use, rides and air quality level of the area. Regular checks can help maintain optimal air quality."
+      },
+      "9": {
+        "question": "9. Where can I purchase Prana Air Car Cabin Air Filter?",
+        "answer": "It is available for purchase on our official website, as well as through Amazon online. Be sure to buy from trusted sources to guarantee the authenticity of the product."
+      },
+      "10": {
+        "question": "10. Does Prana Air Car Cabin Air Filter come with a warranty?",
+        "answer": "Usually, warranty is not given to Filters. Most of the marketers also dont provide warranty on filters. But, you can avail the replacement option if there is any defect when you receive the product for the first time."
+      },
+      "11": {
+        "question": "11. Can Prana Air Car Cabin Air Filter help with car exhaust fumes?",
+        "answer": "Yes, the activated carbon layer in the filter is specifically designed to absorb harmful gases and odors, including car exhaust fumes. This helps to reduce the presence of these pollutants inside your vehicle."
+      }
+    }
+  }
+}

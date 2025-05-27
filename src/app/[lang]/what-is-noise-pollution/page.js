@@ -1,8 +1,9 @@
-"use client"
 import "./styles.css"
-import "react-multi-carousel/lib/styles.css"
+import Image from "next/image"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function NoisePollutionPage() {
+export default async function NoisePollutionPage() {
+  const { t } = await getServerTranslation("noise-pollution")
   return (
     <main>
       {/* Hero Section */}
@@ -12,25 +13,20 @@ export default function NoisePollutionPage() {
       >
         <div className="container">
           <div className="text-center" style={{ paddingTop: "15px" }}>
-            <img
+            <Image
               className="aligncenter"
               src="https://www.pranaair.com/wp-content/uploads/2023/03/noise-pollution.png"
-              alt="what is noise pollution"
-              width="200"
-              height="221"
+              alt={t("noise.hero.iconAlt")}
+              width={200}
+              height={221}
             />
             <h1 className="whitetext" style={{ textAlign: "center" }}>
               <span className="heading_top_white" style={{ fontSize: "50pt", lineHeight: "1.1" }}>
-                What is Noise pollution?
+                {t("noise.hero.title")}
               </span>
             </h1>
             <p className="whitetext topsection" style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "16pt" }}>
-                Noise is a term used to describe any excessive or unwanted sound that can negatively impact humans and
-                animals. As it causing physical and psychological stress to those who are exposed to it for longer
-                durations. It is usually caused by human activities. Such as transportation, construction, industrial
-                activities, and recreational activities. And it causes noise pollution.
-              </span>
+              <span style={{ fontSize: "16pt" }}>{t("noise.hero.description")}</span>
             </p>
           </div>
         </div>
@@ -42,44 +38,31 @@ export default function NoisePollutionPage() {
           <div style={{ paddingTop: "15px" }}>
             <div className="air_heading">
               <h2 className="headingfont" style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "36pt" }}>Difference between</span>
+                <span style={{ fontSize: "36pt" }}>{t("noise.soundVsNoise.titlePrefix")}</span>
               </h2>
               <h2 className="headingfont" style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "36pt" }}>
-                  <span style={{ color: "#f099cf" }}>Sound </span>and <span style={{ color: "#f099cf" }}>Noise</span>
+                  <span style={{ color: "#f099cf" }}>{t("noise.soundVsNoise.sound")} </span>
+                  {t("noise.soundVsNoise.and")}{" "}
+                  <span style={{ color: "#f099cf" }}>{t("noise.soundVsNoise.noise")}</span>
                 </span>
               </h2>
             </div>
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                Noise and sound are two related but distinct concepts in acoustics and communication. Sound refers to
-                any audible vibration of air particles that propagate through a medium, such as air, water, or solids.
-                Hence, it is a physical phenomenon that can perceive by the human ear and has characteristics such as
-                frequency, amplitude, and waveform.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.soundVsNoise.paragraph1")}</span>
             </p>
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                On the other hand, noise refers to any unwanted or disturbing sound that causes physical discomfort.
-                Because, it is a type of sound that is considered undesirable or irrelevant in a particular context or
-                situation. Noise can characterize by its randomness, irregularity, or unpredictability. And it can arise
-                from various sources, such as machinery, traffic, crowds, or environmental factors.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.soundVsNoise.paragraph2")}</span>
             </p>
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                Thus, the main difference between noise and sound is that sound is a physical phenomenon. And it can be
-                intentional or desired. While noise is a subjective perception of sound that is unwanted or distracting.
-                Additionally, while sound can have positive effects on human emotions and behavior. Noise can cause
-                stress, annoyance, or even health problems in certain cases.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.soundVsNoise.paragraph3")}</span>
             </p>
-            <img
+            <Image
               className="size-large aligncenter"
               src="https://www.pranaair.com/wp-content/uploads/2023/03/differences-of-sound-and-noise-1024x390.jpg"
-              alt="differences of sound and noise"
-              width="1024"
-              height="390"
+              alt={t("noise.soundVsNoise.imageAlt")}
+              width={1024}
+              height={390}
             />
           </div>
         </div>
@@ -94,84 +77,71 @@ export default function NoisePollutionPage() {
           <div style={{ paddingTop: "15px" }}>
             <h2 className="air_heading" style={{ textAlign: "center" }}>
               <span style={{ fontSize: "36pt" }}>
-                When can <span style={{ color: "#8789ab" }}>noise irritate you?</span>
+                {t("noise.irritation.titlePrefix")}{" "}
+                <span style={{ color: "#8789ab" }}>{t("noise.irritation.titleHighlight")}</span>
               </span>
             </h2>
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt", color: "#646478" }}>
-                When noise irritates you, it can cause physical and psychological discomfort, stress, and distraction.
-                The degree of irritation can vary depending on the type, intensity, duration, and frequency of the
-                noise. As well as individual factors such as personality, mood, and sensitivity to sound.
-              </span>
+              <span style={{ fontSize: "14pt", color: "#646478" }}>{t("noise.irritation.description")}</span>
             </p>
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "18pt", color: "#646478" }}>Common signs of noise irritation include:</span>
+              <span style={{ fontSize: "18pt", color: "#646478" }}>{t("noise.irritation.signsTitle")}</span>
             </p>
           </div>
 
           <div className="row" style={{ paddingTop: "25px" }}>
             <div className="col-md-3 noisesign">
               <h3 style={{ textAlign: "center" }}>
-                <span style={{ color: "#8789ab" }}>Annoyance</span>
+                <span style={{ color: "#8789ab" }}>{t("noise.irritation.signs.annoyance.title")}</span>
               </h3>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Feeling agitated, frustrated, </span>
-                <span style={{ fontSize: "14pt" }}>or impatient due to the noise.</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.irritation.signs.annoyance.description")}</span>
               </p>
             </div>
             <div className="col-md-3 noisesigns">
               <h3 style={{ textAlign: "center" }}>
-                <span style={{ color: "#8789ab" }}>Distraction</span>
+                <span style={{ color: "#8789ab" }}>{t("noise.irritation.signs.distraction.title")}</span>
               </h3>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Having difficulty focusing, concentrating, or completing tasks due to noise.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.irritation.signs.distraction.description")}</span>
               </p>
             </div>
             <div className="col-md-6">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/signs-of-noise-pollution.png"
-                alt="noise irritation"
-                width="100%"
-                height="auto"
+                alt={t("noise.irritation.signs.imageAlt")}
+                width={600}
+                height={400}
+                style={{ width: "100%", height: "auto" }}
               />
               <div className="noisesigns">
                 <h3 style={{ textAlign: "center" }}>
-                  <span style={{ color: "#8789ab" }}>Stress</span>
+                  <span style={{ color: "#8789ab" }}>{t("noise.irritation.signs.stress.title")}</span>
                 </h3>
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "14pt" }}>Feeling tense, anxious, or overwhelmed due to the noise.</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.irritation.signs.stress.description")}</span>
                 </p>
               </div>
             </div>
             <div className="col-md-3 noisesign">
               <h3 style={{ textAlign: "center" }}>
-                <span style={{ color: "#8789ab" }}>Sleep disturbances</span>
+                <span style={{ color: "#8789ab" }}>{t("noise.irritation.signs.sleep.title")}</span>
               </h3>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Having difficulty falling or staying asleep due to the noise.</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.irritation.signs.sleep.description")}</span>
               </p>
             </div>
             <div className="col-md-3 noisesigns">
               <h3 style={{ textAlign: "center" }}>
-                <span style={{ color: "#8789ab" }}>Discomfort</span>
+                <span style={{ color: "#8789ab" }}>{t("noise.irritation.signs.discomfort.title")}</span>
               </h3>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Experiencing physical discomforts, such as headaches, nausea, or muscle tension due to the noise.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.irritation.signs.discomfort.description")}</span>
               </p>
             </div>
             <div className="col-md-12 noisesigns">
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt", color: "#646478" }}>
-                  To avoid or reduce noise irritation, it is important to identify the sources of noise. As to minimize
-                  exposure to them. And to use protective measures such as earplugs or noise-canceling headphones.
-                  Additionally, creating a quiet and peaceful environment, practicing relaxation techniques, and
-                  engaging in stress-reducing activities can help alleviate the negative effects of noise on your
-                  well-being.
-                </span>
+                <span style={{ fontSize: "14pt", color: "#646478" }}>{t("noise.irritation.prevention")}</span>
               </p>
             </div>
           </div>
@@ -184,24 +154,20 @@ export default function NoisePollutionPage() {
           <div style={{ paddingTop: "15px" }}>
             <h2 className="air_heading" style={{ textAlign: "center" }}>
               <span style={{ fontSize: "36pt" }}>
-                What is <span style={{ color: "#8789ab" }}>noise pollution?</span>
+                {t("noise.definition.titlePrefix")}{" "}
+                <span style={{ color: "#8789ab" }}>{t("noise.definition.titleHighlight")}</span>
               </span>
             </h2>
             <p style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                Unwanted, disturbing, and distractive levels of sound that can cause discomfort to humans and animals is
-                called noise pollution. It can also affect wildlife by interfering with their communication, migration
-                patterns, and feeding habits. Moreover, it can also have ecological effects, such as the disruption of
-                animal behavior, communication, and migration patterns.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.definition.description")}</span>
             </p>
           </div>
-          <img
+          <Image
             src="https://www.pranaair.com/wp-content/uploads/2023/03/what-is-noise-pollution.png"
-            alt="noise pollution definition"
-            width="100%"
-            height="auto"
-            style={{ paddingTop: "25px", paddingBottom: "60px" }}
+            alt={t("noise.definition.imageAlt")}
+            width={1200}
+            height={600}
+            style={{ width: "100%", height: "auto", paddingTop: "25px", paddingBottom: "60px" }}
           />
         </div>
       </section>
@@ -217,143 +183,121 @@ export default function NoisePollutionPage() {
               <span style={{ fontSize: "36pt" }}>
                 <strong>
                   <span style={{ lineHeight: "1" }}>
-                    <span style={{ color: "#8789ab" }}>Causes</span> of noise pollution
+                    <span style={{ color: "#8789ab" }}>{t("noise.causes.titleHighlight")}</span>{" "}
+                    {t("noise.causes.titleSuffix")}
                   </span>
                 </strong>
               </span>
             </h2>
             <p className="air_heading" style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                Various human activities cause noise pollution. This can result in discomfort experienced by humans
-                especially small children and the elderly and animals. Some common sources of noise pollution include:
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.causes.description")}</span>
             </p>
           </div>
 
           <div className="row" style={{ paddingBottom: "10px" }}>
             <div className="col-md-4 text-center">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/indusrial-activities.png"
-                alt="noise pollution by industrial activities"
-                width="170"
-                height="170"
+                alt={t("noise.causes.sources.industrial.alt")}
+                width={170}
+                height={170}
               />
             </div>
             <div className="col-md-8">
               <h4>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Industrial Activities</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.industrial.title")}</span>
                 </strong>
               </h4>
-              <span style={{ fontSize: "14pt" }}>
-                C&amp;D activities, industrial processes, loud machinery processes, etc. can generate noise. Moreover,
-                excessive noise from industrial processes can reduce productivity and increase worker safety risks.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.industrial.description")}</span>
             </div>
           </div>
 
           <div className="row" style={{ paddingBottom: "25px" }}>
             <div className="col-md-4 text-center">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/entertainment-activities.png"
-                alt="noise pollution by entertainment activities"
-                width="170"
-                height="170"
+                alt={t("noise.causes.sources.entertainment.alt")}
+                width={170}
+                height={170}
               />
             </div>
             <div className="col-md-8">
               <h4>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Entertainment activities</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.entertainment.title")}</span>
                 </strong>
               </h4>
-              <span style={{ fontSize: "14pt" }}>
-                Loud music, fireworks, etc. can cause an excessive amount of noise. Long-term exposure to loud noise
-                from recreational activities can also cause hearing loss and other related health problems.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.entertainment.description")}</span>
             </div>
           </div>
 
           <div className="row" style={{ paddingBottom: "25px" }}>
             <div className="col-md-4 text-center">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/urbanization.png"
-                alt="noise pollution by urbanization"
-                width="170"
-                height="170"
+                alt={t("noise.causes.sources.urbanization.alt")}
+                width={170}
+                height={170}
               />
             </div>
             <div className="col-md-8">
               <h4>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Urbanization</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.urbanization.title")}</span>
                 </strong>
               </h4>
-              <span style={{ fontSize: "14pt" }}>
-                Increased urbanization, including the construction of buildings and roads, can lead to increased noise
-                pollution. Noise pollution in urban areas can also have an impact on wildlife. As by changing their
-                behaviour and communication patterns.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.urbanization.description")}</span>
             </div>
           </div>
 
           <div className="row" style={{ paddingBottom: "25px" }}>
             <div className="col-md-4 text-center">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/natural-disasters.png"
-                alt="noise pollution by natural disasters"
-                width="170"
-                height="170"
+                alt={t("noise.causes.sources.naturalDisasters.alt")}
+                width={170}
+                height={170}
               />
             </div>
             <div className="col-md-8">
               <h4>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Natural disasters</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.naturalDisasters.title")}</span>
                 </strong>
               </h4>
-              <span style={{ fontSize: "14pt" }}>
-                Natural disasters such as earthquakes, hurricanes, volcanic eruptions, tornadoes, and thunderstorms can
-                also cause noise pollution. As through the sound of strong winds, thunder, and other related sounds.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.naturalDisasters.description")}</span>
             </div>
           </div>
 
           <div className="row" style={{ paddingBottom: "25px" }}>
             <div className="col-md-4 text-center">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/household-activities.png"
-                alt="noise pollution by household activities"
-                width="170"
-                height="170"
+                alt={t("noise.causes.sources.household.alt")}
+                width={170}
+                height={170}
               />
             </div>
             <div className="col-md-8">
               <h4>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Household activities</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.household.title")}</span>
                 </strong>
               </h4>
-              <span style={{ fontSize: "14pt" }}>
-                Various household activities such as vacuum cleaning, blenders, and certain household appliances can
-                generate noise. Noise can be annoying to family members, neighbours, and even pets, resulting in
-                increased stress.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.causes.sources.household.description")}</span>
             </div>
           </div>
 
           <div className="row" style={{ paddingTop: "30px" }}>
             <div className="col-md-12">
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  To mitigate the negative effects of noise pollution, various strategies have used. As by including
-                  noise barriers, soundproofing, and regulations to limit noise levels from various sources.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.causes.mitigation")}</span>
               </p>
             </div>
           </div>
@@ -365,19 +309,15 @@ export default function NoisePollutionPage() {
         <div className="container">
           <div className="row">
             <div className="col-md-3">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/04/loud-noise-speaker.png"
-                alt="WHO logo"
-                width="148"
-                height="164"
+                alt={t("noise.who.iconAlt")}
+                width={148}
+                height={164}
               />
             </div>
             <div className="col-md-9">
-              <span style={{ fontSize: "14pt" }}>
-                The World Health Organization (WHO) and the United States Environmental Protection Agency (EPA)
-                recommend reducing environmental noise levels to less than 70 decibels (dBA) during a 24-hour period to
-                prevent noise-induced hearing loss (or 75 dBA over an 8-hour period).
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.who.recommendation")}</span>
             </div>
           </div>
 
@@ -385,72 +325,74 @@ export default function NoisePollutionPage() {
             <div className="col-md-12">
               <h2 className="air_heading" style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "36pt" }}>
-                  How <span style={{ color: "#8789ab" }}>loud</span> are your{" "}
-                  <span style={{ color: "#8789ab" }}>home appliances?</span>
+                  {t("noise.homeAppliances.titlePrefix")}{" "}
+                  <span style={{ color: "#8789ab" }}>{t("noise.homeAppliances.titleHighlight1")}</span>{" "}
+                  {t("noise.homeAppliances.titleMiddle")}{" "}
+                  <span style={{ color: "#8789ab" }}>{t("noise.homeAppliances.titleHighlight2")}</span>
                 </span>
               </h2>
             </div>
           </div>
 
-          <img
+          <Image
             src="https://www.pranaair.com/wp-content/uploads/2023/04/noise-from-home-appliances.jpg"
-            alt="home appliances noise levels"
-            width="100%"
-            height="auto"
-            style={{ paddingTop: "30px" }}
+            alt={t("noise.homeAppliances.imageAlt")}
+            width={1200}
+            height={600}
+            style={{ width: "100%", height: "auto", paddingTop: "30px" }}
           />
 
           <div className="row" style={{ paddingTop: "35px" }}>
             <div className="col-md-2">
               <h4 style={{ textAlign: "center" }}>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>32 to 80 (dB)</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.refrigerators.range")}</span>
                 </strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Refrigerators and air conditioning units</span>
-              </p>
-              <div className="homeappliance" style={{ textAlign: "center" }}></div>
-            </div>
-            <div className="col-md-2">
-              <h4 style={{ textAlign: "center" }}>
-                <strong>
-                  <span style={{ fontSize: "14pt" }}>56 to 80 (dB)</span>
-                </strong>
-              </h4>
-              <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Vacuum Cleaners and blenders</span>
-              </p>
-              <div className="homeappliance"></div>
-            </div>
-            <div className="col-md-2">
-              <h4 style={{ textAlign: "center" }}>
-                <strong>
-                  <span style={{ fontSize: "14pt" }}>47 to 65 (dB)</span>
-                </strong>
-              </h4>
-              <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Washing machines and dishwashers</span>
+                <span style={{ fontSize: "14pt" }}>
+                  {t("noise.homeAppliances.appliances.refrigerators.description")}
+                </span>
               </p>
             </div>
             <div className="col-md-2">
               <h4 style={{ textAlign: "center" }}>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}> 85 to 110 (dB)</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.vacuum.range")}</span>
                 </strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Smoke alarms in the building</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.vacuum.description")}</span>
               </p>
             </div>
             <div className="col-md-2">
               <h4 style={{ textAlign: "center" }}>
                 <strong>
-                  <span style={{ fontSize: "14pt" }}>Up to 100 (dB)</span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.washing.range")}</span>
                 </strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Home theatre and soundbars</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.washing.description")}</span>
+              </p>
+            </div>
+            <div className="col-md-2">
+              <h4 style={{ textAlign: "center" }}>
+                <strong>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.smokeAlarms.range")}</span>
+                </strong>
+              </h4>
+              <p style={{ textAlign: "center" }}>
+                <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.smokeAlarms.description")}</span>
+              </p>
+            </div>
+            <div className="col-md-2">
+              <h4 style={{ textAlign: "center" }}>
+                <strong>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.homeTheatre.range")}</span>
+                </strong>
+              </h4>
+              <p style={{ textAlign: "center" }}>
+                <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.appliances.homeTheatre.description")}</span>
               </p>
             </div>
           </div>
@@ -458,14 +400,7 @@ export default function NoisePollutionPage() {
           <div className="row" style={{ paddingTop: "40px" }}>
             <div className="col-md-12">
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  It is important to keep in mind in the context of noise pollution that long term exposure to noise
-                  levels exceeding 70 dB can induce hearing loss over time. Furthermore, noise levels exceeding 85
-                  decibels (dB) can be hazardous after only a few hours of exposure, while levels above 100 decibels
-                  (dB) can cause rapid hearing impairment. To safeguard your hearing and overall well-being, its
-                  critical to monitor sound levels and take efforts to limit noise pollution in the home, such as
-                  choosing quieter appliances or installing soundproofing materials.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.homeAppliances.warning")}</span>
               </p>
             </div>
           </div>
@@ -477,51 +412,42 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center" }}>
             <span style={{ fontSize: "36pt" }}>
-              What is <span style={{ color: "#8789ab" }}>Acoustics</span> and
+              {t("noise.acoustics.titlePrefix")}{" "}
+              <span style={{ color: "#8789ab" }}>{t("noise.acoustics.titleHighlight1")}</span>{" "}
+              {t("noise.acoustics.titleMiddle")}
             </span>
             <span style={{ fontSize: "36pt" }}>
-              how is it related to <span style={{ color: "#8789ab" }}>Noise pollution?</span>
+              {t("noise.acoustics.titleSuffix")}{" "}
+              <span style={{ color: "#8789ab" }}>{t("noise.acoustics.titleHighlight2")}</span>
             </span>
           </h2>
           <p style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "14pt" }}>
-              Acoustics are critical for the efficient operation of a wide range of settings, including corporate
-              offices, retail stores, restaurants, performance halls, home theatres, and even private spaces such as
-              bathrooms and living rooms where noise control is critical. This enables comfortable working conditions, a
-              good dining experience, improved audio quality for entertainment, and the creation of an engaging ambiance
-              that attracts and retains people.
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("noise.acoustics.description")}</span>
           </p>
 
           <div style={{ paddingTop: "50px" }}>
             <h2 style={{ textAlign: "center" }}>
               <span style={{ fontSize: "36pt" }}>
-                ACOUSTIC <span style={{ color: "#8789ab" }}>BUILDING COMFORT</span>
+                {t("noise.acoustics.buildingComfort.titlePrefix")}{" "}
+                <span style={{ color: "#8789ab" }}>{t("noise.acoustics.buildingComfort.titleHighlight")}</span>
               </span>
             </h2>
             <p className="textbox" style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                The degree of sound quality and comfort within a building is referred to as acoustic building comfort.
-                It is frequently assessed in terms of noise levels, as excessive noise can cause residents discomfort,
-                stress, and even health problems.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.acoustics.buildingComfort.description")}</span>
             </p>
           </div>
 
-          <img
+          <Image
             src="https://www.pranaair.com/wp-content/uploads/2023/04/acoustic-building-comfort.png"
-            alt="acoustic building comfort"
-            width="100%"
-            height="auto"
-            style={{ paddingTop: "20px" }}
+            alt={t("noise.acoustics.buildingComfort.imageAlt")}
+            width={1200}
+            height={600}
+            style={{ width: "100%", height: "auto", paddingTop: "20px" }}
           />
 
           <div style={{ marginBottom: "50px", paddingTop: "30px" }}>
             <p className="textbox" style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "14pt" }}>
-                To calculate acoustic building comfort with the help of monitored noise levels in decibels (dB), a
-                number of factors need to consider. These include:
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.acoustics.buildingComfort.factors")}</span>
             </p>
           </div>
 
@@ -529,38 +455,44 @@ export default function NoisePollutionPage() {
             <div className="col-md-2"></div>
             <div className="col-md-2">
               <p style={{ textAlign: "left" }}>
-                <img
+                <Image
                   className="alignleft"
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/frequency-of-noise.png"
-                  alt="frequency of noise"
-                  width="69"
-                  height="auto"
+                  alt={t("noise.acoustics.buildingComfort.factorsList.frequency.alt")}
+                  width={69}
+                  height={69}
                 />
-                <span style={{ fontSize: "14pt" }}>Frequency of noise</span>
+                <span style={{ fontSize: "14pt" }}>
+                  {t("noise.acoustics.buildingComfort.factorsList.frequency.title")}
+                </span>
               </p>
             </div>
             <div className="col-md-2">
               <p style={{ textAlign: "left" }}>
-                <img
+                <Image
                   className="alignleft"
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/duration-of-noise.png"
-                  alt="duration of noise"
-                  width="69"
-                  height="auto"
+                  alt={t("noise.acoustics.buildingComfort.factorsList.duration.alt")}
+                  width={69}
+                  height={69}
                 />
-                <span style={{ fontSize: "14pt" }}>Duration of noise</span>
+                <span style={{ fontSize: "14pt" }}>
+                  {t("noise.acoustics.buildingComfort.factorsList.duration.title")}
+                </span>
               </p>
             </div>
             <div className="col-md-2">
               <p style={{ textAlign: "left" }}>
-                <img
+                <Image
                   className="alignleft"
                   src="https://www.pranaair.com/wp-content/uploads/2023/04/background-noise.png"
-                  alt="background noise levels"
-                  width="69"
-                  height="auto"
+                  alt={t("noise.acoustics.buildingComfort.factorsList.background.alt")}
+                  width={69}
+                  height={69}
                 />
-                <span style={{ fontSize: "14pt" }}>Background noise levels</span>
+                <span style={{ fontSize: "14pt" }}>
+                  {t("noise.acoustics.buildingComfort.factorsList.background.title")}
+                </span>
               </p>
             </div>
             <div className="col-md-2"></div>
@@ -576,45 +508,44 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center" }}>
             <span style={{ fontSize: "36pt" }}>
-              Acceptable <span style={{ color: "#8789ab" }}>noise levels</span>
+              {t("noise.acceptableLevels.titlePrefix")}{" "}
+              <span style={{ color: "#8789ab" }}>{t("noise.acceptableLevels.titleHighlight")}</span>
             </span>
-            <span style={{ fontSize: "36pt" }}>for indoor environment:</span>
+            <span style={{ fontSize: "36pt" }}>{t("noise.acceptableLevels.titleSuffix")}</span>
           </h2>
 
           <div className="row" style={{ paddingTop: "35px" }}>
             <div className="col-md-2"></div>
             <div className="col-md-8" style={{ paddingLeft: "30px" }}>
-              <img
+              <Image
                 className="alignleft"
                 src="https://www.pranaair.com/wp-content/uploads/2023/04/green-300x44.png"
-                alt="green"
-                width="211"
-                height="31"
+                alt={t("noise.acceptableLevels.levels.sleeping.colorAlt")}
+                width={211}
+                height={31}
               />
               <p style={{ textAlign: "justify" }}>
-                <span style={{ fontSize: "14pt" }}>Noise levels in sleeping areas should be kept below 35 dB(A).</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.acceptableLevels.levels.sleeping.description")}</span>
               </p>
-              <img
+              <Image
                 className="alignleft"
                 src="https://www.pranaair.com/wp-content/uploads/2023/04/light-green-300x44.png"
-                alt="light green"
-                width="211"
-                height="31"
+                alt={t("noise.acceptableLevels.levels.living.colorAlt")}
+                width={211}
+                height={31}
               />
               <p style={{ textAlign: "justify" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  The Noise levels in living areas should be kept below 45 dB(A).
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.acceptableLevels.levels.living.description")}</span>
               </p>
-              <img
+              <Image
                 className="alignleft"
                 src="https://www.pranaair.com/wp-content/uploads/2023/04/yellow-300x44.png"
-                alt="yellow"
-                width="211"
-                height="31"
+                alt={t("noise.acceptableLevels.levels.work.colorAlt")}
+                width={211}
+                height={31}
               />
               <p style={{ textAlign: "justify" }}>
-                <span style={{ fontSize: "14pt" }}>Noise levels in work areas should be kept below 55 dB(A).</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.acceptableLevels.levels.work.description")}</span>
               </p>
             </div>
             <div className="col-md-2"></div>
@@ -637,15 +568,11 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h4 style={{ textAlign: "center" }}>
             <span style={{ fontSize: "18pt" }}>
-              <strong>Fun Fact</strong>
+              <strong>{t("noise.funFact.title")}</strong>
             </span>
           </h4>
           <p style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "14pt" }}>
-              Humans can typically hear sounds between 20 Hz and 20,000 Hz, but some animals can hear sounds at much
-              higher or lower frequencies. For example, dogs can hear frequencies up to 65,000 Hz, while whales can
-              communicate with sounds at frequencies as low as 10 Hz.
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("noise.funFact.description")}</span>
           </p>
         </div>
       </section>
@@ -655,124 +582,110 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h2 style={{ textAlign: "center" }}>
             <span style={{ fontSize: "36pt" }}>
-              What can <span style={{ color: "#8789ab" }}>excessive noise do?</span>
+              {t("noise.excessiveEffects.titlePrefix")}{" "}
+              <span style={{ color: "#8789ab" }}>{t("noise.excessiveEffects.titleHighlight")}</span>
             </span>
           </h2>
           <p className="air_heading" style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "14pt" }}>
-              High noise levels can cause various negative effects on humans, animals, wildlife, and the overall
-              ecosystem. Noise in excessive levels can cause:
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("noise.excessiveEffects.description")}</span>
           </p>
 
           <div className="row">
             <div className="col-md-4">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/stress-and-anxiety.png"
-                alt="stress and anxiety due to noise"
-                width="300"
-                height="300"
+                alt={t("noise.excessiveEffects.effects.stress.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Stress and anxiety</strong>
+                <strong>{t("noise.excessiveEffects.effects.stress.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Prolonged exposure to excessive noise can cause stress and anxiety, leading to physical and mental
-                  health problems.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.excessiveEffects.effects.stress.description")}</span>
               </p>
             </div>
             <div className="col-md-4">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/Interference-with-communication.png"
-                alt="Interference with communication due to noise"
-                width="300"
-                height="300"
+                alt={t("noise.excessiveEffects.effects.communication.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Interference with communication</strong>
+                <strong>{t("noise.excessiveEffects.effects.communication.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "14pt" }}>
-                  Excessive noise can make it difficult to communicate, leading to social and psychological problems.
+                  {t("noise.excessiveEffects.effects.communication.description")}
                 </span>
               </p>
             </div>
             <div className="col-md-4">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/Deafness.png"
-                alt="Deafness due to noise"
-                width="300"
-                height="300"
+                alt={t("noise.excessiveEffects.effects.deafness.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Deafness</strong>
+                <strong>{t("noise.excessiveEffects.effects.deafness.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Exposure to high levels of noise can damage the cells in the inner ear, which can lead to hearing loss
-                  and deafness.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.excessiveEffects.effects.deafness.description")}</span>
               </p>
             </div>
           </div>
 
           <div className="row" style={{ paddingTop: "20px", paddingBottom: "40px" }}>
             <div className="col-md-4">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/Troubled-sleep.png"
-                alt="Troubled sleep due to noise"
-                width="300"
-                height="300"
+                alt={t("noise.excessiveEffects.effects.sleep.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Troubled Sleep</strong>
+                <strong>{t("noise.excessiveEffects.effects.sleep.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Prolonged exposure to excessive noise can cause trouble in sleeping whichleads to insomnia and sleep
-                  disturbances.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.excessiveEffects.effects.sleep.description")}</span>
               </p>
             </div>
             <div className="col-md-4">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/High-blood-pressure.png"
-                alt="High blood pressure due to noise"
-                width="300"
-                height="300"
+                alt={t("noise.excessiveEffects.effects.bloodPressure.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>High Blood Pressure</strong>
+                <strong>{t("noise.excessiveEffects.effects.bloodPressure.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "14pt" }}>
-                  Excessive noise can cause hypertension and various cardiovascular problems, especially in old people.
+                  {t("noise.excessiveEffects.effects.bloodPressure.description")}
                 </span>
               </p>
             </div>
             <div className="col-md-4">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/Wildlife.png"
-                alt="Impact on Health of Wildlife due to noise"
-                width="300"
-                height="300"
+                alt={t("noise.excessiveEffects.effects.wildlife.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Wildlife</strong>
+                <strong>{t("noise.excessiveEffects.effects.wildlife.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  High levels of noise can cause disturbances among wildlife. This includes disturbance in mating calls,
-                  breeding patterns, etc.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.excessiveEffects.effects.wildlife.description")}</span>
               </p>
             </div>
           </div>
@@ -783,88 +696,76 @@ export default function NoisePollutionPage() {
       <section className="environmental-effects" style={{ marginTop: "80px", paddingTop: "30px" }}>
         <div className="container">
           <h2 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "36pt" }}>How does noise pollution</span>
+            <span style={{ fontSize: "36pt" }}>{t("noise.environmentalEffects.titlePrefix")}</span>
           </h2>
           <h2 style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "36pt", color: "#8789ab" }}>affects the environment?</span>
+            <span style={{ fontSize: "36pt", color: "#8789ab" }}>{t("noise.environmentalEffects.titleHighlight")}</span>
           </h2>
           <p style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "14pt" }}>
-              Noise pollution can have negative effects on the environment, including wildlife and ecosystems.
-            </span>
-            <span className="air_heading" style={{ fontSize: "14pt" }}>
-              Some of these negative effects include:
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("noise.environmentalEffects.description")}</span>
           </p>
 
-          <img
+          <Image
             src="https://www.pranaair.com/wp-content/uploads/2023/03/effects-of-noise-pollution-on-environment.jpg"
-            alt="noise pollution effects on environment"
-            width="100%"
-            height="auto"
-            style={{ paddingTop: "30px", paddingBottom: "30px" }}
+            alt={t("noise.environmentalEffects.imageAlt")}
+            width={1200}
+            height={600}
+            style={{ width: "100%", height: "auto", paddingTop: "30px", paddingBottom: "30px" }}
           />
 
           <div className="row" style={{ paddingTop: "30px", paddingBottom: "60px" }}>
             <div className="col-md-3">
               <h4 style={{ textAlign: "center" }}>
-                <strong>Changes in community</strong>
+                <strong>{t("noise.environmentalEffects.effects.community.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "14pt" }}>
-                  Noise pollution can alter the composition of animal communities. A
+                  {t("noise.environmentalEffects.effects.community.description")}
                 </span>
-                <span style={{ fontSize: "14pt" }}>s some species are more sensitive to noise than others.</span>
               </p>
             </div>
             <div className="col-md-3">
               <h4 style={{ textAlign: "center" }}>
-                <strong>Habitat loss</strong>
+                <strong>{t("noise.environmentalEffects.effects.habitat.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Noise pollution can cause animals to avoid certain areas. It </span>
-                <span style={{ fontSize: "14pt" }}>can lead to habitat loss and fragmentation.</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.environmentalEffects.effects.habitat.description")}</span>
               </p>
             </div>
             <div className="col-md-3">
               <h4 style={{ textAlign: "center" }}>
-                <strong>Changes in plant growth</strong>
+                <strong>{t("noise.environmentalEffects.effects.plantGrowth.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "14pt" }}>
-                  Excessive noise can affect the growth and development of plants. It l
+                  {t("noise.environmentalEffects.effects.plantGrowth.description")}
                 </span>
-                <span style={{ fontSize: "14pt" }}>eads to the changes in the structure of ecosystems.</span>
               </p>
             </div>
             <div className="col-md-3">
               <h4 style={{ textAlign: "center" }}>
-                <strong>Ecosystem imbalance</strong>
+                <strong>{t("noise.environmentalEffects.effects.ecosystem.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
                 <span style={{ fontSize: "14pt" }}>
-                  The negative effects of noise pollution on animals and plants can{" "}
+                  {t("noise.environmentalEffects.effects.ecosystem.description")}
                 </span>
-                <span style={{ fontSize: "14pt" }}>lead to imbalances in ecosystems.</span>
               </p>
             </div>
           </div>
 
           <div className="row" style={{ paddingBottom: "15px", backgroundColor: "#f9f9f9" }}>
             <div className="col-md-3">
-              <img
+              <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/04/do-you-know-about-noise.png"
-                alt="study icon"
-                width="100%"
-                height="auto"
+                alt={t("noise.environmentalEffects.study.iconAlt")}
+                width={300}
+                height={200}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div className="col-md-9">
-              <span style={{ fontSize: "14pt" }}>
-                According to a study conducted by experts at California Polytechnic State University, human noise
-                pollution has an impact on the diversity of plant life in an environment even after the noise is
-                eliminated.
-              </span>
+              <span style={{ fontSize: "14pt" }}>{t("noise.environmentalEffects.study.description")}</span>
             </div>
           </div>
         </div>
@@ -875,7 +776,9 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h2 className="air_heading" style={{ textAlign: "center" }}>
             <span style={{ fontSize: "36pt" }}>
-              What do the <span style={{ color: "#8789ab" }}>noise levels</span> say?
+              {t("noise.noiseLevels.titlePrefix")}{" "}
+              <span style={{ color: "#8789ab" }}>{t("noise.noiseLevels.titleHighlight")}</span>{" "}
+              {t("noise.noiseLevels.titleSuffix")}
             </span>
           </h2>
 
@@ -883,149 +786,138 @@ export default function NoisePollutionPage() {
             <section className="health_effects_section">
               <div className="level_range_cntr health_effect_box">
                 <div className="lavel_box">
-                  <span>Noise levels</span>
+                  <span>{t("noise.noiseLevels.table.headers.levels")}</span>
                   <span className="mg_text">
-                    <b>dB</b>
+                    <b>{t("noise.noiseLevels.table.headers.units")}</b>
                   </span>
                 </div>
                 <div className="health_color">
-                  <span>Health Effects</span>
+                  <span>{t("noise.noiseLevels.table.headers.healthEffects")}</span>
                 </div>
               </div>
               <div className="level_range_cntr">
                 <div className="lavel_box">
-                  <span>Peace</span>
+                  <span>{t("noise.noiseLevels.table.levels.peace.category")}</span>
                   <p>
                     <span>0-40 </span>
-                    <span className="mobile_mg_text">dB</span>
+                    <span className="mobile_mg_text">{t("noise.noiseLevels.table.mobileUnits")}</span>
                   </p>
                 </div>
                 <div className="health_color Good_color">
-                  <span>No harmful effects</span>
+                  <span>{t("noise.noiseLevels.table.levels.peace.effect")}</span>
                 </div>
               </div>
               <div className="level_range_cntr">
                 <div className="lavel_box">
-                  <span>Silent</span>
+                  <span>{t("noise.noiseLevels.table.levels.silent.category")}</span>
                   <p>
                     <span>41-50</span>
-                    <span className="mobile_mg_text">dB</span>
+                    <span className="mobile_mg_text">{t("noise.noiseLevels.table.mobileUnits")}</span>
                   </p>
                 </div>
                 <div className="health_color Satisfactory_color">
-                  <span>Minor disturbance, difficulty concentrating</span>
+                  <span>{t("noise.noiseLevels.table.levels.silent.effect")}</span>
                 </div>
               </div>
               <div className="level_range_cntr">
                 <div className="lavel_box">
-                  <span>Disturbing</span>
+                  <span>{t("noise.noiseLevels.table.levels.disturbing.category")}</span>
                   <p>
                     <span>51-60</span>
-                    <span className="mobile_mg_text">(dB</span>
+                    <span className="mobile_mg_text">{t("noise.noiseLevels.table.mobileUnits")}</span>
                   </p>
                 </div>
                 <div className="health_color Moderately_color">
-                  <span>Annoyance, sleep disturbance, increased stress levels</span>
+                  <span>{t("noise.noiseLevels.table.levels.disturbing.effect")}</span>
                 </div>
               </div>
               <div className="level_range_cntr">
                 <div className="lavel_box">
-                  <span>Bustling</span>
+                  <span>{t("noise.noiseLevels.table.levels.bustling.category")}</span>
                   <p>
                     <span>61-70</span>
-                    <span className="mobile_mg_text">dB</span>
+                    <span className="mobile_mg_text">{t("noise.noiseLevels.table.mobileUnits")}</span>
                   </p>
                 </div>
                 <div className="health_color poor_color">
-                  <span>
-                    Significant health effects, including hearing loss, high blood pressure, and cardiovascular diseases{" "}
-                  </span>
+                  <span>{t("noise.noiseLevels.table.levels.bustling.effect")}</span>
                 </div>
               </div>
               <div className="level_range_cntr">
                 <div className="lavel_box">
-                  <span>Loud</span>
+                  <span>{t("noise.noiseLevels.table.levels.loud.category")}</span>
                   <p>
                     <span>71-80</span>
-                    <span className="mobile_mg_text">dB</span>
+                    <span className="mobile_mg_text">{t("noise.noiseLevels.table.mobileUnits")}</span>
                   </p>
                 </div>
                 <div className="health_color verypoor_color">
-                  <span>Severe hearing damage, tinnitus (ringing in the ears), and speech interference</span>
+                  <span>{t("noise.noiseLevels.table.levels.loud.effect")}</span>
                 </div>
               </div>
               <div className="level_range_cntr">
                 <div className="lavel_box">
-                  <span>Extremely Loud</span>
+                  <span>{t("noise.noiseLevels.table.levels.extremelyLoud.category")}</span>
                   <p>
                     <span>81-90(+)</span>
-                    <span className="mobile_mg_text">dB</span>
+                    <span className="mobile_mg_text">{t("noise.noiseLevels.table.mobileUnits")}</span>
                   </p>
                 </div>
                 <div className="health_color Severe_color">
-                  <span>
-                    Permanent hearing loss and other serious health problems, including stress, anxiety, and sleep
-                    disturbance
-                  </span>
+                  <span>{t("noise.noiseLevels.table.levels.extremelyLoud.effect")}</span>
                 </div>
               </div>
             </section>
           </div>
 
           <p style={{ textAlign: "center", marginTop: "35px", paddingBottom: "60px" }}>
-            <span style={{ fontSize: "14pt" }}>
-              Its important to note that these effects can vary depending on factors such as duration of exposure,
-              frequency of exposure, and individual susceptibility to noise. Therefore, its crucial to take steps to
-              reduce noise pollution whenever possible, regardless of the noise level.
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("noise.noiseLevels.disclaimer")}</span>
           </p>
 
           <div className="row">
             <div className="col-md-2"></div>
             <div className="col-md-8" style={{ marginTop: "30px", paddingBottom: "20px" }}>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Some examples of different sound pressure levels measured in decibels (dB):
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.noiseLevels.examples.title")}</span>
               </p>
               <table>
                 <thead>
                   <tr>
-                    <th>Noise Levels</th>
-                    <th>Indoor</th>
-                    <th>Outdoor</th>
+                    <th>{t("noise.noiseLevels.examples.table.headers.levels")}</th>
+                    <th>{t("noise.noiseLevels.examples.table.headers.indoor")}</th>
+                    <th>{t("noise.noiseLevels.examples.table.headers.outdoor")}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>50-60 dB</td>
-                    <td>Normal conversation</td>
-                    <td>Quiet suburb or light traffic on a highway</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.conversation.indoor")}</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.conversation.outdoor")}</td>
                   </tr>
                   <tr>
                     <td>50-60 dB</td>
-                    <td>Background music at a low volume</td>
-                    <td>Normal conversation or a busy street</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.music.indoor")}</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.music.outdoor")}</td>
                   </tr>
                   <tr>
                     <td>70-80 dB</td>
-                    <td>Busy street noise heard from indoors</td>
-                    <td>Traffic noise or a motorcycle passing by</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.traffic.indoor")}</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.traffic.outdoor")}</td>
                   </tr>
                   <tr>
                     <td>70-75 dB</td>
-                    <td>Vacuum cleaner</td>
-                    <td>Noisy restaurant kitchen or a jackhammer </td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.vacuum.indoor")}</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.vacuum.outdoor")}</td>
                   </tr>
                   <tr>
                     <td>85-100 dB</td>
-                    <td>Loud music from speakers</td>
-                    <td>Concert music or a car horn</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.loudMusic.indoor")}</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.loudMusic.outdoor")}</td>
                   </tr>
                   <tr>
                     <td>80-120 dB</td>
-                    <td>Power tools</td>
-                    <td>Thunder or a jet plane taking off</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.powerTools.indoor")}</td>
+                    <td>{t("noise.noiseLevels.examples.table.rows.powerTools.outdoor")}</td>
                   </tr>
                 </tbody>
               </table>
@@ -1043,87 +935,76 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h2 style={{ textAlign: "center" }}>
             <span style={{ fontSize: "36pt", color: "#8789ab" }}>
-              Reducing <span style={{ color: "#000000" }}>noise pollution</span>
+              {t("noise.reducing.titleHighlight")}{" "}
+              <span style={{ color: "#000000" }}>{t("noise.reducing.titleSuffix")}</span>
             </span>
           </h2>
           <p className="air_heading" style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "14pt" }}>
-              Noise pollution can have negative effects on the environment, including wildlife and ecosystems. Some of
-              these negative effects include:
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("noise.reducing.description")}</span>
           </p>
 
           <div className="row">
             <div className="col-md-6">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/use-noise-barriers.png"
-                alt="use noise barriers"
-                width="300"
-                height="300"
+                alt={t("noise.reducing.methods.barriers.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Use noise barriers</strong>
+                <strong>{t("noise.reducing.methods.barriers.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>Noise barriers can be used to reduce noise </span>
-                <span style={{ fontSize: "14pt" }}>pollution from highways, railways, and other sources.</span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.reducing.methods.barriers.description")}</span>
               </p>
             </div>
             <div className="col-md-6">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/plant-trees.png"
-                alt="plant trees"
-                width="300"
-                height="300"
+                alt={t("noise.reducing.methods.trees.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Plant trees</strong>
+                <strong>{t("noise.reducing.methods.trees.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Trees and vegetation can help absorb sound waves, reducing the amount of noise that reaches people.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.reducing.methods.trees.description")}</span>
               </p>
             </div>
           </div>
 
           <div className="row" style={{ paddingTop: "35px" }}>
             <div className="col-md-6">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/regulators.png"
-                alt="government regulations to reduce noise"
-                width="300"
-                height="300"
+                alt={t("noise.reducing.methods.regulations.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Govt. Regulations</strong>
+                <strong>{t("noise.reducing.methods.regulations.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Governments can enforce regulations and standards for noise levels, which can include limits on noise
-                  emissions from various sources, and can require noise-reducing technologies to be used.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.reducing.methods.regulations.description")}</span>
               </p>
             </div>
             <div className="col-md-6">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/insulate-buildings.png"
-                alt="insulate buildings to reduce noise pollution"
-                width="300"
-                height="300"
+                alt={t("noise.reducing.methods.insulation.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Insulate buildings</strong>
+                <strong>{t("noise.reducing.methods.insulation.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Insulating buildings can reduce the amount of noise that enters them. This can be done by using
-                  double-glazed windows, soundproof curtains, and acoustic panels.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.reducing.methods.insulation.description")}</span>
               </p>
             </div>
           </div>
@@ -1131,22 +1012,18 @@ export default function NoisePollutionPage() {
           <div className="row" style={{ paddingTop: "10px", paddingBottom: "40px" }}>
             <div className="col-md-3"></div>
             <div className="col-md-6">
-              <img
+              <Image
                 className="aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/03/educate-people-300x300.png"
-                alt="educate people"
-                width="300"
-                height="300"
+                alt={t("noise.reducing.methods.education.alt")}
+                width={300}
+                height={300}
               />
               <h4 style={{ textAlign: "center" }}>
-                <strong>Educate people</strong>
+                <strong>{t("noise.reducing.methods.education.title")}</strong>
               </h4>
               <p style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "14pt" }}>
-                  Educating people about the negative impacts of noise pollution and the ways to control it can be an
-                  effective way to raise awareness and encourage action. Overall, controlling noise pollution requires a
-                  combination of efforts from individuals, businesses, and governments.
-                </span>
+                <span style={{ fontSize: "14pt" }}>{t("noise.reducing.methods.education.description")}</span>
               </p>
             </div>
             <div className="col-md-3"></div>
@@ -1159,24 +1036,20 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h2 style={{ textAlign: "center" }}>
             <span style={{ fontSize: "36pt", color: "#8789ab" }}>
-              <span style={{ color: "#000000" }}>When to know</span> precautions are needed?
+              <span style={{ color: "#000000" }}>{t("noise.precautions.titlePrefix")}</span>{" "}
+              {t("noise.precautions.titleHighlight")}
             </span>
           </h2>
           <p className="air_heading" style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "14pt" }}>
-              In outdoor settings, the volume of noise can often reach excessive levels. As a result, it is important
-              for authorities and other concerned parties to monitor sound levels, particularly in areas where there is
-              a high degree of noise pollution, such as construction sites, industrial zones, and other similarly noisy
-              environments. This enables them to keep the noise within acceptable limits.
-            </span>
+            <span style={{ fontSize: "14pt" }}>{t("noise.precautions.description")}</span>
           </p>
 
-          <img
+          <Image
             className="aligncenter"
             src="https://www.pranaair.com/wp-content/uploads/2023/03/air-quality-device-to-detect-noise.png"
-            alt="air quality device to detect noise"
-            width="458"
-            height="503"
+            alt={t("noise.precautions.imageAlt")}
+            width={458}
+            height={503}
           />
         </div>
       </section>
@@ -1186,50 +1059,46 @@ export default function NoisePollutionPage() {
         <div className="container">
           <h3 className="air_heading" style={{ textAlign: "center" }}>
             <span style={{ fontSize: "24pt" }}>
-              Use a device to measure <span style={{ color: "#8789ab" }}>Noise</span> level
+              {t("noise.devices.titlePrefix")}{" "}
+              <span style={{ color: "#8789ab" }}>{t("noise.devices.titleHighlight")}</span>{" "}
+              {t("noise.devices.titleSuffix")}
             </span>
-            <span style={{ fontSize: "24pt" }}>indoor &amp; outdoor</span>
           </h3>
 
           <div className="row">
             <div className="col-md-6">
               <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
-                <img
+                <Image
                   className="aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-squair-monitor-1024x807.png"
-                  alt="prana air squair monitor"
-                  width="500"
-                  height="auto"
+                  alt={t("noise.devices.squair.alt")}
+                  width={500}
+                  height={394}
+                  style={{ width: "auto", height: "auto" }}
                 />
                 <h4 style={{ textAlign: "center" }}>
-                  <strong>SQUAIR Air Monitor</strong>
+                  <strong>{t("noise.devices.squair.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "14pt" }}>
-                    This is an ultimate indoor air quality monitoring device that is designed to keep you informed about
-                    the air you breathe. The device is capable of measuring indoor noise level also.
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.devices.squair.description")}</span>
                 </p>
               </a>
             </div>
             <div className="col-md-6" style={{ borderTopWidth: "20px" }}>
               <a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
-                <img
+                <Image
                   className="aligncenter"
                   src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-noise-sensor-in-ambient-monitor-1024x1024.png"
-                  alt="prana air noise sensor in ambient monitor"
-                  width="350"
-                  height="auto"
-                  style={{ paddingTop: "10px" }}
+                  alt={t("noise.devices.ambient.alt")}
+                  width={350}
+                  height={350}
+                  style={{ paddingTop: "10px", width: "auto", height: "auto" }}
                 />
                 <h4 style={{ textAlign: "center" }}>
-                  <strong>Ambient Air Monitor</strong>
+                  <strong>{t("noise.devices.ambient.title")}</strong>
                 </h4>
                 <p style={{ textAlign: "center" }}>
-                  <span style={{ fontSize: "14pt" }}>
-                    This ambient air monitor detects noise and air quality parameters outdoors. This is compact,
-                    user-friendly and can be used for real-time data monitoring/alerts.
-                  </span>
+                  <span style={{ fontSize: "14pt" }}>{t("noise.devices.ambient.description")}</span>
                 </p>
               </a>
             </div>

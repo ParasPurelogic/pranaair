@@ -1,30 +1,44 @@
-"use client"
-
 import Image from "next/image"
 import "./styles.css"
-import "react-multi-carousel/lib/styles.css"
-import Carousel from "react-multi-carousel"
+import MeasureCarousel from "@/Components/Pages/CarbonDioxide/measure-co2-slider"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function CarbonDioxidePage() {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4,
+export default async function CarbonDioxidePage() {
+  const { t } = await getServerTranslation("carbon-dioxide")
+  const measureProducts = [
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-co2-sensor.jpg",
+      imageAlt: t("products.co2Sensor.imageAlt"),
+      title: t("products.co2Sensor.title"),
+      description: t("products.co2Sensor.description"),
+      width: 300,
+      height: 300
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-pocket-co2-monitor.jpg",
+      imageAlt: t("products.pocketCO2.imageAlt"),
+      title: t("products.pocketCO2.title"),
+      description: t("products.pocketCO2.description"),
+      width: 300,
+      height: 300
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-squair-air-monitor.jpg",
+      imageAlt: t("products.squair.imageAlt"),
+      title: t("products.squair.title"),
+      description: t("products.squair.description"),
+      width: 300,
+      height: 300
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
-
+    {
+      imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-sensible-plus-air-quality-monitor.jpg",
+      imageAlt: t("products.sensiblePlus.imageAlt"),
+      title: t("products.sensiblePlus.title"),
+      description: t("products.sensiblePlus.description"),
+      width: 300,
+      height: 300
+    }
+  ]
   return (
     <main>
       {/* Banner Section */}
@@ -33,48 +47,33 @@ export default function CarbonDioxidePage() {
           <div className="banner-content">
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/12/what-is-co2.png"
-              alt="what is co2 carbon dioxide"
+              alt={t("banner.iconAlt")}
               width={224}
               height={194}
               className="banner-icon"
             />
             <h1 className="whitetext">
-              <span className="heading_top_white">
-                What is Carbon Dioxide (CO<sub>2</sub>)?
-              </span>
+              <span className="heading_top_white">{t("banner.title")}</span>
             </h1>
             <p className="whitetext">
-              <span>
-                Carbon Dioxide (CO<sub>2</sub>) is a transparent gas and natural component of air, that acts as a
-                greenhouse gas in the atmosphere. It is generally harmless in small quantities but can affect severely
-                as the quantities rise, especially indoors where ventilation is low and indoor air cannot recirculate.
-                Hence, it can impact sleep patterns, productivity, concentration levels, etc.
-              </span>
+              <span>{t("banner.description")}</span>
             </p>
           </div>
 
           <div className="environment-importance">
             <h2 className="whitetext">
-              <span>How is it important in the environment?</span>
+              <span>{t("environment.title")}</span>
             </h2>
             <p className="whitetext">
-              <span>
-                CO<sub>2</sub> helps plants in the process of photosynthesis, a process through which plants make their
-                food. Many animals and humans both depend on plants for their survival. Therefore photosynthesis is
-                important for the survival of plants, animals, and humans.
-              </span>
+              <span>{t("environment.description1")}</span>
             </p>
             <p className="whitetext">
-              <span>
-                CO<sub>2</sub> helps in trapping the heat and energy from the sun within the earths atmosphere. Because
-                this helps in preventing the temperature from getting inhospitably cold and oceans from freezing into
-                solid.
-              </span>
+              <span>{t("environment.description2")}</span>
             </p>
             <div className="plant-icon-container">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/plant-icon-300x271.png"
-                alt="plant icon"
+                alt={t("environment.iconAlt")}
                 width={161}
                 height={145}
                 className="plant-icon"
@@ -88,43 +87,37 @@ export default function CarbonDioxidePage() {
       <section className="indoor-co2-levels">
         <div className="container">
           <h2>
-            <span>
-              What do indoor Carbon Dioxide (CO<sub>2)</sub> levels say?
-            </span>
+            <span>{t("indoorLevels.title")}</span>
           </h2>
           <p>
-            <span>
-              CO<sub>2</sub> is commonly measured in PPM (Parts Per Million). ASHRAE (The American Society of Heating,
-              Refrigerating and Air-Conditioning Engineers) recommended that carbon dioxide levels indoors should be
-              maintained below 1000 ppm.
-            </span>
+            <span>{t("indoorLevels.description")}</span>
           </p>
 
           <div className="co2-levels-container">
             <div className="co2-levels-list">
               <p>
-                <span>Good – 300-600</span>
+                <span>{t("indoorLevels.levels.good")}</span>
               </p>
               <p>
-                <span>Moderate – 601-800</span>
+                <span>{t("indoorLevels.levels.moderate")}</span>
               </p>
               <p>
-                <span>Poor – 801-1000</span>
+                <span>{t("indoorLevels.levels.poor")}</span>
               </p>
               <p>
-                <span>Unhealthy – 1001-1200</span>
+                <span>{t("indoorLevels.levels.unhealthy")}</span>
               </p>
               <p>
-                <span>Severe – 1201-1500</span>
+                <span>{t("indoorLevels.levels.severe")}</span>
               </p>
               <p>
-                <span>Hazardous – Above 1051</span>
+                <span>{t("indoorLevels.levels.hazardous")}</span>
               </p>
             </div>
             <div className="co2-levels-image">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/color-scale-of-co2.png"
-                alt="CO2 levels chart"
+                alt={t("indoorLevels.chartAlt")}
                 width={500}
                 height={400}
               />
@@ -137,22 +130,15 @@ export default function CarbonDioxidePage() {
       <section className="co2-sources">
         <div className="container">
           <h2>
-            <span>Where does Carbon Dioxide (CO2) come from indoors?</span>
+            <span>{t("sources.title")}</span>
           </h2>
           <p>
-            <span>
-              The main source of CO<sub>2</sub> indoors is respiration. Because as we inhale oxygen and release CO
-              <sub>2</sub>. In the modern age, homes are becoming more airtight, ventilation does not happen that
-              frequently and fresh air cannot enter indoors. Many ventilation systems that are used nowadays recirculate
-              the air indoors rather than bringing less CO<sub>2</sub> contaminated air from outdoors. As a result, the
-              same air is recirculating and recirculating. Hence, this increases the carbon dioxide contamination
-              indoors.
-            </span>
+            <span>{t("sources.description")}</span>
           </p>
           <div className="co2-sources-image">
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2022/12/sources-of-indoor-co2-level-1024x635.jpg"
-              alt="sources of indoor Carbon Dioxide (CO2) level"
+              alt={t("sources.imageAlt")}
               width={1024}
               height={635}
               className="sources-image"
@@ -165,118 +151,106 @@ export default function CarbonDioxidePage() {
       <section className="health-effects">
         <div className="container">
           <h2>
-            <span>Health Effects</span>
+            <span>{t("healthEffects.title")}</span>
           </h2>
           <p>
-            <span>
-              High levels of CO<sub>2</sub> are responsible for
-            </span>
+            <span>{t("healthEffects.subtitle")}</span>
           </p>
 
           <div className="health-effects-grid">
             <div className="health-effect-item">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/low-productivity-due-to-high-co2-300x194.jpg"
-                alt="low productivity due to high Carbon Dioxide (CO2)"
+                alt={t("healthEffects.effects.productivity.imageAlt")}
                 width={456}
                 height={295}
                 className="health-effect-image"
               />
               <h4>
-                <span>1. Lower productivity</span>
+                <span>{t("healthEffects.effects.productivity.title")}</span>
               </h4>
               <p>
-                <span>
-                  High CO<sub>2</sub> affects concentration and attention and in turn productivity.
-                </span>
+                <span>{t("healthEffects.effects.productivity.description")}</span>
               </p>
             </div>
 
             <div className="health-effect-item">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/disturbing-sleep-due-to-high-co2.jpg"
-                alt="disturbing sleep due to high Carbon Dioxide (CO2)"
+                alt={t("healthEffects.effects.sleep.imageAlt")}
                 width={456}
                 height={295}
                 className="health-effect-image"
               />
               <h4>
-                <span>2. Disturbed sleep</span>
+                <span>{t("healthEffects.effects.sleep.title")}</span>
               </h4>
               <p>
-                <span>When limits exceed, one can have difficulty in their sleeping patterns as well.</span>
+                <span>{t("healthEffects.effects.sleep.description")}</span>
               </p>
             </div>
 
             <div className="health-effect-item">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/increased-blood-pressure-due-to-high-co2.jpg"
-                alt="Increased blood pressure and heart rate"
+                alt={t("healthEffects.effects.bloodPressure.imageAlt")}
                 width={456}
                 height={295}
                 className="health-effect-image"
               />
               <h4>
-                <span>3. Increased blood pressure & heart rate</span>
+                <span>{t("healthEffects.effects.bloodPressure.title")}</span>
               </h4>
               <p>
-                <span>
-                  High CO<sub>2</sub> levels can trigger high BP problems due to the vasodilating effect.
-                </span>
+                <span>{t("healthEffects.effects.bloodPressure.description")}</span>
               </p>
             </div>
 
             <div className="health-effect-item">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/headache-due-to-high-co2.jpg"
-                alt="headache due to high Carbon Dioxide (CO2)"
+                alt={t("healthEffects.effects.headache.imageAlt")}
                 width={456}
                 height={295}
                 className="health-effect-image"
               />
               <h4>
-                <span>4. Headache</span>
+                <span>{t("healthEffects.effects.headache.title")}</span>
               </h4>
               <p>
-                <span>
-                  CO<sub>2</sub> levels highly influence cerebral blood flow, which can cause headache problems.
-                </span>
+                <span>{t("healthEffects.effects.headache.description")}</span>
               </p>
             </div>
 
             <div className="health-effect-item">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/restlessness-due-to-high-co2.jpg"
-                alt="restlessness due to high Carbon Dioxide (CO2)"
+                alt={t("healthEffects.effects.restlessness.imageAlt")}
                 width={456}
                 height={295}
                 className="health-effect-image"
               />
               <h4>
-                <span>5. Restlessness</span>
+                <span>{t("healthEffects.effects.restlessness.title")}</span>
               </h4>
               <p>
-                <span>
-                  Disorders such as hypercapnia can happen when CO<sub>2</sub> levels are high.
-                </span>
+                <span>{t("healthEffects.effects.restlessness.description")}</span>
               </p>
             </div>
 
             <div className="health-effect-item">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/diziness-due-to-high-co2.jpg"
-                alt="diziness due to high Carbon Dioxide (CO2)"
+                alt={t("healthEffects.effects.dizziness.imageAlt")}
                 width={456}
                 height={295}
                 className="health-effect-image"
               />
               <h4>
-                <span>6. Dizziness</span>
+                <span>{t("healthEffects.effects.dizziness.title")}</span>
               </h4>
               <p>
-                <span>
-                  At high levels, CO<sub>2</sub> is known to cause dizziness, vertigo, and other symptoms.
-                </span>
+                <span>{t("healthEffects.effects.dizziness.description")}</span>
               </p>
             </div>
           </div>
@@ -287,10 +261,10 @@ export default function CarbonDioxidePage() {
       <section className="tips-section">
         <div className="container">
           <h2 className="whitetext">
-            <span>How to achieve the ideal Carbon Dioxide (CO2) levels indoors?</span>
+            <span>{t("tips.title")}</span>
           </h2>
           <p className="whitetext">
-            <span>10 tips to reduce carbon dioxide levels indoors:</span>
+            <span>{t("tips.subtitle")}</span>
           </p>
 
           <div className="tips-grid">
@@ -299,7 +273,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/ventilation.jpg"
-                  alt="Ventilation"
+                  alt={t("tips.items.ventilation.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -307,13 +281,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>1. Ventilation</span>
+                  <span>{t("tips.items.ventilation.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    Makes it easy for the flow of air. Besides, it is the easiest and most economical way of reducing CO
-                    <sub>2</sub>.
-                  </span>
+                  <span>{t("tips.items.ventilation.description")}</span>
                 </p>
               </div>
             </div>
@@ -323,7 +294,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/use-air-filtration.jpg"
-                  alt="Filtration"
+                  alt={t("tips.items.filtration.imageAlt")}
                   width={200}
                   height={100}
                   className="tip-img"
@@ -331,13 +302,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>2. Filtration</span>
+                  <span>{t("tips.items.filtration.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    Air filters with activated carbon filters will help reduce the CO
-                    <sub>2</sub> concentration indoors.
-                  </span>
+                  <span>{t("tips.items.filtration.description")}</span>
                 </p>
               </div>
             </div>
@@ -347,7 +315,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/plant-trees.jpg"
-                  alt="Plants"
+                  alt={t("tips.items.plants.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -355,12 +323,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>3. Plants</span>
+                  <span>{t("tips.items.plants.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    Indoor plants such as Snake Plant, Aloe vera, and money plant are known as the natural air filters.
-                  </span>
+                  <span>{t("tips.items.plants.description")}</span>
                 </p>
               </div>
             </div>
@@ -370,7 +336,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/co2-level-indoor.jpg"
-                  alt="Decreasing people"
+                  alt={t("tips.items.decreasing.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -378,12 +344,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>4. Decreasing</span>
+                  <span>{t("tips.items.decreasing.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    The number of people in a room also helps in reducing CO<sub>2</sub> concentrations.
-                  </span>
+                  <span>{t("tips.items.decreasing.description")}</span>
                 </p>
               </div>
             </div>
@@ -393,7 +357,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/co2-device.jpg"
-                  alt="Air quality monitor"
+                  alt={t("tips.items.monitor.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -401,12 +365,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>5. Use an air quality monitor</span>
+                  <span>{t("tips.items.monitor.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    This will help in tracking and keeping a check on the CO<sub>2</sub> levels indoors.
-                  </span>
+                  <span>{t("tips.items.monitor.description")}</span>
                 </p>
               </div>
             </div>
@@ -416,7 +378,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/control-co2-emissions.jpg"
-                  alt="Control CO2 emissions"
+                  alt={t("tips.items.emissions.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -424,10 +386,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>6. Control CO2 emissions</span>
+                  <span>{t("tips.items.emissions.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>The usage of gas-powered heaters, coal burning, etc. must be controlled.</span>
+                  <span>{t("tips.items.emissions.description")}</span>
                 </p>
               </div>
             </div>
@@ -437,7 +399,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/stop-smoking.jpg"
-                  alt="Avoid smoking"
+                  alt={t("tips.items.smoking.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -445,12 +407,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>7. Avoid smoking</span>
+                  <span>{t("tips.items.smoking.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    Indoors as smoking contributes to the overall CO<sub>2</sub> concentrations indoors.
-                  </span>
+                  <span>{t("tips.items.smoking.description")}</span>
                 </p>
               </div>
             </div>
@@ -460,7 +420,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/use-air-purifier.jpg"
-                  alt="Air purification"
+                  alt={t("tips.items.purification.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -468,13 +428,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>8. Air purification</span>
+                  <span>{t("tips.items.purification.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    It does not help in reducing the CO<sub>2</sub> levels but filtered air is better than unfiltered
-                    air.
-                  </span>
+                  <span>{t("tips.items.purification.description")}</span>
                 </p>
               </div>
             </div>
@@ -484,7 +441,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/stop-open-fire.jpg"
-                  alt="Open flames"
+                  alt={t("tips.items.flames.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -492,13 +449,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>9. Open flames</span>
+                  <span>{t("tips.items.flames.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    Must be limited as CO<sub>2</sub> is the primary pollutant emitted by an open fire, such as
-                    fireplaces.
-                  </span>
+                  <span>{t("tips.items.flames.description")}</span>
                 </p>
               </div>
             </div>
@@ -508,7 +462,7 @@ export default function CarbonDioxidePage() {
               <div className="tip-card-image">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2022/12/check-fuel-leaks.jpg"
-                  alt="Check fuel leaks"
+                  alt={t("tips.items.fuelLeaks.imageAlt")}
                   width={300}
                   height={200}
                   className="tip-img"
@@ -516,12 +470,10 @@ export default function CarbonDioxidePage() {
               </div>
               <div className="tip-card-content">
                 <h4 className="whitetext">
-                  <span>10. Keep a check on fuel leaks</span>
+                  <span>{t("tips.items.fuelLeaks.title")}</span>
                 </h4>
                 <p className="whitetext">
-                  <span>
-                    CO<sub>2</sub> is released when fuels are burned improperly.
-                  </span>
+                  <span>{t("tips.items.fuelLeaks.description")}</span>
                 </p>
               </div>
             </div>
@@ -533,20 +485,16 @@ export default function CarbonDioxidePage() {
       <section className="measure-co2">
         <div className="container">
           <h2 className="whitetext">
-            <span>How to Measure CO2 level?</span>
+            <span>{t("measure.title")}</span>
           </h2>
           <p className="whitetext">
-            <span>
-              Prana Air CO<sub>2</sub> monitor has an embedded sensor that is a Non-Dispersive InfraRed (NDIR) sensor
-              with 1 PPM resolution and a 10,000 PPM range. With an LCD screen and multiple data displays, monitor the
-              carbon dioxide levels indoors as well as outdoors.
-            </span>
+            <span>{t("measure.description")}</span>
           </p>
           <div className="co2-monitor-image">
             <a href="#">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2022/12/good-co2-level-with-pocket-monitor-1024x574.png"
-                alt="good co2 level with pocket monitor"
+                alt={t("measure.imageAlt")}
                 width={819}
                 height={459}
                 className="monitor-image"
@@ -560,56 +508,9 @@ export default function CarbonDioxidePage() {
       <section className="product-carousel">
         <div className="container">
           <h3>
-            <span>Choose Your Air Quality Monitor To Measure CO2</span>
+            <span>{t("productCarousel.title")}</span>
           </h3>
-          <Carousel
-            responsive={responsive}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            className="product-slider"
-          >
-            <div className="product-item">
-              <Image
-                src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-co2-sensor.jpg"
-                alt="CO2 Sensor"
-                width={300}
-                height={300}
-              />
-              <h4>CO2 Sensor</h4>
-              <p>Measures CO2 levels with high accuracy</p>
-            </div>
-            <div className="product-item">
-              <Image
-                src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-pocket-co2-monitor.jpg"
-                alt="Pocket CO2 Monitor"
-                width={300}
-                height={300}
-              />
-              <h4>Pocket CO2 Monitor</h4>
-              <p>Portable CO2 monitoring solution</p>
-            </div>
-            <div className="product-item">
-              <Image
-                src="https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-squair-air-monitor.jpg"
-                alt="SQUAIR Air Monitor"
-                width={300}
-                height={300}
-              />
-              <h4>SQUAIR Air Monitor</h4>
-              <p>Measures CO2 and other pollutants</p>
-            </div>
-            <div className="product-item">
-              <Image
-                src="https://www.pranaair.com/wp-content/uploads/2021/04/prana-air-sensible-plus-air-quality-monitor.jpg"
-                alt="Sensible+ Advanced CO2 Monitor"
-                width={300}
-                height={300}
-              />
-              <h4>Sensible+ Advanced CO2 Monitor</h4>
-              <p>Professional grade monitoring</p>
-            </div>
-          </Carousel>
+          <MeasureCarousel applications={measureProducts} />
         </div>
       </section>
     </main>

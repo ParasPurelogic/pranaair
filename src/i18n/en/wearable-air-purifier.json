@@ -1,0 +1,301 @@
+{
+     "personalPurifier": {
+    "nav": {
+      "overview": "Overview",
+      "features": "Features",
+      "dualIons": "Dual-Ions",
+      "comparison": "Comparison",
+      "specs": "Specs"
+    },
+    "banner": {
+      "subtitle": "Prana Air Personal",
+      "title1": "Wearable Air",
+      "title2": "Dual -VE Ions Emitter",
+      "buyNow": "Buy Now",
+      "arrowAlt": "Arrow icon",
+      "imageAlt": "Prana Air Personal Wearable Air Purifier"
+    },
+    "elimination": {
+      "title": "Effective Elimination from various Pollutants",
+      "description": "Prana Air Personal Air Purifier, Ideal for Respiratory Disorders, Effectively Eliminates Pollutants for a Healthier Environment.",
+      "iconAlt": "heading ion icon",
+      "deviceAlt": "Elimination Device",
+      "pollen": {
+        "text": "Eliminates Pollen, ensuring cleaner air.",
+        "iconAlt": "ensuring cleaner air icon"
+      },
+      "dust": {
+        "text": "Effectively traps Dust Particles with our hanging purifier.",
+        "iconAlt": "effectively traps icon"
+      },
+      "pm25": {
+        "text": "Tackles harmful PM2.5 for fresher indoor and outdoor environments.",
+        "iconAlt": "tackles harmful icons"
+      },
+      "smoke": {
+        "text": "Removes Smoke, keeping surroundings fresh and clean.",
+        "iconAlt": "remove smoke icon"
+      }
+    },
+    "features": {
+      "title": "Impressive Features",
+      "subtitle": "That Redefine Air Purification",
+      "imageAlt": "Portable personal air purifier",
+      "dualIon": {
+        "title": "Dual (-ve) Ion Emitters",
+        "description": "High-Density Negative Ion Emission (80-150 million/cm3)",
+        "iconAlt": "high density negative ion"
+      },
+      "battery": {
+        "title": "Long Battery Life",
+        "description": "Long-lasting Power with up to 30-60 Hours of Battery Life.",
+        "iconAlt": "long battery life icon"
+      },
+      "runtime": {
+        "title": "Extended Runtime",
+        "description": "Quick 2-Hour Charge, 45-Hour Purification with 700mAh Battery",
+        "iconAlt": "extended runtime icon"
+      },
+      "quiet": {
+        "title": "Ultra Quiet Design",
+        "description": "The Device Silently works its Magic by your side.",
+        "iconAlt": "ultra quite design icon"
+      },
+      "portable": {
+        "title": "Portable and Wearable",
+        "description": "Purify the air on the go, wherever you are.",
+        "iconAlt": "portable and wearable icon"
+      },
+      "noFilter": {
+        "title": "No Filter Replacements",
+        "description": "Hassle-free Maintenance with no Filter Replacement.",
+        "iconAlt": "no filter replacements icon"
+      }
+    },
+    "wearable": {
+      "title": "Wearable",
+      "subtitle": "Air Purifier",
+      "description": "Experience effortless protection with our wearable air purifier. Easy to carry and use, it ensures clean and fresh air wherever you go.",
+      "arrowAlt": "Wearable Arrow",
+      "imageAlt": "Prana Air Wearable Purifier"
+    },
+    "benefits": {
+      "title": "The Benefits",
+      "subtitle": "of Wearable Air Purification",
+      "breathing": {
+        "title": "Healthier Breathing",
+        "description": "Eliminate pollutants and allergens for improved respiratory health.",
+        "iconAlt": "healthier breathing icon"
+      },
+      "focus": {
+        "title": "Enhanced Focus",
+        "description": "Breathe clean air to boost energy and mental clarity.",
+        "iconAlt": "enhanced focus icon"
+      },
+      "smoke": {
+        "title": "Smoke Removal",
+        "description": "Say goodbye to secondhand smoke with effective smoke elimination.",
+        "iconAlt": "smoke removal icon"
+      },
+      "immunity": {
+        "title": "Stronger Immunity",
+        "description": "Reduce exposure to pathogens and boost your immune system.",
+        "iconAlt": "immunity icon"
+      },
+      "customizable": {
+        "title": "Customizable Purification",
+        "description": "Adjust settings for personalized air cleansing.",
+        "iconAlt": "customizable-purification-icon"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Harnessing the Power of Negative Ions",
+      "description": "Harnessing Negative Ions for Healthier Air. Neutralizes harmful particles, enhances mood, and promotes well-being. Breathe pure and revitalizing air now!",
+      "iconAlt": "negative-ions",
+      "imageAlt": "How Dual Negative Ions Emitter Works"
+    },
+    "video1": {
+      "title1": "Efficiency Experiment: How",
+      "titleHighlight": "Prana Air",
+      "title2": "Personal Air Purifier Cleans The Air Pollutants",
+      "description": "Find out how much filtration efficiency of Prana Airs Personal Wearable Air Purifier has. In this experiment, you will be able to see the efficiency of the product cleaning the smoke inside the small closed-chamber."
+    },
+    "operation": {
+      "title": "Effortless",
+      "subtitle": "Operation",
+      "step1": {
+        "number": "01",
+        "description": "Long press the button to turn it on/off.and pressing the button once again shows blue (high gear).",
+        "imageAlt": "power button"
+      },
+      "step2": {
+        "number": "02",
+        "description": "After the negative ion purifier is turned on, the indicator light shows green (low gear),",
+        "imageAlt": "green indicator"
+      },
+      "step3": {
+        "number": "03",
+        "description": "The low battery indicator light is red, and the indicator light is red when charging.",
+        "imageAlt": "red indicator"
+      }
+    },
+    "ionization": {
+      "subtitle": "Advanced",
+      "title": "Ionization technology",
+      "description": "Now with Dual Ionizer! Effortlessly purify and freshen the air you breathe. Breathe cleaner, feel rejuvenated!",
+      "imageAlt": "Ionization Technology of Prana Air Purifier",
+      "dual": {
+        "title": "Dual",
+        "subtitle1": "Negative",
+        "highlight": "ion",
+        "subtitle2": "emitter"
+      }
+    },
+    "protected": {
+      "title": "Stay Protected",
+      "subtitle": "On-the-Go",
+      "description": "Experience effortless protection with our wearable air purifier. Easy to carry and use, it ensures clean and fresh air wherever you go.",
+      "iconAlt": "Stay Protected Icon",
+      "imageAlt": "Stay Protected with Prana Air Purifier"
+    },
+    "comparison": {
+      "pranaTitle": "Prana Airs",
+      "pranaSubtitle": "Air Purifier",
+      "otherTitle": "other",
+      "otherSubtitle": "Air Purifier",
+      "prana": {
+        "title": "Dual",
+        "subtitle1": "Negative",
+        "highlight": "ion",
+        "subtitle2": "emitter",
+        "imageAlt": "Prana Air Dual Negative Ions Emitters"
+      },
+      "other": {
+        "title": "single",
+        "subtitle": "Negative ion emitter",
+        "imageAlt": "Other Purifier with Single Ion Emitter"
+      }
+    },
+    "video2": {
+      "title1": "Product Application: Use of",
+      "titleHighlight": "Prana Air",
+      "title2": "Personal Air Purifier",
+      "description": "This innovative personal air purifier can be used by anyone anytime at home or any workplace. The small air purifier can help you breathe clean air and give your safety from the unhealthy air quality."
+    },
+    "ageGroups": {
+      "title": "For Every",
+      "subtitle": "Age Group",
+      "kids": {
+        "title": "Kids",
+        "description": "Clean air for little lungs, Prana Air cares!",
+        "imageAlt": "Personal air purifier for child"
+      },
+      "adults": {
+        "title": "Adults",
+        "description": "Breathe easy with Prana Air, your daily companion.",
+        "imageAlt": "Use of Prana Air purifier in office"
+      },
+      "elderly": {
+        "title": "Old Age",
+        "description": "Nurture your health with Prana Air, age gracefully.",
+        "imageAlt": "Old man using personal air purifier"
+      }
+    },
+    "attractive": {
+      "title": "Attractive",
+      "subtitle": "details for easy carrying",
+      "iconAlt": "heading ion icon",
+      "productAlt": "Product Feature",
+      "features": {
+        "lowGear": "Low Gear",
+        "highGear": "High Gear",
+        "batteryIndicator": "Battery indicater",
+        "switchKey": "ON & OFF Switch Key",
+        "lineAlt": "Feature Line"
+      },
+      "typeC": {
+        "title": "Type C",
+        "subtitle": "Charging Port",
+        "imageAlt": "Type C Charger"
+      },
+      "hanging": {
+        "title": "Hanging",
+        "subtitle": "Thread",
+        "imageAlt": "Hanging Device"
+      },
+      "modes": {
+        "title": "2 Adjustable Modes",
+        "highGear": "High Gear",
+        "lowGear": "Low Gear",
+        "imageAlt": "Two Modes of Speed in Prana Air Personal Air Purifier"
+      }
+    },
+    "specs": {
+      "title": "Product",
+      "subtitle": "Technical specifications",
+      "iconAlt": "heading ion icon",
+      "brochureAlt": "brochore-btn",
+      "downloadBrochure": "Download Brochure",
+      "ionConcentration": {
+        "label": "Negative ion concentration :",
+        "value": "80-150 million /cm3"
+      },
+      "weight": {
+        "label": "Product weight :",
+        "value": "42g"
+      },
+      "voltage": {
+        "label": "Input voltage :",
+        "value": "DC5V C"
+      },
+      "model": {
+        "label": "Model :",
+        "value": "M8"
+      },
+      "batteryCapacity": {
+        "label": "Battery capacity :",
+        "value": "700mAh"
+      },
+      "batteryLife": {
+        "label": "Battery life. :",
+        "value": "30-60h"
+      },
+      "chargingTime": {
+        "label": "Charging time :",
+        "value": "About 2 hours"
+      },
+      "size": {
+        "label": "Size :",
+        "value": "72*35*20mm"
+      },
+      "filter": {
+        "label": "Filter :",
+        "value": "No filter replacement"
+      }
+    },
+    "customize": {
+      "title": "Customize",
+      "subtitle": "Your Air Purification Experience"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "1. How does Prana Air Personal Air Purifier work?",
+      "a1": "Prana Air Personal Air Purifier utilizes advanced high-density dual negative ion emitters to purify the air around you, providing cleaner and healthier air to breathe.",
+      "q2": "2. Is Prana Air Personal Air Purifier suitable for people with respiratory conditions?",
+      "a2": "Yes, Prana Air Personal Air Purifier is designed to improve air quality and can be beneficial for individuals with respiratory conditions by reducing pollutants and allergens in the surrounding air.",
+      "q3": "3. How long does the battery of Prana Air Personal Air Purifier last?",
+      "a3": "The battery of Prana Air Personal Air Purifier can last up to 45 hours on a single charge, providing long-lasting usage before requiring a recharge.",
+      "q4": "4. Is Prana Air Personal Air Purifier easy to use?",
+      "a4": "Prana Air Personal Air Purifier features user-friendly controls, making it easy to operate and adjust settings according to your preferences.",
+      "q5": "5. Can I wear Prana Air Personal Air Purifier during physical activities?",
+      "a5": "Yes, Prana Air Personal Air Purifier is designed to be portable and wearable, making it suitable for use during various physical activities like workouts or outdoor adventures.",
+      "q6": "6. Is there any need to replace the filters?",
+      "a6": "Prana Air Personal Air purifier works on the principle of negative ion emitters. It does not constitute any air filters thereby reducing the hassle of filter changes.",
+      "q7": "7. Can I adjust the purification intensity of the Personal Air Purifier?",
+      "a7": "Yes, the Personal Air Purifier offers adjustable settings, allowing you to customize the purification intensity based on your preferences and the air quality of your surroundings.",
+      "q8": "8. Is Prana Air Personal Air Purifier suitable for travel?",
+      "a8": "The compact and portable design of Prana Air Personal Air Purifier makes it perfect for travel, providing clean and fresh air wherever you go."
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+      "products": {
+  "co2Sensor": {
+    "imageAlt": "CO2 Sensor",
+    "title": "CO2 Sensor",
+    "description": "Measures CO2 levels with high accuracy"
+  },
+  "pocketCO2": {
+    "imageAlt": "Pocket CO2 Monitor",
+    "title": "Pocket CO2 Monitor",
+    "description": "Portable CO2 monitoring solution"
+  },
+  "squair": {
+    "imageAlt": "SQUAIR Air Monitor",
+    "title": "SQUAIR Air Monitor",
+    "description": "Measures CO2 and other pollutants"
+  },
+  "sensiblePlus": {
+    "imageAlt": "Sensible+ Advanced CO2 Monitor",
+    "title": "Sensible+ Advanced CO2 Monitor",
+    "description": "Professional grade monitoring"
+  }
+},
+"voc": {
+    "banner": {
+      "iconAlt": "VOC gas icon",
+      "title": "What is VOC?",
+      "description": "Volatile Organic Compounds (VOCs) are a broad category of airborne organic compounds, that contain carbon and hydrogen, evaporate and disperse easily at room temperature. VOCs are emitted by a wide range of construction materials, paints, furnishings, and everyday consumer products. You will know when a VOC is around you just by the strong smell of it.",
+      "whyDiscussing": {
+        "title": "Why are we discussing VOCs?",
+        "description": "VOCs are highly harmful since they evaporate at room temperature and they are emitted by a variety of sources that we are unaware of. Depending on the exposure levels, they may cause short-term headaches, and eye, throat, and nose irritation, while long-term exposures may cause serious kidney damage and cancer."
+      },
+      "vocsAndTvocs": {
+        "title": "VOCs and TVOCs",
+        "description": "As there are thousands of VOCs and many can exist in a room setting, TVOCs (Total Volatile Organic Compounds) are used to represent different groups of VOCs that can exist in an indoor environment. Total Volatile Organic Compounds (TVOCs) represent a class of VOCs that use to indicate the total pool of contaminants. Or we can say that the total sum of VOCs is known as TVOCs."
+      }
+    },
+    "sources": {
+      "title": "Primary Sources of VOCs",
+      "furniture": {
+        "title": "1. Plywood and Furniture",
+        "description": "The primary VOC found in plywood and particle boards is formaldehyde or HCHO. Since, new furniture contains a high amount of VOCs and as time passes, they slowly escape from the wooden furniture. This is known as off-gassing.",
+        "imageAlt": "source of voc from furniture"
+      },
+      "vinylFlooring": {
+        "title": "2. Vinyl Flooring",
+        "description": "A vinyl floor will emit some amount of VOCs for a short period after the installation due to the materials used in vinyl production. They can contaminate the air quality where they installed and can cause various respiratory issues over time.",
+        "imageAlt": "sources of voc from vinyl flooring"
+      },
+      "carpets": {
+        "title": "3. Carpets and Upholstery",
+        "description": "Various chemicals are used in the manufacturing of carpets and upholstery. VOCs in them can therefore be highly concerning. Due to this, they could pose several health issues.",
+        "imageAlt": "voc from carpets"
+      },
+      "smoking": {
+        "title": "4. Smoking and tobacco products",
+        "description": "VOCs in large amounts produced when tobacco products are burnt and incomplete combustion of tobacco takes place. So, these VOCs are responsible for various respiratory and heart diseases.",
+        "imageAlt": "voc from smoking"
+      },
+      "printing": {
+        "title": "5. Photocopying and Printing",
+        "description": "To print a document, the toner that used for printing is heated. They emit small amounts of VOCs that are produced by this process. Even harmful ozone can produce by laser printers.",
+        "imageAlt": "voc from printers"
+      },
+      "perfumes": {
+        "title": "6. Perfumes",
+        "description": "Have you ever had a sharp pain in your head when someone wearing strong perfume walks by? That is due to the high amount of VOCs that are present in perfumes which can cause dizziness and headaches.",
+        "imageAlt": "voc from perfumes"
+      },
+      "cleaningProducts": {
+        "title": "7. Cleaning products and Air Fresheners",
+        "description": "Exposure to VOCs present in many household cleaning products and air fresheners is known to cause serious harm to human health. These commonly include asthma, eczema, endocrine disruption, etc.",
+        "imageAlt": "voc from cleaning products"
+      },
+      "paints": {
+        "title": "8. Paints",
+        "description": "Ever wondered why a freshly painted wall smell has a strong smell and as time passes it wears off? This is because of the VOCs that are present in paints. They slowly wear off as time passes due to off-gassing.",
+        "imageAlt": "voc from paints"
+      },
+      "markers": {
+        "title": "9. Markers, glue, and whiteners",
+        "description": "Hobby supplies are made to dry quickly at room temperature. That is why hobby items such as markers, glue, and whiteners made with materials containing VOCs that evaporate at room temperature, making these products equally harmful.",
+        "imageAlt": "voc from markers or glue"
+      },
+      "candles": {
+        "title": "10. Candle and incense burning",
+        "description": "Scented candles or incense sticks are made in such a way that they create a pleasant aroma in their immediate surroundings. However, they produce with VOC-containing components that, when burned, evaporate and disperse around the room, which can be annoying to certain people.",
+        "imageAlt": "voc from burning candle"
+      }
+    },
+    "healthEffects": {
+      "title": "Health Effects of VOCs",
+      "description": "VOCs propensity to create health impacts ranges significantly, from very hazardous to those with no known health effects. The concentration and duration of chemical exposure affect how VOCs affect human health.",
+      "designImageAlt": "health effects of VOCs",
+      "shortTerm": {
+        "title": "Short-term health effects may include:-",
+        "description": "Short-term health effects of VOCs can last from hours to days. Some of the symptoms may include shortness of breath, allergic skin reactions, dizziness, nausea, and fatigue. Short-term health effects may include:",
+        "imageAlt": "short-term health effects of VOCs",
+        "eyeIrritation": {
+          "title": "- Eye, nose, and throat irritation:",
+          "description": "VOCs create strong odors These can irritate your eyes, your nose and throat if you inhale them."
+        },
+        "skinProblems": {
+          "title": "- Skin problems:",
+          "description": "When VOCs are exposed to sunlight and NOx, causes a photochemical reaction that emits O3 that can cause various skin problems."
+        },
+        "headaches": {
+          "title": "- Headaches:",
+          "description": "Strong smells in the presence of VOCs can cause headaches when exposed to relatively low levels in the short term."
+        },
+        "vomiting": {
+          "title": "- Vomiting:",
+          "description": "VOCs can cause nausea and dizziness in the short term, which can lead to loss of coordination and vomiting."
+        }
+      },
+      "longTerm": {
+        "title": "Long-term health effects",
+        "description": "Long-term exposure to VOCs can be very harmful to your health, with symptoms lasting for years. Because, VOCs such as benzene, and C6H6, can have long-term effects on your health. Symptoms may include chronic headaches and loss of coordination. Long-term health impacts may include:",
+        "imageAlt": "long-term health effects of VOCs",
+        "lungIrritation": {
+          "title": "- Irritation in the lungs:",
+          "description": "Exposure to VOCs at high levels can cause inflammation in the airways, which can cause lung irritation."
+        },
+        "organDamage": {
+          "title": "- Liver and kidney damages:",
+          "description": "Inhaling VOCs for longer durations can cause various health issues including damage to the kidney and lungs."
+        },
+        "nervousSystem": {
+          "title": "- Central Nervous System damages:",
+          "description": "Long-term exposures to toxins such as toluene and xylene can cause severe damage to the nervous system."
+        },
+        "cancer": {
+          "title": "- Cancer:",
+          "description": "Many VOCs indoors are probable or considered carcinogens by several authorities. These include benzene and formaldehyde."
+        }
+      }
+    },
+    "preventiveMeasures": {
+      "title": "Preventive Measures to Reduce VOC Levels in Your Space",
+      "description": "Indoor air is often up to 5x more polluted than ambient air and as we spend more than 90% of our time indoors, it is important to keep the TVOC levels in check and try to reduce them as much as possible.",
+      "ventilation": {
+        "title": "1. Ventilation",
+        "description": "Ventilation is extremely important when it comes to reducing indoor air pollutants. Keep your doors and windows open so that these chemicals can reduce via ventilation.",
+        "imageAlt": "maintain good ventilation to reduce voc"
+      },
+      "climateControl": {
+        "title": "2. Climate Control",
+        "description": "VOCs evaporate and disperse at room temperature and above. Temperature and humidity should be as low as possible to avoid evaporation and dispersion of VOCs.",
+        "imageAlt": "climate control to reduce voc"
+      },
+      "disposeChemicals": {
+        "title": "3. Dispose of unused chemicals",
+        "description": "Clear out or dispose of any unwanted and unused chemicals. Disposal of unused chemicals and buy paints or varnishes whenever you need them.",
+        "imageAlt": "dispose unused chemicals to reduce voc"
+      },
+      "checkLeakages": {
+        "title": "4. Check for chemical leakages",
+        "description": "Chemical leakage can cause damage to the property and harm to human health as well. If you have stored chemicals, always keep a check for any chemical leakages.",
+        "imageAlt": "avoid chemical leakage to reduce voc"
+      },
+      "renovationTiming": {
+        "title": "5. Choose the right time for renovations",
+        "description": "When renovating, humans should not expose to emissions. Hence, renovations must be done when no people are present in that indoor setting.",
+        "imageAlt": "right time for house renovations to reduce voc"
+      },
+      "controlSources": {
+        "title": "6. Control Potential VOC emitters",
+        "description": "Burning of fuels such as kerosene must avoid indoors. Sources such as fuel burning and indoor smoking should reduce to keep VOC levels in check.",
+        "imageAlt": "control the sources to reduce voc"
+      }
+    },
+    "products": {
+      "title": "Choose Your Air Quality Monitor To Measure VOCs"
+    }
+  }
+}

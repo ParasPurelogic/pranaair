@@ -1,0 +1,214 @@
+{
+  "no2": {
+    "header": {
+      "title": "What is Nitrogen Dioxide NO₂?",
+      "description": "Nitrogen Dioxide (NO₂), accounts for more than 70% of the air present in the environment. And it is the most abundant gas present. For instance, Traffic on the road and the burning of fossil fuels result in poisonous NO₂ air pollution. Hence, it is harmful to humans, plants, and animals.",
+      "formulaAlt": "what is nitrogen dioxide (NO2)"
+    },
+    "sources": {
+      "title": "Sources Of Nitrogen Dioxide (NO2) Gas",
+      "description": "NO₂ is present in the environment in a very small quantity. But due to our excessive use of resources and other activities, nitrogen dioxide level is increasing to a troublesome level. There are both natural and men-made causes of the formation of the no2 gas.",
+      "natural": {
+        "title": "Natural causes include:",
+        "volcanic": {
+          "description": "Volcano eruption or active volcanic sites.",
+          "alt": "Volcano eruption or active volcanic sites"
+        },
+        "fertilizer": {
+          "description": "Biological decay of waste for fertilizer",
+          "alt": "no2 from Fertilizer"
+        },
+        "lightning": {
+          "description": "Lightning strikes- facilitates the formation of the NO₂ gas.",
+          "alt": "no2 from lightning"
+        },
+        "oceans": {
+          "description": "Oceans",
+          "alt": "no2 from oceans"
+        }
+      },
+      "manmade": {
+        "title": "Manmade means of production of Nitrogen Dioxide (NO2) gas are:",
+        "vehicles": {
+          "description": "Car, truck, boots, and airplane emissions",
+          "alt": "no2 from car pollution"
+        },
+        "powerPlants": {
+          "description": "Power plants",
+          "alt": "no2 from power plant"
+        },
+        "ammoniaFertilizers": {
+          "description": "Ammonia-emitting fertilizers",
+          "alt": "no2 from ammonia emitting fertilizers"
+        },
+        "dieselMachines": {
+          "description": "Diesel-powered heavy machines",
+          "alt": "no2 from diesel vehicles"
+        },
+        "stoves": {
+          "description": "Kerosene and gas stoves",
+          "alt": "no2 from Kerosene and gas stoves"
+        }
+      },
+      "mainSource": "The main source of nitrogen dioxide produced by human activity is the combustion of fossil fuels. Such as the fuel used in automobiles, the creation of nitric acid, welding, explosives, refinement of petrol and metals, and commercial and food processing."
+    },
+    "impacts": {
+      "title": "Health & Environmental Impacts of NO₂ Gas",
+      "description": "NO₂ is part of the NOx group of highly reactive gases. Whereas NO₂ is a brownish acidic gas with and pungent odor. It reacts with O2 to form nitric acid responsible for corrosion. And it also plays role in the formation of other pollutants like smog, PM, and acid rain. It is a flame accelerator but itself not combustible.",
+      "health": {
+        "title": "Health Impacts Due to Nitrogen Dioxide (NO2)",
+        "effects": {
+          "lungs": {
+            "title": "Altered lungs function",
+            "alt": "lungs problem due to no2"
+          },
+          "breathing": {
+            "title": "Breathing problem",
+            "alt": "breathing problems due to no2"
+          },
+          "asthma": {
+            "title": "Asthma",
+            "alt": "asthma due to no2"
+          },
+          "immunity": {
+            "title": "Reduced immunity",
+            "alt": "low Immunity due to no2"
+          },
+          "throat": {
+            "title": "Irritation in airways",
+            "alt": "throat problem due to no2"
+          },
+          "coughing": {
+            "title": "Coughing, breathing difficulty, wheezing",
+            "alt": "Coughing due to no2"
+          },
+          "heart": {
+            "title": "Heart failure",
+            "alt": "heart problem due to no2"
+          },
+          "premature": {
+            "title": "Reduced birth weight, high risk of premature death",
+            "alt": "premature death due to no2"
+          }
+        }
+      },
+      "environmental": {
+        "title": "Environmental effects are severe due to excessive concentration of this gas:",
+        "effects": {
+          "smog": {
+            "title": "Hazy air (smog)",
+            "alt": "hazy air due to no2"
+          },
+          "water": {
+            "title": "Polluting water",
+            "alt": "polluting water due to no2"
+          },
+          "ozone": {
+            "title": "Generates ground level O3",
+            "alt": "o3 due to no2"
+          },
+          "pm": {
+            "title": "Increases PM levels",
+            "alt": "Increases PM levels due to no2"
+          },
+          "acidRain": {
+            "title": "Acid rain- forming an acidic compound with moisture present in the air",
+            "alt": "acid rain due to no2"
+          },
+          "vegetation": {
+            "title": "Affects the vegetation, growth of plants",
+            "alt": "plant growth due to no2"
+          },
+          "noxPm": {
+            "title": "NOx + other chemicals leads to formation of PM.",
+            "alt": "nox formation"
+          },
+          "plantStress": {
+            "title": "Acts as a stressor to plants and results in chlorophyll content reduction.",
+            "alt": "stressor to plants due to no2"
+          }
+        }
+      }
+    },
+    "measures": {
+      "title": "Corrective Measures To Reduce Nitrogen Dioxide (NO2) Gas",
+      "description": "The primary preventive measure is to monitor the concentration of NO₂ which our Prana air sensor and Air quality monitors are quite useful. Other than that there are some corrective measures that could help us keep safe from the respiratory repercussion of this gas:",
+      "steps": {
+        "lowEmission": "Vehicles with low emission rates can help us with the reduced production of NO₂",
+        "alternateFuels": "Alternate fuels including hydrogen cells and electric-powered cars can be useful in bringing down the overall footprint of NO₂ production.",
+        "avoidCongestion": "Avoid traffic congestion. Improving engines to be more efficient",
+        "publicTransport": "Using public transport",
+        "closedEnvironment": "Use of a closed environment for the production of fertilizer and processing of the gases produced in it."
+      }
+    },
+    "healthLevels": {
+      "title": "Nitrogen Dioxide (NO₂) and the harm it causes",
+      "mobileTitle": "NO₂ Levels and their health effects",
+      "table": {
+        "headers": {
+          "levels": "Levels",
+          "units": "(µg/m³)",
+          "healthEffects": "Health Effects"
+        },
+        "mobileUnits": "(mg/m³)",
+        "levels": {
+          "good": {
+            "category": "Good",
+            "effect": "Fresh air"
+          },
+          "satisfactory": {
+            "category": "Satisfactory",
+            "effect": "Coughing, difficulty in breathing experienced"
+          },
+          "moderate": {
+            "category": "Moderately polluted",
+            "effect": "Breathing difficulties, aggravation of asthma"
+          },
+          "poor": {
+            "category": "Poor",
+            "effect": "Reduced brain functionality, and lung function alterations"
+          },
+          "veryPoor": {
+            "category": "Very poor",
+            "effect": "Brain damage and heart failure"
+          },
+          "severe": {
+            "category": "Severe",
+            "effect": "Life-threatening"
+          }
+        },
+        "footnote": "*NAQI as per CBCB. 2-h hourly average values."
+      }
+    },
+    "sensor": {
+      "title": "Air quality sensor to measure NO₂",
+      "imageAlt": "Prana Air NO2 gas sensor"
+    },
+    "products": {
+      "title": "Choose Your Air Quality Monitor To Measure NO₂ Gas",
+      "ambientMonitorAlt": "prana air Ambient Air Monitor"
+    }
+  },
+   "products": {
+  "co2Sensor": {
+    "imageAlt": "CO2 Sensor",
+    "title": "CO2 Sensor",
+    "description": "Measures CO2 levels with high accuracy"
+  },
+  "pocketCO2": {
+    "imageAlt": "Pocket CO2 Monitor",
+    "title": "Pocket CO2 Monitor",
+    "description": "Portable CO2 monitoring solution"
+  },
+  "squair": {
+    "imageAlt": "SQUAIR Air Monitor",
+    "title": "SQUAIR Air Monitor",
+    "description": "Measures CO2 and other pollutants"
+  },
+  "sensiblePlus": {
+    "imageAlt": "Sensible+ Advanced CO2 Monitor",
+    "title": "Sensible+ Advanced CO2 Monitor",
+    "description": "Professional grade monitoring"
+  }
+}
+}

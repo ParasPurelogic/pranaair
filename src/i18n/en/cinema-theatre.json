@@ -1,0 +1,265 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"airQualityMonitors": {
+    "squair": {
+      "imageAlt": "prana air squair monitor as the air quality solutions for restaurant or cafe",
+      "title": "Prana Air SQUAIR<br /> Air quality monitor",
+      "description": "SQUAIR monitor is a smart indoor air quality monitoring device that can detect particulate matters, temperature, humidity, and gas parameters.",
+      "features": {
+        "item1": "Detects PM2.5, PM10, CO2, TVOC, Noise, Light (LUX), Temperature & humidity",
+        "item2": "Mode of connectivity: WiFi, GSM, BMS",
+        "item3": "Mobile & Smart TV App, web-dashboard"
+      }
+    },
+    "sensiblePlus": {
+      "imageAlt": "prana air sensible+ air quality monitor for restaurants and cafe",
+      "title": "Prana Air Sensible+<br /> Air quality monitor",
+      "description": "This is a smart air quality monitor that comes with 7 inch touch screen display that gives more insightful data.",
+      "features": {
+        "item1": "Detects PM2.5, PM10, CO2, TVOC, HCHO, Temperature, Humidity",
+        "item2": "7 Inch LED Touch Screen Display",
+        "item3": "5000 mAh Battery InBuilt",
+        "item4": "WiFi Connectivity With Mobile App"
+      }
+    }
+  },
+   "cinema": {
+    "banner": {
+      "title": "Air quality solutions for",
+      "highlight": "Cinema Halls & Theatre",
+      "description": "A complete solution including air quality monitoring, air purification & data accessibility",
+      "cta": "Get a Quote"
+    },
+    "pollutants": {
+      "title": "Major Air",
+      "highlight": "Pollutants",
+      "description": "When the cinema halls and theatres are packed, there is no movement in the pollution particles, and as a result, they build up within the enclosed spaces. As a result, movie-goers will feel uneasy and unwell. This will reduce the number of their visits. In short, cinema halls will lose money."
+    },
+    "pollutantFeatures": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "Fine dust particles & water droplets suspended in the air (diameter of 2.5 microns)",
+        "imgAlt": "pm2.5 in school and institutes"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "CO2 levels exceed the desired CO2 limits at times when there is no movement in the air",
+        "imgAlt": "co2 gas in schools and institutes"
+      },
+      "tvoc": {
+        "title": "TVOC",
+        "description": "The fabric used in seating furniture or wooden products paints carpets",
+        "imgAlt": "tvoc in schools and institutes"
+      },
+      "hcho": {
+        "title": "HCHO",
+        "description": "Aerosol sprays perfumes and room fresheners are some of the potential sources",
+        "imgAlt": "ozone in school & institutes"
+      }
+    },
+    "pollutantSources": {
+      "pm25": {
+        "title": "PM2.5",
+        "description": "Carpet and clothing fibers, degradation of buildings",
+        "imgAlt": "pm2.5 in school & institutes"
+      },
+      "co2": {
+        "title": "CO2",
+        "description": "Respiration or breathing",
+        "imgAlt": "co2 in school & institutes"
+      },
+      "tvocs": {
+        "title": "TVOCs",
+        "description": "Paints, carpets, disinfectants",
+        "imgAlt": "ozone o3 in school & institutes"
+      }
+    },
+    "risk": {
+      "title": "Who are at",
+      "highlight": "Risk?",
+      "description": "Different people from different age groups can be present in a cinema hall. But certain groups are significantly impacted as compared to healthy adults."
+    },
+    "riskGroups": {
+      "respiratoryIllness": {
+        "title": "Respiratory Illness",
+        "description": "Movie-goers and staff with respiratory or other illnesses already have a weaker respiratory and immune system.",
+        "imgAlt": "Personal Trainer in fitness center"
+      },
+      "children": {
+        "title": "Children",
+        "description": "Children have developing organs. When exposed the growing tissue and cell growth are hampered.",
+        "imgAlt": "Service Technician in fitness center"
+      },
+      "staff": {
+        "title": "Staff",
+        "description": "Lower productivity, absenteeism, and lower concentration are some of the side effects of exposure.",
+        "imgAlt": "Front desk staff in fitness center & gym"
+      },
+      "movieGoers": {
+        "title": "Movie-Goers",
+        "description": "Healthy adults will experience side effects like headaches dizziness stuffiness and nausea.",
+        "imgAlt": "a customer of a restaurant"
+      }
+    },
+    "solutions": {
+      "title": "Air quality",
+      "highlight": "Solutions",
+      "description": "Prana Air air quality monitoring and purifying solutions give you the power to know what your customers and staff breathe and what you could do to clean the air to make your fitness centers and gyms 'Air pollution-free zone' and view and analyze your IAQ."
+    },
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "tabContent": {
+      "freshAir": {
+        "imgAlt": "prana air fresh air machine as iaq solution for school & institutes",
+        "title": "Fresh Air Machine",
+        "subtitle": "As IAQ Solution",
+        "description": "It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.",
+        "features": {
+          "item1": "Comes with multi-layers HEPA Filters",
+          "item2": "Compact Design makes it easy to place",
+          "item3": "Promising you up to 99.5% efficiency"
+        },
+        "knowMore": "Know More",
+        "rent": "Looking to Rent?"
+      },
+      "apiData": {
+        "imgAlt": "aqi api data for school & institutes",
+        "title": "AQI API Data",
+        "subtitle": "For Institutes",
+        "description": "Avail the real-time air quality data of your institutes nearby outdoor area on the web.",
+        "features": {
+          "item1": "Integrate the institutes data on the web",
+          "item2": "Access the real-time data quickly",
+          "item3": "Take precautions from the air pollution"
+        },
+        "knowMore": "Know More"
+      }
+    },
+    "dataServices": {
+      "title": "Data Freemium",
+      "highlight": "Services",
+      "description": "The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the QR to know the AQI of the cinema hall.",
+      "features": {
+        "tvDashboard": {
+          "title": "TV Dashboard App",
+          "imgAlt": "aqi tv app dashboard for fitness center & gym"
+        },
+        "customApp": {
+          "title": "Customised App for Schools",
+          "imgAlt": "aqi customized dashboard app for fitness center & gym"
+        },
+        "qrCode": {
+          "title": "QR Code Scan",
+          "imgAlt": "aqi monitor data qr code scan for airport"
+        }
+      }
+    },
+    "effects": {
+      "title": "The Effects of Air Pollution - In",
+      "highlight": "Cinema Halls",
+      "description": "When movie-goers are exposed to poor air quality, they feel unwell, and headaches and nausea are common symptoms of air pollution exposure.",
+      "cleanAir": {
+        "title": "With Clean Air",
+        "benefits": {
+          "item1": "Improved ventilation",
+          "item2": "Improve the health of the movie-goers",
+          "item3": "Increase the comfort of the audience",
+          "item4": "Better movie experience"
+        }
+      },
+      "vsText": "VS",
+      "uncleanAir": {
+        "title": "Without Clean Air",
+        "drawbacks": {
+          "item1": "Decrease audience comfort",
+          "item2": "Less enjoyable experience",
+          "item3": "Bad odor and stuffiness",
+          "item4": "Movie-goers may feel unwell"
+        }
+      }
+    },
+    "faq": {
+      "questions": {
+        "q1": {
+          "question": "1. What are the major pollutants that are present in a cinema hall?",
+          "answer": "Many pollutants can be present inside a typical cinema hall setting. CO2, TVOC, and dust particles are the main pollutants followed by noise, CO, airborne pathogens, temperature, etc."
+        },
+        "q2": {
+          "question": "2. What are the health impacts of the pollutants present inside the cinema hall?",
+          "answer": "Physical discomforts like headaches, nausea, dizziness, etc. among movie-goers and staff."
+        },
+        "q3": {
+          "question": "3. What are some criteria that need to be kept in mind for a comfortable movie experience?",
+          "answer": "Ventilation rate, noise, comfort level, mold score, organic aerosols, etc. are some of the criteria."
+        },
+        "q4": {
+          "question": "4. Why is it necessary to have air quality monitoring solutions?",
+          "answer": "To know the nature of pollutants and by how much are they present in a cinema hall so that necessary actions can be taken."
+        },
+        "q5": {
+          "question": "5. How can I check the AQI of my cinema hall using your device?",
+          "answer": "Prana Air Monitors are WiFi enabled so you don't need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens."
+        },
+        "q6": {
+          "question": "6. Are any other parameters included in the monitors other than the air pollutants?",
+          "answer": "Yes, you can monitor the temperature, noise, and humidity in an area."
+        },
+        "q7": {
+          "question": "7. Are there any additional benefits that come with the solutions?",
+          "answer": "Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more."
+        }
+      }
+    },
+    "clientele": {
+      "title": "Our",
+      "highlight": "Clientele",
+      "description": "We are honored to work with so many well-known companies."
+    },
+     "industrialApplications": {
+      "title": "Industrial",
+      "highlight": "Applications",
+      "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Please help us know what requirements you have. Our team will contact you very soon."
+    }
+  }
+}

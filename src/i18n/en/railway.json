@@ -1,0 +1,245 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"railwayApplications": {
+  "tvApp": {
+    "title": "AQI TV App",
+    "description": "Display monitor data on a large TV screen with the AQI TV app. Compare real-time and historical data, and access 24/7 remote monitoring to stay updated on AQI levels. Data availability to everyone."
+  },
+  "webDashboard": {
+    "title": "AQI Web-Dashboard",
+    "description": "Analyze monitor data effortlessly with the AQI Web Dashboard. Access real-time and historic air quality data directly on our website, and explore global pollution trends with detailed analysis of the worlds most polluted cities and countries."
+  },
+  "mobileApp": {
+    "title": "AQI Mobile App",
+    "description": "Access air monitor data anytime with the AQI Mobile App. Enjoy real-time air quality updates through our accurate global data API and advanced features. With the AQI Mobile App, you have all the essential air quality information right at your fingertips."
+  }
+},
+"railwayBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Railways",
+    "description": "Lets embark on a journey towards cleaner, healthier railways for everyone with comprehensive air monitoring, purification, and data management solutions.",
+    "types": {
+      "railways": "Railways",
+      "metros": "Metros",
+      "trains": "Trains"
+    },
+    "cta": "Contact Us"
+  },
+   "railwayFactors": {
+    "title": "Factors affecting air quality in",
+    "highlight": "Railway Stations",
+    "description": "Diesel-powered trains and crowded stations are fueling a rise in air pollutants at railway stations.",
+    "pm": {
+      "title": "Particulate Matter\n(PM2.5 and PM10)",
+      "description": "Dust from rail systems, and dust from maintenance activities."
+    },
+    "vocs": {
+      "title": "Volatile Organic\nCompounds (VOCs)",
+      "description": "Emits from solvents used in maintenance, and chemical interactions."
+    },
+    "co": {
+      "title": "Carbon\nMonoxide (CO)",
+      "description": "Emits from Diesel engines and incomplete combustion of fuel in trains."
+    },
+    "nox": {
+      "title": "Nitrogen\nOxides (NOx)",
+      "description": "Emits from diesel-powered locomotives and engines."
+    }
+  },
+  "railwayPlatform": {
+    "congested": {
+      "title": "Congested Stations",
+      "description": "Crowded stations result in poor ventilation, trapping pollutants and worsening air quality."
+    },
+    "noise": {
+      "title": "Noise Pollution",
+      "description": "High noise level increases the stress levels in a person and can exacerbate respiratory problems."
+    },
+    "diesel": {
+      "title": "Diesel Emissions",
+      "description": "Diesel engines powered trains emit various pollutants such as nitrogen oxides (NOx) and particulate matter (PM)."
+    }
+  },
+  "railwayQuote": {
+    "title": "DO YOU KNOW?",
+    "content1": "According to the study by the California Air Resources Board (CARB), locomotives are projected to produce",
+    "highlight": "Over 640 tons per year of PM2.5 and Over 29,800 tons per year of NOx in California.",
+    "content2": "Such emissions not only deteriorate air quality within the state but can also contribute to global air pollution."
+  },
+   "railwayConcern": {
+    "title": "Areas of",
+    "highlight": "Concern",
+    "description": "Railway stations are bustling activity hubs and also pose significant air quality challenges.",
+    "stations": {
+      "title": "Railway Stations",
+      "description": "Train emissions and crowded conditions emit various pollutants that affect indoor and outdoor air quality."
+    },
+    "cabins": {
+      "title": "Locomotive Cabins",
+      "description": "Loco Pilot and other members are exposed to diesel emissions for extended periods."
+    },
+    "tracks": {
+      "title": "Rail Tracks in Urban Areas",
+      "description": "The passing trains suspend pollutants from tracks in residential and commercial areas."
+    },
+    "yards": {
+      "title": "Maintenance Yards",
+      "description": "Train maintenance includes engines and other equipment repairs that release pollutants."
+    }
+  },
+  "railwayRisk": {
+    "title": "Who is at",
+    "highlight": "Risk?",
+    "description": "The air quality issues at railway stations impact various groups, each facing unique risks.",
+    "passengers": {
+      "title": "Passengers",
+      "description": "Children, older, and those with pre-existing respiratory conditions."
+    },
+    "pilot": {
+      "title": "Loco Pilot",
+      "description": "Prolonged exposure to pollutants trapped in the cabin."
+    },
+    "residents": {
+      "title": "Nearby Residents",
+      "description": "Communities living close to railway tracks and stations."
+    },
+    "workers": {
+      "title": "Railway Workers",
+      "description": "Long-term exposure while performing their duties."
+    }
+  },
+  "railwaySolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions",
+    "description": "Identifying and addressing these risks is essential to safeguard everyone affected by the air quality challenges at railway stations.",
+    "tabs": {
+      "monitors": "Air quality Monitors",
+      "purifier": "Outdoor Air Purifier",
+      "display": "Data Display"
+    },
+    "monitors": {
+      "title": "Prana Air Ambient Air quality monitor",
+      "description": "Integrating air quality monitoring systems is key to address concerns at railway stations.",
+      "features": {
+        "feature1": "Real-time air quality monitoring",
+        "feature2": "Fully Waterproof Housing",
+        "feature3": "Low-cost Multiple sensors available"
+      },
+      "cta": "Know More"
+    },
+    "purifier": {
+      "title": "Prana Air Outdoor Air Purifier",
+      "description": "Implementing Air Purifiers can help in tackling air pollution effectively at railway stations.",
+      "features": {
+        "feature1": "Filter out PM2.5, NOx, and VOCs etc.",
+        "feature2": "High-capacity filtration system",
+        "feature3": "Reduces pollutant levels for better protection"
+      },
+      "cta": "Know More"
+    },
+    "display": {
+      "title": "Prana Air Customized TV Displays",
+      "description": "Tailor the interface to your specific needs and Monitor air quality in real-time for immediate insights.",
+      "features": {
+        "feature1": "Real-time air quality monitoring",
+        "feature2": "Customized display",
+        "feature3": "Accessible Data for everyone"
+      }
+    }
+  },
+  "railwayEffects": {
+    "title": "The Effects of Air Pollution",
+    "highlight": "Railway Station",
+    "description": "Poor Air Quality at railway stations affects every passenger and workers health causing various problems.",
+    "without": {
+      "title": "Without Air Quality Solutions",
+      "effects": {
+        "effect1": "Poor airflow and pollutant upsurge",
+        "effect2": "Decreased comfort for everyone",
+        "effect3": "Unpleasant and stuffy environment."
+      }
+    },
+    "with": {
+      "title": "With Air Quality Solutions",
+      "effects": {
+        "effect1": "Better airflow and pollutant removal",
+        "effect2": "Improve everyones comfort",
+        "effect3": "Cleaner and fresher environment."
+      }
+    }
+  },
+  "railwayClientele": {
+    "description": "Our partnerships with these renowned organizations reflect our commitment to excellence and innovation."
+  },
+  "railwayIndustrial": {
+    "description": "Prana Air offers a diverse selection of smart, affordable, and remarkably precise air quality solutions, catering to various sectors, irrespective of their scale."
+  },
+  "railwayFaq": {
+    "description": "About Air Quality Solution for Railways\nHave questions? Were here to help.",
+    "questions": {
+      "q1": "1. Why air quality is a concern at railway stations?",
+      "q2": "2. What are the health impacts of poor air quality at railway stations?",
+      "q3": "3. Can air quality issues be managed without advanced solutions at railway stations?",
+      "q4": "4. How does Prana Air Ambient Air Monitor improve air quality?"
+    },
+    "answers": {
+      "a1": "Trains operate with diesel engines and other activities emit various pollutants like PM2.5, NOx, carbon monoxide (CO), and volatile organic compounds (VOCs).",
+      "a2": "Exposure to poor air quality can cause or worsen respiratory problems including asthma, bronchitis, cardiovascular issues etc.",
+      "a3": "Managing air quality without advanced solutions is challenging. Air quality monitors and purifiers have a proactive approach to maintaining healthy air quality.",
+      "a4": "The Prana Air Ambient Air Monitor provides real-time data on pollutant levels, enabling timely responses and informed decision-making for air quality management."
+    }
+  },
+   "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  },
+    "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help."
+  }
+}

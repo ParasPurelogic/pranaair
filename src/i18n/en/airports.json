@@ -1,0 +1,362 @@
+{
+   "airQualityTabs": {
+    "tabs": {
+      "airQualityMonitors": "Air Quality Monitors",
+      "freshAirMachine": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "common": {
+      "knowMoreButton": "Know More"
+    },
+    "airQualityMonitors": {
+      "firstSection": {
+        "title": "Air Quality Monitoring (with Wi-Fi or GSM)",
+        "description": "Prana Air provides the smart indoor air quality monitors WiFi & GSM connectivity.",
+        "iconAlt": "1st air quality monitoring"
+      },
+      "carousel": {
+        "squair": {
+          "title": "Squair Air Monitor",
+          "description": "Squair monitor is a smart indoor air quality monitoring device that can detect IAQ pollutants.",
+          "imageAlt": "prana air squair air quality monitor for airport",
+          "rentButton": "Looking to Rent?",
+          "features": {
+            "feature1": "Detects PM2.5, CO, CO2, TVOC, noise, temp., & humidity",
+            "feature2": "Mobile & Smart TV App Enabled",
+            "feature3": "Reliable Web Dashboard Accessibility"
+          }
+        },
+        "sensible": {
+          "title": "Sensible+ Air Monitor",
+          "description": "This is a smart air quality monitor that comes with 7 inch touch screen display that gives more insightful data.",
+          "imageAlt": "prana air sensible+ air quality monitor for airport",
+          "features": {
+            "feature1": "7 Inch LED Touch Screen Display",
+            "feature2": "5000 mAh Battery InBuilt",
+            "feature3": "WiFi Connectivity With Mobile App"
+          }
+        }
+      },
+      "loraSection": {
+        "title": "Air Quality Monitoring (with LoRa)",
+        "description": {
+          "part1": "LoRa technology is a new wireless protocol designed specifically for long-range & low-power communications. LoRa stands for",
+          "emphasis": "Long Range",
+          "part2": "and is mainly targeted for IoT networks. This technology enables to connect a number of applications running on the same network."
+        },
+        "iconAlt": "2nd lora air quality monitoring",
+        "mainImageAlt": "LoRa air quality monitoring for airport",
+        "networkDiagramAlt": "LoRa network diagram"
+      },
+      "loraFeatures": {
+        "title": "Unique Features of LoRa",
+        "feature1": {
+          "title": "Wireless Communication",
+          "iconAlt": "lora is Wireless Communication"
+        },
+        "feature2": {
+          "title": "Upto 2000 nodes connectivity",
+          "iconAlt": "lora Upto 2000 nodes connectivity"
+        },
+        "feature3": {
+          "title": "IoT technology",
+          "iconAlt": "IoT technology"
+        },
+        "feature4": {
+          "title": "Local area connectivity",
+          "iconAlt": "Local area connectivity"
+        },
+        "feature5": {
+          "title": "Upto 5kms signal coverage",
+          "iconAlt": "Upto 5kms signal coverage"
+        },
+        "feature6": {
+          "title": "Easy to install",
+          "iconAlt": "lora Easy to install"
+        },
+        "feature7": {
+          "title": "Local server operation",
+          "iconAlt": "Local server operation"
+        },
+        "feature8": {
+          "title": "No operational/ recurring expenses",
+          "iconAlt": "lora No operational/ recurring expenses"
+        }
+      },
+      "comparisonTable": {
+        "title": "How LoRa is different from Wi-Fi connectivity?",
+        "header": {
+          "specifications": "Specifications",
+          "wifi": "Wi-Fi",
+          "lora": "LoRa"
+        },
+        "rows": {
+          "range": {
+            "label": "1. Range",
+            "wifi": "Upto 30m (approx)",
+            "lora": "Upto 5000m (5km)"
+          },
+          "gateway": {
+            "label": "2. Gateway",
+            "wifi": "It can connect very few devices.",
+            "lora": "It can connect upto 2000 nodes."
+          },
+          "configuration": {
+            "label": "3. Configuration",
+            "wifi": "Need to re-configure if wi-fi password changes",
+            "lora": "No such need"
+          },
+          "dataAccessibility": {
+            "label": "4. Data Accessibility",
+            "wifi": "Cloud storage",
+            "lora": "Local network or Cloud storage"
+          },
+          "powerConsumption": {
+            "label": "5. Power Consumption",
+            "wifi": "Very High",
+            "lora": "Very Low"
+          },
+          "sustainable": {
+            "label": "6. Sustainable",
+            "wifi": "No",
+            "lora": "Yes"
+          }
+        }
+      }
+    },
+    "freshAirMachine": {
+      "title": {
+        "line1": "Fresh Air Machine",
+        "line2": "As IAQ Solution"
+      },
+      "description": "One-stop solution for indoor air pollution by Prana Air Fresh Air Machine working as an air purifier with the capability to filter out 99.5% efficiency and multi-layer HEPA filters.",
+      "imageAlt": "prana air fresh air machine as iaq solution for airport",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Compact Design makes it easy to place",
+        "feature3": "Promising you up to 99.5% efficiency"
+      }
+    },
+    "apiData": {
+      "title": {
+        "line1": "AQI API Data",
+        "line2": "For Airport"
+      },
+      "description": "Avail the real-time air quality data of nearby outdoor area on the web.",
+      "imageAlt": "aqi api data for airport",
+      "features": {
+        "feature1": "Integrate the airports data on the web",
+        "feature2": "Access the real-time data quickly",
+        "feature3": "Take precautions from the air pollution"
+      }
+    }
+  },
+   "airportBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Airport",
+    "description": "A complete solution for air quality monitoring, air purification, data accessibility for areas in and around the airports.",
+    "cta": "Get a Quote"
+  },
+  "airPollutants": {
+    "title": "Major Air",
+    "highlight": "Pollutants",
+    "description": "The nature of air pollutants inside an airport is so vast that if ignored, they can have extreme effects on passengers, staff, and people living near airports. Due to this, air monitoring becomes essential in and around airports. A real-time air quality monitoring system will enable airport authorities to estimate pollution levels caused by various sources to comply with regulatory standards."
+  },
+  "pmSensorHero": {
+    "title": "Your PM Sensor Hero Title Here"
+  },
+  "pollutants": {
+    "pm25": {
+      "title": "PM2.5",
+      "description": "fine breathable water and dust particles",
+      "imgAlt": "pm2.5 level in airport"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "High occupancy of passengers",
+      "imgAlt": "high co2 level in airport"
+    },
+    "tvoc": {
+      "title": "TVOC",
+      "description": "carpets, disinfectants, room fresheners, etc.",
+      "imgAlt": "tvoc in airport"
+    },
+    "oxides": {
+      "title": "Oxides (NOx, SOx)",
+      "description": "Emission of oxides during the operation",
+      "imgAlt": "oxides emissions in airport"
+    },
+    "virusBacteria": {
+      "title": "Viruses & Bacteria",
+      "description": "Carrying diseases by passengers",
+      "imgAlt": "virus and bacteria in airport"
+    },
+    "noise": {
+      "title": "Noise",
+      "description": "Loud noise due to huge no. of people gathering",
+      "imgAlt": "noise in airport"
+    }
+  },
+  "risk": {
+    "title": "Who are at",
+    "highlight": "Risk?",
+    "description": "The occupancy of hotels is one of the major reasons for bad air quality inside hotels. People with underlying health issues, old age groups, children, and sensitive groups are at risk when exposed to air pollution. Even healthy adults can feel sick due to exposure to bad air quality."
+  },
+  "riskGroups": {
+    "healthIssues": {
+      "title": "Underlying Health Issues",
+      "description": "Passengers and staff with respiratory illnesses already have a weaker respiratory system.",
+      "imgAlt": "person with respiratory illness in hotel"
+    },
+    "securityStaff": {
+      "title": "Security Staff",
+      "description": "The airport security staffs are also threat to the air pollution present inside the premises.",
+      "imgAlt": "hotel chef"
+    },
+    "staff": {
+      "title": "Staff",
+      "description": "The staff may have low of coordination and performance, a high chance of illness.",
+      "imgAlt": "hotel staff"
+    },
+    "passenger": {
+      "title": "Passenger",
+      "description": "Even healthy passengers may experience uneasiness, headaches, etc.",
+      "imgAlt": "hotel guests"
+    }
+  },
+  "pollutantsViz": {
+    "pm25": {
+      "title": "PM2.5",
+      "description": "Cardiorespiratory disorders due to particle exposure",
+      "imgAlt": "pm2.5 icon"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "People experience breathing issue, nausea, convulsions",
+      "imgAlt": "co2 icon"
+    },
+    "noise": {
+      "title": "Noise",
+      "description": "Stress, anxiety, high BP, headache due to noise",
+      "imgAlt": "noise icon"
+    },
+    "oxides": {
+      "title": "Oxides",
+      "description": "Coughing, choking, fatigue, etc. are experienced if exposed",
+      "imgAlt": "oxides like no2 and so2 in air port"
+    },
+    "virusBacteria": {
+      "title": "Virus & Bacteria",
+      "description": "Infections are common when exposed to viruses & bacteria",
+      "imgAlt": "viruses and bacteria in airport"
+    },
+    "tvoc": {
+      "title": "TVOC",
+      "description": "Headaches, and irritation in the eyes, nose, and throat",
+      "imgAlt": "tvoc icon"
+    }
+  },
+  "solutions": {
+    "title": "Air quality",
+    "highlight": "Solutions",
+    "description": {
+      "part1": "As the aviation industry is growing rapidly, it becomes essential to monitor and control air pollution in and around airports. ",
+      "brandName": "Prana Air",
+      "part2": " air quality monitoring and air purifying solutions give you the power to know what your passengers and staff breathe and analyze the IAQ at airports and in aircraft."
+    }
+  },
+  "dataServicesFeatures": {
+    "tvDashboard": {
+      "title": "TV Dashboard App",
+      "imgAlt": "aqi tv app dashboard for airport"
+    },
+    "webDashboard": {
+      "title": "Web-Dashboard & App for Airport",
+      "imgAlt": "aqi customized dashboard app for airport"
+    },
+    "qrCode": {
+      "title": "QR Code Scan",
+      "imgAlt": "aqi monitor data qr code scan for airport"
+    }
+  },
+  "airPollutionEffects": {
+    "title": "The Effects of Air Pollution -",
+    "highlight": "In Airports",
+    "description": "When passengers and staff are exposed to poor air quality, they feel nauseous, dizzy, and unwell, and headaches are common symptoms of air pollution exposure."
+  },
+  "airComparison": {
+    "cleanAir": {
+      "title": "With Clean Air",
+      "benefits": {
+        "item1": "Improved ventilation",
+        "item2": "Good air quality",
+        "item3": "Enhanced experience",
+        "item4": "Increase staff performance"
+      }
+    },
+    "vsText": "VS",
+    "uncleanAir": {
+      "title": "Without Clean Air",
+      "drawbacks": {
+        "item1": "Bad customer experience",
+        "item2": "Passengers less comfort",
+        "item3": "Staff low performance",
+        "item4": "Unhealthy air quality"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "About Air Quality Solution for Airports Have questions? Were here to help."
+  },
+    "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "industrialApplications": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  },
+  "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+}
+}

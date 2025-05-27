@@ -1,0 +1,223 @@
+{
+    "industrialApplicationsData": {
+  "hotel": {
+    "title": "Solutions for Hotel"
+  },
+  "restaurant": {
+    "title": "Solutions for Restaurant"
+  },
+  "institutes": {
+    "title": "Solutions for Institutes"
+  },
+  "cinema": {
+    "title": "Solutions for Cinema/Theatre"
+  },
+  "automobiles": {
+    "title": "Solutions for Automobiles"
+  },
+  "realEstate": {
+    "title": "Solutions for Real Estates"
+  },
+  "smartphone": {
+    "title": "Solutions for Smartphone Makers"
+  },
+  "construction": {
+    "title": "Solutions for Construction"
+  },
+  "animalCare": {
+    "title": "Air quality Solutions for Animal care"
+  },
+  "logistics": {
+    "title": "Air quality Solutions for logistics"
+  },
+  "railways": {
+    "title": "Air quality Solutions for Railways"
+  }
+},
+"logisticsBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Logistics",
+    "description": "Innovative solutions for logistics firms to reduce their environmental impact, protect public wellness, and contribute to a cleaner, greener future.",
+    "subtitle": "Warehouse | Ports | Transportation",
+    "cta": "Contact Us"
+  },
+  "logisticsFactors": {
+    "title": "Factors affecting air quality in",
+    "highlight": "Logistics",
+    "description": "Logistics sectors involve various activities that contribute to air pollution through various pollutant emissions, such as:",
+    "pm": {
+      "title": "Particulate Matter\n(PM2.5 and PM10)",
+      "description": "Diesel trucks and locomotives, handling equipment and loading operations emit PM."
+    },
+    "vocs": {
+      "title": "Volatile Organic\nCompounds (VOCs)",
+      "description": "Vehicles, industrial processes, heating systems, and packaging activities emit VOCs."
+    },
+    "co": {
+      "title": "Carbon\nMonoxide (CO)",
+      "description": "Fuel combustion, handling equipment, loading and unloading operations releases CO."
+    },
+    "nox": {
+      "title": "Nitrogen\nOxides (NOx)",
+      "description": "Fossil fuel combustion in trucks and shipping vessels, heating systems, etc. suspend NOx."
+    }
+  },
+  "logisticsTransportation": {
+    "transportation": {
+      "title": "Transportation",
+      "trucks": "Trucks",
+      "marineVessels": "Marine Vessels",
+      "locomotives": "Locomotives",
+      "handlingEquipment": "Handling Equipment"
+    },
+    "stationary": {
+      "title": "Stationary",
+      "refineries": "Refineries",
+      "oilGasStorage": "Oil & Gas Storage",
+      "storagePilesCoal": "Storage Piles of Coal",
+      "powerGeneration": "Power Generation"
+    }
+  },
+  "logisticsQuote": {
+    "title": "DO YOU KNOW?",
+    "content": "According to the International Agency for Research on Cancer (IARC), diesel engine exhaust is carcinogenic to humans as its exposure increases the risk of lung cancer."
+  },
+  "logisticsConcern": {
+    "title": "Areas of",
+    "highlight": "Concern",
+    "description": "Logistics sectors are bustling with activity and face significant challenges when it comes to maintaining good air quality.",
+    "warehouse": {
+      "title": "Warehouse Facilities",
+      "description": "Highly trap pollutants due to enclosed spaces and heavy operations."
+    },
+    "loadingDocks": {
+      "title": "Loading Docks",
+      "description": "Loading and unloading operations and vehicle emissions release pollutants emissions."
+    },
+    "transportationRoutes": {
+      "title": "Transportation Routes",
+      "description": "Diesel vehicle emissions in major routes affect the nearby and commercial areas."
+    },
+    "logisticsHubs": {
+      "title": "Logistics Hubs",
+      "description": "Continuous operations in high-activity centres result in localized pollution."
+    }
+  },
+  "logisticsRisk": {
+    "title": "Who is at",
+    "highlight": "Risk?",
+    "description": "Air quality issues in the logistics sector pose various health risk for everyone involved.",
+    "workers": {
+      "title": "Logistics Workers",
+      "description": "Prolonged pollutants exposure lead to respiratory and cardiovascular issues."
+    },
+    "residents": {
+      "title": "Nearby Residents",
+      "description": "People living near logistics hubs have higher health risk due to pollutants."
+    },
+    "drivers": {
+      "title": "Drivers",
+      "description": "Drives highly exposed harmful pollutants due to Extended periods in vehicles."
+    },
+    "deliveryPersonnel": {
+      "title": "Delivery Personnel",
+      "description": "Long-term harmful pollutants exposure while delivering or pickups."
+    }
+  },
+  "logisticsSolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions",
+    "description": "Maintaining air quality is crucial in the logistics sector for the well-being of everyone. It requires a multi-faceted approach with advanced air quality monitoring, pollution control strategies etc.",
+    "tabs": {
+      "monitors": "Air quality Monitors",
+      "freshAir": "Fresh air machine",
+      "dataDisplay": "Data Display"
+    },
+    "monitors": {
+      "title": "Prana Air Sensible+Air quality monitor",
+      "description": "Installing indoor air quality monitor can help in maintaining a healthy working environment.",
+      "features": {
+        "feature1": "Real-time air quality monitoring",
+        "feature2": "5000 mAh Inbuilt Battery for Long Screen-Time",
+        "feature3": "Monitors Multiple Indoor Pollutants"
+      },
+      "cta": "Know More"
+    },
+    "freshAir": {
+      "title": "Prana Air Fresh Air Machine",
+      "description": "Integrating an Indoor Air Purifier can help in tackling air pollution effectively in the logistics sector.",
+      "features": {
+        "feature1": "Filter out up to 99.5% indoor pollutants",
+        "feature2": "Coverage area is 1200 square feet",
+        "feature3": "AI-Enabled for automates the airflow"
+      },
+      "cta": "Know More"
+    },
+    "dataDisplay": {
+      "title": "Prana Air Customized Data Display",
+      "description": "Implementing a customized digital display in the logistics sector allows continuous, 24/7 data visualization.",
+      "features": {
+        "feature1": "Real-Time Air Quality Data Display",
+        "feature2": "Customized display",
+        "feature3": "Access outdoor and indoor Data"
+      }
+    }
+  },
+  "logisticsEffects": {
+    "title": "The Effects of Air Pollution",
+    "highlight": "Logistics",
+    "description": "Poor Air Quality in the logistics sector affects workers, drivers, Residents etc. health causing various problems.",
+    "without": {
+      "title": "Without Air Quality Solutions",
+      "effects": {
+        "effect1": "Impacts workers and drivers productivity.",
+        "effect2": "More risks of respiratory conditions.",
+        "effect3": "Affecting nearby communities air."
+      }
+    },
+    "with": {
+      "title": "With Air Quality Solutions",
+      "effects": {
+        "effect1": "Enhanced productivity for workers and drivers",
+        "effect2": "Reduced risk of respiratory conditions",
+        "effect3": "Clean and fresh air for everyone"
+      }
+    }
+  },
+  "logisticsClientele": {
+    "description": "Our partnerships with these renowned organizations reflect our commitment to excellence and innovation."
+  },
+  "logisticsFaq": {
+    "questions": {
+      "q1": "1. How do logistics sectors affect the nearby residents air quality?",
+      "q2": "2. What are the major pollutants in the logistic sectors?",
+      "q3": "3. Why air quality is a major issue in the warehouse?",
+      "q4": "4. What are the solutions for logistics sectors to improve air quality?"
+    },
+    "answers": {
+      "a1": "The logistics sector involves several activities that involve diesel-powered transportation and various operations that can impact nearby communities.",
+      "a2": "Logistics sectors include warehouses, transportation, and stationary that emit pollutants like PM2.5, NOx, CO, VOCs etc.",
+      "a3": "Warehouses highly trap pollutants due to Congested operational areas and impact the indoor and outdoor air quality.",
+      "a4": "Prana Air offers practical solutions to improve air quality in the logistics sectors as air quality monitoring systems, advanced air purifiers etc."
+    }
+  },
+   "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+   "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}

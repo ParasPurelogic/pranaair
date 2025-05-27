@@ -1,77 +1,67 @@
-"use client"
-
 import "./style.css"
-import "react-multi-carousel/lib/styles.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
-import Carousel from "react-multi-carousel"
+import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
+import InstallCarousel from "@/Components/Pages/Construction/construction"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function ConstructionAirQualityPage() {
-    // Carousel responsive settings
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 1,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 1,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-        },
-    }
-
-    const insdurialapp = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 3,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-        },
-    }
-
-    // Carousel data for slider
-    const carouselItems = [
+export default async function ConstructionAirQualityPage() {
+    const { t } = await getServerTranslation("construction")
+    const industrialApplications = [
         {
-            id: 1,
-            icon: "https://www.pranaair.com/wp-content/uploads/2024/08/tv-aqi-app-icon.png",
-            title: "AQI TV App",
-            description:
-                "Access real-time air quality data on a large TV screen at your construction site. Get continuous 24/7 remote monitoring to stay informed about AQI levels and ensure a healthier environment for workers and nearby residents.",
-            image:
-                "https://www.pranaair.com/wp-content/uploads/2023/05/led-display-and-tv-dashboard-at-construction-site.jpg",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
+            title: t("industrialApplicationsData.hotel.title"),
+            link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
         },
         {
-            id: 2,
-            icon: "https://www.pranaair.com/wp-content/uploads/2024/08/AQI-Dashboard-icon.jpg",
-            title: "AQI Web-Dashboard",
-            description:
-                "Get real-time data from your construction site on a web dashboard to make informed decisions. Explore pollution trends, receive health advice based on real-time air quality indexes, and easily compare air quality parameters across multiple locations.",
-            image: "https://www.pranaair.com/wp-content/uploads/2023/05/aqi-cloud-and-data-dashboards.jpg",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
+            title: t("industrialApplicationsData.restaurant.title"),
+            link: "https://www.pranaair.com/solutions-by-application/restaurants/",
         },
         {
-            id: 3,
-            icon: "https://www.pranaair.com/wp-content/uploads/2024/08/mobile-AQI-APP-icon.png",
-            title: "AQI Mobile App",
-            description:
-                "Monitor real-time air quality data from your construction site anytime, anywhere with our mobile app. View air pollution and weather maps, and easily compare air quality parameters across multiple locations with the AQI App.",
-            image: "https://www.pranaair.com/wp-content/uploads/2024/05/aqi-app-and-web-dashboard.webp",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
+            title: t("industrialApplicationsData.institutes.title"),
+            link: "https://www.pranaair.com/solutions-by-application/institutes/",
         },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
+            title: t("industrialApplicationsData.cinema.title"),
+            link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
+            title: t("industrialApplicationsData.automobiles.title"),
+            link: "https://www.pranaair.com/solutions-by-application/automobile/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
+            title: t("industrialApplicationsData.realEstate.title"),
+            link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
+            title: t("industrialApplicationsData.smartphone.title"),
+            link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
+            title: t("industrialApplicationsData.construction.title"),
+            link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
+            title: t("industrialApplicationsData.animalCare.title"),
+            link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
+            title: t("industrialApplicationsData.logistics.title"),
+            link: "https://www.pranaair.com/solutions-by-application/logistics/",
+        },
+        {
+            image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
+            title: t("industrialApplicationsData.railways.title"),
+            link: "https://www.pranaair.com/solutions-by-application/railway/",
+        }
     ]
 
     return (
@@ -89,16 +79,14 @@ export default function ConstructionAirQualityPage() {
                         <div className="col-md-6">
                             <div className="pocket_title_box school_aqi_box">
                                 <h1>
-                                    Air quality Monitoring solutions<span className="bold_text"> For Construction Sites</span>
+                                    {t("construction.banner.title")}
+                                    <span className="bold_text">{t("construction.banner.highlight")}</span>
                                 </h1>
-                                <span style={{ fontSize: "14pt" }}>
-                                    A complete solution to air quality monitoring of PM2.5, PM10, dust emissions, and VOCs at construction
-                                    and demolition sites.
-                                </span>
+                                <span style={{ fontSize: "14pt" }}>{t("construction.banner.description")}</span>
                                 <br />
                                 <br />
                                 <a className="pocket_buy_btn" href="#get_in_touch">
-                                    Get a Quote
+                                    {t("construction.banner.cta")}
                                 </a>
                             </div>
                         </div>
@@ -113,14 +101,10 @@ export default function ConstructionAirQualityPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Major Air <span className="bold_text">Pollutants</span>
+                                {t("construction.pollutants.title")}{" "}
+                                <span className="bold_text">{t("construction.pollutants.highlight")}</span>
                             </h2>
-                            <p>
-                                Air pollution has been a major cause of concern for a long time now and there one major aspect of it
-                                that goes unnoticed is the air pollution due to construction. 30% of the air pollution prevalent in
-                                Delhi is caused due to construction pollution i.e. particulate matter – pm2.5, pm10 dust particles
-                                produced from the construction sites.
-                            </p>
+                            <p>{t("construction.pollutants.description")}</p>
                         </div>
                     </div>
                 </div>
@@ -133,13 +117,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/04/pm-pollutant.png"
-                                alt="pm2.5 pm10 pollutants level at construction site"
+                                alt={t("construction.pollutantGrid.pm.imgAlt")}
                                 width="102"
                                 height="99"
                             />
                             <div className="feature_wrap_box">
-                                <h2>PM</h2>
-                                <p>Fine particles suspended in the air, especially at the sites</p>
+                                <h2>{t("construction.pollutantGrid.pm.title")}</h2>
+                                <p>{t("construction.pollutantGrid.pm.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -147,13 +131,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/05/noise-pollutant.png"
-                                alt="noise pollution"
+                                alt={t("construction.pollutantGrid.noise.imgAlt")}
                                 width="102"
                                 height="99"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Noise</h2>
-                                <p>Machinery on the sites creates noise that can cause ear injury.</p>
+                                <h2>{t("construction.pollutantGrid.noise.title")}</h2>
+                                <p>{t("construction.pollutantGrid.noise.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -161,13 +145,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/04/CO-pollutant.png"
-                                alt="co pollution at construction site"
+                                alt={t("construction.pollutantGrid.co.imgAlt")}
                                 width="102"
                                 height="99"
                             />
                             <div className="feature_wrap_box">
-                                <h2>CO</h2>
-                                <p>It is produced from the combustion of carbon-based fuels.</p>
+                                <h2>{t("construction.pollutantGrid.co.title")}</h2>
+                                <p>{t("construction.pollutantGrid.co.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -175,13 +159,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/04/voc-pollutant.png"
-                                alt="VOCs pollution at construction site"
+                                alt={t("construction.pollutantGrid.vocs.imgAlt")}
                                 width="102"
                                 height="99"
                             />
                             <div className="feature_wrap_box">
-                                <h2>VOCs</h2>
-                                <p>Activities like welding emits organic compounds & cause illness</p>
+                                <h2>{t("construction.pollutantGrid.vocs.title")}</h2>
+                                <p>{t("construction.pollutantGrid.vocs.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -189,13 +173,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/04/NOx-pollutant.png"
-                                alt="no2 pollution at construction site"
+                                alt={t("construction.pollutantGrid.nox.imgAlt")}
                                 width="102"
                                 height="99"
                             />
                             <div className="feature_wrap_box">
-                                <h2>NOx</h2>
-                                <p>Burning of fuels used in machinery can release NOx into the air.</p>
+                                <h2>{t("construction.pollutantGrid.nox.title")}</h2>
+                                <p>{t("construction.pollutantGrid.nox.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -218,60 +202,60 @@ export default function ConstructionAirQualityPage() {
                                         <span className="school_icon_box">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-icon.png"
-                                                alt="voc at construction site"
+                                                alt={t("construction.pollutionEffects.vocs.imgAlt")}
                                             />
                                         </span>
                                         <div className="schhol_text_box">
-                                            <h3>VOCs</h3>
-                                            <p>Exposures can cause dizziness, headaches, and other discomforts.</p>
+                                            <h3>{t("construction.pollutionEffects.vocs.title")}</h3>
+                                            <p>{t("construction.pollutionEffects.vocs.description")}</p>
                                         </div>
                                     </li>
                                     <li className="second_school_box">
                                         <span className="school_icon_box">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/05/noise-icon.png"
-                                                alt="noise at construction site"
+                                                alt={t("construction.pollutionEffects.sox.imgAlt")}
                                             />
                                         </span>
                                         <div className="schhol_text_box">
-                                            <h3>SOx</h3>
-                                            <p>Shifting to alternative fuels can decrease SOx emissions.</p>
+                                            <h3>{t("construction.pollutionEffects.sox.title")}</h3>
+                                            <p>{t("construction.pollutionEffects.sox.description")}</p>
                                         </div>
                                     </li>
                                     <li className="third_school_box">
                                         <span className="school_icon_box">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/04/NOx-pollutant-icon.png"
-                                                alt="NOx pollutant at construction site"
+                                                alt={t("construction.pollutionEffects.nox.imgAlt")}
                                             />
                                         </span>
                                         <div className="schhol_text_box">
-                                            <h3>NOx</h3>
-                                            <p>Causes respiratory problems and is a major cause of acid rain.</p>
+                                            <h3>{t("construction.pollutionEffects.nox.title")}</h3>
+                                            <p>{t("construction.pollutionEffects.nox.description")}</p>
                                         </div>
                                     </li>
                                     <li className="fourth_school_box">
                                         <span className="school_icon_box">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/particulate-pm2.5-icon.png"
-                                                alt="particulate matter pm2.5 and pm10 at construction site"
+                                                alt={t("construction.pollutionEffects.pm.imgAlt")}
                                             />
                                         </span>
                                         <div className="schhol_text_box">
-                                            <h3>PM</h3>
-                                            <p>It can cause respiratory and cardiovascular problems.</p>
+                                            <h3>{t("construction.pollutionEffects.pm.title")}</h3>
+                                            <p>{t("construction.pollutionEffects.pm.description")}</p>
                                         </div>
                                     </li>
                                     <li className="fivth_school_box">
                                         <span className="school_icon_box">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/04/co-pollutant-icon.png"
-                                                alt="co gas at construction site"
+                                                alt={t("construction.pollutionEffects.co.imgAlt")}
                                             />
                                         </span>
                                         <div className="schhol_text_box">
-                                            <h3>CO</h3>
-                                            <p>It can cause nausea, dizziness, headaches, and even death at very high levels.</p>
+                                            <h3>{t("construction.pollutionEffects.co.title")}</h3>
+                                            <p>{t("construction.pollutionEffects.co.description")}</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -287,23 +271,19 @@ export default function ConstructionAirQualityPage() {
                     <div className="col-md-12">
                         <div className="introducing_box sub_title_box text-center">
                             <h2 className="title_heading">
-                                Who are at <span className="bold_text">Risk?</span>
+                                {t("construction.risk.title")} <span className="bold_text">{t("construction.risk.highlight")}</span>
                             </h2>
-                            <p>
-                                The workers working on the C&D site are affected the most by air pollution. Other than them, people
-                                living nearby these areas are affected by both indoor and outdoor air pollution caused by C&D emissions
-                                near their homes. These include:
-                            </p>
+                            <p>{t("construction.risk.description")}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* People at the site */}
+            {/* People at the Site */}
             <div className="container pollution_cntr inner_container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h3 style={{ textAlign: "center", fontSize: "18pt" }}>People at the site</h3>
+                        <h3 style={{ textAlign: "center", fontSize: "18pt" }}>{t("construction.peopleAtSite.title")}</h3>
                     </div>
                 </div>
                 <div className="row">
@@ -311,13 +291,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/worker.png"
-                                alt="Construction workers"
+                                alt={t("construction.peopleAtSite.workers.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Construction workers</h2>
-                                <p>They are most exposed to various pollution sources</p>
+                                <h2>{t("construction.peopleAtSite.workers.title")}</h2>
+                                <p>{t("construction.peopleAtSite.workers.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -325,13 +305,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/inspector.png"
-                                alt="Construction Inspector"
+                                alt={t("construction.peopleAtSite.inspector.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Construction Inspector</h2>
-                                <p>They can experience short-term health effects.</p>
+                                <h2>{t("construction.peopleAtSite.inspector.title")}</h2>
+                                <p>{t("construction.peopleAtSite.inspector.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -339,13 +319,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/surveyor.png"
-                                alt="construction surveyor"
+                                alt={t("construction.peopleAtSite.surveyor.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Surveyor</h2>
-                                <p>Eye & respiratory tract irritations, & aggravation in asthma.</p>
+                                <h2>{t("construction.peopleAtSite.surveyor.title")}</h2>
+                                <p>{t("construction.peopleAtSite.surveyor.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -353,13 +333,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/civil-engineer.png"
-                                alt="civil engineer for construction"
+                                alt={t("construction.peopleAtSite.civilEngineer.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Civil Engineer</h2>
-                                <p>Exposure can impact attentiveness.</p>
+                                <h2>{t("construction.peopleAtSite.civilEngineer.title")}</h2>
+                                <p>{t("construction.peopleAtSite.civilEngineer.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -370,7 +350,7 @@ export default function ConstructionAirQualityPage() {
             <div className="container pollution_cntr inner_container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h3 style={{ textAlign: "center", fontSize: "18pt" }}>Nearby Residential Areas</h3>
+                        <h3 style={{ textAlign: "center", fontSize: "18pt" }}>{t("construction.residentialAreas.title")}</h3>
                     </div>
                 </div>
                 <div className="row">
@@ -378,13 +358,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/children-near-construction-site.png"
-                                alt="Children"
+                                alt={t("construction.residentialAreas.children.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Children</h2>
-                                <p>Their airways are narrower, resulting in more obstructions.</p>
+                                <h2>{t("construction.residentialAreas.children.title")}</h2>
+                                <p>{t("construction.residentialAreas.children.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -392,13 +372,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/pregnant-lady.png"
-                                alt="Pregnant ladies"
+                                alt={t("construction.residentialAreas.pregnantLadies.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Pregnant ladies</h2>
-                                <p>PM exposure can cause preterm labor, low-weight deliveries, etc.</p>
+                                <h2>{t("construction.residentialAreas.pregnantLadies.title")}</h2>
+                                <p>{t("construction.residentialAreas.pregnantLadies.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -406,13 +386,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/old-people-near-construction-site.png"
-                                alt="Old people"
+                                alt={t("construction.residentialAreas.oldPeople.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>Old people</h2>
-                                <p>Aggravates COPD, asthma, and other disorders among old age people.</p>
+                                <h2>{t("construction.residentialAreas.oldPeople.title")}</h2>
+                                <p>{t("construction.residentialAreas.oldPeople.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -420,13 +400,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/01/people-with-health-issue.png"
-                                alt="People with health issues"
+                                alt={t("construction.residentialAreas.healthIssues.imgAlt")}
                                 width="108"
                                 height="160"
                             />
                             <div className="feature_wrap_box">
-                                <h2>People with health issues</h2>
-                                <p>Their conditions might worsen and harm organs such as the kidneys, lungs, etc.</p>
+                                <h2>{t("construction.residentialAreas.healthIssues.title")}</h2>
+                                <p>{t("construction.residentialAreas.healthIssues.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -440,14 +420,10 @@ export default function ConstructionAirQualityPage() {
                         <div className="col-md-12">
                             <div className="introducing_box sub_title_box text-center">
                                 <h2 className="title_heading">
-                                    Guidelines for C&D sites <span className="bold_text">as per the CAQM</span>
+                                    {t("construction.guidelines.title")}{" "}
+                                    <span className="bold_text">{t("construction.guidelines.highlight")}</span>
                                 </h2>
-                                <p>
-                                    The government of India recognized the problem and has come up with a solution for dust mitigation.
-                                    The Ministry of Environment, Forest, and Climate Change recently issued a notice regarding the
-                                    construction pollution at the project sites in Delhi NCR and other regions that come under the
-                                    Commission for Air Quality and Management (CAQM).
-                                </p>
+                                <p>{t("construction.guidelines.description")}</p>
                             </div>
                             <div className="introduce_button" style={{ display: "flex", justifyContent: "center" }}>
                                 <a
@@ -458,13 +434,13 @@ export default function ConstructionAirQualityPage() {
                                     aria-expanded="false"
                                     aria-controls="guidelinesCollapse"
                                 >
-                                    Know More{" "}
+                                    {t("construction.guidelines.knowMore")}{" "}
                                     <img
                                         className="alignnone"
                                         src="https://www.pranaair.com/wp-content/uploads/2023/05/view-button.png"
                                         width="24"
                                         height="24"
-                                        alt="view button"
+                                        alt={t("construction.guidelines.viewBtnAlt")}
                                     />
                                 </a>
                             </div>
@@ -479,18 +455,19 @@ export default function ConstructionAirQualityPage() {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <h3 style={{ textAlign: "center" }}>Dust Pollution Control Self Assessment</h3>
+                                <h3 style={{ textAlign: "center" }}>{t("construction.guidelinesDetails.title")}</h3>
                             </div>
                             <div className="col-md-4">
                                 <p style={{ textAlign: "center" }}>
                                     <img
                                         className="wp-image-66977 aligncenter"
                                         src="https://www.pranaair.com/wp-content/uploads/2023/02/DPCC-300x286.png"
-                                        alt="DPCC"
+                                        alt={t("construction.guidelinesDetails.dpcc.imgAlt")}
                                         width="186"
                                         height="177"
                                     />
-                                    <strong>DPCC</strong> (Delhi Pollution Control Committee)
+                                    <strong>{t("construction.guidelinesDetails.dpcc.abbr")}</strong>{" "}
+                                    {t("construction.guidelinesDetails.dpcc.fullName")}
                                 </p>
                             </div>
                             <div className="col-md-4">
@@ -498,11 +475,12 @@ export default function ConstructionAirQualityPage() {
                                     <img
                                         className="wp-image-66977 aligncenter"
                                         src="https://www.pranaair.com/wp-content/uploads/2023/02/HSPCB.png"
-                                        alt="HSPCB (Haryana State Pollution Control Board)"
+                                        alt={t("construction.guidelinesDetails.hspcb.imgAlt")}
                                         width="186"
                                         height="177"
                                     />
-                                    <strong>HSPCB</strong> (Haryana State Pollution Control Board)
+                                    <strong>{t("construction.guidelinesDetails.hspcb.abbr")}</strong>{" "}
+                                    {t("construction.guidelinesDetails.hspcb.fullName")}
                                 </p>
                             </div>
                             <div className="col-md-4">
@@ -510,51 +488,40 @@ export default function ConstructionAirQualityPage() {
                                     <img
                                         className="wp-image-66977 aligncenter"
                                         src="https://www.pranaair.com/wp-content/uploads/2023/02/UPPCB.png"
-                                        alt="UPPCB (Uttar Pradesh Pollution Control Board)"
+                                        alt={t("construction.guidelinesDetails.uppcb.imgAlt")}
                                         width="186"
                                         height="177"
                                     />
-                                    <strong>UPPCB</strong> (Uttar Pradesh Pollution Control Board)
+                                    <strong>{t("construction.guidelinesDetails.uppcb.abbr")}</strong>{" "}
+                                    {t("construction.guidelinesDetails.uppcb.fullName")}
                                 </p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-12">
                                 <p style={{ textAlign: "center", fontSize: "12pt" }}>
-                                    A bunch of instructions by Govt. of India is given in order to curb the Construction and Demolition
-                                    activities in Delhi NCR, India which are as follows:-
+                                    {t("construction.guidelinesDetails.instructions.intro")}
                                 </p>
                             </div>
                             <div className="col-md-6">
-                                <div className="alert alert-info">
-                                    The Government announced that an online tool should be introduced to keep track of whether the
-                                    pollution control rules are being implemented as per said rules.
-                                </div>
+                                <div className="alert alert-info">{t("construction.guidelinesDetails.instructions.item1")}</div>
                             </div>
                             <div className="col-md-6">
-                                <div className="alert alert-info">
-                                    All projects of construction and demolition whose area is 500 square meters or more than 500 square
-                                    meters which come under Delhi NCR have to register at the web portal.
-                                </div>
+                                <div className="alert alert-info">{t("construction.guidelinesDetails.instructions.item2")}</div>
                             </div>
                             <div className="col-md-6">
-                                <div className="alert alert-info">
-                                    Video fencing that is also well-found with remote 4G connectivity should be integrated with the web
-                                    portal for effective observation of the implementation of pollution control measures.
-                                </div>
+                                <div className="alert alert-info">{t("construction.guidelinesDetails.instructions.item3")}</div>
                             </div>
                             <div className="col-md-6">
-                                <div className="alert alert-info">
-                                    All the construction and demolition sites need to be equipped with economical and accurate sensors of
-                                    the particulate matter, PM10, AND PM2.5. The sensors should be linked to where they can be accessed
-                                    live at all times by the CPCB, government, and other government bodies.
-                                </div>
+                                <div className="alert alert-info">{t("construction.guidelinesDetails.instructions.item4")}</div>
                             </div>
                             <div className="col-md-12">
-                                <h3 style={{ textAlign: "center", color: "#78ae60" }}>Press Release by CAQM:</h3>
+                                <h3 style={{ textAlign: "center", color: "#78ae60" }}>
+                                    {t("construction.guidelinesDetails.pressRelease.title")}
+                                </h3>
                                 <p style={{ textAlign: "center" }}>
                                     <a href="https://pib.gov.in/Pressreleaseshare.aspx?PRID=1759914" rel="nofollow">
-                                        https://pib.gov.in/Pressreleaseshare.aspx?PRID=1759914
+                                        {t("construction.guidelinesDetails.pressRelease.link")}
                                     </a>
                                 </p>
                             </div>
@@ -562,7 +529,7 @@ export default function ConstructionAirQualityPage() {
                         <div className="row">
                             <div className="col-md-12">
                                 <h2 className="air_heading" style={{ textAlign: "center" }}>
-                                    How we can help?
+                                    {t("construction.guidelinesDetails.howWeCanHelp")}
                                 </h2>
                             </div>
                         </div>
@@ -590,11 +557,11 @@ export default function ConstructionAirQualityPage() {
                                         <span className="tab_img">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/05/Prana-Air-Ambient-Air-quality-monitor-for-construction.webp"
-                                                alt="Prana air construction ambient air quality monitor"
+                                                alt={t("construction.ambientMonitor.tabs.monitor.imgAlt")}
                                                 height="183"
                                             />
                                         </span>
-                                        Ambient Monitor
+                                        {t("construction.ambientMonitor.tabs.monitor.title")}
                                     </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
@@ -611,12 +578,12 @@ export default function ConstructionAirQualityPage() {
                                         <span className="tab_img">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-api-for-construction.png"
-                                                alt="prana air monitor api data for construction site"
+                                                alt={t("construction.ambientMonitor.tabs.apiData.imgAlt")}
                                                 width="242"
                                                 height="183"
                                             />
                                         </span>
-                                        API Data To Govt. Portal
+                                        {t("construction.ambientMonitor.tabs.apiData.title")}
                                     </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
@@ -633,38 +600,34 @@ export default function ConstructionAirQualityPage() {
                                         <span className="tab_img">
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/05/cctv-camera.png"
-                                                alt="construction cctv camera"
+                                                alt={t("construction.ambientMonitor.tabs.cctvCamera.imgAlt")}
                                                 width="242"
                                                 height="183"
                                             />
                                         </span>
-                                        CCTV Camera
+                                        {t("construction.ambientMonitor.tabs.cctvCamera.title")}
                                     </button>
                                 </li>
                             </ul>
                             <div className="tab-content" id="ambientMonitorTabsContent">
                                 <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div className="ambient_monitor_box">
-                                        <p>
-                                            Prana Air Ambient Air Quality Monitors help construction companies monitor air quality and ensure
-                                            worker safety. Accurate readings of different air quality parameters, including temperature, allow
-                                            for proactive measures to mitigate air pollution and improve overall air quality on site.
-                                        </p>
-                                        <h5 className="features">Features</h5>
+                                        <p>{t("construction.ambientMonitor.content.monitor.description")}</p>
+                                        <h5 className="features">{t("construction.ambientMonitor.content.monitor.featuresTitle")}</h5>
                                         <ul>
-                                            <li>Real-time and historical data analysis</li>
-                                            <li>Lightweight and Weatherproof monitor</li>
-                                            <li>Multiple sensor & connectivity available</li>
-                                            <li>Can be used as a CAAQMS</li>
+                                            {t("construction.ambientMonitor.content.monitor.features", { returnObjects: true }).map(
+                                                (feature, index) => (
+                                                    <li key={index}>{feature}</li>
+                                                ),
+                                            )}
                                         </ul>
 
                                         <ul className="paramete_list">
-                                            <li>AQI</li>
-                                            <li>PM1.0</li>
-                                            <li>PM2.5</li>
-                                            <li>PM10</li>
-                                            <li>Temperature</li>
-                                            <li>Humidity</li>
+                                            {t("construction.ambientMonitor.content.monitor.parameters", { returnObjects: true }).map(
+                                                (param, index) => (
+                                                    <li key={index}>{param}</li>
+                                                ),
+                                            )}
                                         </ul>
 
                                         <div className="ambient_btn_box">
@@ -672,64 +635,58 @@ export default function ConstructionAirQualityPage() {
                                                 href="https://www.pranaair.com/wp-content/uploads/2024/05/Prana-Air-ambient-quality-monitor-brochure-for-construction-sites.pdf"
                                                 className="broucher_btn"
                                             >
-                                                Brochure
+                                                {t("construction.ambientMonitor.content.monitor.brochureBtn")}
                                             </a>
                                             <a href="#get_in_touch" className="broucher_btn get_quote_btn">
-                                                Get A Quote
+                                                {t("construction.ambientMonitor.content.monitor.quoteBtn")}
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="menu1" role="tabpanel" aria-labelledby="menu1-tab">
                                     <div className="ambient_monitor_box">
-                                        <p>
-                                            As per the Govt. guidlines, the data has to be accessed on a website portal owned by the
-                                            government. Prana Air will provide the data of the air quality monitor through an API that can be
-                                            integrated on any website.
-                                        </p>
-                                        <h5 className="features">Features:</h5>
+                                        <p>{t("construction.ambientMonitor.content.apiData.description")}</p>
+                                        <h5 className="features">{t("construction.ambientMonitor.content.apiData.featuresTitle")}</h5>
                                         <ul>
-                                            <li>Uninterrupted API data </li>
-                                            <li>Real-time and historical data</li>
-                                            <li>100% uptime data transfer</li>
-                                            <li>Reliable, stable & secure data</li>
+                                            {t("construction.ambientMonitor.content.apiData.features", { returnObjects: true }).map(
+                                                (feature, index) => (
+                                                    <li key={index}>{feature}</li>
+                                                ),
+                                            )}
                                         </ul>
 
                                         <ul className="paramete_list"></ul>
 
                                         <div className="ambient_btn_box">
                                             <a href="#" className="broucher_btn">
-                                                Brochure
+                                                {t("construction.ambientMonitor.content.apiData.brochureBtn")}
                                             </a>
                                             <a href="#get_in_touch" className="broucher_btn get_quote_btn">
-                                                Get A Quote
+                                                {t("construction.ambientMonitor.content.apiData.quoteBtn")}
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="menu2" role="tabpanel" aria-labelledby="menu2-tab">
                                     <div className="ambient_monitor_box">
-                                        <p>
-                                            With the ability to remotely access live video footage and real-time air quality data,
-                                            construction teams can make informed decisions to improve the air quality, and follow the
-                                            standards, and safety of their work environment.
-                                        </p>
-                                        <h5 className="features">Features</h5>
+                                        <p>{t("construction.ambientMonitor.content.cctvCamera.description")}</p>
+                                        <h5 className="features">{t("construction.ambientMonitor.content.cctvCamera.featuresTitle")}</h5>
                                         <ul className="feature_list_box">
-                                            <li>Live video footage of the site</li>
-                                            <li>Enables proactive measures to mitigate pollution</li>
-                                            <li>Real-time monitoring of actvities</li>
-                                            <li>Improves the saftety & security of the workers </li>
+                                            {t("construction.ambientMonitor.content.cctvCamera.features", { returnObjects: true }).map(
+                                                (feature, index) => (
+                                                    <li key={index}>{feature}</li>
+                                                ),
+                                            )}
                                         </ul>
 
                                         <ul className="paramete_list"></ul>
 
                                         <div className="ambient_btn_box">
                                             <a href="#" className="broucher_btn">
-                                                Brochure
+                                                {t("construction.ambientMonitor.content.cctvCamera.brochureBtn")}
                                             </a>
                                             <a href="#get_in_touch" className="broucher_btn get_quote_btn">
-                                                Get A Quote
+                                                {t("construction.ambientMonitor.content.cctvCamera.quoteBtn")}
                                             </a>
                                         </div>
                                     </div>
@@ -747,13 +704,11 @@ export default function ConstructionAirQualityPage() {
                         <div className="col-md-12">
                             <div className="introducing_box sub_title_box text-center">
                                 <h2 className="title_heading">
-                                    Air Quality <span className="bold_text">Monitoring at Construction Sites</span>
+                                    {t("construction.airQualityMonitoring.title")}{" "}
+                                    <span className="bold_text">{t("construction.airQualityMonitoring.highlight")}</span>
                                 </h2>
-                                <strong>Bad air quality means bad health for construction workers and people living nearby</strong>
-                                <p>
-                                    Air quality assessment at C&D sites will help in monitoring and maintaining the air quality as per the
-                                    Govt. norms, and therefore mitigation strategies can be adapted to maintain the air quality.
-                                </p>
+                                <strong>{t("construction.airQualityMonitoring.subtitle")}</strong>
+                                <p>{t("construction.airQualityMonitoring.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -776,7 +731,7 @@ export default function ConstructionAirQualityPage() {
                                     aria-controls="aqm"
                                     aria-selected="true"
                                 >
-                                    Air Quality Monitor
+                                    {t("construction.airQualitySolutions.tabs.monitor")}
                                 </button>
                             </li>
                             <li className="nav-item" role="presentation">
@@ -790,7 +745,7 @@ export default function ConstructionAirQualityPage() {
                                     aria-controls="tvapp"
                                     aria-selected="false"
                                 >
-                                    LED/TV Display
+                                    {t("construction.airQualitySolutions.tabs.display")}
                                 </button>
                             </li>
                             <li className="nav-item" role="presentation">
@@ -804,7 +759,7 @@ export default function ConstructionAirQualityPage() {
                                     aria-controls="webdashboard"
                                     aria-selected="false"
                                 >
-                                    Storage & Dashboard
+                                    {t("construction.airQualitySolutions.tabs.dashboard")}
                                 </button>
                             </li>
                         </ul>
@@ -813,28 +768,23 @@ export default function ConstructionAirQualityPage() {
                                 <div className="row">
                                     <div className="col-md-6">
                                         <h2>
-                                            <span style={{ color: "#78ae60" }}>Ambient Air Monitor (CAAQMS)</span>
+                                            <span style={{ color: "#78ae60" }}>
+                                                {t("construction.airQualitySolutions.content.monitor.title")}
+                                            </span>
                                         </h2>
-                                        <p>
-                                            Prana Air monitors detect various pollutants and can be used as a CAAQMS for construction sites.
-                                            This Continuous Ambient Air Quality Management System enables informed decisions and emission
-                                            control strategies, ensuring improved air quality and reducing health risks for workers and
-                                            communities.
-                                        </p>
+                                        <p>{t("construction.airQualitySolutions.content.monitor.description")}</p>
                                         <ul className="paramete_list new-para">
-                                            <li>PM1</li>
-                                            <li>PM2.5</li>
-                                            <li>PM10</li>
-                                            <li>Noise</li>
-                                            <li>Temperature</li>
-                                            <li>Humidity</li>
-                                            <li>TVOC</li>
+                                            {t("construction.airQualitySolutions.content.monitor.parameters", { returnObjects: true }).map(
+                                                (param, index) => (
+                                                    <li key={index}>{param}</li>
+                                                ),
+                                            )}
                                         </ul>
                                         <a
                                             className="new-brochure"
                                             href="https://www.pranaair.com/wp-content/uploads/2024/05/Prana-Air-ambient-quality-monitor-brochure-for-construction-sites.pdf"
                                         >
-                                            Download Brochure
+                                            {t("construction.airQualitySolutions.content.monitor.brochureLink")}
                                         </a>
                                     </div>
                                     <div className="col-md-6 new-monitor-bg">
@@ -842,7 +792,7 @@ export default function ConstructionAirQualityPage() {
                                             <img
                                                 className="wp-image-74252 aligncenter"
                                                 src="https://www.pranaair.com/wp-content/uploads/2024/05/Prana-Air-Ambient-Air-quality-monitor-for-construction.webp"
-                                                alt="prana air ambient caaqms air quality monitor for construction sites"
+                                                alt={t("construction.airQualitySolutions.content.monitor.imgAlt")}
                                                 width="306"
                                                 height="419"
                                             />
@@ -854,26 +804,24 @@ export default function ConstructionAirQualityPage() {
                                 <div className="row">
                                     <div className="col-md-6">
                                         <h2>
-                                            <span style={{ color: "#78ae60" }}>LED Display & Android TV Dashboard</span>
+                                            <span style={{ color: "#78ae60" }}>
+                                                {t("construction.airQualitySolutions.content.display.title")}
+                                            </span>
                                         </h2>
-                                        <p>
-                                            Display real-time air quality data on your Android television sets or LED displays 24/7 at
-                                            construction sites. This enables construction teams to easily monitor and analyze air quality
-                                            data, helping them make informed decisions and take proactive measures to mitigate potential
-                                            health risks for workers and nearby communities.
-                                        </p>
+                                        <p>{t("construction.airQualitySolutions.content.display.description")}</p>
                                         <ul className="paramete_list">
-                                            <li>TV Display</li>
-                                            <li>Large Display</li>
-                                            <li>More Insightful</li>
-                                            <li>Real-time Data</li>
+                                            {t("construction.airQualitySolutions.content.display.features", { returnObjects: true }).map(
+                                                (feature, index) => (
+                                                    <li key={index}>{feature}</li>
+                                                ),
+                                            )}
                                         </ul>
                                     </div>
                                     <div className="col-md-6">
                                         <img
                                             className="wp-image-74236 aligncenter"
                                             src="https://www.pranaair.com/wp-content/uploads/2023/05/led-and-android-tv-display.png"
-                                            alt="prana air construction monitor led and android tv display"
+                                            alt={t("construction.airQualitySolutions.content.display.imgAlt")}
                                             width="420"
                                             height="318"
                                         />
@@ -884,26 +832,24 @@ export default function ConstructionAirQualityPage() {
                                 <div className="row">
                                     <div className="col-md-6">
                                         <h2>
-                                            <span style={{ color: "#78ae60" }}>Cloud Storage & Data Dashboards</span>
+                                            <span style={{ color: "#78ae60" }}>
+                                                {t("construction.airQualitySolutions.content.dashboard.title")}
+                                            </span>
                                         </h2>
-                                        <p>
-                                            Cloud storage is an essential tool for construction sites to remotely access monitored data. Cloud
-                                            storage provides a secure backup for critical data, reducing the risk of data loss or corruption.
-                                            The data can be accessed on mobile and tablet apps, android TV and web-dashboard anytime anywhere
-                                            24/7.
-                                        </p>
+                                        <p>{t("construction.airQualitySolutions.content.dashboard.description")}</p>
                                         <ul className="paramete_list">
-                                            <li>Mobile</li>
-                                            <li>Tablet</li>
-                                            <li>TV</li>
-                                            <li>Web</li>
+                                            {t("construction.airQualitySolutions.content.dashboard.platforms", { returnObjects: true }).map(
+                                                (platform, index) => (
+                                                    <li key={index}>{platform}</li>
+                                                ),
+                                            )}
                                         </ul>
                                     </div>
                                     <div className="col-md-6">
                                         <img
                                             className="wp-image-74195 aligncenter"
                                             src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-cloud-storage-and-data-dashboard.png"
-                                            alt="aqi cloud storage and data dashboard"
+                                            alt={t("construction.airQualitySolutions.content.dashboard.imgAlt")}
                                             width="480"
                                             height="363"
                                         />
@@ -921,13 +867,13 @@ export default function ConstructionAirQualityPage() {
                     <div className="col-md-4">
                         <div className="new-card-monitor">
                             <div className="new-card-text">
-                                <h3>Uninterrupted Performance :</h3>
-                                <p>No Continuous Power Needed</p>
+                                <h3>{t("construction.monitorFeatures.uninterrupted.title")}</h3>
+                                <p>{t("construction.monitorFeatures.uninterrupted.description")}</p>
                             </div>
                             <div className="new-card-img">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2024/05/Uninterrupted-Performance.webp"
-                                    alt="uninterrupted performance of prana air ambient air quality monitor at constructions site"
+                                    alt={t("construction.monitorFeatures.uninterrupted.imgAlt")}
                                 />
                             </div>
                         </div>
@@ -935,13 +881,13 @@ export default function ConstructionAirQualityPage() {
                     <div className="col-md-4">
                         <div className="new-card-monitor">
                             <div className="new-card-text">
-                                <h3>GPS Enabled :</h3>
-                                <p>Location-based deployment</p>
+                                <h3>{t("construction.monitorFeatures.gps.title")}</h3>
+                                <p>{t("construction.monitorFeatures.gps.description")}</p>
                             </div>
                             <div className="new-card-img">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2024/05/GPS-Enabled.webp"
-                                    alt="gps enabled on prana air ambient air quality monitor at constructions site"
+                                    alt={t("construction.monitorFeatures.gps.imgAlt")}
                                 />
                             </div>
                         </div>
@@ -949,13 +895,13 @@ export default function ConstructionAirQualityPage() {
                     <div className="col-md-4">
                         <div className="new-card-monitor">
                             <div className="new-card-text">
-                                <h3>SD Card Storage :</h3>
-                                <p>Efficiently store data offline</p>
+                                <h3>{t("construction.monitorFeatures.sdCard.title")}</h3>
+                                <p>{t("construction.monitorFeatures.sdCard.description")}</p>
                             </div>
                             <div className="new-card-img">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2024/05/SD-CARD-STORAGE.webp"
-                                    alt="sd card offline data storage on prana air ambient air quality monitor at constructions site"
+                                    alt={t("construction.monitorFeatures.sdCard.imgAlt")}
                                 />
                             </div>
                         </div>
@@ -969,18 +915,15 @@ export default function ConstructionAirQualityPage() {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="air-qlty-banner-txt">
-                                <h2>Ambient Air Quality Monitor</h2>
-                                <p>
-                                    Monitor boasts an IP68 waterproof housing to provide unparalleled durability and performance in any
-                                    weather condition. Ensures reliable data collection and analysis with accurate air quality.
-                                </p>
+                                <h2>{t("construction.waterproofBanner.title")}</h2>
+                                <p>{t("construction.waterproofBanner.description")}</p>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="waterproof-housing">
                                 <img
                                     src="https://www.pranaair.com/wp-content/uploads/2024/05/IP68-Weatherproof.png"
-                                    alt="IP68 Weatherproof of Prana Air Ambient air quality monitor for construction sites"
+                                    alt={t("construction.waterproofBanner.imgAlt")}
                                 />
                             </div>
                         </div>
@@ -993,22 +936,21 @@ export default function ConstructionAirQualityPage() {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="web-dash-heading">
-                            <h2>AQI App and Web Dashboard</h2>
-                            <p>
-                                Access device data display with AQI App and Web Dashboard connectivity. Seamlessly navigate to trend
-                                analysis, leveraging historical and comparative insights on air quality.
-                            </p>
+                            <h2>{t("construction.webDashboard.title")}</h2>
+                            <p>{t("construction.webDashboard.description")}</p>
                             <ul>
                                 <li>
                                     <a href="https://apps.apple.com/tt/app/aqi/id1439684571">
-                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/05/icon-_apple.png" alt="" /> Download
-                                        for <strong>iOS</strong>
+                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/05/icon-_apple.png" alt="" />{" "}
+                                        {t("construction.webDashboard.downloadIOS.prefix")}{" "}
+                                        <strong>{t("construction.webDashboard.downloadIOS.platform")}</strong>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://play.google.com/store/apps/details?id=com.aqi.data">
-                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/05/icon-android.png" alt="" /> Download
-                                        for <strong>android</strong>
+                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/05/icon-android.png" alt="" />{" "}
+                                        {t("construction.webDashboard.downloadAndroid.prefix")}{" "}
+                                        <strong>{t("construction.webDashboard.downloadAndroid.platform")}</strong>
                                     </a>
                                 </li>
                             </ul>
@@ -1018,7 +960,7 @@ export default function ConstructionAirQualityPage() {
                         <div className="web-dash-img">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2024/05/aqi-app-and-web-dashboard.webp"
-                                alt="aqi apps and web dashboard for prana air ambient air quality monitor at constructions sites"
+                                alt={t("construction.webDashboard.imgAlt")}
                             />
                         </div>
                     </div>
@@ -1032,13 +974,10 @@ export default function ConstructionAirQualityPage() {
                         <div className="col-md-12">
                             <div className="introducing_box sub_title_box text-center">
                                 <h2 className="title_heading">
-                                    Data Freemium <span className="bold_text">Services</span>
+                                    {t("construction.dataServices.title")}{" "}
+                                    <span className="bold_text">{t("construction.dataServices.highlight")}</span>
                                 </h2>
-                                <p>
-                                    You can access the real-time & historical air quality data of your monitor on multiple devices like
-                                    mobile and tablet apps, android TV/LED display, and website 24*7. For more analytical and data
-                                    reports, you can avail the premium data features of AQI dashboard.
-                                </p>
+                                <p>{t("construction.dataServices.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -1052,27 +991,27 @@ export default function ConstructionAirQualityPage() {
                         <div className="app_service_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2024/05/Air-Quality-Monitor-services.webp"
-                                alt="prana air ambient air quality monitor caaqms for construction sites"
+                                alt={t("construction.servicesGrid.monitor.imgAlt")}
                             />
-                            <h4>Ambient Monitor (CAAQMS)</h4>
+                            <h4>{t("construction.servicesGrid.monitor.title")}</h4>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="app_service_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/05/led-display-and-tv-dashboard-at-construction-site.jpg"
-                                alt="led display and android tv dashboard at construction site"
+                                alt={t("construction.servicesGrid.display.imgAlt")}
                             />
-                            <h4>LED Display/TV Dashboard</h4>
+                            <h4>{t("construction.servicesGrid.display.title")}</h4>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="app_service_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2023/05/aqi-cloud-and-data-dashboards.jpg"
-                                alt="aqi customized data dashboard and cloud storage "
+                                alt={t("construction.servicesGrid.dashboard.imgAlt")}
                             />
-                            <h4>Data Dashboards & Cloud Storage</h4>
+                            <h4>{t("construction.servicesGrid.dashboard.title")}</h4>
                         </div>
                     </div>
                 </div>
@@ -1083,39 +1022,8 @@ export default function ConstructionAirQualityPage() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h3 style={{ textAlign: "center", fontSize: "18pt" }}>
-                                Installation of Ambient Monitors at Construction Sites
-                            </h3>
-                            <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={8000} infinite={true} showDots={true}>
-                                <div>
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/05/installed-of-prana-air-ambient-air-monitors-at-construction-site-2048x863.jpg"
-                                        alt="Installation of ambient monitors"
-                                        className="img-responsive"
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/05/installed-of-prana-air-ambient-air-monitors-at-construction-site-2048x863.jpg"
-                                        alt="Installation of ambient monitors"
-                                        className="img-responsive"
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/05/installed-prana-air-ambient-monitors-at-construction-site-1536x635.jpg"
-                                        alt="Installation of ambient monitors"
-                                        className="img-responsive"
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/05/installed-prana-air-ambient-monitors-at-construction-site-1536x635.jpg"
-                                        alt="Installation of ambient monitors"
-                                        className="img-responsive"
-                                    />
-                                </div>
-                            </Carousel>
+                            <h3 style={{ textAlign: "center", fontSize: "18pt" }}>{t("construction.installation.title")}</h3>
+                            <InstallCarousel />
                         </div>
                     </div>
                 </div>
@@ -1125,26 +1033,20 @@ export default function ConstructionAirQualityPage() {
             <div className="container">
                 <div className="row testimonial-bg-image">
                     <div className="col-md-9">
-                        <p>
-                            We have been using the PRANA AIRs Air Quality Monitors, installed by PURELOGIC LABS INDIA PVT. LTD.,
-                            706, 7th Floor, Crown Heights, Sector - 10, Rohini, New Delhi, at our different construction sites and
-                            have found their product accurate and reliable. The devices installed have helped us to comply with the
-                            air quality standards and ensure the safety of our workers. The after-sales service is very prompt and
-                            excellent.
-                        </p>
+                        <p>{t("construction.testimonial.quote")}</p>
                     </div>
                     <div className="col-md-3">
                         <img
                             className="wp-image-74390 aligncenter"
                             src="https://www.pranaair.com/wp-content/uploads/2023/05/unity-group-logo.png"
-                            alt="unity group logo"
+                            alt={t("construction.testimonial.logoAlt")}
                             width="182"
                             height="63"
                         />
                         <p style={{ textAlign: "center" }}>
-                            <strong>Anil Sobti</strong>
+                            <strong>{t("construction.testimonial.name")}</strong>
                             <br />
-                            General Manager Commercial
+                            {t("construction.testimonial.position")}
                         </p>
                     </div>
                 </div>
@@ -1159,16 +1061,17 @@ export default function ConstructionAirQualityPage() {
                                 <ul>
                                     <li>
                                         <h5>
-                                            Discover the Importance of Air Quality Monitoring for <b>RMC Plants:</b> Ensuring Compliance and
-                                            Healthy Atmospheres.
+                                            {t("construction.rmcPlant.description.part1")}{" "}
+                                            <b>{t("construction.rmcPlant.description.highlight")}</b>{" "}
+                                            {t("construction.rmcPlant.description.part2")}
                                         </h5>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            Know More
+                                            {t("construction.rmcPlant.knowMore")}
                                             <img
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/05/plant-btn-icon.png"
-                                                alt="btn icon"
+                                                alt={t("construction.rmcPlant.btnIconAlt")}
                                             />
                                         </a>
                                     </li>
@@ -1186,9 +1089,10 @@ export default function ConstructionAirQualityPage() {
                         <div className="col-md-12">
                             <div className="introducing_box sub_title_box text-center">
                                 <h2 className="title_heading">
-                                    Our <span className="bold_text">Clientele</span>
+                                    {t("construction.clientele.title")}{" "}
+                                    <span className="bold_text">{t("construction.clientele.highlight")}</span>
                                 </h2>
-                                <p>We are honored to work with so many well-known companies.</p>
+                                <p>{t("construction.clientele.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -1266,12 +1170,12 @@ export default function ConstructionAirQualityPage() {
                         <div className="col-md-12">
                             <div className="introducing_box sub_title_box text-center">
                                 <h2 className="title_heading">
-                                    Frequently Asked <span className="bold_text">Questions</span>
+                                    {t("construction.faq.title")} <span className="bold_text">{t("construction.faq.highlight")}</span>
                                 </h2>
                                 <p>
-                                    About Air Quality Solution for construction sites
+                                    {t("construction.faq.description")}
                                     <br />
-                                    Have questions? Were here to help.
+                                    {t("construction.faq.helpText")}
                                 </p>
                             </div>
                         </div>
@@ -1295,7 +1199,7 @@ export default function ConstructionAirQualityPage() {
                                             aria-expanded="true"
                                             aria-controls="collapse1"
                                         >
-                                            1. What are some common air pollutants that are present at C&D sites?
+                                            {t("construction.faq.questions.q1.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -1304,9 +1208,7 @@ export default function ConstructionAirQualityPage() {
                                         aria-labelledby="heading1"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            – Common air pollutants present at C&D sites are PM2.5, PM10, CO, NOx, VOCs, etc, and noise.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("construction.faq.questions.q1.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -1319,7 +1221,7 @@ export default function ConstructionAirQualityPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse2"
                                         >
-                                            2. What are the health impacts of the pollutants present at a C&D site?
+                                            {t("construction.faq.questions.q2.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -1328,11 +1230,7 @@ export default function ConstructionAirQualityPage() {
                                         aria-labelledby="heading2"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            – Workers and people living nearby are affected the most. The harm can be increased by subsequent
-                                            exposure to PM and dust pollution. Health effects include eye and respiratory tract irritations,
-                                            lung and kidney damage, and cancer.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("construction.faq.questions.q2.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -1345,7 +1243,7 @@ export default function ConstructionAirQualityPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse3"
                                         >
-                                            3. What are some effective methods for reducing dust at C&D sites?
+                                            {t("construction.faq.questions.q3.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -1354,10 +1252,7 @@ export default function ConstructionAirQualityPage() {
                                         aria-labelledby="heading3"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            – The best methods for reducing dust at C&D facilities include routinely wetting down surfaces,
-                                            employing dust suppression devices, and making sure enclosed spaces have adequate ventilation.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("construction.faq.questions.q3.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -1370,7 +1265,7 @@ export default function ConstructionAirQualityPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse4"
                                         >
-                                            4. Why is it necessary to have air quality monitoring solutions?
+                                            {t("construction.faq.questions.q4.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -1379,10 +1274,7 @@ export default function ConstructionAirQualityPage() {
                                         aria-labelledby="heading4"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            – To know the nature of pollutants and how much they are present at the site so that necessary
-                                            actions can be taken while complying with the standards under the CAQM.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("construction.faq.questions.q4.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -1395,8 +1287,7 @@ export default function ConstructionAirQualityPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse5"
                                         >
-                                            5. What are some of the regulations that C&D sites must follow in order to maintain appropriate
-                                            air quality?
+                                            {t("construction.faq.questions.q5.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -1405,11 +1296,7 @@ export default function ConstructionAirQualityPage() {
                                         aria-labelledby="heading5"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            – C&D sites are required to abide by rules established by the regional air quality management
-                                            district or a state agency, which may include restrictions on the number of certain pollutants
-                                            that can be emitted, measures to reduce dust, and reporting requirements.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("construction.faq.questions.q5.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -1422,7 +1309,7 @@ export default function ConstructionAirQualityPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse6"
                                         >
-                                            6. Other than the air pollutants, do your monitors include any other parameters?
+                                            {t("construction.faq.questions.q6.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -1431,9 +1318,7 @@ export default function ConstructionAirQualityPage() {
                                         aria-labelledby="heading6"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            – Yes, you can keep an eye on the humidity, noise, and temperature of a place.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("construction.faq.questions.q6.answer")}</div>
                                     </div>
                                 </div>
                                 <div className="accordion-item">
@@ -1446,7 +1331,7 @@ export default function ConstructionAirQualityPage() {
                                             aria-expanded="false"
                                             aria-controls="collapse7"
                                         >
-                                            7. Are there any further advantages to the solutions?
+                                            {t("construction.faq.questions.q7.question")}
                                         </button>
                                     </h2>
                                     <div
@@ -1455,10 +1340,7 @@ export default function ConstructionAirQualityPage() {
                                         aria-labelledby="heading7"
                                         data-bs-parent="#faqAccordion"
                                     >
-                                        <div className="accordion-body faq-tab-para">
-                                            – Customizable dashboard, 24*7 remote access to the data, health suggestions, real-time and
-                                            historical data analysis, QR code to scan for real-time AQI in that location, and much more.
-                                        </div>
+                                        <div className="accordion-body faq-tab-para">{t("construction.faq.questions.q7.answer")}</div>
                                     </div>
                                 </div>
                             </div>
@@ -1473,15 +1355,14 @@ export default function ConstructionAirQualityPage() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="contact-heading">
-                                <h2>Get in Touch</h2>
-                                <p>Please help us know what requirements you have. Our team will contact you very soon.</p>
+                                <h2>{t("construction.contact.title")}</h2>
+                                <p>{t("construction.contact.description")}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <ContactForm pageName="Constructions Page" />
             </div>
-
             {/* Industrial Applications */}
             <div className="container-fluid seperate_industrial_box">
                 <div className="container">
@@ -1489,12 +1370,13 @@ export default function ConstructionAirQualityPage() {
                         <div className="col-md-12">
                             <div className="introducing_box sub_title_box text-center">
                                 <h2 className="title_heading">
-                                    Industrial <span className="bold_text">Applications</span>
+                                    {t("construction.industrialApplications.title")}{" "}
+                                    <span className="bold_text">{t("construction.industrialApplications.highlight")}</span>
                                 </h2>
                                 <p>
-                                    Regardless of how small or large a business is, Prana Air offers a wide choice of Smart,
+                                    {t("construction.industrialApplications.description")}
                                     <br />
-                                    affordable, and highly accurate air quality solutions for various industries.
+                                    {t("construction.industrialApplications.descriptionLine2")}
                                 </p>
                             </div>
                         </div>
@@ -1507,60 +1389,7 @@ export default function ConstructionAirQualityPage() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="owl-slider">
-                            <Carousel responsive={insdurialapp} autoPlay={true} autoPlaySpeed={8000} infinite={true} showDots={false}>
-                                <div className="app_service_box">
-                                    <div className="app_img_bx">
-                                        <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2023/01/air-quality-solutions-for-retail-outlets.jpg"
-                                                alt="air quality solutions for retail stores"
-                                            />
-                                        </a>
-                                    </div>
-                                    <a href="https://www.pranaair.com/solutions-by-application/retail-stores/">
-                                        <h4>Solutions for Retail Stores</h4>
-                                    </a>
-                                </div>
-                                <div className="app_service_box">
-                                    <div className="app_img_bx">
-                                        <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png"
-                                                alt="air quality solutions for banks"
-                                            />
-                                        </a>
-                                    </div>
-                                    <a href="https://www.pranaair.com/solutions-by-application/bank-financial-institutions/">
-                                        <h4>Solutions for Bank</h4>
-                                    </a>
-                                </div>
-                                <div className="app_service_box">
-                                    <div className="app_img_bx">
-                                        <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2023/07/solution-for-office-scaled.jpg"
-                                                alt="air quality solutions for hotel business"
-                                            />
-                                        </a>
-                                    </div>
-                                    <a href="https://www.pranaair.com/solutions-by-application/hotel-businesses/">
-                                        <h4>Solutions for Hotel</h4>
-                                    </a>
-                                </div>
-                                <div className="app_service_box">
-                                    <div className="app_img_bx">
-                                        <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                            <img
-                                                src="https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg"
-                                                alt="air quality solutions for restaurants"
-                                            />
-                                        </a>
-                                    </div>
-                                    <a href="https://www.pranaair.com/solutions-by-application/restaurants/">
-                                        <h4>Solutions for Restaurant</h4>
-                                    </a>
-                                </div>
-                            </Carousel>
+                            <IndustrialApplicationsCarousel applications={industrialApplications} />
                         </div>
                     </div>
                 </div>

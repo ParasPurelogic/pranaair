@@ -1,0 +1,219 @@
+{
+    "industrialApplicationsData": {
+        "hotel": {
+            "title": "Solutions for Hotel"
+        },
+        "restaurant": {
+            "title": "Solutions for Restaurant"
+        },
+        "institutes": {
+            "title": "Solutions for Institutes"
+        },
+        "cinema": {
+            "title": "Solutions for Cinema/Theatre"
+        },
+        "automobiles": {
+            "title": "Solutions for Automobiles"
+        },
+        "realEstate": {
+            "title": "Solutions for Real Estates"
+        },
+        "smartphone": {
+            "title": "Solutions for Smartphone Makers"
+        },
+        "construction": {
+            "title": "Solutions for Construction"
+        },
+        "animalCare": {
+            "title": "Air quality Solutions for Animal care"
+        },
+        "logistics": {
+            "title": "Air quality Solutions for logistics"
+        },
+        "railways": {
+            "title": "Air quality Solutions for Railways"
+        }
+    },
+     "hotelBanner": {
+    "title": "Air quality solutions for",
+    "highlight": "Hotel Businesses",
+    "description": "All-around air quality monitoring systems and clean air solutions with data accessibility for Hotel Businesses.",
+    "cta": "Get a Quote"
+  },
+  "majorPollutants": {
+    "title": "Major Air",
+    "highlight": "Pollutants",
+    "description": "Hotel and inn guests come from various geographical places. As a result, these visitors bring a range of air pollutants with them, which contaminate the air within hotels. In addition to this, the air is further contaminated by emissions from tools and other hotel-related utilities, making it more dangerous to breathe."
+  },
+  "pollutantFeatures": {
+    "pm25": {
+      "title": "PM2.5",
+      "description": "Hotel boilers that run on coal emit a lot of dust particles. Breathing these particles can cause cardiorespiratory issues."
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "Guests occupancy is very high during the holiday season in the hotels."
+    },
+    "tvoc": {
+      "title": "TVOC",
+      "description": "The air fresheners and cleaning agents. Paints, carpets, and furniture can emit TVOC as well."
+    },
+    "co": {
+      "title": "CO",
+      "description": "Various utilities such as fireplaces and diesel exhausts emit gases such as carbon monoxide."
+    },
+    "noise": {
+      "title": "Noise",
+      "description": "Hustle and bustle in hotels are quite normal. This sometimes creates disturbance for guests."
+    }
+  },
+  "schoolImageBox": {
+    "pm25": {
+      "title": "PM2.5",
+      "description": "Carpet and clothing fibers, degradation of buildings"
+    },
+    "co2": {
+      "title": "CO2",
+      "description": "Respiration or breathing"
+    },
+    "hcho": {
+      "title": "HCHO",
+      "description": "Air fresheners, wood preservatives"
+    },
+    "tvocs": {
+      "title": "TVOCs",
+      "description": "Paints, carpets, disinfectants"
+    }
+  },
+  "risk": {
+    "title": "Who are at",
+    "highlight": "Risk?",
+    "description": "The occupancy of hotels is one of the major reasons for bad air quality inside hotels. People with underlying health issues, old age groups, children, and sensitive groups are at risk when exposed to air pollution. Even healthy adults can feel sick due to exposure to bad air quality."
+  },
+  "riskFeatures": {
+    "healthIssues": {
+      "title": "Underlying Health Issues",
+      "description": "Guests with underlying illnesses like breathing issues are seriously impacted when exposed to air pollution."
+    },
+    "kitchenStaff": {
+      "title": "Kitchen Staff",
+      "description": "There are many sources of emissions in a kitchen scenario. The kitchen staff is most affected by pollutants like CO in the kitchen."
+    },
+    "hotelStaff": {
+      "title": "Hotel Staff",
+      "description": "Unattentiveness, loss of coordination, higher absenteeism, and being more prone to illnesses caused due to bad air exposure."
+    },
+    "guests": {
+      "title": "Guests",
+      "description": "When healthy individuals are exposed to bad air quality, they can feel uneasy and possibly can get sick."
+    }
+  },
+  "qualitySolutions": {
+    "title": "Air quality",
+    "highlight": "Solutions",
+    "description": "Prana Air air quality monitoring and purification solutions are suited for hotel rooms and large lobby areas. They empower you to understand the air quality you breathe and what you can do to clean the air for your guests' comfort and to create an air pollution-free zone, as well as view and analyze the IAQ of different floors of your hotel.",
+    "tabs": {
+      "monitors": "Air Quality Monitors",
+      "freshAir": "Fresh Air Machine",
+      "apiData": "API Data"
+    },
+    "monitors": {
+      "title": "Prana Air SQUAIR\nAir quality monitor",
+      "subtitle": "SSQUAIR monitor is a smart indoor air quality monitoring device that can detect IAQ pollutants.",
+      "features": {
+        "feature1": "Detects PM2.5, CO, CO2, TVOC, noise, temp., & humidity",
+        "feature2": "Mobile & Smart TV App Enabled",
+        "feature3": "Reliable Web Dashboard Accessibility"
+      },
+      "knowMore": "Know More",
+      "rent": "Looking to Rent?"
+    },
+    "freshAir": {
+      "title": "Fresh Air Machine\nAs IAQ Solution",
+      "subtitle": "It is one-stop solution for indoor air pollution, working as an air purifier - IAQ solution.",
+      "features": {
+        "feature1": "Comes with multi-layers HEPA Filters",
+        "feature2": "Compact Design makes it easy to place",
+        "feature3": "Promising you up to 99.5% efficiency"
+      },
+      "knowMore": "Know More",
+      "rent": "Looking to Rent?"
+    },
+    "apiData": {
+      "title": "AQI API Data\nFor Institutes",
+      "subtitle": "Avail the real-time air quality data of your institutes nearby outdoor area on the web.",
+      "features": {
+        "feature1": "Integrate the institutes data on the web",
+        "feature2": "Access the real-time data quickly",
+        "feature3": "Take precautions from the air pollution"
+      },
+      "knowMore": "Know More"
+    }
+  },
+  "dataServices": {
+    "title": "Data Freemium",
+    "highlight": "Services",
+    "description": "The data can be displayed or analyzed on the LCD screens or the app via our customized dashboard. Scan the QR to know the AQI of the area you are in.",
+    "tvApp": "TV Dashboard App",
+    "customApp": "Customised App for Schools",
+    "qrCode": "QR Code Scan"
+  },
+  "effects": {
+    "title": "The Effects of Air Pollution",
+    "highlight": "On Hotel Business",
+    "description": "When guests are exposed to bad air quality, it affects their health, and therefore their overall experience while staying at your hotel.",
+    "withCleanAir": {
+      "title": "With Clean Air",
+      "benefits": {
+        "benefit1": "Improved ventilation",
+        "benefit2": "Guests – good comfort score",
+        "benefit3": "Enhanced experience",
+        "benefit4": "Healthy air quality"
+      }
+    },
+    "withoutCleanAir": {
+      "title": "Without Clean Air",
+      "drawbacks": {
+        "drawback1": "Low ventilation score",
+        "drawback2": "Less guest comfort",
+        "drawback3": "Bad experience",
+        "drawback4": "Unhealthy air quality"
+      }
+    }
+  },
+  "clientele": {
+    "title": "Our",
+    "highlight": "Clientele",
+    "description": "We are honored to work with so many well-known companies."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "highlight": "Questions",
+    "description": "Have questions? We're here to help.",
+    "questions": {
+      "q1": "1. What are the health impacts of the pollutants present inside a hotel?",
+      "q2": "2. What are the major pollutants that are present in hotels?",
+      "q3": "3. Why is it necessary to have air quality monitoring solutions?",
+      "q4": "4. How can I check the AQI in a hotel area using your device?",
+      "q5": "5. Are any other parameters included in the monitors other than the air pollutants?",
+      "q6": "6. Are there any additional benefits that come with the solutions?"
+    },
+    "answers": {
+      "a1": "Your health could be harmed by increased CO2 exposure. Health effects like nausea, vertigo, exhaustion, difficulty breathing, and perspiration can be evident in public spaces like hotel lobbies and reception areas. Transmission of chronic illnesses like the flu and the common cold is fairly common.",
+      "a2": "Many pollutants can be present inside hotel rooms and lobbies. CO2 is one of the main pollutants followed by microbial pollution, CO, TVOC, and noise.",
+      "a3": "To know the nature of pollutants and by how much are they present in hotels so that necessary actions can be taken.",
+      "a4": "Prana Air Monitors are WiFi enabled so you dont need to set up a wire framework to extract and display the data. Simply connect the monitor to the dashboard through WiFi connectivity and view the real-time data on your screens.",
+      "a5": "Yes, you can monitor the temperature, noise, and humidity in an area.",
+      "a6": "Customizable dashboard, 24*7 remote access to the data, get health tips, real-time and historical data analysis, QR code to scan and know the real-time AQI of that area, and many more."
+    }
+  },
+  "industrial": {
+    "title": "Industrial",
+    "highlight": "Applications",
+    "description": "Regardless of how small or large a business is, Prana Air offers a wide choice of Smart, affordable, and highly accurate air quality solutions for various industries."
+  }
+}
