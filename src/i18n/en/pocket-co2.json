@@ -1,0 +1,606 @@
+{
+  "banner": {
+    "title": {
+      "prefix": "Worlds Smallest",
+      "highlight": "CO2 Monitor"
+    },
+    "description": "Track the real-time air quality levels on the go with our smallest, portable, and handiest pocket air monitor.",
+    "price": "₹ 5,990.00",
+    "features": {
+      "pocketSized": {
+        "text": "Pocket-Sized",
+        "alt": "pocket-sized icon"
+      },
+      "wifi": {
+        "text": "Wifi Enabled",
+        "alt": "wifi icon"
+      }
+    },
+    "buyButton": "Buy Now",
+    "buyButton.iconAlt": "icon"
+  },
+  "common": {
+    "logoAlt": "logo"
+  },
+  "qualitativeFeatures": {
+    "heading": {
+      "first": "Monitors",
+      "second": "Qualitative Features"
+    },
+    "description": "This air quality monitor helps you to track real-time CO2 levels wherever you go indoor & outdoor. Our pocket sized monitor is the slimmest and handy device that you can easily fit into your pocket.",
+    "features": {
+      "realTime": {
+        "text": "Real-time Level",
+        "alt": "real-time co2 level"
+      },
+      "wifi": {
+        "text": "Wi-Fi Connectivity",
+        "alt": "wifi icon"
+      },
+      "mobileApp": {
+        "text": "Mobile App Enabled",
+        "alt": "mobile app icon"
+      },
+      "portable": {
+        "text": "Portable Monitor",
+        "alt": "portable monitor icon"
+      },
+      "lcd": {
+        "text": "LCD Display",
+        "alt": "lcd display icon"
+      },
+      "battery": {
+        "text": "400 mAh Battery",
+        "alt": "battery icon"
+      }
+    }
+  },
+  "compliance": {
+    "iconAlt": "compliance icon",
+    "text": {
+      "prefix": "Compliance with",
+      "highlight1": "LEED, WELL,",
+      "conjunction": "and",
+      "highlight2": "ASHRAE",
+      "suffix": "standards"
+    }
+  },
+  "portableMonitor": {
+    "imageAlt": "prana air portable pocket co2 monitor"
+  },
+  "userInterfaces": {
+    "heading": "Multiple User-Interfaces",
+    "description": "Displaying the real-time CO2 levels in the form of both the emoticon and numerical screens. Green, yellow, and red color representation.",
+    "tabs": {
+      "faceNumber": {
+        "title": "Face + Number",
+        "description": "Front view",
+        "iconAlt": "face and number screen"
+      },
+      "numberScreen": {
+        "title": "Number Screen",
+        "description": "Numerical View",
+        "iconAlt": "number screen"
+      },
+      "faceScreen": {
+        "title": "Face Screen",
+        "description": "Emoticon View",
+        "iconAlt": "face screen"
+      },
+      "graphScreen": {
+        "title": "Graph Screen",
+        "description": "Historical Data",
+        "iconAlt": "graph screen"
+      }
+    },
+    "tabContent": {
+      "faceNumber": {
+        "imageAlt": "prana air co2 monitor face and number screen"
+      },
+      "numberScreen": {
+        "imageAlt": "prana air co2 monitor number screen"
+      },
+      "faceScreen": {
+        "imageAlt": "prana air co2 monitor face screen"
+      },
+      "graphScreen": {
+        "imageAlt": "prana air co2 monitor graph screen"
+      }
+    }
+  },
+  "remoteData": {
+    "heading": {
+      "first": "Remote Data",
+      "second": "Accessibility"
+    },
+    "description": "AQI data cloud storage eases the accessibility of the monitors air quality data remotely anytime anywhere wherever you go.",
+    "images": {
+      "co2Monitor": {
+        "text": "CO2 Monitor",
+        "alt": "prana air pocket co2 monitor wifi enabled"
+      },
+      "wifi": {
+        "text": "WIFI Connectivity",
+        "alt": "wifi icon"
+      },
+      "aqiCloud": {
+        "text": "AQI Cloud Server",
+        "alt": "aqi cloud"
+      },
+      "mobileApp": {
+        "text": "CO2 data on AQI mobile app",
+        "alt": "prana air pocket co2 monitor data on aqi app"
+      }
+    }
+  },
+  "appKeyFeatures": {
+    "tabs": {
+      "aqiApp": "AQI App",
+      "aqiDashboard": "AQI Dashboard",
+      "aqiTvApp": "AQI TV App"
+    },
+    "aqiApp": {
+      "description": "Connect your Prana Air Pocket CO2 monitor to AQI mobile app to track your CO2 levels in real time and ventilation score.",
+      "features": {
+        "healthAdvice": {
+          "title": "Health Advice",
+          "description": "Get the health advice for indoor CO2 level from AQI app",
+          "imageAlt": "health advice of co2 level"
+        },
+        "ventilationScore": {
+          "title": "Ventilation Score",
+          "description": "You will understand how good or bad the CO2 levels are in your house.",
+          "imageAlt": "co2 vantilation score data on aqi app"
+        },
+        "historicData": {
+          "title": "Historic Data",
+          "description": "You can analyse the historic data of CO2 where you keep the monitor.",
+          "imageAlt": "pocket co2 monitor history data"
+        },
+        "monthlyInsight": {
+          "title": "Monthly Insight",
+          "description": "The CO2 level of a whole month can be analysed on your fingertips",
+          "imageAlt": "Prana Air co2 monitor calender monthly data"
+        }
+      }
+    },
+    "aqiDashboard": {
+      "features": {
+        "realTime": {
+          "title": "Real-time CO2 air quality data",
+          "imageAlt": "real-time co2 data icon"
+        },
+        "insightful": {
+          "title": "Insightful Air quality monitoring dashboard",
+          "imageAlt": "dashboard icon"
+        },
+        "historic": {
+          "title": "Historic air quality graphs of CO2 level",
+          "imageAlt": "historic co2 graph"
+        },
+        "healthRecommendations": {
+          "title": "Air Quality health recommendations",
+          "imageAlt": "air quality health"
+        }
+      },
+      "dashboardImageAlt": "prana air pocket co2 monitor on aqi web-dashboard"
+    },
+    "aqiTvApp": {
+      "features": {
+        "realTime": {
+          "title": "Real-time CO2 air quality data",
+          "imageAlt": "real-time co2 data"
+        },
+        "historic": {
+          "title": "Historic data for 1, 8, 12 hours.",
+          "imageAlt": "historic co2 data"
+        },
+        "control": {
+          "title": "Control the TV app from mobile.",
+          "imageAlt": "aqi tv app"
+        },
+        "ventilationScore": {
+          "title": "The data indicates the ventilation score.",
+          "imageAlt": "ventilation score"
+        }
+      },
+      "dashboardImageAlt": "prana air pocket co2 monitor on aqi tv-dashboard"
+    }
+  },
+  "dataConnectivity": {
+    "title": "Pocket PM2.5 Monitor",
+    "subtitle": "Data connectivity to Mobile App",
+    "steps": {
+      "install": {
+        "title": "1. INSTALL AQI APP & SIGN UP",
+        "description": "Install the AQI app on your smartphones from the app store. Sign up & log in through your account.",
+        "iconAlt": "Install AQI App",
+        "previewAlt": "Install AQI App Preview"
+      },
+      "connect": {
+        "title": "2. CONNECT THE DEVICE WITH THE APP",
+        "description": "Go to My Device & select Pocket PM2.5 Monitor. Long press the power button on top of the device until a QR code appears on the screen.",
+        "iconAlt": "Connect Device",
+        "previewAlt": "Connect Device Preview"
+      },
+      "scan": {
+        "title": "3. SCAN THE QR & CONFIGURE WIFI",
+        "description": "Scan the QR code or Enter the device ID displayed on your device screen. Fill in your Wi-Fi details. Your device should successfully be connected now.",
+        "iconAlt": "Scan QR Code",
+        "previewAlt": "Scan QR Code Preview"
+      },
+      "data": {
+        "title": "4. NOW GET THE INSIGHTFUL DATA-",
+        "description": "Analyse the PM2.5 level in real-time & historical data stored in the AQI cloud through the app on your smartphone.",
+        "iconAlt": "Get Insightful Data",
+        "previewAlt": "Insightful Data Preview"
+      }
+    },
+    "download": {
+      "titlePrefix": "Download the",
+      "titleHighlight": "AQI App",
+      "description": "Integrate your monitors data to our mobile application to access the data remotely and analyze the historical trend.",
+      "googlePlayAlt": "Google Play Store",
+      "appStoreAlt": "Apple App Store"
+    }
+  },
+  "productSlider": {
+    "heading": {
+      "first": "Salient Features",
+      "second": "CO2 Monitor"
+    },
+    "description": "Our monitor detects CO2 levels at ±5 % accuracy with the help of an in-built NDIR sensor. The product has a 400 mAh battery with 30 minutes (approx.) charging time. It can measure the CO2 range up to 9999 ppm.",
+    "features": {
+      "charging": {
+        "highlight": "Type-C USB",
+        "text": "Charging"
+      },
+      "co2Level": {
+        "highlight": "CO2 Level",
+        "text": "Real-time Data"
+      },
+      "battery": {
+        "highlight": "400mAh",
+        "text": "Battery"
+      },
+      "size": {
+        "highlight": "Size",
+        "text": "Pocket"
+      },
+      "sensor": {
+        "highlight": "NDIR",
+        "text": "Sensor"
+      },
+      "wifi": {
+        "highlight": "WiFi 2.4 GHz",
+        "text": "Connectivity"
+      }
+    },
+    "images": {
+      "frontView": {
+        "alt": "prana-air-smart-portable-monitor",
+        "thumbAlt": "prana-air-smart-portable-monitor"
+      },
+      "leftView": {
+        "alt": "pocket-monitor-side-view",
+        "thumbAlt": "pocket-monitor-side-view"
+      },
+      "sideView": {
+        "alt": "pm-pocket-monitor-sideview",
+        "thumbAlt": "pm-pocket-monitor-sideview"
+      }
+    },
+    "downloads": {
+      "brochure": {
+        "text": "Brochure",
+        "iconAlt": "download icon"
+      },
+      "manual": {
+        "text": "Manual",
+        "iconAlt": "download icon"
+      }
+    }
+  },
+  "technicalSpecs": {
+    "heading": "Technical Specifications",
+    "subheading": "CO2 Monitor",
+    "details": {
+      "productName": {
+        "label": "Product Name :",
+        "value": "Pocket CO2 monitor"
+      },
+      "sensor": {
+        "label": "Sensor :",
+        "value": "CO2 NDIR"
+      },
+      "dimension": {
+        "label": "Dimension :",
+        "value": "5.8 x 2.5 x 4.6 cm"
+      },
+      "powerSupply": {
+        "label": "Power Supply :",
+        "value": "5V DC / Type-C USB cable"
+      },
+      "connectivity": {
+        "label": "Connectivity :",
+        "value": "WiFi [2.4GHz]"
+      },
+      "mobileApp": {
+        "label": "Mobile App Enabled :",
+        "value": "AQI Mobile App [iOS & Android]"
+      },
+      "range": {
+        "label": "Range :",
+        "value": "Up to 9999 ppm"
+      },
+      "temperature": {
+        "label": "Operating temperature range:",
+        "value": "-5° C - 45°C"
+      },
+      "weight": {
+        "label": "Weight :",
+        "value": "60 gram"
+      },
+      "display": {
+        "label": "Display :",
+        "value": "LCD Display"
+      },
+      "dataStorage": {
+        "label": "Data Storage :",
+        "value": "AQI Cloud Storage (option)"
+      },
+      "battery": {
+        "label": "Battery :",
+        "value": "400 mAh rechargeable battery"
+      }
+    }
+  },
+  "ndirTechnology": {
+    "imageAlt": "prana air ndir sensor for pocket co2 monitor",
+    "heading": {
+      "highlight": "NDIR",
+      "text": "Technology"
+    },
+    "subheading": "for more Accurate Detection",
+    "description": "With Prana Airs CO2 sensor is based on the non-dispersive infrared (NDIR) principle, which is the most widely used and trusted technology for CO2 sensing.",
+    "linkText": "Find Out"
+  },
+  "co2HealthIndex": {
+    "heading": "CO2 Health Index",
+    "description": "The CO2 health index will help you understand the quality of the air you breathe and the health impacts. You will also know if your house or office ventilation system is good or bad.",
+    "linkText": "Know More"
+  },
+  "applications": {
+    "heading": "Applications of CO2 Monitor",
+    "description": "Based on the dense CO2 concentrations that can be present indoors, Prana Air Pocket CO2 monitor can have various indoor applications like home, school, office, etc. The below cases are on a condition when any fresh air machine or proper ventilation system is not facilitated.",
+    "tabs": {
+      "home": "Home",
+      "school": "School",
+      "office": "Office"
+    },
+    "home": {
+      "moderate": {
+        "number": "01",
+        "title": "Moderate CO2 At Home – Morning",
+        "description": "Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the early morning.",
+        "range": "CO₂ Range: Between 400-1000 ppm",
+        "timeFrame": "Time Frame: Till 10 am",
+        "healthImpacts": "Health Impacts: Headaches, vomiting, & drowsiness.",
+        "tagAlt": "moderate co2 level",
+        "imageAlt": "moderate co2 level at home",
+        "monitorAlt": "moderate co2 level on monitor",
+        "iconAlt": "moderate co2 icon"
+      },
+      "good": {
+        "number": "02",
+        "title": "Good CO2 At Home – Morning",
+        "description": "When there is proper ventilation and the number of people inside a house is minimal, CO2 levels remain under the good category.",
+        "range": "Levels 250 ppm : CO2 Range",
+        "timeFrame": "10 am – 5 pm : Time Frame",
+        "healthImpacts": "Safe to breathe : Health Impacts",
+        "tagAlt": "good air co2 level",
+        "imageAlt": "good co2 level at home",
+        "monitorAlt": "good co2 level on monitor",
+        "iconAlt": "good co2 icon"
+      },
+      "bad": {
+        "number": "03",
+        "title": "Bad CO2 At Home – Evening",
+        "description": "Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the early morning.",
+        "range": "CO₂ Range: Between 400-1000 ppm",
+        "timeFrame": "Time Frame: Till 10 am",
+        "healthImpacts": "Health Impacts: Headaches, vomiting, & drowsiness.",
+        "tagAlt": "bad co2 level",
+        "imageAlt": "bad co2 level at home",
+        "monitorAlt": "bad co2 level on monitor",
+        "iconAlt": "bad co2 icon"
+      }
+    },
+    "school": {
+      "moderate": {
+        "number": "01",
+        "title": "Moderate CO2 in School – Morning",
+        "description": "Usually, the CO2 level in the early morning is moderate when the number of students and staff is not much. The range increases when the number of students and staff increases.",
+        "range": "CO2 Range: Between 400-1000 ppm",
+        "timeFrame": "Time Frame: From 8 am – 12 pm",
+        "healthImpacts": "Health Impacts: lifelong respiratory infections, unattentiveness, etc.",
+        "tagAlt": "moderate co2 level",
+        "imageAlt": "moderate co2 level at school",
+        "monitorAlt": "moderate co2 level on monitor",
+        "iconAlt": "moderate co2 icon"
+      },
+      "good": {
+        "number": "02",
+        "title": "Good CO2 in School – Evening",
+        "description": "As the school day ends, there is a progressive decline in the number of students on the school grounds. When the ventilation rate is good, CO2 levels start to decline and the air quality begins to improve.",
+        "range": "CO2 Range: ≤ 1000 ppm",
+        "timeFrame": "Time Frame: Between 12-2 PM",
+        "healthImpacts": "Health Impacts: Cognitive, IQ skills, mental abilities of the child",
+        "tagAlt": "good air co2 level",
+        "imageAlt": "good co2 level at school",
+        "monitorAlt": "good co2 level on monitor",
+        "iconAlt": "good co2 icon"
+      },
+      "bad": {
+        "number": "03",
+        "title": "Bad CO2 in School – Day (Afternoon)",
+        "description": "An increase in the CO2 levels even by 100 ppm corresponds to a 0.2% increase in absence rates.",
+        "range": "CO2 Range: 2000 ppm.",
+        "timeFrame": "Time Frame: Between 12-2 PM",
+        "healthImpacts": "Health Impacts: Cognitive, IQ skills, mental abilities of the child",
+        "tagAlt": "bad co2 level",
+        "imageAlt": "bad co2 level at school",
+        "monitorAlt": "bad co2 level on monitor",
+        "iconAlt": "bad co2 icon"
+      }
+    },
+    "office": {
+      "moderate": {
+        "number": "01",
+        "title": "Moderate CO2 in Office – Morning",
+        "description": "Early in the morning, when working hour begins, CO2 levels are typical to moderate as the employees are not fully present.",
+        "range": "CO2 Range: 1000 ppm",
+        "timeFrame": "Time Frame: From 9 am – 11 pm",
+        "healthImpacts": "Health Impacts: Employees feel fresh and active when there are good to moderate CO2 levels.",
+        "tagAlt": "moderate co2 level",
+        "imageAlt": "moderate co2 level at office",
+        "monitorAlt": "moderate co2 level on monitor",
+        "iconAlt": "moderate co2 icon"
+      },
+      "good": {
+        "number": "02",
+        "title": "Bad CO2 in Office – Day (Afternoon)",
+        "description": "As all the employees are present, then CO2 levels rise as a result of respiration and accumulate over time, they are in an unhealthy range.",
+        "range": "CO2 Range: It can exceed up to 3000 ppm",
+        "timeFrame": "Time Frame: between 12 pm – 4 pm",
+        "healthImpacts": "Health Impacts: Dizziness, loss of coordination, unattentiveness",
+        "tagAlt": "good air co2 level",
+        "imageAlt": "good co2 level at office",
+        "monitorAlt": "good co2 level on monitor",
+        "iconAlt": "good co2 icon"
+      },
+      "bad": {
+        "number": "03",
+        "title": "Bad CO2 in School – Day (Afternoon)",
+        "description": "An increase in the CO2 levels even by 100 ppm corresponds to a 0.2% increase in absence rates.",
+        "range": "CO2 Range: 2000 ppm.",
+        "timeFrame": "Time Frame: Between 12-2 PM",
+        "healthImpacts": "Health Impacts: Cognitive, IQ skills, mental abilities of the child",
+        "tagAlt": "bad co2 level",
+        "imageAlt": "bad co2 level at office",
+        "monitorAlt": "bad co2 level on monitor",
+        "iconAlt": "bad co2 icon"
+      }
+    }
+  },
+  "placesHighCO2": {
+    "heading": "Places Where There is High CO2 Level",
+    "description": "It helps you understand the level of Carbon Dioxide of your location. Works as both – real-time indoor and outdoor CO2 monitoring sensor; the LCD display shows you CO2 reading indicating",
+    "places": {
+      "home": {
+        "title": "Home",
+        "description": "CO2 monitoring becomes necessary since different age groups are present in a typical house setting. High CO2 concentrations have diverse effects on different age groups. Children and the elderly are particularly affected. If you have pets, the high levels of CO2 will also harm them. To prevent carbon dioxide poisoning in you, your children, the elderly, and your pets, you can ensure that the desired levels of CO2 are maintained within your homes.",
+        "imageAlt": "high co2 level at home"
+      },
+      "schools": {
+        "title": "Schools",
+        "description": "Besides our homes, we spend the majority of our time indoors at schools /offices. CO2 levels are generally greater in both classrooms and business settings. When students and staff are exposed to high CO2 levels, they may become drowsy, tired, and lose attention, resulting in poor academic and overall performance. The staffs thinking abilities are also hampered.",
+        "imageAlt": "high co2 level at school"
+      },
+      "malls": {
+        "title": "Malls",
+        "description": "The indoor air quality and ventilation rates of a building are monitored with the help of a CO2 monitor. There is a constant movement of people inside malls and shop establishments. When a few of them depart, new people enter. As a result, contaminants like carbon dioxide accumulates in malls and retail stores. Monitoring CO2 levels in the retail sector is therefore much more crucial in light of this.",
+        "imageAlt": "high co2 level at mall"
+      },
+      "hospitals": {
+        "title": "Hospitals",
+        "description": "According to a 2011 Infinium Medical, Inc. study, 82% of critical care accidents that resulted in brain damage and death might have been avoided if CO2 had been monitored and the necessary steps are taken to lower the excessive levels. Monitoring CO2 levels is frequently overlooked when managing the hospits indoor air quality. When these levels are kept in check, recovery time and attention problems improve.",
+        "imageAlt": "high co2 level at hospital"
+      },
+      "restaurants": {
+        "title": "Restaurants",
+        "description": "Monitoring CO2 will be helpful since increased CO2 exhalation by residents increases the risk of viral transmission (such as covid-19). On a smart LCD TV screen, the real-time CO2 levels can be displayed. Checking the AQI of hotels and restaurants will be made easier with the help of monitoring. Staff productivity will rise as a result of ongoing CO2 monitoring.",
+        "imageAlt": "high co2 level in restaurants"
+      },
+      "metroSubways": {
+        "title": "Metro Subways",
+        "description": "Monitoring CO2 levels offer a helpful measure of how well-ventilated inhabited indoor spaces are. These places include airports and metro subways, where the population is fluid and people are constantly arriving and departing, especially during peak hours. To protect public health, it is necessary to continuously monitor interior air pollutant levels in subway stations and airports, where the accumulation of pollutants is very easy.",
+        "imageAlt": "high co2 level in metro subways"
+      }
+    }
+  },
+  "cleanAirSolution": {
+    "heading": {
+      "first": "Clean Air Quality Solution",
+      "second": "Fresh Air Machine"
+    },
+    "description": "Prana Air provides the solution to indoor air pollution with an air purifying machine to purify the air pollutants.",
+    "linkText": ">>Learn More",
+    "imageAlt": "fresh air machine"
+  },
+  "trustedBy": {
+    "heading": "Trusted By",
+    "logos": {
+      "ola": "Ola logo",
+      "microsoft": "Microsoft logo",
+      "marriott": "Marriott logo",
+      "tata": "Tata logo",
+      "havells": "Havells logo",
+      "csir": "CSIR logo",
+      "gmda": "GMDA logo",
+      "cii": "CII logo",
+      "morgan": "Morgan Stanley logo",
+      "interglobe": "Interglobe logo",
+      "mahindra": "Mahindra logo",
+      "renaultNissan": "Renault-Nissan logo"
+    }
+  },
+  "smallestPortable": {
+    "heading": "Smallest & Portable",
+    "subheadingPrefix": "CO",
+    "subheadingSuffix": "Monitor",
+    "imageAlt": "pocket co2 monitor side view",
+    "buttons": {
+      "buyNow": "Buy Now",
+      "amazon": "Amazon"
+    }
+  },
+  "co2Ranges": {
+  "good": {
+    "name": "Good",
+    "range": "350-700",
+    "imageAlt": "good co2 level",
+    "tooltip": "The air is fresh and free from toxins. People are not exposed to any health risk."
+  },
+  "moderate": {
+    "name": "Moderate",
+    "range": "701-900",
+    "imageAlt": "moderate co2 level",
+    "tooltip": "Indoor CO2 levels with a good ventilation rate"
+  },
+  "poor": {
+    "name": "Poor",
+    "range": "901-1200",
+    "imageAlt": "poor co2 level",
+    "tooltip": "Tiredness, laziness, and stuffiness in the air"
+  },
+  "unhealthy": {
+    "name": "Unhealthy",
+    "range": "1201-1500",
+    "imageAlt": "unhealthy co2 level",
+    "tooltip": "Lack of concentration, sleepiness, drowsiness, headaches, increased heart rate, stuffiness in the air, nausea, etc. can be experienced."
+  },
+  "severe": {
+    "name": "Severe",
+    "range": "1501-2500",
+    "imageAlt": "severe co2 level",
+    "tooltip": "Many countries have occupational exposure (like an eight-hour TWA)."
+  },
+  "hazardous": {
+    "name": "Hazardous",
+    "range": "2500+",
+    "imageAlt": "hazardous co2 level",
+    "tooltip": "Such high levels of exposure can cause acute oxygen shortage, unconsciousness, severe neurological damage, and even death."
+  }
+}
+}

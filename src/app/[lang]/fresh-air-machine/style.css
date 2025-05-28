@@ -22,8 +22,22 @@ a {
   text-decoration: none !important;
 }
 
+img {
+  height: auto;
+}
+
 .vc_section[data-vc-full-width] {
   overflow: visible !important;
+}
+
+ul#pollutantTabs li button.active {
+  background: #4a9fd8;
+  color: #fff;
+}
+
+ul#pollutantTabs li button {
+  padding: 10px 20px;
+  border: 0;
 }
 
 .deskshow {

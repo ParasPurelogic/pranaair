@@ -24,6 +24,33 @@ a {
     text-decoration: none !important;
 }
 
+ul#factorTab li button {
+    padding: 10px 20px;
+    color: #ffffff82;
+    font-size: 16px;
+    border: 0;
+    border-radius: 0;
+}
+
+ul#factorTab li button.active {
+    background: #24c250;
+    color: #000;
+}
+
+ul#frameTab li button.active {
+    background: #ffffff26;
+}
+
+ul#frameTab li button {
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 0;
+}
+
+div#frameTabContent {
+    margin-top: 30px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -600,6 +627,12 @@ a {
 
 .accordion-item {
     margin-bottom: 15px;
+    border: 0;
+    background: transparent;
+}
+
+div#accordionAirQuality .accordion-body {
+    padding: 0;
 }
 
 .accordian-tab-heading {
@@ -657,7 +690,24 @@ a {
 }
 
 .heading-icon {
-    width: 40px;
+    width: 25px;
+}
+
+ul#techTab li button.active {
+    background: #ffffff21;
+    color: #fff;
+}
+
+ul#techTab li button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 0;
+}
+
+.accordion-header .accordion-button {
+    background: transparent;
+    align-items: stretch;
+    gap: 8px;
 }
 
 .drone-icon {
@@ -2441,34 +2491,43 @@ a {
         margin-top: 0px;
         height: 600px;
     }
+
     .slider-buttons {
         margin-top: -150px;
         margin-bottom: 40px;
     }
+
     .slider-buttons:before {
         right: 0;
         left: 10px;
     }
+
     .mouse-scroll-icon {
         right: 100px;
     }
+
     .office-pollutant-icons {
         background-size: cover;
         height: 250px;
         margin-top: -20px;
     }
+
     .health-impact-slider {
         padding: 0px 0;
     }
+
     .frame-image {
         width: 100%;
     }
+
     .frame-description {
         right: 0;
     }
+
     .box-form {
         width: 100%;
     }
+
     .our-clients-logo {
         width: 100%;
     }
@@ -2538,32 +2597,40 @@ a {
         padding: 15px 70px;
         gap: 30px;
     }
+
     .accordian-tab-heading h4 {
         font-size: 16px;
     }
+
     .parameter ul li {
         display: inline-block;
         width: 33%;
         text-align: center;
         margin-bottom: 20px;
     }
+
     .parameter ul {
         display: block;
         margin: 0;
     }
+
     .parameter ul li h6 {
         left: 0;
         margin: 5px 0 0;
     }
+
     .text h3 {
         font-size: 18px;
     }
+
     .text {
         top: 75%;
     }
+
     .text p {
         font-size: 14px;
     }
+
     .row {
         display: block;
     }

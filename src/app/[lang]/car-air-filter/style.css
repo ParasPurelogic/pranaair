@@ -17,6 +17,10 @@ a {
   font-family: "Nunito Sans" !important;
 }
 
+img {
+  height: auto;
+}
+
 .hero-section {
   background: url(https://www.pranaair.com/wp-content/uploads/2024/06/Anti-Pollution-Car-Cabin-Filter-scaled.jpg);
   background-size: cover;
@@ -96,6 +100,7 @@ a {
 
 .using-car-air-filter-img img {
   width: 100%;
+  height: auto;
 }
 
 .using-bg {
@@ -232,6 +237,7 @@ ul.problem-of-car-solution li {
 
 .indor-box img {
   width: 40%;
+  height: auto;
 }
 
 .right-filter-box-main {
@@ -318,6 +324,7 @@ ul.car-filter li {
 .filtration-tec-img img {
   width: 100%;
   margin-top: 50px;
+  height: auto;
   position: relative;
   z-index: 1;
 }
@@ -334,6 +341,7 @@ ul.car-filter li {
 
 .filrtion-tech-point ul li img {
   width: 50px;
+  height: auto;
 }
 
 .filrtion-tech-point {
@@ -379,6 +387,7 @@ ul.car-filter li {
 
 .ultimate-protection-img img {
   width: 100%;
+  height: auto;
 }
 
 .ultimate-heading h2 {
@@ -420,6 +429,7 @@ ul.car-filter li {
 
 .guard-img img {
   width: 19%;
+  height: auto;
 }
 
 .guard-img {
@@ -543,6 +553,7 @@ img.soot {
 
 .enjoy-fresh-air-img img {
   width: 100%;
+  height: auto;
 }
 
 .enjoy-fresh-air-sec {

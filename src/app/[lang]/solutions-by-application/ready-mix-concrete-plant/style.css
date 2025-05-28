@@ -1007,13 +1007,6 @@ ul.paramete_list {
     display: flex;
 }
 
-.contact-info {
-    width: 35%;
-    background-color: var(--primary-green);
-    color: white;
-    padding: 40px 30px;
-    position: relative;
-}
 
 .contact-info h3 {
     font-size: 24px;

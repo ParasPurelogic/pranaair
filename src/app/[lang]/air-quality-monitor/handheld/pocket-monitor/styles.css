@@ -560,14 +560,18 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background-color: white;
   border-radius: 4px;
   padding: 5px;
+}
+
+.display-option-primary.active .display-option-icon img {
+  filter: none;
 }
 
 .display-option-icon img {
   max-width: 100%;
   height: auto;
+  filter: invert(1);
   display: block;
 }
 

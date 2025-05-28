@@ -2325,6 +2325,7 @@ ul.application-tabs {
 
 .work-box ul li img {
     width: 100%;
+    height: auto;
     border-radius: 15px;
 }
 

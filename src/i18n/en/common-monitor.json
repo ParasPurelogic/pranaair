@@ -9,68 +9,169 @@
     "iconAlt": "Contact icon"
   },
   "productTabs": {
-    "explore": "Explore",
-    "title": "Air Quality Monitoring Devices",
-    "subtitle": "For Every Space: Home, Office, & Industrial Use",
-    "categories": {
-      "handheld": "Handheld",
-      "indoor": "Indoor",
-      "outdoor": "Outdoor"
+  "explore": "Explore",
+  "title": "Air Quality Monitoring Devices",
+  "subtitle": "For Every Space: Home, Office, & Industrial Use",
+  "categories": {
+    "handheld": "Handheld",
+    "indoor": "Indoor",
+    "outdoor": "Outdoor"
+  },
+  "altTexts": {
+    "arrowIcon": "icon",
+    "rating": "card-rating",
+    "buttonIcon": "button icon"
+  },
+  "specs": {
+    "connectivity": "Connectivity",
+    "battery": "Battery"
+  },
+  "buttons": {
+    "buyNow": "Buy Now",
+    "knowMore": "Know More"
+  },
+  "products": {
+    "pocketCO2": {
+      "name": "Pocket CO2 Monitor",
+      "price": "₹4,999",
+      "connectivity": "WiFi",
+      "battery": "400 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-Co2.png",
+      "imageAlt": "prana air pocket co2 monitor",
+      "link": "/air-quality-monitor/pocket-co2-monitor/",
+      "formAction": "https://www.pranaair.com/product/pocket-co2-monitor/"
     },
-    "altTexts": {
-      "arrowIcon": "icon",
-      "rating": "card-rating"
+    "pocketPM": {
+      "name": "Pocket PM2.5 Monitor",
+      "price": "₹3,499",
+      "connectivity": "WiFi",
+      "battery": "450 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.png",
+      "imageAlt": "prana air pocket pm2.5 monitor",
+      "link": "/air-quality-monitor/handheld/pocket-monitor/",
+      "formAction": "https://www.pranaair.com/product/pm2-5-pocket-monitor/"
     },
-    "specs": {
-      "connectivity": "Connectivity",
-      "battery": "Battery"
+    "sensible": {
+      "name": "Sensible Monitor",
+      "price": "₹59,999",
+      "connectivity": "WiFi",
+      "battery": "NA",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/sensible-air-quality-monitor.png",
+      "imageAlt": "prana air sensible air quality monitor",
+      "link": "/air-quality-monitor/sensible-air-monitor/",
+      "formAction": "https://www.pranaair.com/product/sensible-air-monitor/"
     },
-    "buttons": {
-      "buyNow": "Buy Now",
-      "knowMore": "Know More"
+    "ambientPM": {
+      "name": "Ambient PM",
+      "price": "Request A Quote",
+      "connectivity": "WiFi / GSM",
+      "battery": "NA",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/07/Ambient-PM-product.png",
+      "imageAlt": "prana air ambient pm air quality monitor",
+      "link": "/air-quality-monitor/ambient-air-monitor/",
+      "formAction": "https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
     },
-    "products": {
-      "pocketCO2": {
-        "name": "Pocket CO2 Monitor",
-        "price": "₹4,999",
-        "connectivity": "WiFi",
-        "battery": "400 mAh",
-        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-Co2.png",
-        "imageAlt": "prana air pocket co2 monitor",
-        "link": "/air-quality-monitor/pocket-co2-monitor/",
-        "formAction": "https://www.pranaair.com/product/pocket-co2-monitor/"
-      },
-      "pocketPM": {
-        "name": "Pocket PM2.5 Monitor",
-        "price": "₹3,499",
-        "connectivity": "WiFi",
-        "battery": "450 mAh",
-        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.png",
-        "imageAlt": "prana air pocket pm2.5 monitor",
-        "link": "/air-quality-monitor/handheld/pocket-monitor/",
-        "formAction": "https://www.pranaair.com/product/pm2-5-pocket-monitor/"
-      },
-      "sensible": {
-        "name": "Sensible Monitor",
-        "price": "₹59,999",
-        "connectivity": "WiFi",
-        "battery": "NA",
-        "image": "https://www.pranaair.com/wp-content/uploads/2024/03/sensible-air-quality-monitor.png",
-        "imageAlt": "prana air sensible air quality monitor",
-        "link": "/air-quality-monitor/sensible-air-monitor/",
-        "formAction": "https://www.pranaair.com/product/sensible-air-monitor/"
-      },
-      "ambientPM": {
-        "name": "Ambient PM",
-        "price": "Request A Quote",
-        "connectivity": "WiFi / GSM",
-        "battery": "NA",
-        "image": "https://www.pranaair.com/wp-content/uploads/2024/07/Ambient-PM-product.png",
-        "imageAlt": "prana air sensible air quality monitor",
-        "link": "/air-quality-monitor/ambient-air-monitor/",
-        "formAction": "https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/"
-      }
+    "oxyCO": {
+      "name": "OxyCO Monitor",
+      "price": "₹29,990.00",
+      "connectivity": "WiFi",
+      "battery": "450 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-oxygen-co-monitor.png",
+      "imageAlt": "prana air oxyco monitor",
+      "link": "/air-quality-monitor/oxyco-monitor/",
+      "formAction": "https://www.pranaair.com/product/oxyco-monitor/"
+    },
+    "nanoCO": {
+      "name": "Nano CO Monitor",
+      "price": "₹8,990.00",
+      "connectivity": "NA",
+      "battery": "1000 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Nano-Co.png",
+      "imageAlt": "prana air nano co monitor",
+      "link": "/air-quality-monitor/nano-co-monitor/",
+      "formAction": "https://www.pranaair.com/product/nano-co-monitor/"
+    },
+    "nanoCO2": {
+      "name": "Nano CO2 Monitor",
+      "price": "₹2,490.00",
+      "connectivity": "NA",
+      "battery": "700 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Nano-Co2.png",
+      "imageAlt": "prana air nano co2 monitor",
+      "link": "/air-quality-monitor/nano-co2-monitor/",
+      "formAction": "https://www.pranaair.com/product/nano-co2-monitor/"
+    },
+    "nanoTVOC": {
+      "name": "Nano TVOC Monitor",
+      "price": "₹4,990.00",
+      "connectivity": "NA",
+      "battery": "1000 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Nano-TVOC-monitor.png",
+      "imageAlt": "prana air nano tvoc monitor",
+      "link": "/air-quality-monitor/nano-tvoc-monitor/",
+      "formAction": "https://www.pranaair.com/product/nano-tvoc-monitor/"
+    },
+    "sensiblePlus": {
+      "name": "Sensible+ Monitor",
+      "price": "₹69,990.00",
+      "connectivity": "WiFi",
+      "battery": "5000 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Sensible-.png",
+      "imageAlt": "prana air sensible plus monitor",
+      "link": "/air-quality-monitor/sensible-plus-monitor/",
+      "formAction": "https://www.pranaair.com/product/sensible-plus-monitor/"
+    },
+    "cairPlus": {
+      "name": "Cair+",
+      "price": "₹16,990.00",
+      "connectivity": "WiFi",
+      "battery": "1500 mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Cair.png",
+      "imageAlt": "prana air cair plus monitor",
+      "link": "/air-quality-monitor/cair-plus/",
+      "formAction": "https://www.pranaair.com/product/cair-plus/"
+    },
+    "squair": {
+      "name": "Squair",
+      "price": "Request A Quote",
+      "connectivity": "WiFi / GSM / RH485 / LORA",
+      "battery": "NA",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Squiar-lite.png",
+      "imageAlt": "prana air squair monitor",
+      "link": "/air-quality-monitor/squair/",
+      "formAction": "https://www.pranaair.com/air-quality-monitor/squair/"
+    },
+    "pranaSense": {
+      "name": "Prana Sense",
+      "price": "Request A Quote",
+      "connectivity": "LoRa / GSM / WiFi / RS485",
+      "battery": "40,000mAh",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/12/Prana-sense-monitor.png",
+      "imageAlt": "prana air sense monitor",
+      "link": "/air-quality-monitor/prana-sense/",
+      "formAction": "https://www.pranaair.com/air-quality-monitor/prana-sense/"
+    },
+    "ambientPro": {
+      "name": "Ambient Pro",
+      "price": "Request A Quote",
+      "connectivity": "WiFi / GSM / RH485",
+      "battery": "NA",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/07/Ambient-pro-product.png",
+      "imageAlt": "prana air ambient pro monitor",
+      "link": "/air-quality-monitor/ambient-pro/",
+      "formAction": "https://www.pranaair.com/air-quality-monitor/ambient-pro/"
+    },
+    "airQualityDrone": {
+      "name": "Air Quality Drone",
+      "price": "Request A Quote",
+      "connectivity": "GPS/Raider",
+      "battery": "YES",
+      "image": "https://www.pranaair.com/wp-content/uploads/2024/03/Air-quality-drone.png",
+      "imageAlt": "prana air quality drone",
+      "link": "/air-quality-monitor/air-quality-drone/",
+      "formAction": "https://www.pranaair.com/air-quality-monitor/air-quality-drone/"
     }
+  }
   },
    "features": {
     "title": {

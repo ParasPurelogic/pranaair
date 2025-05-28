@@ -39,6 +39,19 @@ a:hover {
   color: #5a8a48;
 }
 
+ul#solutionsTabs li button {
+  padding: 10px 10px;
+}
+
+div#solutionsTabsContent {
+  margin-top: 30px;
+}
+
+ul#solutionsTabs li button.active {
+  background: #7ab261;
+  color: #fff;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1053,6 +1066,7 @@ section {
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
+
   .factors-grid,
   .concern-grid,
   .risk-grid,
@@ -1208,6 +1222,7 @@ section {
 }
 
 @media (max-width: 576px) {
+
   .factors-grid,
   .concern-grid,
   .risk-grid,
@@ -1265,4 +1280,3 @@ section {
     height: 250px;
   }
 }
-

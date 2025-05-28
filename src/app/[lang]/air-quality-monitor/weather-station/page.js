@@ -1,5 +1,3 @@
-import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import DurabilitySlider from "@/Components/Pages/WeatherStation/durability-slider"

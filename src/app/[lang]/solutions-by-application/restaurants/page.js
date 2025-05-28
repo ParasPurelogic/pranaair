@@ -144,16 +144,16 @@ export default async function AirQualitySolutions() {
                             <div className="feature_box">
                                 <img
                                     src={`https://www.pranaair.com/wp-content/uploads/2022/08/${pollutant === "pm25"
-                                            ? "pm2.5-parameter.png"
-                                            : pollutant === "co2"
-                                                ? "co2-gas-icon.png"
-                                                : pollutant === "tvoc"
-                                                    ? "tvoc-parameter-icon.png"
-                                                    : pollutant === "co"
-                                                        ? "co-icon.png"
-                                                        : pollutant === "no2"
-                                                            ? "no2-icon.png"
-                                                            : "noise-icon.png"
+                                        ? "pm2.5-parameter.png"
+                                        : pollutant === "co2"
+                                            ? "co2-gas-icon.png"
+                                            : pollutant === "tvoc"
+                                                ? "tvoc-parameter-icon.png"
+                                                : pollutant === "co"
+                                                    ? "co-icon.png"
+                                                    : pollutant === "no2"
+                                                        ? "no2-icon.png"
+                                                        : "noise-icon.png"
                                         }`}
                                     alt={t(`restaurantPollutants.items.${pollutant}.imageAlt`)}
                                 />
@@ -183,12 +183,12 @@ export default async function AirQualitySolutions() {
                                     <span className="school_icon_box">
                                         <img
                                             src={`https://www.pranaair.com/wp-content/uploads/2022/08/${pollutant === "pm25"
-                                                    ? "pm2.5-icon-2.png"
-                                                    : pollutant === "co2"
-                                                        ? "co2-icon.png"
-                                                        : pollutant === "noise"
-                                                            ? "ozone-o3-icon.png"
-                                                            : "no2-icon-for-restaurant.png"
+                                                ? "pm2.5-icon-2.png"
+                                                : pollutant === "co2"
+                                                    ? "co2-icon.png"
+                                                    : pollutant === "noise"
+                                                        ? "ozone-o3-icon.png"
+                                                        : "no2-icon-for-restaurant.png"
                                                 }`}
                                             alt={t(`restaurantImageBox.items.${pollutant}.imageAlt`)}
                                         />
@@ -226,12 +226,12 @@ export default async function AirQualitySolutions() {
                             <div className="risk_box">
                                 <img
                                     src={`https://www.pranaair.com/wp-content/uploads/2022/08/${risk === "respiratory"
-                                            ? "respiratory-ill.png"
-                                            : risk === "staff"
-                                                ? "staff.png"
-                                                : risk === "chef"
-                                                    ? "chef.png"
-                                                    : "customer.png"
+                                        ? "respiratory-ill.png"
+                                        : risk === "staff"
+                                            ? "staff.png"
+                                            : risk === "chef"
+                                                ? "chef.png"
+                                                : "customer.png"
                                         }`}
                                     alt={t(`restaurantRisk.items.${risk}.imageAlt`)}
                                 />
@@ -377,10 +377,10 @@ export default async function AirQualitySolutions() {
                             <div className="app_service_box">
                                 <img
                                     src={`https://www.pranaair.com/wp-content/uploads/2022/08/restaurant-${service === "tvApp"
-                                            ? "tv-dashboard-app.jpg"
-                                            : service === "customApp"
-                                                ? "aqi-customized-dashboard-app.jpg"
-                                                : "aqi-qr-code-scan.jpg"
+                                        ? "tv-dashboard-app.jpg"
+                                        : service === "customApp"
+                                            ? "aqi-customized-dashboard-app.jpg"
+                                            : "aqi-qr-code-scan.jpg"
                                         }`}
                                     alt={t(`restaurantFreemium.services.${service}.imageAlt`)}
                                 />
@@ -489,12 +489,12 @@ export default async function AirQualitySolutions() {
                         <div className="col-md-3" key={client}>
                             <img
                                 src={`https://www.pranaair.com/wp-content/uploads/2022/08/${client === "morgan"
-                                        ? "MORGAN-STANLEY.png"
-                                        : client === "ola"
-                                            ? "OLA.png"
-                                            : client === "microsoft"
-                                                ? "MICROSOFT.png"
-                                                : "IIT-BHU.png"
+                                    ? "MORGAN-STANLEY.png"
+                                    : client === "ola"
+                                        ? "OLA.png"
+                                        : client === "microsoft"
+                                            ? "MICROSOFT.png"
+                                            : "IIT-BHU.png"
                                     }`}
                                 className="img-responsive"
                                 alt={t(`restaurantClientele.clients.${client}.alt`)}
@@ -507,12 +507,12 @@ export default async function AirQualitySolutions() {
                         <div className="col-md-3" key={client}>
                             <img
                                 src={`https://www.pranaair.com/wp-content/uploads/2022/08/${client === "renault"
-                                        ? "RENAULT-NISSAN.png"
-                                        : client === "tata"
-                                            ? "TATA.png"
-                                            : client === "csir"
-                                                ? "CSIR.png"
-                                                : "MAHINDRA.png"
+                                    ? "RENAULT-NISSAN.png"
+                                    : client === "tata"
+                                        ? "TATA.png"
+                                        : client === "csir"
+                                            ? "CSIR.png"
+                                            : "MAHINDRA.png"
                                     }`}
                                 className="img-responsive"
                                 alt={t(`restaurantClientele.clients.${client}.alt`)}

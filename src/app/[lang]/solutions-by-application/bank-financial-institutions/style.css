@@ -19,6 +19,19 @@ body p,
   font-family: "Poppins", sans-serif !important;
 }
 
+ul#airQualityTabs li button {
+  padding: 10px 10px;
+}
+
+div#airQualityTabsContent {
+  margin-top: 30px;
+}
+
+ul#airQualityTabs li button.active {
+  background: #7ab261;
+  color: #fff;
+}
+
 /* Update banner styling */
 .school_banner_box {
   position: relative;

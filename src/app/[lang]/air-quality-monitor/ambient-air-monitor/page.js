@@ -1624,7 +1624,7 @@ export default async function AmbientAirMonito() {
                                 <ul>
                                     <li>
                                         <Image
-                                            src={t("connectivity.types.items.0.icon") || "/placeholder.svg"}
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/wifi.webp"
                                             alt={t("connectivity.types.items.0.alt")}
                                             width={35}
                                             height={35}
@@ -1633,7 +1633,7 @@ export default async function AmbientAirMonito() {
                                     </li>
                                     <li>
                                         <Image
-                                            src={t("connectivity.types.items.1.icon") || "/placeholder.svg"}
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/gsm.png"
                                             alt={t("connectivity.types.items.1.alt")}
                                             width={35}
                                             height={35}
@@ -1642,7 +1642,7 @@ export default async function AmbientAirMonito() {
                                     </li>
                                     <li>
                                         <Image
-                                            src={t("connectivity.types.items.2.icon") || "/placeholder.svg"}
+                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/rs-485.png"
                                             alt={t("connectivity.types.items.2.alt")}
                                             width={35}
                                             height={35}
@@ -1787,7 +1787,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.webDashboard.features.0.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/World-air-pollution.png"
                                                                     alt={t("dataAccess.webDashboard.features.0.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -1800,7 +1800,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.webDashboard.features.1.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/weather.png"
                                                                     alt={t("dataAccess.webDashboard.features.1.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -1815,7 +1815,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.webDashboard.features.2.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/health-recommendation.png"
                                                                     alt={t("dataAccess.webDashboard.features.2.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -1828,7 +1828,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.webDashboard.features.3.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Compare.png"
                                                                     alt={t("dataAccess.webDashboard.features.3.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -1889,7 +1889,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.mobileApp.features.0.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/real-time-co2-level.png"
                                                                     alt={t("dataAccess.mobileApp.features.0.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -1902,7 +1902,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.mobileApp.features.1.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/historic-data.png"
                                                                     alt={t("dataAccess.mobileApp.features.1.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -1917,7 +1917,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.mobileApp.features.2.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/World-air-pollution.png"
                                                                     alt={t("dataAccess.mobileApp.features.2.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -1930,7 +1930,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.mobileApp.features.3.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Compare.png"
                                                                     alt={t("dataAccess.mobileApp.features.3.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -2011,7 +2011,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.tvApp.features.0.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Compare.png"
                                                                     alt={t("dataAccess.tvApp.features.0.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -2024,7 +2024,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.tvApp.features.1.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/24-hours.png"
                                                                     alt={t("dataAccess.tvApp.features.1.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -2039,7 +2039,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.tvApp.features.2.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/AQI.png"
                                                                     alt={t("dataAccess.tvApp.features.2.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -2052,7 +2052,7 @@ export default async function AmbientAirMonito() {
                                                         <ul>
                                                             <li>
                                                                 <Image
-                                                                    src={t("dataAccess.tvApp.features.3.icon") || "/placeholder.svg"}
+                                                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/Choose.png"
                                                                     alt={t("dataAccess.tvApp.features.3.alt")}
                                                                     width={41}
                                                                     height={41}
@@ -2105,10 +2105,10 @@ export default async function AmbientAirMonito() {
                             <div className="ambient-air-quote fadeInUp animated">
                                 <p>
                                     <Image
-                                        src="/images/quote-icon-ambient.png"
+                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/quote-icon-ambient.png"
                                         alt={t("ambientAirQuality.quoteIconAlt")}
-                                        width={50}
-                                        height={50}
+                                        width={30}
+                                        height={30}
                                     />
                                     <br />
                                     {t("ambientAirQuality.quote")}
@@ -2127,9 +2127,7 @@ export default async function AmbientAirMonito() {
                             <div className="caaqms-heading fadeInUp animated">
                                 <h2>{t("caaqms.title")}</h2>
                                 <p className="text-center">{t("caaqms.description1")}</p>
-                                <p>&nbsp;</p>
                                 <p className="text-center">{t("caaqms.description2")}</p>
-                                <p>&nbsp;</p>
                                 <p className="text-center">{t("caaqms.description3")}</p>
                             </div>
 

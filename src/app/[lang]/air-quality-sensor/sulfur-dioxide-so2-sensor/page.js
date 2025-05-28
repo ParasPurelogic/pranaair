@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import Link from "next/link"
 import Image from "next/image"

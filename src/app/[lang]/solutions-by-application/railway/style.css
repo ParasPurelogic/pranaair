@@ -26,6 +26,19 @@ a {
   text-decoration: none;
 }
 
+ul#solutionsTabs li button {
+  padding: 10px 10px;
+}
+
+div#solutionsTabsContent {
+  margin-top: 30px;
+}
+
+ul#solutionsTabs li button.active {
+  background: #7ab261;
+  color: #fff;
+}
+
 .school_banner_box {
   padding: 0 0 160px;
   background: url(https://www.pranaair.com/wp-content/uploads/2024/08/air-quality-solutions-for-railways-scaled.jpg);

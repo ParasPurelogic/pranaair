@@ -5,11 +5,11 @@ import "react-multi-carousel/lib/styles.css";
 const responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 1440 },
-        items: 4
+        items: 1
     },
     desktop: {
         breakpoint: { max: 1440, min: 1024 },
-        items: 3
+        items: 1
     },
     tablet: {
         breakpoint: { max: 1024, min: 768 },

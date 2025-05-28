@@ -184,8 +184,16 @@ a {
 }
 
 .tablinks.active {
-    background: #77b160;
-    box-shadow: 0px 5px 4px #e2e0e0;
+    background: #77b160 !important;
+}
+
+.tab-pane img {
+    height: auto;
+    margin-top: 80px;
+}
+
+ul.nav.nav-tabs {
+    gap: 20px;
 }
 
 .tablinks.active ul li img {
@@ -355,19 +363,9 @@ li.image-box h5 {
     position: relative;
     overflow: visible;
     padding-bottom: 100px;
+    background: radial-gradient(#cfd2e4, #e9eef4);
 }
 
-.app-key-features::before {
-    position: absolute;
-    content: "";
-    height: 700px;
-    background: radial-gradient(#cfd2e4, #e9eef4);
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    width: 100%;
-    z-index: -1;
-}
 
 .aqi-dashboard-para p {
     text-align: center;
@@ -377,10 +375,15 @@ li.image-box h5 {
     font-weight: 700;
 }
 
+.application-tabs .nav-link.active {
+    padding: 15px !important;
+}
+
 .application-tabs {
-    margin: 0;
+    margin: 100px 0 0;
     list-style: none;
     padding-left: 0;
+    display: block;
 }
 
 .app-tab {
@@ -400,7 +403,7 @@ li.image-box h5 {
 
 .app-tab:hover {
     background-color: #77b160;
-    color: #fff;
+    color: #fff !important;
 }
 
 .app-tab.active {
@@ -553,6 +556,24 @@ li.image-box h5 {
     padding: 180px 0 40px;
 }
 
+.app-tabs ul {
+    justify-content: center;
+}
+
+.app-tabs ul li button {
+    padding: 10px 20px;
+}
+
+.app-tabs ul li button.active {
+    background: #7ab261 !important;
+    color: #fff !important;
+}
+
+.application_text_box p img {
+    margin: 0;
+    height: auto;
+}
+
 .new-tabcontent {
     display: none;
     padding: 0 20px;
@@ -571,7 +592,6 @@ li.image-box h5 {
     border: 0;
     display: flex;
     overflow: hidden;
-    justify-content: center;
     gap: 20px;
     padding-top: 30px;
 }
@@ -665,9 +685,11 @@ li.image-box h5 {
 .tech-spec-heading h2 {
     margin: 0;
 }
+
 .ndir-sensor-Image img {
     height: auto;
 }
+
 .tech-spec {
     margin-top: 15px;
 }
@@ -991,9 +1013,14 @@ small.range_no {
     gap: 10px;
 }
 
+.step-content {
+    text-align: left;
+}
+
 .dashboard-data ul li img {
     width: 50px;
     height: auto;
+    margin: 0;
 }
 
 .dashboard-data ul li h5 {
@@ -1026,10 +1053,10 @@ img.dashborad-img {
 }
 
 .product-tabs ul .nav-link.active {
-    background: transparent;
+    background: #7ab261;
     border: none;
-    color: #000;
-    font-weight: 800;
+    color: #ffffff;
+    padding: 5px 20px;
 }
 
 .product-tabs ul .nav-link {
@@ -1347,12 +1374,6 @@ h4.step-title {
     font-weight: 700;
 }
 
-.product-tabs ul .nav-link.active {
-    background: transparent;
-    border: none;
-    color: #000;
-    font-weight: 800;
-}
 
 .product-tabs ul .nav-link {
     font-size: 22px;
@@ -1809,9 +1830,11 @@ span.tab_monitor_device img {
     img.pocket-co-monitor-side-view {
         height: auto;
     }
+
     .content-placement-middle .col-md-6 {
         padding: 0 0 20px 15px !important;
     }
+
     .logo-box ul li img {
         width: 80%;
     }
@@ -1953,9 +1976,11 @@ span.tab_monitor_device img {
     .screen-monitor {
         width: 100px;
     }
+
     h2.title_heading {
         width: 100%;
     }
+
     .title_heading.circle_heading {
         width: 100%;
     }

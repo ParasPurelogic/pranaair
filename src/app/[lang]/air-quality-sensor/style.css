@@ -257,16 +257,15 @@ a.monitor_know_btn {
   padding-top: 35px;
 }
 
-.all-sensor-tab ul .active button {
-  color: #fff;
-  background: #7ab261;
+.all-sensor-tab ul li a.active {
+  background: #7ab261 !important;
+  border-radius: 20px;
+  color: #fff !important;
 }
 
-.all-sensor-tab ul button {
-  padding: 15px 60px;
-  border-radius: 50px;
-  color: #7ab261;
-  border: none;
+.all-sensor-tab ul li a {
+  padding: 10px 30px;
+  border: 0 !important;
   font-size: 16px;
 }
 

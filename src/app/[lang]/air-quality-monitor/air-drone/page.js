@@ -193,13 +193,13 @@ export default async function AirDronePage() {
               className="hero-drone-image"
               style={{ transform: "scale(1.2)", marginTop: "-40px", position: "relative", zIndex: 2 }}
             >
-              <Image src="/img/Prana-air-VTOL.webp" alt="Logo" width={200} height={200} />
+              <Image src="/img/prana-air-vtol.webp" alt="Logo" width={200} height={200} />
             </div>
             <p className="hero-subtitle">{t("hero.subtitle")}</p>
             <div className="hero-buttons">
               <button className="btn-request-quote">{t("droneCategory.buttons.requestQuote")}</button>
               <button>
-                <Image src="/img/hero-btn-icon.png" alt="Logo" width={20} height={20} />
+                <Image src="public/img/hero-btn-icon.png" alt="Logo" width={20} height={20} />
               </button>
             </div>
           </div>

@@ -1,5 +1,3 @@
-
-import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm";
 import TvAppTabs from '@/Components/Pages/CairMonitor/TvApptabs'

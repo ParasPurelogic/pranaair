@@ -64,25 +64,18 @@ export default async function OxygenMonitor() {
                                 <h1>{t("oxygenHero.title")}</h1>
                                 <h2>{t("oxygenHero.subtitle")}</h2>
                                 <p>{t("oxygenHero.description")}</p>
-                                <form
-                                    className="cart"
-                                    action="https://www.pranaair.com/product/oxyco-monitor/"
-                                    encType="multipart/form-data"
-                                    method="post"
+                                <button
+                                    className="single_add_to_cart_button button alt banner-btn"
+                                    name="add-to-cart"
+                                    type="submit"
+                                    value="124689"
                                 >
-                                    <button
-                                        className="single_add_to_cart_button button alt banner-btn"
-                                        name="add-to-cart"
-                                        type="submit"
-                                        value="124689"
-                                    >
-                                        {t("oxygenHero.buyButton")}{" "}
-                                        <img
-                                            src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                            alt={t("oxygenHero.altTexts.buyIcon")}
-                                        />
-                                    </button>
-                                </form>
+                                    {t("oxygenHero.buyButton")}{" "}
+                                    <img
+                                        src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                        alt={t("oxygenHero.altTexts.buyIcon")}
+                                    />
+                                </button>
                             </div>
                         </div>
                         <div className="col-md-6"></div>
@@ -223,25 +216,18 @@ export default async function OxygenMonitor() {
                                 <div className="tab-pane fade show active" id="london" role="tabpanel" aria-labelledby="london-tab">
                                     <div className="content-para">
                                         <p>{t("oxygenVariants.tabs.oxygenCO.description")}</p>
-                                        <form
-                                            className="cart"
-                                            action="https://www.pranaair.com/product/oxyco-monitor/"
-                                            encType="multipart/form-data"
-                                            method="post"
+                                        <button
+                                            className="single_add_to_cart_button button alt banner-btn"
+                                            name="add-to-cart"
+                                            type="submit"
+                                            value="124689"
                                         >
-                                            <button
-                                                className="single_add_to_cart_button button alt banner-btn"
-                                                name="add-to-cart"
-                                                type="submit"
-                                                value="124689"
-                                            >
-                                                {t("oxygenVariants.buyButton")}{" "}
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                                    alt={t("oxygenVariants.altTexts.buyIcon")}
-                                                />
-                                            </button>
-                                        </form>
+                                            {t("oxygenVariants.buyButton")}{" "}
+                                            <img
+                                                src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                                alt={t("oxygenVariants.altTexts.buyIcon")}
+                                            />
+                                        </button>
                                     </div>
                                     <div className="oxy-co-box">
                                         <img
@@ -288,25 +274,18 @@ export default async function OxygenMonitor() {
                                 <div className="tab-pane fade" id="paris" role="tabpanel" aria-labelledby="paris-tab">
                                     <div className="content-para">
                                         <p>{t("oxygenVariants.tabs.oxygenCO2.description")}</p>
-                                        <form
-                                            className="cart"
-                                            action="https://www.pranaair.com/product/oxyco-monitor/"
-                                            encType="multipart/form-data"
-                                            method="post"
+                                        <button
+                                            className="single_add_to_cart_button button alt banner-btn"
+                                            name="add-to-cart"
+                                            type="submit"
+                                            value="1"
                                         >
-                                            <button
-                                                className="single_add_to_cart_button button alt banner-btn"
-                                                name="add-to-cart"
-                                                type="submit"
-                                                value="1"
-                                            >
-                                                {t("oxygenVariants.buyButton")}{" "}
-                                                <img
-                                                    src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
-                                                    alt={t("oxygenVariants.altTexts.buyIcon")}
-                                                />
-                                            </button>
-                                        </form>
+                                            {t("oxygenVariants.buyButton")}{" "}
+                                            <img
+                                                src="https://www.pranaair.com/wp-content/uploads/2024/09/download-btn.png"
+                                                alt={t("oxygenVariants.altTexts.buyIcon")}
+                                            />
+                                        </button>
                                     </div>
                                     <div className="oxy-co-box oxy-co2-box">
                                         <img

@@ -368,6 +368,10 @@ ul.connect-tab {
     width: 30%;
 }
 
+ul#connectivityTab {
+    flex-direction: column;
+}
+
 ul.connect-tab li button {
     font-size: 20px;
     font-weight: 500;

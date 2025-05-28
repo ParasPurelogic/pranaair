@@ -1,18 +1,91 @@
-"use client"
 import Image from "next/image"
-import Link from "next/link"
-import "bootstrap/dist/css/bootstrap.min.css"
+import { getServerTranslation } from "@/i18n/server"
 import "./style.css"
+import Link from "next/link"
+import RangeMonitorPage from "@/Components/Pages/PocketCo2Monitor/range"
 
-export default function CO2MonitorPage() {
-    // Custom tab handlers without React state
-    const handleRangeHover = (event) => {
-        document.querySelectorAll(".range_cntr li").forEach((item) => {
-            item.classList.remove("active_range")
-        })
-        event.currentTarget.classList.add("active_range")
-    }
-
+export default async function CO2MonitorPage() {
+    const { t } = await getServerTranslation("pocket-co2")
+    const rangeData = [
+        {
+            id: "good_range",
+            name: t("co2Ranges.good.name"),
+            range: t("co2Ranges.good.range"),
+            isActive: true,
+            image: {
+                src: "https://www.pranaair.com/wp-content/uploads/2022/06/good_child.png",
+                width: 55,
+                height: 55,
+                alt: t("co2Ranges.good.imageAlt"),
+            },
+            tooltip: t("co2Ranges.good.tooltip"),
+        },
+        {
+            id: "moderate_range",
+            name: t("co2Ranges.moderate.name"),
+            range: t("co2Ranges.moderate.range"),
+            isActive: false,
+            image: {
+                src: "https://www.pranaair.com/wp-content/uploads/2022/06/moderate_child.png",
+                width: 55,
+                height: 55,
+                alt: t("co2Ranges.moderate.imageAlt"),
+            },
+            tooltip: t("co2Ranges.moderate.tooltip"),
+        },
+        {
+            id: "poor_range",
+            name: t("co2Ranges.poor.name"),
+            range: t("co2Ranges.poor.range"),
+            isActive: false,
+            image: {
+                src: "https://www.pranaair.com/wp-content/uploads/2022/06/poor_child.png",
+                width: 88,
+                height: 88,
+                alt: t("co2Ranges.poor.imageAlt"),
+            },
+            tooltip: t("co2Ranges.poor.tooltip"),
+        },
+        {
+            id: "unhealthy_range",
+            name: t("co2Ranges.unhealthy.name"),
+            range: t("co2Ranges.unhealthy.range"),
+            isActive: false,
+            image: {
+                src: "https://www.pranaair.com/wp-content/uploads/2022/06/unhealthy_child.png",
+                width: 68,
+                height: 68,
+                alt: t("co2Ranges.unhealthy.imageAlt"),
+            },
+            tooltip: t("co2Ranges.unhealthy.tooltip"),
+        },
+        {
+            id: "serve_range",
+            name: t("co2Ranges.severe.name"),
+            range: t("co2Ranges.severe.range"),
+            isActive: false,
+            image: {
+                src: "https://www.pranaair.com/wp-content/uploads/2022/06/sevre_child.png",
+                width: 74,
+                height: 74,
+                alt: t("co2Ranges.severe.imageAlt"),
+            },
+            tooltip: t("co2Ranges.severe.tooltip"),
+        },
+        {
+            id: "hazaedous_range",
+            name: t("co2Ranges.hazardous.name"),
+            range: t("co2Ranges.hazardous.range"),
+            isActive: false,
+            image: {
+                src: "https://www.pranaair.com/wp-content/uploads/2022/06/hazardous_child.png",
+                width: 106,
+                height: 106,
+                alt: t("co2Ranges.hazardous.imageAlt"),
+            },
+            tooltip: t("co2Ranges.hazardous.tooltip"),
+        },
+    ]
     return (
         <div className="co2-monitor-page">
             {/* Banner Section */}
@@ -22,33 +95,30 @@ export default function CO2MonitorPage() {
                         <div className="col-md-6">
                             <div className="banner-content">
                                 <h1>
-                                    Worlds Smallest <span className="banner-txt">CO2 Monitor</span>
+                                    {t("banner.title.prefix")} <span className="banner-txt">{t("banner.title.highlight")}</span>
                                 </h1>
-                                <p>
-                                    Track the real-time air quality levels on the go with our smallest, portable, and handiest pocket air
-                                    monitor.
-                                </p>
+                                <p>{t("banner.description")}</p>
                                 <ul className="rate_list">
                                     <li>
-                                        <div className="woocom-list-content">₹ 5,990.00</div>
+                                        <div className="woocom-list-content">{t("banner.price")}</div>
                                     </li>
                                     <li>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/Pocket-Sized-icon.png"
                                             width={20}
                                             height={20}
-                                            alt="pocket-sized icon"
+                                            alt={t("banner.features.pocketSized.alt")}
                                         />{" "}
-                                        Pocket-Sized
+                                        {t("banner.features.pocketSized.text")}
                                     </li>
                                     <li>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/WIFI-enable-icon.png"
                                             width={20}
                                             height={20}
-                                            alt="wifi icon"
+                                            alt={t("banner.features.wifi.alt")}
                                         />{" "}
-                                        Wifi Enabled
+                                        {t("banner.features.wifi.text")}
                                     </li>
                                 </ul>
                                 <form
@@ -63,11 +133,11 @@ export default function CO2MonitorPage() {
                                         type="submit"
                                         value="52265"
                                     >
-                                        Buy Now{" "}
+                                        {t("banner.buyButton")}{" "}
                                         <img
                                             decoding="async"
                                             src="https://www.pranaair.com/wp-content/uploads/2023/09/Vector-3.png"
-                                            alt="icon"
+                                            alt={t("banner.buyButton.iconAlt")}
                                         />
                                     </button>
                                 </form>
@@ -84,21 +154,18 @@ export default function CO2MonitorPage() {
                     <div className="row">
                         <div className="col-md-6 features_left_box">
                             <div className="title_heading circle_heading">
-                                <span style={{ fontSize: "24pt" }}>Monitors</span>
+                                <span style={{ fontSize: "24pt" }}>{t("qualitativeFeatures.heading.first")}</span>
                                 <sup>
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                         width={24}
                                         height={24}
-                                        alt="logo"
+                                        alt={t("common.logoAlt")}
                                     />
                                 </sup>
-                                <span style={{ fontSize: "24pt" }}>Qualitative Features</span>
+                                <span style={{ fontSize: "24pt" }}>{t("qualitativeFeatures.heading.second")}</span>
                             </div>
-                            <span style={{ fontSize: "15pt" }}>
-                                This air quality monitor helps you to track real-time CO2 levels wherever you go indoor & outdoor. Our
-                                pocket sized monitor is the slimmest and handy device that you can easily fit into your pocket.
-                            </span>
+                            <span style={{ fontSize: "15pt" }}>{t("qualitativeFeatures.description")}</span>
                         </div>
                         <div className="col-md-6 border_left_line">
                             <div className="features_detail_box">
@@ -108,10 +175,10 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/real-time-co2-levels.png"
                                             width={109}
                                             height={109}
-                                            alt="real-time co2 level"
+                                            alt={t("qualitativeFeatures.features.realTime.alt")}
                                         />
                                         <span className="fetures_name" style={{ fontSize: "12pt" }}>
-                                            Real-time Level
+                                            {t("qualitativeFeatures.features.realTime.text")}
                                         </span>
                                     </li>
                                     <li>
@@ -119,10 +186,10 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/wifi.png"
                                             width={109}
                                             height={109}
-                                            alt="wifi icon"
+                                            alt={t("qualitativeFeatures.features.wifi.alt")}
                                         />
                                         <span className="fetures_name" style={{ fontSize: "12pt" }}>
-                                            Wi-Fi Connectivity
+                                            {t("qualitativeFeatures.features.wifi.text")}
                                         </span>
                                     </li>
                                     <li>
@@ -130,10 +197,10 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/mobile-app.png"
                                             width={109}
                                             height={109}
-                                            alt="mobile app icon"
+                                            alt={t("qualitativeFeatures.features.mobileApp.alt")}
                                         />
                                         <span className="fetures_name" style={{ fontSize: "12pt" }}>
-                                            Mobile App Enabled
+                                            {t("qualitativeFeatures.features.mobileApp.text")}
                                         </span>
                                     </li>
                                     <li>
@@ -141,10 +208,10 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/portable-monitor.png"
                                             width={109}
                                             height={109}
-                                            alt="portable monitor icon"
+                                            alt={t("qualitativeFeatures.features.portable.alt")}
                                         />
                                         <span className="fetures_name" style={{ fontSize: "12pt" }}>
-                                            Portable Monitor
+                                            {t("qualitativeFeatures.features.portable.text")}
                                         </span>
                                     </li>
                                     <li>
@@ -152,10 +219,10 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/lcd-display.png"
                                             width={109}
                                             height={109}
-                                            alt="lcd display icon"
+                                            alt={t("qualitativeFeatures.features.lcd.alt")}
                                         />
                                         <span className="fetures_name" style={{ fontSize: "12pt" }}>
-                                            LCD Display
+                                            {t("qualitativeFeatures.features.lcd.text")}
                                         </span>
                                     </li>
                                     <li>
@@ -163,10 +230,10 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2022/07/battery.png"
                                             width={109}
                                             height={109}
-                                            alt="battery icon"
+                                            alt={t("qualitativeFeatures.features.battery.alt")}
                                         />
                                         <span className="fetures_name" style={{ fontSize: "12pt" }}>
-                                            400 mAh Battery
+                                            {t("qualitativeFeatures.features.battery.text")}
                                         </span>
                                     </li>
                                 </ul>
@@ -191,18 +258,18 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2022/07/compliance-icon.png"
                                                     width={30}
                                                     height={30}
-                                                    alt="compliance icon"
+                                                    alt={t("compliance.iconAlt")}
                                                 />
                                             </sub>{" "}
-                                            Compliance with{" "}
+                                            {t("compliance.text.prefix")}{" "}
                                             <span style={{ color: "#4cae51" }}>
-                                                <strong>LEED, WELL,</strong>
+                                                <strong>{t("compliance.text.highlight1")}</strong>
                                             </span>{" "}
-                                            and{" "}
+                                            {t("compliance.text.conjunction")}{" "}
                                             <span style={{ color: "#4cae51" }}>
-                                                <strong>ASHRAE</strong>
+                                                <strong>{t("compliance.text.highlight2")}</strong>
                                             </span>{" "}
-                                            standards
+                                            {t("compliance.text.suffix")}
                                         </sup>
                                     </span>
                                 </em>
@@ -223,7 +290,7 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2022/08/portable-pocket-co2-monitor.jpeg"
                                     width={1200}
                                     height={400}
-                                    alt="prana air portable pocket co2 monitor"
+                                    alt={t("portableMonitor.imageAlt")}
                                     className="Image-fluid"
                                 />
                             </div>
@@ -239,20 +306,17 @@ export default function CO2MonitorPage() {
                         <div className="col-md-6">
                             <div className="multi-data-content">
                                 <h2 className="title_heading">
-                                    Multiple User-Interfaces
+                                    {t("userInterfaces.heading")}
                                     <span className="heading-leaf">
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                             width={24}
                                             height={24}
-                                            alt="logo"
+                                            alt={t("common.logoAlt")}
                                         />
                                     </span>
                                 </h2>
-                                <p>
-                                    Displaying the real-time CO2 levels in the form of both the emoticon and numerical screens. Green,
-                                    yellow, and red color representation.
-                                </p>
+                                <p>{t("userInterfaces.description")}</p>
                             </div>
                             <ul className="nav nav-tabs" role="tablist">
                                 <li className="nav-item" role="presentation">
@@ -272,12 +336,12 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/08/face-number-icon.png"
                                                     width={30}
                                                     height={30}
-                                                    alt="face and number screen"
+                                                    alt={t("userInterfaces.tabs.faceNumber.iconAlt")}
                                                 />
                                             </li>
                                             <li>
-                                                <h3>Face + Number</h3>
-                                                <p>Front view</p>
+                                                <h3>{t("userInterfaces.tabs.faceNumber.title")}</h3>
+                                                <p>{t("userInterfaces.tabs.faceNumber.description")}</p>
                                             </li>
                                         </ul>
                                     </button>
@@ -299,12 +363,12 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/08/number-screen.png"
                                                     width={30}
                                                     height={30}
-                                                    alt="number screen"
+                                                    alt={t("userInterfaces.tabs.numberScreen.iconAlt")}
                                                 />
                                             </li>
                                             <li>
-                                                <h3>Number Screen</h3>
-                                                <p>Numerical View</p>
+                                                <h3>{t("userInterfaces.tabs.numberScreen.title")}</h3>
+                                                <p>{t("userInterfaces.tabs.numberScreen.description")}</p>
                                             </li>
                                         </ul>
                                     </button>
@@ -326,12 +390,12 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/08/face-screen.png"
                                                     width={30}
                                                     height={30}
-                                                    alt="face screen"
+                                                    alt={t("userInterfaces.tabs.faceScreen.iconAlt")}
                                                 />
                                             </li>
                                             <li>
-                                                <h3>Face Screen</h3>
-                                                <p>Emoticon View</p>
+                                                <h3>{t("userInterfaces.tabs.faceScreen.title")}</h3>
+                                                <p>{t("userInterfaces.tabs.faceScreen.description")}</p>
                                             </li>
                                         </ul>
                                     </button>
@@ -353,12 +417,12 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/08/graphic-screen.png"
                                                     width={30}
                                                     height={30}
-                                                    alt="graph screen"
+                                                    alt={t("userInterfaces.tabs.graphScreen.iconAlt")}
                                                 />
                                             </li>
                                             <li>
-                                                <h3>Graph Screen</h3>
-                                                <p>Historical Data</p>
+                                                <h3>{t("userInterfaces.tabs.graphScreen.title")}</h3>
+                                                <p>{t("userInterfaces.tabs.graphScreen.description")}</p>
                                             </li>
                                         </ul>
                                     </button>
@@ -367,12 +431,17 @@ export default function CO2MonitorPage() {
                         </div>
                         <div className="col-md-6">
                             <div className="tab-content">
-                                <div id="Comonitora" className="tab-pane fade show active" role="tabpanel" aria-labelledby="comonitora-tab">
+                                <div
+                                    id="Comonitora"
+                                    className="tab-pane fade show active"
+                                    role="tabpanel"
+                                    aria-labelledby="comonitora-tab"
+                                >
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png"
                                         width={400}
                                         height={400}
-                                        alt="prana air co2 monitor face and number screen"
+                                        alt={t("userInterfaces.tabContent.faceNumber.imageAlt")}
                                     />
                                 </div>
                                 <div id="Comonitorb" className="tab-pane fade" role="tabpanel" aria-labelledby="comonitorb-tab">
@@ -380,7 +449,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/number-co2-monitor.png"
                                         width={400}
                                         height={400}
-                                        alt="prana air co2 monitor number screen"
+                                        alt={t("userInterfaces.tabContent.numberScreen.imageAlt")}
                                     />
                                 </div>
                                 <div id="Comonitorc" className="tab-pane fade" role="tabpanel" aria-labelledby="comonitorc-tab">
@@ -388,7 +457,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/face-co2-monitor.png"
                                         width={400}
                                         height={400}
-                                        alt="prana air co2 monitor face screen"
+                                        alt={t("userInterfaces.tabContent.faceScreen.imageAlt")}
                                     />
                                 </div>
                                 <div id="Comonitord" className="tab-pane fade" role="tabpanel" aria-labelledby="comonitord-tab">
@@ -396,7 +465,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/graph-co2-monitor.png"
                                         width={400}
                                         height={400}
-                                        alt="prana air co2 monitor graph screen"
+                                        alt={t("userInterfaces.tabContent.graphScreen.imageAlt")}
                                     />
                                 </div>
                             </div>
@@ -412,21 +481,18 @@ export default function CO2MonitorPage() {
                         <div className="col-12">
                             <div className="remote-data-para">
                                 <h2 className="title_heading circle_heading data_heading">
-                                    Remote Data
+                                    {t("remoteData.heading.first")}
                                     <sup>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                             width={24}
                                             height={24}
-                                            alt="logo"
+                                            alt={t("common.logoAlt")}
                                         />
                                     </sup>
-                                    Accessibility
+                                    {t("remoteData.heading.second")}
                                 </h2>
-                                <p>
-                                    AQI data cloud storage eases the accessibility of the monitors air quality data remotely anytime
-                                    anywhere wherever you go.
-                                </p>
+                                <p>{t("remoteData.description")}</p>
                             </div>
                         </div>
                     </div>
@@ -445,40 +511,40 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/remote-data-co2-monitor.png"
                                             width={200}
                                             height={200}
-                                            alt="prana air pocket co2 monitor wifi enabled"
+                                            alt={t("remoteData.images.co2Monitor.alt")}
                                             className="screen-monitor"
                                         />
-                                        <h5>CO2 Monitor</h5>
+                                        <h5>{t("remoteData.images.co2Monitor.text")}</h5>
                                     </li>
                                     <li className="image-box">
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/08/wifi-image.png"
                                             width={100}
                                             height={100}
-                                            alt="wifi icon"
+                                            alt={t("remoteData.images.wifi.alt")}
                                             className="wife"
                                         />
-                                        <h5>WIFI Connectivity</h5>
+                                        <h5>{t("remoteData.images.wifi.text")}</h5>
                                     </li>
                                     <li className="image-box">
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/08/aqi-cloud.png"
                                             width={135}
                                             height={135}
-                                            alt="aqi cloud"
+                                            alt={t("remoteData.images.aqiCloud.alt")}
                                             className="aqi-cloud"
                                         />
-                                        <h5>AQI Cloud Server</h5>
+                                        <h5>{t("remoteData.images.aqiCloud.text")}</h5>
                                     </li>
                                     <li>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/08/mobile-app.png"
                                             width={220}
                                             height={220}
-                                            alt="prana air pocket co2 monitor data on aqi app"
+                                            alt={t("remoteData.images.mobileApp.alt")}
                                             className="mob-app"
                                         />
-                                        <h5>CO2 data on AQI mobile app</h5>
+                                        <h5>{t("remoteData.images.mobileApp.text")}</h5>
                                     </li>
                                 </ul>
                             </div>
@@ -503,7 +569,7 @@ export default function CO2MonitorPage() {
                                     aria-controls="handheld"
                                     aria-selected="true"
                                 >
-                                    AQI App
+                                    {t("appKeyFeatures.tabs.aqiApp")}
                                 </button>
                             </li>
                             <li className="nav-item" role="presentation">
@@ -517,7 +583,7 @@ export default function CO2MonitorPage() {
                                     aria-controls="indoor"
                                     aria-selected="false"
                                 >
-                                    AQI Dashboard
+                                    {t("appKeyFeatures.tabs.aqiDashboard")}
                                 </button>
                             </li>
                             <li className="nav-item" role="presentation">
@@ -531,24 +597,16 @@ export default function CO2MonitorPage() {
                                     aria-controls="outdoor"
                                     aria-selected="false"
                                 >
-                                    AQI TV App
+                                    {t("appKeyFeatures.tabs.aqiTvApp")}
                                 </button>
                             </li>
                         </ul>
 
                         <div className="tab-content" id="productTabsContent">
-                            <div
-                                className="tab-pane fade show active"
-                                id="handheld"
-                                role="tabpanel"
-                                aria-labelledby="handheld-tab"
-                            >
+                            <div className="tab-pane fade show active" id="handheld" role="tabpanel" aria-labelledby="handheld-tab">
                                 <div className="row">
                                     <div className="aqi-dashboard-para">
-                                        <p>
-                                            Connect your Prana Air Pocket CO2 monitor to AQI mobile app to track your CO2 levels in real time
-                                            and ventilation score.
-                                        </p>
+                                        <p>{t("appKeyFeatures.aqiApp.description")}</p>
                                     </div>
                                     <div className="tab-card row">
                                         <div className="col-md-6">
@@ -564,7 +622,7 @@ export default function CO2MonitorPage() {
                                                         aria-controls="tab1Content"
                                                         aria-selected="true"
                                                     >
-                                                        Health Advice
+                                                        {t("appKeyFeatures.aqiApp.features.healthAdvice.title")}
                                                     </button>
                                                 </li>
                                                 <li className="nav-item" role="presentation">
@@ -578,7 +636,7 @@ export default function CO2MonitorPage() {
                                                         aria-controls="tab2Content"
                                                         aria-selected="false"
                                                     >
-                                                        Ventilation Score
+                                                        {t("appKeyFeatures.aqiApp.features.ventilationScore.title")}
                                                     </button>
                                                 </li>
                                                 <li className="nav-item" role="presentation">
@@ -592,7 +650,7 @@ export default function CO2MonitorPage() {
                                                         aria-controls="tab3Content"
                                                         aria-selected="false"
                                                     >
-                                                        Historic Data
+                                                        {t("appKeyFeatures.aqiApp.features.historicData.title")}
                                                     </button>
                                                 </li>
                                                 <li className="nav-item" role="presentation">
@@ -606,7 +664,7 @@ export default function CO2MonitorPage() {
                                                         aria-controls="tab4Content"
                                                         aria-selected="false"
                                                     >
-                                                        Monthly Insight
+                                                        {t("appKeyFeatures.aqiApp.features.monthlyInsight.title")}
                                                     </button>
                                                 </li>
                                             </ul>
@@ -616,52 +674,72 @@ export default function CO2MonitorPage() {
                                                 <div className="tab-content">
                                                     <ul>
                                                         <li data-tab="tab1">
-                                                            <div id="tab1Content" className="tab-pane fade show active" role="tabpanel" aria-labelledby="tab1-tab">
-                                                                <p>Get the health advice for indoor CO2 level from AQI app</p>
+                                                            <div
+                                                                id="tab1Content"
+                                                                className="tab-pane fade show active"
+                                                                role="tabpanel"
+                                                                aria-labelledby="tab1-tab"
+                                                            >
+                                                                <p>{t("appKeyFeatures.aqiApp.features.healthAdvice.description")}</p>
                                                             </div>
                                                             <Image
                                                                 src="https://www.pranaair.com/wp-content/uploads/2023/08/health-advice-of-co2-level.webp"
                                                                 width={220}
                                                                 height={220}
-                                                                alt="health advice of co2 level"
+                                                                alt={t("appKeyFeatures.aqiApp.features.healthAdvice.imageAlt")}
                                                                 className="br-clr helth-advice-Image active"
                                                             />
                                                         </li>
                                                         <li data-tab="tab2">
-                                                            <div id="tab2Content" className="tab-pane fade" role="tabpanel" aria-labelledby="tab2-tab">
-                                                                <p>You will understand how good or bad the CO2 levels are in your house.</p>
+                                                            <div
+                                                                id="tab2Content"
+                                                                className="tab-pane fade"
+                                                                role="tabpanel"
+                                                                aria-labelledby="tab2-tab"
+                                                            >
+                                                                <p>{t("appKeyFeatures.aqiApp.features.ventilationScore.description")}</p>
                                                             </div>
                                                             <Image
                                                                 src="https://www.pranaair.com/wp-content/uploads/2023/08/vantilation-score-data.png"
                                                                 width={220}
                                                                 height={220}
-                                                                alt="co2 vantilation score data on aqi app"
+                                                                alt={t("appKeyFeatures.aqiApp.features.ventilationScore.imageAlt")}
                                                                 className="br-clr vantilation-score-Image"
                                                             />
                                                         </li>
                                                     </ul>
                                                     <ul>
                                                         <li data-tab="tab3">
-                                                            <div id="tab3Content" className="tab-pane fade" role="tabpanel" aria-labelledby="tab3-tab">
-                                                                <p>You can analyse the historic data of CO2 where you keep the monitor.</p>
+                                                            <div
+                                                                id="tab3Content"
+                                                                className="tab-pane fade"
+                                                                role="tabpanel"
+                                                                aria-labelledby="tab3-tab"
+                                                            >
+                                                                <p>{t("appKeyFeatures.aqiApp.features.historicData.description")}</p>
                                                             </div>
                                                             <Image
                                                                 src="https://www.pranaair.com/wp-content/uploads/2023/08/pocket-co2-monitor-history-data.webp"
                                                                 width={220}
                                                                 height={220}
-                                                                alt="pocket co2 monitor history data"
+                                                                alt={t("appKeyFeatures.aqiApp.features.historicData.imageAlt")}
                                                                 className="br-clr historic-data-Image"
                                                             />
                                                         </li>
                                                         <li data-tab="tab4">
-                                                            <div id="tab4Content" className="tab-pane fade" role="tabpanel" aria-labelledby="tab4-tab">
-                                                                <p>The CO2 level of a whole month can be analysed on your fingertips</p>
+                                                            <div
+                                                                id="tab4Content"
+                                                                className="tab-pane fade"
+                                                                role="tabpanel"
+                                                                aria-labelledby="tab4-tab"
+                                                            >
+                                                                <p>{t("appKeyFeatures.aqiApp.features.monthlyInsight.description")}</p>
                                                             </div>
                                                             <Image
                                                                 src="https://www.pranaair.com/wp-content/uploads/2023/08/monthly-insight-data.png"
                                                                 width={220}
                                                                 height={220}
-                                                                alt="Prana Air co2 monitor calender monthly data"
+                                                                alt={t("appKeyFeatures.aqiApp.features.monthlyInsight.imageAlt")}
                                                                 className="br-clr monthly-insight-Image"
                                                             />
                                                         </li>
@@ -681,38 +759,38 @@ export default function CO2MonitorPage() {
                                                 <li>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/real-time-co2-level.png"
-                                                        alt="real-time co2 data icon"
+                                                        alt={t("appKeyFeatures.aqiDashboard.features.realTime.imageAlt")}
                                                         width={100}
                                                         height={100}
                                                     />
-                                                    <h5>Real-time CO2 air quality data</h5>
+                                                    <h5>{t("appKeyFeatures.aqiDashboard.features.realTime.title")}</h5>
                                                 </li>
                                                 <li>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/historic-data.png"
-                                                        alt="dashboard icon"
+                                                        alt={t("appKeyFeatures.aqiDashboard.features.insightful.imageAlt")}
                                                         width={100}
                                                         height={100}
                                                     />
-                                                    <h5>Insightful Air quality monitoring dashboard</h5>
+                                                    <h5>{t("appKeyFeatures.aqiDashboard.features.insightful.title")}</h5>
                                                 </li>
                                                 <li>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/historic-co2-graph-level.png"
-                                                        alt="historic co2 graph"
+                                                        alt={t("appKeyFeatures.aqiDashboard.features.historic.imageAlt")}
                                                         width={100}
                                                         height={100}
                                                     />
-                                                    <h5>Historic air quality graphs of CO2 level</h5>
+                                                    <h5>{t("appKeyFeatures.aqiDashboard.features.historic.title")}</h5>
                                                 </li>
                                                 <li>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/health-recommendation.png"
-                                                        alt="air quality health"
+                                                        alt={t("appKeyFeatures.aqiDashboard.features.healthRecommendations.imageAlt")}
                                                         width={100}
                                                         height={100}
                                                     />
-                                                    <h5>Air Quality health recommendations</h5>
+                                                    <h5>{t("appKeyFeatures.aqiDashboard.features.healthRecommendations.title")}</h5>
                                                 </li>
                                             </ul>
                                         </div>
@@ -721,7 +799,7 @@ export default function CO2MonitorPage() {
                                         <Image
                                             className="dashborad-Image"
                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-web-dashboard-for-pocket-co2-monitor.png"
-                                            alt="prana air pocket co2 monitor on aqi web-dashboard"
+                                            alt={t("appKeyFeatures.aqiDashboard.dashboardImageAlt")}
                                             width={300}
                                             height={200}
                                         />
@@ -738,38 +816,38 @@ export default function CO2MonitorPage() {
                                                     <li>
                                                         <Image
                                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/real-time-co2-level.png"
-                                                            alt="real-time co2 data"
+                                                            alt={t("appKeyFeatures.aqiTvApp.features.realTime.imageAlt")}
                                                             width={100}
                                                             height={100}
                                                         />
-                                                        <h5>Real-time CO2 air quality data</h5>
+                                                        <h5>{t("appKeyFeatures.aqiTvApp.features.realTime.title")}</h5>
                                                     </li>
                                                     <li>
                                                         <Image
                                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/historic-data.png"
-                                                            alt="historic co2 data"
+                                                            alt={t("appKeyFeatures.aqiTvApp.features.historic.imageAlt")}
                                                             width={100}
                                                             height={100}
                                                         />
-                                                        <h5>Historic data for 1, 8, 12 hours.</h5>
+                                                        <h5>{t("appKeyFeatures.aqiTvApp.features.historic.title")}</h5>
                                                     </li>
                                                     <li>
                                                         <Image
                                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/control-tv-app-form-mobile.png"
-                                                            alt="aqi tv app"
+                                                            alt={t("appKeyFeatures.aqiTvApp.features.control.imageAlt")}
                                                             width={100}
                                                             height={100}
                                                         />
-                                                        <h5>Control the TV app from mobile.</h5>
+                                                        <h5>{t("appKeyFeatures.aqiTvApp.features.control.title")}</h5>
                                                     </li>
                                                     <li>
                                                         <Image
                                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/indicate-valid-score-co2.png"
-                                                            alt="ventilation score"
+                                                            alt={t("appKeyFeatures.aqiTvApp.features.ventilationScore.imageAlt")}
                                                             width={100}
                                                             height={100}
                                                         />
-                                                        <h5>The data indicates the ventilation score.</h5>
+                                                        <h5>{t("appKeyFeatures.aqiTvApp.features.ventilationScore.title")}</h5>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -778,7 +856,7 @@ export default function CO2MonitorPage() {
                                             <Image
                                                 className="dashborad-Image tv-Image"
                                                 src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-tv-app-pocket-co2-monitor.png"
-                                                alt="prana air pocket co2 monitor on aqi tv-dashboard"
+                                                alt={t("appKeyFeatures.aqiTvApp.dashboardImageAlt")}
                                                 width={300}
                                                 height={200}
                                             />
@@ -798,16 +876,16 @@ export default function CO2MonitorPage() {
                         <div className="col-lg-6 col-md-12">
                             <div className="connectivity-content">
                                 <h2 className="connectivity-title">
-                                    Pocket PM2.5 Monitor
+                                    {t("dataConnectivity.title")}
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                         width={20}
                                         height={20}
-                                        alt="Prana Air"
+                                        alt={t("common.logoAlt")}
                                         className="title-icon"
                                     />
                                 </h2>
-                                <h3 className="connectivity-subtitle">Data connectivity to Mobile App</h3>
+                                <h3 className="connectivity-subtitle">{t("dataConnectivity.subtitle")}</h3>
 
                                 <ul className="connectivity-steps nav nav-tabs" role="tablist">
                                     <li className="nav-item" role="presentation">
@@ -824,17 +902,14 @@ export default function CO2MonitorPage() {
                                             <div className="step-icon">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/08/install.png.png"
-                                                    alt="Install AQI App"
+                                                    alt={t("dataConnectivity.steps.install.iconAlt")}
                                                     width={20}
                                                     height={20}
                                                 />
                                             </div>
                                             <div className="step-content">
-                                                <h4 className="step-title">1. INSTALL AQI APP & SIGN UP</h4>
-                                                <p className="step-description">
-                                                    Install the AQI app on your smartphones from the app store. Sign up & log in through your
-                                                    account.
-                                                </p>
+                                                <h4 className="step-title">{t("dataConnectivity.steps.install.title")}</h4>
+                                                <p className="step-description">{t("dataConnectivity.steps.install.description")}</p>
                                             </div>
                                         </button>
                                     </li>
@@ -855,15 +930,12 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/09/connect.png"
                                                     width={20}
                                                     height={20}
-                                                    alt="Connect Device"
+                                                    alt={t("dataConnectivity.steps.connect.iconAlt")}
                                                 />
                                             </div>
                                             <div className="step-content">
-                                                <h4 className="step-title">2. CONNECT THE DEVICE WITH THE APP</h4>
-                                                <p className="step-description">
-                                                    Go to My Device & select Pocket PM2.5 Monitor. Long press the power button on top of the device
-                                                    until a QR code appears on the screen.
-                                                </p>
+                                                <h4 className="step-title">{t("dataConnectivity.steps.connect.title")}</h4>
+                                                <p className="step-description">{t("dataConnectivity.steps.connect.description")}</p>
                                             </div>
                                         </button>
                                     </li>
@@ -884,15 +956,12 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/09/scan-qr-code.png"
                                                     width={20}
                                                     height={20}
-                                                    alt="Scan QR Code"
+                                                    alt={t("dataConnectivity.steps.scan.iconAlt")}
                                                 />
                                             </div>
                                             <div className="step-content">
-                                                <h4 className="step-title">3. SCAN THE QR & CONFIGURE WIFI</h4>
-                                                <p className="step-description">
-                                                    Scan the QR code or Enter the device ID displayed on your device screen. Fill in your Wi-Fi
-                                                    details. Your device should successfully be connected now.
-                                                </p>
+                                                <h4 className="step-title">{t("dataConnectivity.steps.scan.title")}</h4>
+                                                <p className="step-description">{t("dataConnectivity.steps.scan.description")}</p>
                                             </div>
                                         </button>
                                     </li>
@@ -911,17 +980,14 @@ export default function CO2MonitorPage() {
                                             <div className="step-icon">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2023/09/data.png"
-                                                    alt="Get Insightful Data"
+                                                    alt={t("dataConnectivity.steps.data.iconAlt")}
                                                     width={20}
                                                     height={20}
                                                 />
                                             </div>
                                             <div className="step-content">
-                                                <h4 className="step-title">4. NOW GET THE INSIGHTFUL DATA-</h4>
-                                                <p className="step-description">
-                                                    Analyse the PM2.5 level in real-time & historical data stored in the AQI cloud through the app
-                                                    on your smartphone.
-                                                </p>
+                                                <h4 className="step-title">{t("dataConnectivity.steps.data.title")}</h4>
+                                                <p className="step-description">{t("dataConnectivity.steps.data.description")}</p>
                                             </div>
                                         </button>
                                     </li>
@@ -929,12 +995,10 @@ export default function CO2MonitorPage() {
 
                                 <div className="download-app-section">
                                     <h3 className="download-title">
-                                        Download the <span className="highlight-text">AQI App</span>
+                                        {t("dataConnectivity.download.titlePrefix")}{" "}
+                                        <span className="highlight-text">{t("dataConnectivity.download.titleHighlight")}</span>
                                     </h3>
-                                    <p className="download-description">
-                                        Integrate your monitors data to our mobile application to access the data remotely and analyze the
-                                        historical trend.
-                                    </p>
+                                    <p className="download-description">{t("dataConnectivity.download.description")}</p>
                                     <div className="app-store-buttons">
                                         <a
                                             href="https://play.google.com/store/apps/details?id=com.aqi.data"
@@ -944,7 +1008,7 @@ export default function CO2MonitorPage() {
                                         >
                                             <Image
                                                 src="https://www.pranaair.com/wp-content/uploads/2021/03/google-play-store.png"
-                                                alt="Google Play Store"
+                                                alt={t("dataConnectivity.download.googlePlayAlt")}
                                                 width={20}
                                                 height={20}
                                             />
@@ -957,7 +1021,7 @@ export default function CO2MonitorPage() {
                                         >
                                             <Image
                                                 src="https://www.pranaair.com/wp-content/uploads/2021/02/appstore.png"
-                                                alt="Apple App Store"
+                                                alt={t("dataConnectivity.download.appStoreAlt")}
                                                 width={20}
                                                 height={20}
                                             />
@@ -970,10 +1034,15 @@ export default function CO2MonitorPage() {
                         <div className="col-lg-6 col-md-12">
                             <div className="app-preview">
                                 <div className="app-image-container tab-content">
-                                    <div id="step1Content" className="tab-pane fade show active" role="tabpanel" aria-labelledby="step1-tab">
+                                    <div
+                                        id="step1Content"
+                                        className="tab-pane fade show active"
+                                        role="tabpanel"
+                                        aria-labelledby="step1-tab"
+                                    >
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2022/06/1.png"
-                                            alt="Install AQI App Preview"
+                                            alt={t("dataConnectivity.steps.install.previewAlt")}
                                             width={600}
                                             height={400}
                                             data-step="1"
@@ -982,7 +1051,7 @@ export default function CO2MonitorPage() {
                                     <div id="step2Content" className="tab-pane fade" role="tabpanel" aria-labelledby="step2-tab">
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/09/connect-device-with-our-app.png"
-                                            alt="Connect Device Preview"
+                                            alt={t("dataConnectivity.steps.connect.previewAlt")}
                                             width={600}
                                             height={400}
                                             data-step="2"
@@ -991,7 +1060,7 @@ export default function CO2MonitorPage() {
                                     <div id="step3Content" className="tab-pane fade" role="tabpanel" aria-labelledby="step3-tab">
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/09/scan-qr-and-configure-with-wifi.png"
-                                            alt="Scan QR Code Preview"
+                                            alt={t("dataConnectivity.steps.scan.previewAlt")}
                                             width={600}
                                             height={400}
                                             data-step="3"
@@ -1000,7 +1069,7 @@ export default function CO2MonitorPage() {
                                     <div id="step4Content" className="tab-pane fade" role="tabpanel" aria-labelledby="step4-tab">
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/09/insightful-data.png"
-                                            alt="Insightful Data Preview"
+                                            alt={t("dataConnectivity.steps.data.previewAlt")}
                                             width={600}
                                             height={400}
                                             data-step="4"
@@ -1019,12 +1088,17 @@ export default function CO2MonitorPage() {
                     <div className="row">
                         <div className="col-md-6 product-slider-first">
                             <div className="tab-content">
-                                <div id="MonitorTab1" className="tab-pane fade show active" role="tabpanel" aria-labelledby="monitortab1-tab">
+                                <div
+                                    id="MonitorTab1"
+                                    className="tab-pane fade show active"
+                                    role="tabpanel"
+                                    aria-labelledby="monitortab1-tab"
+                                >
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/prana-air-co2-monitor-face-and-number-screen.png"
                                         width={400}
                                         height={400}
-                                        alt="prana-air-smart-portable-monitor"
+                                        alt={t("productSlider.images.frontView.alt")}
                                     />
                                 </div>
                                 <div id="MonitorTab2" className="tab-pane fade" role="tabpanel" aria-labelledby="monitortab2-tab">
@@ -1032,7 +1106,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2023/08/co2-monitor-left-view.png"
                                         width={400}
                                         height={400}
-                                        alt="pocket-monitor-side-view"
+                                        alt={t("productSlider.images.leftView.alt")}
                                     />
                                 </div>
                                 <div id="MonitorTab3" className="tab-pane fade" role="tabpanel" aria-labelledby="monitortab3-tab">
@@ -1040,7 +1114,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2023/08/co2-monitor-side-view.png"
                                         width={400}
                                         height={400}
-                                        alt="pm-pocket-monitor-sideview"
+                                        alt={t("productSlider.images.sideView.alt")}
                                     />
                                 </div>
                             </div>
@@ -1060,7 +1134,7 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/prana-air-co2-monitor-face-and-number-screen.png"
                                             width={80}
                                             height={80}
-                                            alt="prana-air-smart-portable-monitor"
+                                            alt={t("productSlider.images.frontView.thumbAlt")}
                                         />
                                     </button>
                                 </li>
@@ -1079,7 +1153,7 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2023/08/co2-monitor-left-view.png"
                                             width={80}
                                             height={80}
-                                            alt="pocket-monitor-side-view"
+                                            alt={t("productSlider.images.leftView.thumbAlt")}
                                         />
                                     </button>
                                 </li>
@@ -1098,7 +1172,7 @@ export default function CO2MonitorPage() {
                                             src="https://www.pranaair.com/wp-content/uploads/2023/08/co2-monitor-side-view.png"
                                             width={80}
                                             height={80}
-                                            alt="pm-pocket-monitor-sideview"
+                                            alt={t("productSlider.images.sideView.thumbAlt")}
                                         />
                                     </button>
                                 </li>
@@ -1106,44 +1180,43 @@ export default function CO2MonitorPage() {
                         </div>
                         <div className="col-md-6 pocket_slider_content">
                             <h2 className="title_heading circle_heading">
-                                Salient Features
+                                {t("productSlider.heading.first")}
                                 <sup>
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                         width={24}
                                         height={24}
-                                        alt="logo"
+                                        alt={t("common.logoAlt")}
                                     />
                                 </sup>
-                                CO2 Monitor
+                                {t("productSlider.heading.second")}
                             </h2>
-                            <p>
-                                Our monitor detects CO<sub>2</sub> levels at ±5 % accuracy with the help of an in-built NDIR sensor. The
-                                product has a 400 mAh battery with 30 minutes (approx.) charging time. It can measure the CO<sub>2</sub>{" "}
-                                range up to 9999 ppm.
-                            </p>
+                            <p>{t("productSlider.description")}</p>
                             <div className="introduce_features clearfix">
                                 <ul>
                                     <li>
-                                        <span className="highlight_feature">Type-C USB</span>Charging
+                                        <span className="highlight_feature">{t("productSlider.features.charging.highlight")}</span>
+                                        {t("productSlider.features.charging.text")}
                                     </li>
                                     <li>
-                                        <span className="highlight_feature">
-                                            CO<sub>2</sub> Level
-                                        </span>
-                                        Real-time Data
+                                        <span className="highlight_feature">{t("productSlider.features.co2Level.highlight")}</span>
+                                        {t("productSlider.features.co2Level.text")}
                                     </li>
                                     <li>
-                                        <span className="highlight_feature">400mAh</span>Battery
+                                        <span className="highlight_feature">{t("productSlider.features.battery.highlight")}</span>
+                                        {t("productSlider.features.battery.text")}
                                     </li>
                                     <li>
-                                        <span className="highlight_feature">Size</span>Pocket
+                                        <span className="highlight_feature">{t("productSlider.features.size.highlight")}</span>
+                                        {t("productSlider.features.size.text")}
                                     </li>
                                     <li>
-                                        <span className="highlight_feature">NDIR</span>Sensor
+                                        <span className="highlight_feature">{t("productSlider.features.sensor.highlight")}</span>
+                                        {t("productSlider.features.sensor.text")}
                                     </li>
                                     <li>
-                                        <span className="highlight_feature">WiFi 2.4 GHz</span>Connectivity
+                                        <span className="highlight_feature">{t("productSlider.features.wifi.highlight")}</span>
+                                        {t("productSlider.features.wifi.text")}
                                     </li>
                                 </ul>
                             </div>
@@ -1156,9 +1229,9 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png"
                                         width={20}
                                         height={20}
-                                        alt="download icon"
+                                        alt={t("productSlider.downloads.brochure.iconAlt")}
                                     />{" "}
-                                    Brochure
+                                    {t("productSlider.downloads.brochure.text")}
                                 </Link>
                                 <Link
                                     href="https://www.pranaair.com/wp-content/uploads/2024/10/Prana-air-Pocket-CO2-air-quality-monitor-manual.pdf"
@@ -1168,9 +1241,9 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2023/06/brochore-btn.png"
                                         width={20}
                                         height={20}
-                                        alt="download icon"
+                                        alt={t("productSlider.downloads.manual.iconAlt")}
                                     />{" "}
-                                    Manual
+                                    {t("productSlider.downloads.manual.text")}
                                 </Link>
                             </div>
                         </div>
@@ -1185,17 +1258,17 @@ export default function CO2MonitorPage() {
                         <div className="col-12 pocket-air-sec">
                             <div className="tech-spec-heading">
                                 <h2 className="title_heading circle_heading data_heading">
-                                    Technical Specifications
+                                    {t("technicalSpecs.heading")}
                                     <sup>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                             width={24}
                                             height={24}
-                                            alt="logo"
+                                            alt={t("common.logoAlt")}
                                         />
                                     </sup>
                                 </h2>
-                                <p>CO2 Monitor</p>
+                                <p>{t("technicalSpecs.subheading")}</p>
                             </div>
                         </div>
                     </div>
@@ -1211,28 +1284,28 @@ export default function CO2MonitorPage() {
                                 <div className="tech-spec-colm">
                                     <ul>
                                         <li>
-                                            <h6>Product Name :</h6>
-                                            <h5>Pocket CO2 monitor</h5>
+                                            <h6>{t("technicalSpecs.details.productName.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.productName.value")}</h5>
                                         </li>
                                         <li className="tech-spec-row-bg">
-                                            <h6>Sensor :</h6>
-                                            <h5>CO2 NDIR</h5>
+                                            <h6>{t("technicalSpecs.details.sensor.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.sensor.value")}</h5>
                                         </li>
                                         <li>
-                                            <h6>Dimension :</h6>
-                                            <h5>5.8 x 2.5 x 4.6 cm</h5>
+                                            <h6>{t("technicalSpecs.details.dimension.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.dimension.value")}</h5>
                                         </li>
                                         <li className="tech-spec-row-bg">
-                                            <h6>Power Supply :</h6>
-                                            <h5>5V DC / Type-C USB cable</h5>
+                                            <h6>{t("technicalSpecs.details.powerSupply.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.powerSupply.value")}</h5>
                                         </li>
                                         <li>
-                                            <h6>Connectivity :</h6>
-                                            <h5>WiFi [2.4GHz]</h5>
+                                            <h6>{t("technicalSpecs.details.connectivity.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.connectivity.value")}</h5>
                                         </li>
                                         <li className="tech-spec-row-bg">
-                                            <h6>Mobile App Enabled :</h6>
-                                            <h5>AQI Mobile App [iOS &amp; Android]</h5>
+                                            <h6>{t("technicalSpecs.details.mobileApp.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.mobileApp.value")}</h5>
                                         </li>
                                     </ul>
                                 </div>
@@ -1243,28 +1316,28 @@ export default function CO2MonitorPage() {
                                 <div className="tech-spec-colm">
                                     <ul>
                                         <li>
-                                            <h6>Range :</h6>
-                                            <h5>Up to 9999 ppm</h5>
+                                            <h6>{t("technicalSpecs.details.range.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.range.value")}</h5>
                                         </li>
                                         <li className="tech-spec-row-bg">
-                                            <h6>Operating temperature range:</h6>
-                                            <h5>-5° C - 45°C</h5>
+                                            <h6>{t("technicalSpecs.details.temperature.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.temperature.value")}</h5>
                                         </li>
                                         <li>
-                                            <h6>Weight :</h6>
-                                            <h5>60 gram</h5>
+                                            <h6>{t("technicalSpecs.details.weight.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.weight.value")}</h5>
                                         </li>
                                         <li className="tech-spec-row-bg">
-                                            <h6>Display :</h6>
-                                            <h5>LCD Display</h5>
+                                            <h6>{t("technicalSpecs.details.display.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.display.value")}</h5>
                                         </li>
                                         <li>
-                                            <h6>Data Storage :</h6>
-                                            <h5>AQI Cloud Storage (option)</h5>
+                                            <h6>{t("technicalSpecs.details.dataStorage.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.dataStorage.value")}</h5>
                                         </li>
                                         <li className="tech-spec-row-bg">
-                                            <h6>Battery :</h6>
-                                            <h5>400 mAh rechargeable battery</h5>
+                                            <h6>{t("technicalSpecs.details.battery.label")}</h6>
+                                            <h5>{t("technicalSpecs.details.battery.value")}</h5>
                                         </li>
                                     </ul>
                                 </div>
@@ -1284,21 +1357,21 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2023/10/ndir-sensor-for-pocket-co2-monitor.png"
                                     width={600}
                                     height={600}
-                                    alt="prana air ndir sensor for pocket co2 monitor"
+                                    alt={t("ndirTechnology.imageAlt")}
                                 />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="ndir-sensor-taxt">
                                 <h2>
-                                    <span className="ndir">NDIR</span> Technology
+                                    <span className="ndir">{t("ndirTechnology.heading.highlight")}</span>{" "}
+                                    {t("ndirTechnology.heading.text")}
                                 </h2>
-                                <h3>for more Accurate Detection</h3>
-                                <p>
-                                    With Prana Airs CO2 sensor is based on the non-dispersive infrared (NDIR) principle, which is the most
-                                    widely used and trusted technology for CO2 sensing.
-                                </p>
-                                <Link href="https://www.pranaair.com/air-quality-sensor/carbon-dioxide-co2-sensor/">Find Out</Link>
+                                <h3>{t("ndirTechnology.subheading")}</h3>
+                                <p>{t("ndirTechnology.description")}</p>
+                                <Link href="https://www.pranaair.com/air-quality-sensor/carbon-dioxide-co2-sensor/">
+                                    {t("ndirTechnology.linkText")}
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -1312,23 +1385,24 @@ export default function CO2MonitorPage() {
                         <div className="col-12">
                             <div className="introducing_box text-center">
                                 <h2 className="title_heading">
-                                    CO2 Health Index
+                                    {t("co2HealthIndex.heading")}
                                     <sup>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                             width={24}
                                             height={24}
-                                            alt="logo"
+                                            alt={t("common.logoAlt")}
                                         />
                                     </sup>
                                 </h2>
                                 <span style={{ fontSize: "13pt" }}>
-                                    The CO<sub>2</sub> health index will help you understand the quality of the air you breathe and the
-                                    health impacts. You will also know if your house or office ventilation system is good or bad.
+                                    {t("co2HealthIndex.description")}
                                 </span>
                                 <p>
                                     <span style={{ fontSize: "13pt" }}>
-                                        <Link href="/what-is-carbon-dioxide-co2/">Know More</Link>
+                                        <Link href="/what-is-carbon-dioxide-co2/">
+                                            {t("co2HealthIndex.linkText")}
+                                        </Link>
                                     </span>
                                 </p>
                             </div>
@@ -1336,108 +1410,7 @@ export default function CO2MonitorPage() {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <section className="range_section">
-                                <div className="range_cntr">
-                                    <ul>
-                                        <li className="good_range active_range" onMouseEnter={handleRangeHover}>
-                                            <span className="range_text">Good</span>
-                                            <div className="range_color"></div>
-                                            <small className="range_no">350-700</small>
-                                            <div className="hover_range_box">
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good_child.png"
-                                                    width={55}
-                                                    height={55}
-                                                    alt="good co2 level"
-                                                />
-                                                <div className="tooltip_aqi">
-                                                    The air is fresh and free from toxins. People are not exposed to any health risk.
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li className="moderate_range" onMouseEnter={handleRangeHover}>
-                                            <span className="range_text">Moderate</span>
-                                            <div className="range_color"></div>
-                                            <small className="range_no">701-900</small>
-                                            <div className="hover_range_box">
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate_child.png"
-                                                    width={55}
-                                                    height={55}
-                                                    alt="moderate co2 level"
-                                                />
-                                                <div className="tooltip_aqi">Indoor CO2 levels with a good ventilation rate</div>
-                                            </div>
-                                        </li>
-                                        <li className="poor_range" onMouseEnter={handleRangeHover}>
-                                            <span className="range_text">Poor</span>
-                                            <div className="range_color"></div>
-                                            <small className="range_no">901-1200</small>
-                                            <div className="hover_range_box">
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/poor_child.png"
-                                                    width={88}
-                                                    height={88}
-                                                    alt="poor co2 level"
-                                                />
-                                                <div className="tooltip_aqi">Tiredness, laziness, and stuffiness in the air</div>
-                                            </div>
-                                        </li>
-                                        <li className="unhealthy_range" onMouseEnter={handleRangeHover}>
-                                            <span className="range_text">Unhealthy</span>
-                                            <div className="range_color"></div>
-                                            <small className="range_no">1201-1500</small>
-                                            <div className="hover_range_box">
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/unhealthy_child.png"
-                                                    width={68}
-                                                    height={68}
-                                                    alt="unhealthy co2 level"
-                                                />
-                                                <div className="tooltip_aqi">
-                                                    Lack of concentration, sleepiness, drowsiness, headaches, increased heart rate, stuffiness in
-                                                    the air, nausea, etc. can be experienced.
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li className="serve_range" onMouseEnter={handleRangeHover}>
-                                            <span className="range_text">Severe</span>
-                                            <div className="range_color"></div>
-                                            <small className="range_no">1501-2500</small>
-                                            <div className="hover_range_box">
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/sevre_child.png"
-                                                    width={74}
-                                                    height={74}
-                                                    alt="severe co2 level"
-                                                />
-                                                <div className="tooltip_aqi">
-                                                    Many countries have occupational exposure (like an eight-hour TWA).
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li className="hazaedous_range" onMouseEnter={handleRangeHover}>
-                                            <span className="range_text">Hazardous</span>
-                                            <div className="range_color"></div>
-                                            <small className="range_no">2500+</small>
-                                            <div className="hover_range_box">
-                                                <Image
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/hazardous_child.png"
-                                                    width={106}
-                                                    height={106}
-                                                    alt="hazardous co2 level"
-                                                />
-                                                <div className="tooltip_aqi">
-                                                    <span style={{ fontSize: "12pt" }}>
-                                                        Such high levels of exposure can cause acute oxygen shortage, unconsciousness, severe
-                                                        neurological damage, and even death.
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </section>
+                            <RangeMonitorPage rangeData={rangeData} />
                         </div>
                     </div>
                 </div>
@@ -1450,21 +1423,17 @@ export default function CO2MonitorPage() {
                         <div className="col-12">
                             <div className="introducing_box text-center">
                                 <h2 className="title_heading">
-                                    Applications of CO<sub>2</sub> Monitor
+                                    {t("applications.heading")}
                                     <sup>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                             width={24}
                                             height={24}
-                                            alt="logo"
+                                            alt={t("common.logoAlt")}
                                         />
                                     </sup>
                                 </h2>
-                                <span style={{ fontSize: "14pt" }}>
-                                    Based on the dense CO2 concentrations that can be present indoors, Prana Air Pocket CO2 monitor can
-                                    have various indoor applications like home, school, office, etc. The below cases are on a condition
-                                    when any fresh air machine or proper ventilation system is not facilitated.
-                                </span>
+                                <span style={{ fontSize: "14pt" }}>{t("applications.description")}</span>
                             </div>
                         </div>
                     </div>
@@ -1482,7 +1451,7 @@ export default function CO2MonitorPage() {
                                         aria-controls="home"
                                         aria-selected="true"
                                     >
-                                        Home
+                                        {t("applications.tabs.home")}
                                     </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
@@ -1496,7 +1465,7 @@ export default function CO2MonitorPage() {
                                         aria-controls="school"
                                         aria-selected="false"
                                     >
-                                        School
+                                        {t("applications.tabs.school")}
                                     </button>
                                 </li>
                                 <li className="nav-item" role="presentation">
@@ -1510,18 +1479,13 @@ export default function CO2MonitorPage() {
                                         aria-controls="office"
                                         aria-selected="false"
                                     >
-                                        Office
+                                        {t("applications.tabs.office")}
                                     </button>
                                 </li>
                             </ul>
 
                             <div className="tab-content" id="appTabsContent">
-                                <div
-                                    className="tab-pane fade show active"
-                                    id="home"
-                                    role="tabpanel"
-                                    aria-labelledby="home-tab"
-                                >
+                                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="tab_left_Image">
@@ -1531,7 +1495,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="moderate co2 level"
+                                                        alt={t("applications.home.moderate.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
@@ -1539,7 +1503,7 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-home.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.home.moderate.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
@@ -1547,7 +1511,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.home.moderate.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -1555,41 +1519,38 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p>
-                                                    <span className="application_no">01</span>
+                                                    <span className="application_no">{t("applications.home.moderate.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>
-                                                    Moderate CO<sub>2</sub> At Home – Morning
-                                                </h3>
+                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>{t("applications.home.moderate.title")}</h3>
                                                 <p style={{ textAlign: "justify", fontSize: "13pt" }}>
-                                                    Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the
-                                                    early morning.
+                                                    {t("applications.home.moderate.description")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    CO₂ Range: Between 400-1000 ppm
+                                                    {t("applications.home.moderate.range")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Time Frame: Till 10 am
+                                                    {t("applications.home.moderate.timeFrame")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Health Impacts: Headaches, vomiting, & drowsiness.
+                                                    {t("applications.home.moderate.healthImpacts")}
                                                 </p>
                                             </div>
                                         </div>
@@ -1598,38 +1559,35 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p style={{ textAlign: "right" }}>
-                                                    <span className="application_no">02</span>
+                                                    <span className="application_no">{t("applications.home.good.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>
-                                                    Good CO<sub>2</sub> At Home – Morning
-                                                </h3>
+                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>{t("applications.home.good.title")}</h3>
                                                 <p style={{ textAlign: "right", fontSize: "13pt" }}>
-                                                    When there is proper ventilation and the number of people inside a house is minimal, CO2
-                                                    levels remain under the good category.
+                                                    {t("applications.home.good.description")}
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                    Levels 250 ppm : CO2 Range{" "}
+                                                    {t("applications.home.good.range")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                    10 am – 5 pm : Time Frame{" "}
+                                                    {t("applications.home.good.timeFrame")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", color: "#1c1b1b" }}>
-                                                    Safe to breathe : Health Impacts{" "}
+                                                    {t("applications.home.good.healthImpacts")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
@@ -1644,7 +1602,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="good air co2 level"
+                                                        alt={t("applications.home.good.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
@@ -1652,7 +1610,7 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2022/06/good-home.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.home.good.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
@@ -1660,7 +1618,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/co2-monitor-in-home-device.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.home.good.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -1675,7 +1633,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="moderate co2 level"
+                                                        alt={t("applications.home.bad.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
@@ -1683,7 +1641,7 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-home.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.home.bad.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
@@ -1691,7 +1649,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/remote-data-co2-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.home.bad.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -1699,53 +1657,45 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p>
-                                                    <span className="application_no">03</span>
+                                                    <span className="application_no">{t("applications.home.bad.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>
-                                                    Moderate CO<sub>2</sub> At Home – Morning
-                                                </h3>
+                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>{t("applications.home.bad.title")}</h3>
                                                 <p style={{ textAlign: "justify", fontSize: "13pt" }}>
-                                                    Usually, at the beginning of the day, the CO₂ levels will range from good to moderate in the
-                                                    early morning.
+                                                    {t("applications.home.bad.description")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    CO₂ Range: Between 400-1000 ppm
+                                                    {t("applications.home.bad.range")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Time Frame: Till 10 am
+                                                    {t("applications.home.bad.timeFrame")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Health Impacts: Headaches, vomiting, & drowsiness.
+                                                    {t("applications.home.bad.healthImpacts")}
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div
-                                    className="tab-pane fade"
-                                    id="school"
-                                    role="tabpanel"
-                                    aria-labelledby="school-tab"
-                                >
+                                <div className="tab-pane fade" id="school" role="tabpanel" aria-labelledby="school-tab">
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="tab_left_Image">
@@ -1755,7 +1705,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="moderate co2 level"
+                                                        alt={t("applications.school.moderate.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
@@ -1763,15 +1713,15 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-classroom.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.school.moderate.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.school.moderate.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -1779,39 +1729,38 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p>
-                                                    <span className="application_no">01</span>
+                                                    <span className="application_no">{t("applications.school.moderate.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>Moderate CO2 in School – Morning</h3>
+                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>{t("applications.school.moderate.title")}</h3>
                                                 <p style={{ textAlign: "justify", fontSize: "13pt" }}>
-                                                    Usually, the CO2 level in the early morning is moderate when the number of students and staff
-                                                    is not much. The range increases when the number of students and staff increases.
+                                                    {t("applications.school.moderate.description")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    CO2 Range: Between 400-1000 ppm
+                                                    {t("applications.school.moderate.range")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Time Frame: From 8 am – 12 pm
+                                                    {t("applications.school.moderate.timeFrame")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Health Impacts: lifelong respiratory infections, unattentiveness, etc.
+                                                    {t("applications.school.moderate.healthImpacts")}
                                                 </p>
                                             </div>
                                         </div>
@@ -1820,37 +1769,35 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p style={{ textAlign: "right" }}>
-                                                    <span className="application_no">02</span>
+                                                    <span className="application_no">{t("applications.school.good.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>Good CO2 in School – Evening</h3>
+                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>{t("applications.school.good.title")}</h3>
                                                 <p style={{ textAlign: "right", fontSize: "13pt" }}>
-                                                    As the school day ends, there is a progressive decline in the number of students on the school
-                                                    grounds. When the ventilation rate is good, CO2 levels start to decline and the air quality
-                                                    begins to improve.
+                                                    {t("applications.school.good.description")}
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                    CO2 Range: ≤ 1000 ppm
+                                                    {t("applications.school.good.range")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                    Time Frame: Between 12-2 PM{" "}
+                                                    {t("applications.school.good.timeFrame")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", color: "#1c1b1b" }}>
-                                                    Health Impacts: Cognitive, IQ skills, mental abilities of the child{" "}
+                                                    {t("applications.school.good.healthImpacts")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
@@ -1862,26 +1809,26 @@ export default function CO2MonitorPage() {
                                                 <span className="range_btn_Image">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="good air co2 level"
+                                                        alt={t("applications.school.good.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
                                                     decoding="async"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-classroom.jpg"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-classroom-1.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.school.good.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/co2-monitor-in-home-device.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.school.good.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -1893,26 +1840,26 @@ export default function CO2MonitorPage() {
                                                 <span className="range_btn_Image">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="moderate co2 level"
+                                                        alt={t("applications.school.bad.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
                                                     decoding="async"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-classroom-1.jpg"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-classroom.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.school.bad.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/remote-data-co2-monitor.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/good-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.school.bad.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -1920,50 +1867,45 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p>
-                                                    <span className="application_no">03</span>
+                                                    <span className="application_no">{t("applications.school.bad.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>Bad CO2 in School – Day (Afternoon)</h3>
+                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>{t("applications.school.bad.title")}</h3>
                                                 <p style={{ textAlign: "justify", fontSize: "13pt" }}>
-                                                    An increase in the CO2 levels even by 100 ppm corresponds to a 0.2% increase in absence rates.
+                                                    {t("applications.school.bad.description")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    CO2 Range: 2000 ppm.
+                                                    {t("applications.school.bad.range")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Time Frame: Between 12-2 PM
+                                                    {t("applications.school.bad.timeFrame")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.school.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Health Impacts: Cognitive, IQ skills, mental abilities of the child
+                                                    {t("applications.school.bad.healthImpacts")}
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div
-                                    className="tab-pane fade"
-                                    id="office"
-                                    role="tabpanel"
-                                    aria-labelledby="office-tab"
-                                >
+                                <div className="tab-pane fade" id="office" role="tabpanel" aria-labelledby="office-tab">
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="tab_left_Image">
@@ -1973,7 +1915,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="moderate co2 level"
+                                                        alt={t("applications.office.moderate.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
@@ -1981,7 +1923,7 @@ export default function CO2MonitorPage() {
                                                     src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-office.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.office.moderate.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
@@ -1989,7 +1931,7 @@ export default function CO2MonitorPage() {
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/face-number-co2-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.office.moderate.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -1997,39 +1939,38 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p>
-                                                    <span className="application_no">01</span>
+                                                    <span className="application_no">{t("applications.office.moderate.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>Moderate CO2 in Office – Morning</h3>
+                                                <h3 style={{ textAlign: "left", color: "#e8c92e" }}>{t("applications.office.moderate.title")}</h3>
                                                 <p style={{ textAlign: "justify", fontSize: "13pt" }}>
-                                                    Early in the morning, when working hour begins, CO2 levels are typical to moderate as the
-                                                    employees are not fully present.
+                                                    {t("applications.office.moderate.description")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.office.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    CO2 Range: 1000 ppm
+                                                    {t("applications.office.moderate.range")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
-                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/good-office.jpg"
-                                                        alt="moderate co2 icon"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
+                                                        alt={t("applications.office.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Time Frame: From 9 am – 11 pm
+                                                    {t("applications.office.moderate.timeFrame")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/moderate-co2-icon.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.office.moderate.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Health Impacts: Employees feel fresh and active when there are good to moderate CO2 levels.
+                                                    {t("applications.office.moderate.healthImpacts")}
                                                 </p>
                                             </div>
                                         </div>
@@ -2038,36 +1979,35 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p style={{ textAlign: "right" }}>
-                                                    <span className="application_no">02</span>
+                                                    <span className="application_no">{t("applications.office.good.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>Bad CO2 in Office – Day (Afternoon)</h3>
+                                                <h3 style={{ textAlign: "right", color: "#33c262" }}>{t("applications.office.good.title")}</h3>
                                                 <p style={{ textAlign: "right", fontSize: "13pt" }}>
-                                                    As all the employees are present, then CO2 levels rise as a result of respiration and
-                                                    accumulate over time, they are in an unhealthy range.
+                                                    {t("applications.office.good.description")}
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                    CO2 Range: It can exceed up to 3000 ppm
+                                                    {t("applications.office.good.range")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.office.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
-                                                    Time Frame: between 12 pm – 4 pm{" "}
+                                                    {t("applications.office.good.timeFrame")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.office.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
                                                 </p>
                                                 <p style={{ textAlign: "right", fontSize: "13pt", color: "#1c1b1b" }}>
-                                                    Health Impacts: Dizziness, loss of coordination, unattentiveness{" "}
+                                                    {t("applications.office.good.healthImpacts")}{" "}
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/good-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.office.good.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />
@@ -2079,26 +2019,26 @@ export default function CO2MonitorPage() {
                                                 <span className="range_btn_Image">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="good air co2 level"
+                                                        alt={t("applications.office.good.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
                                                     decoding="async"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-classroom-1.jpg"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-office.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.office.good.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/co2-monitor-in-home-device.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.office.good.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -2110,26 +2050,26 @@ export default function CO2MonitorPage() {
                                                 <span className="range_btn_Image">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-tag.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/good-tag.png"
                                                         width={30}
                                                         height={30}
-                                                        alt="moderate co2 level"
+                                                        alt={t("applications.office.bad.tagAlt")}
                                                     />
                                                 </span>
                                                 <Image
                                                     decoding="async"
-                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-classroom-1.jpg"
+                                                    src="https://www.pranaair.com/wp-content/uploads/2022/06/good-office.jpg"
                                                     width={300}
                                                     height={300}
-                                                    alt="moderate co2 level at home"
+                                                    alt={t("applications.office.bad.imageAlt")}
                                                 />
                                                 <span className="tab_monitor_device">
                                                     <Image
                                                         decoding="async"
-                                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/remote-data-co2-monitor.png"
+                                                        src="https://www.pranaair.com/wp-content/uploads/2022/06/good-monitor.png"
                                                         width={300}
                                                         height={300}
-                                                        alt="moderate co2 level on monitor"
+                                                        alt={t("applications.office.bad.monitorAlt")}
                                                     />
                                                 </span>
                                             </div>
@@ -2137,38 +2077,38 @@ export default function CO2MonitorPage() {
                                         <div className="col-md-6">
                                             <div className="application_text_box">
                                                 <p>
-                                                    <span className="application_no">03</span>
+                                                    <span className="application_no">{t("applications.office.bad.number")}</span>
                                                 </p>
-                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>Bad CO2 in School – Day (Afternoon)</h3>
+                                                <h3 style={{ textAlign: "left", color: "#db4746" }}>{t("applications.office.bad.title")}</h3>
                                                 <p style={{ textAlign: "justify", fontSize: "13pt" }}>
-                                                    An increase in the CO2 levels even by 100 ppm corresponds to a 0.2% increase in absence rates.
+                                                    {t("applications.office.bad.description")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.office.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    CO2 Range: 2000 ppm.
+                                                    {t("applications.office.bad.range")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", paddingBottom: "10px", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.home.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Time Frame: Between 12-2 PM
+                                                    {t("applications.office.bad.timeFrame")}
                                                 </p>
                                                 <p style={{ fontSize: "13pt", color: "#1c1b1b" }}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2022/06/bad-co2-icon-100x100.png"
-                                                        alt="moderate co2 icon"
+                                                        alt={t("applications.office.bad.iconAlt")}
                                                         width="20"
                                                         height="20"
                                                     />{" "}
-                                                    Health Impacts: Cognitive, IQ skills, mental abilities of the child
+                                                    {t("applications.office.bad.healthImpacts")}
                                                 </p>
                                             </div>
                                         </div>
@@ -2186,20 +2126,17 @@ export default function CO2MonitorPage() {
                     <div className="row">
                         <div className="introducing_box text-center">
                             <h2 className="places_heading">
-                                Places Where There is High CO2 Level
+                                {t("placesHighCO2.heading")}
                                 <sup>
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                         width={24}
                                         height={24}
-                                        alt="logo"
+                                        alt={t("common.logoAlt")}
                                     />
                                 </sup>
                             </h2>
-                            <span style={{ fontSize: "14pt" }}>
-                                It helps you understand the level of Carbon Dioxide of your location. Works as both – real-time indoor
-                                and outdoor CO2 monitoring sensor; the LCD display shows you CO2 reading indicating
-                            </span>
+                            <span style={{ fontSize: "14pt" }}>{t("placesHighCO2.description")}</span>
                         </div>
                         <div className="col-md-6">
                             <div className="pocket_monitor_cntr">
@@ -2207,17 +2144,11 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2022/07/co2-monitor-at-home.jpg"
                                     width={600}
                                     height={400}
-                                    alt="high co2 level at home"
+                                    alt={t("placesHighCO2.places.home.imageAlt")}
                                 />
                                 <div className="pocket_overlay_box pocket_overlay_box2 hover_overlay_pocket">
-                                    <h3>Home</h3>
-                                    <p>
-                                        CO2 monitoring becomes necessary since different age groups are present in a typical house setting.
-                                        High CO2 concentrations have diverse effects on different age groups. Children and the elderly are
-                                        particularly affected. If you have pets, the high levels of CO2 will also harm them. To prevent
-                                        carbon dioxide poisoning in you, your children, the elderly, and your pets, you can ensure that the
-                                        desired levels of CO2 are maintained within your homes.
-                                    </p>
+                                    <h3>{t("placesHighCO2.places.home.title")}</h3>
+                                    <p>{t("placesHighCO2.places.home.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -2227,16 +2158,11 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2022/07/co2-monitor-at-school.jpg"
                                     width={600}
                                     height={400}
-                                    alt="high co2 level at school"
+                                    alt={t("placesHighCO2.places.schools.imageAlt")}
                                 />
                                 <div className="pocket_overlay_box pocket_overlay_box2 hover_overlay_pocket">
-                                    <h3>Schools</h3>
-                                    <p>
-                                        Besides our homes, we spend the majority of our time indoors at schools /offices. CO2 levels are
-                                        generally greater in both classrooms and business settings. When students and staff are exposed to
-                                        high CO2 levels, they may become drowsy, tired, and lose attention, resulting in poor academic and
-                                        overall performance. The staffs thinking abilities are also hampered.
-                                    </p>
+                                    <h3>{t("placesHighCO2.places.schools.title")}</h3>
+                                    <p>{t("placesHighCO2.places.schools.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -2248,17 +2174,11 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2022/07/co2-monitor-at-mall.jpg"
                                     width={600}
                                     height={400}
-                                    alt="high co2 level at mall"
+                                    alt={t("placesHighCO2.places.malls.imageAlt")}
                                 />
                                 <div className="pocket_overlay_box pocket_overlay_box2 hover_overlay_pocket">
-                                    <h3>Malls</h3>
-                                    <p>
-                                        The indoor air quality and ventilation rates of a building are monitored with the help of a CO2
-                                        monitor. There is a constant movement of people inside malls and shop establishments. When a few of
-                                        them depart, new people enter. As a result, contaminants like carbon dioxide accumulates in malls
-                                        and retail stores. Monitoring CO2 levels in the retail sector is therefore much more crucial in
-                                        light of this.
-                                    </p>
+                                    <h3>{t("placesHighCO2.places.malls.title")}</h3>
+                                    <p>{t("placesHighCO2.places.malls.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -2268,17 +2188,11 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2022/07/co2-monitor-at-hospitals.jpg"
                                     width={600}
                                     height={400}
-                                    alt="high co2 level at hospital"
+                                    alt={t("placesHighCO2.places.hospitals.imageAlt")}
                                 />
                                 <div className="pocket_overlay_box pocket_overlay_box2 hover_overlay_pocket">
-                                    <h3>Hospitals</h3>
-                                    <p>
-                                        According to a 2011 Infinium Medical, Inc. study, 82% of critical care accidents that resulted in
-                                        brain damage and death might have been avoided if CO2 had been monitored and the necessary steps are
-                                        taken to lower the excessive levels. Monitoring CO2 levels is frequently overlooked when managing
-                                        the hospits indoor air quality. When these levels are kept in check, recovery time and attention
-                                        problems improve.
-                                    </p>
+                                    <h3>{t("placesHighCO2.places.hospitals.title")}</h3>
+                                    <p>{t("placesHighCO2.places.hospitals.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -2290,16 +2204,11 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2022/07/co2-monitor-at-restaurant.jpg"
                                     width={600}
                                     height={400}
-                                    alt="high co2 level in restaurants"
+                                    alt={t("placesHighCO2.places.restaurants.imageAlt")}
                                 />
                                 <div className="pocket_overlay_box pocket_overlay_box2 hover_overlay_pocket">
-                                    <h3>Restaurants</h3>
-                                    <p>
-                                        Monitoring CO2 will be helpful since increased CO2 exhalation by residents increases the risk of
-                                        viral transmission (such as covid-19). On a smart LCD TV screen, the real-time CO2 levels can be
-                                        displayed. Checking the AQI of hotels and restaurants will be made easier with the help of
-                                        monitoring. Staff productivity will rise as a result of ongoing CO2 monitoring.
-                                    </p>
+                                    <h3>{t("placesHighCO2.places.restaurants.title")}</h3>
+                                    <p>{t("placesHighCO2.places.restaurants.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -2309,17 +2218,11 @@ export default function CO2MonitorPage() {
                                     src="https://www.pranaair.com/wp-content/uploads/2022/07/co2-monitor-at-subway.jpg"
                                     width={600}
                                     height={400}
-                                    alt="high co2 level in metro subways"
+                                    alt={t("placesHighCO2.places.metroSubways.imageAlt")}
                                 />
                                 <div className="pocket_overlay_box pocket_overlay_box2 hover_overlay_pocket">
-                                    <h3>Metro Subways</h3>
-                                    <p>
-                                        Monitoring CO2 levels offer a helpful measure of how well-ventilated inhabited indoor spaces are.
-                                        These places include airports and metro subways, where the population is fluid and people are
-                                        constantly arriving and departing, especially during peak hours. To protect public health, it is
-                                        necessary to continuously monitor interior air pollutant levels in subway stations and airports,
-                                        where the accumulation of pollutants is very easy.
-                                    </p>
+                                    <h3>{t("placesHighCO2.places.metroSubways.title")}</h3>
+                                    <p>{t("placesHighCO2.places.metroSubways.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -2334,23 +2237,20 @@ export default function CO2MonitorPage() {
                         <div className="col-md-6" style={{ backgroundColor: "#f2f8f0", paddingLeft: "90px" }}>
                             <div className="pocket_cntr_bg">
                                 <h2 className="title_heading">
-                                    <span style={{ fontSize: "24pt", lineHeight: "55px" }}>Clean Air Quality Solution</span>
+                                    <span style={{ fontSize: "24pt", lineHeight: "55px" }}>{t("cleanAirSolution.heading.first")}</span>
                                     <sup>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                             width={24}
                                             height={24}
-                                            alt="logo"
+                                            alt={t("common.logoAlt")}
                                         />
                                     </sup>
-                                    <span style={{ fontSize: "24pt" }}>Fresh Air Machine</span>
+                                    <span style={{ fontSize: "24pt" }}>{t("cleanAirSolution.heading.second")}</span>
                                 </h2>
-                                <span style={{ fontSize: "14pt" }}>
-                                    Prana Air provides the solution to indoor air pollution with an air purifying machine to purify the
-                                    air pollutants.
-                                </span>
+                                <span style={{ fontSize: "14pt" }}>{t("cleanAirSolution.description")}</span>
                                 <Link href="/fresh-air-machine/" className="learn_more">
-                                    &gt;&gt;Learn More
+                                    {t("cleanAirSolution.linkText")}
                                 </Link>
                             </div>
                         </div>
@@ -2359,7 +2259,7 @@ export default function CO2MonitorPage() {
                                 src="https://www.pranaair.com/wp-content/uploads/2022/07/air-quality-solutions-of-prana-air-1.png"
                                 width={600}
                                 height={400}
-                                alt="fresh air machine"
+                                alt={t("cleanAirSolution.imageAlt")}
                             />
                         </div>
                     </div>
@@ -2372,13 +2272,13 @@ export default function CO2MonitorPage() {
                     <div className="row">
                         <div className="col-12">
                             <h2 className="trusted_heading">
-                                Trusted By
+                                {t("trustedBy.heading")}
                                 <sup>
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                         width={24}
                                         height={24}
-                                        alt="logo"
+                                        alt={t("common.logoAlt")}
                                     />
                                 </sup>
                             </h2>
@@ -2392,7 +2292,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/ola.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.ola")}
                                     />
                                 </li>
                                 <li>
@@ -2400,7 +2300,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/microsoftt.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.microsoft")}
                                     />
                                 </li>
                                 <li>
@@ -2408,7 +2308,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/marriott.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.marriott")}
                                     />
                                 </li>
                                 <li>
@@ -2416,7 +2316,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/tata.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.tata")}
                                     />
                                 </li>
                                 <li>
@@ -2424,7 +2324,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/havellss.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.havells")}
                                     />
                                 </li>
                                 <li>
@@ -2432,7 +2332,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/csir.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.csir")}
                                     />
                                 </li>
                                 <li>
@@ -2440,7 +2340,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/gmda.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.gmda")}
                                     />
                                 </li>
                                 <li>
@@ -2448,7 +2348,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/cii.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.cii")}
                                     />
                                 </li>
                                 <li>
@@ -2456,7 +2356,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/morgan.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.morgan")}
                                     />
                                 </li>
                                 <li>
@@ -2464,7 +2364,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/interglobe.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.interglobe")}
                                     />
                                 </li>
                                 <li>
@@ -2472,7 +2372,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/mahindra.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.mahindra")}
                                     />
                                 </li>
                                 <li>
@@ -2480,7 +2380,7 @@ export default function CO2MonitorPage() {
                                         src="https://www.pranaair.com/wp-content/uploads/2022/07/renault-nissan.jpg"
                                         width={65}
                                         height={65}
-                                        alt="microsoft logo"
+                                        alt={t("trustedBy.logos.renaultNissan")}
                                     />
                                 </li>
                             </ul>
@@ -2495,25 +2395,28 @@ export default function CO2MonitorPage() {
                     <div className="row smallest_portable_monitore-section">
                         <div className="col-md-7">
                             <div className="smallest-portable-heading">
-                                <h2>Smallest &amp; Portable</h2>
+                                <h2>{t("smallestPortable.heading")}</h2>
                                 <h3>
-                                    CO<sub>2</sub> Monitor
+                                    {t("smallestPortable.subheadingPrefix")}
+                                    <sub>2</sub> {t("smallestPortable.subheadingSuffix")}
                                     <span className="heading-Image">
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                                             width={24}
                                             height={24}
-                                            alt="leaf icon"
+                                            alt={t("common.logoAlt")}
                                         />
                                     </span>
                                 </h3>
                                 <div className="buy-btns">
                                     <ul>
                                         <li>
-                                            <Link href="/?page_id=9&amp;add-to-cart=52265">Buy Now</Link>
+                                            <Link href="/?page_id=9&amp;add-to-cart=52265">{t("smallestPortable.buttons.buyNow")}</Link>
                                         </li>
                                         <li>
-                                            <Link href="https://www.amazon.in/dp/B0CKQXGKW1?ref=myi_title_dp">Amazon</Link>
+                                            <Link href="https://www.amazon.in/dp/B0CKQXGKW1?ref=myi_title_dp">
+                                                {t("smallestPortable.buttons.amazon")}
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -2524,7 +2427,7 @@ export default function CO2MonitorPage() {
                                 src="https://www.pranaair.com/wp-content/uploads/2023/08/pocket-co2-side-view-300x259.png"
                                 width={220}
                                 height={220}
-                                alt="pocket co2 monitor side view"
+                                alt={t("smallestPortable.imageAlt")}
                                 className="pocket-co-monitor-side-view"
                             />
                         </div>

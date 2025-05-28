@@ -39,6 +39,19 @@ a:hover {
   color: #5c8a49;
 }
 
+ul#solutionsTabs li button {
+  padding: 10px 10px;
+}
+
+div#solutionsTabsContent {
+  margin-top: 30px;
+}
+
+ul#solutionsTabs li button.active {
+  background: #7ab261;
+  color: #fff;
+}
+
 /* Container */
 .section-container {
   max-width: 1200px;

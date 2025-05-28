@@ -19,6 +19,23 @@ body p,
     font-family: "Poppins", sans-serif !important;
 }
 
+.new-monitor-bg {
+    text-align: center;
+}
+
+ul#aqmTabs li button.active {
+    background: #7ab261;
+    color: #fff;
+}
+
+ul#aqmTabs li button {
+    color: #000;
+}
+
+div#aqmTabsContent {
+    margin-top: 30px;
+}
+
 .school_banner_box {
     padding: 0 0 160px;
 }
@@ -1792,6 +1809,7 @@ ul.paramete_list {
 
 .new-monitor-bg img {
     width: 35%;
+    height: auto;
 }
 
 .new-monitor-bg {
@@ -1970,6 +1988,7 @@ a.new-brochure {
 img.img-responsive {
     width: 100%;
 }
+
 .faq-section {
     margin-top: 100px;
     margin-bottom: 50px;

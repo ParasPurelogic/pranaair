@@ -255,11 +255,7 @@ export default async function PocketMonitorPage() {
               <div className="display-content">
                 <h2 className="display-title">
                   {t("multipleDisplays.title")}
-                  <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/09/leaf-icon.png"
-                    alt={t("multipleDisplays.altTexts.leafIcon")}
-                    className="leaf-icon"
-                  />
+
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                     alt={t("multipleDisplays.altTexts.pranaAirLogo")}
@@ -364,13 +360,6 @@ export default async function PocketMonitorPage() {
                       aria-controls="aqi-app"
                       aria-selected="true"
                     >
-                      <span className="platform-icon">
-                        <img
-                          src="https://www.pranaair.com/wp-content/uploads/2023/09/leaf-icon.png"
-                          alt={t("aqiPlatforms.altTexts.leafIcon")}
-                          className="tab-leaf-icon"
-                        />
-                      </span>
                       {t("aqiPlatforms.tabs.app")}
                     </button>
                   </li>
@@ -995,7 +984,7 @@ export default async function PocketMonitorPage() {
               <h2 className="section-title">
                 {t("productGallery.title")}
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/09/leaf-icon.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                   alt={t("productGallery.altTexts.leafIcon")}
                   className="leaf-icon"
                 />
@@ -1103,7 +1092,7 @@ export default async function PocketMonitorPage() {
                 <h2 className="features-title">
                   {t("salientFeatures.title")}
                   <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/09/leaf-icon.png"
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                     alt={t("salientFeatures.altTexts.leafIcon")}
                     className="leaf-icon"
                   />
@@ -1169,7 +1158,7 @@ export default async function PocketMonitorPage() {
                 <h2 className="specs-title">
                   {t("techSpecs.title")}
                   <img
-                    src="https://www.pranaair.com/wp-content/uploads/2023/09/leaf-icon.png"
+                    src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                     alt={t("techSpecs.altTexts.leafIcon")}
                     className="leaf-icon"
                   />
@@ -1245,7 +1234,7 @@ export default async function PocketMonitorPage() {
                   <h2 className="banner-title">
                     {t("bannerSlider.banner.title")}{" "}
                     <img
-                      src="https://www.pranaair.com/wp-content/uploads/2023/09/leaf-icon.png"
+                      src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                       alt={t("bannerSlider.banner.altTexts.leafIcon")}
                       className="leaf-icon"
                     />
@@ -1350,7 +1339,7 @@ export default async function PocketMonitorPage() {
               <h2 className="clientele-title">
                 {t("clientele.title")}
                 <img
-                  src="https://www.pranaair.com/wp-content/uploads/2023/09/leaf-icon.png"
+                  src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                   alt={t("clientele.altTexts.leafIcon")}
                   className="leaf-icon"
                 />

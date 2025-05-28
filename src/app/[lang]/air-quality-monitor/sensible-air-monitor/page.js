@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import ContactForm from "@/Components/Contacform/ContactForm";
 import SensibleSlider from '@/Components/Pages/SensibleAirMonitor/carousel';

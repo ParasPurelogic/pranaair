@@ -614,10 +614,10 @@ export default async function ReadyMixConcretePlant() {
               <div className="service-card" key={service}>
                 <Image
                   src={`https://www.pranaair.com/wp-content/uploads/2023/05/${index === 0
-                      ? "ready-mix-concrete-plant"
-                      : index === 1
-                        ? "led-display-and-lcd-tv"
-                        : "aqi-cloud-storage-and-dashboards"
+                    ? "ready-mix-concrete-plant"
+                    : index === 1
+                      ? "led-display-and-lcd-tv"
+                      : "aqi-cloud-storage-and-dashboards"
                     }.png`}
                   alt={t(`rmcFreemium.services.${service}.alt`)}
                   width={300}
@@ -666,12 +666,12 @@ export default async function ReadyMixConcretePlant() {
             <div className="client-logo" key={client}>
               <Image
                 src={`https://www.pranaair.com/wp-content/uploads/2023/05/${client}-${client === "ultratech"
-                    ? "cement-icon"
-                    : client === "speco"
-                      ? "logo-icon"
-                      : client === "starcrete"
-                        ? "icon"
-                        : "icon-logo"
+                  ? "cement-icon"
+                  : client === "speco"
+                    ? "logo-icon"
+                    : client === "starcrete"
+                      ? "icon"
+                      : "icon-logo"
                   }.png`}
                 alt={t(`rmcClientele.clients.${client}.alt`)}
                 width={180}

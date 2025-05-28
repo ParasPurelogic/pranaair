@@ -600,7 +600,21 @@ select.nav.dropbtn {
   justify-content: flex-end;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 40px;
+  background: #ffffff;
+  width: 43%;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
+.tab-heading li button.active {
+  background: #7ab261 !important;
+  color: #fff !important;
+}
+
+.tab-heading li button {
+  padding: 10px 10px;
+  border-radius: 5px;
 }
 
 .tab-heading li {

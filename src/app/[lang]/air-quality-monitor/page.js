@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
 import Image from "next/image";
 import ContactForm from "@/Components/Contacform/ContactForm"
@@ -179,7 +178,6 @@ export default async function CommonMonitorPage() {
                             {/* Handheld Tab */}
                             <div className="tab-pane fade show active" id="handheld" role="tabpanel" aria-labelledby="handheld-tab">
                                 <div className="row tab-card">
-                                    {/* Pocket CO2 Monitor */}
                                     <div className="col-md-4">
                                         <div className="prdocut-card">
                                             <div className="arrow-link">
@@ -235,14 +233,12 @@ export default async function CommonMonitorPage() {
                                                         value="52265"
                                                     >
                                                         {t("productTabs.buttons.buyNow")}{" "}
-                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
                                                     </button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Pocket PM2.5 Monitor */}
                                     <div className="col-md-4">
                                         <div className="prdocut-card">
                                             <div className="arrow-link">
@@ -298,7 +294,251 @@ export default async function CommonMonitorPage() {
                                                         value="7312"
                                                     >
                                                         {t("productTabs.buttons.buyNow")}{" "}
-                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
+                                                <a href={t("productTabs.products.oxyCO.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.oxyCO.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.oxyCO.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.oxyCO.link")}>{t("productTabs.products.oxyCO.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.oxyCO.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.oxyCO.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.oxyCO.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.oxyCO.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
+                                                <a href={t("productTabs.products.nanoCO.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.nanoCO.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.nanoCO.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.nanoCO.link")}>{t("productTabs.products.nanoCO.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.nanoCO.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.nanoCO.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.nanoCO.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.nanoCO.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
+                                                <a href={t("productTabs.products.nanoCO2.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.nanoCO2.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.nanoCO2.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.nanoCO2.link")}>{t("productTabs.products.nanoCO2.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.nanoCO2.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.nanoCO2.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.nanoCO2.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.nanoCO2.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
+                                                <a href={t("productTabs.products.nanoTVOC.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.nanoTVOC.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.nanoTVOC.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.nanoTVOC.link")}>{t("productTabs.products.nanoTVOC.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.nanoTVOC.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.nanoTVOC.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.nanoTVOC.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.nanoTVOC.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
                                                     </button>
                                                 </form>
                                             </div>
@@ -365,7 +605,190 @@ export default async function CommonMonitorPage() {
                                                         value="12151"
                                                     >
                                                         {t("productTabs.buttons.buyNow")}{" "}
-                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.indoor")}</span>
+                                                <a href={t("productTabs.products.sensiblePlus.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.sensiblePlus.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.sensiblePlus.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.sensiblePlus.link")}>{t("productTabs.products.sensiblePlus.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.sensiblePlus.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.sensiblePlus.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.sensiblePlus.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.sensiblePlus.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.indoor")}</span>
+                                                <a href={t("productTabs.products.cairPlus.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.cairPlus.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.cairPlus.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.cairPlus.link")}>{t("productTabs.products.cairPlus.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.cairPlus.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.cairPlus.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.cairPlus.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.cairPlus.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.indoor")}</span>
+                                                <a href={t("productTabs.products.squair.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.squair.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.squair.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.squair.link")}>{t("productTabs.products.squair.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.squair.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.squair.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.squair.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.squair.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
                                                     </button>
                                                 </form>
                                             </div>
@@ -431,7 +854,190 @@ export default async function CommonMonitorPage() {
                                                         type="submit"
                                                     >
                                                         {t("productTabs.buttons.knowMore")}{" "}
-                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt="" />
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.outdoor")}</span>
+                                                <a href={t("productTabs.products.pranaSense.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.pranaSense.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.pranaSense.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.pranaSense.link")}>{t("productTabs.products.pranaSense.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.pranaSense.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.pranaSense.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.pranaSense.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.pranaSense.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.outdoor")}</span>
+                                                <a href={t("productTabs.products.ambientPro.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.ambientPro.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.ambientPro.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.ambientPro.link")}>{t("productTabs.products.ambientPro.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.ambientPro.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.ambientPro.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.ambientPro.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.ambientPro.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="prdocut-card">
+                                            <div className="arrow-link">
+                                                <img
+                                                    src="https://www.pranaair.com/wp-content/uploads/2024/02/card-arrow.png"
+                                                    alt={t("productTabs.altTexts.arrowIcon")}
+                                                />
+                                            </div>
+                                            <div className="card-img">
+                                                <span className="in-outdoor">{t("productTabs.categories.outdoor")}</span>
+                                                <a href={t("productTabs.products.airQualityDrone.link")}>
+                                                    <img
+                                                        src={t("productTabs.products.airQualityDrone.image") || "/placeholder.svg"}
+                                                        alt={t("productTabs.products.airQualityDrone.imageAlt")}
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="card-text">
+                                                <a href={t("productTabs.products.airQualityDrone.link")}>{t("productTabs.products.airQualityDrone.name")}</a>
+                                                <ul>
+                                                    <li>
+                                                        <span className="coast">{t("productTabs.products.airQualityDrone.price")}</span>
+                                                    </li>
+                                                    <li>
+                                                        <img
+                                                            src="https://www.pranaair.com/wp-content/uploads/2024/02/card-rating.png"
+                                                            alt={t("productTabs.altTexts.rating")}
+                                                        />
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.connectivity")} :</h5>
+                                                        <h4>{t("productTabs.products.airQualityDrone.connectivity")}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <h5>{t("productTabs.specs.battery")} :</h5>
+                                                        <h4>{t("productTabs.products.airQualityDrone.battery")}</h4>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div className="card-btn">
+                                                <form
+                                                    className="cart"
+                                                    action={t("productTabs.products.airQualityDrone.formAction")}
+                                                    encType="multipart/form-data"
+                                                    method="post"
+                                                >
+                                                    <button
+                                                        className="single_add_to_cart_button button alt monitor_know_btn monitor_card_btn"
+                                                        name="add-to-cart"
+                                                        type="submit"
+                                                        value="7312"
+                                                    >
+                                                        {t("productTabs.buttons.buyNow")}{" "}
+                                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/02/card-btn-icon.png" alt={t("productTabs.altTexts.buttonIcon")} />
                                                     </button>
                                                 </form>
                                             </div>

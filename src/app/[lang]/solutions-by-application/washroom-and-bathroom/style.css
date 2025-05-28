@@ -34,6 +34,19 @@ img {
     height: auto;
 }
 
+ul#solutionsTabs li button {
+    padding: 10px 10px;
+}
+
+div#solutionsTabsContent {
+    margin-top: 30px;
+}
+
+ul#solutionsTabs li button.active {
+    background: #7ab261;
+    color: #fff;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;

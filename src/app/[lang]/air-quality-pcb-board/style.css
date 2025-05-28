@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
 
-
 h1,
 h2,
 h3,
@@ -42,10 +41,12 @@ a {
   color: #fff;
   padding: 10px;
 }
+
 .product-info a:hover {
   background: #4f753d;
 
 }
+
 .deskshow {
   display: block;
 }
@@ -355,6 +356,16 @@ li.tab-inner-title.active button {
 
 .tab-navigation ul {
   gap: 15px;
+}
+
+ul#communicationTabs li button.active {
+  border-bottom: 2px solid #7ab261;
+}
+
+ul#communicationTabs li button {
+  padding: 10px 30px;
+  border: 0;
+  font-size: 16px;
 }
 
 .tab-img-para {

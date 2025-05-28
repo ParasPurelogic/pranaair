@@ -32,6 +32,19 @@ body p,
     margin-top: -30px;
 }
 
+ul#solutionsTabs li button {
+    padding: 10px 10px;
+}
+
+div#solutionsTabsContent {
+    margin-top: 30px;
+}
+
+ul#solutionsTabs li button.active {
+    background: #7ab261;
+    color: #fff;
+}
+
 .pocket_title_box.school_aqi_box p {
     font-size: 18px;
     color: #677580;
@@ -1565,9 +1578,11 @@ button.slick-prev.default.slick-arrow i {
     .health-impact .feature_wrap_box p {
         padding: 0;
     }
+
     .contact-heading p {
         width: 80%;
     }
+
     .client-logo-box img {
         width: 100%;
     }

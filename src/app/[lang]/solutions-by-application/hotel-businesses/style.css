@@ -13,6 +13,10 @@ body h2.sec-heading.sec-heading-sec {
     font-family: 'Poppins', sans-serif !important;
 }
 
+.custom {
+    flex-wrap: nowrap;
+}
+
 body p,
 .inner-real-time-aqi .countrey-sec {
     font-size: 18px;

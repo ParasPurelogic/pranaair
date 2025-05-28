@@ -19,6 +19,19 @@ body p,
     font-family: 'Poppins', sans-serif !important;
 }
 
+ul#airQualityTabs li button {
+    padding: 10px 10px;
+}
+
+div#airQualityTabsContent {
+    margin-top: 30px;
+}
+
+ul#airQualityTabs li button.active {
+    background: #7ab261;
+    color: #fff;
+}
+
 .school_banner_box {
     padding: 0 0 160px;
     background-size: cover;
@@ -1202,19 +1215,24 @@ label.message_text {
         padding: 0 0px !important;
     }
 }
+
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
     .airgraph_cntr {
         padding: 0px 100px !important;
     }
+
     ul.airquality_list li {
         padding-left: 0;
     }
+
     .client_logo_section img {
         width: 60%;
     }
+
     .box-form {
         width: 100%;
     }
+
     .airqulality_contact_section {
         padding: 0 !important;
     }

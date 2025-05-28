@@ -129,6 +129,11 @@ a {
   width: 40%;
 }
 
+.tab-pane p {
+  text-align: left;
+  padding: 20px 0;
+}
+
 .feature-heading h2 {
   color: #263d4f;
   font-size: 40px;
@@ -624,7 +629,7 @@ a {
 }
 
 .app-slider {
-  margin-left: 190px;
+  margin-left: 300px;
   margin-top: 20px;
 }
 
