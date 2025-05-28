@@ -899,6 +899,7 @@ input.wpcf7-submit {
     content: "";
     z-index: -1;
 }
+
 .contact-heading {
     padding-top: 50px !important;
 }
@@ -1471,7 +1472,7 @@ input.wpcf7-submit {
         margin-top: 30px;
     }
 
-    
+
 
     .you-may-also {
         padding-top: 60px;
