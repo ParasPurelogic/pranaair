@@ -234,6 +234,17 @@
     }
   },
   "advancedTech": {
+    "applications": {
+      "mobile" : {
+        "title" : "AQI Mobile Application"
+      },
+       "web" : {
+        "title" : "AQI Web Dashboard"
+      },
+       "tv" : {
+        "title" : "AQI TV Application"
+      }
+    },
     "heading": "Prana Sense",
     "subheading": "Air Quality Monitoring with Advanced Technology",
     "image": {

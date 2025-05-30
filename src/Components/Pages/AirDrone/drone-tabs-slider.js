@@ -116,12 +116,14 @@ export default function DroneTabsSlider({
 
     return (
         <div className="category-tabs" ref={tabsRef}>
-            <button className={`category-tab ${activeTab === "vtol" ? "active" : ""}`} onClick={() => handleTabClick("vtol")}>
-                {vtolContent.title}
-            </button>
-            <button className={`category-tab ${activeTab === "quad" ? "active" : ""}`} onClick={() => handleTabClick("quad")}>
-                {quadContent.title}
-            </button>
+            <div className="category-inner-tab">
+                <button className={`category-tab ${activeTab === "vtol" ? "active" : ""}`} onClick={() => handleTabClick("vtol")}>
+                    {vtolContent.title}
+                </button>
+                <button className={`category-tab ${activeTab === "quad" ? "active" : ""}`} onClick={() => handleTabClick("quad")}>
+                    {quadContent.title}
+                </button>
+            </div>
 
             <div className="drone-details" ref={sectionRef}>
                 {activeTab === "vtol" ? (

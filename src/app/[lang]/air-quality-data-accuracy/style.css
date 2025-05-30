@@ -1,0 +1,883 @@
+/* Monitoring Devices Page Styles - Updated with Original Design */
+
+/* General Styles */
+.realtime_banner_section,
+.realtime_feature_section {
+    padding: 70px 0;
+}
+
+.realtime_banner_section {
+    position: relative;
+    padding: 70px 164px !important;
+}
+
+.realtime_banner_section:after {
+    background: url(https://www.pranaair.com/wp-content/uploads/2023/03/world_bg.png) no-repeat;
+    width: 1168px;
+    height: 770px;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    background-size: cover;
+    transform: translate(-50%, 0);
+}
+
+.realtime_feature_section .wpb_column.vc_column_container.vc_col-sm-6 {
+    z-index: 9;
+}
+
+.quality_real_box h1 {
+    font-size: 48px;
+    letter-spacing: .2em;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.quality_real_box h2 {
+    font-size: 40px;
+    line-height: 50px;
+    color: #565454e6;
+}
+
+.airquality_content_box {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.airquality_content_box p {
+    color: #727380;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.discover_btn {
+    background: #55b592;
+    font-size: 19px;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.discover_btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+/* Banner Bottom Image */
+.banner_bottom_image {
+    padding: 60px 0 40px;
+    background: white;
+    overflow: inherit !important;
+}
+
+.data_accuracy_image {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.data_accuracy_image img {
+    width: 600px;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Features Section */
+.real_feature_heading {
+    color: #2e2d37;
+    font-size: 35px;
+    margin-top: 0;
+    position: relative;
+}
+
+.real_feature_heading::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #67b455, #7ab261);
+    border-radius: 2px;
+}
+
+.features_real_box h3 {
+    color: #8c8c8c;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.feature_content_box {
+    padding: 20px;
+}
+
+.feature_content_box p {
+    font-size: 18px;
+    color: #727380;
+    line-height: 31px;
+}
+
+.realtime_feature_section {
+    padding: 100px 0 50px;
+}
+
+/* Feature Cards */
+.feature_list_section {
+    padding: 80px 0;
+    background: white;
+}
+
+.feature_card_box {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 50px 30px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature_card_box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.featured_icon {
+    display: block;
+    padding-bottom: 0;
+    min-height: 93px;
+    margin-bottom: 20px;
+}
+
+.featured_icon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature_card_box h3 {
+    font-size: 24px;
+    color: #2e2d37;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.feature_card_box>p {
+    margin: 0;
+    font-size: 18px;
+    color: #727380;
+    line-height: 1.6;
+}
+
+/* Prana Air Sensors Section */
+.pranaair_sensor_section {
+    height: 610px;
+    padding: 150px 0 0;
+    margin: 70px 0 0;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.pranaair_sensor_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.pranaair_sensor_box {
+    position: relative;
+    z-index: 2;
+    padding-left: 90px;
+}
+
+.pranaair_sensor_box h3 {
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 13px;
+    font-weight: 700;
+}
+
+.pranaair_sensor_box p {
+    font-size: 30px;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Comparison Graph */
+.comparison_graph_box {
+    padding: 40px 0;
+}
+
+.comparison_graph_box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image_source_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #2e2d37;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.source_box {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.image_source_text a {
+    color: #028cb8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.image_source_text a:hover {
+    text-decoration: underline;
+}
+
+span.highlight_point {
+    font-size: 18px;
+    color: #2e2d37;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+/* Video Section */
+.video_section {
+    background: white;
+    padding: 0;
+}
+
+.video-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Monitor Tab Section */
+.monitor_tab_section {
+    padding: 40px 0 60px;
+    background-color: #55b592;
+}
+
+.nav-tabs {
+    border: none;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.nav-tabs .nav-link {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+    background: white;
+    color: #55b592;
+    border-top: 1px solid #fff;
+}
+
+/* Pills Navigation */
+.pills_tab {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.pills_tab::before {
+    width: 273px;
+    height: 3px;
+    background: #ffffff36;
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.nav-pills {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 0;
+}
+
+.nav-pills .nav-link {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+    border: none;
+    padding: 10px 29px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    position: relative;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    background: none;
+    color: #fff;
+}
+
+.nav-pills .nav-link:focus,
+.nav-pills .nav-link:hover {
+    background: none;
+}
+
+.no_text {
+    position: absolute;
+    top: -35px;
+    left: 28px;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    min-width: 24px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+.nav-pills .nav-link.active .no_text,
+.nav-pills .nav-link:hover .no_text {
+    background: #55b592;
+    color: white;
+}
+
+/* Monitor Details */
+.monitor_product_box {
+    padding: 20px;
+}
+
+.monitor_product_box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.monitor_details_box {
+    padding: 93px 20px 20px;
+    color: white;
+}
+
+.monitor_details_box h2 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.monitor_details_box p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 29px;
+    margin-bottom: 30px;
+    padding-top: 7px;
+}
+
+.checkout_btn {
+    color: #38765f;
+    background: #fff;
+    font-size: 16px;
+    padding: 6px 50px;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 17px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.checkout_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #38765f;
+    text-decoration: none;
+}
+
+/* Testimonials Section */
+.testimonial_cntr {
+    padding-top: 29px;
+}
+
+.testimonial_left_box {
+    background: #f9f9f9;
+    padding: 70px 140px;
+    min-height: 446px;
+}
+
+.testimonial_left_box p {
+    font-size: 18px;
+    color: #727380;
+    line-height: 34px;
+}
+
+.testimonial_right_box {
+    background: #23282a;
+    padding: 150px 140px;
+    min-height: 446px;
+}
+
+.testimonial_profile_box {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial_box {
+    padding-left: 23px;
+}
+
+.testimonial_box h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 24px;
+}
+
+.testimonial_box ul {
+    display: flex;
+    padding-top: 8px;
+    list-style: none;
+    margin: 0;
+}
+
+.testimonial_box li {
+    color: rgba(255, 255, 255, 0.5);
+    padding-right: 9px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    margin-right: 8px;
+    line-height: 13px;
+}
+
+.testimonial_box li:last-child {
+    border: none;
+}
+
+/* Trusted By Section */
+.trustedby_section {
+    background: white;
+    padding-top: 20px;
+}
+
+/* Client Logos */
+.ourclient_section {
+    background: #f9f9f9;
+    padding: 50px 0;
+}
+
+.our_client_box ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.our_client_box ul li {
+    padding: 0 46px 53px;
+    width: 25%;
+}
+
+.our_client_box img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.our_client_box img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Tab Content Styling */
+.tab-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+/* Carousel Controls */
+.carousel-control i {
+    width: 35px;
+    height: 35px;
+    background: #7c7c7e;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+a.left.carousel-control {
+    background: none;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    top: auto;
+    left: auto;
+    width: 63%;
+    opacity: 1;
+}
+
+a.right.carousel-control {
+    position: absolute;
+    bottom: 100px;
+    right: 29px;
+    top: auto;
+    width: 51%;
+    background: none;
+    opacity: 1;
+}
+
+a.right.carousel-control i {
+    background: #55b592;
+}
+
+/* Slick Carousel Styles */
+.slick-arrow {
+    width: 35px;
+    height: 35px;
+    background: #d7d7d7;
+    border-radius: 50%;
+}
+
+.slick-arrow:hover {
+    background: #d7d7d7;
+}
+
+.slick-arrow i {
+    color: #2e2d37;
+}
+
+button.slick-next.default.slick-arrow {
+    position: absolute;
+    bottom: -45px;
+    right: 7px;
+    top: auto;
+}
+
+button.slick-prev.default.slick-arrow {
+    bottom: -45px;
+    left: 92.7%;
+    top: auto;
+}
+
+.testimonial_section button.slick-next.default.slick-arrow {
+    bottom: 78px;
+    right: 27%;
+    top: auto;
+    background: #55b592;
+}
+
+.testimonial_section button.slick-prev.default.slick-arrow {
+    bottom: 79px;
+    left: 67%;
+    top: auto;
+}
+
+.testimonial_section .slick-arrow {
+    background: #7c7c7e;
+}
+
+.testimonial_section .slick-arrow i {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+ul.slick-dots {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 767px) {
+    .quality_real_box h1 {
+        font-size: 18px;
+    }
+
+    .quality_real_box h2 {
+        font-size: 26px;
+        margin: 5px 0 22px !important;
+        line-height: 40px;
+    }
+
+    .airquality_content_box p {
+        font-size: 18px;
+        line-height: 2;
+    }
+
+    .discover_btn {
+        margin-top: 30px;
+    }
+
+    .data_accuracy_image {
+        padding-top: 20px;
+    }
+
+    .data_accuracy_image img {
+        width: 88%;
+    }
+
+    .realtime_banner_section:after {
+        width: 100%;
+        height: 420px;
+        top: 172px;
+        background-position: center;
+    }
+
+    .real_feature_heading {
+        font-size: 24px;
+    }
+
+    .features_real_box h3 {
+        font-size: 20px;
+        margin-bottom: 15px !important;
+        border-bottom: 1px solid #e7e5e5;
+        display: inline-block;
+        padding-bottom: 12px;
+    }
+
+    .feature_content_box p {
+        font-size: 18px;
+    }
+
+    .pranaair_sensor_section {
+        height: 200px;
+        padding: 0;
+        background-size: 100% !important;
+        margin: 50px 0 0;
+    }
+
+    .pranaair_sensor_box {
+        padding: 20px 10px 40px 30px;
+    }
+
+    .pranaair_sensor_box h3 {
+        font-size: 20px;
+    }
+
+    .pranaair_sensor_box p {
+        font-size: 17px;
+    }
+
+    .pranaair_sensor_box p br {
+        display: none;
+    }
+
+    .feature_list_section .col-lg-3 {
+        width: 50%;
+    }
+
+    .feature_card_box h3 {
+        font-size: 18px;
+    }
+
+    .feature_card_box>p {
+        font-size: 15px;
+    }
+
+    .feature_card_box {
+        padding: 22px 12px;
+        margin-top: 22px;
+    }
+
+    .featured_icon {
+        min-height: 75px;
+    }
+
+    .realtime_feature_section {
+        padding: 50px 0;
+    }
+
+    .source_box {
+        margin-right: 0;
+        font-size: 10px;
+    }
+
+    .image_source_text a {
+        font-size: 10px;
+    }
+
+    .image_source_text {
+        display: inherit;
+        font-size: 11px;
+    }
+
+    span.highlight_point {
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 7px;
+    }
+
+    .testimonial_left_box {
+        padding: 40px 20px;
+        min-height: 385px;
+    }
+
+    .testimonial_left_box p {
+        font-size: 14px;
+    }
+
+    .testimonial_right_box {
+        padding: 50px 55px 70px;
+        min-height: auto;
+    }
+
+    .testimonial_section button.slick-next.default.slick-arrow {
+        bottom: 27px;
+        right: 35%;
+    }
+
+    .testimonial_section button.slick-prev.default.slick-arrow {
+        bottom: 27px;
+        left: 43%;
+    }
+
+    .our_client_box ul li {
+        padding: 0 5px 53px 0;
+        width: 33.33%;
+    }
+
+    .our_client_box ul li img {
+        width: 126px !important;
+    }
+
+    .monitor_tab_section .nav>li>a {
+        padding: 20px 10px;
+        font-size: 15px;
+    }
+
+    .pills_tab {
+        overflow-x: scroll;
+    }
+
+    .monitor_tab_section ul.nav.nav-pills {
+        width: 415px;
+    }
+
+    .monitor_details_box {
+        padding-top: 5px;
+    }
+
+    .monitor_product_box img {
+        width: 100%;
+    }
+
+    .monitor_tab_section {
+        padding-top: 20px;
+    }
+
+    .realtime_feature_section .vc_column-inner {
+        padding-top: 7px !important;
+    }
+
+    .realtime_feature_section.trustedby_section {
+        padding-top: 0;
+    }
+
+    button.slick-prev.default.slick-arrow {
+        left: 72.7%;
+    }
+
+    button.slick-next.default.slick-arrow {
+        right: 16px;
+    }
+}
+
+/* Focus States for Accessibility */
+.nav-link:focus,
+.discover_btn:focus,
+.checkout_btn:focus {
+    outline: 2px solid #67b455;
+    outline-offset: 2px;
+}
+
+/* Loading States */
+.tab-pane {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.fadeInLeft {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.fadeInRight {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Additional Styling for Better Visual Hierarchy */
+.air_heading {
+    color: #67b455;
+}
+
+/* Hover Effects */
+.feature_card_box,
+.monitor_product_box img,
+.comparison_graph_box img {
+    transition: all 0.3s ease;
+}
+
+.monitor_product_box img:hover {
+    transform: scale(1.05);
+}
+
+/* Container and Grid Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

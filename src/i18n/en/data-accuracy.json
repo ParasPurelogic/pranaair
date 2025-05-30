@@ -1,0 +1,175 @@
+{
+  "pranaAirLanding": {
+    "hero": {
+      "title": "Most Accurate & Affordable",
+      "subtitle": "Prana Air's Air Quality Monitor, A Reliable Alternative to Costly Devices",
+      "description": "Prana Air brings you a range of low-cost, highly accurate air quality monitors and sensors. Examine the data accuracy of our devices as compared to high-end & costly equipments.",
+      "buttonText": "Discover Now",
+      "imageAlt": "Prana Air's air quality monitor data accuracy"
+    },
+    "whyPranaAir": {
+      "title": "Why Prana Air's Monitor/Sensor?",
+      "subtitle": "All round Air Quality Monitoring",
+      "description": "Prana Air's air quality sensors are low-cost, durable, accurate, responsive & energy efficient. The sensors are PM, toxic gases (CO, CO2, SO2, NO2 etc.), HCHO, TVOCs, temperature, humidity, noise, light, etc."
+    },
+    "features": {
+      "lowCost": {
+        "title": "Low cost",
+        "description": "India's first low-cost monitors & sensors",
+        "imageAlt": "low cost sensor"
+      },
+      "responsive": {
+        "title": "Highly responsive",
+        "description": "Highly accurate and responsive sensors",
+        "imageAlt": "highly responsive sensor"
+      },
+      "reliable": {
+        "title": "Reliable",
+        "description": "Reliable data with many other benefits",
+        "imageAlt": "reliable sensor"
+      },
+      "accurate": {
+        "title": "Accurate",
+        "description": "Accurate data on air pollution in real-time.",
+        "imageAlt": "accurate sensor"
+      }
+    },
+    "sensorsSection": {
+      "title": "Prana Air Sensors",
+      "description": "Our sensors are low-cost, yet the data is extremely accurate when compared to high-end equipment."
+    },
+    "dataAccuracy": {
+      "mainTitle": "Prana Air's PM2.5 Air Quality Data Accuracy Comparisons with Very Costly Devices",
+      "case1": {
+        "caseNumber": "1st Case",
+        "title": "With Prana Air PM Monitor",
+        "subtitle": "Comparison of PM2.5 with a High-End Instrument",
+        "description": "A high-end device was used to correlate PM2.5 during a 30-minute time interval. We can compare Prana Air's product's data accuracy to that of a more expensive product.",
+        "graphAlt": "comparison graph of air quality data"
+      },
+      "case2": {
+        "caseNumber": "2nd Case",
+        "title": "With Prana Air PM2.5 Monitor",
+        "subtitle": "Comparison of PM Data Accuracy With BAM",
+        "description": "We conducted a data comparison study between Prana Air's PM2.5 monitor and a high-end air quality monitoring device (BAM) to assess the accuracy of our low-cost air quality monitor. The study showed that our PM2.5 monitor provides results that are highly correlated with those of the BAM, demonstrating that our low-cost monitor is just as accurate and reliable.",
+        "graphAlt": "Prana Air PM Monitor vs BAM comparison"
+      },
+      "case3": {
+        "caseNumber": "3rd Case",
+        "title": "With Prana Air PM Sensor",
+        "subtitle": "Comparative Evaluation of Other Low-Cost PM Sensors",
+        "description1": "The graph below is the research study report of",
+        "studyTitle": "Comparative Evaluation of New Low-Cost Particulate Matter Sensors",
+        "description2": "by IIIT, Hyderabad, India. The study includes the sensors of Aeroqual, SDS, Prana Air, and SPS PM2.5. The study concludes that the new, low-cost PM sensors are capable of monitoring particulate matter level, although calibration is necessary to get a better result.",
+        "graphAlt": "comparison of prana air pm sensor with other sensors",
+        "sourceText": "Research study report by IIIT, Hyderabad, India",
+        "linkText": "Comparative Evaluation of New Low-Cost Particulate Matter Sensors"
+      }
+    },
+    "realtimeComparison": {
+      "title": "Real-time PM2.5 Comparison\nPrana Air vs A High End Device",
+      "description": "You can witness the data accuracy level by the comparison of real-time PM2.5 monitoring between Prana Air's a low-cost monitor and a high-end & costly device."
+    },
+    "videos": {
+      "video1Title": "Prana Air Monitor Comparison Video 1",
+      "video2Title": "Prana Air Monitor Comparison Video 2"
+    },
+    "products": {
+      "title": "Monitors & Sensors",
+      "subtitle": "Know what you breathe",
+      "description": "Prana Air offers a variety of highly accurate, low-cost, and portable air quality monitors and sensors for all indoor and outdoor air quality monitoring applications.",
+      "findOutButton": "Find Out",
+      "tabs": {
+        "monitors": "Monitors",
+        "sensors": "Sensors"
+      },
+      "monitors": {
+        "squair": {
+          "name": "SQUAIR",
+          "title": "SQUAIR Air Monitor",
+          "description": "SQUAIR monitor is a smart air quality monitor that detects different air quality parameters. It detects PM10, PM2.5, CO, CO2, O3, NO2, SO2, TVOC, HCHO, noise, light, temperature, & humidity.",
+          "imageAlt": "prana air squair air quality monitor"
+        },
+        "sensiblePlus": {
+          "name": "Sensible+",
+          "title": "Sensible+ Air Monitor",
+          "description": "SENSIBLE+ is an IAQ monitor that detects a variety of primary and secondary air contaminants. It monitors and reports on the AQI, temp., Humidity, PM (10, 2.5, and 1), CO2, and TVOCs in the surrounding air.",
+          "imageAlt": "prana air sensible+ air quality monitor"
+        },
+        "sensible": {
+          "name": "Sensible",
+          "title": "Sensible Air Monitor",
+          "description": "Sensible Air Quality Monitor is equipped with extremely accurate sensors and gives accurate real-time AQI readings in seconds. It measures PM, CO, CO2, HCHO, VOC, O3, temperature, and humidity.",
+          "imageAlt": "prana air sensible air quality monitor"
+        },
+        "particulate": {
+          "name": "Particulate",
+          "title": "Smart PM Monitor",
+          "description": "Prana Air Ambient Air monitor is a CAAQMS equipped with sensors that measure pollution concentrations. Pollutants commonly measured include PM10 and PM2.5, SO2, NO2, O3, H2S, and CO.",
+          "imageAlt": "prana air smart PM monitor"
+        },
+        "ambient": {
+          "name": "Ambient",
+          "title": "Ambient Monitor",
+          "description": "Prana Air Ambient Air monitor is a CAAQMS equipped with sensors that measure pollution concentrations. Pollutants commonly measured include PM10 and PM2.5, SO2, NO2, O3, H2S, and CO.",
+          "imageAlt": "prana air ambient air quality monitor caaqms"
+        }
+      },
+      "sensors": {
+        "co2": {
+          "name": "CO2 Sensor",
+          "title": "CO2 Sensor",
+          "description": "Prana Air CO2 sensor is a non-dispersive infrared NDIR sensor with a resolution of 1 PPM and a range of 10,000 PPM. It is very accurate and responsive.",
+          "imageAlt": "prana air CO2 air quality sensor"
+        },
+        "co": {
+          "name": "CO Sensor",
+          "title": "CO Sensor",
+          "description": "Prana Air CO sensor (500 PPM range) is ROHS compliant and uses electrochemical technology using the most effective means of monitoring CO gas.",
+          "imageAlt": "prana air CO air quality sensor"
+        },
+        "so2": {
+          "name": "SO2 Sensor",
+          "title": "SO2 Sensor",
+          "description": "Prana Air SO2 sensor uses electrochemical technology to detect highly toxic SO2 gas. The sensor is precision-engineered for both industrial and consumer-grade safety monitoring.",
+          "imageAlt": "prana air SO2 sensor"
+        },
+        "no2": {
+          "name": "NO2 Sensor",
+          "title": "NO2 Sensor",
+          "description": "Prana Air NO2 sensor has a powerful signal, a low zero current resolution of 50 parts per billion (PPB), and an operational range of 20 ( Parts Per Million) PPM.",
+          "imageAlt": "prana air No2 air quality sensor"
+        },
+        "o3": {
+          "name": "O3 Sensor",
+          "title": "Ozone O3",
+          "description": "Prana Air's ozone sensors use electrochemical gas sensing techniques. A working electrode, a counter electrode, and an ion conductor are the three main components of the technique.",
+          "imageAlt": "prana air ozone o3 air quality sensor"
+        }
+      }
+    },
+    "trustedBy": {
+      "title": "Trusted By",
+      "subtitle": "Some of the industry's giants",
+      "description": "We are really proud and grateful to have worked and partnered with these well-known firms and industries."
+    },
+    "clients": {
+      "csir": "Prana Air client csir",
+      "iitVaranasi": "Prana Air client iit varanasi",
+      "iitRoorkee": "Prana Air client iit roorkee",
+      "iitHyderabad": "Prana Air client iit hyderabad",
+      "iitDhanbad": "Prana Air client iit dhanbad",
+      "iitBombay": "Prana Air client iit bombay",
+      "dae": "Prana Air client dae",
+      "ola": "Prana Air client ola",
+      "renaultNissan": "Prana Air client renault nissan",
+      "havells": "Prana Air client havells",
+      "tata": "Prana Air client tata",
+      "microsoft": "Prana Air client microsoft",
+      "gmda": "Prana Air client gmda",
+      "marriott": "Prana Air client marriott",
+      "mahindra": "Prana Air client mahindra",
+      "tajHotel": "Prana Air client taj hotel"
+    }
+  }
+}

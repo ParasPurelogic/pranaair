@@ -27,13 +27,14 @@ export default function GalleryTabsSlider({ vtolGalleryImages, quadGalleryImages
 
     return (
         <div className="category-tabs gallery-tab">
-            <button className={`category-tab ${activeTab === "vtol" ? "active" : ""}`} onClick={() => handleTabClick("vtol")}>
-                {tabLabels.vtol}
-            </button>
-            <button className={`category-tab ${activeTab === "quad" ? "active" : ""}`} onClick={() => handleTabClick("quad")}>
-                {tabLabels.quad}
-            </button>
-
+            <div className="category-inner-tab">
+                <button className={`category-tab ${activeTab === "vtol" ? "active" : ""}`} onClick={() => handleTabClick("vtol")}>
+                    {tabLabels.vtol}
+                </button>
+                <button className={`category-tab ${activeTab === "quad" ? "active" : ""}`} onClick={() => handleTabClick("quad")}>
+                    {tabLabels.quad}
+                </button>
+            </div>
             <div className="drone-details">
                 {activeTab === "vtol" ? (
                     <>

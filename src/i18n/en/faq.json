@@ -1,0 +1,217 @@
+{
+  "faqHero": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about air pollution, our products, and services"
+  },
+  "airPollutionFaq": {
+    "sectionTitle": "Air Pollution FAQs",
+    "sectionSubtitle": "Understanding air quality and its impact on health",
+    "questions": {
+      "whatIsAirPollution": {
+        "question": "What is air pollution?",
+        "answer": "According to the World Health Organization (WHO) air pollution is a major cause of disease and death in the world, contributing to 3 million premature deaths worldwide every year. It happens when gases and other substances, including particulates and biological molecules, are introduced into Earth's atmosphere, harming humans, animals, plants and the whole ecosystem. It is a global issue and a serious health concern which needs to be attended to."
+      },
+      "whatIsPM25": {
+        "question": "What is PM2.5?",
+        "answer": "PM 2.5 – or fine particulate matter – is a mixture of extremely small solid and liquid particles present in the air that are not visible to the naked eye. They measure less than 2.5 micrometers in diameter, which is 30 times smaller than the human hair. Because of that, they can penetrate deep into our lungs and bloodstream, causing severe damage to the lung tissue, cardiovascular disease and premature deaths."
+      },
+      "whatIsAQI": {
+        "question": "What is AQI?",
+        "answer": "An Air Quality Index (AQI) is a number used by government agencies to measure the air pollution levels and communicate it to the population. As the AQI increases, it means that a large percentage of the population will experience severe adverse health effects. The measurement of the AQI requires an air monitor and an air pollutant concentration over a specified averaging period. The results are grouped into ranges, and each range is assigned a descriptor, a color code and a standardized public health advisory. You can check more about AQI here:"
+      },
+      "whatIsPM10": {
+        "question": "What is PM10?",
+        "answer": "PM10 is almost the same as PM2.5; the only difference is on it's size. PM10 measures 10 micrometers or less in diameter."
+      },
+      "averageAQIIndia": {
+        "question": "What is the average AQI for India?",
+        "answer": "The pollution sources in India – and in most Asian countries – are numerous and incompletely understood. That's why each country has to have it's own AQI values. The National Air Quality Index Standard (NAQI) in India was launched on 17 September 2014. The initiative constitutes part of the Government's mission to introduce the \"culture of cleanliness\", as the air pollution has been a huge concern in the country.\n\nLike everywhere in the world, AQI value varies on a daily bases and it depends on which city you are in. But even though India has its own AQI standards, they are ranked as one of the highest: according to the World Health Organization, 10 of the top 20 most polluted cities in the world are in India, and ambient fine particulate matter (PM2.5) levels in Delhi rank among the highest levels measured in any city in the world – about 15 times higher than WHO's guideline concentrations. That's why it is very important to understand the air quality around you.",
+        "appNote": "Download the AQI India app for live updates directly on your mobile device (COMING SOON)."
+      },
+      "aqiValues": {
+        "question": "What are the AQI values?",
+        "subtitle": "The AQI values represent the following status of air pollution:"
+      },
+      "healthEffects": {
+        "question": "How does air pollution affect people's health?",
+        "answer": "Air pollution causes a huge number of pollution-related diseases, including respiratory infections, heart disease, Chronic Obstructive Pulmonary Disease (COPD), stroke, lung cancer and, of course, the worsening of existing respiratory and cardiac conditions. Symptoms like allergies, difficulty in breathing, wheezing, coughing and asthma may lead to increased medication use, doctor visits and more hospital admissions. The gravity of these effects depend on the type of pollutant the person is exposed to, the degree of exposure and the individual's health status and genetics."
+      },
+      "childrenEffects": {
+        "question": "How does air pollution affect children?",
+        "answer": "A research done by the World Health Organization (WHO) states that the youngest, the oldest and the poorest are the most vulnerable urban populations to air pollution – it affects the central nervous system, playing a role in autism, as well as in other neurodevelopmental disorders. It also affects short-term memory, learning ability, impulsivity and the cognitive performance. Babies and children are particularly sensitive to the harmful effects of pollutants because they are growing and their lungs, cardiovascular system, immune system and brains are still developing."
+      },
+      "protection": {
+        "question": "How can I protect myself from air pollution?",
+        "answer": "When the AQI levels are high, the recommendation is to stay indoors and avoid doing physical activities outside, like jogging, hiking, cycling, etc., especially for sensitive groups like children, elderly and people with lung and heart conditions. If it's inevitable to go outside, an air-pollution mask should be worn. Nevertheless, indoor pollution should be taken care of. Having a good air purifier and purifying plants at home or office are recommended, and to ensure the good air quality, avoid smoking indoors and make sure that there is a chimney in the kitchen and an exhaust in the bathroom.\n\nA healthy diet rich in vitamin C, magnesium and Omega fatty acids might help to protect you from air pollution. You can also protect yourself and your family with Prana Air extensive range of anti-pollution solutions, like our motion mask and our air purifier. Find them here:"
+      },
+      "findInformation": {
+        "question": "Where can I find information on air pollution in my city?",
+        "answer": "Government agencies have different ways of measuring their respective Air Quality Index and use this information to inform the public of potential short-term health risk. Readings from government monitoring stations all over the world can be found here. For more precise information, you could consider installing a monitoring station at your home/office and use an app such as",
+        "comingSoon": "(COMING SOON)."
+      }
+    },
+    "aqiLevels": {
+      "good": "Good",
+      "moderate": "Moderate",
+      "unhealthyForGroups": "Unhealthy For Groups",
+      "unhealthy": "Unhealthy",
+      "veryUnhealthy": "Very Unhealthy",
+      "hazardous": "Hazardous"
+    }
+  },
+  "purifierFaq": {
+    "sectionTitle": "Prana Air Indoor Air Purifier",
+    "sectionSubtitle": "Everything you need to know about our air purification systems",
+    "questions": {
+      "filterFrequency": {
+        "question": "How frequently do I need to change the filters?",
+        "answer": "You should change the filters ideally every 2 months."
+      },
+      "operatingHours": {
+        "question": "For how long can I operate the air purifier?",
+        "answer": "The air purifier is meant to be runned for long hours. However, we recommend using it for a maximum 18 hours per day."
+      },
+      "pollutantRemoval": {
+        "question": "Does it remove dust particles, bacteria and viruses from the air?",
+        "answer": "Yes, the Prana Air Purifier is designed to remove 99% of a wide range of pollutants – formaldehyde, PM10, PM2.5, dust, pollen, smoke odors, allergens, 0.3um particles, VOC, H1N1 virus, bacterias – in just 1 hour.",
+        "statLabel": "Pollutant Removal"
+      },
+      "aqiDisplay": {
+        "question": "Does the air purifier display the AQI readings?",
+        "answer": "No, it doesn't."
+      },
+      "sleepMode": {
+        "question": "Does the air purifier have an auto/sleep mode?",
+        "answer": "Yes, it does."
+      },
+      "remote": {
+        "question": "Does the air purifier have a remote?",
+        "answer": "Yes, it comes with a remote control."
+      },
+      "ozoneProduction": {
+        "question": "Does it produce Ozone gas?",
+        "answer": "No, Prana Air purifiers does not produce Ozone gas or any other pollutant."
+      },
+      "co2Reduction": {
+        "question": "Does the Prana Air purifier reduce CO2 levels?",
+        "answer": "No. Until today, there is no technology that decreases CO2, only plants."
+      },
+      "filterCleaning": {
+        "question": "Can I clean Prana Air Purifier filter?",
+        "answer": "No, HEPA filters cannot be cleaned, only changed. If they are in touch with water, they get damaged."
+      },
+      "filterReuse": {
+        "question": "Is it possible to use the air filter again?",
+        "answer": "No. Once changed, the HEPA filter cannot be used again. They are disposable once particles as small as 2.5 microns get attached to them."
+      },
+      "odorReduction": {
+        "question": "Does Prana Air Purifier reduce odors in the surroundings?",
+        "answer": "Yes, that's the reason behind the ionizator function."
+      },
+      "gasReduction": {
+        "question": "Does it reduce NO2 and SO2 in the surroundings?",
+        "answer": "No, it won't purify these gases."
+      },
+      "ozoneFilter": {
+        "question": "Does the air purifier filter ozone gas?",
+        "answer": "No, it doesn't."
+      },
+      "pollutionIndicator": {
+        "question": "Does it have an air pollution indicator?",
+        "answer": "Prana Air Purifier does not have an air pollution indicator on it."
+      },
+      "roomSpace": {
+        "question": "Does it take a lot of place in the room?",
+        "answer": "No, it doesn't take too much space. The size is small if compared to other brands providing the same functions."
+      },
+      "portability": {
+        "question": "Can it be moved from place to place?",
+        "answer": "Yes, the air purifier is very easy (and light) to be moved from one place to another."
+      },
+      "wallMount": {
+        "question": "Can it be fixed at the wall?",
+        "answer": "No, it cannot."
+      },
+      "childLock": {
+        "question": "Does the air purifier have a child lock?",
+        "answer": "No, it doesn't have a child lock."
+      }
+    }
+  },
+  "maskFaq": {
+    "sectionTitle": "Prana Air Outdoor Masks",
+    "sectionSubtitle": "Portable protection for outdoor air quality",
+    "questions": {
+      "washable": {
+        "question": "Are the Prana Air Purifying masks washable?",
+        "maskAnswer": "Yes, washable",
+        "filterAnswer": "Not washable - replaceable only. HEPA filters get damaged in contact with water."
+      },
+      "filterReplacement": {
+        "question": "How often should I replace the filter?",
+        "answer": "You should replace the filter every 6 months, depending on how polluted the area you live is, or how often you wear the mask."
+      },
+      "fanSpeed": {
+        "question": "In which occasions I should change the fan speed?",
+        "answer": "You should change the fan speed when the pollution levels are higher than usual and you are having trouble in breathing."
+      },
+      "continuousWear": {
+        "question": "Can I wear the mask continually?",
+        "answer": "No, you can't. You can wear it for 6 hours straight and then you should recharge it."
+      },
+      "powerIndicator": {
+        "question": "How do I know if the mask is on or not?",
+        "answer": "There is a light indicator next to the on/off button. If the red light is on, it means that the mask is on."
+      }
+    },
+    "labels": {
+      "mask": "Mask:",
+      "filters": "Filters:"
+    }
+  },
+  "carFilterFaq": {
+    "sectionTitle": "Car Cabin Air Filter",
+    "sectionSubtitle": "Clean air solutions for your vehicle",
+    "questions": {
+      "hepaFilter": {
+        "question": "What is HEPA Filter?",
+        "subtitle": "High Efficiency Particulate Air (HEPA)",
+        "answer": "HEPA stands for High Efficiency particulate Air. It is a type of filter that traps dust particles and other microbes when in use. HEPA filter is one that can capture 99.97% of dust particles and other microbes in the air. They are efficient, and the HEPA filter is certainly worth the extra money.",
+        "statLabel": "Particle Capture Rate"
+      },
+      "washable": {
+        "question": "Can the Prana car cabin air filter be washed and reused?",
+        "answer": "No, they are not washable and also can not be reused. They are replaceable."
+      },
+      "lifespan": {
+        "question": "How long can Prana car cabin air filter last?",
+        "answer": "Typically the filter will last 6-9 months, however this is also dependent on frequency of your drive time. The poorer the vehicle air quality the shorter the filter lifespan as well as the frequency and duration of the drive. The more frequent and longer your drive time, the more your Prana Air car cabin air filter works for you!"
+      },
+      "aqiValue": {
+        "question": "What is AQI value inside car while using Prana car cabin air filter?",
+        "answer": "AQI value goes down to 1 when Prana car cabin air filter is used. It captures all fine dust particles and provide healthy environment inside car for healthy ride to your destination."
+      },
+      "installation": {
+        "question": "Do I need to have my Prana car cabin air filter professionally installed?",
+        "answer": "No, you can install new Prana car cabin air filter on your own in as little as 15 minutes."
+      },
+      "engineFilters": {
+        "question": "Does Prana Air sell engine air filters?",
+        "answer": "No, we do not sell engine air filters."
+      },
+      "addFilter": {
+        "question": "Can I add a cabin air filter to my vehicle if my vehicle does not have one?",
+        "answer": "Yes, if your specific vehicle is designed to use one. Some vehicles came from the manufacturer without an optional cabin filter installed. In these cases, you can simply insert the correct filter into the empty housing. In other cases, a vehicle may have come from the manufacturer without an optional cabin filter or housing. The housing can be ordered from a car dealer. In this case, you must install the housing before you can install the filter. Some cars did not come from the manufacturer with the option of a cabin filter. In this case, you cannot add one."
+      },
+      "quality": {
+        "question": "Is the Prana Air car cabin air filter as good as an \"Original\" or \"Genuine\" filter?",
+        "answer": "The filters we sell are \"aftermarket\" - which means they are made by a company that has no connection with the car manufacturer. The \"Aftermarket\" has both good and bad reputations. Some aftermarket brands are known for being better that the original parts. Each part is designed to meet or exceed the function of the original."
+      }
+    }
+  },
+  "faqCta": {
+    "title": "Still have questions?",
+    "subtitle": "Our team is here to help you find the perfect air quality solution",
+    "buttonText": "Contact Us"
+  }
+}

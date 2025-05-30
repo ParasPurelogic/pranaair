@@ -1,0 +1,48 @@
+{
+     "returnPolicy": {
+    "mainTitle": "Product Return & Refund Policy",
+    "returnSection": {
+      "title": "Return Policy",
+      "paragraph1": "Prana Air provides a return policy of the product purchased by the client only when a newly purchased product has some manufacturing defects.",
+      "paragraph2": "There is no guranteed return policy for every product purchased by our customers."
+    },
+    "refundSection": {
+      "title": "Refund Policy",
+      "paragraph": "Prana Air does not provide a guranteed refund policy of every order received by us. We only accept the request of the customer's complaint to get the refund when he/she faces manufacturing defects on the product they purchased within a week of its delivery."
+    },
+    "qa": {
+      "whatToProvide": {
+        "question": "What does a customer have to provide to get his/her refund?",
+        "answer": "Answer: He/she has to provide a video & images as a proof when he/she received the manufacturing defected product at the time of successful delivery of the product."
+      },
+      "howToClaim": {
+        "question": "How can a customer claim the refund?",
+        "answer": "Answer: He/she has to prepare a proof of defected products as mentioned above within 2 days of the delivery and call the helpline no. 7391873918 and send the proof of documents to info@purelogic.in along with the order details."
+      },
+      "proofMaterials": {
+        "question": "What is the proof of materials to claim for the refund?",
+        "answer": "Answer: The proof of materials to claim for the refund is a video with the images of the defected/damaged product at the time of delivery."
+      },
+      "everyoneRefund": {
+        "question": "Will every customer get the refund?",
+        "answer": "Answers: No, every customer will not get the claimed refund. Prana Air will decide who can get the refund depending on the proof of materials provided by the customers."
+      },
+      "refundTiming": {
+        "question": "When will a customer receive the refund amount to the bank account after he/she claimed for the refund?",
+        "answer": "Answers: Prana Air will first review the proof of materials provided by the customer who claimed for the refund. If the proof of materials is under the terms and conditions of the company, Prana Air will provide the full amount of the product order purchased by the customer. The amount will reflect on his/her bank account as per the terms and conditions of the payment gateway."
+      },
+      "replacement": {
+        "question": "Can a customer get the defected/damaged product replaced with a new product?",
+        "answer": "Answer: Yes, if the customer who claims that he/she received a defected/damaged product at the time of delivery, Prana Air will provide a new product as a replacement of the claim after reviewing the proof of materials."
+      }
+    },
+    "returnNote": {
+      "label": "Note:",
+      "content": "The customer has to return the defected/damaged product to the below address first at their own cost through a courier/speed post before we process for the refund to his/her bank account. The customer has to provide a slip as a proof of shipment."
+    },
+    "companyAddress": {
+      "name": "Purelogic Labs India Pvt. Ltd.",
+      "address": "Crown Heights, 7th Floor, 706, Sector 10, Rohini, New Delhi, Delhi-110085, India"
+    }
+  }
+}

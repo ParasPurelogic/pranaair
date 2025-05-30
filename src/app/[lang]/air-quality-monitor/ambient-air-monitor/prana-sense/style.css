@@ -478,14 +478,14 @@ ul.no-addi-box li:first-child {
 
 .all-weather-monitor-img img {
   max-width: 835px;
-  margin-left: 0;
+  margin-left: 105px;
   margin-top: -80px;
 }
 
 video#myVideo {
   width: 100%;
   height: 800px;
-  margin-left: -140px;
+  margin-left: -240px;
   margin-bottom: -763px !important
 }
 
@@ -1265,7 +1265,7 @@ ul.monitor-noise-box li h6 {
 
 .app-slider {
   position: relative;
-  right: -190px
+  right: 0px
 }
 
 .wall-monitor-img img {

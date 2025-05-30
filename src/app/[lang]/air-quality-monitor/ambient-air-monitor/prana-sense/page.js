@@ -882,17 +882,11 @@ export default async function PranaSense() {
 
             {/* Monitor Wall */}
             <section id="monitor-wall">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="wall-monitor-img">
-                                <img
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/monitor-at-wall-with-apps-data.webp"
-                                    alt="Prana Sense ambient air quality monitor installed outside a building and data accessing on mobile app"
-                                />
-                            </div>
-                        </div>
-                    </div>
+                <div className="wall-monitor-img">
+                    <img
+                        src="https://www.pranaair.com/wp-content/uploads/2024/10/monitor-at-wall-with-apps-data.webp"
+                        alt="Prana Sense ambient air quality monitor installed outside a building and data accessing on mobile app"
+                    />
                 </div>
             </section>
 

@@ -1,0 +1,178 @@
+{
+   "cemMiddleEast2025": {
+    "hero": {
+      "eventBadge": "Our starting First Ever International Conference & Exhibition",
+      "title": "Prana Air at CEM Middle East 2025, Bahrain",
+      "subtitle": "Join us at the premier conference on emissions monitoring",
+      "date": "April 8-10, 2025",
+      "location": "The Gulf Hotel & Convention Centre, Bahrain",
+      "booth": "Booth: Table Top",
+      "registerNow": "Register Now",
+      "contactUs": "Contact Us",
+      "imageAlt": "CEM Middle East 2025"
+    },
+    "about": {
+      "badge": "About The Event",
+      "title": "Join Us at CEM Middle East 2025",
+      "description": "We are excited to be part of CEM Middle East 2025, a global event focused on emissions and air quality monitoring. As experts in air pollution solutions, we look forward to meeting professionals, regulators, and businesses to discuss the latest technologies that help create cleaner and healthier air.",
+      "boothInfo": "Visit us at Booth: Table Top to explore our air quality monitoring solutions.",
+      "imageAlt": "CEM Middle East Event"
+    },
+    "keyFocus": {
+      "badge": "Key Focus Areas",
+      "title": "Why This Event Is Important",
+      "description": "Air pollution is a growing concern worldwide, and the Middle East is taking steps to improve emissions monitoring and control. This event brings together experts to discuss:",
+      "airQuality": {
+        "title": "Air Quality & Emissions Monitoring",
+        "description": "Advanced techniques for monitoring air quality and emissions in real-time"
+      },
+      "industrial": {
+        "title": "Industrial Pollution Control",
+        "description": "Solutions for industries to reduce and control pollution effectively"
+      },
+      "greenhouse": {
+        "title": "Greenhouse Gas & Methane Detection",
+        "description": "Latest technologies for detecting and measuring greenhouse gases"
+      },
+      "sensor": {
+        "title": "Advanced Sensor & AI Technologies",
+        "description": "Cutting-edge sensors and AI applications for environmental monitoring"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics for Pollution Control",
+        "description": "Leveraging big data to analyze and predict pollution patterns"
+      },
+      "regulations": {
+        "title": "New Environmental Regulations",
+        "description": "Updates on regulatory frameworks and compliance requirements"
+      }
+    },
+    "schedule": {
+      "badge": "EVENT PROGRAM",
+      "title": "Event Schedule",
+      "description": "A comprehensive three-day program featuring industry experts, innovative technologies, and networking opportunities",
+      "timezone": "Arabian Standard Time-zone in Bahrain (GMT+3)",
+      "day1": {
+        "title": "Day 1",
+        "date": "April 8, 2025",
+        "subtitle": "Opening and Keynote Sessions",
+        "opening": {
+          "title": "Opening Ceremony",
+          "description": "Insights from industry leaders and welcome address"
+        },
+        "keynote": {
+          "title": "Keynote Speeches",
+          "description": "Future of emissions monitoring and global trends"
+        },
+        "technology": {
+          "title": "Technology Presentations",
+          "description": "New real-time air quality sensors and innovations"
+        },
+        "exhibition": {
+          "title": "Exhibition Opens",
+          "description": "Visit Prana Air's booth for hands-on product demos!"
+        }
+      },
+      "day2": {
+        "title": "Day 2",
+        "date": "April 9, 2025",
+        "subtitle": "Innovations and Networking",
+        "workshops": {
+          "title": "Workshops & Live Demos",
+          "description": "Latest air monitoring solutions and practical applications"
+        },
+        "panel": {
+          "title": "Panel Discussions",
+          "description": "Experts discuss AI-powered emissions tracking"
+        },
+        "networking": {
+          "title": "Networking Sessions",
+          "description": "Connect with industry professionals and decision-makers"
+        },
+        "methane": {
+          "title": "Methane and Greenhouse Gas Monitoring",
+          "description": "Advanced detection technologies and close for day two"
+        }
+      },
+      "day3": {
+        "title": "Day 3",
+        "date": "April 10, 2025",
+        "subtitle": "Future of Air Quality Monitoring",
+        "regulations": {
+          "title": "Regulations & Compliance Talks",
+          "description": "Industry laws and best practices for compliance"
+        },
+        "sustainability": {
+          "title": "Sustainability Discussions",
+          "description": "New clean-air technologies and sustainable approaches"
+        },
+        "closing": {
+          "title": "Closing Ceremony",
+          "description": "Key takeaways and upcoming opportunities"
+        }
+      }
+    },
+    "booth": {
+      "badge": "VISIT US",
+      "title": "Why Visit Prana Air's Booth?",
+      "imageAlt": "Prana Air Booth",
+      "smartMonitoring": {
+        "title": "Smart Air Monitoring",
+        "description": "Combining AI, IoT, and real-time tracking for comprehensive air quality management"
+      },
+      "innovative": {
+        "title": "Innovative Technology",
+        "description": "Affordable, high-accuracy sensors designed for various environmental conditions"
+      },
+      "practical": {
+        "title": "Practical Solutions",
+        "description": "Designed for industries, governments, and environmental agencies with specific needs"
+      },
+      "expert": {
+        "title": "Expert Knowledge",
+        "description": "Learn from our team about pollution control, compliance, and best practices"
+      }
+    },
+    "cta": {
+      "title": "Let's Work Together for Cleaner Air!",
+      "description": "We are excited to meet researchers, policymakers, and industry leaders at CEM Middle East 2025. Let's build a cleaner, healthier future with smarter air quality solutions.",
+      "linkedin": "Follow us on LinkedIn",
+      "website": "Visit our website",
+      "register": "Register Now",
+      "contact": "Contact Us"
+    },
+    "contact": {
+      "badge": "GET IN TOUCH",
+      "title": "Contact Us",
+      "email": {
+        "title": "Email Us",
+        "value": "info@purelogic.in"
+      },
+      "phone": {
+        "title": "Call Us",
+        "value": "+91 7391873918"
+      },
+      "booth": {
+        "title": "Visit Our Booth",
+        "value": "Booth: Table Top"
+      },
+      "eventInfo": {
+        "title": "Event Info",
+        "value": "April 8-10, 2025"
+      },
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Your Name",
+        "email": "Email",
+        "emailPlaceholder": "Your Email",
+        "phone": "Phone",
+        "phonePlaceholder": "Your Phone",
+        "organization": "Organization",
+        "organizationPlaceholder": "Your Organization",
+        "message": "Message",
+        "messagePlaceholder": "Your Message",
+        "submit": "Send Message"
+      }
+    }
+  }
+}

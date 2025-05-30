@@ -1674,6 +1674,32 @@ ul.contact_info {
 .types-visuals-section {
   padding-top: 200px;
   position: relative !important;
+  padding-bottom: 70px;
+}
+
+ul#visualTabs li button {
+  color: #fff;
+  font-size: 16px;
+}
+
+ul#visualTabs {
+  gap: 20px;
+}
+
+ul#visualTabs li button .text-center {
+  padding: 0;
+}
+
+
+ul#visualTabs li button.active {
+  background: transparent;
+  border: 0;
+  color: #7ab261;
+  font-size: 18px;
+}
+
+ul#visualTabs li button.active img {
+  border: 2px solid;
 }
 
 .types-visuals-section:before {

@@ -58,7 +58,7 @@ export default function TechSpecTabs({
                     <div className="tab-content">
                         <div className={`tab-pane ${activePartTab === "Parts & Label" ? "show active fade-in" : ""}`}>
                             <div className="row texh-spec-box">
-                                <div className="col-md-6">
+                                <div className="col-md-12">
                                     {vtolSpecs &&
                                         vtolSpecs.slice(0, 8).map((spec, index) => (
                                             <div key={index} className={`tech-spec-list ${index % 2 === 1 ? "bg" : ""}`}>

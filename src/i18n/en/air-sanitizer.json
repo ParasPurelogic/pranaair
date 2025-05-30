@@ -1,0 +1,378 @@
+{
+  "pmSensorHero": {
+    "title": "AIR SANITIZER",
+    "productCode": "BI-AR-HS-AR001",
+    "description": "Prana Air Sanitizer Cum Air Purifier has a cutting-edge space technology that works even in microgravity and wipes out 99.99% of pathogens.",
+    "priceLabel": "MRP",
+    "priceValue": "₹ 29,990.00",
+    "buyNowButton": "Buy Now",
+    "certifiedSpaceTech": "Certified Space Technology",
+    "positiveIonAlt": "positive ion",
+    "negativeIonAlt": "negative ion",
+    "productImageAlt": "Prana Air Sanitizer",
+    "virusAlt": "virus",
+    "bacteriaAlt": "bacteria",
+    "covidVirusAlt": "covid virus",
+    "coronaVirusAlt": "corona virus",
+    "germsAlt": "germs",
+    "harmfulVirusAlt": "harmful virus",
+    "allergensAlt": "allergens"
+  },
+  "airSanitizer": {
+    "title": "Air Sanitizer Cum Air Purifier",
+    "description1": "Impure indoor air is a major concern for households. Prana Air sanitizer is a mega cleanser",
+    "description2": "that disinfects the air around you. This supreme air purifier clears out germs and pollutants, and makes air breathable.",
+    "description3": "The purifier also makes your space free from repulsive and putrid odours. In short, this magical machine renders yours life livable and air breathable."
+  },
+  "fiveStageActions": {
+    "title": "Five Stage Actions",
+    "subtitle": "What makes our product different & better than its contemporaries"
+  },
+  "features": {
+    "uvLight": {
+      "title": "UV Light Kills Bacteria",
+      "description": "The ultraviolet radiations are effective in making the environment free from microbes.",
+      "imageAlt": "air sanitizer uv light bacteria"
+    },
+    "controlledOzone": {
+      "title": "Controlled Ozone",
+      "description": "Controlled levels of ozone gas to eliminate the remnant allergens and microbes.",
+      "imageAlt": "air sanitizer controls ozone"
+    },
+    "ions": {
+      "title": "Positive & Negative Ions",
+      "description": "An array of million of ions to remove dust and other particulate pollutants.",
+      "imageAlt": "air sanitizer positive negative ions"
+    },
+    "photocatalytic": {
+      "title": "Photocatalytic Oxidation",
+      "description": "Removal of biological contaminants via molecular dissociation.",
+      "imageAlt": "prana air photocatalytic oxidation"
+    },
+    "electrostatic": {
+      "title": "Electrostatic",
+      "description": "The pre-filter keeps the purifier clean and filters out initial impurities.",
+      "imageAlt": "air sanitizer electrostatic"
+    }
+  },
+  "howItWorks": {
+    "title": "Packed With 4-in-1 Ultra Strength",
+    "electrostaticFiltration": {
+      "title": "Electrostatic Filtration",
+      "description": "Purification begins with an electrostatic pre-filter to keep the purifier clean along with active filtration of impurities. What makes it better than the usual HEPA filter is its washability & reusability.",
+      "imageAlt": "air sanitizer electrostatic filtration"
+    },
+    "ionizationChamber": {
+      "title": "Ionization Chamber",
+      "description": "The purifier creates a continuous stream of millions of negative ions that charge the pollutants. This causes them to clump together, making them heavier & easy to get rid of. They can either get sucked into the home HVAC system or just settle down on the floor.",
+      "imageAlt": "air sanitizer ionization chamber"
+    },
+    "regulatedPurification": {
+      "title": "Regulated Purification",
+      "description": "The users can adjust the oxidation setting according to their comfort. In the High Mode, the purification plate releases activated oxygen that catalyzes the breakdown of odour-producing contaminants. Through the Away Mode, the users can set a timer to automatically shut the equipment off. This is to optimize the output when the room or home is unoccupied.",
+      "imageAlt": "air sanitizer regulated purification"
+    },
+    "photocatalyticDisinfection": {
+      "title": "Photocatalytic Disinfection",
+      "description": "This mode of disinfection works on the principle of photocatalytic oxidation (PCO). It wipes out 99% of the biological contaminants, such as bacteria, viruses, fungi, mold & spores in less than 24 hours through molecular dissociation. This means that the destruction of the pathogens take place at the molecular level.",
+      "imageAlt": "air sanitizer photocatalytic disinfection"
+    }
+  },
+  "cleansPollutants": {
+    "title": "Cleans 99.99% of Pollutants and Microbes",
+    "subtitle": "Kills pathogens including H1N1 virus, Klebsiella pneumonea, Escherichia coli, Staphylococcus albus etc.",
+    "virusIconAlt": "virus icon"
+  },
+  "productFeatures": {
+    "productImageAlt": "Prana Air Sanitizer",
+    "pcoCell": {
+      "title": "PCO Cell",
+      "description": "A section based on photocatylitic oxidation to wipe out 99% of microbes in less than 24 hours.",
+      "imageAlt": "PCO Cell"
+    },
+    "preFilter": {
+      "title": "Pre Filter",
+      "description": "Reusable and washable Electrostatic prefilter for the purpose of initial purification.",
+      "imageAlt": "Pre Filter"
+    },
+    "controlButton": {
+      "title": "Control Button",
+      "description": "Regulate the functions of this air purifier with the control buttons.",
+      "imageAlt": "Control Button"
+    },
+    "airOutlet": {
+      "title": "Air Outlet",
+      "description": "The air outlet releases the purest and the most fresh air for the users. Be ready to breath in comfort.",
+      "imageAlt": "Air Outlet"
+    },
+    "purificationPlate": {
+      "title": "Purification Plate",
+      "description": "The plate releases a lot of negative ions to render the air pure and breathable.",
+      "imageAlt": "Purification Plate"
+    },
+    "remoteControl": {
+      "title": "Remote Control",
+      "description": "The device comes with a remote control to regulate the functions as per the comfort of the user from a distance.",
+      "imageAlt": "Remote Control"
+    }
+  },
+  "comparison": {
+    "title": "Air Sanitizer vs Air Purifier (any)",
+    "tableHeaders": {
+      "serialNumber": "Sl.No.",
+      "productSpecification": "Product Specification",
+      "pranaAirSanitizer": "Prana Air Sanitizer",
+      "contemporaryAirPurifiers": "Contemporary Air Purifiers"
+    },
+    "rows": {
+      "technologyUsed": {
+        "specification": "Technology Used For Purification",
+        "pranaAir": "4-In-1: Electrostatic Filtration, Ionization, Regulated Purification & Photocatalytic Disinfection",
+        "contemporary": "Pre-Filters, Activated Carbon Filter, And/Or HEPA Filters"
+      },
+      "actionOfPurifying": {
+        "specification": "Action of Purifying Contaiminants",
+        "pranaAir": "Used technology kills them.",
+        "contemporary": "Filter traps them."
+      },
+      "efficiencyAgainstMicrobes": {
+        "specification": "Efficiency Against Microbes",
+        "pranaAir": "99.99%",
+        "contemporary": "99.95 to 99.99%"
+      },
+      "rangeOfAction": {
+        "specification": "Range Of Action",
+        "pranaAir": "3000 Sq.Ft.",
+        "contemporary": "500-1000 Sq.Ft."
+      },
+      "useOfFilter": {
+        "specification": "Use of Filter for Purification",
+        "pranaAir": "Not Required",
+        "contemporary": "Yes"
+      },
+      "maintenanceCost": {
+        "specification": "Maintenance/Replacement of Filter Cost",
+        "pranaAir": "No",
+        "contemporary": "Yes"
+      },
+      "efficiencyAgainstVOCs": {
+        "specification": "Efficiency Against VOCs",
+        "pranaAir": "Yes",
+        "contemporary": "No"
+      },
+      "reducesRecontamination": {
+        "specification": "Reduces Recontamination",
+        "pranaAir": "Yes",
+        "contemporary": "No"
+      }
+    }
+  },
+  "rangeOfAction": {
+    "title": "RANGE OF ACTION",
+    "airPurifier": {
+      "title": "AIR PURIFIER (ANY)",
+      "range": "300 sq. ft.",
+      "description": "(Small - medium rooms)",
+      "imageAlt": "Regular Air Purifier"
+    },
+    "airSanitizer": {
+      "title": "AIR SANITIZER",
+      "range": "3000 sq. ft.",
+      "description": "(Large Areas)",
+      "imageAlt": "Prana Air Sanitizer"
+    }
+  },
+  "wondrousObservations": {
+    "title": "Wondrous Observations"
+  },
+  "graphSections": {
+    "microorganismsList": {
+      "imageAlt": "graph of reduction of microbes",
+      "pathogens": [
+        "Staphylococcus aureus (staph)",
+        "Escherichia coli",
+        "Bacillus spp.",
+        "Staphylococcus aureus (MRSA)",
+        "Streptococcus spp.",
+        "Pseudomonas spp.",
+        "Listeria monocytogenes",
+        "Candida albicans",
+        "Stachybotrys chartarum",
+        "Influenza Virus H5N1 (avian bird-flu)",
+        "Hepatitis",
+        "H1N1 (swine flu)",
+        "Norovirus"
+      ]
+    },
+    "fluReduction": {
+      "title": "80% + Reduction in number of Flu-Related Dismissals",
+      "description": "The graph demonstrates the decrease in the number of Flu-Related Dismissals. A reduction of more than 80% was observed after the installation of air purification units. The number of dismissals further decreased with an increase in the air purification units. This graph confirms the high-end performance and efficiency of the device.",
+      "imageAlt": "graph of reduction in number of flu"
+    },
+    "airborneContaminants": {
+      "title": "Reduction of Airborne Contaminants",
+      "description": "Pathogens are the biological agents (microorganisms) that can infect its host with the associated disease. Close to a 100% reduction in the airborne pathogens was achieved during the operating hours of Air Sanitizer.",
+      "imageAlt": "reduction of airborne contaminants"
+    },
+    "staphReduction": {
+      "title": "100% Reduction in cases of Staph",
+      "description": "Staphylococcus spp. is a class of bacteria that causes skin-based infections. Staph infections are common in health-care centers that are not sanitized regularly. The graph depicts a whopping decrease in the cases of Staph infection after the installation of Air Sanitizer.",
+      "imageAlt": "graph of reduction in staph"
+    }
+  },
+  "testingResults": {
+    "title": "Testing Results",
+    "description1": "The aggressive air sanitization technology can reduce the quantity of virus, bacteria and other harmful",
+    "description2": "substances in the air as well as surface-bound, including Klebsiella pneumoniae, Escherichia coli, Staphylococcus",
+    "description3": "aureus, Staphylococcus albus, etc."
+  },
+  "eliminationGraphs": {
+    "staphylococcusAlbus": {
+      "title": "99.99% Elimination of surface-bound Staphylococcus albus",
+      "description1": "Eliminates surface-bound pathogens such as Staphylococcus albus",
+      "description2": "with an efficiency of upto 99.99% within 30mins of operation.",
+      "imageAlt": "99% eliminating surface of bound staphylococcus albus"
+    },
+    "staphylococcusAureus": {
+      "title": "99.99% Elimination of surface-bound Staphylococcus aureus",
+      "description1": "Eliminates surface-bound pathogens such as Staphylococcus aureus",
+      "description2": "with an efficiency of upto 99.99% within 30mins of operation.",
+      "imageAlt": "air sanitizer eliminating surface bound of staphylococcus aureus"
+    }
+  },
+  "additionalEliminationGraphs": {
+    "escherichiaColiElimination": {
+      "title": "99.99% Elimination of surface-bound Escherichia coli",
+      "description1": "Eliminates surface-bound pathogens such as Escherichia coli with",
+      "description2": "an efficiency of upto 99.99% within 30mins of operation.",
+      "imageAlt": "99% eliminating surface bound of escherishia coli"
+    },
+    "klebsiellaPneumoniaeElimination": {
+      "title": "99.99% Elimination of surface-bound Klebsiella pneumoniae",
+      "description1": "Eliminates surface-bound pathogens such as Klebsiella pneumoniae",
+      "description2": " with an efficiency of upto 99.99% within 30mins of operation.",
+      "imageAlt": "99% eliminating surface bound of klebsiella pneumoniae"
+    },
+    "h1n1Elimination": {
+      "title": "99.99% Elimination of surface-bound H1N1",
+      "description1": "Eliminates surface-bound pathogens such as H1N1 with",
+      "description2": "an efficiency of upto 99.99% within 30mins of operation.",
+      "imageAlt": "99% Elimination of surface bound H1N1"
+    }
+  },
+  "productSpecifications": {
+    "downloadBrochure": "Download Brochure",
+    "title": "Product Specification",
+    "getQuote": "Get A Quote",
+    "imageAlts": {
+      "frontView": "Prana Air Sanitizer Front View",
+      "sideView": "Prana Air Sanitizer Side View",
+      "backView": "Prana Air Sanitizer Back View",
+      "thumbnail1": "Thumbnail 1",
+      "thumbnail2": "Thumbnail 2",
+      "thumbnail3": "Thumbnail 3"
+    },
+    "specifications": {
+      "sanitizingTechnology": {
+        "label": "Sanitizing Technology",
+        "value": "Controlled Ozone, PCO, Negative Ions, UV Light"
+      },
+      "filter": {
+        "label": "Filter",
+        "value": "Pre-filter"
+      },
+      "settings": {
+        "label": "Settings",
+        "value": "32dB, 36dB, 41dB, 46dB, 51dB"
+      },
+      "noiseLevel": {
+        "label": "Noise Level",
+        "value": "32dB, 36dB, 41dB, 46dB, 51dB"
+      },
+      "display": {
+        "label": "Display",
+        "value": "LCD Display"
+      },
+      "productSize": {
+        "label": "Product Size",
+        "value": "315mm (L) * 229mm (W) * 280mm (H) ( 9 * 124 * 11 )"
+      },
+      "weight": {
+        "label": "Weight",
+        "value": "3.86 kg (8.5 lbs)"
+      },
+      "power": {
+        "label": "Power",
+        "value": "54W DC 38V/3A (with power adaptor)"
+      },
+      "coverage": {
+        "label": "Coverage",
+        "value": "279 m³ ( 3,000ft² )"
+      },
+      "ionsConcentration": {
+        "label": "Ions Concentration",
+        "value": "2*10⁶/ cm³"
+      }
+    }
+  },
+  "aggressiveCleaning": {
+    "title": "Aggressive Cleaning For Living Space",
+    "subtitle": "Eliminate the surface-bound virus and bacteria",
+    "cards": {
+      "sanitize": {
+        "title": "Sanitize",
+        "subtitle": "Eliminate surface bound germs",
+        "description": "Effectively sanitizes the surfaces-the controlled ozone. Concentration levels will proactively oxidize surface-bound germs to assure the cleanliness and hygiene of your space.",
+        "imageAlt": "Bacteria under microscope",
+        "number": "01"
+      },
+      "sterilize": {
+        "title": "Sterilize",
+        "subtitle": "Eliminate airborne germs",
+        "description": "With its incredible oxidation capacity, ozone helps in elimination of airborne bacteria, virus and fungi while also doubling as an effective odour-control agent to prevent unpleasant smells from lingering in the air we breathe.",
+        "imageAlt": "Virus under microscope",
+        "number": "02"
+      },
+      "ionize": {
+        "title": "Ionize",
+        "subtitle": "Fresher indoor air",
+        "description": "Revels in an overall calming effect with millions of negative ions that freshen up the indoor air quality. Negative ions also aid in relieving stress, boosting energy levels, and increasing overall alertness.",
+        "imageAlt": "Ions visualization",
+        "number": "03"
+      },
+      "purify": {
+        "title": "Purify",
+        "subtitle": "Eliminate airborne allergens",
+        "description": "Eases your breathing by cleaning musty odours, and removing the dust, mites, pet danders, pollens, and other allergens.",
+        "imageAlt": "Dust mite under microscope",
+        "number": "04"
+      }
+    }
+  },
+  "killsEliminates": {
+    "title": "Kills & Eliminates",
+    "cards": {
+      "virusBacteria": {
+        "title": "Virus & Bacteria",
+        "imageAlt": "Virus and bacteria visualization"
+      },
+      "smokeFumes": {
+        "title": "Smoke and Fumes",
+        "subtitle": "Particles",
+        "imageAlt": "Smoke and fumes visualization"
+      },
+      "toxicGases": {
+        "title": "Toxic Gases",
+        "imageAlt": "Toxic gases visualization"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "description": "Please help us know what requirements you have. Our team will contact you very soon."
+  },
+  "faq": {
+    "title": "FAQs",
+    "subtitle": "Find out any frequently asked questions about Prana Air - Air Sanitizer."
+  }
+}

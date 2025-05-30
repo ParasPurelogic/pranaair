@@ -617,10 +617,10 @@ export default async function AirDronePage() {
         <section className="drone-category-section">
           <div className="container">
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-lg-12">
                 <h2 className="gallery-title">{t("gallery.title")}</h2>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-12">
                 <GalleryTabsSlider
                   vtolGalleryImages={vtolGalleryImages}
                   quadGalleryImages={quadGalleryImages}
@@ -714,16 +714,7 @@ export default async function AirDronePage() {
         <section className="tech-spec">
           <div className="container">
             <div className="row">
-              <div className="col-md-12">
-                <div className="parts-label-heading">
-                  <h2>{t("techSpecs.title")}</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6">
+              <div className="col-lg-12">
                 <TechSpecTabs
                   vtolSpecs={vtolSpecs}
                   quadSpecs={quadSpecs}
@@ -735,16 +726,13 @@ export default async function AirDronePage() {
                 />
               </div>
               <div className="col-lg-6">
-                <a className="brochure-btn" href="#">
-                  <Image src="/img/btn-icon.png" alt="brochure" width={200} height={100} /> {t("techSpecs.brochure")}
-                </a>
               </div>
             </div>
             <div className="row">
               <div className="col-md-6"></div>
               <div className="col-md-6">
                 <div className="roch-icon">
-                  <Image src="/img/rohs.png" alt="rohs" width={50} height={50} />
+
                 </div>
               </div>
             </div>

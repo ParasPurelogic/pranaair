@@ -12,11 +12,11 @@ export default async function AirDronePage() {
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
-            items: 4,
+            items: 2,
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 4,
+            items: 2,
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -607,16 +607,19 @@ export default async function AirDronePage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <ProductCarousel responsive={responsive} className="app-slider">
-                                    <div className="applications-slider">
-                                        {applications.map((app) => (
-                                            <div key={app.id}>
-                                                <div className="app-slide-img-box">
-                                                    <Image src={app.image || "/placeholder.svg"} alt={app.alt} width={200} height={100} />
-                                                    <h3>{app.title}</h3>
-                                                </div>
+                                    {applications.map((app) => (
+                                        <div key={app.id}>
+                                            <div className="app-slide-img-box">
+                                                <Image
+                                                    src={app.image || "/placeholder.svg"}
+                                                    alt={app.alt || "App Image"}
+                                                    width={200}
+                                                    height={100}
+                                                />
+                                                <h3>{app.title}</h3>
                                             </div>
-                                        ))}
-                                    </div>
+                                        </div>
+                                    ))}
                                 </ProductCarousel>
                             </div>
                         </div>

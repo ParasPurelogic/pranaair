@@ -1,0 +1,75 @@
+/* Return & Refund Policy Page Styles */
+.return-policy-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.policy-content h2 {
+    color: #2e2d37;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.policy-content p {
+    color: #727380;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.policy-section {
+    margin-bottom: 30px;
+}
+
+.policy-qa {
+    margin-bottom: 20px;
+}
+
+.policy-qa .question {
+    color: #2e2d37;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.policy-qa .answer {
+    padding-left: 0;
+}
+
+.note {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #55b592;
+    margin: 20px 0;
+}
+
+.company-address {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.company-address p {
+    margin-bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .return-policy-section {
+        padding: 40px 0;
+    }
+
+    .policy-content h2 {
+        font-size: 24px;
+    }
+
+    .policy-content p {
+        font-size: 15px;
+    }
+}

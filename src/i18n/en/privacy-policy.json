@@ -1,0 +1,205 @@
+{
+     "privacyPolicy": {
+    "mainTitle": "This Privacy Policy applies to the www.pranaair.com",
+    "introduction": {
+      "paragraph1": "Prana Air recognizes the importance of guarding your privacy. We greatly value your trust in us. This following policy describes how we treat user information we collect on www.pranaair.com and other offline sources. This Privacy Policy applies to current and former visitors to our website and to our online customers. By visiting and/or using our website, you agree to this Privacy Policy.",
+      "paragraph2": "www.pranaair.com is a property of Purelogic Labs India Pvt. Ltd, an Indian Company registered under the Companies Act, 2013."
+    },
+    "informationCollection": {
+      "title": "Information we collect",
+      "contactInfo": {
+        "label": "Contact information:",
+        "description": "We might collect your name, email, mobile number, phone number, street, city, state, pin code, country and IP address."
+      },
+      "paymentInfo": {
+        "label": "Payment and billing information:",
+        "description": "We might collect your billing name, billing address and payment method when you buy a product. We NEVER collect your credit card number or credit card expiry date or other details pertaining to your credit card on our website. Credit card information will be obtained and processed by our online payment partner Instamojo."
+      },
+      "postInfo": {
+        "label": "Information you post:",
+        "description": "We collect information you post in a public space on our website or on a third-party social media site belonging to www.pranaair.com."
+      },
+      "demographicInfo": {
+        "label": "Demographic information:",
+        "description": "We may collect demographic information about you, products you buy, or any other information provided by your during the use of our website. We might collect this as a part of a survey also."
+      },
+      "otherInfo": {
+        "label": "Other information:",
+        "description": "If you use our website, we may collect information about your IP address and the browser you're using. We might look at what site you came from, duration of time spent on our website, pages accessed or what site you visit when you leave us. We might also collect the type of mobile device you are using, or the version of the operating system your computer or device is running."
+      }
+    },
+    "extractingInfo": {
+      "title": "Extracting Information Using Platform",
+      "directCollection": {
+        "label": "We collect information directly from you:",
+        "description": "We also collect information if you post a comment on our websites or ask us a question through phone or email."
+      },
+      "passiveCollection": {
+        "label": "We collect information from you passively:",
+        "description": "We use tracking tools like Google Analytics for collecting information about your usage of our website."
+      },
+      "thirdPartyInfo": {
+        "label": "We get information about you from third parties:",
+        "description": "For example, if you use an integrated social media feature on our websites. The third-party social media site will give us certain information about you. This could include your name and email address."
+      }
+    },
+    "useOfInfo": {
+      "title": "Use of your personal information",
+      "contact": {
+        "label": "We use information to contact you:",
+        "description": "We might use the information you provide to contact you for confirmation of a purchase on our website or for other promotional purposes."
+      },
+      "respond": {
+        "label": "We use information to respond to your requests or questions:",
+        "description": "We might use your information to confirm your registration for an event or contest."
+      },
+      "improve": {
+        "label": "We use information to improve our products and services:",
+        "description": "We might use your information to customize your experience with us. This could include displaying content based upon your preferences."
+      },
+      "trends": {
+        "label": "We use information to look at site trends and customer interests:",
+        "description": "We may use your information to make our website and products better. We may combine information we get from you with information about you we get from third parties."
+      },
+      "security": {
+        "label": "We use information for security purposes:",
+        "description": "We may use the information to protect our company, our customers, or our websites."
+      },
+      "marketing": {
+        "label": "We use information for marketing purposes:",
+        "description": "We might send you information about special promotions or offers. We might also tell you about new features or products. These might be our own offers or products, or third-party offers or products we think you might find interesting."
+      },
+      "transactional": {
+        "label": "We use information to send you transactional communications:",
+        "description": "We might send you emails or SMS about your account or a product purchase."
+      },
+      "legal": {
+        "text": "We use information as otherwise permitted by law."
+      }
+    },
+    "sharingInfo": {
+      "title": "Sharing of information with third-parties",
+      "serviceProviders": {
+        "label": "We will share information with third parties who perform services on our behalf:",
+        "description": "We share information with vendors who help us manage our online registration process or payment processors or transactional message processors. Some vendors may be located outside of India."
+      },
+      "businessPartners": {
+        "label": "We will share information with our business partners:",
+        "description": "This includes a third party who provide or sponsor an event, or who operates a venue where we hold events. Our partners use the information we give them as described in their privacy policies."
+      },
+      "legalCompliance": {
+        "label": "We may share information if we think we have to in order to comply with the law or to protect ourselves:",
+        "description": "We will share information to respond to a court order or subpoena. We may also share it if a government agency or investigatory body requests. Or, we might also share information when we are investigating potential fraud."
+      },
+      "businessSuccessor": {
+        "label": "We may share information with any successor to all or part of our business:",
+        "description": "For example, if part of our business is sold we may give our customer list as part of that transaction."
+      },
+      "otherReasons": {
+        "label": "We may share your information for reasons not described in this policy:",
+        "description": "We will tell you before we do this."
+      }
+    },
+    "emailOptOut": {
+      "title": "Email Opt-Out",
+      "optOut": {
+        "label": "You can opt out of receiving our marketing emails:",
+        "description": "To stop receiving our promotional emails, please email info@pranaair.com. It may take about ten days to process your request. Even if you opt out of getting marketing messages, we will still be sending you transactional messages through email and SMS about your purchases."
+      }
+    },
+    "thirdPartySites": {
+      "title": "Third party sites",
+      "description": "If you click on one of the links to third party websites, you may be taken to websites we do not control. This policy does not apply to the privacy practices of those websites. Read the privacy policy of other websites carefully. We are not responsible for these third party sites."
+    },
+    "agreements": {
+      "title": "We agree to the following:",
+      "anonymousVisit": "Users can visit our site anonymously.",
+      "policyLink": "Once this privacy policy is created, we will add a link to it on our home page or as a minimum, on the first significant page after entering our website.",
+      "privacyLinkLocation": "Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page specified above.",
+      "policyChanges": {
+        "label": "You will be notified of any Privacy Policy changes:",
+        "method": "Via Email"
+      },
+      "personalInfoChange": {
+        "label": "You can change your personal information:",
+        "methods": {
+          "email": "By emailing us",
+          "phone": "By calling us",
+          "account": "By logging in to your account",
+          "chat": "By chatting with us or by sending us a message"
+        }
+      }
+    },
+    "doNotTrack": {
+      "title": "How does our site handle Do Not Track signals?",
+      "description": "We Do Not Track signals and Do Not Track, plant cookies, or use advertising when a Do Not Track (DNT) browser mechanism is in place."
+    },
+    "behavioralTracking": {
+      "title": "Does our site allow third-party behavioural tracking?",
+      "description": "It's also important to note that we do not allow third-party behavioural tracking"
+    },
+    "coppa": {
+      "title": "COPPA (Children Online Privacy Protection Act)",
+      "description": "When it comes to the collection of personal information from children under the age of 13 years old, the Children's Online Privacy Protection Act (COPPA) puts parents in control. According to the Children's Online Privacy Protection Act (COPPA), which spells out what operators of websites and online services must do to protect children's privacy and safety online.",
+      "noMarketingToChildren": "We do not specifically market to children under the age of 13 years old."
+    },
+    "fairInfoPractices": {
+      "title": "Fair Information Practices",
+      "description": "The Fair Information Practices Principles form the backbone of privacy law and the concepts they include have played a significant role in the development of data protection laws around the globe. Understanding the Fair Information Practice Principles and how they should be implemented is critical to comply with the various privacy laws that protect personal information.",
+      "dataBreach": {
+        "label": "In order to be in line with Fair Information Practices we will take the following responsive action, should a data breach occur:",
+        "notification": "We will notify you via email.",
+        "timeframe": "Within 1 business day"
+      },
+      "individualRedress": "We also agree to the Individual Redress Principle which requires that individuals have the right to legally pursue enforceable rights against data collectors and processors who fail to adhere to the law. This principle requires not only that individuals have enforceable rights against data users, but also that individuals have recourse to courts or government agencies to investigate and/or prosecute non-compliance by data processors."
+    },
+    "canSpam": {
+      "title": "CAN SPAM Act",
+      "description": "The CAN-SPAM Act is a law that sets the rules for commercial email, establishes requirements for commercial messages, gives recipients the right to have emails stopped from being sent to them, and spells out tough penalties for violations."
+    },
+    "emailCollection": {
+      "title": "We collect your email address in order to:",
+      "purposes": {
+        "sendInfo": "Send information, respond to inquiries, and/or other requests or questions",
+        "processOrders": "Process orders and to send information and updates pertaining to orders.",
+        "additionalInfo": "Send you additional information related to your product and/or service",
+        "marketing": "Market to our mailing list or continue to send emails to our clients after the original transaction has occurred."
+      }
+    },
+    "canSpamCompliance": {
+      "title": "To be in accordance with CANSPAM, we agree to the following:",
+      "rules": {
+        "noFalseInfo": "Not use false or misleading subjects or email addresses.",
+        "identifyAds": "Identify the message as an advertisement in some reasonable way.",
+        "includeAddress": "Include the physical address of our business or site headquarters.",
+        "monitorThirdParty": "Monitor third-party email marketing services for compliance, if one is used.",
+        "honorOptOut": "Honour opt-out/unsubscribe requests quickly.",
+        "unsubscribeLink": "Allow users to unsubscribe by using the link at the bottom of each email."
+      }
+    },
+    "unsubscribe": {
+      "title": "If at any time you would like to unsubscribe from receiving future emails, you can email us at",
+      "instructions": "Follow the instructions at the bottom of each email.",
+      "removal": "and we will promptly remove you from ALL correspondence."
+    },
+    "updates": {
+      "title": "Updates to this policy",
+      "description": "This Privacy Policy was last updated on 27.03.2018 From time to time we may change our privacy practices. We will notify you of any material changes to this policy as required by law. We will also post an updated copy on our website. Please check our site periodically for updates."
+    },
+    "jurisdiction": {
+      "title": "Jurisdiction",
+      "description": "If you choose to visit the website, your visit and any dispute over privacy is subject to this Policy and the website's terms of use. In addition to the foregoing, any disputes arising under this Policy shall be governed by the laws of India."
+    },
+    "grievance": {
+      "title": "Grievance",
+      "description": "In accordance with Information Technology Act 2000 and rules made there under, the name and contact details of the Grievance Officer are provided below:",
+      "contact": {
+        "companyName": "Prana Air",
+        "address": "Crown Heights, 7th Floor, 706, Rohini Sector -10, New Delhi, India",
+        "phone": "Phone: 07391873918",
+        "email": "Email: info@purelogic.in"
+      },
+      "additionalContact": "If you have any questions about this Policy or other privacy concerns, you can also email us at info@purelogic.in"
+    }
+  }
+}
