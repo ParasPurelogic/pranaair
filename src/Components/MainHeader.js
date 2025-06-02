@@ -1,10 +1,9 @@
 "use client"
-
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { MegaMenu } from "./MegaMenu"
+import { MegaMenu, SolutionsMegaMenu, KnowWhatMegaMenu, AboutUsMegaMenu, CaseStudiesMegaMenu } from "./MegaMenu"
 import { useTranslation } from "react-i18next"
 
 // Mock cart context
@@ -107,34 +106,6 @@ function MainHeader() {
     }
   }
 
-  // Sample product data for the handheld category
-  const handheldProducts = [
-    {
-      name: "Pocket PM2.5",
-      image: "https://www.pranaair.com/wp-content/uploads/2024/01/pocket-pm25.jpg",
-      slug: "pocket-monitor",
-      url: "/air-quality-monitor/handheld/pocket-monitor",
-    },
-    {
-      name: "Nano CO",
-      image: "https://www.pranaair.com/wp-content/uploads/2024/01/nano-co.jpg",
-      slug: "nano-co-monitor",
-      url: "/air-quality-monitor/handheld/nano-co-monitor",
-    },
-    {
-      name: "Nano CO2",
-      image: "https://www.pranaair.com/wp-content/uploads/2024/01/nano-co2.jpg",
-      slug: "nano-co2-monitor",
-      url: "/air-quality-monitor/handheld/nano-co2-monitor",
-    },
-    {
-      name: "Nano TVOC",
-      image: "https://www.pranaair.com/wp-content/uploads/2024/01/nano-tvoc.jpg",
-      slug: "nano-tvoc-monitor",
-      url: "/air-quality-monitor/handheld/nano-tvoc-monitor",
-    },
-  ]
-
   return (
     <>
       <header className="header-container">
@@ -175,7 +146,27 @@ function MainHeader() {
                       </Link>
                       {item.label === "Products" && (
                         <div className="mega-menu-container">
-                          <MegaMenu onClose={() => {}} />
+                          <MegaMenu onClose={() => { }} />
+                        </div>
+                      )}
+                      {item.label === "Solutions" && (
+                        <div className="mega-menu-container">
+                          <SolutionsMegaMenu onClose={() => { }} />
+                        </div>
+                      )}
+                      {item.label === "Know What" && (
+                        <div className="mega-menu-container">
+                          <KnowWhatMegaMenu onClose={() => { }} />
+                        </div>
+                      )}
+                      {item.label === "About" && (
+                        <div className="mega-menu-container">
+                          <AboutUsMegaMenu onClose={() => { }} />
+                        </div>
+                      )}
+                      {item.label === "Case Studies" && (
+                        <div className="mega-menu-container">
+                          <CaseStudiesMegaMenu onClose={() => { }} />
                         </div>
                       )}
                     </>
@@ -466,29 +457,6 @@ function MainHeader() {
                           <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                       </button>
-
-                      {/* Product Grid */}
-                      <div className="mobile-product-grid">
-                        {handheldProducts.map((product) => (
-                          <Link
-                            key={product.slug}
-                            href={`/${i18n.language}${product.url}`}
-                            className="mobile-product-card"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            <div className="mobile-product-image">
-                              <Image
-                                src={product.image || "/placeholder.svg"}
-                                alt={product.name}
-                                width={150}
-                                height={150}
-                                style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                              />
-                            </div>
-                            <div className="mobile-product-name">{product.name}</div>
-                          </Link>
-                        ))}
-                      </div>
 
                       {/* View All Link */}
                       <Link
