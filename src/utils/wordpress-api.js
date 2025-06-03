@@ -15,11 +15,11 @@ const CATEGORY_MAPPING = {
         en: 193, // English case studies category ID
         hi: 193, // Use same ID for now, will try different methods
     },
-    blogs: {
+    "blogs": {
         en: 1, // English blog category ID
         hi: 1, // Use same ID for now, will try different methods
     },
-    news: {
+    "news": {
         en: 196, // English news category ID
         hi: 196, // Use same ID for now
     },

@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import { fetchLocalizedPosts, fetchLocalizedCaseStudies } from "../utils/wordpress-api"
 
 // Complete Product categories data with all products
-const getProductCategories = (t) => [
+export const getProductCategories = (t) => [
   {
     name: t("products.categories.airQualityMonitors"),
     slug: "air-quality-monitor",
@@ -372,7 +372,7 @@ const getProductCategories = (t) => [
 ]
 
 // Complete Solutions categories data
-const getSolutionsCategories = (t) => [
+export const getSolutionsCategories = (t) => [
   {
     name: t("solutions.categories.forApplications"),
     slug: "for-applications",
@@ -546,7 +546,7 @@ const getSolutionsCategories = (t) => [
 ]
 
 // Complete Know What articles data
-const getKnowWhatArticles = (t) => [
+export const getKnowWhatArticles = (t) => [
   {
     name: t("knowWhat.articles.airPollution"),
     slug: "what-is-air-pollution",
@@ -763,7 +763,164 @@ function WeatherStationMegaMenuContent({ onClose }) {
   )
 }
 
-// Main Mega Menu Component
+// Mobile Mega Menu Component
+export function MobileMegaMenu({
+  menuType = "products",
+  activeCategory,
+  activeSubcategory,
+  onClose,
+  onCategoryChange,
+  onSubcategoryChange,
+}) {
+  const { t, i18n } = useTranslation("header-menu")
+
+  // Get categories based on menu type and current language
+  const categoriesData = menuType === "products" ? getProductCategories(t) : getSolutionsCategories(t)
+  const selectedCategory = categoriesData.find((cat) => cat.slug === activeCategory)
+  const selectedSubcategory = selectedCategory?.subcategories?.find((sub) => sub.slug === activeSubcategory)
+
+  // Helper function to get localized URL
+  const getLocalizedUrl = (url) => {
+    return i18n.language && i18n.language !== "en" ? `/${i18n.language}${url}` : url
+  }
+
+  return (
+    <div className="mobile-mega-menu-content">
+      {/* Categories */}
+      {categoriesData.map((category) => (
+        <div key={category.slug} className="mobile-category-section">
+          <button
+            className={`mobile-category-button ${activeCategory === category.slug ? "active" : ""}`}
+            onClick={() => onCategoryChange(category.slug)}
+          >
+            <Image src={category.icon || "/placeholder.svg"} alt="" width={24} height={24} />
+            {category.name}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{
+                marginLeft: "auto",
+                transform: activeCategory === category.slug ? "rotate(180deg)" : "none",
+                transition: "transform 0.2s",
+              }}
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          {/* Subcategories */}
+          {activeCategory === category.slug && category.subcategories && category.subcategories.length > 0 && (
+            <div className="mobile-subcategory-section">
+              {category.subcategories.map((subcategory) => (
+                <div key={subcategory.slug}>
+                  <button
+                    className={`mobile-subcategory-button ${activeSubcategory === subcategory.slug ? "active" : ""}`}
+                    onClick={() => onSubcategoryChange(subcategory.slug)}
+                  >
+                    {subcategory.icon && (
+                      <Image src={subcategory.icon || "/placeholder.svg"} alt="" width={24} height={24} />
+                    )}
+                    {subcategory.name}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      style={{ marginLeft: "auto" }}
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  {/* Products Grid */}
+                  {activeSubcategory === subcategory.slug && subcategory.products && (
+                    <div className="mobile-product-showcase">
+                      <div className="mobile-product-grid-enhanced">
+                        {subcategory.products.map((product) => (
+                          <Link
+                            key={product.slug}
+                            href={getLocalizedUrl(product.url)}
+                            className="mobile-product-card-enhanced"
+                            onClick={onClose}
+                          >
+                            <div className="mobile-product-image-enhanced">
+                              <Image
+                                src={product.image || "/placeholder.svg"}
+                                alt={product.name}
+                                width={120}
+                                height={120}
+                                style={{ objectFit: "cover" }}
+                              />
+                            </div>
+                            <div className="mobile-product-name-enhanced">{product.name}</div>
+                          </Link>
+                        ))}
+                      </div>
+
+                      <div className="mobile-help-section">
+                        <p>
+                          Welcome to Prana Air, if you need help for air quality monitors & sensors, we are ready to
+                          help.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Custom Content for PCB and Weather Station */}
+          {activeCategory === category.slug && category.customContent && (
+            <div className="mobile-custom-content">
+              {category.slug === "air-quality-pcb" && <PCBMegaMenuContent onClose={onClose} />}
+              {category.slug === "weather-station" && <WeatherStationMegaMenuContent onClose={onClose} />}
+            </div>
+          )}
+
+          {/* Solutions Direct Products */}
+          {activeCategory === category.slug && menuType === "solutions" && category.products && (
+            <div className="mobile-solutions-grid">
+              {category.products.map((product) => (
+                <Link
+                  key={product.slug}
+                  href={getLocalizedUrl(product.url)}
+                  className="mobile-solution-card"
+                  onClick={onClose}
+                >
+                  <div className="mobile-solution-image">
+                    <Image
+                      src={product.image || "/placeholder.svg"}
+                      alt={product.name}
+                      width={120}
+                      height={80}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="mobile-solution-name">{product.name}</div>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// Main Mega Menu Component (Desktop)
 export function MegaMenu({ onClose, menuType = "products" }) {
   const { t, i18n } = useTranslation("header-menu")
 
@@ -1134,16 +1291,70 @@ export function AboutUsMegaMenu({ onClose }) {
       try {
         setLoading(true)
 
-        // Use the localized API function
+        // Enhanced parameters for latest posts with better cache busting
         const data = await fetchLocalizedPosts({
           language: i18n.language,
           perPage: 4,
-          category: "blogs",
+          page: 1,
+          orderBy: "date",
+          order: "desc",
+          search: "",
+          // Additional parameters to ensure latest posts
+          status: "publish",
+          _embed: true,
+          _fields: "id,date,title,link,excerpt,_embedded",
+          // Strong cache busting with timestamp
+          _cacheBust: Date.now(),
+          // Force fresh data
+          _t: new Date().getTime(),
         })
 
-        setBlogs(data)
+        // Double-check sorting on client side to ensure latest posts
+        const sortedData = data
+          .filter((post) => post && post.date) // Filter out invalid posts
+          .sort((a, b) => {
+            const dateA = new Date(a.date)
+            const dateB = new Date(b.date)
+            return dateB - dateA // Latest first
+          })
+          .slice(0, 4) // Ensure only 4 posts
+
+        console.log(
+          "Latest blog posts fetched:",
+          sortedData.map((post) => ({
+            title: post.cleanTitle,
+            date: post.date,
+          })),
+        )
+
+        setBlogs(sortedData)
       } catch (error) {
         console.error("Error fetching blogs:", error)
+
+        // Enhanced fallback with direct WordPress API call
+        try {
+          const fallbackResponse = await fetch(
+            `https://www.pranaair.com/wp-json/wp/v2/posts?per_page=4&orderby=date&order=desc&status=publish&_embed=true&_cachebust=${Date.now()}${i18n.language !== "en" ? `&lang=${i18n.language}` : ""}`,
+          )
+
+          if (fallbackResponse.ok) {
+            const fallbackData = await fallbackResponse.json()
+            const processedFallback = fallbackData
+              .map((post) => ({
+                ...post,
+                featuredImage: post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null,
+                cleanTitle: post.title?.rendered?.replace(/<[^>]*>/g, "") || "",
+                cleanExcerpt: post.excerpt?.rendered?.replace(/<[^>]*>/g, "") || "",
+              }))
+              .sort((a, b) => new Date(b.date) - new Date(a.date))
+              .slice(0, 4)
+
+            setBlogs(processedFallback)
+            console.log("Fallback blog posts loaded:", processedFallback.length)
+          }
+        } catch (fallbackError) {
+          console.error("Fallback fetch also failed:", fallbackError)
+        }
       } finally {
         setLoading(false)
       }
@@ -1242,7 +1453,7 @@ export function AboutUsMegaMenu({ onClose }) {
               color: "#6b7280",
             }}
           >
-            {t("about.loadingBlogs")}
+            Loading latest blogs...
           </div>
         ) : (
           <div
@@ -1363,7 +1574,7 @@ export function AboutUsMegaMenu({ onClose }) {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8 12a8 8 0 0 1 16 0Z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
               <div>
@@ -1415,7 +1626,10 @@ export function AboutUsMegaMenu({ onClose }) {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0
+1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
               </svg>
               <div style={{ fontSize: "14px", color: "#1f2937" }}>+91 73918 73918</div>
             </div>
@@ -1507,7 +1721,6 @@ export function AboutUsMegaMenu({ onClose }) {
   )
 }
 
-// Case Studies Mega Menu with localized WordPress content
 // Case Studies Mega Menu with localized WordPress content
 export function CaseStudiesMegaMenu({ onClose }) {
   const { t, i18n } = useTranslation("header-menu")

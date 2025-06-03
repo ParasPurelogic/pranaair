@@ -1391,6 +1391,10 @@ ul#connectivityTabs li {
   padding: 100px 0;
 }
 
+.blog-sec .articles-list {
+  flex-direction: column;
+}
+
 .blog-content {
   display: flex;
   flex-direction: row;
