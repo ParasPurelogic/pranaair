@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "products": "Products",
+    "caseStudies": "Case Studies",
+    "knowWhat": "Know What",
+    "about": "About",
+    "getInTouch": "Get in touch",
+    "login": "Login",
+    "selectLanguage": "Select Language"
+  },
+  "products": {
+    "categories": {
+      "airQualityMonitors": "Air Quality Monitors",
+      "airQualitySensors": "Air Quality Sensors",
+      "airQualityPCBs": "Air Quality PCB's",
+      "weatherStation": "Weather Station",
+      "airPurifier": "Air Purifier",
+      "antiPollutionMasks": "Anti-Pollution Masks",
+      "airFilters": "Air Filters"
+    },
+    "subcategories": {
+      "handheld": "Handheld",
+      "indoor": "Indoor",
+      "outdoor": "Outdoor",
+      "pmSensors": "PM Sensors",
+      "gasSensors": "Gas Sensors",
+      "airSanitizer": "Air Sanitizer",
+      "freshAirMachine": "Fresh Air Machine",
+      "outdoorAirPurifier": "Outdoor Air Purifier",
+      "secondGenMask": "2nd Gen Mask",
+      "adultKidMask": "Adult-Kid Mask",
+      "carCabinFilter": "Car Cabin Air Filter",
+      "airPurifierFilter": "Air Purifier Filter",
+      "roomACFilter": "Room AC Filter",
+      "secondGenMaskFilter": "2nd Gen Mask Filter",
+      "motionMaskFilter": "Motion Mask Filter"
+    },
+    "airQualityMonitors": "Air Quality Monitors",
+    "handheld": "Handheld",
+    "indoor": "Indoor",
+    "outdoor": "Outdoor",
+    "viewAll": "View All",
+    "viewAllHandheld": "View All Handheld Monitors",
+    "viewAllCategory": "View All {{category}}",
+    "addToCart": "Add to Cart",
+    "learnMore": "Learn More"
+  },
+  "solutions": {
+    "categories": {
+      "forApplications": "For Applications",
+      "forIndustries": "For Industries"
+    },
+    "applications": {
+      "title": "Applications",
+      "smartCity": "Smart City Project",
+      "constructionSites": "Construction Sites",
+      "institutes": "Institutes | Schools",
+      "airQualityDrone": "Air Quality Drone",
+      "hotelBusinesses": "Hotel Businesses",
+      "restaurants": "Restaurants",
+      "rmcPlants": "RMC Plants",
+      "fitnessCenter": "Fitness Center | GYM",
+      "carParkingLot": "Car Parking Lot",
+      "office": "Office",
+      "retailStores": "Retail Stores",
+      "airports": "Airports",
+      "animalCareCenter": "Animal Care Center",
+      "cinemaAndTheatre": "Cinema And Theatre",
+      "hospital": "Hospital",
+      "logistics": "Logistics",
+      "railway": "Railway",
+      "realEstate": "Real Estate",
+      "washroomAndBathroom": "Washroom and Bathroom",
+      "bank": "Bank"
+    },
+    "industries": {
+      "title": "Industries",
+      "automotiveIndustry": "Automotive Industry",
+      "chemicalIndustry": "Chemical Industry",
+      "textileIndustry": "Textile Industry",
+      "powerPlants": "Power Plants",
+      "oilGas": "Oil & Gas",
+      "miningIndustry": "Mining Industry"
+    },
+    "viewAll": "View all {{category}}"
+  },
+  "knowWhat": {
+    "articles": {
+      "airPollution": "What is Air Pollution?",
+      "ammonia": "What is Ammonia(NH3)?",
+      "h2s": "What is H2S?",
+      "radon": "What is Radon?",
+      "co": "What is CO?",
+      "so2": "What is SO2?",
+      "ozone": "What is Ozone?",
+      "noise": "What is Noise?",
+      "methane": "What is Methane?",
+      "pm": "What is PM2.5 | PM10?",
+      "co2": "What is CO2?",
+      "humidity": "What is Humidity?",
+      "pollen": "What is Pollen?",
+      "vocs": "What is VOCs?",
+      "no2": "What is NO2?",
+      "temperature": "What is Temperature?",
+      "mold": "What is Mold?"
+    }
+  },
+  "about": {
+    "blogs": "Blogs",
+    "seeAllBlogs": "See All Blogs",
+    "loadingBlogs": "Loading blogs...",
+    "contactUs": "Contact Us",
+    "supportDesk": "Support Desk",
+    "address": "706, 7th Floor, Crown Heights, Rohini Sec-10, Delhi 110085, INDIA"
+  },
+  "caseStudies": {
+    "loading": "Loading case studies...",
+    "readMore": "Read More →"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "address": "Address",
+    "phone": "Phone"
+  },
+  "footer": {
+    "company": "Company",
+    "products": "Products",
+    "support": "Support",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved"
+  }
+}

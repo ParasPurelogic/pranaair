@@ -11,17 +11,8 @@ const useCart = () => {
   return { itemCount: 0 }
 }
 
-// Navigation data
-const mainNavItems = [
-  { label: "Solutions", href: "/solutions", hasDropdown: true },
-  { label: "Products", href: "/products", hasDropdown: true },
-  { label: "Case Studies", href: "/case-studies", hasDropdown: true },
-  { label: "Know What", href: "/know-what", hasDropdown: true },
-  { label: "About", href: "/about", hasDropdown: true },
-]
-
 function MainHeader() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation("header-menu")
   const router = useRouter()
   const pathname = usePathname()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -40,31 +31,52 @@ function MainHeader() {
     { code: "hi", name: "हिंदी" },
   ]
 
+  // Navigation data with translation keys
+  const mainNavItems = [
+    { label: t("nav.solutions"), href: "/solutions", hasDropdown: true, key: "solutions" },
+    { label: t("nav.products"), href: "/products", hasDropdown: true, key: "products" },
+    { label: t("nav.caseStudies"), href: "/case-studies", hasDropdown: true, key: "case-studies" },
+    { label: t("nav.knowWhat"), href: "/know-what", hasDropdown: true, key: "know-what" },
+    { label: t("nav.about"), href: "/about", hasDropdown: true, key: "about" },
+  ]
+
   // Change language function with URL update
   const changeLanguage = (lng) => {
     // Update i18next language
     i18n.changeLanguage(lng)
 
-    // Update URL to include language code
-    const currentLang = i18n.language
+    // Check if current path has a locale prefix
+    const hasLocalePrefix = availableLanguages.some(
+      (lang) => lang.code && (pathname.startsWith(`/${lang.code}/`) || pathname === `/${lang.code}`),
+    )
 
-    // Get the current path without the language prefix
     let newPath = pathname
 
-    // Remove current language prefix if it exists
-    availableLanguages.forEach((lang) => {
-      if (pathname.startsWith(`/${lang.code}/`)) {
-        newPath = pathname.substring(lang.code.length + 1)
-      } else if (pathname === `/${lang.code}`) {
-        newPath = "/"
-      }
-    })
+    // If currently on a localized path, remove the locale prefix
+    if (hasLocalePrefix) {
+      availableLanguages.forEach((lang) => {
+        if (lang.code && pathname.startsWith(`/${lang.code}/`)) {
+          newPath = pathname.substring(lang.code.length + 1)
+        } else if (lang.code && pathname === `/${lang.code}`) {
+          newPath = "/"
+        }
+      })
+    }
 
-    // Add new language prefix
-    if (newPath === "/") {
-      router.push(`/${lng}`)
+    // If switching to English (empty code), go to global URL
+    if (lng === "") {
+      if (newPath === "/") {
+        router.push("/")
+      } else {
+        router.push(newPath)
+      }
     } else {
-      router.push(`/${lng}${newPath}`)
+      // For other languages, add the locale prefix
+      if (newPath === "/") {
+        router.push(`/${lng}`)
+      } else {
+        router.push(`/${lng}${newPath}`)
+      }
     }
 
     setIsLanguageDropdownOpen(false)
@@ -106,12 +118,23 @@ function MainHeader() {
     }
   }
 
+  // Helper function to get localized URL
+  const getLocalizedUrl = (url) => {
+    const isLocalizedPath = pathname.startsWith(`/${i18n.language}/`) || pathname === `/${i18n.language}`
+    return isLocalizedPath ? `/${i18n.language}${url}` : url
+  }
+
   return (
     <>
       <header className="header-container">
         <div className="header-inner">
           {/* Logo */}
-          <Link href={`/${i18n.language}`} className="logo-container">
+          <Link
+            href={
+              pathname.startsWith(`/${i18n.language}/`) || pathname === `/${i18n.language}` ? `/${i18n.language}` : "/"
+            }
+            className="logo-container"
+          >
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-logo.webp"
               alt="Prana Air"
@@ -125,10 +148,10 @@ function MainHeader() {
           <nav className="nav-container">
             <ul className="nav-list">
               {mainNavItems.map((item) => (
-                <li key={item.label} className="nav-item">
+                <li key={item.key} className="nav-item">
                   {item.hasDropdown ? (
                     <>
-                      <Link href={`/${i18n.language}${item.href}`} className="nav-link">
+                      <Link href={getLocalizedUrl(item.href)} className="nav-link">
                         {item.label}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -144,34 +167,34 @@ function MainHeader() {
                           <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                       </Link>
-                      {item.label === "Products" && (
+                      {item.key === "products" && (
                         <div className="mega-menu-container">
                           <MegaMenu onClose={() => { }} />
                         </div>
                       )}
-                      {item.label === "Solutions" && (
+                      {item.key === "solutions" && (
                         <div className="mega-menu-container">
                           <SolutionsMegaMenu onClose={() => { }} />
                         </div>
                       )}
-                      {item.label === "Know What" && (
+                      {item.key === "know-what" && (
                         <div className="mega-menu-container">
                           <KnowWhatMegaMenu onClose={() => { }} />
                         </div>
                       )}
-                      {item.label === "About" && (
+                      {item.key === "about" && (
                         <div className="mega-menu-container">
                           <AboutUsMegaMenu onClose={() => { }} />
                         </div>
                       )}
-                      {item.label === "Case Studies" && (
+                      {item.key === "case-studies" && (
                         <div className="mega-menu-container">
                           <CaseStudiesMegaMenu onClose={() => { }} />
                         </div>
                       )}
                     </>
                   ) : (
-                    <Link href={`/${i18n.language}${item.href}`} className="nav-link">
+                    <Link href={getLocalizedUrl(item.href)} className="nav-link">
                       {item.label}
                     </Link>
                   )}
@@ -182,8 +205,8 @@ function MainHeader() {
 
           {/* Right Menu */}
           <div className="right-menu">
-            <Link href={`/${i18n.language}/contact`} className="get-in-touch">
-              Get in touch
+            <Link href={getLocalizedUrl("/contact")} className="get-in-touch">
+              {t("nav.getInTouch")}
             </Link>
 
             <div
@@ -265,11 +288,11 @@ function MainHeader() {
               )}
             </div>
 
-            <Link href={`/${i18n.language}/login`} className="login-link">
-              Login
+            <Link href={getLocalizedUrl("/login")} className="login-link">
+              {t("nav.login")}
             </Link>
 
-            <Link href={`/${i18n.language}/cart`} className="cart-link">
+            <Link href={getLocalizedUrl("/cart")} className="cart-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -326,7 +349,14 @@ function MainHeader() {
       {isMobileMenuOpen && (
         <div className="mobile-menu">
           <div className="mobile-menu-header">
-            <Link href={`/${i18n.language}`} className="logo-container">
+            <Link
+              href={
+                pathname.startsWith(`/${i18n.language}/`) || pathname === `/${i18n.language}`
+                  ? `/${i18n.language}`
+                  : "/"
+              }
+              className="logo-container"
+            >
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-logo.webp"
                 alt="Prana Air"
@@ -354,222 +384,115 @@ function MainHeader() {
           </div>
 
           <div className="mobile-nav-list">
-            {/* Solutions */}
-            <div className="mobile-nav-item">
-              <button
-                className={`mobile-nav-button ${activeCategory === "solutions" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("solutions")}
-              >
-                Solutions
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  style={{
-                    transform: activeCategory === "solutions" ? "rotate(180deg)" : "none",
-                    transition: "transform 0.2s",
-                  }}
+            {mainNavItems.map((item) => (
+              <div key={item.key} className="mobile-nav-item">
+                <button
+                  className={`mobile-nav-button ${activeCategory === item.key ? "active" : ""}`}
+                  onClick={() => handleCategoryClick(item.key)}
                 >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-            </div>
-
-            {/* Products */}
-            <div className="mobile-nav-item">
-              <button
-                className={`mobile-nav-button ${activeCategory === "products" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("products")}
-              >
-                Products
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  style={{
-                    transform: activeCategory === "products" ? "rotate(180deg)" : "none",
-                    transition: "transform 0.2s",
-                  }}
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-
-              {activeCategory === "products" && (
-                <div className="mobile-category-menu">
-                  {/* Air Quality Monitors */}
-                  <button
-                    className={`mobile-category-button ${activeSubcategory === "monitors" ? "active" : ""}`}
-                    onClick={() => handleSubcategoryClick("monitors")}
+                  {item.label}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    style={{
+                      transform: activeCategory === item.key ? "rotate(180deg)" : "none",
+                      transition: "transform 0.2s",
+                    }}
                   >
-                    <img src="/icons/monitor.svg" alt="" width={24} height={24} />
-                    Air Quality Monitors
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      style={{
-                        marginLeft: "auto",
-                        transform: activeSubcategory === "monitors" ? "rotate(180deg)" : "none",
-                        transition: "transform 0.2s",
-                      }}
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+
+                {activeCategory === "products" && item.key === "products" && (
+                  <div className="mobile-category-menu">
+                    <button
+                      className={`mobile-category-button ${activeSubcategory === "monitors" ? "active" : ""}`}
+                      onClick={() => handleSubcategoryClick("monitors")}
                     >
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </button>
-
-                  {activeSubcategory === "monitors" && (
-                    <>
-                      {/* Handheld Category */}
-                      <button className="mobile-subcategory-button" onClick={() => handleSubcategoryClick("handheld")}>
-                        <img src="/icons/handheld.svg" alt="" width={24} height={24} />
-                        Handheld
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          style={{ marginLeft: "auto" }}
-                        >
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </button>
-
-                      {/* View All Link */}
-                      <Link
-                        href={`/${i18n.language}/air-quality-monitor/handheld`}
-                        className="view-all-link"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                      <img src="/icons/monitor.svg" alt="" width={24} height={24} />
+                      {t("products.airQualityMonitors")}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        style={{
+                          marginLeft: "auto",
+                          transform: activeSubcategory === "monitors" ? "rotate(180deg)" : "none",
+                          transition: "transform 0.2s",
+                        }}
                       >
-                        View All Handheld Monitors
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </button>
+
+                    {activeSubcategory === "monitors" && (
+                      <>
+                        <button
+                          className="mobile-subcategory-button"
+                          onClick={() => handleSubcategoryClick("handheld")}
                         >
-                          <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                      </Link>
-                    </>
-                  )}
-                </div>
-              )}
-            </div>
+                          <img src="/icons/handheld.svg" alt="" width={24} height={24} />
+                          {t("products.handheld")}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            style={{ marginLeft: "auto" }}
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </button>
 
-            {/* Case Studies */}
-            <div className="mobile-nav-item">
-              <button
-                className={`mobile-nav-button ${activeCategory === "case-studies" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("case-studies")}
-              >
-                Case Studies
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  style={{
-                    transform: activeCategory === "case-studies" ? "rotate(180deg)" : "none",
-                    transition: "transform 0.2s",
-                  }}
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-            </div>
-
-            {/* Know What */}
-            <div className="mobile-nav-item">
-              <button
-                className={`mobile-nav-button ${activeCategory === "know-what" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("know-what")}
-              >
-                Know What
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  style={{
-                    transform: activeCategory === "know-what" ? "rotate(180deg)" : "none",
-                    transition: "transform 0.2s",
-                  }}
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-            </div>
-
-            {/* About */}
-            <div className="mobile-nav-item">
-              <button
-                className={`mobile-nav-button ${activeCategory === "about" ? "active" : ""}`}
-                onClick={() => handleCategoryClick("about")}
-              >
-                About
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  style={{
-                    transform: activeCategory === "about" ? "rotate(180deg)" : "none",
-                    transition: "transform 0.2s",
-                  }}
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-            </div>
+                        <Link
+                          href={getLocalizedUrl("/air-quality-monitor/handheld")}
+                          className="view-all-link"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {t("products.viewAllHandheld")}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </Link>
+                      </>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Language Switcher in Mobile Menu */}
           <div className="mobile-nav-item" style={{ padding: "16px", borderBottom: "1px solid #e5e7eb" }}>
-            <div style={{ fontSize: "16px", color: "#374151", marginBottom: "10px" }}>Select Language</div>
+            <div style={{ fontSize: "16px", color: "#374151", marginBottom: "10px" }}>{t("nav.selectLanguage")}</div>
             <div style={{ display: "flex", gap: "10px" }}>
               {availableLanguages.map((lang) => (
                 <button
@@ -597,7 +520,7 @@ function MainHeader() {
           {/* Mobile Actions */}
           <div style={{ padding: "16px", marginTop: "16px" }}>
             <Link
-              href={`/${i18n.language}/contact`}
+              href={getLocalizedUrl("/contact")}
               style={{
                 display: "block",
                 width: "100%",
@@ -609,7 +532,7 @@ function MainHeader() {
                 fontWeight: "500",
               }}
             >
-              Get in touch
+              {t("nav.getInTouch")}
             </Link>
           </div>
         </div>

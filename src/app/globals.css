@@ -407,9 +407,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 14px;
+  font-size: 16px;
   color: #7ab261;
-  transition: color 0.2s;
+  transition: color .2s;
+  padding-top: 20px;
+}
+
+.common-txt {
+  font-size: 22px;
+  color: #7ab261;
 }
 
 .view-all-products:hover {

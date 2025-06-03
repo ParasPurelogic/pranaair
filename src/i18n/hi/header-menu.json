@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "solutions": "समाधान",
+    "products": "उत्पाद",
+    "caseStudies": "केस स्टडी",
+    "knowWhat": "जानें क्या",
+    "about": "हमारे बारे में",
+    "getInTouch": "संपर्क करें",
+    "login": "लॉगिन",
+    "selectLanguage": "भाषा चुनें"
+  },
+  "products": {
+    "categories": {
+      "airQualityMonitors": "वायु गुणवत्ता मॉनिटर",
+      "airQualitySensors": "वायु गुणवत्ता सेंसर",
+      "airQualityPCBs": "वायु गुणवत्ता पीसीबी",
+      "weatherStation": "मौसम स्टेशन",
+      "airPurifier": "एयर प्यूरीफायर",
+      "antiPollutionMasks": "प्रदूषण रोधी मास्क",
+      "airFilters": "एयर फिल्टर"
+    },
+    "subcategories": {
+      "handheld": "हैंडहेल्ड",
+      "indoor": "इनडोर",
+      "outdoor": "आउटडोर",
+      "pmSensors": "पीएम सेंसर",
+      "gasSensors": "गैस सेंसर",
+      "airSanitizer": "एयर सैनिटाइज़र",
+      "freshAirMachine": "फ्रेश एयर मशीन",
+      "outdoorAirPurifier": "आउटडोर एयर प्यूरीफायर",
+      "secondGenMask": "दूसरी पीढ़ी का मास्क",
+      "adultKidMask": "वयस्क-बच्चे का मास्क",
+      "carCabinFilter": "कार केबिन एयर फिल्टर",
+      "airPurifierFilter": "एयर प्यूरीफायर फिल्टर",
+      "roomACFilter": "रूम एसी फिल्टर",
+      "secondGenMaskFilter": "दूसरी पीढ़ी मास्क फिल्टर",
+      "motionMaskFilter": "मोशन मास्क फिल्टर"
+    },
+    "airQualityMonitors": "वायु गुणवत्ता मॉनिटर",
+    "handheld": "हैंडहेल्ड",
+    "indoor": "इनडोर",
+    "outdoor": "आउटडोर",
+    "viewAll": "सभी देखें",
+    "viewAllHandheld": "सभी हैंडहेल्ड मॉनिटर देखें",
+    "viewAllCategory": "सभी {{category}} देखें",
+    "addToCart": "कार्ट में जोड़ें",
+    "learnMore": "और जानें"
+  },
+  "solutions": {
+    "categories": {
+      "forApplications": "अनुप्रयोगों के लिए",
+      "forIndustries": "उद्योगों के लिए"
+    },
+    "applications": {
+      "title": "अनुप्रयोग",
+      "smartCity": "स्मार्ट सिटी प्रोजेक्ट",
+      "constructionSites": "निर्माण स्थल",
+      "institutes": "संस्थान | स्कूल",
+      "airQualityDrone": "एयर क्वालिटी ड्रोन",
+      "hotelBusinesses": "होटल व्यवसाय",
+      "restaurants": "रेस्तराँ",
+      "rmcPlants": "आरएमसी प्लांट्स",
+      "fitnessCenter": "फिटनेस सेंटर | जिम",
+      "carParkingLot": "कार पार्किंग लॉट",
+      "office": "कार्यालय",
+      "retailStores": "खुदरा स्टोर",
+      "airports": "हवाई अड्डे",
+      "animalCareCenter": "पशु देखभाल केंद्र",
+      "cinemaAndTheatre": "सिनेमा और थिएटर",
+      "hospital": "अस्पताल",
+      "logistics": "लॉजिस्टिक्स",
+      "railway": "रेलवे",
+      "realEstate": "रियल एस्टेट",
+      "washroomAndBathroom": "वाशरूम और बाथरूम",
+      "bank": "बैंक"
+    },
+    "industries": {
+      "title": "उद्योग",
+      "automotiveIndustry": "ऑटोमोटिव उद्योग",
+      "chemicalIndustry": "रासायनिक उद्योग",
+      "textileIndustry": "वस्त्र उद्योग",
+      "powerPlants": "पावर प्लांट्स",
+      "oilGas": "तेल और गैस",
+      "miningIndustry": "खनन उद्योग"
+    },
+    "viewAll": "सभी {{category}} देखें"
+  },
+  "knowWhat": {
+    "articles": {
+      "airPollution": "वायु प्रदूषण क्या है?",
+      "ammonia": "अमोनिया (NH3) क्या है?",
+      "h2s": "H2S क्या है?",
+      "radon": "रेडॉन क्या है?",
+      "co": "CO क्या है?",
+      "so2": "SO2 क्या है?",
+      "ozone": "ओजोन क्या है?",
+      "noise": "शोर क्या है?",
+      "methane": "मीथेन क्या है?",
+      "pm": "PM2.5 | PM10 क्या है?",
+      "co2": "CO2 क्या है?",
+      "humidity": "आर्द्रता क्या है?",
+      "pollen": "पराग क्या है?",
+      "vocs": "VOCs क्या है?",
+      "no2": "NO2 क्या है?",
+      "temperature": "तापमान क्या है?",
+      "mold": "मोल्ड क्या है?"
+    }
+  },
+  "about": {
+    "blogs": "ब्लॉग",
+    "seeAllBlogs": "सभी ब्लॉग देखें",
+    "loadingBlogs": "ब्लॉग लोड हो रहे हैं...",
+    "contactUs": "संपर्क करें",
+    "supportDesk": "सहायता डेस्क",
+    "address": "706, 7वीं मंजिल, क्राउन हाइट्स, रोहिणी सेक्टर-10, दिल्ली 110085, भारत"
+  },
+  "caseStudies": {
+    "loading": "केस स्टडी लोड हो रही हैं...",
+    "readMore": "और पढ़ें →"
+  },
+  "contact": {
+    "title": "संपर्क करें",
+    "name": "नाम",
+    "email": "ईमेल",
+    "message": "संदेश",
+    "send": "संदेश भेजें",
+    "address": "पता",
+    "phone": "फोन"
+  },
+  "footer": {
+    "company": "कंपनी",
+    "products": "उत्पाद",
+    "support": "सहायता",
+    "followUs": "हमें फॉलो करें",
+    "allRightsReserved": "सभी अधिकार सुरक्षित"
+  }
+}

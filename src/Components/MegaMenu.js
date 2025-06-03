@@ -2,16 +2,18 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { useTranslation } from "react-i18next"
+import { fetchLocalizedPosts, fetchLocalizedCaseStudies } from "../utils/wordpress-api"
 
-// Product categories data based on the provided list
-const categories = [
+// Complete Product categories data with all products
+const getProductCategories = (t) => [
   {
-    name: "Air Quality Monitors",
+    name: t("products.categories.airQualityMonitors"),
     slug: "air-quality-monitor",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Quality-Monitors-icon.png",
     subcategories: [
       {
-        name: "Handheld",
+        name: t("products.subcategories.handheld"),
         slug: "handheld",
         icon: "https://www.pranaair.com/wp-content/uploads/2024/09/handled.png",
         products: [
@@ -60,7 +62,7 @@ const categories = [
         ],
       },
       {
-        name: "Indoor",
+        name: t("products.subcategories.indoor"),
         slug: "indoor",
         icon: "https://www.pranaair.com/wp-content/uploads/2024/09/Indoor.png",
         products: [
@@ -97,7 +99,7 @@ const categories = [
         ],
       },
       {
-        name: "Outdoor",
+        name: t("products.subcategories.outdoor"),
         slug: "outdoor",
         icon: "https://www.pranaair.com/wp-content/uploads/2024/09/Outdoor.png",
         products: [
@@ -124,12 +126,12 @@ const categories = [
     ],
   },
   {
-    name: "Air Quality Sensors",
+    name: t("products.categories.airQualitySensors"),
     slug: "air-quality-sensor",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Quality-Sensors-icon.webp",
     subcategories: [
       {
-        name: "PM Sensors",
+        name: t("products.subcategories.pmSensors"),
         slug: "pm-sensors",
         icon: "https://www.pranaair.com/wp-content/uploads/2024/08/pm-sensor-icon.webp",
         products: [
@@ -148,7 +150,7 @@ const categories = [
         ],
       },
       {
-        name: "Gas Sensors",
+        name: t("products.subcategories.gasSensors"),
         slug: "gas-sensors",
         icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Gas-Sensors-icon.webp",
         products: [
@@ -211,26 +213,26 @@ const categories = [
     ],
   },
   {
-    name: "Air Quality PCB's",
+    name: t("products.categories.airQualityPCBs"),
     slug: "air-quality-pcb",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Quality-PCBs-icon.webp",
     subcategories: [],
     customContent: true,
   },
   {
-    name: "Weather Station",
+    name: t("products.categories.weatherStation"),
     slug: "weather-station",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-weather-station-icon.png",
     subcategories: [],
     customContent: true,
   },
   {
-    name: "Air Purifier",
+    name: t("products.categories.airPurifier"),
     slug: "air-purifier",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Purifier-icon.webp",
     subcategories: [
       {
-        name: "Air Sanitizer",
+        name: t("products.subcategories.airSanitizer"),
         slug: "air-sanitizer",
         products: [
           {
@@ -242,7 +244,7 @@ const categories = [
         ],
       },
       {
-        name: "Fresh Air Machine",
+        name: t("products.subcategories.freshAirMachine"),
         slug: "fresh-air-machine",
         products: [
           {
@@ -254,7 +256,7 @@ const categories = [
         ],
       },
       {
-        name: "Outdoor Air Purifier",
+        name: t("products.subcategories.outdoorAirPurifier"),
         slug: "outdoor-air-purifier",
         products: [
           {
@@ -268,12 +270,12 @@ const categories = [
     ],
   },
   {
-    name: "Anti-Pollution Masks",
+    name: t("products.categories.antiPollutionMasks"),
     slug: "anti-pollution-mask",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Pollution-Mask-icon.webp",
     subcategories: [
       {
-        name: "2nd Gen Mask",
+        name: t("products.subcategories.secondGenMask"),
         slug: "2nd-gen-mask",
         icon: "/icons/mask.svg",
         products: [
@@ -286,7 +288,7 @@ const categories = [
         ],
       },
       {
-        name: "Adult-Kid Mask",
+        name: t("products.subcategories.adultKidMask"),
         slug: "adult-kid-mask",
         icon: "/icons/kids-mask.svg",
         products: [
@@ -301,12 +303,12 @@ const categories = [
     ],
   },
   {
-    name: "Air Filters",
+    name: t("products.categories.airFilters"),
     slug: "air-filter",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Filters-icon.webp",
     subcategories: [
       {
-        name: "Car Cabin Air Filter",
+        name: t("products.subcategories.carCabinFilter"),
         slug: "car-cabin-air-filter",
         products: [
           {
@@ -318,7 +320,7 @@ const categories = [
         ],
       },
       {
-        name: "Air Purifier Filter",
+        name: t("products.subcategories.airPurifierFilter"),
         slug: "air-purifier-filter",
         products: [
           {
@@ -330,7 +332,7 @@ const categories = [
         ],
       },
       {
-        name: "Room AC Filter",
+        name: t("products.subcategories.roomACFilter"),
         slug: "room-ac-filter",
         products: [
           {
@@ -342,7 +344,7 @@ const categories = [
         ],
       },
       {
-        name: "2nd Gen Mask Filter",
+        name: t("products.subcategories.secondGenMaskFilter"),
         slug: "2nd-gen-mask-filter",
         products: [
           {
@@ -354,7 +356,7 @@ const categories = [
         ],
       },
       {
-        name: "Motion Mask Filter",
+        name: t("products.subcategories.motionMaskFilter"),
         slug: "motion-mask-filter",
         products: [
           {
@@ -369,124 +371,172 @@ const categories = [
   },
 ]
 
-// Solutions categories data - simplified structure without subcategories
-const solutionsCategories = [
+// Complete Solutions categories data
+const getSolutionsCategories = (t) => [
   {
-    name: "For Applications",
+    name: t("solutions.categories.forApplications"),
     slug: "for-applications",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Quality-Monitors-icon.png",
     products: [
       {
-        name: "Smart City Project",
+        name: t("solutions.applications.smartCity"),
         slug: "smart-city-project",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/smart-city-project.webp",
-        url: "/solutions/for-applications/smart-city-project",
+        url: "/solutions-by-application/smart-city",
       },
       {
-        name: "Constructions Sites",
+        name: t("solutions.applications.constructionSites"),
         slug: "constructions-sites",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Constructions-Sites.jpg",
-        url: "/solutions/for-applications/constructions-sites",
+        url: "/solutions-by-application/constructions",
       },
       {
-        name: "Institutes | Schools",
+        name: t("solutions.applications.institutes"),
         slug: "institutes-schools",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Institutes-Schools.jpg",
-        url: "/solutions/for-applications/institutes-schools",
+        url: "/solutions-by-application/institutes",
       },
       {
-        name: "Air Quality Drone",
+        name: t("solutions.applications.airQualityDrone"),
         slug: "air-quality-drone",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Drone.jpg",
-        url: "/solutions/for-applications/air-quality-drone",
+        url: "/air-quality-monitor/air-drone",
       },
       {
-        name: "Hotel Businesses",
+        name: t("solutions.applications.hotelBusinesses"),
         slug: "hotel-businesses",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Hotel-Business.jpg",
-        url: "/solutions/for-applications/hotel-businesses",
+        url: "/solutions-by-application/hotel-businesses",
       },
       {
-        name: "Restaurants",
+        name: t("solutions.applications.restaurants"),
         slug: "restaurants",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Restaurants.jpg",
-        url: "/solutions/for-applications/restaurants",
+        url: "/solutions-by-application/restaurants",
       },
       {
-        name: "RMC Plants",
+        name: t("solutions.applications.rmcPlants"),
         slug: "rmc-plants",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/RMC-Plants.jpg",
-        url: "/solutions/for-applications/rmc-plants",
+        url: "/solutions-by-application/ready-mix-concrete-plant",
       },
       {
-        name: "Fitness Center | GYM",
+        name: t("solutions.applications.fitnessCenter"),
         slug: "fitness-center-gym",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Fitness-Center-_-GYM.jpg",
-        url: "/solutions/for-applications/fitness-center-gym",
+        url: "/solutions-by-application/fitness-center-gym",
       },
       {
-        name: "Car Parking Lot",
+        name: t("solutions.applications.carParkingLot"),
         slug: "car-parking-lot",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Car-Parking-Lot.jpg",
-        url: "/solutions/for-applications/car-parking-lot",
+        url: "/solutions-by-application/parking-lot",
       },
       {
-        name: "Office",
+        name: t("solutions.applications.office"),
         slug: "office",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Office-area.jpg",
-        url: "/solutions/for-applications/office",
+        url: "/solutions-by-application/office",
       },
       {
-        name: "Retail Stores",
+        name: t("solutions.applications.retailStores"),
         slug: "retail-stores",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Retail-Stores.jpg",
-        url: "/solutions/for-applications/retail-stores",
+        url: "/solutions-by-application/retail-stores",
       },
       {
-        name: "Airports",
+        name: t("solutions.applications.airports"),
         slug: "airports",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/Airport.jpg",
-        url: "/solutions/for-applications/airports",
+        url: "/solutions-by-application/airports",
+      },
+      {
+        name: t("solutions.applications.animalCareCenter"),
+        slug: "animal-care-center",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/Solutions-for-animal-care.jpg",
+        url: "/solutions-by-application/animal-care-center",
+      },
+      {
+        name: t("solutions.applications.cinemaAndTheatre"),
+        slug: "cinema-and-theatre",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/Cinema.jpg",
+        url: "/solutions-by-application/cinema-and-theatre",
+      },
+      {
+        name: t("solutions.applications.hospital"),
+        slug: "hospital",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/Hospital.jpg",
+        url: "/solutions-by-application/hospital",
+      },
+      {
+        name: t("solutions.applications.logistics"),
+        slug: "logistics",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics.jpg",
+        url: "/solutions-by-application/logistics",
+      },
+      {
+        name: t("solutions.applications.railway"),
+        slug: "railway",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railways.png",
+        url: "/solutions-by-application/railway",
+      },
+      {
+        name: t("solutions.applications.realEstate"),
+        slug: "real-estate",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/Real-Estate.jpg",
+        url: "/solutions-by-application/real-estate",
+      },
+      {
+        name: t("solutions.applications.washroomAndBathroom"),
+        slug: "washroom-and-bathroom",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/Washroom.jpg",
+        url: "/solutions-by-application/washroom-and-bathroom",
+      },
+      {
+        name: t("solutions.applications.bank"),
+        slug: "bank",
+        image: "https://www.pranaair.com/wp-content/uploads/2024/08/Bank.jpg",
+        url: "/solutions-by-application/bank",
       },
     ],
   },
   {
-    name: "For Industries",
+    name: t("solutions.categories.forIndustries"),
     slug: "for-industries",
     icon: "https://www.pranaair.com/wp-content/uploads/2024/08/Air-Quality-Sensors-icon.webp",
     products: [
       {
-        name: "Automotive Industry",
+        name: t("solutions.industries.automotiveIndustry"),
         slug: "automotive-industry",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/automotive-industry.jpg",
         url: "/solutions/for-industries/automotive-industry",
       },
       {
-        name: "Chemical Industry",
+        name: t("solutions.industries.chemicalIndustry"),
         slug: "chemical-industry",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/chemical-industry.jpg",
         url: "/solutions/for-industries/chemical-industry",
       },
       {
-        name: "Textile Industry",
+        name: t("solutions.industries.textileIndustry"),
         slug: "textile-industry",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/textile-industry.jpg",
         url: "/solutions/for-industries/textile-industry",
       },
       {
-        name: "Power Plants",
+        name: t("solutions.industries.powerPlants"),
         slug: "power-plants",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/power-plants.jpg",
         url: "/solutions/for-industries/power-plants",
       },
       {
-        name: "Oil & Gas",
+        name: t("solutions.industries.oilGas"),
         slug: "oil-gas",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/oil-gas.jpg",
         url: "/solutions/for-industries/oil-gas",
       },
       {
-        name: "Mining Industry",
+        name: t("solutions.industries.miningIndustry"),
         slug: "mining-industry",
         image: "https://www.pranaair.com/wp-content/uploads/2024/08/mining-industry.jpg",
         url: "/solutions/for-industries/mining-industry",
@@ -495,106 +545,106 @@ const solutionsCategories = [
   },
 ]
 
-// Know What articles data - simple flat structure
-const knowWhatArticles = [
+// Complete Know What articles data
+const getKnowWhatArticles = (t) => [
   {
-    name: "What is Air Pollution?",
+    name: t("knowWhat.articles.airPollution"),
     slug: "what-is-air-pollution",
     icon: "🌫️",
     url: "/know-what/what-is-air-pollution",
   },
   {
-    name: "What is Ammonia(NH3)?",
+    name: t("knowWhat.articles.ammonia"),
     slug: "what-is-ammonia-nh3",
     icon: "💨",
     url: "/know-what/what-is-ammonia-nh3",
   },
   {
-    name: "What is H2S?",
+    name: t("knowWhat.articles.h2s"),
     slug: "what-is-h2s",
     icon: "🥚",
     url: "/know-what/what-is-h2s",
   },
   {
-    name: "What is Radon?",
+    name: t("knowWhat.articles.radon"),
     slug: "what-is-radon",
     icon: "☢️",
     url: "/know-what/what-is-radon",
   },
   {
-    name: "What is CO?",
+    name: t("knowWhat.articles.co"),
     slug: "what-is-co",
     icon: "☁️",
     url: "/know-what/what-is-co",
   },
   {
-    name: "What is SO2?",
+    name: t("knowWhat.articles.so2"),
     slug: "what-is-so2",
     icon: "🏭",
     url: "/know-what/what-is-so2",
   },
   {
-    name: "What is Ozone?",
+    name: t("knowWhat.articles.ozone"),
     slug: "what-is-ozone",
     icon: "☀️",
     url: "/know-what/what-is-ozone",
   },
   {
-    name: "What is Noise?",
+    name: t("knowWhat.articles.noise"),
     slug: "what-is-noise",
     icon: "🔊",
     url: "/know-what/what-is-noise",
   },
   {
-    name: "What is Methane?",
+    name: t("knowWhat.articles.methane"),
     slug: "what-is-methane",
     icon: "🔥",
     url: "/know-what/what-is-methane",
   },
   {
-    name: "What is PM2.5 | PM10?",
+    name: t("knowWhat.articles.pm"),
     slug: "what-is-pm2-5-pm10",
     icon: "🔬",
     url: "/know-what/what-is-pm2-5-pm10",
   },
   {
-    name: "What is CO2?",
+    name: t("knowWhat.articles.co2"),
     slug: "what-is-co2",
     icon: "🌍",
     url: "/know-what/what-is-co2",
   },
   {
-    name: "What is Humidity?",
+    name: t("knowWhat.articles.humidity"),
     slug: "what-is-humidity",
     icon: "💧",
     url: "/know-what/what-is-humidity",
   },
   {
-    name: "What is Pollen?",
+    name: t("knowWhat.articles.pollen"),
     slug: "what-is-pollen",
     icon: "🌸",
     url: "/know-what/what-is-pollen",
   },
   {
-    name: "What is VOCs?",
+    name: t("knowWhat.articles.vocs"),
     slug: "what-is-vocs",
     icon: "🧪",
     url: "/know-what/what-is-vocs",
   },
   {
-    name: "What is NO2?",
+    name: t("knowWhat.articles.no2"),
     slug: "what-is-no2",
     icon: "🚗",
     url: "/know-what/what-is-no2",
   },
   {
-    name: "What is Temperature?",
+    name: t("knowWhat.articles.temperature"),
     slug: "what-is-temperature",
     icon: "🌡️",
     url: "/know-what/what-is-temperature",
   },
   {
-    name: "What is Mold?",
+    name: t("knowWhat.articles.mold"),
     slug: "what-is-mold",
     icon: "🍄",
     url: "/know-what/what-is-mold",
@@ -608,7 +658,7 @@ function PaginationControl({ currentPage, totalPages, onPageChange }) {
       <button
         onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className=" flex items-center justify-center w-8 h-8 rounded-md border border-gray-300 bg-white text-gray-700 disabled:opacity-50"
+        className="flex items-center justify-center w-8 h-8 rounded-md border border-gray-300 bg-white text-gray-700 disabled:opacity-50"
         aria-label="Previous page"
       >
         <svg
@@ -665,53 +715,60 @@ function PaginationControl({ currentPage, totalPages, onPageChange }) {
 
 // PCB Mega Menu Content
 function PCBMegaMenuContent({ onClose }) {
+  const { t, i18n } = useTranslation("header-menu")
+
+  const getLocalizedUrl = (url) => {
+    return i18n.language && i18n.language !== "en" ? `/${i18n.language}${url}` : url
+  }
+
   return (
     <div className="empty-products-content">
-      <Link href="/air-quality-pcb-board/">
+      <Link href={getLocalizedUrl("/air-quality-pcb-board/")} onClick={onClose}>
         <Image
           src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-air-quality-PCBs-borads-2048x596.jpg"
-          alt="Air Quality PCBs"
+          alt={t("products.categories.airQualityPCBs")}
           width={800}
           height={233}
           className="w-full h-auto rounded-lg"
         />
-        <h3 className="text-xl font-semibold mt-4 mb-2">Air Quality PCBs</h3>
+        <h3 className="text-xl font-semibold mt-4 mb-2 common-txt">{t("products.categories.airQualityPCBs")}</h3>
       </Link>
     </div>
   )
 }
 
 // Weather Station Mega Menu Content
-function WeatherStationMegaMenuContent({ products, onClose, currentPage, setCurrentPage }) {
-  const itemsPerPage = 7
-  const totalPages = Math.ceil(products.length / itemsPerPage)
-  const displayedProducts = products.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+function WeatherStationMegaMenuContent({ onClose }) {
+  const { t, i18n } = useTranslation("header-menu")
+
+  const getLocalizedUrl = (url) => {
+    return i18n.language && i18n.language !== "en" ? `/${i18n.language}${url}` : url
+  }
 
   return (
     <div className="products-container">
       <div className="empty-products-content">
-        <Link href="/air-quality-monitor/weather-station/">
+        <Link href={getLocalizedUrl("/air-quality-monitor/weather-station/")} onClick={onClose}>
           <Image
             src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-Weather-station-Measure-weather-data-with-air-quality-2048x594.jpg"
-            alt="Weather Station"
+            alt={t("products.categories.weatherStation")}
             width={800}
             height={233}
             className="w-full h-auto rounded-lg"
           />
-          <h3 className="text-xl font-semibold mt-4 mb-2">Weather Station</h3>
+          <h3 className="text-xl font-semibold mt-4 mb-2 common-txt">{t("products.categories.weatherStation")}</h3>
         </Link>
       </div>
-
-      {totalPages > 1 && (
-        <PaginationControl currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
-      )}
     </div>
   )
 }
 
+// Main Mega Menu Component
 export function MegaMenu({ onClose, menuType = "products" }) {
-  // Use the appropriate categories based on menuType
-  const categoriesData = menuType === "products" ? categories : solutionsCategories
+  const { t, i18n } = useTranslation("header-menu")
+
+  // Get categories based on menu type and current language
+  const categoriesData = menuType === "products" ? getProductCategories(t) : getSolutionsCategories(t)
 
   const [activeCategory, setActiveCategory] = useState(categoriesData[0]?.slug || "")
   const [activeSubcategory, setActiveSubcategory] = useState(categoriesData[0]?.subcategories?.[0]?.slug || "")
@@ -720,6 +777,11 @@ export function MegaMenu({ onClose, menuType = "products" }) {
 
   const selectedCategory = categoriesData.find((cat) => cat.slug === activeCategory)
   const selectedSubcategory = selectedCategory?.subcategories?.find((sub) => sub.slug === activeSubcategory)
+
+  // Helper function to get localized URL
+  const getLocalizedUrl = (url) => {
+    return i18n.language && i18n.language !== "en" ? `/${i18n.language}${url}` : url
+  }
 
   // Reset page when category or subcategory changes
   const handleCategoryChange = (categorySlug) => {
@@ -831,12 +893,9 @@ export function MegaMenu({ onClose, menuType = "products" }) {
             </div>
           ) : /* Weather Station Custom Content */
             selectedCategory?.slug === "weather-station" && menuType === "products" ? (
-              <WeatherStationMegaMenuContent
-                products={selectedCategory.products || []}
-                onClose={onClose}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-              />
+              <div className="empty-products">
+                <WeatherStationMegaMenuContent onClose={onClose} />
+              </div>
             ) : /* Solutions - Direct Products Grid */
               menuType === "solutions" && selectedCategory?.products && selectedCategory.products.length > 0 ? (
                 <>
@@ -844,7 +903,12 @@ export function MegaMenu({ onClose, menuType = "products" }) {
                     {selectedCategory.products
                       .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
                       .map((product) => (
-                        <Link key={product.slug} href={product.url} className="product-card" onClick={onClose}>
+                        <Link
+                          key={product.slug}
+                          href={getLocalizedUrl(product.url)}
+                          className="product-card"
+                          onClick={onClose}
+                        >
                           <div className="product-image-container">
                             <Image
                               src={product.image || "/placeholder.svg?height=200&width=200"}
@@ -869,8 +933,17 @@ export function MegaMenu({ onClose, menuType = "products" }) {
                   )}
 
                   <div className="products-header">
-                    <Link href={`/solutions/${selectedCategory.slug}`} className="view-all-products" onClick={onClose}>
-                      View all {selectedCategory.name === "For Applications" ? "Applications" : "Industries"}
+                    <Link
+                      href={getLocalizedUrl(`/solutions/${selectedCategory.slug}`)}
+                      className="view-all-products"
+                      onClick={onClose}
+                    >
+                      {t("solutions.viewAll", {
+                        category:
+                          selectedCategory.name === t("solutions.categories.forApplications")
+                            ? t("solutions.applications.title")
+                            : t("solutions.industries.title"),
+                      })}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="12"
@@ -894,7 +967,12 @@ export function MegaMenu({ onClose, menuType = "products" }) {
                       {selectedSubcategory.products
                         .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
                         .map((product) => (
-                          <Link key={product.slug} href={product.url} className="product-card" onClick={onClose}>
+                          <Link
+                            key={product.slug}
+                            href={getLocalizedUrl(product.url)}
+                            className="product-card"
+                            onClick={onClose}
+                          >
                             <div className="product-image-container">
                               <Image
                                 src={product.image || "/placeholder.svg?height=200&width=200"}
@@ -920,11 +998,11 @@ export function MegaMenu({ onClose, menuType = "products" }) {
 
                     <div className="products-header">
                       <Link
-                        href={`/${selectedCategory?.slug}/${selectedSubcategory.slug}`}
+                        href={getLocalizedUrl(`/${selectedCategory?.slug}/${selectedSubcategory.slug}`)}
                         className="view-all-products"
                         onClick={onClose}
                       >
-                        View All {selectedSubcategory.name}
+                        {t("products.viewAllCategory", { category: selectedSubcategory.name })}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="12"
@@ -944,7 +1022,7 @@ export function MegaMenu({ onClose, menuType = "products" }) {
                 ) : (
                   <div className="empty-products">
                     <div className="empty-products-content">
-                      <Link href={`/${menuType === "products" ? selectedCategory?.slug : "solutions"}`}>
+                      <Link href={getLocalizedUrl(`/${menuType === "products" ? selectedCategory?.slug : "solutions"}`)}>
                         <Image
                           src={
                             menuType === "products"
@@ -967,13 +1045,19 @@ export function MegaMenu({ onClose, menuType = "products" }) {
   )
 }
 
-// Simple Know What Mega Menu - No categories, just articles grid
+// Know What Mega Menu with translations
 export function KnowWhatMegaMenu({ onClose }) {
+  const { t, i18n } = useTranslation("header-menu")
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 17
 
+  const knowWhatArticles = getKnowWhatArticles(t)
   const totalPages = Math.ceil(knowWhatArticles.length / itemsPerPage)
   const displayedArticles = knowWhatArticles.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+
+  const getLocalizedUrl = (url) => {
+    return i18n.language && i18n.language !== "en" ? `/${i18n.language}${url}` : url
+  }
 
   return (
     <div
@@ -1001,7 +1085,7 @@ export function KnowWhatMegaMenu({ onClose }) {
         {displayedArticles.map((article) => (
           <Link
             key={article.slug}
-            href={article.url}
+            href={getLocalizedUrl(article.url)}
             className="know-what-article-card"
             onClick={onClose}
             style={{
@@ -1039,16 +1123,24 @@ export function KnowWhatMegaMenu({ onClose }) {
   )
 }
 
-// About Us Mega Menu with dynamic blogs
+// About Us Mega Menu with localized WordPress content
 export function AboutUsMegaMenu({ onClose }) {
+  const { t, i18n } = useTranslation("header-menu")
   const [blogs, setBlogs] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("https://www.pranaair.com/wp-json/wp/v2/posts?_embed&per_page=4")
-        const data = await response.json()
+        setLoading(true)
+
+        // Use the localized API function
+        const data = await fetchLocalizedPosts({
+          language: i18n.language,
+          perPage: 4,
+          category: "blogs",
+        })
+
         setBlogs(data)
       } catch (error) {
         console.error("Error fetching blogs:", error)
@@ -1058,21 +1150,19 @@ export function AboutUsMegaMenu({ onClose }) {
     }
 
     fetchBlogs()
-  }, [])
+  }, [i18n.language]) // Re-fetch when language changes
 
   const formatDate = (dateString) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString(i18n.language === "hi" ? "hi-IN" : "en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
     })
   }
 
-  const stripHtml = (html) => {
-    const tmp = document.createElement("div")
-    tmp.innerHTML = html
-    return tmp.textContent || tmp.innerText || ""
+  const getLocalizedUrl = (url) => {
+    return i18n.language && i18n.language !== "en" ? `/${i18n.language}${url}` : url
   }
 
   return (
@@ -1089,7 +1179,7 @@ export function AboutUsMegaMenu({ onClose }) {
         padding: "32px",
         display: "grid",
         gridTemplateColumns: "1fr 400px",
-        gap: "48px"
+        gap: "48px",
       }}
     >
       {/* Blogs Section */}
@@ -1110,10 +1200,10 @@ export function AboutUsMegaMenu({ onClose }) {
               margin: 0,
             }}
           >
-            Blogs
+            {t("about.blogs")}
           </h3>
           <Link
-            href="/blogs"
+            href={getLocalizedUrl("/blogs")}
             onClick={onClose}
             style={{
               color: "#7ab261",
@@ -1125,7 +1215,7 @@ export function AboutUsMegaMenu({ onClose }) {
               gap: "4px",
             }}
           >
-            See All Blogs
+            {t("about.seeAllBlogs")}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="12"
@@ -1152,86 +1242,83 @@ export function AboutUsMegaMenu({ onClose }) {
               color: "#6b7280",
             }}
           >
-            Loading blogs...
+            {t("about.loadingBlogs")}
           </div>
         ) : (
-          <div style={{
-            display: "grid",
-            gap: "24px",
-            gridTemplateColumns: "repeat(2, 1fr)"
-          }}>
-            {blogs.map((blog) => {
-              const featuredImage = blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url
-              const excerpt = stripHtml(blog.excerpt.rendered).substring(0, 150) + "..."
-
-              return (
-                <Link
-                  key={blog.id}
-                  href={blog.link}
-                  onClick={onClose}
+          <div
+            style={{
+              display: "grid",
+              gap: "24px",
+              gridTemplateColumns: "repeat(2, 1fr)",
+            }}
+          >
+            {blogs.map((blog) => (
+              <Link
+                key={blog.id}
+                href={blog.link}
+                onClick={onClose}
+                style={{
+                  display: "flex",
+                  gap: "16px",
+                  textDecoration: "none",
+                  color: "inherit",
+                  padding: "16px",
+                  borderRadius: "8px",
+                  flexDirection: "column",
+                  transition: "background-color 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#f9fafb"
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "transparent"
+                }}
+              >
+                <div
                   style={{
-                    display: "flex",
-                    gap: "16px",
-                    textDecoration: "none",
-                    color: "inherit",
-                    padding: "16px",
-                    borderRadius: "8px",
-                    flexDirection: "column",
-                    transition: "background-color 0.2s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "#f9fafb"
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = "transparent"
+                    width: "500px",
+                    height: "auto",
+                    borderRadius: "6px",
+                    overflow: "hidden",
+                    flexShrink: 0,
+                    backgroundColor: "#f3f4f6",
                   }}
                 >
-                  <div
+                  <Image
+                    src={blog.featuredImage || "/placeholder.svg?height=80&width=120&query=blog post"}
+                    alt={blog.cleanTitle}
+                    width={120}
+                    height={80}
                     style={{
-                      width: "500px",
-                      height: "auto",
-                      borderRadius: "6px",
-                      overflow: "hidden",
-                      flexShrink: 0,
-                      backgroundColor: "#f3f4f6",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <h4
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      color: "#1f2937",
+                      margin: "0 0 8px 0",
+                      lineHeight: "1.4",
                     }}
                   >
-                    <Image
-                      src={featuredImage || "/placeholder.svg?height=80&width=120&query=blog post"}
-                      alt={stripHtml(blog.title.rendered)}
-                      width={120}
-                      height={80}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <h4
-                      style={{
-                        fontSize: "16px",
-                        fontWeight: "600",
-                        color: "#1f2937",
-                        margin: "0 0 8px 0",
-                        lineHeight: "1.4",
-                      }}
-                    >
-                      {stripHtml(blog.title.rendered)}
-                    </h4>
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        color: "#9ca3af",
-                      }}
-                    >
-                      {formatDate(blog.date)}
-                    </span>
-                  </div>
-                </Link>
-              )
-            })}
+                    {blog.cleanTitle}
+                  </h4>
+                  <span
+                    style={{
+                      fontSize: "12px",
+                      color: "#9ca3af",
+                    }}
+                  >
+                    {formatDate(blog.date)}
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         )}
       </div>
@@ -1280,9 +1367,7 @@ export function AboutUsMegaMenu({ onClose }) {
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
               <div>
-                <div style={{ fontSize: "14px", fontWeight: "500", color: "#1f2937" }}>
-                  706, 7th Floor, Crown Heights, Rohini Sec-10, Delhi 110085, INDIA
-                </div>
+                <div style={{ fontSize: "14px", fontWeight: "500", color: "#1f2937" }}>{t("about.address")}</div>
               </div>
             </div>
 
@@ -1338,7 +1423,7 @@ export function AboutUsMegaMenu({ onClose }) {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             <Link
-              href="/contact"
+              href={getLocalizedUrl("/contact")}
               onClick={onClose}
               style={{
                 display: "flex",
@@ -1360,7 +1445,7 @@ export function AboutUsMegaMenu({ onClose }) {
                 e.target.style.backgroundColor = "#7ab261"
               }}
             >
-              Contact Us
+              {t("about.contactUs")}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -1377,7 +1462,7 @@ export function AboutUsMegaMenu({ onClose }) {
             </Link>
 
             <Link
-              href="/support"
+              href={getLocalizedUrl("/support")}
               onClick={onClose}
               style={{
                 display: "flex",
@@ -1400,7 +1485,7 @@ export function AboutUsMegaMenu({ onClose }) {
                 e.target.style.backgroundColor = "white"
               }}
             >
-              Support Desk
+              {t("about.supportDesk")}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -1422,43 +1507,78 @@ export function AboutUsMegaMenu({ onClose }) {
   )
 }
 
-// Case Studies Mega Menu with dynamic case studies
+// Case Studies Mega Menu with localized WordPress content
+// Case Studies Mega Menu with localized WordPress content
 export function CaseStudiesMegaMenu({ onClose }) {
+  const { t, i18n } = useTranslation("header-menu")
   const [caseStudies, setCaseStudies] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 4
 
   useEffect(() => {
     const fetchCaseStudies = async () => {
       try {
-        // Fetch case studies from category 193
-        const response = await fetch("https://www.pranaair.com/wp-json/wp/v2/posts?_embed&categories=193&per_page=20")
-        const data = await response.json()
+        setLoading(true)
+        setError(null)
+
+        console.log(`Fetching case studies for language: ${i18n.language}`)
+
+        // Try multiple approaches to get case study content
+        let data = []
+
+        // Method 1: Try with specific case studies category
+        try {
+          data = await fetchLocalizedCaseStudies(i18n.language, 20)
+          console.log(`Method 1 (case studies): Found ${data.length} posts`)
+        } catch (err) {
+          console.log("Method 1 failed:", err.message)
+        }
+
+        // Method 2: If no case studies found, try with general posts
+        if (data.length === 0) {
+          try {
+            data = await fetchLocalizedPosts({
+              language: i18n.language,
+              perPage: 20,
+              // No category filter
+            })
+            console.log(`Method 2 (general posts): Found ${data.length} posts`)
+          } catch (err) {
+            console.log("Method 2 failed:", err.message)
+          }
+        }
+
+        // Method 3: If still no data, try English fallback
+        if (data.length === 0 && i18n.language !== "en") {
+          try {
+            data = await fetchLocalizedCaseStudies("en", 20)
+            console.log(`Method 3 (English fallback): Found ${data.length} posts`)
+          } catch (err) {
+            console.log("Method 3 failed:", err.message)
+          }
+        }
+
         setCaseStudies(data)
       } catch (error) {
         console.error("Error fetching case studies:", error)
+        setError(error.message)
       } finally {
         setLoading(false)
       }
     }
 
     fetchCaseStudies()
-  }, [])
+  }, [i18n.language])
 
   const formatDate = (dateString) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString(i18n.language === "hi" ? "hi-IN" : "en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
     })
-  }
-
-  const stripHtml = (html) => {
-    const tmp = document.createElement("div")
-    tmp.innerHTML = html
-    return tmp.textContent || tmp.innerText || ""
   }
 
   const totalPages = Math.ceil(caseStudies.length / itemsPerPage)
@@ -1478,55 +1598,6 @@ export function CaseStudiesMegaMenu({ onClose }) {
         padding: "32px",
       }}
     >
-      {/* Header */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: "32px",
-        }}
-      >
-        <h3
-          style={{
-            fontSize: "28px",
-            fontWeight: "600",
-            color: "#1f2937",
-            margin: 0,
-          }}
-        >
-          Case Studies
-        </h3>
-        <Link
-          href="https://www.pranaair.com/category/case-studies/"
-          onClick={onClose}
-          style={{
-            color: "#7ab261",
-            fontSize: "14px",
-            fontWeight: "500",
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "4px",
-          }}
-        >
-          View All Case Studies
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </Link>
-      </div>
-
       {loading ? (
         <div
           style={{
@@ -1537,7 +1608,51 @@ export function CaseStudiesMegaMenu({ onClose }) {
             color: "#6b7280",
           }}
         >
-          Loading case studies...
+          {t("caseStudies.loading")}
+        </div>
+      ) : error ? (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "300px",
+            color: "#ef4444",
+            textAlign: "center",
+          }}
+        >
+          <p>Error loading case studies: {error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            style={{
+              marginTop: "10px",
+              padding: "8px 16px",
+              backgroundColor: "#7ab261",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+            }}
+          >
+            Retry
+          </button>
+        </div>
+      ) : caseStudies.length === 0 ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "300px",
+            color: "#6b7280",
+            textAlign: "center",
+          }}
+        >
+          <div>
+            <p>No case studies found for {i18n.language === "hi" ? "Hindi" : "English"}</p>
+            <p style={{ fontSize: "12px", marginTop: "8px" }}>Check WordPress WPML configuration</p>
+          </div>
         </div>
       ) : (
         <>
@@ -1550,164 +1665,105 @@ export function CaseStudiesMegaMenu({ onClose }) {
               marginBottom: "32px",
             }}
           >
-            {displayedCaseStudies.map((caseStudy) => {
-              const featuredImage = caseStudy._embedded?.["wp:featuredmedia"]?.[0]?.source_url
-              const excerpt = stripHtml(caseStudy.excerpt.rendered).substring(0, 120) + "..."
-
-              return (
-                <Link
-                  key={caseStudy.id}
-                  href={caseStudy.link}
-                  onClick={onClose}
+            {displayedCaseStudies.map((caseStudy) => (
+              <Link
+                key={caseStudy.id}
+                href={caseStudy.link}
+                onClick={onClose}
+                style={{
+                  display: "block",
+                  textDecoration: "none",
+                  color: "inherit",
+                  backgroundColor: "white",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                  border: "1px solid #e5e7eb",
+                  transition: "all 0.3s ease",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = "translateY(-4px)"
+                  e.target.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.15)"
+                  e.target.style.borderColor = "#7ab261"
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = "translateY(0)"
+                  e.target.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.05)"
+                  e.target.style.borderColor = "#e5e7eb"
+                }}
+              >
+                <div
                   style={{
-                    display: "block",
-                    textDecoration: "none",
-                    color: "inherit",
-                    backgroundColor: "white",
-                    borderRadius: "12px",
+                    width: "100%",
+                    height: "200px",
+                    backgroundColor: "#f3f4f6",
                     overflow: "hidden",
-                    border: "1px solid #e5e7eb",
-                    transition: "all 0.3s ease",
-                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.transform = "translateY(-4px)"
-                    e.target.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.15)"
-                    e.target.style.borderColor = "#7ab261"
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.transform = "translateY(0)"
-                    e.target.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.05)"
-                    e.target.style.borderColor = "#e5e7eb"
                   }}
                 >
-                  <div
+                  <Image
+                    src={caseStudy.featuredImage || "/placeholder.svg?height=200&width=350&query=case study"}
+                    alt={caseStudy.cleanTitle}
+                    width={350}
+                    height={200}
                     style={{
                       width: "100%",
-                      height: "200px",
-                      backgroundColor: "#f3f4f6",
-                      overflow: "hidden",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div style={{ padding: "20px" }}>
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      color: "#1f2937",
+                      margin: "0 0 12px 0",
+                      lineHeight: "1.4",
                     }}
                   >
-                    <Image
-                      src={featuredImage || "/placeholder.svg?height=200&width=350&query=case study"}
-                      alt={stripHtml(caseStudy.title.rendered)}
-                      width={350}
-                      height={200}
+                    {caseStudy.cleanTitle}
+                  </h4>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <span
                       style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                  <div style={{ padding: "20px" }}>
-                    <h4
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "#1f2937",
-                        margin: "0 0 12px 0",
-                        lineHeight: "1.4",
+                        fontSize: "12px",
+                        color: "#9ca3af",
                       }}
                     >
-                      {stripHtml(caseStudy.title.rendered)}
-                    </h4>
-                    <div
+                      {formatDate(caseStudy.date)}
+                    </span>
+                    <span
                       style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
+                        fontSize: "12px",
+                        color: "#7ab261",
+                        fontWeight: "500",
                       }}
                     >
-                      <span
-                        style={{
-                          fontSize: "12px",
-                          color: "#9ca3af",
-                        }}
-                      >
-                        {formatDate(caseStudy.date)}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "12px",
-                          color: "#7ab261",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Read More →
-                      </span>
-                    </div>
+                      {t("caseStudies.readMore")}
+                    </span>
                   </div>
-                </Link>
-              )
-            })}
+                </div>
+              </Link>
+            ))}
           </div>
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-center space-x-2">
-              <button
-                onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
-                disabled={currentPage === 1}
-                className="flex items-center justify-center w-8 h-8 rounded-md border border-gray-300 bg-white text-gray-700 disabled:opacity-50"
-                aria-label="Previous page"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <button
-                  key={page}
-                  onClick={() => setCurrentPage(page)}
-                  className={`w-8 h-8 rounded-md flex items-center justify-center ${currentPage === page ? "bg-green-600 text-white" : "border border-gray-300 bg-white text-gray-700"
-                    }`}
-                  aria-label={`Page ${page}`}
-                  aria-current={currentPage === page ? "page" : undefined}
-                >
-                  {page}
-                </button>
-              ))}
-
-              <button
-                onClick={() => currentPage < totalPages && setCurrentPage(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className="flex items-center justify-center w-8 h-8 rounded-md border border-gray-300 bg-white text-gray-700 disabled:opacity-50"
-                aria-label="Next page"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
+            <PaginationControl currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
           )}
         </>
       )}
     </div>
   )
 }
+
 // Export for Solutions mega menu
 export function SolutionsMegaMenu({ onClose }) {
   return <MegaMenu onClose={onClose} menuType="solutions" />
