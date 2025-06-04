@@ -368,16 +368,14 @@ li.ult_tab_li.home-tab-title.current a {
 }
 
 .air-pollution-box ul li img {
-    width: 30%
-}
-
-.air-pollution-box ul li:first-child {
     width: 100%
 }
+
 
 .air-pollution-box ul li h3 {
     color: #263D4F;
     font-size: 18px;
+    font-weight: 700;
     margin: 0
 }
 
@@ -430,6 +428,7 @@ ul.air-poll-box-last-row {
 .tailored ul li h3 {
     color: #263D4F;
     font-size: 18px;
+    font-weight: 700;
     margin: 0;
     line-height: 24px
 }
@@ -467,6 +466,7 @@ ul.air-poll-box-last-row {
 .hassle ul li h3 {
     color: #263D4F;
     font-size: 18px;
+    font-weight: 700;
     margin: 0;
     line-height: 24px
 }
@@ -504,6 +504,7 @@ ul.air-poll-box-last-row {
 .versatile ul li h3 {
     color: #263D4F;
     font-size: 18px;
+    font-weight: 700;
     margin: 0;
     line-height: 24px
 }

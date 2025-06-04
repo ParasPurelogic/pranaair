@@ -2,7 +2,7 @@
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
-export default function ProductCarousel({ children, className, responsive, showDots = true, arrows = false }) {
+export default function ProductCarousel({ children, className, responsive, showDots = true, arrows = true }) {
     return (
         <Carousel
             responsive={responsive}
