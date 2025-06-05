@@ -3,7 +3,7 @@ import { getServerTranslation } from "@/i18n/server"
 import Image from "next/image"
 
 export default async function Methane() {
-  const { t } = await getServerTranslation("methane")
+  const { t } = await getServerTranslation("what-methane")
   return (
     <main>
       {/* Banner Section */}

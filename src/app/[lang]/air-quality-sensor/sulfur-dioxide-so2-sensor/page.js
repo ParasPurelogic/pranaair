@@ -1,10 +1,12 @@
 import SensorPageTemplate from "@/Components/Pages/SensorPage/sensor-page-template"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function NO2SensorPage() {
+export default async function NO2SensorPage() {
+    const { t } = await getServerTranslation("sulfur-dioxide-so2-sensor")
     const sensorData = {
-        sensorName: "SO2 SENSOR ",
-        sensorType: "SO2 SENSOR ",
-        pageName: "SO2 SENSOR Page",
+        sensorName: t("pmSensorHero.title"),
+        sensorType: t("pmSensorHero.type"),
+        pageName: t("pmSensorHero.pageName"),
 
         productImages: {
             main: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
@@ -13,31 +15,34 @@ export default function NO2SensorPage() {
 
         variants: {
             standard: {
-                ppm: "0-20 PPM",
-                price: "$249",
+                ppm: t("pmSensorHero.variants.standard.ppm"),
+                price: t("pmSensorHero.variants.standard.price"),
                 image: "/img/so2-sensor.webp",
             },
             premium: {
-                ppm: "0-100 PPM",
-                price: "$349",
+                ppm: t("pmSensorHero.variants.premium.ppm"),
+                price: t("pmSensorHero.variants.premium.price"),
                 image: "/img/sensor.png",
             },
         },
 
-        description:
-            "Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas. ",
-        descriptions:
-            "eeeeeeeeeeeeeeeeeeeee ",
+        description: t("pmSensorHero.description"),
+        descriptions: t("pmSensorHero.descriptions"),
 
         introduction: {
-            title: "Introduction",
-            titleHighlight: "SO2 Sensor",
-            description:
-                "The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes. ",
+            title: t("pmSensorHero.introduction.title"),
+            titleHighlight: t("pmSensorHero.introduction.titleHighlight"),
+            description: t("pmSensorHero.introduction.description"),
 
             specs: {
-                resolution: { label: "Resolution", value: "0.1 PPM" },
-                range: { label: "Range", value: "50 PPM" },
+                resolution: {
+                    label: t("pmSensorHero.introduction.specs.resolution.label"),
+                    value: t("pmSensorHero.introduction.specs.resolution.value"),
+                },
+                range: {
+                    label: t("pmSensorHero.introduction.specs.range.label"),
+                    value: t("pmSensorHero.introduction.specs.range.value"),
+                },
             },
             sensorImages: {
                 variantA: "/img/so2-sensor-pcb.webp",
@@ -46,127 +51,155 @@ export default function NO2SensorPage() {
             whyChooseFeatures: [
                 {
                     icon: "/img/Compact.png",
-                    title: "Miniature Size",
-                    description: "Ultra-compact design for space-constrained applications",
-                    iconAlt: "Compact Icon",
+                    title: t("pmSensorHero.introduction.whyChooseFeatures.0.title"),
+                    description: t("pmSensorHero.introduction.whyChooseFeatures.0.description"),
+                    iconAlt: t("pmSensorHero.introduction.whyChooseFeatures.0.iconAlt"),
                 },
                 {
                     icon: "/img/durable.webp",
-                    title: "Weather Resistant",
-                    description: "Designed for outdoor environmental monitoring",
-                    iconAlt: "Durable Icon",
+                    title: t("pmSensorHero.introduction.whyChooseFeatures.1.title"),
+                    description: t("pmSensorHero.introduction.whyChooseFeatures.1.description"),
+                    iconAlt: t("pmSensorHero.introduction.whyChooseFeatures.1.iconAlt"),
                 },
                 {
                     icon: "/img/highly-responsive.webp",
-                    title: "Real-time Detection",
-                    description: "Instant NO2 level monitoring",
-                    iconAlt: "Responsive Icon",
+                    title: t("pmSensorHero.introduction.whyChooseFeatures.2.title"),
+                    description: t("pmSensorHero.introduction.whyChooseFeatures.2.description"),
+                    iconAlt: t("pmSensorHero.introduction.whyChooseFeatures.2.iconAlt"),
                 },
                 {
                     icon: "/img/energy-efficient.webp",
-                    title: "Battery Friendly",
-                    description: "Optimized for battery-powered devices",
-                    iconAlt: "Energy Efficient Icon",
+                    title: t("pmSensorHero.introduction.whyChooseFeatures.3.title"),
+                    description: t("pmSensorHero.introduction.whyChooseFeatures.3.description"),
+                    iconAlt: t("pmSensorHero.introduction.whyChooseFeatures.3.iconAlt"),
                 },
                 {
                     icon: "/img/individually-calibrated.webp",
-                    title: "Factory Tested",
-                    description: "Each sensor individually tested and calibrated",
-                    iconAlt: "Calibrated Icon",
+                    title: t("pmSensorHero.introduction.whyChooseFeatures.4.title"),
+                    description: t("pmSensorHero.introduction.whyChooseFeatures.4.description"),
+                    iconAlt: t("pmSensorHero.introduction.whyChooseFeatures.4.iconAlt"),
                 },
                 {
                     icon: "/img/rohs-compliance.webp",
-                    title: "Eco-Friendly",
-                    description: "RoHS compliant and environmentally safe",
-                    iconAlt: "RoHS Icon",
+                    title: t("pmSensorHero.introduction.whyChooseFeatures.5.title"),
+                    description: t("pmSensorHero.introduction.whyChooseFeatures.5.description"),
+                    iconAlt: t("pmSensorHero.introduction.whyChooseFeatures.5.iconAlt"),
                 },
             ],
         },
 
         calibration: {
-            title: "NO2 Sensor Calibration Guide",
-            description: "Step-by-step calibration process to ensure accurate NO2 measurements in your application.",
+            title: t("pmSensorHero.calibration.title"),
+            description: t("pmSensorHero.calibration.description"),
             videoImage: "/img/so2-sensor-calibration.webp",
-            videoAlt: "NO2 Sensor Calibration Guide",
+            videoAlt: t("pmSensorHero.calibration.videoAlt"),
         },
 
         technology: {
-            title: "Advanced Sensing Technology",
-            subtitle: "Electrochemical Detection",
+            title: t("pmSensorHero.technology.title"),
+            subtitle: t("pmSensorHero.technology.subtitle"),
             learnMoreLink: "#",
         },
 
         whatIsSection: {
-            title: "What is Nitrogen Dioxide (NO2)?",
-            description:
-                "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.",
+            title: t("pmSensorHero.whatIsSection.title"),
+            description: t("pmSensorHero.whatIsSection.description"),
             image: "/img/chlorine source.webp",
-            imageAlt: "NO2 Pollution Sources",
+            imageAlt: t("pmSensorHero.whatIsSection.imageAlt"),
         },
 
         lightMode: {
-            title: "Electrochemical Technology",
-            description:
-                "The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our monitors use a special sensor to detect sulfur dioxide (SO2), a harmful gas found in the air. This SO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When SO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more SO2 in the air, the stronger the current.By measuring this current, our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone.",
+            title: t("pmSensorHero.lightMode.title"),
+            description: t("pmSensorHero.lightMode.description"),
             image: "/img/what-technology-is-being-used.webp",
-            imageAlt: "Electrochemical Technology",
+            imageAlt: t("pmSensorHero.lightMode.imageAlt"),
         },
 
         sensorChip: {
-            title: "NO2 Detection Module",
-            description: "High-performance electrochemical cell with integrated electronics for precise NO2 measurement.",
+            title: t("pmSensorHero.sensorChip.title"),
+            description: t("pmSensorHero.sensorChip.description"),
             image: "/img/sensor-chip.webp",
-            imageAlt: "NO2 Detection Module",
+            imageAlt: t("pmSensorHero.sensorChip.imageAlt"),
             buyNowLink: "#",
         },
 
         applications: {
-            title: "Applications of SO2 Sensor",
+            title: t("pmSensorHero.applications.title"),
             items: [
                 {
                     id: 1,
                     image: "/img/Air-Quality-Monitoring-Equipment.webp",
-                    title: "Air Quality Stations",
-                    alt: "Air Quality Monitoring Station",
+                    title: t("pmSensorHero.applications.items.0.title"),
+                    alt: t("pmSensorHero.applications.items.0.alt"),
                 },
                 {
                     id: 2,
                     image: "/img/industrial-safety-equipment.webp",
-                    title: "Traffic Pollution Monitoring",
-                    alt: "Traffic Pollution",
+                    title: t("pmSensorHero.applications.items.1.title"),
+                    alt: t("pmSensorHero.applications.items.1.alt"),
                 },
                 {
                     id: 3,
                     image: "/img/automobile-equipment.webp",
-                    title: "Industrial Emission Control",
-                    alt: "Industrial Emissions",
+                    title: t("pmSensorHero.applications.items.2.title"),
+                    alt: t("pmSensorHero.applications.items.2.alt"),
                 },
                 {
                     id: 4,
                     image: "/img/regulatory-at-power-plants-oil-refineries.webp",
-                    title: "Urban Environment Monitoring",
-                    alt: "Urban Environment",
+                    title: t("pmSensorHero.applications.items.3.title"),
+                    alt: t("pmSensorHero.applications.items.3.alt"),
                 },
             ],
         },
 
         technicalSpecs: {
-            title: "Technical Specifications",
+            title: t("pmSensorHero.technicalSpecs.title"),
             variants: {
-                variantA: "Standard Range",
-                variantB: "Extended Range",
+                variantA: t("pmSensorHero.technicalSpecs.variants.variantA"),
+                variantB: t("pmSensorHero.technicalSpecs.variants.variantB"),
             },
             specs: {
-                productName: { label: "Product Name", value: "NO2 Sensor" },
-                resolution: { label: "Resolution", value: "0.1 PPM" },
-                responseTime: { label: "Response Time", value: "< 60 seconds" },
-                operatingTemp: { label: "Operating Temperature", value: "-20°C to +50°C" },
-                operatingHumidity: { label: "Operating Humidity", value: "15-90% RH" },
-                measurementRange: { label: "Measurement Range", value: "0-20 PPM" },
-                repeatability: { label: "Repeatability", value: "±3% of reading" },
-                sensitivity: { label: "Sensitivity", value: "0.1 PPM" },
-                operatingVoltage: { label: "Operating Voltage", value: "3.3V" },
-                powerConsumption: { label: "Power Consumption", value: "< 10mA" },
+                productName: {
+                    label: t("pmSensorHero.technicalSpecs.specs.productName.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.productName.value"),
+                },
+                resolution: {
+                    label: t("pmSensorHero.technicalSpecs.specs.resolution.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.resolution.value"),
+                },
+                responseTime: {
+                    label: t("pmSensorHero.technicalSpecs.specs.responseTime.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.responseTime.value"),
+                },
+                operatingTemp: {
+                    label: t("pmSensorHero.technicalSpecs.specs.operatingTemp.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.operatingTemp.value"),
+                },
+                operatingHumidity: {
+                    label: t("pmSensorHero.technicalSpecs.specs.operatingHumidity.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.operatingHumidity.value"),
+                },
+                measurementRange: {
+                    label: t("pmSensorHero.technicalSpecs.specs.measurementRange.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.measurementRange.value"),
+                },
+                repeatability: {
+                    label: t("pmSensorHero.technicalSpecs.specs.repeatability.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.repeatability.value"),
+                },
+                sensitivity: {
+                    label: t("pmSensorHero.technicalSpecs.specs.sensitivity.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.sensitivity.value"),
+                },
+                operatingVoltage: {
+                    label: t("pmSensorHero.technicalSpecs.specs.operatingVoltage.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.operatingVoltage.value"),
+                },
+                powerConsumption: {
+                    label: t("pmSensorHero.technicalSpecs.specs.powerConsumption.label"),
+                    value: t("pmSensorHero.technicalSpecs.specs.powerConsumption.value"),
+                },
             },
             images: {
                 variantA: "/img/so2-sensor-vaiant.webp",
@@ -175,69 +208,69 @@ export default function NO2SensorPage() {
         },
 
         gallery: {
-            title: "NO2 Sensor",
-            titleHighlight: "Product Gallery",
-            description: "Detailed views of our NO2 sensor showing its professional design and build quality.",
+            title: t("pmSensorHero.gallery.title"),
+            titleHighlight: t("pmSensorHero.gallery.titleHighlight"),
+            description: t("pmSensorHero.gallery.description"),
             images: ["/img/sensors-gallery-img.webp", "/img/sensors-gallery-img.webp", "/img/sensors-gallery-img.webp"],
         },
 
         contact: {
-            title: "Technical Support",
-            description: "Need help with NO2 sensor integration? Our engineers are here to assist you.",
+            title: t("pmSensorHero.contact.title"),
+            description: t("pmSensorHero.contact.description"),
         },
 
         relatedProducts: {
-            title: "Related Gas Sensors",
+            title: t("pmSensorHero.relatedProducts.title"),
             items: [
                 {
                     id: 1,
-                    name: "CO2 Sensor",
+                    name: t("pmSensorHero.relatedProducts.items.0.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "CO2 Sensor",
+                    alt: t("pmSensorHero.relatedProducts.items.0.alt"),
                     link: "/sensors/co2",
                 },
                 {
                     id: 2,
-                    name: "SO2 Sensor",
+                    name: t("pmSensorHero.relatedProducts.items.1.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "SO2 Sensor",
+                    alt: t("pmSensorHero.relatedProducts.items.1.alt"),
                     link: "/sensors/so2",
                 },
                 {
                     id: 3,
-                    name: "O3 Sensor",
+                    name: t("pmSensorHero.relatedProducts.items.2.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "Ozone Sensor",
+                    alt: t("pmSensorHero.relatedProducts.items.2.alt"),
                     link: "/sensors/ozone",
                 },
                 {
                     id: 4,
-                    name: "CO Sensor",
+                    name: t("pmSensorHero.relatedProducts.items.3.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "CO Sensor",
+                    alt: t("pmSensorHero.relatedProducts.items.3.alt"),
                     link: "/sensors/co",
                 },
                 {
                     id: 5,
-                    name: "SO2 Sensor",
+                    name: t("pmSensorHero.relatedProducts.items.4.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "SO2 Sensor",
+                    alt: t("pmSensorHero.relatedProducts.items.4.alt"),
                     link: "/sensors/so2",
                 },
                 {
                     id: 6,
-                    name: "O3 Sensor",
+                    name: t("pmSensorHero.relatedProducts.items.5.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "Ozone Sensor",
+                    alt: t("pmSensorHero.relatedProducts.items.5.alt"),
                     link: "/sensors/ozone",
                 },
                 {
                     id: 7,
-                    name: "CO Sensor",
+                    name: t("pmSensorHero.relatedProducts.items.6.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "CO Sensor",
+                    alt: t("pmSensorHero.relatedProducts.items.6.alt"),
                     link: "/sensors/co",
-                }
+                },
             ],
         },
     }

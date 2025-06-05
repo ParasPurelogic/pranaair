@@ -775,7 +775,7 @@ function MainHeader() {
 
                     {/* Case Studies Menu - Dynamic Content */}
                     {item.key === "case-studies" && (
-                      <div className="mobile-subcategory-menu">
+                      <div className="case-mobile-subcategory-menu">
                         {mobileCaseStudiesLoading ? (
                           <div style={{ padding: "20px", textAlign: "center", color: "#6b7280" }}>
                             Loading case studies...
@@ -930,7 +930,7 @@ function MainHeader() {
                                 </Link>
                               ))}
                               <Link
-                                href={getLocalizedUrl("/blogs")}
+                                href={getLocalizedUrl("https://www.pranaair.com/blog/")}
                                 className="mobile-view-all-button"
                                 onClick={closeMobileMenu}
                               >

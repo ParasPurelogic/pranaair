@@ -4,7 +4,7 @@ import MeasureCarousel from "@/Components/Pages/CarbonDioxide/measure-co2-slider
 import Image from "next/image"
 
 export default async function SulfurDioxidePage() {
-  const { t } = await getServerTranslation("sulfur-dioxide")
+  const { t } = await getServerTranslation("what-sulfur-dioxide")
   const measureProducts = [
     {
       imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-co2-sensor.jpg",

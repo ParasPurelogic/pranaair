@@ -4,7 +4,7 @@ import MeasureCarousel from "@/Components/Pages/CarbonDioxide/measure-co2-slider
 import Image from "next/image"
 
 export default async function VOCPage() {
-  const { t } = await getServerTranslation("voc")
+  const { t } = await getServerTranslation("what-voc")
 
   const measureProducts = [
     {

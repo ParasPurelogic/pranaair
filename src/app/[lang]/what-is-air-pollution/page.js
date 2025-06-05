@@ -4,7 +4,7 @@ import Link from "next/link"
 import { getServerTranslation } from "@/i18n/server"
 
 export default async function AirPollution() {
-  const { t } = await getServerTranslation("pollution")
+  const { t } = await getServerTranslation("what-pollution")
   return (
     <main>
       {/* Hero Section */}

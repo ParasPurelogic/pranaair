@@ -5,7 +5,7 @@ import MeasureCarousel from "@/Components/Pages/CarbonDioxide/measure-co2-slider
 
 
 export default async function OzonePage() {
-  const { t } = await getServerTranslation("ozone")
+  const { t } = await getServerTranslation("what-ozone")
   const measureProducts = [
     {
       imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-co2-sensor.jpg",

@@ -3,7 +3,7 @@ import { getServerTranslation } from "@/i18n/server"
 import Image from "next/image"
 
 export default async function WhatIsPollen() {
-  const { t } = await getServerTranslation("pollen")
+  const { t } = await getServerTranslation("what-pollen")
 
   return (
     <main>

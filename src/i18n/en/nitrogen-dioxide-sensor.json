@@ -1,8 +1,8 @@
 {
-  "pmSensorHero": {
-    "title": "SO2 SENSOR",
-    "type": "SO2 SENSOR",
-    "pageName": "SO2 SENSOR Page",
+    "no2SensorHero": {
+    "title": "NO2 Sensor",
+    "type": "NO2 Sensor",
+    "pageName": "NO2 Sensor Page",
     "variants": {
       "standard": {
         "ppm": "0-20 PPM",
@@ -13,12 +13,12 @@
         "price": "$349"
       }
     },
-    "description": "Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas.",
-    "descriptions": "eeeeeeeeeeeeeeeeeeeee",
+    "description": "Prana Air NO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic nitrogen dioxide gas.",
+    "descriptions": "Advanced nitrogen dioxide detection for comprehensive air quality monitoring.",
     "introduction": {
       "title": "Introduction",
-      "titleHighlight": "SO2 Sensor",
-      "description": "The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes.",
+      "titleHighlight": "NO2 Sensor",
+      "description": "The Prana Air NO2 sensor is designed with great accuracy and quality for both industrial and urban air quality monitoring. It uses electrochemical technology to detect harmful nitrogen dioxide (NO2) gas. This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including traffic monitoring stations, urban environments, industrial facilities, and vehicle emission testing.",
       "specs": {
         "resolution": {
           "label": "Resolution",
@@ -73,12 +73,12 @@
     },
     "whatIsSection": {
       "title": "What is Nitrogen Dioxide (NO2)?",
-      "description": "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.",
+      "description": "Nitrogen dioxide (NO₂) is a reddish-brown toxic gas with a sharp, harsh odor. It is a major air pollutant and a significant contributor to smog and acid rain. NO₂ is primarily produced during combustion processes at high temperatures, such as in vehicle engines, power plants, and industrial facilities. It can cause respiratory problems, especially in people with asthma, and can contribute to the development of respiratory infections. Long-term exposure to elevated concentrations of NO₂ may contribute to the development of asthma and potentially increase susceptibility to respiratory infections. Vehicle emissions are the largest source of NO₂ in urban areas, particularly from diesel engines.",
       "imageAlt": "NO2 Pollution Sources"
     },
     "lightMode": {
       "title": "Electrochemical Technology",
-      "description": "The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our monitors use a special sensor to detect sulfur dioxide (SO2), a harmful gas found in the air. This SO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When SO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more SO2 in the air, the stronger the current.By measuring this current, our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone.",
+      "description": "The NO2 sensor uses electrochemical gas sensing technology to detect nitrogen dioxide in the air. Our monitors use a special sensor to detect nitrogen dioxide (NO2), a harmful gas found in vehicle emissions and industrial processes. This NO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When NO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more NO2 in the air, the stronger the current. By measuring this current, our sensor tells us exactly how much NO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone.",
       "imageAlt": "Electrochemical Technology"
     },
     "sensorChip": {
@@ -87,10 +87,10 @@
       "imageAlt": "NO2 Detection Module"
     },
     "applications": {
-      "title": "Applications of SO2 Sensor",
+      "title": "Applications of NO2 Sensor",
       "items": [
         {
-          "title": "Air Quality Stations",
+          "title": "Air Quality Monitoring",
           "alt": "Air Quality Monitoring Station"
         },
         {
@@ -104,6 +104,14 @@
         {
           "title": "Urban Environment Monitoring",
           "alt": "Urban Environment"
+        },
+        {
+          "title": "Petrochemical Industry",
+          "alt": "Petrochemical Industry"
+        },
+        {
+          "title": "Generator Emissions",
+          "alt": "Generator Emissions"
         }
       ]
     },
@@ -185,16 +193,16 @@
           "alt": "CO Sensor"
         },
         {
-          "name": "SO2 Sensor",
-          "alt": "SO2 Sensor"
+          "name": "NH3 Sensor",
+          "alt": "NH3 Sensor"
         },
         {
-          "name": "O3 Sensor",
-          "alt": "Ozone Sensor"
+          "name": "Cl2 Sensor",
+          "alt": "Cl2 Sensor"
         },
         {
-          "name": "CO Sensor",
-          "alt": "CO Sensor"
+          "name": "H2S Sensor",
+          "alt": "H2S Sensor"
         }
       ]
     }

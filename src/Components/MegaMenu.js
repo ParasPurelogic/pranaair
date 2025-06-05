@@ -551,103 +551,103 @@ export const getKnowWhatArticles = (t) => [
     name: t("knowWhat.articles.airPollution"),
     slug: "what-is-air-pollution",
     icon: "🌫️",
-    url: "/know-what/what-is-air-pollution",
+    url: "/what-is-air-pollution",
   },
   {
     name: t("knowWhat.articles.ammonia"),
     slug: "what-is-ammonia-nh3",
     icon: "💨",
-    url: "/know-what/what-is-ammonia-nh3",
+    url: "/what-is-ammonia-nh3",
   },
   {
     name: t("knowWhat.articles.h2s"),
     slug: "what-is-h2s",
     icon: "🥚",
-    url: "/know-what/what-is-h2s",
+    url: "/what-is-h2s",
   },
   {
     name: t("knowWhat.articles.radon"),
     slug: "what-is-radon",
     icon: "☢️",
-    url: "/know-what/what-is-radon",
+    url: "/what-is-radon",
   },
   {
     name: t("knowWhat.articles.co"),
     slug: "what-is-co",
     icon: "☁️",
-    url: "/know-what/what-is-co",
+    url: "/what-is-co",
   },
   {
     name: t("knowWhat.articles.so2"),
     slug: "what-is-so2",
     icon: "🏭",
-    url: "/know-what/what-is-so2",
+    url: "/what-is-so2",
   },
   {
     name: t("knowWhat.articles.ozone"),
     slug: "what-is-ozone",
     icon: "☀️",
-    url: "/know-what/what-is-ozone",
+    url: "/what-is-ozone",
   },
   {
     name: t("knowWhat.articles.noise"),
     slug: "what-is-noise",
     icon: "🔊",
-    url: "/know-what/what-is-noise",
+    url: "/what-is-noise",
   },
   {
     name: t("knowWhat.articles.methane"),
     slug: "what-is-methane",
     icon: "🔥",
-    url: "/know-what/what-is-methane",
+    url: "/what-is-methane",
   },
   {
     name: t("knowWhat.articles.pm"),
     slug: "what-is-pm2-5-pm10",
     icon: "🔬",
-    url: "/know-what/what-is-pm2-5-pm10",
+    url: "/what-is-pm2-5-pm10",
   },
   {
     name: t("knowWhat.articles.co2"),
     slug: "what-is-co2",
     icon: "🌍",
-    url: "/know-what/what-is-co2",
+    url: "/what-is-co2",
   },
   {
     name: t("knowWhat.articles.humidity"),
     slug: "what-is-humidity",
     icon: "💧",
-    url: "/know-what/what-is-humidity",
+    url: "/what-is-humidity",
   },
   {
     name: t("knowWhat.articles.pollen"),
     slug: "what-is-pollen",
     icon: "🌸",
-    url: "/know-what/what-is-pollen",
+    url: "/what-is-pollen",
   },
   {
     name: t("knowWhat.articles.vocs"),
     slug: "what-is-vocs",
     icon: "🧪",
-    url: "/know-what/what-is-vocs",
+    url: "/what-is-vocs",
   },
   {
     name: t("knowWhat.articles.no2"),
     slug: "what-is-no2",
     icon: "🚗",
-    url: "/know-what/what-is-no2",
+    url: "/what-is-no2",
   },
   {
     name: t("knowWhat.articles.temperature"),
     slug: "what-is-temperature",
     icon: "🌡️",
-    url: "/know-what/what-is-temperature",
+    url: "/what-is-temperature",
   },
   {
     name: t("knowWhat.articles.mold"),
     slug: "what-is-mold",
     icon: "🍄",
-    url: "/know-what/what-is-mold",
+    url: "/what-is-mold",
   },
 ]
 
@@ -1155,11 +1155,11 @@ export function MegaMenu({ onClose, menuType = "products" }) {
 
                     <div className="products-header">
                       <Link
-                        href={getLocalizedUrl(`/${selectedCategory?.slug}/${selectedSubcategory.slug}`)}
+                        href={getLocalizedUrl(`/${selectedCategory?.slug}`)}
                         className="view-all-products"
                         onClick={onClose}
                       >
-                        {t("products.viewAllCategory", { category: selectedSubcategory.name })}
+                        {t("products.viewAllCategory", { category: selectedCategory.name })}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="12"
@@ -1414,7 +1414,7 @@ export function AboutUsMegaMenu({ onClose }) {
             {t("about.blogs")}
           </h3>
           <Link
-            href={getLocalizedUrl("/blogs")}
+            href={getLocalizedUrl("https://www.pranaair.com/blog/")}
             onClick={onClose}
             style={{
               color: "#7ab261",

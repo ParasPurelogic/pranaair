@@ -3,7 +3,7 @@ import { getServerTranslation } from "@/i18n/server"
 import Image from "next/image"
 
 export default async function RadonPage() {
-  const { t } = await getServerTranslation("radon-rn")
+  const { t } = await getServerTranslation("what-radon-rn")
   return (
     <main>
       {/* Hero Section */}

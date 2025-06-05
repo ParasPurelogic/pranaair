@@ -1,0 +1,52 @@
+{
+  "footer": {
+    "description": "Prana Air is a product brand of Purelogic Labs India to provide the best air quality monitoring and solutions for indoor & outdoor globally.",
+    "columns": {
+      "quickLinks": "Quick Links",
+      "ourProducts": "Our Products",
+      "otherLinks": "Other Links"
+    },
+    "contactDetails": "Contact Details",
+    "email": "Email",
+    "emailAddress": "info@purelogic.in",
+    "phone": "Phone",
+    "phoneIndia": "+91 7391873918",
+    "phoneUS": "+1 612 2992 211",
+    "regions": {
+      "india": "India",
+      "us": "US"
+    },
+    "offices": {
+      "indiaOffice": "India Office",
+      "usOffice": "US Office"
+    },
+    "addresses": {
+      "indiaAddress": "Crown Heights, 7th Floor, 706, Rohini Sec-10, New Delhi-110085, India",
+      "usAddress": "1240 S 2nd St, #933, Minneapolis, MN 55415, United States"
+    },
+    "yourOrder": "Your Order",
+    "tracking": "Tracking",
+    "findUsOn": "Find us on",
+    "copyright": "Prana Air. All rights reserved.",
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "blog": "Blog",
+      "faqs": "FAQs",
+      "shop": "Shop",
+      "airQualityMonitors": "Air Quality Monitors",
+      "airQualitySensors": "Air Quality Sensors",
+      "airQualityDrone": "Air Quality Drone",
+      "airQualityPCBs": "Air Quality PCBs",
+      "weatherStation": "Weather Station",
+      "freshAirMachine": "Fresh Air Machine",
+      "airQualitySolutions": "Air Quality Solutions",
+      "productManuals": "Product Manuals",
+      "dataAccuracy": "Data Accuracy",
+      "caseStudy": "Case Study",
+      "refundPolicy": "Refund Policy",
+      "privacyPolicy": "Privacy Policy"
+    }
+  }
+}

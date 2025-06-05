@@ -3,7 +3,7 @@ import { getServerTranslation } from "@/i18n/server"
 import Image from "next/image"
 
 export default async function CarbonMonoxidePage() {
-  const { t } = await getServerTranslation("carbon-monoxide-co")
+  const { t } = await getServerTranslation("what-carbon-monoxide-co")
   return (
     <main>
       {/* Hero Section */}

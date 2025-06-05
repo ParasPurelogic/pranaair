@@ -3,7 +3,7 @@ import { getServerTranslation } from "@/i18n/server"
 import Image from "next/image"
 
 export default async function TemperaturePage() {
-  const { t } = await getServerTranslation("temperature")
+  const { t } = await getServerTranslation("what-temperature")
 
   return (
     <main>

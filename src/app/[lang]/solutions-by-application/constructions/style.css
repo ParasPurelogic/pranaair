@@ -1231,7 +1231,7 @@ label.message_text {
 
     li.second_school_box {
         top: 155px;
-        left: 62px;
+        left: 0px;
     }
 
     li.second_school_box span.school_icon_box {
@@ -1279,7 +1279,7 @@ label.message_text {
 
     li.fourth_school_box {
         top: 124px;
-        left: 65px;
+        left: 0px;
     }
 
     li.first_school_box .schhol_text_box {

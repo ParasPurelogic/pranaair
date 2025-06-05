@@ -1,8 +1,8 @@
 {
-  "pmSensorHero": {
-    "title": "SO2 SENSOR",
-    "type": "SO2 SENSOR",
-    "pageName": "SO2 SENSOR Page",
+  "nh3SensorHero": {
+    "title": "Ammonia NH3 Sensor",
+    "type": "Ammonia NH3 Sensor",
+    "pageName": "Ammonia NH3 Sensor Page",
     "variants": {
       "standard": {
         "ppm": "0-20 PPM",
@@ -13,12 +13,12 @@
         "price": "$349"
       }
     },
-    "description": "Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas.",
-    "descriptions": "eeeeeeeeeeeeeeeeeeeee",
+    "description": "Prana Air NH3 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic ammonia gas.",
+    "descriptions": "Advanced ammonia detection for comprehensive environmental and safety monitoring.",
     "introduction": {
       "title": "Introduction",
-      "titleHighlight": "SO2 Sensor",
-      "description": "The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes.",
+      "titleHighlight": "NH3 Sensor",
+      "description": "The Prana Air NH3 sensor is designed with great accuracy and quality for both industrial and agricultural safety monitoring. It uses electrochemical technology to detect harmful ammonia (NH3) gas. This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including farms, factories, refrigeration systems, and wastewater treatment plants.",
       "specs": {
         "resolution": {
           "label": "Resolution",
@@ -42,7 +42,7 @@
         },
         {
           "title": "Real-time Detection",
-          "description": "Instant NO2 level monitoring",
+          "description": "Instant NH3 level monitoring",
           "iconAlt": "Responsive Icon"
         },
         {
@@ -63,47 +63,47 @@
       ]
     },
     "calibration": {
-      "title": "NO2 Sensor Calibration Guide",
-      "description": "Step-by-step calibration process to ensure accurate NO2 measurements in your application.",
-      "videoAlt": "NO2 Sensor Calibration Guide"
+      "title": "NH3 Sensor Calibration Guide",
+      "description": "Step-by-step calibration process to ensure accurate NH3 measurements in your application.",
+      "videoAlt": "NH3 Sensor Calibration Guide"
     },
     "technology": {
       "title": "Advanced Sensing Technology",
       "subtitle": "Electrochemical Detection"
     },
     "whatIsSection": {
-      "title": "What is Nitrogen Dioxide (NO2)?",
-      "description": "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.",
-      "imageAlt": "NO2 Pollution Sources"
+      "title": "What is Ammonia (NH3)?",
+      "description": "Ammonia (NH₃) is a colorless gas with a strong, pungent odor. It is highly toxic and can cause severe respiratory problems, skin burns, and eye damage. NH₃ is lighter than air and can accumulate in enclosed spaces. The main sources of ammonia include agricultural activities (fertilizers, livestock), industrial processes (chemical manufacturing, refrigeration), wastewater treatment plants, cleaning products, and decomposing organic matter. Proper ventilation and NH3 detection are essential for preventing ammonia poisoning in agricultural and industrial environments.",
+      "imageAlt": "NH3 Pollution Sources"
     },
     "lightMode": {
       "title": "Electrochemical Technology",
-      "description": "The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our monitors use a special sensor to detect sulfur dioxide (SO2), a harmful gas found in the air. This SO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When SO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more SO2 in the air, the stronger the current.By measuring this current, our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone.",
+      "description": "The NH3 sensor uses electrochemical gas sensing technology to detect ammonia in the air. Our monitors use a special sensor to detect ammonia (NH3), a toxic gas commonly found in agricultural and industrial environments. This NH3 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When NH3 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more NH3 in the air, the stronger the current. By measuring this current, our sensor tells us exactly how much NH3 is present. This helps in preventing ammonia exposure and keeping agricultural and industrial environments safer for workers.",
       "imageAlt": "Electrochemical Technology"
     },
     "sensorChip": {
-      "title": "NO2 Detection Module",
-      "description": "High-performance electrochemical cell with integrated electronics for precise NO2 measurement.",
-      "imageAlt": "NO2 Detection Module"
+      "title": "NH3 Detection Module",
+      "description": "High-performance electrochemical cell with integrated electronics for precise NH3 measurement.",
+      "imageAlt": "NH3 Detection Module"
     },
     "applications": {
-      "title": "Applications of SO2 Sensor",
+      "title": "Applications of NH3 Sensor",
       "items": [
         {
-          "title": "Air Quality Stations",
-          "alt": "Air Quality Monitoring Station"
+          "title": "Agricultural Monitoring",
+          "alt": "Agricultural Monitoring"
         },
         {
-          "title": "Traffic Pollution Monitoring",
-          "alt": "Traffic Pollution"
+          "title": "Smart Home Safety",
+          "alt": "Smart Home Safety"
         },
         {
-          "title": "Industrial Emission Control",
-          "alt": "Industrial Emissions"
+          "title": "Refrigeration Systems",
+          "alt": "Refrigeration Systems"
         },
         {
-          "title": "Urban Environment Monitoring",
-          "alt": "Urban Environment"
+          "title": "Wastewater Treatment",
+          "alt": "Wastewater Treatment"
         }
       ]
     },
@@ -116,7 +116,7 @@
       "specs": {
         "productName": {
           "label": "Product Name",
-          "value": "NO2 Sensor"
+          "value": "NH3 Sensor"
         },
         "resolution": {
           "label": "Resolution",
@@ -157,13 +157,13 @@
       }
     },
     "gallery": {
-      "title": "NO2 Sensor",
+      "title": "NH3 Sensor",
       "titleHighlight": "Product Gallery",
-      "description": "Detailed views of our NO2 sensor showing its professional design and build quality."
+      "description": "Detailed views of our NH3 sensor showing its professional design and build quality."
     },
     "contact": {
       "title": "Technical Support",
-      "description": "Need help with NO2 sensor integration? Our engineers are here to assist you."
+      "description": "Need help with NH3 sensor integration? Our engineers are here to assist you."
     },
     "relatedProducts": {
       "title": "Related Gas Sensors",
@@ -185,16 +185,16 @@
           "alt": "CO Sensor"
         },
         {
-          "name": "SO2 Sensor",
-          "alt": "SO2 Sensor"
+          "name": "NO2 Sensor",
+          "alt": "NO2 Sensor"
         },
         {
-          "name": "O3 Sensor",
-          "alt": "Ozone Sensor"
+          "name": "H2S Sensor",
+          "alt": "H2S Sensor"
         },
         {
-          "name": "CO Sensor",
-          "alt": "CO Sensor"
+          "name": "VOC Sensor",
+          "alt": "VOC Sensor"
         }
       ]
     }

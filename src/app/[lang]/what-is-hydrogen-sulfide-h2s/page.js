@@ -3,7 +3,7 @@ import "./styles.css"
 import { getServerTranslation } from "@/i18n/server"
 
 export default async function HydrogenSulfidePage() {
-  const { t } = await getServerTranslation("hydrogensulfide")
+  const { t } = await getServerTranslation("what-hydrogensulfide")
   return (
     <main>
       {/* Hero Section */}

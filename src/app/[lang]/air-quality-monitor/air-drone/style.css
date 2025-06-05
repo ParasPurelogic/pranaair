@@ -2583,6 +2583,11 @@ input.wpcf7-submit {
     font-size: 30px;
     width: 90%;
   }
+
+  .tech-tab {
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {

@@ -3,7 +3,7 @@ import Image from "next/image"
 import { getServerTranslation } from "@/i18n/server"
 
 export default async function MoldPage() {
-  const { t } = await getServerTranslation("mold")
+  const { t } = await getServerTranslation("what-mold")
   return (
     <main className="mold-page">
       {/* Banner Section */}

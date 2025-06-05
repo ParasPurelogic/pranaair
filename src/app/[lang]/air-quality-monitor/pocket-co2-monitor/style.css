@@ -1651,7 +1651,7 @@ span.tab_monitor_device img {
 
     .app-key-feature-mobile-bg {
         background-size: 160px;
-        padding: 0px 0 70px;
+        padding: 0px 0 0px;
     }
 
     .app-key-feature-mobile-bg img {
@@ -1837,6 +1837,14 @@ span.tab_monitor_device img {
 
     .logo-box ul li img {
         width: 80%;
+    }
+
+    .tab-pane img {
+        width: 80%;
+    }
+
+    .product-tabs ul .nav-link {
+        font-size: 12px;
     }
 }
 

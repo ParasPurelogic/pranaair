@@ -1,55 +1,10 @@
-"use client"
 
 import Link from "next/link"
 import Image from "next/image"
+import { getServerTranslation } from "@/i18n/server"
 
-// Mock translations
-const useTranslations = () => {
-  return {
-    t: (key) => {
-      const translations = {
-        "footer.columns.quickLinks": "Quick Links",
-        "footer.columns.ourProducts": "Our Products",
-        "footer.columns.otherLinks": "Other Links",
-        "footer.contactDetails": "Contact Details",
-        "footer.email": "Email",
-        "footer.phone": "Phone",
-        "footer.regions.india": "India",
-        "footer.regions.us": "US",
-        "footer.offices.indiaOffice": "India Office",
-        "footer.offices.usOffice": "US Office",
-        "footer.yourOrder": "Your Order",
-        "footer.tracking": "Tracking",
-        "footer.findUsOn": "Find us on",
-        "footer.copyright": "Prana Air. All rights reserved.",
-        "footer.links.home": "Home",
-        "footer.links.about": "About Us",
-        "footer.links.contact": "Contact Us",
-        "footer.links.blog": "Blog",
-        "footer.links.faqs": "FAQs",
-        "footer.links.shop": "Shop",
-        "footer.links.airQualityMonitors": "Air Quality Monitors",
-        "footer.links.airQualitySensors": "Air Quality Sensors",
-        "footer.links.airQualityDrone": "Air Quality Drone",
-        "footer.links.airQualityPCBs": "Air Quality PCBs",
-        "footer.links.weatherStation": "Weather Station",
-        "footer.links.freshAirMachine": "Fresh Air Machine",
-        "footer.links.airQualitySolutions": "Air Quality Solutions",
-        "footer.links.productManuals": "Product Manuals",
-        "footer.links.dataAccuracy": "Data Accuracy",
-        "footer.links.caseStudy": "Case Study",
-        "footer.links.refundPolicy": "Refund Policy",
-        "footer.links.privacyPolicy": "Privacy Policy",
-      }
-      return translations[key] || key
-    },
-    locale: "en",
-    getLocalizedPath: (path) => path,
-  }
-}
-
-function MainFooter() {
-  const { t, locale, getLocalizedPath } = useTranslations()
+export default async function MainFooter() {
+  const { t } = await getServerTranslation("footer")
 
   return (
     <footer className="footer">
@@ -67,10 +22,7 @@ function MainFooter() {
                 style={{ marginBottom: "16px" }}
               />
             </Link>
-            <p className="footer-description">
-              Prana Air is a product brand of Purelogic Labs India to provide the best air quality monitoring and
-              solutions for indoor & outdoor globally.
-            </p>
+            <p className="footer-description">{t("footer.description")}</p>
           </div>
 
           {/* Quick Links */}
@@ -86,7 +38,7 @@ function MainFooter() {
                 { key: "shop", path: "https://www.pranaair.com/shop/" },
               ].map((link) => (
                 <li key={link.key} className="footer-link-item">
-                  <Link href={getLocalizedPath(link.path)} className="footer-link">
+                  <Link href={link.path} className="footer-link">
                     {t(`footer.links.${link.key}`)}
                   </Link>
                 </li>
@@ -107,14 +59,14 @@ function MainFooter() {
                 { key: "freshAirMachine", path: "/fresh-air-machine/" },
               ].map((product) => (
                 <li key={product.key} className="footer-link-item">
-                  <Link href={getLocalizedPath(product.path)} className="footer-link">
+                  <Link href={product.path} className="footer-link">
                     {t(`footer.links.${product.key}`)}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
- 
+
           {/* Other Links */}
           <div className="footer-links-section">
             <h5 className="footer-heading">{t("footer.columns.otherLinks")}</h5>
@@ -128,7 +80,7 @@ function MainFooter() {
                 { key: "privacyPolicy", path: "https://www.pranaair.com/privacy/" },
               ].map((link) => (
                 <li key={link.key} className="footer-link-item">
-                  <Link href={getLocalizedPath(link.path)} className="footer-link">
+                  <Link href={link.path} className="footer-link">
                     {t(`footer.links.${link.key}`)}
                   </Link>
                 </li>
@@ -142,7 +94,7 @@ function MainFooter() {
               <h5 className="footer-heading" style={{ marginBottom: "24px" }}>
                 {t("footer.contactDetails")}
               </h5>
-              <div style={{ display: "flex", flexDirection: "column"}}>
+              <div style={{ display: "flex", flexDirection: "column" }}>
                 <div className="contact-item">
                   <div className="contact-icon">
                     <svg
@@ -164,7 +116,7 @@ function MainFooter() {
                   <div className="contact-content">
                     <p className="contact-label">{t("footer.email")}:</p>
                     <a href="mailto:info@purelogic.in" className="contact-email">
-                      info@purelogic.in
+                      {t("footer.emailAddress")}
                     </a>
                   </div>
                 </div>
@@ -189,9 +141,11 @@ function MainFooter() {
                   <div className="contact-content">
                     <p className="contact-label">{t("footer.phone")}:</p>
                     <p className="contact-value" style={{ marginBottom: "4px" }}>
-                      +91 7391873918 ({t("footer.regions.india")})
+                      {t("footer.phoneIndia")} ({t("footer.regions.india")})
                     </p>
-                    <p className="contact-value">+1 612 2992 211 ({t("footer.regions.us")})</p>
+                    <p className="contact-value">
+                      {t("footer.phoneUS")} ({t("footer.regions.us")})
+                    </p>
                   </div>
                 </div>
 
@@ -216,13 +170,11 @@ function MainFooter() {
                   <div className="contact-content">
                     <div style={{ marginBottom: "16px" }}>
                       <p className="contact-label">{t("footer.offices.indiaOffice")}:</p>
-                      <p className="contact-value">
-                        Crown Heights, 7th Floor, 706, Rohini Sec-10, New Delhi-110085, India
-                      </p>
+                      <p className="contact-value">{t("footer.addresses.indiaAddress")}</p>
                     </div>
                     <div>
                       <p className="contact-label">{t("footer.offices.usOffice")}:</p>
-                      <p className="contact-value">1240 S 2nd St, #933, Minneapolis, MN 55415, United States</p>
+                      <p className="contact-value">{t("footer.addresses.usAddress")}</p>
                     </div>
                   </div>
                 </div>
@@ -245,8 +197,7 @@ function MainFooter() {
               />
             </Link>
             <p style={{ color: "#9ca3af", fontSize: "14px", lineHeight: "1.5", padding: "0 16px" }}>
-              Prana Air is a product brand of Purelogic Labs India to provide the best air quality monitoring and
-              solutions for indoor & outdoor globally.
+              {t("footer.description")}
             </p>
           </div>
         </div>
@@ -256,7 +207,7 @@ function MainFooter() {
           <div className="footer-bottom-flex">
             <div className="footer-order-tracking">
               <span className="order-label">{t("footer.yourOrder")}</span>
-              <Link href={getLocalizedPath("/tracking")} className="tracking-button">
+              <Link href="https://pranaair.aftership.com/" className="tracking-button">
                 {t("footer.tracking")}
               </Link>
             </div>
@@ -321,6 +272,4 @@ function MainFooter() {
     </footer>
   )
 }
-
-export default MainFooter
 

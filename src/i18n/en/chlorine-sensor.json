@@ -1,0 +1,202 @@
+{
+     "cl2SensorHero": {
+    "title": "Chlorine Cl2 Sensor",
+    "type": "Chlorine Cl2 Sensor",
+    "pageName": "Chlorine Cl2 Sensor Page",
+    "variants": {
+      "standard": {
+        "ppm": "0-20 PPM",
+        "price": "$249"
+      },
+      "premium": {
+        "ppm": "0-100 PPM",
+        "price": "$349"
+      }
+    },
+    "description": "Prana Air Cl2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic chlorine gas.",
+    "descriptions": "Advanced chlorine detection for water treatment and industrial safety monitoring.",
+    "introduction": {
+      "title": "Introduction",
+      "titleHighlight": "Cl2 Sensor",
+      "description": "The Prana Air Cl2 sensor is designed with great accuracy and quality for both industrial and water treatment safety monitoring. It uses electrochemical technology to detect harmful chlorine (Cl2) gas. This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including water treatment plants, swimming pools, chemical facilities, and manufacturing environments.",
+      "specs": {
+        "resolution": {
+          "label": "Resolution",
+          "value": "0.1 PPM"
+        },
+        "range": {
+          "label": "Range",
+          "value": "50 PPM"
+        }
+      },
+      "whyChooseFeatures": [
+        {
+          "title": "Miniature Size",
+          "description": "Ultra-compact design for space-constrained applications",
+          "iconAlt": "Compact Icon"
+        },
+        {
+          "title": "Chemical Resistant",
+          "description": "Designed for harsh chemical environments",
+          "iconAlt": "Durable Icon"
+        },
+        {
+          "title": "Real-time Detection",
+          "description": "Instant Cl2 level monitoring",
+          "iconAlt": "Responsive Icon"
+        },
+        {
+          "title": "Battery Friendly",
+          "description": "Optimized for battery-powered devices",
+          "iconAlt": "Energy Efficient Icon"
+        },
+        {
+          "title": "Factory Tested",
+          "description": "Each sensor individually tested and calibrated",
+          "iconAlt": "Calibrated Icon"
+        },
+        {
+          "title": "Eco-Friendly",
+          "description": "RoHS compliant and environmentally safe",
+          "iconAlt": "RoHS Icon"
+        }
+      ]
+    },
+    "calibration": {
+      "title": "Cl2 Sensor Calibration Guide",
+      "description": "Step-by-step calibration process to ensure accurate Cl2 measurements in your application.",
+      "videoAlt": "Cl2 Sensor Calibration Guide"
+    },
+    "technology": {
+      "title": "Advanced Sensing Technology",
+      "subtitle": "Electrochemical Detection"
+    },
+    "whatIsSection": {
+      "title": "What is Chlorine (Cl2)?",
+      "description": "Chlorine (Cl₂) is a yellow-green gas with a strong, pungent odor. It is highly toxic and corrosive, causing severe respiratory problems, skin burns, and eye damage upon exposure. Cl₂ is heavier than air and can accumulate in low-lying areas. The main sources of chlorine include water treatment facilities, swimming pools, chemical manufacturing, bleach production, paper and textile industries, and disinfection processes. Proper ventilation and Cl2 detection are essential for preventing chlorine poisoning in industrial and water treatment environments.",
+      "imageAlt": "Cl2 Pollution Sources"
+    },
+    "lightMode": {
+      "title": "Electrochemical Technology",
+      "description": "The Cl2 sensor uses electrochemical gas sensing technology to detect chlorine in the air. Our monitors use a special sensor to detect chlorine (Cl2), a toxic gas commonly found in water treatment and industrial environments. This Cl2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When Cl2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more Cl2 in the air, the stronger the current. By measuring this current, our sensor tells us exactly how much Cl2 is present. This helps in preventing chlorine exposure and keeping water treatment and industrial environments safer for workers.",
+      "imageAlt": "Electrochemical Technology"
+    },
+    "sensorChip": {
+      "title": "Cl2 Detection Module",
+      "description": "High-performance electrochemical cell with integrated electronics for precise Cl2 measurement.",
+      "imageAlt": "Cl2 Detection Module"
+    },
+    "applications": {
+      "title": "Applications of Cl2 Sensor",
+      "items": [
+        {
+          "title": "Swimming Pool Safety",
+          "alt": "Swimming Pool Safety"
+        },
+        {
+          "title": "Industrial Production",
+          "alt": "Industrial Production"
+        },
+        {
+          "title": "Medical Equipment Manufacturing",
+          "alt": "Medical Equipment Manufacturing"
+        },
+        {
+          "title": "Water Treatment Plants",
+          "alt": "Water Treatment Plants"
+        }
+      ]
+    },
+    "technicalSpecs": {
+      "title": "Technical Specifications",
+      "variants": {
+        "variantA": "Standard Range",
+        "variantB": "Extended Range"
+      },
+      "specs": {
+        "productName": {
+          "label": "Product Name",
+          "value": "Cl2 Sensor"
+        },
+        "resolution": {
+          "label": "Resolution",
+          "value": "0.1 PPM"
+        },
+        "responseTime": {
+          "label": "Response Time",
+          "value": "< 60 seconds"
+        },
+        "operatingTemp": {
+          "label": "Operating Temperature",
+          "value": "-20°C to +50°C"
+        },
+        "operatingHumidity": {
+          "label": "Operating Humidity",
+          "value": "15-90% RH"
+        },
+        "measurementRange": {
+          "label": "Measurement Range",
+          "value": "0-20 PPM"
+        },
+        "repeatability": {
+          "label": "Repeatability",
+          "value": "±3% of reading"
+        },
+        "sensitivity": {
+          "label": "Sensitivity",
+          "value": "0.1 PPM"
+        },
+        "operatingVoltage": {
+          "label": "Operating Voltage",
+          "value": "3.3V"
+        },
+        "powerConsumption": {
+          "label": "Power Consumption",
+          "value": "< 10mA"
+        }
+      }
+    },
+    "gallery": {
+      "title": "Cl2 Sensor",
+      "titleHighlight": "Product Gallery",
+      "description": "Detailed views of our Cl2 sensor showing its professional design and build quality."
+    },
+    "contact": {
+      "title": "Technical Support",
+      "description": "Need help with Cl2 sensor integration? Our engineers are here to assist you."
+    },
+    "relatedProducts": {
+      "title": "Related Gas Sensors",
+      "items": [
+        {
+          "name": "CO2 Sensor",
+          "alt": "CO2 Sensor"
+        },
+        {
+          "name": "SO2 Sensor",
+          "alt": "SO2 Sensor"
+        },
+        {
+          "name": "O3 Sensor",
+          "alt": "Ozone Sensor"
+        },
+        {
+          "name": "CO Sensor",
+          "alt": "CO Sensor"
+        },
+        {
+          "name": "NH3 Sensor",
+          "alt": "NH3 Sensor"
+        },
+        {
+          "name": "H2S Sensor",
+          "alt": "H2S Sensor"
+        },
+        {
+          "name": "VOC Sensor",
+          "alt": "VOC Sensor"
+        }
+      ]
+    }
+  }
+}

@@ -1,10 +1,12 @@
 import SensorPageTemplate from "@/Components/Pages/SensorPage/sensor-page-template"
+import { getServerTranslation } from "@/i18n/server"
 
-export default function NO2SensorPage() {
+export default async function NO2SensorPage() {
+    const { t } = await getServerTranslation("ozone-sensor")
     const sensorData = {
-        sensorName: "O3 SENSOR ",
-        sensorType: "O3 SENSOR ",
-        pageName: "O3 SENSOR Page",
+        sensorName: t("o3SensorHero.title"),
+        sensorType: t("o3SensorHero.type"),
+        pageName: t("o3SensorHero.pageName"),
 
         productImages: {
             main: ["/img/o3-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
@@ -13,31 +15,34 @@ export default function NO2SensorPage() {
 
         variants: {
             standard: {
-                ppm: "0-20 PPM",
-                price: "$249",
+                ppm: t("o3SensorHero.variants.standard.ppm"),
+                price: t("o3SensorHero.variants.standard.price"),
                 image: "/img/so2-sensor.webp",
             },
             premium: {
-                ppm: "0-100 PPM",
-                price: "$349",
+                ppm: t("o3SensorHero.variants.premium.ppm"),
+                price: t("o3SensorHero.variants.premium.price"),
                 image: "/img/sensor.png",
             },
         },
 
-        description:
-            "Prana Air SO2 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly toxic SO2 gas. ",
-        descriptions:
-            "eeeeeeeeeeeeeeeeeeeee ",
+        description: t("o3SensorHero.description"),
+        descriptions: t("o3SensorHero.descriptions"),
 
         introduction: {
-            title: "Introduction",
-            titleHighlight: "SO2 Sensor",
-            description:
-                "The Prana Air SO2 sensor is designed with great accuracy and quality for both industrial and home safety monitoring. It uses electrochemical technology to detect harmful sulfur dioxide (SO2) gas.This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including factories, businesses, and homes. ",
+            title: t("o3SensorHero.introduction.title"),
+            titleHighlight: t("o3SensorHero.introduction.titleHighlight"),
+            description: t("o3SensorHero.introduction.description"),
 
             specs: {
-                resolution: { label: "Resolution", value: "0.1 PPM" },
-                range: { label: "Range", value: "50 PPM" },
+                resolution: {
+                    label: t("o3SensorHero.introduction.specs.resolution.label"),
+                    value: t("o3SensorHero.introduction.specs.resolution.value"),
+                },
+                range: {
+                    label: t("o3SensorHero.introduction.specs.range.label"),
+                    value: t("o3SensorHero.introduction.specs.range.value"),
+                },
             },
             sensorImages: {
                 variantA: "/img/so2-sensor-pcb.webp",
@@ -46,145 +51,173 @@ export default function NO2SensorPage() {
             whyChooseFeatures: [
                 {
                     icon: "/img/Compact.png",
-                    title: "Miniature Size",
-                    description: "Ultra-compact design for space-constrained applications",
-                    iconAlt: "Compact Icon",
+                    title: t("o3SensorHero.introduction.whyChooseFeatures.0.title"),
+                    description: t("o3SensorHero.introduction.whyChooseFeatures.0.description"),
+                    iconAlt: t("o3SensorHero.introduction.whyChooseFeatures.0.iconAlt"),
                 },
                 {
                     icon: "/img/durable.webp",
-                    title: "Weather Resistant",
-                    description: "Designed for outdoor environmental monitoring",
-                    iconAlt: "Durable Icon",
+                    title: t("o3SensorHero.introduction.whyChooseFeatures.1.title"),
+                    description: t("o3SensorHero.introduction.whyChooseFeatures.1.description"),
+                    iconAlt: t("o3SensorHero.introduction.whyChooseFeatures.1.iconAlt"),
                 },
                 {
                     icon: "/img/highly-responsive.webp",
-                    title: "Real-time Detection",
-                    description: "Instant NO2 level monitoring",
-                    iconAlt: "Responsive Icon",
+                    title: t("o3SensorHero.introduction.whyChooseFeatures.2.title"),
+                    description: t("o3SensorHero.introduction.whyChooseFeatures.2.description"),
+                    iconAlt: t("o3SensorHero.introduction.whyChooseFeatures.2.iconAlt"),
                 },
                 {
                     icon: "/img/energy-efficient.webp",
-                    title: "Battery Friendly",
-                    description: "Optimized for battery-powered devices",
-                    iconAlt: "Energy Efficient Icon",
+                    title: t("o3SensorHero.introduction.whyChooseFeatures.3.title"),
+                    description: t("o3SensorHero.introduction.whyChooseFeatures.3.description"),
+                    iconAlt: t("o3SensorHero.introduction.whyChooseFeatures.3.iconAlt"),
                 },
                 {
                     icon: "/img/individually-calibrated.webp",
-                    title: "Factory Tested",
-                    description: "Each sensor individually tested and calibrated",
-                    iconAlt: "Calibrated Icon",
+                    title: t("o3SensorHero.introduction.whyChooseFeatures.4.title"),
+                    description: t("o3SensorHero.introduction.whyChooseFeatures.4.description"),
+                    iconAlt: t("o3SensorHero.introduction.whyChooseFeatures.4.iconAlt"),
                 },
                 {
                     icon: "/img/rohs-compliance.webp",
-                    title: "Eco-Friendly",
-                    description: "RoHS compliant and environmentally safe",
-                    iconAlt: "RoHS Icon",
+                    title: t("o3SensorHero.introduction.whyChooseFeatures.5.title"),
+                    description: t("o3SensorHero.introduction.whyChooseFeatures.5.description"),
+                    iconAlt: t("o3SensorHero.introduction.whyChooseFeatures.5.iconAlt"),
                 },
             ],
         },
 
         calibration: {
-            title: "NO2 Sensor Calibration Guide",
-            description: "Step-by-step calibration process to ensure accurate NO2 measurements in your application.",
+            title: t("o3SensorHero.calibration.title"),
+            description: t("o3SensorHero.calibration.description"),
             videoImage: "/img/so2-sensor-calibration.webp",
-            videoAlt: "NO2 Sensor Calibration Guide",
+            videoAlt: t("o3SensorHero.calibration.videoAlt"),
         },
 
         technology: {
-            title: "Advanced Sensing Technology",
-            subtitle: "Electrochemical Detection",
+            title: t("o3SensorHero.technology.title"),
+            subtitle: t("o3SensorHero.technology.subtitle"),
             learnMoreLink: "#",
         },
 
         whatIsSection: {
-            title: "What is Nitrogen Dioxide (NO2)?",
-            description:
-                "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.",
+            title: t("o3SensorHero.whatIsSection.title"),
+            description: t("o3SensorHero.whatIsSection.description"),
             image: "/img/ozone source.webp",
-            imageAlt: "NO2 Pollution Sources",
+            imageAlt: t("o3SensorHero.whatIsSection.imageAlt"),
         },
 
         lightMode: {
-            title: "Electrochemical Technology",
-            description:
-                "The SO2 sensor uses electrochemical gas sensing technology to detect sulfur dioxide in the air. Our monitors use a special sensor to detect sulfur dioxide (SO2), a harmful gas found in the air. This SO2 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When SO2 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more SO2 in the air, the stronger the current.By measuring this current, our sensor tells us exactly how much SO2 is present. This helps in tracking air pollution and keeping the air cleaner and safer for everyone.",
+            title: t("o3SensorHero.lightMode.title"),
+            description: t("o3SensorHero.lightMode.description"),
             image: "/img/what-technology-is-being-used.webp",
-            imageAlt: "Electrochemical Technology",
+            imageAlt: t("o3SensorHero.lightMode.imageAlt"),
         },
 
         sensorChip: {
-            title: "NO2 Detection Module",
-            description: "High-performance electrochemical cell with integrated electronics for precise NO2 measurement.",
+            title: t("o3SensorHero.sensorChip.title"),
+            description: t("o3SensorHero.sensorChip.description"),
             image: "/img/sensor-chip.webp",
-            imageAlt: "NO2 Detection Module",
+            imageAlt: t("o3SensorHero.sensorChip.imageAlt"),
             buyNowLink: "#",
         },
 
         applications: {
-            title: "Applications of SO2 Sensor",
+            title: t("o3SensorHero.applications.title"),
             items: [
                 {
                     id: 1,
                     image: "/img/Air-Quality-Monitoring-Equipment.webp",
-                    title: "Air Quality Stations",
-                    alt: "Air Quality Monitoring Station",
+                    title: t("o3SensorHero.applications.items.0.title"),
+                    alt: t("o3SensorHero.applications.items.0.alt"),
                 },
                 {
                     id: 2,
                     image: "/img/smoking-factory-daytime.webp",
-                    title: "Traffic Pollution Monitoring",
-                    alt: "Traffic Pollution",
+                    title: t("o3SensorHero.applications.items.1.title"),
+                    alt: t("o3SensorHero.applications.items.1.alt"),
                 },
                 {
                     id: 3,
                     image: "/img/researcher-woman-measuring-eco-sapling-while-observing.webp",
-                    title: "Industrial Emission Control",
-                    alt: "Industrial Emissions",
+                    title: t("o3SensorHero.applications.items.2.title"),
+                    alt: t("o3SensorHero.applications.items.2.alt"),
                 },
                 {
                     id: 4,
                     image: "/img/3d-coronavirus-vaccine.webp",
-                    title: "Urban Environment Monitoring",
-                    alt: "Urban Environment",
+                    title: t("o3SensorHero.applications.items.3.title"),
+                    alt: t("o3SensorHero.applications.items.3.alt"),
                 },
                 {
                     id: 5,
                     image: "/img/men-lab-doing-experiments-close-up.webp",
-                    title: "Urban Environment Monitoring",
-                    alt: "Urban Environment",
+                    title: t("o3SensorHero.applications.items.4.title"),
+                    alt: t("o3SensorHero.applications.items.4.alt"),
                 },
                 {
                     id: 6,
                     image: "/img/establishing-shot-active-local-indian-health-clinic-lobby.webp",
-                    title: "Urban Environment Monitoring",
-                    alt: "Urban Environment",
+                    title: t("o3SensorHero.applications.items.5.title"),
+                    alt: t("o3SensorHero.applications.items.5.alt"),
                 },
                 {
                     id: 7,
                     image: "/img/woman-using-home-technology.webp",
-                    title: "Urban Environment Monitoring",
-                    alt: "Urban Environment",
-                }
+                    title: t("o3SensorHero.applications.items.6.title"),
+                    alt: t("o3SensorHero.applications.items.6.alt"),
+                },
             ],
         },
 
         technicalSpecs: {
-            title: "Technical Specifications",
+            title: t("o3SensorHero.technicalSpecs.title"),
             variants: {
-                variantA: "Standard Range",
-                variantB: "Extended Range",
+                variantA: t("o3SensorHero.technicalSpecs.variants.variantA"),
+                variantB: t("o3SensorHero.technicalSpecs.variants.variantB"),
             },
             specs: {
-                productName: { label: "Product Name", value: "NO2 Sensor" },
-                resolution: { label: "Resolution", value: "0.1 PPM" },
-                responseTime: { label: "Response Time", value: "< 60 seconds" },
-                operatingTemp: { label: "Operating Temperature", value: "-20°C to +50°C" },
-                operatingHumidity: { label: "Operating Humidity", value: "15-90% RH" },
-                measurementRange: { label: "Measurement Range", value: "0-20 PPM" },
-                repeatability: { label: "Repeatability", value: "±3% of reading" },
-                sensitivity: { label: "Sensitivity", value: "0.1 PPM" },
-                operatingVoltage: { label: "Operating Voltage", value: "3.3V" },
-                powerConsumption: { label: "Power Consumption", value: "< 10mA" },
+                productName: {
+                    label: t("o3SensorHero.technicalSpecs.specs.productName.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.productName.value"),
+                },
+                resolution: {
+                    label: t("o3SensorHero.technicalSpecs.specs.resolution.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.resolution.value"),
+                },
+                responseTime: {
+                    label: t("o3SensorHero.technicalSpecs.specs.responseTime.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.responseTime.value"),
+                },
+                operatingTemp: {
+                    label: t("o3SensorHero.technicalSpecs.specs.operatingTemp.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.operatingTemp.value"),
+                },
+                operatingHumidity: {
+                    label: t("o3SensorHero.technicalSpecs.specs.operatingHumidity.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.operatingHumidity.value"),
+                },
+                measurementRange: {
+                    label: t("o3SensorHero.technicalSpecs.specs.measurementRange.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.measurementRange.value"),
+                },
+                repeatability: {
+                    label: t("o3SensorHero.technicalSpecs.specs.repeatability.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.repeatability.value"),
+                },
+                sensitivity: {
+                    label: t("o3SensorHero.technicalSpecs.specs.sensitivity.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.sensitivity.value"),
+                },
+                operatingVoltage: {
+                    label: t("o3SensorHero.technicalSpecs.specs.operatingVoltage.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.operatingVoltage.value"),
+                },
+                powerConsumption: {
+                    label: t("o3SensorHero.technicalSpecs.specs.powerConsumption.label"),
+                    value: t("o3SensorHero.technicalSpecs.specs.powerConsumption.value"),
+                },
             },
             images: {
                 variantA: "/img/so2-sensor-vaiant.webp",
@@ -193,69 +226,69 @@ export default function NO2SensorPage() {
         },
 
         gallery: {
-            title: "NO2 Sensor",
-            titleHighlight: "Product Gallery",
-            description: "Detailed views of our NO2 sensor showing its professional design and build quality.",
+            title: t("o3SensorHero.gallery.title"),
+            titleHighlight: t("o3SensorHero.gallery.titleHighlight"),
+            description: t("o3SensorHero.gallery.description"),
             images: ["/img/sensors-gallery-img.webp", "/img/sensors-gallery-img.webp", "/img/sensors-gallery-img.webp"],
         },
 
         contact: {
-            title: "Technical Support",
-            description: "Need help with NO2 sensor integration? Our engineers are here to assist you.",
+            title: t("o3SensorHero.contact.title"),
+            description: t("o3SensorHero.contact.description"),
         },
 
         relatedProducts: {
-            title: "Related Gas Sensors",
+            title: t("o3SensorHero.relatedProducts.title"),
             items: [
                 {
                     id: 1,
-                    name: "CO2 Sensor",
+                    name: t("o3SensorHero.relatedProducts.items.0.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "CO2 Sensor",
+                    alt: t("o3SensorHero.relatedProducts.items.0.alt"),
                     link: "/sensors/co2",
                 },
                 {
                     id: 2,
-                    name: "SO2 Sensor",
+                    name: t("o3SensorHero.relatedProducts.items.1.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "SO2 Sensor",
+                    alt: t("o3SensorHero.relatedProducts.items.1.alt"),
                     link: "/sensors/so2",
                 },
                 {
                     id: 3,
-                    name: "O3 Sensor",
+                    name: t("o3SensorHero.relatedProducts.items.2.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "Ozone Sensor",
-                    link: "/sensors/ozone",
+                    alt: t("o3SensorHero.relatedProducts.items.2.alt"),
+                    link: "/sensors/no2",
                 },
                 {
                     id: 4,
-                    name: "CO Sensor",
+                    name: t("o3SensorHero.relatedProducts.items.3.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "CO Sensor",
+                    alt: t("o3SensorHero.relatedProducts.items.3.alt"),
                     link: "/sensors/co",
                 },
                 {
                     id: 5,
-                    name: "SO2 Sensor",
+                    name: t("o3SensorHero.relatedProducts.items.4.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "SO2 Sensor",
-                    link: "/sensors/so2",
+                    alt: t("o3SensorHero.relatedProducts.items.4.alt"),
+                    link: "/sensors/nh3",
                 },
                 {
                     id: 6,
-                    name: "O3 Sensor",
+                    name: t("o3SensorHero.relatedProducts.items.5.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "Ozone Sensor",
-                    link: "/sensors/ozone",
+                    alt: t("o3SensorHero.relatedProducts.items.5.alt"),
+                    link: "/sensors/cl2",
                 },
                 {
                     id: 7,
-                    name: "CO Sensor",
+                    name: t("o3SensorHero.relatedProducts.items.6.name"),
                     image: "/img/ethanol-sensor.webp",
-                    alt: "CO Sensor",
-                    link: "/sensors/co",
-                }
+                    alt: t("o3SensorHero.relatedProducts.items.6.alt"),
+                    link: "/sensors/h2s",
+                },
             ],
         },
     }

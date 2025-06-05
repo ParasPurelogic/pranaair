@@ -3,7 +3,7 @@ import Image from "next/image"
 import { getServerTranslation } from "@/i18n/server"
 
 export default async function NoisePollutionPage() {
-  const { t } = await getServerTranslation("noise-pollution")
+  const { t } = await getServerTranslation("what-noise-pollution")
   return (
     <main>
       {/* Hero Section */}

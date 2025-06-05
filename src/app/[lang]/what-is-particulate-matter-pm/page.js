@@ -5,7 +5,7 @@ import AqiTabsPM from "@/Components/Pages/ParticulateMatter/tabs-aqi"
 import Image from "next/image"
 
 export default async function ParticularMatterPage() {
-  const { t } = await getServerTranslation("particulate")
+  const { t } = await getServerTranslation("what-particulate")
 
   const measureProducts = [
     {

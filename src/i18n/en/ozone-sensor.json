@@ -1,0 +1,214 @@
+{
+     "o3SensorHero": {
+    "title": "O3 SENSOR",
+    "type": "O3 SENSOR",
+    "pageName": "O3 SENSOR Page",
+    "variants": {
+      "standard": {
+        "ppm": "0-20 PPM",
+        "price": "$249"
+      },
+      "premium": {
+        "ppm": "0-100 PPM",
+        "price": "$349"
+      }
+    },
+    "description": "Prana Air O3 sensor is made with precision and fineness for both industrial-grade and consumer-grade safety monitoring. The sensor is based on electrochemical technology for highly reactive ozone gas.",
+    "descriptions": "Advanced ozone detection for comprehensive air quality and environmental monitoring.",
+    "introduction": {
+      "title": "Introduction",
+      "titleHighlight": "O3 Sensor",
+      "description": "The Prana Air O3 sensor is designed with great accuracy and quality for both environmental and industrial ozone monitoring. It uses electrochemical technology to detect harmful ozone (O3) gas. This sensor is small, lightweight, and affordable, making it easy to use in different monitoring and safety systems. It is durable, lasts a long time, and can be used in a variety of settings, including air quality stations, research facilities, healthcare environments, and industrial applications.",
+      "specs": {
+        "resolution": {
+          "label": "Resolution",
+          "value": "0.1 PPM"
+        },
+        "range": {
+          "label": "Range",
+          "value": "50 PPM"
+        }
+      },
+      "whyChooseFeatures": [
+        {
+          "title": "Miniature Size",
+          "description": "Ultra-compact design for space-constrained applications",
+          "iconAlt": "Compact Icon"
+        },
+        {
+          "title": "Weather Resistant",
+          "description": "Designed for outdoor environmental monitoring",
+          "iconAlt": "Durable Icon"
+        },
+        {
+          "title": "Real-time Detection",
+          "description": "Instant O3 level monitoring",
+          "iconAlt": "Responsive Icon"
+        },
+        {
+          "title": "Battery Friendly",
+          "description": "Optimized for battery-powered devices",
+          "iconAlt": "Energy Efficient Icon"
+        },
+        {
+          "title": "Factory Tested",
+          "description": "Each sensor individually tested and calibrated",
+          "iconAlt": "Calibrated Icon"
+        },
+        {
+          "title": "Eco-Friendly",
+          "description": "RoHS compliant and environmentally safe",
+          "iconAlt": "RoHS Icon"
+        }
+      ]
+    },
+    "calibration": {
+      "title": "O3 Sensor Calibration Guide",
+      "description": "Step-by-step calibration process to ensure accurate O3 measurements in your application.",
+      "videoAlt": "O3 Sensor Calibration Guide"
+    },
+    "technology": {
+      "title": "Advanced Sensing Technology",
+      "subtitle": "Electrochemical Detection"
+    },
+    "whatIsSection": {
+      "title": "What is Ozone (O3)?",
+      "description": "Ozone (O₃) is a highly reactive gas composed of three oxygen atoms. At ground level, ozone is a harmful air pollutant that can cause respiratory problems, chest pain, and throat irritation. It is formed when nitrogen oxides (NOx) and volatile organic compounds (VOCs) react in the presence of sunlight. Ground-level ozone is a major component of smog and can worsen asthma and other respiratory conditions. However, in the upper atmosphere (stratosphere), ozone forms a protective layer that shields Earth from harmful ultraviolet radiation. Sources of ground-level ozone include vehicle emissions, industrial facilities, power plants, and chemical solvents.",
+      "imageAlt": "O3 Pollution Sources"
+    },
+    "lightMode": {
+      "title": "Electrochemical Technology",
+      "description": "The O3 sensor uses electrochemical gas sensing technology to detect ozone in the air. Our monitors use a special sensor to detect ozone (O3), a reactive gas that can be harmful to human health. This O3 sensor works using a simple chemical process. It has two key parts called electrodes and a special material that connects them. When O3 enters the sensor, a chemical reaction happens. This reaction creates a tiny electric current. The more O3 in the air, the stronger the current. By measuring this current, our sensor tells us exactly how much O3 is present. This helps in monitoring air quality and protecting people from harmful ozone exposure.",
+      "imageAlt": "Electrochemical Technology"
+    },
+    "sensorChip": {
+      "title": "O3 Detection Module",
+      "description": "High-performance electrochemical cell with integrated electronics for precise O3 measurement.",
+      "imageAlt": "O3 Detection Module"
+    },
+    "applications": {
+      "title": "Applications of O3 Sensor",
+      "items": [
+        {
+          "title": "Air Quality Monitoring",
+          "alt": "Air Quality Monitoring Station"
+        },
+        {
+          "title": "Industrial Emission Control",
+          "alt": "Industrial Emissions"
+        },
+        {
+          "title": "Environmental Research",
+          "alt": "Environmental Research"
+        },
+        {
+          "title": "Healthcare Facilities",
+          "alt": "Healthcare Facilities"
+        },
+        {
+          "title": "Laboratory Testing",
+          "alt": "Laboratory Testing"
+        },
+        {
+          "title": "Medical Equipment",
+          "alt": "Medical Equipment"
+        },
+        {
+          "title": "Smart Home Monitoring",
+          "alt": "Smart Home Monitoring"
+        }
+      ]
+    },
+    "technicalSpecs": {
+      "title": "Technical Specifications",
+      "variants": {
+        "variantA": "Standard Range",
+        "variantB": "Extended Range"
+      },
+      "specs": {
+        "productName": {
+          "label": "Product Name",
+          "value": "O3 Sensor"
+        },
+        "resolution": {
+          "label": "Resolution",
+          "value": "0.1 PPM"
+        },
+        "responseTime": {
+          "label": "Response Time",
+          "value": "< 60 seconds"
+        },
+        "operatingTemp": {
+          "label": "Operating Temperature",
+          "value": "-20°C to +50°C"
+        },
+        "operatingHumidity": {
+          "label": "Operating Humidity",
+          "value": "15-90% RH"
+        },
+        "measurementRange": {
+          "label": "Measurement Range",
+          "value": "0-20 PPM"
+        },
+        "repeatability": {
+          "label": "Repeatability",
+          "value": "±3% of reading"
+        },
+        "sensitivity": {
+          "label": "Sensitivity",
+          "value": "0.1 PPM"
+        },
+        "operatingVoltage": {
+          "label": "Operating Voltage",
+          "value": "3.3V"
+        },
+        "powerConsumption": {
+          "label": "Power Consumption",
+          "value": "< 10mA"
+        }
+      }
+    },
+    "gallery": {
+      "title": "O3 Sensor",
+      "titleHighlight": "Product Gallery",
+      "description": "Detailed views of our O3 sensor showing its professional design and build quality."
+    },
+    "contact": {
+      "title": "Technical Support",
+      "description": "Need help with O3 sensor integration? Our engineers are here to assist you."
+    },
+    "relatedProducts": {
+      "title": "Related Gas Sensors",
+      "items": [
+        {
+          "name": "CO2 Sensor",
+          "alt": "CO2 Sensor"
+        },
+        {
+          "name": "SO2 Sensor",
+          "alt": "SO2 Sensor"
+        },
+        {
+          "name": "NO2 Sensor",
+          "alt": "NO2 Sensor"
+        },
+        {
+          "name": "CO Sensor",
+          "alt": "CO Sensor"
+        },
+        {
+          "name": "NH3 Sensor",
+          "alt": "NH3 Sensor"
+        },
+        {
+          "name": "Cl2 Sensor",
+          "alt": "Cl2 Sensor"
+        },
+        {
+          "name": "H2S Sensor",
+          "alt": "H2S Sensor"
+        }
+      ]
+    }
+  }
+}

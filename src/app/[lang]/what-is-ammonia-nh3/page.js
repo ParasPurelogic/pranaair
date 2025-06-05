@@ -3,7 +3,7 @@ import Image from "next/image"
 import { getServerTranslation } from "@/i18n/server"
 
 export default async function AmmoniaPage() {
-  const { t } = await getServerTranslation("ammonia")
+  const { t } = await getServerTranslation("what-ammonia")
 
   return (
     <main>

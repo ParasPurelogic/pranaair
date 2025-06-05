@@ -4,7 +4,7 @@ import MeasureCarousel from "@/Components/Pages/CarbonDioxide/measure-co2-slider
 import { getServerTranslation } from "@/i18n/server"
 
 export default async function HumidityPage() {
-  const { t } = await getServerTranslation("humidity")
+  const { t } = await getServerTranslation("what-humidity")
   const measureProducts = [
     {
       imageSrc: "https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-co2-sensor.jpg",
