@@ -2,13 +2,13 @@ import SensorPageTemplate from "@/Components/Pages/SensorPage/sensor-page-templa
 
 export default function NO2SensorPage() {
     const sensorData = {
-        sensorName: "SO2 SENSOR ",
-        sensorType: "SO2 SENSOR ",
-        pageName: "SO2 SENSOR Page",
+        sensorName: "Chlorine Cl2 Sensor",
+        sensorType: "Chlorine Cl2 Sensor",
+        pageName: "Chlorine Cl2 Sensor Page",
 
         productImages: {
-            main: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
-            thumbnails: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            main: ["/img/chlorine-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            thumbnails: ["/img/chlorine-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
         },
 
         variants: {
@@ -125,25 +125,25 @@ export default function NO2SensorPage() {
             items: [
                 {
                     id: 1,
-                    image: "/img/Air-Quality-Monitoring-Equipment.webp",
+                    image: "/img/view-toilet-bathroom.webp",
                     title: "Air Quality Stations",
                     alt: "Air Quality Monitoring Station",
                 },
                 {
                     id: 2,
-                    image: "/img/industrial-safety-equipment.webp",
+                    image: "/img/technologist-expert-production-line.webp",
                     title: "Traffic Pollution Monitoring",
                     alt: "Traffic Pollution",
                 },
                 {
                     id: 3,
-                    image: "/img/automobile-equipment.webp",
+                    image: "/img/production-medical-mask-development-machine.webp",
                     title: "Industrial Emission Control",
                     alt: "Industrial Emissions",
                 },
                 {
                     id: 4,
-                    image: "/img/regulatory-at-power-plants-oil-refineries.webp",
+                    image: "/img/aerial-view-water-treatment-factory-city-wastewater-cleaning.webp",
                     title: "Urban Environment Monitoring",
                     alt: "Urban Environment",
                 },

@@ -2,13 +2,13 @@ import SensorPageTemplate from "@/Components/Pages/SensorPage/sensor-page-templa
 
 export default function NO2SensorPage() {
     const sensorData = {
-        sensorName: "SO2 SENSOR ",
-        sensorType: "SO2 SENSOR ",
-        pageName: "SO2 SENSOR Page",
+        sensorName: "NO2 Sensor",
+        sensorType: "NO2 Sensor",
+        pageName: "NO2 Sensor Page",
 
         productImages: {
-            main: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
-            thumbnails: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            main: ["/img/NO2-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            thumbnails: ["/img/NO2-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
         },
 
         variants: {
@@ -100,7 +100,7 @@ export default function NO2SensorPage() {
             title: "What is Nitrogen Dioxide (NO2)?",
             description:
                 "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.",
-            image: "/img/chlorine source.webp",
+            image: "/img/NO2-source.webp",
             imageAlt: "NO2 Pollution Sources",
         },
 
@@ -147,6 +147,18 @@ export default function NO2SensorPage() {
                     title: "Urban Environment Monitoring",
                     alt: "Urban Environment",
                 },
+                {
+                    id: 5,
+                    image: "/img/petrochemical-industry.webp",
+                    title: "Urban Environment Monitoring",
+                    alt: "Urban Environment",
+                },
+                {
+                    id: 6,
+                    image: "/img/generator-emergency-electric-power.webp",
+                    title: "Urban Environment Monitoring",
+                    alt: "Urban Environment",
+                }
             ],
         },
 

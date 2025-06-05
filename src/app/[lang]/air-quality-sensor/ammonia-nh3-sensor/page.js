@@ -2,13 +2,13 @@ import SensorPageTemplate from "@/Components/Pages/SensorPage/sensor-page-templa
 
 export default function NO2SensorPage() {
     const sensorData = {
-        sensorName: "SO2 SENSOR ",
-        sensorType: "SO2 SENSOR ",
-        pageName: "SO2 SENSOR Page",
+        sensorName: "Ammonia NH3 Sensor ",
+        sensorType: "Ammonia NH3 Sensor ",
+        pageName: "Ammonia NH3 Sensor Page",
 
         productImages: {
-            main: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
-            thumbnails: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            main: ["/img/ammonia-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            thumbnails: ["/img/ammonia-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
         },
 
         variants: {
@@ -100,7 +100,7 @@ export default function NO2SensorPage() {
             title: "What is Nitrogen Dioxide (NO2)?",
             description:
                 "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.",
-            image: "/img/chlorine source.webp",
+            image: "/img/ammonia-source.webp",
             imageAlt: "NO2 Pollution Sources",
         },
 
@@ -125,25 +125,25 @@ export default function NO2SensorPage() {
             items: [
                 {
                     id: 1,
-                    image: "/img/Air-Quality-Monitoring-Equipment.webp",
+                    image: "/img/aerial-top-view-shot-hong-kong-cityscape.webp",
                     title: "Air Quality Stations",
                     alt: "Air Quality Monitoring Station",
                 },
                 {
                     id: 2,
-                    image: "/img/industrial-safety-equipment.webp",
+                    image: "/img/young-woman-using-home-technology.webp",
                     title: "Traffic Pollution Monitoring",
                     alt: "Traffic Pollution",
                 },
                 {
                     id: 3,
-                    image: "/img/automobile-equipment.webp",
+                    image: "/img/close-up-heat-pump-outside-home.webp",
                     title: "Industrial Emission Control",
                     alt: "Industrial Emissions",
                 },
                 {
                     id: 4,
-                    image: "/img/regulatory-at-power-plants-oil-refineries.webp",
+                    image: "/img/foggy-day-with-smoke-coming-out-chimney.webp",
                     title: "Urban Environment Monitoring",
                     alt: "Urban Environment",
                 },

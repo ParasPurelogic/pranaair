@@ -51,28 +51,28 @@
           "iconAlt": "compact icon"
         },
         "feature2": {
-          "title": "Compact",
-          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "title": "Durable",
+          "description": "The SO2 sensor has a lifespan of up to 10 years, eliminating concerns about calibration and breakdown.",
           "iconAlt": "compact icon"
         },
         "feature3": {
-          "title": "Compact",
-          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "title": "Highly Responsive",
+          "description": "The Prana Air SO2 sensor is both precise and fast, with an average response time of 15 seconds.",
           "iconAlt": "compact icon"
         },
         "feature4": {
-          "title": "Compact",
-          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "title": "Energy Efficient",
+          "description": "Our sensors are both accurate and energy-efficient, eliminating concerns about high energy consumption.",
           "iconAlt": "compact icon"
         },
         "feature5": {
-          "title": "Compact",
-          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "title": "Individually Calibrated",
+          "description": "Sulfur Dioxide sensors are carefully calibrated individually before integration to ensure precise and reliable readings in every device.",
           "iconAlt": "compact icon"
         },
         "feature6": {
-          "title": "Compact",
-          "description": "The sensors compact size allows easy installation in any space, making it suitable for both portable and fixed monitoring devices.",
+          "title": "RoHS Compliance",
+          "description": "Our sensors comply with RoHS guidelines, ensuring restricted use of hazardous substances in electronic devices.",
           "iconAlt": "compact icon"
         }
       }

@@ -2,13 +2,13 @@ import SensorPageTemplate from "@/Components/Pages/SensorPage/sensor-page-templa
 
 export default function NO2SensorPage() {
     const sensorData = {
-        sensorName: "SO2 SENSOR ",
-        sensorType: "SO2 SENSOR ",
-        pageName: "SO2 SENSOR Page",
+        sensorName: "O3 SENSOR ",
+        sensorType: "O3 SENSOR ",
+        pageName: "O3 SENSOR Page",
 
         productImages: {
-            main: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
-            thumbnails: ["/img/so2-sensors.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            main: ["/img/o3-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
+            thumbnails: ["/img/o3-sensor.webp", "/img/new-sensor1.webp", "/img/new-sensor2.webp"],
         },
 
         variants: {
@@ -100,7 +100,7 @@ export default function NO2SensorPage() {
             title: "What is Nitrogen Dioxide (NO2)?",
             description:
                 "Sulfur dioxide (SO₂) is a toxic gas with a strong, burnt smell. Its odor is sharp and irritating, though it is not the same as nitric acid. SO₂ is an acidic and corrosive gas. When it reacts with other substances in the air, it can form harmful compounds like sulfuric acid and sulfate pollutants, which contribute to air pollution and acid rain. The main sources of SO₂ include burning fossil fuels, power plants, metal extraction, industrial processes, volcanoes, vehicle emissions, oil refining, and diesel engines. However, the Indian government's move toward BSVI-compliant engines has helped reduce SO₂ emissions from vehicles.",
-            image: "/img/chlorine source.webp",
+            image: "/img/ozone source.webp",
             imageAlt: "NO2 Pollution Sources",
         },
 
@@ -131,22 +131,40 @@ export default function NO2SensorPage() {
                 },
                 {
                     id: 2,
-                    image: "/img/industrial-safety-equipment.webp",
+                    image: "/img/smoking-factory-daytime.webp",
                     title: "Traffic Pollution Monitoring",
                     alt: "Traffic Pollution",
                 },
                 {
                     id: 3,
-                    image: "/img/automobile-equipment.webp",
+                    image: "/img/researcher-woman-measuring-eco-sapling-while-observing.webp",
                     title: "Industrial Emission Control",
                     alt: "Industrial Emissions",
                 },
                 {
                     id: 4,
-                    image: "/img/regulatory-at-power-plants-oil-refineries.webp",
+                    image: "/img/3d-coronavirus-vaccine.webp",
                     title: "Urban Environment Monitoring",
                     alt: "Urban Environment",
                 },
+                {
+                    id: 5,
+                    image: "/img/men-lab-doing-experiments-close-up.webp",
+                    title: "Urban Environment Monitoring",
+                    alt: "Urban Environment",
+                },
+                {
+                    id: 6,
+                    image: "/img/establishing-shot-active-local-indian-health-clinic-lobby.webp",
+                    title: "Urban Environment Monitoring",
+                    alt: "Urban Environment",
+                },
+                {
+                    id: 7,
+                    image: "/img/woman-using-home-technology.webp",
+                    title: "Urban Environment Monitoring",
+                    alt: "Urban Environment",
+                }
             ],
         },
 
