@@ -58,6 +58,7 @@ export default async function AirMaskPage() {
               <span style={{ fontSize: "22pt" }}>{t("heading.title")}</span>
               <sup>
                 <Image
+                  className="mask-img"
                   src="https://www.pranaair.com/wp-content/uploads/2021/02/logo-icon-top.png"
                   alt="logo"
                   width={30}

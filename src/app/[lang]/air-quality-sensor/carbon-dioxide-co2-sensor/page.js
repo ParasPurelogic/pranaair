@@ -1073,7 +1073,7 @@ export default async function CO2SensorPage() {
               <ProductCarousel className="allsensor-slide" showDots={true} arrows={false} >
                 {sensors.map((sensor) => (
                   <div className="may-also" key={sensor.id}>
-                    <a href="#">
+                    <a href="">
                       <img src={sensor.imageUrl || "/placeholder.svg"} alt={t(sensor.altKey)} />
                     </a>
                     <h5>

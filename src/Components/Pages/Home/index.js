@@ -1,12 +1,13 @@
 // Imports
 import "./home.css";
-import Link from "next/link";
 import Image from "next/image";
 import BlogSection from "./BlogSection";
 import HeroImageGrid from "./HeroImageGrid";
 import SectionDiscover from "./SectionDiscover";
 import SeamleassConnectivitySection from "./SeamlessConnectivitySection";
 import { getServerTranslation } from "../../../i18n/server";
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function PranaAirHomepage() {
   // Initialize i18n
@@ -24,7 +25,7 @@ export default async function PranaAirHomepage() {
                 {t("hero.title")} <span className="text-highlight">{t("hero.highlight")}</span>
               </h1>
               <p>{t("hero.description")}</p>
-              <Link href="/air-quality-monitor" className="hero-button">
+              <Link href={`${domain}/air-quality-monitor`} className="hero-button">
                 {t("hero.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/hero-button-icon.png"
@@ -52,7 +53,7 @@ export default async function PranaAirHomepage() {
             </div>
             <div className="parameter-box">
               <div className="firstn">
-                <Link href="/what-is-particulate-matter-pm/" className="parameter-btn param-1">
+                <Link href={`${domain}/what-is-particulate-matter-pm`} className="parameter-btn param-1">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-pm10.png"
                     alt="pm10 pollutant"
@@ -69,7 +70,7 @@ export default async function PranaAirHomepage() {
                   />
                 </Link>
 
-                <Link href="/what-is-nitrogen-dioxide-no2/" className="parameter-btn param-2">
+                <Link href={`${domain}/what-is-nitrogen-dioxide-no2`} className="parameter-btn param-2">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-no2.png"
                     alt="no2 pollutant"
@@ -86,7 +87,7 @@ export default async function PranaAirHomepage() {
                   />
                 </Link>
 
-                <Link href="/what-is-ozone-o3/" className="parameter-btn param-3">
+                <Link href={`${domain}/what-is-ozone-o3`} className="parameter-btn param-3">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-o3.png"
                     alt="ozone pollutant"
@@ -104,7 +105,7 @@ export default async function PranaAirHomepage() {
                 </Link>
               </div>
               <div className="firstn">
-                <Link href="/what-is-carbon-monoxide-co/" className="parameter-btn param-4">
+                <Link href={`${domain}/what-is-carbon-monoxide-co`} className="parameter-btn param-4">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/08/co-parameter.png"
                     alt="co pollutant"
@@ -121,7 +122,7 @@ export default async function PranaAirHomepage() {
                   />
                 </Link>
 
-                <Link href="/what-is-particulate-matter-pm/" className="parameter-btn param-5">
+                <Link href={`${domain}/what-is-particulate-matter-pm`} className="parameter-btn param-5">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-pm2.5.png"
                     alt="pm2.5 pollutant"
@@ -138,7 +139,7 @@ export default async function PranaAirHomepage() {
                   />
                 </Link>
 
-                <Link href="/what-is-hydrogen-sulfide-h2s/" className="parameter-btn param-6">
+                <Link href={`${domain}/what-is-hydrogen-sulfide-h2s`} className="parameter-btn param-6">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-h2s.png"
                     alt="h2s pollutant"
@@ -156,7 +157,7 @@ export default async function PranaAirHomepage() {
                 </Link>
               </div>
               <div className="firstn last-para">
-                <Link href="/what-is-sulfur-dioxide-so2/" className="parameter-btn param-7">
+                <Link href={`${domain}/what-is-sulfur-dioxide-so2`} className="parameter-btn param-7">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2024/07/hm-so2.png"
                     alt="so2 pollutant"
@@ -194,7 +195,7 @@ export default async function PranaAirHomepage() {
               <p>
                 {t("drone.description")}
               </p>
-              <Link href="/air-quality-monitor/air-drone" className="drone-button">
+              <Link href={`${domain}/air-quality-monitor/air-drone`} className="drone-button">
                 {t("drone.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/08/parameters-icon.webp"
@@ -546,7 +547,7 @@ export default async function PranaAirHomepage() {
           <div className="breathing-fresh-air-content">
             <div className="breathing-fresh-air-txt">
               <h2>{t("freshAir.title")}</h2>
-              <Link href="/fresh-air-machine/" className="fresh-air-button">
+              <Link href={`${domain}/fresh-air-machine`} className="fresh-air-button">
                 {t("freshAir.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/green-arrow.png"
@@ -572,7 +573,7 @@ export default async function PranaAirHomepage() {
               </h4>
             </div>
             <div className="accurate-btn">
-              <Link href="https://www.pranaair.com/air-quality-data-accuracy/" className="accuracy-button">
+              <Link href={`${domain}/air-quality-data-accuracy`} className="accuracy-button">
                 {t("accurate.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/green-arrow.png"
@@ -596,7 +597,7 @@ export default async function PranaAirHomepage() {
                   <h3>
                     {t("solutions.title")} <span className="text-highlight">{t("solutions.highlight")}</span>
                   </h3>
-                  <Link href="/solutions-by-application" className="solutions-button">
+                  <Link href={`${domain}/solutions-by-application`} className="solutions-button">
                     {t("solutions.button")}
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/parameters-icon.png"
@@ -608,7 +609,7 @@ export default async function PranaAirHomepage() {
                   </Link>
                 </div>
                 <div className="solution-pages-link smart-city">
-                  <Link href="/solutions-by-application/smart-city/">
+                  <Link href={`${domain}/solutions-by-application/smart-city`}>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/Smart-City-Projects.jpg"
                       alt="prana air - air quality solutions for smart city project"
@@ -632,7 +633,7 @@ export default async function PranaAirHomepage() {
             <div className="col-lg-6">
               <div className="all-solu-tab">
                 <div className="solution-tab-links">
-                  <Link href="/solutions-by-application/institutes/">
+                  <Link href={`${domain}/solutions-by-application/institutes/`}>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/Institutes-Schools.jpg"
                       alt="prana air - air quality solutions for schools and insitutes"
@@ -652,7 +653,7 @@ export default async function PranaAirHomepage() {
                   </Link>
                 </div>
                 <div className="solution-tab-links">
-                  <Link href="/solutions-by-application/constructions/">
+                  <Link href={`${domain}/solutions-by-application/constructions/`}>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/air-quality-solutions-for-contruction-sites.jpg"
                       alt="prana air - air quality solutions for construction sites"
@@ -678,7 +679,7 @@ export default async function PranaAirHomepage() {
             <div className="col-lg-6">
               <div className="all-solu-tab">
                 <div className="solution-tab-links">
-                  <Link href="/solutions-by-application/hotel-businesses/">
+                  <Link href={`${domain}/solutions-by-application/hotel-businesses`}>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/Hotel-Businesses.jpg"
                       alt="prana air - air quality solutions for hotel businesses"
@@ -698,7 +699,7 @@ export default async function PranaAirHomepage() {
                   </Link>
                 </div>
                 <div className="solution-tab-links">
-                  <Link href="/solutions-by-application/airports/">
+                  <Link href={`${domain}/solutions-by-application/airports/`}>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/Airports.jpg"
                       alt="prana air - air quality solutions for airport"
@@ -722,7 +723,7 @@ export default async function PranaAirHomepage() {
             <div className="col-lg-6">
               <div className="all-solu-tab">
                 <div className="solution-tab-links">
-                  <Link href="/solutions-by-application/hospital/">
+                  <Link href={`${domain}/solutions-by-application/hospital/`}>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/Hospital-Healthcare.jpg"
                       alt="prana air - air quality solutions for hospital and healthcare industries"
@@ -742,7 +743,7 @@ export default async function PranaAirHomepage() {
                   </Link>
                 </div>
                 <div className="solution-tab-links">
-                  <Link href="/solutions-by-application/real-estate/">
+                  <Link href={`${domain}/solutions-by-application/real-estate`}>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/07/Real-Estates.jpg"
                       alt="prana air - air quality solutions for real estates businesses"
@@ -895,7 +896,7 @@ export default async function PranaAirHomepage() {
               </h2>
             </div>
             <div className="lets-talk-link">
-              <Link href="https://www.pranaair.com/contact/">
+              <Link href={`${domain}/https://www.pranaair.com/contact/`}>
                 {t("query.button")}
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"

@@ -1,6 +1,8 @@
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function AirQualitySensors() {
   const { t } = await getServerTranslation("air-quality-sensor")
@@ -105,18 +107,19 @@ export default async function AirQualitySensors() {
                 <div className="ui-tabs-panel">
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co2-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.co2.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.co2.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor`}>
+                          {t("airQualitySensorsTabs.sensors.co2.name")}</Link>
                       </h3>
                       <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.co2.price")}</div>
                       <ul className="product_feature_list">
@@ -126,9 +129,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.type")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <form
                           className="cart"
                           action="https://www.pranaair.com/product/carbon-dioxide-sensor/"
@@ -150,18 +153,18 @@ export default async function AirQualitySensors() {
 
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/carbon-monoxide-co-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.co.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.co.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/carbon-monoxide-co-sensor`}>{t("airQualitySensorsTabs.sensors.co.name")}</Link>
                       </h3>
                       <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.co.price")}</div>
                       <ul className="product_feature_list">
@@ -171,9 +174,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.co.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/carbon-monoxide-co-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
                           {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
@@ -183,18 +186,18 @@ export default async function AirQualitySensors() {
 
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="https://www.pranaair.com/product/carbon-monoxide-co-sensor/">
+                      <Link href={`${domain}/air-quality-sensor/sulfur-dioxide-so2-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-so2-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.so2.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.so2.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/sulfur-dioxide-so2-sensor`}>{t("airQualitySensorsTabs.sensors.so2.name")}</Link>
                       </h3>
                       <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.so2.price")}</div>
                       <ul className="product_feature_list">
@@ -204,9 +207,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/sulfur-dioxide-so2-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
                           {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
@@ -216,18 +219,18 @@ export default async function AirQualitySensors() {
 
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/nitrogen-dioxide-no2-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-no2-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.no2.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.no2.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/nitrogen-dioxide-no2-sensor`}>{t("airQualitySensorsTabs.sensors.no2.name")}</Link>
                       </h3>
                       <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.no2.price")}</div>
                       <ul className="product_feature_list">
@@ -237,15 +240,15 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.no2.features.workingTemp")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/nitrogen-dioxide-no2-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                           className="monitor_know_btn monitor_card_btn"
-                          href="https://www.pranaair.com/product/nitrogen-dioxide-no2-sensor/"
+                          href={`${domain}/air-quality-sensor/nitrogen-dioxide-no2-sensor`}
                         >
                           {t("airQualitySensorsTabs.buttons.buyNow")}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -256,18 +259,18 @@ export default async function AirQualitySensors() {
                 <div className="ui-tabs-panel">
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/indoor-pm-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-indoor-pm-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.indoorPM.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.indoorPM.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/indoor-pm-sensor`}>{t("airQualitySensorsTabs.sensors.indoorPM.name")}</Link>
                       </h3>
                       <div className="rate_compare_box">{t("airQualitySensorsTabs.sensors.indoorPM.price")}</div>
                       <ul className="product_feature_list">
@@ -277,9 +280,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.indoorPM.features.workingTemp")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/indoor-pm-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
                           {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
@@ -289,16 +292,16 @@ export default async function AirQualitySensors() {
 
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2021/03/outdoor-pm2.5-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.outdoorPM.altText")}
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.outdoorPM.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}>{t("airQualitySensorsTabs.sensors.outdoorPM.name")}</Link>
                       </h3>
                       <span className="rating_box">
                         <img
@@ -315,9 +318,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.outdoorPM.features.workingTemp")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
                           {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
@@ -331,18 +334,18 @@ export default async function AirQualitySensors() {
                 <div className="ui-tabs-panel">
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co2-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.co2.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.co2.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor`}>{t("airQualitySensorsTabs.sensors.co2.name")}</Link>
                       </h3>
                       <span className="rating_box">
                         <img
@@ -359,9 +362,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.co2.features.type")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <button className="single_add_to_cart_button button alt banner-btn">
                           {t("airQualitySensorsTabs.buttons.buyNow")}
                         </button>
@@ -371,18 +374,18 @@ export default async function AirQualitySensors() {
 
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/carbon-monoxide-co-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-co-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.co.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.co.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/carbon-monoxide-co-sensor`}>{t("airQualitySensorsTabs.sensors.co.name")}</Link>
                       </h3>
                       <span className="rating_box">
                         <img
@@ -399,9 +402,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.co.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/carbon-monoxide-co-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
                           {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
@@ -411,18 +414,18 @@ export default async function AirQualitySensors() {
 
                   <div className="pocket_monitor_box">
                     <div className="pocket_monitor_img">
-                      <a href="#">
+                      <Link href={`${domain}/air-quality-sensor/sulfur-dioxide-so2-sensor`}>
                         <img
                           src="https://www.pranaair.com/wp-content/uploads/2023/03/prana-air-so2-sensor.png"
                           alt={t("airQualitySensorsTabs.sensors.so2.altText")}
                           width="100"
                           height="100"
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="monitor_detail_box">
                       <h3>
-                        <a href="#">{t("airQualitySensorsTabs.sensors.so2.name")}</a>
+                        <Link href={`${domain}/air-quality-sensor/sulfur-dioxide-so2-sensor`}>{t("airQualitySensorsTabs.sensors.so2.name")}</Link>
                       </h3>
                       <span className="rating_box">
                         <img
@@ -439,9 +442,9 @@ export default async function AirQualitySensors() {
                         <li>✓ {t("airQualitySensorsTabs.sensors.so2.features.responseTime")}</li>
                       </ul>
                       <div className="monitor_btn_box">
-                        <a className="monitor_know_btn" href="#">
+                        <Link className="monitor_know_btn" href={`${domain}/air-quality-sensor/sulfur-dioxide-so2-sensor`}>
                           {t("airQualitySensorsTabs.buttons.knowMore")}
-                        </a>
+                        </Link>
                         <a className="monitor_know_btn monitor_card_btn" href="#">
                           {t("airQualitySensorsTabs.buttons.buyNow")}
                         </a>
@@ -558,9 +561,9 @@ export default async function AirQualitySensors() {
           <div className="quality_real_box">
             <h3>{t("sensorCalibration.dataAccuracy.heading")}</h3>
             <h2>{t("sensorCalibration.dataAccuracy.subheading")}</h2>
-            <a className="discover_btn" href="#">
+            <Link className="discover_btn" href={`${domain}/air-quality-data-accuracy`}>
               {t("sensorCalibration.dataAccuracy.discoverButton")}
-            </a>
+            </Link>
           </div>
         </div>
         <div className="col-md-6">
@@ -569,9 +572,9 @@ export default async function AirQualitySensors() {
               src="https://www.pranaair.com/wp-content/uploads/2023/03/air-quality-data-accuracy.png"
               alt={t("sensorCalibration.dataAccuracy.altTexts.accuracyImage")}
             />
-            <a className="discover_btn accuracy_btn" href="#">
+            <Link className="discover_btn accuracy_btn" href={`${domain}/air-quality-data-accuracy`}>
               {t("sensorCalibration.dataAccuracy.accuracyButton")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -610,13 +613,13 @@ export default async function AirQualitySensors() {
         <div className="row">
           <div className="col-md-12">
             <p style={{ textAlign: "center" }}>
-              <a href="#">
+              <Link href={`${domain}/air-quality-pcb-board`}>
                 <img
                   className="img-responsive center-block"
                   src="https://www.pranaair.com/wp-content/uploads/2021/09/air-quality-sensor-pcb-board-scaled.jpg"
                   alt={t("airQualityPcbs.altTexts.pcbBoard")}
                 />
-              </a>
+              </Link>
             </p>
           </div>
         </div>

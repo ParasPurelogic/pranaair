@@ -2,6 +2,8 @@ import PollutantsToggle from "@/Components/Pages/SquairAirmonitor/pollutants-tog
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function SquairMonitor() {
   const { t } = await getServerTranslation("squair-monitor")
@@ -1237,40 +1239,44 @@ export default async function SquairMonitor() {
         </div>
         <div className="row">
           <div className="product_compare_box">
-            <a href="#">
+            <Link href={`${domain}/air-quality-monitor/handheld/pocket-monitor`}>
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/pocket-monitor-in-outdoor.jpeg"
                 alt={t("relatedProducts.products.pocket.alt")}
               />
-            </a>
-            <h3>{t("relatedProducts.products.pocket.name")}</h3>
+              <h3>{t("relatedProducts.products.pocket.name")}</h3>
+            </Link>
+
           </div>
           <div className="product_compare_box">
-            <a href="#">
+            <Link href={`${domain}/air-quality-monitor/cair-monitor`}>
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg"
                 alt={t("relatedProducts.products.cair.alt")}
               />
-            </a>
-            <h3>{t("relatedProducts.products.cair.name")}</h3>
+              <h3>{t("relatedProducts.products.cair.name")}</h3>
+            </Link>
+
           </div>
           <div className="product_compare_box">
-            <a href="#">
+            <Link href={`${domain}/air-quality-monitor/sensible-air-monitor`}>
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-sensible-monitor-on-table.jpg"
                 alt={t("relatedProducts.products.sensible.alt")}
               />
-            </a>
-            <h3>{t("relatedProducts.products.sensible.name")}</h3>
+              <h3>{t("relatedProducts.products.sensible.name")}</h3>
+            </Link>
+
           </div>
           <div className="product_compare_box">
-            <a href="#">
+            <Link href={`${domain}/air-quality-monitor/sensible-plus-air-monitor`}>
               <img
                 src="https://www.pranaair.com/wp-content/uploads/2021/03/Sensible-air-monitor-on-table.jpg"
                 alt={t("relatedProducts.products.sensiblePlus.alt")}
               />
-            </a>
-            <h3>{t("relatedProducts.products.sensiblePlus.name")}</h3>
+              <h3>{t("relatedProducts.products.sensiblePlus.name")}</h3>
+            </Link>
+
           </div>
         </div>
       </div>

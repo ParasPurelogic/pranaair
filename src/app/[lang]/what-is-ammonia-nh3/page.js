@@ -1,6 +1,8 @@
 import "./styles.css"
 import Image from "next/image"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function AmmoniaPage() {
   const { t } = await getServerTranslation("what-ammonia")
@@ -661,7 +663,7 @@ export default async function AmmoniaPage() {
             <span style={{ fontSize: "24pt" }}>{t("ammonia.product.titlePart4")}</span>
           </h2>
           <div style={{ paddingTop: "40px" }}>
-            <a href="#">
+            <Link href={`${domain}/air-quality-monitor`}>
               <Image
                 className="size-large wp-image-65217 aligncenter"
                 src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-caaqms-outdoor-monitor--1024x512.jpg"
@@ -669,7 +671,7 @@ export default async function AmmoniaPage() {
                 width={1024}
                 height={512}
               />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

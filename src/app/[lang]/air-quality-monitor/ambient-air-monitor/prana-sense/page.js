@@ -4,6 +4,8 @@ import ContactForm from "@/Components/Contacform/ContactForm"
 import ApplicationsSlider from "@/Components/Pages/PranaSensMonitor/applications-slider"
 import ProductSlider from "@/Components/Pages/PranaSensMonitor/product-slider"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function PranaSense() {
     const { t } = await getServerTranslation("prana-sense")
@@ -485,9 +487,9 @@ export default async function PranaSense() {
                                     <strong>{t("weatherMonitor.overview.strong") || "Get a complete Environmental overview:"}</strong>{" "}
                                     {t("weatherMonitor.overview.text") ||
                                         "Optional weather station for real-time data weather monitoring capabilities."}{" "}
-                                    <a href="/air-quality-monitor/weather-station/">
+                                    <Link href={`${domain}/air-quality-monitor/weather-station`}>
                                         <strong>{t("weatherMonitor.overview.link") || "Weather Station"}</strong>
-                                    </a>
+                                    </Link>
                                 </p>
                             </div>
                             <div className="card-box">

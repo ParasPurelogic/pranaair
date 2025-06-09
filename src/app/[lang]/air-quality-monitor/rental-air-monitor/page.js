@@ -1,6 +1,8 @@
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function RentalAirMonitorPage() {
   const { t } = await getServerTranslation("rental-air-monitor")
@@ -149,9 +151,9 @@ export default async function RentalAirMonitorPage() {
               <strong>{t("rentalSquairMonitor.title")}</strong>
             </h2>
             <p>{t("rentalSquairMonitor.description")}</p>
-            <a className="pocket_buy_btn" href="/air-quality-monitor">
+            <Link className="pocket_buy_btn" href={`${domain}/air-quality-monitor`}>
               {t("rentalSquairMonitor.knowMoreButton")}
-            </a>
+            </Link>
           </div>
 
           <div className="text-center">

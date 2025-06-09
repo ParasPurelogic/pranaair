@@ -2,6 +2,8 @@ import './style.css';
 import ContactForm from "@/Components/Contacform/ContactForm";
 import SensibleSlider from '@/Components/Pages/SensibleAirMonitor/carousel';
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function SensibleAirMonitor() {
   const { t } = await getServerTranslation("sensible-air-monitor")
@@ -522,28 +524,32 @@ export default async function SensibleAirMonitor() {
           <div className="row">
             <div className="col-12">
               <div className="product_compare_box">
-                <a href="#">
+                <Link href={`${domain}/air-quality-monitor/handheld/pocket-monitor`}>
                   <img src="https://www.pranaair.com/wp-content/uploads/2021/03/pocket-monitor-in-outdoor.jpeg" alt="prana air pocket air quality monitor" />
-                </a>
-                <h3>Pocket+</h3>
+                  <h3>Pocket+</h3>
+                </Link>
+
               </div>
               <div className="product_compare_box">
-                <a href="#">
+                <Link href={`${domain}/air-quality-monitor/cair-monitor`}>
                   <img src="https://www.pranaair.com/wp-content/uploads/2021/03/prana-air-cair-monitor-indoor.jpeg" alt="prana air cair air quality monitor" />
-                </a>
-                <h3>CAIR+</h3>
+                  <h3>CAIR+</h3>
+                </Link>
+
               </div>
               <div className="product_compare_box">
-                <a href="#">
+                <Link href={`${domain}/air-quality-monitor/sensible-plus-air-monitor`}>
                   <img src="https://www.pranaair.com/wp-content/uploads/2021/03/Sensible-air-monitor-on-table.jpg" alt="prana air sensible plus air quality monitor" />
-                </a>
-                <h3>Sensible+</h3>
+                  <h3>Sensible+</h3>
+                </Link>
+
               </div>
               <div className="product_compare_box">
-                <a href="#">
+                <Link href={`${domain}/air-quality-monitor/squair-air-monitor`}>
                   <img src="https://www.pranaair.com/wp-content/uploads/2021/05/prana-air-squair-air-quality-monitor.jpg" alt="prana air squair air quality monitor" />
-                </a>
-                <h3>SQUAIR</h3>
+                  <h3>SQUAIR</h3>
+                </Link>
+
               </div>
             </div>
           </div>

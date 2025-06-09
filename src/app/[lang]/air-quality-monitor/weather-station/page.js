@@ -3,6 +3,8 @@ import ContactForm from "@/Components/Contacform/ContactForm"
 import DurabilitySlider from "@/Components/Pages/WeatherStation/durability-slider"
 import VeriouseSlider from "@/Components/Pages/WeatherStation/various-app-slider"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function WeatherStation() {
   const { t } = await getServerTranslation("weather-station")
@@ -945,13 +947,13 @@ export default async function WeatherStation() {
               <div className="web-dash-txt pranaair-ambient-txt">
                 <h3>{t("weatherStationAmbient.title")}</h3>
                 <p>{t("weatherStationAmbient.description")}</p>
-                <a href="#">
+                <Link href={`${domain}/air-quality-monitor/ambient-air-monitor`}>
                   {t("weatherStationAmbient.knowMoreButton")}{" "}
                   <img
                     src="https://www.pranaair.com/wp-content/uploads/2024/06/wifi-icon.png"
                     alt={t("weatherStationAmbient.altTexts.icon")}
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-md-6">
@@ -1109,12 +1111,12 @@ export default async function WeatherStation() {
           <div className="row mob-row-like">
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href={t("weatherStationAlsoLike.products.pocketPM.link")}>
+                <Link className="also-like-link" href={`${domain}/air-quality-monitor/handheld/pocket-monitor`}>
                   <img
                     src={t("weatherStationAlsoLike.products.pocketPM.image") || "/placeholder.svg"}
                     alt={t("weatherStationAlsoLike.altTexts.pocketPM")}
                   />
-                </a>
+                </Link>
                 <ul>
                   <li>{t("weatherStationAlsoLike.products.pocketPM.name")}</li>
                   <li>
@@ -1128,12 +1130,12 @@ export default async function WeatherStation() {
             </div>
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href={t("weatherStationAlsoLike.products.cair.link")}>
+                <Link className="also-like-link" href={`${domain}/air-quality-monitor/cair-monitor`}>
                   <img
                     src={t("weatherStationAlsoLike.products.cair.image") || "/placeholder.svg"}
                     alt={t("weatherStationAlsoLike.altTexts.cair")}
                   />
-                </a>
+                </Link>
                 <ul>
                   <li>{t("weatherStationAlsoLike.products.cair.name")}</li>
                   <li>
@@ -1147,12 +1149,12 @@ export default async function WeatherStation() {
             </div>
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href={t("weatherStationAlsoLike.products.sensible.link")}>
+                <Link className="also-like-link" href={`${domain}/air-quality-monitor/sensible-air-monitor`}>
                   <img
                     src={t("weatherStationAlsoLike.products.sensible.image") || "/placeholder.svg"}
                     alt={t("weatherStationAlsoLike.altTexts.sensible")}
                   />
-                </a>
+                </Link>
                 <ul>
                   <li>{t("weatherStationAlsoLike.products.sensible.name")}</li>
                   <li>
@@ -1166,12 +1168,12 @@ export default async function WeatherStation() {
             </div>
             <div className="col-md-3">
               <div className="also-like-img">
-                <a className="also-like-link" href={t("weatherStationAlsoLike.products.ambientPro.link")}>
+                <Link className="also-like-link" href={`${domain}/air-quality-monitor/ambient-air-monitor`}>
                   <img
                     src={t("weatherStationAlsoLike.products.ambientPro.image") || "/placeholder.svg"}
                     alt={t("weatherStationAlsoLike.altTexts.ambientPro")}
                   />
-                </a>
+                </Link>
                 <ul>
                   <li>{t("weatherStationAlsoLike.products.ambientPro.name")}</li>
                   <li>

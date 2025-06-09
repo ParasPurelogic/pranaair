@@ -3,6 +3,8 @@ import ContactForm from "@/Components/Contacform/ContactForm"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 import ProductCarousel from "@/Components/Pages/CinemaTheatre/airQualityMonitors"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function AirQualitySolutionsPage() {
     const { t } = await getServerTranslation("cinema-theatre")
@@ -11,62 +13,62 @@ export default async function AirQualitySolutionsPage() {
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
             title: t("industrialApplicationsData.hotel.title"),
-            link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
+            link: "/solutions-by-application/hotel-businesses/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
             title: t("industrialApplicationsData.restaurant.title"),
-            link: "https://www.pranaair.com/solutions-by-application/restaurants/",
+            link: "/solutions-by-application/restaurants/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
             title: t("industrialApplicationsData.institutes.title"),
-            link: "https://www.pranaair.com/solutions-by-application/institutes/",
+            link: "/solutions-by-application/institutes/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
             title: t("industrialApplicationsData.cinema.title"),
-            link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+            link: "/solutions-by-application/cinema-and-theatre/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
             title: t("industrialApplicationsData.automobiles.title"),
-            link: "https://www.pranaair.com/solutions-by-application/automobile/",
+            link: "/solutions-by-application/automobile/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
             title: t("industrialApplicationsData.realEstate.title"),
-            link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+            link: "/solutions-by-application/real-estate/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
             title: t("industrialApplicationsData.smartphone.title"),
-            link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+            link: "/solutions-by-application/smartphone-makers/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
             title: t("industrialApplicationsData.construction.title"),
-            link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+            link: "/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
             title: t("industrialApplicationsData.animalCare.title"),
-            link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+            link: "/solutions-by-application/animal-care-center/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
             title: t("industrialApplicationsData.logistics.title"),
-            link: "https://www.pranaair.com/solutions-by-application/logistics/",
+            link: "/solutions-by-application/logistics/",
         },
         {
             image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
             title: t("industrialApplicationsData.railways.title"),
-            link: "https://www.pranaair.com/solutions-by-application/railway/",
+            link: "/solutions-by-application/railway/",
         }
     ]
     const airQualityMonitors = [
         {
-            image: "/air-quality-monitor.png",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/09/prana-air-quality-monitor-in-cinema-hall.jpg",
             imageAlt: t("airQualityMonitors.squair.imageAlt"),
             title: t("airQualityMonitors.squair.title"),
             description: t("airQualityMonitors.squair.description"),
@@ -75,11 +77,11 @@ export default async function AirQualitySolutionsPage() {
                 t("airQualityMonitors.squair.features.item2"),
                 t("airQualityMonitors.squair.features.item3"),
             ],
-            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            knowMoreLink: "/air-quality-monitor/sensible-plus-air-monitor/",
             hasRentOption: true,
         },
         {
-            image: "/sensible-plus-monitor.png",
+            image: "https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-sensible-plus-air-quality-monitor-iaq.jpg",
             imageAlt: t("airQualityMonitors.sensiblePlus.imageAlt"),
             title: t("airQualityMonitors.sensiblePlus.title"),
             description: t("airQualityMonitors.sensiblePlus.description"),
@@ -89,7 +91,7 @@ export default async function AirQualitySolutionsPage() {
                 t("airQualityMonitors.sensiblePlus.features.item3"),
                 t("airQualityMonitors.sensiblePlus.features.item4"),
             ],
-            knowMoreLink: "https://www.pranaair.com/air-quality-monitor/squair-air-monitor/",
+            knowMoreLink: "/air-quality-monitor/sensible-plus-air-monitor/",
             hasRentOption: true,
         },
     ]
@@ -384,13 +386,13 @@ export default async function AirQualitySolutionsPage() {
                             <div className="tab-pane" id="fresh-air" role="tabpanel" aria-labelledby="fresh-air-tab">
                                 <div className="slider_cntr">
                                     <div className="slider_img_box">
-                                        <a href="https://www.pranaair.com/fresh-air-machine/">
+                                        <Link href={`${domain}/fresh-air-machine`}>
                                             <img
                                                 style={{ width: "100%" }}
-                                                src="/fresh-air-machine.png"
+                                                src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
                                                 alt={t("cinema.tabContent.freshAir.imgAlt")}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="slider_details_box">
                                         <h3>
@@ -403,12 +405,12 @@ export default async function AirQualitySolutionsPage() {
                                             <li>{t("cinema.tabContent.freshAir.features.item2")}</li>
                                             <li>{t("cinema.tabContent.freshAir.features.item3")}</li>
                                         </ul>
-                                        <a href="https://www.pranaair.com/fresh-air-machine/" className="knowmore_btn">
+                                        <Link href={`${domain}/fresh-air-machine`} className="knowmore_btn">
                                             {t("cinema.tabContent.freshAir.knowMore")}
-                                        </a>
-                                        <a href="#" className="rent_btn">
+                                        </Link>
+                                        <Link href="#" className="rent_btn">
                                             {t("cinema.tabContent.freshAir.rent")}
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -416,7 +418,7 @@ export default async function AirQualitySolutionsPage() {
                             <div className="tab-pane" id="data-display" role="tabpanel" aria-labelledby="data-display-tab">
                                 <div className="slider_cntr">
                                     <div className="slider_img_box">
-                                        <img style={{ width: "100%" }} src="/api-data.png" alt={t("cinema.tabContent.apiData.imgAlt")} />
+                                        <img style={{ width: "100%" }} src="https://www.pranaair.com/wp-content/uploads/2022/08/aqi-api-data-for-institutes.jpg" alt={t("cinema.tabContent.apiData.imgAlt")} />
                                     </div>
                                     <div className="slider_details_box">
                                         <h3>

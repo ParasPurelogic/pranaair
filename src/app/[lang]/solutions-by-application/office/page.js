@@ -4,6 +4,8 @@ import ContactForm from "@/Components/Contacform/ContactForm"
 import OfficeApplicationsCarousel from "@/Components/Pages/Office/app-slider"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function OfficeSolutions() {
   const { t } = await getServerTranslation("office")
@@ -19,7 +21,7 @@ export default async function OfficeSolutions() {
       ],
       imageSrc: "https://www.pranaair.com/wp-content/uploads/2023/07/sensible-plus-air-quality-monitor-scaled.jpg",
       imageAlt: "Prana air sensible+ air quality monitor for office",
-      knowMoreLink: "#",
+      knowMoreLink: "/air-quality-monitor/sensible-air-monitor",
       hasRentOption: false
     },
     {
@@ -32,7 +34,7 @@ export default async function OfficeSolutions() {
       ],
       imageSrc: "https://www.pranaair.com/wp-content/uploads/2023/07/squair-air-quality-monitor-scaled.jpg",
       imageAlt: "Prana air squair air quality monitor for offices",
-      knowMoreLink: "#",
+      knowMoreLink: "/air-quality-monitor/squair-air-monitor",
       hasRentOption: true
     }
   ]
@@ -40,57 +42,57 @@ export default async function OfficeSolutions() {
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
       title: t("industrialApplicationsData.hotel.title"),
-      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
+      link: "/solutions-by-application/hotel-businesses/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
       title: t("industrialApplicationsData.restaurant.title"),
-      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
+      link: "/solutions-by-application/restaurants/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
       title: t("industrialApplicationsData.institutes.title"),
-      link: "https://www.pranaair.com/solutions-by-application/institutes/",
+      link: "/solutions-by-application/institutes/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
       title: t("industrialApplicationsData.cinema.title"),
-      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+      link: "/solutions-by-application/cinema-and-theatre/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
       title: t("industrialApplicationsData.automobiles.title"),
-      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+      link: "/solutions-by-application/automobile/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
       title: t("industrialApplicationsData.realEstate.title"),
-      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+      link: "/solutions-by-application/real-estate/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
       title: t("industrialApplicationsData.smartphone.title"),
-      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+      link: "/solutions-by-application/smartphone-makers/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
       title: t("industrialApplicationsData.construction.title"),
-      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+      link: "/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
       title: t("industrialApplicationsData.animalCare.title"),
-      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+      link: "/solutions-by-application/animal-care-center/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
       title: t("industrialApplicationsData.logistics.title"),
-      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+      link: "/solutions-by-application/logistics/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
       title: t("industrialApplicationsData.railways.title"),
-      link: "https://www.pranaair.com/solutions-by-application/railway/",
+      link: "/solutions-by-application/railway/",
     }
   ]
   return (
@@ -617,9 +619,9 @@ export default async function OfficeSolutions() {
                         <li>{t("officeSolutions.freshAir.features.feature2")}</li>
                         <li>{t("officeSolutions.freshAir.features.feature3")}</li>
                       </ul>
-                      <a className="know-more-btn" href="#">
+                      <Link className="know-more-btn" href={`${domain}/fresh-air-machine`}>
                         {t("officeSolutions.freshAir.cta")}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

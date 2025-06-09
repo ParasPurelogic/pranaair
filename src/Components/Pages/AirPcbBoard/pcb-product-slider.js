@@ -1,7 +1,8 @@
 "use client"
+import Link from "@/Components/TranslateLink"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
-export default function PCBProductSlider({ activeTab, products }) {
+export default function PCBProductSlider({ products }) {
     // Responsive settings for carousel
     const responsive = {
         superLargeDesktop: {
@@ -31,9 +32,9 @@ export default function PCBProductSlider({ activeTab, products }) {
                     </div>
                     <div className="product-info">
                         <h4>{product.name}</h4>
-                        <a href="#" className="btn btn-sm btn-outline-primary">
+                        <Link href="#" className="btn btn-sm btn-outline-primary">
                             View Details
-                        </a>
+                        </Link>
                     </div>
                 </div>
             ))}

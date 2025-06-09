@@ -6,6 +6,8 @@ import ApplicationsSlider from "@/Components/Pages/AirQualityCommonMonitor/appli
 import TestimonialsSlider from "@/Components/Pages/AirQualityCommonMonitor/testimonials-slider"
 import { getServerTranslation } from "@/i18n/server"
 import AirQualitySensorSlider from "@/Components/Pages/AirQualityCommonMonitor/air-quality-monitor-sensor";
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function CommonMonitorPage() {
     const { t } = await getServerTranslation("common-monitor")
@@ -102,10 +104,10 @@ export default async function CommonMonitorPage() {
                                     <span className="prana-txt">{t("ambientBanner.pranaText")}</span> {t("ambientBanner.title")}
                                 </h1>
                                 <p>{t("ambientBanner.description")}</p>
-                                <a href="#contact" aria-label={t("ambientBanner.ariaLabel")}>
+                                <Link href="#contact" aria-label={t("ambientBanner.ariaLabel")}>
                                     {t("ambientBanner.contactUs")}{" "}
                                     <img src="https://www.pranaair.com/wp-content/uploads/2024/09/banner-icon.png" alt={t("ambientBanner.iconAlt")} />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -188,15 +190,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
-                                                <a href={t("productTabs.products.pocketCO2.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/pocket-co2-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.pocketCO2.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.pocketCO2.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.pocketCO2.link")}>{t("productTabs.products.pocketCO2.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/pocket-co2-monitor`}>{t("productTabs.products.pocketCO2.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.pocketCO2.price")}</span>
@@ -249,15 +251,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
-                                                <a href={t("productTabs.products.pocketPM.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/handheld/pocket-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.pocketPM.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.pocketPM.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.pocketPM.link")}>{t("productTabs.products.pocketPM.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/handheld/pocket-monitor`}>{t("productTabs.products.pocketPM.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.pocketPM.price")}</span>
@@ -310,15 +312,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
-                                                <a href={t("productTabs.products.oxyCO.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/oxyco-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.oxyCO.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.oxyCO.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.oxyCO.link")}>{t("productTabs.products.oxyCO.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/oxyco-monitor`}>{t("productTabs.products.oxyCO.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.oxyCO.price")}</span>
@@ -371,15 +373,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
-                                                <a href={t("productTabs.products.nanoCO.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/nano-co-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.nanoCO.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.nanoCO.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.nanoCO.link")}>{t("productTabs.products.nanoCO.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/nano-co-monitor`}>{t("productTabs.products.nanoCO.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.nanoCO.price")}</span>
@@ -432,15 +434,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
-                                                <a href={t("productTabs.products.nanoCO2.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/nano-co2-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.nanoCO2.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.nanoCO2.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.nanoCO2.link")}>{t("productTabs.products.nanoCO2.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/nano-co2-monitor`}>{t("productTabs.products.nanoCO2.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.nanoCO2.price")}</span>
@@ -493,15 +495,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.handheld")}</span>
-                                                <a href={t("productTabs.products.nanoTVOC.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/nano-tvoc-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.nanoTVOC.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.nanoTVOC.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.nanoTVOC.link")}>{t("productTabs.products.nanoTVOC.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/nano-tvoc-monitor`}>{t("productTabs.products.nanoTVOC.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.nanoTVOC.price")}</span>
@@ -560,15 +562,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.indoor")}</span>
-                                                <a href={t("productTabs.products.sensible.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/sensible-air-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.sensible.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.sensible.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.sensible.link")}>{t("productTabs.products.sensible.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/sensible-air-monitor`}>{t("productTabs.products.sensible.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.sensible.price")}</span>
@@ -621,15 +623,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.indoor")}</span>
-                                                <a href={t("productTabs.products.sensiblePlus.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/sensible-plus-monitor`}>
                                                     <img
                                                         src={t("productTabs.products.sensiblePlus.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.sensiblePlus.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.sensiblePlus.link")}>{t("productTabs.products.sensiblePlus.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/sensible-plus-monitor`}>{t("productTabs.products.sensiblePlus.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.sensiblePlus.price")}</span>
@@ -682,15 +684,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.indoor")}</span>
-                                                <a href={t("productTabs.products.cairPlus.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/cair-plus`}>
                                                     <img
                                                         src={t("productTabs.products.cairPlus.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.cairPlus.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.cairPlus.link")}>{t("productTabs.products.cairPlus.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/cair-plus`}>{t("productTabs.products.cairPlus.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.cairPlus.price")}</span>
@@ -743,15 +745,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.indoor")}</span>
-                                                <a href={t("productTabs.products.squair.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/squair`}>
                                                     <img
                                                         src={t("productTabs.products.squair.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.squair.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.squair.link")}>{t("productTabs.products.squair.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/squair`}>{t("productTabs.products.squair.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.squair.price")}</span>
@@ -810,15 +812,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.outdoor")}</span>
-                                                <a href={t("productTabs.products.ambientPM.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/squair`}>
                                                     <img
                                                         src={t("productTabs.products.ambientPM.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.ambientPM.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.ambientPM.link")}>{t("productTabs.products.ambientPM.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/squair`}>{t("productTabs.products.ambientPM.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.ambientPM.price")}</span>
@@ -870,15 +872,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.outdoor")}</span>
-                                                <a href={t("productTabs.products.pranaSense.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/prana-sense`}>
                                                     <img
                                                         src={t("productTabs.products.pranaSense.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.pranaSense.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.pranaSense.link")}>{t("productTabs.products.pranaSense.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/prana-sense`}>{t("productTabs.products.pranaSense.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.pranaSense.price")}</span>
@@ -931,15 +933,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.outdoor")}</span>
-                                                <a href={t("productTabs.products.ambientPro.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/ambient-pro`}>
                                                     <img
                                                         src={t("productTabs.products.ambientPro.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.ambientPro.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.ambientPro.link")}>{t("productTabs.products.ambientPro.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/ambient-pro`}>{t("productTabs.products.ambientPro.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.ambientPro.price")}</span>
@@ -992,15 +994,15 @@ export default async function CommonMonitorPage() {
                                             </div>
                                             <div className="card-img">
                                                 <span className="in-outdoor">{t("productTabs.categories.outdoor")}</span>
-                                                <a href={t("productTabs.products.airQualityDrone.link")}>
+                                                <Link href={`${domain}/air-quality-monitor/air-quality-drone`}>
                                                     <img
                                                         src={t("productTabs.products.airQualityDrone.image") || "/placeholder.svg"}
                                                         alt={t("productTabs.products.airQualityDrone.imageAlt")}
                                                     />
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="card-text">
-                                                <a href={t("productTabs.products.airQualityDrone.link")}>{t("productTabs.products.airQualityDrone.name")}</a>
+                                                <Link href={`${domain}/air-quality-monitor/air-quality-drone`}>{t("productTabs.products.airQualityDrone.name")}</Link>
                                                 <ul>
                                                     <li>
                                                         <span className="coast">{t("productTabs.products.airQualityDrone.price")}</span>
@@ -1292,7 +1294,7 @@ export default async function CommonMonitorPage() {
                                 <p><strong>{t("hiddenImpact.subtitle")}</strong></p>
                                 <p>{t("hiddenImpact.description1")}</p>
                                 <p>{t("hiddenImpact.description2")}
-                                    <a href="https://www.pranaair.com/solutions-by-application/">{t("hiddenImpact.learnMore")}</a></p>
+                                    <Link href="https://www.pranaair.com/solutions-by-application/">{t("hiddenImpact.learnMore")}</Link></p>
                             </div>
                         </div>
                     </div>
@@ -1407,9 +1409,9 @@ export default async function CommonMonitorPage() {
                                             <h4>{t("airPollutants.healthImpactTitle")}</h4>
                                             <p>{t("airPollutants.pm.healthImpact")}</p>
 
-                                            <a className="key-btn" href={t("airPollutants.pm.link")}>
+                                            <Link className="key-btn" href={`${domain}/what-is-particulate-matter-pm/`}>
                                                 {t("airPollutants.exploreMore")}
-                                            </a>
+                                            </Link>
 
                                             <img
                                                 className="para-bg"
@@ -1439,9 +1441,9 @@ export default async function CommonMonitorPage() {
                                             <h4>{t("airPollutants.healthImpactTitle")}</h4>
                                             <p>{t("airPollutants.co2.healthImpact")}</p>
 
-                                            <a className="key-btn" href={t("airPollutants.co2.link")}>
+                                            <Link className="key-btn" href={`${domain}/what-is-carbon-dioxide-co2/`}>
                                                 {t("airPollutants.exploreMore")}
-                                            </a>
+                                            </Link>
 
                                             <img
                                                 className="para-bg"
@@ -1471,9 +1473,9 @@ export default async function CommonMonitorPage() {
                                             <h4>{t("airPollutants.healthImpactTitle")}</h4>
                                             <p>{t("airPollutants.tvoc.healthImpact")}</p>
 
-                                            <a className="key-btn" href={t("airPollutants.tvoc.link")}>
+                                            <Link className="key-btn" href={`${domain}/what-is-voc/`}>
                                                 {t("airPollutants.exploreMore")}
-                                            </a>
+                                            </Link>
 
                                             <img
                                                 className="para-bg"
@@ -1504,9 +1506,9 @@ export default async function CommonMonitorPage() {
                                             <p>{t("airPollutants.hcho.healthImpact")}</p>
 
                                             {t("airPollutants.hcho.link") && (
-                                                <a className="key-btn" href={t("airPollutants.hcho.link")}>
+                                                <Link className="key-btn" href={`${domain}/airPollutants.hcho.link`}>
                                                     {t("airPollutants.exploreMore")}
-                                                </a>
+                                                </Link>
                                             )}
 
                                             <img
@@ -1791,24 +1793,24 @@ export default async function CommonMonitorPage() {
                                             </ul>
                                             <ul className="dashbord-btn">
                                                 <li>
-                                                    <a href={t("aqiAppsSection.mobileApp.downloadLinks.ios.url")}>
+                                                    <Link href="https://apps.apple.com/tt/app/aqi/id1439684571?utm_campaign=ios_app_install%27&utm_medium=iOS+app&utm_source=app+store">
                                                         <img
                                                             src="https://www.pranaair.com/wp-content/uploads/2024/01/ios-icon.png"
                                                             alt={t("aqiAppsSection.mobileApp.downloadLinks.ios.iconAlt")}
                                                         />{" "}
                                                         {t("aqiAppsSection.mobileApp.downloadLinks.ios.text")}{" "}
                                                         <strong>{t("aqiAppsSection.mobileApp.downloadLinks.ios.platform")}</strong>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href={t("aqiAppsSection.mobileApp.downloadLinks.android.url")}>
+                                                    <Link href="https://play.google.com/store/apps/details?id=com.aqi.data&hl=en&utm_source=play+store&utm_medium=android&utm_campaign=android_app_install%27&pli=1">
                                                         <img
                                                             src="https://www.pranaair.com/wp-content/uploads/2024/01/android-icon.png"
                                                             alt={t("aqiAppsSection.mobileApp.downloadLinks.android.iconAlt")}
                                                         />{" "}
                                                         {t("aqiAppsSection.mobileApp.downloadLinks.android.text")}{" "}
                                                         <strong>{t("aqiAppsSection.mobileApp.downloadLinks.android.platform")}</strong>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1864,11 +1866,11 @@ export default async function CommonMonitorPage() {
                                             </ul>
                                             <ul className="tv-web-btn">
                                                 <li>
-                                                    <a href={t("aqiAppsSection.tvApp.downloadLink.url")}>
+                                                    <Link href="https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew">
                                                         {" "}
                                                         {t("aqiAppsSection.tvApp.downloadLink.text")}{" "}
                                                         <strong>{t("aqiAppsSection.tvApp.downloadLink.platform")}</strong>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1924,11 +1926,11 @@ export default async function CommonMonitorPage() {
                                             </ul>
                                             <ul className="tv-web-btn">
                                                 <li>
-                                                    <a href={t("aqiAppsSection.webDashboard.downloadLink.url")}>
+                                                    <Link href="https://www.aqi.in/userlogin">
                                                         {" "}
                                                         {t("aqiAppsSection.webDashboard.downloadLink.text")}{" "}
                                                         <strong>{t("aqiAppsSection.webDashboard.downloadLink.platform")}</strong>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2718,44 +2720,44 @@ export default async function CommonMonitorPage() {
                     <div className="row g-4">
                         <div className="may-also">
                             <ul>
-                                <li><a href="https://www.pranaair.com/air-quality-monitor/handheld/pocket-monitor/">
+                                <li><Link href={`${domain}/air-quality-monitor/handheld/pocket-monitor/`}>
                                     <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Pocket-PM.jpg"
                                         alt="Pocket-PM" />
-                                </a>
+                                </Link>
                                     <h5>{t("youMayAlsoLike.products.pocketPM")} <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
 
                                 </li>
-                                <li><a href="https://www.pranaair.com/air-quality-monitor/cair-monitor/">
+                                <li><Link href={`${domain}/air-quality-monitor/cair-monitor/`}>
                                     <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Cair.jpg" alt="Cair" />
-                                </a>
+                                </Link>
 
                                     <h5>{t("youMayAlsoLike.products.cairPlus")} <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
 
                                 </li>
-                                <li><a href="https://www.pranaair.com/air-quality-monitor/sensible-air-monitor/">
+                                <li><Link href={`${domain}/air-quality-monitor/sensible-air-monitor/`}>
                                     <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/pranaair-sensible-air-monitor.webp"
                                         alt="pranaair-sensible-air-monitor" />
-                                </a>
+                                </Link>
 
                                     <h5>{t("youMayAlsoLike.products.sensible")} <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
 
                                 </li>
-                                <li><a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
+                                <li><Link href={`${domain}/air-quality-monitor/ambient-air-monitor/`}>
                                     <img src="https://www.pranaair.com/wp-content/uploads/2024/03/Ambient-pro.jpg"
                                         alt="Ambient-pro" />
-                                </a>
+                                </Link>
 
                                     <h5>{t("youMayAlsoLike.products.ambientPro")} <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>
 
                                 </li>
-                                <li><a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
+                                <li><Link href={`${domain}/air-quality-monitor/squair-air-monitor/`}>
                                     <img src="https://www.pranaair.com/wp-content/uploads/2024/03/SQUAIR.jpg" alt="SQUAIR" />
-                                </a>
+                                </Link>
 
                                     <h5>{t("youMayAlsoLike.products.squair")} <img
                                         src="https://www.pranaair.com/wp-content/uploads/2024/03/arrow-link.png" alt="" /></h5>

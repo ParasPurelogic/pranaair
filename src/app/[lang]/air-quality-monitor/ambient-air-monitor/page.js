@@ -1,9 +1,10 @@
 import Image from "next/image"
-import Link from "next/link"
 import "./style.css"
 import CaseStudiesSlider from "@/Components/Pages/AmbientAirmonitor/CaseSlider"
 import { getServerTranslation } from "@/i18n/server"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function AmbientAirMonito() {
     const { t } = await getServerTranslation("ambient")
@@ -46,9 +47,9 @@ export default async function AmbientAirMonito() {
                                     <span className="hd-txt">{t("ambient.heading.highlight")}</span> {t("ambient.heading.main")}
                                 </h1>
                                 <p>{t("ambient.description")}</p>
-                                <a href="#contact_form" aria-label={t("ambient.ctaAriaLabel")}>
+                                <Link href="#contact_form" aria-label={t("ambient.ctaAriaLabel")}>
                                     {t("ambient.cta")}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -158,7 +159,7 @@ export default async function AmbientAirMonito() {
                                     <div className="get-brochur">
                                         <ul>
                                             <li>
-                                                <a href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
+                                                <Link href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
                                                         alt={t("ambientMonitors.variants.ambientPM.brochure")}
@@ -166,10 +167,10 @@ export default async function AmbientAirMonito() {
                                                         height={22}
                                                     />
                                                     {t("ambientMonitors.variants.ambientPM.brochure")}
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="#contact_form">{t("ambientMonitors.variants.ambientPM.getQuote")}</a>
+                                                <Link href="#contact_form">{t("ambientMonitors.variants.ambientPM.getQuote")}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -293,7 +294,7 @@ export default async function AmbientAirMonito() {
                                     <div className="get-brochur">
                                         <ul>
                                             <li>
-                                                <a href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
+                                                <Link href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf">
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
                                                         alt={t("ambientMonitors.variants.pranaSense.brochure")}
@@ -301,10 +302,10 @@ export default async function AmbientAirMonito() {
                                                         height={22}
                                                     />
                                                     {t("ambientMonitors.variants.pranaSense.brochure")}
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="#contact_form">{t("ambientMonitors.variants.pranaSense.getQuote")}</a>
+                                                <Link href="#contact_form">{t("ambientMonitors.variants.pranaSense.getQuote")}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -428,7 +429,7 @@ export default async function AmbientAirMonito() {
                                     <div className="get-brochur">
                                         <ul>
                                             <li>
-                                                <a href="#">
+                                                <Link href={`${domain}/#`}>
                                                     <Image
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
                                                         alt={t("ambientMonitors.variants.ambientPro.brochure")}
@@ -436,12 +437,12 @@ export default async function AmbientAirMonito() {
                                                         height={22}
                                                     />
                                                     {t("ambientMonitors.variants.ambientPro.brochure")}
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="/air-quality-monitor/ambient-air-monitor/prana-sense/">
+                                                <Link href={`${domain}/air-quality-monitor/ambient-air-monitor/prana-sense/`}>
                                                     {t("ambientMonitors.variants.ambientPro.getQuote")}
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -731,7 +732,7 @@ export default async function AmbientAirMonito() {
                                     <div className="box-mob">
                                         <div className="box-inner">
                                             <div className="container-my">
-                                                <Link href="#">
+                                                <Link href={`${domain}/solutions-by-application/constructions/`}>
                                                     <Image
                                                         className="image"
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/construction-air-quality-monitor.webp"
@@ -748,13 +749,15 @@ export default async function AmbientAirMonito() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="/solutions-by-application/constructions/">{t("applications.items.0.title")}</Link>
+                                                    <Link href={`${domain}/solutions-by-application/constructions/`}>
+                                                        {t("applications.items.0.title")}
+                                                    </Link>
                                                 </h3>
                                             </div>
                                         </div>
                                         <div className="box-inner">
                                             <div className="container-my">
-                                                <Link href="#">
+                                                <Link href={`${domain}/solutions-by-application/parking-lot/`}>
                                                     <Image
                                                         className="image"
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/smart-city-air-quality-monitor.webp"
@@ -771,7 +774,9 @@ export default async function AmbientAirMonito() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="/solutions-by-application/parking-lot/">{t("applications.items.1.title")}</Link>
+                                                    <Link href={`${domain}/solutions-by-application/parking-lot/`}>
+                                                        {t("applications.items.1.title")}
+                                                    </Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -781,7 +786,7 @@ export default async function AmbientAirMonito() {
                                     <div className="box-mob">
                                         <div className="box-inner">
                                             <div className="container-my">
-                                                <Link href="#">
+                                                <Link href={`${domain}/solutions-by-application/smart-city/`}>
                                                     <Image
                                                         className="image"
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/rmc-air-quality-monitor.webp"
@@ -798,13 +803,15 @@ export default async function AmbientAirMonito() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="/solutions-by-application/smart-city/">{t("applications.items.2.title")}</Link>
+                                                    <Link href={`${domain}/solutions-by-application/smart-city/`}>
+                                                        {t("applications.items.2.title")}
+                                                    </Link>
                                                 </h3>
                                             </div>
                                         </div>
                                         <div className="box-inner">
                                             <div className="container-my">
-                                                <Link href="#">
+                                                <Link href={`${domain}/solutions-by-application/real-estate/`}>
                                                     <Image
                                                         className="image"
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/parking-lot-air-quality-monitor.webp"
@@ -821,7 +828,9 @@ export default async function AmbientAirMonito() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="/solutions-by-application/real-estate/">{t("applications.items.3.title")}</Link>
+                                                    <Link href={`${domain}/solutions-by-application/real-estate/`}>
+                                                        {t("applications.items.3.title")}
+                                                    </Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -831,7 +840,7 @@ export default async function AmbientAirMonito() {
                                     <div className="box-mob">
                                         <div className="box-inner">
                                             <div className="container-my">
-                                                <Link href="#">
+                                                <Link href={`${domain}/solutions-by-application/ready-mix-concrete-plant/`}>
                                                     <Image
                                                         className="image"
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/real-estates-air-quality-monitor.webp"
@@ -848,7 +857,7 @@ export default async function AmbientAirMonito() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="/solutions-by-application/ready-mix-concrete-plant/">
+                                                    <Link href={`${domain}/solutions-by-application/ready-mix-concrete-plant/`}>
                                                         {t("applications.items.4.title")}
                                                     </Link>
                                                 </h3>
@@ -856,7 +865,7 @@ export default async function AmbientAirMonito() {
                                         </div>
                                         <div className="box-inner">
                                             <div className="container-my">
-                                                <Link href="#">
+                                                <Link href={`${domain}/solutions-by-application/airports/`}>
                                                     <Image
                                                         className="image"
                                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/airport-air-quality-monitor.webp"
@@ -873,7 +882,9 @@ export default async function AmbientAirMonito() {
                                             </div>
                                             <div className="app-card-title">
                                                 <h3>
-                                                    <Link href="/solutions-by-application/airports/">{t("applications.items.5.title")}</Link>
+                                                    <Link href={`${domain}/solutions-by-application/airports/`}>
+                                                        {t("applications.items.5.title")}
+                                                    </Link>
                                                 </h3>
                                             </div>
                                         </div>
@@ -881,7 +892,7 @@ export default async function AmbientAirMonito() {
                                 </div>
                             </div>
                             <div className="explore-btn">
-                                <Link href="/solutions-by-application/">{t("applications.exploreMore")}</Link>
+                                <Link href={`${domain}/solutions-by-application/`}>{t("applications.exploreMore")}</Link>
                             </div>
                         </div>
                     </div>
@@ -896,7 +907,7 @@ export default async function AmbientAirMonito() {
                             <div className="weather-staiton-headimg">
                                 <h2>{t("weatherStation.title")}</h2>
                                 <p>{t("weatherStation.description")}</p>
-                                <Link href="/air-quality-monitor/weather-station/">{t("weatherStation.knowMore")}</Link>
+                                <Link href={`${domain}/air-quality-monitor/weather-station/`}>{t("weatherStation.knowMore")}</Link>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -1316,7 +1327,7 @@ export default async function AmbientAirMonito() {
                                     role="tabpanel"
                                     aria-labelledby="ambient-pm-tech-tab"
                                 >
-                                    <a
+                                    <Link
                                         className="tech-spec-btn"
                                         href="https://www.pranaair.com/wp-content/uploads/2024/06/construction-site-Prana-Air-Air-quality-monitor-brochure.pdf"
                                         target="_blank"
@@ -1329,7 +1340,7 @@ export default async function AmbientAirMonito() {
                                             height={20}
                                         />
                                         {t("techSpecs.brochure")}
-                                    </a>
+                                    </Link>
                                     <div className="tech-spec-parameter">
                                         <ul className="basic-pm">
                                             <li>
@@ -1480,7 +1491,7 @@ export default async function AmbientAirMonito() {
                                     role="tabpanel"
                                     aria-labelledby="prana-sense-tech-tab"
                                 >
-                                    <Link className="tech-spec-btn" href="#">
+                                    <Link className="tech-spec-btn" href={`${domain}/#`}>
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/brochure-icon.png"
                                             alt={t("techSpecs.brochureAlt")}
@@ -1588,106 +1599,7 @@ export default async function AmbientAirMonito() {
                     </div>
                 </div>
             </div>
-            <section className="generic-connective-section">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <div className="generic-connect-device-box devices">
-                                <div className="line-arrow">
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png"
-                                        alt={t("connectivity.arrowAlt")}
-                                        width={120}
-                                        height={80}
-                                    />
-                                </div>
-                                <Image
-                                    className="devices-img"
-                                    src="https://www.pranaair.com/wp-content/uploads/2024/10/generic-connectivity-devices.webp"
-                                    alt={t("connectivity.devices.imageAlt")}
-                                    width={130}
-                                    height={130}
-                                />
-                                <h3>{t("connectivity.devices.title")}</h3>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="generic-connect-device-box tyc">
-                                <div className="type-arrow">
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png"
-                                        alt={t("connectivity.arrowAlt")}
-                                        width={120}
-                                        height={80}
-                                    />
-                                </div>
-                                <ul>
-                                    <li>
-                                        <Image
-                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/wifi.webp"
-                                            alt={t("connectivity.types.items.0.alt")}
-                                            width={35}
-                                            height={35}
-                                        />
-                                        <h5>{t("connectivity.types.items.0.title")}</h5>
-                                    </li>
-                                    <li>
-                                        <Image
-                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/gsm.png"
-                                            alt={t("connectivity.types.items.1.alt")}
-                                            width={35}
-                                            height={35}
-                                        />
-                                        <h5>{t("connectivity.types.items.1.title")}</h5>
-                                    </li>
-                                    <li>
-                                        <Image
-                                            src="https://www.pranaair.com/wp-content/uploads/2023/10/rs-485.png"
-                                            alt={t("connectivity.types.items.2.alt")}
-                                            width={35}
-                                            height={35}
-                                        />
-                                        <h5>{t("connectivity.types.items.2.title")}</h5>
-                                    </li>
-                                </ul>
-                                <h3>{t("connectivity.types.title")}</h3>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="generic-connect-device-box sd-card-cloud">
-                                <div className="type-arrow">
-                                    <Image
-                                        src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-line-generic.png"
-                                        alt={t("connectivity.arrowAlt")}
-                                        width={120}
-                                        height={80}
-                                    />
-                                </div>
-                                <Image
-                                    className="sd-card"
-                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/SD-CARD.png"
-                                    alt={t("connectivity.storage.imageAlt")}
-                                    width={90}
-                                    height={90}
-                                />
-                                <h3>{t("connectivity.storage.title")}</h3>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="generic-connect-device-box web-tv-board">
-                                <Image
-                                    className="dashboard"
-                                    src="https://www.pranaair.com/wp-content/uploads/2023/10/aqi-data-dashboard-and-apps.png"
-                                    alt={t("connectivity.dashboard.imageAlt")}
-                                    width={180}
-                                    height={180}
-                                />
-                                <h3>{t("connectivity.dashboard.title")}</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Modes of Connectivity Section */}
 
             {/* Data Accessibility & Analysis Section */}
             <div className="app-ambient-line aqi-tv-heading-section">
@@ -1843,9 +1755,9 @@ export default async function AmbientAirMonito() {
                                                 <div className="aqi-tv-btn-box">
                                                     <ul>
                                                         <li>
-                                                            <a className="apple-btn" href="https://www.aqi.in/userlogin">
+                                                            <Link className="apple-btn" href="https://www.aqi.in/userlogin">
                                                                 {t("dataAccess.webDashboard.viewButton")}
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1945,7 +1857,7 @@ export default async function AmbientAirMonito() {
                                                 <div className="aqi-tv-btn-box">
                                                     <ul>
                                                         <li>
-                                                            <a className="apple-btn" href="https://apps.apple.com/tt/app/aqi/id1439684571">
+                                                            <Link className="apple-btn" href="https://apps.apple.com/tt/app/aqi/id1439684571">
                                                                 <Image
                                                                     src="https://www.pranaair.com/wp-content/uploads/2023/10/apple-icon.png"
                                                                     alt={t("dataAccess.mobileApp.iosAlt")}
@@ -1953,10 +1865,10 @@ export default async function AmbientAirMonito() {
                                                                     height={15}
                                                                 />
                                                                 {t("dataAccess.mobileApp.iosButton")} <span className="iso">iOS</span>
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a
+                                                            <Link
                                                                 className="apple-btn andro-btn"
                                                                 href="https://play.google.com/store/apps/details?id=com.aqi.data"
                                                             >
@@ -1967,7 +1879,7 @@ export default async function AmbientAirMonito() {
                                                                     height={15}
                                                                 />
                                                                 {t("dataAccess.mobileApp.androidButton")} <span className="andro">android</span>
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -2067,12 +1979,12 @@ export default async function AmbientAirMonito() {
                                                 <div className="aqi-tv-btn-box">
                                                     <ul>
                                                         <li>
-                                                            <a
+                                                            <Link
                                                                 className="apple-btn"
                                                                 href="https://play.google.com/store/apps/details?id=com.aqitv.aqitvnew"
                                                             >
                                                                 {t("dataAccess.tvApp.downloadButton")} <span className="iso">TV</span>
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -2299,7 +2211,7 @@ export default async function AmbientAirMonito() {
                         </div>
                         <div className="col-sm-4">
                             <div className="text-center">
-                                <Link href="https://www.pranaair.com/air-quality-data-accuracy/" className="mini-graph-btn">
+                                <Link href={`${domain}/air-quality-data-accuracy/`} className="mini-graph-btn">
                                     {t("accuracyGraph.exploreMore")}
                                 </Link>
                             </div>
@@ -2359,7 +2271,7 @@ export default async function AmbientAirMonito() {
                         </div>
                         <div className="col-sm-6">
                             <div>
-                                <Link href="/solutions-by-application/constructions/">
+                                <Link href={`${domain}/solutions-by-application/constructions/`}>
                                     <Image
                                         src="https://www.pranaair.com/wp-content/uploads/2023/10/contruction-image.jpg"
                                         alt={t("constructionSite.imageAlt")}
@@ -2369,7 +2281,7 @@ export default async function AmbientAirMonito() {
                                     />
                                 </Link>
                                 <p>
-                                    <Link href="/solutions-by-application/constructions/" className="learn-more">
+                                    <Link href={`${domain}/solutions-by-application/constructions/`} className="learn-more">
                                         {t("constructionSite.knowMore")}
                                         <Image
                                             src="https://www.pranaair.com/wp-content/uploads/2023/10/arrow-ambient.png"
@@ -2395,7 +2307,7 @@ export default async function AmbientAirMonito() {
                                 <p>
                                     {t("chipSensor.description")}
                                     <br />
-                                    <Link href="/air-quality-sensor/" className="know-how-link">
+                                    <Link href={`${domain}/air-quality-sensor/`} className="know-how-link">
                                         {t("chipSensor.knowHow")}
                                     </Link>
                                 </p>

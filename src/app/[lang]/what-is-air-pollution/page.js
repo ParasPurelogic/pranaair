@@ -1,6 +1,7 @@
 import "./styles.css"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 import { getServerTranslation } from "@/i18n/server"
 
 export default async function AirPollution() {
@@ -761,7 +762,7 @@ export default async function AirPollution() {
           </h2>
 
           <div className="caaqms-banner">
-            <Link href="/air-quality-monitor">
+            <Link href={`${domain}/air-quality-monitor`}>
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/01/prana-air-caaqms-outdoor-monitor--1024x512.jpg"
                 alt={t("monitors.imageAlt")}

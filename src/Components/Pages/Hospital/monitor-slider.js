@@ -1,7 +1,7 @@
 "use client";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import Link from "@/Components/TranslateLink"
 export default function MonitorCarousel({ monitorSlides = [] }) {
     return (
         <Carousel
@@ -23,7 +23,7 @@ export default function MonitorCarousel({ monitorSlides = [] }) {
             partialVisible={false}
             centerMode={false}
         >
-            {monitorSlides.map((monitor, index) => (
+            {monitorSlides.map((monitor, index, item) => (
                 <div key={index} className="monitor-slide">
                     <div className="row">
                         <div className="col-lg-6">
@@ -36,13 +36,13 @@ export default function MonitorCarousel({ monitorSlides = [] }) {
                                     ))}
                                 </ul>
                                 <div className="action-buttons">
-                                    <a href="#" className="primary-button">
+                                    <Link href="" className="primary-button">
                                         Know More
-                                    </a>
+                                    </Link>
                                     {monitor.hasRentOption && (
-                                        <a href="#" className="secondary-button">
+                                        <Link href="#" className="secondary-button">
                                             Looking to Rent?
-                                        </a>
+                                        </Link>
                                     )}
                                 </div>
                             </div>

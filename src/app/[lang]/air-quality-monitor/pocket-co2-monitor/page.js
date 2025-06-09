@@ -1,7 +1,8 @@
 import Image from "next/image"
 import { getServerTranslation } from "@/i18n/server"
 import "./style.css"
-import Link from "next/link"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 import RangeMonitorPage from "@/Components/Pages/PocketCo2Monitor/range"
 
 export default async function CO2MonitorPage() {
@@ -1000,7 +1001,7 @@ export default async function CO2MonitorPage() {
                                     </h3>
                                     <p className="download-description">{t("dataConnectivity.download.description")}</p>
                                     <div className="app-store-buttons">
-                                        <a
+                                        <Link
                                             href="https://play.google.com/store/apps/details?id=com.aqi.data"
                                             className="app-store-link"
                                             target="_blank"
@@ -1012,8 +1013,8 @@ export default async function CO2MonitorPage() {
                                                 width={20}
                                                 height={20}
                                             />
-                                        </a>
-                                        <a
+                                        </Link>
+                                        <Link
                                             href="https://apps.apple.com/tt/app/airqualityindex-aqi/id1439684571"
                                             className="app-store-link"
                                             target="_blank"
@@ -1025,7 +1026,7 @@ export default async function CO2MonitorPage() {
                                                 width={20}
                                                 height={20}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -1369,7 +1370,7 @@ export default async function CO2MonitorPage() {
                                 </h2>
                                 <h3>{t("ndirTechnology.subheading")}</h3>
                                 <p>{t("ndirTechnology.description")}</p>
-                                <Link href="https://www.pranaair.com/air-quality-sensor/carbon-dioxide-co2-sensor/">
+                                <Link href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor`}>
                                     {t("ndirTechnology.linkText")}
                                 </Link>
                             </div>
@@ -1400,7 +1401,7 @@ export default async function CO2MonitorPage() {
                                 </span>
                                 <p>
                                     <span style={{ fontSize: "13pt" }}>
-                                        <Link href="/what-is-carbon-dioxide-co2/">
+                                        <Link href={`${domain}/what-is-carbon-dioxide-co2`}>
                                             {t("co2HealthIndex.linkText")}
                                         </Link>
                                     </span>

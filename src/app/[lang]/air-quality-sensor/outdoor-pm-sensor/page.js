@@ -1,6 +1,7 @@
 import Image from "next/image"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Link from "next/link"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import ProductCarousel from "@/Components/Pages/OutPmSensor/product-carousel"
@@ -1020,7 +1021,7 @@ export default async function PMSensorPage() {
             <div className="col-sm-6">
               <div className="construction-btn fadeInUp animated">
                 <p>
-                  <Link href="https://www.pranaair.com/solutions-by-application/constructions/" className="btn-link">
+                  <Link href={`${domain}/solutions-by-application/constructions`} className="btn-link">
                     {t("constructionSection.linkText")}{" "}
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
@@ -1258,13 +1259,13 @@ export default async function PMSensorPage() {
               <div className="construction-btn">
                 <ul>
                   <li>
-                    <a href="#">
+                    <Link href={`${domain}/solutions-by-application/constructions`}>
                       {t("techSpecsSection.links.arduinoCode")}
                       <img
                         src="https://www.pranaair.com/wp-content/uploads/2024/12/tab-btn.png"
                         alt={t("techSpecsSection.links.iconAlt")}
                       />
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="https://www.pranaair.com/wp-content/uploads/2025/01/prana-air-pas-out-1-outdoor-pm-sensor-datasheet.pdf">
@@ -1423,12 +1424,12 @@ export default async function PMSensorPage() {
             <div className="col-md-12">
               <ProductCarousel responsive={alsoLikeResponsive} className="allsensor-slide">
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/carbon-dioxide-co2-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/CO2-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.co2.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.co2.title")}{" "}
                     <img
@@ -1438,12 +1439,12 @@ export default async function PMSensorPage() {
                   </h5>
                 </div>
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/carbon-monoxide-co-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/CO-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.co.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.co.title")}{" "}
                     <img
@@ -1453,12 +1454,12 @@ export default async function PMSensorPage() {
                   </h5>
                 </div>
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/ammonia-nh3-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/Ammonia-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.ammonia.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.ammonia.title")}{" "}
                     <img
@@ -1468,12 +1469,12 @@ export default async function PMSensorPage() {
                   </h5>
                 </div>
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/hydrogen-sulfide-h2s-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/H2S-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.h2s.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.h2s.title")}{" "}
                     <img
@@ -1483,12 +1484,12 @@ export default async function PMSensorPage() {
                   </h5>
                 </div>
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/ozone-o3-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/Ozone-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.ozone.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.ozone.title")}{" "}
                     <img
@@ -1498,12 +1499,12 @@ export default async function PMSensorPage() {
                   </h5>
                 </div>
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/chlorine-cl2-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/Chlorine-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.chlorine.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.chlorine.title")}{" "}
                     <img
@@ -1513,12 +1514,12 @@ export default async function PMSensorPage() {
                   </h5>
                 </div>
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/sulfur-dioxide-so2-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/SO2-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.so2.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.so2.title")}{" "}
                     <img
@@ -1528,12 +1529,12 @@ export default async function PMSensorPage() {
                   </h5>
                 </div>
                 <div className="may-also">
-                  <a href="#">
+                  <Link href={`${domain}/air-quality-sensor/nitrogen-dioxide-no2-sensor/`}>
                     <img
                       src="https://www.pranaair.com/wp-content/uploads/2024/08/No2-gas-sensor.jpg"
                       alt={t("alsoLikeSection.products.no2.alt")}
                     />
-                  </a>
+                  </Link>
                   <h5>
                     {t("alsoLikeSection.products.no2.title")}{" "}
                     <img

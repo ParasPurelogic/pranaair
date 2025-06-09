@@ -1,8 +1,9 @@
-import Link from "next/link"
 import "./styles.css"
 import AnimatedSection from "@/Components/Pages/AboutVideo/AnimatedSection"
 import VideoSection from "@/Components/Pages/AboutVideo/VideoSection"
 import { getServerTranslation } from "../../../i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function AboutUs({ params }) {
   // Get translations for the about-us page
@@ -18,7 +19,7 @@ export default async function AboutUs({ params }) {
               <h1>{t("hero.title")}</h1>
               <p>{t("hero.description")}</p>
               <div className="hero-buttons">
-                <Link href={`/${params.lang}/air-quality-monitor`} className="btn-primary">
+                <Link href={`${domain}/air-quality-monitor`} className="btn-primary">
                   {t("hero.exploreProducts")} <span className="icon-arrow-right"></span>
                 </Link>
                 <a href="#about" className="btn-secondary">
@@ -350,7 +351,7 @@ export default async function AboutUs({ params }) {
                 </div>
                 <h3>{t("company.pranaAirName")}</h3>
                 <p>{t("company.pranaAirDescription")}</p>
-                <Link href={`/${params.lang}/air-quality-monitor`} className="brand-link">
+                <Link href={`${domain}/air-quality-data-accuracy`} className="brand-link">
                   {t("company.exploreProducts")} <span className="icon-external-link"></span>
                 </Link>
               </div>
@@ -452,7 +453,7 @@ export default async function AboutUs({ params }) {
             <span className="section-subtitle light">{t("vision.subtitle")}</span>
             <h2 className="section-title light">{t("vision.title")}</h2>
             <p className="vision-text">{t("vision.description")}</p>
-            <Link href={`/${params.lang}/contact`} className="btn-light">
+            <Link href={`${domain}/contact`} className="btn-light">
               {t("vision.joinMission")} <span className="icon-arrow-right"></span>
             </Link>
           </div>

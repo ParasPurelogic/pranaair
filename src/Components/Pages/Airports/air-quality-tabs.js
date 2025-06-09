@@ -1,6 +1,7 @@
 import BootstrapTabs from "../BootstrapTabsReuse/bootstrap-tabs"
 import { getServerTranslation } from "@/i18n/server"
-
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 export default async function AirQualityTabs() {
     const { t } = await getServerTranslation("airports")
     const tabs = [
@@ -39,21 +40,21 @@ export default async function AirQualityTabs() {
                                             <li>{t("airQualityTabs.airQualityMonitors.carousel.squair.features.feature2")}</li>
                                             <li>{t("airQualityTabs.airQualityMonitors.carousel.squair.features.feature3")}</li>
                                         </ul>
-                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/" className="knowmore_btn">
+                                        <Link href={`${domain}/air-quality-monitor/squair-air-monitor`} className="knowmore_btn">
                                             {t("airQualityTabs.common.knowMoreButton")}
-                                        </a>
-                                        <a href="https://www.pranaair.com/air-quality-monitor/rental-air-monitor/" className="rent_btn">
+                                        </Link>
+                                        <Link href={`${domain}/air-quality-monitor/rental-air-monitor/`} className="rent_btn">
                                             {t("airQualityTabs.airQualityMonitors.carousel.squair.rentButton")}
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="slider_img_box">
-                                        <a href="https://www.pranaair.com/air-quality-monitor/squair-air-monitor/">
+                                        <Link href={`${domain}/air-quality-monitor/squair-air-monitor`}>
                                             <img
                                                 style={{ width: "100%" }}
                                                 src="https://www.pranaair.com/wp-content/uploads/2022/09/prana-air-squair-monitor-in-airport.jpg"
                                                 alt={t("airQualityTabs.airQualityMonitors.carousel.squair.imageAlt")}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -67,21 +68,21 @@ export default async function AirQualityTabs() {
                                             <li>{t("airQualityTabs.airQualityMonitors.carousel.sensible.features.feature2")}</li>
                                             <li>{t("airQualityTabs.airQualityMonitors.carousel.sensible.features.feature3")}</li>
                                         </ul>
-                                        <a
-                                            href="https://www.pranaair.com/air-quality-monitor/sensible-plus-air-monitor/"
+                                        <Link
+                                            href={`${domain}/air-quality-monitor/sensible-plus-air-monitor/`}
                                             className="knowmore_btn"
                                         >
                                             {t("airQualityTabs.common.knowMoreButton")}
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="slider_img_box">
-                                        <a href="https://www.pranaair.com/air-quality-monitor/sensible-plus-air-monitor/">
+                                        <Link href={`${domain}/air-quality-monitor/sensible-plus-air-monitor/`}>
                                             <img
                                                 style={{ width: "100%" }}
                                                 src="https://www.pranaair.com/wp-content/uploads/2022/09/prana-air-sensible-plus-monitor-for-airport.jpg"
                                                 alt={t("airQualityTabs.airQualityMonitors.carousel.sensible.imageAlt")}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -385,13 +386,13 @@ export default async function AirQualityTabs() {
                             <div className="item active">
                                 <div className="slider_cntr">
                                     <div className="slider_img_box">
-                                        <a href="https://www.pranaair.com/fresh-air-machine/">
+                                        <Link href={`${domain}/fresh-air-machine/`}>
                                             <img
                                                 style={{ width: "100%" }}
                                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/prana-air-fresh-air-machine-for-iaq-solution.jpg"
                                                 alt={t("airQualityTabs.freshAirMachine.imageAlt")}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="slider_details_box">
                                         <h3>
@@ -404,9 +405,9 @@ export default async function AirQualityTabs() {
                                             <li>{t("airQualityTabs.freshAirMachine.features.feature2")}</li>
                                             <li>{t("airQualityTabs.freshAirMachine.features.feature3")}</li>
                                         </ul>
-                                        <a href="https://www.pranaair.com/fresh-air-machine/" className="knowmore_btn">
+                                        <Link href={`${domain}/fresh-air-machine/`} className="knowmore_btn">
                                             {t("airQualityTabs.common.knowMoreButton")}
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

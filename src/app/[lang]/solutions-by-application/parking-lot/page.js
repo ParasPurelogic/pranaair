@@ -2,6 +2,8 @@ import "./style.css"
 import IndustrialApplicationsCarousel from "@/Components/Pages/Airports/industrial-applications-carousel"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 export default async function ParkingLotPage() {
   const { t } = await getServerTranslation("parking")
 
@@ -9,57 +11,57 @@ export default async function ParkingLotPage() {
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-hotel.jpg",
       title: t("industrialApplicationsData.hotel.title"),
-      link: "https://www.pranaair.com/solutions-by-application/hotel-businesses/",
+      link: "/solutions-by-application/hotel-businesses/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-restaurant.jpg",
       title: t("industrialApplicationsData.restaurant.title"),
-      link: "https://www.pranaair.com/solutions-by-application/restaurants/",
+      link: "/solutions-by-application/restaurants/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-institute.jpg",
       title: t("industrialApplicationsData.institutes.title"),
-      link: "https://www.pranaair.com/solutions-by-application/institutes/",
+      link: "/solutions-by-application/institutes/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/09/clean-air-solutions-for-cinema.jpg",
       title: t("industrialApplicationsData.cinema.title"),
-      link: "https://www.pranaair.com/solutions-by-application/cinema-and-theatre/",
+      link: "/solutions-by-application/cinema-and-theatre/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-autombile.jpg",
       title: t("industrialApplicationsData.automobiles.title"),
-      link: "https://www.pranaair.com/solutions-by-application/automobile/",
+      link: "/solutions-by-application/automobile/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-real-estate.jpg",
       title: t("industrialApplicationsData.realEstate.title"),
-      link: "https://www.pranaair.com/solutions-by-application/real-estate/",
+      link: "/solutions-by-application/real-estate/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/solutions-for-mobile-phone-makers.png",
       title: t("industrialApplicationsData.smartphone.title"),
-      link: "https://www.pranaair.com/solutions-by-application/smartphone-makers/",
+      link: "/solutions-by-application/smartphone-makers/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2022/08/air-quality-construction-sites.jpg",
       title: t("industrialApplicationsData.construction.title"),
-      link: "https://www.pranaair.com/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
+      link: "/solutions-by-industry/pm2-5-monitoring-air-pollution-by-construction-sites/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-animale-care-page.jpg",
       title: t("industrialApplicationsData.animalCare.title"),
-      link: "https://www.pranaair.com/solutions-by-application/animal-care-center/",
+      link: "/solutions-by-application/animal-care-center/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-logistics-page.jpg",
       title: t("industrialApplicationsData.logistics.title"),
-      link: "https://www.pranaair.com/solutions-by-application/logistics/",
+      link: "/solutions-by-application/logistics/",
     },
     {
       image: "https://www.pranaair.com/wp-content/uploads/2024/08/solutions-for-railway-page.jpg",
       title: t("industrialApplicationsData.railways.title"),
-      link: "https://www.pranaair.com/solutions-by-application/railway/",
+      link: "/solutions-by-application/railway/",
     }
   ]
   return (
@@ -461,13 +463,13 @@ export default async function ParkingLotPage() {
                     </a>
                   </div>
                   <div className="slider_img_box">
-                    <a href="https://www.pranaair.com/air-quality-monitor/ambient-air-monitor/">
+                    <Link href={`${domain}/air-quality-monitor/ambient-air-monitor/`}>
                       <img
                         style={{ width: "100%" }}
                         src="https://www.pranaair.com/wp-content/uploads/2023/04/ambient-air-monitor-in-car-parking.jpg"
                         alt="Prana Air ambient air monitor in car parking"
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

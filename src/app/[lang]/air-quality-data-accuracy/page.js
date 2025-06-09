@@ -1,5 +1,7 @@
 import "./style.css"
 import { getServerTranslation } from "@/i18n/server"
+import Link from "@/Components/TranslateLink"
+import { domain } from "@/config"
 
 export default async function AirQualityDataAccuracy() {
     const { t } = await getServerTranslation("data-accuracy")
@@ -18,9 +20,9 @@ export default async function AirQualityDataAccuracy() {
                         <div className="col-md-6">
                             <div className="airquality_content_box">
                                 <p>{t("pranaAirLanding.hero.description")}</p>
-                                <a className="discover_btn" href="/?page_id=18093">
+                                <Link className="discover_btn" href={`${domain}/air-quality-monitor`}>
                                     {t("pranaAirLanding.hero.buttonText")}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
