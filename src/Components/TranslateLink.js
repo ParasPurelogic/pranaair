@@ -1,14 +1,13 @@
 "use client";
 
+import { defaultLanguage, domain } from "@/config";
+import { useTranslation } from "@/i18n/client";
 import NextLink from "next/link"
 import { forwardRef } from "react";
 
 const TranslateLink = forwardRef((props, ref) => {
   // lang
-  // const currentLang = useTra();
-
-  // const { t, i18n } = useTranslation("header-menu")
-
+  const { i18n } = useTranslation();
 
   // Destructure skiplangmodification from props
   const { skiplangmodification, ...restProps } = props;
@@ -17,18 +16,9 @@ const TranslateLink = forwardRef((props, ref) => {
   let href = props.href;
 
   // modify href
-  // if (!skiplangmodification) {
-  //   href = insertLangIntoURL({
-  //     url: href,
-  //     lang: currentLang,
-  //     currentLang,
-  //     debug: logDebug,
-  //   });
-  // }
-  // Helper function to get localized URL
-  // const getLocalizedUrl = (url) => {
-  //   return i18n.language && i18n.language !== "en" ? `/${i18n.language}${url}` : url
-  // }
+  if (!skiplangmodification) {
+    href = insertLangIntoURL(href, i18n.language);
+  }
 
   // Return JSX
   return (
@@ -45,3 +35,49 @@ const TranslateLink = forwardRef((props, ref) => {
 TranslateLink.displayName = "TranslateLink";
 
 export default TranslateLink;
+
+
+function insertLangIntoURL(url = "", locale = "") {
+  const argsUrl = url?.includes?.(domain) ? url : `${domain}${url}`
+
+  // if default lang, return
+  if (locale == defaultLanguage) return argsUrl
+
+  // if home url
+  if (argsUrl == domain) {
+    return `${domain}/${locale}`
+  }
+
+  // let url obj
+  let urlObj = (() => {
+    try {
+      return new URL(argsUrl);
+    } catch (error) {
+      console.log("INSERT_LANG_INTO_URL_ERROR", {
+        insertLangError: error.message,
+        url,
+        argsUrl,
+        locale,
+      });
+      return new URL(domain + (argsUrl.startsWith("/") ? argsUrl : "/" + argsUrl));
+    }
+  })();
+
+
+  // pure href
+  const pureHref = urlObj.href.replace(
+    new RegExp(`/${locale}/`, "g"),
+    "/"
+  )
+
+  // new pathname
+  const splittedPathname = pureHref.split?.(domain
+  ).filter((e) => e.length > 2);
+
+  // Return
+  return `${domain}/${locale}${splittedPathname}`
+    // Ensure no multi "/"
+    .replace(/([^:]\/)\/+/g, "$1")
+    // No "/" at the end
+    .replace?.(/\/+$/, "")
+};

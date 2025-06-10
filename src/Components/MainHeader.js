@@ -1,7 +1,7 @@
 "use client"
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "./TranslateLink"
 import { usePathname, useRouter } from "next/navigation"
 import { MegaMenu, SolutionsMegaMenu, KnowWhatMegaMenu, AboutUsMegaMenu, CaseStudiesMegaMenu } from "./MegaMenu"
 import { useTranslation } from "react-i18next"
@@ -14,6 +14,7 @@ const useCart = () => {
 
 // Import the real product categories from mega menu
 import { getProductCategories, getSolutionsCategories, getKnowWhatArticles } from "./MegaMenu"
+
 
 function MainHeader() {
   const { t, i18n } = useTranslation("header-menu")
@@ -153,12 +154,6 @@ function MainHeader() {
     setActiveMobileMenu(null)
     setActiveCategory(null)
     setActiveSubcategory(null)
-  }
-
-  // Helper function to get localized URL
-  const getLocalizedUrl = (url) => {
-    const isLocalizedPath = pathname.startsWith(`/${i18n.language}/`) || pathname === `/${i18n.language}`
-    return isLocalizedPath ? `/${i18n.language}${url}` : url
   }
 
   // Fetch dynamic content when mobile menu opens
@@ -320,7 +315,7 @@ function MainHeader() {
                 <li key={item.key} className="nav-item">
                   {item.hasDropdown ? (
                     <>
-                      <Link href={getLocalizedUrl(item.href)} className="nav-link">
+                      <Link href={(item.href)} className="nav-link">
                         {item.label}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -363,7 +358,7 @@ function MainHeader() {
                       )}
                     </>
                   ) : (
-                    <Link href={getLocalizedUrl(item.href)} className="nav-link">
+                    <Link href={(item.href)} className="nav-link">
                       {item.label}
                     </Link>
                   )}
@@ -374,7 +369,7 @@ function MainHeader() {
 
           {/* Right Menu */}
           <div className="right-menu">
-            <Link href={getLocalizedUrl("/contact")} className="get-in-touch">
+            <Link href={("/contact")} className="get-in-touch">
               {t("nav.getInTouch")}
             </Link>
 
@@ -457,11 +452,11 @@ function MainHeader() {
               )}
             </div>
 
-            <Link href={getLocalizedUrl("/login")} className="login-link">
+            <Link href={("/login")} className="login-link">
               {t("nav.login")}
             </Link>
 
-            <Link href={getLocalizedUrl("/cart")} className="cart-link">
+            <Link href={("/cart")} className="cart-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -662,7 +657,7 @@ function MainHeader() {
                                               {subcategory.products.map((product) => (
                                                 <Link
                                                   key={product.slug}
-                                                  href={getLocalizedUrl(product.url)}
+                                                  href={(product.url)}
                                                   className="mobile-product-card-enhanced"
                                                   onClick={closeMobileMenu}
                                                 >
@@ -697,7 +692,7 @@ function MainHeader() {
                                 {category.customContent && (
                                   <div className="mobile-custom-content">
                                     {category.slug === "air-quality-pcb" && (
-                                      <Link href={getLocalizedUrl("/air-quality-pcb-board/")} onClick={closeMobileMenu}>
+                                      <Link href={("/air-quality-pcb-board/")} onClick={closeMobileMenu}>
                                         <Image
                                           src="https://www.pranaair.com/wp-content/uploads/2024/08/pranaair-air-quality-PCBs-borads-2048x596.jpg"
                                           alt="Air Quality PCBs"
@@ -710,7 +705,7 @@ function MainHeader() {
                                     )}
                                     {category.slug === "weather-station" && (
                                       <Link
-                                        href={getLocalizedUrl("/air-quality-monitor/weather-station/")}
+                                        href={("/air-quality-monitor/weather-station/")}
                                         onClick={closeMobileMenu}
                                       >
                                         <Image
@@ -741,7 +736,7 @@ function MainHeader() {
                             {category.products.map((solution) => (
                               <Link
                                 key={solution.slug}
-                                href={getLocalizedUrl(solution.url)}
+                                href={(solution.url)}
                                 className="mobile-subcategory-button"
                                 onClick={closeMobileMenu}
                               >
@@ -821,7 +816,7 @@ function MainHeader() {
                               </Link>
                             ))}
                             <Link
-                              href={getLocalizedUrl("/case-studies")}
+                              href={("/case-studies")}
                               className="mobile-view-all-button"
                               onClick={closeMobileMenu}
                             >
@@ -856,7 +851,7 @@ function MainHeader() {
                         {knowWhatArticles.map((article) => (
                           <Link
                             key={article.slug}
-                            href={getLocalizedUrl(article.url)}
+                            href={(article.url)}
                             className="mobile-subcategory-button"
                             onClick={closeMobileMenu}
                           >
@@ -930,7 +925,7 @@ function MainHeader() {
                                 </Link>
                               ))}
                               <Link
-                                href={getLocalizedUrl("https://www.pranaair.com/blog/")}
+                                href={("https://www.pranaair.com/blog/")}
                                 className="mobile-view-all-button"
                                 onClick={closeMobileMenu}
                               >
@@ -960,7 +955,7 @@ function MainHeader() {
                         <div className="mobile-about-links">
                           <h4 className="mobile-section-title">About Us</h4>
                           <Link
-                            href={getLocalizedUrl("/about")}
+                            href={("/about")}
                             className="mobile-subcategory-button"
                             onClick={closeMobileMenu}
                           >
@@ -983,7 +978,7 @@ function MainHeader() {
                           </Link>
 
                           <Link
-                            href={getLocalizedUrl("/about/team")}
+                            href={("/about/team")}
                             className="mobile-subcategory-button"
                             onClick={closeMobileMenu}
                           >
@@ -1006,7 +1001,7 @@ function MainHeader() {
                           </Link>
 
                           <Link
-                            href={getLocalizedUrl("/contact")}
+                            href={("/contact")}
                             className="mobile-subcategory-button"
                             onClick={closeMobileMenu}
                           >
@@ -1029,7 +1024,7 @@ function MainHeader() {
                           </Link>
 
                           <Link
-                            href={getLocalizedUrl("/support")}
+                            href={("/support")}
                             className="mobile-subcategory-button"
                             onClick={closeMobileMenu}
                           >
@@ -1142,7 +1137,7 @@ function MainHeader() {
           {/* Mobile Actions */}
           <div style={{ padding: "16px", marginTop: "16px" }}>
             <Link
-              href={getLocalizedUrl("/contact")}
+              href={("/contact")}
               onClick={closeMobileMenu}
               style={{
                 display: "block",
