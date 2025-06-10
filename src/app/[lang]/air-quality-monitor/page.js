@@ -111,7 +111,7 @@ export default async function CommonMonitorPage() {
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <VideoPopup />
+                            <VideoPopup videoUrl="https://www.youtube.com/embed/vKTDgUu1K_E?autoplay=1&mute=1" />
                         </div>
                     </div>
                 </div>

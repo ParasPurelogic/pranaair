@@ -2,78 +2,54 @@
 
 import { useEffect } from "react"
 
-export default function VideoPopup() {
+export default function VideoPopup({ videoUrl }) {
     useEffect(() => {
-        // Video Popup Functionality
         const playButton = document.getElementById("playButton")
         const videoPopup = document.getElementById("videoPopup")
         const closeBtn = document.getElementById("closeBtn")
         const videoFrame = document.getElementById("videoFrame")
 
-        // YouTube video URL
-        const videoUrl = "https://www.youtube.com/embed/vKTDgUu1K_E?autoplay=1&mute=1"
+        const fullVideoUrl = `${videoUrl}?autoplay=1&mute=1`
 
-        // Show the popup and play the video
-        if (playButton) {
-            playButton.addEventListener("click", () => {
-                if (videoPopup) {
-                    videoPopup.style.display = "flex"
-                }
-                if (videoFrame) {
-                    videoFrame.src = videoUrl
-                }
-            })
+        const openPopup = () => {
+            if (videoPopup) videoPopup.style.display = "flex"
+            if (videoFrame) videoFrame.src = fullVideoUrl
+            if (closeBtn) closeBtn.style.display = "block"
         }
 
-        // Close the popup
-        if (closeBtn) {
-            closeBtn.addEventListener("click", () => {
-                if (videoPopup) {
-                    videoPopup.style.display = "none"
-                }
-                if (videoFrame) {
-                    videoFrame.src = ""
-                }
-            })
+        const closePopup = () => {
+            if (videoPopup) videoPopup.style.display = "none"
+            if (videoFrame) videoFrame.src = ""
+            if (closeBtn) closeBtn.style.display = "none"
         }
 
-        // Close the popup if clicked outside the video content
+        if (playButton) playButton.addEventListener("click", openPopup)
+        if (closeBtn) closeBtn.addEventListener("click", closePopup)
         if (videoPopup) {
             window.addEventListener("click", (event) => {
                 if (event.target === videoPopup) {
-                    videoPopup.style.display = "none"
-                    if (videoFrame) {
-                        videoFrame.src = ""
-                    }
+                    closePopup()
                 }
             })
         }
 
-        // Cleanup event listeners on unmount
         return () => {
-            if (playButton) {
-                playButton.removeEventListener("click", () => { })
-            }
-            if (closeBtn) {
-                closeBtn.removeEventListener("click", () => { })
-            }
-            if (videoPopup) {
-                window.removeEventListener("click", () => { })
-            }
+            if (playButton) playButton.removeEventListener("click", openPopup)
+            if (closeBtn) closeBtn.removeEventListener("click", closePopup)
+            if (videoPopup) window.removeEventListener("click", closePopup)
         }
-    }, [])
+    }, [videoUrl])
+
 
     return (
         <div className="video-container">
             <button id="playButton">
-                <img src="https://www.pranaair.com/wp-content/uploads/2025/01/play-button.png" alt="" />
+                <img src="https://www.pranaair.com/wp-content/uploads/2025/01/play-button.png" alt="Play" />
             </button>
 
             <div id="videoPopup" className="popup">
                 <div className="popup-content">
-                    <span id="closeBtn" className="close">
-                        &times;
-                    </span>
+                    <span id="closeBtn" className="close">&times;</span>
                     <iframe
                         id="videoFrame"
                         width="650"

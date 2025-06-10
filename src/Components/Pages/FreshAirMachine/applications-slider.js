@@ -1,39 +1,25 @@
 "use client"
-
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
-export default function ApplicationsSlider({ applications }) {
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 3,
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-        },
-    }
-
+export default function FresherCarousel({ children, className, responsive, showDots = false, arrows = true }) {
     return (
-        <Carousel responsive={responsive} infinite={true} className="applications-slider">
-            {applications.map((app, index) => (
-                <div key={index} className="application-card">
-                    <div className="application-overlay">
-                        <p>{app.description}</p>
-                    </div>
-                    <img src={app.image || "/placeholder.svg"} alt={app.title} />
-                    <div className="application-title">{app.title}</div>
-                </div>
-            ))}
+        <Carousel
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            className={className}
+            showDots={showDots}
+            arrows={arrows}
+            keyBoardControl={true}
+            customTransition="all .8s"
+            transitionDuration={1000}
+            containerClass="carousel-container"
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding"
+        >
+            {children}
         </Carousel>
     )
 }

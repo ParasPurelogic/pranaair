@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap');
+
+.container-fluid {
+    width: 85%;
+}
+
+#closeBtn {
+    display: none;
+    /* Initially hidden */
+}
+
+main.main.py-4 {
+    padding: 0px !important;
+}
+
+.hero-sec {
+    background: url("/img/lower-your-indoor-aqi-levels-to-single-digits.webp") center center / cover;
+    margin-top: -100px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.hero-heading {
+    margin-top: 500px;
+    top: 50px;
+    position: relative;
+}
+
+.hero-sec::before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(0deg, rgb(50, 27, 1), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 500px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.hero-link:before {
+    position: absolute;
+    content: "";
+    background: #ffffff6e;
+    width: 1px;
+    height: 60px;
+    left: 0;
+    top: -10px;
+}
+
+.hero-link {
+    margin-top: 600px;
+    padding-left: 100px;
+    position: relative;
+    z-index: 1;
+    left: -200px;
+    top: 80px;
+}
+
+.hero-heading h1 {
+    color: #f9faff;
+    font-size: 44px;
+    width: 70%;
+    font-weight: 300;
+}
+
+.hero-heading p {
+    color: #ffffffb2;
+    font-size: 18px;
+    font-weight: 100;
+    width: 60%;
+}
+
+iframe#videoFrame {
+    position: absolute;
+    left: -700px;
+    top: -300px;
+}
+
+span#closeBtn {
+    position: absolute;
+    top: -330px;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    left: -40px;
+    cursor: pointer;
+}
+
+.hero-link a {
+    background: rgb(97, 167, 66);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 15px 50px;
+    border-radius: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.2s linear;
+}
+
+.hero-link a:hover {
+    background: none;
+}
+
+.video-box {
+    position: relative;
+    float: right;
+    background: url("/img/fresher-air-video-thumbnail.webp") 0% 0% / cover;
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.video-box button#playButton {
+    background: none;
+    border: 0px;
+}
+
+.video-box button#playButton img {
+    width: 70%;
+    margin-left: -18px;
+}
+
+.scroll-explore {
+    text-align: center;
+    border-top: 1px solid #ffffff5c;
+    padding-top: 20px;
+    margin-top: 130px;
+    position: relative;
+}
+
+.scroll-explore a {
+    color: #ffffff73;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    top: 60px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.scroll-explore a img {
+    width: 8px;
+    height: auto;
+}
+
+.app-slide-img-box img {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.any-moment-box h3 {
+    color: #263D4F;
+    font-size: 24px;
+}
+
+.any-moment-box p {
+    color: #263D4FCC;
+    font-size: 16px;
+    width: 60%;
+}
+
+.any-moment-box {
+    top: -150px;
+    position: relative;
+    padding: 0 40px;
+}
+
+section.any-mood {
+    padding-top: 100px;
+}
+
+.app-slide-img-box img {
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.any-moment-box h3 {
+    color: #263D4F;
+    font-size: 24px;
+}
+
+.any-moment-box p {
+    color: #263D4FCC;
+    font-size: 16px;
+    width: 60%;
+}
+
+.any-moment-box {
+    top: -150px;
+    position: relative;
+    padding: 0 40px;
+}
+
+.any-mood {
+    padding-top: 100px;
+}
+
+.any-moment-heading h2 {
+    color: #263D4F;
+    font-family: 'Nuosu' !important;
+    font-size: 40px;
+}
+
+.any-moment-heading h3 {
+    color: #263D4F;
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: calc(90% + 1px) !important;
+}
+
+.react-multiple-carousel__arrow {
+    bottom: 40px !important;
+    background: #7ab261 !important;
+}
+
+section.toxic-sec-bg {
+    background: #050812;
+    border-radius: 60px 60px 0 0;
+    padding-top: 100px;
+    margin: 120px 20px 0;
+}
+
+section.toxic-img {
+    background: url("/img/toxic-pollutants.webp");
+    background-size: cover;
+    height: 900px;
+    background-position: center;
+}
+
+.toxic-heading {
+    text-align: center;
+}
+
+.toxic-heading h2 {
+    color: #FFFFFF;
+    font-family: Nuosu !important;
+    font-size: 40px;
+    margin: 0;
+}
+
+.toxic-heading h3 {
+    font-size: 40px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.toxic-heading p {
+    color: #FFFFFFCC;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.particular ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.particular ul li img {
+    width: 50px;
+    height: auto;
+}
+
+.particular ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.particular ul li p {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+    width: 50%;
+}
+
+.particular {
+    padding-top: 200px;
+}
+
+.particular ul li:first-child {
+    position: relative;
+    top: 170px;
+}
+
+.particular ul li:nth-last-child(2) {
+    position: relative;
+    top: 200px;
+}
+
+.tab-main-box {
+    display: flex;
+}
+
+section.pick-fresh-air-variant {
+    margin-top: 150px;
+}
+
+.pick-fresh-heaidng h2 {
+    color: #263D4F;
+    font-family: Nuosu SIL !important;
+    font-size: 40px;
+}
+
+.pick-fresh-heaidng h3 {
+    color: #263D4F;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.pick-fresh-para p {
+    color: #263D4FCC;
+    font-size: 18px;
+    padding-left: 270px;
+}
+
+.br-line {
+    border: 1px solid #bfbfbf;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.tab-sec ul.nav {
+    border: 0;
+    gap: 30px;
+    background: #263d4fc4;
+    padding: 15px 25px;
+    border-radius: 11px;
+    width: 33%;
+    position: relative;
+    left: 120px;
+    top: 50px;
+}
+
+.tab-sec ul.nav:before {
+    position: absolute;
+    content: "";
+    background: url(/img/bestseller.png);
+    width: 100%;
+    background-size: 15%;
+    height: 100px;
+    background-repeat: no-repeat;
+    top: -8px;
+    left: 150px;
+}
+
+.tab-sec ul.nav .active h4 {
+    font-weight: 600;
+    color: #ffffff;
+    border: 0;
+    margin: 0;
+}
+
+.tab-sec ul.nav button h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.tab-sec ul.nav .active {
+    border: 0;
+    background: transparent;
+}
+
+.tab-sec ul.nav button {
+    padding: 0;
+    color: #ffffffb3;
+}
+
+.tab-sec ul.nav button:hover {
+    color: #fff;
+    border: 0;
+}
+
+.tab-sec ul.nav button:hover {
+    color: #ffffff4f;
+    border: 0;
+}
+
+.tab-cont-img {
+    width: 100%;
+    margin-top: -50px;
+    border-radius: 30px 0 0 30px;
+}
+
+.tab-cont-img img {
+    width: 100%;
+    height: auto;
+}
+
+.tab-inner-content {
+    width: 80%;
+    background: #e7efff;
+    margin-top: -50px;
+    padding: 40px 40px 70px;
+    margin-left: -40px;
+    border-radius: 0 30px 30px 0;
+}
+
+.tab-content a {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #61A742;
+    font-size: 16px;
+    margin-top: -50px;
+    position: relative;
+    margin-right: 30px;
+}
+
+.tab-inner-content h3 {
+    color: #263D4F;
+    font-size: 28px;
+    font-family: Nuosu SIL !important;
+    border: 1px solid #263D4F;
+    text-align: center;
+    width: 33%;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.tab-inner-content span {
+    color: #263D4F;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.inner-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.lft {
+    width: 100%;
+    background: #fff;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.rgt {
+    width: 60%;
+    background: #fff;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.lft h4 {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.lft ul li {
+    display: inline-block;
+    margin-right: 55px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #263D4FE5;
+}
+
+.lft ul {
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.rgt h4 {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.rgt span {
+    color: #263D4F;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.rgt h5 {
+    color: #263D4F;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.highlight {
+    width: 100%;
+    background: #fff;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.highlight h4 {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.highlight ul {
+    padding: 0;
+    margin-top: 20px;
+}
+
+.highlight ul li {
+    padding-bottom: 10px;
+    color: #263d4ff0;
+    font-size: 16px;
+}
+
+.tab-content a img {
+    width: 30px;
+    height: auto;
+}
+
+.hazardous-video-box img {
+    width: 100%;
+    height: auto;
+}
+
+section.aqi-levels-digits {
+    padding-top: 140px;
+}
+
+.hazardous-video-box-heading {
+    padding-bottom: 50px;
+}
+
+.hazardous-video-box-heading h2 {
+    color: #263D4F;
+    font-size: 40px;
+    font-family: Nuosu SIL !important;
+}
+
+.hazardous-video-box-heading h3 {
+    color: #263D4F;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+section.effortless-sec .container-fluid {
+    background: url(/img/effortless-fresh-air-machine.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 80px;
+    height: 900px;
+    padding: 0;
+}
+
+.efforless-text h2 {
+    color: #F7F7F7;
+    font-size: 32px;
+    font-family: Nuosu SIL !important;
+}
+
+.efforless-text h3 {
+    color: #F7F7F7;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.efforless-text {
+    padding-top: 70px;
+    padding-left: 100px;
+}
+
+.effortless-data {
+    background: #fff3;
+    box-shadow: 0 10px 32px #8e8e8e1f;
+    border-radius: 30px;
+    padding: 50px 50px 20px;
+    margin: 440px 30px 0;
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+}
+
+.effortless-data ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+}
+
+.effortless-data ul li {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.effortless-data ul li span img {
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.effortless-data ul li span h3 {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0;
+}
+
+.effortless-data ul li span p {
+    color: #FFFFFFCC;
+    font-size: 14px;
+    width: 70%;
+    padding-top: 5px;
+}
+
+section.effortless-sec .container-fluid:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(0deg, black, transparent);
+    width: 100%;
+    height: 400px;
+    bottom: 0;
+    border-radius: 30px;
+}
+
+.effortless-data ul li:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(45deg, #ffffff1f, #ffffffa6, #ffffff26);
+    width: 1px;
+    height: 60px;
+    top: 0;
+    left: 65px;
+}
+
+.banner-slider-img img {
+    width: 99%;
+    height: auto;
+}
+
+.banner-slider-heading {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+section.slider-sec {
+    margin-top: 100px;
+}
+
+.banner-slider-heading h2 {
+    color: #263D4F;
+    font-size: 40px;
+    font-family: Nuosu SIL !important;
+}
+
+.banner-slider-heading h3 {
+    color: #263D4F;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.banner-slider-heading p {
+    color: #263D4FB2;
+    font-size: 16px;
+    width: 70%;
+}
