@@ -25,7 +25,7 @@ export default function ToxicPollutantsSection({ toxicContent }) {
                     trigger: toxicRef.current,
                     start: "top 70%",
                     end: "top 30%",
-                    scrub: true,
+                    scrub: 1,
                 },
             }
         )
