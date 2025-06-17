@@ -94,9 +94,9 @@ main.main.py-4 {
 
 .hero-link {
     margin-top: 600px;
-    padding-left: 100px;
+    padding-left: 50px;
     position: relative;
-    left: -200px;
+    left: -300px;
     top: 80px;
 }
 
@@ -205,14 +205,9 @@ span#closeBtn {
 .any-moment-box p {
     color: #263D4FCC;
     font-size: 16px;
-    width: 60%;
+    width: 70%;
 }
 
-.any-moment-box {
-    top: -150px;
-    position: relative;
-    padding: 0 40px;
-}
 
 section.any-mood {
     padding-top: 100px;
@@ -229,16 +224,12 @@ section.any-mood {
     font-size: 24px;
 }
 
-.any-moment-box p {
-    color: #263D4FCC;
-    font-size: 16px;
-    width: 60%;
-}
 
 .any-moment-box {
-    top: -150px;
+    top: -140px;
     position: relative;
-    padding: 0 40px;
+    padding: 0;
+    text-align: left;
 }
 
 .any-mood {
@@ -256,6 +247,37 @@ section.any-mood {
     font-size: 40px;
     font-weight: 700;
     padding-bottom: 40px;
+}
+
+.any-moment-track {
+    display: flex;
+    width: 190%;
+}
+
+.moment-card img {
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.any-moment-box {
+    margin-top: 1rem;
+    max-width: 400px;
+}
+
+.any-moment-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 5rem 0;
+}
+
+.moment-card {
+    width: 95%;
+}
+
+.pin-spacer {
+    margin: 0 !important;
 }
 
 .react-multiple-carousel__arrow--left {
@@ -476,7 +498,7 @@ section.pick-fresh-air-variant {
     width: 80%;
     background: #e7efff;
     margin-top: -50px;
-    padding: 40px 40px 70px;
+    padding: 40px 20px 70px;
     margin-left: -40px;
     border-radius: 0 30px 30px 0;
 }
@@ -634,7 +656,7 @@ section.effortless-sec .container-fluid {
     background-size: cover;
     position: relative;
     margin-top: 80px;
-    height: 900px;
+    height: 820px;
     padding: 0;
 }
 
@@ -660,7 +682,7 @@ section.effortless-sec .container-fluid {
     box-shadow: 0 10px 32px #8e8e8e1f;
     border-radius: 30px;
     padding: 50px 50px 20px;
-    margin: 440px 30px 0;
+    margin: 360px 20px 0;
     backdrop-filter: blur(8.5px);
     -webkit-backdrop-filter: blur(8.5px);
 }
@@ -735,6 +757,18 @@ section.slider-sec {
     margin-top: 100px;
 }
 
+.fresher-machine-heading h2 {
+    color: #D2E4FF !important;
+}
+
+.fresher-machine-heading h3 {
+    color: #D2E4FF !important;
+}
+
+.fresher-machine-heading p {
+    color: #DBDBDB !important;
+}
+
 .banner-slider-heading h2 {
     color: #263D4F;
     font-size: 40px;
@@ -750,7 +784,7 @@ section.slider-sec {
 .banner-slider-heading p {
     color: #263D4FB2;
     font-size: 16px;
-    width: 70%;
+    width: 40%;
 }
 
 .outdoor-img {
@@ -782,6 +816,18 @@ section.slider-sec {
 .tow-modes-heading {
     padding-top: 60px;
     padding-left: 100px;
+}
+
+.tow-modes-heading h2 {
+    font-family: Nuosu SIL !important;
+    color: #263D4F;
+    font-size: 32px;
+}
+
+.tow-modes-heading h3 {
+    color: #263D4F;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .mode-box ul {
@@ -1072,7 +1118,7 @@ section.loved-family {
 .variant-tile {
     color: #263d4f;
     font-size: 16px;
-    width: 25%;
+    width: 30%;
     margin: 0 auto;
 }
 
@@ -1163,7 +1209,7 @@ section.future-ready-sec {
     font-size: 20px;
     text-transform: capitalize;
     width: 70%;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     line-height: 30px;
 }
 
@@ -1174,7 +1220,7 @@ section.future-ready-sec {
 }
 
 .low-maintenance ul li img {
-    width: 90%;
+    width: 100%;
     height: auto;
 }
 
@@ -1197,7 +1243,11 @@ section.future-ready-sec {
 .green-building ul li img {
     width: 100%;
     height: auto;
-    margin-top: 100px;
+    margin-top: 165px;
+}
+
+.green-building ul li {
+    width: 100%;
 }
 
 .green-building ul li h4 {

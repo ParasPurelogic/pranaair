@@ -4,6 +4,8 @@ import Link from "@/Components/TranslateLink"
 import VideoPopup from "@/Components/Pages/AirQualityCommonMonitor/video-popup"
 import FresherCarousel from "@/Components/Pages/FreshAirMachine/applications-slider"
 import ContactForm from "@/Components/Contacform/ContactForm"
+import AnyMomentScrollCards from "@/Components/Pages/FreshAirMachine/gsap-animation"
+import ToxicPollutantsSection from "@/Components/Pages/FreshAirMachine/zoom-animation"
 
 
 export default async function CommonMonitorPage() {
@@ -61,6 +63,50 @@ export default async function CommonMonitorPage() {
             items: 1,
         },
     }
+    const anyMomentData = [
+        {
+            title: "Me Time",
+            desc: "Turn your personal space into a clean-air retreat. Whether you're reading, meditating, or just unwinding.",
+            image: "/img/turn-your-personal-space.webp",
+        },
+        {
+            title: "Fresh Classrooms",
+            desc: "Improve focus, reduce allergens, and create a safe, breathable space for each student.",
+            image: "/img/fresh-classrooms.webp",
+        },
+        {
+            title: "Party Time",
+            desc: "Hosting friends? Keep the vibes high and the pollution low. Perfect air, even in a packed room.",
+            image: "/img/party-time.webp",
+        },
+        {
+            title: "Family Time",
+            desc: "A safer, cleaner home for the ones you love. Great for kids, elderly, and pets.",
+            image: "/img/family-time.webp",
+        },
+        {
+            title: "Work Smarter",
+            desc: "Boost focus, reduce fatigue, and create a more productive workspace—one breath at a time.",
+            image: "/img/work-smarter.webp",
+        },
+        {
+            title: "Healthier Care Centres",
+            desc: "Clean air isn’t optional in healthcare—it’s essential. Create a safer space for patients, staff, and visitors.",
+            image: "/img/healthier-care-centres.webp",
+        },
+    ]
+    const toxicContent = {
+        heading: "Toxic Pollutants,",
+        subheading: "It can reduce",
+        description:
+            "Indoor air can trap harmful toxins that make you sick. Clear them out with the Fresh Air Machine and breathe fresh, healthy air at home.",
+        pollutants: [
+            "FormalDehyde (HCHO)",
+            "Particulate Matter (PM10, PM2.5)",
+            "Total Volatile Organic Compounds(TVOC)",
+            "Carbon Dioxide(CO2)",
+        ],
+    }
     return (
         <main>
             {/* Hero Section */}
@@ -109,93 +155,14 @@ export default async function CommonMonitorPage() {
                         </div>
                         <div className="row">
                             <div className="col-lg-12">
-                                <FresherCarousel responsive={responsive} className="app-slider">
-                                    <div className="app-slide-img-box">
-                                        <Image src="/img/turn-your-personal-space.webp" alt="" width={200} height={150} />
-                                        <div className="any-moment-box">
-                                            <h3>Me Time</h3>
-                                            <p>Turn your personal space into a clean-air retreat. Whether youre reading, meditating, or just unwinding.</p>
-                                        </div>
-                                    </div>
-                                    <div className="app-slide-img-box">
-                                        <Image src="/img/party-time.webp" alt="" width={200} height={150} />
-                                        <div className="any-moment-box">
-                                            <h3>Party Time</h3>
-                                            <p>Hosting friends? Keep the vibes high and the pollution low. Perfect air, even in a packed room.</p>
-                                        </div>
-                                    </div>
-                                    <div className="app-slide-img-box">
-                                        <Image src="/img/family-time.webp" alt="" width={200} height={150} />
-                                        <div className="any-moment-box">
-                                            <h3>Family Time</h3>
-                                            <p>A safer, cleaner home for the ones you love. Great for kids, elderly, and pets.</p>
-                                        </div>
-                                    </div>
-                                    <div className="app-slide-img-box">
-                                        <Image src="/img/work-smarter.webp" alt="" width={200} height={150} />
-                                        <div className="any-moment-box">
-                                            <h3>Work Smarter</h3>
-                                            <p>Boost focus, reduce fatigue, and create a more productive workspace—one breath at a time.</p>
-                                        </div>
-                                    </div>
-                                    <div className="app-slide-img-box">
-                                        <Image src="/img/fresh-classrooms.webp" alt="" width={200} height={150} />
-                                        <div className="any-moment-box">
-                                            <h3>Fresh Classrooms</h3>
-                                            <p>Improve focus, reduce allergens, and create a safe, breathable space for each student.</p>
-                                        </div>
-                                    </div>
-                                    <div className="app-slide-img-box">
-                                        <Image src="/img/healthier-care-centres.webp" alt="" width={200} height={150} />
-                                        <div className="any-moment-box">
-                                            <h3>Healthier Care Centres</h3>
-                                            <p>Clean air isn’t optional in healthcare—it’s essential. Create a safer space for patients, staff, and visitors.</p>
-                                        </div>
-                                    </div>
-                                </FresherCarousel>
+                                <AnyMomentScrollCards anyMomentData={anyMomentData} />
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Toxic Pollutants */}
-                <section className="toxic-sec-bg">
-                    <section className="toxic-img">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="toxic-heading">
-                                        <h2>Toxic Pollutants,</h2>
-                                        <h3>It can reduce </h3>
-                                        <p>
-                                            Indoor air can trap harmful toxins that make you sick. Clear them out with the Fresh Air Machine and breathe fresh, healthy air at home.
-                                        </p>
-                                    </div>
-                                    <div className="particular">
-                                        <ul>
-                                            <li className="floating">
-                                                <Image src="/img/particulate-matter.png" alt="" width={40} height={40} />
-                                                <p>FormalDehyde (HCHO)</p>
-                                            </li>
-                                            <li className="floating">
-                                                <Image src="/img/particulate-matter.png" alt="" width={40} height={40} />
-                                                <p>Particulate Matter (PM10, PM2.5)</p>
-                                            </li>
-                                            <li className="floating">
-                                                <Image src="/img/particulate-matter.png" alt="" width={40} height={40} />
-                                                <p>Total Volatile Organic Compounds(TVOC)</p>
-                                            </li>
-                                            <li className="floating">
-                                                <Image src="/img/particulate-matter.png" alt="" width={40} height={40} />
-                                                <p>Carbon Dioxide(CO2)</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </section>
+                <ToxicPollutantsSection toxicContent={toxicContent} />
 
                 {/* In Minutes */}
                 <section className="aqi-levels-digits">
@@ -327,7 +294,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab2"
                                                 aria-selected="false"
                                             >
-                                                <h4>AeroLite 1200</h4>
+                                                <h4>AirGlide 2000</h4>
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -341,7 +308,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab3"
                                                 aria-selected="false"
                                             >
-                                                <h4>AeroLite 1200</h4>
+                                                <h4>Arctic Duo 2000 </h4>
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -355,7 +322,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab4"
                                                 aria-selected="false"
                                             >
-                                                <h4>AeroLite 1200</h4>
+                                                <h4>FrostAir 2000</h4>
                                             </button>
                                         </li>
                                     </ul>
@@ -365,7 +332,7 @@ export default async function CommonMonitorPage() {
                                         <div className="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                                             <div className="tab-main-box">
                                                 <div className="tab-cont-img">
-                                                    <Image src="/img/aerolite-1200.webp" alt="" width={400} height={400} />
+                                                    <Image src="/img/freaher-machine.webp" alt="" width={400} height={400} />
                                                 </div>
                                                 <div className="tab-inner-content">
                                                     <h3>AeroLite 1200 </h3>
@@ -400,10 +367,10 @@ export default async function CommonMonitorPage() {
                                         <div className="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                                             <div className="tab-main-box">
                                                 <div className="tab-cont-img">
-                                                    <Image src="/img/aerolite.webp" alt="" width={400} height={400} />
+                                                    <Image src="/img/aerolite-1200.webp" alt="" width={400} height={400} />
                                                 </div>
                                                 <div className="tab-inner-content">
-                                                    <h3>AeroLite 2000 </h3>
+                                                    <h3>AirGlide 2000 </h3>
                                                     <span>“Our whole family breathes better – even during Delhi winters.”</span>
                                                     <div className="inner-flex">
                                                         <div className="lft">
@@ -435,7 +402,7 @@ export default async function CommonMonitorPage() {
                                         <div className="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                                             <div className="tab-main-box">
                                                 <div className="tab-cont-img">
-                                                    <Image src="/img/freaher-machine.webp" alt="" width={400} height={400} />
+                                                    <Image src="/img/aerolite.webp" alt="" width={400} height={400} />
                                                 </div>
                                                 <div className="tab-inner-content">
                                                     <h3>Arctic Duo 2000 </h3>
@@ -510,7 +477,7 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <FresherCarousel responsive={bannersldier} className="banner-slider-box" arrows={false} showDots={true}>
                                 <div className="banner-slider-img">
-                                    <div className="banner-slider-heading">
+                                    <div className="banner-slider-heading fresher-machine-heading">
                                         <h2>From Polluted to Protected</h2>
                                         <h3>— Fresh Air Machine</h3>
                                         <p>Because the air you breathe should nurture, not worry you. Remove 99.5% of hidden pollutants and invite in wellness.</p>
