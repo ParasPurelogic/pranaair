@@ -174,7 +174,14 @@ export default async function CommonMonitorPage() {
                                     <h3>In Minutes.</h3>
                                 </div>
                                 <div className="hazardous-video-box">
-                                    <Image src="/img/hazardous-heavenly-video.webp" alt="" width={400} height={400} />
+                                    <video
+                                        src="/img/fresh-air-machine-video-for-page.webm"
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        style={{ width: "100%", height: "auto" }}
+                                    />
                                 </div>
                             </div>
                         </div>
