@@ -101,10 +101,22 @@ export default async function CommonMonitorPage() {
         description:
             "Indoor air can trap harmful toxins that make you sick. Clear them out with the Fresh Air Machine and breathe fresh, healthy air at home.",
         pollutants: [
-            "FormalDehyde (HCHO)",
-            "Particulate Matter (PM10, PM2.5)",
-            "Total Volatile Organic Compounds(TVOC)",
-            "Carbon Dioxide(CO2)",
+            {
+                label: "Formaldehyde (HCHO)",
+                image: "/img/hcho.png",
+            },
+            {
+                label: "Particulate Matter (PM10, PM2.5)",
+                image: "/img/particulate-matter.png",
+            },
+            {
+                label: "Total Volatile Organic Compounds (TVOC)",
+                image: "/img/tvoc-icon.png",
+            },
+            {
+                label: "Carbon Dioxide (CO2)",
+                image: "/img/carbon-dioxide.png",
+            },
         ],
     }
     return (
@@ -161,9 +173,6 @@ export default async function CommonMonitorPage() {
                     </div>
                 </section>
 
-                {/* Toxic Pollutants */}
-                <ToxicPollutantsSection toxicContent={toxicContent} />
-
                 {/* In Minutes */}
                 <section className="aqi-levels-digits">
                     <div className="container-fluid">
@@ -187,6 +196,9 @@ export default async function CommonMonitorPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Toxic Pollutants */}
+                <ToxicPollutantsSection toxicContent={toxicContent} />
 
                 {/* Effortlessly */}
                 <section className="effortless-sec">
@@ -316,20 +328,6 @@ export default async function CommonMonitorPage() {
                                                 aria-selected="false"
                                             >
                                                 <h4>Arctic Duo 2000 </h4>
-                                            </button>
-                                        </li>
-                                        <li className="nav-item" role="presentation">
-                                            <button
-                                                className="nav-link tab-button"
-                                                id="tab4-tab"
-                                                data-bs-toggle="tab"
-                                                data-bs-target="#tab4"
-                                                type="button"
-                                                role="tab"
-                                                aria-controls="tab4"
-                                                aria-selected="false"
-                                            >
-                                                <h4>FrostAir 2000</h4>
                                             </button>
                                         </li>
                                     </ul>
@@ -595,41 +593,27 @@ export default async function CommonMonitorPage() {
                                                 <h4>Arctic Duo 2000</h4>
                                             </button>
                                         </li>
-                                        <li className="nav-item" role="presentation">
-                                            <button
-                                                className="nav-link tab-button"
-                                                id="tab8-tab"
-                                                data-bs-toggle="tab"
-                                                data-bs-target="#tab8"
-                                                type="button"
-                                                role="tab"
-                                                aria-controls="tab8"
-                                                aria-selected="false"
-                                            >
-                                                <h4>FrostAir 2000</h4>
-                                            </button>
-                                        </li>
                                     </ul>
 
                                     {/* Tab Content */}
                                     <div className="tab-content">
                                         <div className="tab-pane fade show active" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
                                             <div className="tab-main-box-img">
-                                                <Image src="/img/technology-breathes-for-you.webp" alt="" width={200} height={200} />
+                                                <Image src="/img/aerolite1200.webp" alt="" width={200} height={200} />
                                                 <p>Made for small spaces where fresh air matters most—quiet, compact, and perfect for bedrooms or study corners.
                                                 </p>
                                             </div>
                                         </div>
                                         <div className="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
                                             <div className="tab-main-box-img">
-                                                <Image src="/img/technology-breathes-for-you.webp" alt="" width={200} height={200} />
+                                                <Image src="/img/airglide2000.webp" alt="" width={200} height={200} />
                                                 <p>Handles busy rooms with ease. Great for families, clinics, or shared offices where clean air needs to go the distance.
                                                 </p>
                                             </div>
                                         </div>
                                         <div className="tab-pane fade" id="tab7" role="tabpanel" aria-labelledby="tab7-tab">
                                             <div className="tab-main-box-img">
-                                                <Image src="/img/technology-breathes-for-you.webp" alt="" width={200} height={200} />
+                                                <Image src="/img/airglide2000.webp" alt="" width={200} height={200} />
                                                 <p>Already have an AC? This one boosts it with fresh, clean air—perfect for modern homes and smart setups.
                                                 </p>
                                             </div>
@@ -938,20 +922,19 @@ export default async function CommonMonitorPage() {
                                             </li>
                                             <li>
                                                 <span>
-                                                    <Image src="/img/contact-call-icon.png" alt="" width={15} height={15} />
+                                                    <Image src="/img/contact-location-icon.png" alt="" width={15} height={15} />
                                                 </span>
                                                 <h4>
-                                                    <span>Phone Number:</span>
-                                                    (+91) 73918-73918
+                                                    <span>706, 7th Floor, Sec 10, Rohini, Delhi 85, India</span>
                                                 </h4>
                                             </li>
                                             <li>
                                                 <span>
-                                                    <Image src="/img/contact-call-icon.png" alt="" width={15} height={15} />
+                                                    <Image src="/img/contact-mail-icon.png" alt="" width={15} height={15} />
                                                 </span>
                                                 <h4>
-                                                    <span>Phone Number:</span>
-                                                    (+91) 73918-73918
+                                                    <span>info@purelogic.in</span>
+                                                    contact@purelogic.in
                                                 </h4>
                                             </li>
                                         </ul>

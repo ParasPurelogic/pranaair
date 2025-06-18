@@ -14,6 +14,8 @@ export default function AnyMomentScrollCards({ anyMomentData = [] }) {
 
     useEffect(() => {
         if (!cardsRef.current) return
+        // Disable animation on mobile/tablet
+        if (window.innerWidth < 1024) return
 
         const container = cardsRef.current
         const cards = container.querySelectorAll(".moment-card")

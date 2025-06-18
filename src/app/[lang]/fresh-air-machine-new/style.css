@@ -293,7 +293,7 @@ section.toxic-sec-bg {
     background: #050812;
     border-radius: 60px 60px 0 0;
     padding-top: 100px;
-    margin: 120px 20px 0;
+    margin: 50px 20px 0;
 }
 
 section.toxic-img {
@@ -432,17 +432,18 @@ section.pick-fresh-air-variant {
     background: #263d4fc4;
     padding: 15px 25px;
     border-radius: 11px;
-    width: 36%;
+    width: 30%;
     position: relative;
     left: 120px;
     top: 50px;
+    justify-content: center;
 }
 
 .tab-sec ul.nav:before {
     position: absolute;
     content: "";
     background: url(/img/bestseller.png);
-    width: 20%;
+    width: 25%;
     background-size: 60%;
     height: 100px;
     background-repeat: no-repeat;
@@ -627,10 +628,6 @@ section.pick-fresh-air-variant {
 .hazardous-video-box img {
     width: 100%;
     height: auto;
-}
-
-section.aqi-levels-digits {
-    padding-top: 140px;
 }
 
 .hazardous-video-box-heading {
@@ -930,13 +927,13 @@ section.tech-breathes {
 }
 
 .tab-main-box-img {
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 .tab-main-box-img p {
     color: #263D4FB2;
     font-size: 22px;
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 .tab-main-box-img p span {
@@ -1366,8 +1363,41 @@ section.future-ready-sec {
     padding: 0;
 }
 
+form.form-box {
+    padding: 0 0px 0px 50px !important;
+    margin-right: -200px !important;
+}
+
 .contact-info {
     display: none;
+}
+
+form.form-box input {
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    border-radius: 0;
+    padding: 0 0 10px;
+    margin-bottom: 30px;
+}
+
+form.form-box textarea {
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    border-radius: 0;
+    padding: 0 0 10px;
+    margin-bottom: 30px;
+}
+
+.contact-form-box .box-form .row {
+    display: block;
+}
+
+.contact-form-box .box-form .row .g-3 {
+    display: flex;
+}
+
+.contact-form-box form-box {
+    width: 100%;
 }
 
 .contact-form-box .box-form .row {
@@ -1532,7 +1562,7 @@ section.faq-sec:before {
 
     .hero-heading h1 {
         font-size: 30px;
-        width: 70%;
+        width: 80%;
     }
 
     .hero-heading p {
@@ -1565,10 +1595,24 @@ section.faq-sec:before {
 
     iframe#videoFrame {
         left: -140px;
-        top: 0;
+        top: -330px;
         width: 360px;
         height: 205px;
         z-index: 99;
+    }
+
+    .any-moment-track {
+        width: 100%;
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+    .moment-card {
+        width: 250px;
+    }
+
+    .any-moment-wrapper {
+        margin: 0;
     }
 
     .video-box button#playButton {
@@ -1577,8 +1621,12 @@ section.faq-sec:before {
     }
 
     span#closeBtn {
-        top: -50px;
+        top: -390px;
         left: 150px;
+    }
+
+    section.any-mood {
+        padding-top: 50px;
     }
 
     .contact-form-box .box-form .row {
@@ -1623,11 +1671,11 @@ section.faq-sec:before {
     }
 
     .variant-comparison h2 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .variant-comparison h3 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .banner-slider-heading {
@@ -1636,7 +1684,7 @@ section.faq-sec:before {
     }
 
     .banner-slider-heading h2 {
-        font-size: 18px;
+        font-size: 14px;
         padding-top: 10px;
         margin: 0;
     }
@@ -1664,7 +1712,7 @@ section.faq-sec:before {
     .tech-tab-box ul {
         padding: 5px 0px;
         width: 100%;
-        justify-content: unset;
+        justify-content: center;
         gap: 0px;
     }
 
@@ -1733,7 +1781,7 @@ section.faq-sec:before {
 
     .banner-slider-heading p {
         font-size: 14px;
-        width: 50%;
+        width: 60%;
     }
 
     .banner-slider-heading h3 {
@@ -1819,12 +1867,17 @@ section.faq-sec:before {
     }
 
     .any-moment-box {
-        top: -120px;
+        top: -90px;
         padding: 0 10px;
     }
 
     .any-moment-box h3 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .any-moment-box p {
+        font-size: 14px;
+        width: 80%;
     }
 
     .react-multiple-carousel__arrow--right {
@@ -1837,7 +1890,7 @@ section.faq-sec:before {
 
     section.toxic-sec-bg {
         border-radius: 40px 40px 0 0;
-        padding-top: 60px;
+        padding-top: 20px;
         margin: 50px 10px 0;
     }
 
@@ -1867,16 +1920,20 @@ section.faq-sec:before {
     }
 
     .particular ul li p {
-        width: 40%;
+        width: 60%;
+    }
+
+    .floating {
+        margin-top: 25px;
     }
 
     .particular ul li:nth-last-child(2) {
-        top: 130px;
+        top: 0px;
         left: 10px;
     }
 
     section.aqi-levels-digits {
-        padding-top: 100px;
+        padding-top: 60px;
     }
 
     .hazardous-video-box-heading h2 {
@@ -1957,7 +2014,7 @@ section.faq-sec:before {
 
     .tab-inner-content {
         width: 100%;
-        margin-top: -50px;
+        margin-top: -10px;
         padding: 20px 20px 70px;
         margin-left: 0px;
         border-radius: 0 30px 30px 30px;
@@ -2137,6 +2194,15 @@ section.faq-sec:before {
         padding-bottom: 0px;
         padding-top: 0px;
     }
+
+    form.form-box {
+        padding: 20px 0 0 0px !important;
+        margin-right: 0px !important;
+    }
+
+    .scroll-explore a {
+        top: 20px;
+    }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
@@ -2185,13 +2251,13 @@ section.faq-sec:before {
     }
 
     .any-moment-box {
-        top: -60px;
+        top: -70px;
         position: relative;
         padding: 0;
     }
 
     .any-moment-box h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .app-slide-review-box h3 {
@@ -2203,8 +2269,27 @@ section.faq-sec:before {
         font-size: 16px;
     }
 
+    .any-moment-track {
+        width: 100%;
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+    .moment-card {
+        width: 200px;
+    }
+
     .any-moment-box p {
-        width: 70%;
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .particular ul li p {
+        width: 100%;
+    }
+
+    .any-moment-wrapper {
+        margin: 0;
     }
 
     .react-multiple-carousel__arrow--left {
@@ -2222,6 +2307,10 @@ section.faq-sec:before {
 
     .floating {
         margin-left: 0px;
+    }
+
+    section.aqi-levels-digits {
+        padding-top: 60px;
     }
 
     .effortless-data {
@@ -2253,7 +2342,19 @@ section.faq-sec:before {
         padding: 15px 25px;
         width: 70%;
         left: 120px;
-        top: 50px;
+        top: 10px;
+    }
+
+    span#closeBtn {
+        top: -340px;
+        left: 200px;
+    }
+
+    iframe#videoFrame {
+        left: -200px;
+        top: -280px;
+        width: 450px;
+        height: 254px;
     }
 
     .tab-inner-content {

@@ -14,6 +14,8 @@ export default function ToxicPollutantsSection({ toxicContent }) {
 
     useEffect(() => {
         if (!toxicRef.current) return
+        // Disable animation on mobile and tablet
+        if (window.innerWidth < 1024) return
 
         gsap.fromTo(
             toxicRef.current,
@@ -47,12 +49,12 @@ export default function ToxicPollutantsSection({ toxicContent }) {
                                     {toxicContent.pollutants.map((item, index) => (
                                         <li className="floating" key={index}>
                                             <Image
-                                                src="/img/particulate-matter.png"
-                                                alt=""
+                                                src={item.image}
+                                                alt={item.label}
                                                 width={40}
                                                 height={40}
                                             />
-                                            <p>{item}</p>
+                                            <p>{item.label}</p>
                                         </li>
                                     ))}
                                 </ul>
