@@ -130,7 +130,6 @@ export default function DeviceForm() {
             }
         } catch (error) {
             alert("An error occurred while submitting the form.")
-            console.error("Form submission error:", error)
         } finally {
             setIsSubmitting(false)
         }

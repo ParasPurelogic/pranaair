@@ -1,9 +1,9 @@
 "use client";
 
-import { defaultLanguage, domain } from "@/config";
-import { useTranslation } from "@/i18n/client";
+import { useTranslation } from "../i18n/client";
 import NextLink from "next/link"
 import { forwardRef } from "react";
+import { defaultLanguage, domain } from "../config/index";
 
 const TranslateLink = forwardRef((props, ref) => {
   // lang

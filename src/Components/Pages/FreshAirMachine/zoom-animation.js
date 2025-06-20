@@ -19,7 +19,7 @@ export default function ToxicPollutantsSection({ toxicContent }) {
 
         gsap.fromTo(
             toxicRef.current,
-            { scale: 0.5, opacity: 1 },
+            { scale: 0.8, opacity: 1 },
             {
                 scale: 1,
                 opacity: 1,

@@ -165,8 +165,6 @@ function MainHeader() {
 
         const fetchLatestBlogs = async () => {
           try {
-            console.log(`Fetching latest mobile blogs for language: ${i18n.language}`)
-
             // Enhanced parameters for latest posts with better cache busting
             const data = await fetchLocalizedPosts({
               language: i18n.language,
@@ -195,18 +193,8 @@ function MainHeader() {
               })
               .slice(0, 4) // Ensure only 4 posts
 
-            console.log(
-              "Latest mobile blog posts fetched:",
-              sortedData.map((post) => ({
-                title: post.cleanTitle,
-                date: post.date,
-              })),
-            )
-
             setMobileBlogs(sortedData)
           } catch (error) {
-            console.error("Error fetching mobile blogs:", error)
-
             // Enhanced fallback with direct WordPress API call
             try {
               const fallbackResponse = await fetch(
@@ -226,10 +214,8 @@ function MainHeader() {
                   .slice(0, 4)
 
                 setMobileBlogs(processedFallback)
-                console.log("Fallback mobile blog posts loaded:", processedFallback.length)
               }
             } catch (fallbackError) {
-              console.error("Mobile blog fallback fetch also failed:", fallbackError)
             }
           } finally {
             setMobileBlogsLoading(false)
@@ -251,7 +237,6 @@ function MainHeader() {
 
             // If no results, try with general posts approach
             if (!data || data.length === 0) {
-              console.log("No case studies found with primary method, trying fallback...")
               data = await fetchLocalizedPosts({
                 language: i18n.language,
                 perPage: 6,
@@ -261,14 +246,10 @@ function MainHeader() {
 
             // If still no results, try with English fallback
             if (!data || (data.length === 0 && i18n.language !== "en")) {
-              console.log("No case studies found in current language, trying English fallback...")
               data = await fetchLocalizedCaseStudies("en", 6)
             }
-
-            console.log(`Found ${data.length} case studies for language: ${i18n.language}`)
             setMobileCaseStudies(data)
           } catch (error) {
-            console.error("Error fetching case studies:", error)
           } finally {
             setMobileCaseStudiesLoading(false)
           }

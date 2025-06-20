@@ -28,8 +28,6 @@ export function middleware(request) {
   response.cookies.set("i18next", locale || fallbackLng);
   response.headers.set("i18next", locale || fallbackLng);
 
-  console.log({ pathname, pathSegments, locale })
-
   // Return result
   return response
 

@@ -2,38 +2,32 @@ import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 
 export async function POST(req) {
-    try {
-        console.log("API route called - starting email process")
+  try {
+    const body = await req.json()
 
-        const body = await req.json()
-        console.log("Form data received:", body)
+    // Fix: createTransport instead of createTransporter
+    const transporter = nodemailer.createTransport({
+      host: "smtphz.qiye.163.com",
+      port: 994,
+      secure: true, // SSL
+      auth: {
+        user: "no-reply@pranaair.com",
+        pass: "fMX&01C6/JJ6",
+      },
+      // Add TLS configuration for better compatibility
+      tls: {
+        rejectUnauthorized: false,
+      },
+    })
 
-        // Fix: createTransport instead of createTransporter
-        const transporter = nodemailer.createTransport({
-            host: "smtphz.qiye.163.com",
-            port: 994,
-            secure: true, // SSL
-            auth: {
-                user: "no-reply@pranaair.com",
-                pass: "fMX&01C6/JJ6",
-            },
-            // Add TLS configuration for better compatibility
-            tls: {
-                rejectUnauthorized: false,
-            },
-        })
+    // Verify SMTP connection
+    await transporter.verify()
 
-        console.log("Transporter created, verifying connection...")
-
-        // Verify SMTP connection
-        await transporter.verify()
-        console.log("SMTP connection verified successfully")
-
-        const mailOptions = {
-            from: '"Prana Air" <no-reply@pranaair.com>',
-            to: "abhi.kk716@gmail.com",
-            subject: `New Inquiry from ${body.Fname || "Unknown User"}`,
-            html: `
+    const mailOptions = {
+      from: '"Prana Air" <no-reply@pranaair.com>',
+      to: "abhi.kk716@gmail.com",
+      subject: `New Inquiry from ${body.Fname || "Unknown User"}`,
+      html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
           <h2 style="color: #4CAF50; text-align: center;">New Device Inquiry - Prana Air</h2>
           
@@ -63,29 +57,25 @@ export async function POST(req) {
           </p>
         </div>
       `,
-        }
-
-        console.log("Sending email...")
-        const result = await transporter.sendMail(mailOptions)
-        console.log("Email sent successfully:", result.messageId)
-
-        return NextResponse.json({
-            success: true,
-            message: "Email sent successfully",
-            messageId: result.messageId,
-        })
-    } catch (error) {
-        console.error("Detailed email error:", error)
-
-        // Return detailed error information for debugging
-        return NextResponse.json(
-            {
-                success: false,
-                message: "Email failed to send",
-                error: error.message,
-                code: error.code || "UNKNOWN_ERROR",
-            },
-            { status: 500 },
-        )
     }
+
+    const result = await transporter.sendMail(mailOptions)
+
+    return NextResponse.json({
+      success: true,
+      message: "Email sent successfully",
+      messageId: result.messageId,
+    })
+  } catch (error) {
+    // Return detailed error information for debugging
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Email failed to send",
+        error: error.message,
+        code: error.code || "UNKNOWN_ERROR",
+      },
+      { status: 500 },
+    )
+  }
 }
