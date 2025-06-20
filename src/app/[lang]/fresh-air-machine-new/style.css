@@ -1549,7 +1549,7 @@ section.faq-sec:before {
     --bs-accordion-border-color: transparent;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
     .container-fluid {
         width: 94%;
     }
@@ -1666,8 +1666,9 @@ section.faq-sec:before {
     }
 
     .efforless-text {
-        padding-top: 40px;
-        padding-left: 20px;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-bottom: 40px;
     }
 
     .inner-flex {
@@ -1688,14 +1689,28 @@ section.faq-sec:before {
     }
 
     .banner-slider-heading {
-        margin-top: 0;
+        margin-top: 10px;
         margin-left: 0;
+        position: revert;
+    }
+
+    .banner-slider-img {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .banner-slider-heading h2 {
         font-size: 14px;
         padding-top: 10px;
         margin: 0;
+    }
+
+    .fresher-machine-heading h2 {
+        color: #263d4f !important;
+    }
+
+    .fresher-machine-heading h3 {
+        color: #263d4f !important;
     }
 
     .mode-box ul li:last-child {
@@ -1788,13 +1803,44 @@ section.faq-sec:before {
         padding-left: 20px;
     }
 
+    .fresher-machine-heading p {
+        color: #263d4fb2 !important;
+    }
+
     .banner-slider-heading p {
         font-size: 14px;
-        width: 60%;
+        width: 90%;
+    }
+
+    .variant-comparison-box ul li a {
+        font-size: 12px;
+    }
+
+    .variant-comparison-box ul li img {
+        width: 20px;
+    }
+
+    .app-slide-review-box h3 {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .app-slide-review-box {
+        margin: 0 10px;
+        padding: 20px;
+        height: auto;
+    }
+
+    .tow-modes-heading h3 {
+        font-size: 22px;
+    }
+
+    .tow-modes-heading h2 {
+        font-size: 22px;
     }
 
     .banner-slider-heading h3 {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .rgt h5 {
@@ -1807,7 +1853,7 @@ section.faq-sec:before {
     }
 
     .banner-slider-img img {
-        width: 100%;
+        width: 95%;
     }
 
     .rgt {
@@ -1958,28 +2004,51 @@ section.faq-sec:before {
     }
 
     section.effortless-sec .container-fluid {
-        margin-top: 80px;
+        margin-top: 0;
         height: auto;
         padding: 0;
+        background-position: -230px top;
+        border-radius: 0px;
+        background-size: 200%;
+    }
+
+    .effortless-data ul li span img {
+        width: 30px;
+    }
+
+    section.effortless-sec .container-fluid:before {
+        border-radius: 30px;
+        height: 50%;
+        background-image: linear-gradient(0deg, #000, #ffffff);
     }
 
     .effortless-data {
         border-radius: 30px;
         padding: 20px;
-        margin: 120px 20px 0;
-        background: #00000052;
+        margin: 120px 0px 0;
+        background: #0000007d;
+    }
+
+    .hazardous-video-box video {
+        border-radius: 15px;
     }
 
     .effortless-data ul li:before {
         display: none;
     }
 
+    .particular ul li img {
+        width: 30px;
+    }
+
     .efforless-text h2 {
-        font-size: 26px;
+        font-size: 22px;
+        color: #212529;
     }
 
     .efforless-text h3 {
-        font-size: 30px;
+        font-size: 25px;
+        color: #212529;
     }
 
     section.pick-fresh-air-variant {
@@ -2000,25 +2069,42 @@ section.faq-sec:before {
     }
 
     .tab-sec ul.nav {
-        gap: 5px;
-        padding: 15px;
-        width: 90%;
+        gap: 10px;
+        padding: 15px 0;
+        width: 100%;
         justify-content: center;
         left: 0;
-        top: -20px;
+        top: -10px;
         margin: 0 auto;
     }
 
     .tab-inner-content h3 {
-        font-size: 22px;
-        width: 70%;
+        font-size: 18px;
+        width: 60%;
+        padding: 7px;
+    }
+
+    .highlight ul li {
+        font-size: 14px;
+    }
+
+    .tab-inner-content span {
+        font-size: 14px;
+    }
+
+    .lft ul li {
+        margin-right: 0px;
+    }
+
+    .tab-sec ul.nav button h4 {
+        font-size: 13px;
     }
 
     .tab-sec ul.nav:before {
-        background-size: 60%;
+        background-size: 80%;
         height: 40px;
         top: -5px;
-        left: 110px;
+        left: 120px;
     }
 
     .tab-inner-content {
@@ -2093,7 +2179,7 @@ section.faq-sec:before {
     }
 
     .why-settle-heading h2 {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .why-settle-heading h3 {
@@ -2173,8 +2259,10 @@ section.faq-sec:before {
     }
 
     section.faq-sec {
+        padding-top: 30px;
         margin-top: 70px;
         padding-bottom: 100px;
+        background: conic-gradient(from 180deg at 50% 50%, #F4F8FF, #E7EFFF, #F2F7FD, #F4F8FF);
     }
 
     .faq-heading h2 {
@@ -2496,7 +2584,21 @@ section.faq-sec:before {
     }
 }
 
-@media only screen and (min-width: 1023px) and (max-width: 1366px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .app-slide-review-box {
+        padding: 15px;
+        height: auto;
+    }
+
+    .main-title-variant:before {
+        width: 13%;
+    }
+
+    .app-slide-review-box h3 {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
     .hero-sec {
         height: 850px;
     }
