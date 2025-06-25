@@ -6,9 +6,10 @@ import FresherCarousel from "@/Components/Pages/FreshAirMachine/applications-sli
 import ContactForm from "@/Components/Contacform/ContactForm"
 import AnyMomentScrollCards from "@/Components/Pages/FreshAirMachine/gsap-animation"
 import ToxicPollutantsSection from "@/Components/Pages/FreshAirMachine/zoom-animation"
-
+import { getServerTranslation } from "@/i18n/server"
 
 export default async function CommonMonitorPage() {
+    const { t } = await getServerTranslation("fresh-air-machine-new")
     const bannersldier = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -47,56 +48,55 @@ export default async function CommonMonitorPage() {
     }
     const anyMomentData = [
         {
-            title: "Me Time",
-            desc: "Turn your personal space into a clean-air retreat. Whether you're reading, meditating, or just unwinding.",
+            title: t("anyMoment.meTime.title"),
+            desc: t("anyMoment.meTime.desc"),
             image: "/img/turn-your-personal-space.webp",
         },
         {
-            title: "Fresh Classrooms",
-            desc: "Improve focus, reduce allergens, and create a safe, breathable space for each student.",
+            title: t("anyMoment.freshClassrooms.title"),
+            desc: t("anyMoment.freshClassrooms.desc"),
             image: "/img/fresh-classrooms.webp",
         },
         {
-            title: "Party Time",
-            desc: "Hosting friends? Keep the vibes high and the pollution low. Perfect air, even in a packed room.",
+            title: t("anyMoment.partyTime.title"),
+            desc: t("anyMoment.partyTime.desc"),
             image: "/img/party-time.webp",
         },
         {
-            title: "Family Time",
-            desc: "A safer, cleaner home for the ones you love. Great for kids, elderly, and pets.",
+            title: t("anyMoment.familyTime.title"),
+            desc: t("anyMoment.familyTime.desc"),
             image: "/img/family-time.webp",
         },
         {
-            title: "Work Smarter",
-            desc: "Boost focus, reduce fatigue, and create a more productive workspace—one breath at a time.",
+            title: t("anyMoment.workSmarter.title"),
+            desc: t("anyMoment.workSmarter.desc"),
             image: "/img/work-smarter.webp",
         },
         {
-            title: "Healthier Care Centres",
-            desc: "Clean air isn’t optional in healthcare—it’s essential. Create a safer space for patients, staff, and visitors.",
+            title: t("anyMoment.healthierCare.title"),
+            desc: t("anyMoment.healthierCare.desc"),
             image: "/img/healthier-care-centres.webp",
         },
     ]
     const toxicContent = {
-        heading: "Toxic Pollutants,",
-        subheading: "It can reduce",
-        description:
-            "Indoor air can trap harmful toxins that make you sick. Clear them out with the Fresh Air Machine and breathe fresh, healthy air at home.",
+        heading: t("toxicPollutants.heading"),
+        subheading: t("toxicPollutants.subheading"),
+        description: t("toxicPollutants.description"),
         pollutants: [
             {
-                label: "Formaldehyde (HCHO)",
+                label: t("toxicPollutants.pollutants.formaldehyde"),
                 image: "/img/hcho.png",
             },
             {
-                label: "Particulate Matter (PM10, PM2.5)",
+                label: t("toxicPollutants.pollutants.particulateMatter"),
                 image: "/img/particulate-matter.png",
             },
             {
-                label: "Total Volatile Organic Compounds (TVOC)",
+                label: t("toxicPollutants.pollutants.tvoc"),
                 image: "/img/tvoc-icon.png",
             },
             {
-                label: "Carbon Dioxide (CO2)",
+                label: t("toxicPollutants.pollutants.carbonDioxide"),
                 image: "/img/carbon-dioxide.png",
             },
         ],
@@ -109,13 +109,13 @@ export default async function CommonMonitorPage() {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="hero-heading">
-                                <h1>Lower Your Indoor AQI Levels to Single Digits</h1>
-                                <p>High outdoor AQI? The Fresh Air Machine keeps your indoor air in the fresh single digits.</p>
+                                <h1>{t("hero.title")}</h1>
+                                <p>{t("hero.description")}</p>
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="hero-link">
-                                <Link href="#form">Request a quote</Link>
+                                <Link href="#form">{t("hero.requestQuote")}</Link>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,9 @@ export default async function CommonMonitorPage() {
                                 <VideoPopup videoUrl="https://www.youtube.com/embed/vKTDgUu1K_E?autoplay=1&mute=1" />
                             </div>
                             <div className="scroll-explore">
-                                <a href="#explore"><Image src="/img/explore-icon.png" alt="" width={10} height={10} /> Scroll to explore</a>
+                                <a href="#explore">
+                                    <Image src="/img/explore-icon.png" alt="" width={10} height={10} /> {t("hero.scrollToExplore")}
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -142,8 +144,8 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="any-moment-heading">
-                                    <h2>Fresh Air</h2>
-                                    <h3>For Any Moment. Any Mood.</h3>
+                                    <h2>{t("anyMoment.heading")}</h2>
+                                    <h3>{t("anyMoment.subheading")}</h3>
                                 </div>
                             </div>
                         </div>
@@ -161,8 +163,8 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="hazardous-video-box-heading">
-                                    <h2>From Hazardous to Heavenly -</h2>
-                                    <h3>In Minutes.</h3>
+                                    <h2>{t("inMinutes.heading")}</h2>
+                                    <h3>{t("inMinutes.subheading")}</h3>
                                 </div>
                                 <div className="hazardous-video-box">
                                     <video
@@ -188,8 +190,8 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="efforless-text">
-                                    <h2>Take Control of Your Air –</h2>
-                                    <h3>Effortlessly.</h3>
+                                    <h2>{t("effortless.heading")}</h2>
+                                    <h3>{t("effortless.subheading")}</h3>
                                 </div>
                             </div>
                             <div className="col-lg-6"></div>
@@ -199,45 +201,57 @@ export default async function CommonMonitorPage() {
                                 <div className="effortless-data">
                                     <ul>
                                         <li>
-                                            <span><Image src="/img/real-time-data.png" alt="" width={100} height={100} /></span>
                                             <span>
-                                                <h3>Real-time Data Display</h3>
-                                                <p>Monitor CO2 (ppm) PM2.5 Temperature Humidity and TVOC instantly</p>
+                                                <Image src="/img/real-time-data.png" alt="" width={100} height={100} />
+                                            </span>
+                                            <span>
+                                                <h3>{t("effortless.features.realTimeData.title")}</h3>
+                                                <p>{t("effortless.features.realTimeData.description")}</p>
                                             </span>
                                         </li>
                                         <li>
-                                            <span><Image src="/img/adjustable-fan.png" alt="" width={100} height={100} /></span>
                                             <span>
-                                                <h3>Adjustable Fan Speeds</h3>
-                                                <p>Choose the airflow level you want</p>
+                                                <Image src="/img/adjustable-fan.png" alt="" width={100} height={100} />
+                                            </span>
+                                            <span>
+                                                <h3>{t("effortless.features.adjustableFan.title")}</h3>
+                                                <p>{t("effortless.features.adjustableFan.description")}</p>
                                             </span>
                                         </li>
                                         <li>
-                                            <span><Image src="/img/heating-cooling-modes.png" alt="" width={100} height={100} /></span>
                                             <span>
-                                                <h3>Heating & Cooling Modes</h3>
-                                                <p>Toggle comfort settings to suit your needs</p>
+                                                <Image src="/img/heating-cooling-modes.png" alt="" width={100} height={100} />
+                                            </span>
+                                            <span>
+                                                <h3>{t("effortless.features.heatingCooling.title")}</h3>
+                                                <p>{t("effortless.features.heatingCooling.description")}</p>
                                             </span>
                                         </li>
                                         <li>
-                                            <span><Image src="/img/child-lock.png" alt="" width={100} height={100} /></span>
                                             <span>
-                                                <h3>Child Lock</h3>
-                                                <p>Keep settings safe from curious little hands</p>
+                                                <Image src="/img/child-lock.png" alt="" width={100} height={100} />
+                                            </span>
+                                            <span>
+                                                <h3>{t("effortless.features.childLock.title")}</h3>
+                                                <p>{t("effortless.features.childLock.description")}</p>
                                             </span>
                                         </li>
                                         <li>
-                                            <span><Image src="/img/manual-auto-modes.png" alt="" width={100} height={100} /></span>
                                             <span>
-                                                <h3>Manual & Auto Modes</h3>
-                                                <p>Set it and forget it—or fine-tune as you wish</p>
+                                                <Image src="/img/manual-auto-modes.png" alt="" width={100} height={100} />
+                                            </span>
+                                            <span>
+                                                <h3>{t("effortless.features.manualAuto.title")}</h3>
+                                                <p>{t("effortless.features.manualAuto.description")}</p>
                                             </span>
                                         </li>
                                         <li>
-                                            <span><Image src="/img/wifi-connected.png" alt="" width={100} height={100} /></span>
                                             <span>
-                                                <h3>Wi-Fi Connected</h3>
-                                                <p>For real-time outdoor AQI syncing</p>
+                                                <Image src="/img/wifi-connected.png" alt="" width={100} height={100} />
+                                            </span>
+                                            <span>
+                                                <h3>{t("effortless.features.wifiConnected.title")}</h3>
+                                                <p>{t("effortless.features.wifiConnected.description")}</p>
                                             </span>
                                         </li>
                                     </ul>
@@ -253,13 +267,13 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="pick-fresh-heaidng">
-                                    <h2>Pick Your Fresh Air Variant</h2>
-                                    <h3>Personalized The Air You Are Breathing</h3>
+                                    <h2>{t("variants.heading")}</h2>
+                                    <h3>{t("variants.subheading")}</h3>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="pick-fresh-para">
-                                    <p>From small bedrooms to big workspaces, there’s a perfect Fresh Air Machine for every space. Find the one that fits your space—and your vibe.</p>
+                                    <p>{t("variants.description")}</p>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +295,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab1"
                                                 aria-selected="true"
                                             >
-                                                <h4>AeroLite 1200</h4>
+                                                <h4>{t("variants.products.aeroLite1200.name")}</h4>
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -295,7 +309,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab2"
                                                 aria-selected="false"
                                             >
-                                                <h4>AirGlide 2000</h4>
+                                                <h4>{t("variants.products.airGlide2000.name")}</h4>
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -309,7 +323,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab3"
                                                 aria-selected="false"
                                             >
-                                                <h4>Arctic Duo 2000 </h4>
+                                                <h4>{t("variants.products.arcticDuo2000.name")}</h4>
                                             </button>
                                         </li>
                                     </ul>
@@ -322,30 +336,39 @@ export default async function CommonMonitorPage() {
                                                     <Image src="/img/freaher-machine.webp" alt="" width={400} height={400} />
                                                 </div>
                                                 <div className="tab-inner-content">
-                                                    <h3>AeroLite 1200 </h3>
-                                                    <span>“The best upgrade for my small flat – I wake up feeling fresh!”</span>
+                                                    <h3>{t("variants.products.aeroLite1200.name")}</h3>
+                                                    <span>{t("variants.products.aeroLite1200.testimonial")}</span>
                                                     <div className="inner-flex">
                                                         <div className="lft">
-                                                            <h4>Perfect For :</h4>
+                                                            <h4>{t("variants.perfectFor")}:</h4>
                                                             <ul>
-                                                                <li><Image src="/img/bed-double.png" alt="" width={20} height={20} /> Bedrooms</li>
-                                                                <li><Image src="/img/study-rooms.png" alt="" width={20} height={20} /> study rooms </li>
-                                                                <li><Image src="/img/studio-apastments.png" alt="" width={20} height={20} /> studio apartments</li>
+                                                                <li>
+                                                                    <Image src="/img/bed-double.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.aeroLite1200.perfectFor.bedrooms")}
+                                                                </li>
+                                                                <li>
+                                                                    <Image src="/img/study-rooms.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.aeroLite1200.perfectFor.studyRooms")}
+                                                                </li>
+                                                                <li>
+                                                                    <Image src="/img/studio-apastments.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.aeroLite1200.perfectFor.studioApartments")}
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                         <div className="rgt">
-                                                            <h4>Coverage :</h4>
-                                                            <span>Up to</span>
-                                                            <h5>1200 sq. ft.</h5>
+                                                            <h4>{t("variants.coverage")}:</h4>
+                                                            <span>{t("variants.upTo")}</span>
+                                                            <h5>{t("variants.products.aeroLite1200.coverage")}</h5>
                                                         </div>
                                                     </div>
                                                     <div className="highlight">
-                                                        <h4>Highlights :</h4>
+                                                        <h4>{t("variants.highlights")}:</h4>
                                                         <ul>
-                                                            <li>Ultra-quiet operation – perfect for sleep and focus</li>
-                                                            <li>Lightweight, sleek, and fits into small spaces</li>
-                                                            <li>Brings AQI to less than 10 in minutes</li>
-                                                            <li>Ideal for single rooms or personal use</li>
+                                                            <li>{t("variants.products.aeroLite1200.highlights.ultraQuiet")}</li>
+                                                            <li>{t("variants.products.aeroLite1200.highlights.lightweight")}</li>
+                                                            <li>{t("variants.products.aeroLite1200.highlights.aqiReduction")}</li>
+                                                            <li>{t("variants.products.aeroLite1200.highlights.idealFor")}</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -357,30 +380,39 @@ export default async function CommonMonitorPage() {
                                                     <Image src="/img/aerolite-1200.webp" alt="" width={400} height={400} />
                                                 </div>
                                                 <div className="tab-inner-content">
-                                                    <h3>AirGlide 2000 </h3>
-                                                    <span>“Our whole family breathes better – even during Delhi winters.”</span>
+                                                    <h3>{t("variants.products.airGlide2000.name")}</h3>
+                                                    <span>{t("variants.products.airGlide2000.testimonial")}</span>
                                                     <div className="inner-flex">
                                                         <div className="lft">
-                                                            <h4>Perfect For :</h4>
+                                                            <h4>{t("variants.perfectFor")}:</h4>
                                                             <ul>
-                                                                <li><Image src="/img/large-halls.png" alt="" width={20} height={20} /> Large halls</li>
-                                                                <li><Image src="/img/shared-offices.png" alt="" width={20} height={20} /> shared offices </li>
-                                                                <li><Image src="/img/clinics.png" alt="" width={20} height={20} /> clinics apartments</li>
+                                                                <li>
+                                                                    <Image src="/img/large-halls.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.airGlide2000.perfectFor.largeHalls")}
+                                                                </li>
+                                                                <li>
+                                                                    <Image src="/img/shared-offices.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.airGlide2000.perfectFor.sharedOffices")}
+                                                                </li>
+                                                                <li>
+                                                                    <Image src="/img/clinics.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.airGlide2000.perfectFor.clinics")}
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                         <div className="rgt">
-                                                            <h4>Coverage :</h4>
-                                                            <span>Up to</span>
-                                                            <h5>2000 sq. ft.</h5>
+                                                            <h4>{t("variants.coverage")}:</h4>
+                                                            <span>{t("variants.upTo")}</span>
+                                                            <h5>{t("variants.products.airGlide2000.coverage")}</h5>
                                                         </div>
                                                     </div>
                                                     <div className="highlight">
-                                                        <h4>Highlights :</h4>
+                                                        <h4>{t("variants.highlights")}:</h4>
                                                         <ul>
-                                                            <li>Powerful airflow for large open spaces</li>
-                                                            <li>Consistent single-digit AQI even with high occupancy</li>
-                                                            <li>Whisper-quiet yet strong performance</li>
-                                                            <li>Ideal for families, clinics, and businesses</li>
+                                                            <li>{t("variants.products.airGlide2000.highlights.powerfulAirflow")}</li>
+                                                            <li>{t("variants.products.airGlide2000.highlights.consistentAqi")}</li>
+                                                            <li>{t("variants.products.airGlide2000.highlights.whisperQuiet")}</li>
+                                                            <li>{t("variants.products.airGlide2000.highlights.idealFor")}</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -392,71 +424,47 @@ export default async function CommonMonitorPage() {
                                                     <Image src="/img/aerolite.webp" alt="" width={400} height={400} />
                                                 </div>
                                                 <div className="tab-inner-content">
-                                                    <h3>Arctic Duo 2000 </h3>
-                                                    <span> “Feels like breathing in a premium resort. Cool, clean, and quiet.”</span>
+                                                    <h3>{t("variants.products.arcticDuo2000.name")}</h3>
+                                                    <span>{t("variants.products.arcticDuo2000.testimonial")}</span>
                                                     <div className="inner-flex">
                                                         <div className="lft">
-                                                            <h4>Perfect For :</h4>
+                                                            <h4>{t("variants.perfectFor")}:</h4>
                                                             <ul>
-                                                                <li><Image src="/img/smart-home.png" alt="" width={20} height={20} /> Smart homes</li>
-                                                                <li><Image src="/img/modular-setups.png" alt="" width={20} height={20} /> modular setups </li>
-                                                                <li><Image src="/img/offices.png" alt="" width={20} height={20} /> Offices </li>
+                                                                <li>
+                                                                    <Image src="/img/smart-home.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.arcticDuo2000.perfectFor.smartHomes")}
+                                                                </li>
+                                                                <li>
+                                                                    <Image src="/img/modular-setups.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.arcticDuo2000.perfectFor.modularSetups")}
+                                                                </li>
+                                                                <li>
+                                                                    <Image src="/img/offices.png" alt="" width={20} height={20} />{" "}
+                                                                    {t("variants.products.arcticDuo2000.perfectFor.offices")}
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                         <div className="rgt">
-                                                            <h4>Coverage :</h4>
-                                                            <span>Up to</span>
-                                                            <h5>2000 sq. ft.</h5>
+                                                            <h4>{t("variants.coverage")}:</h4>
+                                                            <span>{t("variants.upTo")}</span>
+                                                            <h5>{t("variants.products.arcticDuo2000.coverage")}</h5>
                                                         </div>
                                                     </div>
                                                     <div className="highlight">
-                                                        <h4>Highlights :</h4>
+                                                        <h4>{t("variants.highlights")}:</h4>
                                                         <ul>
-                                                            <li>Integrates with compressor AC units</li>
-                                                            <li>Dual benefit: air purification + active cooling</li>
-                                                            <li>Smart choice for modern climate-controlled spaces</li>
-                                                            <li>Best for those who already have an AC setup</li>
+                                                            <li>{t("variants.products.arcticDuo2000.highlights.integrates")}</li>
+                                                            <li>{t("variants.products.arcticDuo2000.highlights.dualBenefit")}</li>
+                                                            <li>{t("variants.products.arcticDuo2000.highlights.smartChoice")}</li>
+                                                            <li>{t("variants.products.arcticDuo2000.highlights.bestFor")}</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-                                            <div className="tab-main-box">
-                                                <div className="tab-cont-img">
-                                                    <Image src="/img/aerolite-1200.webp" alt="" width={400} height={400} />
-                                                </div>
-                                                <div className="tab-inner-content">
-                                                    <h3>FrostAir 2000  </h3>
-                                                    <span>“We live in a rented flat with no AC – FrostAir made it livable!”</span>
-                                                    <div className="inner-flex">
-                                                        <div className="lft">
-                                                            <h4>Perfect For :</h4>
-                                                            <ul>
-                                                                <li><Image src="/img/multi-use-rooms.png" alt="" width={20} height={20} /> multi-use rooms</li>
-                                                                <li><Image src="/img/home-without-ac.png" alt="" width={20} height={20} /> Homes without AC </li>
-                                                                <li><Image src="/img/rentals.png" alt="" width={20} height={20} /> rentals</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="rgt">
-                                                            <h4>Coverage :</h4>
-                                                            <span>Up to</span>
-                                                            <h5>2000 sq. ft.</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div className="highlight">
-                                                        <h4>Highlights :</h4>
-                                                        <ul>
-                                                            <li>Inbuilt compressor delivers fresh, cooled air</li>
-                                                            <li>No external AC needed – it’s a 2-in-1 solution</li>
-                                                            <li>Seamless setup, perfect for warm zones</li>
-                                                            <li>Great for non-AC spaces or AC alternatives</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <Link href="#">Request a quote <Image src="/img/link-icon.png" alt="" width={50} height={50} /></Link>
+                                        <Link href="#">
+                                            {t("variants.requestQuote")} <Image src="/img/link-icon.png" alt="" width={50} height={50} />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -465,17 +473,17 @@ export default async function CommonMonitorPage() {
                             <FresherCarousel responsive={bannersldier} className="banner-slider-box" arrows={false} showDots={true}>
                                 <div className="banner-slider-img">
                                     <div className="banner-slider-heading fresher-machine-heading">
-                                        <h2>From Polluted to Protected</h2>
-                                        <h3>— Fresh Air Machine</h3>
-                                        <p>Because the air you breathe should nurture, not worry you. Remove 99.5% of hidden pollutants and invite in wellness.</p>
+                                        <h2>{t("carousel.slide1.heading")}</h2>
+                                        <h3>{t("carousel.slide1.subheading")}</h3>
+                                        <p>{t("carousel.slide1.description")}</p>
                                     </div>
                                     <Image src="/img/fresh-air-machine-transforms.webp" alt="" width={200} height={150} />
                                 </div>
                                 <div className="banner-slider-img">
                                     <div className="banner-slider-heading">
-                                        <h2>AQI Below 10.</h2>
-                                        <h3>In Minutes.</h3>
-                                        <p>With AI-powered 99.5% purification, HEPA filters, UV light and ionizer—transform your home into a fresh-air sanctuary for the entire family.</p>
+                                        <h2>{t("carousel.slide2.heading")}</h2>
+                                        <h3>{t("carousel.slide2.subheading")}</h3>
+                                        <p>{t("carousel.slide2.description")}</p>
                                     </div>
                                     <Image src="/img/form-hazardous-to-heavenly.webp" alt="" width={200} height={150} />
                                 </div>
@@ -485,8 +493,8 @@ export default async function CommonMonitorPage() {
                             <div className="row">
                                 <div className="col-lg-6">
                                     <div className="tow-modes-heading">
-                                        <h2>Two modes of</h2>
-                                        <h3>Circulation</h3>
+                                        <h2>{t("modes.heading")}</h2>
+                                        <h3>{t("modes.subheading")}</h3>
                                     </div>
                                 </div>
                                 <div className="col-lg-6"></div>
@@ -497,9 +505,9 @@ export default async function CommonMonitorPage() {
                                         <Image src="/img/mode-recircuation.webp" alt="" width={200} height={200} />
                                         <ul>
                                             <li>01</li>
-                                            <li>Mode: Recirculation</li>
+                                            <li>{t("modes.recirculation.title")}</li>
                                         </ul>
-                                        <p>The air inside the room passes through the fresh air machine via an open damper. The machine filters and n recirculates the air back into the room, which is advantageous during high pollution levels outside</p>
+                                        <p>{t("modes.recirculation.description")}</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -507,9 +515,9 @@ export default async function CommonMonitorPage() {
                                         <Image className="outdoor-img" src="/img/mode-outdoor-air.webp" alt="" width={200} height={200} />
                                         <ul>
                                             <li>02</li>
-                                            <li>Mode: Outdoor Air</li>
+                                            <li>{t("modes.outdoorAir.title")}</li>
                                         </ul>
-                                        <p>In this mode, the closed damper enables outside air to enter the fresh air machine for purification, before entering indoors. This is advantageous when indoor pollution levels are high, making air recirculation ineffective .</p>
+                                        <p>{t("modes.outdoorAir.description")}</p>
                                     </div>
                                 </div>
                             </div>
@@ -523,8 +531,8 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="tech-breath-heading">
-                                    <h2>Technology</h2>
-                                    <h3>That Breathes for You</h3>
+                                    <h2>{t("technology.heading")}</h2>
+                                    <h3>{t("technology.subheading")}</h3>
                                 </div>
                             </div>
                         </div>
@@ -544,7 +552,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab5"
                                                 aria-selected="true"
                                             >
-                                                <h4>AeroLite 1200</h4>
+                                                <h4>{t("variants.products.aeroLite1200.name")}</h4>
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -558,7 +566,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab6"
                                                 aria-selected="false"
                                             >
-                                                <h4>AirGlide 2000</h4>
+                                                <h4>{t("variants.products.airGlide2000.name")}</h4>
                                             </button>
                                         </li>
                                         <li className="nav-item" role="presentation">
@@ -572,7 +580,7 @@ export default async function CommonMonitorPage() {
                                                 aria-controls="tab7"
                                                 aria-selected="false"
                                             >
-                                                <h4>Arctic Duo 2000</h4>
+                                                <h4>{t("variants.products.arcticDuo2000.name")}</h4>
                                             </button>
                                         </li>
                                     </ul>
@@ -582,29 +590,19 @@ export default async function CommonMonitorPage() {
                                         <div className="tab-pane fade show active" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
                                             <div className="tab-main-box-img">
                                                 <Image src="/img/aerolite1200.webp" alt="" width={200} height={200} />
-                                                <p>Made for small spaces where fresh air matters most—quiet, compact, and perfect for bedrooms or study corners.
-                                                </p>
+                                                <p>{t("technology.products.aeroLite1200.description")}</p>
                                             </div>
                                         </div>
                                         <div className="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
                                             <div className="tab-main-box-img">
                                                 <Image src="/img/airglide2000.webp" alt="" width={200} height={200} />
-                                                <p>Handles busy rooms with ease. Great for families, clinics, or shared offices where clean air needs to go the distance.
-                                                </p>
+                                                <p>{t("technology.products.airGlide2000.description")}</p>
                                             </div>
                                         </div>
                                         <div className="tab-pane fade" id="tab7" role="tabpanel" aria-labelledby="tab7-tab">
                                             <div className="tab-main-box-img">
                                                 <Image src="/img/airglide2000.webp" alt="" width={200} height={200} />
-                                                <p>Already have an AC? This one boosts it with fresh, clean air—perfect for modern homes and smart setups.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="tab-pane fade" id="tab8" role="tabpanel" aria-labelledby="tab8-tab">
-                                            <div className="tab-main-box-img">
-                                                <Image src="/img/technology-breathes-for-you.webp" alt="" width={200} height={200} />
-                                                <p>No AC? No problem. This all-in-one cools and purifies—ideal for rentals or rooms that need a full comfort upgrade.
-                                                </p>
+                                                <p>{t("technology.products.arcticDuo2000.description")}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -620,8 +618,8 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="loved-heading">
-                                    <h2>Loved by Families,</h2>
-                                    <h3>Trusted by Professionals</h3>
+                                    <h2>{t("testimonials.heading")}</h2>
+                                    <h3>{t("testimonials.subheading")}</h3>
                                 </div>
                             </div>
                         </div>
@@ -629,33 +627,43 @@ export default async function CommonMonitorPage() {
                     <FresherCarousel responsive={trusted} className="review-slider">
                         <div className="app-slide-review-box">
                             <Image src="/img/rating.png" alt="" width={100} height={100} />
-                            <p><strong>Our Office Feels Energized!</strong>
-                                We have installed in our co-working space and the atmosphere has totally changed. It is quieter fresher and feels healthier—our employees love it. The continuous flow of fresh air without pollutants is a game-changer.</p>
-                            <h3> — Startup Founder Bengaluru</h3>
+                            <p>
+                                <strong>{t("testimonials.reviews.startup.title")}</strong>
+                                {t("testimonials.reviews.startup.content")}
+                            </p>
+                            <h3>{t("testimonials.reviews.startup.author")}</h3>
                         </div>
                         <div className="app-slide-review-box">
                             <Image src="/img/rating.png" alt="" width={100} height={100} />
-                            <p><strong>Fresh Air Without Compromise</strong>
-                                Running a preschool means keeping kids safe and healthy. This machine ensures indoor air stays clean even during bad AQI days. Parents have noticed the difference—and so have we.</p>
-                            <h3> — Preschool Owner Noida</h3>
+                            <p>
+                                <strong>{t("testimonials.reviews.preschool.title")}</strong>
+                                {t("testimonials.reviews.preschool.content")}
+                            </p>
+                            <h3>{t("testimonials.reviews.preschool.author")}</h3>
                         </div>
                         <div className="app-slide-review-box">
                             <Image src="/img/rating.png" alt="" width={100} height={100} />
-                            <p><strong>Reliable in Critical Spaces</strong>
-                                In our small diagnostic lab we needed a solution that wouldnt just circulate the same indoor air. Prana Air is machine gives us that fresh air exchange while maintaining hygiene and comfort. Absolutely essential.</p>
-                            <h3> — Lab Manager Mumbai</h3>
+                            <p>
+                                <strong>{t("testimonials.reviews.lab.title")}</strong>
+                                {t("testimonials.reviews.lab.content")}
+                            </p>
+                            <h3>{t("testimonials.reviews.lab.author")}</h3>
                         </div>
                         <div className="app-slide-review-box">
                             <Image src="/img/rating.png" alt="" width={100} height={100} />
-                            <p><strong>Clean Air for Every Breath</strong>
-                                We installed this system in our gym to ensure members get fresh oxygen-rich air even during peak hours. It handles sweat odour and outside dust effortlessly. Members have actually commented on how clean’ it smells</p>
-                            <h3> — Fitness Centre Owner Pune</h3>
+                            <p>
+                                <strong>{t("testimonials.reviews.gym.title")}</strong>
+                                {t("testimonials.reviews.gym.content")}
+                            </p>
+                            <h3>{t("testimonials.reviews.gym.author")}</h3>
                         </div>
                         <div className="app-slide-review-box">
                             <Image src="/img/rating.png" alt="" width={100} height={100} />
-                            <p><strong>One-Time Setup Long-Term Results</strong>
-                                We have been using the Prana Air Fresh Air Machine in our villa for 6 months now. It is silent efficient and we dont even feel the outside pollution anymore. A must-have for urban homes.</p>
-                            <h3> — Architect & Homeowner Gurugram</h3>
+                            <p>
+                                <strong>{t("testimonials.reviews.homeowner.title")}</strong>
+                                {t("testimonials.reviews.homeowner.content")}
+                            </p>
+                            <h3>{t("testimonials.reviews.homeowner.author")}</h3>
                         </div>
                     </FresherCarousel>
                 </section>
@@ -665,8 +673,8 @@ export default async function CommonMonitorPage() {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="variant-comparison">
-                                <h2>Find Your Perfect Fit: </h2>
-                                <h3>Variant Comparison</h3>
+                                <h2>{t("comparison.heading")}</h2>
+                                <h3>{t("comparison.subheading")}</h3>
                             </div>
                         </div>
                     </div>
@@ -676,83 +684,189 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <ul className="main-title-variant">
-                                    <li><h4 className="main-title">Features</h4></li>
                                     <li>
-                                        <h5>AeroLite 1200 </h5>
-                                        <span>(Small Spaces)</span>
+                                        <h4 className="main-title">{t("comparison.features")}</h4>
                                     </li>
                                     <li>
-                                        <h5>AirGlide 2000 </h5>
-                                        <span>(Large Rooms)</span>
+                                        <h5>{t("variants.products.aeroLite1200.name")}</h5>
+                                        <span>({t("comparison.smallSpaces")})</span>
                                     </li>
                                     <li>
-                                        <h5>Arctic Duo 2000  </h5>
-                                        <span>(Hybrid with AC)</span>
+                                        <h5>{t("variants.products.airGlide2000.name")}</h5>
+                                        <span>({t("comparison.largeRooms")})</span>
                                     </li>
                                     <li>
-                                        <h5>FrostAir 2000</h5>
-                                        <span>(Built-in Cooling)</span>
+                                        <h5>{t("variants.products.arcticDuo2000.name")}</h5>
+                                        <span>({t("comparison.hybridWithAc")})</span>
+                                    </li>
+                                    <li>
+                                        <h5>{t("variants.products.frostAir2000.name")}</h5>
+                                        <span>({t("comparison.builtInCooling")})</span>
                                     </li>
                                 </ul>
                                 <div className="variant-comparison-box">
                                     <ul className="variant-feature">
-                                        <li><h4 className="variant-text">Coverage Area</h4></li>
-                                        <li><h4 className="variant-text">Brings AQI to Single Digits</h4></li>
-                                        <li><h4 className="variant-text">Fresh Air Inflow</h4></li>
-                                        <li><h4 className="variant-text">Compatible with Compressor AC</h4></li>
-                                        <li><h4 className="variant-text">Built-in Compressor</h4></li>
-                                        <li><h4 className="variant-text">Cooling Functionality</h4></li>
-                                        <li><h4 className="variant-text">Ideal For</h4></li>
-                                        <li><h4 className="variant-text">Power Consumption</h4></li>
-                                        <li><h4 className="variant-text">Noise Level</h4></li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.coverageArea")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.aqiSingleDigits")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.freshAirInflow")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.compatibleAc")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.builtInCompressor")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.coolingFunctionality")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.idealFor")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.powerConsumption")}</h4>
+                                        </li>
+                                        <li>
+                                            <h4 className="variant-text">{t("comparison.table.noiseLevel")}</h4>
+                                        </li>
                                     </ul>
                                     <ul>
-                                        <li><h5 className="variant-tile">Up to 1200 sq. ft.</h5></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><h5 className="variant-tile">Bedrooms, small offices</h5></li>
-                                        <li><h5 className="variant-tile">Low</h5></li>
-                                        <li><h5 className="variant-tile">Ultra-quiet</h5></li>
-                                        <li><a href="#">Request a quote <Image alt="" width={50} height={50} src="/img/link-icon.png" /></a></li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("variants.products.aeroLite1200.coverage")}</h5>
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.aeroLite.idealFor")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.aeroLite.powerConsumption")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.aeroLite.noiseLevel")}</h5>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                {t("variants.requestQuote")} <Image alt="" width={50} height={50} src="/img/link-icon.png" />
+                                            </a>
+                                        </li>
                                     </ul>
                                     <ul>
-                                        <li><h5 className="variant-tile">Up to 2000 sq. ft.</h5></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><h5 className="variant-tile">Living rooms, clinics, open areas</h5></li>
-                                        <li><h5 className="variant-tile">Moderate</h5></li>
-                                        <li><h5 className="variant-tile">Quiet</h5></li>
-                                        <li><a href="#">Request a quote <Image alt="" width={50} height={50} src="/img/link-icon.png" /></a></li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("variants.products.airGlide2000.coverage")}</h5>
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.airGlide.idealFor")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.airGlide.powerConsumption")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.airGlide.noiseLevel")}</h5>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                {t("variants.requestQuote")} <Image alt="" width={50} height={50} src="/img/link-icon.png" />
+                                            </a>
+                                        </li>
                                     </ul>
                                     <ul>
-                                        <li><h5 className="variant-tile">Up to 2000 sq. ft.</h5></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><h5 className="variant-tile">AC Integration Required</h5></li>
-                                        <li><h5 className="variant-tile">Smart homes, conference rooms</h5></li>
-                                        <li><h5 className="variant-tile">Moderate-High</h5></li>
-                                        <li><h5 className="variant-tile">Quiet with AC mode</h5></li>
-                                        <li><a href="#">Request a quote <Image alt="" width={50} height={50} src="/img/link-icon.png" /></a></li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("variants.products.arcticDuo2000.coverage")}</h5>
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/wrong-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.arcticDuo.coolingFunctionality")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.arcticDuo.idealFor")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.arcticDuo.powerConsumption")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.arcticDuo.noiseLevel")}</h5>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                {t("variants.requestQuote")} <Image alt="" width={50} height={50} src="/img/link-icon.png" />
+                                            </a>
+                                        </li>
                                     </ul>
                                     <ul>
-                                        <li><h5 className="variant-tile">Up to 2000 sq. ft.</h5></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("variants.products.frostAir2000.coverage")}</h5>
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
                                         <li>___</li>
-                                        <li><Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} /></li>
-                                        <li><h5 className="variant-tile">Inbuilt Air Cooling</h5></li>
-                                        <li><h5 className="variant-tile">Homes/offices without a separate AC</h5></li>
-                                        <li><h5 className="variant-tile">High</h5></li>
-                                        <li><h5 className="variant-tile">Quiet (With Cooling)</h5></li>
-                                        <li><a href="#">Request a quote <Image alt="" width={50} height={50} src="/img/link-icon.png" /></a></li>
+                                        <li>
+                                            <Image className="variant-icon" src="/img/correct-icon.png" alt="" width={40} height={40} />
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.frostAir.coolingFunctionality")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.frostAir.idealFor")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.frostAir.powerConsumption")}</h5>
+                                        </li>
+                                        <li>
+                                            <h5 className="variant-tile">{t("comparison.table.frostAir.noiseLevel")}</h5>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                {t("variants.requestQuote")} <Image alt="" width={50} height={50} src="/img/link-icon.png" />
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -766,14 +880,14 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="future-heading">
-                                    <h2>Green And Clean For You.</h2>
-                                    <h3>Safest To The Planet</h3>
+                                    <h2>{t("greenClean.heading")}</h2>
+                                    <h3>{t("greenClean.subheading")}</h3>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="future-para">
                                     <p>
-                                        <span>Breathe cleaner</span> air without harming the planet. With energy-saving tech and long-lasting filters, you get a healthier home and a smaller carbon footprint.
+                                        <span>{t("greenClean.description.breatheCleaner")}</span> {t("greenClean.description.rest")}
                                     </p>
                                 </div>
                             </div>
@@ -783,8 +897,8 @@ export default async function CommonMonitorPage() {
                                 <div className="low-maintenance">
                                     <ul>
                                         <li>
-                                            <h4>Low-maintenance, recyclable filters</h4>
-                                            <p>Filters made to last, so you don’t have to replace them constantly. Just swap to change and recycle.</p>
+                                            <h4>{t("greenClean.features.lowMaintenance.title")}</h4>
+                                            <p>{t("greenClean.features.lowMaintenance.description")}</p>
                                         </li>
                                         <li>
                                             <Image src="/img/low-maintenance.png" alt="" width={100} height={100} />
@@ -794,8 +908,8 @@ export default async function CommonMonitorPage() {
                                 <div className="low-maintenance">
                                     <ul>
                                         <li>
-                                            <h4>40% less energy than traditional purifier</h4>
-                                            <p>The advanced design uses up to 40% less energy than standard air purifiers, enjoy cleaner air without the high power bill. </p>
+                                            <h4>{t("greenClean.features.lessEnergy.title")}</h4>
+                                            <p>{t("greenClean.features.lessEnergy.description")}</p>
                                         </li>
                                         <li>
                                             <Image src="/img/less-energy-traditional-purifier.png" alt="" width={100} height={100} />
@@ -807,8 +921,8 @@ export default async function CommonMonitorPage() {
                                 <div className="green-building">
                                     <ul>
                                         <li>
-                                            <h4>Perfect for Green Homes and Mindful Living</h4>
-                                            <p>This purifier is a perfect match for green-certified buildings and anyone looking to reduce their environmental impact—without compromising on clean and healthy air.</p>
+                                            <h4>{t("greenClean.features.greenHomes.title")}</h4>
+                                            <p>{t("greenClean.features.greenHomes.description")}</p>
                                         </li>
                                         <li>
                                             <Image src="/img/ideal-for-green-buildings.webp" alt="" width={100} height={100} />
@@ -826,8 +940,8 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="why-settle-heading">
-                                    <h2>Why Settle for “Better” Air</h2>
-                                    <h3>When You Can Have the Best?</h3>
+                                    <h2>{t("whySettle.heading")}</h2>
+                                    <h3>{t("whySettle.subheading")}</h3>
                                 </div>
                             </div>
                         </div>
@@ -837,34 +951,29 @@ export default async function CommonMonitorPage() {
                                     <ul>
                                         <li className="floating">
                                             <Image src="/img/particulate-matter.png" alt="" width={50} height={50} />
-                                            <span>FormalDehyde (HCHO)</span>
+                                            <span>{t("toxicPollutants.pollutants.formaldehyde")}</span>
                                         </li>
                                         <li className="floating">
                                             <Image src="/img/particulate-matter.png" alt="" width={50} height={50} />
-                                            <span>FormalDehyde (HCHO)</span>
+                                            <span>{t("toxicPollutants.pollutants.formaldehyde")}</span>
                                         </li>
                                         <li className="floating">
                                             <Image src="/img/particulate-matter.png" alt="" width={50} height={50} />
-                                            <span>FormalDehyde (HCHO)</span>
+                                            <span>{t("toxicPollutants.pollutants.formaldehyde")}</span>
                                         </li>
                                         <li className="floating">
                                             <Image src="/img/particulate-matter.png" alt="" width={50} height={50} />
-                                            <span>FormalDehyde (HCHO)</span>
+                                            <span>{t("toxicPollutants.pollutants.formaldehyde")}</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="spend-time-para">
-                                    <p>
-                                        We spend 90% of your time indoors—but is the indoor air you are breathing really safe? With rising pollution, poor indoor air can lead to fatigue, allergies, and even anxiety.
-                                    </p>
+                                    <p>{t("whySettle.leftContent")}</p>
                                 </div>
                             </div>
                             <div className="col-lg-6 mob-flex">
                                 <div className="spend-time-para fresh-air-machine">
-                                    <p>
-                                        The Fresh Air Machine doesn’t just filter – it transforms.
-                                        Breathe easy while you live, work, sleep, and relax in air that feels fresh, light, and completely worry-free.
-                                    </p>
+                                    <p>{t("whySettle.rightContent")}</p>
                                 </div>
                                 <div className="fresh-air-machine-para">
                                     <Image src="/img/fresh-air-machine-filter.webp" alt="" width={50} height={50} />
@@ -880,8 +989,8 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="get-in-heading">
-                                    <h2>Get in Touch</h2>
-                                    <h3>With Us</h3>
+                                    <h2>{t("contact.heading")}</h2>
+                                    <h3>{t("contact.subheading")}</h3>
                                 </div>
                             </div>
                         </div>
@@ -890,15 +999,15 @@ export default async function CommonMonitorPage() {
                                 <div className="contact-box">
                                     <Image src="/img/get-in-touch.webp" alt="" width={200} height={200} />
                                     <div className="contact-details">
-                                        <h4>Contact Info</h4>
-                                        <p>Looking for Fresh Air Machine?</p>
+                                        <h4>{t("contact.contactInfo")}</h4>
+                                        <p>{t("contact.lookingFor")}</p>
                                         <ul>
                                             <li>
                                                 <span>
                                                     <Image src="/img/contact-call-icon.png" alt="" width={15} height={15} />
                                                 </span>
                                                 <h4>
-                                                    <span>Phone Number:</span>
+                                                    <span>{t("contact.phoneNumber")}:</span>
                                                     (+91) 73918-73918
                                                 </h4>
                                             </li>
@@ -938,11 +1047,9 @@ export default async function CommonMonitorPage() {
                         <div className="row">
                             <div className="col-lg-5">
                                 <div className="faq-heading">
-                                    <h2>Frequently</h2>
-                                    <h3>Asked Questions</h3>
-                                    <p>
-                                        Whether you are setting up a cozy reading nook or running a conference room, there is a Fresh Air
-                                    </p>
+                                    <h2>{t("faq.heading")}</h2>
+                                    <h3>{t("faq.subheading")}</h3>
+                                    <p>{t("faq.description")}</p>
                                 </div>
                             </div>
                             <div className="col-lg-7">
@@ -957,14 +1064,12 @@ export default async function CommonMonitorPage() {
                                                 aria-expanded="true"
                                                 aria-controls="faq1"
                                             >
-                                                1. Can I use the Fresh Air Machine in any room?
+                                                {t("faq.questions.q1.question")}
                                             </button>
                                         </h2>
                                         <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                             <div className="accordion-body faq-tab-para">
-                                                <p>
-                                                    Yes! We have models designed for different room sizes, from compact spaces like bedrooms to large areas like living rooms or offices. Choose the one that fits your space and needs!
-                                                </p>
+                                                <p>{t("faq.questions.q1.answer")}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -978,14 +1083,12 @@ export default async function CommonMonitorPage() {
                                                 aria-expanded="false"
                                                 aria-controls="faq2"
                                             >
-                                                2. How long does it take to purify the air?
+                                                {t("faq.questions.q2.question")}
                                             </button>
                                         </h2>
                                         <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                             <div className="accordion-body faq-tab-para">
-                                                <p>
-                                                    The Fresh Air Machine works fast. It can bring your AQI down to single digits in just a few minutes, so you’ll start breathing cleaner air almost immediately.
-                                                </p>
+                                                <p>{t("faq.questions.q2.answer")}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -999,14 +1102,12 @@ export default async function CommonMonitorPage() {
                                                 aria-expanded="false"
                                                 aria-controls="faq3"
                                             >
-                                                3. Is the Fresh Air Machine noisy?
+                                                {t("faq.questions.q3.question")}
                                             </button>
                                         </h2>
                                         <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                             <div className="accordion-body faq-tab-para">
-                                                <p>
-                                                    Nope Our machines are designed to run quietly so you can enjoy fresh air without disruptions. Whether you are sleeping working or relaxing the machine operates quietly in the background.
-                                                </p>
+                                                <p>{t("faq.questions.q3.answer")}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1020,14 +1121,12 @@ export default async function CommonMonitorPage() {
                                                 aria-expanded="false"
                                                 aria-controls="faq4"
                                             >
-                                                4. How do I maintain the Fresh Air Machine?
+                                                {t("faq.questions.q4.question")}
                                             </button>
                                         </h2>
                                         <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                             <div className="accordion-body faq-tab-para">
-                                                <p>
-                                                    Our machines are low maintenance! Simply replace the filters when needed (depending on usage), and they are recyclable. No complex setups or regular maintenance required.
-                                                </p>
+                                                <p>{t("faq.questions.q4.answer")}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1037,18 +1136,16 @@ export default async function CommonMonitorPage() {
                                                 className="accordion-button collapsed"
                                                 type="button"
                                                 data-bs-toggle="collapse"
-                                                data-bs-target="#faq4"
+                                                data-bs-target="#faq5"
                                                 aria-expanded="false"
-                                                aria-controls="faq4"
+                                                aria-controls="faq5"
                                             >
-                                                5. Is the Fresh Air Machine energy-efficient?
+                                                {t("faq.questions.q5.question")}
                                             </button>
                                         </h2>
-                                        <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                             <div className="accordion-body faq-tab-para">
-                                                <p>
-                                                    Yes, it uses up to 40% less energy compared to traditional purifiers, making it an eco-friendly and cost-effective choice for keeping your air clean without a high energy bill.
-                                                </p>
+                                                <p>{t("faq.questions.q5.answer")}</p>
                                             </div>
                                         </div>
                                     </div>

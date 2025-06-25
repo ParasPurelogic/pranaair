@@ -7,11 +7,11 @@ export default function OdorMonitor() {
     const trusted = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
-            items: 3,
+            items: 1,
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3,
+            items: 1,
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -968,7 +968,7 @@ export default function OdorMonitor() {
 
             {/* Application slider */}
             <section className="slider-app">
-                <FresherCarousel responsive={trusted} className="review-slider">
+                <FresherCarousel responsive={trusted} className="review-slider" centerMode={true}>
                     <div className="app-slide-review-box">
                         <Image src="/img/rice-field-people-bridge-walking-thailand.webp" alt="" width={800} height={400} />
                         <h4>Sewage Treatment Plants</h4>

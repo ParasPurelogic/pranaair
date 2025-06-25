@@ -2,12 +2,13 @@
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
-export default function FresherCarousel({ children, className, responsive, showDots = false, arrows = true }) {
+export default function FresherCarousel({ children, className, responsive, showDots = false, arrows = true, centerMode = false // default is false
+}) {
     return (
         <Carousel
             responsive={responsive}
             infinite={true}
-            autoPlay={true}
+            autoPlay={false}
             autoPlaySpeed={3000}
             className={className}
             showDots={showDots}
@@ -18,6 +19,7 @@ export default function FresherCarousel({ children, className, responsive, showD
             containerClass="carousel-container"
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding"
+            centerMode={centerMode}
         >
             {children}
         </Carousel>

@@ -1,0 +1,334 @@
+{
+  "hero": {
+    "title": "Lower Your Indoor AQI Levels to Single Digits",
+    "description": "High outdoor AQI? The Fresh Air Machine keeps your indoor air in the fresh single digits.",
+    "requestQuote": "Request a quote",
+    "scrollToExplore": "Scroll to explore"
+  },
+  "anyMoment": {
+    "heading": "Fresh Air",
+    "subheading": "For Any Moment. Any Mood.",
+    "meTime": {
+      "title": "Me Time",
+      "desc": "Turn your personal space into a clean-air retreat. Whether you're reading, meditating, or just unwinding."
+    },
+    "freshClassrooms": {
+      "title": "Fresh Classrooms",
+      "desc": "Improve focus, reduce allergens, and create a safe, breathable space for each student."
+    },
+    "partyTime": {
+      "title": "Party Time",
+      "desc": "Hosting friends? Keep the vibes high and the pollution low. Perfect air, even in a packed room."
+    },
+    "familyTime": {
+      "title": "Family Time",
+      "desc": "A safer, cleaner home for the ones you love. Great for kids, elderly, and pets."
+    },
+    "workSmarter": {
+      "title": "Work Smarter",
+      "desc": "Boost focus, reduce fatigue, and create a more productive workspace—one breath at a time."
+    },
+    "healthierCare": {
+      "title": "Healthier Care Centres",
+      "desc": "Clean air isn't optional in healthcare—it's essential. Create a safer space for patients, staff, and visitors."
+    }
+  },
+  "inMinutes": {
+    "heading": "From Hazardous to Heavenly -",
+    "subheading": "In Minutes."
+  },
+  "toxicPollutants": {
+    "heading": "Toxic Pollutants,",
+    "subheading": "It can reduce",
+    "description": "Indoor air can trap harmful toxins that make you sick. Clear them out with the Fresh Air Machine and breathe fresh, healthy air at home.",
+    "pollutants": {
+      "formaldehyde": "Formaldehyde (HCHO)",
+      "particulateMatter": "Particulate Matter (PM10, PM2.5)",
+      "tvoc": "Total Volatile Organic Compounds (TVOC)",
+      "carbonDioxide": "Carbon Dioxide (CO2)"
+    }
+  },
+  "effortless": {
+    "heading": "Take Control of Your Air –",
+    "subheading": "Effortlessly.",
+    "features": {
+      "realTimeData": {
+        "title": "Real-time Data Display",
+        "description": "Monitor CO2 (ppm) PM2.5 Temperature Humidity and TVOC instantly"
+      },
+      "adjustableFan": {
+        "title": "Adjustable Fan Speeds",
+        "description": "Choose the airflow level you want"
+      },
+      "heatingCooling": {
+        "title": "Heating & Cooling Modes",
+        "description": "Toggle comfort settings to suit your needs"
+      },
+      "childLock": {
+        "title": "Child Lock",
+        "description": "Keep settings safe from curious little hands"
+      },
+      "manualAuto": {
+        "title": "Manual & Auto Modes",
+        "description": "Set it and forget it—or fine-tune as you wish"
+      },
+      "wifiConnected": {
+        "title": "Wi-Fi Connected",
+        "description": "For real-time outdoor AQI syncing"
+      }
+    }
+  },
+  "variants": {
+    "heading": "Pick Your Fresh Air Variant",
+    "subheading": "Personalized The Air You Are Breathing",
+    "description": "From small bedrooms to big workspaces, there's a perfect Fresh Air Machine for every space. Find the one that fits your space—and your vibe.",
+    "perfectFor": "Perfect For",
+    "coverage": "Coverage",
+    "upTo": "Up to",
+    "highlights": "Highlights",
+    "requestQuote": "Request a quote",
+    "products": {
+      "aeroLite1200": {
+        "name": "AeroLite 1200",
+        "testimonial": "The best upgrade for my small flat – I wake up feeling fresh!",
+        "coverage": "1200 sq. ft.",
+        "perfectFor": {
+          "bedrooms": "Bedrooms",
+          "studyRooms": "study rooms",
+          "studioApartments": "studio apartments"
+        },
+        "highlights": {
+          "ultraQuiet": "Ultra-quiet operation – perfect for sleep and focus",
+          "lightweight": "Lightweight, sleek, and fits into small spaces",
+          "aqiReduction": "Brings AQI to less than 10 in minutes",
+          "idealFor": "Ideal for single rooms or personal use"
+        }
+      },
+      "airGlide2000": {
+        "name": "AirGlide 2000",
+        "testimonial": "Our whole family breathes better – even during Delhi winters.",
+        "coverage": "2000 sq. ft.",
+        "perfectFor": {
+          "largeHalls": "Large halls",
+          "sharedOffices": "shared offices",
+          "clinics": "clinics apartments"
+        },
+        "highlights": {
+          "powerfulAirflow": "Powerful airflow for large open spaces",
+          "consistentAqi": "Consistent single-digit AQI even with high occupancy",
+          "whisperQuiet": "Whisper-quiet yet strong performance",
+          "idealFor": "Ideal for families, clinics, and businesses"
+        }
+      },
+      "arcticDuo2000": {
+        "name": "Arctic Duo 2000",
+        "testimonial": "Feels like breathing in a premium resort. Cool, clean, and quiet.",
+        "coverage": "2000 sq. ft.",
+        "perfectFor": {
+          "smartHomes": "Smart homes",
+          "modularSetups": "modular setups",
+          "offices": "Offices"
+        },
+        "highlights": {
+          "integrates": "Integrates with compressor AC units",
+          "dualBenefit": "Dual benefit: air purification + active cooling",
+          "smartChoice": "Smart choice for modern climate-controlled spaces",
+          "bestFor": "Best for those who already have an AC setup"
+        }
+      },
+      "frostAir2000": {
+        "name": "FrostAir 2000",
+        "testimonial": "We live in a rented flat with no AC – FrostAir made it livable!",
+        "coverage": "2000 sq. ft.",
+        "perfectFor": {
+          "multiUseRooms": "multi-use rooms",
+          "homesWithoutAc": "Homes without AC",
+          "rentals": "rentals"
+        },
+        "highlights": {
+          "inbuiltCompressor": "Inbuilt compressor delivers fresh, cooled air",
+          "noExternalAc": "No external AC needed – it's a 2-in-1 solution",
+          "seamlessSetup": "Seamless setup, perfect for warm zones",
+          "greatFor": "Great for non-AC spaces or AC alternatives"
+        }
+      }
+    }
+  },
+  "carousel": {
+    "slide1": {
+      "heading": "From Polluted to Protected",
+      "subheading": "— Fresh Air Machine",
+      "description": "Because the air you breathe should nurture, not worry you. Remove 99.5% of hidden pollutants and invite in wellness."
+    },
+    "slide2": {
+      "heading": "AQI Below 10.",
+      "subheading": "In Minutes.",
+      "description": "With AI-powered 99.5% purification, HEPA filters, UV light and ionizer—transform your home into a fresh-air sanctuary for the entire family."
+    }
+  },
+  "modes": {
+    "heading": "Two modes of",
+    "subheading": "Circulation",
+    "recirculation": {
+      "title": "Mode: Recirculation",
+      "description": "The air inside the room passes through the fresh air machine via an open damper. The machine filters and n recirculates the air back into the room, which is advantageous during high pollution levels outside"
+    },
+    "outdoorAir": {
+      "title": "Mode: Outdoor Air",
+      "description": "In this mode, the closed damper enables outside air to enter the fresh air machine for purification, before entering indoors. This is advantageous when indoor pollution levels are high, making air recirculation ineffective ."
+    }
+  },
+  "technology": {
+    "heading": "Technology",
+    "subheading": "That Breathes for You",
+    "products": {
+      "aeroLite1200": {
+        "description": "Made for small spaces where fresh air matters most—quiet, compact, and perfect for bedrooms or study corners."
+      },
+      "airGlide2000": {
+        "description": "Handles busy rooms with ease. Great for families, clinics, or shared offices where clean air needs to go the distance."
+      },
+      "arcticDuo2000": {
+        "description": "Already have an AC? This one boosts it with fresh, clean air—perfect for modern homes and smart setups."
+      },
+      "frostAir2000": {
+        "description": "No AC? No problem. This all-in-one cools and purifies—ideal for rentals or rooms that need a full comfort upgrade."
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "Loved by Families,",
+    "subheading": "Trusted by Professionals",
+    "reviews": {
+      "startup": {
+        "title": "Our Office Feels Energized!",
+        "content": "We have installed in our co-working space and the atmosphere has totally changed. It is quieter fresher and feels healthier—our employees love it. The continuous flow of fresh air without pollutants is a game-changer.",
+        "author": "— Startup Founder Bengaluru"
+      },
+      "preschool": {
+        "title": "Fresh Air Without Compromise",
+        "content": "Running a preschool means keeping kids safe and healthy. This machine ensures indoor air stays clean even during bad AQI days. Parents have noticed the difference—and so have we.",
+        "author": "— Preschool Owner Noida"
+      },
+      "lab": {
+        "title": "Reliable in Critical Spaces",
+        "content": "In our small diagnostic lab we needed a solution that wouldnt just circulate the same indoor air. Prana Air is machine gives us that fresh air exchange while maintaining hygiene and comfort. Absolutely essential.",
+        "author": "— Lab Manager Mumbai"
+      },
+      "gym": {
+        "title": "Clean Air for Every Breath",
+        "content": "We installed this system in our gym to ensure members get fresh oxygen-rich air even during peak hours. It handles sweat odour and outside dust effortlessly. Members have actually commented on how clean' it smells",
+        "author": "— Fitness Centre Owner Pune"
+      },
+      "homeowner": {
+        "title": "One-Time Setup Long-Term Results",
+        "content": "We have been using the Prana Air Fresh Air Machine in our villa for 6 months now. It is silent efficient and we dont even feel the outside pollution anymore. A must-have for urban homes.",
+        "author": "— Architect & Homeowner Gurugram"
+      }
+    }
+  },
+  "comparison": {
+    "heading": "Find Your Perfect Fit: ",
+    "subheading": "Variant Comparison",
+    "features": "Features",
+    "smallSpaces": "Small Spaces",
+    "largeRooms": "Large Rooms",
+    "hybridWithAc": "Hybrid with AC",
+    "builtInCooling": "Built-in Cooling",
+    "table": {
+      "coverageArea": "Coverage Area",
+      "aqiSingleDigits": "Brings AQI to Single Digits",
+      "freshAirInflow": "Fresh Air Inflow",
+      "compatibleAc": "Compatible with Compressor AC",
+      "builtInCompressor": "Built-in Compressor",
+      "coolingFunctionality": "Cooling Functionality",
+      "idealFor": "Ideal For",
+      "powerConsumption": "Power Consumption",
+      "noiseLevel": "Noise Level",
+      "aeroLite": {
+        "idealFor": "Bedrooms, small offices",
+        "powerConsumption": "Low",
+        "noiseLevel": "Ultra-quiet"
+      },
+      "airGlide": {
+        "idealFor": "Living rooms, clinics, open areas",
+        "powerConsumption": "Moderate",
+        "noiseLevel": "Quiet"
+      },
+      "arcticDuo": {
+        "coolingFunctionality": "AC Integration Required",
+        "idealFor": "Smart homes, conference rooms",
+        "powerConsumption": "Moderate-High",
+        "noiseLevel": "Quiet with AC mode"
+      },
+      "frostAir": {
+        "coolingFunctionality": "Inbuilt Air Cooling",
+        "idealFor": "Homes/offices without a separate AC",
+        "powerConsumption": "High",
+        "noiseLevel": "Quiet (With Cooling)"
+      }
+    }
+  },
+  "greenClean": {
+    "heading": "Green And Clean For You.",
+    "subheading": "Safest To The Planet",
+    "description": {
+      "breatheCleaner": "Breathe cleaner",
+      "rest": "air without harming the planet. With energy-saving tech and long-lasting filters, you get a healthier home and a smaller carbon footprint."
+    },
+    "features": {
+      "lowMaintenance": {
+        "title": "Low-maintenance, recyclable filters",
+        "description": "Filters made to last, so you don't have to replace them constantly. Just swap to change and recycle."
+      },
+      "lessEnergy": {
+        "title": "40% less energy than traditional purifier",
+        "description": "The advanced design uses up to 40% less energy than standard air purifiers, enjoy cleaner air without the high power bill."
+      },
+      "greenHomes": {
+        "title": "Perfect for Green Homes and Mindful Living",
+        "description": "This purifier is a perfect match for green-certified buildings and anyone looking to reduce their environmental impact—without compromising on clean and healthy air."
+      }
+    }
+  },
+  "whySettle": {
+    "heading": "Why Settle for \"Better\" Air",
+    "subheading": "When You Can Have the Best?",
+    "leftContent": "We spend 90% of your time indoors—but is the indoor air you are breathing really safe? With rising pollution, poor indoor air can lead to fatigue, allergies, and even anxiety.",
+    "rightContent": "The Fresh Air Machine doesn't just filter – it transforms. Breathe easy while you live, work, sleep, and relax in air that feels fresh, light, and completely worry-free."
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "With Us",
+    "contactInfo": "Contact Info",
+    "lookingFor": "Looking for Fresh Air Machine?",
+    "phoneNumber": "Phone Number"
+  },
+  "faq": {
+    "heading": "Frequently",
+    "subheading": "Asked Questions",
+    "description": "Whether you are setting up a cozy reading nook or running a conference room, there is a Fresh Air",
+    "questions": {
+      "q1": {
+        "question": "1. Can I use the Fresh Air Machine in any room?",
+        "answer": "Yes! We have models designed for different room sizes, from compact spaces like bedrooms to large areas like living rooms or offices. Choose the one that fits your space and needs!"
+      },
+      "q2": {
+        "question": "2. How long does it take to purify the air?",
+        "answer": "The Fresh Air Machine works fast. It can bring your AQI down to single digits in just a few minutes, so you'll start breathing cleaner air almost immediately."
+      },
+      "q3": {
+        "question": "3. Is the Fresh Air Machine noisy?",
+        "answer": "Nope Our machines are designed to run quietly so you can enjoy fresh air without disruptions. Whether you are sleeping working or relaxing the machine operates quietly in the background."
+      },
+      "q4": {
+        "question": "4. How do I maintain the Fresh Air Machine?",
+        "answer": "Our machines are low maintenance! Simply replace the filters when needed (depending on usage), and they are recyclable. No complex setups or regular maintenance required."
+      },
+      "q5": {
+        "question": "5. Is the Fresh Air Machine energy-efficient?",
+        "answer": "Yes, it uses up to 40% less energy compared to traditional purifiers, making it an eco-friendly and cost-effective choice for keeping your air clean without a high energy bill."
+      }
+    }
+  }
+}

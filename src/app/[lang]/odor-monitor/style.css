@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 .py-4 {
     padding: 0 !important;
 }
@@ -36,7 +38,7 @@
 
 .hero-title {
     font-size: 44px;
-    font-weight: 500;
+    font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -44,15 +46,16 @@
 
 .hero-subtitle {
     font-size: 24px;
-    color: #FFFFFF;
+    color: #fff;
     margin-bottom: 10px;
-    background-image: linear-gradient(90deg, #FFFFFF00, #ffffff47, #FFFFFF00);
+    background-image: linear-gradient(90deg, #fff0, #ffffff47, #fff0);
     padding: 15px 20px;
-    width: 26%;
+    width: 22%;
     text-align: left;
     border-top: 1px solid #ffffff47;
     border-bottom: 1px solid #ffffff47;
     margin-top: 10px;
+    font-weight: 400;
 }
 
 .hero-description {
@@ -90,7 +93,7 @@
 
 .section-title {
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 40px;
     margin-bottom: 48px;
 }
@@ -98,11 +101,13 @@
 .title-gray {
     color: #87949e;
     font-size: 40px;
+    font-weight: 500;
 }
 
 .title-dark {
     color: #263d4f;
     font-size: 40px;
+    font-weight: 700;
 }
 
 .feature-card ul {
@@ -118,11 +123,13 @@
 .feature-card ul li h3 {
     color: #263D4F;
     font-size: 24px;
+    font-weight: 600;
 }
 
 .feature-card ul li p {
     color: #263d4fbf;
     font-size: 16px;
+    width: 80%;
 }
 
 .feature-card ul li img {
@@ -248,7 +255,6 @@ ul.portable-device li p {
     position: relative;
     background-image: url(/img/parameters-cair-odour-monitor.webp);
     background-size: cover;
-    background-position: center;
 }
 
 .parameters-section:before {
@@ -332,19 +338,23 @@ ul.portable-device li p {
 
 p.wifi-description {
     font-size: 24px;
-    color: #263D4F;
-    font-weight: 700;
+    color: #263d4f;
+    font-weight: 400;
     padding-top: 10px;
-    width: 64%;
+    width: 70%;
+}
+
+p.wifi-description span {
+    font-weight: 600;
 }
 
 .wifi-image img {
-    width: 78%;
+    width: 90%;
     height: auto;
 }
 
 .wifi-badge {
-    margin-top: 100px;
+    margin-top: 170px;
 }
 
 .separator {
@@ -413,6 +423,10 @@ h3 {
     width: 80%;
     margin-left: auto;
     margin-top: 30px;
+}
+
+.main-tab-box ul li {
+    width: 80%;
 }
 
 .param-box {
@@ -903,12 +917,13 @@ section.science-smell {
 .science-smell-heading h2 {
     font-size: 40px;
     color: #263D4F;
-    font-weight: 600;
+    font-weight: 700;
     width: 38%;
 }
 
 .science-smell-heading h2 span {
     color: #87949E;
+    font-weight: 600;
 }
 
 .science-smell-heading {
@@ -989,11 +1004,13 @@ section.time-saver {
 .time-saver-txt h2 {
     color: #FFFFFF;
     font-size: 40px;
+    font-weight: 600;
     width: 50%;
 }
 
 .time-saver-txt h2 span {
     color: #ffffffd1;
+    font-weight: 400;
 }
 
 .time-saver-txt p {
@@ -1005,7 +1022,7 @@ section.time-saver {
 section.what-indoor {
     padding-top: 150px;
     margin: 0 auto;
-    width: 90%;
+    width: 85%;
 }
 
 .whats-indoor-heading {
@@ -1023,7 +1040,7 @@ section.what-indoor {
 
 .whats-indoor-heading h2 span {
     color: #87949E;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .whats-indoor-heading p {
