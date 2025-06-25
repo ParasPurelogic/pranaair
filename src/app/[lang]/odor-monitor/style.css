@@ -1740,13 +1740,13 @@ button.accordion-button {
     }
 
     .last-value {
-        margin-top: 33px !important;
+        margin-top: 37px !important;
     }
 
     .range-value {
         font-size: 14px;
-        margin-top: 20px;
-        left: 10px;
+        margin-top: 25px;
+        left: 20px;
         position: relative;
     }
 
