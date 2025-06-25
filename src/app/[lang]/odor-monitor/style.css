@@ -3,7 +3,7 @@
 }
 
 .hero-section {
-    height: 870px;
+    height: 800px;
     background-image: url(/img/odor-monitor.webp);
     background-size: cover;
     background-position: center;
@@ -13,7 +13,7 @@
 
 .hero-content {
     text-align: left;
-    padding-top: 350px;
+    padding-top: 300px;
     position: relative;
     padding-left: 100px;
 }
@@ -244,10 +244,11 @@ ul.portable-device li p {
 
 .parameters-section {
     margin-top: 120px;
-    height: 850px;
+    height: 790px;
     position: relative;
     background-image: url(/img/parameters-cair-odour-monitor.webp);
     background-size: cover;
+    background-position: center;
 }
 
 .parameters-section:before {
@@ -258,7 +259,7 @@ ul.portable-device li p {
     height: 100%;
     left: 0;
     top: 0;
-    border-radius: 100px 0 0 0;
+    border-radius: 90px 0 0 0;
 }
 
 .parameters-content {
@@ -567,7 +568,7 @@ section.highlight {
 .txt h4 {
     font-size: 32px;
     background: -webkit-linear-gradient(left, #F2F863 0%, #42F4AA 30%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     margin: 0;
@@ -577,6 +578,7 @@ section.highlight {
     font-size: 20px;
     background: -webkit-linear-gradient(left, #F2F863 0%, #42F4AA 30%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
 }
@@ -595,6 +597,7 @@ section.highlight {
     background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 30%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .opration img {
@@ -829,6 +832,7 @@ section.connect-monitor {
 
 .app-slide-review-box img {
     width: 100%;
+    height: auto;
 }
 
 .app-heading {
@@ -941,14 +945,15 @@ section.science-smell {
 
 .cause-txt-box h3 {
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     margin: 0;
 }
 
 .cause-txt-box p {
-    color: #FFFFFF;
+    color: #fff;
     font-size: 16px;
+    width: 90%;
 }
 
 section.time-saver {
@@ -1041,7 +1046,7 @@ section.what-indoor {
 .odour-score .top-icon li:nth-child(1) {
     position: relative;
     top: 100px;
-    left: -100px;
+    left: 0px;
 }
 
 .odour-score .top-icon li:nth-child(2) {
@@ -1073,8 +1078,8 @@ section.what-indoor {
 
 .odour-score .bottom-icon li:nth-child(1) {
     position: relative;
-    top: 150px;
-    left: -10px;
+    top: 100px;
+    left: 0px;
 }
 
 .odour-score .bottom-icon li:nth-child(1) img {
@@ -1134,7 +1139,7 @@ section.what-indoor {
 
 .waste-disposal .bottom-icon li:nth-child(1) {
     position: relative;
-    top: 150px;
+    top: 100px !important;
     left: 300px;
 }
 
@@ -1181,7 +1186,7 @@ section.what-indoor {
     color: #FFFFFF;
     font-size: 24px;
     padding-left: 50px;
-    padding-top: 100px;
+    padding-top: 120px;
     position: relative;
 }
 
@@ -1255,7 +1260,7 @@ section.what-indoor {
 }
 
 .cleaing-score .bottom-icon li:nth-child(2) img {
-    width: 90%;
+    width: 60%;
     height: auto;
 }
 
@@ -1342,13 +1347,9 @@ section.tech-spec {
     width: 70%;
 }
 
-.tech-heading {}
-
 .tech-heading {
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 }
-
-li {}
 
 .tech-parameter ul li h4 {
     color: #263D4F;
@@ -1461,30 +1462,51 @@ button.accordion-button {
     color: #263d4f;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
     .hero-content {
         padding-top: 100px;
+        padding-left: 0;
+        text-align: center;
     }
 
     .hero-title {
         font-size: 32px;
     }
 
+    .separator {
+        margin: 25px 110px;
+    }
+
+    .visuals-description {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 0;
+    }
+
     .hero-subtitle {
-        font-size: 22px;
+        font-size: 18px;
+        width: 80%;
+        text-align: center;
+        padding: 5px;
+        margin: 10px auto 0;
     }
 
     .hero-description {
         font-size: 16px;
-        max-width: 100%;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 320px;
     }
 
     .hero-section {
         height: 700px;
+        background-position: -950px center;
     }
 
     .hero-section:before {
-        height: 40%;
+        height: 60%;
+        width: 100%;
+        background-image: linear-gradient(181deg, #161817, transparent);
     }
 
     .features-section {
@@ -1661,9 +1683,22 @@ button.accordion-button {
     }
 
     .main-tab-box .nav-tabs .nav-link {
-        padding: 15px;
-        width: 215px;
+        padding: 10px;
+        width: 205px;
         justify-content: center;
+        margin: 0;
+    }
+
+    .connect-tab-box .nav-tabs .nav-link {
+        width: 170px !important;
+    }
+
+    .connect-tab-box ul li {
+        width: 100%;
+    }
+
+    .connect-tab-box ul {
+        margin-bottom: 30px;
     }
 
     .main-tab-box {
@@ -1700,13 +1735,19 @@ button.accordion-button {
     }
 
     .range-level {
-        font-size: 14px;
+        font-size: 11px;
         left: 30px;
+    }
+
+    .last-value {
+        margin-top: 33px !important;
     }
 
     .range-value {
         font-size: 14px;
         margin-top: 20px;
+        left: 10px;
+        position: relative;
     }
 
     .highlight-heading {
@@ -1730,6 +1771,7 @@ button.accordion-button {
         font-size: 22px;
         background: -webkit-linear-gradient(left, #f2f863 0%, #42f4aa 80%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
@@ -1742,6 +1784,7 @@ button.accordion-button {
         background: -webkit-linear-gradient(left, #fff 0% 30%) !important;
         -webkit-text-fill-color: transparent !important;
         -webkit-background-clip: text !important;
+        background-clip: text;
     }
 
     .opration h3 {
@@ -1770,7 +1813,7 @@ button.accordion-button {
 
     section.connect-monitor {
         width: 100%;
-        margin: 140px auto;
+        margin: 100px auto;
     }
 
     .app-mob-web {
@@ -1796,6 +1839,7 @@ button.accordion-button {
         padding: 20px 0 0;
         gap: 9px;
         margin: 0 10px;
+        flex-direction: column;
     }
 
     .mob-app-heading ul li {
@@ -1804,8 +1848,10 @@ button.accordion-button {
 
     .mob-app-heading ul li a {
         gap: 10px;
-        padding: 10px 20px;
+        padding: 5px 20px;
         align-items: center;
+        width: 60%;
+        margin: 0 auto;
     }
 
     .mob-app-heading ul li a span {
@@ -1897,8 +1943,28 @@ button.accordion-button {
     }
 
     .app-slide-review-box img {
-        width: 80%;
+        width: 97%;
         height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .time-saver-txt h2 span {
+        color: #1d1d1dd1;
+    }
+
+    .whats-indoor-heading {
+        padding-bottom: 0px;
+    }
+
+    .app-slide-review-box h4 {
+        padding-top: 20px;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    .review-slider ul {
+        gap: 0;
     }
 
     .review-slider {
@@ -1906,7 +1972,7 @@ button.accordion-button {
     }
 
     .react-multiple-carousel__arrow--left {
-        left: calc(73% + 1px) !important;
+        left: calc(70% + 1px) !important;
     }
 
     .app-heading {
@@ -1931,7 +1997,12 @@ button.accordion-button {
     }
 
     .cause-txt-box h3 {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .science-smell-heading {
+        padding-bottom: 10px;
     }
 
     .cause-txt-box p {
@@ -1962,6 +2033,7 @@ button.accordion-button {
     .time-saver-txt h2 {
         font-size: 30px;
         width: 80%;
+        height: 70px;
     }
 
     .time-saver-txt p {
@@ -2089,7 +2161,7 @@ button.accordion-button {
 
     section.tech-spec {
         padding-top: 60px;
-        width: 90%;
+        width: 100%;
     }
 
     .tech-heading h2 {
@@ -2125,14 +2197,20 @@ button.accordion-button {
     }
 
     .tech-parameter ul li h4 {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    .mob-grid:after {
+        left: 0;
+        right: 0;
+        bottom: 90px;
     }
 
     .mob-grid:before {
         height: 60px;
         left: 0;
         right: 0;
-        top: 70px;
+        top: 50px;
     }
 
     section.faq-sec {
@@ -2140,6 +2218,661 @@ button.accordion-button {
     }
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) {}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .hero-section {
+        height: auto;
+        margin-top: 10px;
+    }
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px) {}
+    .hero-content {
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 15px 20px;
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 24px;
+        margin-top: 20px;
+        width: 44%;
+    }
+
+    .features-section {
+        margin-top: 50px;
+        padding: 0 30px;
+    }
+
+    .parameters-section {
+        margin-top: 60px;
+        height: auto;
+    }
+
+    .parameters-section:before {
+        border-radius: 0;
+    }
+
+    .parameters-content {
+        padding: 30px 20px 40px;
+    }
+
+    .title-gray {
+        font-size: 30px;
+    }
+
+    .parameters-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .parameters-grid {
+        gap: 0px;
+        margin-top: 30px;
+        width: 60%;
+    }
+
+    .parameter-icon img {
+        width: 50px;
+    }
+
+    .parameter-item h3 {
+        font-size: 14px;
+        line-height: 22px;
+        width: 70%;
+    }
+
+    .wifi-section {
+        margin-top: 0px;
+        padding: 0 20px;
+    }
+
+    p.wifi-description {
+        font-size: 20px;
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .wifi-image {
+        text-align: center;
+    }
+
+    .separator {
+        margin: 15px 105px;
+    }
+
+    .visuals-section {
+        margin-top: 50px;
+        padding: 0 30px;
+    }
+
+    .visuals-description {
+        font-size: 18px;
+        padding-left: 0;
+    }
+
+    .main-tab-box ul {
+        flex-wrap: nowrap;
+        gap: 7px;
+    }
+
+    .main-tab-box .nav-tabs .nav-link img {
+        width: 20px;
+        height: auto;
+    }
+
+    .main-tab-box .nav-tabs .nav-link {
+        padding: 10px 15px;
+        width: 100%;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+
+    .pollutants-section {
+        padding: 30px;
+        height: auto;
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .pollutant-nav-tabs {
+        gap: 10px;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .param-box {
+        margin-bottom: 10px;
+    }
+
+    .range-level {
+        left: 20px;
+    }
+
+    section.connect-monitor {
+        margin: 100px auto;
+    }
+
+    .title-dark {
+        font-size: 30px;
+    }
+
+    .connect-tab-box ul li {
+        width: 30%;
+    }
+
+    .app-mob-web {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .mob-app-heading {
+        float: none;
+        top: 0px;
+        left: 10px;
+    }
+
+    .mob-app-heading h2 {
+        font-size: 24px;
+    }
+
+    .mob-app-heading ul li a img {
+        height: auto;
+        width: 30px;
+    }
+
+    .web-txt-part {
+        justify-content: center;
+        padding-top: 0;
+        flex-direction: column-reverse;
+    }
+
+    .web-dashboard-txt {
+        left: 0;
+        text-align: center;
+    }
+
+    .web-dashboard-txt h2 {
+        font-size: 24px;
+        width: 70%;
+        margin: 0 auto 40px;
+    }
+
+    .mob-img {
+        top: 0;
+    }
+
+    .web-dashboard-txt img {
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .web-dashboard img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .tv-txt-part {
+        padding-top: 0;
+        flex-direction: column-reverse;
+    }
+
+    .tv-dashboard-txt {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .tv-dashboard-txt h2 {
+        font-size: 24px;
+        width: 60%;
+        margin: 0 auto 40px;
+    }
+
+    .tv-dashboard {
+        width: 100%;
+    }
+
+    .tv-dashboard img {
+        width: 50%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .review-slider ul {
+        gap: 0;
+    }
+
+    .app-slide-review-box {
+        margin: 0 20px;
+    }
+
+    .react-multiple-carousel__arrow--left {
+        left: calc(83% + 1px) !important;
+    }
+
+    section.science-smell {
+        padding-top: 20px;
+    }
+
+    .science-smell-heading h2 {
+        font-size: 26px;
+        width: 80%;
+    }
+
+    .science-smell-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .time-saver-txt {
+        bottom: 50px;
+        left: 20px;
+    }
+
+    .time-saver-txt h2 {
+        font-size: 26px;
+        width: 50%;
+    }
+
+    .time-saver-txt p {
+        font-size: 16px;
+    }
+
+    section.what-indoor {
+        padding-top: 50px;
+    }
+
+    .whats-indoor-heading h2 {
+        font-size: 28px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .whats-indoor-heading p {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .whats-indoor-heading {
+        padding-bottom: 20px;
+    }
+
+    .cleaing-score .top-icon li:nth-child(3) {
+        left: 0;
+    }
+
+    .cleaing-score .bottom-icon li:nth-child(3) {
+        left: 0;
+    }
+
+    .btn-tech {
+        margin-top: -100px;
+    }
+
+    .tech-parameter ul li {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .mob-grid:before {
+        left: 0;
+    }
+
+    .mob-grid:after {
+        left: 0;
+    }
+
+    .fc-logo img {
+        width: 15%;
+    }
+
+    section.tech-spec {
+        padding-top: 80px;
+    }
+
+    .mob-grid {
+        width: 100%;
+    }
+
+    .fc-logo {
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .hero-section {
+        height: auto;
+    }
+
+    .hero-content {
+        padding-top: 100px;
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        width: 40%;
+    }
+
+    .features-section {
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+
+    .type-c ul {
+        padding: 30px 30px 0;
+    }
+
+    .parameters-section {
+        margin-top: 90px;
+        height: auto;
+    }
+
+    .parameters-section:before {
+        border-radius: 0;
+    }
+
+    .parameters-content {
+        padding: 30px 30px 50px;
+    }
+
+    .parameters-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .parameter-item h3 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .parameter-icon img {
+        width: 55px;
+    }
+
+    .wifi-section {
+        margin-top: 50px;
+        padding: 0 30px;
+    }
+
+    .wifi-badge {
+        margin-top: 50px;
+    }
+
+    .wifi-badge h2 {
+        width: 55%;
+    }
+
+    p.wifi-description {
+        font-size: 22px;
+        width: 100%;
+    }
+
+    .visuals-description {
+        font-size: 16px;
+        padding-left: 0;
+    }
+
+    .main-tab-box ul li {
+        width: 100%;
+    }
+
+    .main-tab-box .nav-tabs .nav-link {
+        font-size: 12px;
+    }
+
+    .main-tab-box .nav-tabs .nav-link img {
+        width: 20px;
+    }
+
+    .pollutant-nav-tabs {
+        width: 100%;
+        margin-left: auto;
+        margin-top: 30px;
+    }
+
+    .pollutants-title h2,
+    h3 {
+        font-size: 30px;
+    }
+
+    .title-dark {
+        font-size: 30px;
+    }
+
+    .pollutant-nav-tabs .nav-link {
+        font-size: 12px;
+    }
+
+    .pollutant-nav-tabs .nav-link img {
+        width: 15px;
+    }
+
+    .param-box {
+        margin-bottom: 10px;
+    }
+
+    .pollutants-section {
+        height: auto;
+        width: 90%;
+        margin: 80px auto;
+    }
+
+    .opration p {
+        font-size: 16px;
+        margin: 10px auto 20px;
+        width: 80%;
+    }
+
+    .cair-odour-box {
+        height: 300px;
+    }
+
+    .opration {
+        height: 300px;
+    }
+
+    section.connect-monitor {
+        margin: 90px auto;
+    }
+
+    .connect-tab-box ul li {
+        width: 25%;
+    }
+
+    .mob-img {
+        top: 0;
+    }
+
+    .app-mob-web {
+        height: auto;
+        padding: 50px;
+    }
+
+    .mob-app-heading {
+        float: none;
+        top: 0;
+        left: 0;
+    }
+
+    .mob-img ul {
+        margin: 40px 0 0;
+    }
+
+    .web-txt-part {
+        padding-top: 0;
+    }
+
+    .web-dashboard img {
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .web-dashboard-txt img {
+        height: auto;
+        margin-top: 40px;
+        margin-left: -35px;
+    }
+
+    .web-dashboard-txt {
+        left: 0;
+    }
+
+    .web-dashboard-txt h2 {
+        width: 100%;
+    }
+
+    .review-slider ul {
+        gap: 0;
+    }
+
+    .app-slide-review-box {
+        margin: 0 20px;
+    }
+
+    .review-slider {
+        padding-bottom: 100px;
+    }
+
+    .react-multiple-carousel__arrow--left {
+        left: calc(86% + 1px) !important;
+    }
+
+    section.science-smell {
+        padding-top: 20px;
+    }
+
+    .science-smell-heading h2 {
+        font-size: 30px;
+        width: 70%;
+    }
+
+    .cause-txt-box {
+        bottom: 20px;
+        left: 10px;
+    }
+
+    .time-saver-txt {
+        bottom: 50px;
+        left: 30px;
+    }
+
+    .time-saver-txt h2 {
+        font-size: 30px;
+        width: 40%;
+    }
+
+    .time-saver-txt p {
+        font-size: 16px;
+        width: 40%;
+    }
+
+    section.what-indoor {
+        padding-top: 60px;
+    }
+
+    .whats-indoor-heading h2 {
+        font-size: 30px;
+        width: 50%;
+    }
+
+    .whats-indoor-heading p {
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .whats-indoor-heading {
+        padding-bottom: 50px;
+    }
+
+    .cleaing-score {
+        height: 250px;
+    }
+
+    .odour-score {
+        height: 250px;
+    }
+
+    .odour-score .bottom-icon li:nth-child(3) {
+        top: 0;
+        left: 0;
+    }
+
+    .cleaing-score .bottom-icon li:nth-child(2) {
+        top: 0;
+        left: 0;
+    }
+
+    .cleaing-score .top-icon li:nth-child(3) {
+        top: 50px;
+        left: 0;
+    }
+
+    .cleaing-score .bottom-icon li:nth-child(3) {
+        top: 30px;
+        left: 0;
+    }
+
+    .waste-disposal .bottom-icon li:first-child {
+        top: 0px !important;
+    }
+
+    .cleaing-score .bottom-icon li:first-child {
+        left: 0;
+    }
+
+    .cleaing-score h4 {
+        font-size: 18px;
+        padding-top: 0;
+    }
+
+    .odour-score h4 {
+        font-size: 18px;
+        padding-top: 40px;
+    }
+
+    section.tech-spec {
+        padding-top: 60px;
+    }
+
+    .tech-parameter ul li h4 {
+        font-size: 16px;
+    }
+
+    .tech-parameter ul li {
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .mob-grid {
+        width: 100%;
+    }
+
+    .fc-logo img {
+        width: 8%;
+    }
+
+    .fc-logo {
+        padding-right: 0;
+    }
+}
