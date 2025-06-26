@@ -251,10 +251,11 @@ ul.portable-device li p {
 
 .parameters-section {
     margin-top: 120px;
-    height: 790px;
+    height: 760px;
     position: relative;
     background-image: url(/img/parameters-cair-odour-monitor.webp);
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .parameters-section:before {
@@ -341,7 +342,7 @@ p.wifi-description {
     color: #263d4f;
     font-weight: 400;
     padding-top: 10px;
-    width: 70%;
+    width: 80%;
 }
 
 p.wifi-description span {
@@ -354,7 +355,7 @@ p.wifi-description span {
 }
 
 .wifi-badge {
-    margin-top: 170px;
+    margin-top: 130px;
 }
 
 .separator {
@@ -454,9 +455,6 @@ h3 {
     gap: 20px;
 }
 
-.main-tab-box ul li {
-    width: 60%;
-}
 
 .main-tab-box .nav-tabs .nav-link.active {
     border-color: #f9faff;
@@ -1034,7 +1032,7 @@ section.what-indoor {
     color: #263D4F;
     font-size: 40px;
     font-weight: 600;
-    width: 28%;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -1118,7 +1116,7 @@ section.what-indoor {
 .odour-score .bottom-icon li:nth-child(3) {
     position: relative;
     top: 150px;
-    left: 90px;
+    left: 60px;
 }
 
 .waste-disposal .top-icon li:nth-child(1) {
@@ -2892,4 +2890,8 @@ button.accordion-button {
     .fc-logo {
         padding-right: 0;
     }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* Styles for desktop and large screens */
 }
