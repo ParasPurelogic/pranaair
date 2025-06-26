@@ -354,6 +354,15 @@ li.image-box h5 {
 .remote-data-iamges ul li:last-child h5 {
     position: relative;
     top: -60px;
+    font-size: 15px;
+}
+
+.product-slider-first .tab-content {
+    padding-top: 0;
+}
+
+div#productTabsContent {
+    padding-top: 0;
 }
 
 /* App Key Features */
@@ -1308,6 +1317,14 @@ h2.trusted_heading {
 
 .tab-pane.fade.show.active {
     height: auto;
+}
+
+.tab-content {
+    text-align: center;
+}
+
+div#Comonitora {
+    padding-top: 100px;
 }
 
 span.range_btn_Image img {

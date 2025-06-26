@@ -1533,9 +1533,11 @@ img.rosh-iocn {
 
 .product-specifi {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 15px 0;
   border-bottom: 1px solid #eee;
+  gap: 30px;
+  align-items: baseline;
 }
 
 .product-specifi:nth-child(odd) {
@@ -1573,11 +1575,16 @@ img.rosh-iocn {
 
 .applications-slider {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .breathalyzer-slider-img {
   margin-bottom: 30px;
+}
+
+button.accordion-button h3 {
+  font-size: 18px;
 }
 
 .breathalyzer-slider-img img {

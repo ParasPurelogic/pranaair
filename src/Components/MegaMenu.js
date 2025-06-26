@@ -1457,10 +1457,11 @@ export function AboutUsMegaMenu({ onClose }) {
           </div>
         ) : (
           <div
+            className="api-blogs"
             style={{
               display: "grid",
-              gap: "24px",
-              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "2px",
+              gridTemplateColumns: "repeat(2, 0fr)",
             }}
           >
             {blogs.map((blog) => (
@@ -1487,7 +1488,7 @@ export function AboutUsMegaMenu({ onClose }) {
               >
                 <div
                   style={{
-                    width: "500px",
+                    width: "560px",
                     height: "auto",
                     borderRadius: "6px",
                     overflow: "hidden",

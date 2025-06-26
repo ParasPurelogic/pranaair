@@ -107,7 +107,7 @@ export default async function AirQualitySolutions() {
             {/* Pollutants Features */}
             <div className="container pollution_cntr inner_container">
                 <div className="row d-flex justify-content-between custom">
-                    <div className="col flex-fill text-center">
+                    <div className="col-lg-3 flex-fill text-center">
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/pm2.5-parameter.png"
@@ -119,7 +119,7 @@ export default async function AirQualitySolutions() {
                             </div>
                         </div>
                     </div>
-                    <div className="col flex-fill text-center">
+                    <div className="col-lg-3 flex-fill text-center">
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/co2-gas-icon.png"
@@ -131,7 +131,7 @@ export default async function AirQualitySolutions() {
                             </div>
                         </div>
                     </div>
-                    <div className="col flex-fill text-center">
+                    <div className="col-lg-3 flex-fill text-center">
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/tvoc-parameter-icon.png"
@@ -143,7 +143,7 @@ export default async function AirQualitySolutions() {
                             </div>
                         </div>
                     </div>
-                    <div className="col flex-fill text-center">
+                    <div className="col-lg-3 flex-fill text-center">
                         <div className="feature_box">
                             <img
                                 src="https://www.pranaair.com/wp-content/uploads/2022/08/co-icon.png"
@@ -152,18 +152,6 @@ export default async function AirQualitySolutions() {
                             <div className="feature_wrap_box">
                                 <h2>{t("pollutantFeatures.co.title")}</h2>
                                 <p>{t("pollutantFeatures.co.description")}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col flex-fill text-center">
-                        <div className="feature_box">
-                            <img
-                                src="https://www.pranaair.com/wp-content/uploads/2022/08/noise-icon.png"
-                                alt="ozone in school & institutes"
-                            />
-                            <div className="feature_wrap_box">
-                                <h2>{t("pollutantFeatures.noise.title")}</h2>
-                                <p>{t("pollutantFeatures.noise.description")}</p>
                             </div>
                         </div>
                     </div>

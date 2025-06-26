@@ -482,7 +482,7 @@ a {
 
 .tab-content-para {
   text-align: left !important;
-  padding: 0px 25px 20px !important;
+  padding: 0px 0px 20px !important;
   font-size: 16px !important;
   background: transparent;
   width: 60%;
@@ -1003,6 +1003,7 @@ a.btn:hover .fa-arrow-right {
 
 .hospital {
   position: relative;
+  margin-top: 100px;
 }
 
 .hospital-heading {
@@ -1026,7 +1027,7 @@ a.btn:hover .fa-arrow-right {
 }
 
 .hospital-img {
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .hospital:before {
@@ -1034,7 +1035,7 @@ a.btn:hover .fa-arrow-right {
   background-image: linear-gradient(90deg, #000, #0000);
   width: 40%;
   left: 0;
-  height: 664px;
+  height: 100%;
   content: "";
   z-index: 1;
   bottom: 0;
@@ -1446,7 +1447,7 @@ a.btn:hover .fa-arrow-right {
   }
 
   .tab-content-para {
-    padding: 0px 25px 10px !important;
+    padding: 0px 0px 10px !important;
     font-size: 16px !important;
     width: 90%;
   }

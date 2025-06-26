@@ -1078,7 +1078,8 @@ a.right.carousel-control {
     }
 
     li.first_school_box {
-        left: 44px;
+        left: 0px;
+        position: relative;
     }
 
     .schhol_text_box {
@@ -1150,15 +1151,18 @@ a.right.carousel-control {
     }
 
     li.first_school_box {
-        left: 290px;
+        left: 0px;
+        position: relative;
     }
 
     li.second_school_box {
-        left: 0;
+        position: relative;
+        left: -100px;
     }
 
     li.third_school_box {
-        left: 270px;
+        left: -100px;
+        position: relative;
         top: 60px;
     }
 

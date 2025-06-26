@@ -306,6 +306,26 @@ ul.rate_list li {
     margin: 0 auto;
 }
 
+ul#ambientMonitorTabs li .nav-link.active {
+    background: #7ab261;
+    color: #fff;
+}
+
+ul#ambientMonitorTabs li .nav-link {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #3c3b3b;
+}
+
+.introduce_button a {
+    background: #7ab261;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
 .ambient_monitor_section .nav.nav-pills {
     display: flex;
     align-items: center;
@@ -364,7 +384,7 @@ ul.rate_list li {
     border-radius: 9px;
     padding: 20px 30px;
     margin: 0 auto;
-    width: 60%;
+    width: 90%;
 }
 
 .ambient_monitor_box p {
@@ -896,6 +916,10 @@ label.message_text {
     padding: 0 220px !important;
 }
 
+.accordion-header {
+    background: #e8e9e9;
+}
+
 @media screen and (max-width: 767px) {
     .school_banner_box {
         padding: 0;
@@ -904,11 +928,11 @@ label.message_text {
     .pocket_title_box.school_aqi_box h1 {
         font-size: 20px;
         line-height: normal;
-        color: #fff;
+        color: #000000;
     }
 
     .pocket_title_box.school_aqi_box span {
-        color: #fff;
+        color: #242424;
     }
 
     .pocket_title_box.school_aqi_box p {
@@ -1081,11 +1105,12 @@ label.message_text {
     }
 
     .feature_box img {
-        width: auto;
+        width: 60px;
+        height: auto;
     }
 
     .feature_wrap_box {
-        padding: 0 0 0 18px;
+        padding: 0px;
     }
 
     .pollution_cntr {
@@ -1169,7 +1194,8 @@ label.message_text {
     }
 
     .main-inner_box {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .ambient_monitor_section .tab-content {
@@ -1219,10 +1245,10 @@ label.message_text {
     }
 
     .school_banner_box {
-        padding: 0;
+        padding: 70px 0 0px;
         background-size: cover;
-        height: 370px;
-        background-position: -400px center;
+        height: 500px;
+        background-position: -500px center;
     }
 
     .school_img_box {
@@ -1321,8 +1347,6 @@ label.message_text {
     .six_school_box .schhol_text_box {
         min-width: 283px;
     }
-
-
 
     .vc_row.wpb_row.vc_row-fluid.school_img_box.vc_custom_1660844203328.vc_row-has-fill.vc_row-o-full-height.vc_row-o-columns-middle.vc_row-flex {
         background-size: cover !important;
@@ -1441,10 +1465,19 @@ ul.paramete_list {
     .testimonial-bg-image {
         background-size: cover;
         background-position: center;
-        height: 75vh;
+        height: auto;
         width: auto;
-        padding-top: 109px;
-        padding-left: 11px;
+        padding-top: 40px;
+        padding-left: 0;
+    }
+
+    .client_logo_section .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-section {
+        margin-top: 0px;
     }
 }
 
@@ -1594,7 +1627,7 @@ ul.paramete_list {
     }
 
     .air-qlty-banner-txt {
-        padding-top: 160px !important;
+        padding-top: 40px !important;
         margin-left: -10px !important;
         position: relative;
         top: 0px !important;
@@ -1649,7 +1682,7 @@ ul.paramete_list {
 
     .waterproof-housing {
         margin-top: 20px !important;
-        margin-left: -70px !important;
+        margin-left: 0px !important;
     }
 
     .waterproof-housing img {
@@ -1799,6 +1832,10 @@ ul.paramete_list {
 
     .ambient_monitor_section .tab-content {
         width: 90%;
+    }
+
+    .school_box_cntr {
+        width: 100%;
     }
 }
 

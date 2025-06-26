@@ -1143,9 +1143,9 @@ label.message_text {
     }
 
     .client_logo_section img {
-        width: 30%;
+        width: 50%;
         display: block;
-        margin: 0 auto 30px;
+        margin: 0 auto 20px;
     }
 
     .airgraph_cntr {
@@ -1171,8 +1171,18 @@ label.message_text {
     padding: 10px 30px;
 }
 
+.app_img_bx {
+    margin: 0 10px;
+}
+
+.client_logo_section.inner_container .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .solution-tab ul .nav-link {
     margin: 0px 30px;
+    color: #000;
 }
 
 .faq-section {

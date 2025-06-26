@@ -19,35 +19,11 @@
   --footer-border: #2a2f2a;
 }
 
-body {
-  padding-top: var(--header-height);
-  font-family: "Nunito Sans", sans-serif;
-  margin-top: -10px;
+
+.py-4 {
+  padding-top: 0 !important;
 }
 
-.main-content {
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-.container-fluid {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 @media (min-width: 576px) {
   .container {

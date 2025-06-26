@@ -117,14 +117,6 @@ main.main.py-4 {
   object-fit: contain;
 }
 
-/* Product Information */
-.product-info {
-  display: flex;
-  flex-direction: column;
-  padding: 50px 0 0;
-  text-align: left;
-}
-
 .product-title {
   font-size: 32px;
   font-weight: 700;
@@ -2105,30 +2097,37 @@ html {
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
   .mini-co2 {
     left: 0;
-}
-.ultra-hd {
-  width: 100%;
-  padding-left: 0;
-  top: 50px !important;
-}
-.calibration {
-  left: 0;
-}
-.product-key-img img {
-  max-width: 50%;
-}
-.product-key-img {
-  margin-top: 0;
-}
-.brightness {
-  left: 0;
-  top: -50px;
-}
-.key-function-item {
-  left: 0;
-  top: 0;
-}
-.brochore-btn a {
-  width: 35%;
-}
+  }
+
+  .ultra-hd {
+    width: 100%;
+    padding-left: 0;
+    top: 50px !important;
+  }
+
+  .calibration {
+    left: 0;
+  }
+
+  .product-key-img img {
+    max-width: 50%;
+  }
+
+  .product-key-img {
+    margin-top: 0;
+  }
+
+  .brightness {
+    left: 0;
+    top: -50px;
+  }
+
+  .key-function-item {
+    left: 0;
+    top: 0;
+  }
+
+  .brochore-btn a {
+    width: 35%;
+  }
 }

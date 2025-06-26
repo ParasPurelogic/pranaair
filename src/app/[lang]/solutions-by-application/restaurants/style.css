@@ -1165,6 +1165,16 @@ label.message_text {
     .airqulality_contact_section {
         padding: 0 0px !important;
     }
+
+    .client_logo_section.inner_container .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pollution_cntr.inner_container .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .solution-tab ul {
@@ -1199,10 +1209,16 @@ label.message_text {
     .airqulality_contact_section {
         padding: 0 !important;
     }
+
     .contact-heading p {
         width: 80%;
     }
+
     .pollution_cntr .feature_box p {
         padding: 0;
+    }
+
+    .airgraph_cntr {
+        padding: 0 70px !important;
     }
 }

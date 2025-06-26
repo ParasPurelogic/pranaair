@@ -261,7 +261,7 @@ li.sixth_school_box {
 }
 
 .pocket_title_box.school_aqi_box {
-    padding: 130px 0 0 15%;
+    padding: 200px 0 0 0%;
     position: relative;
 }
 
@@ -974,11 +974,6 @@ button.slick-prev.default.slick-arrow i {
     left: -14px;
 }
 
-@media screen and (min-width: 1700px) and (max-width: 2000px) {
-    .pocket_title_box.school_aqi_box {
-        padding: 110px 0 0 25%;
-    }
-}
 
 @media screen and (max-width: 767px) {
     .school_banner_box {
@@ -1282,7 +1277,7 @@ button.slick-prev.default.slick-arrow i {
     }
 
     .school_img_box {
-        min-height: 495px !important;
+        min-height: 700px !important;
     }
 
     li.second_school_box {
@@ -1737,23 +1732,6 @@ button.slick-prev.default.slick-arrow i {
     overflow: hidden;
 }
 
-.product-info {
-    flex: 1;
-    padding: 30px;
-}
-
-.product-info h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.product-info p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
 
 .feature-list {
     list-style: none;

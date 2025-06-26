@@ -76,7 +76,7 @@ p {
 }
 
 .pocket_title_box.school_aqi_box {
-  padding: 110px 0 0 15%;
+  padding: 200px 0 0 0%;
 }
 
 .pocket_title_box.school_aqi_box h1 {
@@ -91,13 +91,17 @@ p {
   display: block;
   color: #78ae60;
 }
+
 .contact-heading {
   padding-top: 50px !important;
 }
+
 .pocket_title_box .rate_list {
   margin-top: 15px;
   list-style: none;
   padding-left: 0;
+  display: flex;
+  gap: 30px;
 }
 
 ul.rate_list li {
@@ -128,7 +132,7 @@ ul.rate_list li {
 }
 
 .introducing_box.sub_title_box {
-  padding: 45px 0;
+  padding: 45px 0 0;
 }
 
 .sub_title_box .title_heading {
@@ -285,9 +289,11 @@ li.fivth_school_box {
   0% {
     transform: translatey(0px);
   }
+
   50% {
     transform: translatey(-10px);
   }
+
   100% {
     transform: translatey(0px);
   }
@@ -662,6 +668,7 @@ label.message_text {
 }
 
 @media screen and (max-width: 992px) {
+
   .col-md-1-5,
   .col-md-3,
   .col-md-4,
@@ -704,7 +711,7 @@ label.message_text {
   }
 
   .pocket_title_box.school_aqi_box {
-    padding: 10px 30px 80px;
+    padding: 150px 10px 70px;
   }
 
   .pocket_title_box.school_aqi_box h1 {
@@ -719,12 +726,14 @@ label.message_text {
   .feature_box {
     padding: 13px 15px;
   }
+
   .img-responsive {
     width: 50%;
     height: auto;
     display: block;
     margin: 0 auto;
-}
+  }
+
   .airqulality_contact_section {
     padding: 0 15px !important;
   }

@@ -254,11 +254,11 @@ a {
 }
 
 .seamless-para {
-  background: #FBFFF9;
+  background: #fbfff9;
   margin: 0;
   border: 1px solid #00000024;
-  padding: 60px 50px 60px 50px;
-  width: 430px;
+  padding: 40px 30px;
+  width: 450px;
   margin-top: 80px;
 }
 
@@ -1467,7 +1467,7 @@ button.tab-title.active {
   height: 7px;
   left: -20px;
   margin: 0 auto;
-  top: 70px;
+  top: 50px;
 }
 
 .may-also a img {

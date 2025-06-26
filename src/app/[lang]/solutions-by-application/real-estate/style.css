@@ -360,16 +360,6 @@ ul#solutionsTabs li button.active {
   flex: 1;
 }
 
-.product-info h3 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.product-info p {
-  margin-bottom: 20px;
-}
-
 .feature-list {
   list-style: none;
   padding: 0;

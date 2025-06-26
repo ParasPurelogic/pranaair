@@ -385,9 +385,9 @@ ul.airquality_list.red_list li {
   content: "";
   background: #f1f7ef;
   width: 70%;
-  height: 400px;
+  height: 100%;
   left: 0;
-  top: 80px;
+  top: 0;
 }
 
 .line {
@@ -1455,14 +1455,8 @@ label.message_text {
   font-size: 16px;
 }
 
-.contact-card {
-  display: flex;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  max-width: 1000px;
-  margin: 0 auto;
+.app_service_box a h4 {
+  font-size: 14px;
 }
 
 .contact-sidebar {

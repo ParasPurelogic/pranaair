@@ -31,6 +31,7 @@ body p,
     padding: 0 0 160px;
     background-size: cover;
     width: 100%;
+    height: 700px;
     background-position: center;
 }
 
@@ -398,6 +399,11 @@ span.bold_text {
     background: #78AE60 !important;
     margin: 12px 0 0 0 !important;
     box-shadow: 2px 2px 8px -1px #ccc;
+}
+
+.introducing_box.sub_title_box p {
+    color: #262729a1;
+    font-size: 18px;
 }
 
 .air_quality_tab_sec .wpb_tabs.tab-style-one .wpb_tabs_nav>li.ui-state-active {
@@ -779,15 +785,15 @@ section.img-box-sec {
 
 @media screen and (min-width:1700px) and (max-width:2000px) {
     .pocket_title_box.school_aqi_box {
-        padding: 110px 0 0 40%;
+        padding: 250px 0 0 20%;
     }
 }
 
 @media screen and (max-width:767px) {
     .school_banner_box {
         padding: 0;
-        background-size: cover;
-        background-position: center;
+        height: 400px;
+        background-position: -320px center !important;
     }
 
     .pocket_title_box.school_aqi_box h1 {
@@ -902,6 +908,12 @@ section.img-box-sec {
 
     .air_quality_box h3 {
         font-size: 22px;
+        padding-left: 30px;
+    }
+
+    .client_logo_section.inner_container .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .tab-style-one.wpb_tabs .wpb_tabs_nav a {
@@ -1049,7 +1061,21 @@ section.img-box-sec {
     }
 
     .pocket_title_box.school_aqi_box {
-        padding: 10px 30px 30px;
+        padding: 100px 30px 30px;
+    }
+
+    .custom {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pollution_cntr.inner_container .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    span.school_icon_box {
+        left: 0;
     }
 
     span.vs_text {
@@ -1220,13 +1246,38 @@ section.img-box-sec {
     margin-bottom: 50px;
 }
 
+.contact-heading h2 {
+    color: #070707 !important;
+}
+
+.contact-section:before {
+    display: none;
+}
+
+.box-form {
+    background-image: none;
+    box-shadow: none;
+}
+
 .accordion-button:not(.collapsed) {
-    background: transparent;
-    color: #0c0c0c;
+    color: #333131 !important;
+    background-color: #f4f4f4 !important;
+}
+
+.client_logo_section.inner_container .row {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .accordion-item {
     border: none;
+}
+
+.collapse.show {
+    background: #f4f4f4;
+}
+
+.faq-tab-para {
+    color: #272727b5;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
@@ -1252,5 +1303,19 @@ section.img-box-sec {
 
     .custom {
         flex-wrap: wrap;
+    }
+
+    .school_banner_box {
+        height: 530px;
+    }
+
+    .pocket_title_box.school_aqi_box h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .custom {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

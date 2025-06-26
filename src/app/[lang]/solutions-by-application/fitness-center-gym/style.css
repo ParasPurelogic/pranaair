@@ -21,6 +21,7 @@ body p,
 
 ul#airQualityTabs li button {
     padding: 10px 10px;
+    color: #000;
 }
 
 div#airQualityTabsContent {
@@ -37,6 +38,7 @@ ul#airQualityTabs li button.active {
     background-size: cover;
     width: 100%;
     background-position: center;
+    height: 750px;
 }
 
 .contact_info i.fa.fa-phone {
@@ -184,7 +186,7 @@ li.fourth_school_box {
 }
 
 .pocket_title_box.school_aqi_box {
-    padding: 110px 0 0 15%;
+    padding: 200px 0 0 20%;
 }
 
 .banner_quality_box.wpb_column.vc_column_container.vc_col-sm-6 {
@@ -796,11 +798,6 @@ label.message_text {
     border: none;
 }
 
-@media screen and (min-width:1700px) and (max-width:2000px) {
-    .pocket_title_box.school_aqi_box {
-        padding: 110px 0 0 40%;
-    }
-}
 
 @media screen and (max-width:767px) {
     .school_banner_box {
@@ -1182,6 +1179,17 @@ label.message_text {
     .school_banner_box {
         background-size: cover;
         background-position: center;
+        height: 350px;
+    }
+
+    .pollution_cntr .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .client_logo_section.inner_container .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .pollution_cntr .feature_box p {
@@ -1235,5 +1243,9 @@ label.message_text {
 
     .airqulality_contact_section {
         padding: 0 !important;
+    }
+
+    .pollution_cntr .feature_box p {
+        padding: 0;
     }
 }
