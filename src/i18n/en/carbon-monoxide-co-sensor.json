@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air CO Sensor 500 PPM | Electrochemical - Highly Accurate",
+    "description": "Prana Air CO sensor is an electrochemical sensor of compact size, highly sensitive, accurate data and energy efficient with 500 PPM range.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
     "coSensorHero": {
     "title": "CO SENSOR",
     "type": "CO SENSOR",

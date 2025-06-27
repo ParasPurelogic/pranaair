@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air: Air Quality Sensors PM2.5, CO, CO2, O3, SO2, NO2",
+    "description": "Prana Air's best air quality sensors give highly accurate air pollution data, i.e, PM2.5, PM10, CO, CO2, NO2, SO2, O3, H2S, NH3, TVOC, etc.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
     "airQualitySensorsBanner": {
     "companyName": "Prana Air",
     "title": "Air Quality Sensors",

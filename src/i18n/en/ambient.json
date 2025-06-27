@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air CAAQMS Ambient Air Quality Monitoring System | Outdoor",
+    "description": "Prana Air provides CAAQMS continuous ambient air quality monitoring system - an outdoor device with highly accurate air pollution sensors.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
   "ambient": {
     "title": "Prana Air",
     "heading": {
@@ -667,37 +672,6 @@
     "exploreMore": "Explore More",
     "imageAlt": "prana air sensor data accuracy graph",
     "comparisonAlt": "prana air data accuracy comparison"
-  },
-  "caseStudies": {
-    "title": "Case Studies",
-    "description": "Here are some of the top organizations that have installed our ambient monitors.",
-    "readMore": "Read More",
-    "items": {
-      "0": {
-        "title": "Delhi Construction Site",
-        "alt": "Delhi construction site case study",
-        "image": "/placeholder.svg?height=200&width=300&query=construction site case study",
-        "link": "/case-studies/delhi-construction"
-      },
-      "1": {
-        "title": "Mumbai Smart City",
-        "alt": "Mumbai smart city case study",
-        "image": "/placeholder.svg?height=200&width=300&query=smart city case study",
-        "link": "/case-studies/mumbai-smart-city"
-      },
-      "2": {
-        "title": "Bangalore Tech Park",
-        "alt": "Bangalore tech park case study",
-        "image": "/placeholder.svg?height=200&width=300&query=tech park case study",
-        "link": "/case-studies/bangalore-tech-park"
-      },
-      "3": {
-        "title": "Chennai Airport",
-        "alt": "Chennai airport case study",
-        "image": "/placeholder.svg?height=200&width=300&query=airport case study",
-        "link": "/case-studies/chennai-airport"
-      }
-    }
   },
   "constructionSite": {
     "count": "150+",

@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Outdoor Air Quality Monitor | Solar Powered | Prana Sense",
+    "description": "Enhance accuracy and reliability in air quality monitoring with Prana Sense advanced outdoor air quality monitor.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
     "applications": {
         "heading": {
       "title": "Applications",

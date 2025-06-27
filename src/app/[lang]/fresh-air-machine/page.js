@@ -5,6 +5,7 @@ import { getServerTranslation } from "@/i18n/server"
 import Image from "next/image"
 import Link from "next/link"
 
+
 export default async function FreshAirMachine() {
   const { t } = await getServerTranslation("fresh-air-machine")
   const faqItems = [

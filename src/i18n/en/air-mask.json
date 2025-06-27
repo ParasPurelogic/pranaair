@@ -1,9 +1,14 @@
 {
+  "meta": {
+    "title": "Buy Best Anti-Pollution Air Mask Online | Prana Air",
+    "description": "Prana Air offers N95 and electric air masks with advanced filtration technology to protect you from pollutants, dust, and allergens."
+  },
   "airMask": {
     "motorized": "Motorized",
     "heading": "Be safe out there with N95 pollution mask",
     "description": "Maximum protection from dangerous pollutants",
     "buyNow": "Buy Now",
+    
     "price": "₹2,990"
   },
    "heading": {
@@ -285,57 +290,6 @@
       "amazon": "amazon",
       "amazonAlt": "Amazon logo"
     }
-  },
-   "faq": {
-    "title": {
-      "line1": "Frequently Asked Questions",
-      "line2": "About Prana Air Mask"
-    },
-    "questions": [
-      {
-        "question": "Is the air mask available in white color only?",
-        "answer": "- There are 3 colors of the cap only for 2nd Gen Mask- White, Pink, Grey."
-      },
-      {
-        "question": "Are the mask straps adjustable?",
-        "answer": "- Yes, you can adjust the air mask straps."
-      },
-      {
-        "question": "How to charge it?",
-        "answer": "- It is easily chargeable with a micro USB cable."
-      },
-      {
-        "question": "How many modes of the fan are there?",
-        "answer": "- The air mask comes with 3 different fan modes. It is adjustable depending on the pollution level."
-      },
-      {
-        "question": "How much does it weigh?",
-        "answer": "- It is a lightweight air mask, with a weight of 70 grams."
-      },
-      {
-        "question": "How long does the battery last when fully charged?",
-        "answer": "- The battery lasts up to 2 hours on a single full charge."
-      },
-      {
-        "question": "Does the air mask help protect from viruses like COVID-19?",
-        "answer": "-Yes, it is highly recommended to wear a mask to stop the virus from spreading."
-      },
-      {
-        "question": "How many filters does the mask have?",
-        "answer": "- There is only 1 filter with multi-layer of pre-filter & HEPA filter."
-      },
-      {
-        "question": "What air pollutants can the mask filter out?",
-        "answer": "- Dust (PM10, PM2.5), Carbon Monoxide, Sulphur Dioxide, Smoke, etc."
-      },
-      {
-        "question": "Is the fan speed adjustable?",
-        "answer": "- Yes, the fan speed is adjustable, you can adjust it with 3 different modes."
-      },
-      {
-        "question": "How efficient is the Prana Air- Air Mask?",
-        "answer": "- The purification efficiency of the air mask is up to 95.99%."
-      }
-    ]
   }
+  
 }

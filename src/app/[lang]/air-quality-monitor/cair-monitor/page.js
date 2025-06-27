@@ -4,6 +4,41 @@ import TvAppTabs from '@/Components/Pages/CairMonitor/TvApptabs'
 import InstallationSlider from "@/Components/Pages/CairMonitor/InstallationSlider"
 import { getServerTranslation } from "@/i18n/server"
 
+// ✅ SEO Metadata
+export async function generateMetadata() {
+  const { t } = await getServerTranslation("cair");
+  const title = t("meta.title");
+  const description = t("meta.description");
+  const image = t("meta.image") || "https://www.pranaair.com/images/air-drone.jpg";
+  const url = `https://www.pranaair.com/air-drone`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        en: "https://www.pranaair.com/air-drone",
+        hi: "https://www.pranaair.com/hi/air-drone",
+      }
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Prana Air",
+      type: "website",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: "Air Drone - Prana Air"
+        }
+      ]
+    }
+  };
+}
 export default async function CairMonitor() {
   const { t } = await getServerTranslation("cair")
 

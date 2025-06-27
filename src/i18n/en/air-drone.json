@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Air Quality Drone Monitoring | Prana Air",
+    "description": "Monitor air quality in hard-to-reach areas using Prana Air Drone-based monitoring solutions.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
   "hero": {
     "title": "AIR QUALITY MONITORING DRONE",
     "subtitle": "Transforming Environmental Insights Real-time Air Quality Data with Cutting-edge Drone Technology"

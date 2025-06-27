@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air Sensible+ Indoor Air Quality Monitor - PM2.5, CO2, NO2",
+    "description": "Prana Air Sensible+ Indoor Air Quality Monitor (IAQ) Measures PM2.5 CO, CO2, O3, NO2, SO2, TVOC parameters and other pollutants",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
      "sensibleBanner": {
     "title": {
       "highlight": "Sensible+",

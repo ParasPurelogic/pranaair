@@ -1,4 +1,9 @@
 {
+   "meta": {
+    "title": "Prana Air Oxygen Monitor (OxyCO) | O2 & CO Air Quality Detector",
+    "description": "Prana Air Oxygen Monitor (OxyCO) detects O2, CO, and CO2 levels, ensuring healthier air quality for homes, offices, and industries.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
      "oxygenHero": {
     "title": "Oxygen Monitor",
     "subtitle": "Live Easy with OxyCO Monitor",

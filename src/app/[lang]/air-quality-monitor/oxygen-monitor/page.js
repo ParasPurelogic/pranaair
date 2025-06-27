@@ -1,9 +1,43 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style.css"
-
 import { getServerTranslation } from "@/i18n/server"
 import OxyGenslider from "@/Components/Pages/OxygenMonitor/carousel"
 
+// ✅ SEO Metadata
+export async function generateMetadata() {
+    const { t } = await getServerTranslation("oxygen-monitor");
+    const title = t("meta.title");
+    const description = t("meta.description");
+    const image = t("meta.image") || "https://www.pranaair.com/images/air-drone.jpg";
+    const url = `https://www.pranaair.com/air-drone`;
+
+    return {
+        title,
+        description,
+        alternates: {
+            canonical: url,
+            languages: {
+                en: "https://www.pranaair.com/air-drone",
+                hi: "https://www.pranaair.com/hi/air-drone",
+            }
+        },
+        openGraph: {
+            title,
+            description,
+            url,
+            siteName: "Prana Air",
+            type: "website",
+            images: [
+                {
+                    url: image,
+                    width: 1200,
+                    height: 630,
+                    alt: "Air Drone - Prana Air"
+                }
+            ]
+        }
+    };
+}
 export default async function OxygenMonitor() {
     const { t } = await getServerTranslation("oxygen-monitor")
     const appresponsive = [

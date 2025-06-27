@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air Pocket PM2.5 Monitor (WiFi) | Portable Pollution Detector",
+    "description": "Prana Air Pocket PM2.5 Monitor (WiFi) is the smallest and portable air pollution device that tells real-time PM2.5, and PM10.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
       "hero": {
     "title": {
       "productName": "Pocket PM2.5",

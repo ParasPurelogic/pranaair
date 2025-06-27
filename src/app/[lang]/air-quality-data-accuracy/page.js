@@ -3,6 +3,14 @@ import { getServerTranslation } from "@/i18n/server"
 import Link from "@/Components/TranslateLink"
 import { domain } from "@/config"
 
+// ✅ SEO Metadata
+export async function generateMetadata() {
+    const { t } = await getServerTranslation("data-accuracy");
+    return {
+        title: t("meta.title"),
+        description: t("meta.description"),
+    };
+}
 export default async function AirQualityDataAccuracy() {
     const { t } = await getServerTranslation("data-accuracy")
     return (

@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Sensible Indoor Air Quality Monitor | PM2.5, PM10, CO, CO2, O3 | Prana Air",
+    "description": "Know the quality of air by Prana Air Sensible Indoor Air Quality Monitor and highly accurate gases pollution sensors of PM2.5, PM10, CO, CO2, O3, HCHO, TVOCs.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
      "homeBanner": {
     "title": "Sensible Air Monitor",
     "description": "keep a track of indoor air quality along-with ambient indoor & outdoor PM level.",

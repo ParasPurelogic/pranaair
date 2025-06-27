@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air SO2 Sensor (Sulfur Dioxide) 50 PPM Range",
+    "description": "Prana Air SO2 Sensor (Sulfur Dioxide) - 50 PPM range works on electrochemical technology and it is compact, durable & accurate",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
   "pmSensorHero": {
     "title": "SO2 SENSOR",
     "type": "SO2 SENSOR",

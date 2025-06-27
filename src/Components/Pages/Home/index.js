@@ -12,7 +12,6 @@ import { domain } from "@/config"
 export default async function PranaAirHomepage() {
   // Initialize i18n
   const { t } = await getServerTranslation("home");
-
   return (
     <main>
       {/* Hero Section */}

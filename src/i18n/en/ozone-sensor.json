@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Ozone O3 Sensor 50 PPM | Electrochemical | Prana Air",
+    "description": "Prana Air Ozone O3 sensor is a compact, durable, highly responsive & accurate data and energy efficient electrochemical sensor",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
      "o3SensorHero": {
     "title": "O3 SENSOR",
     "type": "O3 SENSOR",

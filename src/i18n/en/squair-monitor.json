@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air SQUAIR Indoor Air Quality Monitor | WiFi - GSM Connectivity",
+    "description": "Prana Air SQUAIR indoor air quality monitor (IAQ) measures PM10, PM2.5, CO, CO2, O3, NO2, SO2, TVOC, HCHO with WiFi & GSM connectivity.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
      "squairBanner": {
     "title": {
       "brand": "Prana Air",

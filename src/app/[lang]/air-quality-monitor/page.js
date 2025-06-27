@@ -9,6 +9,41 @@ import AirQualitySensorSlider from "@/Components/Pages/AirQualityCommonMonitor/a
 import Link from "@/Components/TranslateLink"
 import { domain } from "@/config"
 
+// ✅ SEO Metadata
+export async function generateMetadata() {
+    const { t } = await getServerTranslation("common-monitor");
+    const title = t("meta.title");
+    const description = t("meta.description");
+    const image = t("meta.image") || "https://www.pranaair.com/images/air-drone.jpg";
+    const url = `https://www.pranaair.com/air-drone`;
+
+    return {
+        title,
+        description,
+        alternates: {
+            canonical: url,
+            languages: {
+                en: "https://www.pranaair.com/air-drone",
+                hi: "https://www.pranaair.com/hi/air-drone",
+            }
+        },
+        openGraph: {
+            title,
+            description,
+            url,
+            siteName: "Prana Air",
+            type: "website",
+            images: [
+                {
+                    url: image,
+                    width: 1200,
+                    height: 630,
+                    alt: "Air Drone - Prana Air"
+                }
+            ]
+        }
+    };
+}
 export default async function CommonMonitorPage() {
     const { t } = await getServerTranslation("common-monitor")
     const testimonials = [
@@ -1289,7 +1324,7 @@ export default async function CommonMonitorPage() {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div class="gases-text">
+                            <div className="gases-text">
                                 <h2>{t("hiddenImpact.title")}</h2>
                                 <p><strong>{t("hiddenImpact.subtitle")}</strong></p>
                                 <p>{t("hiddenImpact.description1")}</p>
@@ -1533,7 +1568,7 @@ export default async function CommonMonitorPage() {
                             <div className="air-quality-sensor-content">
                                 <h2>{t("airQualitySensors.title")}</h2>
                                 <h3>{t("airQualitySensors.subtitle")}</h3>
-                                <a class="know-more-btn" href="https://www.pranaair.com/air-quality-sensor/">{t("airQualitySensors.knowMore")}</a>
+                                <Link class="know-more-btn" href="https://www.pranaair.com/air-quality-sensor/">{t("airQualitySensors.knowMore")}</Link>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -1948,8 +1983,8 @@ export default async function CommonMonitorPage() {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="health-score-title">
-                                <h2><span class="green-txt">{t("healthScore.ai")}</span> {t("healthScore.calculated")}
-                                    <span class="green-txt">{t("healthScore.health")}</span> {t("healthScore.indexScore")}</h2>
+                                <h2><span className="green-txt">{t("healthScore.ai")}</span> {t("healthScore.calculated")}
+                                    <span className="green-txt">{t("healthScore.health")}</span> {t("healthScore.indexScore")}</h2>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -1973,7 +2008,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#fbb400' }}>
                                                 {t("healthScore.ventilation.score")} <br />
-                                                <span class="score-clr">{t("healthScore.ventilation.status")}</span>
+                                                <span className="score-clr">{t("healthScore.ventilation.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -1994,7 +2029,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#29b713' }}>
                                                 {t("healthScore.capacity.score")} <br />
-                                                <span class="score-clr">{t("healthScore.capacity.status")}</span>
+                                                <span className="score-clr">{t("healthScore.capacity.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -2015,7 +2050,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#fbb400' }}>
                                                 {t("healthScore.mites.score")} <br />
-                                                <span class="score-clr">{t("healthScore.mites.status")}</span>
+                                                <span className="score-clr">{t("healthScore.mites.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -2036,7 +2071,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#f4231c' }}>
                                                 {t("healthScore.virus.score")} <br />
-                                                <span class="score-clr">{t("healthScore.virus.status")}</span>
+                                                <span className="score-clr">{t("healthScore.virus.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -2059,7 +2094,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#f4231c' }}>
                                                 {t("healthScore.mold.score")} <br />
-                                                <span class="score-clr">{t("healthScore.mold.status")}</span>
+                                                <span className="score-clr">{t("healthScore.mold.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -2080,7 +2115,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#29b713' }}>
                                                 {t("healthScore.odor.score")} <br />
-                                                <span class="score-clr">{t("healthScore.odor.status")}</span>
+                                                <span className="score-clr">{t("healthScore.odor.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -2101,7 +2136,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#fbb400' }}>
                                                 {t("healthScore.filtration.score")} <br />
-                                                <span class="score-clr">{t("healthScore.filtration.status")}</span>
+                                                <span className="score-clr">{t("healthScore.filtration.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -2122,7 +2157,7 @@ export default async function CommonMonitorPage() {
                                         <li>
                                             <h4 style={{ color: '#f4231c' }}>
                                                 {t("healthScore.comfort.score")} <br />
-                                                <span class="score-clr">{t("healthScore.comfort.status")}</span>
+                                                <span className="score-clr">{t("healthScore.comfort.status")}</span>
                                             </h4>
                                         </li>
                                     </ul>
@@ -2389,7 +2424,7 @@ export default async function CommonMonitorPage() {
                             <div className="dppc-heading">
                                 <h2>{t("constructionSite.title")}</h2>
                                 <img src="https://www.pranaair.com/wp-content/uploads/2024/03/air-quality-device-at-construction-site.jpg" alt={t("constructionSite.imageAlt")} />
-                                <a class="dpcc-btn" href="https://www.pranaair.com/solutions-by-application/constructions/">{t("constructionSite.learnMore")}</a>
+                                <Link className="dpcc-btn" href="https://www.pranaair.com/solutions-by-application/constructions/">{t("constructionSite.learnMore")}</Link>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -2399,7 +2434,7 @@ export default async function CommonMonitorPage() {
                             </div>
                             <div className="site-coverd">
                                 <ul>
-                                    <li><span class="count">{t("constructionSite.sitesCount")}</span></li>
+                                    <li><span className="count">{t("constructionSite.sitesCount")}</span></li>
                                     <li>
                                         <h5>{t("constructionSite.sitesDescription")}</h5>
                                     </li>
@@ -2622,7 +2657,7 @@ export default async function CommonMonitorPage() {
                     </div>
                     <div className="row">
                         <div className="col-lg-6">
-                            <div class="historic-table-img">
+                            <div className="historic-table-img">
                                 <ul>
                                     <li><img src="https://www.pranaair.com/wp-content/uploads/2024/02/partical-counts.png" alt={t("dataInsight.particleCountsAlt")} /></li>
                                     <li><img src="https://www.pranaair.com/wp-content/uploads/2024/02/aqi-avrage.png" alt={t("dataInsight.aqiAverageAlt")} /></li>

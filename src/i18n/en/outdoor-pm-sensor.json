@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air Outdoor PM Sensor: PM2.5, PM10 Dust Pollution",
+    "description": "Prana Air laser outdoor PM sensor monitoring PM2.5 PM10 dust pollution using light scattering method and built-in photoelectric module.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
      "pmSensorHero": {
     "title": "PM SENSOR (LASER)",
     "description": {

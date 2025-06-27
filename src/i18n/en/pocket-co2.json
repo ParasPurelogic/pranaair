@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air Pocket CO2 Monitor (WiFi 📶): World's Smallest Portable Device",
+    "description": "Prana Air Pocket CO2 Monitor is the world's smallest & portable air quality device of an NDIR sensor with 📶 WiFi connectivity.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
   "banner": {
     "title": {
       "prefix": "Worlds Smallest",

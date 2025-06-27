@@ -2,6 +2,15 @@ import Image from "next/image"
 import "./style.css"
 import { getServerTranslation } from "@/i18n/server"
 
+// ✅ SEO Metadata
+export async function generateMetadata() {
+  const { t } = await getServerTranslation("air-mask");
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+}
+
 export default async function AirMaskPage() {
   const { t } = await getServerTranslation("air-mask")
   return (
@@ -1043,7 +1052,7 @@ export default async function AirMaskPage() {
 
       {/* FAQ Section - Using Bootstrap Accordion */}
       <div className="container">
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-12">
             <h3 style={{ textAlign: "center" }}>
               <span style={{ fontSize: "18pt" }}>{t("faq.title.line1")}</span>
@@ -1078,7 +1087,7 @@ export default async function AirMaskPage() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
