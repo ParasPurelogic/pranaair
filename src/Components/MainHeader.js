@@ -6,11 +6,9 @@ import { usePathname, useRouter } from "next/navigation"
 import { MegaMenu, SolutionsMegaMenu, KnowWhatMegaMenu, AboutUsMegaMenu, CaseStudiesMegaMenu } from "./MegaMenu"
 import { useTranslation } from "react-i18next"
 import { fetchLocalizedPosts, fetchLocalizedCaseStudies } from "../utils/wordpress-api"
+import { useCart } from "@/context/CartContext"
+import "@fortawesome/fontawesome-free/css/all.min.css"
 
-// Mock cart context
-const useCart = () => {
-  return { itemCount: 0 }
-}
 
 // Import the real product categories from mega menu
 import { getProductCategories, getSolutionsCategories, getKnowWhatArticles } from "./MegaMenu"
@@ -27,13 +25,14 @@ function MainHeader() {
   const [activeCategory, setActiveCategory] = useState(null)
   const [activeSubcategory, setActiveSubcategory] = useState(null)
   const [activeMobileMenu, setActiveMobileMenu] = useState(null)
-  const { itemCount } = useCart()
   const megaMenuRef = useRef(null)
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
   const [mobileBlogs, setMobileBlogs] = useState([])
   const [mobileCaseStudies, setMobileCaseStudies] = useState([])
   const [mobileBlogsLoading, setMobileBlogsLoading] = useState(false)
   const [mobileCaseStudiesLoading, setMobileCaseStudiesLoading] = useState(false)
+  const { cartItems } = useCart()
+  const cartCount = cartItems?.reduce((total, item) => total + item.quantity, 0)
 
   const languageDropdownRef = useRef(null)
 
@@ -52,11 +51,11 @@ function MainHeader() {
 
   // Navigation data with translation keys
   const mainNavItems = [
-    { label: t("nav.solutions"), href: "/solutions", hasDropdown: true, key: "solutions" },
-    { label: t("nav.products"), href: "/products", hasDropdown: true, key: "products" },
-    { label: t("nav.caseStudies"), href: "/case-studies", hasDropdown: true, key: "case-studies" },
-    { label: t("nav.knowWhat"), href: "/know-what", hasDropdown: true, key: "know-what" },
-    { label: t("nav.about"), href: "/about", hasDropdown: true, key: "about" },
+    { label: t("nav.solutions"), id: "solutions", hasDropdown: true, key: "solutions" },
+    { label: t("nav.products"), id: "products", hasDropdown: true, key: "products" },
+    { label: t("nav.caseStudies"), id: "case-studies", hasDropdown: true, key: "case-studies" },
+    { label: t("nav.knowWhat"), id: "know-what", hasDropdown: true, key: "know-what" },
+    { label: t("nav.about"), id: "about", hasDropdown: true, key: "about" },
   ]
 
   // Change language function with URL update
@@ -296,7 +295,7 @@ function MainHeader() {
                 <li key={item.key} className="nav-item">
                   {item.hasDropdown ? (
                     <>
-                      <Link href={(item.href)} className="nav-link">
+                      <div className="nav-link" style={{ cursor: "pointer" }}>
                         {item.label}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -311,7 +310,7 @@ function MainHeader() {
                         >
                           <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
-                      </Link>
+                      </div>
                       {item.key === "products" && (
                         <div className="mega-menu-container">
                           <MegaMenu onClose={() => { }} />
@@ -437,24 +436,15 @@ function MainHeader() {
               {t("nav.login")}
             </Link>
 
-            <Link href={("/cart")} className="cart-link">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-              </svg>
-              {itemCount > 0 && <span className="cart-badge">{itemCount}</span>}
+            <Link href="/cart" className="relative test-class group ml-4 cart-icon">
+              <i className="fas fa-shopping-cart text-2xl text-gray-800 group-hover:text-blue-600"></i>
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center animate-pulse">
+                  {cartCount}
+                </span>
+              )}
             </Link>
+
 
             {/* Mobile Menu Button */}
             <button

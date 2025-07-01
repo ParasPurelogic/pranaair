@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "What is Humidity?",
+    "description": "Humidity is the amount of water vapour in the air in its gaseous state. The ideal range of humidity should be maintained between 30-60%.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
       "products": {
   "co2Sensor": {
     "imageAlt": "CO2 Sensor",

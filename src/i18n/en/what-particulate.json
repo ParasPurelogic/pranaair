@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "What is Particulate Matter (PM)? | Prana Air",
+    "description": "PM, Particulate matter, or Particulate is a mixture of liquid and solid particles that are suspended in the air.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
       "products": {
   "co2Sensor": {
     "imageAlt": "CO2 Sensor",

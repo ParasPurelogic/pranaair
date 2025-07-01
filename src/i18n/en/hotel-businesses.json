@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Air Quality Solutions for Hotel Businesses | Prana Air",
+    "description": "Prana Air's air quality solutions are suited for hotel businesses. The occupancy of hotels is the main reasons for bad air quality.",
+    "image": "https://www.pranaair.com/images/og/air-drone.jpg"
+  },
     "industrialApplicationsData": {
         "hotel": {
             "title": "Solutions for Hotel"

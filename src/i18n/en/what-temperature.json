@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "What Is Temperature? | How It Affects Air Quality | Health Impacts",
+    "description": "Temperature affects air quality and health. Learn how high temperatures can lead to poor air quality and heat-related illnesses",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
   "temperature": {
     "banner": {
       "titleStart": "What does the word",

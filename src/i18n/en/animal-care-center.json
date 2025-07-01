@@ -1,4 +1,9 @@
-{
+{"meta": {
+    "title": "Air Quality Solutions For Animal Care Center, Labs | Prana Air",
+    "description": "Prana Air offers air quality solutions for animal care centers and labs. Ensure a healthier environment for animals with our technology.",
+    "image": "https://www.pranaair.com/images/og/air-drone.jpg"
+  },
+  
     "industrialApplicationsData": {
   "hotel": {
     "title": "Solutions for Hotel"
@@ -34,6 +39,7 @@
     "title": "Air quality Solutions for Railways"
   }
 },
+
 "animalFacilities": {
     "hero": {
       "title": "Air quality solutions for",

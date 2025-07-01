@@ -1,0 +1,322 @@
+{
+    "breadcrumb": {
+      "home": "Home",
+      "monitors": "Air Quality Monitors",
+      "breathalyzer": "Breathalyzer"
+    },
+    "product": {
+      "title": "Breathalyzer",
+      "subtitle": "Alcohol Detector",
+      "description": "Handheld | Fast Detect | Very Accurate",
+      "mrp": "m.r.p.",
+      "details": {
+        "part1": "Prana Air Breathalyzer is the ultimate portable device for accurate alcohol detection. With its cutting-edge fuel cell technology you can rely on precise and trustworthy results. Ensure safety and peace of mind wherever you go with this highly accurate and convenient breathalyzer.",
+        "part2": "Order yours today and prioritize responsible drinking."
+      },
+      "show_more": "Show More",
+      "model": "model",
+      "model_options": {
+        "breathalyzer": "Breathalyzer",
+        "nano_tvoc": "Nano TVOC & HCHO",
+        "nano_co": "Nano CO",
+        "nano_co2": "Nano CO2"
+      },
+      "quantity": "Quantity",
+      "add_to_cart": "Add to Cart"
+    },
+    "features": {
+      "title": "Qualitative features of the Breathalyzer",
+      "description": "Experience the Power of Precision with our Sleek Compact Alcohol Detector - Your Perfect Companion for Responsible Decisions.",
+      "compact_size": {
+        "title": "Compact and Portable",
+        "alt": "compact size"
+      },
+      "reliable": {
+        "title": "Accurate and Reliable",
+        "alt": "reliable icon"
+      },
+      "stable": {
+        "title": "Stable Performance",
+        "alt": "stable data icon"
+      },
+      "contactless": {
+        "title": "Contactless Testing",
+        "alt": "Contactless Testing"
+      },
+      "fuel_cell": {
+        "title": "GB05 Fuel Cell",
+        "alt": "fuel cell sensor"
+      },
+      "storage": {
+        "title": "On-Board Storage",
+        "alt": "on board storage"
+      },
+      "image_alt": "Breathalyzer"
+    },
+    "contactless": {
+      "title": "Contactless",
+      "subtitle": "Alcohol Detection",
+      "description": "Accurately measures BAC (Blood Alcohol Concentration) and alcohol concentration to eliminate drunk driving risks. Make responsible decisions and protect yourself and others on the road with Prana Air Breathalyzer ensuring accurate results.",
+      "icon_alt": "contactless breathalyzer icon",
+      "image_alt": "Contactless testing"
+    },
+    "functions": {
+      "product": "Product",
+      "key_functions": "Key functions",
+      "key_functions_img_alt": "prana air breathalyzer key functions",
+      "air": "Air",
+      "inlet": "Inlet",
+      "screen": "Screen",
+      "display": "Display",
+      "power": "Power",
+      "button": "Button",
+      "dimensions": "Dimensions",
+      "dimensions_description": "Prana Air Breathalyzer: Blending sleek design palm-sized convenience and compact dimensions for effortless portability and accurate alcohol detection on the go.",
+      "dimensions_img_alt": "prana air breathalyzer dimension"
+    },
+    "did_you_know": {
+      "title": "DID YOU KNOW?",
+      "description": "According to the Traffic Injury Prevention study <b>2-33%</b> of injured and <b>6-48%</b> of those who died in road traffic accidents had consumed alcohol. In <b>2019</b> there were <b>12256</b> accidents caused by drunk driving with <b>5325</b> people killed and <b>10564 injured</b>.",
+      "icon_alt": "do you know icon"
+    },
+    "how_to_use": {
+      "title": "How to use Breathalyzer",
+      "tabs": {
+        "alcohol_test": "Alcohol Test",
+        "date_time": "Date & Time",
+        "history_export": "History & Data Export"
+      },
+      "alcohol_test": {
+        "title": "Test Alcohol",
+        "description": "Follow these step-by-step instructions to precisely measure the alcohol level in every breath sample.",
+        "power_off_alt": "Auto power off",
+        "power_off_text": "The device automatically powers off after 20 seconds of inactivity.",
+        "step1_alt": "Prana Air Logo",
+        "step1_text": "Press the button for a second till the Prana Air Logo and Wait will appear.",
+        "step2_alt": "Blow for 5-6 seconds",
+        "step2_text": "Blow when the test bar shows blow for 5-6 seconds until the bar fills.",
+        "step3_alt": "Alcohol level display",
+        "step3_text": "Alcohol level (green/yellow/red) displays.",
+        "green": "Green",
+        "yellow": "Yellow",
+        "red": "Red",
+        "bac_explanation": "0.08%BAC means 0.08g (80mg) of alcohol per 100ml of blood."
+      },
+      "date_time": {
+        "title": "Setting the Time and Date on Your Breathalyzer",
+        "description": "Ensure accurate data logging by setting the correct time and date on your breathalyzer.",
+        "step1_alt": "Prana Air Logo",
+        "step1_text": "Press the button for a second till the Prana Air Logo and Wait will appear.",
+        "step2_alt": "Blow for 5-6 seconds",
+        "step2_text": "Once the device is turn on long-press the button to enter settings.",
+        "step3_alt": "Alcohol level display",
+        "step3_text": "Use short/long presses to adjust time and date and Long-press again to return to the main screen."
+      },
+      "history_export": {
+        "history_title": "Viewing Historical Records",
+        "history_description": "Easily access past test results along with their date and time to check records anytime and anywhere.",
+        "export_title": "Data Export:",
+        "export_description": "Effortlessly export your data for future analysis.",
+        "step1_alt": "Prana Air Logo",
+        "step1_text": "Press and hold the button until the Prana Air logo appears on the screen.",
+        "step2_alt": "Blow for 5-6 seconds",
+        "step2_text": "Short-press to view past records with date time and alcohol level.",
+        "step3_alt": "Alcohol level display",
+        "step3_text": "Connect via Type-C cable enable USB mode and access records in an Excel file."
+      },
+      "tutorials": {
+        "title": "Tutorials",
+        "video1_title": "Unboxing Video Of Prana Air Breathalyzer Alcohol Tester",
+        "video2_title": "How to Use Prana Air Breathalyzer Alcohol Detector"
+      }
+    },
+    "simplified_operation": {
+      "title": "Simplified Operation",
+      "description": "One-Button Operation Just Switch On and Blow into the Air Inlet.",
+      "image_alt": "Simple operation"
+    },
+    "instant_results": {
+      "title": "Instant Results at Your Fingertips",
+      "subtitle": "Get Accurate BAC Measurements within Seconds!",
+      "less_than": "less then",
+      "response_time": "10s Response time",
+      "image_alt": "Instant results"
+    },
+    "ranges": {
+      "title": "Ranges",
+      "description": "One-Button Operation Just Switch On and Blow into the Air Inlet.",
+      "icon_alt": "alcohol icon",
+      "no_alcohol": "No Alcohol",
+      "alcohol": "Alcohol",
+      "high_alcohol": "High Alcohol",
+      "bac_explanation": "*0.08%BAC means 0.08g (80mg) of alcohol per 100ml of blood."
+    },
+    "data_export": {
+      "title": "Data Export",
+      "description": "Download the recorded data in Excel file format with the help of a type-C data cable.",
+      "icon_alt": "connectivity icon",
+      "image_alt": "Data export",
+      "storage_icon_alt": "data storage icon",
+      "storable": "Storable",
+      "records": "1000 records"
+    },
+    "fuel_cell": {
+      "title": "Fuel Cell",
+      "accuracy_alt": "breathalyzer accuracy",
+      "subtitle": "Type Electrochemical Alcohol tester",
+      "description": "Independent Gb05 fuel cell alcohol detector with compact size highly sensitive electrochemical sensor for accurate breath alcohol detection.",
+      "sensor_title": "Fuel Cell",
+      "sensor_subtitle": "Sensor",
+      "sensor_image_alt": "Sensor"
+    },
+    "quote": {
+      "country": "India",
+      "text": "had the highest number of road traffic accidents injuries and deaths as compared to any other country in the world. People killed in drunk driving-related traffic accidents account for 3.5% of all road fatalities. (Report by Ministry Road Transport and Highways)"
+    },
+    "detection": {
+      "title": "Detection Type",
+      "description": "Accurate Alcohol Level Measurement No False Positives. Detects Alcohol Levels in:",
+      "image_alt": "Detection device",
+      "cold_drink_alt": "cold drink",
+      "garlic_alt": "garlic icon",
+      "onion_alt": "onion icon",
+      "carrot_alt": "carrot icon",
+      "milk_alt": "milk icon",
+      "food_smell_alt": "food smell icon"
+    },
+    "comparison": {
+      "brand": "Prana",
+      "title": "Air vs. Existing Breathalyzers",
+      "description": "A Comprehensive Comparison for Better Decision Making",
+      "comprehensive": "Comprehensive",
+      "breathalyzer": "Breathalyzer",
+      "fuel_cell": "Fuel Cell Sensor",
+      "alcohol_test": "Alcohol Test",
+      "data_export": "Data Export",
+      "onion_garlic": "Onion Garlic Smell",
+      "price": "Price",
+      "accuracy": "Accuracy",
+      "weight": "Weight",
+      "portability": "Portability",
+      "prana_air": "Prana Air",
+      "ordinary": "Ordinary Breathalyzers",
+      "high_end": "High-End Breathalyzers",
+      "prana_air_alt": "prana air breathalyzer",
+      "ordinary_alt": "ordinary cheap breathalyzer",
+      "high_end_alt": "high end expensive breathalyzer",
+      "not_detected": "Not detected",
+      "very_high": "Very High",
+      "lightweight": "Lightweight",
+      "easily_portable": "Easily Portable",
+      "detected_as_alcohol": "Detected as alcohol",
+      "low": "Low",
+      "bulky": "Bulky",
+      "less_portable": "Comparatively less portable"
+    },
+    "bac_standard": {
+      "title": "%BAC",
+      "subtitle": "Standard",
+      "description": "The permissible BAC in India - <b>0.03% or 30mg and US/UK - 0.08% or 80mg per 100ml of blood</b>",
+      "image_alt": "BAC Standard",
+      "view_standards": "View Standards"
+    },
+    "attractive_details": {
+      "title": "Attractive",
+      "subtitle": "details for easy carrying",
+      "tft_title": "TFT HD Display",
+      "tft_alt": "TFT HD Display",
+      "type_c_title": "Type C",
+      "type_c_subtitle": "Interface",
+      "type_c_alt": "Type C Interface",
+      "lithium_title": "Lithium",
+      "lithium_subtitle": "Battery",
+      "lithium_alt": "Lithium Battery"
+    },
+    "specifications": {
+      "product": "Product",
+      "title": "Technical specifications",
+      "brochure_alt": "brochore-btn",
+      "download_brochure": "Download Brochure",
+      "product_name": "Product Name",
+      "breathalyzer": "Breathalyzer",
+      "sensor": "Sensor",
+      "electrochemical": "Electrochemical Fuel Cell",
+      "working_current": "Working current",
+      "device_dimension": "Device dimension",
+      "blowing_test": "Blowing continuity test",
+      "measuring_range": "Measuring Range",
+      "battery": "Battery",
+      "lithium_ion": "Lithium Ion (210 mAh)",
+      "weight": "Instrument weight",
+      "response_time": "Response Time",
+      "measurements": "Measurements",
+      "display": "Display",
+      "data_export": "Data Export",
+      "export_to_computer": "Export to an computer",
+      "data_refresh": "Data Refresh Rate",
+      "charging_mode": "Charging Mode",
+      "data_storage": "Data Storage",
+      "onboard_records": "On-board 1000 records",
+      "rohs_alt": "ROHS Certified"
+    },
+    "applications": {
+      "title": "Breathalyzer",
+      "subtitle": "Applications",
+      "health": {
+        "title": "Be Aware of Your Health",
+        "description": "Monitor your alcohol intake to promote overall health and well-being making conscious choices about alcohol consumption.",
+        "image_alt": "doctor talking with his patient clinic"
+      },
+      "limit": {
+        "title": "Drinking in Limit",
+        "description": "Help maintain responsible drinking habits by using the breathalyzer to gauge your alcohol levels and stay within legal limits.",
+        "image_alt": "people celebrating party"
+      },
+      "self_testing": {
+        "title": "Self-Testing",
+        "description": "Monitor your alcohol levels and make informed decisions about driving or engaging in activities that may be affected by alcohol consumption.",
+        "image_alt": "personal use of breathalyzer before drive"
+      },
+      "road_safety": {
+        "title": "Enhancing Road Safety",
+        "description": "Road Police with Breathalyzers to Ensure Compliance with Traffic Regulations to Promote Responsible and Safe Behavior for Drivers.",
+        "image_alt": "Enhancing Road Safety"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions About Prana Air Breathalyzer",
+      "q1": {
+        "question": "How does Prana Air Breathalyzer work?",
+        "answer": "Prana Air Breathalyzer utilizes advanced electrochemical sensors to accurately measure alcohol levels in your breath."
+      },
+      "q2": {
+        "question": "How long does it take to get the results?",
+        "answer": "You can get the results within 10 seconds of blowing into the device providing quick and convenient alcohol level readings."
+      },
+      "q3": {
+        "question": "Does Prana Air Breathalyzer detect other substances besides alcohol?",
+        "answer": "No Prana Air Breathalyzer is specifically designed to measure alcohol levels and does not detect other substances."
+      },
+      "q4": {
+        "question": "Is the device easy to use?",
+        "answer": "Yes the Prana Air Breathalyzer features a user - friendly design with simple one - button operation making it easy for anyone to use."
+      },
+      "q5": {
+        "question": "How portable is the Prana Air Breathalyzer?",
+        "answer": "The device has a sleek and compact design making it highly portable and convenient to carry wherever you go."
+      },
+      "q6": {
+        "question": "How accurate is the Prana Air Breathalyzer?",
+        "answer": "Prana Air Breathalyzer utilizes advanced Gb05 Fuel cell technology providing highly accurate alcohol level measurements for reliable results."
+      },
+      "q7": {
+        "question": "Can I export the test data for record-keeping purposes?",
+        "answer": "Yes Prana Air Breathalyzer allows you to export the test record data to a computer facilitating easy record - keeping in an excel file format."
+      },
+      "q8": {
+        "question": "Is Prana Air Breathalyzer suitable for professional use?",
+        "answer": "Yes the devices high sensitivity stability and precise detection make it suitable for professional applications such as law enforcement workplace safety and alcohol testing centers."
+      }
+    }
+
+}

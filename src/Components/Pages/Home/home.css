@@ -920,13 +920,13 @@ ul#connectivityTabs li {
 }
 
 .controller {
-  margin-top: -300px;
+  margin-top: -330px;
 }
 
 .controller-image {
-  width: 80%;
+  width: 100%;
   height: auto;
-  margin: 40px auto;
+  margin: 0 auto;
   display: block;
 }
 

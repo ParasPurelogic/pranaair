@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "What is Radon (Rn)?",
+    "description": "Radon (Rn) is a naturally occurring radioactive gas formed by the decay of radium, found in most soils. Its exposure affects human health.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
   "radon": {
     "hero": {
       "title": "What is Radon (Rn)?",

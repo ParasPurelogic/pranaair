@@ -1,8 +1,8 @@
 "use client"
-
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { domain } from "@/config"
 
 export default function HeroImageGrid() {
 
@@ -24,7 +24,7 @@ export default function HeroImageGrid() {
                 <div className="all-device">
                     <ul>
                         <li>
-                            <Link href="/air-quality-monitor/ambient-air-monitor/prana-sense">
+                            <Link href={`${domain}/air-quality-monitor/ambient-air-monitor/prana-sense`}>
                                 <Image
                                     src="https://www.pranaair.com/wp-content/uploads/2024/10/prana-air-sensible-plus-monitor.webp"
                                     alt="prana air sensible plus indoor air quality monitor"
@@ -48,7 +48,7 @@ export default function HeroImageGrid() {
                     </ul>
                     <ul className="second-row">
                         <li className="mt">
-                            <Link href="/air-quality-monitor/handheld/pocket-monitor/">
+                            <Link href={`${domain}/air-quality-monitor/handheld/pocket-monitor`}>
                                 <Image
                                     src="https://www.pranaair.com/wp-content/uploads/2024/10/Pocket-PM2.5-Monitor-WiFi.webp"
                                     alt="prana air pocket pm2.5 monitor"
@@ -59,7 +59,7 @@ export default function HeroImageGrid() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/air-quality-monitor/cair-monitor/">
+                            <Link href={`${domain}/air-quality-monitor/cair-monitor`}>
                                 <Image
                                     src="https://www.pranaair.com/wp-content/uploads/2024/10/Cair-plus-Indoor-Air-Quality-Monitor.webp"
                                     alt="prana air cair+ indoor air quality monitor"
@@ -76,7 +76,7 @@ export default function HeroImageGrid() {
                 <div className="all-device">
                     <ul>
                         <li>
-                            <Link href="/air-quality-monitor/ambient-air-monitor/prana-sense/">
+                            <Link href={`${domain}/air-quality-monitor/ambient-air-monitor/prana-sense`}>
                                 <Image
                                     src="https://www.pranaair.com/wp-content/uploads/2024/10/Highly-accurate-prana-senes-monitor.webp"
                                     alt="prana air prana sense ambient air quality monitor"
@@ -87,7 +87,7 @@ export default function HeroImageGrid() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/air-quality-monitor/pocket-co2-monitor/">
+                            <Link href={`${domain}/air-quality-monitor/pocket-co2-monitor`}>
                                 <Image
                                     src="https://www.pranaair.com/wp-content/uploads/2024/10/Worlds-Smallest-CO2-Monitor.webp"
                                     alt="prana air co2 air quality monitor"
@@ -100,7 +100,7 @@ export default function HeroImageGrid() {
                     </ul>
                     <ul className="second-row">
                         <li className="mt">
-                            <Link href="/air-quality-monitor/sensible-air-monitor/">
+                            <Link href={`${domain}/air-quality-monitor/sensible-air-monitor`}>
                                 <Image
                                     src="https://www.pranaair.com/wp-content/uploads/2024/10/sensible-monitor.webp"
                                     alt="prana air sensible indoor air quality monitor"

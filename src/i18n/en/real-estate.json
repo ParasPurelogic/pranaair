@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Air Quality Solutions for Real Estates: Residential, Commercial",
+    "description": "Prana Air provides the air quality solutions of pollution monitoring and fresh air for real estates - residential and commercial.",
+    "image": "https://www.pranaair.com/images/og/air-drone.jpg"
+  },
     "industrialApplicationsData": {
   "hotel": {
     "title": "Solutions for Hotel"

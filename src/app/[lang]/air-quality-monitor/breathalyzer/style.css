@@ -12,6 +12,11 @@ main.main.py-4 {
   padding: 0;
 }
 
+.quantity.buttons_added {
+  display: flex;
+  gap: 10px;
+}
+
 /* Navigation Styles */
 .product-navigation {
   background-color: #f5f7fa;

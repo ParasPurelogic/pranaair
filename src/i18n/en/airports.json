@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Air Quality Solutions for Airport | Prana Air",
+    "description": "Prana Air provides the air quality solutions for airport. Gathering of many passengers is the main reasons of bad air quality in airport."
+  },
    "airQualityTabs": {
     "tabs": {
       "airQualityMonitors": "Air Quality Monitors",

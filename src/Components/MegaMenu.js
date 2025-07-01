@@ -277,7 +277,6 @@ export const getProductCategories = (t) => [
       {
         name: t("products.subcategories.secondGenMask"),
         slug: "2nd-gen-mask",
-        icon: "/icons/mask.svg",
         products: [
           {
             name: "2nd Gen Mask",
@@ -290,7 +289,6 @@ export const getProductCategories = (t) => [
       {
         name: t("products.subcategories.adultKidMask"),
         slug: "adult-kid-mask",
-        icon: "/icons/kids-mask.svg",
         products: [
           {
             name: "Adult-Kid Mask",

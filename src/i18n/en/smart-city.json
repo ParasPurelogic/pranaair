@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Prana Air's Smart City Air Quality Monitoring | Solutions Project",
+    "description": "Prana Air's smart city project provides air quality monitors, drones, outdoor air purifiers, and data dashboards solution to improve air quality.",
+    "image": "https://www.pranaair.com/images/og/air-drone.jpg"
+  },
     "industrialApplicationsData": {
   "hotel": {
     "title": "Solutions for Hotel"

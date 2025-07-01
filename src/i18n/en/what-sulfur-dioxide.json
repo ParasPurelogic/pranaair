@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "What is Sulfur Dioxide (SO2)? | Prana Air",
+    "description": "Sulfur Dioxide (SO2) is a gaseous form of air pollution, made from two components- sulfur and oxygen.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
       "products": {
   "co2Sensor": {
     "imageAlt": "CO2 Sensor",

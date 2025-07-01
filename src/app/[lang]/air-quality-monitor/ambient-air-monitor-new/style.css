@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth
+}
+
+main.main.py-4 {
+    padding: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    font-family: 'Mukta' !important;
+}
+
+p {
+    margin: 0 !important;
+    font-family: 'Mukta' !important;
+
+}
+
+a {
+    font-family: 'Mukta' !important;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+}
+
+.tab-content-wrapper {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    min-height: 250px;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.hero-content {
+    position: absolute;
+    top: 300px;
+    left: 60px;
+    text-align: left;
+}
+
+.hero-content span {
+    color: #F9FAFF;
+    font-size: 1.5rem;
+}
+
+.hero-content h1 {
+    color: #F9FAFF;
+    font-size: 3rem;
+    ;
+    font-weight: 300;
+    padding-top: 0.625rem;
+    width: 56%;
+    line-height: 3.25rem;
+}
+
+.hero-content p {
+    color: #FFFFFFCC;
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding-top: 2.5rem;
+    width: 60%;
+}
+
+.hero-content:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(91deg, #ffffff00, #fff, #ffffff00);
+    width: 60%;
+    height: 1px;
+    left: 0;
+    top: 11.875rem;
+}
+
+.hero-btn {
+    background: #7ab261;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 1.875rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+    justify-content: space-between;
+    border-top: 1px solid #ffffff6e;
+    border-left: 1px solid #ffffff6e;
+    margin-top: 2.5rem;
+}
+
+ul.hero-tab-button {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    position: relative;
+    bottom: 9.375rem;
+    left: 3.75rem;
+    width: 50%;
+}
+
+ul.hero-tab-button li button {
+    background: #2F577480;
+    border-radius: 10px;
+    padding: 0.75rem 1.875rem;
+    color: #ffffffc7;
+    font-weight: 400;
+    border-top: 1px solid #ffffff70;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+ul.hero-tab-button li .active {
+    color: #ffffff;
+    background: #2f5774e0;
+}
+
+ul.hero-tab-button li button:hover {
+    color: #fff !important;
+}
+
+.hero-section .tab-content-wrapper {
+    position: relative;
+}
+
+.hero-section .tab-content-wrapper:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(90deg, #00000069, transparent);
+    width: 40%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+section.explore-our {
+    padding-top: 120px;
+}
+
+.main-headign {
+    text-align: center;
+}
+
+span.sub-heading {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.page-heading {
+    color: #263D4F;
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 5px;
+}
+
+.main-headign p {
+    color: #263D4FCC;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+ul#partsLabelTab {
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 20px;
+    background: #14281180;
+    border-radius: 15px;
+    padding: 5px;
+    width: 25%;
+    float: right;
+    position: relative;
+    top: 100px;
+    left: -150px;
+    border: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+ul#partsLabelTab button.nav-link.active {
+    background: #7AB261;
+    border: 1px solid #ffffff85;
+    border-bottom: 0;
+    border-radius: 10px;
+}
+
+ul#partsLabelTab button.nav-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 20px;
+    font-family: Mukta;
+}
+
+ul#partsLabelTab button.nav-link:hover {
+    background: #7AB261;
+    border: 1px solid #ffffff85;
+    border-bottom: 0;
+    border-radius: 10px;
+}
+
+.choose-monitor-img img {
+    width: 100%;
+    height: auto;
+}
+
+.choose-monitor-img {
+    margin-left: -40px;
+    margin-top: 15px;
+}
+
+div#partsLabelTabContent {
+    margin: 0 40px;
+}
+
+.main-box {
+    background: radial-gradient(circle, #beffccd9 10%, #ebf9e6 90%);
+    border-radius: 14px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 40px 40px 80px;
+}
+
+.choose-monitor-txt h3 {
+    color: #263D4F;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.choose-monitor-txt p {
+    color: #263D4FCC;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 10px;
+    width: 60%;
+}
+
+.choose-monitor-txt {
+    border-bottom: 1px solid #263D4F1A;
+    padding: 0px 10px 20px;
+}
+
+.feature {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.feature p {
+    color: #263D4F;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.feature ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.feature ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.feature ul li span img {
+    width: 35px;
+    height: auto;
+}
+
+.feature ul li span {
+    color: #263D4FCC;
+    font-family: 'Mukta';
+    font-size: 15px;
+}
+
+.parameters {
+    border-top: 1px solid #263d4f17;
+    border-bottom: 1px solid #263d4f17;
+    margin-top: 30px;
+}
+
+.parameters ul {
+    list-style: none;
+    padding: 0 10px 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.parameters ul li {
+    color: #263d4fcf;
+    font-size: 14px;
+    border: 1px solid #263d4f52;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.button-brochure ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    align-items: anchor-center;
+}
+
+.button-brochure ul li a {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    color: #3FA512;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.button-brochure ul li a img {
+    width: 20px;
+    height: auto;
+}
+
+.button-brochure ul li:last-child a {
+    border: 1px solid #3FA512;
+    border-radius: 10px;
+    padding: 5px 15px;
+    align-items: center;
+}
+
+.button-brochure ul li:last-child a img {
+    width: 12px;
+}
+
+.button-brochure ul li:last-child a:hover {
+    background: #ffffff;
+}
+
+section.performance {
+    padding-top: 120px;
+    margin: 0 40px;
+}
+
+.perform-heading h2 {
+    width: 25%;
+}
+
+.performance-meets ul {
+    list-style: none;
+    padding: 0;
+    margin: 60px 0 0;
+    display: flex;
+    gap: 10px;
+}
+
+.performance-meets ul li {
+    height: 280px;
+    background: #F1F5F0;
+    border-radius: 15px;
+    width: 280px;
+    padding-top: 100px;
+    padding-left: 30px;
+    transition: .2s linear;
+}
+
+.performance-meets ul li img {
+    width: 65px;
+    height: auto;
+}
+
+.performance-meets ul li p {
+    padding-top: 20px;
+    color: #263D4F;
+    font-size: 18px;
+    width: 63%;
+    line-height: 24px;
+}
+
+.performance-meets ul li:hover {
+    background: radial-gradient(circle, #beffccd9 10%, #ebf9e6 90%);
+    border-radius: 14px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.performance-meets ul li:hover p {
+    color: #3FA512;
+}

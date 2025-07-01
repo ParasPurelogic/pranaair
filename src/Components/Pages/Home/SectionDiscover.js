@@ -1,6 +1,8 @@
 import Image from "next/image"
-import Link from "next/link"
+import Link from "@/Components/TranslateLink"
 import { getServerTranslation } from "../../../i18n/server";
+import { domain } from "@/config"
+
 
 export default async function SectionDiscover() {
     // Translator
@@ -84,7 +86,7 @@ export default async function SectionDiscover() {
                                 <div className="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                                     <div className="aq-monitor-box">
                                         <div className="discover-air-quality-page-img">
-                                            <Link href="/air-quality-monitor/handheld/pocket-monitor/" className="page-link">
+                                            <Link href={`${domain}/air-quality-monitor/handheld/pocket-monitor`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-pocket-pm2.5-monitor-portable-PM2.5-Monitor.jpg"
                                                     alt="prana air pocket pm2.5 monitor portable" width={400} height={200}
@@ -100,7 +102,7 @@ export default async function SectionDiscover() {
                                             </Link>
                                         </div>
                                         <div className="discover-air-quality-page-img">
-                                            <Link href="/air-quality-monitor/air-drone/" className="page-link">
+                                            <Link href={`${domain}/air-quality-monitor/air-drone`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-Air-Quality-Drone.jpg"
                                                     alt="prana air air quality drone" width={400} height={200}
@@ -118,7 +120,7 @@ export default async function SectionDiscover() {
                                     </div>
                                     <div className="aq-monitor-last">
                                         <div className="discover-air-quality-page-img cair-monitor">
-                                            <Link href="/air-quality-monitor/cair-monitor/" className="page-link">
+                                            <Link href={`${domain}/air-quality-monitor/cair-monitor`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-indoor-Cair-Monitor.jpg"
                                                     alt="prana air cair indoor air quality monitor" width={400} height={200}
@@ -134,7 +136,7 @@ export default async function SectionDiscover() {
                                             </Link>
                                         </div>
                                         <div className="discover-air-quality-page-img cair-monitor ambient-lite">
-                                            <Link href="/air-quality-monitor/ambient-air-monitor/" className="page-link">
+                                            <Link href={`${domain}/air-quality-monitor/ambient-air-monitor`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Ambient-Lite-monitor.jpg"
                                                     alt="prana air ambient air quality monitor" width={400} height={200}
@@ -150,7 +152,7 @@ export default async function SectionDiscover() {
                                             </Link>
                                         </div>
                                         <div className="see-more-box">
-                                            <Link href="/air-quality-monitor/" className="see-more">
+                                            <Link href={`${domain}/air-quality-monitor`} className="see-more">
                                                 {t("discovers.button")}
                                                 <Image src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
                                                     alt="arrow icon" width={15} height={15} className="arrow-icon" />
@@ -165,7 +167,7 @@ export default async function SectionDiscover() {
                                         <ul className="all-sensor">
                                             <li>
                                                 <div className="discover-air-sensor-page-img">
-                                                    <Link href="/air-quality-sensor/outdoor-pm-sensor/"
+                                                    <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}
                                                         className="sensor-page-link">
                                                         <div className="img-box">
                                                             <Image
@@ -187,7 +189,7 @@ export default async function SectionDiscover() {
                                             </li>
                                             <li>
                                                 <div className="discover-air-sensor-page-img">
-                                                    <Link href="/air-quality-sensor/outdoor-pm-sensor/"
+                                                    <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}
                                                         className="sensor-page-link">
                                                         <div className="img-box">
                                                             <Image
@@ -209,7 +211,7 @@ export default async function SectionDiscover() {
                                             </li>
                                             <li>
                                                 <div className="discover-air-sensor-page-img">
-                                                    <Link href="/air-quality-sensor/outdoor-pm-sensor/"
+                                                    <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}
                                                         className="sensor-page-link">
                                                         <div className="img-box">
                                                             <Image
@@ -231,7 +233,7 @@ export default async function SectionDiscover() {
                                             </li>
                                             <li>
                                                 <div className="discover-air-sensor-page-img">
-                                                    <Link href="/air-quality-sensor/outdoor-pm-sensor/"
+                                                    <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}
                                                         className="sensor-page-link">
                                                         <div className="img-box">
                                                             <Image
@@ -255,7 +257,7 @@ export default async function SectionDiscover() {
                                         <ul className="all-sensor">
                                             <li>
                                                 <div className="discover-air-sensor-page-img">
-                                                    <Link href="/air-quality-sensor/outdoor-pm-sensor/"
+                                                    <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}
                                                         className="sensor-page-link">
                                                         <div className="img-box">
                                                             <Image
@@ -277,7 +279,7 @@ export default async function SectionDiscover() {
                                             </li>
                                             <li>
                                                 <div className="discover-air-sensor-page-img">
-                                                    <Link href="/air-quality-sensor/outdoor-pm-sensor/"
+                                                    <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}
                                                         className="sensor-page-link">
                                                         <div className="img-box">
                                                             <Image
@@ -299,7 +301,7 @@ export default async function SectionDiscover() {
                                             </li>
                                             <li>
                                                 <div className="discover-air-sensor-page-img">
-                                                    <Link href="/air-quality-sensor/outdoor-pm-sensor/"
+                                                    <Link href={`${domain}/air-quality-sensor/outdoor-pm-sensor`}
                                                         className="sensor-page-link">
                                                         <div className="img-box">
                                                             <Image
@@ -321,13 +323,12 @@ export default async function SectionDiscover() {
                                             </li>
                                             <li>
                                                 <div className="knwo-more-box">
-                                                    <a href="/air-quality-sensor" className="see-more">Know More
-
+                                                    <Link href={`${domain}/air-quality-sensor/air-quality-sensor`} className="see-more">Know More
                                                         <Image
                                                             src="https://www.pranaair.com/wp-content/uploads/2024/07/link-arrow.png"
                                                             alt="arrow icon" width={10} height={10}
                                                             className="arrow-icon" />
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </li>
                                         </ul>
@@ -338,7 +339,7 @@ export default async function SectionDiscover() {
                                 <div className="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                                     <div className="aq-monitor-pcb-box">
                                         <div className="discover-air-quality-pcb-page-img">
-                                            <Link href="/air-quality-pcb-board/" className="pcb-page-link">
+                                            <Link href={`${domain}/air-quality-sensor/air-quality-pcb-board`} className="pcb-page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/09/pranaair-pcb-board.webp"
                                                     alt="air quality pcb boards of prana air" width={500} height={300}
@@ -360,7 +361,7 @@ export default async function SectionDiscover() {
                                 <div className="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                                     <div className="aq-monitor-pcb-box">
                                         <div className="discover-air-quality-pcb-page-img weather-st-img">
-                                            <Link href="/air-quality-monitor/weather-station/" className="pcb-page-link">
+                                            <Link href={`${domain}/air-quality-monitor/weather-station`} className="pcb-page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Weather-station.jpg"
                                                     alt="Weather station of prana air" width={500} height={300}
@@ -382,7 +383,7 @@ export default async function SectionDiscover() {
                                 <div className="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
                                     <div className="aq-monitor-box">
                                         <div className="discover-air-quality-page-img">
-                                            <Link href="/wearable-air-purifier/" className="page-link">
+                                            <Link href={`${domain}/wearable-air-purifier`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Hanging-Purifier.jpg"
                                                     alt="prana air wearable personal air purifier" width={400} height={200}
@@ -398,7 +399,7 @@ export default async function SectionDiscover() {
                                             </Link>
                                         </div>
                                         <div className="discover-air-quality-page-img">
-                                            <Link href="/fresh-air-machine" className="page-link">
+                                            <Link href={`${domain}/fresh-air-machine`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Fresh-air-Machine.jpg"
                                                     alt="prana air wearable personal air purifier" width={400} height={200}
@@ -416,7 +417,7 @@ export default async function SectionDiscover() {
                                     </div>
                                     <div className="aq-monitor-box">
                                         <div className="discover-air-quality-page-img">
-                                            <Link href="/outdoor-air-purifier" className="page-link">
+                                            <Link href={`${domain}/outdoor-air-purifier`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-outdoor-air-Purifier.jpg"
                                                     alt="prana air wearable personal air purifier" width={400} height={200}
@@ -432,7 +433,7 @@ export default async function SectionDiscover() {
                                             </Link>
                                         </div>
                                         <div className="discover-air-quality-page-img">
-                                            <Link href="/car-air-filter" className="page-link">
+                                            <Link href={`${domain}/car-air-filter`} className="page-link">
                                                 <Image
                                                     src="https://www.pranaair.com/wp-content/uploads/2024/08/prana-air-Car-cabin-filters.jpg"
                                                     alt="prana air wearable personal air purifier" width={400} height={200}

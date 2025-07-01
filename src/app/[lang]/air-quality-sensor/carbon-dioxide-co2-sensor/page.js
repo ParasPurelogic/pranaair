@@ -3,29 +3,32 @@ import "./style.css"
 import ContactForm from "@/Components/Contacform/ContactForm"
 import CO2GraphAnimation from "@/Components/Pages/CarbonDioxidesensor/co2-graph-animation"
 import { getServerTranslation } from "@/i18n/server"
+import { domain, supportedLanguages } from "@/config"
 
-// ✅ SEO Metadata
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
+  const lang = params?.lang || "en";
+  const slug = "air-quality-monitor"; // page-specific slug
   const { t } = await getServerTranslation("carbon-dioxide-co2-sensor");
   const title = t("meta.title");
   const description = t("meta.description");
-  const image = t("meta.image") || "https://www.pranaair.com/images/air-drone.jpg";
-  const url = `https://www.pranaair.com/air-drone`;
+  const image = t("meta.image") || `${domain}/images/${slug}.jpg`;
+
+  const languages = supportedLanguages.reduce((acc, code) => {
+    acc[code] = `${domain}/${code}/${slug}`;
+    return acc;
+  }, {});
 
   return {
     title,
     description,
     alternates: {
-      canonical: url,
-      languages: {
-        en: "https://www.pranaair.com/air-drone",
-        hi: "https://www.pranaair.com/hi/air-drone",
-      }
+      canonical: `${domain}/${lang}/${slug}`,
+      languages,
     },
     openGraph: {
       title,
       description,
-      url,
+      url: `${domain}/${lang}/${slug}`,
       siteName: "Prana Air",
       type: "website",
       images: [
@@ -33,10 +36,16 @@ export async function generateMetadata() {
           url: image,
           width: 1200,
           height: 630,
-          alt: "Air Drone - Prana Air"
-        }
-      ]
-    }
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
   };
 }
 export default async function CO2SensorPage() {

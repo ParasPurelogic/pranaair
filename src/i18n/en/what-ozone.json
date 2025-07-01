@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "What is Ozone (O3)? | Prana Air",
+    "description": "Ozone (O3) is a molecule composed of three oxygen atoms. Its share is 0.00001% in the ambient air. Ozone is good up there, but bad nearby”.",
+    "image": "https://www.pranaair.com/images/air-drone.jpg"
+  },
       "products": {
   "co2Sensor": {
     "imageAlt": "CO2 Sensor",

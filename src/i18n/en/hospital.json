@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Air Quality Monitoring & Solutions For Hospital | Prana Air",
+    "description": "Prana Air provides air quality monitoring and fresh air solutions for hospitals to ensure clean and healthy indoor air.",
+    "image": "https://www.pranaair.com/images/og/air-drone.jpg"
+  },
     "industrialApplicationsData": {
         "hotel": {
             "title": "Solutions for Hotel"

@@ -2,8 +2,51 @@ import Image from "next/image"
 import "./styles.css"
 import { getServerTranslation } from "@/i18n/server"
 import MeasureCarousel from "@/Components/Pages/CarbonDioxide/measure-co2-slider"
+import { domain, supportedLanguages } from "@/config"
 
+export async function generateMetadata({ params }) {
+  const lang = params?.lang || "en";
+  const slug = "air-quality-monitor"; // page-specific slug
+  const { t } = await getServerTranslation("what-ozone");
+  const title = t("meta.title");
+  const description = t("meta.description");
+  const image = t("meta.image") || `${domain}/images/${slug}.jpg`;
 
+  const languages = supportedLanguages.reduce((acc, code) => {
+    acc[code] = `${domain}/${code}/${slug}`;
+    return acc;
+  }, {});
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${domain}/${lang}/${slug}`,
+      languages,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${domain}/${lang}/${slug}`,
+      siteName: "Prana Air",
+      type: "website",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
 export default async function OzonePage() {
   const { t } = await getServerTranslation("what-ozone")
   const measureProducts = [

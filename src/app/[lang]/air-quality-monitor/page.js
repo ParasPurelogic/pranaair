@@ -7,30 +7,34 @@ import TestimonialsSlider from "@/Components/Pages/AirQualityCommonMonitor/testi
 import { getServerTranslation } from "@/i18n/server"
 import AirQualitySensorSlider from "@/Components/Pages/AirQualityCommonMonitor/air-quality-monitor-sensor";
 import Link from "@/Components/TranslateLink"
-import { domain } from "@/config"
+import { domain, supportedLanguages } from "@/config"
+import FadeInText from "@/Components/FadeInText";
 
 // ✅ SEO Metadata
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
+    const lang = params?.lang || "en";
+    const slug = "air-quality-monitor"; // page-specific slug
     const { t } = await getServerTranslation("common-monitor");
     const title = t("meta.title");
     const description = t("meta.description");
-    const image = t("meta.image") || "https://www.pranaair.com/images/air-drone.jpg";
-    const url = `https://www.pranaair.com/air-drone`;
+    const image = t("meta.image") || `${domain}/images/${slug}.jpg`;
+
+    const languages = supportedLanguages.reduce((acc, code) => {
+        acc[code] = `${domain}/${code}/${slug}`;
+        return acc;
+    }, {});
 
     return {
         title,
         description,
         alternates: {
-            canonical: url,
-            languages: {
-                en: "https://www.pranaair.com/air-drone",
-                hi: "https://www.pranaair.com/hi/air-drone",
-            }
+            canonical: `${domain}/${lang}/${slug}`,
+            languages,
         },
         openGraph: {
             title,
             description,
-            url,
+            url: `${domain}/${lang}/${slug}`,
             siteName: "Prana Air",
             type: "website",
             images: [
@@ -38,10 +42,16 @@ export async function generateMetadata() {
                     url: image,
                     width: 1200,
                     height: 630,
-                    alt: "Air Drone - Prana Air"
-                }
-            ]
-        }
+                    alt: title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [image],
+        },
     };
 }
 export default async function CommonMonitorPage() {
@@ -133,17 +143,19 @@ export default async function CommonMonitorPage() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <div className="ambient-banner">
-                                <p className="heading-para">{t("ambientBanner.headingPara")}</p>
-                                <h1>
-                                    <span className="prana-txt">{t("ambientBanner.pranaText")}</span> {t("ambientBanner.title")}
-                                </h1>
-                                <p>{t("ambientBanner.description")}</p>
-                                <Link href="#contact" aria-label={t("ambientBanner.ariaLabel")}>
-                                    {t("ambientBanner.contactUs")}{" "}
-                                    <img src="https://www.pranaair.com/wp-content/uploads/2024/09/banner-icon.png" alt={t("ambientBanner.iconAlt")} />
-                                </Link>
-                            </div>
+                            <FadeInText>
+                                <div className="ambient-banner">
+                                    <p className="heading-para">{t("ambientBanner.headingPara")}</p>
+                                    <h1>
+                                        <span className="prana-txt">{t("ambientBanner.pranaText")}</span> {t("ambientBanner.title")}
+                                    </h1>
+                                    <p>{t("ambientBanner.description")}</p>
+                                    <Link href="#contact" aria-label={t("ambientBanner.ariaLabel")}>
+                                        {t("ambientBanner.contactUs")}{" "}
+                                        <img src="https://www.pranaair.com/wp-content/uploads/2024/09/banner-icon.png" alt={t("ambientBanner.iconAlt")} />
+                                    </Link>
+                                </div>
+                            </FadeInText>
                         </div>
                         <div className="col-md-6">
                             <VideoPopup videoUrl="https://www.youtube.com/embed/vKTDgUu1K_E?autoplay=1&mute=1" />
@@ -157,11 +169,13 @@ export default async function CommonMonitorPage() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <div className="all-monitore-tite">
-                                <span className="explore">{t("productTabs.explore")}</span>
-                                <h2>{t("productTabs.title")}</h2>
-                                <p>{t("productTabs.subtitle")}</p>
-                            </div>
+                            <FadeInText>
+                                <div className="all-monitore-tite">
+                                    <span className="explore">{t("productTabs.explore")}</span>
+                                    <h2>{t("productTabs.title")}</h2>
+                                    <p>{t("productTabs.subtitle")}</p>
+                                </div>
+                            </FadeInText>
                         </div>
                     </div>
 

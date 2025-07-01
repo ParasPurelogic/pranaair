@@ -2,45 +2,13 @@ import Link from "@/Components/TranslateLink"
 import { domain } from "@/config"
 import Image from "next/image"
 import "bootstrap/dist/css/bootstrap.min.css"
+import { getServerTranslation } from "@/i18n/server"
 import "./style.css"
 import QuantityCounter from "@/Components/Pages/Breathalyzer/quantity-counter"
 
-// ✅ SEO Metadata
-export async function generateMetadata() {
-  const { t } = await getServerTranslation("prana-sense");
-  const title = t("meta.title");
-  const description = t("meta.description");
-  const image = t("meta.image") || "https://www.pranaair.com/images/air-drone.jpg";
-  const url = `https://www.pranaair.com/air-drone`;
+export default async function BreathalyzerPage() {
+  const { t } = await getServerTranslation("breathalyzer")
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: url,
-      languages: {
-        en: "https://www.pranaair.com/air-drone",
-        hi: "https://www.pranaair.com/hi/air-drone",
-      }
-    },
-    openGraph: {
-      title,
-      description,
-      url,
-      siteName: "Prana Air",
-      type: "website",
-      images: [
-        {
-          url: image,
-          width: 1200,
-          height: 630,
-          alt: "Air Drone - Prana Air"
-        }
-      ]
-    }
-  };
-}
-export default function BreathalyzerPage() {
   // Scroll to section when clicking on navigation
   const handleTabClick = (tab) => {
     const element = document.getElementById(tab)
@@ -57,60 +25,60 @@ export default function BreathalyzerPage() {
           <li>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2023/06/compact-size.png"
-              alt="compact size"
+              alt={t("features.compact_size.alt")}
               width={60}
               height={60}
             />
-            <h3>Compact and Portable</h3>
+            <h3>{t("features.compact_size.title")}</h3>
           </li>
           <li>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2023/06/reliable-icon.png"
-              alt="reliable icon"
+              alt={t("features.reliable.alt")}
               width={60}
               height={60}
             />
-            <h3>Accurate and Reliable</h3>
+            <h3>{t("features.reliable.title")}</h3>
           </li>
         </ul>
         <ul className="product-features-list-two">
           <li>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2023/06/stable-data-icon.png"
-              alt="stable data icon"
+              alt={t("features.stable.alt")}
               width={60}
               height={60}
             />
-            <h3>Stable Performance</h3>
+            <h3>{t("features.stable.title")}</h3>
           </li>
           <li>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2023/06/contact-less-icon.png"
-              alt="Contactless Testing"
+              alt={t("features.contactless.alt")}
               width={60}
               height={60}
             />
-            <h3>Contactless Testing</h3>
+            <h3>{t("features.contactless.title")}</h3>
           </li>
         </ul>
         <ul className="product-features-list-two">
           <li>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2023/06/fuel-cell-sensor.png"
-              alt="fuel cell sensor"
+              alt={t("features.fuel_cell.alt")}
               width={60}
               height={60}
             />
-            <h3>GB05 Fuel Cell</h3>
+            <h3>{t("features.fuel_cell.title")}</h3>
           </li>
           <li>
             <Image
               src="https://www.pranaair.com/wp-content/uploads/2023/06/on-board-storage.png"
-              alt="on board storage"
+              alt={t("features.storage.alt")}
               width={60}
               height={60}
             />
-            <h3>On-Board Storage</h3>
+            <h3>{t("features.storage.title")}</h3>
           </li>
         </ul>
       </div>
@@ -124,13 +92,13 @@ export default function BreathalyzerPage() {
         <div className="col-lg-6 col-md-12 key-func-right-bg ipad">
           <div id="main-order" className="product-key-func-box">
             <div id="heading-ord" className="prodt-heading">
-              <p>Product</p>
-              <h4>Key functions</h4>
+              <p>{t("functions.product")}</p>
+              <h4>{t("functions.key_functions")}</h4>
             </div>
             <div id="img-ord" className="prodt-img">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-key-functions.png"
-                alt="prana air breathalyzer key functions"
+                alt={t("functions.key_functions_img_alt")}
                 width={190}
                 height={300}
               />
@@ -138,16 +106,16 @@ export default function BreathalyzerPage() {
             <div id="key-word-ord" className="key-heading">
               <ul>
                 <li>
-                  Air
-                  <h4>Inlet</h4>
+                  {t("functions.air")}
+                  <h4>{t("functions.inlet")}</h4>
                 </li>
                 <li>
-                  Screen
-                  <h4>Display</h4>
+                  {t("functions.screen")}
+                  <h4>{t("functions.display")}</h4>
                 </li>
                 <li>
-                  Power
-                  <h4>Button</h4>
+                  {t("functions.power")}
+                  <h4>{t("functions.button")}</h4>
                 </li>
               </ul>
             </div>
@@ -157,17 +125,14 @@ export default function BreathalyzerPage() {
           <div className="product-dimension-box">
             <ul>
               <li>
-                Product
-                <h4>Dimensions</h4>
-                <p>
-                  Prana Air Breathalyzer: Blending sleek design palm-sized convenience and compact dimensions for
-                  effortless portability and accurate alcohol detection on the go.
-                </p>
+                {t("functions.product")}
+                <h4>{t("functions.dimensions")}</h4>
+                <p>{t("functions.dimensions_description")}</p>
               </li>
               <li>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/dimension-of-prana-air-breathalyzer.png"
-                  alt="prana air breathalyzer dimension"
+                  alt={t("functions.dimensions_img_alt")}
                   width={320}
                   height={200}
                 />
@@ -186,14 +151,14 @@ export default function BreathalyzerPage() {
       <div className="static-breadcrums">
         <ul>
           <li>
-            <Link href={`${domain}/`}>Home</Link> <span>&gt;</span>
+            <Link href={`${domain}/`}>{t("breadcrumb.home")}</Link> <span>&gt;</span>
           </li>
           <li>
-            <Link href={`${domain}/air-quality-monitor`}>Air Quality Monitors</Link> <span>&gt;</span>
+            <Link href={`${domain}/air-quality-monitor`}>{t("breadcrumb.monitors")}</Link> <span>&gt;</span>
           </li>
           <li>
             <Link href="#">
-              <b>Breathalyzer</b>
+              <b>{t("breadcrumb.breathalyzer")}</b>
             </Link>
           </li>
         </ul>
@@ -209,7 +174,7 @@ export default function BreathalyzerPage() {
                 <div className="tab-pane fade show active" id="Comonitora">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-portable-alcohol-tester.png"
-                    alt="prana air breathalyzer portable alcohol tester"
+                    alt={t("product.images.main_alt")}
                     width={400}
                     height={450}
                   />
@@ -218,7 +183,7 @@ export default function BreathalyzerPage() {
                 <div className="tab-pane fade" id="Comonitorb">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-alcohol-detector.png"
-                    alt="prana air breathalyzer alcohol detector"
+                    alt={t("product.images.variant1_alt")}
                     width={400}
                     height={450}
                   />
@@ -227,7 +192,7 @@ export default function BreathalyzerPage() {
                 <div className="tab-pane fade" id="Comonitorc">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-portable-breathalyzer-device.png"
-                    alt="prana air portable breathalyzer device"
+                    alt={t("product.images.variant2_alt")}
                     width={400}
                     height={450}
                   />
@@ -236,7 +201,7 @@ export default function BreathalyzerPage() {
                 <div className="tab-pane fade" id="Comonitord">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-device.png"
-                    alt="prana air breathalyzer device"
+                    alt={t("product.images.variant3_alt")}
                     width={400}
                     height={450}
                   />
@@ -256,7 +221,7 @@ export default function BreathalyzerPage() {
                   >
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-portable-alcohol-tester.png"
-                      alt="breathly-img-front"
+                      alt={t("product.images.thumb_main_alt")}
                       width={80}
                       height={80}
                     />
@@ -274,7 +239,7 @@ export default function BreathalyzerPage() {
                   >
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-alcohol-detector.png"
-                      alt="breathly-img-left"
+                      alt={t("product.images.thumb_variant1_alt")}
                       width={80}
                       height={80}
                     />
@@ -292,7 +257,7 @@ export default function BreathalyzerPage() {
                   >
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-portable-breathalyzer-device.png"
-                      alt="breathly-img-bottom"
+                      alt={t("product.images.thumb_variant2_alt")}
                       width={80}
                       height={80}
                     />
@@ -310,7 +275,7 @@ export default function BreathalyzerPage() {
                   >
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-device.png"
-                      alt="breathly-img-back-min"
+                      alt={t("product.images.thumb_variant3_alt")}
                       width={80}
                       height={80}
                     />
@@ -323,24 +288,22 @@ export default function BreathalyzerPage() {
             <div className="col-lg-4 col-md-12 ipad" id="text">
               <div className="product-text">
                 <div className="inner-product-txt">
-                  <h1>Breathalyzer</h1>
-                  <h4>Alcohol Detector</h4>
-                  <p>Handheld | Fast Detect | Very Accurate</p>
+                  <h1>{t("product.title")}</h1>
+                  <h4>{t("product.subtitle")}</h4>
+                  <p>{t("product.description")}</p>
                 </div>
                 <div className="mrp-sec">
                   <div className="discount-mrp woocom-list-content">
-                    <h6>m.r.p.</h6>
+                    <h6>{t("product.mrp")}</h6>
                     <h5>₹ 6990.00</h5>
                   </div>
                   <section className="articles-container">
                     <article className="article">
                       <p>
-                        Prana Air Breathalyzer is the ultimate portable device for accurate alcohol detection. With its
-                        cutting-edge fuel cell technology you can rely on precise and trustworthy results. Ensure safety
-                        and peace of mind wherever you go with this highly accurate and convenient breathalyzer.
+                        {t("product.details.part1")}
                       </p>
                       <p className="extra-content collapse" id="showMoreContent">
-                        Order yours today and prioritize responsible drinking.
+                        {t("product.details.part2")}
                       </p>
                       <button
                         className="read-more btn"
@@ -349,7 +312,7 @@ export default function BreathalyzerPage() {
                         aria-expanded="false"
                         aria-controls="showMoreContent"
                       >
-                        Show More
+                        {t("product.show_more")}
                       </button>
                     </article>
                   </section>
@@ -361,24 +324,24 @@ export default function BreathalyzerPage() {
             <div className="col-lg-4 col-md-12 ipad" id="buybtn">
               <div className="add-cart-box">
                 <div className="model-box">
-                  <h5>model</h5>
+                  <h5>{t("product.model")}</h5>
                   <center>
                     <select className="nav dropbtn" defaultValue="#">
-                      <option value="#">Breathalyzer</option>
+                      <option value="#">{t("product.model_options.breathalyzer")}</option>
                       <option value="https://www.pranaair.com/air-quality-monitor/handheld/nano-tvoc-monitor/">
-                        Nano TVOC & HCHO
+                        {t("product.model_options.nano_tvoc")}
                       </option>
                       <option value="https://www.pranaair.com/air-quality-monitor/handheld/nano-co-monitor/">
-                        Nano CO
+                        {t("product.model_options.nano_co")}
                       </option>
                       <option value="https://www.pranaair.com/air-quality-monitor/handheld/nano-co-monitor/">
-                        Nano CO2
+                        {t("product.model_options.nano_co2")}
                       </option>
                     </select>
                   </center>
 
                   <div className="model-box">
-                    <h5>Quantity</h5>
+                    <h5>{t("product.quantity")}</h5>
                     <QuantityCounter />
                     <div className="buy-btns">
                       <br />
@@ -394,7 +357,7 @@ export default function BreathalyzerPage() {
                           value="77733"
                           className="single_add_to_cart_button button alt"
                         >
-                          Add to Cart
+                          {t("product.add_to_cart")}
                         </button>
                       </form>
                     </div>
@@ -412,10 +375,9 @@ export default function BreathalyzerPage() {
           <div className="row mob-revers">
             <div className="col-lg-8 col-md-12 produt-img ipad">
               <div className="product-quantity-txt">
-                <h3>Qualitative features of the Breathalyzer</h3>
+                <h3>{t("features.title")}</h3>
                 <p>
-                  Experience the Power of Precision with our Sleek Compact Alcohol Detector - Your Perfect Companion for
-                  Responsible Decisions.
+                  {t("features.description")}
                 </p>
               </div>
               {updateProductFeatures()}
@@ -423,7 +385,7 @@ export default function BreathalyzerPage() {
             <div className="col-lg-4 col-md-12 ipad product-img-right">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-portable-alcohol-tester.png"
-                alt="Breathalyzer"
+                alt={t("features.image_alt")}
                 width={210}
                 height={300}
                 className="tvoc-high-definition-img"
@@ -442,24 +404,22 @@ export default function BreathalyzerPage() {
                 <h4>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/contactless-icon.png"
-                    alt="contactless breathalyzer icon"
+                    alt={t("contactless.icon_alt")}
                     width={50}
                     height={50}
                   />
-                  Contactless
+                  {t("contactless.title")}
                 </h4>
-                <h5>Alcohol Detection</h5>
+                <h5>{t("contactless.subtitle")}</h5>
                 <p>
-                  Accurately measures BAC (Blood Alcohol Concentration) and alcohol concentration to eliminate drunk
-                  driving risks. Make responsible decisions and protect yourself and others on the road with Prana Air
-                  Breathalyzer ensuring accurate results.
+                  {t("contactless.description")}
                 </p>
               </div>
             </div>
             <div className="col-lg-5 col-md-12">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/a-man-using-prana-air-breathalyzer.png"
-                alt="Contactless testing"
+                alt={t("contactless.image_alt")}
                 width={420}
                 height={300}
                 className="contact-less-men-img"
@@ -484,17 +444,15 @@ export default function BreathalyzerPage() {
                   <li>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/do-you-know-icon.png"
-                      alt="do you know icon"
+                      alt={t("did_you_know.icon_alt")}
                       width={80}
                       height={80}
                     />
                   </li>
                   <li>
-                    <h4>DID YOU KNOW?</h4>
+                    <h4>{t("did_you_know.title")}</h4>
                     <p>
-                      According to the Traffic Injury Prevention study <b>2-33%</b> of injured and <b>6-48%</b> of those
-                      who died in road traffic accidents had consumed alcohol. In <b>2019</b> there were <b>12256</b>{" "}
-                      accidents caused by drunk driving with <b>5325</b> people killed and <b>10564 injured</b>.
+                      {t("did_you_know.description")}
                     </p>
                   </li>
                 </ul>
@@ -510,7 +468,7 @@ export default function BreathalyzerPage() {
           <div className="row br-btm">
             <div className="col-lg-6 col-md-12">
               <div className="how-to-use-heading">
-                <h2>How to use Breathalyzer</h2>
+                <h2>{t("how_to_use.title")}</h2>
               </div>
             </div>
             <div className="col-lg-6 col-md-12"></div>
@@ -530,7 +488,7 @@ export default function BreathalyzerPage() {
                       aria-controls="alcohol-test"
                       aria-selected="true"
                     >
-                      Alcohol Test
+                      {t("how_to_use.tabs.alcohol_test")}
                     </button>
                   </li>
                   <li className="nav-item" role="presentation">
@@ -544,7 +502,7 @@ export default function BreathalyzerPage() {
                       aria-controls="date-time"
                       aria-selected="false"
                     >
-                      Date & Time
+                      {t("how_to_use.tabs.date_time")}
                     </button>
                   </li>
                   <li className="nav-item" role="presentation">
@@ -558,7 +516,7 @@ export default function BreathalyzerPage() {
                       aria-controls="history-export"
                       aria-selected="false"
                     >
-                      History & Data Export
+                      {t("how_to_use.tabs.history_export")}
                     </button>
                   </li>
                 </ul>
@@ -573,10 +531,9 @@ export default function BreathalyzerPage() {
                     <div className="row">
                       <div className="col-md-6">
                         <div className="tab-content-box">
-                          <h3>Test Alcohol</h3>
+                          <h3>{t("how_to_use.alcohol_test.title")}</h3>
                           <p>
-                            Follow these step-by-step instructions to precisely measure the alcohol level in every
-                            breath sample.
+                            {t("how_to_use.alcohol_test.description")}
                           </p>
                         </div>
                       </div>
@@ -586,12 +543,12 @@ export default function BreathalyzerPage() {
                             <li>
                               <Image
                                 src="https://www.pranaair.com/wp-content/uploads/2025/02/automatically-powers-off.png"
-                                alt="Auto power off"
+                                alt={t("how_to_use.alcohol_test.power_off_alt")}
                                 width={60}
                                 height={60}
                               />
                             </li>
-                            <li>The device automatically powers off after 20 seconds of inactivity.</li>
+                            <li>{t("how_to_use.alcohol_test.power_off_text")}</li>
                           </ul>
                         </div>
                       </div>
@@ -603,11 +560,11 @@ export default function BreathalyzerPage() {
                           <h3>01</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/prana-air-logo.jpg"
-                            alt="Prana Air Logo"
+                            alt={t("how_to_use.alcohol_test.step1_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>Press the button for a second till the Prana Air Logo and Wait will appear.</p>
+                          <p>{t("how_to_use.alcohol_test.step1_text")}</p>
                         </div>
                       </div>
                       <div className="col-md-4">
@@ -615,11 +572,11 @@ export default function BreathalyzerPage() {
                           <h3>02</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/blow-for-5-6-seconds-until-the-bar-fills.jpg"
-                            alt="Blow for 5-6 seconds"
+                            alt={t("how_to_use.alcohol_test.step2_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>Blow when the test bar shows blow for 5-6 seconds until the bar fills.</p>
+                          <p>{t("how_to_use.alcohol_test.step2_text")}</p>
                         </div>
                       </div>
                       <div className="col-md-4">
@@ -627,11 +584,11 @@ export default function BreathalyzerPage() {
                           <h3>03</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/Alcohol-level-green-yellow-red-displays.jpg"
-                            alt="Alcohol level display"
+                            alt={t("how_to_use.alcohol_test.step3_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>Alcohol level (green/yellow/red) displays.</p>
+                          <p>{t("how_to_use.alcohol_test.step3_text")}</p>
                         </div>
                       </div>
                     </div>
@@ -645,15 +602,15 @@ export default function BreathalyzerPage() {
                             <li>0.40~1.00mg/l</li>
                           </ul>
                           <ul className="rang-clr">
-                            <li>Green</li>
-                            <li>Yellow</li>
-                            <li>Red</li>
+                            <li>{t("how_to_use.alcohol_test.green")}</li>
+                            <li>{t("how_to_use.alcohol_test.yellow")}</li>
+                            <li>{t("how_to_use.alcohol_test.red")}</li>
                           </ul>
                         </div>
                       </div>
                       <div className="col-md-6">
                         <div className="point-para">
-                          <p>0.08%BAC means 0.08g (80mg) of alcohol per 100ml of blood.</p>
+                          <p>{t("how_to_use.alcohol_test.bac_explanation")}</p>
                         </div>
                       </div>
                     </div>
@@ -661,8 +618,8 @@ export default function BreathalyzerPage() {
 
                   <div className="tab-pane fade" id="date-time" role="tabpanel" aria-labelledby="date-time-tab">
                     <div className="tab-content-box">
-                      <h3>Setting the Time and Date on Your Breathalyzer</h3>
-                      <p>Ensure accurate data logging by setting the correct time and date on your breathalyzer.</p>
+                      <h3>{t("how_to_use.date_time.title")}</h3>
+                      <p>{t("how_to_use.date_time.description")}</p>
                     </div>
 
                     <div className="row mob-row-parametere">
@@ -671,11 +628,11 @@ export default function BreathalyzerPage() {
                           <h3>01</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
-                            alt="Prana Air Logo"
+                            alt={t("how_to_use.date_time.step1_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>Press the button for a second till the Prana Air Logo and Wait will appear.</p>
+                          <p>{t("how_to_use.date_time.step1_text")}</p>
                         </div>
                       </div>
                       <div className="col-md-4">
@@ -683,11 +640,11 @@ export default function BreathalyzerPage() {
                           <h3>02</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/turn-on-long-press-the-button.png"
-                            alt="Blow for 5-6 seconds"
+                            alt={t("how_to_use.date_time.step2_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>Once the device is turn on long-press the button to enter settings.</p>
+                          <p>{t("how_to_use.date_time.step2_text")}</p>
                         </div>
                       </div>
                       <div className="col-md-4">
@@ -695,14 +652,11 @@ export default function BreathalyzerPage() {
                           <h3>03</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
-                            alt="Alcohol level display"
+                            alt={t("how_to_use.date_time.step3_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>
-                            Use short/long presses to adjust time and date and Long-press again to return to the main
-                            screen.
-                          </p>
+                          <p>{t("how_to_use.date_time.step3_text")}</p>
                         </div>
                       </div>
                     </div>
@@ -715,15 +669,14 @@ export default function BreathalyzerPage() {
                     aria-labelledby="history-export-tab"
                   >
                     <div className="tab-content-box">
-                      <h3>Viewing Historical Records</h3>
+                      <h3>{t("how_to_use.history_export.history_title")}</h3>
                       <p>
-                        Easily access past test results along with their date and time to check records anytime and
-                        anywhere.
+                        {t("how_to_use.history_export.history_description")}
                       </p>
                     </div>
                     <div className="tab-content-box data-txt">
-                      <h3>Data Export:</h3>
-                      <p>Effortlessly export your data for future analysis.</p>
+                      <h3>{t("how_to_use.history_export.export_title")}</h3>
+                      <p>{t("how_to_use.history_export.export_description")}</p>
                     </div>
 
                     <div className="row mob-row-parametere">
@@ -732,11 +685,11 @@ export default function BreathalyzerPage() {
                           <h3>01</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/Press-the-button-for-few-second.jpg"
-                            alt="Prana Air Logo"
+                            alt={t("how_to_use.history_export.step1_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>Press and hold the button until the Prana Air logo appears on the screen.</p>
+                          <p>{t("how_to_use.history_export.step1_text")}</p>
                         </div>
                       </div>
                       <div className="col-md-4">
@@ -744,20 +697,20 @@ export default function BreathalyzerPage() {
                           <h3>02</h3>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/Use-short-long-press-to-adjust-time.jpg"
-                            alt="Blow for 5-6 seconds"
+                            alt={t("how_to_use.history_export.step2_alt")}
                             width={150}
                             height={100}
                           />
-                          <p>Short-press to view past records with date time and alcohol level.</p>
+                          <p>{t("how_to_use.history_export.step2_text")}</p>
                         </div>
                       </div>
                       <div className="col-md-4">
                         <div className="tab-logo-box data-box">
                           <h3>03</h3>
-                          <p>Connect via Type-C cable enable USB mode and access records in an Excel file.</p>
+                          <p>{t("how_to_use.history_export.step3_text")}</p>
                           <Image
                             src="https://www.pranaair.com/wp-content/uploads/2025/02/Connect-via-Type-C-cable.webp"
-                            alt="Alcohol level display"
+                            alt={t("how_to_use.history_export.step3_alt")}
                             width={150}
                             height={100}
                           />
@@ -771,7 +724,7 @@ export default function BreathalyzerPage() {
               <div className="row br-top">
                 <div className="col-md-12">
                   <div className="tutroials-heading">
-                    <h4>Tutorials</h4>
+                    <h4>{t("how_to_use.tutorials.title")}</h4>
                   </div>
                 </div>
               </div>
@@ -783,7 +736,7 @@ export default function BreathalyzerPage() {
                       width="100%"
                       height="315"
                       src="https://www.youtube.com/embed/S-1hOGdcwIQ"
-                      title="Unboxing Video Of Prana Air Breathalyzer Alcohol Tester"
+                      title={t("how_to_use.tutorials.video1_title")}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
@@ -796,7 +749,7 @@ export default function BreathalyzerPage() {
                       width="100%"
                       height="315"
                       src="https://www.youtube.com/embed/b0opxV6JFk0"
-                      title="How to Use Prana Air Breathalyzer Alcohol Detector"
+                      title={t("how_to_use.tutorials.video2_title")}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
@@ -817,15 +770,15 @@ export default function BreathalyzerPage() {
               <div className="row">
                 <div className="col-md-8">
                   <div className="simpli-oprt-txt">
-                    <h4>Simplified Operation</h4>
-                    <p>One-Button Operation Just Switch On and Blow into the Air Inlet.</p>
+                    <h4>{t("simplified_operation.title")}</h4>
+                    <p>{t("simplified_operation.description")}</p>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="simpli-img-left">
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/man-using-breathalyzer-easily.png"
-                      alt="Simple operation"
+                      alt={t("simplified_operation.image_alt")}
                       width={273}
                       height={200}
                     />
@@ -837,11 +790,11 @@ export default function BreathalyzerPage() {
               <div className="row">
                 <div className="col-md-8">
                   <div className="instent-result-txt">
-                    <h4>Instant Results at Your Fingertips</h4>
-                    <p>Get Accurate BAC Measurements within Seconds!</p>
+                    <h4>{t("instant_results.title")}</h4>
+                    <p>{t("instant_results.subtitle")}</p>
                     <ul>
-                      <li>less then</li>
-                      <li>10s Response time</li>
+                      <li>{t("instant_results.less_than")}</li>
+                      <li>{t("instant_results.response_time")}</li>
                     </ul>
                   </div>
                 </div>
@@ -849,7 +802,7 @@ export default function BreathalyzerPage() {
                   <div className="simpli-img-right">
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-real-time-alcohol-detector.png"
-                      alt="Instant results"
+                      alt={t("instant_results.image_alt")}
                       width={235}
                       height={200}
                     />
@@ -867,14 +820,14 @@ export default function BreathalyzerPage() {
           <div className="row">
             <div className="col-md-10">
               <div className="range-section">
-                <h4>Ranges</h4>
-                <p>One-Button Operation Just Switch On and Blow into the Air Inlet.</p>
+                <h4>{t("ranges.title")}</h4>
+                <p>{t("ranges.description")}</p>
               </div>
             </div>
             <div className="col-md-2">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/bottle-icon-100x100.png"
-                alt="alcohol icon"
+                alt={t("ranges.icon_alt")}
                 width={45}
                 height={45}
                 className="alcohol-icon"
@@ -886,7 +839,7 @@ export default function BreathalyzerPage() {
               <div className="range-bar-box">
                 <ul>
                   <li>
-                    <h4>No Alcohol</h4>
+                    <h4>{t("ranges.no_alcohol")}</h4>
                   </li>
                   <li>
                     0~0.10mg/l
@@ -899,7 +852,7 @@ export default function BreathalyzerPage() {
               <div className="range-bar-box">
                 <ul>
                   <li>
-                    <h4>Alcohol</h4>
+                    <h4>{t("ranges.alcohol")}</h4>
                   </li>
                   <li>
                     0.10~0.40mg/l
@@ -912,7 +865,7 @@ export default function BreathalyzerPage() {
               <div className="range-bar-box">
                 <ul>
                   <li>
-                    <h4>High Alcohol</h4>
+                    <h4>{t("ranges.high_alcohol")}</h4>
                   </li>
                   <li>
                     0.40~1.00mg/l
@@ -924,7 +877,7 @@ export default function BreathalyzerPage() {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="per-ml-text">*0.08%BAC means 0.08g (80mg) of alcohol per 100ml of blood.</div>
+              <div className="per-ml-text">{t("ranges.bac_explanation")}</div>
             </div>
           </div>
         </div>
@@ -937,7 +890,7 @@ export default function BreathalyzerPage() {
             <div className="col-lg-5 col-md-12 ipad">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/data-export-feature-in-prana-air-breathalyzer-device.jpeg"
-                alt="Data export"
+                alt={t("data_export.image_alt")}
                 width={400}
                 height={300}
                 className="data-img"
@@ -948,26 +901,26 @@ export default function BreathalyzerPage() {
                 <h4>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/connectivity-icon.png"
-                    alt="connectivity icon"
+                    alt={t("data_export.icon_alt")}
                     width={30}
                     height={30}
                   />
-                  Data Export
+                  {t("data_export.title")}
                 </h4>
-                <p>Download the recorded data in Excel file format with the help of a type-C data cable.</p>
+                <p>{t("data_export.description")}</p>
               </div>
               <ul className="store-box">
                 <li>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/data-storage-icon.png"
-                    alt="data storage icon"
+                    alt={t("data_export.storage_icon_alt")}
                     width={25}
                     height={25}
                   />
                 </li>
                 <li>
-                  Storable
-                  <h4>1000 records</h4>
+                  {t("data_export.storable")}
+                  <h4>{t("data_export.records")}</h4>
                 </li>
               </ul>
             </div>
@@ -982,30 +935,29 @@ export default function BreathalyzerPage() {
             <div className="col-lg-7 col-md-12 ipad">
               <div className="fule-cell-txt">
                 <h4>
-                  Fuel Cell
+                  {t("fuel_cell.title")}
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/breathalyzer-accuracy.jpeg"
-                    alt="breathalyzer accuracy"
+                    alt={t("fuel_cell.accuracy_alt")}
                     width={150}
                     height={100}
                   />
                 </h4>
-                <h3>Type Electrochemical Alcohol tester</h3>
+                <h3>{t("fuel_cell.subtitle")}</h3>
                 <p>
-                  Independent Gb05 fuel cell alcohol detector with compact size highly sensitive electrochemical sensor
-                  for accurate breath alcohol detection.
+                  {t("fuel_cell.description")}
                 </p>
               </div>
             </div>
             <div className="col-lg-5 col-md-12">
               <div className="cell-img-top-txt">
-                <h4>Fuel Cell</h4>
-                <p>Sensor</p>
+                <h4>{t("fuel_cell.sensor_title")}</h4>
+                <p>{t("fuel_cell.sensor_subtitle")}</p>
               </div>
               <div className="sensore-img">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-fuel-cell-sensor.png"
-                  alt="Sensor"
+                  alt={t("fuel_cell.sensor_image_alt")}
                   width={350}
                   height={300}
                 />
@@ -1021,11 +973,9 @@ export default function BreathalyzerPage() {
           <div className="row">
             <div className="col-md-12 ipad">
               <div className="quote-txt">
-                <strong>India</strong>
+                <strong>{t("quote.country")}</strong>
                 <p>
-                  had the highest number of road traffic accidents injuries and deaths as compared to any other country
-                  in the world. People killed in drunk driving-related traffic accidents account for 3.5% of all road
-                  fatalities. (Report by Ministry Road Transport and Highways)
+                  {t("quote.text")}
                 </p>
               </div>
             </div>
@@ -1041,7 +991,7 @@ export default function BreathalyzerPage() {
               <div className="detect-device-img">
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-data-accuracy-with-fuel-cell-sensor.png"
-                  alt="Detection device"
+                  alt={t("detection.image_alt")}
                   width={500}
                   height={400}
                 />
@@ -1049,8 +999,8 @@ export default function BreathalyzerPage() {
             </div>
             <div className="col-lg-6 col-md-12 ipad">
               <div className="detection-txt">
-                <h4>Detection Type</h4>
-                <p>Accurate Alcohol Level Measurement No False Positives. Detects Alcohol Levels in:</p>
+                <h4>{t("detection.title")}</h4>
+                <p>{t("detection.description")}</p>
                 <ul>
                   <li>mg/L</li>
                   <li>mg/dL</li>
@@ -1061,7 +1011,7 @@ export default function BreathalyzerPage() {
                 <li>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/not-detect-cold-drink.png"
-                    alt="cold drink"
+                    alt={t("detection.cold_drink_alt")}
                     width={52}
                     height={52}
                   />
@@ -1069,7 +1019,7 @@ export default function BreathalyzerPage() {
                 <li>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/not-detect-garlic.png"
-                    alt="garlic icon"
+                    alt={t("detection.garlic_alt")}
                     width={52}
                     height={52}
                   />
@@ -1077,7 +1027,7 @@ export default function BreathalyzerPage() {
                 <li>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/not-detect-onion.png"
-                    alt="onion icon"
+                    alt={t("detection.onion_alt")}
                     width={52}
                     height={52}
                   />
@@ -1085,7 +1035,7 @@ export default function BreathalyzerPage() {
                 <li>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/not-detect-carrot.png"
-                    alt="carrot icon"
+                    alt={t("detection.carrot_alt")}
                     width={52}
                     height={52}
                   />
@@ -1093,7 +1043,7 @@ export default function BreathalyzerPage() {
                 <li>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/not-detect-milk.png"
-                    alt="milk icon"
+                    alt={t("detection.milk_alt")}
                     width={52}
                     height={52}
                   />
@@ -1101,7 +1051,7 @@ export default function BreathalyzerPage() {
                 <li>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/not-detect-food-smell.png"
-                    alt="food smell icon"
+                    alt={t("detection.food_smell_alt")}
                     width={52}
                     height={52}
                   />
@@ -1119,9 +1069,9 @@ export default function BreathalyzerPage() {
             <div className="col-md-3">
               <div className="breathlayzer-comparision-heading">
                 <h4>
-                  <span>Prana</span> Air vs. Existing Breathalyzers
+                  <span>{t("comparison.brand")}</span> {t("comparison.title")}
                 </h4>
-                <p>A Comprehensive Comparison for Better Decision Making</p>
+                <p>{t("comparison.description")}</p>
               </div>
             </div>
             <div className="col-md-9"></div>
@@ -1130,18 +1080,18 @@ export default function BreathalyzerPage() {
             <div className="col-md-3">
               <div className="product-discription">
                 <div className="mobshow com-heading">
-                  <h4>Comprehensive</h4>
-                  <p>Breathalyzer</p>
+                  <h4>{t("comparison.comprehensive")}</h4>
+                  <p>{t("comparison.breathalyzer")}</p>
                 </div>
                 <ul>
-                  <li>Fuel Cell Sensor :</li>
-                  <li>Alcohol Test :</li>
-                  <li>Data Export :</li>
-                  <li>Onion Garlic Smell:</li>
-                  <li>Price :</li>
-                  <li>Accuracy :</li>
-                  <li>Weight :</li>
-                  <li>Portability :</li>
+                  <li>{t("comparison.fuel_cell")} :</li>
+                  <li>{t("comparison.alcohol_test")} :</li>
+                  <li>{t("comparison.data_export")} :</li>
+                  <li>{t("comparison.onion_garlic")}:</li>
+                  <li>{t("comparison.price")} :</li>
+                  <li>{t("comparison.accuracy")} :</li>
+                  <li>{t("comparison.weight")} :</li>
+                  <li>{t("comparison.portability")} :</li>
                 </ul>
               </div>
             </div>
@@ -1149,29 +1099,29 @@ export default function BreathalyzerPage() {
               <div className="dis-img">
                 <div className="disc-inner-img-one">
                   <h4>
-                    <strong>Prana Air</strong> Breathalyzer
+                    <strong>{t("comparison.prana_air")}</strong> {t("comparison.breathalyzer")}
                   </h4>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-for-comparison.jpeg"
-                    alt="prana air breathalyzer"
+                    alt={t("comparison.prana_air_alt")}
                     width={205}
                     height={200}
                   />
                 </div>
                 <div className="disc-inner-img-two">
-                  <h4>Ordinary Breathalyzers</h4>
+                  <h4>{t("comparison.ordinary")}</h4>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/ordinary-breathalyzer-for-comparison.jpeg"
-                    alt="ordinary cheap breathalyzer"
+                    alt={t("comparison.ordinary_alt")}
                     width={205}
                     height={200}
                   />
                 </div>
                 <div className="disc-inner-img-three">
-                  <h4>High-End Breathalyzers</h4>
+                  <h4>{t("comparison.high_end")}</h4>
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/high-end-breathalyzer-for-comparison.jpeg"
-                    alt="high end expensive breathalyzer"
+                    alt={t("comparison.high_end_alt")}
                     width={205}
                     height={200}
                   />
@@ -1182,31 +1132,31 @@ export default function BreathalyzerPage() {
                   <li>✔</li>
                   <li className="tab-bg">✔</li>
                   <li>✔</li>
-                  <li className="tab-bg">Not detected</li>
+                  <li className="tab-bg">{t("comparison.not_detected")}</li>
                   <li>$$$$</li>
-                  <li className="tab-bg">Very High</li>
-                  <li>Lightweight</li>
-                  <li className="tab-bg">Easily Portable</li>
+                  <li className="tab-bg">{t("comparison.very_high")}</li>
+                  <li>{t("comparison.lightweight")}</li>
+                  <li className="tab-bg">{t("comparison.easily_portable")}</li>
                 </ul>
                 <ul className="co-multifuntion-monitor">
                   <li>X</li>
                   <li>✔</li>
                   <li>X</li>
-                  <li>Detected as alcohol</li>
+                  <li>{t("comparison.detected_as_alcohol")}</li>
                   <li>$$$</li>
-                  <li>Low</li>
-                  <li>Lightweight</li>
-                  <li>Easily Portable</li>
+                  <li>{t("comparison.low")}</li>
+                  <li>{t("comparison.lightweight")}</li>
+                  <li>{t("comparison.easily_portable")}</li>
                 </ul>
                 <ul className="co-multifuntion-monitor">
                   <li>✔</li>
                   <li>✔</li>
                   <li>✔</li>
-                  <li>Not detected</li>
+                  <li>{t("comparison.not_detected")}</li>
                   <li>$$$$$</li>
-                  <li>Very High</li>
-                  <li>Bulky</li>
-                  <li>Comparatively less portable</li>
+                  <li>{t("comparison.very_high")}</li>
+                  <li>{t("comparison.bulky")}</li>
+                  <li>{t("comparison.less_portable")}</li>
                 </ul>
               </div>
             </div>
@@ -1221,7 +1171,7 @@ export default function BreathalyzerPage() {
             <div className="col-lg-5 col-md-12 ipad">
               <Image
                 src="https://www.pranaair.com/wp-content/uploads/2023/06/police-checking-alcohol-test-with-a-breathalyzer.jpeg"
-                alt="BAC Standard"
+                alt={t("bac_standard.image_alt")}
                 width={400}
                 height={300}
                 className="data-img bca-img"
@@ -1229,10 +1179,10 @@ export default function BreathalyzerPage() {
             </div>
             <div className="col-lg-7 col-md-12 export-data-bg bca-stanrd-bg ipad">
               <div className="bca-txt">
-                <h4>%BAC</h4>
-                <h3>Standard</h3>
+                <h4>{t("bac_standard.title")}</h4>
+                <h3>{t("bac_standard.subtitle")}</h3>
                 <p>
-                  The permissible BAC in India - <b>0.03% or 30mg and US/UK - 0.08% or 80mg per 100ml of blood</b>
+                  {t("bac_standard.description")}
                 </p>
                 <Link
                   className="myBtn"
@@ -1240,7 +1190,7 @@ export default function BreathalyzerPage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  View Standards
+                  {t("bac_standard.view_standards")}
                 </Link>
               </div>
             </div>
@@ -1254,18 +1204,18 @@ export default function BreathalyzerPage() {
           <div className="row">
             <div className="col-md-12">
               <div className="attractive-txt">
-                <h4>Attractive</h4>
-                <p>details for easy carrying</p>
+                <h4>{t("attractive_details.title")}</h4>
+                <p>{t("attractive_details.subtitle")}</p>
               </div>
             </div>
           </div>
           <div className="row mt-4">
             <div className="col-lg-6 col-md-12">
               <div className="tft-display-box">
-                <h3>TFT HD Display</h3>
+                <h3>{t("attractive_details.tft_title")}</h3>
                 <Image
                   src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-tft-display.png"
-                  alt="TFT HD Display"
+                  alt={t("attractive_details.tft_alt")}
                   width={600}
                   height={400}
                   className="feature-img"
@@ -1277,12 +1227,12 @@ export default function BreathalyzerPage() {
                 <div className="col-md-12 mb-4">
                   <div className="type-c-box">
                     <div className="type-c-content">
-                      <h3>Type C</h3>
-                      <p>Interface</p>
+                      <h3>{t("attractive_details.type_c_title")}</h3>
+                      <p>{t("attractive_details.type_c_subtitle")}</p>
                     </div>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalzyer-with-type-c-charging.png"
-                      alt="Type C Interface"
+                      alt={t("attractive_details.type_c_alt")}
                       width={600}
                       height={200}
                       className="feature-img"
@@ -1292,12 +1242,12 @@ export default function BreathalyzerPage() {
                 <div className="col-md-12">
                   <div className="lithium-box">
                     <div className="lithium-content">
-                      <h3>Lithium</h3>
-                      <p>Battery</p>
+                      <h3>{t("attractive_details.lithium_title")}</h3>
+                      <p>{t("attractive_details.lithium_subtitle")}</p>
                     </div>
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prana-air-breathalyzer-battery-capacity.png"
-                      alt="Lithium Battery"
+                      alt={t("attractive_details.lithium_alt")}
                       width={600}
                       height={200}
                       className="feature-img"
@@ -1316,8 +1266,8 @@ export default function BreathalyzerPage() {
           <div className="row">
             <div className="col-md-3">
               <div className="attractive-txt product-specification-heading">
-                <p>Product</p>
-                <h4>Technical specifications</h4>
+                <p>{t("specifications.product")}</p>
+                <h4>{t("specifications.title")}</h4>
               </div>
             </div>
             <div className="col-md-9">
@@ -1325,11 +1275,11 @@ export default function BreathalyzerPage() {
                 <Link href="https://www.pranaair.com/wp-content/uploads/2023/08/prana-air-alcohol-breathalyzer-brochure.pdf">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/05/brochore-btn.png"
-                    alt="brochore-btn"
+                    alt={t("specifications.brochure_alt")}
                     width={20}
                     height={20}
                   />
-                  Download Brochure
+                  {t("specifications.download_brochure")}
                 </Link>
               </div>
             </div>
@@ -1337,59 +1287,59 @@ export default function BreathalyzerPage() {
           <div className="row mid-box mob-scroll">
             <div className="col-md-6 box-line">
               <div className="product-specifi">
-                Product Name :<h4>Breathalyzer</h4>
+                {t("specifications.product_name")} :<h4>{t("specifications.breathalyzer")}</h4>
               </div>
               <div className="product-specifi shdw-line">
-                Sensor :<h4>Electrochemical Fuel Cell</h4>
+                {t("specifications.sensor")} :<h4>{t("specifications.electrochemical")}</h4>
               </div>
               <div className="product-specifi">
-                Working current :<h4>-20~60°C</h4>
+                {t("specifications.working_current")} :<h4>-20~60°C</h4>
               </div>
               <div className="product-specifi shdw-line">
-                Device dimension :<h4>6.6 x 4x 1.6 (cm)</h4>
+                {t("specifications.device_dimension")} :<h4>6.6 x 4x 1.6 (cm)</h4>
               </div>
               <div className="product-specifi">
-                Blowing continuity test :<h4>35 Sec</h4>
+                {t("specifications.blowing_test")} :<h4>35 Sec</h4>
               </div>
               <div className="product-specifi shdw-line">
-                Measuring Range :<h4>0 ~ 1.00mg/l</h4>
+                {t("specifications.measuring_range")} :<h4>0 ~ 1.00mg/l</h4>
               </div>
               <div className="product-specifi">
-                Battery:
-                <h4>Lithium Ion (210 mAh)</h4>
+                {t("specifications.battery")}:
+                <h4>{t("specifications.lithium_ion")}</h4>
               </div>
               <div className="product-specifi shdw-line">
-                Instrument weight :<h4>30 grams</h4>
+                {t("specifications.weight")} :<h4>30 grams</h4>
               </div>
             </div>
             <div className="col-md-6 box-line">
               <div className="product-specifi">
-                Response Time :<h4>10 seconds</h4>
+                {t("specifications.response_time")} :<h4>10 seconds</h4>
               </div>
               <div className="product-specifi">
-                Measurements :<h4>BAC (%)</h4>
+                {t("specifications.measurements")} :<h4>BAC (%)</h4>
               </div>
               <div className="product-specifi">
-                Display :<h4>TFT HD Screen</h4>
+                {t("specifications.display")} :<h4>TFT HD Screen</h4>
               </div>
               <div className="product-specifi">
-                Data Export :<h4>Export to an computer</h4>
+                {t("specifications.data_export")} :<h4>{t("specifications.export_to_computer")}</h4>
               </div>
               <div className="product-specifi">
-                Data Refresh Rate :<h4>2 Sec</h4>
+                {t("specifications.data_refresh")} :<h4>2 Sec</h4>
               </div>
               <div className="product-specifi">
-                Charging Mode :<h4>USB Type-C</h4>
+                {t("specifications.charging_mode")} :<h4>USB Type-C</h4>
               </div>
               <div className="product-specifi">
-                Data Storage :<h4>On-board 1000 records</h4>
+                {t("specifications.data_storage")} :<h4>{t("specifications.onboard_records")}</h4>
               </div>
               <div className="row">
                 <div className="col-md-8"></div>
                 <div className="col-md-4">
                   <Image
                     src="https://www.pranaair.com/wp-content/uploads/2023/06/rosh-icon.png"
-                    alt="ROHS Certified"
+                    alt={t("specifications.rohs_alt")}
                     width={80}
                     height={80}
                     className="rosh-iocn"
@@ -1407,8 +1357,8 @@ export default function BreathalyzerPage() {
           <div className="row">
             <div className="col-md-3">
               <div className="breathalyzer-slider-heading">
-                <h2>Breathalyzer</h2>
-                <h3>Applications</h3>
+                <h2>{t("applications.title")}</h2>
+                <h3>{t("applications.subtitle")}</h3>
               </div>
             </div>
             <div className="col-md-9">
@@ -1417,14 +1367,13 @@ export default function BreathalyzerPage() {
                   <div className="breathalyzer-slider-img">
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/doctor-talking-with-his-patient.jpg"
-                      alt="doctor talking with his patient clinic"
+                      alt={t("applications.health.image_alt")}
                       width={280}
                       height={200}
                     />
-                    <h4>Be Aware of Your Health</h4>
+                    <h4>{t("applications.health.title")}</h4>
                     <p>
-                      Monitor your alcohol intake to promote overall health and well-being making conscious choices
-                      about alcohol consumption.
+                      {t("applications.health.description")}
                     </p>
                   </div>
                 </div>
@@ -1432,14 +1381,13 @@ export default function BreathalyzerPage() {
                   <div className="breathalyzer-slider-img">
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/people-celebrating-party.jpg"
-                      alt="people celebrating party"
+                      alt={t("applications.limit.image_alt")}
                       width={280}
                       height={200}
                     />
-                    <h4>Drinking in Limit</h4>
+                    <h4>{t("applications.limit.title")}</h4>
                     <p>
-                      Help maintain responsible drinking habits by using the breathalyzer to gauge your alcohol levels
-                      and stay within legal limits.
+                      {t("applications.limit.description")}
                     </p>
                   </div>
                 </div>
@@ -1447,14 +1395,13 @@ export default function BreathalyzerPage() {
                   <div className="breathalyzer-slider-img">
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/personal-use-of-breathalyzer-before-drive.jpeg"
-                      alt="personal use of breathalyzer before drive"
+                      alt={t("applications.self_testing.image_alt")}
                       width={280}
                       height={200}
                     />
-                    <h4>Self-Testing</h4>
+                    <h4>{t("applications.self_testing.title")}</h4>
                     <p>
-                      Monitor your alcohol levels and make informed decisions about driving or engaging in activities
-                      that may be affected by alcohol consumption.
+                      {t("applications.self_testing.description")}
                     </p>
                   </div>
                 </div>
@@ -1462,14 +1409,13 @@ export default function BreathalyzerPage() {
                   <div className="breathalyzer-slider-img">
                     <Image
                       src="https://www.pranaair.com/wp-content/uploads/2023/06/prevent-drink-and-drive.jpg"
-                      alt="Enhancing Road Safety"
+                      alt={t("applications.road_safety.image_alt")}
                       width={280}
                       height={200}
                     />
-                    <h4>Enhancing Road Safety</h4>
+                    <h4>{t("applications.road_safety.title")}</h4>
                     <p>
-                      Road Police with Breathalyzers to Ensure Compliance with Traffic Regulations to Promote
-                      Responsible and Safe Behavior for Drivers.
+                      {t("applications.road_safety.description")}
                     </p>
                   </div>
                 </div>
@@ -1485,7 +1431,7 @@ export default function BreathalyzerPage() {
           <div className="row">
             <div className="col-md-6">
               <div className="attractive-txt faq-heading">
-                <h4>Frequently Asked Questions About Prana Air Breathalyzer</h4>
+                <h4>{t("faq.title")}</h4>
               </div>
             </div>
             <div className="col-md-6"></div>
@@ -1503,7 +1449,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="true"
                       aria-controls="collapseOne"
                     >
-                      <h3>1. How does Prana Air Breathalyzer work?</h3>
+                      <h3>1. {t("faq.q1.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1514,8 +1460,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        Prana Air Breathalyzer utilizes advanced electrochemical sensors to accurately measure alcohol
-                        levels in your breath.
+                        {t("faq.q1.answer")}
                       </p>
                     </div>
                   </div>
@@ -1530,7 +1475,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      <h3>2. How long does it take to get the results?</h3>
+                      <h3>2. {t("faq.q2.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1541,8 +1486,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        You can get the results within 10 seconds of blowing into the device providing quick and
-                        convenient alcohol level readings.
+                        {t("faq.q2.answer")}
                       </p>
                     </div>
                   </div>
@@ -1557,7 +1501,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      <h3>3. Does Prana Air Breathalyzer detect other substances besides alcohol?</h3>
+                      <h3>3. {t("faq.q3.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1568,8 +1512,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        No Prana Air Breathalyzer is specifically designed to measure alcohol levels and does not detect
-                        other substances.
+                        {t("faq.q3.answer")}
                       </p>
                     </div>
                   </div>
@@ -1584,7 +1527,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                      <h3>4. Is the device easy to use?</h3>
+                      <h3>4. {t("faq.q4.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1595,8 +1538,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        Yes the Prana Air Breathalyzer features a user - friendly design with simple one - button
-                        operation making it easy for anyone to use.
+                        {t("faq.q4.answer")}
                       </p>
                     </div>
                   </div>
@@ -1611,7 +1553,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="false"
                       aria-controls="collapseFive"
                     >
-                      <h3>5. How portable is the Prana Air Breathalyzer?</h3>
+                      <h3>5. {t("faq.q5.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1622,8 +1564,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        The device has a sleek and compact design making it highly portable and convenient to carry
-                        wherever you go.
+                        {t("faq.q5.answer")}
                       </p>
                     </div>
                   </div>
@@ -1638,7 +1579,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="false"
                       aria-controls="collapseSix"
                     >
-                      <h3>6. How accurate is the Prana Air Breathalyzer?</h3>
+                      <h3>6. {t("faq.q6.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1649,8 +1590,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        Prana Air Breathalyzer utilizes advanced Gb05 Fuel cell technology providing highly accurate
-                        alcohol level measurements for reliable results.
+                        {t("faq.q6.answer")}
                       </p>
                     </div>
                   </div>
@@ -1665,7 +1605,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="false"
                       aria-controls="collapseSeven"
                     >
-                      <h3>7. Can I export the test data for record-keeping purposes?</h3>
+                      <h3>7. {t("faq.q7.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1676,8 +1616,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        Yes Prana Air Breathalyzer allows you to export the test record data to a computer facilitating
-                        easy record - keeping in an excel file format.
+                        {t("faq.q7.answer")}
                       </p>
                     </div>
                   </div>
@@ -1692,7 +1631,7 @@ export default function BreathalyzerPage() {
                       aria-expanded="false"
                       aria-controls="collapseEight"
                     >
-                      <h3>8. Is Prana Air Breathalyzer suitable for professional use?</h3>
+                      <h3>8. {t("faq.q8.question")}</h3>
                     </button>
                   </h2>
                   <div
@@ -1703,8 +1642,7 @@ export default function BreathalyzerPage() {
                   >
                     <div className="accordion-body">
                       <p>
-                        Yes the devices high sensitivity stability and precise detection make it suitable for
-                        professional applications such as law enforcement workplace safety and alcohol testing centers.
+                        {t("faq.q8.answer")}
                       </p>
                     </div>
                   </div>
