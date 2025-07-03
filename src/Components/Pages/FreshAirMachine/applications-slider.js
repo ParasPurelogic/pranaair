@@ -8,7 +8,7 @@ export default function FresherCarousel({ children, className, responsive, showD
         <Carousel
             responsive={responsive}
             infinite={true}
-            autoPlay={false}
+            autoPlay={true}
             autoPlaySpeed={3000}
             className={className}
             showDots={showDots}
