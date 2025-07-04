@@ -187,7 +187,7 @@ export default async function AmbientAirMonito() {
                         <div className="col-lg-12">
                             <div className="tab-content" id="partsLabelTabContent">
                                 <div className="tab-pane fade show active" id="ambient-pm" role="tabpanel" aria-labelledby="ambient-pm-tab">
-                                    <div className="row">
+                                    <div className="row mob-row">
                                         <div className="col-lg-7">
                                             <div className="main-box">
                                                 <div className="choose-monitor-txt">
@@ -266,7 +266,7 @@ export default async function AmbientAirMonito() {
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="ambient-pro" role="tabpanel" aria-labelledby="ambient-pro-tab">
-                                    <div className="row">
+                                    <div className="row mob-row">
                                         <div className="col-lg-7">
                                             <div className="main-box">
                                                 <div className="choose-monitor-txt">
@@ -345,7 +345,7 @@ export default async function AmbientAirMonito() {
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="prana-sense" role="tabpanel" aria-labelledby="prana-sense-tab">
-                                    <div className="row">
+                                    <div className="row mob-row">
                                         <div className="col-lg-7">
                                             <div className="main-box">
                                                 <div className="choose-monitor-txt">
@@ -1116,11 +1116,11 @@ export default async function AmbientAirMonito() {
                 <div className="table-wrapper">
                     <table className="comparison-table">
                         <thead>
-                            <tr>
+                            <tr className="compar-heading">
                                 <th>Features</th>
-                                <th>Ambient PM</th>
-                                <th>Ambient Pro</th>
-                                <th>Prana Sense</th>
+                                <th><span>Ambient Pro</span></th>
+                                <th><span>Ambient PM</span></th>
+                                <th><span>Prana Sense</span></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1219,6 +1219,322 @@ export default async function AmbientAirMonito() {
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </section>
+
+            {/* Clintele */}
+            <section className="all-company-sec">
+                <div className="client-heading">
+                    <FadeInText>
+                        <span className="sub-heading">Clintele</span>
+                        <h2 className="page-heading">Organisations We Work With</h2>
+                    </FadeInText>
+                </div>
+                <div className="container-fluid">
+                    <div className="col-lg-12">
+                        <div className="container-fluid">
+                            <div className="marquee">
+                                <div className="marquee-inner">
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/taj.png" alt="taj logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/mahindra.png" alt="mahindra" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/renault-nissan.png" alt="renault logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/tata.png" alt="tata logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/havells.png" alt="havells logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/microsoft.png" alt="microsoft logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-bombay.png" alt="iit-bombay logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/UOC.png" alt="UOC logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Symbiosis-Pune.png" alt="Symbiosis logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Siemens.png" alt="Siemens logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Schneider-Electric-.png" alt="Schneider logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/OLA.png" alt="OLA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/WRI.png" alt="WRI logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BITS-pilani.png" alt="BITS-pilani logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BIRLA-Ultratech.png" alt="BIRLA-Ultratech logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/taj.png" alt="taj logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/mahindra.png" alt="mahindra" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/renault-nissan.png" alt="renault logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/tata.png" alt="tata logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/havells.png" alt="havells logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/microsoft.png" alt="microsoft logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-bombay.png" alt="iit-bombay logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/UOC.png" alt="UOC logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Symbiosis-Pune.png" alt="Symbiosis logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Siemens.png" alt="Siemens logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Schneider-Electric-.png" alt="Schneider logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/OLA.png" alt="OLA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/WRI.png" alt="WRI logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BITS-pilani.png" alt="BITS-pilani logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BIRLA-Ultratech.png" alt="BIRLA-Ultratech logo" /></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="container-fluid">
+                            <div className="marquee">
+                                <div className="marquee-inner-rgt">
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BCG-Boston-Consulting-Group.png" alt="BCG-Boston-Consulting-Group logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Adani-Group.png" alt="Adani-Group logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/hyderabad-iit.png" alt="hyderabad-iit logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-kanpur.png" alt="iit-kanpur logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/rorkee-iit.png" alt="iit roorkee logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/dae.png" alt="dae logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iiot.png" alt="iiot logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/bhu.png" alt="bhu logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-rorkee.png" alt="iit-rorkee logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/LODHA.png" alt="LODHA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Leighton.png" alt="Leighton logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/InterGlobe-Aviation-Indigo.png" alt="InterGlobe-Aviation-Indigo logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/IIT-Banaras.png" alt="IIT-Banaras" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/FOOD-works.png" alt="FOOD-works logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Emaar.png" alt="Emaar logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CII.png" alt="CII logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CEEW.png" alt="CEEW logo" /></li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/BCG-Boston-Consulting-Group.png" alt="BCG-Boston-Consulting-Group logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Adani-Group.png" alt="Adani-Group logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/hyderabad-iit.png" alt="hyderabad-iit logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-kanpur.png" alt="iit-kanpur logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/rorkee-iit.png" alt="iit roorkee logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/marriott.png" alt="marriott logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/dae.png" alt="dae logo" />
+                                            </li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iiot.png" alt="iiot logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/bhu.png" alt="bhu logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/iit-rorkee.png" alt="iit-rorkee logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/LODHA.png" alt="LODHA logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Leighton.png" alt="Leighton logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/InterGlobe-Aviation-Indigo.png" alt="InterGlobe-Aviation-Indigo logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/IIT-Banaras.png" alt="IIT-Banaras" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/FOOD-works.png" alt="FOOD-works logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/Emaar.png" alt="Emaar logo" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className="marquee-img-box">
+                                        <ul>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CII.png" alt="CII logo" /></li>
+                                            <li><img className="arrow" src="https://www.pranaair.com/wp-content/uploads/2024/03/CEEW.png" alt="CEEW logo" /></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Comparison of technologies */}
+            <section className="caqm-section">
+                <div className="compare-heading">
+                    <FadeInText>
+                        <span className="sub-heading">Comparison of technologies</span>
+                        <h2 className="page-heading">Prana Air CAAQMS vs Traditional CAAQMS</h2>
+                    </FadeInText>
+                </div>
+                <div className="container-fluid">
+                    <div className="comparison-grid">
+                        <div className="feature-list">
+                            <ul>
+                                <li>Pollutants</li>
+                                <li>Monitor Size</li>
+                                <li>Real-time Data</li>
+                                <li>Portability</li>
+                                <li>Device Cost</li>
+                                <li>Manpower</li>
+                                <li>Accuracy</li>
+                                <li>Technology</li>
+                                <li>Data Accessibility</li>
+                            </ul>
+                        </div>
+
+                        {/* Prana Air Column */}
+                        <div className="compare-img">
+                            <Image
+                                src="/img/prana-air-ambient-caaqms-monitor.png"
+                                width={150}
+                                height={150}
+                                alt="Prana Air CAAQMS"
+                            />
+                            <h3>Prana Air CAAQMS</h3>
+                            <div className="column prana">
+                                <ul>
+                                    <li>PM10, PM2.5, SO2, NO2, O3, CO</li>
+                                    <li>Compact & lightweight</li>
+                                    <li>In less than 30 seconds.</li>
+                                    <li>Easy portability</li>
+                                    <li>Low cost</li>
+                                    <li>Very less manpower</li>
+                                    <li>Highly accurate & precise</li>
+                                    <li>Sensor based</li>
+                                    <li>Available on website, mobile & TV app</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Traditional Column */}
+                        <div className="compare-img">
+                            <Image
+                                src="/img/traditional-caaqms-.png"
+                                width={150}
+                                height={150}
+                                alt="Prana Air CAAQMS"
+                            />
+                            <h3>Traditional CAAQMS</h3>
+                            <div className="column traditional">
+                                <ul>
+                                    <li>PM10, PM2.5, SO2, NO2, O3, CO</li>
+                                    <li>Compact & lightweight</li>
+                                    <li>In less than 30 seconds.</li>
+                                    <li>Easy portability</li>
+                                    <li>Low cost</li>
+                                    <li>Very less manpower</li>
+                                    <li>Highly accurate & precise</li>
+                                    <li>Sensor based</li>
+                                    <li>Available on website, mobile & TV app</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

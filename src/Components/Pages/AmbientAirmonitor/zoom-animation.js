@@ -47,7 +47,7 @@ export default function ToxicPollutantsSection({ toxicContent }) {
                             </div>
                         </div>
                     </div>
-                    <div className="row mob-row">
+                    <div className="row mob-row-flex">
                         <div className="col-lg-3">
                             <div className="aqm-device arrow">
                                 <Image src="/img/modes-air-quality-monitor.webp" alt="" width={800} height={400} />

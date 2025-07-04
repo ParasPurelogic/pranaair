@@ -1292,7 +1292,7 @@ export function AboutUsMegaMenu({ onClose }) {
         // Enhanced parameters for latest posts with better cache busting
         const data = await fetchLocalizedPosts({
           language: i18n.language,
-          perPage: 4,
+          perPage: 2,
           page: 1,
           orderBy: "date",
           order: "desc",
