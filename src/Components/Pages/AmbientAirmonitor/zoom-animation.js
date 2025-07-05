@@ -62,12 +62,12 @@ export default function ToxicPollutantsSection({ toxicContent }) {
                                         <p>Wifi</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/wifi-mode.webp" alt="" width={800} height={400} />
-                                        <p>Wifi</p>
+                                        <Image src="/img/gsm-mode.webp" alt="" width={800} height={400} />
+                                        <p>GSM</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/wifi-mode.webp" alt="" width={800} height={400} />
-                                        <p>Wifi</p>
+                                        <Image src="/img/rs485-mode.webp" alt="" width={800} height={400} />
+                                        <p>RS 485</p>
                                     </li>
                                 </ul>
                                 <p>Types of Connectivity</p>
@@ -87,12 +87,12 @@ export default function ToxicPollutantsSection({ toxicContent }) {
                                         <p>Laptop</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/laptop-mode.webp" alt="" width={800} height={400} />
-                                        <p>Laptop</p>
+                                        <Image src="/img/tv-mode.webp" alt="" width={800} height={400} />
+                                        <p>TV</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/laptop-mode.webp" alt="" width={800} height={400} />
-                                        <p>Laptop</p>
+                                        <Image src="/img/mobile-mode.webp" alt="" width={800} height={400} />
+                                        <p>Mobile</p>
                                     </li>
                                 </ul>
                             </div>

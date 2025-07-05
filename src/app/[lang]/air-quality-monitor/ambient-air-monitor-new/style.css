@@ -397,7 +397,7 @@ section.performance {
     padding-top: 20px;
     color: #263D4F;
     font-size: 18px;
-    width: 63%;
+    width: 90%;
     line-height: 24px;
 }
 
@@ -435,12 +435,25 @@ section.performance {
     background-position: center;
     padding-top: 100px;
     padding-left: 100px;
+    position: relative;
+}
+
+.common-bg:before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(90deg, black, transparent);
+    width: 40%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 0;
 }
 
 .common-bg span {
     color: #EAEAEA;
     font-family: 'Mukta';
     text-transform: uppercase;
+    position: relative;
 }
 
 .common-bg h2 {
@@ -448,6 +461,7 @@ section.performance {
     font-size: 32px;
     font-weight: 600;
     width: 30%;
+    position: relative;
 }
 
 .common-bg p {
@@ -456,11 +470,13 @@ section.performance {
     font-weight: 300;
     padding-top: 10px;
     width: 31%;
+    position: relative;
 }
 
 .common-bg a {
     width: 12%;
     margin-top: 30px;
+    position: relative;
 }
 
 ul#partsLabelTab2 {
@@ -697,7 +713,15 @@ section.toxic-img {
 }
 
 .mob-tv ul li img {
-    width: 95px;
+    width: 90px;
+}
+
+.mob-tv ul li:nth-child(2) img {
+    width: 60%;
+}
+
+.mob-tv ul li:last-child img {
+    width: 60%;
 }
 
 .mob-row {
@@ -766,7 +790,7 @@ section.reliable {
 }
 
 .type-device.arrow:before {
-    top: 155px;
+    top: 65px;
     width: 70%;
     left: 250px;
 }
@@ -868,6 +892,18 @@ ul#partsLabelTab3 button.nav-link:hover {
     text-align: right;
 }
 
+.prana-sens img {
+    width: 70%;
+    display: block;
+    margin: 50px auto 0;
+}
+
+.ambient-pro-label img {
+    width: 70%;
+    display: block;
+    margin: 40px auto 0;
+}
+
 .part-ponts ul {
     padding: 0;
     list-style: none;
@@ -911,11 +947,11 @@ ul#partsLabelTab3 button.nav-link:hover {
 }
 
 .aqd {
-    background: url(/img/aqi-mobile-ap.webp);
+    background: url(/img/aqi-web-dashboard-real-time-historix-data.webp);
 }
 
 .ata {
-    background: url(/img/aqi-mobile-ap.webp);
+    background: url(/img/aqi-tv-app.webp);
 }
 
 .data-box {
@@ -1081,7 +1117,7 @@ section.data-access {
     width: 95%;
     margin: 0 auto;
     position: relative;
-    top: 200px;
+    top: 150px;
 }
 
 .float-img ul li {
@@ -1538,7 +1574,7 @@ a.quote img {
     .hero-img img {
         width: 950px;
         height: auto;
-        margin-left: -350px;
+        margin-left: -400px;
     }
 
     .hero-content {
@@ -1715,7 +1751,7 @@ a.quote img {
     }
 
     .performance-meets ul li img {
-        width: 45px;
+        width: 60px;
         height: auto;
     }
 
@@ -1944,7 +1980,8 @@ a.quote img {
     }
 
     ul#partsLabelTab4 button.nav-link {
-        padding: 10px;
+        padding: 10px 9px;
+        font-size: 14px;
     }
 
     .logo-brand-aq img {
@@ -2036,6 +2073,7 @@ a.quote img {
 
     .construction-site .container a {
         margin: 10px auto;
+        width: 60%;
     }
 
     .float-img {
@@ -2081,8 +2119,8 @@ a.quote img {
     }
 
     .case-slider .react-multiple-carousel__arrow {
-        width: 60px;
-        margin-top: 500px;
+        width: 50px;
+        margin-top: 440px;
     }
 
     .details-heading {
@@ -2119,6 +2157,7 @@ a.quote img {
     .comparison-table td {
         font-size: 14px;
         width: 170px;
+        padding: 5px 15px;
     }
 
     a.download-brochur {
@@ -2229,6 +2268,673 @@ a.quote img {
     }
 }
 
-@media (max-width: 768px) {}
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
 
-@media (max-width: 1024px) {}
+    .aqm-device img {
+        width: 20%;
+    }
+
+    .mob-row-flex {
+        gap: 120px;
+    }
+
+    .hero-section {
+        margin-top: 70px;
+    }
+
+    .type-device ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .type-device ul li {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        top: 0px;
+        left: 0px;
+        padding-left: 30px;
+    }
+
+    .hero-content span {
+        font-size: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        padding-top: 5px;
+        line-height: 35px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        padding-top: 10px;
+        width: 60%;
+    }
+
+    .hero-content:before {
+        display: none;
+    }
+
+    .hero-btn {
+        width: 30%;
+        margin-top: 20px;
+    }
+
+    ul.hero-tab-button {
+        left: 0;
+        padding-top: 60px;
+        width: 70%;
+        padding-left: 30px;
+
+    }
+
+    section.explore-our {
+        padding-top: 0;
+    }
+
+    .mob-row {
+        flex-direction: column-reverse;
+    }
+
+    .choose-monitor-img {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .choose-monitor-img img {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    ul#partsLabelTab {
+        width: 60%;
+        float: none;
+        top: 70px;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .main-box {
+        padding: 30px 30px 40px;
+    }
+
+    section.performance {
+        padding-top: 60px;
+        margin: 0 0px;
+    }
+
+    .perform-heading h2 {
+        width: 55%;
+    }
+
+    .perform-heading {
+        padding-left: 30px;
+    }
+
+    .performance-meets ul {
+        margin: 30px 40px 0;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .performance-meets ul li {
+        height: 250px;
+        width: 100%;
+        padding-top: 60px;
+        padding-left: 30px;
+    }
+
+    .common-bg {
+        height: 500px;
+        padding-top: 100px;
+        padding-left: 30px;
+    }
+
+    .common-bg h2 {
+        font-size: 22px;
+        width: 50%;
+    }
+
+    .common-bg p {
+        font-size: 18px;
+        padding-top: 10px;
+        width: 50%;
+    }
+
+    .common-bg a {
+        width: 25%;
+        margin-top: 20px;
+    }
+
+    .insights-tab {
+        padding-top: 80px;
+    }
+
+    section.built-scenario {
+        padding-top: 30px;
+    }
+
+    .built-heading h2 {
+        width: 70%;
+    }
+
+    .built-heading p {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .app-slide-review-box p {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    section.toxic-img {
+        background-size: cover;
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        background-position: bottom;
+        border-radius: 50px;
+    }
+
+    .arrow:before {
+        width: 15%;
+        height: 50px;
+        left: 300px;
+        top: 170px;
+        transform: rotate(90deg);
+    }
+
+    .type-device.arrow:before {
+        top: 210px;
+        width: 30%;
+        left: 120px;
+    }
+
+    .accurate-text {
+        bottom: 0;
+        top: 40%;
+        left: 30px;
+    }
+
+    .accurate-text h2 {
+        padding-bottom: 10px;
+        width: 70%;
+    }
+
+    .reliable .react-multiple-carousel__arrow {
+        width: 50px;
+        margin-top: 190px;
+        margin-left: 0;
+    }
+
+    ul#partsLabelTab3 {
+        margin: 20px auto 0;
+        width: 60%;
+        float: none;
+        left: 0;
+        border: 0;
+    }
+
+    .part-item-img img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .part-ponts {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .part-ponts ul {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+    }
+
+    section.data-access {
+        margin: 80px 20px 0;
+    }
+
+    ul#partsLabelTab4 {
+        margin: 30px auto;
+        justify-content: space-between;
+        gap: 20px;
+        width: 62%;
+        float: none;
+        top: 0;
+        left: 0;
+        border: 0;
+    }
+
+    .logo-brand-aq img {
+        width: 10%;
+    }
+
+    .data-text {
+        width: 55%;
+        padding-top: 130px;
+    }
+
+    .data-text ul {
+        width: 90%;
+    }
+
+    .real-time ul li {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .real-time {
+        border-radius: 20px;
+        padding: 20px 30px;
+        margin: 170px auto 0;
+    }
+
+    .real-time ul li img {
+        width: 30%;
+    }
+
+    .real-time ul li p {
+        font-size: 14px;
+    }
+
+    .data-box {
+        border-radius: 30px;
+    }
+
+    .construction-site .container {
+        height: 500px;
+        margin-top: 80px;
+        padding-top: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .case-study {
+        padding-top: 50px;
+    }
+
+    .case-heading p {
+        font-size: 17px;
+        width: 50%;
+    }
+
+    .case-heading {
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
+
+    .app-slide-review-box h3 {
+        font-size: 16px;
+        padding-top: 15px;
+        width: 80%;
+    }
+
+    .case-heading {
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
+
+    .case-slider .react-multiple-carousel__arrow {
+        width: 60px;
+        margin-top: 400px;
+    }
+
+    .case-slider .react-multiple-carousel__arrow--left {
+        left: calc(75% + 20px) !important;
+    }
+
+    .case-slider {
+        margin-left: 30px;
+        padding-bottom: 100px;
+    }
+
+    .comparison-section {
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+
+    .compar-heading th {
+        font-size: 16px;
+    }
+
+    .compar-heading th span {
+        padding: 10px;
+        width: 100%;
+    }
+
+    a.download-brochur {
+        font-size: 14px;
+    }
+
+    a.quote {
+        width: 100%;
+    }
+
+    .all-company-sec {
+        padding-top: 50px;
+    }
+
+    .caqm-section {
+        padding: 50px 30px 100px;
+    }
+
+    .compare-heading {
+        margin-bottom: 0;
+    }
+
+    .compare-heading h2 {
+        width: 60%;
+    }
+
+    .caqm-section .container-fluid {
+        padding: 0 0px;
+    }
+
+    .compare-img img {
+        width: 75%;
+    }
+
+    .compare-img h3 {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .column ul li {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-device-width :768px) and (max-device-width :1024px) and (orientation :landscape) {
+    .hero-content {
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        text-align: left;
+    }
+
+    .hero-content span {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        padding-top: 10px;
+        width: 46%;
+        line-height: 30px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        padding-top: 15px;
+        width: 60%;
+    }
+
+    .hero-content:before {
+        display: none;
+    }
+
+    .hero-btn {
+        width: 24%;
+    }
+
+    ul.hero-tab-button {
+        bottom: 5.375rem;
+        left: 1.75rem;
+    }
+
+    section.explore-our {
+        padding-top: 20px;
+    }
+
+    .main-box {
+        padding: 30px 20px 50px;
+    }
+
+    .choose-monitor-img {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .choose-monitor-txt h3 {
+        font-size: 20px;
+    }
+
+    .choose-monitor-txt p {
+        font-size: 14px;
+        padding-top: 10px;
+        width: 90%;
+    }
+
+    .feature ul li span {
+        font-size: 14px;
+    }
+
+    .parameters ul {
+        display: grid;
+        grid-template-columns: repeat(5, 0fr);
+    }
+
+    ul#partsLabelTab button.nav-link {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    #partsLabelTab {
+        width: 35% !important;
+        float: right !important;
+        top: 100px !important;
+        left: -50px !important;
+    }
+
+    section.performance {
+        padding-top: 50px;
+        margin: 0 30px;
+    }
+
+    .perform-heading h2 {
+        width: 45%;
+    }
+
+    .performance-meets ul li {
+        height: 200px;
+        padding-top: 50px;
+        padding-left: 20px;
+    }
+
+    .performance-meets ul li p {
+        padding-top: 20px;
+        font-size: 14px;
+        width: 100%;
+        line-height: 21px;
+    }
+
+    .insights-tab {
+        padding-top: 80px;
+    }
+
+    .common-bg {
+        height: 450px;
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+
+    .common-bg h2 {
+        font-size: 26px;
+        width: 40%;
+    }
+
+    .common-bg p {
+        font-size: 18px;
+        width: 40%;
+    }
+
+    .common-bg a {
+        width: 20%;
+        margin-top: 20px;
+    }
+
+    section.built-scenario {
+        padding-top: 30px;
+    }
+
+    .built-heading h2 {
+        width: 50%;
+    }
+
+    .app-slide-review-box p {
+        width: 90%;
+    }
+
+    section.toxic-img {
+        background-size: cover;
+        margin-top: 60px;
+        padding-top: 30px;
+        padding-bottom: 150px;
+        background-position: center;
+        border-radius: 30px;
+    }
+
+    .mob-row-flex {
+        gap: 0px;
+        align-items: center;
+    }
+
+    .type-device ul li {
+        flex-direction: column;
+    }
+
+    .arrow:before {
+        left: 200px;
+        top: 30px;
+    }
+
+    .type-device.arrow:before {
+        top: 195px;
+        width: 80%;
+        left: 150px;
+    }
+
+    section.reliable {
+        margin-top: 50px;
+    }
+
+    .accurate-text {
+        bottom: 0;
+        top: 45%;
+        left: 50px;
+    }
+
+    .reliable .react-multiple-carousel__arrow {
+        width: 60px;
+        margin-top: 150px;
+        margin-left: 0px;
+    }
+
+    ul#partsLabelTab3 {
+        margin-top: 40px;
+        width: 80%;
+        left: -50px;
+    }
+
+    .part-ponts {
+        padding-top: 20px;
+    }
+
+    section.data-access {
+        margin: 70px 30px 0;
+    }
+
+    ul#partsLabelTab4 {
+        width: 100%;
+    }
+
+    .logo-brand-aq img {
+        width: 10%;
+    }
+
+    .data-text {
+        width: 45%;
+        padding-top: 80px;
+        margin-left: auto;
+    }
+
+    .data-text ul {
+        padding: 30px 0 0;
+        width: 90%;
+    }
+
+    .data-box {
+        height: 630px;
+        border-radius: 25px;
+    }
+
+    .construction-site .container {
+        height: 600px;
+        margin-top: 80px;
+        padding-top: 20px;
+    }
+
+    .float-img {
+        top: 150px;
+    }
+
+    .case-study {
+        padding-top: 0;
+    }
+
+    .case-heading p {
+        width: 50%;
+    }
+
+    .app-slide-review-box h3 {
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .case-slider .react-multiple-carousel__arrow {
+        width: 50px;
+        margin-top: 500px;
+    }
+
+    .case-slider .react-multiple-carousel__arrow--left {
+        left: calc(81% + 20px) !important;
+    }
+
+    .comparison-section {
+        padding: 40px 30px;
+    }
+
+    .compar-heading th span {
+        width: 100%;
+    }
+
+    .all-company-sec {
+        padding-top: 50px;
+    }
+
+    .caqm-section {
+        padding: 100px 30px;
+    }
+
+    .compare-heading h2 {
+        width: 33%;
+        font-size: 26px;
+    }
+
+    .compare-img img {
+        width: 65%;
+    }
+
+    .compare-img h3 {
+        font-size: 16px;
+        width: 80%;
+    }
+}

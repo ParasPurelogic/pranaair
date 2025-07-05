@@ -207,26 +207,26 @@ export default async function AmbientAirMonito() {
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <Image src="/img/low-cost-icon.png" width={40} height={40} alt=""></Image>
+                                                                <Image src="/img/portable-icon.png" width={40} height={40} alt=""></Image>
                                                             </span>
-                                                            <span>Low-cost real-time air
-                                                                quality monitoring</span>
+                                                            <span>Portable and easy to
+                                                                carry anywhere</span>
                                                         </li>
                                                     </ul>
                                                     <ul>
                                                         <li>
                                                             <span>
-                                                                <Image src="/img/low-cost-icon.png" width={40} height={40} alt=""></Image>
+                                                                <Image src="/img/weatherproof-icon.png" width={40} height={40} alt=""></Image>
                                                             </span>
-                                                            <span>Low-cost real-time air
-                                                                quality monitoring</span>
+                                                            <span>Fully Waterproof
+                                                                Housing</span>
                                                         </li>
                                                         <li>
                                                             <span>
-                                                                <Image src="/img/low-cost-icon.png" width={40} height={40} alt=""></Image>
+                                                                <Image src="/img/compact-device.png" width={40} height={40} alt=""></Image>
                                                             </span>
-                                                            <span>Low-cost real-time air
-                                                                quality monitoring</span>
+                                                            <span>Compact and light
+                                                                weight design</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -447,28 +447,28 @@ export default async function AmbientAirMonito() {
                             <div className="performance-meets">
                                 <ul>
                                     <li>
-                                        <Image src="/img/realt-time.png" width={100} height={75} alt=""></Image>
+                                        <Image src="/img/real-time-data-monitoring.png" width={100} height={75} alt=""></Image>
                                         <p>Real-time air quality monitoring</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/realt-time.png" width={100} height={75} alt=""></Image>
+                                        <Image src="/img/low-cost-monitors.png" width={100} height={75} alt=""></Image>
                                         <p>Real-time air quality monitoring</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/realt-time.png" width={100} height={75} alt=""></Image>
-                                        <p>Real-time air quality monitoring</p>
+                                        <Image src="/img/reliable-sensors.png" width={100} height={75} alt=""></Image>
+                                        <p>Highly accurate and reliable sensors</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/realt-time.png" width={100} height={75} alt=""></Image>
-                                        <p>Real-time air quality monitoring</p>
+                                        <Image src="/img/cloud-data-access.png" width={100} height={75} alt=""></Image>
+                                        <p>Data accessibility on website, mobile & TV apps</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/realt-time.png" width={100} height={75} alt=""></Image>
-                                        <p>Real-time air quality monitoring</p>
+                                        <Image src="/img/connectivity.png" width={100} height={75} alt=""></Image>
+                                        <p>Multiple modes of connectivity</p>
                                     </li>
                                     <li>
-                                        <Image src="/img/realt-time.png" width={100} height={75} alt=""></Image>
-                                        <p>Real-time air quality monitoring</p>
+                                        <Image src="/img/low-cost-maintenance.png" width={100} height={75} alt=""></Image>
+                                        <p>Low-cost maintenance expense</p>
                                     </li>
                                 </ul>
                             </div>
@@ -562,27 +562,27 @@ export default async function AmbientAirMonito() {
                 </div>
                 <CustomDragCursorCarousel responsive={responsive}>
                     <div className="app-slide-review-box">
-                        <Image src="/img/construction-site.webp" alt="" width={800} height={400} />
+                        <Image src="/img/building-new-concrete-houses.webp" alt="" width={800} height={400} />
                         <h4>Sewage Treatment Plants</h4>
                         <p>Construction sites are a major source of dust and other pollutants. Prana Air can help construction sites to monitor their air quality levels and take steps to reduce emissions.</p>
                     </div>
                     <div className="app-slide-review-box">
-                        <Image src="/img/construction-site.webp" alt="" width={800} height={400} />
+                        <Image src="/img/smart-city-air-quality-monitor.webp" alt="" width={800} height={400} />
                         <h4>Public Toilets</h4>
                         <p>Construction sites are a major source of dust and other pollutants. Prana Air can help construction sites to monitor their air quality levels and take steps to reduce emissions.</p>
                     </div>
                     <div className="app-slide-review-box">
-                        <Image src="/img/construction-site.webp" alt="" width={800} height={400} />
+                        <Image src="/img/parking-lot-air-quality-monitor.webp" alt="" width={800} height={400} />
                         <h4>Wastewater Facilities</h4>
                         <p>Construction sites are a major source of dust and other pollutants. Prana Air can help construction sites to monitor their air quality levels and take steps to reduce emissions.</p>
                     </div>
                     <div className="app-slide-review-box">
-                        <Image src="/img/construction-site.webp" alt="" width={800} height={400} />
+                        <Image src="/img/airport-air-quality-monitor.webp" alt="" width={800} height={400} />
                         <h4>Oil & Gas Industries:</h4>
                         <p>Construction sites are a major source of dust and other pollutants. Prana Air can help construction sites to monitor their air quality levels and take steps to reduce emissions.</p>
                     </div>
                     <div className="app-slide-review-box">
-                        <Image src="/img/construction-site.webp" alt="" width={800} height={400} />
+                        <Image src="/img/construction-workers-carrying-shovel-construction-site.webp" alt="" width={800} height={400} />
                         <h4>Landfills</h4>
                         <p>Construction sites are a major source of dust and other pollutants. Prana Air can help construction sites to monitor their air quality levels and take steps to reduce emissions.</p>
                     </div>
@@ -688,40 +688,40 @@ export default async function AmbientAirMonito() {
                                                     <p>PM Sensor Inlet (2)</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>2</span>
+                                                    <p>GPS Antenna</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>3</span>
+                                                    <p>Air Inlet - T/H</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>4</span>
+                                                    <p>Mode Button</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>5</span>
+                                                    <p>Micro SD Card Slot</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>6</span>
+                                                    <p>Power Button</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>7</span>
+                                                    <p>12V DC</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>8</span>
+                                                    <p>Weather Station Slot</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>9</span>
+                                                    <p>RS485/ Relay</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>10</span>
+                                                    <p>Air Out</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -733,8 +733,8 @@ export default async function AmbientAirMonito() {
                             <div className="container-fluid">
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <div className="part-item-img">
-                                            <Image src="/img/ambient-pm-parts-label.webp" alt="" width={1000} height={600} />
+                                        <div className="part-item-img prana-sens">
+                                            <Image src="/img/prana-sense-parts-label.webp" alt="" width={1000} height={600} />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
@@ -742,43 +742,31 @@ export default async function AmbientAirMonito() {
                                             <ul>
                                                 <li>
                                                     <span>1</span>
+                                                    <p>Mode Button</p>
+                                                </li>
+                                                <li>
+                                                    <span>2</span>
+                                                    <p>Power Button</p>
+                                                </li>
+                                                <li>
+                                                    <span>3</span>
                                                     <p>PM Sensor Inlet (2)</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>4</span>
+                                                    <p>Air Inlet - Temperature & Humidity</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>5</span>
+                                                    <p>Micro SD Card Slot</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>6</span>
+                                                    <p>Weather Station Slot</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>7</span>
+                                                    <p>12V DC</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -790,8 +778,8 @@ export default async function AmbientAirMonito() {
                             <div className="container-fluid">
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <div className="part-item-img">
-                                            <Image src="/img/ambient-pm-parts-label.webp" alt="" width={1000} height={600} />
+                                        <div className="part-item-img ambient-pro-label">
+                                            <Image src="/img/ambient-pro-parts-label.webp" alt="" width={1000} height={600} />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
@@ -799,43 +787,31 @@ export default async function AmbientAirMonito() {
                                             <ul>
                                                 <li>
                                                     <span>1</span>
+                                                    <p>Mode Button</p>
+                                                </li>
+                                                <li>
+                                                    <span>2</span>
+                                                    <p>Weather station</p>
+                                                </li>
+                                                <li>
+                                                    <span>3</span>
                                                     <p>PM Sensor Inlet (2)</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>4</span>
+                                                    <p>Air Inlet - Temperature & Humidity</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>5</span>
+                                                    <p>Micro SD Card Slot</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>6</span>
+                                                    <p>Weather Station Slot</p>
                                                 </li>
                                                 <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
-                                                </li>
-                                                <li>
-                                                    <span>1</span>
-                                                    <p>PM Sensor Inlet (2)</p>
+                                                    <span>7</span>
+                                                    <p>12V DC</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -907,20 +883,20 @@ export default async function AmbientAirMonito() {
                                             <div className="real-time">
                                                 <ul>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt="" ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
-                                                    </li>
-                                                    <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt="" ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
-                                                    </li>
-                                                    <li>
                                                         <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
                                                         <p>Real-time air quality API for accurate global data</p>
                                                     </li>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt="" ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/insightful-dashboard.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Insightful Air quality monitoring dashboard</p>
+                                                    </li>
+                                                    <li>
+                                                        <Image src="/img/world-air-pollution-map.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>World air pollution map and weather map</p>
+                                                    </li>
+                                                    <li>
+                                                        <Image src="/img/compare-different-air-quality-parameters.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Compare different air quality parameters of two or more location</p>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -946,20 +922,20 @@ export default async function AmbientAirMonito() {
                                             <div className="real-time">
                                                 <ul>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/analysis-polluted-city.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Analysis: World’s most polluted cities and countries.</p>
                                                     </li>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/health-advice.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Health advice based on real-time air quality index</p>
                                                     </li>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/weather-forecast.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Weather forecast of your current selected location</p>
                                                     </li>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/compare-different-air-quality-parameters.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Compare different air quality parameters of two or more location</p>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -975,30 +951,30 @@ export default async function AmbientAirMonito() {
                                                 <p>Access your ambient air monitor data on the app.</p>
                                                 <ul>
                                                     <li>
-                                                        <Link href="#"><Image src="/img/app-btn.png" width={190} height={50}  ></Image> </Link>
+                                                        <Link href="#"><Image src="/img/app-btn.png" width={190} height={50} alt=""  ></Image> </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="#"><Image src="/img/playstore-btn.png" width={190} height={50}  ></Image> </Link>
+                                                        <Link href="#"><Image src="/img/playstore-btn.png" width={190} height={50} alt=""  ></Image> </Link>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div className="real-time">
                                                 <ul>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/compare-different-air-quality-parameters.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Outdoor vs Indoor Air Quality data</p>
                                                     </li>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/24x7-remote-access.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>24*7 remote access to the monitored data</p>
                                                     </li>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/aqi-tv-app.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>AQI TV app controlled by AQI mobile app.</p>
                                                     </li>
                                                     <li>
-                                                        <Image src="/img/real-time.png" width={190} height={50} alt=""  ></Image>
-                                                        <p>Real-time air quality API for accurate global data</p>
+                                                        <Image src="/img/multiple-ranges.png" width={190} height={50} alt=""  ></Image>
+                                                        <p>Choose from multiple ranges of themes.</p>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1034,10 +1010,10 @@ export default async function AmbientAirMonito() {
                                         <Image src='/img/construction-covered.webp' width={50} height={50} alt="arrow icon" />
                                     </li>
                                     <li>
-                                        <Image src='/img/construction-covered.webp' width={50} height={50} alt="arrow icon" />
+                                        <Image src='/img/dpcc-guidlines.webp' width={50} height={50} alt="arrow icon" />
                                     </li>
                                     <li>
-                                        <Image src='/img/construction-covered.webp' width={50} height={50} alt="arrow icon" />
+                                        <Image src='/img/bmc.webp' width={50} height={50} alt="arrow icon" />
                                     </li>
                                 </ul>
                             </div>
