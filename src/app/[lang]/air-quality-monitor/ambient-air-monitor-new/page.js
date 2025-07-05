@@ -233,9 +233,9 @@ export default async function AmbientAirMonito() {
                                                 <div className="parameters">
                                                     <ul>
                                                         <li>AQI</li>
-                                                        <li>AQI</li>
-                                                        <li>AQI</li>
-                                                        <li>AQI</li>
+                                                        <li>PM1</li>
+                                                        <li>PM2.5</li>
+                                                        <li>PM10</li>
                                                         <li>Temperature</li>
                                                         <li>Humidity</li>
                                                     </ul>
@@ -339,7 +339,7 @@ export default async function AmbientAirMonito() {
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="choose-monitor-img">
-                                                <Image src="/img/ambient-pm-monitor.webp" width={500} height={500} alt=""></Image>
+                                                <Image src="/img/prana-sense-air-monitor.webp" width={500} height={500} alt=""></Image>
                                             </div>
                                         </div>
                                     </div>
@@ -418,7 +418,7 @@ export default async function AmbientAirMonito() {
                                         </div>
                                         <div className="col-lg-5">
                                             <div className="choose-monitor-img">
-                                                <Image src="/img/ambient-pm-monitor.webp" width={500} height={500} alt=""></Image>
+                                                <Image src="/img/ambient-pro-air-monitor.webp" width={500} height={500} alt=""></Image>
                                             </div>
                                         </div>
                                     </div>
